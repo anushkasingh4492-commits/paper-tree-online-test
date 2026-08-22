@@ -1,0 +1,317 @@
+{
+  "package": "MHT-CET_Chemistry_full_v2.0.0.zip",
+  "release_version": "2.0.0",
+  "included_file_count_excluding_manifest": 62,
+  "included_files": [
+    {
+      "path": "asset_manifest_v2.0.0.json",
+      "size_bytes": 10937,
+      "sha256": "1cf3341278a0e3b0e33cf5bdfd4ec8a734682cb7b08f0c91a2c963c6be05491e"
+    },
+    {
+      "path": "assets/figures/CHEM-11-CH04-orbital_boxes.svg",
+      "size_bytes": 769,
+      "sha256": "4aa77c2cb0d2bfa1fcc6cd828bdf94010d0c4c1de71540deb52c8d3bb7f80319"
+    },
+    {
+      "path": "assets/figures/CHEM-11-CH05-tbp.svg",
+      "size_bytes": 846,
+      "sha256": "c2b63be817fc1f59a0eb2fb7fd9741ed6f4cfac4e75998d54a1a2bd467a608e7"
+    },
+    {
+      "path": "assets/figures/CHEM-11-CH10-hyperbola.svg",
+      "size_bytes": 773,
+      "sha256": "918b62dd817c3fb4ad6617a553f509a8d2997528fa9039491bc32fddb994d3a6"
+    },
+    {
+      "path": "assets/figures/CHEM-11-CH11-logline.svg",
+      "size_bytes": 762,
+      "sha256": "5433f6a4eab947e36efb585692d5f72986339a00284c4b320eed99fd0b27e409"
+    },
+    {
+      "path": "assets/figures/CHEM-11-CH14-fishhook.svg",
+      "size_bytes": 774,
+      "sha256": "dd6679af5638010364317172c2e22b0e185fd7fa01fb2742ba56288a10f11261"
+    },
+    {
+      "path": "assets/figures/CHEM-11-CH15-cis_trans.svg",
+      "size_bytes": 1067,
+      "sha256": "29a3bb5546054faddc9c060910b71a59e0ac1afd078283686a0b5b0537fc80ab"
+    },
+    {
+      "path": "assets/figures/CHEM-12-CH01-bcc.svg",
+      "size_bytes": 959,
+      "sha256": "78ec5cdeaab83c31972b3b2c39175d285d95798063e3267542d27ff81e52482c"
+    },
+    {
+      "path": "assets/figures/CHEM-12-CH01-fcc.svg",
+      "size_bytes": 1008,
+      "sha256": "25a1c2ec931290910f604ebb4237261abbb5c02f8026ff3e4957b58fe1bdf7de"
+    },
+    {
+      "path": "assets/figures/CHEM-12-CH02-vapour_curve.svg",
+      "size_bytes": 847,
+      "sha256": "2d5ca690d445137a9e9403b4f8bbdfa2c2e2bb23c0f0b5b2897b016822ecbb47"
+    },
+    {
+      "path": "assets/figures/CHEM-12-CH03-titration.svg",
+      "size_bytes": 843,
+      "sha256": "3036567164058b6a98c910b4e388ba7b66327263af4333855519d78e8cc71da6"
+    },
+    {
+      "path": "assets/figures/CHEM-12-CH04-piston.svg",
+      "size_bytes": 839,
+      "sha256": "126388d7a94579fe5c0cb3b1bf175ae248d5978e15395488a42a9de0c3ec7280"
+    },
+    {
+      "path": "assets/figures/CHEM-12-CH05-daniell.svg",
+      "size_bytes": 886,
+      "sha256": "13f21e573aa840ebb6c0972b0160885aa9a8d37305ff31fed3993f71666949cf"
+    },
+    {
+      "path": "assets/figures/CHEM-12-CH06-first_order.svg",
+      "size_bytes": 760,
+      "sha256": "1b26691b04529509c015ee95e3279ea7cb2be53815f84cba67c6c14b9d6573a1"
+    },
+    {
+      "path": "assets/figures/CHEM-12-CH07-square_planar.svg",
+      "size_bytes": 748,
+      "sha256": "83e5f63eaaa673c5977f58994a383bd492ff748e784c056eea9b5e83311782d2"
+    },
+    {
+      "path": "assets/figures/CHEM-12-CH08-oct_split.svg",
+      "size_bytes": 882,
+      "sha256": "5de4d12d7dc0d507450d3d017be86d76b1f1370fc47bca7ce9e2c37f7fb376a9"
+    },
+    {
+      "path": "assets/figures/CHEM-12-CH09-coord_isomers.svg",
+      "size_bytes": 1128,
+      "sha256": "9f0c404091a59b1b3cbf8b7d1524fdf1faf778bb1249c48b9c59ea49c073ac2c"
+    },
+    {
+      "path": "assets/figures/CHEM-12-CH10-sn2.svg",
+      "size_bytes": 745,
+      "sha256": "d75d50821cd530f3d6ce074a2840ba471d455d1ff2b5308e5f39938e9bd3fffe"
+    },
+    {
+      "path": "assets/figures/CHEM-12-CH11-williamson.svg",
+      "size_bytes": 779,
+      "sha256": "6dcfbeffbb45ff2d710580efc4a84b0ef4b9383c290cc6a50cae0a6ca91d58d5"
+    },
+    {
+      "path": "assets/figures/CHEM-12-CH12-tollens.svg",
+      "size_bytes": 688,
+      "sha256": "b7b8991db3cdd805cda186429325d4eac2221a434d5dfccefbe9865c13d307f1"
+    },
+    {
+      "path": "assets/figures/CHEM-12-CH13-diazo.svg",
+      "size_bytes": 895,
+      "sha256": "94225abce2a41b49a519336e7b69512bf61e296de5a8c6671a11d84fcde583a3"
+    },
+    {
+      "path": "assets/figures/CHEM-12-CH14-dna.svg",
+      "size_bytes": 823,
+      "sha256": "657b69775104d42acdd72e3cb666d7715844c797af072405939bf79c866ff3ad"
+    },
+    {
+      "path": "assets/figures/CHEM-12-CH15-polymer.svg",
+      "size_bytes": 813,
+      "sha256": "22787c6ba74de0c189a5c0e29555988f17ddc3377b3f982e54d5c9b381ce46d5"
+    },
+    {
+      "path": "assets/figures/CHEM-12-CH16-nanoscale.svg",
+      "size_bytes": 748,
+      "sha256": "2ec23228776e8059851cf983abc2b0adbaea5aca3de8faa1e843485852d7ccfd"
+    },
+    {
+      "path": "chapter_summary_v2.0.0.json",
+      "size_bytes": 11567,
+      "sha256": "fda1af42ad733b59f472681e383bd94e9d81e3c99bf4213045cb125628e65c6d"
+    },
+    {
+      "path": "chapters/CHEM-11-CH01_some-basic-concepts-of-chemistry.json",
+      "size_bytes": 197182,
+      "sha256": "ba0255970fb846325b3f413692943f474a5335c97f62aec52001e1025a8a8d15"
+    },
+    {
+      "path": "chapters/CHEM-11-CH04_structure-of-atom.json",
+      "size_bytes": 193657,
+      "sha256": "d22b5ba78bfd771a924a7e833a5b8b3d5016198f2ac41f106ad9b3856dcefeb2"
+    },
+    {
+      "path": "chapters/CHEM-11-CH05_chemical-bonding.json",
+      "size_bytes": 194186,
+      "sha256": "701baea6fdd66104cd0221bd22ff3e9f31ee7a1defcced2806a4878e10461355"
+    },
+    {
+      "path": "chapters/CHEM-11-CH06_redox-reactions.json",
+      "size_bytes": 194048,
+      "sha256": "3d1030d2c6a2360bbad3faa5e5ef4cc5433767681a5f138b8225a21aa97dce0e"
+    },
+    {
+      "path": "chapters/CHEM-11-CH08_elements-of-group-1-and-2.json",
+      "size_bytes": 194522,
+      "sha256": "d1fce67f4e86884a4520790a821dd244e9b3c45eeee38557f5dda40c1583cde7"
+    },
+    {
+      "path": "chapters/CHEM-11-CH10_states-of-matter.json",
+      "size_bytes": 186471,
+      "sha256": "b6759ee5f1f1d6be849fa4786a73ebf46d14be02df9141dcf4b1bb70a75ae377"
+    },
+    {
+      "path": "chapters/CHEM-11-CH11_adsorption-and-colloids.json",
+      "size_bytes": 189724,
+      "sha256": "6c1842092e71f53e80c3f72b4524bec6a5759913a1383b33bc861b9afb305255"
+    },
+    {
+      "path": "chapters/CHEM-11-CH14_basic-principles-of-organic-chemistry.json",
+      "size_bytes": 194957,
+      "sha256": "d8153b33829311a3fd0ac9950b9e46315287cf3c54068071beddb22fd86018e6"
+    },
+    {
+      "path": "chapters/CHEM-11-CH15_hydrocarbons.json",
+      "size_bytes": 195951,
+      "sha256": "29f5e84de95a7d4366fb13c3255440dbf209a6ecaeb4ba4a6bf4e6ba5de6beed"
+    },
+    {
+      "path": "chapters/CHEM-11-CH16_chemistry-in-everyday-life.json",
+      "size_bytes": 192495,
+      "sha256": "b0564ad69a659656a79dceef6ec76b64590356b2ea8122c8ec49a905d1639144"
+    },
+    {
+      "path": "chapters/CHEM-12-CH01_solid-state.json",
+      "size_bytes": 448418,
+      "sha256": "6f3d474886fa2a8abbacf9ae532b9855316f460d63a44e22bb1960e9c145852b"
+    },
+    {
+      "path": "chapters/CHEM-12-CH02_solutions.json",
+      "size_bytes": 441532,
+      "sha256": "2d702b20b2fdf6a137e330ae8f3f88308b7db3ee7e9d709c67c05755d0ff6f31"
+    },
+    {
+      "path": "chapters/CHEM-12-CH03_ionic-equilibria.json",
+      "size_bytes": 439083,
+      "sha256": "5be0e60c989bd3d3f0af0630cb9548e85cfcf2f59dae1520fdbe82adb044d053"
+    },
+    {
+      "path": "chapters/CHEM-12-CH04_chemical-thermodynamics.json",
+      "size_bytes": 441161,
+      "sha256": "bfb254dfc7714efc4fd4821b301837c892e1cb749f0d80d3ab007ac6d6192ec7"
+    },
+    {
+      "path": "chapters/CHEM-12-CH05_electrochemistry.json",
+      "size_bytes": 437122,
+      "sha256": "9484ade9d23c9e1fbb9bdbc4296fdc380151f915126bda2821397979b5397fda"
+    },
+    {
+      "path": "chapters/CHEM-12-CH06_chemical-kinetics.json",
+      "size_bytes": 440510,
+      "sha256": "0462cb916086e916f3d457988ed98332c1fe535cec4e4bcc1b06728f95819c9e"
+    },
+    {
+      "path": "chapters/CHEM-12-CH07_elements-of-groups-16-17-and-18.json",
+      "size_bytes": 463814,
+      "sha256": "9b6d5c269c901cdff16eb8bff0cf0c905ef0e289815264fd1edb3bb93d386836"
+    },
+    {
+      "path": "chapters/CHEM-12-CH08_transition-and-inner-transition-elements.json",
+      "size_bytes": 463949,
+      "sha256": "11e485a3a955b3bc1ecc5b316815caa1d1a27a5897522edef968b1006b4f3bda"
+    },
+    {
+      "path": "chapters/CHEM-12-CH09_coordination-compounds.json",
+      "size_bytes": 462927,
+      "sha256": "3bab322ed959bbee86d1820aeef6404de3cfe715f4708ca7c8e6597df48f1bd5"
+    },
+    {
+      "path": "chapters/CHEM-12-CH10_halogen-derivatives.json",
+      "size_bytes": 458350,
+      "sha256": "202accfd6f6cbe19cbf39df261d316fade48e6130a5fcba43de1c00d2d6bc7b6"
+    },
+    {
+      "path": "chapters/CHEM-12-CH11_alcohols-phenols-and-ethers.json",
+      "size_bytes": 466184,
+      "sha256": "a852752251e45969dac49df98752125f806971c6891c7b296c371259bae4791e"
+    },
+    {
+      "path": "chapters/CHEM-12-CH12_aldehydes-ketones-and-carboxylic-acids.json",
+      "size_bytes": 468880,
+      "sha256": "e2414b7ed338439554783c7e124c333101187620e1266318da273a7f02aed6ba"
+    },
+    {
+      "path": "chapters/CHEM-12-CH13_amines.json",
+      "size_bytes": 460015,
+      "sha256": "459faa0457ea8f3be8b18ed2967a7aab375f0b923135f2b41dd14ec4ae7b3cc7"
+    },
+    {
+      "path": "chapters/CHEM-12-CH14_biomolecules.json",
+      "size_bytes": 444052,
+      "sha256": "50192e80b8c7e75765bf66ace86b0cbe135569342ccbb381bb73c80cb52d676d"
+    },
+    {
+      "path": "chapters/CHEM-12-CH15_introduction-to-polymer-chemistry.json",
+      "size_bytes": 445959,
+      "sha256": "cfbef55dabb4a441d6929872194d51d68c2e071977ee4b0341d423a5714dcb4d"
+    },
+    {
+      "path": "chapters/CHEM-12-CH16_green-chemistry-and-nanochemistry.json",
+      "size_bytes": 467032,
+      "sha256": "f41563c85ab3e3e92f5f552034bc1c84a96d3e0b748a5b6a764c71874ecbc64e"
+    },
+    {
+      "path": "dataset_manifest_v2.0.0.json",
+      "size_bytes": 1332,
+      "sha256": "dc56ad97422208f6a22ab9bbbc694d09e03871fcbc5e783938553af1c3c516f3"
+    },
+    {
+      "path": "functionality_report_v2.0.0.json",
+      "size_bytes": 2951,
+      "sha256": "b6ce3e9188effed30aef40d0ce2485d0cfb9bb8cfc667ed61083b3827339ee99"
+    },
+    {
+      "path": "MHT-CET_Chemistry_full_master_v2.0.0.xlsx",
+      "size_bytes": 564194,
+      "sha256": "83dce0f33d40df03bf55e3cbf6ac70efd4a739301a4f95138bfd584e8e151447"
+    },
+    {
+      "path": "MHT-CET_Chemistry_question_bank_v2.0.0.json",
+      "size_bytes": 9182056,
+      "sha256": "9ec9fe8c3ccf61a197f0495a2599731bb56685e6d1ead1ae56a172e383a5839f"
+    },
+    {
+      "path": "MHT-CET_Chemistry_question_bank_v2.0.0.schema.json",
+      "size_bytes": 271,
+      "sha256": "2ebd6fed46e4edafd65e8f55d78db66e86be7dc5e8b181562c08e183d07b26e2"
+    },
+    {
+      "path": "MHT-CET_Chemistry_question_record_v2.0.0.schema.json",
+      "size_bytes": 2177,
+      "sha256": "6036287b988acb7187271925024bd252e0e82e6142dac3de3a1f143b731eed01"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 796,
+      "sha256": "912f0d18756f7a68c8ebd1e30fe584805ebd0cdc851c15a3409f5351ff228d03"
+    },
+    {
+      "path": "sample_test_50_questions_v2.0.0.json",
+      "size_bytes": 139417,
+      "sha256": "bc661ca0c4c6ec7844aa587827806344a5b137be3e4e218cab8f9d714b0ff056"
+    },
+    {
+      "path": "sources_manifest_v2.0.0.json",
+      "size_bytes": 1078,
+      "sha256": "abb12daf49222945c3fb6de128755d0d383a2ef5d71b8f40f2bbc87e5588d666"
+    },
+    {
+      "path": "test_generator_blueprint_v2.0.0.json",
+      "size_bytes": 670,
+      "sha256": "01b10d17e2c097b56592e26dfae5573ee8d3e61b52978e40c917cbf5ed765342"
+    },
+    {
+      "path": "validation_report_v2.0.0.json",
+      "size_bytes": 2665,
+      "sha256": "a4e3c7410b10a26490008a174026d344a4b07f543ce4365abfca416a8aa9fe68"
+    }
+  ]
+}

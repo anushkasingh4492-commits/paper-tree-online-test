@@ -1,0 +1,526 @@
+{
+  "dataset": "MHT-CET Mathematics Full Question Bank",
+  "release_version": "2.0.1",
+  "build_date": "2026-08-14",
+  "subject": "Mathematics",
+  "question_count": 3102,
+  "accepted_v1_1_0_question_count": 1112,
+  "new_v2_0_1_question_count": 1990,
+  "chapter_count": 25,
+  "asset_count": 71,
+  "canonical_file": "question_bank_maths_full_v2.0.1.json",
+  "schema_file": "question_record.schema.json",
+  "difficulty_labels": [
+    "Easy",
+    "Medium",
+    "Hard",
+    "Challenging"
+  ],
+  "difficulty_distribution": {
+    "Easy": 615,
+    "Medium": 1405,
+    "Hard": 773,
+    "Challenging": 309
+  },
+  "answer_key_distribution": {
+    "B": 777,
+    "C": 776,
+    "D": 773,
+    "A": 776
+  },
+  "chapters": [
+    {
+      "standard": 11,
+      "chapter_number": 1,
+      "chapter_name": "Trigonometry - II",
+      "question_count": 130,
+      "difficulty": {
+        "Easy": 26,
+        "Medium": 59,
+        "Hard": 32,
+        "Challenging": 13
+      },
+      "answer_key": {
+        "B": 33,
+        "C": 33,
+        "D": 32,
+        "A": 32
+      },
+      "figure_count": 0
+    },
+    {
+      "standard": 11,
+      "chapter_number": 2,
+      "chapter_name": "Straight Line",
+      "question_count": 120,
+      "difficulty": {
+        "Easy": 24,
+        "Medium": 54,
+        "Hard": 30,
+        "Challenging": 12
+      },
+      "answer_key": {
+        "C": 30,
+        "D": 30,
+        "A": 30,
+        "B": 30
+      },
+      "figure_count": 3
+    },
+    {
+      "standard": 11,
+      "chapter_number": 3,
+      "chapter_name": "Circle",
+      "question_count": 110,
+      "difficulty": {
+        "Easy": 22,
+        "Medium": 50,
+        "Hard": 27,
+        "Challenging": 11
+      },
+      "answer_key": {
+        "D": 28,
+        "A": 28,
+        "B": 27,
+        "C": 27
+      },
+      "figure_count": 4
+    },
+    {
+      "standard": 11,
+      "chapter_number": 4,
+      "chapter_name": "Measures of Dispersion",
+      "question_count": 70,
+      "difficulty": {
+        "Easy": 14,
+        "Medium": 32,
+        "Hard": 17,
+        "Challenging": 7
+      },
+      "answer_key": {
+        "A": 18,
+        "B": 18,
+        "C": 17,
+        "D": 17
+      },
+      "figure_count": 0
+    },
+    {
+      "standard": 11,
+      "chapter_number": 5,
+      "chapter_name": "Probability",
+      "question_count": 120,
+      "difficulty": {
+        "Easy": 24,
+        "Medium": 54,
+        "Hard": 30,
+        "Challenging": 12
+      },
+      "answer_key": {
+        "B": 30,
+        "C": 30,
+        "D": 30,
+        "A": 30
+      },
+      "figure_count": 0
+    },
+    {
+      "standard": 11,
+      "chapter_number": 6,
+      "chapter_name": "Complex Numbers",
+      "question_count": 120,
+      "difficulty": {
+        "Easy": 24,
+        "Medium": 54,
+        "Hard": 30,
+        "Challenging": 12
+      },
+      "answer_key": {
+        "C": 30,
+        "D": 30,
+        "A": 30,
+        "B": 30
+      },
+      "figure_count": 0
+    },
+    {
+      "standard": 11,
+      "chapter_number": 7,
+      "chapter_name": "Permutations and Combinations",
+      "question_count": 120,
+      "difficulty": {
+        "Easy": 24,
+        "Medium": 54,
+        "Hard": 30,
+        "Challenging": 12
+      },
+      "answer_key": {
+        "D": 30,
+        "A": 30,
+        "B": 30,
+        "C": 30
+      },
+      "figure_count": 0
+    },
+    {
+      "standard": 11,
+      "chapter_number": 8,
+      "chapter_name": "Functions",
+      "question_count": 100,
+      "difficulty": {
+        "Easy": 20,
+        "Medium": 45,
+        "Hard": 25,
+        "Challenging": 10
+      },
+      "answer_key": {
+        "A": 25,
+        "B": 25,
+        "C": 25,
+        "D": 25
+      },
+      "figure_count": 3
+    },
+    {
+      "standard": 11,
+      "chapter_number": 9,
+      "chapter_name": "Limits",
+      "question_count": 110,
+      "difficulty": {
+        "Easy": 22,
+        "Medium": 50,
+        "Hard": 27,
+        "Challenging": 11
+      },
+      "answer_key": {
+        "B": 28,
+        "C": 28,
+        "D": 27,
+        "A": 27
+      },
+      "figure_count": 0
+    },
+    {
+      "standard": 11,
+      "chapter_number": 10,
+      "chapter_name": "Continuity",
+      "question_count": 90,
+      "difficulty": {
+        "Easy": 18,
+        "Medium": 41,
+        "Hard": 22,
+        "Challenging": 9
+      },
+      "answer_key": {
+        "C": 23,
+        "D": 23,
+        "A": 22,
+        "B": 22
+      },
+      "figure_count": 3
+    },
+    {
+      "standard": 12,
+      "chapter_number": 1,
+      "chapter_name": "Mathematical Logic",
+      "question_count": 132,
+      "difficulty": {
+        "Easy": 26,
+        "Medium": 60,
+        "Hard": 33,
+        "Challenging": 13
+      },
+      "answer_key": {
+        "D": 33,
+        "C": 33,
+        "B": 33,
+        "A": 33
+      },
+      "figure_count": 10
+    },
+    {
+      "standard": 12,
+      "chapter_number": 2,
+      "chapter_name": "Matrices",
+      "question_count": 130,
+      "difficulty": {
+        "Easy": 26,
+        "Medium": 59,
+        "Hard": 32,
+        "Challenging": 13
+      },
+      "answer_key": {
+        "A": 33,
+        "B": 33,
+        "C": 32,
+        "D": 32
+      },
+      "figure_count": 0
+    },
+    {
+      "standard": 12,
+      "chapter_number": 3,
+      "chapter_name": "Trigonometric Functions",
+      "question_count": 180,
+      "difficulty": {
+        "Easy": 36,
+        "Medium": 81,
+        "Hard": 45,
+        "Challenging": 18
+      },
+      "answer_key": {
+        "C": 45,
+        "B": 45,
+        "D": 45,
+        "A": 45
+      },
+      "figure_count": 0
+    },
+    {
+      "standard": 12,
+      "chapter_number": 4,
+      "chapter_name": "Pair of Straight Lines",
+      "question_count": 110,
+      "difficulty": {
+        "Easy": 22,
+        "Medium": 50,
+        "Hard": 27,
+        "Challenging": 11
+      },
+      "answer_key": {
+        "C": 28,
+        "D": 28,
+        "A": 27,
+        "B": 27
+      },
+      "figure_count": 0
+    },
+    {
+      "standard": 12,
+      "chapter_number": 5,
+      "chapter_name": "Vectors",
+      "question_count": 160,
+      "difficulty": {
+        "Easy": 32,
+        "Medium": 72,
+        "Hard": 40,
+        "Challenging": 16
+      },
+      "answer_key": {
+        "D": 40,
+        "B": 40,
+        "A": 40,
+        "C": 40
+      },
+      "figure_count": 0
+    },
+    {
+      "standard": 12,
+      "chapter_number": 6,
+      "chapter_name": "Line and Plane",
+      "question_count": 150,
+      "difficulty": {
+        "Easy": 30,
+        "Medium": 68,
+        "Hard": 37,
+        "Challenging": 15
+      },
+      "answer_key": {
+        "A": 38,
+        "B": 38,
+        "C": 37,
+        "D": 37
+      },
+      "figure_count": 0
+    },
+    {
+      "standard": 12,
+      "chapter_number": 7,
+      "chapter_name": "Linear Programming",
+      "question_count": 90,
+      "difficulty": {
+        "Easy": 18,
+        "Medium": 41,
+        "Hard": 22,
+        "Challenging": 9
+      },
+      "answer_key": {
+        "B": 23,
+        "C": 23,
+        "D": 22,
+        "A": 22
+      },
+      "figure_count": 27
+    },
+    {
+      "standard": 12,
+      "chapter_number": 8,
+      "chapter_name": "Differentiation",
+      "question_count": 166,
+      "difficulty": {
+        "Easy": 32,
+        "Medium": 77,
+        "Hard": 42,
+        "Challenging": 15
+      },
+      "answer_key": {
+        "D": 41,
+        "A": 42,
+        "C": 41,
+        "B": 42
+      },
+      "figure_count": 0
+    },
+    {
+      "standard": 12,
+      "chapter_number": 9,
+      "chapter_name": "Applications of Derivatives",
+      "question_count": 152,
+      "difficulty": {
+        "Easy": 30,
+        "Medium": 69,
+        "Hard": 38,
+        "Challenging": 15
+      },
+      "answer_key": {
+        "C": 38,
+        "A": 38,
+        "B": 38,
+        "D": 38
+      },
+      "figure_count": 0
+    },
+    {
+      "standard": 12,
+      "chapter_number": 10,
+      "chapter_name": "Indefinite Integration",
+      "question_count": 177,
+      "difficulty": {
+        "Easy": 35,
+        "Medium": 79,
+        "Hard": 45,
+        "Challenging": 18
+      },
+      "answer_key": {
+        "A": 45,
+        "D": 44,
+        "B": 44,
+        "C": 44
+      },
+      "figure_count": 0
+    },
+    {
+      "standard": 12,
+      "chapter_number": 11,
+      "chapter_name": "Definite Integration",
+      "question_count": 145,
+      "difficulty": {
+        "Easy": 26,
+        "Medium": 66,
+        "Hard": 38,
+        "Challenging": 15
+      },
+      "answer_key": {
+        "C": 36,
+        "D": 36,
+        "A": 37,
+        "B": 36
+      },
+      "figure_count": 2
+    },
+    {
+      "standard": 12,
+      "chapter_number": 12,
+      "chapter_name": "Application of Definite Integration",
+      "question_count": 90,
+      "difficulty": {
+        "Easy": 18,
+        "Medium": 41,
+        "Hard": 22,
+        "Challenging": 9
+      },
+      "answer_key": {
+        "C": 23,
+        "D": 23,
+        "A": 22,
+        "B": 22
+      },
+      "figure_count": 19
+    },
+    {
+      "standard": 12,
+      "chapter_number": 13,
+      "chapter_name": "Differential Equations",
+      "question_count": 140,
+      "difficulty": {
+        "Easy": 28,
+        "Medium": 63,
+        "Hard": 35,
+        "Challenging": 14
+      },
+      "answer_key": {
+        "D": 35,
+        "A": 35,
+        "B": 35,
+        "C": 35
+      },
+      "figure_count": 0
+    },
+    {
+      "standard": 12,
+      "chapter_number": 14,
+      "chapter_name": "Probability Distributions",
+      "question_count": 100,
+      "difficulty": {
+        "Easy": 20,
+        "Medium": 45,
+        "Hard": 25,
+        "Challenging": 10
+      },
+      "answer_key": {
+        "A": 25,
+        "B": 25,
+        "C": 25,
+        "D": 25
+      },
+      "figure_count": 0
+    },
+    {
+      "standard": 12,
+      "chapter_number": 15,
+      "chapter_name": "Binomial Distribution",
+      "question_count": 90,
+      "difficulty": {
+        "Easy": 18,
+        "Medium": 41,
+        "Hard": 22,
+        "Challenging": 9
+      },
+      "answer_key": {
+        "B": 23,
+        "C": 23,
+        "D": 22,
+        "A": 22
+      },
+      "figure_count": 0
+    }
+  ],
+  "provenance_note": "The accepted v1.1.0 subset is preserved at record level; v2.0.1 regenerates the 18 added chapters after independent errata repair.",
+  "errata_repairs": [
+    "Unique Linear Programming optima enforced",
+    "Feasible-polygon vertex order corrected",
+    "Equal-axis graph rendering applied",
+    "Permutations and Combinations parameters normalized for exam realism",
+    "Zero-coefficient text artifacts removed",
+    "Figure alt text normalized",
+    "Schema title updated"
+  ],
+  "review_limitations": [
+    "No external human subject expert review is claimed.",
+    "Difficulty labels are editorial estimates and are not empirically calibrated against candidate response data.",
+    "Parameterized parallel variants are intentionally used for practice coverage, but exact new item content is unique."
+  ],
+  "workbook_file": "MHT-CET_Mathematics_Master_Database_v2.0.1.xlsx",
+  "workbook_bytes": 1124635,
+  "workbook_sha256": "f3940e694fc93e68bb3343ebdba070774a3ac65f35371537f101c62c985fc44b"
+}

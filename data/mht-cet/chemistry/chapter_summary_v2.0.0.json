@@ -1,0 +1,574 @@
+[
+  {
+    "standard": 11,
+    "chapter_number": 1,
+    "syllabus_sequence": 1,
+    "chapter_name": "Some Basic Concepts of Chemistry",
+    "printed_pages": "1-12",
+    "question_count": 64,
+    "difficulty": {
+      "Easy": 16,
+      "Medium": 26,
+      "Hard": 16,
+      "Challenging": 6
+    },
+    "correct_options": {
+      "C": 16,
+      "B": 16,
+      "D": 16,
+      "A": 16
+    },
+    "figures": 0,
+    "numericals": 28
+  },
+  {
+    "standard": 11,
+    "chapter_number": 4,
+    "syllabus_sequence": 2,
+    "chapter_name": "Structure of Atom",
+    "printed_pages": "35-54",
+    "question_count": 64,
+    "difficulty": {
+      "Easy": 16,
+      "Medium": 26,
+      "Hard": 16,
+      "Challenging": 6
+    },
+    "correct_options": {
+      "D": 16,
+      "A": 16,
+      "B": 16,
+      "C": 16
+    },
+    "figures": 1,
+    "numericals": 0
+  },
+  {
+    "standard": 11,
+    "chapter_number": 5,
+    "syllabus_sequence": 3,
+    "chapter_name": "Chemical Bonding",
+    "printed_pages": "55-80",
+    "question_count": 64,
+    "difficulty": {
+      "Easy": 16,
+      "Medium": 26,
+      "Hard": 16,
+      "Challenging": 6
+    },
+    "correct_options": {
+      "A": 16,
+      "B": 16,
+      "C": 16,
+      "D": 16
+    },
+    "figures": 1,
+    "numericals": 0
+  },
+  {
+    "standard": 11,
+    "chapter_number": 6,
+    "syllabus_sequence": 4,
+    "chapter_name": "Redox Reactions",
+    "printed_pages": "81-92",
+    "question_count": 64,
+    "difficulty": {
+      "Easy": 16,
+      "Medium": 26,
+      "Hard": 16,
+      "Challenging": 6
+    },
+    "correct_options": {
+      "B": 16,
+      "C": 16,
+      "D": 16,
+      "A": 16
+    },
+    "figures": 0,
+    "numericals": 0
+  },
+  {
+    "standard": 11,
+    "chapter_number": 8,
+    "syllabus_sequence": 5,
+    "chapter_name": "Elements of Group 1 and 2",
+    "printed_pages": "110-122",
+    "question_count": 64,
+    "difficulty": {
+      "Easy": 16,
+      "Medium": 26,
+      "Hard": 16,
+      "Challenging": 6
+    },
+    "correct_options": {
+      "D": 16,
+      "A": 16,
+      "B": 16,
+      "C": 16
+    },
+    "figures": 0,
+    "numericals": 0
+  },
+  {
+    "standard": 11,
+    "chapter_number": 10,
+    "syllabus_sequence": 6,
+    "chapter_name": "States of Matter",
+    "printed_pages": "135-159",
+    "question_count": 64,
+    "difficulty": {
+      "Easy": 16,
+      "Medium": 26,
+      "Hard": 16,
+      "Challenging": 6
+    },
+    "correct_options": {
+      "B": 16,
+      "C": 16,
+      "D": 16,
+      "A": 16
+    },
+    "figures": 1,
+    "numericals": 16
+  },
+  {
+    "standard": 11,
+    "chapter_number": 11,
+    "syllabus_sequence": 7,
+    "chapter_name": "Adsorption and Colloids",
+    "printed_pages": "160-173",
+    "question_count": 64,
+    "difficulty": {
+      "Easy": 16,
+      "Medium": 26,
+      "Hard": 16,
+      "Challenging": 6
+    },
+    "correct_options": {
+      "C": 16,
+      "D": 16,
+      "A": 16,
+      "B": 16
+    },
+    "figures": 1,
+    "numericals": 0
+  },
+  {
+    "standard": 11,
+    "chapter_number": 14,
+    "syllabus_sequence": 8,
+    "chapter_name": "Basic Principles of Organic Chemistry",
+    "printed_pages": "204-232",
+    "question_count": 64,
+    "difficulty": {
+      "Easy": 16,
+      "Medium": 26,
+      "Hard": 16,
+      "Challenging": 6
+    },
+    "correct_options": {
+      "B": 16,
+      "C": 16,
+      "D": 16,
+      "A": 16
+    },
+    "figures": 1,
+    "numericals": 0
+  },
+  {
+    "standard": 11,
+    "chapter_number": 15,
+    "syllabus_sequence": 9,
+    "chapter_name": "Hydrocarbons",
+    "printed_pages": "233-260",
+    "question_count": 64,
+    "difficulty": {
+      "Easy": 16,
+      "Medium": 26,
+      "Hard": 16,
+      "Challenging": 6
+    },
+    "correct_options": {
+      "C": 16,
+      "D": 16,
+      "A": 16,
+      "B": 16
+    },
+    "figures": 1,
+    "numericals": 0
+  },
+  {
+    "standard": 11,
+    "chapter_number": 16,
+    "syllabus_sequence": 10,
+    "chapter_name": "Chemistry in Everyday Life",
+    "printed_pages": "261-270",
+    "question_count": 64,
+    "difficulty": {
+      "Easy": 16,
+      "Medium": 26,
+      "Hard": 16,
+      "Challenging": 6
+    },
+    "correct_options": {
+      "D": 16,
+      "A": 16,
+      "B": 16,
+      "C": 16
+    },
+    "figures": 0,
+    "numericals": 0
+  },
+  {
+    "standard": 12,
+    "chapter_number": 1,
+    "syllabus_sequence": 1,
+    "chapter_name": "Solid State",
+    "printed_pages": "1-27",
+    "question_count": 150,
+    "difficulty": {
+      "Easy": 38,
+      "Medium": 60,
+      "Hard": 37,
+      "Challenging": 15
+    },
+    "correct_options": {
+      "B": 38,
+      "C": 37,
+      "D": 37,
+      "A": 38
+    },
+    "figures": 2,
+    "numericals": 24
+  },
+  {
+    "standard": 12,
+    "chapter_number": 2,
+    "syllabus_sequence": 2,
+    "chapter_name": "Solutions",
+    "printed_pages": "28-46",
+    "question_count": 150,
+    "difficulty": {
+      "Easy": 38,
+      "Medium": 60,
+      "Hard": 37,
+      "Challenging": 15
+    },
+    "correct_options": {
+      "C": 38,
+      "D": 38,
+      "A": 37,
+      "B": 37
+    },
+    "figures": 1,
+    "numericals": 36
+  },
+  {
+    "standard": 12,
+    "chapter_number": 3,
+    "syllabus_sequence": 3,
+    "chapter_name": "Ionic Equilibria",
+    "printed_pages": "47-62",
+    "question_count": 150,
+    "difficulty": {
+      "Easy": 38,
+      "Medium": 60,
+      "Hard": 37,
+      "Challenging": 15
+    },
+    "correct_options": {
+      "D": 37,
+      "A": 38,
+      "B": 37,
+      "C": 38
+    },
+    "figures": 1,
+    "numericals": 36
+  },
+  {
+    "standard": 12,
+    "chapter_number": 4,
+    "syllabus_sequence": 4,
+    "chapter_name": "Chemical Thermodynamics",
+    "printed_pages": "63-89",
+    "question_count": 150,
+    "difficulty": {
+      "Easy": 38,
+      "Medium": 60,
+      "Hard": 37,
+      "Challenging": 15
+    },
+    "correct_options": {
+      "A": 37,
+      "B": 38,
+      "C": 37,
+      "D": 38
+    },
+    "figures": 1,
+    "numericals": 32
+  },
+  {
+    "standard": 12,
+    "chapter_number": 5,
+    "syllabus_sequence": 5,
+    "chapter_name": "Electrochemistry",
+    "printed_pages": "90-119",
+    "question_count": 150,
+    "difficulty": {
+      "Easy": 38,
+      "Medium": 60,
+      "Hard": 37,
+      "Challenging": 15
+    },
+    "correct_options": {
+      "B": 38,
+      "C": 37,
+      "D": 37,
+      "A": 38
+    },
+    "figures": 1,
+    "numericals": 36
+  },
+  {
+    "standard": 12,
+    "chapter_number": 6,
+    "syllabus_sequence": 6,
+    "chapter_name": "Chemical Kinetics",
+    "printed_pages": "120-137",
+    "question_count": 150,
+    "difficulty": {
+      "Easy": 38,
+      "Medium": 60,
+      "Hard": 37,
+      "Challenging": 15
+    },
+    "correct_options": {
+      "C": 38,
+      "D": 38,
+      "A": 37,
+      "B": 37
+    },
+    "figures": 1,
+    "numericals": 36
+  },
+  {
+    "standard": 12,
+    "chapter_number": 7,
+    "syllabus_sequence": 7,
+    "chapter_name": "Elements of Groups 16, 17 and 18",
+    "printed_pages": "138-164",
+    "question_count": 150,
+    "difficulty": {
+      "Easy": 38,
+      "Medium": 60,
+      "Hard": 37,
+      "Challenging": 15
+    },
+    "correct_options": {
+      "D": 37,
+      "A": 38,
+      "B": 37,
+      "C": 38
+    },
+    "figures": 1,
+    "numericals": 0
+  },
+  {
+    "standard": 12,
+    "chapter_number": 8,
+    "syllabus_sequence": 8,
+    "chapter_name": "Transition and Inner Transition Elements",
+    "printed_pages": "165-191",
+    "question_count": 150,
+    "difficulty": {
+      "Easy": 38,
+      "Medium": 60,
+      "Hard": 37,
+      "Challenging": 15
+    },
+    "correct_options": {
+      "A": 37,
+      "B": 38,
+      "C": 37,
+      "D": 38
+    },
+    "figures": 1,
+    "numericals": 0
+  },
+  {
+    "standard": 12,
+    "chapter_number": 9,
+    "syllabus_sequence": 9,
+    "chapter_name": "Coordination Compounds",
+    "printed_pages": "192-209",
+    "question_count": 150,
+    "difficulty": {
+      "Easy": 38,
+      "Medium": 60,
+      "Hard": 37,
+      "Challenging": 15
+    },
+    "correct_options": {
+      "B": 38,
+      "C": 37,
+      "D": 37,
+      "A": 38
+    },
+    "figures": 1,
+    "numericals": 0
+  },
+  {
+    "standard": 12,
+    "chapter_number": 10,
+    "syllabus_sequence": 10,
+    "chapter_name": "Halogen Derivatives",
+    "printed_pages": "210-233",
+    "question_count": 150,
+    "difficulty": {
+      "Easy": 38,
+      "Medium": 60,
+      "Hard": 37,
+      "Challenging": 15
+    },
+    "correct_options": {
+      "C": 38,
+      "D": 38,
+      "A": 37,
+      "B": 37
+    },
+    "figures": 1,
+    "numericals": 0
+  },
+  {
+    "standard": 12,
+    "chapter_number": 11,
+    "syllabus_sequence": 11,
+    "chapter_name": "Alcohols, Phenols and Ethers",
+    "printed_pages": "234-253",
+    "question_count": 150,
+    "difficulty": {
+      "Easy": 38,
+      "Medium": 60,
+      "Hard": 37,
+      "Challenging": 15
+    },
+    "correct_options": {
+      "D": 37,
+      "A": 38,
+      "B": 37,
+      "C": 38
+    },
+    "figures": 1,
+    "numericals": 0
+  },
+  {
+    "standard": 12,
+    "chapter_number": 12,
+    "syllabus_sequence": 12,
+    "chapter_name": "Aldehydes, Ketones and Carboxylic Acids",
+    "printed_pages": "254-281",
+    "question_count": 150,
+    "difficulty": {
+      "Easy": 38,
+      "Medium": 60,
+      "Hard": 37,
+      "Challenging": 15
+    },
+    "correct_options": {
+      "A": 37,
+      "B": 38,
+      "C": 37,
+      "D": 38
+    },
+    "figures": 1,
+    "numericals": 0
+  },
+  {
+    "standard": 12,
+    "chapter_number": 13,
+    "syllabus_sequence": 13,
+    "chapter_name": "Amines",
+    "printed_pages": "282-297",
+    "question_count": 150,
+    "difficulty": {
+      "Easy": 38,
+      "Medium": 60,
+      "Hard": 37,
+      "Challenging": 15
+    },
+    "correct_options": {
+      "B": 38,
+      "C": 37,
+      "D": 37,
+      "A": 38
+    },
+    "figures": 1,
+    "numericals": 0
+  },
+  {
+    "standard": 12,
+    "chapter_number": 14,
+    "syllabus_sequence": 14,
+    "chapter_name": "Biomolecules",
+    "printed_pages": "298-321",
+    "question_count": 150,
+    "difficulty": {
+      "Easy": 38,
+      "Medium": 60,
+      "Hard": 37,
+      "Challenging": 15
+    },
+    "correct_options": {
+      "C": 38,
+      "D": 38,
+      "A": 37,
+      "B": 37
+    },
+    "figures": 1,
+    "numericals": 0
+  },
+  {
+    "standard": 12,
+    "chapter_number": 15,
+    "syllabus_sequence": 15,
+    "chapter_name": "Introduction to Polymer Chemistry",
+    "printed_pages": "322-339",
+    "question_count": 150,
+    "difficulty": {
+      "Easy": 38,
+      "Medium": 60,
+      "Hard": 37,
+      "Challenging": 15
+    },
+    "correct_options": {
+      "D": 37,
+      "A": 38,
+      "B": 37,
+      "C": 38
+    },
+    "figures": 1,
+    "numericals": 0
+  },
+  {
+    "standard": 12,
+    "chapter_number": 16,
+    "syllabus_sequence": 16,
+    "chapter_name": "Green Chemistry and Nanochemistry",
+    "printed_pages": "340-352",
+    "question_count": 150,
+    "difficulty": {
+      "Easy": 38,
+      "Medium": 60,
+      "Hard": 37,
+      "Challenging": 15
+    },
+    "correct_options": {
+      "A": 37,
+      "B": 38,
+      "C": 37,
+      "D": 38
+    },
+    "figures": 1,
+    "numericals": 0
+  }
+]

@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "question_record.schema.json",
+  "title": "MHT-CET Mathematics Question Record v2.0.1",
+  "type": "object",
+  "required": [
+    "id",
+    "standard",
+    "chapter_number",
+    "chapter_name",
+    "stem",
+    "options",
+    "correct_option",
+    "correct_answer_text",
+    "solution",
+    "difficulty",
+    "release_review_status"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^MATH-(11|12)-CH[0-9]{2}-[0-9]{4}$"
+    },
+    "standard": {
+      "type": "integer",
+      "enum": [
+        11,
+        12
+      ]
+    },
+    "chapter_number": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "chapter_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "stem": {
+      "type": "string",
+      "minLength": 1
+    },
+    "options": {
+      "type": "object",
+      "required": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "A": {
+          "type": "string",
+          "minLength": 1
+        },
+        "B": {
+          "type": "string",
+          "minLength": 1
+        },
+        "C": {
+          "type": "string",
+          "minLength": 1
+        },
+        "D": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "correct_option": {
+      "type": "string",
+      "enum": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ]
+    },
+    "correct_answer_text": {
+      "type": "string",
+      "minLength": 1
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "Easy",
+        "Medium",
+        "Hard",
+        "Challenging"
+      ]
+    },
+    "figure_asset": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "release_review_status": {
+      "type": "string",
+      "enum": [
+        "PASS"
+      ]
+    },
+    "human_subject_expert_reviewed": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": true
+}

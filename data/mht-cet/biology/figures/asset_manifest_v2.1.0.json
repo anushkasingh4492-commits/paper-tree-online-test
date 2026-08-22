@@ -1,0 +1,818 @@
+[
+  {
+    "asset": "figures/BIO-11-CH01-0109.png",
+    "format": "PNG",
+    "sha256": "95d548bb432ea0500494e9ddf675bba47d069109f0677de7256a6da1a4a25b73",
+    "bytes": 33912,
+    "alt_text": "Enzyme initial velocity curve rising with substrate concentration and approaching a plateau.",
+    "license": "Original release asset; reusable with this question bank",
+    "linked_question_ids": [
+      "BIO-11-CH01-0109",
+      "BIO-11-CH01-0113"
+    ],
+    "standard": 11,
+    "authorship": "Original vector-style diagram rendered by the v1.2.0 build pipeline",
+    "dimensions": [
+      1800,
+      1100
+    ]
+  },
+  {
+    "asset": "figures/BIO-11-CH01-0110.png",
+    "format": "PNG",
+    "sha256": "8a9eb0cadeb75a382627caf6cecee9388b2b8a21aec532605b3965c0f7c90e83",
+    "bytes": 40075,
+    "alt_text": "Bell-shaped enzyme activity curve with an optimum near 37 degrees Celsius and a steep decline at higher temperature.",
+    "license": "Original release asset; reusable with this question bank",
+    "linked_question_ids": [
+      "BIO-11-CH01-0110",
+      "BIO-11-CH01-0114"
+    ],
+    "standard": 11,
+    "authorship": "Original vector-style diagram rendered by the v1.2.0 build pipeline",
+    "dimensions": [
+      1800,
+      1100
+    ]
+  },
+  {
+    "asset": "figures/BIO-11-CH02-0013.png",
+    "format": "PNG",
+    "sha256": "92e389ae177302240113dfe704b0de494111da319f73110f64130bd82b1373e7",
+    "bytes": 51286,
+    "alt_text": "Selected glycolysis steps showing zinc ion at the glyceraldehyde-3-phosphate conversion and NAD reduction.",
+    "license": "Original release asset; reusable with this question bank",
+    "linked_question_ids": [
+      "BIO-11-CH02-0013"
+    ],
+    "standard": 11,
+    "authorship": "Original vector-style diagram rendered by the v1.2.0 build pipeline",
+    "dimensions": [
+      1800,
+      1100
+    ]
+  },
+  {
+    "asset": "figures/BIO-11-CH02-0055.png",
+    "format": "PNG",
+    "sha256": "5458ad6b555839dc1033cd929e21a77c2c6c47026470827a75ab827da5e63c48",
+    "bytes": 39997,
+    "alt_text": "Krebs cycle segment with conversion X from alpha-ketoglutarate to succinyl-CoA and the following substrate-level phosphorylation step.",
+    "license": "Original release asset; reusable with this question bank",
+    "linked_question_ids": [
+      "BIO-11-CH02-0055",
+      "BIO-11-CH02-0110"
+    ],
+    "standard": 11,
+    "authorship": "Original vector-style diagram rendered by the v1.2.0 build pipeline",
+    "dimensions": [
+      1800,
+      1100
+    ]
+  },
+  {
+    "asset": "figures/BIO-11-CH03-0027.png",
+    "format": "PNG",
+    "sha256": "be5c48e0f733802e39315e6ee1c3d4d9ace159b2b58a4126eb16cca0303491db",
+    "bytes": 34737,
+    "alt_text": "Simplified stomach diagram with X on the dome-shaped fundic region and Y on the narrow pyloric outlet.",
+    "license": "Original release asset; reusable with this question bank",
+    "linked_question_ids": [
+      "BIO-11-CH03-0027",
+      "BIO-11-CH03-0101"
+    ],
+    "standard": 11,
+    "authorship": "Original vector-style diagram rendered by the v1.2.0 build pipeline",
+    "dimensions": [
+      1800,
+      1100
+    ]
+  },
+  {
+    "asset": "figures/BIO-11-CH03-0028.png",
+    "format": "PNG",
+    "sha256": "297b7dad602dcf9de40fdfce795bb24da100bbd5fcf0fba555853bd44ee202b6",
+    "bytes": 35902,
+    "alt_text": "Simplified lower alimentary canal with X marking the ascending colon above the caecum.",
+    "license": "Original release asset; reusable with this question bank",
+    "linked_question_ids": [
+      "BIO-11-CH03-0028"
+    ],
+    "standard": 11,
+    "authorship": "Original vector-style diagram rendered by the v1.2.0 build pipeline",
+    "dimensions": [
+      1800,
+      1100
+    ]
+  },
+  {
+    "asset": "figures/BIO-11-CH03-0029.png",
+    "format": "PNG",
+    "sha256": "2a8407409cb3469cbb8dc9cbd36de27c234ebbd3e88a415691f66358f4394290",
+    "bytes": 42563,
+    "alt_text": "Linear sequence of named alimentary-canal regions with P as pharynx and Q as caecum.",
+    "license": "Original release asset; reusable with this question bank",
+    "linked_question_ids": [
+      "BIO-11-CH03-0029"
+    ],
+    "standard": 11,
+    "authorship": "Original vector-style diagram rendered by the v1.2.0 build pipeline",
+    "dimensions": [
+      1800,
+      1100
+    ]
+  },
+  {
+    "asset": "figures/BIO-11-CH03-0041.png",
+    "format": "PNG",
+    "sha256": "66eb0b0f9662b1ac03c070a2cdee39086225800fe2bb09051a918847aa9050f0",
+    "bytes": 40695,
+    "alt_text": "Concentric alimentary-canal wall layers; X and C mark the submucosa immediately outside the mucosa.",
+    "license": "Original release asset; reusable with this question bank",
+    "linked_question_ids": [
+      "BIO-11-CH03-0041",
+      "BIO-11-CH03-0103"
+    ],
+    "standard": 11,
+    "authorship": "Original vector-style diagram rendered by the v1.2.0 build pipeline",
+    "dimensions": [
+      1800,
+      1100
+    ]
+  },
+  {
+    "asset": "figures/BIO-11-CH03-0046.png",
+    "format": "PNG",
+    "sha256": "9ee0ee0dcd44bfcc9940ad9e40a75a3bc567c52b66b777e5ae006f6e8ec4d3b9",
+    "bytes": 51314,
+    "alt_text": "Layered stomach wall showing X at the gland-forming mucosa and Y at the innermost oblique muscle layer.",
+    "license": "Original release asset; reusable with this question bank",
+    "linked_question_ids": [
+      "BIO-11-CH03-0046"
+    ],
+    "standard": 11,
+    "authorship": "Original vector-style diagram rendered by the v1.2.0 build pipeline",
+    "dimensions": [
+      1800,
+      1100
+    ]
+  },
+  {
+    "asset": "figures/BIO-11-CH03-0058.png",
+    "format": "PNG",
+    "sha256": "2567249d53366384225edc48a41b51d2d5b5396ef688d736b06b26eeaef1f53d",
+    "bytes": 35991,
+    "alt_text": "Hexagonal liver lobule with X at the central vein, Y at a sinusoid and Z at a Kupffer cell.",
+    "license": "Original release asset; reusable with this question bank",
+    "linked_question_ids": [
+      "BIO-11-CH03-0058",
+      "BIO-11-CH03-0102"
+    ],
+    "standard": 11,
+    "authorship": "Original vector-style diagram rendered by the v1.2.0 build pipeline",
+    "dimensions": [
+      1800,
+      1100
+    ]
+  },
+  {
+    "asset": "figures/BIO-11-CH04-0039.png",
+    "format": "PNG",
+    "sha256": "289c38b0b72f91eb1ae716b85b03b0ba8bed50b5bce4060948487784ca9d5131",
+    "bytes": 35923,
+    "alt_text": "Kidney longitudinal view with X marking the hilum, a red renal artery entering, renal vein leaving and ureter descending.",
+    "license": "Original release asset; reusable with this question bank",
+    "linked_question_ids": [
+      "BIO-11-CH04-0039",
+      "BIO-11-CH04-0101"
+    ],
+    "standard": 11,
+    "authorship": "Original vector-style diagram rendered by the v1.2.0 build pipeline",
+    "dimensions": [
+      1800,
+      1100
+    ]
+  },
+  {
+    "asset": "figures/BIO-11-CH04-0046.png",
+    "format": "PNG",
+    "sha256": "2bbfaef35daf138742f72f66befb29bbda04782065cc21797895e254f60c6dfd",
+    "bytes": 28541,
+    "alt_text": "Internal urinary bladder showing X as the triangular trigone and Y at its apical urethral opening.",
+    "license": "Original release asset; reusable with this question bank",
+    "linked_question_ids": [
+      "BIO-11-CH04-0046"
+    ],
+    "standard": 11,
+    "authorship": "Original vector-style diagram rendered by the v1.2.0 build pipeline",
+    "dimensions": [
+      1800,
+      1100
+    ]
+  },
+  {
+    "asset": "figures/BIO-11-CH04-0053.png",
+    "format": "PNG",
+    "sha256": "f97c451d695cb285afef70e653e4dae1aeadf8ab0e5b3d2653a4aef4c37afa7e",
+    "bytes": 40047,
+    "alt_text": "Podocytes of the visceral wall over a glomerular capillary; X marks a podocyte and Y a filtration slit between foot processes.",
+    "license": "Original release asset; reusable with this question bank",
+    "linked_question_ids": [
+      "BIO-11-CH04-0053"
+    ],
+    "standard": 11,
+    "authorship": "Original vector-style diagram rendered by the v1.2.0 build pipeline",
+    "dimensions": [
+      1800,
+      1100
+    ]
+  },
+  {
+    "asset": "figures/BIO-11-CH04-0054.png",
+    "format": "PNG",
+    "sha256": "ff19cd8b8827a20f51d664d19d7bdd322aece4727c23422878fec439f6644b12",
+    "bytes": 45052,
+    "alt_text": "Renal corpuscle with a glomerular capillary tuft enclosed by double-walled Bowman's capsule; Y marks capsular space.",
+    "license": "Original release asset; reusable with this question bank",
+    "linked_question_ids": [
+      "BIO-11-CH04-0054",
+      "BIO-11-CH04-0102"
+    ],
+    "standard": 11,
+    "authorship": "Original vector-style diagram rendered by the v1.2.0 build pipeline",
+    "dimensions": [
+      1800,
+      1100
+    ]
+  },
+  {
+    "asset": "figures/BIO-12-CH01-FIG01.png",
+    "standard": 12,
+    "chapter_number": 1,
+    "chapter_name": "Reproduction in Lower and Higher Plants",
+    "title": "Pollination pathways",
+    "visual_type": "flow",
+    "format": "PNG",
+    "dimensions": [
+      1800,
+      1100
+    ],
+    "sha256": "a0ec95eb477ef2220af60289ba1aed6d981ed5bcb5ce2a85cfa27e84e7a55981",
+    "linked_question_ids": [
+      "BIO-12-CH01-0009",
+      "BIO-12-CH01-0002"
+    ],
+    "authorship": "Original programmatic exam schematic for MHT-CET practice; no third-party artwork"
+  },
+  {
+    "asset": "figures/BIO-12-CH01-FIG02.png",
+    "standard": 12,
+    "chapter_number": 1,
+    "chapter_name": "Reproduction in Lower and Higher Plants",
+    "title": "Double fertilization in an angiosperm",
+    "visual_type": "flow",
+    "format": "PNG",
+    "dimensions": [
+      1800,
+      1100
+    ],
+    "sha256": "b026670e422c2b951f64fcea0b71ac2ffaceda50c23960edc75f19ab5748b111",
+    "linked_question_ids": [
+      "BIO-12-CH01-0001",
+      "BIO-12-CH01-0013"
+    ],
+    "authorship": "Original programmatic exam schematic for MHT-CET practice; no third-party artwork"
+  },
+  {
+    "asset": "figures/BIO-12-CH02-FIG01.png",
+    "standard": 12,
+    "chapter_number": 2,
+    "chapter_name": "Reproduction in Lower and Higher Animals",
+    "title": "Hormonal pattern across a menstrual cycle",
+    "visual_type": "graph",
+    "format": "PNG",
+    "dimensions": [
+      1800,
+      1100
+    ],
+    "sha256": "6a4751217757827fcf29314effa2b4db4fc6872ded783c190573c7d4d693342d",
+    "linked_question_ids": [
+      "BIO-12-CH02-0001",
+      "BIO-12-CH02-0010"
+    ],
+    "authorship": "Original programmatic exam schematic for MHT-CET practice; no third-party artwork"
+  },
+  {
+    "asset": "figures/BIO-12-CH02-FIG02.png",
+    "standard": 12,
+    "chapter_number": 2,
+    "chapter_name": "Reproduction in Lower and Higher Animals",
+    "title": "Early human development",
+    "visual_type": "flow",
+    "format": "PNG",
+    "dimensions": [
+      1800,
+      1100
+    ],
+    "sha256": "c54468a245c2822a11f0cdb455de7386a536122789cb55107939dad45ae73ce0",
+    "linked_question_ids": [
+      "BIO-12-CH02-0002",
+      "BIO-12-CH02-0004"
+    ],
+    "authorship": "Original programmatic exam schematic for MHT-CET practice; no third-party artwork"
+  },
+  {
+    "asset": "figures/BIO-12-CH03-FIG01.png",
+    "standard": 12,
+    "chapter_number": 3,
+    "chapter_name": "Inheritance and Variation",
+    "title": "Monohybrid cross: Tt x Tt",
+    "visual_type": "matrix",
+    "format": "PNG",
+    "dimensions": [
+      1800,
+      1100
+    ],
+    "sha256": "e48311e5747114128a3fc0b7194b2c4e54df7756875bcb24a9947d069f9916b9",
+    "linked_question_ids": [
+      "BIO-12-CH03-0002",
+      "BIO-12-CH03-0006"
+    ],
+    "authorship": "Original programmatic exam schematic for MHT-CET practice; no third-party artwork"
+  },
+  {
+    "asset": "figures/BIO-12-CH03-FIG02.png",
+    "standard": 12,
+    "chapter_number": 3,
+    "chapter_name": "Inheritance and Variation",
+    "title": "X-linked recessive inheritance",
+    "visual_type": "pedigree",
+    "format": "PNG",
+    "dimensions": [
+      1800,
+      1100
+    ],
+    "sha256": "01bcf072f8ed22de01c11d19f4040e2539bc3ab7a5d32d02db8fb952b94c090e",
+    "linked_question_ids": [
+      "BIO-12-CH03-0001",
+      "BIO-12-CH03-0009"
+    ],
+    "authorship": "Original programmatic exam schematic for MHT-CET practice; no third-party artwork"
+  },
+  {
+    "asset": "figures/BIO-12-CH04-FIG01.png",
+    "standard": 12,
+    "chapter_number": 4,
+    "chapter_name": "Molecular Basis of Inheritance",
+    "title": "Events at a DNA replication fork",
+    "visual_type": "flow",
+    "format": "PNG",
+    "dimensions": [
+      1800,
+      1100
+    ],
+    "sha256": "cbcbde6d1a76abe9bfebf84c9ae1baceefaf9c8f13ce851c19cfa5764e8baec3",
+    "linked_question_ids": [
+      "BIO-12-CH04-0015",
+      "BIO-12-CH04-0002"
+    ],
+    "authorship": "Original programmatic exam schematic for MHT-CET practice; no third-party artwork"
+  },
+  {
+    "asset": "figures/BIO-12-CH04-FIG02.png",
+    "standard": 12,
+    "chapter_number": 4,
+    "chapter_name": "Molecular Basis of Inheritance",
+    "title": "Regulation of the lac operon",
+    "visual_type": "flow",
+    "format": "PNG",
+    "dimensions": [
+      1800,
+      1100
+    ],
+    "sha256": "c1b290fc20fdef186e8a3a087cc38068df722b4ef2bfa9fe5ef490dc383b52e4",
+    "linked_question_ids": [
+      "BIO-12-CH04-0001",
+      "BIO-12-CH04-0004"
+    ],
+    "authorship": "Original programmatic exam schematic for MHT-CET practice; no third-party artwork"
+  },
+  {
+    "asset": "figures/BIO-12-CH05-FIG01.png",
+    "standard": 12,
+    "chapter_number": 5,
+    "chapter_name": "Origin and Evolution of Life",
+    "title": "Three modes of natural selection",
+    "visual_type": "graph",
+    "format": "PNG",
+    "dimensions": [
+      1800,
+      1100
+    ],
+    "sha256": "a2ae95ca20c8da34f8c2573484c254a271be8a758875e5c0f785c3cc19f350af",
+    "linked_question_ids": [
+      "BIO-12-CH05-0009",
+      "BIO-12-CH05-0011"
+    ],
+    "authorship": "Original programmatic exam schematic for MHT-CET practice; no third-party artwork"
+  },
+  {
+    "asset": "figures/BIO-12-CH05-FIG02.png",
+    "standard": 12,
+    "chapter_number": 5,
+    "chapter_name": "Origin and Evolution of Life",
+    "title": "Hardy-Weinberg equilibrium",
+    "visual_type": "flow",
+    "format": "PNG",
+    "dimensions": [
+      1800,
+      1100
+    ],
+    "sha256": "b0afb248eb53786c7487f0ceffc3849c7389b27282b731795f2138424d9b128a",
+    "linked_question_ids": [
+      "BIO-12-CH05-0002",
+      "BIO-12-CH05-0001"
+    ],
+    "authorship": "Original programmatic exam schematic for MHT-CET practice; no third-party artwork"
+  },
+  {
+    "asset": "figures/BIO-12-CH06-FIG01.png",
+    "standard": 12,
+    "chapter_number": 6,
+    "chapter_name": "Plant Water Relation",
+    "title": "Water-potential gradient through a plant",
+    "visual_type": "flow",
+    "format": "PNG",
+    "dimensions": [
+      1800,
+      1100
+    ],
+    "sha256": "d9c34742c307afd40b149cb76ac26c4bde7be347b4cf81bb87faefc12a55c956",
+    "linked_question_ids": [
+      "BIO-12-CH06-0005",
+      "BIO-12-CH06-0001"
+    ],
+    "authorship": "Original programmatic exam schematic for MHT-CET practice; no third-party artwork"
+  },
+  {
+    "asset": "figures/BIO-12-CH06-FIG02.png",
+    "standard": 12,
+    "chapter_number": 6,
+    "chapter_name": "Plant Water Relation",
+    "title": "Guard-cell control of a stoma",
+    "visual_type": "flow",
+    "format": "PNG",
+    "dimensions": [
+      1800,
+      1100
+    ],
+    "sha256": "42ac41ccb91e0d2f7824123e1c6dcc80353e84708022065eba4da5648d2e4c31",
+    "linked_question_ids": [
+      "BIO-12-CH06-0002",
+      "BIO-12-CH06-0003"
+    ],
+    "authorship": "Original programmatic exam schematic for MHT-CET practice; no third-party artwork"
+  },
+  {
+    "asset": "figures/BIO-12-CH07-FIG01.png",
+    "standard": 12,
+    "chapter_number": 7,
+    "chapter_name": "Plant Growth and Mineral Nutrition",
+    "title": "Sigmoid growth curve",
+    "visual_type": "graph",
+    "format": "PNG",
+    "dimensions": [
+      1800,
+      1100
+    ],
+    "sha256": "3884b6305960d16cf36c8b67689a5ab66f6fb7875dca3e2d234740901849c4ad",
+    "linked_question_ids": [
+      "BIO-12-CH07-0003",
+      "BIO-12-CH07-0001"
+    ],
+    "authorship": "Original programmatic exam schematic for MHT-CET practice; no third-party artwork"
+  },
+  {
+    "asset": "figures/BIO-12-CH07-FIG02.png",
+    "standard": 12,
+    "chapter_number": 7,
+    "chapter_name": "Plant Growth and Mineral Nutrition",
+    "title": "Nitrogen assimilation in a plant",
+    "visual_type": "flow",
+    "format": "PNG",
+    "dimensions": [
+      1800,
+      1100
+    ],
+    "sha256": "467606242f7795a4daa17eab522585a112b2c2fc16df5b1d6cd30befa92fd759",
+    "linked_question_ids": [
+      "BIO-12-CH07-0004",
+      "BIO-12-CH07-0002"
+    ],
+    "authorship": "Original programmatic exam schematic for MHT-CET practice; no third-party artwork"
+  },
+  {
+    "asset": "figures/BIO-12-CH08-FIG01.png",
+    "standard": 12,
+    "chapter_number": 8,
+    "chapter_name": "Respiration and Circulation",
+    "title": "Oxyhaemoglobin dissociation curves",
+    "visual_type": "graph",
+    "format": "PNG",
+    "dimensions": [
+      1800,
+      1100
+    ],
+    "sha256": "ff091bd66bfe934d86c63e5b44cc5eb06bb92423ea180946a116f817328c82a3",
+    "linked_question_ids": [
+      "BIO-12-CH08-0004",
+      "BIO-12-CH08-0002"
+    ],
+    "authorship": "Original programmatic exam schematic for MHT-CET practice; no third-party artwork"
+  },
+  {
+    "asset": "figures/BIO-12-CH08-FIG02.png",
+    "standard": 12,
+    "chapter_number": 8,
+    "chapter_name": "Respiration and Circulation",
+    "title": "Electrical events in one cardiac cycle",
+    "visual_type": "graph",
+    "format": "PNG",
+    "dimensions": [
+      1800,
+      1100
+    ],
+    "sha256": "a0f63f0aa420575a9ebc6487440db572db61eae80d4da4f7e81b51b55fedcb13",
+    "linked_question_ids": [
+      "BIO-12-CH08-0001",
+      "BIO-12-CH08-0022"
+    ],
+    "authorship": "Original programmatic exam schematic for MHT-CET practice; no third-party artwork"
+  },
+  {
+    "asset": "figures/BIO-12-CH09-FIG01.png",
+    "standard": 12,
+    "chapter_number": 9,
+    "chapter_name": "Control and Co-ordination",
+    "title": "Reflex arc",
+    "visual_type": "flow",
+    "format": "PNG",
+    "dimensions": [
+      1800,
+      1100
+    ],
+    "sha256": "2a60b1ea9d9d4d727407dea27bfff388834fd82e9d9680d8e5237c2c40bea755",
+    "linked_question_ids": [
+      "BIO-12-CH09-0003",
+      "BIO-12-CH09-0001"
+    ],
+    "authorship": "Original programmatic exam schematic for MHT-CET practice; no third-party artwork"
+  },
+  {
+    "asset": "figures/BIO-12-CH09-FIG02.png",
+    "standard": 12,
+    "chapter_number": 9,
+    "chapter_name": "Control and Co-ordination",
+    "title": "Chemical synaptic transmission",
+    "visual_type": "flow",
+    "format": "PNG",
+    "dimensions": [
+      1800,
+      1100
+    ],
+    "sha256": "de7ba2cf2488a65df8b2a4b1ef07008542bc56bee2b564464e5d2d7e183a402c",
+    "linked_question_ids": [
+      "BIO-12-CH09-0005",
+      "BIO-12-CH09-0002"
+    ],
+    "authorship": "Original programmatic exam schematic for MHT-CET practice; no third-party artwork"
+  },
+  {
+    "asset": "figures/BIO-12-CH10-FIG01.png",
+    "standard": 12,
+    "chapter_number": 10,
+    "chapter_name": "Human Health and Diseases",
+    "title": "Primary and secondary antibody responses",
+    "visual_type": "graph",
+    "format": "PNG",
+    "dimensions": [
+      1800,
+      1100
+    ],
+    "sha256": "9fc9d62d044fb45b53559305ae7a4edc2f6570b81ff4ed2e33214c406c283c6d",
+    "linked_question_ids": [
+      "BIO-12-CH10-0007",
+      "BIO-12-CH10-0003"
+    ],
+    "authorship": "Original programmatic exam schematic for MHT-CET practice; no third-party artwork"
+  },
+  {
+    "asset": "figures/BIO-12-CH10-FIG02.png",
+    "standard": 12,
+    "chapter_number": 10,
+    "chapter_name": "Human Health and Diseases",
+    "title": "Key transfers in the malaria life cycle",
+    "visual_type": "cycle",
+    "format": "PNG",
+    "dimensions": [
+      1800,
+      1100
+    ],
+    "sha256": "7b31481b594f5fea9dc234157357461924b42c09cd32d4c9c78e490c72c36c24",
+    "linked_question_ids": [
+      "BIO-12-CH10-0002",
+      "BIO-12-CH10-0001"
+    ],
+    "authorship": "Original programmatic exam schematic for MHT-CET practice; no third-party artwork"
+  },
+  {
+    "asset": "figures/BIO-12-CH11-FIG01.png",
+    "standard": 12,
+    "chapter_number": 11,
+    "chapter_name": "Enhancement of Food Production",
+    "title": "Plant micropropagation",
+    "visual_type": "flow",
+    "format": "PNG",
+    "dimensions": [
+      1800,
+      1100
+    ],
+    "sha256": "7db7b3a568fe7b47cb6f81110e491d1d0b37675f19178e12bea2f4594603022c",
+    "linked_question_ids": [
+      "BIO-12-CH11-0006",
+      "BIO-12-CH11-0002"
+    ],
+    "authorship": "Original programmatic exam schematic for MHT-CET practice; no third-party artwork"
+  },
+  {
+    "asset": "figures/BIO-12-CH11-FIG02.png",
+    "standard": 12,
+    "chapter_number": 11,
+    "chapter_name": "Enhancement of Food Production",
+    "title": "Single-cell protein production",
+    "visual_type": "flow",
+    "format": "PNG",
+    "dimensions": [
+      1800,
+      1100
+    ],
+    "sha256": "7de47341e16421e8e3fb35f0e878df265325bd7ea463557cba353204d28c64f0",
+    "linked_question_ids": [
+      "BIO-12-CH11-0001",
+      "BIO-12-CH11-0005"
+    ],
+    "authorship": "Original programmatic exam schematic for MHT-CET practice; no third-party artwork"
+  },
+  {
+    "asset": "figures/BIO-12-CH12-FIG01.png",
+    "standard": 12,
+    "chapter_number": 12,
+    "chapter_name": "Biotechnology",
+    "title": "Polymerase chain reaction",
+    "visual_type": "cycle",
+    "format": "PNG",
+    "dimensions": [
+      1800,
+      1100
+    ],
+    "sha256": "328382bbc822e12a0b2224eebcc55f1539023dcafa240c20757654e90c48a5e2",
+    "linked_question_ids": [
+      "BIO-12-CH12-0001",
+      "BIO-12-CH12-0003"
+    ],
+    "authorship": "Original programmatic exam schematic for MHT-CET practice; no third-party artwork"
+  },
+  {
+    "asset": "figures/BIO-12-CH12-FIG02.png",
+    "standard": 12,
+    "chapter_number": 12,
+    "chapter_name": "Biotechnology",
+    "title": "Simplified plasmid cloning vector",
+    "visual_type": "cycle",
+    "format": "PNG",
+    "dimensions": [
+      1800,
+      1100
+    ],
+    "sha256": "d3fd586ffefbf8fc19b9096c481f00743c4c3b37778db00adc52d66c0ed8cfd9",
+    "linked_question_ids": [
+      "BIO-12-CH12-0004",
+      "BIO-12-CH12-0012"
+    ],
+    "authorship": "Original programmatic exam schematic for MHT-CET practice; no third-party artwork"
+  },
+  {
+    "asset": "figures/BIO-12-CH13-FIG01.png",
+    "standard": 12,
+    "chapter_number": 13,
+    "chapter_name": "Organisms and Populations",
+    "title": "Population growth models",
+    "visual_type": "graph",
+    "format": "PNG",
+    "dimensions": [
+      1800,
+      1100
+    ],
+    "sha256": "afff5234e522f67ec840278689850a811fa03f9548eb48a64e3cfb8271f7c47c",
+    "linked_question_ids": [
+      "BIO-12-CH13-0004",
+      "BIO-12-CH13-0002"
+    ],
+    "authorship": "Original programmatic exam schematic for MHT-CET practice; no third-party artwork"
+  },
+  {
+    "asset": "figures/BIO-12-CH13-FIG02.png",
+    "standard": 12,
+    "chapter_number": 13,
+    "chapter_name": "Organisms and Populations",
+    "title": "Age structure of populations",
+    "visual_type": "age_pyramid",
+    "format": "PNG",
+    "dimensions": [
+      1800,
+      1100
+    ],
+    "sha256": "422f36d084b0e6b5342a86c0e3d4f6cdef2705e26f4926eb63ac96f97e1fa8c0",
+    "linked_question_ids": [
+      "BIO-12-CH13-0001",
+      "BIO-12-CH13-0021"
+    ],
+    "authorship": "Original programmatic exam schematic for MHT-CET practice; no third-party artwork"
+  },
+  {
+    "asset": "figures/BIO-12-CH14-FIG01.png",
+    "standard": 12,
+    "chapter_number": 14,
+    "chapter_name": "Ecosystems and Energy Flow",
+    "title": "Pyramid of energy",
+    "visual_type": "pyramid",
+    "format": "PNG",
+    "dimensions": [
+      1800,
+      1100
+    ],
+    "sha256": "5be9aa82f7c78b3781ae394721a87cc1b39749eaa269661f9936d13566fe0838",
+    "linked_question_ids": [
+      "BIO-12-CH14-0016",
+      "BIO-12-CH14-0002"
+    ],
+    "authorship": "Original programmatic exam schematic for MHT-CET practice; no third-party artwork"
+  },
+  {
+    "asset": "figures/BIO-12-CH14-FIG02.png",
+    "standard": 12,
+    "chapter_number": 14,
+    "chapter_name": "Ecosystems and Energy Flow",
+    "title": "Matter flow through an ecosystem",
+    "visual_type": "network",
+    "format": "PNG",
+    "dimensions": [
+      1800,
+      1100
+    ],
+    "sha256": "917df5ac9bfab19e36e565d0fc8460b0f2f201debbab262adc5330ead574abec",
+    "linked_question_ids": [
+      "BIO-12-CH14-0001",
+      "BIO-12-CH14-0007"
+    ],
+    "authorship": "Original programmatic exam schematic for MHT-CET practice; no third-party artwork"
+  },
+  {
+    "asset": "figures/BIO-12-CH15-FIG01.png",
+    "standard": 12,
+    "chapter_number": 15,
+    "chapter_name": "Biodiversity, Conservation and Environmental Issues",
+    "title": "Species-area relationship",
+    "visual_type": "graph",
+    "format": "PNG",
+    "dimensions": [
+      1800,
+      1100
+    ],
+    "sha256": "989092c4ab60f7cca6be2d46c4915e548f0e56b87c9e5321894c5234d1ba7954",
+    "linked_question_ids": [
+      "BIO-12-CH15-0002",
+      "BIO-12-CH15-0001"
+    ],
+    "authorship": "Original programmatic exam schematic for MHT-CET practice; no third-party artwork"
+  },
+  {
+    "asset": "figures/BIO-12-CH15-FIG02.png",
+    "standard": 12,
+    "chapter_number": 15,
+    "chapter_name": "Biodiversity, Conservation and Environmental Issues",
+    "title": "Catalytic ozone destruction by chlorine",
+    "visual_type": "cycle",
+    "format": "PNG",
+    "dimensions": [
+      1800,
+      1100
+    ],
+    "sha256": "8583575b1bc409f9725caecc331c09f14445dee8ad1516468a79fb811705303c",
+    "linked_question_ids": [
+      "BIO-12-CH15-0003",
+      "BIO-12-CH15-0021"
+    ],
+    "authorship": "Original programmatic exam schematic for MHT-CET practice; no third-party artwork"
+  }
+]

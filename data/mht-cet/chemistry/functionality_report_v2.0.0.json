@@ -1,0 +1,134 @@
+{
+  "release_version": "2.0.0",
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "record_schema_validation",
+      "status": "PASS",
+      "records_checked": 3040,
+      "errors": []
+    },
+    {
+      "check": "json_parse",
+      "status": "PASS",
+      "files_checked": 36,
+      "errors": []
+    },
+    {
+      "check": "asset_hash_and_presence",
+      "status": "PASS",
+      "assets_checked": 23,
+      "failures": []
+    },
+    {
+      "check": "master_workbook",
+      "status": "PASS",
+      "size_bytes": 564194
+    },
+    {
+      "check": "generator_smoke_test",
+      "status": "PASS",
+      "papers_generated": 100,
+      "questions_per_paper": 50,
+      "standard_split": {
+        "11": 10,
+        "12": 40
+      },
+      "difficulty": {
+        "Easy": 13,
+        "Medium": 20,
+        "Hard": 12,
+        "Challenging": 5
+      },
+      "options": {
+        "A": 13,
+        "B": 13,
+        "C": 12,
+        "D": 12
+      },
+      "unique_family_required": true
+    },
+    {
+      "check": "figure_visual_QA",
+      "status": "PASS",
+      "method": "All 23 SVGs rendered to PNG; a complete contact sheet and representative full-size renders were inspected."
+    },
+    {
+      "check": "workbook_visual_QA",
+      "status": "PASS",
+      "method": "README and CHAPTER_SUMMARY rendered and inspected after formula corrections."
+    }
+  ],
+  "generator_test_sample": [
+    {
+      "seed": 2026000,
+      "count": 50,
+      "standard": {
+        "12": 40,
+        "11": 10
+      },
+      "difficulty": {
+        "Easy": 13,
+        "Medium": 20,
+        "Hard": 12,
+        "Challenging": 5
+      },
+      "correct_options": {
+        "B": 13,
+        "C": 12,
+        "A": 13,
+        "D": 12
+      },
+      "unique_ids": 50,
+      "unique_families": 50
+    },
+    {
+      "seed": 2026001,
+      "count": 50,
+      "standard": {
+        "12": 40,
+        "11": 10
+      },
+      "difficulty": {
+        "Easy": 13,
+        "Medium": 20,
+        "Hard": 12,
+        "Challenging": 5
+      },
+      "correct_options": {
+        "B": 13,
+        "C": 12,
+        "A": 13,
+        "D": 12
+      },
+      "unique_ids": 50,
+      "unique_families": 50
+    },
+    {
+      "seed": 2026002,
+      "count": 50,
+      "standard": {
+        "12": 40,
+        "11": 10
+      },
+      "difficulty": {
+        "Easy": 13,
+        "Medium": 20,
+        "Challenging": 5,
+        "Hard": 12
+      },
+      "correct_options": {
+        "C": 12,
+        "B": 13,
+        "D": 12,
+        "A": 13
+      },
+      "unique_ids": 50,
+      "unique_families": 50
+    }
+  ],
+  "limitations": [
+    "Difficulty labels are editorial and require candidate-response data for psychometric calibration.",
+    "The automated functionality suite is not a substitute for a separate external human chemistry SME sign-off."
+  ]
+}

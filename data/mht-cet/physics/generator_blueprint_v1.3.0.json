@@ -1,0 +1,60 @@
+{
+ "release_version": "1.3.0",
+ "release_profile": "strict_cet_generator_deployment_with_assets",
+ "subject": "Physics",
+ "canonical_bank": "question_bank_physics_with_figures_v1.3.0.json",
+ "record_count": 3045,
+ "source_release": "1.1.2",
+ "official_syllabus_source": "https://cetcell.mahacet.org/wp-content/uploads/2023/12/Syllabus.pdf",
+ "paper": {
+  "questions": 50,
+  "marks_per_question": 1,
+  "negative_marking": false,
+  "standard_11_questions": 10,
+  "standard_12_questions": 40,
+  "difficulty_counts": {
+   "Easy": 13,
+   "Medium": 20,
+   "Hard": 12,
+   "Challenging": 5
+  }
+ },
+ "pool_counts": {
+  "standard": {
+   "11": 1125,
+   "12": 1920
+  },
+  "difficulty": {
+   "Easy": 759,
+   "Medium": 1223,
+   "Hard": 760,
+   "Challenging": 303
+  },
+  "correct_option": {
+   "B": 758,
+   "C": 759,
+   "D": 766,
+   "A": 762
+  }
+ },
+ "mandatory_selection_rules": [
+  "Load only the canonical_bank named in this blueprint.",
+  "Select exactly 10 Standard XI and 40 Standard XII questions.",
+  "Select exactly 13 Easy, 20 Medium, 12 Hard and 5 Challenging questions.",
+  "Never select two records sharing a concept_family_id.",
+  "Never select a pair listed in similarity_map_v1.2.0.json.",
+  "Accept only IN_SCOPE records with generator_eligible_strict_cet = true.",
+  "Accept only MODEL_VERIFIED or HUMAN_VERIFIED records; never represent MODEL_VERIFIED as human approval."
+ ],
+ "resolved_release_issues": [
+  "The 75 scope-pending records are absent from the deployable bank and listed in the exclusion registry.",
+  "All 661 strict-pool similarity candidates are mechanically controlled by concept-family exclusion.",
+  "The stale 42-pair statement from v1.1.2 is superseded by the actual 661 strict-pool pair count."
+ ],
+ "open_non_automatable_gates": [
+  "No independent human subject-expert approval is claimed.",
+  "Difficulty tags are editorial and are not calibrated against candidate-response data."
+ ],
+ "asset_manifest": "asset_manifest_v1.3.0.json",
+ "asset_policy": "Resolve every non-null figure_asset relative to the dataset root and display it with the question."
+}

@@ -1,0 +1,24 @@
+[
+  {
+    "source_id": "MHTCET2026",
+    "title": "MHT-CET 2026 Syllabus Technical PDF",
+    "reference_path": "../../MHT-CET Chemistry Question Bank/05_Audit_Reports/2026-08-01_Full_Question_Bank_Audit/Evidence/MHT-CET_2026_Syllabus_Technical.pdf",
+    "role": "scope and XI/XII weighting",
+    "included_in_deployment_package": false
+  },
+  {
+    "source_id": "BAL-XI",
+    "title": "Balbharati Standard XI Chemistry",
+    "reference_path": "../../MHT-CET Chemistry Question Bank/05_Audit_Reports/2026-08-01_Full_Question_Bank_Audit/Evidence/Balbharati_Std_XI_Chemistry_1103030414.pdf",
+    "role": "prescribed XI content and page locators",
+    "included_in_deployment_package": false
+  },
+  {
+    "source_id": "BAL-XII",
+    "title": "Balbharati Standard XII Chemistry",
+    "reference_path": "../../full_build_v2.0.0/sources/Balbharati_Std_XII_Chemistry_1203030414.pdf",
+    "official_url": "https://books.ebalbharati.in/pdfs/1203030414.pdf",
+    "role": "prescribed XII content and page locators",
+    "included_in_deployment_package": false
+  }
+]

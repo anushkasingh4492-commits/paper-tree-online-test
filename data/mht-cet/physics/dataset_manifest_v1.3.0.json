@@ -1,0 +1,99 @@
+{
+ "release_version": "1.3.0",
+ "dataset": "MHT-CET_Physics_Dataset_with_Figures_v1.3.0.zip",
+ "validation_status": "PASS",
+ "files": {
+  "question_bank_physics_with_figures_v1.3.0.json": {
+   "bytes": 6913468,
+   "sha256": "7be528026119f8a9c5d87335938ad2c71d07fb2302f50519c2d94ee7982de071"
+  },
+  "question_record.schema.json": {
+   "bytes": 3274,
+   "sha256": "4ee3aaa5c219072f35d268e0cf0d0a7ab20b4af1ad570539e206aecf003d5e13"
+  },
+  "generator_blueprint_v1.3.0.json": {
+   "bytes": 2144,
+   "sha256": "2ccbb34e946ef6e298b6788dca69d47be263c6acd45bba020db822deece28f70"
+  },
+  "asset_manifest_v1.3.0.json": {
+   "bytes": 7589,
+   "sha256": "048896137d3c64773dec24b3ba9da8778ef6570ca5bdf00eb3b94c29463bb6e6"
+  },
+  "README_DATASET_v1.3.0.md": {
+   "bytes": 772,
+   "sha256": "c52ca2f73fc31abcfc15392241e188069da85b77bf0291fdffb23464f71a98ed"
+  },
+  "validation_report_v1.3.0.json": {
+   "bytes": 270,
+   "sha256": "588384994fe2d619cb9987722af5f7e435a2345773a021431dde76f4ed2b651f"
+  },
+  "assets/figures/PHY_DIAGRAM_ACCEPTOR_LEVEL_OPTIONS.png": {
+   "bytes": 30441,
+   "sha256": "c7061228ef7798c320e019b9c6026c184f52364c7da498fef1cfc8eb5d3946a5"
+  },
+  "assets/figures/PHY_DIAGRAM_BAND_OCCUPATION_OPTIONS.png": {
+   "bytes": 31012,
+   "sha256": "d686f075235ac3e6a90108d09269f58170cc4475092b05c35955d14e55826277"
+  },
+  "assets/figures/PHY_DIAGRAM_INCLINED_PULL_FBD.png": {
+   "bytes": 28293,
+   "sha256": "49b47071f75ebcfe5311d1e1d582f57c965578255de0fc8737e55cdcad104ddc"
+  },
+  "assets/figures/PHY_DIAGRAM_JUNCTION_DIODE_SYMBOL.png": {
+   "bytes": 28675,
+   "sha256": "6bad81463aa1d16c15f97eedcac7ada6f6725ae080862d786e26c8d5cf2a387b"
+  },
+  "assets/figures/PHY_DIAGRAM_RADIATION_MAGNETIC_FIELD.png": {
+   "bytes": 35713,
+   "sha256": "65769c9c3db4a5d9830ab29caafa23e0d4abaca3c6a853300d6021aac1cd87b4"
+  },
+  "assets/figures/PHY_DIAGRAM_STREAMLINE_CROWDING.png": {
+   "bytes": 31802,
+   "sha256": "77658cb6a4c3eb8f82d125ceaf16e5804cfab82ef8c5ea5604e04eca5d01899f"
+  },
+  "assets/figures/PHY_DIAGRAM_UNIFORM_FIELD_OPTIONS.png": {
+   "bytes": 29824,
+   "sha256": "598d1f28e6b52e7b5684b3498240458d97153fc0392e46d435f8713f8eebc1bf"
+  },
+  "assets/figures/PHY_DIAGRAM_UNIFORM_FIELD_OPTIONS_STD11.png": {
+   "bytes": 28518,
+   "sha256": "30a245685f92f3625637b2bea35607c6652320c79d018057b05f299d641b97eb"
+  },
+  "assets/figures/PHY_GRAPH_BINDING_ENERGY_CURVE.png": {
+   "bytes": 39857,
+   "sha256": "fe636ad4a859054be162c4fe322c055f53b0024e8772facdd9a23279433857e8"
+  },
+  "assets/figures/PHY_GRAPH_FORCE_TIME_TRIANGLE.png": {
+   "bytes": 29274,
+   "sha256": "3c511870416b1c3c729390009e2ec2b9ad17caf06ff4b2d87921f989ee157172"
+  },
+  "assets/figures/PHY_GRAPH_PHOTOELECTRIC_FREQUENCY.png": {
+   "bytes": 34071,
+   "sha256": "e4b7a2cf2b541b458cdd4852530240993bbcdc07a5978141b4cbc7f37aa73fcd"
+  },
+  "assets/figures/PHY_GRAPH_PHOTOELECTRIC_INTENSITY.png": {
+   "bytes": 38000,
+   "sha256": "d7a9d0cc6dc0f4e8f3954918fa279b642ab26209b166f2406e937cc1e14e09b3"
+  },
+  "assets/figures/PHY_GRAPH_PRISM_DEVIATION.png": {
+   "bytes": 27449,
+   "sha256": "180e8cd6698ab662c66a5c69a16ea89f071bb3555e8eda60ee9207c8b984fcaf"
+  },
+  "assets/figures/PHY_GRAPH_PROGRESSIVE_WAVE_SNAPSHOT.png": {
+   "bytes": 41150,
+   "sha256": "5e7c5d6fa8972e135c9ddd6f3abfabbf72c3333329a9d6c399975e0cd8faac1c"
+  },
+  "assets/figures/PHY_GRAPH_PV_ISOTHERMAL_ADIABATIC.png": {
+   "bytes": 31999,
+   "sha256": "3cc4bee96eaedd641cd73d3f104a1fc99e51b80427b31014aafbc7df35141e15"
+  },
+  "assets/figures/PHY_GRAPH_PV_TRIANGULAR_CYCLE.png": {
+   "bytes": 33552,
+   "sha256": "2ca296ca7812f26008fc2b1a10debfa062afa14b79f3f586ed3a91988014771e"
+  },
+  "assets/figures/PHY_GRAPH_TEMPERATURE_TIME_LIQUIDS.png": {
+   "bytes": 27923,
+   "sha256": "b85f32d9b3c87df28e20b92475ace3e5d92ebda44d14d6796d7d0840f24a64b0"
+  }
+ }
+}

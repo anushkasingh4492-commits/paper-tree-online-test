@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "questions": 2120,
+  "assets": 44,
+  "figure_linked_questions": 82,
+  "difficulty": {
+    "Easy": 534,
+    "Medium": 853,
+    "Hard": 524,
+    "Challenging": 209
+  },
+  "answer_key": {
+    "B": 530,
+    "A": 530,
+    "D": 530,
+    "C": 530
+  },
+  "generator_seeds_tested": 100,
+  "generator_failures": 0,
+  "papers_with_duplicate_option_sets": 0,
+  "errors": []
+}

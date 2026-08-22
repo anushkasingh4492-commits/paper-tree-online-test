@@ -1,0 +1,215 @@
+{
+ "release_version": "1.3.0",
+ "asset_count": 17,
+ "question_count_with_assets": 20,
+ "style": "Original monochrome MHT-CET-style technical line art; 1800x1200 PNG at 300 dpi.",
+ "assets": [
+  {
+   "file": "assets/figures/PHY_DIAGRAM_ACCEPTOR_LEVEL_OPTIONS.png",
+   "format": "PNG",
+   "width_px": 1800,
+   "height_px": 1200,
+   "dpi": 300,
+   "sha256": "c7061228ef7798c320e019b9c6026c184f52364c7da498fef1cfc8eb5d3946a5",
+   "used_by": [
+    "PHY-11-CH14-0067"
+   ],
+   "alt_text": "Four answer-option band diagrams placing an acceptor level near the conduction band, near the valence band, mid-gap, or inside the conduction band."
+  },
+  {
+   "file": "assets/figures/PHY_DIAGRAM_BAND_OCCUPATION_OPTIONS.png",
+   "format": "PNG",
+   "width_px": 1800,
+   "height_px": 1200,
+   "dpi": 300,
+   "sha256": "d686f075235ac3e6a90108d09269f58170cc4475092b05c35955d14e55826277",
+   "used_by": [
+    "PHY-11-CH14-0025"
+   ],
+   "alt_text": "Four answer-option energy-band diagrams showing different valence-band and conduction-band occupations."
+  },
+  {
+   "file": "assets/figures/PHY_DIAGRAM_INCLINED_PULL_FBD.png",
+   "format": "PNG",
+   "width_px": 1800,
+   "height_px": 1200,
+   "dpi": 300,
+   "sha256": "49b47071f75ebcfe5311d1e1d582f57c965578255de0fc8737e55cdcad104ddc",
+   "used_by": [
+    "PHY-11-CH04-0068"
+   ],
+   "alt_text": "Free-body diagram of a block on a rough horizontal floor with weight downward, normal upward, friction left, and rope tension inclined upward to the right."
+  },
+  {
+   "file": "assets/figures/PHY_DIAGRAM_JUNCTION_DIODE_SYMBOL.png",
+   "format": "PNG",
+   "width_px": 1800,
+   "height_px": 1200,
+   "dpi": 300,
+   "sha256": "6bad81463aa1d16c15f97eedcac7ada6f6725ae080862d786e26c8d5cf2a387b",
+   "used_by": [
+    "PHY-11-CH14-0106"
+   ],
+   "alt_text": "Circuit symbol of a p-n junction diode showing its arrowhead-shaped side pointing toward a vertical bar."
+  },
+  {
+   "file": "assets/figures/PHY_DIAGRAM_RADIATION_MAGNETIC_FIELD.png",
+   "format": "PNG",
+   "width_px": 1800,
+   "height_px": 1200,
+   "dpi": 300,
+   "sha256": "65769c9c3db4a5d9830ab29caafa23e0d4abaca3c6a853300d6021aac1cd87b4",
+   "used_by": [
+    "PHY-12-CH15-0118"
+   ],
+   "alt_text": "A mixed alpha, beta and gamma beam entering a uniform magnetic field directed into the page."
+  },
+  {
+   "file": "assets/figures/PHY_DIAGRAM_STREAMLINE_CROWDING.png",
+   "format": "PNG",
+   "width_px": 1800,
+   "height_px": 1200,
+   "dpi": 300,
+   "sha256": "77658cb6a4c3eb8f82d125ceaf16e5804cfab82ef8c5ea5604e04eca5d01899f",
+   "used_by": [
+    "PHY-12-CH02-0106"
+   ],
+   "alt_text": "Streamlines passing from a wide section into a narrow section, becoming more closely spaced in the narrow region."
+  },
+  {
+   "file": "assets/figures/PHY_DIAGRAM_UNIFORM_FIELD_OPTIONS.png",
+   "format": "PNG",
+   "width_px": 1800,
+   "height_px": 1200,
+   "dpi": 300,
+   "sha256": "598d1f28e6b52e7b5684b3498240458d97153fc0392e46d435f8713f8eebc1bf",
+   "used_by": [
+    "PHY-12-CH08-0021"
+   ],
+   "alt_text": "Four answer-option panels showing radial lines, equally spaced parallel lines, concentric circles, and straight lines that crowd together."
+  },
+  {
+   "file": "assets/figures/PHY_DIAGRAM_UNIFORM_FIELD_OPTIONS_STD11.png",
+   "format": "PNG",
+   "width_px": 1800,
+   "height_px": 1200,
+   "dpi": 300,
+   "sha256": "30a245685f92f3625637b2bea35607c6652320c79d018057b05f299d641b97eb",
+   "used_by": [
+    "PHY-11-CH10-0054"
+   ],
+   "alt_text": "Four answer-option panels showing straight lines that crowd together, radial lines, equally spaced parallel lines, and equally spaced curved lines."
+  },
+  {
+   "file": "assets/figures/PHY_GRAPH_BINDING_ENERGY_CURVE.png",
+   "format": "PNG",
+   "width_px": 1800,
+   "height_px": 1200,
+   "dpi": 300,
+   "sha256": "fe636ad4a859054be162c4fe322c055f53b0024e8772facdd9a23279433857e8",
+   "used_by": [
+    "PHY-12-CH15-0089",
+    "PHY-12-CH15-0090",
+    "PHY-12-CH15-0103",
+    "PHY-12-CH15-0104"
+   ],
+   "alt_text": "Binding energy per nucleon rises rapidly for light nuclei, peaks near mass number 56 at about 8.8 MeV, and falls slowly for heavy nuclei."
+  },
+  {
+   "file": "assets/figures/PHY_GRAPH_FORCE_TIME_TRIANGLE.png",
+   "format": "PNG",
+   "width_px": 1800,
+   "height_px": 1200,
+   "dpi": 300,
+   "sha256": "3c511870416b1c3c729390009e2ec2b9ad17caf06ff4b2d87921f989ee157172",
+   "used_by": [
+    "PHY-11-CH04-0035"
+   ],
+   "alt_text": "Triangular force-time graph rising from 0 N at 0 s to 20 N at 0.2 s and returning to 0 N at 0.4 s."
+  },
+  {
+   "file": "assets/figures/PHY_GRAPH_PHOTOELECTRIC_FREQUENCY.png",
+   "format": "PNG",
+   "width_px": 1800,
+   "height_px": 1200,
+   "dpi": 300,
+   "sha256": "e4b7a2cf2b541b458cdd4852530240993bbcdc07a5978141b4cbc7f37aa73fcd",
+   "used_by": [
+    "PHY-12-CH14-0070"
+   ],
+   "alt_text": "Two photocurrent-versus-collector-potential curves with equal saturation current; the higher-frequency curve has the more negative stopping potential."
+  },
+  {
+   "file": "assets/figures/PHY_GRAPH_PHOTOELECTRIC_INTENSITY.png",
+   "format": "PNG",
+   "width_px": 1800,
+   "height_px": 1200,
+   "dpi": 300,
+   "sha256": "d7a9d0cc6dc0f4e8f3954918fa279b642ab26209b166f2406e937cc1e14e09b3",
+   "used_by": [
+    "PHY-12-CH14-0069"
+   ],
+   "alt_text": "Two photocurrent-versus-collector-potential curves with the same stopping potential and different saturation currents for different intensities."
+  },
+  {
+   "file": "assets/figures/PHY_GRAPH_PRISM_DEVIATION.png",
+   "format": "PNG",
+   "width_px": 1800,
+   "height_px": 1200,
+   "dpi": 300,
+   "sha256": "180e8cd6698ab662c66a5c69a16ea89f071bb3555e8eda60ee9207c8b984fcaf",
+   "used_by": [
+    "PHY-11-CH09-0111"
+   ],
+   "alt_text": "U-shaped prism deviation-versus-incidence curve with one minimum and two incidence angles for a deviation above the minimum."
+  },
+  {
+   "file": "assets/figures/PHY_GRAPH_PROGRESSIVE_WAVE_SNAPSHOT.png",
+   "format": "PNG",
+   "width_px": 1800,
+   "height_px": 1200,
+   "dpi": 300,
+   "sha256": "5e7c5d6fa8972e135c9ddd6f3abfabbf72c3333329a9d6c399975e0cd8faac1c",
+   "used_by": [
+    "PHY-11-CH08-0034"
+   ],
+   "alt_text": "Sinusoidal displacement-distance graph with amplitude 4 mm and wavelength 1.7 m."
+  },
+  {
+   "file": "assets/figures/PHY_GRAPH_PV_ISOTHERMAL_ADIABATIC.png",
+   "format": "PNG",
+   "width_px": 1800,
+   "height_px": 1200,
+   "dpi": 300,
+   "sha256": "3cc4bee96eaedd641cd73d3f104a1fc99e51b80427b31014aafbc7df35141e15",
+   "used_by": [
+    "PHY-12-CH04-0068"
+   ],
+   "alt_text": "Two pressure-volume curves X and Y crossing at the same state; curve X is steeper through the crossing."
+  },
+  {
+   "file": "assets/figures/PHY_GRAPH_PV_TRIANGULAR_CYCLE.png",
+   "format": "PNG",
+   "width_px": 1800,
+   "height_px": 1200,
+   "dpi": 300,
+   "sha256": "2ca296ca7812f26008fc2b1a10debfa062afa14b79f3f586ed3a91988014771e",
+   "used_by": [
+    "PHY-12-CH04-0090"
+   ],
+   "alt_text": "Clockwise triangular P-V cycle A to B to C to A with A at (1,1), B at (1,3), and C at (3,1) in the displayed scaled units."
+  },
+  {
+   "file": "assets/figures/PHY_GRAPH_TEMPERATURE_TIME_LIQUIDS.png",
+   "format": "PNG",
+   "width_px": 1800,
+   "height_px": 1200,
+   "dpi": 300,
+   "sha256": "b85f32d9b3c87df28e20b92475ace3e5d92ebda44d14d6796d7d0840f24a64b0",
+   "used_by": [
+    "PHY-11-CH07-0060"
+   ],
+   "alt_text": "Temperature-time graph for liquids X and Y heated identically; line X is steeper than line Y."
+  }
+ ]
+}

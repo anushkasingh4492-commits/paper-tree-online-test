@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "file": "MHT-CET_Biology_Master_Database_v2.1.0.xlsx",
+  "sheets": [
+    "Summary",
+    "Chapter Breakdown",
+    "Question Bank",
+    "Figure Assets",
+    "Test Blueprint"
+  ],
+  "questions": 2120,
+  "assets": 44,
+  "formula_errors": 0,
+  "rendered_sheets": 5,
+  "visual_check": "PASS - all five sheet previews inspected; no blocking clipping or overlap"
+}

@@ -1,0 +1,83 @@
+{
+  "release_version": "2.0.0",
+  "status": "PASS",
+  "question_count": 3040,
+  "checks": [
+    {
+      "check": "total_count",
+      "status": "PASS",
+      "detail": "Expected 3040; found 3040"
+    },
+    {
+      "check": "unique_ids",
+      "status": "PASS",
+      "detail": "Question IDs are unique"
+    },
+    {
+      "check": "unique_stems",
+      "status": "PASS",
+      "detail": "Normalized unique stems 3040/3040; sample duplicates: []"
+    },
+    {
+      "check": "difficulty_enum",
+      "status": "PASS",
+      "detail": "All difficulties are Easy, Medium, Hard or Challenging"
+    },
+    {
+      "check": "options_shape",
+      "status": "PASS",
+      "detail": "Every item has four distinct A-D options; invalid sample: []"
+    },
+    {
+      "check": "answer_integrity",
+      "status": "PASS",
+      "detail": "Every key resolves to correct_answer_text"
+    },
+    {
+      "check": "no_approval_fields",
+      "status": "PASS",
+      "detail": "No approval or review-status fields are present"
+    },
+    {
+      "check": "chapter_counts",
+      "status": "PASS",
+      "detail": "All 26 chapter totals match blueprint: {(11, 1): 64, (11, 4): 64, (11, 5): 64, (11, 6): 64, (11, 8): 64, (11, 10): 64, (11, 11): 64, (11, 14): 64, (11, 15): 64, (11, 16): 64, (12, 1): 150, (12, 2): 150, (12, 3): 150, (12, 4): 150, (12, 5): 150, (12, 6): 150, (12, 7): 150, (12, 8): 150, (12, 9): 150, (12, 10): 150, (12, 11): 150, (12, 12): 150, (12, 13): 150, (12, 14): 150, (12, 15): 150, (12, 16): 150}"
+    },
+    {
+      "check": "global_difficulty",
+      "status": "PASS",
+      "detail": "Difficulty distribution {'Easy': 768, 'Medium': 1220, 'Hard': 752, 'Challenging': 300}"
+    },
+    {
+      "check": "global_option_balance",
+      "status": "PASS",
+      "detail": "Correct-option distribution {'C': 760, 'B': 760, 'D': 760, 'A': 760}"
+    },
+    {
+      "check": "per_chapter_option_balance",
+      "status": "PASS",
+      "detail": "Each chapter differs by at most one among A-D"
+    },
+    {
+      "check": "figure_assets",
+      "status": "PASS",
+      "detail": "23 figure-dependent questions have present assets"
+    },
+    {
+      "check": "numerical_checks",
+      "status": "PASS",
+      "detail": "244 quantitative questions carry PASS calculation checks"
+    },
+    {
+      "check": "source_locators",
+      "status": "PASS",
+      "detail": "Every record has a Balbharati chapter/page locator"
+    },
+    {
+      "check": "generator_flags",
+      "status": "PASS",
+      "detail": "All records enabled for strict CET generation"
+    }
+  ],
+  "findings": []
+}

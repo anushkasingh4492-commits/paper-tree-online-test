@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "MHT-CET_Biology_question_bank_v2.1.0.schema.json",
+  "title": "MHT-CET Biology full repaired bank v2.1.0",
+  "type": "array",
+  "minItems": 2120,
+  "maxItems": 2120,
+  "items": {
+    "$ref": "MHT-CET_Biology_question_record_v2.1.0.schema.json"
+  }
+}

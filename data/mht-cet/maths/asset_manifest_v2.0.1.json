@@ -1,0 +1,1381 @@
+{
+  "release_version": "2.0.1",
+  "asset_count": 71,
+  "assets": [
+    {
+      "question_id": "MATH-11-CH02-0003",
+      "asset_id": "MATH-11-CH02-FIG-003",
+      "type": "line_graph",
+      "spec": {
+        "type": "line_graph",
+        "x1": 3,
+        "y1": 2,
+        "x2": 1,
+        "y2": 6,
+        "alt_text": "Coordinate graph of the line through (3,2) and (1,6)."
+      },
+      "file": "assets/figures/MATH-11-CH02-FIG-003.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Coordinate graph of the line through (3,2) and (1,6).",
+      "required_for_question": true,
+      "bytes": 31373,
+      "sha256": "0d50c61e5088851a921b7b5340099e9451a8e85b94d1d7c06f47c988d3f0e387"
+    },
+    {
+      "question_id": "MATH-11-CH02-0024",
+      "asset_id": "MATH-11-CH02-FIG-024",
+      "type": "line_graph",
+      "spec": {
+        "type": "line_graph",
+        "x1": 3,
+        "y1": 1,
+        "x2": 1,
+        "y2": 7,
+        "alt_text": "Coordinate graph of the line through (3,1) and (1,7)."
+      },
+      "file": "assets/figures/MATH-11-CH02-FIG-024.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Coordinate graph of the line through (3,1) and (1,7).",
+      "required_for_question": true,
+      "bytes": 30839,
+      "sha256": "aa8a32047d006ecf3e73c20aac17341d650709a4891091d8e612408acd95d77a"
+    },
+    {
+      "question_id": "MATH-11-CH02-0058",
+      "asset_id": "MATH-11-CH02-FIG-058",
+      "type": "line_graph",
+      "spec": {
+        "type": "line_graph",
+        "x1": 3,
+        "y1": 4,
+        "x2": -6,
+        "y2": -32,
+        "alt_text": "Coordinate graph of the line through (3,4) and (-6,-32)."
+      },
+      "file": "assets/figures/MATH-11-CH02-FIG-058.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Coordinate graph of the line through (3,4) and (-6,-32).",
+      "required_for_question": true,
+      "bytes": 38147,
+      "sha256": "5843e9023684f63e3c11c2a36b1192887693f77fd262cd408ce8062cff100b0e"
+    },
+    {
+      "question_id": "MATH-11-CH03-0025",
+      "asset_id": "MATH-11-CH03-FIG-025",
+      "type": "circle_tangent",
+      "spec": {
+        "type": "circle_tangent",
+        "h": 0,
+        "k": 0,
+        "r": 16,
+        "x": 16,
+        "y": 0,
+        "alt_text": "Circle centered at the origin with tangent at (16,0)."
+      },
+      "file": "assets/figures/MATH-11-CH03-FIG-025.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Circle centered at the origin with tangent at (16,0).",
+      "required_for_question": true,
+      "bytes": 40061,
+      "sha256": "2f5dfd339f063cb3b5bec3fdb9ac9ad1b2a1bb11ab7bc902683a84ba2a7a39d6"
+    },
+    {
+      "question_id": "MATH-11-CH03-0050",
+      "asset_id": "MATH-11-CH03-FIG-050",
+      "type": "circle_tangent",
+      "spec": {
+        "type": "circle_tangent",
+        "h": 0,
+        "k": 0,
+        "r": 53,
+        "x": 53,
+        "y": 0,
+        "alt_text": "Circle centered at the origin with tangent at (53,0)."
+      },
+      "file": "assets/figures/MATH-11-CH03-FIG-050.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Circle centered at the origin with tangent at (53,0).",
+      "required_for_question": true,
+      "bytes": 42133,
+      "sha256": "eef2fa31c90e33ca0a36bc8b260525c725ec0c638f08467c8e4ef19d7a9f6e36"
+    },
+    {
+      "question_id": "MATH-11-CH03-0076",
+      "asset_id": "MATH-11-CH03-FIG-076",
+      "type": "circle_tangent",
+      "spec": {
+        "type": "circle_tangent",
+        "h": 0,
+        "k": 0,
+        "r": 59,
+        "x": 59,
+        "y": 0,
+        "alt_text": "Circle centered at the origin with tangent at (59,0)."
+      },
+      "file": "assets/figures/MATH-11-CH03-FIG-076.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Circle centered at the origin with tangent at (59,0).",
+      "required_for_question": true,
+      "bytes": 44165,
+      "sha256": "dec9f650225059c6fcfc3060dfa9563f7237747c197d860b90f4e3b29b0c8f9d"
+    },
+    {
+      "question_id": "MATH-11-CH03-0096",
+      "asset_id": "MATH-11-CH03-FIG-096",
+      "type": "circle_tangent",
+      "spec": {
+        "type": "circle_tangent",
+        "h": 0,
+        "k": 0,
+        "r": 18,
+        "x": 18,
+        "y": 0,
+        "alt_text": "Circle centered at the origin with tangent at (18,0)."
+      },
+      "file": "assets/figures/MATH-11-CH03-FIG-096.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Circle centered at the origin with tangent at (18,0).",
+      "required_for_question": true,
+      "bytes": 38623,
+      "sha256": "a373283c24a0c434cbf0aa30b4fa70fee415b80b05fd671b69517e3fef14dc06"
+    },
+    {
+      "question_id": "MATH-11-CH08-0069",
+      "asset_id": "MATH-11-CH08-FIG-069",
+      "type": "parabola",
+      "spec": {
+        "type": "parabola",
+        "h": -4,
+        "k": -1,
+        "a": 1,
+        "alt_text": "Graph of the parabola y=(x+4) squared minus 1, with vertex (-4,-1)."
+      },
+      "file": "assets/figures/MATH-11-CH08-FIG-069.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Graph of the parabola y=(x+4) squared minus 1, with vertex (-4,-1).",
+      "required_for_question": true,
+      "bytes": 25476,
+      "sha256": "60d1184d0f7e9999f0e8dfcc5bc813136d1671fb227cd873d6638c5b507db26f"
+    },
+    {
+      "question_id": "MATH-11-CH08-0085",
+      "asset_id": "MATH-11-CH08-FIG-085",
+      "type": "parabola",
+      "spec": {
+        "type": "parabola",
+        "h": 2,
+        "k": -4,
+        "a": 1,
+        "alt_text": "Graph of the parabola y=(x-2) squared minus 4, with vertex (2,-4)."
+      },
+      "file": "assets/figures/MATH-11-CH08-FIG-085.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Graph of the parabola y=(x-2) squared minus 4, with vertex (2,-4).",
+      "required_for_question": true,
+      "bytes": 25983,
+      "sha256": "df59b0751ce4b0524c5f9bbd2b562fc6657b75a9b65eb6eeb4b476b86a72be83"
+    },
+    {
+      "question_id": "MATH-11-CH08-0095",
+      "asset_id": "MATH-11-CH08-FIG-095",
+      "type": "parabola",
+      "spec": {
+        "type": "parabola",
+        "h": -4,
+        "k": 2,
+        "a": 1,
+        "alt_text": "Graph of the parabola y=(x+4) squared plus 2, with vertex (-4,2)."
+      },
+      "file": "assets/figures/MATH-11-CH08-FIG-095.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Graph of the parabola y=(x+4) squared plus 2, with vertex (-4,2).",
+      "required_for_question": true,
+      "bytes": 25464,
+      "sha256": "e4502642c9ce6c764ac9f5a588437cceb991257c0a4c35b68de6e6f3f853a225"
+    },
+    {
+      "question_id": "MATH-11-CH10-0062",
+      "asset_id": "MATH-11-CH10-FIG-062",
+      "type": "absolute_value",
+      "spec": {
+        "type": "absolute_value",
+        "h": 3,
+        "k": 0,
+        "alt_text": "V-shaped graph of y equal to the absolute value of x-3, with vertex (3,0)."
+      },
+      "file": "assets/figures/MATH-11-CH10-FIG-062.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "V-shaped graph of y equal to the absolute value of x-3, with vertex (3,0).",
+      "required_for_question": true,
+      "bytes": 31419,
+      "sha256": "d7f2888d43f7485e613d68047240f357fcf940a380ccc36d77ecd1cb1b068e1e"
+    },
+    {
+      "question_id": "MATH-11-CH10-0070",
+      "asset_id": "MATH-11-CH10-FIG-070",
+      "type": "absolute_value",
+      "spec": {
+        "type": "absolute_value",
+        "h": -6,
+        "k": 0,
+        "alt_text": "V-shaped graph of y equal to the absolute value of x+6, with vertex (-6,0)."
+      },
+      "file": "assets/figures/MATH-11-CH10-FIG-070.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "V-shaped graph of y equal to the absolute value of x+6, with vertex (-6,0).",
+      "required_for_question": true,
+      "bytes": 34235,
+      "sha256": "a7a6b8854e68b8c532b0e330adb787e0728fc346e59a7cf84b1436270809824c"
+    },
+    {
+      "question_id": "MATH-11-CH10-0088",
+      "asset_id": "MATH-11-CH10-FIG-088",
+      "type": "absolute_value",
+      "spec": {
+        "type": "absolute_value",
+        "h": 5,
+        "k": 0,
+        "alt_text": "V-shaped graph of y equal to the absolute value of x-5, with vertex (5,0)."
+      },
+      "file": "assets/figures/MATH-11-CH10-FIG-088.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "V-shaped graph of y equal to the absolute value of x-5, with vertex (5,0).",
+      "required_for_question": true,
+      "bytes": 33846,
+      "sha256": "5e4e4cf77f78d93e70ea4e8f80799e2b3a0839b192fd59209ca0ee992951ebc1"
+    },
+    {
+      "question_id": "MATH-12-CH01-0113",
+      "asset_id": "MATH-12-CH01-FIG-001",
+      "type": "switching_circuit",
+      "spec": "SER(S(\"p\"), S(\"~q\"))",
+      "file": "assets/figures/MATH-12-CH01-FIG-001.png",
+      "generator": "release build: code-native circuit renderer",
+      "alt_text": "A switching circuit between terminals L and M consisting of (switch p in series with switch not q).",
+      "required_for_question": true,
+      "width_px": 1800,
+      "height_px": 1000,
+      "dpi": 300,
+      "bytes": 10027,
+      "sha256": "f7f08de427a6ad3fba8cb8a57f7f25268dc9bfefec3213bb182c6528a11dcb27"
+    },
+    {
+      "question_id": "MATH-12-CH01-0114",
+      "asset_id": "MATH-12-CH01-FIG-002",
+      "type": "switching_circuit",
+      "spec": "PAR(S(\"p\"), SER(S(\"q\"), S(\"~p\")))",
+      "file": "assets/figures/MATH-12-CH01-FIG-002.png",
+      "generator": "release build: code-native circuit renderer",
+      "alt_text": "A switching circuit between terminals L and M consisting of (switch p in parallel with (switch q in series with switch not p)).",
+      "required_for_question": true,
+      "width_px": 1800,
+      "height_px": 1000,
+      "dpi": 300,
+      "bytes": 11143,
+      "sha256": "f8e9720be83bd7d76f5ba45dd12282868d570966eb2b56fb47ff1b6257f2261d"
+    },
+    {
+      "question_id": "MATH-12-CH01-0115",
+      "asset_id": "MATH-12-CH01-FIG-003",
+      "type": "switching_circuit",
+      "spec": "SER(PAR(S(\"p\"), S(\"q\")), PAR(S(\"~p\"), S(\"r\")))",
+      "file": "assets/figures/MATH-12-CH01-FIG-003.png",
+      "generator": "release build: code-native circuit renderer",
+      "alt_text": "A switching circuit between terminals L and M consisting of ((switch p in parallel with switch q) in series with (switch not p in parallel with switch r)).",
+      "required_for_question": true,
+      "width_px": 1800,
+      "height_px": 1000,
+      "dpi": 300,
+      "bytes": 10982,
+      "sha256": "dd0c9b6c7d96588073be1b336b9e1ad4c0684ae4c5c899a14074733c991240c9"
+    },
+    {
+      "question_id": "MATH-12-CH01-0116",
+      "asset_id": "MATH-12-CH01-FIG-004",
+      "type": "switching_circuit",
+      "spec": "PAR(SER(S(\"p\"), S(\"q\")), SER(S(\"~p\"), S(\"~q\")))",
+      "file": "assets/figures/MATH-12-CH01-FIG-004.png",
+      "generator": "release build: code-native circuit renderer",
+      "alt_text": "A switching circuit between terminals L and M consisting of ((switch p in series with switch q) in parallel with (switch not p in series with switch not q)).",
+      "required_for_question": true,
+      "width_px": 1800,
+      "height_px": 1000,
+      "dpi": 300,
+      "bytes": 11903,
+      "sha256": "3022ef686b1a9c83dbc10eb9d8c02e21992cdd237ad7f6542b8bd1554ef0992a"
+    },
+    {
+      "question_id": "MATH-12-CH01-0117",
+      "asset_id": "MATH-12-CH01-FIG-005",
+      "type": "switching_circuit",
+      "spec": "PAR(SER(S(\"p\"), S(\"q\")), SER(S(\"p\"), S(\"~q\")))",
+      "file": "assets/figures/MATH-12-CH01-FIG-005.png",
+      "generator": "release build: code-native circuit renderer",
+      "alt_text": "A switching circuit between terminals L and M consisting of ((switch p in series with switch q) in parallel with (switch p in series with switch not q)).",
+      "required_for_question": true,
+      "width_px": 1800,
+      "height_px": 1000,
+      "dpi": 300,
+      "bytes": 11900,
+      "sha256": "fca8b7ea10ab23b26462ce2e527cbac7437ee5942fd5e81d412ec41ee12c8928"
+    },
+    {
+      "question_id": "MATH-12-CH01-0118",
+      "asset_id": "MATH-12-CH01-FIG-006",
+      "type": "switching_circuit",
+      "spec": "SER(S(\"p\"), PAR(S(\"~p\"), S(\"q\")))",
+      "file": "assets/figures/MATH-12-CH01-FIG-006.png",
+      "generator": "release build: code-native circuit renderer",
+      "alt_text": "A switching circuit between terminals L and M consisting of (switch p in series with (switch not p in parallel with switch q)).",
+      "required_for_question": true,
+      "width_px": 1800,
+      "height_px": 1000,
+      "dpi": 300,
+      "bytes": 11292,
+      "sha256": "f93d572051753362ab4ebb2b60f53947e359825281d9c810099d6162953d87b1"
+    },
+    {
+      "question_id": "MATH-12-CH01-0119",
+      "asset_id": "MATH-12-CH01-FIG-007",
+      "type": "switching_circuit",
+      "spec": "PAR(SER(S(\"p\"), S(\"q\")), SER(S(\"q\"), S(\"r\")))",
+      "file": "assets/figures/MATH-12-CH01-FIG-007.png",
+      "generator": "release build: code-native circuit renderer",
+      "alt_text": "A switching circuit between terminals L and M consisting of ((switch p in series with switch q) in parallel with (switch q in series with switch r)).",
+      "required_for_question": true,
+      "width_px": 1800,
+      "height_px": 1000,
+      "dpi": 300,
+      "bytes": 11452,
+      "sha256": "28e0489162203c67377e60683a608f7dd43ed7da0a7260c2c524138580fc0010"
+    },
+    {
+      "question_id": "MATH-12-CH01-0120",
+      "asset_id": "MATH-12-CH01-FIG-008",
+      "type": "switching_circuit",
+      "spec": "PAR(SER(S(\"p\"), S(\"q\")), SER(S(\"~p\"), S(\"q\")), SER(S(\"~p\"), S(\"~q\")))",
+      "file": "assets/figures/MATH-12-CH01-FIG-008.png",
+      "generator": "release build: code-native circuit renderer",
+      "alt_text": "A switching circuit between terminals L and M consisting of ((switch p in series with switch q) in parallel with (switch not p in series with switch q) in parallel with (switch not p in series with switch not q)).",
+      "required_for_question": true,
+      "width_px": 1800,
+      "height_px": 1000,
+      "dpi": 300,
+      "bytes": 13614,
+      "sha256": "6965dc23c9e0f754f22506a115af08f77b2bd7c7084022afaad51de6142635d4"
+    },
+    {
+      "question_id": "MATH-12-CH01-0121",
+      "asset_id": "MATH-12-CH01-FIG-009",
+      "type": "switching_circuit",
+      "spec": "PAR(SER(S(\"p\"), S(\"q\")), S(\"~p\"), S(\"~q\"))",
+      "file": "assets/figures/MATH-12-CH01-FIG-009.png",
+      "generator": "release build: code-native circuit renderer",
+      "alt_text": "A switching circuit between terminals L and M consisting of ((switch p in series with switch q) in parallel with switch not p in parallel with switch not q).",
+      "required_for_question": true,
+      "width_px": 1800,
+      "height_px": 1000,
+      "dpi": 300,
+      "bytes": 12134,
+      "sha256": "8a317ae4e7244d037214d1edc663e0c45ef5f5cb9c0bd77b178c69a57b15e2d3"
+    },
+    {
+      "question_id": "MATH-12-CH01-0122",
+      "asset_id": "MATH-12-CH01-FIG-010",
+      "type": "switching_circuit",
+      "spec": "SER(PAR(S(\"p\"), S(\"q\")), S(\"~p\"), S(\"~q\"))",
+      "file": "assets/figures/MATH-12-CH01-FIG-010.png",
+      "generator": "release build: code-native circuit renderer",
+      "alt_text": "A switching circuit between terminals L and M consisting of ((switch p in parallel with switch q) in series with switch not p in series with switch not q).",
+      "required_for_question": true,
+      "width_px": 1800,
+      "height_px": 1000,
+      "dpi": 300,
+      "bytes": 12021,
+      "sha256": "52d8b754cac7738047ac75bc11fe5b198ba71f43ab84babae9258e7f3d785168"
+    },
+    {
+      "question_id": "MATH-12-CH07-0001",
+      "asset_id": "MATH-12-CH07-FIG-001",
+      "type": "linear_programming",
+      "spec": {
+        "type": "linear_programming",
+        "constraints": [
+          [
+            1,
+            0,
+            7
+          ],
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            1,
+            1,
+            8
+          ]
+        ],
+        "alt_text": "Coordinate graph showing three linear constraints and the feasible region in the first quadrant."
+      },
+      "file": "assets/figures/MATH-12-CH07-FIG-001.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Coordinate graph showing three linear constraints and the feasible region in the first quadrant.",
+      "required_for_question": true,
+      "bytes": 38538,
+      "sha256": "ff6c9d682d3f2385488271cf1211216e3f12e587c44011823c98022bbcee1fd0"
+    },
+    {
+      "question_id": "MATH-12-CH07-0007",
+      "asset_id": "MATH-12-CH07-FIG-007",
+      "type": "linear_programming",
+      "spec": {
+        "type": "linear_programming",
+        "constraints": [
+          [
+            1,
+            0,
+            2
+          ],
+          [
+            0,
+            1,
+            5
+          ],
+          [
+            1,
+            1,
+            6
+          ]
+        ],
+        "alt_text": "Coordinate graph showing three linear constraints and the feasible region in the first quadrant."
+      },
+      "file": "assets/figures/MATH-12-CH07-FIG-007.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Coordinate graph showing three linear constraints and the feasible region in the first quadrant.",
+      "required_for_question": true,
+      "bytes": 35510,
+      "sha256": "95a6c68b22d584da0b026b1949b35d079abf87b3a760856b62435883371f53b3"
+    },
+    {
+      "question_id": "MATH-12-CH07-0013",
+      "asset_id": "MATH-12-CH07-FIG-013",
+      "type": "linear_programming",
+      "spec": {
+        "type": "linear_programming",
+        "constraints": [
+          [
+            1,
+            0,
+            6
+          ],
+          [
+            0,
+            1,
+            5
+          ],
+          [
+            1,
+            1,
+            7
+          ]
+        ],
+        "alt_text": "Coordinate graph showing three linear constraints and the feasible region in the first quadrant."
+      },
+      "file": "assets/figures/MATH-12-CH07-FIG-013.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Coordinate graph showing three linear constraints and the feasible region in the first quadrant.",
+      "required_for_question": true,
+      "bytes": 37426,
+      "sha256": "1971a4b99f8ff28d162ef04a9f402996952a8eda8ed420f0a7139db9bf2c861f"
+    },
+    {
+      "question_id": "MATH-12-CH07-0019",
+      "asset_id": "MATH-12-CH07-FIG-019",
+      "type": "linear_programming",
+      "spec": {
+        "type": "linear_programming",
+        "constraints": [
+          [
+            1,
+            0,
+            3
+          ],
+          [
+            0,
+            1,
+            5
+          ],
+          [
+            1,
+            1,
+            6
+          ]
+        ],
+        "alt_text": "Coordinate graph showing three linear constraints and the feasible region in the first quadrant."
+      },
+      "file": "assets/figures/MATH-12-CH07-FIG-019.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Coordinate graph showing three linear constraints and the feasible region in the first quadrant.",
+      "required_for_question": true,
+      "bytes": 36047,
+      "sha256": "7623c361db18af4662c1cd21bb69edd0b71c88be48b08592d098fdcf571433c6"
+    },
+    {
+      "question_id": "MATH-12-CH07-0020",
+      "asset_id": "MATH-12-CH07-FIG-020",
+      "type": "feasible_polygon",
+      "spec": {
+        "type": "feasible_polygon",
+        "vertices": [
+          [
+            0,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "alt_text": "First-quadrant feasible polygon with its corner points marked."
+      },
+      "file": "assets/figures/MATH-12-CH07-FIG-020.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "First-quadrant feasible polygon with its corner points marked.",
+      "required_for_question": true,
+      "bytes": 29022,
+      "sha256": "594527b8844d4dd0ab34a814a672edebcf99cd4d7855584eb91059919114dc8a"
+    },
+    {
+      "question_id": "MATH-12-CH07-0021",
+      "asset_id": "MATH-12-CH07-FIG-021",
+      "type": "linear_constraint",
+      "spec": {
+        "type": "linear_constraint",
+        "a": 7,
+        "b": 6,
+        "shade": "below",
+        "alt_text": "Graph of the line x/7 plus y/6 equals 1, with the half-plane containing the origin shaded."
+      },
+      "file": "assets/figures/MATH-12-CH07-FIG-021.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Graph of the line x/7 plus y/6 equals 1, with the half-plane containing the origin shaded.",
+      "required_for_question": true,
+      "bytes": 28875,
+      "sha256": "c1f65137bc5f07e758036722ed888d4dc118947a1e725f310f20b46dcdae25e6"
+    },
+    {
+      "question_id": "MATH-12-CH07-0025",
+      "asset_id": "MATH-12-CH07-FIG-025",
+      "type": "linear_constraint",
+      "spec": {
+        "type": "linear_constraint",
+        "a": 4,
+        "b": 3,
+        "shade": "below",
+        "alt_text": "Graph of the line x/4 plus y/3 equals 1, with the half-plane containing the origin shaded."
+      },
+      "file": "assets/figures/MATH-12-CH07-FIG-025.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Graph of the line x/4 plus y/3 equals 1, with the half-plane containing the origin shaded.",
+      "required_for_question": true,
+      "bytes": 28563,
+      "sha256": "9c11c9684c47f5df7c06a571f7da27f652e228f41062aacd80ea5b9eca4830e5"
+    },
+    {
+      "question_id": "MATH-12-CH07-0029",
+      "asset_id": "MATH-12-CH07-FIG-029",
+      "type": "linear_constraint",
+      "spec": {
+        "type": "linear_constraint",
+        "a": 5,
+        "b": 5,
+        "shade": "below",
+        "alt_text": "Graph of the line x/5 plus y/5 equals 1, with the half-plane containing the origin shaded."
+      },
+      "file": "assets/figures/MATH-12-CH07-FIG-029.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Graph of the line x/5 plus y/5 equals 1, with the half-plane containing the origin shaded.",
+      "required_for_question": true,
+      "bytes": 31037,
+      "sha256": "d12f2661f277b72ab97fe6f64bed43813cf8630440a53858d6e4f2d61858f2ae"
+    },
+    {
+      "question_id": "MATH-12-CH07-0031",
+      "asset_id": "MATH-12-CH07-FIG-031",
+      "type": "linear_programming",
+      "spec": {
+        "type": "linear_programming",
+        "constraints": [
+          [
+            1,
+            0,
+            5
+          ],
+          [
+            0,
+            1,
+            6
+          ],
+          [
+            1,
+            1,
+            7
+          ]
+        ],
+        "alt_text": "Coordinate graph showing three linear constraints and the feasible region in the first quadrant."
+      },
+      "file": "assets/figures/MATH-12-CH07-FIG-031.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Coordinate graph showing three linear constraints and the feasible region in the first quadrant.",
+      "required_for_question": true,
+      "bytes": 36363,
+      "sha256": "aeb381af30327b573f6eae5e95640509b23cacd71e712f091c5a6f970adb7da9"
+    },
+    {
+      "question_id": "MATH-12-CH07-0032",
+      "asset_id": "MATH-12-CH07-FIG-032",
+      "type": "feasible_polygon",
+      "spec": {
+        "type": "feasible_polygon",
+        "vertices": [
+          [
+            0,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "alt_text": "First-quadrant feasible polygon with its corner points marked."
+      },
+      "file": "assets/figures/MATH-12-CH07-FIG-032.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "First-quadrant feasible polygon with its corner points marked.",
+      "required_for_question": true,
+      "bytes": 29022,
+      "sha256": "594527b8844d4dd0ab34a814a672edebcf99cd4d7855584eb91059919114dc8a"
+    },
+    {
+      "question_id": "MATH-12-CH07-0033",
+      "asset_id": "MATH-12-CH07-FIG-033",
+      "type": "linear_constraint",
+      "spec": {
+        "type": "linear_constraint",
+        "a": 4,
+        "b": 7,
+        "shade": "below",
+        "alt_text": "Graph of the line x/4 plus y/7 equals 1, with the half-plane containing the origin shaded."
+      },
+      "file": "assets/figures/MATH-12-CH07-FIG-033.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Graph of the line x/4 plus y/7 equals 1, with the half-plane containing the origin shaded.",
+      "required_for_question": true,
+      "bytes": 28499,
+      "sha256": "5809b5b269b94397256ae4b9aed49f35ec36f3693e7c4c75eebbc44593424707"
+    },
+    {
+      "question_id": "MATH-12-CH07-0037",
+      "asset_id": "MATH-12-CH07-FIG-037",
+      "type": "linear_constraint",
+      "spec": {
+        "type": "linear_constraint",
+        "a": 5,
+        "b": 7,
+        "shade": "below",
+        "alt_text": "Graph of the line x/5 plus y/7 equals 1, with the half-plane containing the origin shaded."
+      },
+      "file": "assets/figures/MATH-12-CH07-FIG-037.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Graph of the line x/5 plus y/7 equals 1, with the half-plane containing the origin shaded.",
+      "required_for_question": true,
+      "bytes": 28050,
+      "sha256": "25fcae3a6e13a80b2e643295425b4b9a70ba26c3acdd8702452bd11e64754057"
+    },
+    {
+      "question_id": "MATH-12-CH07-0041",
+      "asset_id": "MATH-12-CH07-FIG-041",
+      "type": "linear_constraint",
+      "spec": {
+        "type": "linear_constraint",
+        "a": 7,
+        "b": 3,
+        "shade": "below",
+        "alt_text": "Graph of the line x/7 plus y/3 equals 1, with the half-plane containing the origin shaded."
+      },
+      "file": "assets/figures/MATH-12-CH07-FIG-041.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Graph of the line x/7 plus y/3 equals 1, with the half-plane containing the origin shaded.",
+      "required_for_question": true,
+      "bytes": 26431,
+      "sha256": "85f62cc7ca61f74c5676c6d344dfbd448a895abc82122cf036d22fd7a9353842"
+    },
+    {
+      "question_id": "MATH-12-CH07-0043",
+      "asset_id": "MATH-12-CH07-FIG-043",
+      "type": "linear_programming",
+      "spec": {
+        "type": "linear_programming",
+        "constraints": [
+          [
+            1,
+            0,
+            6
+          ],
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            1,
+            1,
+            7
+          ]
+        ],
+        "alt_text": "Coordinate graph showing three linear constraints and the feasible region in the first quadrant."
+      },
+      "file": "assets/figures/MATH-12-CH07-FIG-043.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Coordinate graph showing three linear constraints and the feasible region in the first quadrant.",
+      "required_for_question": true,
+      "bytes": 37520,
+      "sha256": "f3aa3165a0f43219cd4230b1c325540e913c95182617817f57ad6287192066f7"
+    },
+    {
+      "question_id": "MATH-12-CH07-0045",
+      "asset_id": "MATH-12-CH07-FIG-045",
+      "type": "linear_constraint",
+      "spec": {
+        "type": "linear_constraint",
+        "a": 4,
+        "b": 6,
+        "shade": "below",
+        "alt_text": "Graph of the line x/4 plus y/6 equals 1, with the half-plane containing the origin shaded."
+      },
+      "file": "assets/figures/MATH-12-CH07-FIG-045.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Graph of the line x/4 plus y/6 equals 1, with the half-plane containing the origin shaded.",
+      "required_for_question": true,
+      "bytes": 32455,
+      "sha256": "ce1a6134e41e4334fcfd2bd39d5a7779520cf06b18085cc2ce3554f40d3c02e9"
+    },
+    {
+      "question_id": "MATH-12-CH07-0049",
+      "asset_id": "MATH-12-CH07-FIG-049",
+      "type": "linear_constraint",
+      "spec": {
+        "type": "linear_constraint",
+        "a": 3,
+        "b": 5,
+        "shade": "below",
+        "alt_text": "Graph of the line x/3 plus y/5 equals 1, with the half-plane containing the origin shaded."
+      },
+      "file": "assets/figures/MATH-12-CH07-FIG-049.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Graph of the line x/3 plus y/5 equals 1, with the half-plane containing the origin shaded.",
+      "required_for_question": true,
+      "bytes": 31335,
+      "sha256": "4e96426e4a8b561339c744c70e785e4b704fc4a15dcc783be6f014ceb7c38157"
+    },
+    {
+      "question_id": "MATH-12-CH07-0053",
+      "asset_id": "MATH-12-CH07-FIG-053",
+      "type": "linear_constraint",
+      "spec": {
+        "type": "linear_constraint",
+        "a": 4,
+        "b": 5,
+        "shade": "below",
+        "alt_text": "Graph of the line x/4 plus y/5 equals 1, with the half-plane containing the origin shaded."
+      },
+      "file": "assets/figures/MATH-12-CH07-FIG-053.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Graph of the line x/4 plus y/5 equals 1, with the half-plane containing the origin shaded.",
+      "required_for_question": true,
+      "bytes": 30741,
+      "sha256": "043af1ec60bd4c8fbf38c2f2eeb177ae9440ff5e007e15dcc18fe237c75cefc5"
+    },
+    {
+      "question_id": "MATH-12-CH07-0056",
+      "asset_id": "MATH-12-CH07-FIG-056",
+      "type": "feasible_polygon",
+      "spec": {
+        "type": "feasible_polygon",
+        "vertices": [
+          [
+            0,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "alt_text": "First-quadrant feasible polygon with its corner points marked."
+      },
+      "file": "assets/figures/MATH-12-CH07-FIG-056.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "First-quadrant feasible polygon with its corner points marked.",
+      "required_for_question": true,
+      "bytes": 29022,
+      "sha256": "594527b8844d4dd0ab34a814a672edebcf99cd4d7855584eb91059919114dc8a"
+    },
+    {
+      "question_id": "MATH-12-CH07-0057",
+      "asset_id": "MATH-12-CH07-FIG-057",
+      "type": "linear_constraint",
+      "spec": {
+        "type": "linear_constraint",
+        "a": 6,
+        "b": 3,
+        "shade": "below",
+        "alt_text": "Graph of the line x/6 plus y/3 equals 1, with the half-plane containing the origin shaded."
+      },
+      "file": "assets/figures/MATH-12-CH07-FIG-057.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Graph of the line x/6 plus y/3 equals 1, with the half-plane containing the origin shaded.",
+      "required_for_question": true,
+      "bytes": 29184,
+      "sha256": "b449bd122d5a8c44fbe7686de964a032f7fb491ccccd2e0105f39648c0f93890"
+    },
+    {
+      "question_id": "MATH-12-CH07-0059",
+      "asset_id": "MATH-12-CH07-FIG-059",
+      "type": "linear_programming",
+      "spec": {
+        "type": "linear_programming",
+        "constraints": [
+          [
+            1,
+            0,
+            6
+          ],
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            1,
+            1,
+            7
+          ]
+        ],
+        "alt_text": "Coordinate graph showing three linear constraints and the feasible region in the first quadrant."
+      },
+      "file": "assets/figures/MATH-12-CH07-FIG-059.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Coordinate graph showing three linear constraints and the feasible region in the first quadrant.",
+      "required_for_question": true,
+      "bytes": 38402,
+      "sha256": "6450efcf79aa7e837557ac51af7fef26b28b219586e636d6c13ec3b90f5f3ad6"
+    },
+    {
+      "question_id": "MATH-12-CH07-0061",
+      "asset_id": "MATH-12-CH07-FIG-061",
+      "type": "linear_constraint",
+      "spec": {
+        "type": "linear_constraint",
+        "a": 6,
+        "b": 4,
+        "shade": "below",
+        "alt_text": "Graph of the line x/6 plus y/4 equals 1, with the half-plane containing the origin shaded."
+      },
+      "file": "assets/figures/MATH-12-CH07-FIG-061.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Graph of the line x/6 plus y/4 equals 1, with the half-plane containing the origin shaded.",
+      "required_for_question": true,
+      "bytes": 31032,
+      "sha256": "6d05b8e1e0e8df8f5636022abea9a0ca2f808eae5ba1ce63b73e48111653465f"
+    },
+    {
+      "question_id": "MATH-12-CH07-0065",
+      "asset_id": "MATH-12-CH07-FIG-065",
+      "type": "linear_constraint",
+      "spec": {
+        "type": "linear_constraint",
+        "a": 3,
+        "b": 7,
+        "shade": "below",
+        "alt_text": "Graph of the line x/3 plus y/7 equals 1, with the half-plane containing the origin shaded."
+      },
+      "file": "assets/figures/MATH-12-CH07-FIG-065.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Graph of the line x/3 plus y/7 equals 1, with the half-plane containing the origin shaded.",
+      "required_for_question": true,
+      "bytes": 29172,
+      "sha256": "3d14f4dad97b60a86e6f2fc99a9e926e0cc4e96c81435b2bb2dc1fac55428755"
+    },
+    {
+      "question_id": "MATH-12-CH07-0069",
+      "asset_id": "MATH-12-CH07-FIG-069",
+      "type": "linear_constraint",
+      "spec": {
+        "type": "linear_constraint",
+        "a": 5,
+        "b": 3,
+        "shade": "below",
+        "alt_text": "Graph of the line x/5 plus y/3 equals 1, with the half-plane containing the origin shaded."
+      },
+      "file": "assets/figures/MATH-12-CH07-FIG-069.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Graph of the line x/5 plus y/3 equals 1, with the half-plane containing the origin shaded.",
+      "required_for_question": true,
+      "bytes": 28606,
+      "sha256": "7b23a3d2807761dd951ceeb979d126300ff2de32f55d5bb618dc3af1f5651e5b"
+    },
+    {
+      "question_id": "MATH-12-CH07-0070",
+      "asset_id": "MATH-12-CH07-FIG-070",
+      "type": "feasible_polygon",
+      "spec": {
+        "type": "feasible_polygon",
+        "vertices": [
+          [
+            0,
+            0
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "alt_text": "First-quadrant feasible polygon with its corner points marked."
+      },
+      "file": "assets/figures/MATH-12-CH07-FIG-070.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "First-quadrant feasible polygon with its corner points marked.",
+      "required_for_question": true,
+      "bytes": 29022,
+      "sha256": "594527b8844d4dd0ab34a814a672edebcf99cd4d7855584eb91059919114dc8a"
+    },
+    {
+      "question_id": "MATH-12-CH07-0073",
+      "asset_id": "MATH-12-CH07-FIG-073",
+      "type": "linear_constraint",
+      "spec": {
+        "type": "linear_constraint",
+        "a": 3,
+        "b": 3,
+        "shade": "below",
+        "alt_text": "Graph of the line x/3 plus y/3 equals 1, with the half-plane containing the origin shaded."
+      },
+      "file": "assets/figures/MATH-12-CH07-FIG-073.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Graph of the line x/3 plus y/3 equals 1, with the half-plane containing the origin shaded.",
+      "required_for_question": true,
+      "bytes": 28245,
+      "sha256": "54de2c8f432f8007e834f820a27476f778a13f44686f8591d5f8541e27227930"
+    },
+    {
+      "question_id": "MATH-12-CH07-0077",
+      "asset_id": "MATH-12-CH07-FIG-077",
+      "type": "linear_constraint",
+      "spec": {
+        "type": "linear_constraint",
+        "a": 6,
+        "b": 5,
+        "shade": "below",
+        "alt_text": "Graph of the line x/6 plus y/5 equals 1, with the half-plane containing the origin shaded."
+      },
+      "file": "assets/figures/MATH-12-CH07-FIG-077.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Graph of the line x/6 plus y/5 equals 1, with the half-plane containing the origin shaded.",
+      "required_for_question": true,
+      "bytes": 32046,
+      "sha256": "738c3e6372f5506288f8bee7c2ee293140da8b434e5f68b7af7199b81ed9ba0d"
+    },
+    {
+      "question_id": "MATH-12-CH07-0081",
+      "asset_id": "MATH-12-CH07-FIG-081",
+      "type": "linear_constraint",
+      "spec": {
+        "type": "linear_constraint",
+        "a": 6,
+        "b": 6,
+        "shade": "below",
+        "alt_text": "Graph of the line x/6 plus y/6 equals 1, with the half-plane containing the origin shaded."
+      },
+      "file": "assets/figures/MATH-12-CH07-FIG-081.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Graph of the line x/6 plus y/6 equals 1, with the half-plane containing the origin shaded.",
+      "required_for_question": true,
+      "bytes": 32432,
+      "sha256": "80dc35ac16e59d1ee058868fc8a5d8a6bdb66ffb7cdbbc8628bb7d312803289e"
+    },
+    {
+      "question_id": "MATH-12-CH11-0143",
+      "asset_id": "MATH-12-CH11-FIG-001",
+      "type": "piecewise_linear_graph",
+      "spec": "MATH-12-CH11-0143",
+      "file": "assets/figures/MATH-12-CH11-FIG-001.png",
+      "generator": "release build: code-native graph renderer",
+      "alt_text": "Graph of f on [0,6] joining (0,0), (2,4), (4,4), and (6,0) by straight line segments.",
+      "required_for_question": true,
+      "width_px": 1800,
+      "height_px": 1200,
+      "dpi": 300,
+      "bytes": 20178,
+      "sha256": "7d2ba906f5b420f5629c0b4a9378030b9d5de719b1b159597b78c120f7f4c8fe"
+    },
+    {
+      "question_id": "MATH-12-CH11-0144",
+      "asset_id": "MATH-12-CH11-FIG-002",
+      "type": "semicircle_graph",
+      "spec": "MATH-12-CH11-0144",
+      "file": "assets/figures/MATH-12-CH11-FIG-002.png",
+      "generator": "release build: code-native graph renderer",
+      "alt_text": "Upper semicircle x squared plus y squared equals 4 on the interval [-2,2].",
+      "required_for_question": true,
+      "width_px": 1800,
+      "height_px": 1200,
+      "dpi": 300,
+      "bytes": 20097,
+      "sha256": "6cb41f1c8012cb41edc27d8e3763b661b172498fa35140c545a3a3596f1e0858"
+    },
+    {
+      "question_id": "MATH-12-CH12-0001",
+      "asset_id": "MATH-12-CH12-FIG-001",
+      "type": "area_triangle",
+      "spec": {
+        "type": "area_triangle",
+        "a": 8,
+        "b": 3,
+        "alt_text": "Coordinate graph of the line through (8,0) and (0,3), with the first-quadrant triangular area shaded."
+      },
+      "file": "assets/figures/MATH-12-CH12-FIG-001.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Coordinate graph of the line through (8,0) and (0,3), with the first-quadrant triangular area shaded.",
+      "required_for_question": true,
+      "bytes": 26818,
+      "sha256": "e228dfa7969d98ee79bf00d62e0d5cef6db2d65a3c9b79c8037c17344a571a9f"
+    },
+    {
+      "question_id": "MATH-12-CH12-0002",
+      "asset_id": "MATH-12-CH12-FIG-002",
+      "type": "area_parabola",
+      "spec": {
+        "type": "area_parabola",
+        "a": 68,
+        "alt_text": "Graph of y=x squared between x=0 and x=68, with the area under the curve shaded."
+      },
+      "file": "assets/figures/MATH-12-CH12-FIG-002.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Graph of y=x squared between x=0 and x=68, with the area under the curve shaded.",
+      "required_for_question": true,
+      "bytes": 31882,
+      "sha256": "acca157470c4162b192ddd2d325ce89fdf6b9357ef7d091e2ecc45ed261df2b9"
+    },
+    {
+      "question_id": "MATH-12-CH12-0008",
+      "asset_id": "MATH-12-CH12-FIG-008",
+      "type": "area_parabola",
+      "spec": {
+        "type": "area_parabola",
+        "a": 70,
+        "alt_text": "Graph of y=x squared between x=0 and x=70, with the area under the curve shaded."
+      },
+      "file": "assets/figures/MATH-12-CH12-FIG-008.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Graph of y=x squared between x=0 and x=70, with the area under the curve shaded.",
+      "required_for_question": true,
+      "bytes": 34036,
+      "sha256": "320ec9aac3a9473652c4b207be9b7b2114eb21910f08ecacb4cb1360cd50b54d"
+    },
+    {
+      "question_id": "MATH-12-CH12-0014",
+      "asset_id": "MATH-12-CH12-FIG-014",
+      "type": "area_parabola",
+      "spec": {
+        "type": "area_parabola",
+        "a": 67,
+        "alt_text": "Graph of y=x squared between x=0 and x=67, with the area under the curve shaded."
+      },
+      "file": "assets/figures/MATH-12-CH12-FIG-014.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Graph of y=x squared between x=0 and x=67, with the area under the curve shaded.",
+      "required_for_question": true,
+      "bytes": 31961,
+      "sha256": "9754e4025cfd0120776a830aaa4f550d891bd274b370b6f3917878b602c58ab6"
+    },
+    {
+      "question_id": "MATH-12-CH12-0019",
+      "asset_id": "MATH-12-CH12-FIG-019",
+      "type": "area_between_lines",
+      "spec": {
+        "type": "area_between_lines",
+        "a": 8,
+        "alt_text": "Graph of y=x and y=16-x with the region between them and the x-axis boundaries highlighted."
+      },
+      "file": "assets/figures/MATH-12-CH12-FIG-019.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Graph of y=x and y=16-x with the region between them and the x-axis boundaries highlighted.",
+      "required_for_question": true,
+      "bytes": 30541,
+      "sha256": "5b5beb19315c1b577a687789de60966a8f759e780d45fd42d4ec73eee6961fdf"
+    },
+    {
+      "question_id": "MATH-12-CH12-0022",
+      "asset_id": "MATH-12-CH12-FIG-022",
+      "type": "area_parabola",
+      "spec": {
+        "type": "area_parabola",
+        "a": 42,
+        "alt_text": "Graph of y=x squared between x=0 and x=42, with the area under the curve shaded."
+      },
+      "file": "assets/figures/MATH-12-CH12-FIG-022.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Graph of y=x squared between x=0 and x=42, with the area under the curve shaded.",
+      "required_for_question": true,
+      "bytes": 31414,
+      "sha256": "b919b7ba62cd648e3d4ca7a14fd2e990bd942c6c9d7edbad9bd9b3285797d903"
+    },
+    {
+      "question_id": "MATH-12-CH12-0030",
+      "asset_id": "MATH-12-CH12-FIG-030",
+      "type": "area_parabola",
+      "spec": {
+        "type": "area_parabola",
+        "a": 72,
+        "alt_text": "Graph of y=x squared between x=0 and x=72, with the area under the curve shaded."
+      },
+      "file": "assets/figures/MATH-12-CH12-FIG-030.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Graph of y=x squared between x=0 and x=72, with the area under the curve shaded.",
+      "required_for_question": true,
+      "bytes": 33282,
+      "sha256": "c4f6c892bcac19ba964fa1f5ddb059cd020204aa4944f7b785518b80e1e0c5ea"
+    },
+    {
+      "question_id": "MATH-12-CH12-0034",
+      "asset_id": "MATH-12-CH12-FIG-034",
+      "type": "area_parabola",
+      "spec": {
+        "type": "area_parabola",
+        "a": 13,
+        "alt_text": "Graph of y=x squared between x=0 and x=13, with the area under the curve shaded."
+      },
+      "file": "assets/figures/MATH-12-CH12-FIG-034.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Graph of y=x squared between x=0 and x=13, with the area under the curve shaded.",
+      "required_for_question": true,
+      "bytes": 27559,
+      "sha256": "76007421cf0431db78cf9964d144e36bf3e396a5bdc26903146c9b5f3d18727e"
+    },
+    {
+      "question_id": "MATH-12-CH12-0037",
+      "asset_id": "MATH-12-CH12-FIG-037",
+      "type": "area_triangle",
+      "spec": {
+        "type": "area_triangle",
+        "a": 3,
+        "b": 5,
+        "alt_text": "Coordinate graph of the line through (3,0) and (0,5), with the first-quadrant triangular area shaded."
+      },
+      "file": "assets/figures/MATH-12-CH12-FIG-037.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Coordinate graph of the line through (3,0) and (0,5), with the first-quadrant triangular area shaded.",
+      "required_for_question": true,
+      "bytes": 30266,
+      "sha256": "01a4d507c7295c72120fc6460b0463bf66ed08c2017a380ed0baf7e1715de748"
+    },
+    {
+      "question_id": "MATH-12-CH12-0039",
+      "asset_id": "MATH-12-CH12-FIG-039",
+      "type": "area_between_lines",
+      "spec": {
+        "type": "area_between_lines",
+        "a": 21,
+        "alt_text": "Graph of y=x and y=42-x with the region between them and the x-axis boundaries highlighted."
+      },
+      "file": "assets/figures/MATH-12-CH12-FIG-039.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Graph of y=x and y=42-x with the region between them and the x-axis boundaries highlighted.",
+      "required_for_question": true,
+      "bytes": 31854,
+      "sha256": "5fadce9ce926d9149dafc6500a6a051f8345335d8313383e92536bc586bd55dc"
+    },
+    {
+      "question_id": "MATH-12-CH12-0045",
+      "asset_id": "MATH-12-CH12-FIG-045",
+      "type": "area_triangle",
+      "spec": {
+        "type": "area_triangle",
+        "a": 7,
+        "b": 8,
+        "alt_text": "Coordinate graph of the line through (7,0) and (0,8), with the first-quadrant triangular area shaded."
+      },
+      "file": "assets/figures/MATH-12-CH12-FIG-045.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Coordinate graph of the line through (7,0) and (0,8), with the first-quadrant triangular area shaded.",
+      "required_for_question": true,
+      "bytes": 28977,
+      "sha256": "29d35d072f7602c9b892ff07edda2839e81c4aae219a9a1c3f02e58777aa94db"
+    },
+    {
+      "question_id": "MATH-12-CH12-0046",
+      "asset_id": "MATH-12-CH12-FIG-046",
+      "type": "area_parabola",
+      "spec": {
+        "type": "area_parabola",
+        "a": 4,
+        "alt_text": "Graph of y=x squared between x=0 and x=4, with the area under the curve shaded."
+      },
+      "file": "assets/figures/MATH-12-CH12-FIG-046.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Graph of y=x squared between x=0 and x=4, with the area under the curve shaded.",
+      "required_for_question": true,
+      "bytes": 24302,
+      "sha256": "7f5841fc733ab32a5b71e4a14c0881131dfebd7aad3f5cf58ed683abddec4e82"
+    },
+    {
+      "question_id": "MATH-12-CH12-0053",
+      "asset_id": "MATH-12-CH12-FIG-053",
+      "type": "area_triangle",
+      "spec": {
+        "type": "area_triangle",
+        "a": 7,
+        "b": 6,
+        "alt_text": "Coordinate graph of the line through (7,0) and (0,6), with the first-quadrant triangular area shaded."
+      },
+      "file": "assets/figures/MATH-12-CH12-FIG-053.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Coordinate graph of the line through (7,0) and (0,6), with the first-quadrant triangular area shaded.",
+      "required_for_question": true,
+      "bytes": 28409,
+      "sha256": "ee3235b6a8e883ccfc3bcc86943742f4777dc687ff40ab8ac7349226054a3ba1"
+    },
+    {
+      "question_id": "MATH-12-CH12-0055",
+      "asset_id": "MATH-12-CH12-FIG-055",
+      "type": "area_between_lines",
+      "spec": {
+        "type": "area_between_lines",
+        "a": 39,
+        "alt_text": "Graph of y=x and y=78-x with the region between them and the x-axis boundaries highlighted."
+      },
+      "file": "assets/figures/MATH-12-CH12-FIG-055.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Graph of y=x and y=78-x with the region between them and the x-axis boundaries highlighted.",
+      "required_for_question": true,
+      "bytes": 35644,
+      "sha256": "c9d2cd3b472369252f00e6c86b6155527177b0500341bb5da0f9cbacbf89fb74"
+    },
+    {
+      "question_id": "MATH-12-CH12-0057",
+      "asset_id": "MATH-12-CH12-FIG-057",
+      "type": "area_triangle",
+      "spec": {
+        "type": "area_triangle",
+        "a": 7,
+        "b": 4,
+        "alt_text": "Coordinate graph of the line through (7,0) and (0,4), with the first-quadrant triangular area shaded."
+      },
+      "file": "assets/figures/MATH-12-CH12-FIG-057.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Coordinate graph of the line through (7,0) and (0,4), with the first-quadrant triangular area shaded.",
+      "required_for_question": true,
+      "bytes": 27306,
+      "sha256": "97a5db06ef121db36ec2d08300cb27a8daf582fed60f4bb98d46d85ec0ab5d25"
+    },
+    {
+      "question_id": "MATH-12-CH12-0066",
+      "asset_id": "MATH-12-CH12-FIG-066",
+      "type": "area_between_lines",
+      "spec": {
+        "type": "area_between_lines",
+        "a": 33,
+        "alt_text": "Graph of y=x and y=66-x with the region between them and the x-axis boundaries highlighted."
+      },
+      "file": "assets/figures/MATH-12-CH12-FIG-066.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Graph of y=x and y=66-x with the region between them and the x-axis boundaries highlighted.",
+      "required_for_question": true,
+      "bytes": 35012,
+      "sha256": "db5685a664faacc887a3d9a95781a2eba3c2497f5cc561ced865635b16f8ca86"
+    },
+    {
+      "question_id": "MATH-12-CH12-0069",
+      "asset_id": "MATH-12-CH12-FIG-069",
+      "type": "area_parabola",
+      "spec": {
+        "type": "area_parabola",
+        "a": 11,
+        "alt_text": "Graph of y=x squared between x=0 and x=11, with the area under the curve shaded."
+      },
+      "file": "assets/figures/MATH-12-CH12-FIG-069.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Graph of y=x squared between x=0 and x=11, with the area under the curve shaded.",
+      "required_for_question": true,
+      "bytes": 27886,
+      "sha256": "f311303e6b24b686a6b5abecb9e9c7b37cca5deff501cd4a21fe09c2095f3b35"
+    },
+    {
+      "question_id": "MATH-12-CH12-0081",
+      "asset_id": "MATH-12-CH12-FIG-081",
+      "type": "area_parabola",
+      "spec": {
+        "type": "area_parabola",
+        "a": 35,
+        "alt_text": "Graph of y=x squared between x=0 and x=35, with the area under the curve shaded."
+      },
+      "file": "assets/figures/MATH-12-CH12-FIG-081.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Graph of y=x squared between x=0 and x=35, with the area under the curve shaded.",
+      "required_for_question": true,
+      "bytes": 31681,
+      "sha256": "c33d6789640a03e82948b4bc6dd17c821c0d15b18eb169a96484fc3818ac76db"
+    },
+    {
+      "question_id": "MATH-12-CH12-0087",
+      "asset_id": "MATH-12-CH12-FIG-087",
+      "type": "area_between_lines",
+      "spec": {
+        "type": "area_between_lines",
+        "a": 68,
+        "alt_text": "Graph of y=x and y=136-x with the region between them and the x-axis boundaries highlighted."
+      },
+      "file": "assets/figures/MATH-12-CH12-FIG-087.png",
+      "generator": "full_build_v2.0.1/render_figures.py",
+      "alt_text": "Graph of y=x and y=136-x with the region between them and the x-axis boundaries highlighted.",
+      "required_for_question": true,
+      "bytes": 36120,
+      "sha256": "7bddf0688f95fa87e3b94cc54f04a18d6137281e8bb080bd996d71d59a59d1e5"
+    }
+  ]
+}

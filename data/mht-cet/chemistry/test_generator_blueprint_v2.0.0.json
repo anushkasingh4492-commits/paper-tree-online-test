@@ -1,0 +1,28 @@
+{
+  "name": "MHT-CET Chemistry full-subject generator blueprint",
+  "release_version": "2.0.0",
+  "total_bank_questions": 3040,
+  "paper_question_count": 50,
+  "standard_distribution": {
+    "11": 10,
+    "12": 40
+  },
+  "difficulty_distribution": {
+    "Easy": 13,
+    "Medium": 20,
+    "Hard": 12,
+    "Challenging": 5
+  },
+  "correct_option_distribution": {
+    "A": 13,
+    "B": 13,
+    "C": 12,
+    "D": 12
+  },
+  "selection_rules": [
+    "single correct option",
+    "all records strict-CET eligible",
+    "avoid repeating concept_family_id where alternatives exist",
+    "include figures only when referenced asset is delivered"
+  ]
+}

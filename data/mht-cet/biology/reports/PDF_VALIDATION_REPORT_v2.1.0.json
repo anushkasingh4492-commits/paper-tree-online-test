@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "files": [
+    {
+      "file": "review_pdfs/MHT-CET_Biology_Full_Questions_with_Figures_v2.1.0.pdf",
+      "pages": 434,
+      "page_size": "A4",
+      "content_fonts": {
+        "/AAAAAA+ArialMT": true,
+        "/AAAAAA+Arial-BoldMT": true
+      }
+    },
+    {
+      "file": "review_pdfs/MHT-CET_Biology_Answer_Key_and_Solutions_v2.1.0.pdf",
+      "pages": 354,
+      "page_size": "A4",
+      "content_fonts": {
+        "/AAAAAA+ArialMT": true,
+        "/AAAAAA+Arial-BoldMT": true
+      }
+    }
+  ],
+  "rendered_pages_checked": [
+    "questions: 1, 2, 97, 434",
+    "answers: 1, 2, 353"
+  ],
+  "visual_result": "PASS - covers, ordinary entries, figure pages and final pages are readable and unclipped"
+}

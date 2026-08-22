@@ -1,0 +1,461 @@
+{
+  "release": "2.1.0",
+  "audit_status": "PASS",
+  "technical_deployment_status": "READY",
+  "questions": 2120,
+  "standards": {
+    "11": 436,
+    "12": 1684
+  },
+  "chapters": 19,
+  "answer_key": {
+    "B": 530,
+    "A": 530,
+    "D": 530,
+    "C": 530
+  },
+  "difficulty": {
+    "Easy": 534,
+    "Medium": 853,
+    "Hard": 524,
+    "Challenging": 209
+  },
+  "difficulty_percent": {
+    "Easy": 25.19,
+    "Medium": 40.24,
+    "Hard": 24.72,
+    "Challenging": 9.86
+  },
+  "duplicate_ids": 0,
+  "duplicate_stems": 0,
+  "duplicate_exact_solutions": 0,
+  "duplicate_exact_distractor_rationales": 1043,
+  "nonchallenge_cross_family_option_set_collisions": 0,
+  "missing_difficulty": 0,
+  "missing_source_locator": 0,
+  "approval_status_fields_present": 0,
+  "challenging_answer_patterns": {
+    "I, II and III only": 12,
+    "III only": 12,
+    "III and IV only": 11,
+    "II only": 10,
+    "II and IV only": 10,
+    "I only": 10,
+    "II and III only": 10,
+    "I, II, III and IV": 11,
+    "I and IV only": 11,
+    "II, III and IV only": 10,
+    "I and III only": 9,
+    "I, III and IV only": 9,
+    "I and II only": 9,
+    "I, II and IV only": 9,
+    "IV only": 10
+  },
+  "challenging_pattern_count": 15,
+  "challenging_question_types": {
+    "Diagram Interpretation": 14,
+    "Evidence Integration": 39,
+    "Error-Correction Logic": 37,
+    "Case Analysis": 40,
+    "Multi-Statement Reasoning": 37,
+    "Graph Analysis": 1
+  },
+  "figures": 44,
+  "figure_linked_questions": 82,
+  "std12_figure_linked_difficulty": {
+    "Medium": 15,
+    "Hard": 15,
+    "Easy": 15,
+    "Challenging": 15
+  },
+  "invalid_figure_assets": [],
+  "json_parse_failures": [],
+  "generator_seeds_tested": 100,
+  "generator_failures": 0,
+  "papers_with_duplicate_option_sets": 0,
+  "workbook_present": true,
+  "questions_pdf_pages": 434,
+  "answers_pdf_pages": 354,
+  "chapter_breakdown": [
+    {
+      "standard": 11,
+      "chapter_number": 1,
+      "chapter_name": "Biomolecules",
+      "questions": 116,
+      "difficulty": {
+        "Easy": 29,
+        "Medium": 46,
+        "Hard": 31,
+        "Challenging": 10
+      },
+      "answer_key": {
+        "B": 29,
+        "A": 29,
+        "D": 29,
+        "C": 29
+      },
+      "figure_linked_questions": 4,
+      "file": "chapters/mhtcet_biology_std11_ch01_biomolecules_v2.1.0.json"
+    },
+    {
+      "standard": 11,
+      "chapter_number": 2,
+      "chapter_name": "Respiration and Energy Transfer",
+      "questions": 112,
+      "difficulty": {
+        "Easy": 29,
+        "Medium": 47,
+        "Challenging": 12,
+        "Hard": 24
+      },
+      "answer_key": {
+        "A": 28,
+        "C": 28,
+        "B": 28,
+        "D": 28
+      },
+      "figure_linked_questions": 3,
+      "file": "chapters/mhtcet_biology_std11_ch02_respiration_and_energy_transfer_v2.1.0.json"
+    },
+    {
+      "standard": 11,
+      "chapter_number": 3,
+      "chapter_name": "Human Nutrition",
+      "questions": 104,
+      "difficulty": {
+        "Easy": 27,
+        "Medium": 44,
+        "Hard": 25,
+        "Challenging": 8
+      },
+      "answer_key": {
+        "A": 26,
+        "C": 26,
+        "D": 26,
+        "B": 26
+      },
+      "figure_linked_questions": 9,
+      "file": "chapters/mhtcet_biology_std11_ch03_human_nutrition_v2.1.0.json"
+    },
+    {
+      "standard": 11,
+      "chapter_number": 4,
+      "chapter_name": "Excretion and Osmoregulation",
+      "questions": 104,
+      "difficulty": {
+        "Easy": 28,
+        "Medium": 42,
+        "Hard": 23,
+        "Challenging": 11
+      },
+      "answer_key": {
+        "C": 26,
+        "B": 26,
+        "D": 26,
+        "A": 26
+      },
+      "figure_linked_questions": 6,
+      "file": "chapters/mhtcet_biology_std11_ch04_excretion_and_osmoregulation_v2.1.0.json"
+    },
+    {
+      "standard": 12,
+      "chapter_number": 1,
+      "chapter_name": "Reproduction in Lower and Higher Plants",
+      "questions": 120,
+      "difficulty": {
+        "Medium": 48,
+        "Hard": 30,
+        "Easy": 30,
+        "Challenging": 12
+      },
+      "answer_key": {
+        "D": 30,
+        "B": 30,
+        "C": 30,
+        "A": 30
+      },
+      "figure_linked_questions": 4,
+      "file": "chapters/mhtcet_biology_std12_ch01_reproduction_in_lower_and_higher_plants_v2.1.0.json"
+    },
+    {
+      "standard": 12,
+      "chapter_number": 2,
+      "chapter_name": "Reproduction in Lower and Higher Animals",
+      "questions": 120,
+      "difficulty": {
+        "Easy": 30,
+        "Medium": 48,
+        "Challenging": 12,
+        "Hard": 30
+      },
+      "answer_key": {
+        "A": 30,
+        "D": 30,
+        "C": 30,
+        "B": 30
+      },
+      "figure_linked_questions": 4,
+      "file": "chapters/mhtcet_biology_std12_ch02_reproduction_in_lower_and_higher_animals_v2.1.0.json"
+    },
+    {
+      "standard": 12,
+      "chapter_number": 3,
+      "chapter_name": "Inheritance and Variation",
+      "questions": 140,
+      "difficulty": {
+        "Medium": 56,
+        "Easy": 35,
+        "Hard": 35,
+        "Challenging": 14
+      },
+      "answer_key": {
+        "A": 35,
+        "B": 35,
+        "C": 35,
+        "D": 35
+      },
+      "figure_linked_questions": 4,
+      "file": "chapters/mhtcet_biology_std12_ch03_inheritance_and_variation_v2.1.0.json"
+    },
+    {
+      "standard": 12,
+      "chapter_number": 4,
+      "chapter_name": "Molecular Basis of Inheritance",
+      "questions": 132,
+      "difficulty": {
+        "Medium": 53,
+        "Hard": 33,
+        "Challenging": 13,
+        "Easy": 33
+      },
+      "answer_key": {
+        "A": 33,
+        "D": 33,
+        "C": 33,
+        "B": 33
+      },
+      "figure_linked_questions": 4,
+      "file": "chapters/mhtcet_biology_std12_ch04_molecular_basis_of_inheritance_v2.1.0.json"
+    },
+    {
+      "standard": 12,
+      "chapter_number": 5,
+      "chapter_name": "Origin and Evolution of Life",
+      "questions": 100,
+      "difficulty": {
+        "Challenging": 10,
+        "Medium": 40,
+        "Easy": 25,
+        "Hard": 25
+      },
+      "answer_key": {
+        "B": 25,
+        "D": 25,
+        "A": 25,
+        "C": 25
+      },
+      "figure_linked_questions": 4,
+      "file": "chapters/mhtcet_biology_std12_ch05_origin_and_evolution_of_life_v2.1.0.json"
+    },
+    {
+      "standard": 12,
+      "chapter_number": 6,
+      "chapter_name": "Plant Water Relation",
+      "questions": 88,
+      "difficulty": {
+        "Hard": 22,
+        "Medium": 35,
+        "Challenging": 9,
+        "Easy": 22
+      },
+      "answer_key": {
+        "B": 22,
+        "A": 22,
+        "D": 22,
+        "C": 22
+      },
+      "figure_linked_questions": 4,
+      "file": "chapters/mhtcet_biology_std12_ch06_plant_water_relation_v2.1.0.json"
+    },
+    {
+      "standard": 12,
+      "chapter_number": 7,
+      "chapter_name": "Plant Growth and Mineral Nutrition",
+      "questions": 100,
+      "difficulty": {
+        "Hard": 25,
+        "Challenging": 10,
+        "Easy": 25,
+        "Medium": 40
+      },
+      "answer_key": {
+        "C": 25,
+        "A": 25,
+        "B": 25,
+        "D": 25
+      },
+      "figure_linked_questions": 4,
+      "file": "chapters/mhtcet_biology_std12_ch07_plant_growth_and_mineral_nutrition_v2.1.0.json"
+    },
+    {
+      "standard": 12,
+      "chapter_number": 8,
+      "chapter_name": "Respiration and Circulation",
+      "questions": 132,
+      "difficulty": {
+        "Medium": 53,
+        "Hard": 33,
+        "Easy": 33,
+        "Challenging": 13
+      },
+      "answer_key": {
+        "A": 33,
+        "B": 33,
+        "D": 33,
+        "C": 33
+      },
+      "figure_linked_questions": 4,
+      "file": "chapters/mhtcet_biology_std12_ch08_respiration_and_circulation_v2.1.0.json"
+    },
+    {
+      "standard": 12,
+      "chapter_number": 9,
+      "chapter_name": "Control and Co-ordination",
+      "questions": 132,
+      "difficulty": {
+        "Hard": 33,
+        "Challenging": 13,
+        "Easy": 33,
+        "Medium": 53
+      },
+      "answer_key": {
+        "A": 33,
+        "D": 33,
+        "C": 33,
+        "B": 33
+      },
+      "figure_linked_questions": 4,
+      "file": "chapters/mhtcet_biology_std12_ch09_control_and_co_ordination_v2.1.0.json"
+    },
+    {
+      "standard": 12,
+      "chapter_number": 10,
+      "chapter_name": "Human Health and Diseases",
+      "questions": 120,
+      "difficulty": {
+        "Challenging": 12,
+        "Medium": 48,
+        "Hard": 30,
+        "Easy": 30
+      },
+      "answer_key": {
+        "A": 30,
+        "B": 30,
+        "D": 30,
+        "C": 30
+      },
+      "figure_linked_questions": 4,
+      "file": "chapters/mhtcet_biology_std12_ch10_human_health_and_diseases_v2.1.0.json"
+    },
+    {
+      "standard": 12,
+      "chapter_number": 11,
+      "chapter_name": "Enhancement of Food Production",
+      "questions": 100,
+      "difficulty": {
+        "Medium": 40,
+        "Hard": 25,
+        "Challenging": 10,
+        "Easy": 25
+      },
+      "answer_key": {
+        "A": 25,
+        "D": 25,
+        "B": 25,
+        "C": 25
+      },
+      "figure_linked_questions": 4,
+      "file": "chapters/mhtcet_biology_std12_ch11_enhancement_of_food_production_v2.1.0.json"
+    },
+    {
+      "standard": 12,
+      "chapter_number": 12,
+      "chapter_name": "Biotechnology",
+      "questions": 112,
+      "difficulty": {
+        "Easy": 28,
+        "Hard": 28,
+        "Medium": 45,
+        "Challenging": 11
+      },
+      "answer_key": {
+        "C": 28,
+        "B": 28,
+        "D": 28,
+        "A": 28
+      },
+      "figure_linked_questions": 4,
+      "file": "chapters/mhtcet_biology_std12_ch12_biotechnology_v2.1.0.json"
+    },
+    {
+      "standard": 12,
+      "chapter_number": 13,
+      "chapter_name": "Organisms and Populations",
+      "questions": 100,
+      "difficulty": {
+        "Medium": 40,
+        "Hard": 25,
+        "Easy": 25,
+        "Challenging": 10
+      },
+      "answer_key": {
+        "D": 25,
+        "A": 25,
+        "B": 25,
+        "C": 25
+      },
+      "figure_linked_questions": 4,
+      "file": "chapters/mhtcet_biology_std12_ch13_organisms_and_populations_v2.1.0.json"
+    },
+    {
+      "standard": 12,
+      "chapter_number": 14,
+      "chapter_name": "Ecosystems and Energy Flow",
+      "questions": 88,
+      "difficulty": {
+        "Medium": 35,
+        "Hard": 22,
+        "Challenging": 9,
+        "Easy": 22
+      },
+      "answer_key": {
+        "B": 22,
+        "A": 22,
+        "C": 22,
+        "D": 22
+      },
+      "figure_linked_questions": 4,
+      "file": "chapters/mhtcet_biology_std12_ch14_ecosystems_and_energy_flow_v2.1.0.json"
+    },
+    {
+      "standard": 12,
+      "chapter_number": 15,
+      "chapter_name": "Biodiversity, Conservation and Environmental Issues",
+      "questions": 100,
+      "difficulty": {
+        "Hard": 25,
+        "Easy": 25,
+        "Medium": 40,
+        "Challenging": 10
+      },
+      "answer_key": {
+        "C": 25,
+        "A": 25,
+        "B": 25,
+        "D": 25
+      },
+      "figure_linked_questions": 4,
+      "file": "chapters/mhtcet_biology_std12_ch15_biodiversity_conservation_and_environmental_issues_v2.1.0.json"
+    }
+  ]
+}

@@ -1,0 +1,324 @@
+[
+  {
+    "asset_id": "CHEM-11-CH04-orbital_boxes",
+    "path": "assets/figures/CHEM-11-CH04-orbital_boxes.svg",
+    "format": "SVG",
+    "width": 1200,
+    "height": 720,
+    "title": "Hund orbital occupancy",
+    "alt_text": "Monochrome MHT-CET-style schematic: Hund orbital occupancy.",
+    "question_ids": [
+      "CHEM-11-CH04-0064"
+    ],
+    "sha256": "4aa77c2cb0d2bfa1fcc6cd828bdf94010d0c4c1de71540deb52c8d3bb7f80319",
+    "required_for_answer": true
+  },
+  {
+    "asset_id": "CHEM-11-CH05-tbp",
+    "path": "assets/figures/CHEM-11-CH05-tbp.svg",
+    "format": "SVG",
+    "width": 1200,
+    "height": 720,
+    "title": "Trigonal-bipyramidal electron geometry",
+    "alt_text": "Monochrome MHT-CET-style schematic: Trigonal-bipyramidal electron geometry.",
+    "question_ids": [
+      "CHEM-11-CH05-0061"
+    ],
+    "sha256": "c2b63be817fc1f59a0eb2fb7fd9741ed6f4cfac4e75998d54a1a2bd467a608e7",
+    "required_for_answer": true
+  },
+  {
+    "asset_id": "CHEM-11-CH10-hyperbola",
+    "path": "assets/figures/CHEM-11-CH10-hyperbola.svg",
+    "format": "SVG",
+    "width": 1200,
+    "height": 720,
+    "title": "Boyle-law isotherm",
+    "alt_text": "Monochrome MHT-CET-style schematic: Boyle-law isotherm.",
+    "question_ids": [
+      "CHEM-11-CH10-0064"
+    ],
+    "sha256": "918b62dd817c3fb4ad6617a553f509a8d2997528fa9039491bc32fddb994d3a6",
+    "required_for_answer": true
+  },
+  {
+    "asset_id": "CHEM-11-CH11-logline",
+    "path": "assets/figures/CHEM-11-CH11-logline.svg",
+    "format": "SVG",
+    "width": 1200,
+    "height": 720,
+    "title": "Freundlich linear plot",
+    "alt_text": "Monochrome MHT-CET-style schematic: Freundlich linear plot.",
+    "question_ids": [
+      "CHEM-11-CH11-0063"
+    ],
+    "sha256": "5433f6a4eab947e36efb585692d5f72986339a00284c4b320eed99fd0b27e409",
+    "required_for_answer": true
+  },
+  {
+    "asset_id": "CHEM-11-CH14-fishhook",
+    "path": "assets/figures/CHEM-11-CH14-fishhook.svg",
+    "format": "SVG",
+    "width": 1200,
+    "height": 720,
+    "title": "Homolytic bond cleavage",
+    "alt_text": "Monochrome MHT-CET-style schematic: Homolytic bond cleavage.",
+    "question_ids": [
+      "CHEM-11-CH14-0064"
+    ],
+    "sha256": "dd6679af5638010364317172c2e22b0e185fd7fa01fb2742ba56288a10f11261",
+    "required_for_answer": true
+  },
+  {
+    "asset_id": "CHEM-11-CH15-cis_trans",
+    "path": "assets/figures/CHEM-11-CH15-cis_trans.svg",
+    "format": "SVG",
+    "width": 1200,
+    "height": 720,
+    "title": "Geometrical alkene isomers",
+    "alt_text": "Monochrome MHT-CET-style schematic: Geometrical alkene isomers.",
+    "question_ids": [
+      "CHEM-11-CH15-0061"
+    ],
+    "sha256": "29a3bb5546054faddc9c060910b71a59e0ac1afd078283686a0b5b0537fc80ab",
+    "required_for_answer": true
+  },
+  {
+    "asset_id": "CHEM-12-CH01-bcc",
+    "path": "assets/figures/CHEM-12-CH01-bcc.svg",
+    "format": "SVG",
+    "width": 1200,
+    "height": 720,
+    "title": "Body-centred cubic unit cell",
+    "alt_text": "Monochrome MHT-CET-style schematic: Body-centred cubic unit cell.",
+    "question_ids": [
+      "CHEM-12-CH01-0147"
+    ],
+    "sha256": "78ec5cdeaab83c31972b3b2c39175d285d95798063e3267542d27ff81e52482c",
+    "required_for_answer": true
+  },
+  {
+    "asset_id": "CHEM-12-CH01-fcc",
+    "path": "assets/figures/CHEM-12-CH01-fcc.svg",
+    "format": "SVG",
+    "width": 1200,
+    "height": 720,
+    "title": "Face-centred cubic contact",
+    "alt_text": "Monochrome MHT-CET-style schematic: Face-centred cubic contact.",
+    "question_ids": [
+      "CHEM-12-CH01-0148"
+    ],
+    "sha256": "25a1c2ec931290910f604ebb4237261abbb5c02f8026ff3e4957b58fe1bdf7de",
+    "required_for_answer": true
+  },
+  {
+    "asset_id": "CHEM-12-CH02-vapour_curve",
+    "path": "assets/figures/CHEM-12-CH02-vapour_curve.svg",
+    "format": "SVG",
+    "width": 1200,
+    "height": 720,
+    "title": "Positive deviation from Raoult law",
+    "alt_text": "Monochrome MHT-CET-style schematic: Positive deviation from Raoult law.",
+    "question_ids": [
+      "CHEM-12-CH02-0148"
+    ],
+    "sha256": "2d5ca690d445137a9e9403b4f8bbdfa2c2e2bb23c0f0b5b2897b016822ecbb47",
+    "required_for_answer": true
+  },
+  {
+    "asset_id": "CHEM-12-CH03-titration",
+    "path": "assets/figures/CHEM-12-CH03-titration.svg",
+    "format": "SVG",
+    "width": 1200,
+    "height": 720,
+    "title": "Weak-acid strong-base titration",
+    "alt_text": "Monochrome MHT-CET-style schematic: Weak-acid strong-base titration.",
+    "question_ids": [
+      "CHEM-12-CH03-0150"
+    ],
+    "sha256": "3036567164058b6a98c910b4e388ba7b66327263af4333855519d78e8cc71da6",
+    "required_for_answer": true
+  },
+  {
+    "asset_id": "CHEM-12-CH04-piston",
+    "path": "assets/figures/CHEM-12-CH04-piston.svg",
+    "format": "SVG",
+    "width": 1200,
+    "height": 720,
+    "title": "Expansion against external pressure",
+    "alt_text": "Monochrome MHT-CET-style schematic: Expansion against external pressure.",
+    "question_ids": [
+      "CHEM-12-CH04-0147"
+    ],
+    "sha256": "126388d7a94579fe5c0cb3b1bf175ae248d5978e15395488a42a9de0c3ec7280",
+    "required_for_answer": true
+  },
+  {
+    "asset_id": "CHEM-12-CH05-daniell",
+    "path": "assets/figures/CHEM-12-CH05-daniell.svg",
+    "format": "SVG",
+    "width": 1200,
+    "height": 720,
+    "title": "Daniell galvanic cell",
+    "alt_text": "Monochrome MHT-CET-style schematic: Daniell galvanic cell.",
+    "question_ids": [
+      "CHEM-12-CH05-0150"
+    ],
+    "sha256": "13f21e573aa840ebb6c0972b0160885aa9a8d37305ff31fed3993f71666949cf",
+    "required_for_answer": true
+  },
+  {
+    "asset_id": "CHEM-12-CH06-first_order",
+    "path": "assets/figures/CHEM-12-CH06-first_order.svg",
+    "format": "SVG",
+    "width": 1200,
+    "height": 720,
+    "title": "First-order kinetic plot",
+    "alt_text": "Monochrome MHT-CET-style schematic: First-order kinetic plot.",
+    "question_ids": [
+      "CHEM-12-CH06-0147"
+    ],
+    "sha256": "1b26691b04529509c015ee95e3279ea7cb2be53815f84cba67c6c14b9d6573a1",
+    "required_for_answer": true
+  },
+  {
+    "asset_id": "CHEM-12-CH07-square_planar",
+    "path": "assets/figures/CHEM-12-CH07-square_planar.svg",
+    "format": "SVG",
+    "width": 1200,
+    "height": 720,
+    "title": "Square-planar XeF4",
+    "alt_text": "Monochrome MHT-CET-style schematic: Square-planar XeF4.",
+    "question_ids": [
+      "CHEM-12-CH07-0145"
+    ],
+    "sha256": "83e5f63eaaa673c5977f58994a383bd492ff748e784c056eea9b5e83311782d2",
+    "required_for_answer": true
+  },
+  {
+    "asset_id": "CHEM-12-CH08-oct_split",
+    "path": "assets/figures/CHEM-12-CH08-oct_split.svg",
+    "format": "SVG",
+    "width": 1200,
+    "height": 720,
+    "title": "Octahedral d-orbital splitting",
+    "alt_text": "Monochrome MHT-CET-style schematic: Octahedral d-orbital splitting.",
+    "question_ids": [
+      "CHEM-12-CH08-0147"
+    ],
+    "sha256": "5de4d12d7dc0d507450d3d017be86d76b1f1370fc47bca7ce9e2c37f7fb376a9",
+    "required_for_answer": true
+  },
+  {
+    "asset_id": "CHEM-12-CH09-coord_isomers",
+    "path": "assets/figures/CHEM-12-CH09-coord_isomers.svg",
+    "format": "SVG",
+    "width": 1200,
+    "height": 720,
+    "title": "Square-planar geometrical isomers",
+    "alt_text": "Monochrome MHT-CET-style schematic: Square-planar geometrical isomers.",
+    "question_ids": [
+      "CHEM-12-CH09-0149"
+    ],
+    "sha256": "9f0c404091a59b1b3cbf8b7d1524fdf1faf778bb1249c48b9c59ea49c073ac2c",
+    "required_for_answer": true
+  },
+  {
+    "asset_id": "CHEM-12-CH10-sn2",
+    "path": "assets/figures/CHEM-12-CH10-sn2.svg",
+    "format": "SVG",
+    "width": 1200,
+    "height": 720,
+    "title": "SN2 backside attack",
+    "alt_text": "Monochrome MHT-CET-style schematic: SN2 backside attack.",
+    "question_ids": [
+      "CHEM-12-CH10-0148"
+    ],
+    "sha256": "d75d50821cd530f3d6ce074a2840ba471d455d1ff2b5308e5f39938e9bd3fffe",
+    "required_for_answer": true
+  },
+  {
+    "asset_id": "CHEM-12-CH11-williamson",
+    "path": "assets/figures/CHEM-12-CH11-williamson.svg",
+    "format": "SVG",
+    "width": 1200,
+    "height": 720,
+    "title": "Williamson ether synthesis",
+    "alt_text": "Monochrome MHT-CET-style schematic: Williamson ether synthesis.",
+    "question_ids": [
+      "CHEM-12-CH11-0150"
+    ],
+    "sha256": "6dcfbeffbb45ff2d710580efc4a84b0ef4b9383c290cc6a50cae0a6ca91d58d5",
+    "required_for_answer": true
+  },
+  {
+    "asset_id": "CHEM-12-CH12-tollens",
+    "path": "assets/figures/CHEM-12-CH12-tollens.svg",
+    "format": "SVG",
+    "width": 1200,
+    "height": 720,
+    "title": "Tollens silver-mirror observation",
+    "alt_text": "Monochrome MHT-CET-style schematic: Tollens silver-mirror observation.",
+    "question_ids": [
+      "CHEM-12-CH12-0150"
+    ],
+    "sha256": "b7b8991db3cdd805cda186429325d4eac2221a434d5dfccefbe9865c13d307f1",
+    "required_for_answer": true
+  },
+  {
+    "asset_id": "CHEM-12-CH13-diazo",
+    "path": "assets/figures/CHEM-12-CH13-diazo.svg",
+    "format": "SVG",
+    "width": 1200,
+    "height": 720,
+    "title": "Diazotization temperature control",
+    "alt_text": "Monochrome MHT-CET-style schematic: Diazotization temperature control.",
+    "question_ids": [
+      "CHEM-12-CH13-0149"
+    ],
+    "sha256": "94225abce2a41b49a519336e7b69512bf61e296de5a8c6671a11d84fcde583a3",
+    "required_for_answer": true
+  },
+  {
+    "asset_id": "CHEM-12-CH14-dna",
+    "path": "assets/figures/CHEM-12-CH14-dna.svg",
+    "format": "SVG",
+    "width": 1200,
+    "height": 720,
+    "title": "DNA complementary pairing",
+    "alt_text": "Monochrome MHT-CET-style schematic: DNA complementary pairing.",
+    "question_ids": [
+      "CHEM-12-CH14-0145"
+    ],
+    "sha256": "657b69775104d42acdd72e3cb666d7715844c797af072405939bf79c866ff3ad",
+    "required_for_answer": true
+  },
+  {
+    "asset_id": "CHEM-12-CH15-polymer",
+    "path": "assets/figures/CHEM-12-CH15-polymer.svg",
+    "format": "SVG",
+    "width": 1200,
+    "height": 720,
+    "title": "Addition-polymer repeat unit",
+    "alt_text": "Monochrome MHT-CET-style schematic: Addition-polymer repeat unit.",
+    "question_ids": [
+      "CHEM-12-CH15-0149"
+    ],
+    "sha256": "22787c6ba74de0c189a5c0e29555988f17ddc3377b3f982e54d5c9b381ce46d5",
+    "required_for_answer": true
+  },
+  {
+    "asset_id": "CHEM-12-CH16-nanoscale",
+    "path": "assets/figures/CHEM-12-CH16-nanoscale.svg",
+    "format": "SVG",
+    "width": 1200,
+    "height": 720,
+    "title": "Nanoscale size comparison",
+    "alt_text": "Monochrome MHT-CET-style schematic: Nanoscale size comparison.",
+    "question_ids": [
+      "CHEM-12-CH16-0149"
+    ],
+    "sha256": "2ec23228776e8059851cf983abc2b0adbaea5aca3de8faa1e843485852d7ccfd",
+    "required_for_answer": true
+  }
+]

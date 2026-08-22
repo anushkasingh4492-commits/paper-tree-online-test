@@ -1,0 +1,191 @@
+{
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "$id": "https://papertree.example/schemas/question_record.schema.json",
+ "title": "MHT-CET Physics question record with optional local figure asset",
+ "type": "object",
+ "required": [
+  "id",
+  "standard",
+  "chapter_number",
+  "chapter_name",
+  "stem",
+  "options",
+  "correct_option",
+  "solution",
+  "difficulty",
+  "question_type",
+  "source_type",
+  "concept_family_id",
+  "syllabus_scope_status",
+  "generator_eligible_strict_cet",
+  "review_status",
+  "syllabus_version",
+  "release_version"
+ ],
+ "additionalProperties": false,
+ "properties": {
+  "id": {
+   "type": "string",
+   "pattern": "^PHY-1[12]-CH[0-9]{2}-[0-9]{4}$"
+  },
+  "standard": {
+   "type": "integer",
+   "enum": [
+    11,
+    12
+   ]
+  },
+  "chapter_number": {
+   "type": "integer",
+   "minimum": 1,
+   "maximum": 16
+  },
+  "chapter_name": {
+   "type": "string",
+   "minLength": 1
+  },
+  "major_topic": {
+   "type": "string"
+  },
+  "subtopic": {
+   "type": "string"
+  },
+  "concept_tested": {
+   "type": "string"
+  },
+  "stem": {
+   "type": "string",
+   "minLength": 10
+  },
+  "options": {
+   "type": "object",
+   "required": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "additionalProperties": false,
+   "properties": {
+    "A": {
+     "type": "string",
+     "minLength": 1
+    },
+    "B": {
+     "type": "string",
+     "minLength": 1
+    },
+    "C": {
+     "type": "string",
+     "minLength": 1
+    },
+    "D": {
+     "type": "string",
+     "minLength": 1
+    }
+   }
+  },
+  "correct_option": {
+   "type": "string",
+   "enum": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ]
+  },
+  "correct_answer_text": {
+   "type": "string",
+   "minLength": 1
+  },
+  "distractor_rationale": {
+   "type": "object"
+  },
+  "solution": {
+   "type": "string",
+   "minLength": 10
+  },
+  "formula_principle": {
+   "type": "string"
+  },
+  "common_misconception": {
+   "type": "string"
+  },
+  "difficulty": {
+   "type": "string",
+   "enum": [
+    "Easy",
+    "Medium",
+    "Hard",
+    "Challenging"
+   ]
+  },
+  "difficulty_basis": {
+   "type": "string"
+  },
+  "estimated_time": {
+   "type": "string"
+  },
+  "question_type": {
+   "type": "string"
+  },
+  "source_type": {
+   "type": "string",
+   "enum": [
+    "ORIGINAL"
+   ]
+  },
+  "source_basis": {
+   "type": "string"
+  },
+  "figure_asset": {
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "concept_family_id": {
+   "type": "string",
+   "pattern": "^CF-[0-9a-f]{8}$"
+  },
+  "family_size": {
+   "type": "integer",
+   "minimum": 1
+  },
+  "syllabus_scope_status": {
+   "type": "string",
+   "enum": [
+    "IN_SCOPE",
+    "PENDING",
+    "OUT_OF_SCOPE"
+   ]
+  },
+  "generator_eligible_strict_cet": {
+   "type": "boolean"
+  },
+  "generator_eligible_extended_revision": {
+   "type": "boolean"
+  },
+  "review_status": {
+   "type": "string",
+   "enum": [
+    "MODEL_VERIFIED",
+    "HUMAN_VERIFIED",
+    "BLOCKED",
+    "QUARANTINED"
+   ]
+  },
+  "review_status_note": {
+   "type": "string"
+  },
+  "reviewer": {
+   "type": "string"
+  },
+  "syllabus_version": {
+   "type": "string"
+  },
+  "release_version": {
+   "type": "string"
+  }
+ }
+}

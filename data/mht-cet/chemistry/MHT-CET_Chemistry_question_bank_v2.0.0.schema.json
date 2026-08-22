@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MHT-CET Chemistry question bank v2.0.0",
+  "type": "array",
+  "minItems": 3040,
+  "maxItems": 3040,
+  "items": {
+    "$ref": "MHT-CET_Chemistry_question_record_v2.0.0.schema.json"
+  }
+}
