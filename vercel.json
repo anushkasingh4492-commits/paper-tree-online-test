@@ -1,12 +1,7 @@
 {
   "functions": {
     "app/api/import-mht-cet/route.ts": {
-      "includeFiles": [
-        "data/mht-cet/**/*.json",
-        "data/mht-cet/**/*.png",
-        "data/mht-cet/**/*.jpg",
-        "data/mht-cet/**/*.jpeg"
-      ]
+      "includeFiles": "data/mht-cet/**"
     }
   }
 }
