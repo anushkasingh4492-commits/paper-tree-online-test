@@ -1,16 +1,14 @@
 const fs = require("fs");
 const path = require("path");
-const { Client } = require("pg");
+const { neon } = require("@neondatabase/serverless");
 require("dotenv").config({ path: ".env.local" });
 
-const client = new Client({
-  connectionString: process.env.DATABASE_URL,
-  connectionTimeoutMillis: 15000,
-  query_timeout: 60000,
-  ssl: {
-    rejectUnauthorized: false,
-  },
-});
+if (!process.env.DATABASE_URL) {
+  console.error("DATABASE_URL is missing from .env.local");
+  process.exit(1);
+}
+
+const sql = neon(process.env.DATABASE_URL);
 
 const DATASETS = [
   {
@@ -31,10 +29,27 @@ const DATASETS = [
   },
 ];
 
+const BATCH_SIZE = 50;
 const RETRIES = 5;
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+async function queryWithRetry(queryFn) {
+  for (let attempt = 1; attempt <= RETRIES; attempt++) {
+    try {
+      return await queryFn();
+    } catch (error) {
+      if (attempt === RETRIES) throw error;
+
+      console.log(
+        `  Database error. Retry ${attempt}/${RETRIES}...`
+      );
+
+      await sleep(attempt * 2000);
+    }
+  }
 }
 
 function loadQuestions(file) {
@@ -44,10 +59,14 @@ function loadQuestions(file) {
     throw new Error(`Dataset not found: ${file}`);
   }
 
-  const parsed = JSON.parse(fs.readFileSync(fullPath, "utf8"));
+  const parsed = JSON.parse(
+    fs.readFileSync(fullPath, "utf8")
+  );
 
   if (!Array.isArray(parsed)) {
-    throw new Error(`${file} does not contain a JSON array`);
+    throw new Error(
+      `${file} does not contain a JSON array`
+    );
   }
 
   return parsed;
@@ -77,39 +96,25 @@ function normalizeQuestion(q, subject) {
     question_type: q.question_type ?? null,
     figure_asset: q.figure_asset ?? null,
     concept_family_id: q.concept_family_id ?? null,
-    family_size: q.family_size == null ? null : Number(q.family_size),
+    family_size:
+      q.family_size == null ? null : Number(q.family_size),
     generator_eligible_strict_cet:
       q.generator_eligible_strict_cet === true,
     generator_eligible_extended_revision:
       q.generator_eligible_extended_revision === true,
-    syllabus_scope_status: q.syllabus_scope_status ?? null,
-    syllabus_version: q.syllabus_version ?? null,
-    release_version: q.release_version ?? null,
+    syllabus_scope_status:
+      q.syllabus_scope_status ?? null,
+    syllabus_version:
+      q.syllabus_version ?? null,
+    release_version:
+      q.release_version ?? null,
     raw_data: q,
   };
 }
 
-async function queryWithRetry(text, values = []) {
-  for (let attempt = 1; attempt <= RETRIES; attempt++) {
-    try {
-      return await client.query(text, values);
-    } catch (error) {
-      if (attempt === RETRIES) {
-        throw error;
-      }
-
-      console.log(
-        `  Database error. Retry ${attempt}/${RETRIES}...`
-      );
-
-      await sleep(attempt * 2000);
-    }
-  }
-}
-
 async function insertQuestion(q) {
-  await queryWithRetry(
-    `
+  return queryWithRetry(() =>
+    sql`
       INSERT INTO questions (
         id,
         exam,
@@ -142,81 +147,81 @@ async function insertQuestion(q) {
         raw_data
       )
       VALUES (
-        $1, $2, $3, $4, $5, $6, $7, $8, $9, $10,
-        $11::jsonb, $12, $13, $14::jsonb, $15, $16, $17,
-        $18, $19, $20, $21, $22, $23, $24, $25, $26, $27,
-        $28, $29::jsonb
+        ${q.id},
+        ${q.exam},
+        ${q.subject},
+        ${q.standard},
+        ${q.chapter_number},
+        ${q.chapter_name},
+        ${q.major_topic},
+        ${q.subtopic},
+        ${q.concept_tested},
+        ${q.stem},
+        ${JSON.stringify(q.options)}::jsonb,
+        ${q.correct_option},
+        ${q.correct_answer_text},
+        ${
+          q.distractor_rationale
+            ? JSON.stringify(q.distractor_rationale)
+            : null
+        }::jsonb,
+        ${q.solution},
+        ${q.formula_principle},
+        ${q.common_misconception},
+        ${q.difficulty},
+        ${q.estimated_time},
+        ${q.question_type},
+        ${q.figure_asset},
+        ${q.concept_family_id},
+        ${q.family_size},
+        ${q.generator_eligible_strict_cet},
+        ${q.generator_eligible_extended_revision},
+        ${q.syllabus_scope_status},
+        ${q.syllabus_version},
+        ${q.release_version},
+        ${JSON.stringify(q.raw_data)}::jsonb
       )
       ON CONFLICT (id) DO NOTHING
-    `,
-    [
-      q.id,
-      q.exam,
-      q.subject,
-      q.standard,
-      q.chapter_number,
-      q.chapter_name,
-      q.major_topic,
-      q.subtopic,
-      q.concept_tested,
-      q.stem,
-      JSON.stringify(q.options),
-      q.correct_option,
-      q.correct_answer_text,
-      q.distractor_rationale
-        ? JSON.stringify(q.distractor_rationale)
-        : null,
-      q.solution,
-      q.formula_principle,
-      q.common_misconception,
-      q.difficulty,
-      q.estimated_time,
-      q.question_type,
-      q.figure_asset,
-      q.concept_family_id,
-      q.family_size,
-      q.generator_eligible_strict_cet,
-      q.generator_eligible_extended_revision,
-      q.syllabus_scope_status,
-      q.syllabus_version,
-      q.release_version,
-      JSON.stringify(q.raw_data),
-    ]
+    `
   );
 }
 
 async function getExistingIds(subject) {
-  const result = await queryWithRetry(
-    `
+  const result = await queryWithRetry(() =>
+    sql`
       SELECT id
       FROM questions
       WHERE exam = 'MHT-CET'
-        AND subject = $1
+        AND subject = ${subject}
         AND generator_eligible_strict_cet = true
-    `,
-    [subject]
+    `
   );
 
-  return new Set(result.rows.map((row) => row.id));
+  return new Set(result.map((row) => String(row.id)));
 }
 
 async function main() {
   console.log("========================================");
   console.log(" PAPER TREE ONLINE TEST");
   console.log(" MHT-CET QUESTION IMPORT");
-  console.log(" PostgreSQL RESUMABLE MODE");
+  console.log(" NEON HTTP RESUMABLE MODE");
   console.log("========================================\n");
 
-  await client.connect();
+  const connectionTest = await sql`
+    SELECT NOW() AS time
+  `;
 
-  console.log("DATABASE CONNECTION: OK\n");
+  console.log("DATABASE HTTP CONNECTION: OK");
+  console.log(`Database time: ${connectionTest[0].time}\n`);
 
   let totalSource = 0;
   let totalEligible = 0;
   let totalNew = 0;
 
   for (const dataset of DATASETS) {
-    console.log(`\nLoading ${dataset.subject}...`);
+    console.log(`\n========================================`);
+    console.log(`${dataset.subject.toUpperCase()}`);
+    console.log(`========================================`);
 
     const questions = loadQuestions(dataset.file);
 
@@ -227,7 +232,8 @@ async function main() {
     console.log(`Total questions: ${questions.length}`);
     console.log(`Strict CET eligible: ${eligible.length}`);
 
-    const existingIds = await getExistingIds(dataset.subject);
+    const existingIds =
+      await getExistingIds(dataset.subject);
 
     console.log(
       `Already in database: ${existingIds.size}`
@@ -243,32 +249,46 @@ async function main() {
 
     if (remaining.length === 0) {
       console.log(`${dataset.subject}: COMPLETE`);
+
       totalSource += questions.length;
       totalEligible += eligible.length;
+
       continue;
     }
 
-    for (let i = 0; i < remaining.length; i++) {
-      const normalized = normalizeQuestion(
-        remaining[i],
-        dataset.subject
+    for (
+      let batchStart = 0;
+      batchStart < remaining.length;
+      batchStart += BATCH_SIZE
+    ) {
+      const batch = remaining.slice(
+        batchStart,
+        batchStart + BATCH_SIZE
       );
 
-      await insertQuestion(normalized);
-
-      totalNew++;
-
-      if (
-        (i + 1) % 50 === 0 ||
-        i === remaining.length - 1
-      ) {
-        console.log(
-          `${dataset.subject}: ${i + 1}/${remaining.length}`
+      for (const rawQuestion of batch) {
+        const normalized = normalizeQuestion(
+          rawQuestion,
+          dataset.subject
         );
+
+        await insertQuestion(normalized);
+
+        totalNew++;
       }
+
+      const completed = Math.min(
+        batchStart + batch.length,
+        remaining.length
+      );
+
+      console.log(
+        `${dataset.subject}: ${completed}/${remaining.length}`
+      );
     }
 
-    const finalIds = await getExistingIds(dataset.subject);
+    const finalIds =
+      await getExistingIds(dataset.subject);
 
     console.log(
       `${dataset.subject}: ${finalIds.size}/${eligible.length} in database`
@@ -285,29 +305,25 @@ async function main() {
   console.log(`Strict CET eligible: ${totalEligible}`);
   console.log(`New questions inserted: ${totalNew}`);
 
-  const counts = await queryWithRetry(`
-    SELECT
-      subject,
-      COUNT(*)::int AS count
-    FROM questions
-    WHERE exam = 'MHT-CET'
-      AND generator_eligible_strict_cet = true
-    GROUP BY subject
-    ORDER BY subject
-  `);
+  const counts = await queryWithRetry(() =>
+    sql`
+      SELECT
+        subject,
+        COUNT(*)::int AS count
+      FROM questions
+      WHERE exam = 'MHT-CET'
+        AND generator_eligible_strict_cet = true
+      GROUP BY subject
+      ORDER BY subject
+    `
+  );
 
   console.log("\nDatabase counts:");
-  console.table(counts.rows);
+  console.table(counts);
 }
 
-main()
-  .catch((error) => {
-    console.error("\nIMPORT FAILED");
-    console.error(error);
-    process.exitCode = 1;
-  })
-  .finally(async () => {
-    try {
-      await client.end();
-    } catch {}
-  });
+main().catch((error) => {
+  console.error("\nIMPORT FAILED");
+  console.error(error);
+  process.exitCode = 1;
+});
