@@ -1,7 +1,14 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
+
+import {
+  getPresetsForGroup,
+  calculatePreset,
+  type StudentGroup,
+  type Preset,
+} from "@/lib/test-presets";
 
 type Course = "MHT-CET" | "JEE" | "NEET";
 
@@ -10,6 +17,11 @@ type Subject =
   | "Chemistry"
   | "Mathematics"
   | "Biology";
+
+type DatabaseChapter = {
+  subject: string;
+  chapter: string;
+};
 
 const COURSE_CONFIG: Record<
   Course,
@@ -52,7 +64,10 @@ const COURSE_CONFIG: Record<
   },
 };
 
-const SAMPLE_CHAPTERS: Record<Subject, string[]> = {
+const SAMPLE_CHAPTERS: Record<
+  Subject,
+  string[]
+> = {
   Physics: [
     "Rotational Motion",
     "Thermodynamics",
@@ -88,20 +103,64 @@ const SAMPLE_CHAPTERS: Record<Subject, string[]> = {
 
 const DIFFICULTIES = [
   "Easy",
-  "Medium",
-  "Hard",
-  "Mixed",
+  "Challenging",
+  "Balanced",
+  "Difficult",
 ];
 
-const QUESTION_COUNTS = [10, 20, 30, 50, 100];
+const PRESET_SUBJECT_NAMES: Record<
+  string,
+  string
+> = {
+  physics: "Physics",
+  chemistry: "Chemistry",
+  maths: "Mathematics",
+  biology: "Biology",
+};
 
-const DURATIONS = [
-  { label: "15 minutes", value: 15 },
-  { label: "30 minutes", value: 30 },
-  { label: "45 minutes", value: 45 },
-  { label: "60 minutes", value: 60 },
-  { label: "90 minutes", value: 90 },
-];
+function subjectToPresetSubject(
+  subject: Subject
+):
+  | "physics"
+  | "chemistry"
+  | "maths"
+  | "biology" {
+  switch (subject) {
+    case "Physics":
+      return "physics";
+
+    case "Chemistry":
+      return "chemistry";
+
+    case "Mathematics":
+      return "maths";
+
+    case "Biology":
+      return "biology";
+  }
+}
+
+function presetSubjectToSubject(
+  subject:
+    | "physics"
+    | "chemistry"
+    | "maths"
+    | "biology"
+): Subject {
+  switch (subject) {
+    case "physics":
+      return "Physics";
+
+    case "chemistry":
+      return "Chemistry";
+
+    case "maths":
+      return "Mathematics";
+
+    case "biology":
+      return "Biology";
+  }
+}
 
 export default function TestsPage() {
   const router = useRouter();
@@ -109,148 +168,1000 @@ export default function TestsPage() {
   const [course, setCourse] =
     useState<Course>("MHT-CET");
 
-  const [subject, setSubject] =
+  const [subjects, setSubjects] =
+    useState<Subject[]>(["Physics"]);
+
+  const [activeChapterSubject, setActiveChapterSubject] =
     useState<Subject>("Physics");
 
-  const [chapters, setChapters] = useState<string[]>([]);
+  const [chaptersBySubject, setChaptersBySubject] =
+    useState<Record<Subject, string[]>>({
+      Physics: [],
+      Chemistry: [],
+      Mathematics: [],
+      Biology: [],
+    });
+
+  const [availableChapters, setAvailableChapters] =
+    useState<DatabaseChapter[]>([]);
+
+  const [databaseSubjects, setDatabaseSubjects] =
+    useState<string[]>([]);
+
+  const [loadingDatabase, setLoadingDatabase] =
+    useState(true);
 
   const [difficulty, setDifficulty] =
-    useState("Mixed");
+    useState("Balanced");
 
-  const [questionCount, setQuestionCount] =
-    useState(20);
+  /*
+   * ---------------------------------------------------------
+   * MHT CET GROUP
+   * ---------------------------------------------------------
+   */
 
-  const [duration, setDuration] =
-    useState(30);
+  const [studentGroup, setStudentGroup] =
+    useState<StudentGroup | null>(null);
+
+  /*
+   * ---------------------------------------------------------
+   * PRESET
+   * ---------------------------------------------------------
+   */
+
+  const [selectedPreset, setSelectedPreset] =
+    useState<Preset | null>(null);
 
   const [generating, setGenerating] =
     useState(false);
 
-  const courseConfig = COURSE_CONFIG[course];
+  const courseConfig =
+    COURSE_CONFIG[course];
 
-  const availableChapters = useMemo(
-    () => SAMPLE_CHAPTERS[subject],
-    [subject]
-  );
+  /*
+   * ---------------------------------------------------------
+   * SELECTED CHAPTERS
+   * ---------------------------------------------------------
+   */
 
-  function changeCourse(nextCourse: Course) {
-    setCourse(nextCourse);
+  const selectedChapters = useMemo(() => {
+    return subjects.flatMap(
+      (subject) =>
+        chaptersBySubject[subject] || []
+    );
+  }, [
+    subjects,
+    chaptersBySubject,
+  ]);
 
-    const config = COURSE_CONFIG[nextCourse];
+  /*
+   * ---------------------------------------------------------
+   * AVAILABLE PRESETS
+   * ---------------------------------------------------------
+   */
 
-    if (config.subjects.length > 0) {
-      setSubject(config.subjects[0]);
+  const availablePresets = useMemo(() => {
+    if (!studentGroup) {
+      return [];
     }
 
-    setChapters([]);
-  }
+    return getPresetsForGroup(
+      studentGroup
+    );
+  }, [studentGroup]);
 
-  function changeSubject(nextSubject: Subject) {
-    setSubject(nextSubject);
-    setChapters([]);
-  }
+  /*
+   * ---------------------------------------------------------
+   * SELECTED PRESET DETAILS
+   * ---------------------------------------------------------
+   */
 
-  function toggleChapter(chapter: string) {
-    setChapters((previous) => {
-      if (previous.includes(chapter)) {
-        return previous.filter(
-          (item) => item !== chapter
+  const presetDetails = useMemo(() => {
+    if (!selectedPreset) {
+      return null;
+    }
+
+    return calculatePreset(
+      selectedPreset
+    );
+  }, [selectedPreset]);
+
+  /*
+   * ---------------------------------------------------------
+   * LOAD SAVED GROUP
+   * ---------------------------------------------------------
+   */
+
+  useEffect(() => {
+    const savedGroup =
+      localStorage.getItem(
+        "mhtCETGroup"
+      );
+
+    if (
+      savedGroup === "PCM" ||
+      savedGroup === "PCB"
+    ) {
+      setStudentGroup(
+        savedGroup
+      );
+    }
+  }, []);
+
+  /*
+   * ---------------------------------------------------------
+   * LOAD DATABASE DATA
+   * ---------------------------------------------------------
+   */
+
+  useEffect(() => {
+    async function loadDatabaseData() {
+      try {
+        setLoadingDatabase(true);
+
+        const response =
+          await fetch(
+            "/api/db-schema",
+            {
+              method: "GET",
+              cache: "no-store",
+            }
+          );
+
+        const data =
+          await response.json();
+
+        if (
+          !response.ok ||
+          !data.success
+        ) {
+          throw new Error(
+            data.error ||
+              "Failed to load subjects and chapters."
+          );
+        }
+
+        setAvailableChapters(
+          Array.isArray(
+            data.chapters
+          )
+            ? data.chapters
+            : []
         );
+
+        setDatabaseSubjects(
+          Array.isArray(
+            data.subjects
+          )
+            ? data.subjects
+            : []
+        );
+      } catch (error) {
+        console.error(
+          "Failed to load database data:",
+          error
+        );
+      } finally {
+        setLoadingDatabase(false);
       }
+    }
 
-      return [...previous, chapter];
-    });
-  }
+    loadDatabaseData();
+  }, []);
 
-  function selectAllChapters() {
-    setChapters(availableChapters);
-  }
+  /*
+   * ---------------------------------------------------------
+   * GROUP CHANGE
+   * ---------------------------------------------------------
+   */
 
-  function clearChapters() {
-    setChapters([]);
-  }
+  function changeStudentGroup(
+    nextGroup: StudentGroup
+  ) {
+    setStudentGroup(nextGroup);
 
-  
-  async function generateTest() {
-  if (!courseConfig.available) {
-    return;
-  }
+    localStorage.setItem(
+      "mhtCETGroup",
+      nextGroup
+    );
 
-  setGenerating(true);
+    /*
+     * PCM:
+     * Physics + Chemistry + Mathematics
+     *
+     * PCB:
+     * Physics + Chemistry + Biology
+     */
 
-  try {
-    const response = await fetch("/api/tests/generate", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        exam: course,
-        subjects: subject ? [subject] : [],
-        chapters,
-        difficulty,
-        questionCount,
-      }),
-    });
+    if (nextGroup === "PCM") {
+      setSubjects([
+        "Physics",
+      ]);
 
-    const data = await response.json();
+      setActiveChapterSubject(
+        "Physics"
+      );
 
-    if (!response.ok || !data.success) {
-      throw new Error(
-        data.error || "Unable to generate test."
+      setChaptersBySubject(
+        (previous) => ({
+          ...previous,
+          Biology: [],
+        })
+      );
+    } else {
+      setSubjects([
+        "Physics",
+      ]);
+
+      setActiveChapterSubject(
+        "Physics"
+      );
+
+      setChaptersBySubject(
+        (previous) => ({
+          ...previous,
+          Mathematics: [],
+        })
       );
     }
 
-    const testId = data.testId;
+    /*
+     * Group change means an old preset
+     * may no longer be valid.
+     */
 
-    const testConfiguration = {
-      testId,
-      course,
-      subject,
-      chapters,
-      difficulty,
-      questionCount,
-      duration,
-      createdAt: new Date().toISOString(),
-    };
+    setSelectedPreset(null);
+  }
 
-    localStorage.setItem(
-      `test-${testId}`,
-      JSON.stringify({
-        ...testConfiguration,
-        questions: data.questions,
-        startedAt: new Date().toISOString(),
+  /*
+   * ---------------------------------------------------------
+   * KEEP SUBJECTS COMPATIBLE WITH GROUP
+   * ---------------------------------------------------------
+   */
+
+  useEffect(() => {
+    if (!studentGroup) {
+      return;
+    }
+
+    const allowedSubjects =
+      studentGroup === "PCM"
+        ? ([
+            "Physics",
+            "Chemistry",
+            "Mathematics",
+          ] as Subject[])
+        : ([
+            "Physics",
+            "Chemistry",
+            "Biology",
+          ] as Subject[]);
+
+    setSubjects(
+      (previous) => {
+        const validSubjects =
+          previous.filter(
+            (subject) =>
+              allowedSubjects.includes(
+                subject
+              )
+          );
+
+        if (
+          validSubjects.length > 0
+        ) {
+          return validSubjects;
+        }
+
+        return ["Physics"];
+      }
+    );
+
+    setActiveChapterSubject(
+      (previous) =>
+        allowedSubjects.includes(
+          previous
+        )
+          ? previous
+          : "Physics"
+    );
+
+    setChaptersBySubject(
+      (previous) => ({
+        ...previous,
+
+        Mathematics:
+          studentGroup === "PCM"
+            ? previous.Mathematics
+            : [],
+
+        Biology:
+          studentGroup === "PCB"
+            ? previous.Biology
+            : [],
       })
     );
 
-    localStorage.setItem(
-      `test-config-${testId}`,
-      JSON.stringify(testConfiguration)
-    );
+    /*
+     * Remove preset if it no longer
+     * belongs to the selected group.
+     */
 
-    router.push(`/test/${testId}`);
-  } catch (error) {
-    console.error("GENERATE TEST ERROR:", error);
+    setSelectedPreset(
+      (previous) => {
+        if (!previous) {
+          return null;
+        }
 
-    alert(
-      error instanceof Error
-        ? error.message
-        : "Unable to generate test."
+        const allowedPresetIds =
+          getPresetsForGroup(
+            studentGroup
+          ).map(
+            (preset) =>
+              preset.id
+          );
+
+        return allowedPresetIds.includes(
+          previous.id
+        )
+          ? previous
+          : null;
+      }
     );
-  } finally {
-    setGenerating(false);
+  }, [studentGroup]);
+
+  /*
+   * ---------------------------------------------------------
+   * CHAPTERS FOR ACTIVE SUBJECT
+   * ---------------------------------------------------------
+   */
+
+  const currentSubjectChapters =
+    useMemo(() => {
+      const databaseChapterNames =
+        availableChapters
+          .filter(
+            (item) =>
+              item.subject
+                .trim()
+                .toLowerCase() ===
+              activeChapterSubject
+                .trim()
+                .toLowerCase()
+          )
+          .map(
+            (item) =>
+              item.chapter
+          );
+
+      const uniqueDatabaseChapters =
+        Array.from(
+          new Set(
+            databaseChapterNames
+          )
+        );
+
+      if (
+        uniqueDatabaseChapters.length >
+        0
+      ) {
+        return uniqueDatabaseChapters;
+      }
+
+      return (
+        SAMPLE_CHAPTERS[
+          activeChapterSubject
+        ] || []
+      );
+    }, [
+      availableChapters,
+      activeChapterSubject,
+    ]);
+
+  /*
+   * ---------------------------------------------------------
+   * CHANGE COURSE
+   * ---------------------------------------------------------
+   */
+
+  function changeCourse(
+    nextCourse: Course
+  ) {
+    setCourse(nextCourse);
+
+    const config =
+      COURSE_CONFIG[
+        nextCourse
+      ];
+
+    if (
+      config.subjects.length >
+      0
+    ) {
+      const firstSubject =
+        config.subjects[0];
+
+      setSubjects([
+        firstSubject,
+      ]);
+
+      setActiveChapterSubject(
+        firstSubject
+      );
+    }
+
+    setChaptersBySubject({
+      Physics: [],
+      Chemistry: [],
+      Mathematics: [],
+      Biology: [],
+    });
+
+    setSelectedPreset(null);
   }
-}
-  
+
+  /*
+   * ---------------------------------------------------------
+   * TOGGLE SUBJECT
+   * ---------------------------------------------------------
+   */
+
+  function toggleSubject(
+    nextSubject: Subject
+  ) {
+    if (studentGroup) {
+      const allowedSubjects =
+        studentGroup === "PCM"
+          ? ([
+              "Physics",
+              "Chemistry",
+              "Mathematics",
+            ] as Subject[])
+          : ([
+              "Physics",
+              "Chemistry",
+              "Biology",
+            ] as Subject[]);
+
+      if (
+        !allowedSubjects.includes(
+          nextSubject
+        )
+      ) {
+        return;
+      }
+    }
+
+    setSubjects(
+      (previous) => {
+        /*
+         * Mathematics and Biology
+         * cannot be combined.
+         */
+
+        if (
+          nextSubject ===
+            "Mathematics" &&
+          previous.includes(
+            "Biology"
+          )
+        ) {
+          return previous;
+        }
+
+        if (
+          nextSubject ===
+            "Biology" &&
+          previous.includes(
+            "Mathematics"
+          )
+        ) {
+          return previous;
+        }
+
+        /*
+         * REMOVE SUBJECT
+         */
+
+        if (
+          previous.includes(
+            nextSubject
+          )
+        ) {
+          if (
+            previous.length ===
+            1
+          ) {
+            return previous;
+          }
+
+          const updated =
+            previous.filter(
+              (item) =>
+                item !==
+                nextSubject
+            );
+
+          if (
+            activeChapterSubject ===
+            nextSubject
+          ) {
+            setActiveChapterSubject(
+              updated[0]
+            );
+          }
+
+          /*
+           * Check whether the
+           * existing preset still matches.
+           */
+
+          if (selectedPreset) {
+            const presetSubjects =
+              Object.keys(
+                selectedPreset.subjects
+              ).map(
+                (subject) =>
+                  subject as
+                    | "physics"
+                    | "chemistry"
+                    | "maths"
+                    | "biology"
+              );
+
+            const updatedPresetStillValid =
+              presetSubjects.every(
+                (
+                  presetSubject
+                ) =>
+                  updated.includes(
+                    presetSubjectToSubject(
+                      presetSubject
+                    )
+                  )
+              ) &&
+              presetSubjects.length ===
+                updated.length;
+
+            if (
+              !updatedPresetStillValid
+            ) {
+              setSelectedPreset(
+                null
+              );
+            }
+          }
+
+          return updated;
+        }
+
+        /*
+         * ADD SUBJECT
+         */
+
+        const updated = [
+          ...previous,
+          nextSubject,
+        ];
+
+        setActiveChapterSubject(
+          nextSubject
+        );
+
+        setSelectedPreset(
+          null
+        );
+
+        return updated;
+      }
+    );
+  }
+
+  /*
+   * ---------------------------------------------------------
+   * TOGGLE CHAPTER
+   * ---------------------------------------------------------
+   */
+
+  function toggleChapter(
+    subject: Subject,
+    chapter: string
+  ) {
+    setChaptersBySubject(
+      (previous) => {
+        const current =
+          previous[subject] ||
+          [];
+
+        if (
+          current.includes(
+            chapter
+          )
+        ) {
+          return {
+            ...previous,
+
+            [subject]:
+              current.filter(
+                (item) =>
+                  item !==
+                  chapter
+              ),
+          };
+        }
+
+        return {
+          ...previous,
+
+          [subject]: [
+            ...current,
+            chapter,
+          ],
+        };
+      }
+    );
+
+    /*
+     * Selecting/clearing chapters
+     * means a preset can still remain
+     * selected because presets determine
+     * question count, not chapters.
+     */
+  }
+
+  /*
+   * ---------------------------------------------------------
+   * SELECT ALL CHAPTERS
+   * ---------------------------------------------------------
+   */
+
+  function selectAllChapters(
+    subject: Subject,
+    chapterList: string[]
+  ) {
+    setChaptersBySubject(
+      (previous) => ({
+        ...previous,
+
+        [subject]: [
+          ...chapterList,
+        ],
+      })
+    );
+  }
+
+  /*
+   * ---------------------------------------------------------
+   * CLEAR CHAPTERS
+   * ---------------------------------------------------------
+   */
+
+  function clearChapters(
+    subject: Subject
+  ) {
+    setChaptersBySubject(
+      (previous) => ({
+        ...previous,
+
+        [subject]: [],
+      })
+    );
+  }
+
+  /*
+   * ---------------------------------------------------------
+   * CHECK PRESET SUBJECT MATCH
+   * ---------------------------------------------------------
+   */
+
+  function presetMatchesSelectedSubjects(
+    preset: Preset
+  ) {
+    const selectedPresetSubjects =
+      Object.keys(
+        preset.subjects
+      ).map(
+        (subject) =>
+          subject as
+            | "physics"
+            | "chemistry"
+            | "maths"
+            | "biology"
+      );
+
+    const selectedSubjectKeys =
+      subjects.map(
+        (subject) =>
+          subjectToPresetSubject(
+            subject
+          )
+      );
+
+    /*
+     * Exact subject combination
+     * is required.
+     */
+
+    if (
+      selectedPresetSubjects.length !==
+      selectedSubjectKeys.length
+    ) {
+      return false;
+    }
+
+    return (
+      selectedPresetSubjects.every(
+        (subject) =>
+          selectedSubjectKeys.includes(
+            subject
+          )
+      ) &&
+      selectedSubjectKeys.every(
+        (subject) =>
+          selectedPresetSubjects.includes(
+            subject
+          )
+      )
+    );
+  }
+
+  /*
+   * ---------------------------------------------------------
+   * GENERATE TEST
+   * ---------------------------------------------------------
+   */
+
+  async function generateTest() {
+    if (
+      !courseConfig.available
+    ) {
+      return;
+    }
+
+    if (!studentGroup) {
+      alert(
+        "Please select your MHT CET group: PCM or PCB."
+      );
+
+      return;
+    }
+
+    if (
+      !selectedPreset ||
+      !presetDetails
+    ) {
+      alert(
+        "Please select a test preset."
+      );
+
+      return;
+    }
+
+    if (
+      !presetMatchesSelectedSubjects(
+        selectedPreset
+      )
+    ) {
+      alert(
+        "Please select subjects that match the chosen preset."
+      );
+
+      return;
+    }
+
+    if (
+      presetDetails.totalMarks >
+        200 ||
+      presetDetails.durationMinutes >
+        180
+    ) {
+      alert(
+        "This preset exceeds the maximum allowed test size."
+      );
+
+      return;
+    }
+
+    if (
+      subjects.length === 0
+    ) {
+      alert(
+        "Please select at least one subject."
+      );
+
+      return;
+    }
+
+    setGenerating(true);
+
+    try {
+      const response =
+        await fetch(
+          "/api/tests/generate",
+          {
+            method: "POST",
+
+            headers: {
+              "Content-Type":
+                "application/json",
+            },
+
+            body: JSON.stringify({
+              exam: course,
+
+              course,
+
+              studentGroup,
+
+              subjects,
+
+              subject:
+                subjects[0],
+
+              chapters:
+                selectedChapters,
+
+              chaptersBySubject,
+
+              difficulty:
+                difficulty.toLowerCase(),
+
+              questionCount:
+                presetDetails.totalQuestions,
+
+              duration:
+                presetDetails.durationMinutes,
+
+              presetId:
+                selectedPreset.id,
+
+              presetName:
+                selectedPreset.name,
+
+              totalMarks:
+                presetDetails.totalMarks,
+            }),
+          }
+        );
+
+      const data =
+        await response.json();
+
+      if (
+        !response.ok ||
+        !data.success
+      ) {
+        throw new Error(
+          data.error ||
+            "Unable to generate test."
+        );
+      }
+
+      const testId =
+        data.testId;
+
+      /*
+       * -----------------------------------------------------
+       * TEST CONFIGURATION
+       * -----------------------------------------------------
+       */
+
+      const testConfiguration = {
+        testId,
+
+        course,
+
+        studentGroup,
+
+        subjects,
+
+        subject:
+          subjects[0],
+
+        chapters:
+          selectedChapters,
+
+        chaptersBySubject,
+
+        difficulty,
+
+        questionCount:
+          presetDetails.totalQuestions,
+
+        duration:
+          presetDetails.durationMinutes,
+
+        totalMarks:
+          presetDetails.totalMarks,
+
+        presetId:
+          selectedPreset.id,
+
+        presetName:
+          selectedPreset.name,
+
+        createdAt:
+          new Date().toISOString(),
+      };
+
+      /*
+       * -----------------------------------------------------
+       * SAVE COMPLETE TEST
+       * -----------------------------------------------------
+       */
+
+      localStorage.setItem(
+        `test-${testId}`,
+        JSON.stringify({
+          ...testConfiguration,
+
+          questions:
+            data.questions,
+
+          startedAt:
+            new Date().toISOString(),
+        })
+      );
+
+      /*
+       * -----------------------------------------------------
+       * SAVE CONFIG
+       * -----------------------------------------------------
+       */
+
+      localStorage.setItem(
+        `test-config-${testId}`,
+        JSON.stringify(
+          testConfiguration
+        )
+      );
+
+      /*
+       * -----------------------------------------------------
+       * OPEN TEST
+       * -----------------------------------------------------
+       */
+
+      router.push(
+        `/test/${testId}`
+      );
+    } catch (error) {
+      console.error(
+        "GENERATE TEST ERROR:",
+        error
+      );
+
+      alert(
+        error instanceof Error
+          ? error.message
+          : "Unable to generate test."
+      );
+    } finally {
+      setGenerating(false);
+    }
+  }
+
+  /*
+   * ---------------------------------------------------------
+   * RENDER
+   * ---------------------------------------------------------
+   */
 
   return (
     <main className="min-h-screen bg-[#f5f7fb] text-[#111827]">
+
       {/* HEADER */}
 
       <header className="h-16 bg-white border-b border-[#e5e7eb] flex items-center justify-between px-6">
+
         <div className="flex items-center gap-3">
+
           <button
-            onClick={() => router.push("/dashboard")}
+            onClick={() =>
+              router.push(
+                "/dashboard"
+              )
+            }
             className="w-9 h-9 rounded-xl bg-[#1d4ed8] text-white flex items-center justify-center font-bold"
           >
             P
@@ -265,20 +1176,28 @@ export default function TestsPage() {
               Create Test
             </div>
           </div>
+
         </div>
 
         <button
-          onClick={() => router.push("/dashboard")}
+          onClick={() =>
+            router.push(
+              "/dashboard"
+            )
+          }
           className="text-sm text-[#6b7280] hover:text-[#111827]"
         >
           Dashboard
         </button>
+
       </header>
 
       <div className="max-w-6xl mx-auto px-6 py-8">
+
         {/* PAGE TITLE */}
 
         <div className="mb-8">
+
           <div className="text-sm font-medium text-[#2563eb] mb-2">
             TEST GENERATOR
           </div>
@@ -288,37 +1207,48 @@ export default function TestsPage() {
           </h1>
 
           <p className="mt-2 text-sm text-[#6b7280]">
-            Configure your test and start practising with
-            questions from the Paper Tree question bank.
+            Configure your test and start
+            practising with questions from
+            the Paper Tree question bank.
           </p>
+
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_330px] gap-6">
+
           {/* MAIN CONFIGURATION */}
 
           <div className="space-y-6">
+
             {/* COURSE */}
 
             <section className="bg-white border border-[#e5e7eb] rounded-2xl shadow-sm p-6">
+
               <div className="mb-5">
+
                 <h2 className="text-lg font-semibold">
                   1. Choose Exam
                 </h2>
 
                 <p className="text-sm text-[#6b7280] mt-1">
-                  Select the entrance examination you are
-                  preparing for.
+                  Select the entrance examination
+                  you are preparing for.
                 </p>
+
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+
                 {(
                   Object.keys(
                     COURSE_CONFIG
                   ) as Course[]
                 ).map((item) => {
+
                   const config =
-                    COURSE_CONFIG[item];
+                    COURSE_CONFIG[
+                      item
+                    ];
 
                   const selected =
                     course === item;
@@ -326,9 +1256,13 @@ export default function TestsPage() {
                   return (
                     <button
                       key={item}
-                      disabled={!config.available}
+                      disabled={
+                        !config.available
+                      }
                       onClick={() =>
-                        changeCourse(item)
+                        changeCourse(
+                          item
+                        )
                       }
                       className={`relative text-left rounded-xl border-2 p-5 transition ${
                         selected
@@ -338,6 +1272,7 @@ export default function TestsPage() {
                           : "border-[#e5e7eb] bg-[#fafafa] opacity-60 cursor-not-allowed"
                       }`}
                     >
+
                       {selected && (
                         <div className="absolute top-4 right-4 w-5 h-5 rounded-full bg-[#2563eb] text-white flex items-center justify-center text-xs">
                           ✓
@@ -355,162 +1290,607 @@ export default function TestsPage() {
                       </div>
 
                       <div className="text-xs text-[#6b7280] mt-2 pr-4">
-                        {config.description}
+                        {
+                          config.description
+                        }
                       </div>
+
                     </button>
                   );
                 })}
+
               </div>
+
+            </section>
+
+            {/* GROUP */}
+
+            <section className="bg-white border border-[#e5e7eb] rounded-2xl shadow-sm p-6">
+
+              <div className="mb-5">
+
+                <h2 className="text-lg font-semibold">
+                  2. Choose MHT CET Group
+                </h2>
+
+                <p className="text-sm text-[#6b7280] mt-1">
+                  Choose the subject combination
+                  you want to practise.
+                </p>
+
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+
+                <button
+                  type="button"
+                  onClick={() =>
+                    changeStudentGroup(
+                      "PCM"
+                    )
+                  }
+                  className={`relative text-left rounded-xl border-2 p-5 transition ${
+                    studentGroup ===
+                    "PCM"
+                      ? "border-[#2563eb] bg-[#eff6ff]"
+                      : "border-[#e5e7eb] hover:border-[#bfdbfe]"
+                  }`}
+                >
+
+                  {studentGroup ===
+                    "PCM" && (
+                    <div className="absolute top-4 right-4 w-5 h-5 rounded-full bg-[#2563eb] text-white flex items-center justify-center text-xs">
+                      ✓
+                    </div>
+                  )}
+
+                  <div className="text-lg font-bold">
+                    PCM
+                  </div>
+
+                  <div className="text-sm text-[#6b7280] mt-2">
+                    Physics + Chemistry +
+                    Mathematics
+                  </div>
+
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() =>
+                    changeStudentGroup(
+                      "PCB"
+                    )
+                  }
+                  className={`relative text-left rounded-xl border-2 p-5 transition ${
+                    studentGroup ===
+                    "PCB"
+                      ? "border-[#2563eb] bg-[#eff6ff]"
+                      : "border-[#e5e7eb] hover:border-[#bfdbfe]"
+                  }`}
+                >
+
+                  {studentGroup ===
+                    "PCB" && (
+                    <div className="absolute top-4 right-4 w-5 h-5 rounded-full bg-[#2563eb] text-white flex items-center justify-center text-xs">
+                      ✓
+                    </div>
+                  )}
+
+                  <div className="text-lg font-bold">
+                    PCB
+                  </div>
+
+                  <div className="text-sm text-[#6b7280] mt-2">
+                    Physics + Chemistry +
+                    Biology
+                  </div>
+
+                </button>
+
+              </div>
+
+              {!studentGroup && (
+                <div className="mt-4 rounded-xl bg-[#fff7ed] border border-[#fed7aa] p-4 text-sm text-[#9a3412]">
+                  Select PCM or PCB to
+                  continue.
+                </div>
+              )}
+
+              {studentGroup && (
+                <div className="mt-4 rounded-xl bg-[#f9fafb] border border-[#e5e7eb] p-3">
+
+                  <div className="text-xs text-[#6b7280]">
+                    Selected group
+                  </div>
+
+                  <div className="text-sm font-semibold mt-1">
+                    {studentGroup}
+                  </div>
+
+                </div>
+              )}
+
             </section>
 
             {/* SUBJECT */}
 
             <section className="bg-white border border-[#e5e7eb] rounded-2xl shadow-sm p-6">
+
               <div className="mb-5">
+
                 <h2 className="text-lg font-semibold">
-                  2. Choose Subject
+                  3. Choose Subject
                 </h2>
 
                 <p className="text-sm text-[#6b7280] mt-1">
-                  Select the subject for this test.
+                  Select one or more subjects.
+                  Mathematics and Biology cannot
+                  be selected together.
                 </p>
+
               </div>
 
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                {courseConfig.subjects.map(
-                  (item) => {
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+
+                {courseConfig.subjects
+                  .filter(
+                    (item) => {
+                      if (
+                        !studentGroup
+                      ) {
+                        return false;
+                      }
+
+                      if (
+                        studentGroup ===
+                        "PCM"
+                      ) {
+                        return [
+                          "Physics",
+                          "Chemistry",
+                          "Mathematics",
+                        ].includes(
+                          item
+                        );
+                      }
+
+                      return [
+                        "Physics",
+                        "Chemistry",
+                        "Biology",
+                      ].includes(
+                        item
+                      );
+                    }
+                  )
+                  .map((item) => {
+
                     const selected =
-                      subject === item;
+                      subjects.includes(
+                        item
+                      );
+
+                    const blocked =
+                      (item ===
+                        "Mathematics" &&
+                        subjects.includes(
+                          "Biology"
+                        )) ||
+                      (item ===
+                        "Biology" &&
+                        subjects.includes(
+                          "Mathematics"
+                        ));
+
+                    const hasDatabaseData =
+                      databaseSubjects.some(
+                        (
+                          dbSubject
+                        ) =>
+                          dbSubject
+                            .trim()
+                            .toLowerCase() ===
+                          item
+                            .trim()
+                            .toLowerCase()
+                      );
 
                     return (
                       <button
                         key={item}
                         onClick={() =>
-                          changeSubject(item)
+                          !blocked &&
+                          toggleSubject(
+                            item
+                          )
+                        }
+                        disabled={
+                          blocked ||
+                          !studentGroup
                         }
                         className={`p-4 rounded-xl border-2 text-sm font-semibold transition ${
                           selected
                             ? "border-[#2563eb] bg-[#eff6ff] text-[#1d4ed8]"
+                            : blocked
+                            ? "border-[#e5e7eb] bg-[#f9fafb] opacity-50 cursor-not-allowed"
                             : "border-[#e5e7eb] hover:border-[#bfdbfe]"
                         }`}
                       >
-                        {item}
+
+                        <div>
+                          {item}
+                        </div>
+
+                        {loadingDatabase ? (
+                          <div className="text-[10px] text-[#9ca3af] mt-1">
+                            Loading...
+                          </div>
+                        ) : (
+                          <div
+                            className={`text-[10px] mt-1 ${
+                              hasDatabaseData
+                                ? "text-green-600"
+                                : "text-[#9ca3af]"
+                            }`}
+                          >
+                            {hasDatabaseData
+                              ? "Database available"
+                              : "No database data"}
+                          </div>
+                        )}
+
+                        {blocked && (
+                          <div className="text-[9px] text-[#9ca3af] mt-1">
+                            Cannot combine with{" "}
+                            {item ===
+                            "Mathematics"
+                              ? "Biology"
+                              : "Mathematics"}
+                          </div>
+                        )}
+
                       </button>
                     );
-                  }
-                )}
+                  })}
+
               </div>
+
+              {studentGroup && (
+                <div className="mt-4 rounded-xl bg-[#f9fafb] border border-[#e5e7eb] p-3">
+
+                  <div className="text-xs text-[#6b7280] mb-2">
+                    Selected subjects
+                  </div>
+
+                  <div className="flex flex-wrap gap-2">
+
+                    {subjects.map(
+                      (item) => (
+                        <span
+                          key={item}
+                          className="px-3 py-1.5 rounded-lg bg-[#eff6ff] text-[#1d4ed8] text-xs font-semibold"
+                        >
+                          {item}
+                        </span>
+                      )
+                    )}
+
+                  </div>
+
+                </div>
+              )}
+
             </section>
 
             {/* CHAPTERS */}
 
             <section className="bg-white border border-[#e5e7eb] rounded-2xl shadow-sm p-6">
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-5">
-                <div>
-                  <h2 className="text-lg font-semibold">
-                    3. Choose Chapters
-                  </h2>
 
-                  <p className="text-sm text-[#6b7280] mt-1">
-                    Select specific chapters or use the
-                    entire subject.
-                  </p>
-                </div>
+              <div className="mb-5">
 
-                <div className="flex gap-2">
-                  <button
-                    onClick={selectAllChapters}
-                    className="text-xs font-semibold text-[#2563eb] hover:underline"
-                  >
-                    Select All
-                  </button>
+                <h2 className="text-lg font-semibold">
+                  4. Choose Chapters
+                </h2>
 
-                  <span className="text-[#d1d5db]">
-                    |
-                  </span>
+                <p className="text-sm text-[#6b7280] mt-1">
+                  Select chapters separately for
+                  each selected subject.
+                </p>
 
-                  <button
-                    onClick={clearChapters}
-                    className="text-xs font-semibold text-[#6b7280] hover:underline"
-                  >
-                    Clear
-                  </button>
-                </div>
               </div>
 
-              <div className="space-y-2">
-                {availableChapters.map(
-                  (chapter) => {
-                    const selected =
-                      chapters.includes(chapter);
+              {!studentGroup ? (
+                <div className="rounded-xl bg-[#fff7ed] border border-[#fed7aa] p-4 text-sm text-[#9a3412]">
+                  Select PCM or PCB first.
+                </div>
+              ) : (
+                <>
+                  <div className="flex flex-wrap gap-2 mb-5">
 
-                    return (
-                      <button
-                        key={chapter}
-                        onClick={() =>
-                          toggleChapter(
-                            chapter
-                          )
-                        }
-                        className={`w-full flex items-center justify-between p-3.5 rounded-xl border transition text-left ${
-                          selected
-                            ? "border-[#93c5fd] bg-[#eff6ff]"
-                            : "border-[#e5e7eb] hover:bg-[#f9fafb]"
-                        }`}
-                      >
-                        <span className="text-sm font-medium">
-                          {chapter}
-                        </span>
+                    {subjects.map(
+                      (item) => {
 
-                        <span
-                          className={`w-5 h-5 rounded-md border flex items-center justify-center text-xs ${
-                            selected
-                              ? "bg-[#2563eb] border-[#2563eb] text-white"
-                              : "border-[#d1d5db]"
-                          }`}
+                        const selectedCount =
+                          (
+                            chaptersBySubject[
+                              item
+                            ] || []
+                          ).length;
+
+                        const active =
+                          activeChapterSubject ===
+                          item;
+
+                        return (
+                          <button
+                            key={item}
+                            onClick={() =>
+                              setActiveChapterSubject(
+                                item
+                              )
+                            }
+                            className={`px-4 py-2.5 rounded-xl border-2 text-sm font-semibold transition ${
+                              active
+                                ? "border-[#2563eb] bg-[#eff6ff] text-[#1d4ed8]"
+                                : "border-[#e5e7eb] hover:border-[#bfdbfe]"
+                            }`}
+                          >
+                            {item}
+
+                            {selectedCount >
+                              0 && (
+                              <span className="ml-2 text-xs">
+                                (
+                                {
+                                  selectedCount
+                                }
+                                )
+                              </span>
+                            )}
+
+                          </button>
+                        );
+                      }
+                    )}
+
+                  </div>
+
+                  {loadingDatabase && (
+                    <div className="rounded-xl bg-[#f9fafb] border border-[#e5e7eb] p-4 text-sm text-[#6b7280]">
+                      Loading chapters from
+                      the question bank...
+                    </div>
+                  )}
+
+                  {!loadingDatabase && (
+                    <div className="flex items-center justify-between gap-3 mb-4">
+
+                      <div>
+
+                        <div className="text-sm font-semibold">
+                          {
+                            activeChapterSubject
+                          }
+                        </div>
+
+                        <div className="text-xs text-[#6b7280] mt-1">
+                          Select chapters for{" "}
+                          {
+                            activeChapterSubject
+                          }.
+                        </div>
+
+                      </div>
+
+                      <div className="flex gap-2">
+
+                        <button
+                          onClick={() =>
+                            selectAllChapters(
+                              activeChapterSubject,
+                              currentSubjectChapters
+                            )
+                          }
+                          disabled={
+                            currentSubjectChapters.length ===
+                            0
+                          }
+                          className="text-xs font-semibold text-[#2563eb] hover:underline disabled:text-[#9ca3af] disabled:no-underline"
                         >
-                          {selected
-                            ? "✓"
-                            : ""}
-                        </span>
-                      </button>
-                    );
-                  }
-                )}
-              </div>
+                          Select All
+                        </button>
 
-              {chapters.length === 0 && (
-                <div className="mt-4 rounded-xl bg-[#f9fafb] border border-[#e5e7eb] p-3 text-xs text-[#6b7280]">
-                  No chapter selected — questions can
-                  be taken from the entire subject.
-                </div>
+                        <span className="text-[#d1d5db]">
+                          |
+                        </span>
+
+                        <button
+                          onClick={() =>
+                            clearChapters(
+                              activeChapterSubject
+                            )
+                          }
+                          className="text-xs font-semibold text-[#6b7280] hover:underline"
+                        >
+                          Clear
+                        </button>
+
+                      </div>
+
+                    </div>
+                  )}
+
+                  {!loadingDatabase &&
+                    currentSubjectChapters.length >
+                      0 && (
+                      <div className="space-y-2">
+
+                        {currentSubjectChapters.map(
+                          (
+                            chapter
+                          ) => {
+
+                            const selected =
+                              (
+                                chaptersBySubject[
+                                  activeChapterSubject
+                                ] || []
+                              ).includes(
+                                chapter
+                              );
+
+                            return (
+                              <button
+                                key={
+                                  chapter
+                                }
+                                onClick={() =>
+                                  toggleChapter(
+                                    activeChapterSubject,
+                                    chapter
+                                  )
+                                }
+                                className={`w-full flex items-center justify-between p-3.5 rounded-xl border transition text-left ${
+                                  selected
+                                    ? "border-[#93c5fd] bg-[#eff6ff]"
+                                    : "border-[#e5e7eb] hover:bg-[#f9fafb]"
+                                }`}
+                              >
+
+                                <span className="text-sm font-medium">
+                                  {
+                                    chapter
+                                  }
+                                </span>
+
+                                <span
+                                  className={`w-5 h-5 rounded-md border flex items-center justify-center text-xs ${
+                                    selected
+                                      ? "bg-[#2563eb] border-[#2563eb] text-white"
+                                      : "border-[#d1d5db]"
+                                  }`}
+                                >
+                                  {selected
+                                    ? "✓"
+                                    : ""}
+                                </span>
+
+                              </button>
+                            );
+                          }
+                        )}
+
+                      </div>
+                    )}
+
+                  {!loadingDatabase &&
+                    currentSubjectChapters.length ===
+                      0 && (
+                      <div className="rounded-xl bg-[#fff7ed] border border-[#fed7aa] p-4 text-sm text-[#9a3412]">
+                        No chapters found in
+                        the database for{" "}
+                        <strong>
+                          {
+                            activeChapterSubject
+                          }
+                        </strong>
+                        .
+                      </div>
+                    )}
+
+                  <div className="mt-5 space-y-2">
+
+                    {subjects.map(
+                      (item) => {
+
+                        const selected =
+                          chaptersBySubject[
+                            item
+                          ] || [];
+
+                        return (
+                          <div
+                            key={item}
+                            className="rounded-xl bg-[#f9fafb] border border-[#e5e7eb] p-3"
+                          >
+
+                            <div className="flex items-center justify-between">
+
+                              <span className="text-xs font-semibold">
+                                {item}
+                              </span>
+
+                              <span className="text-[11px] text-[#6b7280]">
+                                {
+                                  selected.length
+                                }{" "}
+                                selected
+                              </span>
+
+                            </div>
+
+                            {selected.length >
+                              0 && (
+                              <div className="text-[11px] text-[#6b7280] mt-2">
+                                {selected.join(
+                                  ", "
+                                )}
+                              </div>
+                            )}
+
+                          </div>
+                        );
+                      }
+                    )}
+
+                  </div>
+
+                  {selectedChapters.length ===
+                    0 && (
+                    <div className="mt-4 rounded-xl bg-[#f9fafb] border border-[#e5e7eb] p-3 text-xs text-[#6b7280]">
+                      No chapter selected —
+                      questions can be taken
+                      from the selected subjects.
+                    </div>
+                  )}
+                </>
               )}
+
             </section>
 
             {/* DIFFICULTY */}
 
             <section className="bg-white border border-[#e5e7eb] rounded-2xl shadow-sm p-6">
+
               <div className="mb-5">
+
                 <h2 className="text-lg font-semibold">
-                  4. Difficulty
+                  5. Difficulty
                 </h2>
 
                 <p className="text-sm text-[#6b7280] mt-1">
                   Choose the difficulty level.
                 </p>
+
               </div>
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+
                 {DIFFICULTIES.map(
                   (item) => {
+
                     const selected =
-                      difficulty === item;
+                      difficulty ===
+                      item;
 
                     return (
                       <button
                         key={item}
                         onClick={() =>
-                          setDifficulty(item)
+                          setDifficulty(
+                            item
+                          )
                         }
                         className={`p-3.5 rounded-xl border-2 text-sm font-semibold transition ${
                           selected
@@ -523,86 +1903,189 @@ export default function TestsPage() {
                     );
                   }
                 )}
+
               </div>
+
             </section>
 
-            {/* QUESTIONS + DURATION */}
+            {/* PRESETS */}
 
             <section className="bg-white border border-[#e5e7eb] rounded-2xl shadow-sm p-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                  <h2 className="text-lg font-semibold">
-                    5. Number of Questions
-                  </h2>
 
-                  <p className="text-sm text-[#6b7280] mt-1 mb-4">
-                    How many questions should the test
-                    contain?
-                  </p>
+              <div className="mb-5">
 
-                  <div className="flex flex-wrap gap-2">
-                    {QUESTION_COUNTS.map(
-                      (count) => (
-                        <button
-                          key={count}
-                          onClick={() =>
-                            setQuestionCount(
-                              count
-                            )
-                          }
-                          className={`px-5 py-3 rounded-xl border-2 text-sm font-semibold transition ${
-                            questionCount ===
-                            count
-                              ? "border-[#2563eb] bg-[#eff6ff] text-[#1d4ed8]"
-                              : "border-[#e5e7eb] hover:border-[#bfdbfe]"
-                          }`}
-                        >
-                          {count}
-                        </button>
-                      )
-                    )}
-                  </div>
-                </div>
+                <h2 className="text-lg font-semibold">
+                  6. Choose Test Preset
+                </h2>
 
-                <div>
-                  <h2 className="text-lg font-semibold">
-                    6. Duration
-                  </h2>
+                <p className="text-sm text-[#6b7280] mt-1">
+                  Choose a fixed test length.
+                  Questions, marks and duration
+                  are automatically determined.
+                </p>
 
-                  <p className="text-sm text-[#6b7280] mt-1 mb-4">
-                    Set the maximum time for the test.
-                  </p>
-
-                  <select
-                    value={duration}
-                    onChange={(e) =>
-                      setDuration(
-                        Number(e.target.value)
-                      )
-                    }
-                    className="w-full h-12 rounded-xl border border-[#d1d5db] px-4 text-sm outline-none focus:border-[#2563eb] focus:ring-4 focus:ring-blue-100 bg-white"
-                  >
-                    {DURATIONS.map(
-                      (item) => (
-                        <option
-                          key={item.value}
-                          value={item.value}
-                        >
-                          {item.label}
-                        </option>
-                      )
-                    )}
-                  </select>
-                </div>
               </div>
+
+              {!studentGroup && (
+                <div className="rounded-xl bg-[#fff7ed] border border-[#fed7aa] p-4 text-sm text-[#9a3412]">
+                  Select PCM or PCB above to
+                  view the available presets.
+                </div>
+              )}
+
+              {studentGroup && (
+                <div className="space-y-3">
+
+                  {availablePresets
+                    .filter(
+                      (preset) =>
+                        presetMatchesSelectedSubjects(
+                          preset
+                        )
+                    )
+                    .map(
+                      (preset) => {
+
+                        const details =
+                          calculatePreset(
+                            preset
+                          );
+
+                        const selected =
+                          selectedPreset?.id ===
+                          preset.id;
+
+                        const subjectSplit =
+                          Object.entries(
+                            preset.subjects
+                          )
+                            .map(
+                              (
+                                [
+                                  subject,
+                                  count,
+                                ]
+                              ) =>
+                                `${
+                                  PRESET_SUBJECT_NAMES[
+                                    subject
+                                  ]
+                                } ${count}`
+                            )
+                            .join(
+                              " + "
+                            );
+
+                        return (
+                          <button
+                            key={
+                              preset.id
+                            }
+                            type="button"
+                            onClick={() =>
+                              setSelectedPreset(
+                                preset
+                              )
+                            }
+                            className={`relative w-full text-left rounded-xl border-2 p-4 transition ${
+                              selected
+                                ? "border-[#2563eb] bg-[#eff6ff]"
+                                : "border-[#e5e7eb] hover:border-[#bfdbfe]"
+                            }`}
+                          >
+
+                            {selected && (
+                              <div className="absolute top-4 right-4 w-5 h-5 rounded-full bg-[#2563eb] text-white flex items-center justify-center text-xs">
+                                ✓
+                              </div>
+                            )}
+
+                            <div className="flex items-start justify-between gap-4 pr-8">
+
+                              <div>
+
+                                <div className="font-semibold">
+                                  {
+                                    preset.name
+                                  }
+                                </div>
+
+                                <div className="text-xs text-[#6b7280] mt-1">
+                                  {
+                                    subjectSplit
+                                  }
+                                  {" questions per subject"}
+                                </div>
+
+                              </div>
+
+                              {preset.examAccurate && (
+                                <span className="shrink-0 text-[10px] font-semibold uppercase tracking-wide bg-green-100 text-green-700 px-2 py-1 rounded-md">
+                                  Actual MHT CET pattern
+                                </span>
+                              )}
+
+                            </div>
+
+                            <div className="flex flex-wrap gap-2 mt-4">
+
+                              <span className="px-3 py-1.5 rounded-lg bg-white border border-[#e5e7eb] text-xs font-semibold">
+                                {
+                                  details.totalQuestions
+                                }{" "}
+                                questions
+                              </span>
+
+                              <span className="px-3 py-1.5 rounded-lg bg-white border border-[#e5e7eb] text-xs font-semibold">
+                                {
+                                  details.totalMarks
+                                }{" "}
+                                marks
+                              </span>
+
+                              <span className="px-3 py-1.5 rounded-lg bg-white border border-[#e5e7eb] text-xs font-semibold">
+                                {
+                                  details.durationMinutes
+                                }{" "}
+                                minutes
+                              </span>
+
+                            </div>
+
+                          </button>
+                        );
+                      }
+                    )}
+
+                  {availablePresets.filter(
+                    (preset) =>
+                      presetMatchesSelectedSubjects(
+                        preset
+                      )
+                  ).length ===
+                    0 && (
+                    <div className="rounded-xl bg-[#f9fafb] border border-[#e5e7eb] p-4 text-sm text-[#6b7280]">
+                      No presets are available
+                      for the selected subject
+                      combination.
+                    </div>
+                  )}
+
+                </div>
+              )}
+
             </section>
+
           </div>
 
           {/* SUMMARY */}
 
           <aside className="lg:sticky lg:top-6 h-fit">
+
             <div className="bg-white border border-[#e5e7eb] rounded-2xl shadow-sm overflow-hidden">
+
               <div className="p-6 border-b border-[#e5e7eb]">
+
                 <div className="text-xs font-semibold uppercase tracking-wider text-[#6b7280]">
                   Test Summary
                 </div>
@@ -612,70 +2095,141 @@ export default function TestsPage() {
                 </h2>
 
                 <p className="text-sm text-[#6b7280] mt-1">
-                  {subject}
+                  {subjects.join(
+                    " + "
+                  )}
                 </p>
+
               </div>
 
               <div className="p-6 space-y-5">
+
                 <SummaryRow
                   label="Exam"
                   value={course}
                 />
 
                 <SummaryRow
-                  label="Subject"
-                  value={subject}
+                  label="Group"
+                  value={
+                    studentGroup ||
+                    "Not selected"
+                  }
+                />
+
+                <SummaryRow
+                  label="Subjects"
+                  value={
+                    subjects.join(
+                      ", "
+                    )
+                  }
                 />
 
                 <SummaryRow
                   label="Chapters"
                   value={
-                    chapters.length === 0
-                      ? "Entire subject"
-                      : `${chapters.length} selected`
+                    selectedChapters.length ===
+                    0
+                      ? "Entire selected subjects"
+                      : `${selectedChapters.length} selected`
                   }
                 />
 
                 <SummaryRow
                   label="Difficulty"
-                  value={difficulty}
+                  value={
+                    difficulty
+                  }
+                />
+
+                <SummaryRow
+                  label="Preset"
+                  value={
+                    selectedPreset
+                      ? selectedPreset.name
+                      : "Not selected"
+                  }
                 />
 
                 <SummaryRow
                   label="Questions"
-                  value={`${questionCount}`}
+                  value={
+                    presetDetails
+                      ? `${presetDetails.totalQuestions}`
+                      : "—"
+                  }
+                />
+
+                <SummaryRow
+                  label="Marks"
+                  value={
+                    presetDetails
+                      ? `${presetDetails.totalMarks}`
+                      : "—"
+                  }
                 />
 
                 <SummaryRow
                   label="Duration"
-                  value={`${duration} min`}
+                  value={
+                    presetDetails
+                      ? `${presetDetails.durationMinutes} min`
+                      : "—"
+                  }
                 />
 
                 <div className="pt-2">
+
                   <button
-                    onClick={generateTest}
-                    disabled={generating}
+                    onClick={
+                      generateTest
+                    }
+                    disabled={
+                      generating ||
+                      !studentGroup ||
+                      !selectedPreset ||
+                      !presetDetails
+                    }
                     className="w-full h-12 rounded-xl bg-[#1d4ed8] text-white text-sm font-semibold hover:bg-[#1e40af] disabled:opacity-60 disabled:cursor-not-allowed transition"
                   >
                     {generating
                       ? "Generating Test..."
                       : "Generate Test →"}
                   </button>
+
                 </div>
 
                 <p className="text-[11px] leading-relaxed text-[#9ca3af] text-center">
-                  Questions will be selected from the Paper
-                  Tree question bank according to your
-                  configuration.
+                  Questions will be selected from
+                  the Paper Tree question bank
+                  according to your configuration.
                 </p>
+
+                <div className="rounded-xl bg-[#f9fafb] border border-[#e5e7eb] p-3 text-[11px] text-[#6b7280] text-center">
+                  No negative marking. Wrong and
+                  unattempted questions score zero.
+                </div>
+
               </div>
+
             </div>
+
           </aside>
+
         </div>
+
       </div>
+
     </main>
   );
 }
+
+/*
+ * ---------------------------------------------------------
+ * SUMMARY ROW
+ * ---------------------------------------------------------
+ */
 
 function SummaryRow({
   label,
@@ -686,6 +2240,7 @@ function SummaryRow({
 }) {
   return (
     <div className="flex items-center justify-between gap-4">
+
       <span className="text-sm text-[#6b7280]">
         {label}
       </span>
@@ -693,6 +2248,7 @@ function SummaryRow({
       <span className="text-sm font-semibold text-right">
         {value}
       </span>
+
     </div>
   );
 }

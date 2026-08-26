@@ -1,7 +1,7 @@
 "use client";
-
 import { useEffect, useMemo, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
+import jsPDF from "jspdf";
 
 type Question = {
   id: string;
@@ -133,6 +133,210 @@ export default function TestResultPage() {
 
   /*
    * =========================================================
+   * DOWNLOAD COMPLETE RESULT PDF
+   * =========================================================
+   */
+
+  function downloadResult() {
+    if (!result) {
+      return;
+    }
+
+    const doc = new jsPDF();
+    const pageWidth = doc.internal.pageSize.getWidth();
+    const pageHeight = doc.internal.pageSize.getHeight();
+    const margin = 14;
+    const contentWidth = pageWidth - margin * 2;
+    let y = 18;
+
+    const ensureSpace = (height: number) => {
+      if (y + height > pageHeight - margin) {
+        doc.addPage();
+        y = margin;
+      }
+    };
+
+    const addWrappedText = (
+      text: string,
+      fontSize = 10.5,
+      lineHeight = 5.5,
+      bold = false
+    ) => {
+      doc.setFont("helvetica", bold ? "bold" : "normal");
+      doc.setFontSize(fontSize);
+
+      const lines = doc.splitTextToSize(
+        String(text ?? ""),
+        contentWidth
+      );
+
+      const requiredHeight = lines.length * lineHeight;
+      ensureSpace(requiredHeight + 3);
+      doc.text(lines, margin, y);
+      y += requiredHeight + 3;
+    };
+
+    doc.setTextColor(23, 32, 51);
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(20);
+    doc.text(
+      "Paper Tree • Test Result",
+      margin,
+      y
+    );
+    y += 8;
+
+    doc.setFont("helvetica", "normal");
+    doc.setFontSize(10);
+    doc.text(
+      `Test ID: ${result.testId}`,
+      margin,
+      y
+    );
+    y += 5;
+
+    if (result.submittedAt) {
+      doc.text(
+        `Submitted: ${new Date(result.submittedAt).toLocaleString()}`,
+        margin,
+        y
+      );
+      y += 5;
+    }
+
+    y += 3;
+    doc.setDrawColor(220, 224, 232);
+    doc.line(margin, y, pageWidth - margin, y);
+    y += 8;
+
+    addWrappedText(
+      `Exam: ${result.course || "Mock Test"}`,
+      11,
+      5.5,
+      true
+    );
+    addWrappedText(
+      `Subject: ${result.subject || "Multiple Subjects"}`,
+      11,
+      5.5
+    );
+    addWrappedText(
+      `Difficulty: ${result.difficulty || "Mixed"}`,
+      11,
+      5.5
+    );
+    addWrappedText(
+      `Duration: ${result.duration ? `${result.duration} min` : "—"}`,
+      11,
+      5.5
+    );
+
+    y += 2;
+    addWrappedText(
+      `Score: ${percentage}%`,
+      14,
+      7,
+      true
+    );
+    addWrappedText(
+      `Correct: ${result.correct}    Wrong: ${result.wrong}    Unattempted: ${result.unattempted}`,
+      11,
+      6,
+      true
+    );
+    addWrappedText(
+      `Attempted: ${attempted}/${result.total}    Accuracy: ${accuracy}%    Grade: ${grade}`,
+      11,
+      6,
+      true
+    );
+
+    y += 4;
+    doc.setDrawColor(220, 224, 232);
+    doc.line(margin, y, pageWidth - margin, y);
+    y += 8;
+
+    addWrappedText(
+      "Question-by-Question Review",
+      15,
+      7,
+      true
+    );
+
+    result.questions.forEach((question, index) => {
+      const selected = result.answers[question.id];
+      const hasAnswer =
+        selected !== undefined &&
+        selected !== null;
+
+      const isCorrect =
+        hasAnswer &&
+        Number(selected) ===
+          Number(question.answer);
+
+      const status = isCorrect
+        ? "Correct"
+        : hasAnswer
+        ? "Wrong"
+        : "Unattempted";
+
+      ensureSpace(18);
+
+      addWrappedText(
+        `${question.number || index + 1}. ${question.question}`,
+        11,
+        6,
+        true
+      );
+
+      addWrappedText(
+        `Status: ${status}`,
+        10,
+        5
+      );
+
+      question.options.forEach(
+        (option, optionIndex) => {
+          const isSelected =
+            selected === optionIndex;
+          const isCorrectOption =
+            Number(question.answer) ===
+            optionIndex;
+
+          let suffix = "";
+
+          if (isCorrectOption) {
+            suffix = " [Correct Answer]";
+          } else if (isSelected) {
+            suffix = " [Your Answer]";
+          }
+
+          addWrappedText(
+            `${String.fromCharCode(65 + optionIndex)}. ${option}${suffix}`,
+            10,
+            5
+          );
+        }
+      );
+
+      if (question.solution) {
+        addWrappedText(
+          `Solution: ${question.solution}`,
+          10,
+          5
+        );
+      }
+
+      y += 4;
+    });
+
+    doc.save(
+      `paper-tree-result-${result.testId}.pdf`
+    );
+  }
+
+  /*
+   * =========================================================
    * LOADING
    * =========================================================
    */
@@ -239,15 +443,27 @@ export default function TestResultPage() {
 
           </div>
 
-          <button
-            type="button"
-            onClick={() =>
-              router.push("/tests")
-            }
-            className="h-10 px-4 rounded-xl border border-slate-200 bg-white text-sm font-semibold text-slate-700 hover:bg-slate-50 transition"
-          >
-            Back to Tests
-          </button>
+          <div className="flex items-center gap-2">
+
+            <button
+              type="button"
+              onClick={downloadResult}
+              className="h-10 px-4 rounded-xl bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 transition"
+            >
+              ↓ Download Result
+            </button>
+
+            <button
+              type="button"
+              onClick={() =>
+                router.push("/tests")
+              }
+              className="h-10 px-4 rounded-xl border border-slate-200 bg-white text-sm font-semibold text-slate-700 hover:bg-slate-50 transition"
+            >
+              Back to Tests
+            </button>
+
+          </div>
 
         </div>
 
@@ -817,6 +1033,14 @@ export default function TestResultPage() {
 
           <button
             type="button"
+            onClick={downloadResult}
+            className="h-12 px-7 rounded-xl bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 transition"
+          >
+            ↓ Download Complete Result
+          </button>
+
+          <button
+            type="button"
             onClick={() =>
               router.push("/tests")
             }
@@ -832,7 +1056,7 @@ export default function TestResultPage() {
                 `/test/${testId}`
               )
             }
-            className="h-12 px-7 rounded-xl bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 transition"
+            className="h-12 px-7 rounded-xl border border-blue-200 bg-blue-50 text-blue-700 text-sm font-semibold hover:bg-blue-100 transition"
           >
             View Test
           </button>

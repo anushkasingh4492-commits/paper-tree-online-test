@@ -1,7 +1,9 @@
+
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
+import jsPDF from "jspdf";
 
 type Question = {
   id: string;
@@ -26,6 +28,7 @@ type TestData = {
 
 type Answers = Record<string, number>;
 type Marked = Record<string, boolean>;
+type Visited = Record<string, boolean>;
 
 export default function TestPage() {
   const params = useParams();
@@ -39,6 +42,7 @@ export default function TestPage() {
 
   const [answers, setAnswers] = useState<Answers>({});
   const [marked, setMarked] = useState<Marked>({});
+  const [visited, setVisited] = useState<Visited>({});
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [timeLeft, setTimeLeft] = useState(0);
@@ -57,7 +61,169 @@ export default function TestPage() {
    */
   const navigatingToResultRef = useRef(false);
 
+  /*
+   * Test start timestamp.
+   */
   const startedAtRef = useRef<number | null>(null);
+
+  /*
+   * =========================================================
+   * DOWNLOAD QUESTION PAPER
+   * =========================================================
+   */
+
+  function downloadQuestionPaper() {
+    if (!questions.length) {
+      return;
+    }
+
+    const doc = new jsPDF();
+
+    const pageWidth =
+      doc.internal.pageSize.getWidth();
+
+    const pageHeight =
+      doc.internal.pageSize.getHeight();
+
+    const margin = 14;
+
+    const contentWidth =
+      pageWidth - margin * 2;
+
+    let y = 18;
+
+    const addWrappedText = (
+      text: string,
+      fontSize = 11,
+      lineHeight = 6,
+      bold = false
+    ) => {
+      doc.setFont(
+        "helvetica",
+        bold ? "bold" : "normal"
+      );
+
+      doc.setFontSize(fontSize);
+
+      const lines =
+        doc.splitTextToSize(
+          String(text ?? ""),
+          contentWidth
+        );
+
+      const requiredHeight =
+        lines.length * lineHeight;
+
+      if (
+        y + requiredHeight >
+        pageHeight - margin
+      ) {
+        doc.addPage();
+        y = margin;
+      }
+
+      doc.text(
+        lines,
+        margin,
+        y
+      );
+
+      y += requiredHeight + 2;
+    };
+
+    doc.setTextColor(
+      23,
+      32,
+      51
+    );
+
+    doc.setFont(
+      "helvetica",
+      "bold"
+    );
+
+    doc.setFontSize(20);
+
+    doc.text(
+      test?.exam ||
+        "Paper Tree Mock Test",
+      margin,
+      y
+    );
+
+    y += 8;
+
+    doc.setFont(
+      "helvetica",
+      "normal"
+    );
+
+    doc.setFontSize(10);
+
+    doc.text(
+      `Question Paper • ${questions.length} Questions`,
+      margin,
+      y
+    );
+
+    y += 5;
+
+    doc.text(
+      `Test ID: ${testId}`,
+      margin,
+      y
+    );
+
+    y += 10;
+
+    doc.setDrawColor(
+      220,
+      224,
+      232
+    );
+
+    doc.line(
+      margin,
+      y,
+      pageWidth - margin,
+      y
+    );
+
+    y += 8;
+
+    questions.forEach(
+      (question, index) => {
+        addWrappedText(
+          `${question.number || index + 1}. ${question.question}`,
+          12,
+          6.5,
+          true
+        );
+
+        question.options.forEach(
+          (
+            option,
+            optionIndex
+          ) => {
+            addWrappedText(
+              `${String.fromCharCode(
+                65 + optionIndex
+              )}. ${option}`,
+              10.5,
+              5.5,
+              false
+            );
+          }
+        );
+
+        y += 3;
+      }
+    );
+
+    doc.save(
+      `paper-tree-question-paper-${testId}.pdf`
+    );
+  }
 
   /*
    * =========================================================
@@ -71,36 +237,56 @@ export default function TestPage() {
         setLoading(true);
         setError("");
 
-        const response = await fetch(
-          `/api/tests/${testId}`,
-          {
-            cache: "no-store",
-          }
+        const response =
+          await fetch(
+            `/api/tests/${testId}`,
+            {
+              cache: "no-store",
+            }
+          );
+
+        const data =
+          await response.json();
+
+        console.log(
+          "TEST API RESPONSE:",
+          data
         );
-
-        const data = await response.json();
-
-        console.log("TEST API RESPONSE:", data);
 
         if (!response.ok) {
           throw new Error(
-            data?.error || "Failed to load test"
+            data?.error ||
+              "Failed to load test"
           );
         }
 
-        const dbTest = data?.test ?? data;
+        const dbTest =
+          data?.test ?? data;
 
         if (!dbTest) {
-          throw new Error("Test not found");
+          throw new Error(
+            "Test not found"
+          );
         }
 
-        let rawQuestions = dbTest.questions;
+        let rawQuestions =
+          dbTest.questions;
 
-        if (typeof rawQuestions === "string") {
-          rawQuestions = JSON.parse(rawQuestions);
+        if (
+          typeof rawQuestions ===
+          "string"
+        ) {
+          rawQuestions =
+            JSON.parse(
+              rawQuestions
+            );
         }
 
-        if (!Array.isArray(rawQuestions)) {
+        if (
+          !Array.isArray(
+            rawQuestions
+          )
+        ) {
           throw new Error(
             "Questions are not in a valid format"
           );
@@ -108,51 +294,88 @@ export default function TestPage() {
 
         const normalizedQuestions: Question[] =
           rawQuestions.map(
-            (question: any, index: number) => {
-              let options = question.options;
+            (
+              question: any,
+              index: number
+            ) => {
+              let options =
+                question.options;
 
               if (
                 options &&
-                !Array.isArray(options) &&
-                typeof options === "object"
+                !Array.isArray(
+                  options
+                ) &&
+                typeof options ===
+                  "object"
               ) {
-                options = Object.values(options);
+                options =
+                  Object.values(
+                    options
+                  );
               }
 
-              if (!Array.isArray(options)) {
+              if (
+                !Array.isArray(
+                  options
+                )
+              ) {
                 options = [];
               }
 
-              options = options.map(
-                (option: unknown) =>
-                  String(option ?? "")
-              );
+              options =
+                options.map(
+                  (
+                    option: unknown
+                  ) =>
+                    String(
+                      option ?? ""
+                    )
+                );
 
-              let answer = question.answer;
+              let answer =
+                question.answer;
 
-              if (typeof answer === "string") {
-                const numeric = Number(answer);
+              if (
+                typeof answer ===
+                "string"
+              ) {
+                const numeric =
+                  Number(
+                    answer
+                  );
 
-                if (Number.isFinite(numeric)) {
-                  answer = numeric;
+                if (
+                  Number.isFinite(
+                    numeric
+                  )
+                ) {
+                  answer =
+                    numeric;
                 } else {
                   const letter =
                     answer
                       .trim()
                       .toUpperCase()
-                      .charCodeAt(0) - 65;
+                      .charCodeAt(0) -
+                    65;
 
-                  answer = letter;
+                  answer =
+                    letter;
                 }
               }
 
-              const numericAnswer = Number(answer);
+              const numericAnswer =
+                Number(answer);
 
               return {
                 ...question,
 
                 id:
-                  String(question.id ?? "") ||
+                  String(
+                    question.id ??
+                      ""
+                  ) ||
                   `question-${index + 1}`,
 
                 number:
@@ -167,7 +390,9 @@ export default function TestPage() {
                 options,
 
                 answer:
-                  Number.isFinite(numericAnswer)
+                  Number.isFinite(
+                    numericAnswer
+                  )
                     ? numericAnswer
                     : 0,
               };
@@ -176,7 +401,8 @@ export default function TestPage() {
 
         setTest({
           ...dbTest,
-          questions: normalizedQuestions,
+          questions:
+            normalizedQuestions,
         });
 
         /*
@@ -193,13 +419,18 @@ export default function TestPage() {
 
           if (savedAnswers) {
             const parsed =
-              JSON.parse(savedAnswers);
+              JSON.parse(
+                savedAnswers
+              );
 
             if (
               parsed &&
-              typeof parsed === "object"
+              typeof parsed ===
+                "object"
             ) {
-              setAnswers(parsed);
+              setAnswers(
+                parsed
+              );
             }
           }
         } catch (error) {
@@ -223,13 +454,18 @@ export default function TestPage() {
 
           if (savedMarked) {
             const parsed =
-              JSON.parse(savedMarked);
+              JSON.parse(
+                savedMarked
+              );
 
             if (
               parsed &&
-              typeof parsed === "object"
+              typeof parsed ===
+                "object"
             ) {
-              setMarked(parsed);
+              setMarked(
+                parsed
+              );
             }
           }
         } catch (error) {
@@ -239,6 +475,35 @@ export default function TestPage() {
           );
         }
 
+        /*
+ * =====================================================
+ * RESTORE VISITED
+ * =====================================================
+ */
+
+try {
+  const savedVisited =
+    localStorage.getItem(
+      `test-${testId}-visited`
+    );
+
+  if (savedVisited) {
+    const parsed =
+      JSON.parse(savedVisited);
+
+    if (
+      parsed &&
+      typeof parsed === "object"
+    ) {
+      setVisited(parsed);
+    }
+  }
+} catch (error) {
+  console.warn(
+    "Could not restore visited questions:",
+    error
+  );
+}
         /*
          * =====================================================
          * TIMER CONFIG
@@ -255,7 +520,9 @@ export default function TestPage() {
 
           if (config) {
             const parsedConfig =
-              JSON.parse(config);
+              JSON.parse(
+                config
+              );
 
             const configuredDuration =
               Number(
@@ -288,37 +555,46 @@ export default function TestPage() {
         const startedKey =
           `test-${testId}-startedAt`;
 
-        let startedAt = Number(
-          localStorage.getItem(
-            startedKey
-          )
-        );
+        let startedAt =
+          Number(
+            localStorage.getItem(
+              startedKey
+            )
+          );
 
         if (
-          !Number.isFinite(startedAt) ||
+          !Number.isFinite(
+            startedAt
+          ) ||
           startedAt <= 0
         ) {
-          startedAt = Date.now();
+          startedAt =
+            Date.now();
 
           localStorage.setItem(
             startedKey,
-            String(startedAt)
+            String(
+              startedAt
+            )
           );
         }
 
-        startedAtRef.current = startedAt;
+        startedAtRef.current =
+          startedAt;
 
         const totalSeconds =
           Math.max(
             1,
             Math.round(
-              durationMinutes * 60
+              durationMinutes *
+                60
             )
           );
 
         const elapsedSeconds =
           Math.floor(
-            (Date.now() - startedAt) /
+            (Date.now() -
+              startedAt) /
               1000
           );
 
@@ -356,34 +632,71 @@ export default function TestPage() {
    * =========================================================
    */
 
-  const questions = useMemo(
-    () =>
-      Array.isArray(test?.questions)
-        ? test.questions
-        : [],
-    [test]
-  );
+  const questions =
+    useMemo(
+      () =>
+        Array.isArray(
+          test?.questions
+        )
+          ? test.questions
+          : [],
+      [test]
+    );
 
   const current =
-    questions[currentQuestion];
+    questions[
+      currentQuestion
+    ];
+/*
+ * =========================================================
+ * MARK CURRENT QUESTION AS VISITED
+ * =========================================================
+ */
 
+useEffect(() => {
+  const question = questions[currentQuestion];
+
+  if (!question) return;
+
+  setVisited((previous) => {
+    if (previous[question.id]) {
+      return previous;
+    }
+
+    return {
+      ...previous,
+      [question.id]: true,
+    };
+  });
+}, [
+  currentQuestion,
+  questions,
+]);
   /*
    * =========================================================
    * ANSWERED COUNT
    * =========================================================
    */
 
-  const answeredCount = useMemo(() => {
-    return questions.filter(
-      (question) =>
-        answers[question.id] !== undefined
-    ).length;
-  }, [answers, questions]);
+  const answeredCount =
+    useMemo(() => {
+      return questions.filter(
+        (question) =>
+          answers[
+            question.id
+          ] !== undefined
+      ).length;
+    }, [
+      answers,
+      questions,
+    ]);
 
-  const remainingCount = Math.max(
-    0,
-    questions.length - answeredCount
-  );
+  const remainingCount =
+    Math.max(
+      0,
+      questions.length -
+        answeredCount
+    );
 
   /*
    * =========================================================
@@ -397,7 +710,9 @@ export default function TestPage() {
     try {
       localStorage.setItem(
         `test-${testId}-answers`,
-        JSON.stringify(answers)
+        JSON.stringify(
+          answers
+        )
       );
     } catch (error) {
       console.warn(
@@ -423,7 +738,10 @@ export default function TestPage() {
     try {
       localStorage.setItem(
         `test-${testId}-marked`,
-        JSON.stringify(marked)
+        JSON.stringify(
+          marked
+        )
+
       );
     } catch (error) {
       console.warn(
@@ -436,61 +754,138 @@ export default function TestPage() {
     test,
     testId,
   ]);
+  localStorage.setItem(
+  `test-${testId}-visited`,
+  JSON.stringify(
+    visited
+  )
+);
+/*
+ * =========================================================
+ * SAVE VISITED
+ * =========================================================
+ */
 
+useEffect(() => {
+  if (!test) return;
+
+  try {
+    localStorage.setItem(
+      `test-${testId}-visited`,
+      JSON.stringify(visited)
+    );
+  } catch (error) {
+    console.warn(
+      "Could not save visited questions:",
+      error
+    );
+  }
+}, [
+  visited,
+  test,
+  testId,
+]);
   /*
    * =========================================================
    * FORMAT TIMER
    * =========================================================
    */
 
-  const formattedTime = useMemo(() => {
-    const minutes = Math.floor(
-      timeLeft / 60
-    );
+  const formattedTime =
+    useMemo(() => {
+      const minutes =
+        Math.floor(
+          timeLeft / 60
+        );
 
-    const seconds =
-      timeLeft % 60;
+      const seconds =
+        timeLeft % 60;
 
-    return `${String(minutes).padStart(
-      2,
-      "0"
-    )}:${String(seconds).padStart(
-      2,
-      "0"
-    )}`;
-  }, [timeLeft]);
+      return `${String(
+        minutes
+      ).padStart(
+        2,
+        "0"
+      )}:${String(
+        seconds
+      ).padStart(
+        2,
+        "0"
+      )}`;
+    }, [timeLeft]);
 
   /*
    * =========================================================
    * SUBMIT TEST
    * =========================================================
+   *
+   * IMPORTANT:
+   *
+   * The server is the source of truth.
+   *
+   * The browser does NOT calculate:
+   *
+   * - score
+   * - accuracy
+   * - correct
+   * - wrong
+   * - unanswered
+   *
+   * Those values come from:
+   *
+   * /api/test/submit
+   *
+   * which evaluates the submitted answers against
+   * the test stored in PostgreSQL.
    */
 
   async function submitTest(
     automatic = false
   ) {
-    if (submittedRef.current) {
+    /*
+     * Prevent duplicate submissions.
+     */
+    if (
+      submittedRef.current ||
+      submitting
+    ) {
       return;
     }
 
     submittedRef.current = true;
-    navigatingToResultRef.current = true;
+
+    navigatingToResultRef.current =
+      true;
 
     setSubmitting(true);
 
-    /*
-     * Save latest answers.
-     */
+    const submittedAt =
+      new Date().toISOString();
 
+    const startedAt =
+      startedAtRef.current
+        ? new Date(
+            startedAtRef.current
+          ).toISOString()
+        : new Date().toISOString();
+
+    /*
+     * Save latest answers locally before
+     * sending them to the server.
+     */
     try {
       localStorage.setItem(
         `test-${testId}-answers`,
-        JSON.stringify(answers)
+        JSON.stringify(
+          answers
+        )
       );
 
       localStorage.setItem(
         `test-${testId}-marked`,
-        JSON.stringify(marked)
+        JSON.stringify(
+          marked
+        )
       );
     } catch (error) {
       console.warn(
@@ -500,39 +895,11 @@ export default function TestPage() {
     }
 
     /*
-     * Calculate result.
+     * Read test configuration.
+     *
+     * This is only used for result-page display.
+     * It is NOT used to calculate the score.
      */
-
-    let correct = 0;
-    let wrong = 0;
-    let unattempted = 0;
-
-    for (const question of questions) {
-      const selected =
-        answers[question.id];
-
-      if (
-        selected === undefined ||
-        selected === null
-      ) {
-        unattempted++;
-        continue;
-      }
-
-      if (
-        Number(selected) ===
-        Number(question.answer)
-      ) {
-        correct++;
-      } else {
-        wrong++;
-      }
-    }
-
-    /*
-     * Read configuration.
-     */
-
     let config: any = {};
 
     try {
@@ -543,7 +910,9 @@ export default function TestPage() {
 
       if (storedConfig) {
         config =
-          JSON.parse(storedConfig);
+          JSON.parse(
+            storedConfig
+          );
       }
     } catch (error) {
       console.warn(
@@ -553,72 +922,242 @@ export default function TestPage() {
     }
 
     /*
-     * Build result.
+     * =========================================================
+     * GET STUDENT ID
+     * =========================================================
      */
 
-    const result = {
-      testId,
+    let studentId = "";
 
-      total: questions.length,
+    try {
+      const cookie =
+        document.cookie
+          .split(";")
+          .map(
+            (item) =>
+              item.trim()
+          )
+          .find(
+            (item) =>
+              item.startsWith(
+                "student_session="
+              )
+          );
 
-      correct,
+      if (cookie) {
+        const raw =
+          decodeURIComponent(
+            cookie.slice(
+              "student_session="
+                .length
+            )
+          );
 
-      wrong,
+        try {
+          const parsed =
+            JSON.parse(
+              raw
+            );
 
-      unattempted,
-
-      answers,
-
-      marked,
-
-      questions,
-
-      submittedAt:
-        new Date().toISOString(),
-
-      automatic,
-
-      course:
-        typeof config?.course ===
-        "string"
-          ? config.course
-          : "",
-
-      subject:
-        typeof config?.subject ===
-        "string"
-          ? config.subject
-          : "",
-
-      chapters:
-        Array.isArray(
-          config?.chapters
-        )
-          ? config.chapters
-          : [],
-
-      difficulty:
-        typeof config?.difficulty ===
-        "string"
-          ? config.difficulty
-          : "",
-
-      duration:
-        Number.isFinite(
-          Number(config?.duration)
-        )
-          ? Number(config.duration)
-          : undefined,
-    };
+          studentId =
+            String(
+              parsed?.studentId ??
+                ""
+            ).trim();
+        } catch {
+          studentId =
+            raw.trim();
+        }
+      }
+    } catch (error) {
+      console.warn(
+        "Could not read student session:",
+        error
+      );
+    }
 
     /*
-     * Save result.
+     * =========================================================
+     * SUBMIT TO SERVER
+     * =========================================================
      */
 
     try {
+      const response =
+        await fetch(
+          "/api/test/submit",
+          {
+            method: "POST",
+
+            headers: {
+              "Content-Type":
+                "application/json",
+            },
+
+            credentials:
+              "include",
+
+            body: JSON.stringify({
+              testId,
+
+              studentId,
+
+              answers,
+
+              marked,
+
+              automatic,
+
+              violationCount:
+                automatic
+                  ? 1
+                  : 0,
+
+              startedAt,
+
+              submittedAt,
+            }),
+          }
+        );
+
+      const data =
+        await response.json();
+
+      console.log(
+        "TEST SUBMIT RESPONSE:",
+        data
+      );
+
+      if (
+        !response.ok ||
+        !data?.success
+      ) {
+        throw new Error(
+          data?.error ||
+            "Failed to save test submission."
+        );
+      }
+
+      /*
+       * =======================================================
+       * SERVER RESULT
+       * =======================================================
+       *
+       * These are authoritative.
+       */
+
+      const total =
+        Number(
+          data.total ??
+            questions.length
+        );
+
+      const correct =
+        Number(
+          data.correct ?? 0
+        );
+
+      const wrong =
+        Number(
+          data.wrong ?? 0
+        );
+
+      const unattempted =
+        Number(
+          data.unattempted ?? 0
+        );
+
+      const score =
+        Number(
+          data.score ?? 0
+        );
+
+      const accuracy =
+        Number(
+          data.accuracy ?? 0
+        );
+
+      /*
+       * =======================================================
+       * BUILD RESULT FOR RESULT PAGE
+       * =======================================================
+       */
+
+      const result = {
+        testId,
+
+        attemptId:
+          data.attemptId ??
+          null,
+
+        total,
+
+        correct,
+
+        wrong,
+
+        unattempted,
+
+        answers,
+
+        marked,
+
+        questions,
+
+        submittedAt,
+
+        automatic,
+
+        score,
+
+        accuracy,
+
+        course:
+          typeof config?.course ===
+          "string"
+            ? config.course
+            : "",
+
+        subject:
+          typeof config?.subject ===
+          "string"
+            ? config.subject
+            : "",
+
+        chapters:
+          Array.isArray(
+            config?.chapters
+          )
+            ? config.chapters
+            : [],
+
+        difficulty:
+          typeof config?.difficulty ===
+          "string"
+            ? config.difficulty
+            : "",
+
+        duration:
+          Number.isFinite(
+            Number(
+              config?.duration
+            )
+          )
+            ? Number(
+                config.duration
+              )
+            : undefined,
+      };
+
+      /*
+       * Save server-authoritative result for
+       * the existing result page.
+       */
       localStorage.setItem(
         `test-${testId}-result`,
-        JSON.stringify(result)
+        JSON.stringify(
+          result
+        )
       );
 
       localStorage.setItem(
@@ -626,40 +1165,54 @@ export default function TestPage() {
         "true"
       );
 
-      console.log(
-        "RESULT SAVED SUCCESSFULLY"
+      /*
+       * Tell dashboard to refresh if it is already open.
+       */
+      localStorage.setItem(
+        "paperTreeDashboardRefresh",
+        String(
+          Date.now()
+        )
+      );
+
+      /*
+       * Remove warning before navigation.
+       */
+      setShowWarning(false);
+
+      /*
+       * Navigate only AFTER successful
+       * database submission.
+       */
+      router.replace(
+        `/test/result/${testId}`
       );
     } catch (error) {
       console.error(
-        "Could not save test result:",
+        "TEST SUBMISSION ERROR:",
         error
       );
 
-      submittedRef.current = false;
+      /*
+       * Allow the student to retry if the
+       * database/API submission failed.
+       */
+      submittedRef.current =
+        false;
+
       navigatingToResultRef.current =
         false;
 
       setSubmitting(false);
+
       setShowWarning(false);
 
-      return;
+      alert(
+        error instanceof Error
+          ? error.message
+          : "Failed to submit test. Please try again."
+      );
     }
-
-    /*
-     * IMPORTANT
-     *
-     * Remove the test screen before navigation.
-     */
-
-    setShowWarning(false);
-
-    /*
-     * Navigate immediately.
-     */
-
-    router.replace(
-      `/test/result/${testId}`
-    );
   }
 
   /*
@@ -669,7 +1222,12 @@ export default function TestPage() {
    */
 
   useEffect(() => {
-    if (!test || loading) return;
+    if (
+      !test ||
+      loading
+    ) {
+      return;
+    }
 
     const interval =
       window.setInterval(() => {
@@ -685,10 +1243,12 @@ export default function TestPage() {
           window.clearInterval(
             interval
           );
+
           return;
         }
 
-        let durationMinutes = 30;
+        let durationMinutes =
+          30;
 
         try {
           const config =
@@ -698,7 +1258,9 @@ export default function TestPage() {
 
           if (config) {
             const parsedConfig =
-              JSON.parse(config);
+              JSON.parse(
+                config
+              );
 
             const configuredDuration =
               Number(
@@ -721,7 +1283,8 @@ export default function TestPage() {
           Math.max(
             1,
             Math.round(
-              durationMinutes * 60
+              durationMinutes *
+                60
             )
           );
 
@@ -735,12 +1298,17 @@ export default function TestPage() {
         const remaining =
           Math.max(
             0,
-            totalSeconds - elapsed
+            totalSeconds -
+              elapsed
           );
 
-        setTimeLeft(remaining);
+        setTimeLeft(
+          remaining
+        );
 
-        if (remaining <= 0) {
+        if (
+          remaining <= 0
+        ) {
           window.clearInterval(
             interval
           );
@@ -748,7 +1316,9 @@ export default function TestPage() {
           if (
             !submittedRef.current
           ) {
-            submitTest(true);
+            submitTest(
+              true
+            );
           }
         }
       }, 1000);
@@ -772,16 +1342,18 @@ export default function TestPage() {
    */
 
   useEffect(() => {
-    if (!test || loading) return;
+    if (
+      !test ||
+      loading
+    ) {
+      return;
+    }
 
     function handleVisibilityChange() {
       /*
-       * IMPORTANT:
-       *
-       * If we are already submitting or intentionally
-       * navigating to the result page, do nothing.
+       * Ignore visibility changes when we are already
+       * submitting or intentionally navigating.
        */
-
       if (
         submittedRef.current ||
         navigatingToResultRef.current
@@ -799,41 +1371,35 @@ export default function TestPage() {
       /*
        * Save progress immediately.
        */
-
       try {
         localStorage.setItem(
           `test-${testId}-answers`,
-          JSON.stringify(answers)
+          JSON.stringify(
+            answers
+          )
         );
 
         localStorage.setItem(
           `test-${testId}-marked`,
-          JSON.stringify(marked)
+          JSON.stringify(
+            marked
+          )
         );
       } catch {}
 
       /*
-       * Mark submission immediately.
+       * Show the warning overlay immediately.
        */
-
-      submittedRef.current = true;
+      setShowWarning(
+        true
+      );
 
       /*
-       * Show warning.
-       */
-
-      setShowWarning(true);
-
-      /*
-       * Calculate/save result.
+       * Wait briefly before submitting.
        *
-       * submitTest normally checks submittedRef,
-       * therefore reset it temporarily so it can
-       * perform the actual submission.
+       * This prevents the navigation to the result page
+       * from being interpreted as another visibility violation.
        */
-
-      submittedRef.current = false;
-
       window.setTimeout(() => {
         if (
           navigatingToResultRef.current
@@ -841,14 +1407,21 @@ export default function TestPage() {
           return;
         }
 
-        submitTest(true);
+        if (
+          submittedRef.current
+        ) {
+          return;
+        }
+
+        submitTest(
+          true
+        );
       }, 150);
     }
 
     /*
-     * Native browser close/refresh protection.
+     * Native browser close / refresh protection.
      */
-
     function handleBeforeUnload(
       event: BeforeUnloadEvent
     ) {
@@ -862,16 +1435,21 @@ export default function TestPage() {
       try {
         localStorage.setItem(
           `test-${testId}-answers`,
-          JSON.stringify(answers)
+          JSON.stringify(
+            answers
+          )
         );
 
         localStorage.setItem(
           `test-${testId}-marked`,
-          JSON.stringify(marked)
+          JSON.stringify(
+            marked
+          )
         );
       } catch {}
 
       event.preventDefault();
+
       event.returnValue = "";
     }
 
@@ -913,12 +1491,18 @@ export default function TestPage() {
   function selectAnswer(
     optionIndex: number
   ) {
-    if (!current) return;
+    if (!current) {
+      return;
+    }
 
-    setAnswers((previous) => ({
-      ...previous,
-      [current.id]: optionIndex,
-    }));
+    setAnswers(
+      (previous) => ({
+        ...previous,
+
+        [current.id]:
+          optionIndex,
+      })
+    );
   }
 
   /*
@@ -928,13 +1512,20 @@ export default function TestPage() {
    */
 
   function toggleMarked() {
-    if (!current) return;
+    if (!current) {
+      return;
+    }
 
-    setMarked((previous) => ({
-      ...previous,
-      [current.id]:
-        !previous[current.id],
-    }));
+    setMarked(
+      (previous) => ({
+        ...previous,
+
+        [current.id]:
+          !previous[
+            current.id
+          ],
+      })
+    );
   }
 
   /*
@@ -989,14 +1580,16 @@ export default function TestPage() {
           </p>
 
           <button
+            type="button"
             onClick={() =>
-              router.push("/tests")
+              router.push(
+                "/tests"
+              )
             }
             className="mt-6 px-5 h-11 rounded-xl bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 transition"
           >
             Back to Tests
           </button>
-
         </div>
       </main>
     );
@@ -1023,8 +1616,11 @@ export default function TestPage() {
           </p>
 
           <button
+            type="button"
             onClick={() =>
-              router.push("/tests")
+              router.push(
+                "/tests"
+              )
             }
             className="mt-6 px-5 h-11 rounded-xl bg-blue-600 text-white text-sm font-semibold"
           >
@@ -1050,7 +1646,9 @@ export default function TestPage() {
 
   const answered =
     current
-      ? answers[current.id] !== undefined
+      ? answers[
+          current.id
+        ] !== undefined
       : false;
 
   /*
@@ -1095,6 +1693,7 @@ export default function TestPage() {
               <div className="text-[10px] uppercase tracking-wide font-bold text-blue-500">
                 Total
               </div>
+
               <div className="text-sm font-bold text-blue-700">
                 {questions.length}
               </div>
@@ -1104,6 +1703,7 @@ export default function TestPage() {
               <div className="text-[10px] uppercase tracking-wide font-bold text-green-600">
                 Answered
               </div>
+
               <div className="text-sm font-bold text-green-700">
                 {answeredCount}
               </div>
@@ -1113,6 +1713,7 @@ export default function TestPage() {
               <div className="text-[10px] uppercase tracking-wide font-bold text-slate-500">
                 Left
               </div>
+
               <div className="text-sm font-bold text-slate-700">
                 {remainingCount}
               </div>
@@ -1123,6 +1724,7 @@ export default function TestPage() {
           <div
             className={[
               "min-w-[125px] sm:min-w-[145px] px-4 py-2 rounded-xl border transition-all",
+
               timerCritical
                 ? "bg-red-50 border-red-200 text-red-700 animate-pulse"
                 : timerWarning
@@ -1163,6 +1765,7 @@ export default function TestPage() {
             <div className="text-sm font-bold text-blue-700">
               {questions.length}
             </div>
+
             <div className="text-[10px] text-blue-500">
               Total
             </div>
@@ -1172,6 +1775,7 @@ export default function TestPage() {
             <div className="text-sm font-bold text-green-700">
               {answeredCount}
             </div>
+
             <div className="text-[10px] text-green-500">
               Answered
             </div>
@@ -1181,6 +1785,7 @@ export default function TestPage() {
             <div className="text-sm font-bold text-slate-700">
               {remainingCount}
             </div>
+
             <div className="text-[10px] text-slate-500">
               Left
             </div>
@@ -1209,7 +1814,8 @@ export default function TestPage() {
                   <p className="text-xs font-semibold text-blue-600 uppercase tracking-wide">
                     Question{" "}
                     {currentQuestion + 1}{" "}
-                    of {questions.length}
+                    of{" "}
+                    {questions.length}
                   </p>
 
                   <p className="mt-1 text-sm text-slate-500">
@@ -1294,15 +1900,22 @@ export default function TestPage() {
 
                 <button
                   type="button"
-                  onClick={toggleMarked}
+                  onClick={
+                    toggleMarked
+                  }
                   className={[
                     "px-3 py-2 rounded-lg border text-xs font-semibold transition",
-                    marked[current.id]
+
+                    marked[
+                      current.id
+                    ]
                       ? "bg-amber-50 border-amber-200 text-amber-700"
                       : "bg-white border-slate-200 text-slate-500 hover:bg-slate-50",
                   ].join(" ")}
                 >
-                  {marked[current.id]
+                  {marked[
+                    current.id
+                  ]
                     ? "★ Marked"
                     : "☆ Mark"}
                 </button>
@@ -1319,14 +1932,14 @@ export default function TestPage() {
 
                   {current.options.map(
                     (
-                      option: string,
-                      index: number
+                      option,
+                      index
                     ) => {
-
                       const selected =
                         answers[
                           current.id
-                        ] === index;
+                        ] ===
+                        index;
 
                       return (
                         <button
@@ -1339,6 +1952,7 @@ export default function TestPage() {
                           }
                           className={[
                             "w-full text-left rounded-xl border p-4 sm:p-5 flex items-start gap-4 transition-all",
+
                             selected
                               ? "border-blue-500 bg-blue-50 shadow-sm"
                               : "border-slate-200 bg-white hover:border-blue-300 hover:bg-slate-50",
@@ -1348,19 +1962,22 @@ export default function TestPage() {
                           <span
                             className={[
                               "w-9 h-9 shrink-0 rounded-lg flex items-center justify-center font-bold text-sm border",
+
                               selected
                                 ? "bg-blue-600 text-white border-blue-600"
                                 : "bg-slate-50 text-slate-600 border-slate-200",
                             ].join(" ")}
                           >
                             {String.fromCharCode(
-                              65 + index
+                              65 +
+                                index
                             )}
                           </span>
 
                           <span
                             className={[
                               "pt-1 text-sm sm:text-base leading-6",
+
                               selected
                                 ? "text-blue-900 font-semibold"
                                 : "text-slate-700",
@@ -1389,14 +2006,16 @@ export default function TestPage() {
                 <button
                   type="button"
                   disabled={
-                    currentQuestion === 0
+                    currentQuestion ===
+                    0
                   }
                   onClick={() =>
                     setCurrentQuestion(
                       (value) =>
                         Math.max(
                           0,
-                          value - 1
+                          value -
+                            1
                         )
                     )
                   }
@@ -1406,7 +2025,8 @@ export default function TestPage() {
                 </button>
 
                 {currentQuestion <
-                questions.length - 1 ? (
+                questions.length -
+                  1 ? (
                   <button
                     type="button"
                     onClick={() =>
@@ -1415,7 +2035,8 @@ export default function TestPage() {
                           Math.min(
                             questions.length -
                               1,
-                            value + 1
+                            value +
+                              1
                           )
                       )
                     }
@@ -1427,9 +2048,13 @@ export default function TestPage() {
                   <button
                     type="button"
                     onClick={() =>
-                      submitTest(false)
+                      submitTest(
+                        false
+                      )
                     }
-                    disabled={submitting}
+                    disabled={
+                      submitting
+                    }
                     className="h-11 px-7 rounded-xl bg-green-600 text-white text-sm font-semibold hover:bg-green-700 transition disabled:opacity-60"
                   >
                     {submitting
@@ -1451,6 +2076,7 @@ export default function TestPage() {
             <div
               className={[
                 "rounded-2xl border p-5 shadow-sm",
+
                 timerCritical
                   ? "bg-red-50 border-red-200"
                   : timerWarning
@@ -1470,6 +2096,7 @@ export default function TestPage() {
                   <p
                     className={[
                       "mt-1 text-3xl font-bold tabular-nums",
+
                       timerCritical
                         ? "text-red-700"
                         : timerWarning
@@ -1485,6 +2112,7 @@ export default function TestPage() {
                 <div
                   className={[
                     "w-12 h-12 rounded-xl flex items-center justify-center text-xl",
+
                     timerCritical
                       ? "bg-red-100"
                       : timerWarning
@@ -1499,8 +2127,9 @@ export default function TestPage() {
 
               {timerCritical && (
                 <p className="mt-4 text-xs font-semibold text-red-600">
-                  Time is almost over. Your test
-                  will submit automatically.
+                  Time is almost over.
+                  Your test will submit
+                  automatically.
                 </p>
               )}
 
@@ -1543,10 +2172,29 @@ export default function TestPage() {
                   Marked
                 </span>
 
-                <span className="flex items-center gap-1">
-                  <span className="w-2.5 h-2.5 rounded-full bg-slate-200" />
-                  Not visited
-                </span>
+               <div className="mt-4 flex flex-wrap gap-x-3 gap-y-2 text-[10px] text-slate-500">
+
+  <span className="flex items-center gap-1">
+    <span className="w-2.5 h-2.5 rounded-full bg-green-500" />
+    Answered
+  </span>
+
+  <span className="flex items-center gap-1">
+    <span className="w-2.5 h-2.5 rounded-full bg-red-500" />
+    Visited
+  </span>
+
+  <span className="flex items-center gap-1">
+    <span className="w-2.5 h-2.5 rounded-full bg-amber-400" />
+    Marked
+  </span>
+
+  <span className="flex items-center gap-1">
+    <span className="w-2.5 h-2.5 rounded-full bg-slate-200" />
+    Not visited
+  </span>
+
+</div>
 
               </div>
 
@@ -1554,28 +2202,35 @@ export default function TestPage() {
 
                 {questions.map(
                   (
-                    question: Question,
-                    index: number
+                    question,
+                    index
                   ) => {
+               const isAnswered =
+  answers[
+    question.id
+  ] !==
+  undefined;
 
-                    const isAnswered =
-                      answers[
-                        question.id
-                      ] !== undefined;
+const isMarked =
+  marked[
+    question.id
+  ];
 
-                    const isMarked =
-                      marked[
-                        question.id
-                      ];
+const isVisited =
+  visited[
+    question.id
+  ];
 
-                    const isCurrent =
-                      index ===
-                      currentQuestion;
+const isCurrent =
+  index ===
+  currentQuestion;
 
                     return (
                       <button
                         type="button"
-                        key={question.id}
+                        key={
+                          question.id
+                        }
                         onClick={() =>
                           setCurrentQuestion(
                             index
@@ -1583,14 +2238,18 @@ export default function TestPage() {
                         }
                         className={[
                           "relative h-10 rounded-lg text-xs font-bold border transition-all",
+
                           isCurrent
                             ? "ring-2 ring-blue-500 ring-offset-1"
                             : "",
-                          isAnswered
-                            ? "bg-green-50 border-green-300 text-green-700"
-                            : isMarked
-                            ? "bg-amber-50 border-amber-300 text-amber-700"
-                            : "bg-slate-50 border-slate-200 text-slate-500 hover:bg-slate-100",
+
+                     isAnswered
+  ? "bg-green-50 border-green-300 text-green-700"
+  : isMarked
+  ? "bg-amber-50 border-amber-300 text-amber-700"
+  : isVisited
+  ? "bg-red-50 border-red-300 text-red-700"
+  : "bg-slate-50 border-slate-200 text-slate-500 hover:bg-slate-100",
                         ].join(" ")}
                       >
                         {index + 1}
@@ -1608,11 +2267,25 @@ export default function TestPage() {
 
               <button
                 type="button"
-                onClick={() =>
-                  submitTest(false)
+                onClick={
+                  downloadQuestionPaper
                 }
-                disabled={submitting}
-                className="mt-5 w-full h-11 rounded-xl bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 transition disabled:opacity-60"
+                className="mt-5 w-full h-11 rounded-xl border border-slate-200 bg-white text-slate-700 text-sm font-semibold hover:bg-slate-50 transition"
+              >
+                ↓ Download Question Paper
+              </button>
+
+              <button
+                type="button"
+                onClick={() =>
+                  submitTest(
+                    false
+                  )
+                }
+                disabled={
+                  submitting
+                }
+                className="mt-3 w-full h-11 rounded-xl bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 transition disabled:opacity-60"
               >
                 {submitting
                   ? "Submitting..."
@@ -1620,8 +2293,9 @@ export default function TestPage() {
               </button>
 
               <p className="mt-3 text-[10px] leading-4 text-slate-400 text-center">
-                Leaving this test tab will
-                automatically submit your test.
+                Leaving this test tab
+                will automatically
+                submit your test.
               </p>
 
             </div>
@@ -1648,9 +2322,11 @@ export default function TestPage() {
             </h2>
 
             <p className="mt-3 text-sm leading-6 text-slate-500">
-              You left the test window. For exam
-              security, your test has been
-              automatically submitted.
+              You left the test
+              window. For exam
+              security, your test has
+              been automatically
+              submitted.
             </p>
 
             <div className="mt-5 rounded-xl bg-amber-50 border border-amber-100 p-4 text-left">
@@ -1660,8 +2336,9 @@ export default function TestPage() {
               </p>
 
               <p className="mt-1 text-xs leading-5 text-amber-700">
-                Switching tabs or leaving the
-                test window is treated as a test
+                Switching tabs or
+                leaving the test window
+                is treated as a test
                 violation.
               </p>
 

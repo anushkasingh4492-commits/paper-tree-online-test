@@ -26,7 +26,12 @@ const subjects = [
   },
 ];
 
-const difficulties = ["Mixed", "Easy", "Medium", "Hard"];
+const difficulties = [
+  "Easy",
+  "Challenging",
+  "Balanced",
+  "Difficult",
+];
 
 const questionOptions = [10, 20, 30, 40, 50, 60];
 
@@ -133,16 +138,29 @@ export default function GenerateTestPage() {
     return `${selectedSubjects.length} subjects`;
   }, [selectedSubjects]);
 
-  function toggleSubject(subject: string) {
-    setSelectedSubjects((current) => {
-      if (current.includes(subject)) {
-        return current.filter((item) => item !== subject);
-      }
+function toggleSubject(subject: string) {
+  setSelectedSubjects((current) => {
+    if (current.includes(subject)) {
+      return current.filter((item) => item !== subject);
+    }
 
-      return [...current, subject];
-    });
-  }
+    if (subject === "Mathematics") {
+      return [
+        ...current.filter((item) => item !== "Biology"),
+        "Mathematics",
+      ];
+    }
 
+    if (subject === "Biology") {
+      return [
+        ...current.filter((item) => item !== "Mathematics"),
+        "Biology",
+      ];
+    }
+
+    return [...current, subject];
+  });
+}
   async function generateTest() {
     setError("");
 
@@ -355,9 +373,9 @@ export default function GenerateTestPage() {
                           Select subjects
                         </h3>
 
-                        <p className="mt-1 text-xs text-[#929aaa]">
-                          Choose one or more subjects.
-                        </p>
+                      <p className="mt-1 text-xs text-[#929aaa]">
+  Choose one or more subjects. Select either Mathematics or Biology.
+</p>
                       </div>
 
                       <span className="rounded-lg bg-[#f7f8fb] px-3 py-1.5 text-[10px] font-bold text-[#697386]">
@@ -370,14 +388,17 @@ export default function GenerateTestPage() {
                     {subjects.map((subject) => {
                       const selected =
                         selectedSubjects.includes(subject.name);
+                        const isOtherScienceSelected =
+  (subject.name === "Mathematics" &&
+    selectedSubjects.includes("Biology")) ||
+  (subject.name === "Biology" &&
+    selectedSubjects.includes("Mathematics"));
 
                       return (
                         <button
                           key={subject.name}
                           type="button"
-                          onClick={() =>
-                            toggleSubject(subject.name)
-                          }
+onClick={() => toggleSubject(subject.name)}
                           className={`group rounded-[16px] border p-4 text-left transition ${
                             selected
                               ? "border-[#315bea] bg-[#eef2ff]"

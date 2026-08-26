@@ -32,9 +32,15 @@ function getPool() {
   return global.__paperTreePool;
 }
 
-type AnswerMap = Record<string, number | string | null>;
+type AnswerMap = Record<
+  string,
+  number | string | null
+>;
 
-type MarkedMap = Record<string, boolean>;
+type MarkedMap = Record<
+  string,
+  boolean
+>;
 
 type SubmitBody = {
   testId?: string;
@@ -67,19 +73,25 @@ type EvaluatedAnswer = {
 };
 
 /*
- * Convert an answer stored in different formats
- * into the zero-based option index.
+ * =========================================================
+ * NORMALIZE ANSWER
+ * =========================================================
+ *
+ * Converts different answer formats into a
+ * zero-based option index.
  *
  * Supported:
  *
- * 0 -> 0
- * "0" -> 0
- * A -> 0
- * "A" -> 0
- * B -> 1
- * "B" -> 1
- * etc.
+ * 0      -> 0
+ * "0"    -> 0
+ * A      -> 0
+ * "A"    -> 0
+ * B      -> 1
+ * "B"    -> 1
+ * C      -> 2
+ * D      -> 3
  */
+
 function normalizeAnswer(
   value: unknown
 ): number | null {
@@ -126,10 +138,13 @@ function normalizeAnswer(
      * C = 2
      * D = 3
      */
-    const letter = trimmed.toUpperCase();
+    const letter =
+      trimmed.toUpperCase();
 
     if (/^[A-Z]$/.test(letter)) {
-      return letter.charCodeAt(0) - 65;
+      return (
+        letter.charCodeAt(0) - 65
+      );
     }
   }
 
@@ -137,14 +152,17 @@ function normalizeAnswer(
 }
 
 /*
- * Resolve the authoritative correct answer.
+ * =========================================================
+ * GET CORRECT ANSWER
+ * =========================================================
  *
  * Priority:
  *
- * 1. question.answer
- * 2. question.correct_option
- * 3. question.correctOption
+ * 1. answer
+ * 2. correct_option
+ * 3. correctOption
  */
+
 function getCorrectAnswer(
   question: any
 ): number | null {
@@ -156,9 +174,10 @@ function getCorrectAnswer(
     question.answer !== null &&
     question.answer !== ""
   ) {
-    const normalized = normalizeAnswer(
-      question.answer
-    );
+    const normalized =
+      normalizeAnswer(
+        question.answer
+      );
 
     if (normalized !== null) {
       return normalized;
@@ -169,13 +188,15 @@ function getCorrectAnswer(
    * Legacy snake_case field.
    */
   if (
-    question.correct_option !== undefined &&
+    question.correct_option !==
+      undefined &&
     question.correct_option !== null &&
     question.correct_option !== ""
   ) {
-    const normalized = normalizeAnswer(
-      question.correct_option
-    );
+    const normalized =
+      normalizeAnswer(
+        question.correct_option
+      );
 
     if (normalized !== null) {
       return normalized;
@@ -186,13 +207,15 @@ function getCorrectAnswer(
    * Legacy camelCase field.
    */
   if (
-    question.correctOption !== undefined &&
+    question.correctOption !==
+      undefined &&
     question.correctOption !== null &&
     question.correctOption !== ""
   ) {
-    const normalized = normalizeAnswer(
-      question.correctOption
-    );
+    const normalized =
+      normalizeAnswer(
+        question.correctOption
+      );
 
     if (normalized !== null) {
       return normalized;
@@ -202,19 +225,57 @@ function getCorrectAnswer(
   return null;
 }
 
+/*
+ * =========================================================
+ * NORMALIZE STATUS
+ * =========================================================
+ *
+ * Your database currently contains values such as:
+ *
+ * Submitted
+ * Auto Submitted
+ *
+ * We therefore compare statuses case-insensitively.
+ */
+
+function isSubmittedStatus(
+  status: unknown
+): boolean {
+  const normalized =
+    String(status ?? "")
+      .trim()
+      .toLowerCase();
+
+  return (
+    normalized === "submitted" ||
+    normalized === "auto submitted" ||
+    normalized === "auto-submitted"
+  );
+}
+
+/*
+ * =========================================================
+ * POST
+ * =========================================================
+ */
+
 export async function POST(
   request: NextRequest
 ) {
   const pool = getPool();
 
-  const client = await pool.connect();
+  const client =
+    await pool.connect();
 
   let transactionStarted = false;
 
   try {
     /*
+     * =======================================================
      * READ REQUEST BODY
+     * =======================================================
      */
+
     let body: SubmitBody;
 
     try {
@@ -223,66 +284,135 @@ export async function POST(
       return NextResponse.json(
         {
           success: false,
-          error: "Invalid JSON request body.",
+          error:
+            "Invalid JSON request body.",
         },
         { status: 400 }
       );
     }
 
     /*
+     * =======================================================
      * TEST ID
+     * =======================================================
      *
-     * IMPORTANT:
-     *
-     * This route is:
+     * Route:
      *
      * /api/test/submit
      *
-     * NOT:
-     *
-     * /api/test/submit/[testId]
-     *
-     * Therefore testId must come from
-     * the request body.
+     * Therefore testId comes from the request body.
      */
+
     const testId = String(
       body.testId ?? ""
     ).trim();
-    console.log("SUBMIT DEBUG:", {
-  testId,
-  studentId: body.studentId,
-});
+
+    console.log(
+      "SUBMIT DEBUG:",
+      {
+        testId,
+        bodyStudentId:
+          body.studentId,
+      }
+    );
 
     if (!testId) {
       return NextResponse.json(
         {
           success: false,
-          error: "Test ID is required.",
+          error:
+            "Test ID is required.",
         },
         { status: 400 }
       );
     }
 
     /*
+     * =======================================================
      * STUDENT ID
+     * =======================================================
+     *
+     * Prefer the server-side session cookie.
+     *
+     * The body value is used as a fallback because the
+     * current frontend already sends it.
      */
-    const studentId = String(
+
+    let studentId = String(
       body.studentId ?? ""
     ).trim();
+
+    const sessionCookie =
+      request.cookies.get(
+        "student_session"
+      )?.value;
+
+    if (sessionCookie) {
+      try {
+        const decoded =
+          decodeURIComponent(
+            sessionCookie
+          );
+
+        try {
+          const parsed =
+            JSON.parse(decoded);
+
+          const cookieStudentId =
+            String(
+              parsed?.studentId ?? ""
+            ).trim();
+
+          if (cookieStudentId) {
+            studentId =
+              cookieStudentId;
+          }
+        } catch {
+          /*
+           * Some sessions may contain the ID
+           * directly instead of JSON.
+           */
+          const directStudentId =
+            decoded.trim();
+
+          if (directStudentId) {
+            studentId =
+              directStudentId;
+          }
+        }
+      } catch {
+        const directStudentId =
+          sessionCookie.trim();
+
+        if (directStudentId) {
+          studentId =
+            directStudentId;
+        }
+      }
+    }
 
     if (!studentId) {
       return NextResponse.json(
         {
           success: false,
-          error: "Student ID is required.",
+          error:
+            "Student session not found.",
         },
-        { status: 400 }
+        { status: 401 }
       );
     }
 
+    console.log(
+      "SUBMIT STUDENT:",
+      studentId
+    );
+
     /*
+     * =======================================================
      * ANSWERS
+     * =======================================================
      */
+
     const answers: AnswerMap =
       body.answers &&
       typeof body.answers === "object"
@@ -290,8 +420,11 @@ export async function POST(
         : {};
 
     /*
+     * =======================================================
      * MARKED QUESTIONS
+     * =======================================================
      */
+
     const marked: MarkedMap =
       body.marked &&
       typeof body.marked === "object"
@@ -299,62 +432,101 @@ export async function POST(
         : {};
 
     /*
+     * =======================================================
      * SUBMISSION FLAGS
+     * =======================================================
      */
+
     const automatic =
       Boolean(body.automatic);
 
-    const violationCount = Math.max(
-      0,
-      Number(body.violationCount ?? 0)
-    );
+    const parsedViolationCount =
+      Number(
+        body.violationCount ?? 0
+      );
+
+    const violationCount =
+      Number.isFinite(
+        parsedViolationCount
+      )
+        ? Math.max(
+            0,
+            Math.floor(
+              parsedViolationCount
+            )
+          )
+        : 0;
 
     /*
+     * =======================================================
      * LOAD TEST
+     * =======================================================
      */
-    const testResult = await client.query(
-      `
-      SELECT
-        id,
-        exam,
-        question_count,
-        questions,
-        created_at
-      FROM tests
-      WHERE id = $1
-      LIMIT 1
-      `,
-      [testId]
-    );
 
-    if (testResult.rows.length === 0) {
+    const testResult =
+      await client.query(
+        `
+        SELECT
+          id,
+          exam,
+          question_count,
+          questions,
+          created_at
+        FROM tests
+        WHERE id = $1
+        LIMIT 1
+        `,
+        [testId]
+      );
+
+    if (
+      testResult.rows.length === 0
+    ) {
       return NextResponse.json(
         {
           success: false,
-          error: "Test not found.",
+          error:
+            "Test not found.",
         },
         { status: 404 }
       );
     }
 
-    const test = testResult.rows[0];
+    const test =
+      testResult.rows[0];
 
     /*
+     * =======================================================
      * PARSE QUESTIONS
+     * =======================================================
      */
+
     let questions: any[] = [];
 
-    if (Array.isArray(test.questions)) {
-      questions = test.questions;
+    if (
+      Array.isArray(
+        test.questions
+      )
+    ) {
+      questions =
+        test.questions;
     } else if (
-      typeof test.questions === "string"
+      typeof test.questions ===
+      "string"
     ) {
       try {
         const parsedQuestions =
-          JSON.parse(test.questions);
+          JSON.parse(
+            test.questions
+          );
 
-        if (Array.isArray(parsedQuestions)) {
-          questions = parsedQuestions;
+        if (
+          Array.isArray(
+            parsedQuestions
+          )
+        ) {
+          questions =
+            parsedQuestions;
         }
       } catch (error) {
         console.error(
@@ -364,7 +536,9 @@ export async function POST(
       }
     }
 
-    if (questions.length === 0) {
+    if (
+      questions.length === 0
+    ) {
       return NextResponse.json(
         {
           success: false,
@@ -376,98 +550,98 @@ export async function POST(
     }
 
     /*
+     * =======================================================
      * SERVER-SIDE EVALUATION
+     * =======================================================
      *
-     * NEVER trust:
+     * Never trust score/correct/wrong values sent by
+     * the browser.
      *
-     * correct
-     * wrong
-     * score
-     * accuracy
-     *
-     * from the browser.
-     *
-     * Everything is calculated here.
+     * Everything is calculated from the test stored
+     * in the database.
      */
+
     let correct = 0;
     let wrong = 0;
     let unattempted = 0;
 
-    const evaluatedAnswers: EvaluatedAnswer[] =
-      [];
+    const evaluatedAnswers:
+      EvaluatedAnswer[] = [];
 
     for (
       let index = 0;
       index < questions.length;
       index++
     ) {
-      const question = questions[index];
+      const question =
+        questions[index];
 
       /*
        * Normalize question ID.
        */
-      const questionId = String(
-        question.id ??
-          question.question_id ??
-          `question-${index + 1}`
-      );
+      const questionId =
+        String(
+          question.id ??
+            question.question_id ??
+            `question-${index + 1}`
+        );
 
       /*
-       * Get student's submitted answer.
+       * Student answer.
        */
       const selectedRaw =
         answers[questionId];
 
       /*
        * Normalize selected answer.
-       *
-       * Example:
-       *
-       * "0" -> 0
-       * 0 -> 0
-       * "A" -> 0
-       * "B" -> 1
        */
       const selectedAnswer =
-        normalizeAnswer(selectedRaw);
+        normalizeAnswer(
+          selectedRaw
+        );
 
       /*
-       * Resolve authoritative answer
-       * from the database question.
+       * Authoritative correct answer.
        */
       const correctAnswer =
-        getCorrectAnswer(question);
+        getCorrectAnswer(
+          question
+        );
 
-      /*
-       * Evaluate.
-       */
       let isCorrect:
         | boolean
         | null = null;
 
       let marksAwarded = 0;
 
-      if (selectedAnswer === null) {
-        /*
-         * Student did not answer.
-         */
-        unattempted++;
-      } else if (
-        correctAnswer !== null &&
-        selectedAnswer === correctAnswer
+      /*
+       * Unattempted.
+       */
+      if (
+        selectedAnswer === null
       ) {
-        /*
-         * Correct answer.
-         */
+        unattempted++;
+      }
+
+      /*
+       * Correct.
+       */
+      else if (
+        correctAnswer !== null &&
+        selectedAnswer ===
+          correctAnswer
+      ) {
         correct++;
 
         isCorrect = true;
 
         marksAwarded = 1;
-      } else {
-        /*
-         * Student answered but was wrong.
-         */
+      }
+
+      /*
+       * Wrong.
+       */
+      else {
         wrong++;
 
         isCorrect = false;
@@ -485,13 +659,18 @@ export async function POST(
         marksAwarded,
 
         markedForReview:
-          Boolean(marked[questionId]),
+          Boolean(
+            marked[questionId]
+          ),
       });
     }
 
     /*
+     * =======================================================
      * SUMMARY
+     * =======================================================
      */
+
     const totalQuestions =
       questions.length;
 
@@ -504,12 +683,13 @@ export async function POST(
     /*
      * SCORE
      *
-     * For now:
+     * Currently:
      *
-     * 1 correct = 1 mark
+     * 1 correct answer = 1 mark
      *
-     * Score is percentage.
+     * score is percentage.
      */
+
     const score =
       totalMarks > 0
         ? Number(
@@ -526,6 +706,7 @@ export async function POST(
      *
      * Accuracy only considers attempted questions.
      */
+
     const accuracy =
       attempted > 0
         ? Number(
@@ -538,24 +719,38 @@ export async function POST(
         : 0;
 
     /*
+     * =======================================================
      * DATES
+     * =======================================================
      */
-    const submittedAt = body.submittedAt
-      ? new Date(body.submittedAt)
-      : new Date();
 
-    const startedAt = body.startedAt
-      ? new Date(body.startedAt)
-      : new Date(test.created_at);
+    const submittedAt =
+      body.submittedAt
+        ? new Date(
+            body.submittedAt
+          )
+        : new Date();
+
+    const startedAt =
+      body.startedAt
+        ? new Date(
+            body.startedAt
+          )
+        : new Date(
+            test.created_at
+          );
 
     /*
      * Validate dates.
      */
+
     const safeStartedAt =
       Number.isNaN(
         startedAt.getTime()
       )
-        ? new Date(test.created_at)
+        ? new Date(
+            test.created_at
+          )
         : startedAt;
 
     const safeSubmittedAt =
@@ -566,33 +761,53 @@ export async function POST(
         : submittedAt;
 
     /*
+     * =======================================================
      * START TRANSACTION
+     * =======================================================
      */
-    await client.query("BEGIN");
+
+    await client.query(
+      "BEGIN"
+    );
 
     transactionStarted = true;
 
     /*
+     * =======================================================
      * FIND EXISTING ATTEMPT
+     * =======================================================
      *
-     * This prevents duplicate attempts when:
+     * Check BOTH:
      *
-     * - student double-clicks submit
-     * - timer submits
-     * - anti-cheating auto-submits
-     * - browser retries request
+     * test_id
+     * scheduled_test_id
+     *
+     * because your database already contains an attempt
+     * where:
+     *
+     * test_id = null
+     * scheduled_test_id = test-1787481354334
+     *
+     * This prevents duplicate attempts.
      */
+
     const existingAttemptResult =
       await client.query(
         `
         SELECT
           id,
+          test_id,
+          scheduled_test_id,
           status,
-          submitted_at
+          submitted_at,
+          started_at
         FROM test_attempts
-        WHERE scheduled_test_id = $1
-          AND student_id = $2
-        ORDER BY started_at DESC
+        WHERE (
+          test_id = $1
+          OR scheduled_test_id = $1
+        )
+        AND student_id = $2
+        ORDER BY started_at DESC NULLS LAST
         LIMIT 1
         FOR UPDATE
         `,
@@ -605,29 +820,46 @@ export async function POST(
     let attemptId: string;
 
     /*
+     * =======================================================
      * EXISTING ATTEMPT
+     * =======================================================
      */
+
     if (
       existingAttemptResult.rows
         .length > 0
     ) {
       const existing =
-        existingAttemptResult.rows[0];
+        existingAttemptResult
+          .rows[0];
 
       /*
        * Already submitted.
        *
-       * Do not create another attempt.
+       * IMPORTANT:
+       *
+       * Status comparison is case-insensitive.
+       *
+       * This correctly recognizes:
+       *
+       * Submitted
+       * SUBMITTED
+       * submitted
+       * Auto Submitted
+       * AUTO SUBMITTED
        */
-      if (
-        existing.status ===
-          "SUBMITTED" ||
-        existing.status ===
-          "AUTO SUBMITTED"
-      ) {
-        await client.query("COMMIT");
 
-        transactionStarted = false;
+      if (
+        isSubmittedStatus(
+          existing.status
+        )
+      ) {
+        await client.query(
+          "COMMIT"
+        );
+
+        transactionStarted =
+          false;
 
         return NextResponse.json({
           success: true,
@@ -654,12 +886,20 @@ export async function POST(
           score,
 
           accuracy,
+
+          automatic,
+
+          violationCount,
         });
       }
 
       /*
        * Existing in-progress attempt.
+       *
+       * Complete that attempt rather than
+       * creating another one.
        */
+
       attemptId = String(
         existing.id
       );
@@ -680,9 +920,10 @@ export async function POST(
         [
           safeSubmittedAt,
 
-        automatic
-  ? "Auto Submitted"
-  : "Submitted",
+          automatic
+            ? "Auto Submitted"
+            : "Submitted",
+
           score,
 
           totalMarks,
@@ -696,18 +937,30 @@ export async function POST(
           attemptId,
         ]
       );
-    } else {
-      /*
-       * CREATE NEW ATTEMPT
-       */
+    }
+
+    /*
+     * =======================================================
+     * CREATE NEW ATTEMPT
+     * =======================================================
+     */
+
+    else {
       attemptId =
         `attempt-${crypto.randomUUID()}`;
+
+      /*
+       * IMPORTANT:
+       *
+       * This uses test_id because this route has successfully
+       * loaded the test from the tests table using testId.
+       */
 
       await client.query(
         `
         INSERT INTO test_attempts (
           id,
-          scheduled_test_id,
+          test_id,
           student_id,
           started_at,
           submitted_at,
@@ -743,9 +996,9 @@ export async function POST(
 
           safeSubmittedAt,
 
-         automatic
-  ? "Auto Submitted"
-  : "Submitted",
+          automatic
+            ? "Auto Submitted"
+            : "Submitted",
 
           score,
 
@@ -761,11 +1014,14 @@ export async function POST(
     }
 
     /*
+     * =======================================================
      * REMOVE PREVIOUS ANSWERS
+     * =======================================================
      *
-     * Important when an existing in-progress
-     * attempt is being submitted.
+     * Necessary when an existing in-progress attempt
+     * is being submitted.
      */
+
     await client.query(
       `
       DELETE FROM test_answers
@@ -775,10 +1031,14 @@ export async function POST(
     );
 
     /*
+     * =======================================================
      * SAVE EVERY QUESTION ANSWER
+     * =======================================================
      */
+
     for (
-      const answer of evaluatedAnswers
+      const answer of
+        evaluatedAnswers
     ) {
       await client.query(
         `
@@ -827,12 +1087,16 @@ export async function POST(
     }
 
     /*
+     * =======================================================
      * SAVE ANTI-CHEATING VIOLATIONS
+     * =======================================================
      */
-    if (violationCount > 0) {
+
+    if (
+      violationCount > 0
+    ) {
       /*
-       * Remove old violation records for this
-       * attempt before recreating them.
+       * Remove old violations for this attempt.
        */
       await client.query(
         `
@@ -842,6 +1106,9 @@ export async function POST(
         [attemptId]
       );
 
+      /*
+       * Recreate violation records.
+       */
       for (
         let i = 1;
         i <= violationCount;
@@ -868,7 +1135,8 @@ export async function POST(
             "TAB_LEAVE",
 
             JSON.stringify({
-              violationNumber: i,
+              violationNumber:
+                i,
             }),
 
             safeSubmittedAt,
@@ -878,15 +1146,24 @@ export async function POST(
     }
 
     /*
+     * =======================================================
      * COMPLETE TRANSACTION
+     * =======================================================
      */
-    await client.query("COMMIT");
 
-    transactionStarted = false;
+    await client.query(
+      "COMMIT"
+    );
+
+    transactionStarted =
+      false;
 
     /*
+     * =======================================================
      * RETURN FINAL SERVER RESULT
+     * =======================================================
      */
+
     return NextResponse.json({
       success: true,
 
@@ -917,12 +1194,21 @@ export async function POST(
     });
   } catch (error) {
     /*
-     * ROLLBACK ONLY IF TRANSACTION STARTED.
+     * =======================================================
+     * ROLLBACK
+     * =======================================================
      */
-    if (transactionStarted) {
+
+    if (
+      transactionStarted
+    ) {
       try {
-        await client.query("ROLLBACK");
-      } catch (rollbackError) {
+        await client.query(
+          "ROLLBACK"
+        );
+      } catch (
+        rollbackError
+      ) {
         console.error(
           "ROLLBACK ERROR:",
           rollbackError

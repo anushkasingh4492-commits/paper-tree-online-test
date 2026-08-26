@@ -16,15 +16,11 @@ function getPool() {
   if (!global.__paperTreePool) {
     global.__paperTreePool = new Pool({
       connectionString: process.env.DATABASE_URL,
-
       ssl: {
         rejectUnauthorized: false,
       },
-
       max: 10,
-
       idleTimeoutMillis: 30000,
-
       connectionTimeoutMillis: 10000,
     });
   }
@@ -45,7 +41,11 @@ function normalizeSubject(value: unknown): string {
 
   if (subject === "physics") return "Physics";
 
-  if (subject === "chemistry") return "Chemistry";
+  if (
+    subject === "chemistry"
+  ) {
+    return "Chemistry";
+  }
 
   if (
     subject === "mathematics" ||
@@ -55,7 +55,9 @@ function normalizeSubject(value: unknown): string {
     return "Mathematics";
   }
 
-  if (subject === "biology") return "Biology";
+  if (subject === "biology") {
+    return "Biology";
+  }
 
   return (
     subject.charAt(0).toUpperCase() +
@@ -63,16 +65,6 @@ function normalizeSubject(value: unknown): string {
   );
 }
 
-/*
- * Normalizes an answer into a comparable string.
- *
- * Examples:
- *
- * "A" -> "a"
- * "A " -> "a"
- * 0 -> "0"
- * "0" -> "0"
- */
 function normalizeAnswer(
   value: unknown
 ): string | null {
@@ -115,10 +107,7 @@ function getDurationMinutes(
   startedAt: unknown,
   submittedAt: unknown
 ): number {
-  if (
-    !startedAt ||
-    !submittedAt
-  ) {
+  if (!startedAt || !submittedAt) {
     return 0;
   }
 
@@ -138,9 +127,7 @@ function getDurationMinutes(
     return 0;
   }
 
-  return (
-    (end - start) / 60000
-  );
+  return (end - start) / 60000;
 }
 
 function formatDate(
@@ -166,38 +153,14 @@ function formatDate(
   );
 }
 
-function formatDateTime(
-  value: unknown
-): string {
-  if (!value) return "";
-
-  const date = new Date(
-    String(value)
-  );
-
-  if (Number.isNaN(date.getTime())) {
-    return "";
-  }
-
-  return date.toLocaleString(
-    "en-IN",
-    {
-      day: "2-digit",
-      month: "short",
-      year: "numeric",
-      hour: "2-digit",
-      minute: "2-digit",
-    }
-  );
-}
-
 function getStatus(
   value: unknown
 ): string {
-  return String(value ?? "")
+  return String(
+    value ?? ""
+  )
     .trim()
-    .toLowerCase()
-    .replace(/-/g, "_");
+    .toLowerCase();
 }
 
 function isCompletedStatus(
@@ -214,149 +177,6 @@ function isCompletedStatus(
   );
 }
 
-/*
- * Extract question IDs from the test.questions field.
- *
- * Supported:
- *
- * ["q1", "q2"]
- *
- * [
- *   { id: "q1" },
- *   { question_id: "q2" }
- * ]
- */
-function extractQuestionIds(
-  value: unknown
-): string[] {
-  if (!Array.isArray(value)) {
-    return [];
-  }
-
-  const ids: string[] = [];
-
-  for (const item of value) {
-    if (typeof item === "string") {
-      if (item.trim()) {
-        ids.push(item.trim());
-      }
-
-      continue;
-    }
-
-    if (
-      item &&
-      typeof item === "object"
-    ) {
-      const obj =
-        item as Record<
-          string,
-          unknown
-        >;
-
-      const id =
-        obj.id ??
-        obj.question_id ??
-        obj.questionId;
-
-      if (
-        id !== null &&
-        id !== undefined &&
-        String(id).trim()
-      ) {
-        ids.push(
-          String(id).trim()
-        );
-      }
-    }
-  }
-
-  return Array.from(
-    new Set(ids)
-  );
-}
-
-function getTestDifficulty(
-  value: unknown
-): string {
-  if (!Array.isArray(value)) {
-    return "Balanced";
-  }
-
-  const difficulties =
-    Array.from(
-      new Set(
-        value
-          .map((item: any) =>
-            String(
-              item?.difficulty ?? ""
-            )
-              .trim()
-              .toLowerCase()
-          )
-          .filter(Boolean)
-      )
-    );
-
-  if (
-    difficulties.length === 1
-  ) {
-    const difficulty =
-      difficulties[0];
-
-    return (
-      difficulty.charAt(0).toUpperCase() +
-      difficulty.slice(1)
-    );
-  }
-
-  return "Balanced";
-}
-
-/*
- * Resolve the correct answer from a question.
- *
- * Supports the current answer field as well as
- * older database field names.
- */
-function getCorrectAnswer(
-  question: any
-): string | null {
-  const candidates = [
-    question?.answer,
-    question?.correct_option,
-    question?.correctOption,
-  ];
-
-  for (const value of candidates) {
-    const normalized =
-      normalizeAnswer(value);
-
-    if (normalized !== null) {
-      return normalized;
-    }
-  }
-
-  return null;
-}
-
-/* ============================================================
-   TYPES
-============================================================ */
-
-type Stats = {
-  total: number;
-  attempted: number;
-  correct: number;
-  wrong: number;
-  unanswered: number;
-};
-
-type ChapterStats = Stats & {
-  subject: string;
-  chapter: string;
-};
-
 /* ============================================================
    GET DASHBOARD
 ============================================================ */
@@ -364,16 +184,14 @@ type ChapterStats = Stats & {
 export async function GET(
   request: NextRequest
 ) {
-  let client: any;
+  const pool = getPool();
+
+  const client =
+    await pool.connect();
 
   try {
-    const pool = getPool();
-
-    client =
-      await pool.connect();
-
     /* ========================================================
-       SESSION
+       STUDENT SESSION
     ======================================================== */
 
     const sessionCookie =
@@ -407,14 +225,12 @@ export async function GET(
         typeof parsed === "object" &&
         parsed.studentId
       ) {
-        studentId =
-          String(
-            parsed.studentId
-          );
+        studentId = String(
+          parsed.studentId
+        );
       }
     } catch {
-      studentId =
-        sessionCookie;
+      studentId = sessionCookie;
     }
 
     studentId =
@@ -453,8 +269,7 @@ export async function GET(
       );
 
     if (
-      studentResult.rows.length ===
-      0
+      studentResult.rows.length === 0
     ) {
       return NextResponse.json(
         {
@@ -472,14 +287,25 @@ export async function GET(
       studentResult.rows[0];
 
     /* ========================================================
-       ALL ATTEMPTS
-       
-       A test attempt can reference the test through either:
-       
-       test_id
-       scheduled_test_id
-       
-       Therefore resolve the actual test ID with COALESCE.
+       ATTEMPTS
+
+       IMPORTANT:
+
+       We do NOT read questions from a `tests.questions`
+       column because your actual database does not have
+       that structure.
+
+       The real structure is:
+
+       test_attempts
+            ↓
+       scheduled_tests
+            ↓
+       papers
+            ↓
+       paper_questions
+            ↓
+       questions
     ======================================================== */
 
     const attemptsResult =
@@ -487,9 +313,8 @@ export async function GET(
         `
         SELECT
           ta.id,
-          ta.student_id,
-          ta.test_id,
           ta.scheduled_test_id,
+          ta.student_id,
           ta.started_at,
           ta.submitted_at,
           ta.status,
@@ -499,25 +324,30 @@ export async function GET(
           ta.incorrect_count,
           ta.unanswered_count,
           ta.created_at,
+          ta.test_id,
 
-          COALESCE(
-            NULLIF(ta.test_id, ''),
-            NULLIF(ta.scheduled_test_id, '')
-          ) AS resolved_test_id,
+          st.paper_id,
+          st.batch_id,
+          st.title AS scheduled_title,
+          st.start_time,
+          st.end_time,
+          st.duration_minutes,
+          st.status AS scheduled_status,
 
-          t.id AS test_table_id,
-          t.exam AS test_exam,
-          t.question_count AS test_question_count,
-          t.questions AS test_questions,
-          t.created_at AS test_created_at
+          p.id AS paper_id_from_schedule,
+          p.code AS paper_code,
+          p.exam AS paper_exam,
+          p.description AS paper_description,
+          p.duration_minutes AS paper_duration,
+          p.status AS paper_status
 
         FROM test_attempts ta
 
-        LEFT JOIN tests t
-          ON t.id = COALESCE(
-            NULLIF(ta.test_id, ''),
-            NULLIF(ta.scheduled_test_id, '')
-          )
+        LEFT JOIN scheduled_tests st
+          ON st.id = ta.scheduled_test_id
+
+        LEFT JOIN papers p
+          ON p.id = st.paper_id
 
         WHERE ta.student_id = $1
 
@@ -540,7 +370,7 @@ export async function GET(
 
     const completedAttempts =
       attempts.filter(
-        (attempt: any) =>
+        (attempt) =>
           isCompletedStatus(
             attempt.status
           )
@@ -550,7 +380,7 @@ export async function GET(
       completedAttempts.length;
 
     /* ========================================================
-       GLOBAL ANALYTICS
+       GLOBAL STATISTICS
     ======================================================== */
 
     let totalQuestions = 0;
@@ -558,26 +388,63 @@ export async function GET(
     let totalCorrect = 0;
     let totalWrong = 0;
     let totalUnanswered = 0;
+
     let totalStudyMinutes = 0;
+
+    /* ========================================================
+       SUBJECT STATS
+    ======================================================== */
+
+    type SubjectStats = {
+      total: number;
+      attempted: number;
+      correct: number;
+      wrong: number;
+      unanswered: number;
+    };
 
     const subjectStats: Record<
       string,
-      Stats
+      SubjectStats
     > = {};
+
+    /* ========================================================
+       CHAPTER STATS
+    ======================================================== */
+
+    type ChapterStats = {
+      subject: string;
+      chapter: string;
+      total: number;
+      attempted: number;
+      correct: number;
+      wrong: number;
+      unanswered: number;
+    };
 
     const chapterStats: Record<
       string,
       ChapterStats
     > = {};
 
+    /* ========================================================
+       ATTEMPT ANALYTICS
+    ======================================================== */
+
     const attemptAnalytics =
       new Map<
         string,
-        Stats
+        {
+          total: number;
+          attempted: number;
+          correct: number;
+          wrong: number;
+          unanswered: number;
+        }
       >();
 
     /* ========================================================
-       PROCESS COMPLETED ATTEMPTS
+       PROCESS EACH COMPLETED ATTEMPT
     ======================================================== */
 
     for (
@@ -587,6 +454,10 @@ export async function GET(
       const attemptId =
         String(attempt.id);
 
+      /* ------------------------------------------------------
+         STUDY TIME
+      ------------------------------------------------------ */
+
       totalStudyMinutes +=
         getDurationMinutes(
           attempt.started_at,
@@ -594,16 +465,155 @@ export async function GET(
         );
 
       /* ------------------------------------------------------
-         QUESTION IDS
+         GET QUESTIONS BELONGING TO THIS ATTEMPT
       ------------------------------------------------------ */
 
-      let questionIds =
-        extractQuestionIds(
-          attempt.test_questions
-        );
+      let questions: any[] = [];
+
+      /*
+       * FIRST OPTION:
+       *
+       * scheduled_tests -> papers -> paper_questions
+       */
+
+      if (attempt.paper_id) {
+        const paperQuestionsResult =
+          await client.query(
+            `
+            SELECT
+              q.id,
+              q.exam,
+              q.subject,
+              q.standard,
+              q.chapter_number,
+              q.chapter_name,
+              q.major_topic,
+              q.subtopic,
+              q.concept_tested,
+              q.correct_option,
+              pq.question_order
+
+            FROM paper_questions pq
+
+            INNER JOIN questions q
+              ON q.id = pq.question_id
+
+            WHERE pq.paper_id = $1
+
+            ORDER BY
+              pq.question_order ASC
+            `,
+            [attempt.paper_id]
+          );
+
+        questions =
+          paperQuestionsResult.rows;
+      }
+
+      /*
+       * SECOND OPTION:
+       *
+       * If scheduled_test_id is NULL, test_id may contain
+       * the generated test/paper identifier.
+       *
+       * Check whether it matches a paper.
+       */
+
+      if (
+        questions.length === 0 &&
+        attempt.test_id
+      ) {
+        const fallbackPaperResult =
+          await client.query(
+            `
+            SELECT
+              id,
+              code,
+              exam,
+              description,
+              duration_minutes,
+              status
+            FROM papers
+            WHERE id = $1
+            LIMIT 1
+            `,
+            [
+              String(
+                attempt.test_id
+              ),
+            ]
+          );
+
+        if (
+          fallbackPaperResult
+            .rows.length > 0
+        ) {
+          const fallbackPaper =
+            fallbackPaperResult
+              .rows[0];
+
+          const paperQuestionsResult =
+            await client.query(
+              `
+              SELECT
+                q.id,
+                q.exam,
+                q.subject,
+                q.standard,
+                q.chapter_number,
+                q.chapter_name,
+                q.major_topic,
+                q.subtopic,
+                q.concept_tested,
+                q.correct_option,
+                pq.question_order
+
+              FROM paper_questions pq
+
+              INNER JOIN questions q
+                ON q.id = pq.question_id
+
+              WHERE pq.paper_id = $1
+
+              ORDER BY
+                pq.question_order ASC
+              `,
+              [
+                fallbackPaper.id,
+              ]
+            );
+
+          questions =
+            paperQuestionsResult.rows;
+
+          /*
+           * Populate fallback paper information
+           * for the response.
+           */
+
+          if (
+            !attempt.paper_id
+          ) {
+            attempt.paper_id =
+              fallbackPaper.id;
+
+            attempt.paper_code =
+              fallbackPaper.code;
+
+            attempt.paper_exam =
+              fallbackPaper.exam;
+
+            attempt.paper_description =
+              fallbackPaper.description;
+
+            attempt.paper_duration =
+              fallbackPaper.duration_minutes;
+          }
+        }
+      }
 
       /* ------------------------------------------------------
-         ANSWERS
+         GET ALL ANSWERS
       ------------------------------------------------------ */
 
       const answersResult =
@@ -618,8 +628,11 @@ export async function GET(
             time_spent_seconds,
             marked_for_review,
             answered_at
+
           FROM test_answers
+
           WHERE attempt_id = $1
+
           ORDER BY id ASC
           `,
           [attemptId]
@@ -629,62 +642,7 @@ export async function GET(
         answersResult.rows;
 
       /* ------------------------------------------------------
-         FALLBACK QUESTION IDS
-      ------------------------------------------------------ */
-
-      if (
-        questionIds.length === 0 &&
-        answers.length > 0
-      ) {
-        questionIds =
-          Array.from(
-            new Set(
-              answers.map(
-                (answer: any) =>
-                  String(
-                    answer.question_id
-                  )
-              )
-            )
-          );
-      }
-
-      /* ------------------------------------------------------
-         QUESTIONS
-      ------------------------------------------------------ */
-
-      let questions: any[] =
-        [];
-
-      if (
-        questionIds.length > 0
-      ) {
-        const questionResult =
-          await client.query(
-            `
-        SELECT
-  id,
-  exam,
-  subject,
-  standard,
-  chapter_number,
-  chapter_name,
-  major_topic,
-  subtopic,
-  concept_tested,
-  correct_option
-FROM questions
-            WHERE id = ANY($1::varchar[])
-            `,
-            [questionIds]
-          );
-
-        questions =
-          questionResult.rows;
-      }
-
-      /* ------------------------------------------------------
-         MAPS
+         BUILD ANSWER MAP
       ------------------------------------------------------ */
 
       const answerMap =
@@ -694,8 +652,7 @@ FROM questions
         >();
 
       for (
-        const answer of
-          answers
+        const answer of answers
       ) {
         answerMap.set(
           String(
@@ -704,6 +661,65 @@ FROM questions
           answer
         );
       }
+
+      /* ------------------------------------------------------
+         IF PAPER QUESTIONS ARE NOT AVAILABLE,
+         USE ANSWER QUESTION IDS.
+
+         This is important for your current Test 1 because
+         `scheduled_test_id` is NULL.
+      ------------------------------------------------------ */
+
+      if (
+        questions.length === 0 &&
+        answers.length > 0
+      ) {
+        const questionIds =
+          answers.map(
+            (answer) =>
+              String(
+                answer.question_id
+              )
+          );
+
+        const uniqueQuestionIds =
+          Array.from(
+            new Set(
+              questionIds
+            )
+          );
+
+        const questionResult =
+          await client.query(
+            `
+            SELECT
+              id,
+              exam,
+              subject,
+              standard,
+              chapter_number,
+              chapter_name,
+              major_topic,
+              subtopic,
+              concept_tested,
+              correct_option
+
+            FROM questions
+
+            WHERE id = ANY($1::varchar[])
+            `,
+            [
+              uniqueQuestionIds,
+            ]
+          );
+
+        questions =
+          questionResult.rows;
+      }
+
+      /* ------------------------------------------------------
+         CREATE QUESTION MAP
+      ------------------------------------------------------ */
 
       const questionMap =
         new Map<
@@ -727,87 +743,59 @@ FROM questions
          QUESTION COUNT
       ------------------------------------------------------ */
 
-      const configuredQuestionCount =
-        Number(
-          attempt.test_question_count ??
-            0
-        );
+      /*
+       * If paper questions exist, they are the authoritative
+       * number of questions.
+       *
+       * Otherwise use answer rows.
+       */
 
       const questionCount =
-        configuredQuestionCount >
-        0
-          ? configuredQuestionCount
-          : questionIds.length >
-            0
-          ? questionIds.length
+        questions.length > 0
+          ? questions.length
           : answers.length;
 
       totalQuestions +=
         questionCount;
 
+      /* ------------------------------------------------------
+         ATTEMPT COUNTERS
+      ------------------------------------------------------ */
+
       let attemptTotal =
         questionCount;
 
-      let attemptAttempted =
-        0;
-
-      let attemptCorrect =
-        0;
-
-      let attemptWrong =
-        0;
-
-      let attemptUnanswered =
-        0;
-
-      const analysisIds =
-        questionIds.length > 0
-          ? questionIds
-          : questions.map(
-              (question) =>
-                String(
-                  question.id
-                )
-            );
-
-      const uniqueAnalysisIds =
-        Array.from(
-          new Set(
-            analysisIds
-          )
-        );
+      let attemptAttempted = 0;
+      let attemptCorrect = 0;
+      let attemptWrong = 0;
+      let attemptUnanswered = 0;
 
       /* ------------------------------------------------------
          ANALYSE QUESTIONS
       ------------------------------------------------------ */
 
       for (
-        const questionId of
-          uniqueAnalysisIds
+        const question of
+          questions
       ) {
-        const question =
-          questionMap.get(
-            questionId
-          );
-
-        const answer =
-          answerMap.get(
-            questionId
+        const questionId =
+          String(
+            question.id
           );
 
         const subject =
           normalizeSubject(
-            question?.subject
+            question.subject
           );
 
         const chapter =
           String(
-            question?.chapter_name ??
+            question.chapter_name ??
               ""
           ).trim();
 
         /* ----------------------------------------------------
-           SUBJECT
+           SUBJECT INITIALIZATION
         ---------------------------------------------------- */
 
         if (subject) {
@@ -833,7 +821,7 @@ FROM questions
         }
 
         /* ----------------------------------------------------
-           CHAPTER
+           CHAPTER INITIALIZATION
         ---------------------------------------------------- */
 
         const chapterKey =
@@ -867,8 +855,18 @@ FROM questions
         }
 
         /* ----------------------------------------------------
-           UNANSWERED
+           ANSWER
         ---------------------------------------------------- */
+
+        const answer =
+          answerMap.get(
+            questionId
+          );
+
+        /*
+         * No answer row OR empty selected answer
+         * = unanswered.
+         */
 
         if (
           !answer ||
@@ -927,9 +925,10 @@ FROM questions
           answer.is_correct;
 
         /*
-         * If is_correct was not stored for some reason,
-         * calculate it from the database question.
+         * If database doesn't contain is_correct,
+         * calculate using questions.correct_option.
          */
+
         if (
           isCorrect === null ||
           isCorrect === undefined
@@ -940,8 +939,8 @@ FROM questions
             );
 
           const correct =
-            getCorrectAnswer(
-              question
+            normalizeAnswer(
+              question.correct_option
             );
 
           if (
@@ -993,45 +992,36 @@ FROM questions
         }
       }
 
-      /* ------------------------------------------------------
-         ANSWER FALLBACK
-      ------------------------------------------------------ */
+      /*
+       * If we could not obtain paper questions but we do have
+       * answer rows, calculate the answer statistics directly.
+       *
+       * This prevents your dashboard from showing
+       * 0 correct / 0 wrong when test_answers already contains
+       * the real result.
+       */
 
       if (
-        uniqueAnalysisIds.length ===
-          0 &&
+        questions.length === 0 &&
         answers.length > 0
       ) {
         attemptTotal =
-          configuredQuestionCount >
-          0
-            ? configuredQuestionCount
-            : answers.length;
+          answers.length;
 
-        attemptAttempted =
-          0;
-
-        attemptCorrect =
-          0;
-
-        attemptWrong =
-          0;
-
-        attemptUnanswered =
-          0;
+        attemptAttempted = 0;
+        attemptCorrect = 0;
+        attemptWrong = 0;
+        attemptUnanswered = 0;
 
         for (
-          const answer of
-            answers
+          const answer of answers
         ) {
           const selected =
             normalizeAnswer(
               answer.selected_answer
             );
 
-          if (
-            selected === null
-          ) {
+          if (selected === null) {
             attemptUnanswered++;
             continue;
           }
@@ -1049,8 +1039,65 @@ FROM questions
         }
       }
 
+      /*
+       * If the paper contains questions but there are answer
+       * rows for question IDs that weren't returned, also make
+       * sure those answers are included in attempted/correct.
+       */
+
+      if (
+        questions.length > 0
+      ) {
+        const knownIds =
+          new Set(
+            questions.map(
+              (q) =>
+                String(q.id)
+            )
+          );
+
+        for (
+          const answer of answers
+        ) {
+          const questionId =
+            String(
+              answer.question_id
+            );
+
+          if (
+            knownIds.has(
+              questionId
+            )
+          ) {
+            continue;
+          }
+
+          const selected =
+            normalizeAnswer(
+              answer.selected_answer
+            );
+
+          if (
+            selected === null
+          ) {
+            continue;
+          }
+
+          attemptAttempted++;
+
+          if (
+            answer.is_correct ===
+            true
+          ) {
+            attemptCorrect++;
+          } else {
+            attemptWrong++;
+          }
+        }
+      }
+
       /* ------------------------------------------------------
-         SAFETY
+         SAFETY AGAINST IMPOSSIBLE COUNTS
       ------------------------------------------------------ */
 
       if (
@@ -1066,6 +1113,10 @@ FROM questions
           );
       }
 
+      /* ------------------------------------------------------
+         GLOBAL COUNTERS
+      ------------------------------------------------------ */
+
       totalAttempted +=
         attemptAttempted;
 
@@ -1078,21 +1129,21 @@ FROM questions
       totalUnanswered +=
         attemptUnanswered;
 
+      /* ------------------------------------------------------
+         SAVE ATTEMPT ANALYTICS
+      ------------------------------------------------------ */
+
       attemptAnalytics.set(
         attemptId,
         {
           total:
             attemptTotal,
-
           attempted:
             attemptAttempted,
-
           correct:
             attemptCorrect,
-
           wrong:
             attemptWrong,
-
           unanswered:
             attemptUnanswered,
         }
@@ -1103,11 +1154,9 @@ FROM questions
        SCORE STATISTICS
     ======================================================== */
 
-    const scores: number[] =
+    const scores =
       completedAttempts.map(
-        (
-          attempt: any
-        ): number =>
+        (attempt) =>
           Number(
             attempt.score ?? 0
           )
@@ -1119,8 +1168,8 @@ FROM questions
             (
               scores.reduce(
                 (
-                  sum: number,
-                  score: number
+                  sum,
+                  score
                 ) =>
                   sum + score,
                 0
@@ -1151,6 +1200,10 @@ FROM questions
     const totalAttempts =
       attempts.length;
 
+    /* ========================================================
+       ACCURACY
+    ======================================================== */
+
     const overallAccuracy =
       totalAttempted > 0
         ? Number(
@@ -1163,112 +1216,58 @@ FROM questions
         : 0;
 
     /* ========================================================
-       CONSISTENCY
-    ======================================================== */
-
-    let consistency = 0;
-
-    if (scores.length >= 2) {
-      const mean =
-        averageScore;
-
-      const variance =
-        scores.reduce(
-          (
-            sum: number,
-            score: number
-          ) =>
-            sum +
-            Math.pow(
-              score - mean,
-              2
-            ),
-          0
-        ) /
-        scores.length;
-
-      const standardDeviation =
-        Math.sqrt(
-          variance
-        );
-
-      consistency =
-        Math.max(
-          0,
-          Math.min(
-            100,
-            Number(
-              (
-                100 -
-                standardDeviation
-              ).toFixed(0)
-            )
-          )
-        );
-    } else if (
-      scores.length === 1
-    ) {
-      consistency = 100;
-    }
-
-    /* ========================================================
        PERFORMANCE TREND
     ======================================================== */
 
     const performanceTrend =
-      [
-        ...completedAttempts,
-      ]
+      [...completedAttempts]
         .reverse()
         .map(
           (
-            attempt: any,
-            index: number
-          ) => {
-            const testId =
-              attempt.resolved_test_id ??
-              null;
+            attempt,
+            index
+          ) => ({
+            attemptId:
+              String(
+                attempt.id
+              ),
 
-            const date =
+            testId:
+              attempt.test_id
+                ? String(
+                    attempt.test_id
+                  )
+                : attempt.scheduled_test_id
+                ? String(
+                    attempt.scheduled_test_id
+                  )
+                : null,
+
+            score:
+              Number(
+                attempt.score ?? 0
+              ),
+
+            date:
               attempt.submitted_at ??
               attempt.started_at ??
-              attempt.created_at;
+              attempt.created_at,
 
-            return {
-              attemptId:
-                String(
-                  attempt.id
-                ),
+            formattedDate:
+              formatDate(
+                attempt.submitted_at ??
+                  attempt.started_at ??
+                  attempt.created_at
+              ),
 
-              testId,
+            label:
+              `Test ${index + 1}`,
 
-              score:
-                Number(
-                  attempt.score ??
-                    0
-                ),
-
-              date,
-
-              formattedDate:
-                formatDate(
-                  date
-                ),
-
-              label:
-                `Test ${
-                  index + 1
-                }`,
-
-              name: testId
-                ? String(
-                    testId
-                  )
-                : `Test ${
-                    index + 1
-                  }`,
-            };
-          }
+            name:
+              attempt.scheduled_title ??
+              attempt.paper_code ??
+              `Test ${index + 1}`,
+          })
         );
 
     /* ========================================================
@@ -1296,25 +1295,19 @@ FROM questions
           ) {
             return {
               subject,
-
               score: 0,
-
               accuracy: 0,
-
               total: 0,
-
               attempted: 0,
-
               correct: 0,
-
               wrong: 0,
-
               unanswered: 0,
             };
           }
 
           const accuracy =
-            stats.attempted > 0
+            stats.attempted >
+            0
               ? Number(
                   (
                     (stats.correct /
@@ -1326,24 +1319,16 @@ FROM questions
 
           return {
             subject,
-
-            score:
-              accuracy,
-
+            score: accuracy,
             accuracy,
-
             total:
               stats.total,
-
             attempted:
               stats.attempted,
-
             correct:
               stats.correct,
-
             wrong:
               stats.wrong,
-
             unanswered:
               stats.unanswered,
           };
@@ -1351,7 +1336,7 @@ FROM questions
       );
 
     /* ========================================================
-       OTHER SUBJECTS
+       CUSTOM SUBJECTS
     ======================================================== */
 
     for (
@@ -1383,24 +1368,16 @@ FROM questions
 
       subjectPerformance.push({
         subject,
-
-        score:
-          accuracy,
-
+        score: accuracy,
         accuracy,
-
         total:
           stats.total,
-
         attempted:
           stats.attempted,
-
         correct:
           stats.correct,
-
         wrong:
           stats.wrong,
-
         unanswered:
           stats.unanswered,
       });
@@ -1417,7 +1394,8 @@ FROM questions
         .map(
           (stats) => {
             const accuracy =
-              stats.attempted > 0
+              stats.attempted >
+              0
                 ? Number(
                     (
                       (stats.correct /
@@ -1463,43 +1441,27 @@ FROM questions
        WEAK AREAS
     ======================================================== */
 
-    const weakAreas =
-      chapterPerformance
-        .filter(
-          (item) =>
-            item.attempted > 0
-        )
-        .slice(0, 10)
-        .map(
-          (item) => ({
-            topic:
-              item.chapter,
-
-            chapter:
-              item.chapter,
-
-            subject:
-              item.subject,
-
-            score:
-              item.accuracy,
-
-            accuracy:
-              item.accuracy,
-
-            attempted:
-              item.attempted,
-
-            correct:
-              item.correct,
-
-            wrong:
-              item.wrong,
-
-            unanswered:
-              item.unanswered,
-          })
-        );
+  
+        const weakAreas =
+  chapterPerformance
+    .filter(
+      (item) =>
+        item.attempted > 0 &&
+        item.accuracy < 60
+    )
+    .slice(0, 10)
+    .map((item) => ({
+      topic: item.chapter,
+      chapter: item.chapter,
+      subject: item.subject,
+      score: item.accuracy,
+      accuracy: item.accuracy,
+      attempted: item.attempted,
+      correct: item.correct,
+      wrong: item.wrong,
+      unanswered: item.unanswered,
+    }));
+       
 
     /* ========================================================
        SCORE DISTRIBUTION
@@ -1534,6 +1496,57 @@ FROM questions
     };
 
     /* ========================================================
+       CONSISTENCY
+    ======================================================== */
+
+    let consistency = 0;
+
+    if (
+      scores.length >= 2
+    ) {
+      const mean =
+        averageScore;
+
+      const variance =
+        scores.reduce(
+          (
+            sum,
+            score
+          ) =>
+            sum +
+            Math.pow(
+              score - mean,
+              2
+            ),
+          0
+        ) /
+        scores.length;
+
+      const standardDeviation =
+        Math.sqrt(
+          variance
+        );
+
+      consistency =
+        Math.max(
+          0,
+          Math.min(
+            100,
+            Number(
+              (
+                100 -
+                standardDeviation
+              ).toFixed(0)
+            )
+          )
+        );
+    } else if (
+      scores.length === 1
+    ) {
+      consistency = 100;
+    }
+
+    /* ========================================================
        RESULTS
     ======================================================== */
 
@@ -1541,8 +1554,8 @@ FROM questions
       completedAttempts
         .map(
           (
-            attempt: any,
-            index: number
+            attempt,
+            index
           ) => {
             const analytics =
               attemptAnalytics.get(
@@ -1565,49 +1578,45 @@ FROM questions
                 : 0;
 
             const testId =
-              attempt.resolved_test_id ??
+              attempt.test_id ??
+              attempt.scheduled_test_id ??
               null;
 
             const name =
-              testId
-                ? String(
-                    testId
-                  )
-                : `Test ${
-                    index + 1
-                  }`;
+              attempt.scheduled_title ??
+              attempt.paper_code ??
+              `Test ${index + 1}`;
 
             return {
-              id: testId
-                ? String(
-                    testId
-                  )
-                : null,
+              id:
+                testId !== null
+                  ? String(
+                      testId
+                    )
+                  : null,
 
               attemptId:
                 String(
                   attempt.id
                 ),
 
-              difficulty:
-                getTestDifficulty(
-                  attempt.test_questions
-                ),
-
               name,
 
               title:
+                attempt.scheduled_title ??
                 name,
 
               paperId:
+                attempt.paper_id ??
                 null,
 
               paperCode:
+                attempt.paper_code ??
                 null,
 
               exam:
                 String(
-                  attempt.test_exam ??
+                  attempt.paper_exam ??
                     "MHT-CET"
                 ),
 
@@ -1652,17 +1661,11 @@ FROM questions
 
               totalQuestions:
                 analytics?.total ??
-                Number(
-                  attempt.test_question_count ??
-                    0
-                ),
+                0,
 
               questionCount:
                 analytics?.total ??
-                Number(
-                  attempt.test_question_count ??
-                    0
-                ),
+                0,
 
               time:
                 formatDuration(
@@ -1709,8 +1712,8 @@ FROM questions
     const myTests =
       attempts.map(
         (
-          attempt: any,
-          index: number
+          attempt,
+          index
         ) => {
           const analytics =
             attemptAnalytics.get(
@@ -1720,24 +1723,22 @@ FROM questions
             );
 
           const testId =
-            attempt.resolved_test_id ??
+            attempt.test_id ??
+            attempt.scheduled_test_id ??
             null;
 
           const name =
-            testId
-              ? String(
-                  testId
-                )
-              : `Test ${
-                  index + 1
-                }`;
+            attempt.scheduled_title ??
+            attempt.paper_code ??
+            `Test ${index + 1}`;
 
           return {
-            id: testId
-              ? String(
-                  testId
-                )
-              : null,
+            id:
+              testId !== null
+                ? String(
+                    testId
+                  )
+                : null,
 
             attemptId:
               String(
@@ -1747,29 +1748,33 @@ FROM questions
             name,
 
             title:
+              attempt.scheduled_title ??
               name,
 
             exam:
               String(
-                attempt.test_exam ??
+                attempt.paper_exam ??
                   "MHT-CET"
               ),
 
             paperId:
+              attempt.paper_id ??
               null,
 
             paperCode:
+              attempt.paper_code ??
               null,
 
             questionCount:
               analytics?.total ??
-              Number(
-                attempt.test_question_count ??
-                  0
-              ),
+              0,
 
             durationConfigured:
-              0,
+              Number(
+                attempt.duration_minutes ??
+                  attempt.paper_duration ??
+                  0
+              ),
 
             createdAt:
               attempt.created_at ??
@@ -1850,618 +1855,6 @@ FROM questions
       );
 
     /* ========================================================
-       SCHEDULED TESTS
-    ======================================================== */
-
-    const scheduledTestsResult =
-      await client.query(
-        `
-        SELECT
-          st.id,
-          st.paper_id,
-          st.batch_id,
-          st.title,
-          st.start_time,
-          st.end_time,
-          st.duration_minutes,
-          st.status AS scheduled_status,
-
-          p.exam AS paper_exam,
-          p.description AS paper_description,
-          p.code AS paper_code,
-          p.duration_minutes AS paper_duration
-
-        FROM scheduled_tests st
-
-        LEFT JOIN papers p
-          ON p.id = st.paper_id
-
-        INNER JOIN batch_students bs
-          ON bs.batch_id = st.batch_id
-
-        WHERE bs.student_id = $1
-
-        ORDER BY st.start_time ASC
-        `,
-        [studentId]
-      );
-
-    const scheduledTests =
-      scheduledTestsResult.rows;
-
-    /* ========================================================
-       TEST SUMMARY ARRAYS
-    ======================================================== */
-
-    const activeTests: any[] =
-      [];
-
-    const upcomingTests: any[] =
-      [];
-
-    const completedTests: any[] =
-      [];
-
-    const missedTests: any[] =
-      [];
-
-    /* ========================================================
-       COMPLETED TESTS
-    ======================================================== */
-
-    for (
-      const attempt of
-        completedAttempts
-    ) {
-      const analytics =
-        attemptAnalytics.get(
-          String(
-            attempt.id
-          )
-        );
-
-      const testId =
-        attempt.resolved_test_id
-          ? String(
-              attempt.resolved_test_id
-            )
-          : null;
-
-      const questionCount =
-        analytics?.total ??
-        Number(
-          attempt.test_question_count ??
-            0
-        );
-
-      const attempted =
-        analytics?.attempted ??
-        Number(
-          attempt.correct_count ??
-            0
-        ) +
-          Number(
-            attempt.incorrect_count ??
-              0
-          );
-
-      const correct =
-        analytics?.correct ??
-        Number(
-          attempt.correct_count ??
-            0
-        );
-
-      const wrong =
-        analytics?.wrong ??
-        Number(
-          attempt.incorrect_count ??
-            0
-        );
-
-      const unanswered =
-        analytics?.unanswered ??
-        Number(
-          attempt.unanswered_count ??
-            0
-        );
-
-      const accuracy =
-        attempted > 0
-          ? Number(
-              (
-                (correct /
-                  attempted) *
-                100
-              ).toFixed(2)
-            )
-          : 0;
-
-      completedTests.push({
-        id: testId,
-
-        attemptId:
-          String(
-            attempt.id
-          ),
-
-        difficulty:
-          getTestDifficulty(
-            attempt.test_questions
-          ),
-
-        name:
-          testId ??
-          "MHT-CET Test",
-
-        title:
-          testId ??
-          "MHT-CET Test",
-
-        exam:
-          String(
-            attempt.test_exam ??
-              "MHT-CET"
-          ),
-
-        status:
-          "Completed",
-
-        questionCount,
-
-        questions:
-          questionCount,
-
-        score:
-          Number(
-            attempt.score ?? 0
-          ),
-
-        totalMarks:
-          Number(
-            attempt.total_marks ??
-              0
-          ),
-
-        accuracy,
-
-        correct,
-
-        wrong,
-
-        unanswered,
-
-        attempted,
-
-        startedAt:
-          attempt.started_at ??
-          null,
-
-        completedAt:
-          attempt.submitted_at ??
-          null,
-
-        completedDate:
-          formatDate(
-            attempt.submitted_at ??
-              attempt.started_at ??
-              attempt.created_at
-          ),
-
-        completedDateTime:
-          formatDateTime(
-            attempt.submitted_at ??
-              attempt.started_at ??
-              attempt.created_at
-          ),
-
-        durationMinutes:
-          Number(
-            getDurationMinutes(
-              attempt.started_at,
-              attempt.submitted_at
-            ).toFixed(2)
-          ),
-
-        duration:
-          formatDuration(
-            getDurationMinutes(
-              attempt.started_at,
-              attempt.submitted_at
-            )
-          ),
-
-        description:
-          "Completed test",
-
-        comments:
-          "",
-      });
-    }
-
-    /* ========================================================
-       ACTIVE ATTEMPTS
-    ======================================================== */
-
-    for (
-      const attempt of
-        attempts
-    ) {
-      if (
-        isCompletedStatus(
-          attempt.status
-        )
-      ) {
-        continue;
-      }
-
-      const testId =
-        attempt.resolved_test_id
-          ? String(
-              attempt.resolved_test_id
-            )
-          : null;
-
-      activeTests.push({
-        id: testId,
-
-        attemptId:
-          String(
-            attempt.id
-          ),
-
-        difficulty:
-          getTestDifficulty(
-            attempt.test_questions
-          ),
-
-        name:
-          testId ??
-          "MHT-CET Test",
-
-        title:
-          testId ??
-          "MHT-CET Test",
-
-        exam:
-          String(
-            attempt.test_exam ??
-              "MHT-CET"
-          ),
-
-        status:
-          "Active",
-
-        questionCount:
-          Number(
-            attempt.test_question_count ??
-              0
-          ),
-
-        questions:
-          Number(
-            attempt.test_question_count ??
-              0
-          ),
-
-        startedAt:
-          attempt.started_at ??
-          null,
-
-        startTime:
-          formatDateTime(
-            attempt.started_at
-          ),
-
-        endTime:
-          null,
-
-        duration:
-          "Not configured",
-
-        description:
-          "Test available to complete.",
-
-        comments:
-          "",
-      });
-    }
-
-    /* ========================================================
-       COMPLETED TEST IDS
-    ======================================================== */
-
-    const completedTestIds =
-      new Set(
-        completedAttempts
-          .map(
-            (attempt: any) =>
-              attempt.resolved_test_id
-                ? String(
-                    attempt.resolved_test_id
-                  )
-                : null
-          )
-          .filter(
-            Boolean
-          )
-      );
-
-    /* ========================================================
-       SCHEDULED TEST CLASSIFICATION
-    ======================================================== */
-
-    const now =
-      Date.now();
-
-    for (
-      const scheduled of
-        scheduledTests
-    ) {
-      const scheduledId =
-        String(
-          scheduled.id
-        );
-
-      /* ------------------------------------------------------
-         Already completed
-      ------------------------------------------------------ */
-
-      if (
-        completedTestIds.has(
-          scheduledId
-        )
-      ) {
-        continue;
-      }
-
-      const startTime =
-        scheduled.start_time
-          ? new Date(
-              scheduled.start_time
-            ).getTime()
-          : NaN;
-
-      const endTime =
-        scheduled.end_time
-          ? new Date(
-              scheduled.end_time
-            ).getTime()
-          : NaN;
-
-      const durationMinutes =
-        Number(
-          scheduled.duration_minutes ??
-            scheduled.paper_duration ??
-            0
-        );
-
-      const test = {
-        id:
-          scheduledId,
-
-        scheduledTestId:
-          scheduledId,
-
-        paperId:
-          scheduled.paper_id
-            ? String(
-                scheduled.paper_id
-              )
-            : null,
-
-        batchId:
-          scheduled.batch_id
-            ? String(
-                scheduled.batch_id
-              )
-            : null,
-
-        name:
-          String(
-            scheduled.title ??
-              scheduled.paper_code ??
-              scheduled.paper_id ??
-              "Scheduled Test"
-          ),
-
-        title:
-          String(
-            scheduled.title ??
-              scheduled.paper_code ??
-              scheduled.paper_id ??
-              "Scheduled Test"
-          ),
-
-        exam:
-          String(
-            scheduled.paper_exam ??
-              "MHT-CET"
-          ),
-
-        description:
-          String(
-            scheduled.paper_description ??
-              ""
-          ),
-
-        status:
-          String(
-            scheduled.scheduled_status ??
-              "Scheduled"
-          ),
-
-        startTime:
-          scheduled.start_time
-            ? formatDateTime(
-                scheduled.start_time
-              )
-            : "",
-
-        endTime:
-          scheduled.end_time
-            ? formatDateTime(
-                scheduled.end_time
-              )
-            : "",
-
-        startAt:
-          scheduled.start_time ??
-          null,
-
-        endAt:
-          scheduled.end_time ??
-          null,
-
-        startTimestamp:
-          Number.isFinite(
-            startTime
-          )
-            ? startTime
-            : null,
-
-        endTimestamp:
-          Number.isFinite(
-            endTime
-          )
-            ? endTime
-            : null,
-
-        durationMinutes,
-
-        duration:
-          durationMinutes > 0
-            ? formatDuration(
-                durationMinutes
-              )
-            : "Not configured",
-
-        questionCount:
-          0,
-
-        questions:
-          0,
-
-        score:
-          null,
-
-        attempted:
-          0,
-
-        correct:
-          0,
-
-        wrong:
-          0,
-
-        unanswered:
-          0,
-
-        accuracy:
-          0,
-
-        comments:
-          "",
-      };
-
-      /* ------------------------------------------------------
-         UPCOMING
-      ------------------------------------------------------ */
-
-      if (
-        Number.isFinite(
-          startTime
-        ) &&
-        now < startTime
-      ) {
-        upcomingTests.push({
-          ...test,
-
-          status:
-            "Upcoming",
-        });
-
-        continue;
-      }
-
-      /* ------------------------------------------------------
-         MISSED
-      ------------------------------------------------------ */
-
-      if (
-        Number.isFinite(
-          endTime
-        ) &&
-        now > endTime
-      ) {
-        missedTests.push({
-          ...test,
-
-          status:
-            "Missed",
-        });
-
-        continue;
-      }
-
-      /* ------------------------------------------------------
-         ACTIVE
-      ------------------------------------------------------ */
-
-      activeTests.push({
-        ...test,
-
-        status:
-          "Active",
-      });
-    }
-
-    /* ========================================================
-       TEST SUMMARY
-    ======================================================== */
-
-    const testSummary = {
-      all: [
-        ...activeTests,
-        ...upcomingTests,
-        ...completedTests,
-        ...missedTests,
-      ],
-
-      active:
-        activeTests,
-
-      upcoming:
-        upcomingTests,
-
-      completed:
-        completedTests,
-
-      missed:
-        missedTests,
-
-      counts: {
-        active:
-          activeTests.length,
-
-        upcoming:
-          upcomingTests.length,
-
-        completed:
-          completedTests.length,
-
-        missed:
-          missedTests.length,
-
-        total:
-          activeTests.length +
-          upcomingTests.length +
-          completedTests.length +
-          missedTests.length,
-      },
-    };
-
-    /* ========================================================
        LATEST TEST
     ======================================================== */
 
@@ -2473,27 +1866,21 @@ FROM questions
         : null;
 
     /* ========================================================
-       FINAL RESPONSE
+       RESPONSE
     ======================================================== */
 
     return NextResponse.json({
       success: true,
 
-      /* ------------------------------------------------------
-         STUDENT
-      ------------------------------------------------------ */
-
       student: {
-        id:
-          String(
-            student.id
-          ),
+        id: String(
+          student.id
+        ),
 
-        name:
-          String(
-            student.name ??
-              "Student"
-          ),
+        name: String(
+          student.name ??
+            "Student"
+        ),
 
         rollNumber:
           student.roll_number ??
@@ -2503,10 +1890,6 @@ FROM questions
           student.email ??
           null,
       },
-
-      /* ------------------------------------------------------
-         STATISTICS
-      ------------------------------------------------------ */
 
       statistics: {
         testsTaken,
@@ -2552,10 +1935,6 @@ FROM questions
         consistency,
       },
 
-      /* ------------------------------------------------------
-         ANALYTICS
-      ------------------------------------------------------ */
-
       performanceTrend,
 
       scoreDistribution,
@@ -2566,36 +1945,11 @@ FROM questions
 
       weakAreas,
 
-      /* ------------------------------------------------------
-         RESULTS
-      ------------------------------------------------------ */
-
       results,
 
       myTests,
 
       latestTest,
-
-      /* ------------------------------------------------------
-         TEST SUMMARY
-      ------------------------------------------------------ */
-
-      testSummary,
-
-      activeTests,
-
-      upcomingTests,
-
-      completedTests,
-
-      missedTests,
-
-      /* ------------------------------------------------------
-         DASHBOARD COMPATIBILITY
-      ------------------------------------------------------ */
-
-      tests:
-        myTests,
     });
   } catch (error) {
     console.error(
@@ -2606,7 +1960,6 @@ FROM questions
     return NextResponse.json(
       {
         success: false,
-
         error:
           error instanceof Error
             ? error.message
@@ -2617,8 +1970,6 @@ FROM questions
       }
     );
   } finally {
-    if (client) {
-      client.release();
-    }
+    client.release();
   }
 }
