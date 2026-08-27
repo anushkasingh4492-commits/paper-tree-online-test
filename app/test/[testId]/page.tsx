@@ -1,9 +1,15 @@
-
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import {
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import { useParams, useRouter } from "next/navigation";
 import jsPDF from "jspdf";
+import "katex/dist/katex.min.css";
+import { InlineMath, BlockMath } from "react-katex";
 
 type Question = {
   id: string;
@@ -30,41 +36,524 @@ type Answers = Record<string, number>;
 type Marked = Record<string, boolean>;
 type Visited = Record<string, boolean>;
 
+/*
+ * =========================================================
+ * MATH / EQUATION RENDERER
+ * =========================================================
+ *
+ * Supports:
+ *
+ * $v = u + at$
+ * \(v = u + at\)
+ * $$...$$
+ * \[...\]
+ *
+ * It also converts common plain-text notation such as:
+ *
+ * m s^-1  -> m s⁻¹
+ * x^2     -> x²
+ * x^-1    -> x⁻¹
+ * rho     -> ρ in common physics cases
+ *
+ * If your uploaded question contains proper LaTeX,
+ * KaTeX renders it properly.
+ */
+
+function convertSimpleSuperscripts(
+  text: string
+): React.ReactNode {
+  const superscriptMap: Record<
+    string,
+    string
+  > = {
+    "0": "⁰",
+    "1": "¹",
+    "2": "²",
+    "3": "³",
+    "4": "⁴",
+    "5": "⁵",
+    "6": "⁶",
+    "7": "⁷",
+    "8": "⁸",
+    "9": "⁹",
+    "+": "⁺",
+    "-": "⁻",
+    "=": "⁼",
+    "(": "⁽",
+    ")": "⁾",
+    n: "ⁿ",
+    i: "ⁱ",
+  };
+
+  const parts = text.split(
+    /(\^-?\d+|\^\([^)]+\))/g
+  );
+
+  return parts.map(
+    (part, index) => {
+      if (
+        part.startsWith("^")
+      ) {
+        let value =
+          part.slice(1);
+
+        if (
+          value.startsWith("(") &&
+          value.endsWith(")")
+        ) {
+          value = value.slice(
+            1,
+            -1
+          );
+        }
+
+        const converted =
+          value
+            .split("")
+            .map(
+              (char) =>
+                superscriptMap[
+                  char
+                ] ?? char
+            )
+            .join("");
+
+        return (
+          <sup
+            key={index}
+            className="text-[0.72em] leading-none"
+          >
+            {converted}
+          </sup>
+        );
+      }
+
+      return (
+        <span key={index}>
+          {part}
+        </span>
+      );
+    }
+  );
+}
+
+function MathText({
+  text,
+  block = false,
+}: {
+  text: string;
+  block?: boolean;
+}) {
+  const value = String(
+    text ?? ""
+  );
+
+  /*
+   * If the entire string is wrapped
+   * in display math delimiters.
+   */
+
+  if (
+    value.startsWith("$$") &&
+    value.endsWith("$$")
+  ) {
+    const math = value.slice(
+      2,
+      -2
+    );
+
+    return (
+      <div className="my-3 overflow-x-auto">
+        <BlockMath
+          math={math}
+          errorColor="#64748b"
+        />
+      </div>
+    );
+  }
+
+  if (
+    value.startsWith("\\[") &&
+    value.endsWith("\\]")
+  ) {
+    const math = value.slice(
+      2,
+      -2
+    );
+
+    return (
+      <div className="my-3 overflow-x-auto">
+        <BlockMath
+          math={math}
+          errorColor="#64748b"
+        />
+      </div>
+    );
+  }
+
+  /*
+   * Find inline/display LaTeX inside normal text.
+   */
+
+  const regex =
+    /(\$\$[\s\S]*?\$\$|\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\)|\$[^$\n]+\$)/g;
+
+  const parts =
+    value.split(regex);
+
+  return (
+    <>
+      {parts.map(
+        (part, index) => {
+          if (!part) {
+            return null;
+          }
+
+          if (
+            part.startsWith("$$") &&
+            part.endsWith("$$")
+          ) {
+            return (
+              <span
+                key={index}
+                className="block overflow-x-auto my-3"
+              >
+                <BlockMath
+                  math={part.slice(
+                    2,
+                    -2
+                  )}
+                  errorColor="#64748b"
+                />
+              </span>
+            );
+          }
+
+          if (
+            part.startsWith("\\[") &&
+            part.endsWith("\\]")
+          ) {
+            return (
+              <span
+                key={index}
+                className="block overflow-x-auto my-3"
+              >
+                <BlockMath
+                  math={part.slice(
+                    2,
+                    -2
+                  )}
+                  errorColor="#64748b"
+                />
+              </span>
+            );
+          }
+
+          if (
+            part.startsWith("\\(") &&
+            part.endsWith("\\)")
+          ) {
+            return (
+              <InlineMath
+                key={index}
+                math={part.slice(
+                  2,
+                  -2
+                )}
+                errorColor="#64748b"
+              />
+            );
+          }
+
+          if (
+            part.startsWith("$") &&
+            part.endsWith("$")
+          ) {
+            return (
+              <InlineMath
+                key={index}
+                math={part.slice(
+                  1,
+                  -1
+                )}
+                errorColor="#64748b"
+              />
+            );
+          }
+
+          return (
+            <span key={index}>
+              {convertSimpleSuperscripts(
+                part
+              )}
+            </span>
+          );
+        }
+      )}
+    </>
+  );
+}
+
+/*
+ * =========================================================
+ * MAIN COMPONENT
+ * =========================================================
+ */
+
 export default function TestPage() {
   const params = useParams();
   const router = useRouter();
 
-  const testId = String(params.testId);
+  const testId = String(
+    params.testId
+  );
 
-  const [test, setTest] = useState<TestData | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
+  const [test, setTest] =
+    useState<TestData | null>(
+      null
+    );
 
-  const [answers, setAnswers] = useState<Answers>({});
-  const [marked, setMarked] = useState<Marked>({});
-  const [visited, setVisited] = useState<Visited>({});
+  const [loading, setLoading] =
+    useState(true);
 
-  const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [timeLeft, setTimeLeft] = useState(0);
+  const [error, setError] =
+    useState("");
 
-  const [showWarning, setShowWarning] = useState(false);
-  const [submitting, setSubmitting] = useState(false);
+  const [answers, setAnswers] =
+    useState<Answers>({});
+
+  const [marked, setMarked] =
+    useState<Marked>({});
+
+  const [visited, setVisited] =
+    useState<Visited>({});
+
+  const [
+    currentQuestion,
+    setCurrentQuestion,
+  ] = useState(0);
+
+  const [timeLeft, setTimeLeft] =
+    useState(0);
+
+  const [
+    showWarning,
+    setShowWarning,
+  ] = useState(false);
+
+  const [
+    submitting,
+    setSubmitting,
+  ] = useState(false);
+
+  const [
+    downloadingPaper,
+    setDownloadingPaper,
+  ] = useState(false);
+
+  const submittedRef =
+    useRef(false);
+
+  const navigatingToResultRef =
+    useRef(false);
+
+  const startedAtRef =
+    useRef<number | null>(null);
 
   /*
-   * Prevent multiple submissions.
+   * =========================================================
+   * IMAGE HELPERS
+   * =========================================================
    */
-  const submittedRef = useRef(false);
 
-  /*
-   * Prevent visibility detection while we intentionally
-   * navigate to the result page.
-   */
-  const navigatingToResultRef = useRef(false);
+  function getImageFormatFromDataUrl(
+    dataUrl: string
+  ): "PNG" | "JPEG" {
+    if (
+      dataUrl.startsWith(
+        "data:image/jpeg"
+      ) ||
+      dataUrl.startsWith(
+        "data:image/jpg"
+      )
+    ) {
+      return "JPEG";
+    }
 
-  /*
-   * Test start timestamp.
-   */
-  const startedAtRef = useRef<number | null>(null);
+    return "PNG";
+  }
+
+  async function loadImageAsDataUrl(
+    src: string
+  ): Promise<string | null> {
+    try {
+      if (
+        src.startsWith(
+          "data:image/"
+        )
+      ) {
+        return src;
+      }
+
+      const response =
+        await fetch(src);
+
+      if (!response.ok) {
+        throw new Error(
+          `Image request failed: ${response.status}`
+        );
+      }
+
+      const blob =
+        await response.blob();
+
+      return await new Promise(
+        (resolve) => {
+          const reader =
+            new FileReader();
+
+          reader.onloadend = () => {
+            resolve(
+              typeof reader.result ===
+                "string"
+                ? reader.result
+                : null
+            );
+          };
+
+          reader.onerror = () =>
+            resolve(null);
+
+          reader.readAsDataURL(
+            blob
+          );
+        }
+      );
+    } catch (error) {
+      console.warn(
+        "Could not load figure for PDF:",
+        src,
+        error
+      );
+
+      return null;
+    }
+  }
+
+  async function addFigureToPdf(
+    doc: jsPDF,
+    src: string,
+    margin: number,
+    contentWidth: number,
+    pageHeight: number,
+    currentY: number
+  ): Promise<number> {
+    const dataUrl =
+      await loadImageAsDataUrl(
+        src
+      );
+
+    if (!dataUrl) {
+      return currentY;
+    }
+
+    try {
+      const image =
+        new Image();
+
+      image.src = dataUrl;
+
+      await new Promise<void>(
+        (resolve) => {
+          if (image.complete) {
+            resolve();
+            return;
+          }
+
+          image.onload = () =>
+            resolve();
+
+          image.onerror = () =>
+            resolve();
+        }
+      );
+
+      const imageWidth =
+        image.naturalWidth ||
+        image.width ||
+        800;
+
+      const imageHeight =
+        image.naturalHeight ||
+        image.height ||
+        500;
+
+      const maxWidth =
+        Math.min(
+          contentWidth,
+          170
+        );
+
+      const maxHeight =
+        90;
+
+      const scale =
+        Math.min(
+          maxWidth /
+            imageWidth,
+          maxHeight /
+            imageHeight
+        );
+
+      const displayWidth =
+        imageWidth * scale;
+
+      const displayHeight =
+        imageHeight * scale;
+
+      let y = currentY;
+
+      if (
+        y +
+          displayHeight +
+          10 >
+        pageHeight - margin
+      ) {
+        doc.addPage();
+        y = margin;
+      }
+
+      const x =
+        margin +
+        (contentWidth -
+          displayWidth) /
+          2;
+
+      doc.addImage(
+        dataUrl,
+        getImageFormatFromDataUrl(
+          dataUrl
+        ),
+        x,
+        y,
+        displayWidth,
+        displayHeight
+      );
+
+      return (
+        y +
+        displayHeight +
+        7
+      );
+    } catch (error) {
+      console.warn(
+        "Could not add figure to PDF:",
+        error
+      );
+
+      return currentY;
+    }
+  }
 
   /*
    * =========================================================
@@ -72,133 +561,172 @@ export default function TestPage() {
    * =========================================================
    */
 
-  function downloadQuestionPaper() {
-    if (!questions.length) {
+  async function downloadQuestionPaper() {
+    if (
+      !questions.length ||
+      downloadingPaper
+    ) {
       return;
     }
 
-    const doc = new jsPDF();
+    setDownloadingPaper(true);
 
-    const pageWidth =
-      doc.internal.pageSize.getWidth();
+    try {
+      const doc = new jsPDF();
 
-    const pageHeight =
-      doc.internal.pageSize.getHeight();
+      const pageWidth =
+        doc.internal.pageSize.getWidth();
 
-    const margin = 14;
+      const pageHeight =
+        doc.internal.pageSize.getHeight();
 
-    const contentWidth =
-      pageWidth - margin * 2;
+      const margin = 14;
 
-    let y = 18;
+      const contentWidth =
+        pageWidth -
+        margin * 2;
 
-    const addWrappedText = (
-      text: string,
-      fontSize = 11,
-      lineHeight = 6,
-      bold = false
-    ) => {
-      doc.setFont(
-        "helvetica",
-        bold ? "bold" : "normal"
-      );
+      let y = 18;
 
-      doc.setFontSize(fontSize);
-
-      const lines =
-        doc.splitTextToSize(
-          String(text ?? ""),
-          contentWidth
+      const addWrappedText = (
+        text: string,
+        fontSize = 11,
+        lineHeight = 6,
+        bold = false
+      ) => {
+        doc.setFont(
+          "helvetica",
+          bold ? "bold" : "normal"
         );
 
-      const requiredHeight =
-        lines.length * lineHeight;
+        doc.setFontSize(
+          fontSize
+        );
 
-      if (
-        y + requiredHeight >
-        pageHeight - margin
-      ) {
-        doc.addPage();
-        y = margin;
-      }
+        const lines =
+          doc.splitTextToSize(
+            String(text ?? ""),
+            contentWidth
+          );
+
+        const requiredHeight =
+          lines.length *
+          lineHeight;
+
+        if (
+          y + requiredHeight >
+          pageHeight - margin
+        ) {
+          doc.addPage();
+          y = margin;
+        }
+
+        doc.text(
+          lines,
+          margin,
+          y
+        );
+
+        y +=
+          requiredHeight + 2;
+      };
+
+      doc.setTextColor(
+        23,
+        32,
+        51
+      );
+
+      doc.setFont(
+        "helvetica",
+        "bold"
+      );
+
+      doc.setFontSize(20);
 
       doc.text(
-        lines,
+        test?.exam ||
+          "Paper Tree Mock Test",
         margin,
         y
       );
 
-      y += requiredHeight + 2;
-    };
+      y += 8;
 
-    doc.setTextColor(
-      23,
-      32,
-      51
-    );
+      doc.setFont(
+        "helvetica",
+        "normal"
+      );
 
-    doc.setFont(
-      "helvetica",
-      "bold"
-    );
+      doc.setFontSize(10);
 
-    doc.setFontSize(20);
+      doc.text(
+        `Question Paper • ${questions.length} Questions`,
+        margin,
+        y
+      );
 
-    doc.text(
-      test?.exam ||
-        "Paper Tree Mock Test",
-      margin,
-      y
-    );
+      y += 5;
 
-    y += 8;
+      doc.text(
+        `Test ID: ${testId}`,
+        margin,
+        y
+      );
 
-    doc.setFont(
-      "helvetica",
-      "normal"
-    );
+      y += 10;
 
-    doc.setFontSize(10);
+      doc.setDrawColor(
+        220,
+        224,
+        232
+      );
 
-    doc.text(
-      `Question Paper • ${questions.length} Questions`,
-      margin,
-      y
-    );
+      doc.line(
+        margin,
+        y,
+        pageWidth - margin,
+        y
+      );
 
-    y += 5;
+      y += 8;
 
-    doc.text(
-      `Test ID: ${testId}`,
-      margin,
-      y
-    );
+      for (
+        let index = 0;
+        index <
+        questions.length;
+        index++
+      ) {
+        const question =
+          questions[index];
 
-    y += 10;
-
-    doc.setDrawColor(
-      220,
-      224,
-      232
-    );
-
-    doc.line(
-      margin,
-      y,
-      pageWidth - margin,
-      y
-    );
-
-    y += 8;
-
-    questions.forEach(
-      (question, index) => {
         addWrappedText(
           `${question.number || index + 1}. ${question.question}`,
           12,
           6.5,
           true
         );
+
+        /*
+         * IMPORTANT:
+         *
+         * figureAsset is defined in the
+         * normalized question object.
+         */
+
+        if (
+          question.figureAsset
+        ) {
+          y =
+            await addFigureToPdf(
+              doc,
+              question.figureAsset,
+              margin,
+              contentWidth,
+              pageHeight,
+              y
+            );
+        }
 
         question.options.forEach(
           (
@@ -218,11 +746,24 @@ export default function TestPage() {
 
         y += 3;
       }
-    );
 
-    doc.save(
-      `paper-tree-question-paper-${testId}.pdf`
-    );
+      doc.save(
+        `paper-tree-question-paper-${testId}.pdf`
+      );
+    } catch (error) {
+      console.error(
+        "QUESTION PAPER DOWNLOAD ERROR:",
+        error
+      );
+
+      alert(
+        "Could not generate the question paper. Please try again."
+      );
+    } finally {
+      setDownloadingPaper(
+        false
+      );
+    }
   }
 
   /*
@@ -292,12 +833,22 @@ export default function TestPage() {
           );
         }
 
+        /*
+         * =====================================================
+         * NORMALIZE QUESTIONS
+         * =====================================================
+         */
+
         const normalizedQuestions: Question[] =
           rawQuestions.map(
             (
               question: any,
               index: number
             ) => {
+              /*
+               * OPTIONS
+               */
+
               let options =
                 question.options;
 
@@ -309,10 +860,34 @@ export default function TestPage() {
                 typeof options ===
                   "object"
               ) {
+                const orderedOptions =
+                  [
+                    "A",
+                    "B",
+                    "C",
+                    "D",
+                    "E",
+                  ]
+                    .filter(
+                      (letter) =>
+                        Object.prototype.hasOwnProperty.call(
+                          options,
+                          letter
+                        )
+                    )
+                    .map(
+                      (letter) =>
+                        options[
+                          letter
+                        ]
+                    );
+
                 options =
-                  Object.values(
-                    options
-                  );
+                  orderedOptions.length
+                    ? orderedOptions
+                    : Object.values(
+                        options
+                      );
               }
 
               if (
@@ -333,31 +908,50 @@ export default function TestPage() {
                     )
                 );
 
+              /*
+               * ANSWER
+               */
+
               let answer =
                 question.answer;
+
+              if (
+                answer ===
+                  undefined ||
+                answer === null ||
+                answer === ""
+              ) {
+                answer =
+                  question.correct_option;
+              }
 
               if (
                 typeof answer ===
                 "string"
               ) {
+                const trimmed =
+                  answer
+                    .trim()
+                    .toUpperCase();
+
                 const numeric =
                   Number(
-                    answer
+                    trimmed
                   );
 
                 if (
                   Number.isFinite(
                     numeric
-                  )
+                  ) &&
+                  trimmed !== ""
                 ) {
                   answer =
                     numeric;
                 } else {
                   const letter =
-                    answer
-                      .trim()
-                      .toUpperCase()
-                      .charCodeAt(0) -
+                    trimmed.charCodeAt(
+                      0
+                    ) -
                     65;
 
                   answer =
@@ -368,9 +962,49 @@ export default function TestPage() {
               const numericAnswer =
                 Number(answer);
 
-              return {
-                ...question,
+              /*
+               * =================================================
+               * FIGURE
+               * =================================================
+               *
+               * THIS IS THE IMPORTANT FIX.
+               *
+               * Define figureAsset BEFORE returning the
+               * object. This prevents:
+               *
+               * "No value exists in scope for shorthand
+               * property 'figureAsset'"
+               */
 
+            const rawFigureAsset =
+  question.figureAsset ??
+  question.figure_asset ??
+  null;
+
+const figureAsset =
+  typeof rawFigureAsset === "string" &&
+  rawFigureAsset.trim()
+    ? rawFigureAsset.startsWith("/")
+      ? rawFigureAsset
+      : `/${rawFigureAsset}`
+    : null;
+
+              /*
+               * QUESTION TEXT
+               */
+
+              const questionText =
+                String(
+                  question.question ??
+                    question.stem ??
+                    ""
+                );
+
+              /*
+               * NORMALIZED QUESTION
+               */
+
+              return {
                 id:
                   String(
                     question.id ??
@@ -379,13 +1013,13 @@ export default function TestPage() {
                   `question-${index + 1}`,
 
                 number:
-                  question.number ??
+                  Number(
+                    question.number
+                  ) ||
                   index + 1,
 
                 question:
-                  question.question ??
-                  question.stem ??
-                  "",
+                  questionText,
 
                 options,
 
@@ -395,9 +1029,46 @@ export default function TestPage() {
                   )
                     ? numericAnswer
                     : 0,
+
+                subject:
+                  question.subject ??
+                  undefined,
+
+                chapter:
+                  question.chapter ??
+                  question.chapter_name ??
+                  undefined,
+
+                difficulty:
+                  question.difficulty ??
+                  undefined,
+
+                solution:
+                  question.solution ??
+                  null,
+
+                /*
+                 * Correctly initialized.
+                 */
+                figureAsset,
               };
             }
           );
+
+        console.log(
+          "NORMALIZED QUESTIONS:",
+          normalizedQuestions
+        );
+
+        console.log(
+          "FIGURE QUESTIONS:",
+          normalizedQuestions.filter(
+            (question) =>
+              Boolean(
+                question.figureAsset
+              )
+          )
+        );
 
         setTest({
           ...dbTest,
@@ -406,9 +1077,7 @@ export default function TestPage() {
         });
 
         /*
-         * =====================================================
          * RESTORE ANSWERS
-         * =====================================================
          */
 
         try {
@@ -441,9 +1110,7 @@ export default function TestPage() {
         }
 
         /*
-         * =====================================================
          * RESTORE MARKED
-         * =====================================================
          */
 
         try {
@@ -476,38 +1143,40 @@ export default function TestPage() {
         }
 
         /*
- * =====================================================
- * RESTORE VISITED
- * =====================================================
- */
+         * RESTORE VISITED
+         */
 
-try {
-  const savedVisited =
-    localStorage.getItem(
-      `test-${testId}-visited`
-    );
+        try {
+          const savedVisited =
+            localStorage.getItem(
+              `test-${testId}-visited`
+            );
 
-  if (savedVisited) {
-    const parsed =
-      JSON.parse(savedVisited);
+          if (savedVisited) {
+            const parsed =
+              JSON.parse(
+                savedVisited
+              );
 
-    if (
-      parsed &&
-      typeof parsed === "object"
-    ) {
-      setVisited(parsed);
-    }
-  }
-} catch (error) {
-  console.warn(
-    "Could not restore visited questions:",
-    error
-  );
-}
+            if (
+              parsed &&
+              typeof parsed ===
+                "object"
+            ) {
+              setVisited(
+                parsed
+              );
+            }
+          }
+        } catch (error) {
+          console.warn(
+            "Could not restore visited questions:",
+            error
+          );
+        }
+
         /*
-         * =====================================================
          * TIMER CONFIG
-         * =====================================================
          */
 
         let durationMinutes = 30;
@@ -547,9 +1216,7 @@ try {
         }
 
         /*
-         * =====================================================
          * START TIME
-         * =====================================================
          */
 
         const startedKey =
@@ -647,34 +1314,48 @@ try {
     questions[
       currentQuestion
     ];
-/*
- * =========================================================
- * MARK CURRENT QUESTION AS VISITED
- * =========================================================
- */
 
-useEffect(() => {
-  const question = questions[currentQuestion];
-
-  if (!question) return;
-
-  setVisited((previous) => {
-    if (previous[question.id]) {
-      return previous;
-    }
-
-    return {
-      ...previous,
-      [question.id]: true,
-    };
-  });
-}, [
-  currentQuestion,
-  questions,
-]);
   /*
    * =========================================================
-   * ANSWERED COUNT
+   * VISITED
+   * =========================================================
+   */
+
+  useEffect(() => {
+    const question =
+      questions[
+        currentQuestion
+      ];
+
+    if (!question) {
+      return;
+    }
+
+    setVisited(
+      (previous) => {
+        if (
+          previous[
+            question.id
+          ]
+        ) {
+          return previous;
+        }
+
+        return {
+          ...previous,
+          [question.id]:
+            true,
+        };
+      }
+    );
+  }, [
+    currentQuestion,
+    questions,
+  ]);
+
+  /*
+   * =========================================================
+   * COUNTS
    * =========================================================
    */
 
@@ -714,12 +1395,7 @@ useEffect(() => {
           answers
         )
       );
-    } catch (error) {
-      console.warn(
-        "Could not save answers:",
-        error
-      );
-    }
+    } catch {}
   }, [
     answers,
     test,
@@ -741,53 +1417,40 @@ useEffect(() => {
         JSON.stringify(
           marked
         )
-
       );
-    } catch (error) {
-      console.warn(
-        "Could not save marked questions:",
-        error
-      );
-    }
+    } catch {}
   }, [
     marked,
     test,
     testId,
   ]);
-  localStorage.setItem(
-  `test-${testId}-visited`,
-  JSON.stringify(
-    visited
-  )
-);
-/*
- * =========================================================
- * SAVE VISITED
- * =========================================================
- */
 
-useEffect(() => {
-  if (!test) return;
-
-  try {
-    localStorage.setItem(
-      `test-${testId}-visited`,
-      JSON.stringify(visited)
-    );
-  } catch (error) {
-    console.warn(
-      "Could not save visited questions:",
-      error
-    );
-  }
-}, [
-  visited,
-  test,
-  testId,
-]);
   /*
    * =========================================================
-   * FORMAT TIMER
+   * SAVE VISITED
+   * =========================================================
+   */
+
+  useEffect(() => {
+    if (!test) return;
+
+    try {
+      localStorage.setItem(
+        `test-${testId}-visited`,
+        JSON.stringify(
+          visited
+        )
+      );
+    } catch {}
+  }, [
+    visited,
+    test,
+    testId,
+  ]);
+
+  /*
+   * =========================================================
+   * TIMER DISPLAY
    * =========================================================
    */
 
@@ -818,33 +1481,11 @@ useEffect(() => {
    * =========================================================
    * SUBMIT TEST
    * =========================================================
-   *
-   * IMPORTANT:
-   *
-   * The server is the source of truth.
-   *
-   * The browser does NOT calculate:
-   *
-   * - score
-   * - accuracy
-   * - correct
-   * - wrong
-   * - unanswered
-   *
-   * Those values come from:
-   *
-   * /api/test/submit
-   *
-   * which evaluates the submitted answers against
-   * the test stored in PostgreSQL.
    */
 
   async function submitTest(
     automatic = false
   ) {
-    /*
-     * Prevent duplicate submissions.
-     */
     if (
       submittedRef.current ||
       submitting
@@ -852,7 +1493,8 @@ useEffect(() => {
       return;
     }
 
-    submittedRef.current = true;
+    submittedRef.current =
+      true;
 
     navigatingToResultRef.current =
       true;
@@ -870,9 +1512,9 @@ useEffect(() => {
         : new Date().toISOString();
 
     /*
-     * Save latest answers locally before
-     * sending them to the server.
+     * SAVE PROGRESS
      */
+
     try {
       localStorage.setItem(
         `test-${testId}-answers`,
@@ -887,19 +1529,19 @@ useEffect(() => {
           marked
         )
       );
-    } catch (error) {
-      console.warn(
-        "Could not save answers before submit:",
-        error
+
+      localStorage.setItem(
+        `test-${testId}-visited`,
+        JSON.stringify(
+          visited
+        )
       );
-    }
+    } catch {}
 
     /*
-     * Read test configuration.
-     *
-     * This is only used for result-page display.
-     * It is NOT used to calculate the score.
+     * CONFIG
      */
+
     let config: any = {};
 
     try {
@@ -914,17 +1556,10 @@ useEffect(() => {
             storedConfig
           );
       }
-    } catch (error) {
-      console.warn(
-        "Could not read test config:",
-        error
-      );
-    }
+    } catch {}
 
     /*
-     * =========================================================
-     * GET STUDENT ID
-     * =========================================================
+     * STUDENT ID
      */
 
     let studentId = "";
@@ -969,17 +1604,10 @@ useEffect(() => {
             raw.trim();
         }
       }
-    } catch (error) {
-      console.warn(
-        "Could not read student session:",
-        error
-      );
-    }
+    } catch {}
 
     /*
-     * =========================================================
-     * SUBMIT TO SERVER
-     * =========================================================
+     * SERVER SUBMISSION
      */
 
     try {
@@ -999,22 +1627,15 @@ useEffect(() => {
 
             body: JSON.stringify({
               testId,
-
               studentId,
-
               answers,
-
               marked,
-
               automatic,
-
               violationCount:
                 automatic
                   ? 1
                   : 0,
-
               startedAt,
-
               submittedAt,
             }),
           }
@@ -1037,14 +1658,6 @@ useEffect(() => {
             "Failed to save test submission."
         );
       }
-
-      /*
-       * =======================================================
-       * SERVER RESULT
-       * =======================================================
-       *
-       * These are authoritative.
-       */
 
       const total =
         Number(
@@ -1077,12 +1690,6 @@ useEffect(() => {
           data.accuracy ?? 0
         );
 
-      /*
-       * =======================================================
-       * BUILD RESULT FOR RESULT PAGE
-       * =======================================================
-       */
-
       const result = {
         testId,
 
@@ -1091,25 +1698,18 @@ useEffect(() => {
           null,
 
         total,
-
         correct,
-
         wrong,
-
         unattempted,
 
         answers,
-
         marked,
-
         questions,
 
         submittedAt,
-
         automatic,
 
         score,
-
         accuracy,
 
         course:
@@ -1149,10 +1749,6 @@ useEffect(() => {
             : undefined,
       };
 
-      /*
-       * Save server-authoritative result for
-       * the existing result page.
-       */
       localStorage.setItem(
         `test-${testId}-result`,
         JSON.stringify(
@@ -1165,9 +1761,6 @@ useEffect(() => {
         "true"
       );
 
-      /*
-       * Tell dashboard to refresh if it is already open.
-       */
       localStorage.setItem(
         "paperTreeDashboardRefresh",
         String(
@@ -1175,15 +1768,8 @@ useEffect(() => {
         )
       );
 
-      /*
-       * Remove warning before navigation.
-       */
       setShowWarning(false);
 
-      /*
-       * Navigate only AFTER successful
-       * database submission.
-       */
       router.replace(
         `/test/result/${testId}`
       );
@@ -1193,10 +1779,6 @@ useEffect(() => {
         error
       );
 
-      /*
-       * Allow the student to retry if the
-       * database/API submission failed.
-       */
       submittedRef.current =
         false;
 
@@ -1307,19 +1889,16 @@ useEffect(() => {
         );
 
         if (
-          remaining <= 0
+          remaining <= 0 &&
+          !submittedRef.current
         ) {
           window.clearInterval(
             interval
           );
 
-          if (
-            !submittedRef.current
-          ) {
-            submitTest(
-              true
-            );
-          }
+          submitTest(
+            true
+          );
         }
       }, 1000);
 
@@ -1335,10 +1914,15 @@ useEffect(() => {
 
   /*
    * =========================================================
-   * TAB / WINDOW LEAVE DETECTION
+   * TAB LEAVE / VISIBILITY WARNING
    * =========================================================
    *
-   * ONLY ONE visibility listener.
+   * This remains enabled.
+   *
+   * Switching browser tabs causes document.visibilityState
+   * to become "hidden".
+   *
+   * The test is automatically submitted.
    */
 
   useEffect(() => {
@@ -1349,11 +1933,32 @@ useEffect(() => {
       return;
     }
 
+    function saveProgress() {
+      try {
+        localStorage.setItem(
+          `test-${testId}-answers`,
+          JSON.stringify(
+            answers
+          )
+        );
+
+        localStorage.setItem(
+          `test-${testId}-marked`,
+          JSON.stringify(
+            marked
+          )
+        );
+
+        localStorage.setItem(
+          `test-${testId}-visited`,
+          JSON.stringify(
+            visited
+          )
+        );
+      } catch {}
+    }
+
     function handleVisibilityChange() {
-      /*
-       * Ignore visibility changes when we are already
-       * submitting or intentionally navigating.
-       */
       if (
         submittedRef.current ||
         navigatingToResultRef.current
@@ -1369,46 +1974,28 @@ useEffect(() => {
       }
 
       /*
-       * Save progress immediately.
+       * Save everything before submission.
        */
-      try {
-        localStorage.setItem(
-          `test-${testId}-answers`,
-          JSON.stringify(
-            answers
-          )
-        );
 
-        localStorage.setItem(
-          `test-${testId}-marked`,
-          JSON.stringify(
-            marked
-          )
-        );
-      } catch {}
+      saveProgress();
 
       /*
-       * Show the warning overlay immediately.
+       * Show the warning immediately.
        */
+
       setShowWarning(
         true
       );
 
       /*
-       * Wait briefly before submitting.
-       *
-       * This prevents the navigation to the result page
-       * from being interpreted as another visibility violation.
+       * Give React a moment to display the warning,
+       * then submit.
        */
+
       window.setTimeout(() => {
         if (
+          submittedRef.current ||
           navigatingToResultRef.current
-        ) {
-          return;
-        }
-
-        if (
-          submittedRef.current
         ) {
           return;
         }
@@ -1420,8 +2007,9 @@ useEffect(() => {
     }
 
     /*
-     * Native browser close / refresh protection.
+     * Browser refresh / close protection.
      */
+
     function handleBeforeUnload(
       event: BeforeUnloadEvent
     ) {
@@ -1432,21 +2020,7 @@ useEffect(() => {
         return;
       }
 
-      try {
-        localStorage.setItem(
-          `test-${testId}-answers`,
-          JSON.stringify(
-            answers
-          )
-        );
-
-        localStorage.setItem(
-          `test-${testId}-marked`,
-          JSON.stringify(
-            marked
-          )
-        );
-      } catch {}
+      saveProgress();
 
       event.preventDefault();
 
@@ -1480,6 +2054,7 @@ useEffect(() => {
     testId,
     answers,
     marked,
+    visited,
   ]);
 
   /*
@@ -1498,7 +2073,6 @@ useEffect(() => {
     setAnswers(
       (previous) => ({
         ...previous,
-
         [current.id]:
           optionIndex,
       })
@@ -1519,7 +2093,6 @@ useEffect(() => {
     setMarked(
       (previous) => ({
         ...previous,
-
         [current.id]:
           !previous[
             current.id
@@ -1562,7 +2135,6 @@ useEffect(() => {
     return (
       <main className="min-h-screen flex items-center justify-center bg-[#f5f7fb] p-6">
         <div className="bg-white rounded-2xl border border-slate-200 p-8 max-w-md w-full text-center shadow-sm">
-
           <div className="w-14 h-14 mx-auto rounded-2xl bg-red-50 text-red-600 flex items-center justify-center text-2xl font-bold">
             !
           </div>
@@ -1605,7 +2177,6 @@ useEffect(() => {
     return (
       <main className="min-h-screen flex items-center justify-center bg-[#f5f7fb] p-6">
         <div className="bg-white rounded-2xl border border-slate-200 p-8 max-w-md w-full text-center shadow-sm">
-
           <h1 className="text-xl font-bold text-slate-900">
             No questions found
           </h1>
@@ -1626,7 +2197,6 @@ useEffect(() => {
           >
             Back to Tests
           </button>
-
         </div>
       </main>
     );
@@ -1659,21 +2229,16 @@ useEffect(() => {
 
   return (
     <main className="min-h-screen bg-[#f5f7fb] text-slate-900">
-
       {/* HEADER */}
 
       <header className="sticky top-0 z-40 h-[72px] bg-white border-b border-slate-200 shadow-sm">
-
         <div className="h-full max-w-[1500px] mx-auto px-4 lg:px-6 flex items-center justify-between gap-4">
-
           <div className="flex items-center gap-3 min-w-0">
-
             <div className="w-10 h-10 shrink-0 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-lg shadow-sm">
               P
             </div>
 
             <div className="min-w-0">
-
               <h1 className="font-bold text-sm sm:text-base truncate">
                 {test?.exam ||
                   "Mock Test"}
@@ -1682,13 +2247,10 @@ useEffect(() => {
               <p className="text-xs text-slate-400">
                 Paper Tree • CBT
               </p>
-
             </div>
-
           </div>
 
           <div className="hidden md:flex items-center gap-2">
-
             <div className="px-4 py-2 rounded-xl bg-blue-50 border border-blue-100">
               <div className="text-[10px] uppercase tracking-wide font-bold text-blue-500">
                 Total
@@ -1718,13 +2280,11 @@ useEffect(() => {
                 {remainingCount}
               </div>
             </div>
-
           </div>
 
           <div
             className={[
               "min-w-[125px] sm:min-w-[145px] px-4 py-2 rounded-xl border transition-all",
-
               timerCritical
                 ? "bg-red-50 border-red-200 text-red-700 animate-pulse"
                 : timerWarning
@@ -1732,9 +2292,7 @@ useEffect(() => {
                 : "bg-slate-50 border-slate-200 text-slate-800",
             ].join(" ")}
           >
-
             <div className="flex items-center justify-center gap-2">
-
               <span className="text-base">
                 ⏱
               </span>
@@ -1742,25 +2300,19 @@ useEffect(() => {
               <span className="text-lg sm:text-xl font-bold tabular-nums tracking-tight">
                 {formattedTime}
               </span>
-
             </div>
 
             <div className="text-[9px] uppercase tracking-wider font-bold text-center opacity-70">
               Time Remaining
             </div>
-
           </div>
-
         </div>
-
       </header>
 
       {/* MOBILE STATS */}
 
       <div className="md:hidden bg-white border-b border-slate-200 px-4 py-3">
-
         <div className="grid grid-cols-3 gap-2">
-
           <div className="text-center rounded-lg bg-blue-50 py-2">
             <div className="text-sm font-bold text-blue-700">
               {questions.length}
@@ -1790,27 +2342,19 @@ useEffect(() => {
               Left
             </div>
           </div>
-
         </div>
-
       </div>
 
       {/* CONTENT */}
 
       <div className="max-w-[1500px] mx-auto p-4 lg:p-6">
-
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-5">
-
           <section>
-
             {/* PROGRESS */}
 
             <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm mb-5">
-
               <div className="flex items-center justify-between gap-4">
-
                 <div>
-
                   <p className="text-xs font-semibold text-blue-600 uppercase tracking-wide">
                     Question{" "}
                     {currentQuestion + 1}{" "}
@@ -1823,11 +2367,9 @@ useEffect(() => {
                       ? "Answer selected"
                       : "Not answered yet"}
                   </p>
-
                 </div>
 
                 <div className="text-right">
-
                   <div className="text-sm font-bold text-slate-800">
                     {Math.round(
                       (answeredCount /
@@ -1840,13 +2382,10 @@ useEffect(() => {
                   <div className="text-[10px] text-slate-400">
                     Completed
                   </div>
-
                 </div>
-
               </div>
 
               <div className="mt-3 h-2 bg-slate-100 rounded-full overflow-hidden">
-
                 <div
                   className="h-full bg-blue-600 rounded-full transition-all duration-300"
                   style={{
@@ -1861,25 +2400,19 @@ useEffect(() => {
                     )}%`,
                   }}
                 />
-
               </div>
-
             </div>
 
             {/* QUESTION CARD */}
 
             <div className="bg-white border border-slate-200 rounded-2xl shadow-sm overflow-hidden">
-
               <div className="px-5 sm:px-7 py-5 border-b border-slate-100 flex items-center justify-between gap-4">
-
                 <div className="flex items-center gap-3">
-
                   <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-700 flex items-center justify-center font-bold">
                     {current.number}
                   </div>
 
                   <div>
-
                     <div className="font-bold text-slate-900">
                       Question{" "}
                       {current.number}
@@ -1893,9 +2426,7 @@ useEffect(() => {
                           : ""}
                       </div>
                     )}
-
                   </div>
-
                 </div>
 
                 <button
@@ -1905,7 +2436,6 @@ useEffect(() => {
                   }
                   className={[
                     "px-3 py-2 rounded-lg border text-xs font-semibold transition",
-
                     marked[
                       current.id
                     ]
@@ -1919,17 +2449,49 @@ useEffect(() => {
                     ? "★ Marked"
                     : "☆ Mark"}
                 </button>
-
               </div>
 
               <div className="p-5 sm:p-7">
+                {/* QUESTION */}
 
                 <div className="text-[17px] sm:text-lg leading-8 font-medium text-slate-900 whitespace-pre-wrap">
-                  {current.question}
+                  <MathText
+                    text={
+                      current.question
+                    }
+                  />
                 </div>
 
-                <div className="mt-7 space-y-3">
+                {/* FIGURE */}
 
+                {current.figureAsset && (
+                  <div className="mt-7 mb-2 flex justify-center">
+                    <div className="w-full flex justify-center">
+                      <img
+                        src={
+                          current.figureAsset
+                        }
+                        alt={`Figure for question ${current.number}`}
+                        className="max-w-full max-h-[450px] w-auto h-auto object-contain rounded-xl border border-slate-200 bg-white p-3 shadow-sm"
+                        onError={(
+                          event
+                        ) => {
+                          console.warn(
+                            "Could not load question figure:",
+                            current.figureAsset
+                          );
+
+                          event.currentTarget.style.display =
+                            "none";
+                        }}
+                      />
+                    </div>
+                  </div>
+                )}
+
+                {/* OPTIONS */}
+
+                <div className="mt-7 space-y-3">
                   {current.options.map(
                     (
                       option,
@@ -1952,17 +2514,14 @@ useEffect(() => {
                           }
                           className={[
                             "w-full text-left rounded-xl border p-4 sm:p-5 flex items-start gap-4 transition-all",
-
                             selected
                               ? "border-blue-500 bg-blue-50 shadow-sm"
                               : "border-slate-200 bg-white hover:border-blue-300 hover:bg-slate-50",
                           ].join(" ")}
                         >
-
                           <span
                             className={[
                               "w-9 h-9 shrink-0 rounded-lg flex items-center justify-center font-bold text-sm border",
-
                               selected
                                 ? "bg-blue-600 text-white border-blue-600"
                                 : "bg-slate-50 text-slate-600 border-slate-200",
@@ -1976,14 +2535,17 @@ useEffect(() => {
 
                           <span
                             className={[
-                              "pt-1 text-sm sm:text-base leading-6",
-
+                              "pt-1 text-sm sm:text-base leading-6 flex-1",
                               selected
                                 ? "text-blue-900 font-semibold"
                                 : "text-slate-700",
                             ].join(" ")}
                           >
-                            {option}
+                            <MathText
+                              text={
+                                option
+                              }
+                            />
                           </span>
 
                           {selected && (
@@ -1991,18 +2553,16 @@ useEffect(() => {
                               ✓
                             </span>
                           )}
-
                         </button>
                       );
                     }
                   )}
-
                 </div>
-
               </div>
 
-              <div className="px-5 sm:px-7 py-4 border-t border-slate-100 flex flex-col sm:flex-row gap-3 justify-between">
+              {/* NAVIGATION */}
 
+              <div className="px-5 sm:px-7 py-4 border-t border-slate-100 flex flex-col sm:flex-row gap-3 justify-between">
                 <button
                   type="button"
                   disabled={
@@ -2062,21 +2622,18 @@ useEffect(() => {
                       : "Submit Test ✓"}
                   </button>
                 )}
-
               </div>
-
             </div>
-
           </section>
 
           {/* SIDEBAR */}
 
           <aside className="lg:sticky lg:top-[92px] lg:self-start space-y-4">
+            {/* TIMER */}
 
             <div
               className={[
                 "rounded-2xl border p-5 shadow-sm",
-
                 timerCritical
                   ? "bg-red-50 border-red-200"
                   : timerWarning
@@ -2084,11 +2641,8 @@ useEffect(() => {
                   : "bg-white border-slate-200",
               ].join(" ")}
             >
-
               <div className="flex items-center justify-between">
-
                 <div>
-
                   <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
                     Time Remaining
                   </p>
@@ -2096,7 +2650,6 @@ useEffect(() => {
                   <p
                     className={[
                       "mt-1 text-3xl font-bold tabular-nums",
-
                       timerCritical
                         ? "text-red-700"
                         : timerWarning
@@ -2106,13 +2659,11 @@ useEffect(() => {
                   >
                     {formattedTime}
                   </p>
-
                 </div>
 
                 <div
                   className={[
                     "w-12 h-12 rounded-xl flex items-center justify-center text-xl",
-
                     timerCritical
                       ? "bg-red-100"
                       : timerWarning
@@ -2122,7 +2673,6 @@ useEffect(() => {
                 >
                   ⏱
                 </div>
-
               </div>
 
               {timerCritical && (
@@ -2132,17 +2682,13 @@ useEffect(() => {
                   automatically.
                 </p>
               )}
-
             </div>
 
             {/* QUESTION PALETTE */}
 
             <div className="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm">
-
               <div className="flex items-center justify-between">
-
                 <div>
-
                   <h2 className="font-bold text-slate-900">
                     Questions
                   </h2>
@@ -2150,21 +2696,25 @@ useEffect(() => {
                   <p className="text-xs text-slate-400 mt-1">
                     Select a question
                   </p>
-
                 </div>
 
                 <div className="text-xs font-semibold text-slate-500">
                   {answeredCount}/
                   {questions.length}
                 </div>
-
               </div>
 
-              <div className="mt-4 flex flex-wrap gap-x-3 gap-y-2 text-[10px] text-slate-500">
+              {/* LEGEND */}
 
+              <div className="mt-4 flex flex-wrap gap-x-3 gap-y-2 text-[10px] text-slate-500">
                 <span className="flex items-center gap-1">
                   <span className="w-2.5 h-2.5 rounded-full bg-green-500" />
                   Answered
+                </span>
+
+                <span className="flex items-center gap-1">
+                  <span className="w-2.5 h-2.5 rounded-full bg-red-500" />
+                  Visited
                 </span>
 
                 <span className="flex items-center gap-1">
@@ -2172,58 +2722,39 @@ useEffect(() => {
                   Marked
                 </span>
 
-               <div className="mt-4 flex flex-wrap gap-x-3 gap-y-2 text-[10px] text-slate-500">
-
-  <span className="flex items-center gap-1">
-    <span className="w-2.5 h-2.5 rounded-full bg-green-500" />
-    Answered
-  </span>
-
-  <span className="flex items-center gap-1">
-    <span className="w-2.5 h-2.5 rounded-full bg-red-500" />
-    Visited
-  </span>
-
-  <span className="flex items-center gap-1">
-    <span className="w-2.5 h-2.5 rounded-full bg-amber-400" />
-    Marked
-  </span>
-
-  <span className="flex items-center gap-1">
-    <span className="w-2.5 h-2.5 rounded-full bg-slate-200" />
-    Not visited
-  </span>
-
-</div>
-
+                <span className="flex items-center gap-1">
+                  <span className="w-2.5 h-2.5 rounded-full bg-slate-200" />
+                  Not visited
+                </span>
               </div>
 
-              <div className="mt-5 grid grid-cols-5 gap-2">
+              {/* QUESTION NUMBERS */}
 
+              <div className="mt-5 grid grid-cols-5 gap-2">
                 {questions.map(
                   (
                     question,
                     index
                   ) => {
-               const isAnswered =
-  answers[
-    question.id
-  ] !==
-  undefined;
+                    const isAnswered =
+                      answers[
+                        question.id
+                      ] !==
+                      undefined;
 
-const isMarked =
-  marked[
-    question.id
-  ];
+                    const isMarked =
+                      marked[
+                        question.id
+                      ];
 
-const isVisited =
-  visited[
-    question.id
-  ];
+                    const isVisited =
+                      visited[
+                        question.id
+                      ];
 
-const isCurrent =
-  index ===
-  currentQuestion;
+                    const isCurrent =
+                      index ===
+                      currentQuestion;
 
                     return (
                       <button
@@ -2243,13 +2774,13 @@ const isCurrent =
                             ? "ring-2 ring-blue-500 ring-offset-1"
                             : "",
 
-                     isAnswered
-  ? "bg-green-50 border-green-300 text-green-700"
-  : isMarked
-  ? "bg-amber-50 border-amber-300 text-amber-700"
-  : isVisited
-  ? "bg-red-50 border-red-300 text-red-700"
-  : "bg-slate-50 border-slate-200 text-slate-500 hover:bg-slate-100",
+                          isAnswered
+                            ? "bg-green-50 border-green-300 text-green-700"
+                            : isMarked
+                            ? "bg-amber-50 border-amber-300 text-amber-700"
+                            : isVisited
+                            ? "bg-red-50 border-red-300 text-red-700"
+                            : "bg-slate-50 border-slate-200 text-slate-500 hover:bg-slate-100",
                         ].join(" ")}
                       >
                         {index + 1}
@@ -2257,23 +2788,30 @@ const isCurrent =
                         {isMarked && (
                           <span className="absolute -top-1 -right-1 w-3 h-3 rounded-full bg-amber-400 border-2 border-white" />
                         )}
-
                       </button>
                     );
                   }
                 )}
-
               </div>
+
+              {/* DOWNLOAD */}
 
               <button
                 type="button"
                 onClick={
                   downloadQuestionPaper
                 }
-                className="mt-5 w-full h-11 rounded-xl border border-slate-200 bg-white text-slate-700 text-sm font-semibold hover:bg-slate-50 transition"
+                disabled={
+                  downloadingPaper
+                }
+                className="mt-5 w-full h-11 rounded-xl border border-slate-200 bg-white text-slate-700 text-sm font-semibold hover:bg-slate-50 transition disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                ↓ Download Question Paper
+                {downloadingPaper
+                  ? "Generating Question Paper..."
+                  : "↓ Download Question Paper"}
               </button>
+
+              {/* SUBMIT */}
 
               <button
                 type="button"
@@ -2297,22 +2835,18 @@ const isCurrent =
                 will automatically
                 submit your test.
               </p>
-
             </div>
-
           </aside>
-
         </div>
-
       </div>
 
-      {/* AUTO SUBMISSION OVERLAY */}
+      {/* =====================================================
+          AUTO SUBMISSION WARNING
+          ===================================================== */}
 
       {showWarning && (
         <div className="fixed inset-0 z-[100] bg-slate-950/70 backdrop-blur-sm flex items-center justify-center p-5">
-
           <div className="w-full max-w-md bg-white rounded-3xl shadow-2xl p-7 text-center">
-
             <div className="w-16 h-16 mx-auto rounded-2xl bg-red-50 text-red-600 flex items-center justify-center text-3xl">
               ⚠
             </div>
@@ -2330,7 +2864,6 @@ const isCurrent =
             </p>
 
             <div className="mt-5 rounded-xl bg-amber-50 border border-amber-100 p-4 text-left">
-
               <p className="text-xs font-bold text-amber-800">
                 Exam Security Warning
               </p>
@@ -2341,15 +2874,12 @@ const isCurrent =
                 is treated as a test
                 violation.
               </p>
-
             </div>
 
             <div className="mt-5 text-xs text-slate-400">
               Preparing your result...
             </div>
-
           </div>
-
         </div>
       )}
 
@@ -2358,9 +2888,7 @@ const isCurrent =
       {submitting &&
         !showWarning && (
           <div className="fixed inset-0 z-[90] bg-slate-950/40 backdrop-blur-sm flex items-center justify-center p-5">
-
             <div className="bg-white rounded-2xl shadow-xl px-8 py-7 text-center">
-
               <div className="w-10 h-10 border-4 border-blue-100 border-t-blue-600 rounded-full animate-spin mx-auto" />
 
               <h2 className="mt-4 font-bold text-slate-900">
@@ -2370,12 +2898,9 @@ const isCurrent =
               <p className="mt-1 text-xs text-slate-500">
                 Calculating your result...
               </p>
-
             </div>
-
           </div>
         )}
-
     </main>
   );
 }
