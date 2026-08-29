@@ -376,43 +376,35 @@ export async function GET(
        SESSION
     ======================================================== */
 
-    const sessionCookie =
-      request.cookies.get(
-        "student_session"
-      )?.value;
+ const sessionCookie =
+  request.cookies.get("student_session")?.value;
 
-    if (!sessionCookie) {
-      return NextResponse.json(
-        {
-          success: false,
-          error:
-            "Student session not found.",
-        },
-        {
-          status: 401,
-        }
-      );
+if (!sessionCookie) {
+  return NextResponse.json(
+    {
+      success: false,
+      error: "Student session not found.",
+    },
+    {
+      status: 401,
     }
+  );
+}
 
-    let studentId = "";
+let studentId = sessionCookie;
 
-    try {
-      const parsed =
-        JSON.parse(
-          sessionCookie
-        );
+try {
+  const parsed = JSON.parse(sessionCookie);
 
-      if (
-        parsed &&
-        typeof parsed === "object" &&
-        parsed.studentId
-      ) {
-        studentId =
-          String(
-            parsed.studentId
-          );
-      }
-    } catch {
+  if (
+    parsed &&
+    typeof parsed === "object" &&
+    parsed.studentId
+  ) {
+    studentId = String(parsed.studentId);
+  }
+
+}catch {
       studentId =
         sessionCookie;
     }
@@ -1875,11 +1867,14 @@ FROM questions
 
         LEFT JOIN papers p
           ON p.id = st.paper_id
+LEFT JOIN batch_students bs
+  ON bs.batch_id = st.batch_id
+ AND bs.student_id = $1
 
-        INNER JOIN batch_students bs
-          ON bs.batch_id = st.batch_id
-
-        WHERE bs.student_id = $1
+WHERE (
+  st.batch_id IS NULL
+  OR bs.student_id = $1
+)
 
         ORDER BY st.start_time ASC
         `,
