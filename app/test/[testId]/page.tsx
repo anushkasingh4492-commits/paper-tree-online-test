@@ -2439,7 +2439,7 @@ const figureAsset =
                     marked[
                       current.id
                     ]
-                      ? "bg-amber-50 border-amber-200 text-amber-700"
+                      ? "bg-red-50 border-red-200 text-red-700"
                       : "bg-white border-slate-200 text-slate-500 hover:bg-slate-50",
                   ].join(" ")}
                 >
@@ -2796,20 +2796,7 @@ const figureAsset =
 
               {/* DOWNLOAD */}
 
-              <button
-                type="button"
-                onClick={
-                  downloadQuestionPaper
-                }
-                disabled={
-                  downloadingPaper
-                }
-                className="mt-5 w-full h-11 rounded-xl border border-slate-200 bg-white text-slate-700 text-sm font-semibold hover:bg-slate-50 transition disabled:opacity-60 disabled:cursor-not-allowed"
-              >
-                {downloadingPaper
-                  ? "Generating Question Paper..."
-                  : "↓ Download Question Paper"}
-              </button>
+           
 
               {/* SUBMIT */}
 

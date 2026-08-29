@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "record_format": "UTF-8 JSON array; one record per line in JSONL",
+  "primary_key": "id",
+  "required_fields": [
+    "id",
+    "standard",
+    "subject",
+    "branch",
+    "source_class",
+    "unit",
+    "chapter",
+    "topic",
+    "subtopic",
+    "question_type",
+    "question",
+    "options",
+    "correct_option",
+    "correct_answer",
+    "explanation",
+    "difficulty",
+    "cognitive_level",
+    "marks_correct",
+    "marks_incorrect",
+    "marks_unattempted",
+    "source_document",
+    "source_chapter",
+    "source_page",
+    "syllabus_reference",
+    "figures",
+    "figure_required",
+    "tags",
+    "generator_eligible",
+    "validation_status"
+  ],
+  "constraints": {
+    "options": "Exactly A, B, C and D; displayed values unique",
+    "correct_option": "One of A/B/C/D and resolves to correct_answer",
+    "difficulty": [
+      "Easy",
+      "Medium",
+      "Difficult"
+    ],
+    "marks": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    },
+    "figure_path_base": "Package root",
+    "encoding": "UTF-8",
+    "single_correct": true
+  },
+  "generator_contract": {
+    "include_only_when": "generator_eligible is true and validation_status is PASS",
+    "require_figure_when": "figure_required is true",
+    "shuffle_policy": "Shuffle complete option-value pairs and update correct_option; never edit the scientific answer",
+    "missing_asset_policy": "Reject the record",
+    "scoring": "+4/-1/0"
+  }
+}

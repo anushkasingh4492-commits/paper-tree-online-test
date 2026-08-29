@@ -1,0 +1,256 @@
+[
+  {
+    "asset": "figures/chemistry-001-chrom-12.svg",
+    "kind": "required scientific figure",
+    "question_ids": [
+      "NEET27-CHEM-1361"
+    ]
+  },
+  {
+    "asset": "figures/chemistry-002-conf-19.svg",
+    "kind": "required scientific figure",
+    "question_ids": [
+      "NEET27-CHEM-1637"
+    ]
+  },
+  {
+    "asset": "figures/chemistry-003-conf-20.svg",
+    "kind": "required scientific figure",
+    "question_ids": [
+      "NEET27-CHEM-1595"
+    ]
+  },
+  {
+    "asset": "figures/chemistry-004-conf-21.svg",
+    "kind": "required scientific figure",
+    "question_ids": [
+      "NEET27-CHEM-1625"
+    ]
+  },
+  {
+    "asset": "figures/chemistry-005-conf-22.svg",
+    "kind": "required scientific figure",
+    "question_ids": [
+      "NEET27-CHEM-1624"
+    ]
+  },
+  {
+    "asset": "figures/chemistry-006-salt-01.svg",
+    "kind": "supplementary laboratory figure",
+    "question_ids": [
+      "NEET27-CHEM-2066"
+    ]
+  },
+  {
+    "asset": "figures/chemistry-007-salt-02.svg",
+    "kind": "supplementary laboratory figure",
+    "question_ids": [
+      "NEET27-CHEM-2089"
+    ]
+  },
+  {
+    "asset": "figures/chemistry-008-salt-03.svg",
+    "kind": "supplementary laboratory figure",
+    "question_ids": [
+      "NEET27-CHEM-2064"
+    ]
+  },
+  {
+    "asset": "figures/chemistry-009-salt-04.svg",
+    "kind": "supplementary laboratory figure",
+    "question_ids": [
+      "NEET27-CHEM-2092"
+    ]
+  },
+  {
+    "asset": "figures/chemistry-010-salt-05.svg",
+    "kind": "supplementary laboratory figure",
+    "question_ids": [
+      "NEET27-CHEM-2147"
+    ]
+  },
+  {
+    "asset": "figures/chemistry-011-salt-06.svg",
+    "kind": "supplementary laboratory figure",
+    "question_ids": [
+      "NEET27-CHEM-2112"
+    ]
+  },
+  {
+    "asset": "figures/chemistry-012-salt-07.svg",
+    "kind": "supplementary laboratory figure",
+    "question_ids": [
+      "NEET27-CHEM-2156"
+    ]
+  },
+  {
+    "asset": "figures/chemistry-013-salt-08.svg",
+    "kind": "supplementary laboratory figure",
+    "question_ids": [
+      "NEET27-CHEM-2072"
+    ]
+  },
+  {
+    "asset": "figures/chemistry-014-salt-09.svg",
+    "kind": "supplementary laboratory figure",
+    "question_ids": [
+      "NEET27-CHEM-2145"
+    ]
+  },
+  {
+    "asset": "figures/chemistry-015-salt-10.svg",
+    "kind": "supplementary laboratory figure",
+    "question_ids": [
+      "NEET27-CHEM-2141"
+    ]
+  },
+  {
+    "asset": "figures/chemistry-016-salt-11.svg",
+    "kind": "supplementary laboratory figure",
+    "question_ids": [
+      "NEET27-CHEM-2123"
+    ]
+  },
+  {
+    "asset": "figures/chemistry-017-salt-12.svg",
+    "kind": "supplementary laboratory figure",
+    "question_ids": [
+      "NEET27-CHEM-2107"
+    ]
+  },
+  {
+    "asset": "figures/chemistry-018-salt-13.svg",
+    "kind": "supplementary laboratory figure",
+    "question_ids": [
+      "NEET27-CHEM-2100"
+    ]
+  },
+  {
+    "asset": "figures/chemistry-019-salt-14.svg",
+    "kind": "supplementary laboratory figure",
+    "question_ids": [
+      "NEET27-CHEM-2069"
+    ]
+  },
+  {
+    "asset": "figures/chemistry-020-salt-15.svg",
+    "kind": "supplementary laboratory figure",
+    "question_ids": [
+      "NEET27-CHEM-2139"
+    ]
+  },
+  {
+    "asset": "figures/chemistry-021-salt-16.svg",
+    "kind": "supplementary laboratory figure",
+    "question_ids": [
+      "NEET27-CHEM-2055"
+    ]
+  },
+  {
+    "asset": "figures/chemistry-022-salt-17.svg",
+    "kind": "supplementary laboratory figure",
+    "question_ids": [
+      "NEET27-CHEM-2083"
+    ]
+  },
+  {
+    "asset": "figures/chemistry-023-salt-18.svg",
+    "kind": "supplementary laboratory figure",
+    "question_ids": [
+      "NEET27-CHEM-2104"
+    ]
+  },
+  {
+    "asset": "figures/chemistry-024-salt-19.svg",
+    "kind": "supplementary laboratory figure",
+    "question_ids": [
+      "NEET27-CHEM-2137"
+    ]
+  },
+  {
+    "asset": "figures/chemistry-025-shape-01.svg",
+    "kind": "required scientific figure",
+    "question_ids": [
+      "NEET27-CHEM-0184",
+      "NEET27-CHEM-0203"
+    ]
+  },
+  {
+    "asset": "figures/chemistry-026-shape-02.svg",
+    "kind": "required scientific figure",
+    "question_ids": [
+      "NEET27-CHEM-0183",
+      "NEET27-CHEM-0222"
+    ]
+  },
+  {
+    "asset": "figures/chemistry-027-shape-03.svg",
+    "kind": "required scientific figure",
+    "question_ids": [
+      "NEET27-CHEM-0226",
+      "NEET27-CHEM-0230"
+    ]
+  },
+  {
+    "asset": "figures/chemistry-028-shape-04.svg",
+    "kind": "required scientific figure",
+    "question_ids": [
+      "NEET27-CHEM-0190",
+      "NEET27-CHEM-0240"
+    ]
+  },
+  {
+    "asset": "figures/chemistry-029-shape-05.svg",
+    "kind": "required scientific figure",
+    "question_ids": [
+      "NEET27-CHEM-0228",
+      "NEET27-CHEM-0279"
+    ]
+  },
+  {
+    "asset": "figures/chemistry-030-shape-06.svg",
+    "kind": "required scientific figure",
+    "question_ids": [
+      "NEET27-CHEM-0236",
+      "NEET27-CHEM-0287"
+    ]
+  },
+  {
+    "asset": "figures/chemistry-031-shape-07.svg",
+    "kind": "required scientific figure",
+    "question_ids": [
+      "NEET27-CHEM-0237",
+      "NEET27-CHEM-0258"
+    ]
+  },
+  {
+    "asset": "figures/chemistry-032-shape-08.svg",
+    "kind": "required scientific figure",
+    "question_ids": [
+      "NEET27-CHEM-0185",
+      "NEET27-CHEM-0272"
+    ]
+  },
+  {
+    "asset": "figures/chemistry-033-shape-09.svg",
+    "kind": "required scientific figure",
+    "question_ids": [
+      "NEET27-CHEM-0242",
+      "NEET27-CHEM-0244"
+    ]
+  },
+  {
+    "asset": "figures/chemistry-034-titr-03.svg",
+    "kind": "supplementary laboratory figure",
+    "question_ids": [
+      "NEET27-CHEM-2071"
+    ]
+  },
+  {
+    "asset": "figures/chemistry-035-titr-05.svg",
+    "kind": "supplementary laboratory figure",
+    "question_ids": [
+      "NEET27-CHEM-2053"
+    ]
+  }
+]

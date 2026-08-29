@@ -1,0 +1,381 @@
+{
+  "status": "CORRECTED_RELEASE_BLUEPRINT",
+  "target_exam_year": 2027,
+  "student_cohort": "2025-2027",
+  "official_basis": "NMC/NTA NEET-UG 2026 Chemistry syllabus for academic session 2026-27",
+  "total_questions": 2160,
+  "difficulty": {
+    "Medium": 720,
+    "Difficult": 720,
+    "Easy": 720
+  },
+  "answer_keys": {
+    "D": 540,
+    "A": 540,
+    "C": 540,
+    "B": 540
+  },
+  "question_types": {
+    "One-step numerical MCQ": 82,
+    "Conceptual/application MCQ": 232,
+    "Graph/data interpretation MCQ": 4,
+    "Sequence/match MCQ": 373,
+    "Reaction/reagent MCQ": 100,
+    "Statement-based MCQ": 969,
+    "Multi-step numerical MCQ": 17,
+    "Direct recall MCQ": 238,
+    "Structure/diagram MCQ": 37,
+    "Practical/laboratory MCQ": 108
+  },
+  "figures": {
+    "linked_questions": 44,
+    "required_questions": 23,
+    "distinct_assets": 35
+  },
+  "units": [
+    {
+      "unit": 1,
+      "name": "Some Basic Concepts in Chemistry",
+      "quota": 90,
+      "difficulty": {
+        "Medium": 63,
+        "Difficult": 19,
+        "Easy": 8
+      },
+      "question_types": {
+        "One-step numerical MCQ": 41,
+        "Conceptual/application MCQ": 15,
+        "Graph/data interpretation MCQ": 2,
+        "Sequence/match MCQ": 5,
+        "Reaction/reagent MCQ": 4,
+        "Statement-based MCQ": 11,
+        "Multi-step numerical MCQ": 10,
+        "Direct recall MCQ": 2
+      }
+    },
+    {
+      "unit": 2,
+      "name": "Atomic Structure",
+      "quota": 90,
+      "difficulty": {
+        "Medium": 31,
+        "Difficult": 31,
+        "Easy": 28
+      },
+      "question_types": {
+        "One-step numerical MCQ": 8,
+        "Sequence/match MCQ": 16,
+        "Statement-based MCQ": 31,
+        "Conceptual/application MCQ": 20,
+        "Structure/diagram MCQ": 3,
+        "Direct recall MCQ": 12
+      }
+    },
+    {
+      "unit": 3,
+      "name": "Chemical Bonding and Molecular Structure",
+      "quota": 108,
+      "difficulty": {
+        "Easy": 36,
+        "Medium": 40,
+        "Difficult": 32
+      },
+      "question_types": {
+        "Statement-based MCQ": 34,
+        "Structure/diagram MCQ": 21,
+        "Sequence/match MCQ": 18,
+        "One-step numerical MCQ": 8,
+        "Direct recall MCQ": 12,
+        "Conceptual/application MCQ": 15
+      }
+    },
+    {
+      "unit": 4,
+      "name": "Chemical Thermodynamics",
+      "quota": 108,
+      "difficulty": {
+        "Difficult": 39,
+        "Medium": 22,
+        "Easy": 47
+      },
+      "question_types": {
+        "Statement-based MCQ": 63,
+        "Sequence/match MCQ": 26,
+        "Conceptual/application MCQ": 3,
+        "Direct recall MCQ": 16
+      }
+    },
+    {
+      "unit": 5,
+      "name": "Solutions",
+      "quota": 90,
+      "difficulty": {
+        "Easy": 33,
+        "Difficult": 31,
+        "Medium": 26
+      },
+      "question_types": {
+        "Statement-based MCQ": 50,
+        "Sequence/match MCQ": 20,
+        "Conceptual/application MCQ": 12,
+        "Direct recall MCQ": 7,
+        "One-step numerical MCQ": 1
+      }
+    },
+    {
+      "unit": 6,
+      "name": "Equilibrium",
+      "quota": 126,
+      "difficulty": {
+        "Easy": 41,
+        "Medium": 57,
+        "Difficult": 28
+      },
+      "question_types": {
+        "Statement-based MCQ": 53,
+        "Conceptual/application MCQ": 24,
+        "Reaction/reagent MCQ": 10,
+        "Sequence/match MCQ": 18,
+        "One-step numerical MCQ": 10,
+        "Direct recall MCQ": 11
+      }
+    },
+    {
+      "unit": 7,
+      "name": "Redox Reactions and Electrochemistry",
+      "quota": 108,
+      "difficulty": {
+        "Easy": 45,
+        "Medium": 19,
+        "Difficult": 44
+      },
+      "question_types": {
+        "Direct recall MCQ": 12,
+        "Sequence/match MCQ": 24,
+        "Reaction/reagent MCQ": 7,
+        "Statement-based MCQ": 58,
+        "Conceptual/application MCQ": 7
+      }
+    },
+    {
+      "unit": 8,
+      "name": "Chemical Kinetics",
+      "quota": 90,
+      "difficulty": {
+        "Easy": 40,
+        "Medium": 18,
+        "Difficult": 32
+      },
+      "question_types": {
+        "Statement-based MCQ": 54,
+        "Direct recall MCQ": 11,
+        "Sequence/match MCQ": 19,
+        "Conceptual/application MCQ": 2,
+        "Reaction/reagent MCQ": 3,
+        "Graph/data interpretation MCQ": 1
+      }
+    },
+    {
+      "unit": 9,
+      "name": "Classification of Elements and Periodicity in Properties",
+      "quota": 90,
+      "difficulty": {
+        "Easy": 38,
+        "Difficult": 27,
+        "Medium": 25
+      },
+      "question_types": {
+        "Direct recall MCQ": 35,
+        "Statement-based MCQ": 34,
+        "Conceptual/application MCQ": 8,
+        "Sequence/match MCQ": 13
+      }
+    },
+    {
+      "unit": 10,
+      "name": "p-Block Elements",
+      "quota": 126,
+      "difficulty": {
+        "Easy": 32,
+        "Difficult": 33,
+        "Medium": 61
+      },
+      "question_types": {
+        "Direct recall MCQ": 18,
+        "Sequence/match MCQ": 14,
+        "Statement-based MCQ": 77,
+        "Conceptual/application MCQ": 12,
+        "Reaction/reagent MCQ": 5
+      }
+    },
+    {
+      "unit": 11,
+      "name": "d- and f-Block Elements",
+      "quota": 144,
+      "difficulty": {
+        "Easy": 38,
+        "Difficult": 56,
+        "Medium": 50
+      },
+      "question_types": {
+        "Direct recall MCQ": 11,
+        "Sequence/match MCQ": 22,
+        "Statement-based MCQ": 82,
+        "Conceptual/application MCQ": 15,
+        "One-step numerical MCQ": 9,
+        "Reaction/reagent MCQ": 5
+      }
+    },
+    {
+      "unit": 12,
+      "name": "Coordination Compounds",
+      "quota": 180,
+      "difficulty": {
+        "Medium": 56,
+        "Easy": 59,
+        "Difficult": 65
+      },
+      "question_types": {
+        "Statement-based MCQ": 93,
+        "Direct recall MCQ": 20,
+        "Sequence/match MCQ": 37,
+        "Conceptual/application MCQ": 26,
+        "Structure/diagram MCQ": 3,
+        "Reaction/reagent MCQ": 1
+      }
+    },
+    {
+      "unit": 13,
+      "name": "Purification and Characterisation of Organic Compounds",
+      "quota": 54,
+      "difficulty": {
+        "Medium": 39,
+        "Difficult": 15
+      },
+      "question_types": {
+        "Conceptual/application MCQ": 34,
+        "Multi-step numerical MCQ": 7,
+        "Statement-based MCQ": 11,
+        "Graph/data interpretation MCQ": 1,
+        "Reaction/reagent MCQ": 1
+      }
+    },
+    {
+      "unit": 14,
+      "name": "Some Basic Principles of Organic Chemistry",
+      "quota": 126,
+      "difficulty": {
+        "Easy": 54,
+        "Medium": 25,
+        "Difficult": 47
+      },
+      "question_types": {
+        "Direct recall MCQ": 25,
+        "Reaction/reagent MCQ": 17,
+        "Statement-based MCQ": 48,
+        "Conceptual/application MCQ": 14,
+        "Structure/diagram MCQ": 6,
+        "Sequence/match MCQ": 16
+      }
+    },
+    {
+      "unit": 15,
+      "name": "Hydrocarbons",
+      "quota": 108,
+      "difficulty": {
+        "Difficult": 37,
+        "Medium": 47,
+        "Easy": 24
+      },
+      "question_types": {
+        "Statement-based MCQ": 41,
+        "Reaction/reagent MCQ": 29,
+        "Direct recall MCQ": 4,
+        "Sequence/match MCQ": 14,
+        "Conceptual/application MCQ": 11,
+        "One-step numerical MCQ": 5,
+        "Structure/diagram MCQ": 4
+      }
+    },
+    {
+      "unit": 16,
+      "name": "Organic Compounds Containing Halogens",
+      "quota": 90,
+      "difficulty": {
+        "Easy": 40,
+        "Difficult": 35,
+        "Medium": 15
+      },
+      "question_types": {
+        "Statement-based MCQ": 52,
+        "Direct recall MCQ": 8,
+        "Sequence/match MCQ": 23,
+        "Reaction/reagent MCQ": 6,
+        "Conceptual/application MCQ": 1
+      }
+    },
+    {
+      "unit": 17,
+      "name": "Organic Compounds Containing Oxygen",
+      "quota": 126,
+      "difficulty": {
+        "Easy": 45,
+        "Medium": 29,
+        "Difficult": 52
+      },
+      "question_types": {
+        "Statement-based MCQ": 72,
+        "Sequence/match MCQ": 33,
+        "Direct recall MCQ": 8,
+        "Reaction/reagent MCQ": 8,
+        "Conceptual/application MCQ": 5
+      }
+    },
+    {
+      "unit": 18,
+      "name": "Organic Compounds Containing Nitrogen",
+      "quota": 90,
+      "difficulty": {
+        "Easy": 30,
+        "Medium": 22,
+        "Difficult": 38
+      },
+      "question_types": {
+        "Statement-based MCQ": 53,
+        "Sequence/match MCQ": 25,
+        "Conceptual/application MCQ": 5,
+        "Direct recall MCQ": 3,
+        "Reaction/reagent MCQ": 4
+      }
+    },
+    {
+      "unit": 19,
+      "name": "Biomolecules",
+      "quota": 108,
+      "difficulty": {
+        "Easy": 49,
+        "Difficult": 37,
+        "Medium": 22
+      },
+      "question_types": {
+        "Statement-based MCQ": 52,
+        "Direct recall MCQ": 23,
+        "Sequence/match MCQ": 30,
+        "Conceptual/application MCQ": 3
+      }
+    },
+    {
+      "unit": 20,
+      "name": "Principles Related to Practical Chemistry",
+      "quota": 108,
+      "difficulty": {
+        "Medium": 53,
+        "Easy": 33,
+        "Difficult": 22
+      },
+      "question_types": {
+        "Practical/laboratory MCQ": 108
+      }
+    }
+  ]
+}

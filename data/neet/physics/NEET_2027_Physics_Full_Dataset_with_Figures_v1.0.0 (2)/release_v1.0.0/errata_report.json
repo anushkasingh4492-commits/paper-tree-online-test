@@ -1,0 +1,110 @@
+{
+  "status": "PASS",
+  "audit_date": "2026-08-21",
+  "errors_found": 10,
+  "errors_resolved": 10,
+  "errors_removed": 1,
+  "unresolved_errors": 0,
+  "items": [
+    {
+      "question_id": "MULTIPLE",
+      "category": "Syllabus coverage",
+      "severity": "Major",
+      "original_text_or_value": "Zero or thin coverage in explicitly listed subtopics",
+      "problem_found": "Frames and motion graphs, elasticity, Gauss-law applications, bar magnets, galvanometer conversion, transformers, optical instruments, logic gates and Zener regulation were absent or thin.",
+      "corrected_text_or_value": "Added 76 targeted questions and replaced surplus coverage while retaining the 2,160-record total.",
+      "verification_source": "NMC/NTA NEET-UG 2026 Physics syllabus for academic session 2026-27",
+      "resolution_status": "Resolved"
+    },
+    {
+      "question_id": "MULTIPLE",
+      "category": "Syllabus scope",
+      "severity": "Major",
+      "original_text_or_value": "Seven hysteresis/retentivity/coercivity questions in Unit 13",
+      "problem_found": "The block exceeded the strict wording of the current official syllabus.",
+      "corrected_text_or_value": "Excluded all hysteresis, retentivity and coercivity candidates and replaced them with explicitly listed Unit 13 content.",
+      "verification_source": "NMC/NTA NEET-UG 2026 Physics syllabus for academic session 2026-27",
+      "resolution_status": "Removed"
+    },
+    {
+      "question_id": "MULTIPLE",
+      "category": "Figure dependency",
+      "severity": "Major",
+      "original_text_or_value": "111 figure-required stems disclosed the highlighted position or apparatus cue",
+      "problem_found": "The questions could be answered without the linked image.",
+      "corrected_text_or_value": "Removed textual position/apparatus cues; all 111 required-image questions now depend on information carried by the linked figure.",
+      "verification_source": "Corrected dataset and figure-dependency audit",
+      "resolution_status": "Resolved"
+    },
+    {
+      "question_id": "MULTIPLE",
+      "category": "Experimental skills",
+      "severity": "Major",
+      "original_text_or_value": "Cue-driven Unit 20 questions with remote distractors",
+      "problem_found": "Several items tested lexical recognition more than experimental reasoning.",
+      "corrected_text_or_value": "Rewrote stems and supplied same-experiment misconceptions for principles, observations, precautions and purpose-principle matches.",
+      "verification_source": "Corrected Unit 20 question block",
+      "resolution_status": "Resolved"
+    },
+    {
+      "question_id": "MULTIPLE",
+      "category": "Figure rendering",
+      "severity": "Major",
+      "original_text_or_value": "N m□¹ in four spring figures",
+      "problem_found": "The font lacked the superscript-minus glyph.",
+      "corrected_text_or_value": "Regenerated the figures using N/m and visually verified the rendered unit.",
+      "verification_source": "u04-work-005.png through u04-work-008.png",
+      "resolution_status": "Resolved"
+    },
+    {
+      "question_id": "MULTIPLE",
+      "category": "Asset accounting",
+      "severity": "Moderate",
+      "original_text_or_value": "117 distinct_original_figures",
+      "problem_found": "The label overstated educational visual diversity and counted cosmetic A/B variants.",
+      "corrected_text_or_value": "Use 99 byte-distinct asset files, one asset per Unit 20 experiment, and report distinct_asset_files.",
+      "verification_source": "Figure manifest, byte hashes and image decode audit",
+      "resolution_status": "Resolved"
+    },
+    {
+      "question_id": "MULTIPLE",
+      "category": "Repetition",
+      "severity": "Moderate",
+      "original_text_or_value": "Repeated cue-driven spectrum, experimental formats and number-substitution drill families",
+      "problem_found": "Template repetition reduced discrimination.",
+      "corrected_text_or_value": "Made spectrum identification depend on diagrams, diversified experimental misconceptions, limited each non-figure numeric template to at most two records and replaced pruned variants with different concepts.",
+      "verification_source": "Question-plus-figure and numeric-template diversity audits",
+      "resolution_status": "Resolved"
+    },
+    {
+      "question_id": "NEET27-PHY-1544 (pre-rebuild ID)",
+      "category": "Explanation accuracy",
+      "severity": "Minor",
+      "original_text_or_value": "475.6 and 525.6 described as rounding to 475 and 525",
+      "problem_found": "Nearest-whole-number rounding was incorrect.",
+      "corrected_text_or_value": "Explanation now identifies 475 and 525 as the symmetric narrow-band approximation.",
+      "verification_source": "Series-LCR half-power relation",
+      "resolution_status": "Resolved"
+    },
+    {
+      "question_id": "MULTIPLE",
+      "category": "Provenance",
+      "severity": "Moderate",
+      "original_text_or_value": "All source_page values null",
+      "problem_found": "Record-level syllabus provenance was incomplete.",
+      "corrected_text_or_value": "All records now include the applicable official-syllabus PDF page and an official-syllabus/NCERT source description.",
+      "verification_source": "NMC/NTA NEET-UG 2026 Physics syllabus for academic session 2026-27",
+      "resolution_status": "Resolved"
+    },
+    {
+      "question_id": "MULTIPLE",
+      "category": "Difficulty",
+      "severity": "Moderate",
+      "original_text_or_value": "Difficulty labels treated as definitive",
+      "problem_found": "Difficulty is editorial until calibrated with response data.",
+      "corrected_text_or_value": "Retained the intended 30/45/25 deployment mix and explicitly labelled it editorial provisional in the blueprint, manifest and README.",
+      "verification_source": "Coverage blueprint and release policy",
+      "resolution_status": "Resolved"
+    }
+  ]
+}

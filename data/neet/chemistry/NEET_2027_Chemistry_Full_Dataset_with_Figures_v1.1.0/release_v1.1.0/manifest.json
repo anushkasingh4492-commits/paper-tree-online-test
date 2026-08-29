@@ -1,0 +1,264 @@
+{
+  "title": "NEET 2027 Chemistry Question Dataset with Figures",
+  "version": "1.1.0",
+  "build_date": "2026-08-22",
+  "target_exam_year": 2027,
+  "student_cohort": "2025-2027",
+  "record_count": 2160,
+  "errata_status": "PASS",
+  "independent_validation_status": "PASS",
+  "unresolved_errors": 0,
+  "official_basis": "NMC/NTA NEET-UG 2026 Chemistry syllabus for academic session 2026-27",
+  "mandatory_release_time_control": "Compare with the official NEET-UG 2027 bulletin and syllabus when published and apply any formal delta before live exam use.",
+  "hash_algorithm": "SHA-256",
+  "hash_scope": "Every packaged payload file except manifest.json itself.",
+  "manifest_self_exclusion_reason": "A file cannot conventionally contain its own final byte size and SHA-256 without changing those values; all independently verifiable payload files are hashed below.",
+  "payload_file_count": 49,
+  "files": [
+    {
+      "relative_path": "answers_and_explanations.json",
+      "size_bytes": 615027,
+      "sha256": "dd1fcc0387bf1a69a20879d0b2e63dbe9043db235bf8960774cfdf3c1c2ba757"
+    },
+    {
+      "relative_path": "coverage_blueprint.json",
+      "size_bytes": 9575,
+      "sha256": "0d26a2305206a10eb4725d022eea21eb8c5cc2b98cb9e26850016f48ec12c26d"
+    },
+    {
+      "relative_path": "detailed_coverage_blueprint.json",
+      "size_bytes": 7756,
+      "sha256": "a1dd990c40639593ed3b9794a52bfee2956ef6a473136a184f40a07d88451d2b"
+    },
+    {
+      "relative_path": "errata_report.json",
+      "size_bytes": 15498,
+      "sha256": "3ee5fc7546767e1c216fa168c4f57557d56ade608ecf5f6a8ceb2c711c8cb43f"
+    },
+    {
+      "relative_path": "errata_report.md",
+      "size_bytes": 12276,
+      "sha256": "ad800b8b5bbdceba474b18dd682890210731687a4b235fb059f48355cf4166fd"
+    },
+    {
+      "relative_path": "figure_manifest.json",
+      "size_bytes": 5996,
+      "sha256": "40e1dd63299b45952e7d4482ef14c611c4ace87d9cafd1deb7c29972245876c2"
+    },
+    {
+      "relative_path": "figures/chemistry-001-chrom-12.svg",
+      "size_bytes": 1101,
+      "sha256": "7e5a1e899461ee66d4ec349e3a32d3ff52ffec79ca5c231ac6575fb4be03d913"
+    },
+    {
+      "relative_path": "figures/chemistry-002-conf-19.svg",
+      "size_bytes": 1027,
+      "sha256": "dd426f36c92f955fdf3ed6c5abfb1b2c0fd37e47564d74558bce1a32c414a8cf"
+    },
+    {
+      "relative_path": "figures/chemistry-003-conf-20.svg",
+      "size_bytes": 1027,
+      "sha256": "3d752f98b38783756ac5950a9932894983658f72fee27aa32677db554eb9c4f2"
+    },
+    {
+      "relative_path": "figures/chemistry-004-conf-21.svg",
+      "size_bytes": 1254,
+      "sha256": "fa387f4a910004cb4842636de355c10468a7081ae643b322bcaaee6032a7e028"
+    },
+    {
+      "relative_path": "figures/chemistry-005-conf-22.svg",
+      "size_bytes": 1253,
+      "sha256": "8465e29f1dc54a02f43900d301bf49e7992079a8070f3c879e9ee21efc6a12c6"
+    },
+    {
+      "relative_path": "figures/chemistry-006-salt-01.svg",
+      "size_bytes": 839,
+      "sha256": "d48e56cf3be30f2cff2cf28054855ec11b2acfb65ddb8b6a2460fac4c58a4530"
+    },
+    {
+      "relative_path": "figures/chemistry-007-salt-02.svg",
+      "size_bytes": 835,
+      "sha256": "7716204e30480853916ff471e1ec71ca9af87685757088eea09d2f20670f8dd2"
+    },
+    {
+      "relative_path": "figures/chemistry-008-salt-03.svg",
+      "size_bytes": 839,
+      "sha256": "27ebb16ae9b32e8837e219f90a9f20bc3529345ff1e8f513b9affa71849e1f37"
+    },
+    {
+      "relative_path": "figures/chemistry-009-salt-04.svg",
+      "size_bytes": 837,
+      "sha256": "416c97c73ed30ac2f496bfd1a1f25ab43d97f79658b937d8dc4bfeaeaa596595"
+    },
+    {
+      "relative_path": "figures/chemistry-010-salt-05.svg",
+      "size_bytes": 834,
+      "sha256": "ddda4774cd51d2b0c701d423fc73be36b6dd56b5a4ef2efc8287192d409e7a95"
+    },
+    {
+      "relative_path": "figures/chemistry-011-salt-06.svg",
+      "size_bytes": 834,
+      "sha256": "afde0cfd73de516ca8b24f2d90f819cd9c6aea26a02fd818bef4400f96ed1031"
+    },
+    {
+      "relative_path": "figures/chemistry-012-salt-07.svg",
+      "size_bytes": 833,
+      "sha256": "27240403da1e5f48483eab5e4c3c4870cf277cccd2cc95b22bbb82e5d7b1e097"
+    },
+    {
+      "relative_path": "figures/chemistry-013-salt-08.svg",
+      "size_bytes": 837,
+      "sha256": "1db2d3c64139834c95c2953fc81aa7f85d875fc823c0b2be188cb3cba104daae"
+    },
+    {
+      "relative_path": "figures/chemistry-014-salt-09.svg",
+      "size_bytes": 836,
+      "sha256": "5cb77a1263e03770204e568b7c93b0647fbbe62f6489d8590e69198e5375fd54"
+    },
+    {
+      "relative_path": "figures/chemistry-015-salt-10.svg",
+      "size_bytes": 836,
+      "sha256": "7552bc6b6937aecf726aee268431c33e282c90fc55988bab7b15cf2355139af2"
+    },
+    {
+      "relative_path": "figures/chemistry-016-salt-11.svg",
+      "size_bytes": 836,
+      "sha256": "2ad006decc0752483a3c7ec2bb92c1be07c638aacf7df22947b91be846974d58"
+    },
+    {
+      "relative_path": "figures/chemistry-017-salt-12.svg",
+      "size_bytes": 836,
+      "sha256": "302e03a73a0d43a01266bcf7a1326662903386c438b743531ad4a5a80b69701f"
+    },
+    {
+      "relative_path": "figures/chemistry-018-salt-13.svg",
+      "size_bytes": 836,
+      "sha256": "c46e7a8d5f423b3d16597efe22800464de9035e685eab0c66b411316f5633ae4"
+    },
+    {
+      "relative_path": "figures/chemistry-019-salt-14.svg",
+      "size_bytes": 836,
+      "sha256": "f7619f6557452905f70904c66bc0cdf03215734dcf2ed157a09d4749fae49ec3"
+    },
+    {
+      "relative_path": "figures/chemistry-020-salt-15.svg",
+      "size_bytes": 836,
+      "sha256": "7f5648372e7e41daa824fa471e0c5bbe69fafb97f79c0af7907fa94236a0ccda"
+    },
+    {
+      "relative_path": "figures/chemistry-021-salt-16.svg",
+      "size_bytes": 836,
+      "sha256": "4a51c1158644ad7da9dec38c8093e1c1cc6de06c92108e6377f6242841db3432"
+    },
+    {
+      "relative_path": "figures/chemistry-022-salt-17.svg",
+      "size_bytes": 836,
+      "sha256": "12d063c7c2a1355ff156e2da4c778454d7f551a46965772d8ba453bbc01be10b"
+    },
+    {
+      "relative_path": "figures/chemistry-023-salt-18.svg",
+      "size_bytes": 837,
+      "sha256": "f92fcac96f55f11d082a0470f1b10f38bf0edd71a3aa34061f51fc90cf12c6b1"
+    },
+    {
+      "relative_path": "figures/chemistry-024-salt-19.svg",
+      "size_bytes": 839,
+      "sha256": "8525597d9c631304b243308ec930e74df56e7e5cb29ad9ed2720fd36a312500a"
+    },
+    {
+      "relative_path": "figures/chemistry-025-shape-01.svg",
+      "size_bytes": 1170,
+      "sha256": "e619429242baa9b2f97a4197d7aa0c9473fe2651c56be1b1212e4b3ff9d7426b"
+    },
+    {
+      "relative_path": "figures/chemistry-026-shape-02.svg",
+      "size_bytes": 1414,
+      "sha256": "09c9ad2efb8c62b526ba0b9b11c41bc139f687e595fe57ff5133feaa8b030d68"
+    },
+    {
+      "relative_path": "figures/chemistry-027-shape-03.svg",
+      "size_bytes": 1660,
+      "sha256": "5e66fbfd3a2e061ac6191a28c977488c9c5dfdde55aea34d92391e583b44dc0a"
+    },
+    {
+      "relative_path": "figures/chemistry-028-shape-04.svg",
+      "size_bytes": 1414,
+      "sha256": "10098749eb4bbaaab30099f38f1deaf2e56dadeab8c7367d84536c36d0c054c9"
+    },
+    {
+      "relative_path": "figures/chemistry-029-shape-05.svg",
+      "size_bytes": 1168,
+      "sha256": "0d8fc7bb16a20dab8e61abb4306e99f477fd160a5a4ce8640c95561447408b48"
+    },
+    {
+      "relative_path": "figures/chemistry-030-shape-06.svg",
+      "size_bytes": 1907,
+      "sha256": "1331e8bd9bf14c52cbb52686459ad83af7e3d8f59ed028fd7583938d9d23e1ca"
+    },
+    {
+      "relative_path": "figures/chemistry-031-shape-07.svg",
+      "size_bytes": 2150,
+      "sha256": "2f0d70428ce35e34989d6444ca68f0a4da7066f95fa160d8a253d67308f24276"
+    },
+    {
+      "relative_path": "figures/chemistry-032-shape-08.svg",
+      "size_bytes": 1661,
+      "sha256": "6180f78ab4f4f9193cbda96256994f5462589a6117afcef67c0695160e4ebd29"
+    },
+    {
+      "relative_path": "figures/chemistry-033-shape-09.svg",
+      "size_bytes": 1169,
+      "sha256": "4026ce78b4c4c81a8e9093f71c1246610bb4803589cded82c39b1e89c75f7f5f"
+    },
+    {
+      "relative_path": "figures/chemistry-034-titr-03.svg",
+      "size_bytes": 928,
+      "sha256": "ff189323690785848b7f3f15ae569131366a223db87d49f955156407447278aa"
+    },
+    {
+      "relative_path": "figures/chemistry-035-titr-05.svg",
+      "size_bytes": 928,
+      "sha256": "ff189323690785848b7f3f15ae569131366a223db87d49f955156407447278aa"
+    },
+    {
+      "relative_path": "independent_validation.json",
+      "size_bytes": 7958,
+      "sha256": "acd67868db57599a46dbd7c8ab5cda900278d8fdee9b1dc583f0ac6b6a10edd7"
+    },
+    {
+      "relative_path": "neet_2027_chemistry_full_dataset.csv",
+      "size_bytes": 1722202,
+      "sha256": "b5f778be3f9146815210d7e80608aca98f7f9e107ea31ebbbb8e995009bcf7bb"
+    },
+    {
+      "relative_path": "neet_2027_chemistry_full_dataset.json",
+      "size_bytes": 5141265,
+      "sha256": "be594dd7ba8351983af2f78342c59e31ad1e59ad7365e06515f5add986ab7871"
+    },
+    {
+      "relative_path": "neet_2027_chemistry_full_dataset.jsonl",
+      "size_bytes": 4509926,
+      "sha256": "957756d64fde4bdbae0b9f9336043e35f55778c21cadacbbe47cb31cad6ac798"
+    },
+    {
+      "relative_path": "question_index.csv",
+      "size_bytes": 146777,
+      "sha256": "319ff26201b139bf307ddbe1c527b5718680d44bfc96a5009f9b8a55035347d5"
+    },
+    {
+      "relative_path": "questions_only.json",
+      "size_bytes": 1065210,
+      "sha256": "7f4d68ab197f497593b3c4fad314a303873921d15eb97487e749275a8c741173"
+    },
+    {
+      "relative_path": "README.md",
+      "size_bytes": 909,
+      "sha256": "95ca182214ceb6e926af280222c913663939c4d9f456c9699cb7fbb7854a6abc"
+    },
+    {
+      "relative_path": "schema_and_generator_contract.json",
+      "size_bytes": 912,
+      "sha256": "7ebba5d4d22cfc174dd4923f9d58eb814b7d82f7a1b59900766aaaecab11bdc2"
+    }
+  ]
+}

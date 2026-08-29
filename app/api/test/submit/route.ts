@@ -1,3 +1,4 @@
+
 import { NextRequest, NextResponse } from "next/server";
 import { Pool } from "pg";
 
@@ -357,6 +358,45 @@ export async function POST(request: NextRequest) {
 
     /*
      * =======================================================
+     * EXAM MARKING SCHEME
+     * =======================================================
+     *
+     * NEET:
+     *   Correct      = +4
+     *   Wrong        = -1
+     *   Unattempted  = 0
+     *
+     * MHT-CET / Others:
+     *   Correct      = +1
+     *   Wrong        = 0
+     *   Unattempted  = 0
+     */
+
+    const examName = String(
+      test.exam ?? ""
+    )
+      .trim()
+      .toLowerCase();
+
+    const isNEET =
+      examName === "neet" ||
+      examName === "neet-ug" ||
+      examName === "neet ug";
+
+    const marksCorrect = isNEET ? 4 : 1;
+    const marksIncorrect = isNEET ? -1 : 0;
+    const marksUnattempted = 0;
+
+    console.log("MARKING SCHEME:", {
+      exam: test.exam,
+      isNEET,
+      marksCorrect,
+      marksIncorrect,
+      marksUnattempted,
+    });
+
+    /*
+     * =======================================================
      * PARSE QUESTIONS
      * =======================================================
      */
@@ -427,18 +467,28 @@ export async function POST(request: NextRequest) {
 
       let isCorrect: boolean | null = null;
 
-      let marksAwarded = 0;
+      let marksAwarded = marksUnattempted;
 
       /*
-       * Unattempted
+       * =====================================================
+       * UNATTEMPTED
+       * =====================================================
        */
+
       if (selectedAnswer === null) {
         unattempted++;
+
+        isCorrect = null;
+
+        marksAwarded = marksUnattempted;
       }
 
       /*
-       * Correct
+       * =====================================================
+       * CORRECT
+       * =====================================================
        */
+
       else if (
         correctAnswer !== null &&
         selectedAnswer === correctAnswer
@@ -447,18 +497,21 @@ export async function POST(request: NextRequest) {
 
         isCorrect = true;
 
-        marksAwarded = 1;
+        marksAwarded = marksCorrect;
       }
 
       /*
-       * Wrong
+       * =====================================================
+       * WRONG
+       * =====================================================
        */
+
       else {
         wrong++;
 
         isCorrect = false;
 
-        marksAwarded = 0;
+        marksAwarded = marksIncorrect;
       }
 
       evaluatedAnswers.push({
@@ -482,17 +535,37 @@ export async function POST(request: NextRequest) {
 
     const attempted = correct + wrong;
 
-    const totalMarks = totalQuestions;
+    /*
+     * Maximum possible marks.
+     *
+     * NEET:
+     * 180 questions × 4 = 720
+     *
+     * MHT-CET:
+     * 180 questions × 1 = 180
+     */
+
+    const totalMarks =
+      totalQuestions * marksCorrect;
+
+    /*
+     * Actual score.
+     *
+     * NEET:
+     * correct × 4 + wrong × (-1)
+     *
+     * MHT-CET:
+     * correct × 1 + wrong × 0
+     */
 
     const score =
-      totalMarks > 0
-        ? Number(
-            (
-              (correct / totalMarks) *
-              100
-            ).toFixed(2)
-          )
-        : 0;
+      correct * marksCorrect +
+      wrong * marksIncorrect +
+      unattempted * marksUnattempted;
+
+    /*
+     * Accuracy is based only on attempted questions.
+     */
 
     const accuracy =
       attempted > 0
@@ -503,6 +576,17 @@ export async function POST(request: NextRequest) {
             ).toFixed(2)
           )
         : 0;
+
+    console.log("SUBMIT SCORE:", {
+      totalQuestions,
+      attempted,
+      correct,
+      wrong,
+      unattempted,
+      totalMarks,
+      score,
+      accuracy,
+    });
 
     /*
      * =======================================================
@@ -716,17 +800,7 @@ export async function POST(request: NextRequest) {
      * BULK INSERT ALL ANSWERS
      * =======================================================
      *
-     * IMPORTANT PERFORMANCE FIX:
-     *
-     * Previously this was:
-     *
-     * for (...) {
-     *   await client.query(...)
-     * }
-     *
-     * That caused one database round-trip per question.
-     *
-     * Now all answers are inserted using ONE query.
+     * All answers are inserted using ONE query.
      */
 
     if (evaluatedAnswers.length > 0) {
@@ -876,6 +950,7 @@ export async function POST(request: NextRequest) {
       correct,
       wrong,
       unattempted,
+      totalMarks,
       score,
       accuracy,
       automatic,
@@ -918,3 +993,4 @@ export async function POST(request: NextRequest) {
     client.release();
   }
 }
+

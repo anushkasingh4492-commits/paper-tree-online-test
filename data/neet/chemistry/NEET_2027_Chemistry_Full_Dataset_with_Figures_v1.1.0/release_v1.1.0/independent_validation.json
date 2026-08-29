@@ -1,0 +1,377 @@
+{
+  "validation_status": "PASS",
+  "release_version": "1.1.0",
+  "validation_date": "2026-08-22",
+  "validator_independence": "Reads only corrected release files; does not import the build module or its target constants.",
+  "official_basis": "NMC/NTA NEET-UG 2026 Chemistry syllabus for academic session 2026-27, used for the 2025-2027 cohort; official 2027 delta check remains a release-time control.",
+  "records_tested": 2160,
+  "question_level_checks_executed": 2160,
+  "failed_checks": [],
+  "unresolved_errors": 0,
+  "metrics": {
+    "difficulty": {
+      "Medium": 720,
+      "Difficult": 720,
+      "Easy": 720
+    },
+    "answers": {
+      "D": 540,
+      "A": 540,
+      "C": 540,
+      "B": 540
+    },
+    "answers_by_difficulty": {
+      "Easy": {
+        "C": 180,
+        "A": 180,
+        "B": 180,
+        "D": 180
+      },
+      "Medium": {
+        "D": 180,
+        "A": 180,
+        "C": 180,
+        "B": 180
+      },
+      "Difficult": {
+        "A": 180,
+        "C": 180,
+        "D": 180,
+        "B": 180
+      }
+    },
+    "units": {
+      "1": 90,
+      "2": 90,
+      "3": 108,
+      "4": 108,
+      "5": 90,
+      "6": 126,
+      "7": 108,
+      "8": 90,
+      "9": 90,
+      "10": 126,
+      "11": 144,
+      "12": 180,
+      "13": 54,
+      "14": 126,
+      "15": 108,
+      "16": 90,
+      "17": 126,
+      "18": 90,
+      "19": 108,
+      "20": 108
+    },
+    "classes": {
+      "XI": 1080,
+      "XII": 1080
+    },
+    "branches": {
+      "Physical Chemistry": 810,
+      "Inorganic Chemistry": 540,
+      "Organic Chemistry": 702,
+      "Practical Chemistry": 108
+    },
+    "figure_linked_questions": 44,
+    "figure_required_questions": 23,
+    "distinct_figure_assets": 35,
+    "longest_answer_run": 2,
+    "exact_duplicate_groups": 0,
+    "near_duplicate_groups": 0
+  },
+  "checks": [
+    {
+      "check_id": "record_count",
+      "status": "PASS",
+      "details": {
+        "actual": 2160,
+        "expected": 2160
+      }
+    },
+    {
+      "check_id": "required_record_schema",
+      "status": "PASS",
+      "details": {
+        "violations": [],
+        "count": 0
+      }
+    },
+    {
+      "check_id": "four_distinct_options",
+      "status": "PASS",
+      "details": {
+        "ids": [],
+        "count": 0
+      }
+    },
+    {
+      "check_id": "answer_key_integrity",
+      "status": "PASS",
+      "details": {
+        "ids": [],
+        "count": 0
+      }
+    },
+    {
+      "check_id": "explanation_presence",
+      "status": "PASS",
+      "details": {
+        "ids": [],
+        "count": 0
+      }
+    },
+    {
+      "check_id": "marking_scheme",
+      "status": "PASS",
+      "details": {
+        "ids": [],
+        "count": 0
+      }
+    },
+    {
+      "check_id": "fixed_generator_values",
+      "status": "PASS",
+      "details": {
+        "ids": [],
+        "count": 0
+      }
+    },
+    {
+      "check_id": "numerical_answer_supported",
+      "status": "PASS",
+      "details": {
+        "ids": [],
+        "count": 0
+      }
+    },
+    {
+      "check_id": "statement_answer_supported",
+      "status": "PASS",
+      "details": {
+        "ids": [],
+        "count": 0
+      }
+    },
+    {
+      "check_id": "placeholder_screen",
+      "status": "PASS",
+      "details": {
+        "ids": [],
+        "count": 0
+      }
+    },
+    {
+      "check_id": "corrected_wording_regression",
+      "status": "PASS",
+      "details": {
+        "ids": [],
+        "count": 0
+      }
+    },
+    {
+      "check_id": "student_facing_style_and_grammar",
+      "status": "PASS",
+      "details": {
+        "ids": [],
+        "count": 0
+      }
+    },
+    {
+      "check_id": "notation_regression_screen",
+      "status": "PASS",
+      "details": {
+        "ids": [],
+        "count": 0
+      }
+    },
+    {
+      "check_id": "option_length_cue_screen",
+      "status": "PASS",
+      "details": {
+        "ids": [],
+        "count": 0
+      }
+    },
+    {
+      "check_id": "difficulty_validity_screen",
+      "status": "PASS",
+      "details": {
+        "ids": [],
+        "count": 0
+      }
+    },
+    {
+      "check_id": "question_type_content_screen",
+      "status": "PASS",
+      "details": {
+        "ids": [],
+        "count": 0
+      }
+    },
+    {
+      "check_id": "unique_sequential_ids",
+      "status": "PASS",
+      "details": {
+        "duplicate_ids": [],
+        "sequential": true
+      }
+    },
+    {
+      "check_id": "equal_difficulty_distribution",
+      "status": "PASS",
+      "details": {
+        "Medium": 720,
+        "Difficult": 720,
+        "Easy": 720
+      }
+    },
+    {
+      "check_id": "global_answer_balance",
+      "status": "PASS",
+      "details": {
+        "D": 540,
+        "A": 540,
+        "C": 540,
+        "B": 540
+      }
+    },
+    {
+      "check_id": "answer_balance_by_difficulty",
+      "status": "PASS",
+      "details": {
+        "Easy": {
+          "C": 180,
+          "A": 180,
+          "B": 180,
+          "D": 180
+        },
+        "Medium": {
+          "D": 180,
+          "A": 180,
+          "C": 180,
+          "B": 180
+        },
+        "Difficult": {
+          "A": 180,
+          "C": 180,
+          "D": 180,
+          "B": 180
+        }
+      }
+    },
+    {
+      "check_id": "answer_pattern_control",
+      "status": "PASS",
+      "details": {
+        "longest_run": 2,
+        "short_period": null,
+        "first_80": "DDACABCCDABBACCADABBDCDACBDCDDBABCCDDACADBCCDBADBCBBCBACADDAACCBBDCAADBBAABCBACC"
+      }
+    },
+    {
+      "check_id": "unit_coverage",
+      "status": "PASS",
+      "details": {
+        "1": 90,
+        "2": 90,
+        "3": 108,
+        "4": 108,
+        "5": 90,
+        "6": 126,
+        "7": 108,
+        "8": 90,
+        "9": 90,
+        "10": 126,
+        "11": 144,
+        "12": 180,
+        "13": 54,
+        "14": 126,
+        "15": 108,
+        "16": 90,
+        "17": 126,
+        "18": 90,
+        "19": 108,
+        "20": 108
+      }
+    },
+    {
+      "check_id": "class_balance",
+      "status": "PASS",
+      "details": {
+        "XI": 1080,
+        "XII": 1080
+      }
+    },
+    {
+      "check_id": "branch_coverage",
+      "status": "PASS",
+      "details": {
+        "Physical Chemistry": 810,
+        "Inorganic Chemistry": 540,
+        "Organic Chemistry": 702,
+        "Practical Chemistry": 108
+      }
+    },
+    {
+      "check_id": "exact_duplicate_screen",
+      "status": "PASS",
+      "details": {
+        "groups": [],
+        "count": 0
+      }
+    },
+    {
+      "check_id": "near_duplicate_numeric_template_screen",
+      "status": "PASS",
+      "details": {
+        "groups": [],
+        "count": 0
+      }
+    },
+    {
+      "check_id": "syllabus_leakage_regression",
+      "status": "PASS",
+      "details": {}
+    },
+    {
+      "check_id": "critical_syllabus_outcome_coverage",
+      "status": "PASS",
+      "details": {}
+    },
+    {
+      "check_id": "figure_references",
+      "status": "PASS",
+      "details": {
+        "missing": [],
+        "unreferenced": [],
+        "contract_ids": []
+      }
+    },
+    {
+      "check_id": "scientific_vector_asset_screen",
+      "status": "PASS",
+      "details": {
+        "invalid_or_text_only": []
+      }
+    },
+    {
+      "check_id": "required_delivery_files",
+      "status": "PASS",
+      "details": {
+        "missing": []
+      }
+    },
+    {
+      "check_id": "export_id_parity",
+      "status": "PASS",
+      "details": {
+        "jsonl": true,
+        "csv": true,
+        "index": true,
+        "questions_only": true,
+        "answers": true
+      }
+    }
+  ],
+  "dataset_sha256": "be594dd7ba8351983af2f78342c59e31ad1e59ad7365e06515f5add986ab7871"
+}

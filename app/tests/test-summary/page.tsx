@@ -1141,11 +1141,11 @@ export default function TestSummaryPage() {
                         {config.label ===
                           "Upcoming" && (
                           <button
-                            onClick={() =>
-                              router.push(
-                                `/test/${test.id}`
-                              )
-                            }
+                           onClick={() =>
+  router.push(
+    `/test/result/${test.id}`
+  )
+}
                             className="mt-4 h-9 px-4 rounded-lg bg-[#6246e5] text-white text-[10px] font-bold inline-flex items-center gap-2"
                           >
                             Start Test

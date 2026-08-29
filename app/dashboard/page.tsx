@@ -1799,11 +1799,11 @@ export default function DashboardPage() {
                       (test) => (
                         <button
                           key={`${test.id}-${test.attemptId || ""}`}
-                          onClick={() =>
-                            router.push(
-                              `/test/${test.id}`
-                            )
-                          }
+onClick={() =>
+  router.push(
+    `/test/result/${test.id}`
+  )
+}
                           className="w-full grid grid-cols-[2fr_.8fr_.7fr_.7fr_.7fr_1fr_20px] gap-3 items-center py-3.5 text-left border-b border-[#f1f2f5] last:border-b-0 hover:bg-[#fbfbfe]"
                         >
                           <span className="min-w-0 flex items-center gap-2">

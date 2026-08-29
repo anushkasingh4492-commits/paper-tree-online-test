@@ -8,6 +8,12 @@ import {
 
 export const runtime = "nodejs";
 
+/*
+ * =========================================================
+ * TYPES
+ * =========================================================
+ */
+
 type GenerateRequest = {
   exam?: string;
   course?: string;
@@ -20,10 +26,9 @@ type GenerateRequest = {
 
   difficulty?: string;
 
-  // Preset system
   presetId?: string;
 
-  // Kept for backward compatibility
+  // Backward compatibility
   questionCount?: number;
   duration?: number;
 };
@@ -50,6 +55,12 @@ type QuestionRow = {
   figure_asset?: string | null;
 };
 
+/*
+ * =========================================================
+ * BASIC HELPERS
+ * =========================================================
+ */
+
 function clean(value: unknown): string {
   return String(value ?? "").trim();
 }
@@ -58,13 +69,152 @@ function normalize(value: unknown): string {
   return clean(value)
     .toLowerCase()
     .replace(/[_-]+/g, " ")
-    .replace(/\s+/g, " ");
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 /*
- * ---------------------------------------------------------
- * CONVERT DATABASE SUBJECT → PRESET SUBJECT
- * ---------------------------------------------------------
+ * =========================================================
+ * EXAM NORMALIZATION
+ *
+ * IMPORTANT:
+ *
+ * The database currently contains:
+ *
+ * MHT-CET
+ *
+ * The UI may send:
+ *
+ * MHT CET
+ * MHTCET
+ * mht-cet
+ * mht cet
+ *
+ * All of these are converted to:
+ *
+ * MHT-CET
+ *
+ * NEET stays:
+ *
+ * NEET
+ *
+ * This prevents MHT-CET and NEET datasets
+ * from getting mixed together.
+ * =========================================================
+ */
+
+function normalizeExam(value: unknown): string {
+  const exam = normalize(value);
+
+  if (
+    exam === "mht cet" ||
+    exam === "mhtcet" ||
+    exam === "mht cet exam" ||
+    exam === "mht cet 2026"
+  ) {
+    return "MHT-CET";
+  }
+
+  if (
+    exam === "neet" ||
+    exam === "neet exam" ||
+    exam === "neet 2026"
+  ) {
+    return "NEET";
+  }
+
+  if (!exam) {
+    return "MHT-CET";
+  }
+
+  return clean(value);
+}
+
+/*
+ * =========================================================
+ * DATABASE EXAM CONDITION
+ * =========================================================
+ *
+ * We normalize common database spellings as well.
+ *
+ * MHT-CET database rows can therefore be matched even if
+ * they contain:
+ *
+ * MHT-CET
+ * MHT CET
+ * MHTCET
+ *
+ * NEET rows remain NEET-only.
+ * =========================================================
+ */function addExamFilter(
+  exam: string,
+  conditions: string[],
+  values: unknown[]
+) {
+  const normalizedExam = normalizeExam(exam);
+
+  const examParam = values.length + 1;
+
+  values.push(normalizedExam);
+
+  /*
+   * MHT-CET
+   *
+   * Matches:
+   * MHT-CET
+   * MHT CET
+   * MHTCET
+   */
+  if (normalizedExam === "MHT-CET") {
+    conditions.push(`
+      LOWER(
+        REGEXP_REPLACE(
+          TRIM(exam),
+          '[_ -]+',
+          '',
+          'g'
+        )
+      )
+      =
+      LOWER(
+        REGEXP_REPLACE(
+          $${examParam}::text,
+          '[_ -]+',
+          '',
+          'g'
+        )
+      )
+    `);
+
+    return;
+  }
+
+  /*
+   * NEET
+   */
+  if (normalizedExam === "NEET") {
+    conditions.push(`
+      LOWER(TRIM(exam))
+      =
+      LOWER($${examParam}::text)
+    `);
+
+    return;
+  }
+
+  /*
+   * OTHER EXAMS
+   */
+  conditions.push(`
+    LOWER(TRIM(exam))
+    =
+    LOWER($${examParam}::text)
+  `);
+}
+/*
+ * =========================================================
+ * SUBJECT NORMALIZATION
+ * =========================================================
  */
 
 function normalizePresetSubject(
@@ -96,9 +246,9 @@ function normalizePresetSubject(
 }
 
 /*
- * ---------------------------------------------------------
- * SUBJECT DISPLAY NAME
- * ---------------------------------------------------------
+ * =========================================================
+ * DATABASE SUBJECT NAME
+ * =========================================================
  */
 
 function displaySubject(
@@ -123,11 +273,51 @@ function displaySubject(
 }
 
 /*
- * ---------------------------------------------------------
- * DIFFICULTY FILTER
- * ---------------------------------------------------------
+ * =========================================================
+ * SUBJECT DATABASE CONDITION
+ * =========================================================
  */
 
+function addSubjectFilter(
+  subject: string,
+  conditions: string[],
+  values: unknown[]
+) {
+  const normalizedSubject =
+    normalizePresetSubject(subject);
+
+  let databaseSubject = clean(subject);
+
+  if (normalizedSubject) {
+    databaseSubject =
+      displaySubject(normalizedSubject);
+  }
+
+  const subjectParam =
+    values.length + 1;
+
+  values.push(
+    normalize(databaseSubject)
+  );
+
+  conditions.push(`
+    LOWER(
+      REGEXP_REPLACE(
+        TRIM(subject),
+        '[_-]+',
+        ' ',
+        'g'
+      )
+    ) =
+    $${subjectParam}
+  `);
+}
+
+/*
+ * =========================================================
+ * DIFFICULTY FILTER
+ * =========================================================
+ */
 function addDifficultyFilter(
   difficulty: string,
   conditions: string[]
@@ -138,57 +328,123 @@ function addDifficultyFilter(
   /*
    * Easy
    */
-
   if (normalizedDifficulty === "easy") {
     conditions.push(`
       LOWER(TRIM(difficulty)) = 'easy'
     `);
+
+    return;
   }
 
   /*
    * Challenging
    *
-   * Medium + Hard
+   * Medium + Difficult
    */
-
   if (
-    normalizedDifficulty ===
-    "challenging"
+    normalizedDifficulty === "challenging"
   ) {
     conditions.push(`
       LOWER(TRIM(difficulty)) IN (
         'medium',
-        'hard'
+        'difficult'
       )
     `);
+
+    return;
   }
 
   /*
    * Difficult
    *
-   * Hard only
+   * Difficult only
    */
-
   if (
-    normalizedDifficulty ===
-    "difficult"
+    normalizedDifficulty === "difficult"
   ) {
     conditions.push(`
-      LOWER(TRIM(difficulty)) = 'hard'
+      LOWER(TRIM(difficulty)) = 'difficult'
     `);
+
+    return;
   }
 
   /*
-   * Balanced
+   * Balanced / Mixed
    *
-   * No difficulty restriction.
+   * No difficulty filter.
    */
 }
 
+  
+
+
 /*
- * ---------------------------------------------------------
- * BUILD SUBJECT + CHAPTER CONDITIONS
- * ---------------------------------------------------------
+ * =========================================================
+ * CHAPTER FILTER
+ * =========================================================
+ */
+
+function addChapterFilter(
+  chapters: string[],
+  conditions: string[],
+  values: unknown[]
+) {
+  const validChapters =
+    chapters
+      .map(clean)
+      .filter(Boolean);
+
+  if (validChapters.length === 0) {
+    return;
+  }
+
+  const chapterParams =
+    validChapters.map(
+      (chapter) => {
+        const param =
+          values.length + 1;
+
+        values.push(
+          normalize(chapter)
+        );
+
+        return `$${param}`;
+      }
+    );
+
+  conditions.push(`
+    LOWER(
+      REGEXP_REPLACE(
+        TRIM(chapter_name),
+        '[_-]+',
+        ' ',
+        'g'
+      )
+    )
+    = ANY(
+      ARRAY[
+        ${chapterParams.join(", ")}
+      ]::text[]
+    )
+  `);
+}
+
+/*
+ * =========================================================
+ * SUBJECT + CHAPTER FILTER FOR NORMAL MODE
+ * =========================================================
+ *
+ * Keeps subject/chapter relationship intact.
+ *
+ * Example:
+ *
+ * Physics → Current Electricity
+ * Chemistry → Chemical Bonding
+ *
+ * Physics cannot accidentally receive
+ * Chemistry chapters.
+ * =========================================================
  */
 
 function addSubjectChapterFilters(
@@ -199,21 +455,6 @@ function addSubjectChapterFilters(
     | undefined,
   subjects: string[]
 ) {
-  /*
-   * If chapters were selected separately
-   * for each subject, preserve that relationship.
-   *
-   * Example:
-   *
-   * Physics → Current Electricity
-   * Chemistry → Chemical Bonding
-   *
-   * This prevents:
-   *
-   * Physics → Chemical Bonding
-   * Chemistry → Current Electricity
-   */
-
   if (
     chaptersBySubject &&
     Object.keys(chaptersBySubject).length > 0
@@ -270,7 +511,8 @@ function addSubjectChapterFilters(
                     ' ',
                     'g'
                   )
-                ) = $${subjectParam}
+                ) =
+                $${subjectParam}
 
                 AND
 
@@ -281,7 +523,8 @@ function addSubjectChapterFilters(
                     ' ',
                     'g'
                   )
-                ) = $${chapterParam}
+                ) =
+                $${chapterParam}
               )
             `;
           }
@@ -289,9 +532,7 @@ function addSubjectChapterFilters(
 
       conditions.push(`
         (
-          ${pairConditions.join(
-            " OR "
-          )}
+          ${pairConditions.join(" OR ")}
         )
       `);
 
@@ -301,8 +542,7 @@ function addSubjectChapterFilters(
 
   /*
    * No chapter-specific selection.
-   *
-   * Filter only by subjects.
+   * Filter only by selected subjects.
    */
 
   if (subjects.length > 0) {
@@ -328,9 +568,39 @@ function addSubjectChapterFilters(
 }
 
 /*
- * ---------------------------------------------------------
+ * =========================================================
+ * QUESTION SELECT
+ * =========================================================
+ */
+
+const QUESTION_SELECT = `
+  SELECT
+    id,
+    exam,
+    subject,
+    standard,
+    chapter_number,
+    chapter_name,
+    major_topic,
+    subtopic,
+    concept_tested,
+    stem,
+    options,
+    correct_option,
+    correct_answer_text,
+    solution,
+    formula_principle,
+    difficulty,
+    estimated_time,
+    question_type,
+    figure_asset
+  FROM questions
+`;
+
+/*
+ * =========================================================
  * MAIN POST
- * ---------------------------------------------------------
+ * =========================================================
  */
 
 export async function POST(
@@ -339,7 +609,7 @@ export async function POST(
   try {
     /*
      * -------------------------------------------------------
-     * DATABASE
+     * DATABASE CHECK
      * -------------------------------------------------------
      */
 
@@ -348,7 +618,7 @@ export async function POST(
         {
           success: false,
           error:
-            "DATABASE_URL is not configured",
+            "DATABASE_URL is not configured.",
         },
         { status: 500 }
       );
@@ -381,17 +651,36 @@ export async function POST(
 
     /*
      * -------------------------------------------------------
-     * REQUEST
+     * REQUEST BODY
      * -------------------------------------------------------
      */
 
     const body =
       (await request.json()) as GenerateRequest;
 
+    /*
+     * -------------------------------------------------------
+     * EXAM
+     *
+     * IMPORTANT:
+     *
+     * Do not use course as the database dataset
+     * when a proper exam value exists.
+     * -------------------------------------------------------
+     */
+
     const exam =
-      clean(body.exam) ||
-      clean(body.course) ||
-      "MHT-CET";
+      normalizeExam(
+        body.exam ||
+          body.course ||
+          "MHT-CET"
+      );
+
+    /*
+     * -------------------------------------------------------
+     * SUBJECTS
+     * -------------------------------------------------------
+     */
 
     const subjects =
       Array.isArray(body.subjects)
@@ -402,12 +691,24 @@ export async function POST(
           ? [clean(body.subject)]
           : [];
 
+    /*
+     * -------------------------------------------------------
+     * CHAPTERS
+     * -------------------------------------------------------
+     */
+
     const chapters =
       Array.isArray(body.chapters)
         ? body.chapters
             .map(clean)
             .filter(Boolean)
         : [];
+
+    /*
+     * -------------------------------------------------------
+     * DIFFICULTY
+     * -------------------------------------------------------
+     */
 
     const difficulty =
       clean(body.difficulty) ||
@@ -443,16 +744,13 @@ export async function POST(
     /*
      * -------------------------------------------------------
      * QUESTION COUNT + DURATION
-     *
-     * If a preset exists, NEVER trust the
-     * client-provided question count/duration.
-     *
-     * Calculate them from the preset.
      * -------------------------------------------------------
      */
 
     let questionCount: number;
     let duration: number;
+    let presetTotalMarks: number | null =
+      null;
 
     if (preset) {
       const totalQuestions =
@@ -460,7 +758,7 @@ export async function POST(
           preset.subjects
         ).reduce(
           (sum, count) =>
-            sum + (count || 0),
+            sum + (Number(count) || 0),
           0
         );
 
@@ -472,11 +770,6 @@ export async function POST(
             sum,
             [subject, count]
           ) => {
-            /*
-             * Maths = 2 marks
-             * Other subjects = 1 mark
-             */
-
             const marksPerQuestion =
               subject === "maths"
                 ? 2
@@ -484,12 +777,15 @@ export async function POST(
 
             return (
               sum +
-              (count || 0) *
+              (Number(count) || 0) *
                 marksPerQuestion
             );
           },
           0
         );
+
+      presetTotalMarks =
+        totalMarks;
 
       const rawMinutes =
         totalMarks * 0.9;
@@ -502,10 +798,6 @@ export async function POST(
       questionCount =
         totalQuestions;
     } else {
-      /*
-       * Backward compatibility
-       */
-
       questionCount =
         Math.max(
           1,
@@ -524,7 +816,7 @@ export async function POST(
 
     /*
      * -------------------------------------------------------
-     * LOG
+     * LOG REQUEST
      * -------------------------------------------------------
      */
 
@@ -585,12 +877,7 @@ export async function POST(
       const presetSubjects =
         Object.keys(
           preset.subjects
-        );
-
-      /*
-       * Convert selected UI subjects
-       * into preset subject names.
-       */
+        ) as PresetSubject[];
 
       const selectedPresetSubjects =
         subjects
@@ -604,17 +891,14 @@ export async function POST(
               subject !== null
           );
 
-      /*
-       * Every preset subject must be
-       * available in the selected subjects.
-       */
-const missingSubjects =
-  presetSubjects.filter(
-    (presetSubject) =>
-      !selectedPresetSubjects.includes(
-        presetSubject as PresetSubject
-      )
-  ) as PresetSubject[];
+      const missingSubjects =
+        presetSubjects.filter(
+          (presetSubject) =>
+            !selectedPresetSubjects.includes(
+              presetSubject
+            )
+        );
+
       if (
         missingSubjects.length > 0
       ) {
@@ -633,26 +917,26 @@ const missingSubjects =
 
     /*
      * -------------------------------------------------------
-     * BUILD BASE CONDITIONS
+     * BASE CONDITIONS
      * -------------------------------------------------------
      */
 
-    const conditions: string[] = [
-      `
-        LOWER(TRIM(exam))
-        =
-        LOWER(TRIM($1))
-      `,
-    ];
+    const conditions: string[] = [];
 
-    const values: unknown[] = [
-      exam,
-    ];
+    const values: unknown[] = [];
 
     /*
-     * -------------------------------------------------------
-     * DIFFICULTY
-     * -------------------------------------------------------
+     * EXAM FILTER
+     */
+
+    addExamFilter(
+      exam,
+      conditions,
+      values
+    );
+
+    /*
+     * DIFFICULTY FILTER
      */
 
     addDifficultyFilter(
@@ -662,14 +946,8 @@ const missingSubjects =
 
     /*
      * -------------------------------------------------------
-     * NON-PRESET SUBJECT FILTER
+     * NORMAL MODE
      * -------------------------------------------------------
-     *
-     * If there is no preset, use the normal
-     * subject/chapter filtering.
-     *
-     * With a preset, subject quotas are handled
-     * separately below.
      */
 
     if (!preset) {
@@ -683,28 +961,20 @@ const missingSubjects =
 
     /*
      * -------------------------------------------------------
-     * PRESET MODE
+     * SELECTED QUESTIONS
      * -------------------------------------------------------
-     *
-     * Each subject gets its exact quota.
-     *
-     * Example PCM-150:
-     *
-     * Physics    → 50
-     * Chemistry  → 50
-     * Mathematics → 50
      */
 
     const selectedQuestions: QuestionRow[] =
       [];
 
-    if (preset) {
-      /*
-       * -----------------------------------------------------
-       * GET QUESTIONS SUBJECT BY SUBJECT
-       * -----------------------------------------------------
-       */
+    /*
+     * =======================================================
+     * PRESET MODE
+     * =======================================================
+     */
 
+    if (preset) {
       for (
         const [
           presetSubject,
@@ -722,18 +992,15 @@ const missingSubjects =
           continue;
         }
 
-        /*
-         * Convert preset subject name
-         * into database subject name.
-         */
-
         const databaseSubject =
           displaySubject(
             presetSubject as PresetSubject
           );
 
         /*
-         * Clone base conditions.
+         * ---------------------------------------------------
+         * SUBJECT CONDITIONS
+         * ---------------------------------------------------
          */
 
         const subjectConditions =
@@ -742,94 +1009,63 @@ const missingSubjects =
         const subjectValues =
           [...values];
 
-        /*
-         * Add exact subject.
-         */
-
-        const subjectParam =
-          subjectValues.length + 1;
-
-        subjectValues.push(
-          normalize(
-            databaseSubject
-          )
+        addSubjectFilter(
+          databaseSubject,
+          subjectConditions,
+          subjectValues
         );
 
-        subjectConditions.push(`
-          LOWER(
-            REGEXP_REPLACE(
-              TRIM(subject),
-              '[_-]+',
-              ' ',
-              'g'
-            )
-          )
-          =
-          $${subjectParam}
-        `);
-
         /*
          * ---------------------------------------------------
-         * CHAPTER FILTER FOR THIS SUBJECT
+         * SUBJECT-SPECIFIC CHAPTERS
          * ---------------------------------------------------
          */
 
-        const selectedSubjectChapters =
-          body.chaptersBySubject
-            ? Object.entries(
-                body.chaptersBySubject
-              ).find(
-                ([subject]) =>
-                  normalize(
-                    subject
-                  ) ===
-                  normalize(
-                    databaseSubject
-                  )
-              )?.[1] || []
-            : [];
+        let selectedSubjectChapters: string[] =
+          [];
 
         if (
-          selectedSubjectChapters.length >
-          0
+          body.chaptersBySubject
         ) {
-          const chapterParams =
-            selectedSubjectChapters.map(
-              (chapter) => {
-                const param =
-                  subjectValues.length +
-                  1;
-
-                subjectValues.push(
-                  normalize(chapter)
-                );
-
-                return `$${param}`;
-              }
+          const chapterEntry =
+            Object.entries(
+              body.chaptersBySubject
+            ).find(
+              ([subject]) =>
+                normalize(
+                  subject
+                ) ===
+                normalize(
+                  databaseSubject
+                ) ||
+                normalizePresetSubject(
+                  subject
+                ) ===
+                  (presetSubject as PresetSubject)
             );
 
-          subjectConditions.push(`
-            LOWER(
-              REGEXP_REPLACE(
-                TRIM(chapter_name),
-                '[_-]+',
-                ' ',
-                'g'
-              )
+          if (
+            chapterEntry &&
+            Array.isArray(
+              chapterEntry[1]
             )
-            = ANY(
-              ARRAY[
-                ${chapterParams.join(
-                  ", "
-                )}
-              ]::text[]
-            )
-          `);
+          ) {
+            selectedSubjectChapters =
+              chapterEntry[1]
+                .map(clean)
+                .filter(Boolean);
+          }
         }
+
+        addChapterFilter(
+          selectedSubjectChapters,
+          subjectConditions,
+          subjectValues
+        );
 
         /*
          * ---------------------------------------------------
-         * COUNT AVAILABLE FOR THIS SUBJECT
+         * COUNT AVAILABLE QUESTIONS
          * ---------------------------------------------------
          */
 
@@ -855,7 +1091,7 @@ const missingSubjects =
           );
 
         console.log(
-          `${databaseSubject}: ${availableForSubject} available, ${count} required`
+          `[${exam}] ${databaseSubject}: ${availableForSubject} available, ${count} required`
         );
 
         /*
@@ -871,22 +1107,35 @@ const missingSubjects =
           return Response.json(
             {
               success: false,
+
               error:
-                `Only ${availableForSubject} ${databaseSubject} question${availableForSubject === 1 ? "" : "s"} available for the selected criteria, but the "${preset.name}" preset requires ${count}.`,
+                `Only ${availableForSubject} ${databaseSubject} question${availableForSubject === 1 ? "" : "s"} available for the selected ${exam} criteria, but the "${preset.name}" preset requires ${count}.`,
+
               details: {
+                exam,
+
                 presetId:
                   preset.id,
+
                 presetName:
                   preset.name,
+
                 subject:
                   databaseSubject,
+
                 availableQuestions:
                   availableForSubject,
+
                 requiredQuestions:
                   count,
+
                 difficulty,
+
                 chapters:
                   selectedSubjectChapters,
+
+                message:
+                  "Check the selected exam, difficulty, and chapter filters.",
               },
             },
             { status: 400 }
@@ -895,7 +1144,7 @@ const missingSubjects =
 
         /*
          * ---------------------------------------------------
-         * GET RANDOM QUESTIONS FOR SUBJECT
+         * RANDOM QUESTIONS
          * ---------------------------------------------------
          */
 
@@ -906,27 +1155,7 @@ const missingSubjects =
           ];
 
         const questionQuery = `
-          SELECT
-            id,
-            exam,
-            subject,
-            standard,
-            chapter_number,
-            chapter_name,
-            major_topic,
-            subtopic,
-            concept_tested,
-            stem,
-            options,
-            correct_option,
-            correct_answer_text,
-            solution,
-            formula_principle,
-            difficulty,
-            estimated_time,
-            question_type,
-            figure_asset
-          FROM questions
+          ${QUESTION_SELECT}
           WHERE
             ${subjectConditions.join(
               " AND "
@@ -945,7 +1174,7 @@ const missingSubjects =
           result.rows as QuestionRow[];
 
         /*
-         * Safety check.
+         * Safety check
          */
 
         if (
@@ -955,8 +1184,19 @@ const missingSubjects =
           return Response.json(
             {
               success: false,
+
               error:
-                `Unable to collect the required number of ${databaseSubject} questions.`,
+                `Unable to collect the required ${count} ${databaseSubject} questions from the ${exam} dataset.`,
+
+              details: {
+                exam,
+                subject:
+                  databaseSubject,
+                required:
+                  count,
+                found:
+                  subjectQuestions.length,
+              },
             },
             { status: 500 }
           );
@@ -968,8 +1208,14 @@ const missingSubjects =
       }
     } else {
       /*
+       * =====================================================
+       * NORMAL MODE
+       * =====================================================
+       */
+
+      /*
        * -----------------------------------------------------
-       * NORMAL NON-PRESET MODE
+       * COUNT
        * -----------------------------------------------------
        */
 
@@ -995,27 +1241,42 @@ const missingSubjects =
         );
 
       console.log(
-        "Matching questions:",
+        `[${exam}] Matching questions:`,
         available
       );
+
+      /*
+       * -----------------------------------------------------
+       * NO QUESTIONS
+       * -----------------------------------------------------
+       */
 
       if (available === 0) {
         return Response.json(
           {
             success: false,
+
             error:
-              "No questions are available for the selected criteria.",
+              `No ${exam} questions are available for the selected criteria.`,
+
             details: {
               exam,
               subjects,
               chapters,
               difficulty,
-              availableQuestions: 0,
+              availableQuestions:
+                0,
             },
           },
           { status: 404 }
         );
       }
+
+      /*
+       * -----------------------------------------------------
+       * NOT ENOUGH
+       * -----------------------------------------------------
+       */
 
       if (
         available <
@@ -1024,15 +1285,19 @@ const missingSubjects =
         return Response.json(
           {
             success: false,
+
             error:
-              `Only ${available} question${available === 1 ? "" : "s"} available for the selected criteria. You requested ${questionCount}.`,
+              `Only ${available} ${exam} questions are available for the selected criteria. You requested ${questionCount}.`,
+
             details: {
               exam,
               subjects,
               chapters,
               difficulty,
+
               availableQuestions:
                 available,
+
               requestedQuestions:
                 questionCount,
             },
@@ -1041,33 +1306,19 @@ const missingSubjects =
         );
       }
 
+      /*
+       * -----------------------------------------------------
+       * RANDOM QUESTIONS
+       * -----------------------------------------------------
+       */
+
       const questionValues = [
         ...values,
         questionCount,
       ];
 
       const questionQuery = `
-        SELECT
-          id,
-          exam,
-          subject,
-          standard,
-          chapter_number,
-          chapter_name,
-          major_topic,
-          subtopic,
-          concept_tested,
-          stem,
-          options,
-          correct_option,
-          correct_answer_text,
-          solution,
-          formula_principle,
-          difficulty,
-          estimated_time,
-          question_type,
-          figure_asset
-        FROM questions
+        ${QUESTION_SELECT}
         WHERE
           ${conditions.join(
             " AND "
@@ -1088,9 +1339,9 @@ const missingSubjects =
     }
 
     /*
-     * -------------------------------------------------------
-     * FINAL QUESTION SAFETY CHECK
-     * -------------------------------------------------------
+     * =======================================================
+     * FINAL SAFETY CHECK
+     * =======================================================
      */
 
     if (
@@ -1100,11 +1351,16 @@ const missingSubjects =
       return Response.json(
         {
           success: false,
+
           error:
-            "Unable to collect enough questions for this test.",
+            `Unable to collect enough ${exam} questions for this test.`,
+
           details: {
+            exam,
+
             requested:
               questionCount,
+
             found:
               selectedQuestions.length,
           },
@@ -1114,49 +1370,20 @@ const missingSubjects =
     }
 
     /*
-     * -------------------------------------------------------
-     * SHUFFLE FINAL QUESTIONS
-     * -------------------------------------------------------
-     *
-     * Subject quotas are already satisfied.
-     * Now randomize their final order.
-     * -------------------------------------------------------
-     */
-
-    for (
-      let i =
-        selectedQuestions.length - 1;
-      i > 0;
-      i--
-    ) {
-      const j =
-        Math.floor(
-          Math.random() *
-            (i + 1)
-        );
-
-      [
-        selectedQuestions[i],
-        selectedQuestions[j],
-      ] = [
-        selectedQuestions[j],
-        selectedQuestions[i],
-      ];
-    }
-
-    /*
-     * -------------------------------------------------------
+     * =======================================================
      * CREATE TEST ID
-     * -------------------------------------------------------
+     * =======================================================
      */
 
     const testId =
-      `test-${Date.now()}`;
+      `test-${Date.now()}-${Math.random()
+        .toString(36)
+        .slice(2, 8)}`;
 
     /*
-     * -------------------------------------------------------
+     * =======================================================
      * SAVE TEST
-     * -------------------------------------------------------
+     * =======================================================
      */
 
     const client =
@@ -1168,39 +1395,50 @@ const missingSubjects =
       );
 
       /*
-       * Save test.
+       * Save test
        */
 
       await client.query(
         `
-       INSERT INTO tests (
-  id,
-  exam,
-  question_count,
-  questions,
-  difficulty
-)
-VALUES (
-  $1,
-  $2,
-  $3,
-  $4::jsonb,
-  $5
-)
+          INSERT INTO tests (
+            id,
+            exam,
+            question_count,
+            questions,
+            difficulty
+          )
+          VALUES (
+            $1,
+            $2,
+            $3,
+            $4::jsonb,
+            $5
+          )
         `,
-       [
-  testId,
-  exam,
-  selectedQuestions.length,
-  JSON.stringify(
-    selectedQuestions
-  ),
-  difficulty,
-]
+        [
+          testId,
+
+          /*
+           * Store the normalized exam.
+           *
+           * MHT CET becomes MHT-CET.
+           * NEET remains NEET.
+           */
+
+          exam,
+
+          selectedQuestions.length,
+
+          JSON.stringify(
+            selectedQuestions
+          ),
+
+          difficulty,
+        ]
       );
 
       /*
-       * Connect test to student.
+       * Connect test to student
        */
 
       await client.query(
@@ -1222,8 +1460,12 @@ VALUES (
           DO NOTHING
         `,
         [
-          `student-test-${Date.now()}`,
+          `student-test-${Date.now()}-${Math.random()
+            .toString(36)
+            .slice(2, 8)}`,
+
           studentId,
+
           testId,
         ]
       );
@@ -1242,9 +1484,9 @@ VALUES (
     }
 
     /*
-     * -------------------------------------------------------
-     * SUCCESS
-     * -------------------------------------------------------
+     * =======================================================
+     * SUCCESS LOG
+     * =======================================================
      */
 
     console.log(
@@ -1258,6 +1500,11 @@ VALUES (
     console.log(
       "Test ID:",
       testId
+    );
+
+    console.log(
+      "Exam:",
+      exam
     );
 
     console.log(
@@ -1279,6 +1526,12 @@ VALUES (
       "================================="
     );
 
+    /*
+     * =======================================================
+     * RESPONSE
+     * =======================================================
+     */
+
     return Response.json({
       success: true,
 
@@ -1291,10 +1544,16 @@ VALUES (
 
       duration,
 
+      totalMarks:
+        presetTotalMarks,
+
       preset: preset
         ? {
             id: preset.id,
-            name: preset.name,
+
+            name:
+              preset.name,
+
             subjects:
               preset.subjects,
           }
@@ -1303,9 +1562,24 @@ VALUES (
       configuration: {
         testId,
 
+        /*
+         * Store normalized exam here too.
+         */
+
+        exam,
+
         course:
           body.course ||
           exam,
+
+        studentGroup:
+          clean(
+            (
+              body as GenerateRequest & {
+                studentGroup?: string;
+              }
+            ).studentGroup
+          ),
 
         subject:
           body.subject ||
@@ -1325,10 +1599,16 @@ VALUES (
         presetId:
           preset?.id || null,
 
+        presetName:
+          preset?.name || null,
+
         questionCount:
           selectedQuestions.length,
 
         duration,
+
+        totalMarks:
+          presetTotalMarks,
 
         createdAt:
           new Date().toISOString(),
@@ -1346,10 +1626,11 @@ VALUES (
     return Response.json(
       {
         success: false,
+
         error:
           error instanceof Error
             ? error.message
-            : "Failed to generate test",
+            : "Failed to generate test.",
       },
       { status: 500 }
     );

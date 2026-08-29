@@ -60,7 +60,7 @@ const COURSE_CONFIG: Record<
       "Chemistry",
       "Biology",
     ],
-    available: false,
+    available: true,
   },
 };
 

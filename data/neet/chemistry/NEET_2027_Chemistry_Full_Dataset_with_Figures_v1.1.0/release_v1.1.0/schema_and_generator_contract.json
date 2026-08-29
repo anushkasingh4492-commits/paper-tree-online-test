@@ -1,0 +1,51 @@
+{
+  "record_count": 2160,
+  "required_fields": [
+    "id",
+    "standard",
+    "subject",
+    "discipline",
+    "source_class",
+    "unit",
+    "chapter",
+    "topic",
+    "subtopic",
+    "question_type",
+    "question",
+    "options",
+    "correct_option",
+    "correct_answer",
+    "explanation",
+    "difficulty",
+    "cognitive_level",
+    "marks_correct",
+    "marks_incorrect",
+    "marks_unattempted",
+    "source_document",
+    "source_chapter",
+    "source_page",
+    "syllabus_reference",
+    "figures",
+    "figure_required",
+    "tags",
+    "generator_eligible",
+    "validation_status"
+  ],
+  "nullable_fields": [
+    "source_page",
+    "figure_alt_text",
+    "figure_asset"
+  ],
+  "option_keys": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "encoding": "UTF-8",
+  "marking_scheme": {
+    "correct": 4,
+    "incorrect": -1,
+    "unattempted": 0
+  }
+}

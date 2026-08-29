@@ -1,0 +1,24 @@
+{
+  "release": "NEET 2027 Physics Full Dataset with Figures",
+  "version": "1.0.0",
+  "build_date": "2026-08-21",
+  "records": 2160,
+  "target_exam_year": 2027,
+  "student_cohort": "2025-2027",
+  "formats": [
+    "JSON",
+    "JSONL",
+    "CSV"
+  ],
+  "figures": {
+    "linked_question_count": 216,
+    "required_question_count": 111,
+    "distinct_assets": 99,
+    "license_status": "Original figures created for this release"
+  },
+  "difficulty_status": "editorial provisional; empirical calibration requires student response data",
+  "errata_status": "PASS",
+  "independent_validation_status": "PASS",
+  "unresolved_errors": 0,
+  "validation_status": "PASS"
+}

@@ -1,0 +1,190 @@
+{
+  "dataset": "NEET_2027_Biology_Full_Dataset_with_Figures",
+  "version": "1.5.4",
+  "build_date": "2026-08-22",
+  "hash_algorithm": "SHA-256",
+  "manifest_self_reference_policy": "manifest.json is excluded from its own file table because embedding its final hash would change that hash.",
+  "file_count_excluding_manifest": 36,
+  "files": [
+    {
+      "relative_path": "answers_and_explanations.json",
+      "file_size": 1592281,
+      "sha256": "0cf80b687339be54b3753245c3f99c2ebeda11405a9060406609cfadbf9ffcc8"
+    },
+    {
+      "relative_path": "coverage_blueprint.json",
+      "file_size": 76790,
+      "sha256": "eb81c4ea15e59dc777ff4c0f6dde17b397d4294fe2d963ca5f2773d4b820739e"
+    },
+    {
+      "relative_path": "errata_report.json",
+      "file_size": 890038,
+      "sha256": "0de629ebdfec23864e8db5ad216a55dcdd4b1e51669c6f1b99a0e0fdf199048b"
+    },
+    {
+      "relative_path": "errata_report.md",
+      "file_size": 842,
+      "sha256": "3d35cdb2c7825d161f1345a951dce49f2acf48166e778a17033d2de9bfe631da"
+    },
+    {
+      "relative_path": "figures/NEET27-BIO-XI-CH09-0109.png",
+      "file_size": 30947,
+      "sha256": "d6fc237728a5163f2efea8eb417e235c266c20c26276507a53a1ac3a7a7de261"
+    },
+    {
+      "relative_path": "figures/NEET27-BIO-XI-CH09-0110.png",
+      "file_size": 37440,
+      "sha256": "9989eb3119fd6c46e2eae69660bf4181f9ec633eaf491a2ce1d676f95fa07cdd"
+    },
+    {
+      "relative_path": "figures/NEET27-BIO-XI-CH12-0013.png",
+      "file_size": 47758,
+      "sha256": "d7a32182a98bd7672f83517400fc7ad2ea2ed8e2a3e3901f9d10bb9fda0fb3af"
+    },
+    {
+      "relative_path": "figures/NEET27-BIO-XI-CH12-0055.png",
+      "file_size": 36431,
+      "sha256": "97b7fdc397a54730dfa0c042664c8f14fe2f9c87b64653e2b39f5ffe82d57080"
+    },
+    {
+      "relative_path": "figures/NEET27-BIO-XI-CH13-FIG01.png",
+      "file_size": 36123,
+      "sha256": "3884b6305960d16cf36c8b67689a5ab66f6fb7875dca3e2d234740901849c4ad"
+    },
+    {
+      "relative_path": "figures/NEET27-BIO-XI-CH14-FIG01.png",
+      "file_size": 48262,
+      "sha256": "ff091bd66bfe934d86c63e5b44cc5eb06bb92423ea180946a116f817328c82a3"
+    },
+    {
+      "relative_path": "figures/NEET27-BIO-XI-CH15-FIG02.png",
+      "file_size": 32634,
+      "sha256": "a0f63f0aa420575a9ebc6487440db572db61eae80d4da4f7e81b51b55fedcb13"
+    },
+    {
+      "relative_path": "figures/NEET27-BIO-XI-CH16-0039.png",
+      "file_size": 31920,
+      "sha256": "aef197893c52acecc2d960bbc4f86acda70a91a799bf58c2403047da725f36cc"
+    },
+    {
+      "relative_path": "figures/NEET27-BIO-XI-CH16-0053.png",
+      "file_size": 36321,
+      "sha256": "825dd7b1bfb9d6af051b8483ed456a4b85decb034a8e33d1613ceabce1518fd2"
+    },
+    {
+      "relative_path": "figures/NEET27-BIO-XI-CH16-0054.png",
+      "file_size": 41852,
+      "sha256": "13401f90407b2f089d8ef372bf4b72f06cde16c5e25f332673c1a817f19ac870"
+    },
+    {
+      "relative_path": "figures/NEET27-BIO-XII-CH01-FIG02.png",
+      "file_size": 67603,
+      "sha256": "b026670e422c2b951f64fcea0b71ac2ffaceda50c23960edc75f19ab5748b111"
+    },
+    {
+      "relative_path": "figures/NEET27-BIO-XII-CH02-FIG01.png",
+      "file_size": 49673,
+      "sha256": "6a4751217757827fcf29314effa2b4db4fc6872ded783c190573c7d4d693342d"
+    },
+    {
+      "relative_path": "figures/NEET27-BIO-XII-CH02-FIG02.png",
+      "file_size": 48990,
+      "sha256": "c54468a245c2822a11f0cdb455de7386a536122789cb55107939dad45ae73ce0"
+    },
+    {
+      "relative_path": "figures/NEET27-BIO-XII-CH04-FIG01.png",
+      "file_size": 43572,
+      "sha256": "e48311e5747114128a3fc0b7194b2c4e54df7756875bcb24a9947d069f9916b9"
+    },
+    {
+      "relative_path": "figures/NEET27-BIO-XII-CH04-FIG02.png",
+      "file_size": 40080,
+      "sha256": "01bcf072f8ed22de01c11d19f4040e2539bc3ab7a5d32d02db8fb952b94c090e"
+    },
+    {
+      "relative_path": "figures/NEET27-BIO-XII-CH05-FIG01.png",
+      "file_size": 67374,
+      "sha256": "cbcbde6d1a76abe9bfebf84c9ae1baceefaf9c8f13ce851c19cfa5764e8baec3"
+    },
+    {
+      "relative_path": "figures/NEET27-BIO-XII-CH06-FIG01.png",
+      "file_size": 38435,
+      "sha256": "67ee559176e3a156bcb313c5b651af57eb231df4d40e1a0e02302f5c9ffb21a0"
+    },
+    {
+      "relative_path": "figures/NEET27-BIO-XII-CH06-FIG02.png",
+      "file_size": 56656,
+      "sha256": "b0afb248eb53786c7487f0ceffc3849c7389b27282b731795f2138424d9b128a"
+    },
+    {
+      "relative_path": "figures/NEET27-BIO-XII-CH07-FIG01.png",
+      "file_size": 44010,
+      "sha256": "9fc9d62d044fb45b53559305ae7a4edc2f6570b81ff4ed2e33214c406c283c6d"
+    },
+    {
+      "relative_path": "figures/NEET27-BIO-XII-CH07-FIG02.png",
+      "file_size": 64023,
+      "sha256": "7b31481b594f5fea9dc234157357461924b42c09cd32d4c9c78e490c72c36c24"
+    },
+    {
+      "relative_path": "figures/NEET27-BIO-XII-CH09-FIG01.png",
+      "file_size": 42548,
+      "sha256": "328382bbc822e12a0b2224eebcc55f1539023dcafa240c20757654e90c48a5e2"
+    },
+    {
+      "relative_path": "figures/NEET27-BIO-XII-CH09-FIG02.png",
+      "file_size": 51590,
+      "sha256": "d3fd586ffefbf8fc19b9096c481f00743c4c3b37778db00adc52d66c0ed8cfd9"
+    },
+    {
+      "relative_path": "figures/NEET27-BIO-XII-CH11-FIG01.png",
+      "file_size": 43673,
+      "sha256": "afff5234e522f67ec840278689850a811fa03f9548eb48a64e3cfb8271f7c47c"
+    },
+    {
+      "relative_path": "figures/NEET27-BIO-XII-CH11-FIG02.png",
+      "file_size": 39388,
+      "sha256": "422f36d084b0e6b5342a86c0e3d4f6cdef2705e26f4926eb63ac96f97e1fa8c0"
+    },
+    {
+      "relative_path": "figures/NEET27-BIO-XII-CH12-FIG02.png",
+      "file_size": 56455,
+      "sha256": "917df5ac9bfab19e36e565d0fc8460b0f2f201debbab262adc5330ead574abec"
+    },
+    {
+      "relative_path": "figures/NEET27-BIO-XII-CH13-FIG01.png",
+      "file_size": 37621,
+      "sha256": "989092c4ab60f7cca6be2d46c4915e548f0e56b87c9e5321894c5234d1ba7954"
+    },
+    {
+      "relative_path": "independent_validation.json",
+      "file_size": 1888,
+      "sha256": "5af52a5f8f916b612179e30d55c5f76f31ea6d6dc3030c660521642a4dff62ac"
+    },
+    {
+      "relative_path": "question_bank.json",
+      "file_size": 4259737,
+      "sha256": "7e211e8688c2c480ff373f1956ad6e20f69f2361b474a276df738de517477db9"
+    },
+    {
+      "relative_path": "question_index.csv",
+      "file_size": 410090,
+      "sha256": "7a06b78c9a6603941c584a9ae7eb08854b6fde9ce3fdb128f9a0a33693c161d5"
+    },
+    {
+      "relative_path": "questions_only.json",
+      "file_size": 3507734,
+      "sha256": "fcc04b87fa62cf0909a8fdfe7d43e3af0fa591f91afe14f56564522dd12e63d5"
+    },
+    {
+      "relative_path": "README.md",
+      "file_size": 1946,
+      "sha256": "b2df17c03465004a0e55079628b6e010768002783d15b0ffb11993912afcfc98"
+    },
+    {
+      "relative_path": "schema_and_generator_contract.json",
+      "file_size": 3916,
+      "sha256": "024f7c50c8fb6b967b88d0c33de811ceae09a9c246853a7707a8c61ad6f40605"
+    }
+  ]
+}

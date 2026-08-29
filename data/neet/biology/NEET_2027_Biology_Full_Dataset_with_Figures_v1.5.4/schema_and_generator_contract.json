@@ -1,0 +1,175 @@
+{
+  "dataset": "NEET_2027_Biology_Full_Dataset_with_Figures",
+  "version": "1.5.4",
+  "record_type": "four-option single-correct NEET-style MCQ",
+  "required_fields": [
+    "chapter",
+    "cognitive_level",
+    "correct_answer",
+    "correct_option",
+    "difficulty",
+    "discipline",
+    "explanation",
+    "figure_required",
+    "figures",
+    "generator_eligible",
+    "id",
+    "marks_correct",
+    "marks_incorrect",
+    "marks_unattempted",
+    "options",
+    "question",
+    "question_type",
+    "source_chapter",
+    "source_class",
+    "source_document",
+    "source_page",
+    "standard",
+    "subject",
+    "subtopic",
+    "syllabus_reference",
+    "tags",
+    "topic",
+    "unit",
+    "validation_status"
+  ],
+  "option_labels": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "difficulty_enum": [
+    "Easy",
+    "Medium",
+    "Difficult"
+  ],
+  "discipline_enum": [
+    "Botany",
+    "Zoology"
+  ],
+  "source_class_enum": [
+    "XI",
+    "XII"
+  ],
+  "marking_scheme": {
+    "correct": 4,
+    "incorrect": -1,
+    "unattempted": 0
+  },
+  "generator_rules": {
+    "single_correct": true,
+    "exactly_four_options": true,
+    "required_validation_status": "PASS",
+    "figure_paths_relative_to_package_root": true,
+    "2027_cohort_scope_note": "Latest official NMC/NTA syllabus available at build time; run delta audit on publication of the NEET-UG 2027 syllabus."
+  },
+  "json_schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "array",
+    "minItems": 2160,
+    "maxItems": 2160,
+    "items": {
+      "type": "object",
+      "required": [
+        "chapter",
+        "cognitive_level",
+        "correct_answer",
+        "correct_option",
+        "difficulty",
+        "discipline",
+        "explanation",
+        "figure_required",
+        "figures",
+        "generator_eligible",
+        "id",
+        "marks_correct",
+        "marks_incorrect",
+        "marks_unattempted",
+        "options",
+        "question",
+        "question_type",
+        "source_chapter",
+        "source_class",
+        "source_document",
+        "source_page",
+        "standard",
+        "subject",
+        "subtopic",
+        "syllabus_reference",
+        "tags",
+        "topic",
+        "unit",
+        "validation_status"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^NEET27-BIO-[0-9]{4}$"
+        },
+        "standard": {
+          "const": "NEET-UG"
+        },
+        "subject": {
+          "const": "Biology"
+        },
+        "options": {
+          "type": "object",
+          "required": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "A": {
+              "type": "string",
+              "minLength": 1
+            },
+            "B": {
+              "type": "string",
+              "minLength": 1
+            },
+            "C": {
+              "type": "string",
+              "minLength": 1
+            },
+            "D": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "correct_option": {
+          "enum": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        "difficulty": {
+          "enum": [
+            "Easy",
+            "Medium",
+            "Difficult"
+          ]
+        },
+        "source_page": {
+          "type": "string",
+          "pattern": "^PDF page [0-9]+$|^PDF pages [0-9]+(?:, [0-9]+)+$"
+        },
+        "marks_correct": {
+          "const": 4
+        },
+        "marks_incorrect": {
+          "const": -1
+        },
+        "marks_unattempted": {
+          "const": 0
+        }
+      }
+    }
+  }
+}
