@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
@@ -25,10 +26,19 @@ type Question = {
   figure_asset?: string;
 };
 
+type SchemaRow = {
+  exam: string;
+  subject: string;
+  chapter_name: string;
+  difficulty: string;
+  total: number;
+};
+
 export default function CherryPickPage() {
   const router = useRouter();
 
   const [questions, setQuestions] = useState<Question[]>([]);
+  const [schemaRows, setSchemaRows] = useState<SchemaRow[]>([]);
   const [selected, setSelected] = useState<string[]>([]);
 
   const [exam, setExam] = useState("MHT-CET");
@@ -40,6 +50,80 @@ export default function CherryPickPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
+  /*
+   * Load the complete database schema.
+   *
+   * This gives us ALL available:
+   * - exams
+   * - subjects
+   * - chapters
+   * - difficulties
+   *
+   * It does NOT depend on the 200-question limit
+   * of /api/teacher/questions.
+   */
+  useEffect(() => {
+    async function loadSchema() {
+      try {
+        const response = await fetch("/api/db-schema");
+
+        const data = await response.json();
+
+        if (!response.ok || !data.success) {
+          throw new Error(
+            data.error || "Failed to load database schema."
+          );
+        }
+
+        setSchemaRows(data.data || []);
+      } catch (err) {
+        setError(
+          err instanceof Error
+            ? err.message
+            : "Failed to load database schema."
+        );
+      }
+    }
+
+    loadSchema();
+  }, []);
+
+  /*
+   * Subjects come from the COMPLETE schema,
+   * not from the currently loaded questions.
+   */
+  const subjects = useMemo(() => {
+    return Array.from(
+      new Set(
+        schemaRows
+          .filter((row) => row.exam === exam)
+          .map((row) => row.subject)
+          .filter(Boolean)
+      )
+    );
+  }, [schemaRows, exam]);
+
+  /*
+   * Chapters also come from the COMPLETE schema.
+   */
+  const chapters = useMemo(() => {
+    return Array.from(
+      new Set(
+        schemaRows
+          .filter(
+            (row) =>
+              row.exam === exam &&
+              (!subject || row.subject === subject)
+          )
+          .map((row) => row.chapter_name)
+          .filter(Boolean)
+      )
+    );
+  }, [schemaRows, exam, subject]);
+
+  /*
+   * Load actual questions according to the selected filters.
+   */
   async function loadQuestions() {
     try {
       setLoading(true);
@@ -49,10 +133,21 @@ export default function CherryPickPage() {
 
       params.set("exam", exam);
 
-      if (subject) params.set("subject", subject);
-      if (chapter) params.set("chapter", chapter);
-      if (difficulty) params.set("difficulty", difficulty);
-      if (search.trim()) params.set("search", search.trim());
+      if (subject) {
+        params.set("subject", subject);
+      }
+
+      if (chapter) {
+        params.set("chapter", chapter);
+      }
+
+      if (difficulty) {
+        params.set("difficulty", difficulty);
+      }
+
+      if (search.trim()) {
+        params.set("search", search.trim());
+      }
 
       const response = await fetch(
         `/api/teacher/questions?${params.toString()}`
@@ -78,29 +173,12 @@ export default function CherryPickPage() {
     }
   }
 
+  /*
+   * Reload questions when the main filters change.
+   */
   useEffect(() => {
     loadQuestions();
   }, [exam, subject, chapter, difficulty]);
-
-  const subjects = useMemo(() => {
-    return Array.from(
-      new Set(
-        questions
-          .map((q) => q.subject)
-          .filter(Boolean)
-      )
-    );
-  }, [questions]);
-
-  const chapters = useMemo(() => {
-    return Array.from(
-      new Set(
-        questions
-          .map((q) => q.chapter_name)
-          .filter(Boolean)
-      )
-    );
-  }, [questions]);
 
   function toggleQuestion(id: string) {
     setSelected((current) =>
@@ -160,7 +238,10 @@ export default function CherryPickPage() {
         </div>
 
         <section className="mb-6 rounded-2xl border border-[#e5e8ef] bg-white p-5 shadow-sm">
+
           <div className="grid gap-4 md:grid-cols-4">
+
+            {/* EXAM */}
 
             <select
               value={exam}
@@ -176,6 +257,8 @@ export default function CherryPickPage() {
               <option value="NEET">NEET</option>
             </select>
 
+            {/* SUBJECT */}
+
             <select
               value={subject}
               onChange={(e) => {
@@ -185,7 +268,9 @@ export default function CherryPickPage() {
               }}
               className="rounded-xl border px-4 py-3 text-sm"
             >
-              <option value="">All subjects</option>
+              <option value="">
+                All subjects
+              </option>
 
               {subjects.map((item) => (
                 <option key={item} value={item}>
@@ -193,6 +278,8 @@ export default function CherryPickPage() {
                 </option>
               ))}
             </select>
+
+            {/* CHAPTER */}
 
             <select
               value={chapter}
@@ -202,7 +289,9 @@ export default function CherryPickPage() {
               }}
               className="rounded-xl border px-4 py-3 text-sm"
             >
-              <option value="">All chapters</option>
+              <option value="">
+                All chapters
+              </option>
 
               {chapters.map((item) => (
                 <option key={item} value={item}>
@@ -210,6 +299,8 @@ export default function CherryPickPage() {
                 </option>
               ))}
             </select>
+
+            {/* DIFFICULTY */}
 
             <select
               value={difficulty}
@@ -219,18 +310,34 @@ export default function CherryPickPage() {
               }}
               className="rounded-xl border px-4 py-3 text-sm"
             >
-              <option value="">All difficulties</option>
-              <option value="Easy">Easy</option>
-              <option value="Balanced">Balanced</option>
-              <option value="Challenging">Challenging</option>
-              <option value="Difficult">Difficult</option>
+              <option value="">
+                All difficulties
+              </option>
+
+              <option value="Easy">
+                Easy
+              </option>
+
+              <option value="Medium">
+                Medium
+              </option>
+
+              <option value="Hard">
+                Hard
+              </option>
+
+              <option value="Challenging">
+                Challenging
+              </option>
             </select>
 
           </div>
 
           <input
             value={search}
-            onChange={(e) => setSearch(e.target.value)}
+            onChange={(e) =>
+              setSearch(e.target.value)
+            }
             onKeyDown={(e) => {
               if (e.key === "Enter") {
                 loadQuestions();
@@ -239,9 +346,11 @@ export default function CherryPickPage() {
             placeholder="Search question text..."
             className="mt-4 w-full rounded-xl border px-4 py-3 text-sm"
           />
+
         </section>
 
         <div className="mb-5 flex items-center justify-between">
+
           <div>
             <p className="text-sm font-extrabold">
               {selected.length} selected
@@ -260,6 +369,7 @@ export default function CherryPickPage() {
               Clear selection
             </button>
           )}
+
         </div>
 
         {error && (
@@ -274,18 +384,27 @@ export default function CherryPickPage() {
           </div>
         )}
 
-        {!loading && !error && questions.length === 0 && (
-          <div className="rounded-2xl bg-white p-10 text-center">
-            <p className="font-bold">
-              No questions found.
-            </p>
-          </div>
-        )}
+        {!loading &&
+          !error &&
+          questions.length === 0 && (
+            <div className="rounded-2xl bg-white p-10 text-center">
+              <p className="font-bold">
+                No questions found.
+              </p>
+
+              <p className="mt-2 text-sm text-[#8a93a5]">
+                Try another subject, chapter or difficulty.
+              </p>
+            </div>
+          )}
 
         {!loading && questions.length > 0 && (
           <div className="space-y-4 pb-28">
+
             {questions.map((question, index) => {
-              const isSelected = selected.includes(question.id);
+
+              const isSelected =
+                selected.includes(question.id);
 
               return (
                 <button
@@ -300,6 +419,7 @@ export default function CherryPickPage() {
                       : "border-[#e5e8ef] hover:border-[#cbd3e5]"
                   }`}
                 >
+
                   <div className="flex gap-4">
 
                     <div
@@ -315,6 +435,7 @@ export default function CherryPickPage() {
                     <div className="min-w-0 flex-1">
 
                       <div className="mb-3 flex flex-wrap gap-2">
+
                         <span className="rounded-full bg-[#f0f3fa] px-2.5 py-1 text-xs font-bold text-[#697386]">
                           #{index + 1}
                         </span>
@@ -334,6 +455,7 @@ export default function CherryPickPage() {
                             {question.difficulty}
                           </span>
                         )}
+
                       </div>
 
                       <p className="text-sm font-semibold leading-7">
@@ -342,6 +464,7 @@ export default function CherryPickPage() {
 
                       {Array.isArray(question.options) && (
                         <div className="mt-4 grid gap-2 md:grid-cols-2">
+
                           {question.options.map(
                             (option, optionIndex) => (
                               <div
@@ -352,14 +475,18 @@ export default function CherryPickPage() {
                               </div>
                             )
                           )}
+
                         </div>
                       )}
 
                     </div>
+
                   </div>
+
                 </button>
               );
             })}
+
           </div>
         )}
 

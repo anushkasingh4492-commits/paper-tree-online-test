@@ -381,7 +381,7 @@ export default function TestSummaryPage() {
           if (
             response.status === 401
           ) {
-            router.push("/login");
+            router.push("/");
             return;
           }
 
@@ -498,7 +498,7 @@ export default function TestSummaryPage() {
     document.cookie =
       "student_session=; Max-Age=0; path=/";
 
-    router.push("/login");
+    router.push("/");
   }
 
   /* ==========================================================

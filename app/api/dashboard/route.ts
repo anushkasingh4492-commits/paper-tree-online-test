@@ -428,9 +428,10 @@ try {
     /* ========================================================
        STUDENT
     ======================================================== */
+const studentQueryStart = Date.now();
 
-    const studentResult =
-      await client.query(
+const studentResult =
+  await client.query(
         `
         SELECT
           id,
@@ -443,7 +444,11 @@ try {
         `,
         [studentId]
       );
-
+console.log(
+  "STUDENT QUERY:",
+  Date.now() - studentQueryStart,
+  "ms"
+);
     if (
       studentResult.rows.length ===
       0
@@ -474,8 +479,10 @@ try {
        Therefore resolve the actual test ID with COALESCE.
     ======================================================== */
 
-    const attemptsResult =
-      await client.query(
+        const attemptsQueryStart = Date.now();
+
+const attemptsResult =
+  await client.query(
         `
         SELECT
           ta.id,
@@ -522,6 +529,13 @@ try {
         `,
         [studentId]
       );
+      console.log(
+  "ATTEMPTS QUERY:",
+  Date.now() - attemptsQueryStart,
+  "ms",
+  "rows:",
+  attemptsResult.rows.length
+);
 
     const attempts =
       attemptsResult.rows;
@@ -576,6 +590,7 @@ try {
       const attempt of
         completedAttempts
     ) {
+      const analyticsStart = Date.now();
       const attemptId =
         String(attempt.id);
 
@@ -1089,6 +1104,13 @@ FROM questions
             attemptUnanswered,
         }
       );
+      console.log(
+  "DASHBOARD ANALYTICS LOOP:",
+  Date.now() - analyticsStart,
+  "ms",
+  "completed attempts:",
+  completedAttempts.length
+);
     }
 
     /* ========================================================
@@ -1883,7 +1905,10 @@ WHERE (
 
     const scheduledTests =
       scheduledTestsResult.rows;
-
+console.log(
+  "SCHEDULED TESTS FROM DB:",
+  scheduledTests
+);
     /* ========================================================
        TEST SUMMARY ARRAYS
     ======================================================== */

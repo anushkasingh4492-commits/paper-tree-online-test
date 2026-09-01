@@ -178,14 +178,7 @@ export default function TeacherPage() {
                     </p>
                   </div>
 
-                  <button
-                    onClick={() =>
-                      router.push(`/teacher/papers/${paper.id}`)
-                    }
-                    className="rounded-xl bg-[#315bea] px-4 py-2.5 text-sm font-bold text-white hover:bg-[#264ac7]"
-                  >
-                    Manage
-                  </button>
+                  
                 </div>
               ))}
             </div>

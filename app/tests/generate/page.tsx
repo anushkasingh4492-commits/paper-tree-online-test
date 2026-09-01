@@ -90,7 +90,7 @@ function ArrowRight() {
 export default function GenerateTestPage() {
   const router = useRouter();
 
-  const [studentName, setStudentName] = useState("Student");
+const [studentName, setStudentName] = useState("");
 
   const [selectedSubjects, setSelectedSubjects] = useState<string[]>([
     "Physics",

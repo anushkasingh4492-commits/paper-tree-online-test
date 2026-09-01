@@ -43,7 +43,11 @@ export default function TeacherGeneratePage() {
         .filter((r) => r.exam === exam)
         .map((r) => r.subject)
     )
+
   );
+  console.log("EXAM:", exam);
+console.log("ALL SUBJECTS:", subjects);
+console.log("ROWS:", rows.length);
 
   const chapters = Array.from(
     new Set(

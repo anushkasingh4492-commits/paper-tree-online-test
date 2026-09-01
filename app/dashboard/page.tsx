@@ -1,6 +1,11 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import {
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import { useRouter } from "next/navigation";
 
 /* ============================================================
@@ -50,9 +55,32 @@ type WeakArea = {
   unanswered: number;
 };
 
+type ScheduledTestItem = {
+  id?: string;
+  scheduledTestId?: string;
+  paperId?: string | null;
+  batchId?: string | null;
+  name?: string;
+  title?: string;
+  exam?: string;
+  description?: string;
+  status?: string;
+  startTime?: string;
+  endTime?: string;
+  startAt?: string | null;
+  endAt?: string | null;
+  startTimestamp?: number | null;
+  endTimestamp?: number | null;
+  duration?: string;
+  durationMinutes?: number;
+  questionCount?: number;
+  questions?: number;
+};
+
 type DashboardPayload = {
   error?: string;
   success?: boolean;
+
   student?: {
     id?: string;
     name?: string;
@@ -130,6 +158,22 @@ type DashboardPayload = {
     submittedAt?: string | null;
   }>;
 
+  testSummary?: {
+    all?: ScheduledTestItem[];
+    active?: ScheduledTestItem[];
+    upcoming?: ScheduledTestItem[];
+    completed?: ScheduledTestItem[];
+    missed?: ScheduledTestItem[];
+
+    counts?: {
+      active?: number;
+      upcoming?: number;
+      completed?: number;
+      missed?: number;
+      total?: number;
+    };
+  };
+
   latestTest?: TestResult | null;
 };
 
@@ -204,22 +248,38 @@ function MiniIcon({
 
     target: (
       <>
-        <circle cx="8" cy="8" r="5.5" />
-        <circle cx="8" cy="8" r="2.3" />
+        <circle
+          cx="8"
+          cy="8"
+          r="5.5"
+        />
+        <circle
+          cx="8"
+          cy="8"
+          r="2.3"
+        />
         <path d="m12 4 2-2M13 2h1v1" />
       </>
     ),
 
     user: (
       <>
-        <circle cx="8" cy="5" r="2.3" />
+        <circle
+          cx="8"
+          cy="5"
+          r="2.3"
+        />
         <path d="M3.5 14c.7-2.4 2.2-3.6 4.5-3.6s3.8 1.2 4.5 3.6" />
       </>
     ),
 
     settings: (
       <>
-        <circle cx="8" cy="8" r="2.3" />
+        <circle
+          cx="8"
+          cy="8"
+          r="2.3"
+        />
         <path d="m8 2 .6 1.4 1.5.6 1.5-.4.9.9-.4 1.5.6 1.5L14 8l-1.4.6-.6 1.5.4 1.5-.9.9-1.5-.4-1.5.6L8 14l-.6-1.4-1.5-.6-1.5.4-.9-.9.4-1.5L3.3 8 4.7 7.4l.6-1.5-.4-1.5.9-.9 1.5.4L8 2Z" />
       </>
     ),
@@ -282,7 +342,9 @@ function initials(name: string) {
     .split(/\s+/)
     .filter(Boolean);
 
-  if (!parts.length) return "S";
+  if (!parts.length) {
+    return "S";
+  }
 
   if (parts.length === 1) {
     return parts[0][0].toUpperCase();
@@ -294,13 +356,24 @@ function initials(name: string) {
 }
 
 function scoreTone(score: number) {
-  if (score >= 80) return "text-emerald-600";
-  if (score >= 60) return "text-blue-600";
-  if (score >= 50) return "text-amber-500";
+  if (score >= 80) {
+    return "text-emerald-600";
+  }
+
+  if (score >= 60) {
+    return "text-blue-600";
+  }
+
+  if (score >= 50) {
+    return "text-amber-500";
+  }
+
   return "text-rose-500";
 }
 
-function subjectConfig(subject: string) {
+function subjectConfig(
+  subject: string
+) {
   const normalized =
     subject.toLowerCase();
 
@@ -323,7 +396,8 @@ function subjectConfig(subject: string) {
   }
 
   if (
-    normalized === "mathematics" ||
+    normalized ===
+      "mathematics" ||
     normalized === "maths"
   ) {
     return {
@@ -357,9 +431,13 @@ function PerformanceChart({
   const padTop = 18;
   const padBottom = 28;
 
-  const innerW = w - padX * 2;
+  const innerW =
+    w - padX * 2;
+
   const innerH =
-    h - padTop - padBottom;
+    h -
+    padTop -
+    padBottom;
 
   const points = results.map(
     (r, i) => {
@@ -376,7 +454,10 @@ function PerformanceChart({
         innerH -
         (Math.max(
           0,
-          Math.min(100, r.score)
+          Math.min(
+            100,
+            r.score
+          )
         ) /
           100) *
           innerH;
@@ -393,7 +474,9 @@ function PerformanceChart({
   const line = points
     .map(
       (p, i) =>
-        `${i ? "L" : "M"} ${p.x} ${p.y}`
+        `${i ? "L" : "M"} ${
+          p.x
+        } ${p.y}`
     )
     .join(" ");
 
@@ -423,45 +506,52 @@ function PerformanceChart({
           className="w-full h-[225px]"
           preserveAspectRatio="none"
         >
-          {[0, 25, 50, 75, 100].map(
-            (v) => {
-              const y =
-                padTop +
-                innerH -
-                (v / 100) * innerH;
+          {[
+            0,
+            25,
+            50,
+            75,
+            100,
+          ].map((v) => {
+            const y =
+              padTop +
+              innerH -
+              (v / 100) *
+                innerH;
 
-              return (
-                <g key={v}>
-                  <line
-                    x1={padX}
-                    x2={w - padX}
-                    y1={y}
-                    y2={y}
-                    stroke="#edf0f5"
-                    strokeWidth="1"
-                  />
+            return (
+              <g key={v}>
+                <line
+                  x1={padX}
+                  x2={w - padX}
+                  y1={y}
+                  y2={y}
+                  stroke="#edf0f5"
+                  strokeWidth="1"
+                />
 
-                  <text
-                    x="0"
-                    y={y + 4}
-                    fontSize="10"
-                    fill="#a3a9b5"
-                  >
-                    {v}%
-                  </text>
-                </g>
-              );
-            }
-          )}
+                <text
+                  x="0"
+                  y={y + 4}
+                  fontSize="10"
+                  fill="#a3a9b5"
+                >
+                  {v}%
+                </text>
+              </g>
+            );
+          })}
 
-          {points.length > 1 && (
+          {points.length >
+            1 && (
             <path
               d={area}
               fill="url(#areaFill)"
             />
           )}
 
-          {points.length > 1 && (
+          {points.length >
+            1 && (
             <path
               d={line}
               fill="none"
@@ -472,42 +562,47 @@ function PerformanceChart({
             />
           )}
 
-          {points.map((p, i) => (
-            <g key={i}>
-              <text
-                x={p.x}
-                y={Math.max(
-                  12,
-                  p.y - 10
-                )}
-                textAnchor="middle"
-                fontSize="9.5"
-                fontWeight="700"
-                fill="#34394a"
-              >
-                {p.score.toFixed(1)}%
-              </text>
+          {points.map(
+            (p, i) => (
+              <g key={i}>
+                <text
+                  x={p.x}
+                  y={Math.max(
+                    12,
+                    p.y - 10
+                  )}
+                  textAnchor="middle"
+                  fontSize="9.5"
+                  fontWeight="700"
+                  fill="#34394a"
+                >
+                  {p.score.toFixed(
+                    1
+                  )}
+                  %
+                </text>
 
-              <circle
-                cx={p.x}
-                cy={p.y}
-                r="4"
-                fill="#6246e5"
-                stroke="white"
-                strokeWidth="2"
-              />
+                <circle
+                  cx={p.x}
+                  cy={p.y}
+                  r="4"
+                  fill="#6246e5"
+                  stroke="white"
+                  strokeWidth="2"
+                />
 
-              <text
-                x={p.x}
-                y={h - 7}
-                textAnchor="middle"
-                fontSize="8.5"
-                fill="#9aa1ae"
-              >
-                {p.date}
-              </text>
-            </g>
-          ))}
+                <text
+                  x={p.x}
+                  y={h - 7}
+                  textAnchor="middle"
+                  fontSize="8.5"
+                  fill="#9aa1ae"
+                >
+                  {p.date}
+                </text>
+              </g>
+            )
+          )}
 
           <defs>
             <linearGradient
@@ -522,6 +617,7 @@ function PerformanceChart({
                 stopColor="#7658ef"
                 stopOpacity=".20"
               />
+
               <stop
                 offset="100%"
                 stopColor="#7658ef"
@@ -566,7 +662,8 @@ function Donut({
     ).length,
   ];
 
-  const total = results.length;
+  const total =
+    results.length;
 
   const colors = [
     "#20b77a",
@@ -582,7 +679,8 @@ function Donut({
     radius: number
   ) => {
     const a =
-      ((angle - 90) * Math.PI) /
+      ((angle - 90) *
+        Math.PI) /
       180;
 
     return [
@@ -602,7 +700,8 @@ function Donut({
     color: string
   ) => {
     if (
-      endAngle - startAngle >=
+      endAngle -
+        startAngle >=
       359.9
     ) {
       return (
@@ -618,10 +717,16 @@ function Donut({
     }
 
     const [x1, y1] =
-      polar(startAngle, 40);
+      polar(
+        startAngle,
+        40
+      );
 
     const [x2, y2] =
-      polar(endAngle, 40);
+      polar(
+        endAngle,
+        40
+      );
 
     const large =
       endAngle -
@@ -648,6 +753,7 @@ function Donut({
           <div className="text-[22px] font-extrabold text-[#202638]">
             0
           </div>
+
           <div className="text-[10px] text-[#9299a8]">
             Tests
           </div>
@@ -656,25 +762,26 @@ function Donut({
     );
   }
 
-  const segments = counts.map(
-    (count, i) => {
-      const end =
-        start +
-        (count / total) *
-          360;
+  const segments =
+    counts.map(
+      (count, i) => {
+        const end =
+          start +
+          (count / total) *
+            360;
 
-      const result = {
-        start,
-        end,
-        color: colors[i],
-        count,
-      };
+        const result = {
+          start,
+          end,
+          color: colors[i],
+          count,
+        };
 
-      start = end;
+        start = end;
 
-      return result;
-    }
-  );
+        return result;
+      }
+    );
 
   return (
     <div className="flex items-center gap-6">
@@ -693,7 +800,10 @@ function Donut({
           />
 
           {segments.map(
-            (segment, i) => (
+            (
+              segment,
+              i
+            ) => (
               <g key={i}>
                 {segment.count >
                   0 &&
@@ -741,7 +851,14 @@ function Donut({
             colors[3],
           ],
         ].map(
-          ([label, count, color], i) => (
+          (
+            [
+              label,
+              count,
+              color,
+            ],
+            i
+          ) => (
             <div
               className="flex items-center gap-2"
               key={i}
@@ -761,7 +878,9 @@ function Donut({
               <span className="font-semibold text-[#6b7280]">
                 {count} (
                 {Math.round(
-                  (Number(count) /
+                  (Number(
+                    count
+                  ) /
                     total) *
                     100
                 )}
@@ -780,13 +899,29 @@ function Donut({
 ============================================================ */
 
 export default function DashboardPage() {
-  const router = useRouter();
+  const router =
+    useRouter();
 
-  const [studentName, setStudentName] =
-    useState("Student");
+  /*
+   * Prevent multiple dashboard requests from
+   * running at the same time.
+   */
+  const dashboardLoadingRef =
+    useRef(false);
 
-  const [results, setResults] =
-    useState<TestResult[]>([]);
+  const [
+    studentName,
+    setStudentName,
+  ] = useState(
+    "Student"
+  );
+
+  const [
+    results,
+    setResults,
+  ] = useState<
+    TestResult[]
+  >([]);
 
   const [
     subjectPerformance,
@@ -795,10 +930,17 @@ export default function DashboardPage() {
     SubjectPerformance[]
   >([]);
 
-  const [weakAreas, setWeakAreas] =
-    useState<WeakArea[]>([]);
+  const [
+    weakAreas,
+    setWeakAreas,
+  ] = useState<
+    WeakArea[]
+  >([]);
 
-  const [statistics, setStatistics] =
+  const [
+    statistics,
+    setStatistics,
+  ] =
     useState<
       DashboardPayload["statistics"]
     >({});
@@ -821,11 +963,22 @@ export default function DashboardPage() {
     >
   >({});
 
-  const [loading, setLoading] =
-    useState(true);
+  const [
+    upcomingTests,
+    setUpcomingTests,
+  ] = useState<
+    ScheduledTestItem[]
+  >([]);
 
-  const [error, setError] =
-    useState("");
+  const [
+    loading,
+    setLoading,
+  ] = useState(true);
+
+  const [
+    error,
+    setError,
+  ] = useState("");
 
   /* ==========================================================
      LOAD REAL STUDENT DASHBOARD
@@ -834,10 +987,34 @@ export default function DashboardPage() {
   useEffect(() => {
     let active = true;
 
-    async function loadDashboard() {
+    async function loadDashboard(
+      showLoader = false
+    ) {
+      /*
+       * Ignore duplicate focus / visibility /
+       * interval requests while one request is
+       * already running.
+       */
+      if (
+        dashboardLoadingRef.current
+      ) {
+        return;
+      }
+
+      dashboardLoadingRef.current =
+        true;
+
       try {
-        setLoading(true);
-        setError("");
+        if (
+          showLoader &&
+          active
+        ) {
+          setLoading(true);
+        }
+
+        if (active) {
+          setError("");
+        }
 
         const response =
           await fetch(
@@ -845,18 +1022,26 @@ export default function DashboardPage() {
             {
               method: "GET",
               cache: "no-store",
-              credentials: "include",
+              credentials:
+                "include",
             }
           );
 
         const data: DashboardPayload =
           await response.json();
 
-        if (!response.ok) {
+        if (
+          !response.ok ||
+          data.success ===
+            false
+        ) {
           if (
-            response.status === 401
+            response.status ===
+            401
           ) {
-            router.push("/login");
+            router.replace(
+              "/"
+            );
             return;
           }
 
@@ -866,7 +1051,9 @@ export default function DashboardPage() {
           );
         }
 
-        if (!active) return;
+        if (!active) {
+          return;
+        }
 
         setStudentName(
           data.student?.name?.trim() ||
@@ -910,8 +1097,20 @@ export default function DashboardPage() {
             {}
         );
 
+        setUpcomingTests(
+          Array.isArray(
+            data.testSummary
+              ?.upcoming
+          )
+            ? data
+                .testSummary!
+                .upcoming!
+            : []
+        );
+
         setStatistics(
-          data.statistics || {}
+          data.statistics ||
+            {}
         );
       } catch (err) {
         console.error(
@@ -921,52 +1120,121 @@ export default function DashboardPage() {
 
         if (active) {
           setError(
-            err instanceof Error
+            err instanceof
+              Error
               ? err.message
               : "Failed to load dashboard."
           );
         }
-      } finally {
-        if (active) {
-          setLoading(false);
-        }
-      }
+      }finally {
+  dashboardLoadingRef.current = false;
+
+  if (showLoader) {
+    setLoading(false);
+  }
+}
     }
 
-    loadDashboard();
+    /*
+     * Initial page load.
+     */
+    void loadDashboard(
+      true
+    );
 
-    const handleFocus = () => {
-      void loadDashboard();
-    };
+    /*
+     * Background refreshes do NOT put the
+     * entire page back into the loading screen.
+     */
+    const handleFocus =
+      () => {
+        void loadDashboard(
+          false
+        );
+      };
 
-    const handleVisibilityChange = () => {
-      if (document.visibilityState === "visible") {
-        void loadDashboard();
+    const handleVisibilityChange =
+      () => {
+        if (
+          document
+            .visibilityState ===
+          "visible"
+        ) {
+          void loadDashboard(
+            false
+          );
+        }
+      };
+
+    const handleStorage = (
+      event: StorageEvent
+    ) => {
+      if (
+        event.key ===
+        "paperTreeDashboardRefresh"
+      ) {
+        void loadDashboard(
+          false
+        );
       }
     };
 
-    const handleStorage = (event: StorageEvent) => {
-      if (event.key === "paperTreeDashboardRefresh") {
-        void loadDashboard();
-      }
-    };
+    window.addEventListener(
+      "focus",
+      handleFocus
+    );
 
-    window.addEventListener("focus", handleFocus);
-    document.addEventListener("visibilitychange", handleVisibilityChange);
-    window.addEventListener("storage", handleStorage);
+    document.addEventListener(
+      "visibilitychange",
+      handleVisibilityChange
+    );
 
-    const refreshInterval = window.setInterval(() => {
-      if (document.visibilityState === "visible") {
-        void loadDashboard();
-      }
-    }, 15000);
+    window.addEventListener(
+      "storage",
+      handleStorage
+    );
+
+    /*
+     * Keep auto-refresh, but once every minute
+     * instead of every 15 seconds.
+     */
+    const refreshInterval =
+      window.setInterval(
+        () => {
+          if (
+            document
+              .visibilityState ===
+            "visible"
+          ) {
+            void loadDashboard(
+              false
+            );
+          }
+        },
+        60000
+      );
 
     return () => {
       active = false;
-      window.removeEventListener("focus", handleFocus);
-      document.removeEventListener("visibilitychange", handleVisibilityChange);
-      window.removeEventListener("storage", handleStorage);
-      window.clearInterval(refreshInterval);
+
+      window.removeEventListener(
+        "focus",
+        handleFocus
+      );
+
+      document.removeEventListener(
+        "visibilitychange",
+        handleVisibilityChange
+      );
+
+      window.removeEventListener(
+        "storage",
+        handleStorage
+      );
+
+      window.clearInterval(
+        refreshInterval
+      );
     };
   }, [router]);
 
@@ -976,30 +1244,38 @@ export default function DashboardPage() {
 
   const average =
     Number(
-      statistics?.averageScore ??
+      statistics
+        ?.averageScore ??
         0
     );
 
   const best =
     Number(
-      statistics?.bestScore ?? 0
+      statistics
+        ?.bestScore ??
+        0
     );
 
   const lowest =
     Number(
-      statistics?.lowestScore ?? 0
+      statistics
+        ?.lowestScore ??
+        0
     );
 
   const testsTaken =
     Number(
-      statistics?.testsTaken ??
+      statistics
+        ?.testsTaken ??
         results.length
     );
 
   const attempts =
     Number(
-      statistics?.totalAttempts ??
-        statistics?.attempts ??
+      statistics
+        ?.totalAttempts ??
+        statistics
+          ?.attempts ??
         0
     );
 
@@ -1009,23 +1285,23 @@ export default function DashboardPage() {
 
   const consistency =
     Number(
-      statistics?.consistency ?? 0
+      statistics
+        ?.consistency ??
+        0
     );
 
   const initialsText =
-    initials(studentName);
-
-  const latest =
-    results.length
-      ? results[
-          results.length - 1
-        ]
-      : null;
+    initials(
+      studentName
+    );
 
   const highestTest =
     results.length
       ? results.reduce(
-          (bestResult, current) =>
+          (
+            bestResult,
+            current
+          ) =>
             current.score >
             bestResult.score
               ? current
@@ -1036,7 +1312,10 @@ export default function DashboardPage() {
   const lowestTest =
     results.length
       ? results.reduce(
-          (lowestResult, current) =>
+          (
+            lowestResult,
+            current
+          ) =>
             current.score <
             lowestResult.score
               ? current
@@ -1056,18 +1335,25 @@ export default function DashboardPage() {
       return performanceTrend.map(
         (item) => ({
           id: item.testId,
+
           name:
             item.label ||
             "Test",
+
           score:
             Number(
-              item.score || 0
+              item.score ||
+                0
             ),
+
           accuracy:
             Number(
-              item.score || 0
+              item.score ||
+                0
             ),
+
           time: "",
+
           date:
             item.formattedDate ||
             "",
@@ -1086,16 +1372,18 @@ export default function DashboardPage() {
           "Chemistry",
           "Mathematics",
           "Biology",
-        ].map((subject) => ({
-          subject,
-          score: 0,
-          accuracy: 0,
-          total: 0,
-          attempted: 0,
-          correct: 0,
-          wrong: 0,
-          unanswered: 0,
-        }));
+        ].map(
+          (subject) => ({
+            subject,
+            score: 0,
+            accuracy: 0,
+            total: 0,
+            attempted: 0,
+            correct: 0,
+            wrong: 0,
+            unanswered: 0,
+          })
+        );
 
   /* ==========================================================
      LOGOUT
@@ -1113,7 +1401,7 @@ export default function DashboardPage() {
     document.cookie =
       "student_session=; Max-Age=0; path=/";
 
-    router.push("/login");
+    router.push("/");
   }
 
   /* ==========================================================
@@ -1129,16 +1417,19 @@ export default function DashboardPage() {
           </div>
 
           <p className="mt-4 text-sm font-semibold text-[#4e596c]">
-            Loading your dashboard...
+            Loading your
+            dashboard...
           </p>
 
           <p className="mt-1 text-xs text-[#9aa1ae]">
-            Preparing your personal
-            performance data
+            Preparing your
+            personal performance
+            data
           </p>
         </div>
       </main>
     );
+    
   }
 
   /* ==========================================================
@@ -1154,7 +1445,8 @@ export default function DashboardPage() {
           </div>
 
           <h1 className="mt-4 text-lg font-extrabold text-[#202638]">
-            Unable to load dashboard
+            Unable to load
+            dashboard
           </h1>
 
           <p className="mt-2 text-xs text-[#858c9b]">
@@ -1180,6 +1472,7 @@ export default function DashboardPage() {
 
   return (
     <main className="min-h-screen bg-[#f8f9fc] text-[#1d2435]">
+
       <div className="flex min-h-screen">
 
         {/* =====================================================
@@ -1210,6 +1503,7 @@ export default function DashboardPage() {
             </p>
 
             <nav className="space-y-1">
+
               <button
                 onClick={() =>
                   router.push(
@@ -1227,7 +1521,9 @@ export default function DashboardPage() {
 
               <button
                 onClick={() =>
-                  router.push("/tests")
+                  router.push(
+                    "/tests"
+                  )
                 }
                 className="w-full h-10 flex items-center gap-3 px-2.5 rounded-xl text-[#657083] hover:bg-[#f7f8fb] text-xs font-medium"
               >
@@ -1237,20 +1533,21 @@ export default function DashboardPage() {
 
                 My Tests
               </button>
+
               <button
-  onClick={() =>
-    router.push("/test-summary")
-  }
-  className="w-full h-10 flex items-center gap-3 px-2.5 rounded-xl text-[#657083] hover:bg-[#f7f8fb] text-xs font-medium"
->
-  <span className="w-7 h-7 rounded-lg bg-[#f5f6f9] flex items-center justify-center">
-    <MiniIcon type="calendar" />
-  </span>
+                onClick={() =>
+                  router.push(
+                    "/test-summary"
+                  )
+                }
+                className="w-full h-10 flex items-center gap-3 px-2.5 rounded-xl text-[#657083] hover:bg-[#f7f8fb] text-xs font-medium"
+              >
+                <span className="w-7 h-7 rounded-lg bg-[#f5f6f9] flex items-center justify-center">
+                  <MiniIcon type="calendar" />
+                </span>
 
-  Test Summary
-</button>
-
-
+                Test Summary
+              </button>
 
             </nav>
           </div>
@@ -1268,9 +1565,9 @@ export default function DashboardPage() {
               </div>
 
               <p className="text-[9px] text-[#818898] leading-4 mt-2">
-                Unlock unlimited tests,
-                detailed analytics and
-                more.
+                Unlock unlimited
+                tests, detailed
+                analytics and more.
               </p>
 
               <button className="mt-2.5 w-full h-8 rounded-lg bg-gradient-to-r from-[#6744e8] to-[#7d31e8] text-white text-[10px] font-bold">
@@ -1286,6 +1583,7 @@ export default function DashboardPage() {
             <MiniIcon type="logout" />
             Logout
           </button>
+
         </aside>
 
         {/* =====================================================
@@ -1297,6 +1595,7 @@ export default function DashboardPage() {
           {/* Header */}
 
           <header className="h-[82px] bg-white border-b border-[#e9ebf1] px-5 lg:px-8 flex items-center justify-between">
+
             <div>
               <h1 className="text-[20px] font-extrabold tracking-tight">
                 Welcome back,{" "}
@@ -1309,13 +1608,14 @@ export default function DashboardPage() {
               </h1>
 
               <p className="mt-1 text-[11px] text-[#858c9b]">
-                Here's your performance
-                overview and test
-                insights
+                Here's your
+                performance overview
+                and test insights
               </p>
             </div>
 
             <div className="flex items-center gap-2.5">
+
               <button className="hidden sm:flex items-center gap-2 px-3.5 h-9 rounded-xl border border-[#e8eaf1] bg-white text-[11px] font-semibold text-[#33405a] shadow-[0_2px_8px_rgba(30,35,60,.03)]">
                 <span className="text-[#6544e8]">
                   <MiniIcon
@@ -1345,12 +1645,13 @@ export default function DashboardPage() {
               <div className="w-9 h-9 rounded-full bg-gradient-to-br from-[#6944e8] to-[#4f2bd5] text-white flex items-center justify-center text-sm font-bold">
                 {initialsText[0]}
               </div>
+
             </div>
           </header>
 
           {/* Dashboard body */}
 
-          <div className="p-5 lg:p-6 xl:p-7 max-w-[1500px] mx-auto">
+          <div className="p-5 lg:p-6 xl:p-7 max-w-[1500px] mx-auto pb-24 xl:pb-7">
 
             {/* =================================================
                 HERO
@@ -1365,24 +1666,30 @@ export default function DashboardPage() {
               <div className="absolute right-[34%] -top-20 w-28 h-28 rounded-full bg-white/[.05]" />
 
               <div className="relative max-w-[53%]">
+
                 <div className="flex items-center gap-2 text-[11px] font-semibold">
                   <span className="w-2 h-2 rounded-full bg-[#28d48a]" />
+
                   MHT-CET Preparation
                 </div>
 
                 <h2 className="mt-4 text-[24px] lg:text-[26px] font-extrabold tracking-tight">
-                  Keep pushing forward,{" "}
+                  Keep pushing
+                  forward,{" "}
                   {studentName}!
                 </h2>
 
                 <p className="mt-1.5 text-[12px] text-white/85">
-                  Consistency today leads
-                  to success tomorrow.
+                  Consistency today
+                  leads to success
+                  tomorrow.
                 </p>
 
                 <button
                   onClick={() =>
-                    router.push("/tests")
+                    router.push(
+                      "/tests"
+                    )
                   }
                   className="mt-5 h-9 px-4 rounded-lg bg-white text-[#2f58e8] text-[11px] font-bold shadow-sm"
                 >
@@ -1396,6 +1703,7 @@ export default function DashboardPage() {
               {/* Illustration */}
 
               <div className="hidden md:flex absolute right-[23%] bottom-0 w-[245px] h-[145px] items-end">
+
                 <div className="absolute left-0 bottom-5 w-[235px] h-4 rounded-full bg-[#58a8f3]/70 shadow-lg" />
 
                 <div className="absolute left-8 bottom-9 w-10 h-9 rounded-sm bg-[#e9f1ff] border-4 border-[#3b5878] rotate-[-2deg]" />
@@ -1428,17 +1736,21 @@ export default function DashboardPage() {
                 <div className="absolute left-[55px] bottom-10 w-7 h-12 rounded-b-xl bg-[#6ac16c]" />
 
                 <div className="absolute left-[51px] bottom-[57px] w-8 h-8 rounded-full bg-[#84d777]" />
+
               </div>
 
               <div className="hidden lg:block absolute right-7 top-8 w-[210px] text-right">
+
                 <div className="text-4xl font-serif leading-none text-white/45">
                   “
                 </div>
 
                 <p className="text-[12px] leading-5 font-medium">
-                  Success is the sum of
+                  Success is the sum
+                  of
                   <br />
-                  small efforts repeated
+                  small efforts
+                  repeated
                   <br />
                   day in and day out.
                 </p>
@@ -1446,6 +1758,7 @@ export default function DashboardPage() {
                 <p className="mt-2 text-[10px] font-semibold text-white/80">
                   — Robert Collier
                 </p>
+
               </div>
             </section>
 
@@ -1458,24 +1771,41 @@ export default function DashboardPage() {
               {[
                 [
                   "Tests Taken",
-                  String(testsTaken),
-                  `${statistics?.totalQuestions ?? 0} questions analyzed`,
+                  String(
+                    testsTaken
+                  ),
+                  `${
+                    statistics
+                      ?.totalQuestions ??
+                    0
+                  } questions analyzed`,
                   "bg-blue-50 text-blue-600",
                   "▣",
                 ],
 
                 [
                   "Average Score",
-                  `${average.toFixed(1)}%`,
-                  `${statistics?.overallAccuracy ?? statistics?.accuracy ?? 0}% answer accuracy`,
+                  `${average.toFixed(
+                    1
+                  )}%`,
+                  `${
+                    statistics
+                      ?.overallAccuracy ??
+                    statistics
+                      ?.accuracy ??
+                    0
+                  }% answer accuracy`,
                   "bg-pink-50 text-pink-600",
                   "▥",
                 ],
 
                 [
                   "Best Score",
-                  `${best.toFixed(1)}%`,
-                  highestTest?.date ||
+                  `${best.toFixed(
+                    1
+                  )}%`,
+                  highestTest
+                    ?.date ||
                     "Highest completed score",
                   "bg-emerald-50 text-emerald-600",
                   "★",
@@ -1483,8 +1813,14 @@ export default function DashboardPage() {
 
                 [
                   "Attempts",
-                  String(attempts),
-                  `${statistics?.totalCorrect ?? 0} correct answers`,
+                  String(
+                    attempts
+                  ),
+                  `${
+                    statistics
+                      ?.totalCorrect ??
+                    0
+                  } correct answers`,
                   "bg-violet-50 text-violet-600",
                   "↗",
                 ],
@@ -1492,7 +1828,11 @@ export default function DashboardPage() {
                 [
                   "Assesment Time",
                   studyTime,
-                  `${statistics?.totalAttempted ?? 0} questions attempted`,
+                  `${
+                    statistics
+                      ?.totalAttempted ??
+                    0
+                  } questions attempted`,
                   "bg-orange-50 text-orange-500",
                   "◷",
                 ],
@@ -1509,6 +1849,7 @@ export default function DashboardPage() {
                     className="bg-white rounded-[14px] border border-[#e8eaf0] px-4 py-4 shadow-[0_3px_12px_rgba(30,35,60,.035)]"
                   >
                     <div className="flex justify-between gap-2">
+
                       <div className="min-w-0">
                         <p className="text-[10px] font-semibold text-[#858c9b]">
                           {label}
@@ -1528,10 +1869,12 @@ export default function DashboardPage() {
                       >
                         {icon}
                       </span>
+
                     </div>
                   </div>
                 )
               )}
+
             </section>
 
             {/* =================================================
@@ -1543,21 +1886,27 @@ export default function DashboardPage() {
               {/* Performance */}
 
               <div className="bg-white rounded-[14px] border border-[#e8eaf0] p-5 shadow-[0_3px_12px_rgba(30,35,60,.035)]">
+
                 <div className="flex items-start justify-between">
+
                   <div>
                     <h2 className="text-[14px] font-extrabold">
-                      Performance Trend
+                      Performance
+                      Trend
                     </h2>
 
                     <p className="mt-1 text-[10px] text-[#939aa8]">
-                      Your actual score across
+                      Your actual
+                      score across
                       completed tests
                     </p>
                   </div>
 
                   <div className="h-8 px-3 rounded-lg border border-[#e7e9f0] text-[10px] font-semibold text-[#4e596c] flex items-center">
-                    All Completed Tests
+                    All Completed
+                    Tests
                   </div>
+
                 </div>
 
                 <PerformanceChart
@@ -1569,7 +1918,9 @@ export default function DashboardPage() {
                 <div className="grid grid-cols-3 gap-3 mt-2">
 
                   <div className="rounded-xl border border-[#e9e2ff] bg-[#faf8ff] p-3">
+
                     <div className="flex items-center gap-2">
+
                       <span className="w-8 h-8 rounded-lg bg-[#eee7ff] text-[#7047e7] flex items-center justify-center">
                         ♜
                       </span>
@@ -1580,19 +1931,26 @@ export default function DashboardPage() {
                         </p>
 
                         <p className="text-[17px] font-extrabold">
-                          {best.toFixed(1)}%
+                          {best.toFixed(
+                            1
+                          )}
+                          %
                         </p>
 
                         <p className="text-[8px] text-[#9aa0ad]">
-                          {highestTest?.date ||
+                          {highestTest
+                            ?.date ||
                             "—"}
                         </p>
                       </div>
+
                     </div>
                   </div>
 
                   <div className="rounded-xl border border-[#ffe5eb] bg-[#fff9fa] p-3">
+
                     <div className="flex items-center gap-2">
+
                       <span className="w-8 h-8 rounded-lg bg-[#ffeaf0] text-[#ec4f73] flex items-center justify-center">
                         ↘
                       </span>
@@ -1603,19 +1961,26 @@ export default function DashboardPage() {
                         </p>
 
                         <p className="text-[17px] font-extrabold">
-                          {lowest.toFixed(1)}%
+                          {lowest.toFixed(
+                            1
+                          )}
+                          %
                         </p>
 
                         <p className="text-[8px] text-[#9aa0ad]">
-                          {lowestTest?.date ||
+                          {lowestTest
+                            ?.date ||
                             "—"}
                         </p>
                       </div>
+
                     </div>
                   </div>
 
                   <div className="rounded-xl border border-[#e4efff] bg-[#f8fbff] p-3">
+
                     <div className="flex items-center gap-2">
+
                       <span className="w-8 h-8 rounded-lg bg-[#eaf3ff] text-[#3673e9] flex items-center justify-center">
                         ⌁
                       </span>
@@ -1634,13 +1999,15 @@ export default function DashboardPage() {
                           80
                             ? "Excellent"
                             : consistency >=
-                              60
-                            ? "Good"
-                            : "Needs improvement"}
+                                60
+                              ? "Good"
+                              : "Needs improvement"}
                         </p>
                       </div>
+
                     </div>
                   </div>
+
                 </div>
               </div>
 
@@ -1651,8 +2018,10 @@ export default function DashboardPage() {
                 {/* Score Distribution */}
 
                 <div className="bg-white rounded-[14px] border border-[#e8eaf0] p-5 shadow-[0_3px_12px_rgba(30,35,60,.035)]">
+
                   <h2 className="text-[14px] font-extrabold">
-                    Score Distribution
+                    Score
+                    Distribution
                   </h2>
 
                   <p className="mt-1 text-[10px] text-[#939aa8]">
@@ -1663,24 +2032,31 @@ export default function DashboardPage() {
 
                   <div className="mt-4">
                     <Donut
-                      results={results}
+                      results={
+                        results
+                      }
                     />
                   </div>
+
                 </div>
 
                 {/* Subject Performance */}
 
                 <div className="bg-white rounded-[14px] border border-[#e8eaf0] p-5 shadow-[0_3px_12px_rgba(30,35,60,.035)]">
+
                   <h2 className="text-[14px] font-extrabold">
-                    Subject Performance
+                    Subject
+                    Performance
                   </h2>
 
                   <p className="mt-1 text-[10px] text-[#939aa8]">
-                    Based on this student's
-                    actual answers
+                    Based on this
+                    student's actual
+                    answers
                   </p>
 
                   <div className="mt-5 space-y-4">
+
                     {subjectRows.map(
                       (item) => {
                         const c =
@@ -1702,7 +2078,9 @@ export default function DashboardPage() {
                             </span>
 
                             <span className="w-[68px] text-[10px] font-semibold text-[#4e596c]">
-                              {item.subject}
+                              {
+                                item.subject
+                              }
                             </span>
 
                             <span className="flex-1 h-1.5 rounded-full bg-[#e9ebf1] overflow-hidden">
@@ -1736,10 +2114,126 @@ export default function DashboardPage() {
                         );
                       }
                     )}
+
                   </div>
                 </div>
+
               </div>
             </section>
+
+            {/* =================================================
+                UPCOMING SCHEDULED TESTS
+            ================================================== */}
+
+            {upcomingTests.length >
+              0 && (
+              <section className="mt-5">
+
+                <div className="bg-white rounded-[14px] border border-[#e8eaf0] shadow-[0_3px_12px_rgba(30,35,60,.035)] overflow-hidden">
+
+                  <div className="px-5 py-4 flex items-center justify-between border-b border-[#eff0f4]">
+
+                    <div>
+                      <h2 className="text-[14px] font-extrabold text-[#172033]">
+                        Upcoming Tests
+                      </h2>
+
+                      <p className="mt-1 text-[10px] text-[#939aa8]">
+                        Tests scheduled
+                        for you
+                      </p>
+                    </div>
+
+                    <span className="text-[10px] font-bold text-[#315bea] bg-[#eef2ff] px-2.5 py-1 rounded-full">
+                      {
+                        upcomingTests.length
+                      }{" "}
+                      scheduled
+                    </span>
+
+                  </div>
+
+                  <div className="divide-y divide-[#eff0f4]">
+
+                    {upcomingTests.map(
+                      (test) => {
+                        const scheduledId =
+                          test.scheduledTestId ||
+                          test.id;
+
+                        return (
+                          <button
+                            key={
+                              scheduledId
+                            }
+                            type="button"
+                            disabled={
+                              !scheduledId
+                            }
+                            onClick={() => {
+                              if (
+                                !scheduledId
+                              ) {
+                                return;
+                              }
+
+                              router.push(
+                                `/scheduled-test/${scheduledId}`
+                              );
+                            }}
+                            className="w-full px-5 py-4 flex items-center justify-between gap-4 text-left hover:bg-[#fafbff] transition disabled:cursor-default"
+                          >
+
+                            <div className="min-w-0">
+
+                              <h3 className="text-[12px] font-extrabold text-[#172033] truncate">
+                                {test.title ||
+                                  test.name ||
+                                  "Scheduled Test"}
+                              </h3>
+
+                              <div className="mt-1 flex flex-wrap items-center gap-3 text-[10px] text-[#939aa8]">
+
+                                <span>
+                                  {test.startTime ||
+                                    "Start time not configured"}
+                                </span>
+
+                                {test.duration && (
+                                  <span>
+                                    {
+                                      test.duration
+                                    }
+                                  </span>
+                                )}
+
+                              </div>
+
+                            </div>
+
+                            <div className="shrink-0 flex items-center gap-2">
+
+                              <span className="text-[10px] font-bold text-[#315bea] bg-[#eef2ff] px-3 py-1.5 rounded-lg">
+                                Upcoming
+                              </span>
+
+                              <span className="text-[#9ba1ad]">
+                                ›
+                              </span>
+
+                            </div>
+
+                          </button>
+                        );
+                      }
+                    )}
+
+                  </div>
+
+                </div>
+
+              </section>
+            )}
 
             {/* =================================================
                 RECENT TESTS + WEAK AREAS
@@ -1752,14 +2246,15 @@ export default function DashboardPage() {
               <div className="bg-white rounded-[14px] border border-[#e8eaf0] shadow-[0_3px_12px_rgba(30,35,60,.035)] overflow-hidden">
 
                 <div className="px-5 py-4 flex items-center justify-between border-b border-[#eff0f4]">
+
                   <div>
                     <h2 className="text-[14px] font-extrabold">
                       Recent Tests
                     </h2>
 
                     <p className="mt-1 text-[10px] text-[#939aa8]">
-                      Your latest completed
-                      tests
+                      Your latest
+                      completed tests
                     </p>
                   </div>
 
@@ -1772,104 +2267,128 @@ export default function DashboardPage() {
                     className="h-8 px-3 rounded-lg border border-[#dedaff] text-[10px] font-bold text-[#5541dd]"
                   >
                     View All Tests
+
                     <span className="ml-1">
                       →
                     </span>
                   </button>
+
                 </div>
 
                 <div className="px-5">
 
                   <div className="grid grid-cols-[2fr_.8fr_.7fr_.7fr_.7fr_1fr_20px] gap-3 py-3 text-[9px] font-semibold text-[#9198a6] border-b border-[#f1f2f5]">
-                    <span>Test Name</span>
-                    <span>Difficulty</span>
-                    <span>Score</span>
-                    <span>Accuracy</span>
-                    <span>Time</span>
-                    <span>Date</span>
+                    <span>
+                      Test Name
+                    </span>
+
+                    <span>
+                      Difficulty
+                    </span>
+
+                    <span>
+                      Score
+                    </span>
+
+                    <span>
+                      Accuracy
+                    </span>
+
+                    <span>
+                      Time
+                    </span>
+
+                    <span>
+                      Date
+                    </span>
+
                     <span />
                   </div>
 
-                  {[
-                    ...results,
-                  ]
+                  {[...results]
                     .reverse()
                     .slice(0, 5)
-                    .map(
-                      (test) => (
-                        <button
-                          key={`${test.id}-${test.attemptId || ""}`}
-onClick={() =>
-  router.push(
-    `/test/result/${test.id}`
-  )
-}
-                          className="w-full grid grid-cols-[2fr_.8fr_.7fr_.7fr_.7fr_1fr_20px] gap-3 items-center py-3.5 text-left border-b border-[#f1f2f5] last:border-b-0 hover:bg-[#fbfbfe]"
+                    .map((test) => (
+                      <button
+                        key={`${test.id}-${test.attemptId || ""}`}
+                        onClick={() =>
+                          router.push(
+                            `/test/result/${test.id}`
+                          )
+                        }
+                        className="w-full grid grid-cols-[2fr_.8fr_.7fr_.7fr_.7fr_1fr_20px] gap-3 items-center py-3.5 text-left border-b border-[#f1f2f5] last:border-b-0 hover:bg-[#fbfbfe]"
+                      >
+                        <span className="min-w-0 flex items-center gap-2">
+
+                          <span className="w-6 h-6 rounded-md bg-[#f1efff] text-[#5c45df] flex items-center justify-center text-[9px] font-bold">
+                            ▣
+                          </span>
+
+                          <span className="truncate text-[10px] font-semibold text-[#3e4657]">
+                            {test.name}
+                          </span>
+
+                        </span>
+
+                        <span className="text-[10px] text-[#626b7b] capitalize">
+                          {test.difficulty ||
+                            "Balanced"}
+                        </span>
+
+                        <span
+                          className={`text-[10px] font-extrabold ${scoreTone(
+                            test.score
+                          )}`}
                         >
-                          <span className="min-w-0 flex items-center gap-2">
-                            <span className="w-6 h-6 rounded-md bg-[#f1efff] text-[#5c45df] flex items-center justify-center text-[9px] font-bold">
-                              ▣
-                            </span>
+                          {test.score.toFixed(
+                            1
+                          )}
+                          %
+                        </span>
 
-                            <span className="truncate text-[10px] font-semibold text-[#3e4657]">
-                              {test.name}
-                            </span>
-                          </span>
+                        <span className="text-[10px] text-[#626b7b]">
+                          {test.accuracy.toFixed(
+                            1
+                          )}
+                          %
+                        </span>
 
-                          <span className="text-[10px] text-[#626b7b] capitalize">
-                            {test.difficulty || "Balanced"}
-                          </span>
+                        <span className="text-[10px] text-[#626b7b]">
+                          {test.time}
+                        </span>
 
-                          <span
-                            className={`text-[10px] font-extrabold ${scoreTone(
-                              test.score
-                            )}`}
-                          >
-                            {test.score.toFixed(
-                              1
-                            )}
-                            %
-                          </span>
+                        <span className="text-[10px] text-[#626b7b]">
+                          {test.date}
+                        </span>
 
-                          <span className="text-[10px] text-[#626b7b]">
-                            {test.accuracy.toFixed(
-                              1
-                            )}
-                            %
-                          </span>
+                        <span className="text-[#9ba1ad]">
+                          ›
+                        </span>
 
-                          <span className="text-[10px] text-[#626b7b]">
-                            {test.time}
-                          </span>
-
-                          <span className="text-[10px] text-[#626b7b]">
-                            {test.date}
-                          </span>
-
-                          <span className="text-[#9ba1ad]">
-                            ›
-                          </span>
-                        </button>
-                      )
-                    )}
+                      </button>
+                    ))}
 
                   {!results.length && (
                     <div className="py-12 text-center">
+
                       <div className="text-2xl">
                         📝
                       </div>
 
                       <p className="mt-2 text-xs font-semibold text-[#596275]">
-                        No completed tests yet
+                        No completed tests
+                        yet
                       </p>
 
                       <p className="mt-1 text-[10px] text-[#9aa1ae]">
-                        Start your first test
-                        to see your results
-                        here.
+                        Start your first
+                        test to see your
+                        results here.
                       </p>
+
                     </div>
                   )}
+
                 </div>
               </div>
 
@@ -1878,86 +2397,96 @@ onClick={() =>
               <div className="bg-white rounded-[14px] border border-[#e8eaf0] shadow-[0_3px_12px_rgba(30,35,60,.035)] overflow-hidden">
 
                 <div className="px-5 py-4 flex items-center justify-between border-b border-[#eff0f4]">
+
                   <div>
                     <h2 className="text-[14px] font-extrabold">
                       Weak Areas
                     </h2>
 
                     <p className="mt-1 text-[10px] text-[#939aa8]">
-                      Topics that need more
-                      practice
+                      Topics that need
+                      more practice
                     </p>
                   </div>
 
                   <button className="h-8 px-3 rounded-lg border border-[#dedaff] text-[10px] font-bold text-[#5541dd]">
                     View All
+
                     <span className="ml-1">
                       →
                     </span>
                   </button>
+
                 </div>
 
                 <div className="p-5 space-y-3">
 
                   {weakAreas
                     .slice(0, 5)
-                    .map(
-                      (area) => (
-                        <div
-                          key={`${area.subject}-${area.chapter}`}
-                          className="rounded-xl border border-[#edf0f4] p-3"
-                        >
-                          <div className="flex items-center gap-2">
-                            <span className="w-7 h-7 rounded-lg bg-[#fff0f4] text-[#ed4e73] flex items-center justify-center text-[10px]">
-                              ♟
-                            </span>
+                    .map((area) => (
+                      <div
+                        key={`${area.subject}-${area.chapter}`}
+                        className="rounded-xl border border-[#edf0f4] p-3"
+                      >
 
-                            <span className="text-[10px] font-bold text-[#3f4758] flex-1 truncate">
-                              {area.topic ||
-                                area.chapter}
-                            </span>
+                        <div className="flex items-center gap-2">
 
-                            <span className="text-[9px] text-[#858c99]">
-                              {area.subject}
-                            </span>
+                          <span className="w-7 h-7 rounded-lg bg-[#fff0f4] text-[#ed4e73] flex items-center justify-center text-[10px]">
+                            ♟
+                          </span>
 
-                            <span className="text-[11px] font-extrabold text-rose-500">
-                              {area.accuracy.toFixed(
-                                0
-                              )}
-                              %
-                            </span>
-                          </div>
+                          <span className="text-[10px] font-bold text-[#3f4758] flex-1 truncate">
+                            {area.topic ||
+                              area.chapter}
+                          </span>
 
-                          <div className="mt-2.5 ml-9 h-1.5 rounded-full bg-[#e8eaf0] overflow-hidden">
-                            <div
-                              className="h-full rounded-full bg-rose-500"
-                              style={{
-                                width: `${Math.min(
-                                  100,
-                                  Math.max(
-                                    0,
-                                    area.accuracy
-                                  )
-                                )}%`,
-                              }}
-                            />
-                          </div>
+                          <span className="text-[9px] text-[#858c99]">
+                            {area.subject}
+                          </span>
 
-                          <div className="mt-2 ml-9 text-[8px] text-[#9aa1ae]">
-                            {area.correct}{" "}
-                            correct ·{" "}
-                            {area.wrong}{" "}
-                            wrong ·{" "}
-                            {area.unanswered}{" "}
-                            unanswered
-                          </div>
+                          <span className="text-[11px] font-extrabold text-rose-500">
+                            {area.accuracy.toFixed(
+                              0
+                            )}
+                            %
+                          </span>
+
                         </div>
-                      )
-                    )}
+
+                        <div className="mt-2.5 ml-9 h-1.5 rounded-full bg-[#e8eaf0] overflow-hidden">
+
+                          <div
+                            className="h-full rounded-full bg-rose-500"
+                            style={{
+                              width: `${Math.min(
+                                100,
+                                Math.max(
+                                  0,
+                                  area.accuracy
+                                )
+                              )}%`,
+                            }}
+                          />
+
+                        </div>
+
+                        <div className="mt-2 ml-9 text-[8px] text-[#9aa1ae]">
+                          {area.correct}{" "}
+                          correct ·{" "}
+                          {area.wrong}{" "}
+                          wrong ·{" "}
+                          {
+                            area.unanswered
+                          }{" "}
+                          unanswered
+                        </div>
+
+                      </div>
+                    ))}
 
                   {!weakAreas.length && (
                     <div className="py-8 text-center">
+
                       <div className="text-xl">
                         🎯
                       </div>
@@ -1971,10 +2500,13 @@ onClick={() =>
                         to generate chapter
                         analysis.
                       </p>
+
                     </div>
                   )}
+
                 </div>
               </div>
+
             </section>
 
             {/* =================================================
@@ -1986,7 +2518,8 @@ onClick={() =>
               {[
                 [
                   "Correct Answers",
-                  statistics?.totalCorrect ??
+                  statistics
+                    ?.totalCorrect ??
                     0,
                   "text-emerald-600",
                   "bg-emerald-50",
@@ -1994,7 +2527,8 @@ onClick={() =>
 
                 [
                   "Wrong Answers",
-                  statistics?.totalWrong ??
+                  statistics
+                    ?.totalWrong ??
                     0,
                   "text-rose-600",
                   "bg-rose-50",
@@ -2002,7 +2536,8 @@ onClick={() =>
 
                 [
                   "Unanswered",
-                  statistics?.totalUnanswered ??
+                  statistics
+                    ?.totalUnanswered ??
                     0,
                   "text-amber-600",
                   "bg-amber-50",
@@ -2011,8 +2546,10 @@ onClick={() =>
                 [
                   "Overall Accuracy",
                   `${
-                    statistics?.overallAccuracy ??
-                    statistics?.accuracy ??
+                    statistics
+                      ?.overallAccuracy ??
+                    statistics
+                      ?.accuracy ??
                     0
                   }%`,
                   "text-violet-600",
@@ -2029,6 +2566,7 @@ onClick={() =>
                     key={label}
                     className="bg-white rounded-[14px] border border-[#e8eaf0] p-4 flex items-center gap-3"
                   >
+
                     <div
                       className={`w-10 h-10 rounded-full ${bg} ${text} flex items-center justify-center font-extrabold`}
                     >
@@ -2036,12 +2574,12 @@ onClick={() =>
                       "Correct Answers"
                         ? "✓"
                         : label ===
-                          "Wrong Answers"
-                        ? "×"
-                        : label ===
-                          "Unanswered"
-                        ? "—"
-                        : "%"}
+                            "Wrong Answers"
+                          ? "×"
+                          : label ===
+                              "Unanswered"
+                            ? "—"
+                            : "%"}
                     </div>
 
                     <div>
@@ -2055,13 +2593,16 @@ onClick={() =>
                         {value}
                       </p>
                     </div>
+
                   </div>
                 )
               )}
+
             </section>
 
           </div>
         </div>
+
       </div>
 
       {/* =======================================================
@@ -2069,6 +2610,7 @@ onClick={() =>
       ======================================================== */}
 
       <nav className="xl:hidden fixed bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur border-t border-[#e8eaf0] px-5 py-2.5">
+
         <div className="max-w-lg mx-auto flex items-center justify-around">
 
           <button
@@ -2091,7 +2633,9 @@ onClick={() =>
 
           <button
             onClick={() =>
-              router.push("/tests")
+              router.push(
+                "/tests"
+              )
             }
             className="flex flex-col items-center gap-1 text-[#7d8595]"
           >
@@ -2106,6 +2650,7 @@ onClick={() =>
           </button>
 
           <button className="flex flex-col items-center gap-1 text-[#7d8595]">
+
             <span className="w-5 h-5 rounded-full bg-gradient-to-br from-[#7044e8] to-[#4c2bd0] text-white text-[8px] font-bold flex items-center justify-center">
               {initialsText[0]}
             </span>
@@ -2113,9 +2658,13 @@ onClick={() =>
             <span className="text-[9px] font-semibold">
               Profile
             </span>
+
           </button>
+
         </div>
+
       </nav>
+
     </main>
   );
 }
