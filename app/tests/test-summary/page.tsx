@@ -659,7 +659,7 @@ export default function TestSummaryPage() {
             <div className="rounded-xl bg-gradient-to-br from-[#fff8e9] via-[#fff4fb] to-[#f2edff] border border-[#eee8ff] p-3.5">
               <div className="flex items-center gap-2 text-[#7357dc]">
                 <span className="w-7 h-7 rounded-lg bg-white flex items-center justify-center">
-                  ♛
+
                 </span>
 
                 <span className="text-xs font-extrabold">
@@ -1110,7 +1110,7 @@ export default function TestSummaryPage() {
                           <div className="mt-3 flex flex-wrap gap-4 text-[9px] text-[#7c8492]">
 
                             <span>
-                              ✓{" "}
+                              {" "}
                               {
                                 test.correct
                               }{" "}

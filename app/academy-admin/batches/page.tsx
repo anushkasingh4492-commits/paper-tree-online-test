@@ -319,7 +319,7 @@ export default function AcademyBatchesPage() {
                 }}
                 className="rounded-lg border border-[#e2e6ee] px-3 py-2 text-sm font-bold text-[#697386]"
               >
-                ✕
+
               </button>
             </div>
 
@@ -371,7 +371,7 @@ export default function AcademyBatchesPage() {
                               : "border-[#d8deea] bg-white text-transparent"
                           }`}
                         >
-                          ✓
+
                         </div>
                       </button>
                     );

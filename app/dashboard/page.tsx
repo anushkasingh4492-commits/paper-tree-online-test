@@ -382,7 +382,7 @@ function subjectConfig(
       bar: "bg-blue-500",
       text: "text-blue-600",
       iconBg: "bg-blue-50",
-      icon: "⚛",
+      icon: "",
     };
   }
 
@@ -391,7 +391,7 @@ function subjectConfig(
       bar: "bg-emerald-500",
       text: "text-emerald-600",
       iconBg: "bg-emerald-50",
-      icon: "✦",
+      icon: "",
     };
   }
 
@@ -1429,7 +1429,7 @@ export default function DashboardPage() {
         </div>
       </main>
     );
-    
+
   }
 
   /* ==========================================================
@@ -1556,7 +1556,7 @@ export default function DashboardPage() {
             <div className="rounded-xl bg-gradient-to-br from-[#fff8e9] via-[#fff4fb] to-[#f2edff] border border-[#eee8ff] p-3.5">
               <div className="flex items-center gap-2 text-[#7357dc]">
                 <span className="w-7 h-7 rounded-lg bg-white flex items-center justify-center">
-                  ♛
+
                 </span>
 
                 <span className="text-xs font-extrabold">
@@ -1603,7 +1603,7 @@ export default function DashboardPage() {
                   {studentName}
                 </span>{" "}
                 <span className="text-[18px]">
-                  👋
+
                 </span>
               </h1>
 
@@ -1719,7 +1719,7 @@ export default function DashboardPage() {
                           key={item}
                         >
                           <span className="text-[#26bd84]">
-                            ✓
+
                           </span>
 
                           <span className="h-1.5 bg-white rounded w-14 mt-1.5" />
@@ -1808,7 +1808,7 @@ export default function DashboardPage() {
                     ?.date ||
                     "Highest completed score",
                   "bg-emerald-50 text-emerald-600",
-                  "★",
+                  "",
                 ],
 
                 [
@@ -1922,7 +1922,7 @@ export default function DashboardPage() {
                     <div className="flex items-center gap-2">
 
                       <span className="w-8 h-8 rounded-lg bg-[#eee7ff] text-[#7047e7] flex items-center justify-center">
-                        ♜
+
                       </span>
 
                       <div>
@@ -2372,7 +2372,7 @@ export default function DashboardPage() {
                     <div className="py-12 text-center">
 
                       <div className="text-2xl">
-                        📝
+
                       </div>
 
                       <p className="mt-2 text-xs font-semibold text-[#596275]">
@@ -2432,7 +2432,7 @@ export default function DashboardPage() {
                         <div className="flex items-center gap-2">
 
                           <span className="w-7 h-7 rounded-lg bg-[#fff0f4] text-[#ed4e73] flex items-center justify-center text-[10px]">
-                            ♟
+
                           </span>
 
                           <span className="text-[10px] font-bold text-[#3f4758] flex-1 truncate">
@@ -2488,7 +2488,7 @@ export default function DashboardPage() {
                     <div className="py-8 text-center">
 
                       <div className="text-xl">
-                        🎯
+
                       </div>
 
                       <p className="mt-2 text-xs font-semibold text-[#596275]">
@@ -2572,7 +2572,7 @@ export default function DashboardPage() {
                     >
                       {label ===
                       "Correct Answers"
-                        ? "✓"
+                        ? ""
                         : label ===
                             "Wrong Answers"
                           ? "×"

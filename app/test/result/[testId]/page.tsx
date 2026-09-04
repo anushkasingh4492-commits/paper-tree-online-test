@@ -1348,7 +1348,7 @@ export default function TestResultPage() {
               <div className="grid grid-cols-2 xl:grid-cols-4 gap-3">
                 <div className="rounded-2xl bg-white border border-green-100 p-5">
                   <div className="w-10 h-10 rounded-xl bg-green-50 text-green-600 flex items-center justify-center font-bold">
-                    ✓
+
                   </div>
 
                   <p className="mt-4 text-2xl font-bold text-green-700">
@@ -1701,7 +1701,7 @@ export default function TestResultPage() {
                                   <div className="shrink-0 pt-1">
                                     {isCorrectOption && (
                                       <span className="inline-flex items-center rounded-full bg-green-100 px-2.5 py-1 text-[10px] font-bold text-green-700">
-                                        ✓ Correct Answer
+                                         Correct Answer
                                       </span>
                                     )}
 

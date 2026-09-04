@@ -10,7 +10,7 @@ export default function AdminPage() {
       title: "Student Portal",
       description:
         "Open the student side to view the personalised dashboard, tests, results and scheduled tests.",
-      icon: "🎓",
+      icon: "",
       action: "Open Student Portal",
       route: "/dashboard",
     },
@@ -18,7 +18,7 @@ export default function AdminPage() {
       title: "Teacher Portal",
       description:
         "Create papers, cherry-pick questions, publish tests and manage teacher-created papers.",
-      icon: "👩‍🏫",
+      icon: "",
       action: "Open Teacher Portal",
       route: "/teacher",
     },
@@ -34,7 +34,7 @@ export default function AdminPage() {
       title: "Question Bank",
       description:
         "Browse questions across MHT-CET and NEET by subject, chapter and difficulty.",
-      icon: "📚",
+      icon: "",
       action: "View Question Bank",
       route: "/teacher/cherry-pick",
     },
@@ -42,7 +42,7 @@ export default function AdminPage() {
       title: "Create Paper",
       description:
         "Generate a paper automatically from the existing question bank.",
-      icon: "⚡",
+      icon: "",
       action: "Generate Paper",
       route: "/teacher/generate",
     },
@@ -50,7 +50,7 @@ export default function AdminPage() {
       title: "Test Summary",
       description:
         "View test activity, completed tests, upcoming tests and student performance.",
-      icon: "📊",
+      icon: "",
       action: "View Test Summary",
       route: "/test-summary",
     },
@@ -58,7 +58,7 @@ export default function AdminPage() {
   title: "Academies",
   description:
     "Create and manage academy tenants and their administrator accounts.",
-  icon: "🏫",
+  icon: "",
   action: "Manage Academies",
   route: "/admin/academies",
 },

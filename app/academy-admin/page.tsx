@@ -15,25 +15,25 @@ const cards = [
   {
     title: "Teachers",
     description: "Manage teachers belonging to your academy.",
-    icon: "👩‍🏫",
+    icon: "",
     route: "/academy-admin/teachers",
   },
   {
     title: "Students",
     description: "Manage your academy students.",
-    icon: "🎓",
+    icon: "",
     route: "/academy-admin/students",
   },
   {
     title: "Batches",
     description: "Create and manage classes and batches.",
-    icon: "👥",
+    icon: "",
     route: "/academy-admin/batches",
   },
   {
     title: "Scheduled Tests",
     description: "View tests assigned to your academy.",
-    icon: "📝",
+    icon: "",
     route: "/academy-admin/tests",
   },
 ];
@@ -101,7 +101,7 @@ const cards = [
 >
   Manage →
 </button>
-             
+
             </div>
           ))}
         </div>

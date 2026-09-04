@@ -2446,8 +2446,8 @@ const figureAsset =
                   {marked[
                     current.id
                   ]
-                    ? "★ Marked"
-                    : "☆ Mark"}
+                    ? "Marked"
+                    : "Mark"}
                 </button>
               </div>
 
@@ -2550,7 +2550,7 @@ const figureAsset =
 
                           {selected && (
                             <span className="ml-auto text-blue-600 font-bold">
-                              ✓
+
                             </span>
                           )}
                         </button>
@@ -2619,7 +2619,7 @@ const figureAsset =
                   >
                     {submitting
                       ? "Submitting..."
-                      : "Submit Test ✓"}
+                      : "Submit Test"}
                   </button>
                 )}
               </div>
@@ -2796,7 +2796,7 @@ const figureAsset =
 
               {/* DOWNLOAD */}
 
-           
+
 
               {/* SUBMIT */}
 
@@ -2835,7 +2835,7 @@ const figureAsset =
         <div className="fixed inset-0 z-[100] bg-slate-950/70 backdrop-blur-sm flex items-center justify-center p-5">
           <div className="w-full max-w-md bg-white rounded-3xl shadow-2xl p-7 text-center">
             <div className="w-16 h-16 mx-auto rounded-2xl bg-red-50 text-red-600 flex items-center justify-center text-3xl">
-              ⚠
+
             </div>
 
             <h2 className="mt-5 text-xl font-bold text-slate-900">

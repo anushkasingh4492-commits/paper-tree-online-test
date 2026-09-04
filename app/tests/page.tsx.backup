@@ -1275,7 +1275,7 @@ export default function TestsPage() {
 
                       {selected && (
                         <div className="absolute top-4 right-4 w-5 h-5 rounded-full bg-[#2563eb] text-white flex items-center justify-center text-xs">
-                          ✓
+
                         </div>
                       )}
 
@@ -1340,7 +1340,7 @@ export default function TestsPage() {
                   {studentGroup ===
                     "PCM" && (
                     <div className="absolute top-4 right-4 w-5 h-5 rounded-full bg-[#2563eb] text-white flex items-center justify-center text-xs">
-                      ✓
+
                     </div>
                   )}
 
@@ -1373,7 +1373,7 @@ export default function TestsPage() {
                   {studentGroup ===
                     "PCB" && (
                     <div className="absolute top-4 right-4 w-5 h-5 rounded-full bg-[#2563eb] text-white flex items-center justify-center text-xs">
-                      ✓
+
                     </div>
                   )}
 
@@ -1772,7 +1772,7 @@ export default function TestsPage() {
                                   }`}
                                 >
                                   {selected
-                                    ? "✓"
+                                    ? ""
                                     : ""}
                                 </span>
 
@@ -1996,7 +1996,7 @@ export default function TestsPage() {
 
                             {selected && (
                               <div className="absolute top-4 right-4 w-5 h-5 rounded-full bg-[#2563eb] text-white flex items-center justify-center text-xs">
-                                ✓
+
                               </div>
                             )}
 

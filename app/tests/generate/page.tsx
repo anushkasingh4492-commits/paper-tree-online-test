@@ -425,7 +425,7 @@ onClick={() => toggleSubject(subject.name)}
                             >
                               {selected && (
                                 <span className="text-[10px] font-bold">
-                                  ✓
+
                                 </span>
                               )}
                             </div>
@@ -678,7 +678,7 @@ onClick={() => toggleSubject(subject.name)}
                 <div className="mt-4 rounded-[18px] border border-[#e7eaf0] bg-white p-5">
                   <div className="flex gap-3">
                     <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#ecfdf3] text-sm font-bold text-[#19a463]">
-                      ✓
+
                     </div>
 
                     <div>

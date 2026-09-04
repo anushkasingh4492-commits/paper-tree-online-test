@@ -563,32 +563,27 @@ export default function TestsPage() {
    * CHANGE COURSE
    * ---------------------------------------------------------
    */
+  function changeCourse(nextCourse: Course) {
+  setCourse(nextCourse);
 
-  function changeCourse(
-    nextCourse: Course
-  ) {
-    setCourse(nextCourse);
+  const config = COURSE_CONFIG[nextCourse];
 
-    const config =
-      COURSE_CONFIG[
-        nextCourse
-      ];
+  // NEET automatically uses PCB
+  if (nextCourse === "NEET") {
+    setStudentGroup("PCB");
 
-    if (
-      config.subjects.length >
-      0
-    ) {
-      const firstSubject =
-        config.subjects[0];
+    localStorage.setItem(
+      "mhtCETGroup",
+      "PCB"
+    );
 
-      setSubjects([
-        firstSubject,
-      ]);
+    setSubjects([
+      "Physics",
+      "Chemistry",
+      "Biology",
+    ]);
 
-      setActiveChapterSubject(
-        firstSubject
-      );
-    }
+    setActiveChapterSubject("Physics");
 
     setChaptersBySubject({
       Physics: [],
@@ -598,8 +593,52 @@ export default function TestsPage() {
     });
 
     setSelectedPreset(null);
+
+    return;
   }
 
+  // MHT-CET
+  // Keep the group selection so user chooses PCM or PCB
+  if (nextCourse === "MHT-CET") {
+    setStudentGroup(null);
+
+    localStorage.removeItem(
+      "mhtCETGroup"
+    );
+
+    setSubjects(["Physics"]);
+
+    setActiveChapterSubject("Physics");
+
+    setChaptersBySubject({
+      Physics: [],
+      Chemistry: [],
+      Mathematics: [],
+      Biology: [],
+    });
+
+    setSelectedPreset(null);
+
+    return;
+  }
+
+  // Other courses
+  if (config.subjects.length > 0) {
+    const firstSubject = config.subjects[0];
+
+    setSubjects([firstSubject]);
+    setActiveChapterSubject(firstSubject);
+  }
+
+  setChaptersBySubject({
+    Physics: [],
+    Chemistry: [],
+    Mathematics: [],
+    Biology: [],
+  });
+
+  setSelectedPreset(null);
+}
   /*
    * ---------------------------------------------------------
    * TOGGLE SUBJECT
@@ -918,13 +957,18 @@ export default function TestsPage() {
       return;
     }
 
-    if (!studentGroup) {
-      alert(
-        "Please select your MHT CET group: PCM or PCB."
-      );
+if (
+  course === "MHT-CET" &&
+  !studentGroup
+) {
+  alert(
+    "Please select your MHT CET group: PCM or PCB."
+  );
 
-      return;
-    }
+  return;
+}
+
+
 
     if (
       !selectedPreset ||
@@ -991,7 +1035,10 @@ export default function TestsPage() {
 
               course,
 
-              studentGroup,
+              studentGroup:
+  course === "NEET"
+    ? "PCB"
+    : studentGroup,
 
               subjects,
 
@@ -1220,10 +1267,12 @@ export default function TestsPage() {
 
           <div className="space-y-6">
 
-            {/* COURSE */}
 
-            <section className="bg-white border border-[#e5e7eb] rounded-2xl shadow-sm p-6">
 
+
+
+{course === "MHT-CET" && (
+  <section className="bg-white border border-[#e5e7eb] rounded-2xl shadow-sm p-6">
               <div className="mb-5">
 
                 <h2 className="text-lg font-semibold">
@@ -1275,7 +1324,7 @@ export default function TestsPage() {
 
                       {selected && (
                         <div className="absolute top-4 right-4 w-5 h-5 rounded-full bg-[#2563eb] text-white flex items-center justify-center text-xs">
-                          ✓
+
                         </div>
                       )}
 
@@ -1301,117 +1350,105 @@ export default function TestsPage() {
 
               </div>
 
-            </section>
+                       </section>
+)}
 
-            {/* GROUP */}
 
-            <section className="bg-white border border-[#e5e7eb] rounded-2xl shadow-sm p-6">
+       {/* GROUP */}
 
-              <div className="mb-5">
+{course === "MHT-CET" && (
+  <section className="bg-white border border-[#e5e7eb] rounded-2xl shadow-sm p-6">
 
-                <h2 className="text-lg font-semibold">
-                  2. Choose MHT CET Group
-                </h2>
+    <div className="mb-5">
 
-                <p className="text-sm text-[#6b7280] mt-1">
-                  Choose the subject combination
-                  you want to practise.
-                </p>
+      <h2 className="text-lg font-semibold">
+        2. Choose MHT CET Group
+      </h2>
 
-              </div>
+      <p className="text-sm text-[#6b7280] mt-1">
+        Choose the subject combination you want to practise.
+      </p>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+    </div>
 
-                <button
-                  type="button"
-                  onClick={() =>
-                    changeStudentGroup(
-                      "PCM"
-                    )
-                  }
-                  className={`relative text-left rounded-xl border-2 p-5 transition ${
-                    studentGroup ===
-                    "PCM"
-                      ? "border-[#2563eb] bg-[#eff6ff]"
-                      : "border-[#e5e7eb] hover:border-[#bfdbfe]"
-                  }`}
-                >
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
 
-                  {studentGroup ===
-                    "PCM" && (
-                    <div className="absolute top-4 right-4 w-5 h-5 rounded-full bg-[#2563eb] text-white flex items-center justify-center text-xs">
-                      ✓
-                    </div>
-                  )}
+      <button
+        type="button"
+        onClick={() => changeStudentGroup("PCM")}
+        className={`relative text-left rounded-xl border-2 p-5 transition ${
+          studentGroup === "PCM"
+            ? "border-[#2563eb] bg-[#eff6ff]"
+            : "border-[#e5e7eb] hover:border-[#bfdbfe]"
+        }`}
+      >
 
-                  <div className="text-lg font-bold">
-                    PCM
-                  </div>
+        {studentGroup === "PCM" && (
+          <div className="absolute top-4 right-4 w-5 h-5 rounded-full bg-[#2563eb] text-white flex items-center justify-center text-xs">
 
-                  <div className="text-sm text-[#6b7280] mt-2">
-                    Physics + Chemistry +
-                    Mathematics
-                  </div>
+          </div>
+        )}
 
-                </button>
+        <div className="text-lg font-bold">
+          PCM
+        </div>
 
-                <button
-                  type="button"
-                  onClick={() =>
-                    changeStudentGroup(
-                      "PCB"
-                    )
-                  }
-                  className={`relative text-left rounded-xl border-2 p-5 transition ${
-                    studentGroup ===
-                    "PCB"
-                      ? "border-[#2563eb] bg-[#eff6ff]"
-                      : "border-[#e5e7eb] hover:border-[#bfdbfe]"
-                  }`}
-                >
+        <div className="text-sm text-[#6b7280] mt-2">
+          Physics + Chemistry + Mathematics
+        </div>
 
-                  {studentGroup ===
-                    "PCB" && (
-                    <div className="absolute top-4 right-4 w-5 h-5 rounded-full bg-[#2563eb] text-white flex items-center justify-center text-xs">
-                      ✓
-                    </div>
-                  )}
+      </button>
 
-                  <div className="text-lg font-bold">
-                    PCB
-                  </div>
+      <button
+        type="button"
+        onClick={() => changeStudentGroup("PCB")}
+        className={`relative text-left rounded-xl border-2 p-5 transition ${
+          studentGroup === "PCB"
+            ? "border-[#2563eb] bg-[#eff6ff]"
+            : "border-[#e5e7eb] hover:border-[#bfdbfe]"
+        }`}
+      >
 
-                  <div className="text-sm text-[#6b7280] mt-2">
-                    Physics + Chemistry +
-                    Biology
-                  </div>
+        {studentGroup === "PCB" && (
+          <div className="absolute top-4 right-4 w-5 h-5 rounded-full bg-[#2563eb] text-white flex items-center justify-center text-xs">
 
-                </button>
+          </div>
+        )}
 
-              </div>
+        <div className="text-lg font-bold">
+          PCB
+        </div>
 
-              {!studentGroup && (
-                <div className="mt-4 rounded-xl bg-[#fff7ed] border border-[#fed7aa] p-4 text-sm text-[#9a3412]">
-                  Select PCM or PCB to
-                  continue.
-                </div>
-              )}
+        <div className="text-sm text-[#6b7280] mt-2">
+          Physics + Chemistry + Biology
+        </div>
 
-              {studentGroup && (
-                <div className="mt-4 rounded-xl bg-[#f9fafb] border border-[#e5e7eb] p-3">
+      </button>
 
-                  <div className="text-xs text-[#6b7280]">
-                    Selected group
-                  </div>
+    </div>
 
-                  <div className="text-sm font-semibold mt-1">
-                    {studentGroup}
-                  </div>
+    {!studentGroup && (
+      <div className="mt-4 rounded-xl bg-[#fff7ed] border border-[#fed7aa] p-4 text-sm text-[#9a3412]">
+        Select PCM or PCB to continue.
+      </div>
+    )}
 
-                </div>
-              )}
+    {studentGroup && (
+      <div className="mt-4 rounded-xl bg-[#f9fafb] border border-[#e5e7eb] p-3">
 
-            </section>
+        <div className="text-xs text-[#6b7280]">
+          Selected group
+        </div>
+
+        <div className="text-sm font-semibold mt-1">
+          {studentGroup}
+        </div>
+
+      </div>
+    )}
+
+  </section>
+)}
 
             {/* SUBJECT */}
 
@@ -1772,7 +1809,7 @@ export default function TestsPage() {
                                   }`}
                                 >
                                   {selected
-                                    ? "✓"
+                                    ? ""
                                     : ""}
                                 </span>
 
@@ -1996,7 +2033,7 @@ export default function TestsPage() {
 
                             {selected && (
                               <div className="absolute top-4 right-4 w-5 h-5 rounded-full bg-[#2563eb] text-white flex items-center justify-center text-xs">
-                                ✓
+
                               </div>
                             )}
 
@@ -2186,11 +2223,11 @@ export default function TestsPage() {
                       generateTest
                     }
                     disabled={
-                      generating ||
-                      !studentGroup ||
-                      !selectedPreset ||
-                      !presetDetails
-                    }
+  generating ||
+  (course === "MHT-CET" && !studentGroup) ||
+  !selectedPreset ||
+  !presetDetails
+}
                     className="w-full h-12 rounded-xl bg-[#1d4ed8] text-white text-sm font-semibold hover:bg-[#1e40af] disabled:opacity-60 disabled:cursor-not-allowed transition"
                   >
                     {generating

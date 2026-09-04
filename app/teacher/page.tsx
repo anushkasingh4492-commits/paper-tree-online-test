@@ -81,7 +81,7 @@ export default function TeacherPage() {
             className="rounded-2xl border border-[#e3e8f5] bg-white p-7 text-left shadow-sm transition hover:-translate-y-1 hover:shadow-md"
           >
             <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#eef2ff] text-2xl">
-              ⚡
+
             </div>
 
             <h2 className="text-xl font-extrabold">
@@ -103,7 +103,7 @@ export default function TeacherPage() {
             className="rounded-2xl border border-[#e3e8f5] bg-white p-7 text-left shadow-sm transition hover:-translate-y-1 hover:shadow-md"
           >
             <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#eef8f2] text-2xl">
-              ✋
+
             </div>
 
             <h2 className="text-xl font-extrabold">
@@ -178,7 +178,7 @@ export default function TeacherPage() {
                     </p>
                   </div>
 
-                  
+
                 </div>
               ))}
             </div>

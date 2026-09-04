@@ -429,7 +429,7 @@ export default function CherryPickPage() {
                           : "border-[#cbd3df] text-transparent"
                       }`}
                     >
-                      ✓
+
                     </div>
 
                     <div className="min-w-0 flex-1">
