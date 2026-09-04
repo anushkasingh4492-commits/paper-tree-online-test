@@ -169,11 +169,16 @@ console.log("ROWS:", rows.length);
                   Select subject
                 </option>
 
-                {subjects.map((item) => (
-                  <option key={item} value={item}>
-                    {item}
-                  </option>
-                ))}
+               {subjects
+  .filter(
+    (item) =>
+      exam !== "NEET" || item !== "Mathematics"
+  )
+  .map((item) => (
+    <option key={item} value={item}>
+      {item}
+    </option>
+  ))}
               </select>
             </div>
 

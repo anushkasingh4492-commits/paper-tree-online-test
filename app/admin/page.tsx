@@ -54,6 +54,14 @@ export default function AdminPage() {
       action: "View Test Summary",
       route: "/test-summary",
     },
+    {
+  title: "Academies",
+  description:
+    "Create and manage academy tenants and their administrator accounts.",
+  icon: "🏫",
+  action: "Manage Academies",
+  route: "/admin/academies",
+},
   ];
 
   function logout() {

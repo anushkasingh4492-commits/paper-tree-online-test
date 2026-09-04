@@ -18,42 +18,65 @@ export async function POST(request: Request) {
       );
     }
 
-    const admin = await pool.query(
-      `SELECT id, name, email, password_hash
-       FROM admins
-       WHERE LOWER(email) = $1
-       LIMIT 1`,
+    // ==========================================
+    // ADMIN / ACADEMY ADMIN
+    // ==========================================
+
+    const adminResult = await pool.query(
+      `
+      SELECT
+        id,
+        name,
+        email,
+        password_hash,
+        academy_id,
+        is_master
+      FROM admins
+      WHERE LOWER(email) = $1
+      LIMIT 1
+      `,
       [email]
     );
 
-    if (admin.rows.length > 0) {
+    if (adminResult.rows.length > 0) {
+      const admin = adminResult.rows[0];
+
       const valid = await bcrypt.compare(
         password,
-        admin.rows[0].password_hash
+        admin.password_hash
       );
 
       if (!valid) {
         return NextResponse.json(
-          { success: false, error: "Invalid email or password." },
+          {
+            success: false,
+            error: "Invalid email or password.",
+          },
           { status: 401 }
         );
       }
 
+      const role = admin.is_master
+        ? "ADMIN"
+        : "ACADEMY_ADMIN";
+
       const response = NextResponse.json({
         success: true,
-        role: "ADMIN",
-      user: {
-  id: admin.rows[0].id,
-  name: admin.rows[0].name,
-  email: admin.rows[0].email,
-},
+        role,
+        user: {
+          id: admin.id,
+          name: admin.name,
+          email: admin.email,
+          academyId: admin.academy_id,
+        },
       });
 
       response.cookies.set(
         "master_session",
         JSON.stringify({
-          id: admin.rows[0].id,
-          role: "ADMIN",
+          id: admin.id,
+          role,
+          academyId: admin.academy_id || null,
         }),
         {
           httpOnly: true,
@@ -67,23 +90,39 @@ export async function POST(request: Request) {
       return response;
     }
 
-    const teacher = await pool.query(
-      `SELECT id, name, email, password_hash
-       FROM teachers
-       WHERE LOWER(email) = $1
-       LIMIT 1`,
+    // ==========================================
+    // TEACHER
+    // ==========================================
+
+    const teacherResult = await pool.query(
+      `
+      SELECT
+        id,
+        name,
+        email,
+        password_hash,
+        academy_id
+      FROM teachers
+      WHERE LOWER(email) = $1
+      LIMIT 1
+      `,
       [email]
     );
 
-    if (teacher.rows.length > 0) {
+    if (teacherResult.rows.length > 0) {
+      const teacher = teacherResult.rows[0];
+
       const valid = await bcrypt.compare(
         password,
-        teacher.rows[0].password_hash
+        teacher.password_hash
       );
 
       if (!valid) {
         return NextResponse.json(
-          { success: false, error: "Invalid email or password." },
+          {
+            success: false,
+            error: "Invalid email or password.",
+          },
           { status: 401 }
         );
       }
@@ -92,17 +131,19 @@ export async function POST(request: Request) {
         success: true,
         role: "TEACHER",
         user: {
-  id: teacher.rows[0].id,
-  name: teacher.rows[0].name,
-  email: teacher.rows[0].email,
-},
+          id: teacher.id,
+          name: teacher.name,
+          email: teacher.email,
+          academyId: teacher.academy_id,
+        },
       });
 
       response.cookies.set(
         "master_session",
         JSON.stringify({
-          id: teacher.rows[0].id,
+          id: teacher.id,
           role: "TEACHER",
+          academyId: teacher.academy_id || null,
         }),
         {
           httpOnly: true,
@@ -117,7 +158,10 @@ export async function POST(request: Request) {
     }
 
     return NextResponse.json(
-      { success: false, error: "Invalid email or password." },
+      {
+        success: false,
+        error: "Invalid email or password.",
+      },
       { status: 401 }
     );
   } catch (error) {
@@ -126,7 +170,10 @@ export async function POST(request: Request) {
     return NextResponse.json(
       {
         success: false,
-        error: error instanceof Error ? error.message : "Login failed.",
+        error:
+          error instanceof Error
+            ? error.message
+            : "Login failed.",
       },
       { status: 500 }
     );

@@ -433,14 +433,15 @@ const studentQueryStart = Date.now();
 const studentResult =
   await client.query(
         `
-        SELECT
-          id,
-          name,
-          roll_number,
-          email
-        FROM students
-        WHERE id = $1
-        LIMIT 1
+  SELECT
+  id,
+  name,
+  roll_number,
+  email,
+  academy_id
+FROM students
+WHERE id = $1
+LIMIT 1
         `,
         [studentId]
       );
@@ -1866,42 +1867,46 @@ FROM questions
     /* ========================================================
        SCHEDULED TESTS
     ======================================================== */
+const scheduledTestsResult =
+  await client.query(
+    `
+    SELECT
+      st.id,
+      st.paper_id,
+      st.batch_id,
+      st.title,
+      st.start_time,
+      st.end_time,
+      st.duration_minutes,
+      st.status AS scheduled_status,
 
-    const scheduledTestsResult =
-      await client.query(
-        `
-        SELECT
-          st.id,
-          st.paper_id,
-          st.batch_id,
-          st.title,
-          st.start_time,
-          st.end_time,
-          st.duration_minutes,
-          st.status AS scheduled_status,
+      p.exam AS paper_exam,
+      p.description AS paper_description,
+      p.code AS paper_code,
+      p.duration_minutes AS paper_duration
 
-          p.exam AS paper_exam,
-          p.description AS paper_description,
-          p.code AS paper_code,
-          p.duration_minutes AS paper_duration
+    FROM scheduled_tests st
 
-        FROM scheduled_tests st
+    LEFT JOIN papers p
+      ON p.id = st.paper_id
 
-        LEFT JOIN papers p
-          ON p.id = st.paper_id
-LEFT JOIN batch_students bs
-  ON bs.batch_id = st.batch_id
- AND bs.student_id = $1
+    WHERE st.academy_id = $1
 
-WHERE (
-  st.batch_id IS NULL
-  OR bs.student_id = $1
-)
+      AND (
+        st.batch_id IS NULL
 
-        ORDER BY st.start_time ASC
-        `,
-        [studentId]
-      );
+        OR EXISTS (
+          SELECT 1
+          FROM batch_students bs
+          WHERE bs.batch_id = st.batch_id
+            AND bs.student_id = $2
+        )
+      )
+
+    ORDER BY st.start_time ASC
+    `,
+    [student.academy_id, studentId]
+  );
 
     const scheduledTests =
       scheduledTestsResult.rows;

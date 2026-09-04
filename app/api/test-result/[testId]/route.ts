@@ -192,65 +192,89 @@ export async function GET(
       }
     }
 
-    /*
-     * -------------------------------------------------------
-     * ANSWERS
-     * -------------------------------------------------------
-     */
 
-    const answersResult =
-      await pool.query(
-        `
-        SELECT
-          question_id,
-          selected_answer,
-          is_correct,
-          marked_for_review
-        FROM test_answers
-        WHERE attempt_id = $1
-        ORDER BY question_id
-        `,
-        [attempt.attempt_id]
-      );
+ const answersResult =
+  await pool.query(
+    `
+    SELECT
+      question_id,
+      selected_answer,
+      is_correct,
+      marks_awarded,
+      marked_for_review
+    FROM test_answers
+    WHERE attempt_id = $1
+    ORDER BY question_id
+    `,
+    [attempt.attempt_id]
+  );
 
-    const answers: Record<
-      string,
-      number
-    > = {};
+const answers: Record<
+  string,
+  number
+> = {};
 
-    const marked: Record<
-      string,
-      boolean
-    > = {};
+const marked: Record<
+  string,
+  boolean
+> = {};
 
-    for (
-      const answer of
-        answersResult.rows
-    ) {
-      const questionId =
-        String(
-          answer.question_id
+const marksAwarded: Record<
+  string,
+  number
+> = {};
+
+const correctness: Record<
+  string,
+  boolean | null
+> = {};
+
+for (
+  const answer of
+    answersResult.rows
+) {
+  const questionId =
+    String(
+      answer.question_id
+    );
+
+  if (
+    answer.selected_answer !==
+      null &&
+    answer.selected_answer !==
+      undefined
+  ) {
+    answers[
+      questionId
+    ] = Number(
+      answer.selected_answer
+    );
+  }
+
+  marked[
+    questionId
+  ] = Boolean(
+    answer.marked_for_review
+  );
+
+  correctness[
+    questionId
+  ] =
+    answer.is_correct === null ||
+    answer.is_correct === undefined
+      ? null
+      : Boolean(
+          answer.is_correct
         );
 
-      if (
-        answer.selected_answer !==
-          null &&
-        answer.selected_answer !==
-          undefined
-      ) {
-        answers[
-          questionId
-        ] = Number(
-          answer.selected_answer
-        );
-      }
+  marksAwarded[
+    questionId
+  ] = Number(
+    answer.marks_awarded ?? 0
+  );
+}
 
-      marked[
-        questionId
-      ] = Boolean(
-        answer.marked_for_review
-      );
-    }
+    
 
     /*
      * -------------------------------------------------------
@@ -315,9 +339,11 @@ export async function GET(
       wrong,
       unattempted,
 
-      answers,
-      marked,
-      questions,
+   answers,
+marked,
+marksAwarded,
+correctness,
+questions,
 
       submittedAt:
         attempt.submitted_at

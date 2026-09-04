@@ -571,23 +571,44 @@ export async function GET(
        We do NOT create fake upcoming/missed tests.
     ======================================================== */
 
-    const scheduledResult =
-      await client.query(
-        `
-        SELECT
-          st.id,
-          st.paper_id,
-          st.batch_id,
-          st.title,
-          st.start_time,
-          st.end_time,
-          st.duration_minutes,
-          st.status,
-          st.created_at
-        FROM scheduled_tests st
-        ORDER BY st.start_time ASC
-        `
-      );
+  const scheduledResult =
+  await client.query(
+    `
+    SELECT
+      st.id,
+      st.paper_id,
+      st.batch_id,
+      st.title,
+      st.start_time,
+      st.end_time,
+      st.duration_minutes,
+      st.status,
+      st.created_at
+    FROM scheduled_tests st
+    WHERE
+      (
+        st.batch_id IS NOT NULL
+        AND EXISTS (
+          SELECT 1
+          FROM batch_students bs
+          WHERE bs.batch_id = st.batch_id
+            AND bs.student_id = $1
+        )
+      )
+      OR
+      (
+        st.batch_id IS NULL
+        AND EXISTS (
+          SELECT 1
+          FROM scheduled_test_students sts
+          WHERE sts.scheduled_test_id = st.id
+            AND sts.student_id = $1
+        )
+      )
+    ORDER BY st.start_time ASC
+    `,
+    [studentId]
+  );
 
     const scheduledTests =
       scheduledResult.rows;

@@ -45,18 +45,27 @@ function MasterLoginForm() {
         );
       }
 
-      // Make sure the account matches the portal
-      if (result.role !== role) {
-        throw new Error(
-          `This account is not an ${isAdmin ? "Admin" : "Teacher"} account.`
-        );
-      }
+   const validPortalRole =
+  role === "ADMIN"
+    ? result.role === "ADMIN" ||
+      result.role === "ACADEMY_ADMIN"
+    : result.role === "TEACHER";
 
-      if (result.role === "ADMIN") {
-        router.replace("/admin");
-      } else if (result.role === "TEACHER") {
-        router.replace("/teacher");
-      }
+if (!validPortalRole) {
+  throw new Error(
+    `This account is not an ${
+      isAdmin ? "Admin" : "Teacher"
+    } account.`
+  );
+}
+
+     if (result.role === "ADMIN") {
+  router.replace("/admin");
+} else if (result.role === "ACADEMY_ADMIN") {
+  router.replace("/academy-admin");
+} else if (result.role === "TEACHER") {
+  router.replace("/teacher");
+}
     } catch (err) {
       console.error("MASTER LOGIN ERROR:", err);
 

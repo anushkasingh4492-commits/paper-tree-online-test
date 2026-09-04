@@ -84,15 +84,28 @@ export async function GET(
       LEFT JOIN papers p
         ON p.id = st.paper_id
 
-      LEFT JOIN batch_students bs
-        ON bs.batch_id = st.batch_id
-       AND bs.student_id = $2
-
-      WHERE st.id = $1
-        AND (
-          st.batch_id IS NULL
-          OR bs.student_id = $2
-        )
+     WHERE st.id = $1
+  AND (
+    (
+      st.batch_id IS NOT NULL
+      AND EXISTS (
+        SELECT 1
+        FROM batch_students bs
+        WHERE bs.batch_id = st.batch_id
+          AND bs.student_id = $2
+      )
+    )
+    OR
+    (
+      st.batch_id IS NULL
+      AND EXISTS (
+        SELECT 1
+        FROM scheduled_test_students sts
+        WHERE sts.scheduled_test_id = st.id
+          AND sts.student_id = $2
+      )
+    )
+  )
 
       LIMIT 1
       `,
