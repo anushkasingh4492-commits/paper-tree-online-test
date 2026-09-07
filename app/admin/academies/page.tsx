@@ -59,24 +59,32 @@ export default function AcademiesPage() {
 
   const [batchName, setBatchName] = useState("");
   const [batchClass, setBatchClass] = useState("");
+async function loadAcademies() {
+  try {
+    setLoading(true);
 
-  async function loadAcademies() {
-    try {
-      const res = await fetch("/api/admin/academies", {
-        cache: "no-store",
-      });
+    const res = await fetch("/api/admin/academies", {
+      cache: "no-store",
+      credentials: "include",
+    });
 
-      const data = await res.json();
+    const data = await res.json();
 
-      if (data.success) {
-        setAcademies(data.academies || []);
-      }
-    } catch {
-      setMessage("Failed to load academies.");
-    } finally {
-      setLoading(false);
+    console.log("ACADEMIES API:", res.status, data);
+
+    if (!res.ok || !data.success) {
+      setMessage(data.error || "Failed to load academies.");
+      return;
     }
+
+    setAcademies(data.academies || []);
+  } catch (error) {
+    console.error("LOAD ACADEMIES ERROR:", error);
+    setMessage("Failed to load academies.");
+  } finally {
+    setLoading(false);
   }
+}
 
   useEffect(() => {
     loadAcademies();
@@ -116,6 +124,25 @@ export default function AcademiesPage() {
     setMessage("Academy updated successfully.");
     setAcademies((current) => current.map((item) => item.id === academy.id ? { ...item, ...data.academy } : item));
     setSelectedAcademy((current) => current?.id === academy.id ? { ...current, ...data.academy } : current);
+  }
+
+  async function resetAcademyAdmin(academy: Academy) {
+    const password = window.prompt("Enter a new academy admin password (minimum 6 characters):");
+    if (!password) return;
+
+    const res = await fetch(`/api/admin/academies/${academy.id}/reset-admin`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ password }),
+    });
+    const data = await res.json();
+
+    if (!res.ok || !data.success) {
+      setMessage(data.error || "Failed to reset academy admin password.");
+      return;
+    }
+
+    setMessage(`Credentials reset: ${data.credentials.email} / ${data.credentials.password}`);
   }
 
   function getStatus(academy: Academy) {
@@ -836,6 +863,13 @@ export default function AcademiesPage() {
                             className="rounded-xl border border-[#dfe4ed] bg-white px-4 py-2.5 text-xs font-bold text-[#697386]"
                           >
                             🎟️ Manage Subscription
+                          </button>
+
+                          <button
+                            onClick={() => resetAcademyAdmin(academy)}
+                            className="rounded-xl border border-blue-200 bg-blue-50 px-4 py-2.5 text-xs font-bold text-[#315bea]"
+                          >
+                            🔑 Reset Admin Password
                           </button>
                         </div>
 

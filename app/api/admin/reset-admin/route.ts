@@ -7,8 +7,8 @@ export const runtime = "nodejs";
 
 export async function GET() {
   try {
-    const email = "admin@example.com";
-    const password = "Admin@123";
+    const email = "admin@papertree.com";
+    const password = "admin123";
     const hash = await bcrypt.hash(password, 12);
 
     const existing = await pool.query(

@@ -265,7 +265,7 @@ export async function POST(request: Request) {
     return NextResponse.json(
       {
         success: false,
-        error: "Invalid email or password.",
+        error: "No account was found for this email. Check the email or run the master account setup.",
       },
       { status: 401 }
     );

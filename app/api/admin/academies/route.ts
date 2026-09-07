@@ -20,6 +20,17 @@ async function isMasterAdmin() {
   }
 }
 
+async function ensureAcademySettingsColumns() {
+  await pool.query(`
+    ALTER TABLE academies
+      ADD COLUMN IF NOT EXISTS status VARCHAR(30) NOT NULL DEFAULT 'ACTIVE',
+      ADD COLUMN IF NOT EXISTS student_limit INTEGER NOT NULL DEFAULT 10,
+      ADD COLUMN IF NOT EXISTS subscription_start DATE,
+      ADD COLUMN IF NOT EXISTS subscription_end DATE,
+      ADD COLUMN IF NOT EXISTS subscription_plan VARCHAR(255)
+  `);
+}
+
 export async function GET() {
   if (!(await isMasterAdmin())) {
     return NextResponse.json(
@@ -28,30 +39,57 @@ export async function GET() {
     );
   }
 
-  const result = await pool.query(`
-    SELECT
-      a.id,
-      a.name,
-      a.code,
-      a.created_at,
-      a.status,
-      a.student_limit,
-      a.subscription_start,
-      a.subscription_end,
-      a.subscription_plan,
-      COUNT(DISTINCT t.id)::int AS teacher_count,
-      COUNT(DISTINCT s.id)::int AS student_count
-    FROM academies a
-    LEFT JOIN teachers t ON t.academy_id = a.id
-    LEFT JOIN students s ON s.academy_id = a.id
-    GROUP BY a.id
-    ORDER BY a.created_at DESC
-  `);
+  try {
+    await ensureAcademySettingsColumns();
+    const result = await pool.query(`
+      SELECT
+        a.id,
+        a.name,
+        a.code,
+        a.created_at,
+        a.status,
+        a.student_limit,
+        a.subscription_start,
+        a.subscription_end,
+        a.subscription_plan,
+        COUNT(DISTINCT t.id)::int AS teacher_count,
+        COUNT(DISTINCT s.id)::int AS student_count
+      FROM academies a
+      LEFT JOIN teachers t
+        ON t.academy_id = a.id
+      LEFT JOIN students s
+        ON s.academy_id = a.id
+      GROUP BY
+        a.id,
+        a.name,
+        a.code,
+        a.created_at,
+        a.status,
+        a.student_limit,
+        a.subscription_start,
+        a.subscription_end,
+        a.subscription_plan
+      ORDER BY a.created_at DESC
+    `);
 
-  return NextResponse.json({
-    success: true,
-    academies: result.rows,
-  });
+    return NextResponse.json({
+      success: true,
+      academies: result.rows,
+    });
+  } catch (error) {
+    console.error("GET ACADEMIES ERROR:", error);
+
+    return NextResponse.json(
+      {
+        success: false,
+        error:
+          error instanceof Error
+            ? error.message
+            : "Failed to load academies.",
+      },
+      { status: 500 }
+    );
+  }
 }
 
 export async function POST(req: NextRequest) {
