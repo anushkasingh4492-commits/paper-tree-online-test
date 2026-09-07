@@ -21,15 +21,16 @@ export async function GET() {
     if (existing.rows.length > 0) {
       await pool.query(
         `UPDATE admins
-         SET password_hash = $1
+         SET password_hash = $1,
+             is_master = TRUE
          WHERE id = $2`,
         [hash, existing.rows[0].id]
       );
     } else {
       await pool.query(
         `INSERT INTO admins
-         (id, name, email, password_hash)
-         VALUES ($1, $2, $3, $4)`,
+         (id, name, email, password_hash, is_master)
+         VALUES ($1, $2, $3, $4, TRUE)`,
         [
           crypto.randomUUID(),
           "Admin",

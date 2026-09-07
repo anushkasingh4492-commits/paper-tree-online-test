@@ -1537,7 +1537,7 @@ export default function DashboardPage() {
               <button
                 onClick={() =>
                   router.push(
-                    "/test-summary"
+                    "/tests/test-summary"
                   )
                 }
                 className="w-full h-10 flex items-center gap-3 px-2.5 rounded-xl text-[#657083] hover:bg-[#f7f8fb] text-xs font-medium"

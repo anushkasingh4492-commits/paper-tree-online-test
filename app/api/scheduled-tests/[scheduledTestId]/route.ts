@@ -32,6 +32,7 @@ export async function GET(
     }
 
     let studentId = "";
+    let academyId = "";
 
     try {
       const parsed = JSON.parse(sessionCookie);
@@ -39,13 +40,18 @@ export async function GET(
       if (parsed?.studentId) {
         studentId = String(parsed.studentId);
       }
+
+      if (parsed?.academyId) {
+        academyId = String(parsed.academyId);
+      }
     } catch {
       studentId = sessionCookie;
     }
 
     studentId = studentId.trim();
+    academyId = academyId.trim();
 
-    if (!studentId) {
+    if (!studentId || !academyId) {
       return NextResponse.json(
         {
           success: false,
@@ -85,10 +91,11 @@ export async function GET(
         ON p.id = st.paper_id
 
      WHERE st.id = $1
-  AND (
+       AND st.academy_id = $3
+       AND (
     (
       st.batch_id IS NOT NULL
-      AND EXISTS (
+          AND EXISTS (
         SELECT 1
         FROM batch_students bs
         WHERE bs.batch_id = st.batch_id
@@ -109,7 +116,7 @@ export async function GET(
 
       LIMIT 1
       `,
-      [scheduledTestId, studentId]
+      [scheduledTestId, studentId, academyId]
     );
 
     if (scheduledResult.rows.length === 0) {

@@ -1,9 +1,10 @@
 import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { randomUUID } from "crypto";
+import bcrypt from "bcryptjs";
 import { pool } from "@/lib/db";
 
-async function getAcademyAdmin() {
+async function getAcademyAdmin(targetAcademyId?: string) {
   const cookieStore = await cookies();
   const session = cookieStore.get("master_session")?.value;
 
@@ -12,11 +13,18 @@ async function getAcademyAdmin() {
   try {
     const data = JSON.parse(session);
 
-    if (data.role !== "ACADEMY_ADMIN" || !data.academyId) {
-      return null;
+    if (data.role === "ACADEMY_ADMIN" && data.academyId) {
+      return data;
     }
 
-    return data;
+    if (
+      (data.role === "ADMIN" || data.role === "MASTER_ADMIN") &&
+      targetAcademyId
+    ) {
+      return { ...data, academyId: targetAcademyId };
+    }
+
+    return null;
   } catch {
     return null;
   }
@@ -64,7 +72,8 @@ export async function GET() {
 }
 
 export async function POST(req: Request) {
-  const admin = await getAcademyAdmin();
+  const body = await req.json();
+  const admin = await getAcademyAdmin(body.academyId);
 
   if (!admin) {
     return NextResponse.json(
@@ -74,18 +83,27 @@ export async function POST(req: Request) {
   }
 
   try {
-    const body = await req.json();
-
     const name = String(body.name || "").trim();
     const email = String(body.email || "").trim().toLowerCase();
+    const password = String(body.password || "");
     const rollNumber = String(body.rollNumber || "").trim();
     const className = String(body.className || "").trim();
 
-    if (!name || !email) {
+    if (!name || !email || !password) {
       return NextResponse.json(
         {
           success: false,
-          error: "Name and email are required",
+          error: "Name, email and password are required",
+        },
+        { status: 400 }
+      );
+    }
+
+    if (password.length < 6) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: "Student password must be at least 6 characters",
         },
         { status: 400 }
       );
@@ -104,13 +122,15 @@ export async function POST(req: Request) {
       return NextResponse.json(
         {
           success: false,
-          error: "Student email already exists",
+          error:
+            "This email is already registered. Use a different email for another student.",
         },
         { status: 409 }
       );
     }
 
     const studentId = randomUUID();
+    const passwordHash = await bcrypt.hash(password, 10);
 
     await pool.query(
       `
@@ -136,6 +156,16 @@ export async function POST(req: Request) {
       ]
     );
 
+    await pool.query(
+      `
+      INSERT INTO student_credentials
+        (student_id, password_hash)
+      VALUES
+        ($1, $2)
+      `,
+      [studentId, passwordHash]
+    );
+
     return NextResponse.json({
       success: true,
       student: {
@@ -144,6 +174,10 @@ export async function POST(req: Request) {
         email,
         rollNumber,
         className,
+      },
+      credentials: {
+        username: email,
+        password,
       },
     });
   } catch (error) {

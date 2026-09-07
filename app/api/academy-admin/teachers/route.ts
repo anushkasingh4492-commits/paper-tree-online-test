@@ -4,7 +4,7 @@ import bcrypt from "bcryptjs";
 import { randomUUID } from "crypto";
 import { pool } from "@/lib/db";
 
-async function getAcademyAdmin() {
+async function getAcademyAdmin(targetAcademyId?: string) {
   const cookieStore = await cookies();
   const session = cookieStore.get("master_session")?.value;
 
@@ -13,11 +13,18 @@ async function getAcademyAdmin() {
   try {
     const data = JSON.parse(session);
 
-    if (data.role !== "ACADEMY_ADMIN" || !data.academyId) {
-      return null;
+    if (data.role === "ACADEMY_ADMIN" && data.academyId) {
+      return data;
     }
 
-    return data;
+    if (
+      (data.role === "ADMIN" || data.role === "MASTER_ADMIN") &&
+      targetAcademyId
+    ) {
+      return { ...data, academyId: targetAcademyId };
+    }
+
+    return null;
   } catch {
     return null;
   }
@@ -54,7 +61,8 @@ export async function GET() {
 }
 
 export async function POST(req: NextRequest) {
-  const admin = await getAcademyAdmin();
+  const body = await req.json();
+  const admin = await getAcademyAdmin(body.academyId);
 
   if (!admin) {
     return NextResponse.json(
@@ -62,8 +70,6 @@ export async function POST(req: NextRequest) {
       { status: 401 }
     );
   }
-
-  const body = await req.json();
 
   const name = String(body.name || "").trim();
   const email = String(body.email || "").trim().toLowerCase();
@@ -87,7 +93,11 @@ export async function POST(req: NextRequest) {
 
   if (existing.rows.length) {
     return NextResponse.json(
-      { success: false, error: "Teacher email already exists" },
+      {
+        success: false,
+        error:
+          "This email is already registered. Use a different email for another teacher.",
+      },
       { status: 409 }
     );
   }

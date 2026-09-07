@@ -318,30 +318,33 @@ export async function POST(request: Request) {
 
     await client.query(
       `
-      INSERT INTO tests (
-        id,
-        exam,
-        question_count,
-        questions,
-        created_at,
-        difficulty
-      )
-      VALUES (
-        $1,
-        $2,
-        $3,
-        $4::jsonb,
-        NOW(),
-        $5
-      )
+INSERT INTO tests (
+  id,
+  exam,
+  question_count,
+  questions,
+  created_at,
+  difficulty,
+  academy_id
+)
+  VALUES (
+  $1,
+  $2,
+  $3,
+  $4::jsonb,
+  NOW(),
+  $5,
+  $6
+)
       `,
       [
-        testId,
-        generatedTest.exam || "MHT-CET",
-        questions.length,
-        JSON.stringify(questions),
-        generatedTest.difficulty || "Balanced",
-      ]
+  testId,
+  generatedTest.exam || "MHT-CET",
+  questions.length,
+  JSON.stringify(questions),
+  generatedTest.difficulty || "Balanced",
+  academyId,
+]
     );
 
     /*
@@ -470,7 +473,10 @@ export async function POST(request: Request) {
       if (!questionId) {
         continue;
       }
-
+await client.query(`
+  ALTER TABLE tests
+  ADD COLUMN IF NOT EXISTS academy_id UUID
+`);
       await client.query(
         `
         INSERT INTO paper_questions (

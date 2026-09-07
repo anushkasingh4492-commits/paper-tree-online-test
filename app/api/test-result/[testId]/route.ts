@@ -32,6 +32,7 @@ export async function GET(
      */
 
     let studentId = "";
+    let academyId = "";
 
     const sessionCookie =
       request.cookies.get("student_session")?.value;
@@ -50,6 +51,9 @@ export async function GET(
           studentId = String(
             parsed?.studentId ?? ""
           ).trim();
+          academyId = String(
+            parsed?.academyId ?? ""
+          ).trim();
         } catch {
           studentId =
             decoded.trim();
@@ -60,7 +64,7 @@ export async function GET(
       }
     }
 
-    if (!studentId) {
+    if (!studentId || !academyId) {
       return NextResponse.json(
         {
           success: false,
@@ -109,11 +113,16 @@ export async function GET(
             ta.scheduled_test_id
           )
 
+        INNER JOIN students s
+          ON s.id = ta.student_id
+          AND s.academy_id = t.academy_id
+
         WHERE
           ta.student_id = $1
+          AND t.academy_id = $2
           AND (
-            ta.test_id = $2
-            OR ta.scheduled_test_id = $2
+            ta.test_id = $3
+            OR ta.scheduled_test_id = $3
           )
 
         ORDER BY
@@ -122,7 +131,7 @@ export async function GET(
 
         LIMIT 1
         `,
-        [studentId, testId]
+        [studentId, academyId, testId]
       );
 
     if (attemptResult.rows.length === 0) {

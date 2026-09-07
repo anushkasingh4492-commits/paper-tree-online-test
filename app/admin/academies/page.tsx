@@ -16,6 +16,15 @@ type Academy = {
   status?: string;
 };
 
+type AcademyDetailsData = {
+  students: Array<Record<string, unknown>>;
+  teachers: Array<Record<string, unknown>>;
+  batches: Array<Record<string, unknown>>;
+  papers: Array<Record<string, unknown>>;
+  scheduledTests: Array<Record<string, unknown>>;
+  questions: Array<Record<string, unknown>>;
+};
+
 type Plan = {
   name: string;
   students: number;
@@ -48,9 +57,11 @@ export default function AcademiesPage() {
 
   const [selectedAcademy, setSelectedAcademy] =
     useState<Academy | null>(null);
+  const [detailsVersion, setDetailsVersion] = useState(0);
 
   const [studentName, setStudentName] = useState("");
   const [studentEmail, setStudentEmail] = useState("");
+  const [studentPassword, setStudentPassword] = useState("");
   const [studentRoll, setStudentRoll] = useState("");
   const [studentClass, setStudentClass] = useState("");
 
@@ -204,8 +215,10 @@ export default function AcademiesPage() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
+          academyId: selectedAcademy.id,
           name: studentName,
           email: studentEmail,
+          password: studentPassword,
           rollNumber: studentRoll,
           className: studentClass,
         }),
@@ -218,10 +231,16 @@ export default function AcademiesPage() {
         return;
       }
 
-      setMessage("✅ Student added successfully.");
+      setMessage(
+        `✅ Student created. Username: ${studentEmail} · Password: ${studentPassword}`
+      );
+
+      setDetailsVersion((version) => version + 1);
+      await loadAcademies();
 
       setStudentName("");
       setStudentEmail("");
+      setStudentPassword("");
       setStudentRoll("");
       setStudentClass("");
     } catch {
@@ -241,6 +260,7 @@ export default function AcademiesPage() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
+          academyId: selectedAcademy.id,
           name: teacherName,
           email: teacherEmail,
           password: teacherPassword,
@@ -254,7 +274,12 @@ export default function AcademiesPage() {
         return;
       }
 
-      setMessage("✅ Teacher added successfully.");
+      setMessage(
+        `✅ Teacher created. Username: ${teacherEmail} · Password: ${teacherPassword}`
+      );
+
+      setDetailsVersion((version) => version + 1);
+      await loadAcademies();
 
       setTeacherName("");
       setTeacherEmail("");
@@ -276,6 +301,7 @@ export default function AcademiesPage() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
+          academyId: selectedAcademy.id,
           name: batchName,
           className: batchClass,
         }),
@@ -289,6 +315,9 @@ export default function AcademiesPage() {
       }
 
       setMessage("✅ Batch created successfully.");
+
+      setDetailsVersion((version) => version + 1);
+      await loadAcademies();
 
       setBatchName("");
       setBatchClass("");
@@ -625,6 +654,12 @@ export default function AcademiesPage() {
                           </p>
                         </div>
 
+                        {message && (
+                          <div className="mb-5 rounded-xl border border-[#cfe0ff] bg-[#f2f6ff] px-4 py-3 text-sm font-semibold text-[#315bea]">
+                            {message}
+                          </div>
+                        )}
+
                         <div className="grid gap-5 lg:grid-cols-3">
                           {/* STUDENT */}
 
@@ -647,6 +682,13 @@ export default function AcademiesPage() {
                                 value={studentEmail}
                                 onChange={setStudentEmail}
                                 placeholder="Student email"
+                              />
+
+                              <Input
+                                type="password"
+                                value={studentPassword}
+                                onChange={setStudentPassword}
+                                placeholder="Student password"
                               />
 
                               <Input
@@ -767,6 +809,11 @@ export default function AcademiesPage() {
                             🎟️ Manage Subscription
                           </button>
                         </div>
+
+                        <AcademyDetails
+                          key={`${academy.id}-${detailsVersion}`}
+                          academyId={academy.id}
+                        />
                       </div>
                     )}
                   </div>
@@ -778,6 +825,322 @@ export default function AcademiesPage() {
       </div>
     </main>
   );
+}
+
+function AcademyDetails({ academyId }: { academyId: string }) {
+  const [details, setDetails] =
+    useState<AcademyDetailsData | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  async function downloadPaper(paperId: string, paperCode: string) {
+    const response = await fetch(
+      `/api/admin/academies/${academyId}/papers/${paperId}/download`
+    );
+
+    if (!response.ok) {
+      setError("Unable to download this paper.");
+      return;
+    }
+
+    const blob = await response.blob();
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = `${paperCode || "paper"}.json`;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(url);
+  }
+
+  useEffect(() => {
+    let active = true;
+
+    async function loadDetails() {
+      setLoading(true);
+      setError("");
+
+      try {
+        const response = await fetch(
+          `/api/admin/academies/${academyId}/details`,
+          { cache: "no-store" }
+        );
+        const data = await response.json();
+
+        if (!response.ok || !data.success) {
+          throw new Error(
+            data.error || "Failed to load academy details."
+          );
+        }
+
+        if (active) setDetails(data);
+      } catch (loadError) {
+        if (active) {
+          setError(
+            loadError instanceof Error
+              ? loadError.message
+              : "Failed to load academy details."
+          );
+        }
+      } finally {
+        if (active) setLoading(false);
+      }
+    }
+
+    loadDetails();
+
+    return () => {
+      active = false;
+    };
+  }, [academyId]);
+
+  if (loading) {
+    return (
+      <div className="mt-6 rounded-2xl border border-[#e3e8f5] bg-[#fafbfe] p-5 text-sm text-[#697386]">
+        Loading full academy details...
+      </div>
+    );
+  }
+
+  if (error || !details) {
+    return (
+      <div className="mt-6 rounded-2xl border border-red-100 bg-red-50 p-5 text-sm font-semibold text-red-600">
+        {error || "No academy details found."}
+      </div>
+    );
+  }
+
+  return (
+    <section className="mt-6 rounded-2xl border border-[#dfe4ed] bg-[#f8faff] p-5">
+      <div className="mb-5 flex flex-wrap items-end justify-between gap-3">
+        <div>
+          <h5 className="text-lg font-extrabold">
+            Full Academy Details
+          </h5>
+          <p className="mt-1 text-xs text-[#697386]">
+            Students, teachers, batches, papers, schedules and every linked question.
+          </p>
+        </div>
+        <div className="text-right text-xs font-bold text-[#697386]">
+          <div>{details.students.length} students</div>
+          <div>{details.teachers.length} teachers</div>
+          <div>{details.papers.length} papers</div>
+        </div>
+      </div>
+
+      <div className="grid gap-4 xl:grid-cols-2">
+        <DetailGroup title="Students">
+          {details.students.length === 0 ? (
+            <EmptyDetail />
+          ) : (
+            details.students.map((student) => (
+              <DetailRow
+                key={String(student.id)}
+                title={String(student.name ?? "Unnamed student")}
+                lines={[
+                  `Username: ${String(student.email ?? "-")}`,
+                  `Roll: ${String(student.roll_number ?? "-")} · Class: ${String(student.class_name ?? "-")}`,
+                  `Password: ${student.has_password ? "Set securely (cannot be displayed)" : "Not set"}`,
+                  `Created: ${formatDetailDate(student.created_at)}`,
+                ]}
+              />
+            ))
+          )}
+        </DetailGroup>
+
+        <DetailGroup title="Teachers">
+          {details.teachers.length === 0 ? (
+            <EmptyDetail />
+          ) : (
+            details.teachers.map((teacher) => (
+              <DetailRow
+                key={String(teacher.id)}
+                title={String(teacher.name ?? "Unnamed teacher")}
+                lines={[
+                  `Username: ${String(teacher.email ?? "-")}`,
+                  `Password: ${teacher.has_password ? "Set securely (cannot be displayed)" : "Not set"}`,
+                  `Created: ${formatDetailDate(teacher.created_at)}`,
+                ]}
+              />
+            ))
+          )}
+        </DetailGroup>
+
+        <DetailGroup title="Batches">
+          {details.batches.length === 0 ? (
+            <EmptyDetail />
+          ) : (
+            details.batches.map((batch) => (
+              <DetailRow
+                key={String(batch.id)}
+                title={String(batch.name ?? "Unnamed batch")}
+                lines={[
+                  `Class: ${String(batch.class_name ?? "-")}`,
+                  `Students: ${String(batch.student_count ?? 0)}`,
+                  `Created: ${formatDetailDate(batch.created_at)}`,
+                ]}
+              />
+            ))
+          )}
+        </DetailGroup>
+
+        <DetailGroup title="Scheduled Tests">
+          {details.scheduledTests.length === 0 ? (
+            <EmptyDetail />
+          ) : (
+            details.scheduledTests.map((test) => (
+              <DetailRow
+                key={String(test.id)}
+                title={String(test.title ?? "Untitled test")}
+                lines={[
+                  `Status: ${String(test.status ?? "-")}`,
+                  `Paper: ${String(test.paper_code ?? "-")} · Batch: ${String(test.batch_name ?? "Individual")}`,
+                  `Start: ${formatDetailDate(test.start_time)} · End: ${formatDetailDate(test.end_time)}`,
+                  `Duration: ${String(test.duration_minutes ?? 0)} minutes`,
+                ]}
+              />
+            ))
+          )}
+        </DetailGroup>
+      </div>
+
+      <div className="mt-4">
+        <DetailGroup title="Papers and Questions">
+          {details.papers.length === 0 ? (
+            <EmptyDetail />
+          ) : (
+            details.papers.map((paper) => {
+              const paperQuestions = details.questions.filter(
+                (question) => question.paper_id === paper.id
+              );
+
+              return (
+                <details
+                  key={String(paper.id)}
+                  className="border-b border-[#e8ecf4] py-3 last:border-b-0"
+                >
+                  <summary className="cursor-pointer list-none text-sm font-extrabold text-[#172033]">
+                    {String(paper.code ?? "Paper")} · {String(paper.description ?? "Untitled")}
+                    <span className="ml-2 text-xs font-semibold text-[#697386]">
+                      {paperQuestions.length} questions · {String(paper.exam ?? "-")} · {String(paper.status ?? "-")}
+                    </span>
+                  </summary>
+
+                  <div className="mt-2 flex flex-wrap items-center justify-between gap-2">
+                    <p className="text-xs text-[#697386]">
+                      Created by: {String(paper.creator_name ?? paper.creator_email ?? "Unknown teacher")}
+                    </p>
+                    <button
+                      type="button"
+                      onClick={() =>
+                        downloadPaper(
+                          String(paper.id),
+                          String(paper.code ?? "paper")
+                        )
+                      }
+                      className="rounded-lg border border-[#315bea] px-3 py-1.5 text-xs font-bold text-[#315bea] hover:bg-[#f1f4ff]"
+                    >
+                      Download JSON
+                    </button>
+                  </div>
+
+                  <div className="mt-3 space-y-3">
+                    {paperQuestions.length === 0 ? (
+                      <EmptyDetail />
+                    ) : (
+                      paperQuestions.map((question, index) => (
+                        <div
+                          key={`${String(question.id)}-${index}`}
+                          className="rounded-xl border border-[#e3e8f5] bg-white p-4"
+                        >
+                          <div className="flex flex-wrap justify-between gap-2 text-[11px] font-bold text-[#315bea]">
+                            <span>Question {String(question.question_order ?? index + 1)}</span>
+                            <span>{String(question.subject ?? "-")} · {String(question.chapter_name ?? "-")} · {String(question.difficulty ?? "-")}</span>
+                          </div>
+                          <p className="mt-2 whitespace-pre-wrap text-sm font-semibold text-[#172033]">
+                            {String(question.stem ?? "Question text unavailable")}
+                          </p>
+                          <p className="mt-2 text-xs text-[#697386]">
+                            Options: {formatQuestionOptions(question.options)}
+                          </p>
+                          <p className="mt-1 text-xs font-bold text-green-700">
+                            Correct answer: {String(question.correct_option ?? "-")}
+                          </p>
+                          {question.solution ? (
+                            <p className="mt-2 whitespace-pre-wrap text-xs leading-5 text-[#697386]">
+                              Solution: {String(question.solution)}
+                            </p>
+                          ) : null}
+                        </div>
+                      ))
+                    )}
+                  </div>
+                </details>
+              );
+            })
+          )}
+        </DetailGroup>
+      </div>
+    </section>
+  );
+}
+
+function DetailGroup({
+  title,
+  children,
+}: {
+  title: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="rounded-xl border border-[#e3e8f5] bg-white p-4">
+      <h6 className="mb-2 text-sm font-extrabold">{title}</h6>
+      {children}
+    </div>
+  );
+}
+
+function DetailRow({
+  title,
+  lines,
+}: {
+  title: string;
+  lines: string[];
+}) {
+  return (
+    <div className="border-b border-[#eef0f4] py-3 last:border-b-0">
+      <p className="text-sm font-bold">{title}</p>
+      {lines.map((line) => (
+        <p key={line} className="mt-1 text-xs text-[#697386]">
+          {line}
+        </p>
+      ))}
+    </div>
+  );
+}
+
+function EmptyDetail() {
+  return <p className="py-3 text-xs text-[#929aaa]">No records found.</p>;
+}
+
+function formatDetailDate(value: unknown) {
+  if (!value) return "-";
+  const date = new Date(String(value));
+  return Number.isNaN(date.getTime())
+    ? String(value)
+    : date.toLocaleString();
+}
+
+function formatQuestionOptions(value: unknown) {
+  if (!value) return "-";
+  if (typeof value === "string") return value;
+
+  try {
+    return JSON.stringify(value);
+  } catch {
+    return "Unavailable";
+  }
 }
 
 function Input({

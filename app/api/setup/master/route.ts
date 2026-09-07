@@ -11,8 +11,12 @@ export async function POST() {
         name TEXT NOT NULL,
         email TEXT UNIQUE NOT NULL,
         password_hash TEXT NOT NULL,
+        is_master BOOLEAN NOT NULL DEFAULT TRUE,
         created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
       );
+
+      ALTER TABLE admins
+      ADD COLUMN IF NOT EXISTS is_master BOOLEAN NOT NULL DEFAULT FALSE;
 
       ALTER TABLE teachers
       ADD COLUMN IF NOT EXISTS password_hash TEXT;
@@ -40,11 +44,13 @@ export async function POST() {
     await pool.query(
       `
       INSERT INTO admins
-        (id, name, email, password_hash)
+        (id, name, email, password_hash, is_master)
       VALUES
-        ('admin-master', 'Administrator', 'admin@papertree.com', $1)
+        ('admin-master', 'Administrator', 'admin@papertree.com', $1, TRUE)
       ON CONFLICT (email)
-      DO UPDATE SET password_hash = EXCLUDED.password_hash
+      DO UPDATE SET
+        password_hash = EXCLUDED.password_hash,
+        is_master = TRUE
       `,
       [adminPassword]
     );

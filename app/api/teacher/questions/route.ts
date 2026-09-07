@@ -17,7 +17,11 @@ export async function GET(request: Request) {
       );
     }
 
-    let session: { role?: string };
+let session: {
+  role?: string;
+  id?: string;
+  academyId?: string;
+};
 
     try {
       session = JSON.parse(sessionCookie);
@@ -28,7 +32,10 @@ export async function GET(request: Request) {
       );
     }
 
-    if (session.role !== "TEACHER") {
+if (
+  session.role !== "TEACHER" ||
+  !session.academyId
+) {
       return NextResponse.json(
         { success: false, error: "Teacher access required." },
         { status: 403 }
@@ -47,6 +54,8 @@ export async function GET(request: Request) {
     const conditions: string[] = [];
 
     values.push(exam);
+ values.push(session.academyId);
+conditions.push(`academy_id = $${values.length}`);
     conditions.push(`exam = $${values.length}`);
 
     if (subject) {
@@ -95,6 +104,10 @@ export async function GET(request: Request) {
       WHERE ${conditions.join(" AND ")}
       ORDER BY created_at DESC
       LIMIT 200
+      let session: {
+  role?: string;
+  academyId?: string;
+};
       `,
       values
     );

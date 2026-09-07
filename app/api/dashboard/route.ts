@@ -392,6 +392,7 @@ if (!sessionCookie) {
 }
 
 let studentId = sessionCookie;
+let academyId = "";
 
 try {
   const parsed = JSON.parse(sessionCookie);
@@ -402,6 +403,7 @@ try {
     parsed.studentId
   ) {
     studentId = String(parsed.studentId);
+    academyId = String(parsed.academyId ?? "");
   }
 
 }catch {
@@ -411,8 +413,9 @@ try {
 
     studentId =
       studentId.trim();
+    academyId = academyId.trim();
 
-    if (!studentId) {
+    if (!studentId || !academyId) {
       return NextResponse.json(
         {
           success: false,
@@ -441,9 +444,10 @@ const studentResult =
   academy_id
 FROM students
 WHERE id = $1
+  AND academy_id = $2
 LIMIT 1
         `,
-        [studentId]
+  [studentId, academyId]
       );
 console.log(
   "STUDENT QUERY:",

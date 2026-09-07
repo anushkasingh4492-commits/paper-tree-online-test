@@ -81,7 +81,49 @@ export async function GET() {
         )
       )
     `);
+    /* =============================================
+       BATCHES
+    ============================================= */
 
+    await client.query(`
+      CREATE TABLE IF NOT EXISTS batches (
+        id UUID PRIMARY KEY,
+        name VARCHAR(255) NOT NULL,
+        class_name VARCHAR(100),
+        created_by TEXT,
+        academy_id UUID NOT NULL,
+        created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+      )
+    `);
+
+    /* =============================================
+       BATCH STUDENTS
+    ============================================= */
+
+    await client.query(`
+      CREATE TABLE IF NOT EXISTS batch_students (
+        batch_id UUID NOT NULL,
+        student_id UUID NOT NULL,
+        created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+
+        PRIMARY KEY (batch_id, student_id)
+      )
+    `);
+
+    await client.query(`
+      CREATE INDEX IF NOT EXISTS idx_batches_academy
+      ON batches(academy_id)
+    `);
+
+    await client.query(`
+      CREATE INDEX IF NOT EXISTS idx_batch_students_batch
+      ON batch_students(batch_id)
+    `);
+
+    await client.query(`
+      CREATE INDEX IF NOT EXISTS idx_batch_students_student
+      ON batch_students(student_id)
+    `);
     /* =============================================
        USEFUL INDEXES
     ============================================= */

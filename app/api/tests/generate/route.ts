@@ -633,17 +633,39 @@ export async function POST(
     const cookieStore =
       await cookies();
 
-    const studentId =
-      cookieStore.get(
-        "student_session"
-      )?.value;
+    const studentSession = cookieStore.get("student_session")?.value;
+    const staffSession = cookieStore.get("master_session")?.value;
 
-    if (!studentId) {
+    let studentId = "";
+    let teacherId = "";
+
+    if (studentSession) {
+      try {
+        const parsed = JSON.parse(studentSession);
+        studentId = String(parsed?.studentId ?? "").trim();
+      } catch {
+        studentId = studentSession.trim();
+      }
+    }
+
+    if (!studentId && staffSession) {
+      try {
+        const parsed = JSON.parse(staffSession);
+
+        if (parsed?.role === "TEACHER") {
+          teacherId = String(parsed?.id ?? "").trim();
+        }
+      } catch {
+        teacherId = "";
+      }
+    }
+
+    if (!studentId && !teacherId) {
       return Response.json(
         {
           success: false,
           error:
-            "Student is not logged in.",
+            "Please log in as a student or teacher before generating a paper.",
         },
         { status: 401 }
       );
@@ -1441,34 +1463,34 @@ export async function POST(
        * Connect test to student
        */
 
-      await client.query(
-        `
-          INSERT INTO student_tests (
-            id,
-            student_id,
-            test_id
-          )
-          VALUES (
-            $1,
-            $2,
-            $3
-          )
-          ON CONFLICT (
-            student_id,
-            test_id
-          )
-          DO NOTHING
-        `,
-        [
-          `student-test-${Date.now()}-${Math.random()
-            .toString(36)
-            .slice(2, 8)}`,
-
-          studentId,
-
-          testId,
-        ]
-      );
+      if (studentId) {
+        await client.query(
+          `
+            INSERT INTO student_tests (
+              id,
+              student_id,
+              test_id
+            )
+            VALUES (
+              $1,
+              $2,
+              $3
+            )
+            ON CONFLICT (
+              student_id,
+              test_id
+            )
+            DO NOTHING
+          `,
+          [
+            `student-test-${Date.now()}-${Math.random()
+              .toString(36)
+              .slice(2, 8)}`,
+            studentId,
+            testId,
+          ]
+        );
+      }
 
       await client.query(
         "COMMIT"

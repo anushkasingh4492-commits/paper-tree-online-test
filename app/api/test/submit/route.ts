@@ -231,7 +231,8 @@ export async function POST(request: NextRequest) {
      * =======================================================
      */
 
-    let studentId = String(body.studentId ?? "").trim();
+    let studentId = "";
+    let academyId = "";
 
     const sessionCookie =
       request.cookies.get("student_session")?.value;
@@ -250,6 +251,14 @@ export async function POST(request: NextRequest) {
           if (cookieStudentId) {
             studentId = cookieStudentId;
           }
+
+          const cookieAcademyId = String(
+            parsed?.academyId ?? ""
+          ).trim();
+
+          if (cookieAcademyId) {
+            academyId = cookieAcademyId;
+          }
         } catch {
           const directStudentId = decoded.trim();
 
@@ -266,7 +275,7 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    if (!studentId) {
+    if (!studentId || !academyId) {
       return NextResponse.json(
         {
           success: false,
@@ -339,9 +348,10 @@ export async function POST(request: NextRequest) {
         created_at
       FROM tests
       WHERE id = $1
+        AND academy_id = $2
       LIMIT 1
       `,
-      [testId]
+      [testId, academyId]
     );
 
     if (testResult.rows.length === 0) {

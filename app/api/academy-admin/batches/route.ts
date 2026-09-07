@@ -3,7 +3,7 @@ import { cookies } from "next/headers";
 import { randomUUID } from "crypto";
 import { pool } from "@/lib/db";
 
-async function getAcademyAdmin() {
+async function getAcademyAdmin(targetAcademyId?: string) {
   const cookieStore = await cookies();
   const session = cookieStore.get("master_session")?.value;
 
@@ -12,11 +12,18 @@ async function getAcademyAdmin() {
   try {
     const data = JSON.parse(session);
 
-    if (data.role !== "ACADEMY_ADMIN" || !data.academyId) {
-      return null;
+    if (data.role === "ACADEMY_ADMIN" && data.academyId) {
+      return data;
     }
 
-    return data;
+    if (
+      (data.role === "ADMIN" || data.role === "MASTER_ADMIN") &&
+      targetAcademyId
+    ) {
+      return { ...data, academyId: targetAcademyId };
+    }
+
+    return null;
   } catch {
     return null;
   }
@@ -87,7 +94,8 @@ const result = await pool.query(
 }
 
 export async function POST(req: Request) {
-  const admin = await getAcademyAdmin();
+  const body = await req.json();
+  const admin = await getAcademyAdmin(body.academyId);
 
   if (!admin) {
     return NextResponse.json(
@@ -97,8 +105,6 @@ export async function POST(req: Request) {
   }
 
   try {
-    const body = await req.json();
-
     const name = String(body.name || "").trim();
     const className = String(body.className || "").trim();
 
