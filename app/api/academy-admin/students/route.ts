@@ -49,6 +49,7 @@ export async function GET() {
         email,
         roll_number,
         class_name,
+        exam,
         created_at
       FROM students
       WHERE academy_id = $1
@@ -88,6 +89,11 @@ export async function POST(req: Request) {
     const password = String(body.password || "");
     const rollNumber = String(body.rollNumber || "").trim();
     const className = String(body.className || "").trim();
+    const exam = String(body.exam || "JEE-MAINS").trim().toUpperCase();
+
+    if (!["JEE-MAINS", "NEET", "MHT-CET"].includes(exam)) {
+      return NextResponse.json({ success: false, error: "Choose a valid exam." }, { status: 400 });
+    }
 
     if (!name || !email || !password) {
       return NextResponse.json(
@@ -107,6 +113,26 @@ export async function POST(req: Request) {
         },
         { status: 400 }
       );
+    }
+
+    const academy = await pool.query(
+      `SELECT student_limit, subscription_end, status,
+        (SELECT COUNT(*)::int FROM students WHERE academy_id = $1) AS student_count
+       FROM academies WHERE id = $1`,
+      [admin.academyId]
+    );
+    const academySettings = academy.rows[0];
+    if (!academySettings) {
+      return NextResponse.json({ success: false, error: "Academy not found." }, { status: 404 });
+    }
+    if (academySettings.status !== "ACTIVE") {
+      return NextResponse.json({ success: false, error: "This academy is not active." }, { status: 403 });
+    }
+    if (academySettings.subscription_end && new Date(academySettings.subscription_end) < new Date()) {
+      return NextResponse.json({ success: false, error: "The academy subscription has expired." }, { status: 403 });
+    }
+    if (Number(academySettings.student_count) >= Number(academySettings.student_limit)) {
+      return NextResponse.json({ success: false, error: "The academy has reached its student limit." }, { status: 409 });
     }
 
     const existing = await pool.query(
@@ -141,10 +167,11 @@ export async function POST(req: Request) {
           email,
           roll_number,
           class_name,
+          exam,
           academy_id
         )
       VALUES
-        ($1, $2, $3, $4, $5, $6)
+        ($1, $2, $3, $4, $5, $6, $7)
       `,
       [
         studentId,
@@ -152,6 +179,7 @@ export async function POST(req: Request) {
         email,
         rollNumber || null,
         className || null,
+        exam,
         admin.academyId,
       ]
     );
@@ -174,6 +202,7 @@ export async function POST(req: Request) {
         email,
         rollNumber,
         className,
+        exam,
       },
       credentials: {
         username: email,

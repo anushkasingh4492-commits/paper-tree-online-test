@@ -43,6 +43,20 @@ export async function GET() {
     `);
 
     await client.query(`
+      ALTER TABLE students
+      ADD COLUMN IF NOT EXISTS exam VARCHAR(50) DEFAULT 'JEE-MAINS'
+    `);
+
+    await client.query(`
+      ALTER TABLE academies
+      ADD COLUMN IF NOT EXISTS status VARCHAR(30) NOT NULL DEFAULT 'ACTIVE',
+      ADD COLUMN IF NOT EXISTS student_limit INTEGER NOT NULL DEFAULT 10,
+      ADD COLUMN IF NOT EXISTS subscription_start DATE,
+      ADD COLUMN IF NOT EXISTS subscription_end DATE,
+      ADD COLUMN IF NOT EXISTS subscription_plan VARCHAR(255)
+    `);
+
+    await client.query(`
       ALTER TABLE papers
       ADD COLUMN IF NOT EXISTS academy_id UUID
     `);

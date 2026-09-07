@@ -25,19 +25,6 @@ type AcademyDetailsData = {
   questions: Array<Record<string, unknown>>;
 };
 
-type Plan = {
-  name: string;
-  students: number;
-  months: number;
-};
-
-const PLANS: Plan[] = [
-  { name: "5 Students · 6 Months", students: 5, months: 6 },
-  { name: "10 Students · 1 Year", students: 10, months: 12 },
-  { name: "25 Students · 1 Year", students: 25, months: 12 },
-  { name: "50 Students · 1 Year", students: 50, months: 12 },
-];
-
 export default function AcademiesPage() {
   const [academies, setAcademies] = useState<Academy[]>([]);
   const [loading, setLoading] = useState(true);
@@ -50,7 +37,8 @@ export default function AcademiesPage() {
   const [adminEmail, setAdminEmail] = useState("");
   const [adminPassword, setAdminPassword] = useState("");
 
-  const [plan, setPlan] = useState(PLANS[0]);
+  const [studentLimit, setStudentLimit] = useState("10");
+  const [subscriptionMonths, setSubscriptionMonths] = useState("12");
   const [startDate, setStartDate] = useState(
     new Date().toISOString().split("T")[0]
   );
@@ -63,7 +51,7 @@ export default function AcademiesPage() {
   const [studentEmail, setStudentEmail] = useState("");
   const [studentPassword, setStudentPassword] = useState("");
   const [studentRoll, setStudentRoll] = useState("");
-  const [studentClass, setStudentClass] = useState("");
+  const [studentExam, setStudentExam] = useState("JEE-MAINS");
 
   const [teacherName, setTeacherName] = useState("");
   const [teacherEmail, setTeacherEmail] = useState("");
@@ -110,8 +98,24 @@ export default function AcademiesPage() {
 
   function getExpiryDate() {
     const date = new Date(startDate);
-    date.setMonth(date.getMonth() + plan.months);
+    date.setMonth(date.getMonth() + Number(subscriptionMonths || 0));
     return date.toISOString().split("T")[0];
+  }
+
+  async function updateAcademy(academy: Academy, changes: Record<string, unknown>) {
+    const res = await fetch(`/api/admin/academies/${academy.id}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(changes),
+    });
+    const data = await res.json();
+    if (!res.ok || !data.success) {
+      setMessage(data.error || "Failed to update academy.");
+      return;
+    }
+    setMessage("Academy updated successfully.");
+    setAcademies((current) => current.map((item) => item.id === academy.id ? { ...item, ...data.academy } : item));
+    setSelectedAcademy((current) => current?.id === academy.id ? { ...current, ...data.academy } : current);
   }
 
   function getStatus(academy: Academy) {
@@ -119,6 +123,13 @@ export default function AcademiesPage() {
       return {
         label: "Suspended",
         className: "bg-red-50 text-red-600",
+      };
+    }
+
+    if (academy.status === "RESTRICTED") {
+      return {
+        label: "Restricted",
+        className: "bg-orange-50 text-orange-600",
       };
     }
 
@@ -171,8 +182,8 @@ export default function AcademiesPage() {
           adminPassword,
 
           // Subscription information
-          subscriptionPlan: plan.name,
-          studentLimit: plan.students,
+          subscriptionPlan: `${studentLimit} Students · ${subscriptionMonths} Months`,
+          studentLimit: Number(studentLimit),
           subscriptionStart: startDate,
           subscriptionEnd: getExpiryDate(),
         }),
@@ -220,7 +231,7 @@ export default function AcademiesPage() {
           email: studentEmail,
           password: studentPassword,
           rollNumber: studentRoll,
-          className: studentClass,
+          exam: studentExam,
         }),
       });
 
@@ -242,7 +253,7 @@ export default function AcademiesPage() {
       setStudentEmail("");
       setStudentPassword("");
       setStudentRoll("");
-      setStudentClass("");
+      setStudentExam("JEE-MAINS");
     } catch {
       setMessage("Failed to add student.");
     }
@@ -460,23 +471,24 @@ export default function AcademiesPage() {
                 🎟️ Subscription
               </label>
 
-              <select
-                value={plan.name}
-                onChange={(e) => {
-                  const selected = PLANS.find(
-                    (item) => item.name === e.target.value
-                  );
-
-                  if (selected) setPlan(selected);
-                }}
-                className="w-full rounded-xl border border-[#dfe4ed] px-4 py-3 text-sm outline-none focus:border-[#315bea]"
-              >
-                {PLANS.map((item) => (
-                  <option key={item.name}>
-                    {item.name}
-                  </option>
-                ))}
-              </select>
+              <div className="grid grid-cols-2 gap-2">
+                <input
+                  type="number"
+                  min="1"
+                  value={studentLimit}
+                  onChange={(e) => setStudentLimit(e.target.value)}
+                  placeholder="Student seats"
+                  className="w-full rounded-xl border border-[#dfe4ed] px-4 py-3 text-sm outline-none focus:border-[#315bea]"
+                />
+                <input
+                  type="number"
+                  min="1"
+                  value={subscriptionMonths}
+                  onChange={(e) => setSubscriptionMonths(e.target.value)}
+                  placeholder="Months"
+                  className="w-full rounded-xl border border-[#dfe4ed] px-4 py-3 text-sm outline-none focus:border-[#315bea]"
+                />
+              </div>
             </div>
 
             <div>
@@ -498,7 +510,7 @@ export default function AcademiesPage() {
               </p>
 
               <p className="mt-1 text-sm font-extrabold text-[#315bea]">
-                {plan.students} student seats
+                {studentLimit} student seats · {subscriptionMonths} months
               </p>
 
               <p className="mt-1 text-xs text-[#697386]">
@@ -697,11 +709,15 @@ export default function AcademiesPage() {
                                 placeholder="Roll number"
                               />
 
-                              <Input
-                                value={studentClass}
-                                onChange={setStudentClass}
-                                placeholder="Class"
-                              />
+                              <select
+                                value={studentExam}
+                                onChange={(e) => setStudentExam(e.target.value)}
+                                className="w-full rounded-xl border border-[#dfe4ed] bg-white px-4 py-3 text-sm outline-none focus:border-[#315bea]"
+                              >
+                                <option value="JEE-MAINS">JEE Mains</option>
+                                <option value="NEET">NEET</option>
+                                <option value="MHT-CET">MHT-CET</option>
+                              </select>
 
                               <button className="w-full rounded-xl bg-[#315bea] px-4 py-3 text-xs font-bold text-white">
                                 ➕ Add Student
@@ -797,15 +813,28 @@ export default function AcademiesPage() {
                         </div>
 
                         <div className="mt-5 flex flex-wrap gap-3">
-                          <button className="rounded-xl border border-orange-200 bg-orange-50 px-4 py-2.5 text-xs font-bold text-orange-600">
-                            ⏸️ Suspend Academy
+                          <button
+                            onClick={() => updateAcademy(academy, { status: academy.status === "SUSPENDED" ? "ACTIVE" : "SUSPENDED" })}
+                            className="rounded-xl border border-orange-200 bg-orange-50 px-4 py-2.5 text-xs font-bold text-orange-600"
+                          >
+                            {academy.status === "SUSPENDED" ? "▶️ Resume Academy" : "⏸️ Suspend Academy"}
                           </button>
 
-                          <button className="rounded-xl border border-red-200 bg-red-50 px-4 py-2.5 text-xs font-bold text-red-600">
-                            🔒 Restrict Access
+                          <button
+                            onClick={() => updateAcademy(academy, { status: academy.status === "RESTRICTED" ? "ACTIVE" : "RESTRICTED" })}
+                            className="rounded-xl border border-red-200 bg-red-50 px-4 py-2.5 text-xs font-bold text-red-600"
+                          >
+                            {academy.status === "RESTRICTED" ? "🔓 Restore Access" : "🔒 Restrict Access"}
                           </button>
 
-                          <button className="rounded-xl border border-[#dfe4ed] bg-white px-4 py-2.5 text-xs font-bold text-[#697386]">
+                          <button
+                            onClick={() => {
+                              const limit = window.prompt("Student limit", String(academy.student_limit ?? 10));
+                              const end = window.prompt("Subscription end date (YYYY-MM-DD)", academy.subscription_end?.slice(0, 10) || "");
+                              if (limit && end) updateAcademy(academy, { studentLimit: Number(limit), subscriptionEnd: end });
+                            }}
+                            className="rounded-xl border border-[#dfe4ed] bg-white px-4 py-2.5 text-xs font-bold text-[#697386]"
+                          >
                             🎟️ Manage Subscription
                           </button>
                         </div>

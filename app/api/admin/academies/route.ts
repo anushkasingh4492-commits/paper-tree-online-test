@@ -34,6 +34,11 @@ export async function GET() {
       a.name,
       a.code,
       a.created_at,
+      a.status,
+      a.student_limit,
+      a.subscription_start,
+      a.subscription_end,
+      a.subscription_plan,
       COUNT(DISTINCT t.id)::int AS teacher_count,
       COUNT(DISTINCT s.id)::int AS student_count
     FROM academies a
@@ -69,13 +74,21 @@ export async function POST(req: NextRequest) {
     .trim()
     .toLowerCase();
   const adminPassword = String(body.adminPassword || "");
+  const subscriptionPlan = String(body.subscriptionPlan || "Custom").trim();
+  const studentLimit = Number(body.studentLimit);
+  const subscriptionStart = String(body.subscriptionStart || "").trim();
+  const subscriptionEnd = String(body.subscriptionEnd || "").trim();
 
   if (
     !academyName ||
     !academyCode ||
     !adminName ||
     !adminEmail ||
-    !adminPassword
+    !adminPassword ||
+    !Number.isInteger(studentLimit) ||
+    studentLimit < 1 ||
+    !subscriptionStart ||
+    !subscriptionEnd
   ) {
     return NextResponse.json(
       { success: false, error: "All fields are required." },
@@ -123,11 +136,15 @@ export async function POST(req: NextRequest) {
       INSERT INTO academies (
         id,
         name,
-        code
+        code,
+        subscription_plan,
+        student_limit,
+        subscription_start,
+        subscription_end
       )
-      VALUES ($1, $2, $3)
+      VALUES ($1, $2, $3, $4, $5, $6, $7)
       `,
-      [academyId, academyName, academyCode]
+      [academyId, academyName, academyCode, subscriptionPlan, studentLimit, subscriptionStart, subscriptionEnd]
     );
 
     const adminId = crypto.randomUUID();
