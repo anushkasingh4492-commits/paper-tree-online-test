@@ -25,6 +25,12 @@ type AcademyDetailsData = {
   questions: Array<Record<string, unknown>>;
 };
 
+type SubscriptionOption = {
+  id: number;
+  studentLimit: string;
+  months: string;
+};
+
 export default function AcademiesPage() {
   const [academies, setAcademies] = useState<Academy[]>([]);
   const [loading, setLoading] = useState(true);
@@ -37,8 +43,10 @@ export default function AcademiesPage() {
   const [adminEmail, setAdminEmail] = useState("");
   const [adminPassword, setAdminPassword] = useState("");
 
-  const [studentLimit, setStudentLimit] = useState("10");
-  const [subscriptionMonths, setSubscriptionMonths] = useState("12");
+  const [subscriptionOptions, setSubscriptionOptions] = useState<SubscriptionOption[]>([
+    { id: 1, studentLimit: "10", months: "12" },
+  ]);
+  const [selectedSubscriptionId, setSelectedSubscriptionId] = useState(1);
   const [startDate, setStartDate] = useState(
     new Date().toISOString().split("T")[0]
   );
@@ -106,8 +114,37 @@ async function loadAcademies() {
 
   function getExpiryDate() {
     const date = new Date(startDate);
-    date.setMonth(date.getMonth() + Number(subscriptionMonths || 0));
+    const selectedSubscription = subscriptionOptions.find(
+      (option) => option.id === selectedSubscriptionId
+    );
+    date.setMonth(date.getMonth() + Number(selectedSubscription?.months || 0));
     return date.toISOString().split("T")[0];
+  }
+
+  function updateSubscriptionOption(
+    id: number,
+    field: "studentLimit" | "months",
+    value: string
+  ) {
+    setSubscriptionOptions((options) =>
+      options.map((option) =>
+        option.id === id ? { ...option, [field]: value } : option
+      )
+    );
+  }
+
+  function addSubscriptionOption() {
+    setSubscriptionOptions((options) => [
+      ...options,
+      { id: Date.now(), studentLimit: "", months: "" },
+    ]);
+  }
+
+  function removeSubscriptionOption(id: number) {
+    setSubscriptionOptions((options) => options.filter((option) => option.id !== id));
+    if (selectedSubscriptionId === id) {
+      setSelectedSubscriptionId(subscriptionOptions[0]?.id ?? 1);
+    }
   }
 
   async function updateAcademy(academy: Academy, changes: Record<string, unknown>) {
@@ -192,6 +229,15 @@ async function loadAcademies() {
   async function createAcademy(e: FormEvent) {
     e.preventDefault();
 
+    const selectedSubscription = subscriptionOptions.find(
+      (option) => option.id === selectedSubscriptionId
+    );
+
+    if (!selectedSubscription?.studentLimit || !selectedSubscription.months) {
+      setMessage("Select a subscription option with seats and months.");
+      return;
+    }
+
     setSaving(true);
     setMessage("");
 
@@ -209,8 +255,8 @@ async function loadAcademies() {
           adminPassword,
 
           // Subscription information
-          subscriptionPlan: `${studentLimit} Students · ${subscriptionMonths} Months`,
-          studentLimit: Number(studentLimit),
+          subscriptionPlan: `${selectedSubscription.studentLimit} Students · ${selectedSubscription.months} Months`,
+          studentLimit: Number(selectedSubscription.studentLimit),
           subscriptionStart: startDate,
           subscriptionEnd: getExpiryDate(),
         }),
@@ -232,6 +278,8 @@ async function loadAcademies() {
       setAdminName("");
       setAdminEmail("");
       setAdminPassword("");
+      setSubscriptionOptions([{ id: 1, studentLimit: "10", months: "12" }]);
+      setSelectedSubscriptionId(1);
 
       await loadAcademies();
     } catch {
@@ -494,27 +542,62 @@ async function loadAcademies() {
             />
 
             <div>
-              <label className="mb-2 block text-xs font-bold text-[#697386]">
-                🎟️ Subscription
-              </label>
+              <div className="mb-2 flex items-center justify-between gap-3">
+                <label className="block text-xs font-bold text-[#697386]">
+                  🎟️ Subscription options
+                </label>
+                <button
+                  type="button"
+                  onClick={addSubscriptionOption}
+                  className="text-xs font-bold text-[#315bea] hover:text-[#264bc9]"
+                >
+                  + Add subscription
+                </button>
+              </div>
 
-              <div className="grid grid-cols-2 gap-2">
-                <input
-                  type="number"
-                  min="1"
-                  value={studentLimit}
-                  onChange={(e) => setStudentLimit(e.target.value)}
-                  placeholder="Student seats"
-                  className="w-full rounded-xl border border-[#dfe4ed] px-4 py-3 text-sm outline-none focus:border-[#315bea]"
-                />
-                <input
-                  type="number"
-                  min="1"
-                  value={subscriptionMonths}
-                  onChange={(e) => setSubscriptionMonths(e.target.value)}
-                  placeholder="Months"
-                  className="w-full rounded-xl border border-[#dfe4ed] px-4 py-3 text-sm outline-none focus:border-[#315bea]"
-                />
+              <div className="space-y-2">
+                {subscriptionOptions.map((option, index) => (
+                  <div key={option.id} className="flex items-center gap-2">
+                    <input
+                      type="radio"
+                      name="selected-subscription"
+                      checked={selectedSubscriptionId === option.id}
+                      onChange={() => setSelectedSubscriptionId(option.id)}
+                      aria-label={`Select subscription option ${index + 1}`}
+                      className="h-4 w-4 accent-[#315bea]"
+                    />
+                    <input
+                      type="number"
+                      min="1"
+                      value={option.studentLimit}
+                      onChange={(e) =>
+                        updateSubscriptionOption(option.id, "studentLimit", e.target.value)
+                      }
+                      placeholder="Student seats"
+                      className="min-w-0 flex-1 rounded-xl border border-[#dfe4ed] px-3 py-3 text-sm outline-none focus:border-[#315bea]"
+                    />
+                    <input
+                      type="number"
+                      min="1"
+                      value={option.months}
+                      onChange={(e) =>
+                        updateSubscriptionOption(option.id, "months", e.target.value)
+                      }
+                      placeholder="Months"
+                      className="min-w-0 flex-1 rounded-xl border border-[#dfe4ed] px-3 py-3 text-sm outline-none focus:border-[#315bea]"
+                    />
+                    {subscriptionOptions.length > 1 && (
+                      <button
+                        type="button"
+                        onClick={() => removeSubscriptionOption(option.id)}
+                        aria-label={`Remove subscription option ${index + 1}`}
+                        className="px-1 text-lg font-bold text-[#929aaa] hover:text-red-600"
+                      >
+                        ×
+                      </button>
+                    )}
+                  </div>
+                ))}
               </div>
             </div>
 
@@ -537,7 +620,7 @@ async function loadAcademies() {
               </p>
 
               <p className="mt-1 text-sm font-extrabold text-[#315bea]">
-                {studentLimit} student seats · {subscriptionMonths} months
+                {subscriptionOptions.find((option) => option.id === selectedSubscriptionId)?.studentLimit || "—"} student seats · {subscriptionOptions.find((option) => option.id === selectedSubscriptionId)?.months || "—"} months
               </p>
 
               <p className="mt-1 text-xs text-[#697386]">
