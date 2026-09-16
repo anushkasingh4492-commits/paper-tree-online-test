@@ -6,16 +6,16 @@ export const runtime = "nodejs";
 
 export async function GET(request: Request) {
   try {
-    const cookieStore = await cookies();
-    const sessionCookie =
-      cookieStore.get("master_session")?.value;
+const cookieStore = await cookies();
+const sessionCookie =
+  cookieStore.get("master_session")?.value;
 
-    if (!sessionCookie) {
-      return NextResponse.json(
-        { success: false, error: "Teacher is not logged in." },
-        { status: 401 }
-      );
-    }
+if (!sessionCookie) {
+  return NextResponse.json(
+    { success: false, error: "Teacher is not logged in." },
+    { status: 401 }
+  );
+}
 
 let session: {
   role?: string;
@@ -23,24 +23,24 @@ let session: {
   academyId?: string;
 };
 
-    try {
-      session = JSON.parse(sessionCookie);
-    } catch {
-      return NextResponse.json(
-        { success: false, error: "Invalid teacher session." },
-        { status: 401 }
-      );
-    }
+try {
+  session = JSON.parse(sessionCookie);
+} catch {
+  return NextResponse.json(
+    { success: false, error: "Invalid teacher session." },
+    { status: 401 }
+  );
+}
 
 if (
   session.role !== "TEACHER" ||
   !session.academyId
 ) {
-      return NextResponse.json(
-        { success: false, error: "Teacher access required." },
-        { status: 403 }
-      );
-    }
+  return NextResponse.json(
+    { success: false, error: "Teacher access required." },
+    { status: 403 }
+  );
+}
 
     const { searchParams } = new URL(request.url);
 
@@ -54,8 +54,7 @@ if (
     const conditions: string[] = [];
 
     values.push(exam);
- values.push(session.academyId);
-conditions.push(`academy_id = $${values.length}`);
+ 
     conditions.push(`exam = $${values.length}`);
 
     if (subject) {
