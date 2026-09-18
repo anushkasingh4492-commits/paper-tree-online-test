@@ -6,7 +6,7 @@ async function isMasterAdmin() {
   const value = (await cookies()).get("master_session")?.value;
   if (!value) return false;
   try {
-    const session = JSON.parse(value);
+    const session = JSON.parse(decodeURIComponent(value));
     return session.role === "ADMIN" || session.role === "MASTER_ADMIN";
   } catch {
     return false;

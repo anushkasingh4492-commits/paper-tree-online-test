@@ -3,156 +3,160 @@ import { cookies } from "next/headers";
 import { randomUUID } from "crypto";
 import { pool } from "@/lib/db";
 
-async function getAcademyAdmin(targetAcademyId?: string) {
-  const cookieStore = await cookies();
-  const session = cookieStore.get("master_session")?.value;
-
-  if (!session) return null;
-
-  try {
-    const data = JSON.parse(session);
-
-    if (data.role === "ACADEMY_ADMIN" && data.academyId) {
-      return data;
-    }
-
-    if (
-      (data.role === "ADMIN" || data.role === "MASTER_ADMIN") &&
-      targetAcademyId
-    ) {
-      return { ...data, academyId: targetAcademyId };
-    }
-
-    return null;
-  } catch {
-    return null;
-  }
-}
+export const runtime = "nodejs";
 
 export async function GET() {
-  const admin = await getAcademyAdmin();
-
-  if (!admin) {
-    return NextResponse.json(
-      { success: false, error: "Unauthorized" },
-      { status: 401 }
-    );
-  }
-
   try {
-const result = await pool.query(
-  `
-  SELECT
-    st.id,
-    st.paper_id,
-    st.batch_id,
-    st.title,
-    st.start_time,
-    st.end_time,
-    st.duration_minutes,
-    st.status,
-    st.created_at,
-    b.name AS batch_name,
+    const cookieStore = await cookies();
+    const sessionCookie = cookieStore.get("master_session")?.value;
 
-    CASE
-      WHEN st.batch_id IS NOT NULL THEN 'batch'
-      ELSE 'student'
-    END AS target_type,
-
-    COALESCE(
-      (
-        SELECT COUNT(*)::int
-        FROM scheduled_test_students sts
-        WHERE sts.scheduled_test_id = st.id
-      ),
-      0
-    ) AS assigned_student_count
-
-  FROM scheduled_tests st
-
-  LEFT JOIN batches b
-    ON b.id = st.batch_id
-
-  WHERE st.academy_id = $1
-
-  ORDER BY st.start_time DESC
-  `,
-  [admin.academyId]
-);
-    return NextResponse.json({
-      success: true,
-      batches: result.rows,
-    });
-  } catch (error) {
-    console.error("ACADEMY BATCH GET ERROR:", error);
-
-    return NextResponse.json(
-      { success: false, error: "Failed to load batches" },
-      { status: 500 }
-    );
-  }
-}
-
-export async function POST(req: Request) {
-  const body = await req.json();
-  const admin = await getAcademyAdmin(body.academyId);
-
-  if (!admin) {
-    return NextResponse.json(
-      { success: false, error: "Unauthorized" },
-      { status: 401 }
-    );
-  }
-
-  try {
-    const name = String(body.name || "").trim();
-    const className = String(body.className || "").trim();
-
-    if (!name) {
+    if (!sessionCookie) {
       return NextResponse.json(
-        { success: false, error: "Batch name is required" },
-        { status: 400 }
+        {
+          success: false,
+          error: "Teacher is not logged in.",
+        },
+        { status: 401 }
       );
     }
 
-    const batchId = randomUUID();
+    let session: {
+      id?: string;
+      role?: string;
+      academyId?: string | null;
+    };
 
-    await pool.query(
+    try {
+      session = JSON.parse(decodeURIComponent(sessionCookie));
+    } catch {
+      return NextResponse.json(
+        {
+          success: false,
+          error: "Invalid login session. Please log in again.",
+        },
+        { status: 401 }
+      );
+    }
+
+    if (session.role !== "ACADEMY_ADMIN" || !session.id || !session.academyId) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: "Invalid teacher session. Please log in again.",
+        },
+        { status: 401 }
+      );
+    }
+
+    /*
+     * Get the academy from the session first.
+     * If an older session does not contain academyId,
+     * resolve it directly from the teacher account.
+     */
+    const academyId = session.academyId;
+
+    if (!academyId) {
+      return NextResponse.json(
+        {
+          success: false,
+          error:
+            "This teacher is not assigned to an academy yet.",
+        },
+        { status: 403 }
+      );
+    }
+
+    /*
+     * IMPORTANT:
+     * Load actual batches belonging to this academy.
+     */
+    const batchesResult = await pool.query(
       `
-      INSERT INTO batches
-        (
-          id,
-          name,
-          class_name,
-          created_by,
-          academy_id
-        )
-      VALUES
-        ($1, $2, $3, $4, $5)
+      SELECT
+        b.id,
+        b.name,
+        b.class_name,
+        b.created_at,
+        COUNT(bs.student_id)::int AS student_count
+      FROM batches b
+      LEFT JOIN batch_students bs ON bs.batch_id = b.id
+      WHERE b.academy_id = $1
+      GROUP BY b.id
+      ORDER BY b.name ASC
       `,
-      [
-        batchId,
+      [academyId]
+    );
+
+    /*
+     * Load students belonging to this academy.
+     */
+    const studentsResult = await pool.query(
+      `
+      SELECT
+        id,
         name,
-        className || null,
-        null,
-admin.academyId,
-      ]
+        email,
+        roll_number,
+        class_name
+      FROM students
+      WHERE academy_id = $1
+      ORDER BY name ASC
+      `,
+      [academyId]
     );
 
     return NextResponse.json({
       success: true,
-      batch: {
-        id: batchId,
-        name,
-        className,
-      },
+      academyId,
+      batches: batchesResult.rows,
+      students: studentsResult.rows,
     });
   } catch (error) {
-    console.error("ACADEMY BATCH POST ERROR:", error);
+    console.error("TEACHER TARGETS ERROR:", error);
 
     return NextResponse.json(
-      { success: false, error: "Failed to create batch" },
+      {
+        success: false,
+        error:
+          error instanceof Error
+            ? error.message
+            : "Could not load batches and students.",
+      },
       { status: 500 }
     );
   }
+}
+
+export async function POST(request: Request) {
+  const value = (await cookies()).get("master_session")?.value;
+  if (!value) return NextResponse.json({ success: false, error: "Unauthorized" }, { status: 401 });
+  let session: { id?: string; role?: string; academyId?: string };
+  try { session = JSON.parse(decodeURIComponent(value)); } catch { return NextResponse.json({ success: false, error: "Invalid session" }, { status: 401 }); }
+  if (session.role !== "ACADEMY_ADMIN" || !session.id || !session.academyId) {
+    return NextResponse.json({ success: false, error: "Unauthorized" }, { status: 401 });
+  }
+  const body = await request.json();
+  const name = String(body.name ?? "").trim();
+  const className = String(body.className ?? "").trim();
+  if (!name || !className) return NextResponse.json({ success: false, error: "Batch name and class are required." }, { status: 400 });
+  const result = await pool.query(
+    `INSERT INTO batches (id, name, class_name, created_by, academy_id)
+     VALUES ($1, $2, $3, $4, $5)
+     RETURNING id, name, class_name, created_at`,
+    [randomUUID(), name, className, session.id, session.academyId]
+  );
+  return NextResponse.json({ success: true, batch: { ...result.rows[0], student_count: 0 } }, { status: 201 });
+}
+
+export async function DELETE(request: Request) {
+  const value = (await cookies()).get("master_session")?.value;
+  const batchId = new URL(request.url).searchParams.get("id") || "";
+  if (!value) return NextResponse.json({ success: false, error: "Unauthorized" }, { status: 401 });
+  let session: { role?: string; academyId?: string };
+  try { session = JSON.parse(decodeURIComponent(value)); } catch { return NextResponse.json({ success: false, error: "Invalid session" }, { status: 401 }); }
+  if (session.role !== "ACADEMY_ADMIN" || !session.academyId) return NextResponse.json({ success: false, error: "Unauthorized" }, { status: 401 });
+  const scheduled = await pool.query(`SELECT 1 FROM scheduled_tests WHERE batch_id=$1 AND academy_id=$2 LIMIT 1`, [batchId, session.academyId]);
+  if (scheduled.rowCount) return NextResponse.json({ success: false, error: "Cancel this batch's scheduled tests before removing the batch." }, { status: 409 });
+  const client = await pool.connect();
+  try { await client.query("BEGIN"); await client.query(`DELETE FROM batch_students WHERE batch_id=$1`, [batchId]); const result = await client.query(`DELETE FROM batches WHERE id=$1 AND academy_id=$2 RETURNING id`, [batchId, session.academyId]); await client.query("COMMIT"); if (!result.rowCount) return NextResponse.json({ success: false, error: "Batch not found." }, { status: 404 }); return NextResponse.json({ success: true }); } catch (error) { await client.query("ROLLBACK"); return NextResponse.json({ success: false, error: error instanceof Error ? error.message : "Could not remove batch." }, { status: 500 }); } finally { client.release(); }
 }

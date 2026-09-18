@@ -3,8 +3,21 @@ import bcrypt from "bcryptjs";
 
 export const runtime = "nodejs";
 
-export async function POST() {
+export async function POST(request: Request) {
   try {
+    const body = await request.json().catch(() => ({}));
+    const academyId = String(body.academyId || "").trim();
+
+    if (!academyId) {
+      return Response.json(
+        {
+          success: false,
+          error: "academyId is required to create the master teacher account.",
+        },
+        { status: 400 }
+      );
+    }
+
     await pool.query(`
       CREATE TABLE IF NOT EXISTS admins (
         id TEXT PRIMARY KEY,
@@ -38,6 +51,18 @@ export async function POST() {
       ON notifications(scheduled_test_id);
     `);
 
+    const academy = await pool.query(
+      `SELECT id FROM academies WHERE id = $1 LIMIT 1`,
+      [academyId]
+    );
+
+    if (!academy.rows.length) {
+      return Response.json(
+        { success: false, error: "The selected academy does not exist." },
+        { status: 400 }
+      );
+    }
+
     const adminPassword = await bcrypt.hash("admin123", 10);
     const teacherPassword = await bcrypt.hash("teacher123", 10);
 
@@ -58,14 +83,16 @@ export async function POST() {
     await pool.query(
       `
       INSERT INTO teachers
-        (id, name, email, institute_name, password_hash)
+        (id, name, email, institute_name, password_hash, academy_id)
       VALUES
         ('teacher-master', 'Teacher', 'teacher@papertree.com',
-         'Paper Tree', $1)
+         'Paper Tree', $1, $2)
       ON CONFLICT (email)
-      DO UPDATE SET password_hash = EXCLUDED.password_hash
+      DO UPDATE SET
+        password_hash = EXCLUDED.password_hash,
+        academy_id = COALESCE(teachers.academy_id, EXCLUDED.academy_id)
       `,
-      [teacherPassword]
+      [teacherPassword, academyId]
     );
 
     return Response.json({
@@ -78,6 +105,7 @@ export async function POST() {
       teacher: {
         email: "teacher@papertree.com",
         password: "teacher123",
+        academyId,
       },
     });
   } catch (error) {

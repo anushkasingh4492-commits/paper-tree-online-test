@@ -186,7 +186,7 @@ export default function ScheduledTestPage() {
       timing.remaining
     );
 
-  function handleStart() {
+  async function handleStart() {
     if (!test) return;
 
     if (!timing.started) {
@@ -197,21 +197,45 @@ export default function ScheduledTestPage() {
       return;
     }
 
-    /*
-     * IMPORTANT:
-     *
-     * A scheduled test currently points to a PAPER,
-     * while the normal CBT page expects a TEST id.
-     *
-     * Do not pass scheduledTestId directly to
-     * /test/[testId].
-     *
-     * Step 3 below creates/resolves the actual test.
-     */
+    try {
+      const response = await fetch(
+        `/api/scheduled-tests/${test.scheduledTestId}/start`,
+        {
+          method: "GET",
+          cache: "no-store",
+          credentials: "include",
+        }
+      );
 
-    router.push(
-      `/api/scheduled-tests/${test.scheduledTestId}/start`
-    );
+      const data = await response.json();
+
+      if (!response.ok || !data?.success || !data.testId) {
+        throw new Error(
+          data?.error || "Could not start this test."
+        );
+      }
+
+      localStorage.setItem(
+        `test-config-${data.testId}`,
+        JSON.stringify({
+          testId: data.testId,
+          scheduledTestId: data.scheduledTestId,
+          course: data.exam,
+          duration: data.duration,
+          startTime: data.startTime,
+          endTime: data.endTime,
+          createdAt: new Date().toISOString(),
+        })
+      );
+
+      router.push(`/test/${data.testId}`);
+    } catch (error) {
+      setError(
+        error instanceof Error
+          ? error.message
+          : "Could not start this test."
+      );
+    }
   }
 
   if (loading) {

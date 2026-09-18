@@ -1,110 +1,79 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+
+type Overview = {
+  academy: { name: string; code?: string; status?: string; student_limit?: number; subscription_end?: string | null };
+  counts: { teachers: number; students: number; batches: number; scheduled_tests: number };
+  batches: Array<{ id: string; name: string; class_name?: string; student_count: number }>;
+  tests: Array<{ id: string; title: string; batch_name?: string; start_time: string; status: string }>;
+};
+
+const actions = [
+  { title: "Teachers", description: "Invite and manage teaching staff.", icon: "👩‍🏫", href: "/academy-admin/teachers" },
+  { title: "Students", description: "Create student accounts and credentials.", icon: "🎓", href: "/academy-admin/students" },
+  { title: "Batches", description: "Build classes and assign students.", icon: "👥", href: "/academy-admin/batches" },
+  { title: "Scheduled tests", description: "Schedule academy papers for batches.", icon: "🗓️", href: "/academy-admin/tests" },
+];
 
 export default function AcademyAdminPage() {
   const router = useRouter();
+  const [overview, setOverview] = useState<Overview | null>(null);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    void fetch("/api/academy-admin/overview", { cache: "no-store", credentials: "include" })
+      .then(async (response) => {
+        const data = await response.json();
+        if (!response.ok || !data.success) throw new Error(data.error || "Unable to load academy details.");
+        setOverview(data);
+      })
+      .catch((reason) => setError(reason instanceof Error ? reason.message : "Unable to load academy details."));
+  }, []);
 
   function logout() {
-    document.cookie =
-      "master_session=; Max-Age=0; path=/";
-
+    document.cookie = "master_session=; Max-Age=0; path=/";
     router.replace("/");
   }
-const cards = [
-  {
-    title: "Teachers",
-    description: "Manage teachers belonging to your academy.",
-    icon: "",
-    route: "/academy-admin/teachers",
-  },
-  {
-    title: "Students",
-    description: "Manage your academy students.",
-    icon: "",
-    route: "/academy-admin/students",
-  },
-  {
-    title: "Batches",
-    description: "Create and manage classes and batches.",
-    icon: "",
-    route: "/academy-admin/batches",
-  },
-  {
-    title: "Scheduled Tests",
-    description: "View tests assigned to your academy.",
-    icon: "",
-    route: "/academy-admin/tests",
-  },
-];
+
+  const countCards = [
+    ["Teachers", overview?.counts.teachers ?? 0, "👩‍🏫"],
+    ["Students", overview?.counts.students ?? 0, "🎓"],
+    ["Batches", overview?.counts.batches ?? 0, "👥"],
+    ["Open tests", overview?.counts.scheduled_tests ?? 0, "🗓️"],
+  ];
 
   return (
     <main className="min-h-screen bg-[#f6f8fc] text-[#172033]">
       <header className="border-b border-[#e7eaf0] bg-white">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-          <div>
-            <h1 className="text-xl font-extrabold">
-              Academy Administration
-            </h1>
-
-            <p className="mt-1 text-xs font-bold tracking-wider text-[#315bea]">
-              ACADEMY ADMIN
-            </p>
-          </div>
-
-          <button
-            onClick={logout}
-            className="rounded-xl border border-[#e2e6ee] bg-white px-4 py-2.5 text-sm font-bold text-[#697386]"
-          >
-            Logout
-          </button>
+          <div><p className="text-xs font-black tracking-[.16em] text-[#315bea]">ACADEMY ADMIN</p><h1 className="mt-1 text-xl font-extrabold">{overview?.academy.name || "Academy control centre"}</h1></div>
+          <button onClick={logout} className="rounded-xl border border-[#e2e6ee] px-4 py-2.5 text-sm font-bold text-[#697386]">Logout</button>
         </div>
       </header>
 
-      <div className="mx-auto max-w-7xl px-6 py-10">
-        <div className="mb-10">
-          <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#315bea]">
-            Academy Management
-          </p>
+      <div className="mx-auto max-w-7xl px-6 py-9">
+        {error && <div className="mb-6 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-semibold text-red-700">{error}</div>}
+        <section className="rounded-3xl bg-gradient-to-r from-[#315bea] to-[#6b47e8] px-7 py-8 text-white shadow-lg">
+          <p className="text-xs font-black tracking-[.16em] text-blue-100">ONE PLACE TO RUN YOUR ACADEMY</p>
+          <h2 className="mt-2 text-3xl font-extrabold">Everything is in sync.</h2>
+          <p className="mt-3 max-w-2xl text-sm leading-6 text-blue-100">Teachers, students, batches and tests use the same academy records that the master admin sees. Changes appear there automatically.</p>
+          {overview?.academy.subscription_end && <p className="mt-5 text-xs font-bold text-blue-100">Subscription ends {new Date(overview.academy.subscription_end).toLocaleDateString("en-IN")}</p>}
+        </section>
 
-          <h2 className="mt-2 text-3xl font-extrabold">
-            Academy Control Center
-          </h2>
+        <section className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+          {countCards.map(([label, value, icon]) => <div key={String(label)} className="rounded-2xl border border-[#e3e8f5] bg-white p-5 shadow-sm"><span className="text-2xl">{icon}</span><p className="mt-4 text-3xl font-extrabold">{value}</p><p className="mt-1 text-sm font-semibold text-[#697386]">{label}</p></div>)}
+        </section>
 
-          <p className="mt-2 max-w-2xl text-sm leading-6 text-[#697386]">
-            Manage your academy teachers, students, batches and
-            scheduled tests.
-          </p>
-        </div>
+        <section className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+          {actions.map((action) => <button key={action.title} onClick={() => router.push(action.href)} className="rounded-2xl border border-[#e3e8f5] bg-white p-5 text-left shadow-sm transition hover:-translate-y-0.5 hover:border-[#315bea]"><span className="text-2xl">{action.icon}</span><h3 className="mt-4 font-extrabold">{action.title}</h3><p className="mt-1 text-sm leading-6 text-[#697386]">{action.description}</p><span className="mt-4 block text-sm font-bold text-[#315bea]">Manage →</span></button>)}
+        </section>
 
-        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-          {cards.map((card) => (
-            <div
-              key={card.title}
-              className="rounded-2xl border border-[#e3e8f5] bg-white p-6 shadow-sm"
-            >
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#f2f5ff] text-2xl">
-                {card.icon}
-              </div>
-
-              <h3 className="mt-5 text-lg font-extrabold">
-                {card.title}
-              </h3>
-
-              <p className="mt-2 text-sm leading-6 text-[#697386]">
-                {card.description}
-              </p>
-
-            <button
-  className="mt-5 text-sm font-bold text-[#315bea]"
-  onClick={() => router.push(card.route)}
->
-  Manage →
-</button>
-
-            </div>
-          ))}
-        </div>
+        <section className="mt-8 grid gap-6 lg:grid-cols-2">
+          <div className="rounded-2xl border border-[#e3e8f5] bg-white p-6 shadow-sm"><div className="flex items-center justify-between"><h3 className="font-extrabold">Batch snapshot</h3><button onClick={() => router.push("/academy-admin/batches")} className="text-sm font-bold text-[#315bea]">Manage</button></div><div className="mt-4 space-y-3">{overview?.batches.length ? overview.batches.map((batch) => <div key={batch.id} className="flex justify-between rounded-xl bg-[#f7f8fc] px-4 py-3"><span><b>{batch.name}</b><small className="ml-2 text-[#697386]">{batch.class_name}</small></span><span className="text-sm font-bold text-[#315bea]">{batch.student_count} students</span></div>) : <p className="text-sm text-[#697386]">Create your first batch to organise students.</p>}</div></div>
+          <div className="rounded-2xl border border-[#e3e8f5] bg-white p-6 shadow-sm"><div className="flex items-center justify-between"><h3 className="font-extrabold">Upcoming tests</h3><button onClick={() => router.push("/academy-admin/tests")} className="text-sm font-bold text-[#315bea]">Schedule test</button></div><div className="mt-4 space-y-3">{overview?.tests.length ? overview.tests.map((test) => <div key={test.id} className="rounded-xl bg-[#f7f8fc] px-4 py-3"><b>{test.title}</b><p className="mt-1 text-xs text-[#697386]">{test.batch_name || "Academy"} · {new Date(test.start_time).toLocaleString("en-IN")}</p></div>) : <p className="text-sm text-[#697386]">No upcoming tests. Schedule one when a paper is ready.</p>}</div></div>
+        </section>
       </div>
     </main>
   );

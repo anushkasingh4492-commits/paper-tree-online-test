@@ -127,6 +127,17 @@ export async function POST(request: Request) {
         );
       }
 
+      if (!teacher.academy_id) {
+        return NextResponse.json(
+          {
+            success: false,
+            error:
+              "This teacher account is not assigned to an academy. Ask an administrator to assign one before signing in.",
+          },
+          { status: 403 }
+        );
+      }
+
       const response = NextResponse.json({
         success: true,
         role: "TEACHER",

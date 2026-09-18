@@ -35,6 +35,7 @@ type MarkedMap = Record<string, boolean>;
 
 type SubmitBody = {
   testId?: string;
+  scheduledTestId?: string;
   studentId?: string;
   answers?: AnswerMap;
   marked?: MarkedMap;
@@ -366,6 +367,47 @@ export async function POST(request: NextRequest) {
 
     const test = testResult.rows[0];
 
+    await client.query(`
+      ALTER TABLE scheduled_tests
+      ADD COLUMN IF NOT EXISTS test_id UUID
+    `);
+
+    let scheduledTestId: string | null = null;
+
+    const requestedScheduledTestId = String(
+      body.scheduledTestId ?? ""
+    ).trim();
+
+    if (requestedScheduledTestId) {
+      const scheduledResult = await client.query(
+        `
+        SELECT id
+        FROM scheduled_tests
+        WHERE id::text = $1::text
+          AND test_id::text = $2::text
+          AND academy_id::text = $3::text
+        LIMIT 1
+        `,
+        [requestedScheduledTestId, testId, academyId]
+      );
+
+      if (scheduledResult.rows.length > 0) {
+        scheduledTestId = String(
+          scheduledResult.rows[0].id
+        );
+      }
+    }
+
+    await client.query(`
+      ALTER TABLE test_attempts
+      ALTER COLUMN scheduled_test_id DROP NOT NULL
+    `);
+
+    await client.query(`
+      ALTER TABLE test_attempts
+      DROP CONSTRAINT IF EXISTS test_attempts_scheduled_test_id_fkey
+    `);
+
     /*
      * =======================================================
      * EXAM MARKING SCHEME
@@ -652,10 +694,10 @@ export async function POST(request: NextRequest) {
           started_at
         FROM test_attempts
         WHERE (
-          test_id = $1
-          OR scheduled_test_id = $1
+          test_id::text = $1::text
+          OR scheduled_test_id::text = $1::text
         )
-        AND student_id = $2
+        AND student_id::text = $2::text
         ORDER BY started_at DESC NULLS LAST
         LIMIT 1
         FOR UPDATE

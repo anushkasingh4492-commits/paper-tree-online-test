@@ -360,6 +360,9 @@ export default function TestPage() {
   const startedAtRef =
     useRef<number | null>(null);
 
+  const scheduledEndAtRef =
+    useRef<number | null>(null);
+
   /*
    * =========================================================
    * IMAGE HELPERS
@@ -783,6 +786,7 @@ export default function TestPage() {
             `/api/tests/${testId}`,
             {
               cache: "no-store",
+              credentials: "include",
             }
           );
 
@@ -1180,6 +1184,7 @@ const figureAsset =
          */
 
         let durationMinutes = 30;
+        let scheduledEndAt: number | null = null;
 
         try {
           const config =
@@ -1206,6 +1211,20 @@ const figureAsset =
             ) {
               durationMinutes =
                 configuredDuration;
+            }
+
+            const configuredEndTime =
+              new Date(
+                parsedConfig?.endTime
+              ).getTime();
+
+            if (
+              Number.isFinite(
+                configuredEndTime
+              )
+            ) {
+              scheduledEndAt =
+                configuredEndTime;
             }
           }
         } catch (error) {
@@ -1258,6 +1277,18 @@ const figureAsset =
             )
           );
 
+        scheduledEndAtRef.current =
+          scheduledEndAt;
+
+        const scheduledRemainingSeconds =
+          scheduledEndAt
+            ? Math.floor(
+                (scheduledEndAt -
+                  Date.now()) /
+                  1000
+              )
+            : totalSeconds;
+
         const elapsedSeconds =
           Math.floor(
             (Date.now() -
@@ -1268,8 +1299,11 @@ const figureAsset =
         setTimeLeft(
           Math.max(
             0,
-            totalSeconds -
-              elapsedSeconds
+            Math.min(
+              totalSeconds -
+                elapsedSeconds,
+              scheduledRemainingSeconds
+            )
           )
         );
       } catch (err) {
@@ -1627,6 +1661,11 @@ const figureAsset =
 
             body: JSON.stringify({
               testId,
+              scheduledTestId:
+                typeof config?.scheduledTestId ===
+                "string"
+                  ? config.scheduledTestId
+                  : undefined,
               studentId,
               answers,
               marked,
@@ -1768,6 +1807,12 @@ const figureAsset =
         )
       );
 
+      window.dispatchEvent(
+        new Event(
+          "paperTreeDashboardRefresh"
+        )
+      );
+
       setShowWarning(false);
 
       router.replace(
@@ -1831,6 +1876,8 @@ const figureAsset =
 
         let durationMinutes =
           30;
+        let scheduledEndAt =
+          scheduledEndAtRef.current;
 
         try {
           const config =
@@ -1858,6 +1905,22 @@ const figureAsset =
               durationMinutes =
                 configuredDuration;
             }
+
+            const configuredEndTime =
+              new Date(
+                parsedConfig?.endTime
+              ).getTime();
+
+            if (
+              Number.isFinite(
+                configuredEndTime
+              )
+            ) {
+              scheduledEndAt =
+                configuredEndTime;
+              scheduledEndAtRef.current =
+                configuredEndTime;
+            }
           }
         } catch {}
 
@@ -1884,12 +1947,30 @@ const figureAsset =
               elapsed
           );
 
+        const scheduledRemaining =
+          scheduledEndAt
+            ? Math.max(
+                0,
+                Math.floor(
+                  (scheduledEndAt -
+                    Date.now()) /
+                    1000
+                )
+              )
+            : remaining;
+
         setTimeLeft(
-          remaining
+          Math.min(
+            remaining,
+            scheduledRemaining
+          )
         );
 
         if (
-          remaining <= 0 &&
+          Math.min(
+            remaining,
+            scheduledRemaining
+          ) <= 0 &&
           !submittedRef.current
         ) {
           window.clearInterval(

@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { pool } from "@/lib/db";
+import { parseSessionCookie } from "@/lib/session";
 
 async function getAcademyAdmin() {
   const cookieStore = await cookies();
@@ -8,17 +9,18 @@ async function getAcademyAdmin() {
 
   if (!session) return null;
 
-  try {
-    const data = JSON.parse(session.value);
+  const data = parseSessionCookie<Record<string, unknown>>(session.value);
+
+  if (data) {
 
     if (data.role !== "ACADEMY_ADMIN" || !data.academyId) {
       return null;
     }
 
     return data;
-  } catch {
-    return null;
   }
+
+  return null;
 }
 
 export async function GET() {

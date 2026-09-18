@@ -3,6 +3,7 @@ import { cookies } from "next/headers";
 import bcrypt from "bcryptjs";
 import { randomUUID } from "crypto";
 import { pool } from "@/lib/db";
+import { parseSessionCookie } from "@/lib/session";
 
 async function getAcademyAdmin(targetAcademyId?: string) {
   const cookieStore = await cookies();
@@ -10,8 +11,9 @@ async function getAcademyAdmin(targetAcademyId?: string) {
 
   if (!session) return null;
 
-  try {
-    const data = JSON.parse(session);
+  const data = parseSessionCookie<Record<string, unknown>>(session);
+
+  if (data) {
 
     if (data.role === "ACADEMY_ADMIN" && data.academyId) {
       return data;
@@ -25,9 +27,9 @@ async function getAcademyAdmin(targetAcademyId?: string) {
     }
 
     return null;
-  } catch {
-    return null;
   }
+
+  return null;
 }
 
 export async function GET() {
@@ -131,4 +133,14 @@ export async function POST(req: NextRequest) {
       academyId: admin.academyId,
     },
   });
+}
+
+export async function DELETE(request: NextRequest) {
+  const teacherId = request.nextUrl.searchParams.get("id") || "";
+  const admin = await getAcademyAdmin();
+  if (!admin) return NextResponse.json({ success: false, error: "Unauthorized" }, { status: 401 });
+  if (!teacherId) return NextResponse.json({ success: false, error: "Teacher is required." }, { status: 400 });
+  const result = await pool.query(`DELETE FROM teachers WHERE id = $1 AND academy_id = $2 RETURNING id`, [teacherId, admin.academyId]);
+  if (!result.rowCount) return NextResponse.json({ success: false, error: "Teacher not found in this academy." }, { status: 404 });
+  return NextResponse.json({ success: true });
 }

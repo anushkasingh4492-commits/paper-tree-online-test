@@ -77,6 +77,15 @@ type ScheduledTestItem = {
   questions?: number;
 };
 
+type NotificationItem = {
+  id: string;
+  scheduledTestId: string;
+  title: string;
+  message: string;
+  isRead: boolean;
+  createdAt: string;
+};
+
 type DashboardPayload = {
   error?: string;
   success?: boolean;
@@ -175,6 +184,7 @@ type DashboardPayload = {
   };
 
   latestTest?: TestResult | null;
+  notifications?: NotificationItem[];
 };
 
 type IconType =
@@ -970,6 +980,9 @@ export default function DashboardPage() {
     ScheduledTestItem[]
   >([]);
 
+  const [notifications, setNotifications] = useState<NotificationItem[]>([]);
+  const [currentTime, setCurrentTime] = useState(() => Date.now());
+
   const [
     loading,
     setLoading,
@@ -1098,15 +1111,12 @@ export default function DashboardPage() {
         );
 
         setUpcomingTests(
-          Array.isArray(
-            data.testSummary
-              ?.upcoming
-          )
-            ? data
-                .testSummary!
-                .upcoming!
+          Array.isArray(data.testSummary?.all)
+            ? data.testSummary!.all!.filter((test) => Boolean(test.scheduledTestId))
             : []
         );
+
+        setNotifications(Array.isArray(data.notifications) ? data.notifications : []);
 
         setStatistics(
           data.statistics ||
@@ -1179,6 +1189,10 @@ export default function DashboardPage() {
       }
     };
 
+    const handleDashboardRefresh = () => {
+      void loadDashboard(false);
+    };
+
     window.addEventListener(
       "focus",
       handleFocus
@@ -1192,6 +1206,11 @@ export default function DashboardPage() {
     window.addEventListener(
       "storage",
       handleStorage
+    );
+
+    window.addEventListener(
+      "paperTreeDashboardRefresh",
+      handleDashboardRefresh
     );
 
     /*
@@ -1232,11 +1251,21 @@ export default function DashboardPage() {
         handleStorage
       );
 
-      window.clearInterval(
-        refreshInterval
+      window.removeEventListener(
+        "paperTreeDashboardRefresh",
+        handleDashboardRefresh
       );
+
+    window.clearInterval(
+      refreshInterval
+    );
     };
   }, [router]);
+
+  useEffect(() => {
+    const interval = window.setInterval(() => setCurrentTime(Date.now()), 1000);
+    return () => window.clearInterval(interval);
+  }, []);
 
   /* ==========================================================
      DERIVED DATA
@@ -1282,6 +1311,29 @@ export default function DashboardPage() {
   const studyTime =
     statistics?.studyTime ||
     "0m";
+
+  const visibleScheduledTests = upcomingTests.filter((test) => {
+    const end = Number(test.endTimestamp ?? 0);
+    return !end || currentTime <= end;
+  });
+
+  function scheduleCountdown(test: ScheduledTestItem) {
+    const start = Number(test.startTimestamp ?? 0);
+    const end = Number(test.endTimestamp ?? 0);
+    const format = (milliseconds: number) => {
+      const seconds = Math.max(0, Math.floor(milliseconds / 1000));
+      const hours = Math.floor(seconds / 3600);
+      const minutes = Math.floor((seconds % 3600) / 60);
+      const remainingSeconds = seconds % 60;
+      return [hours, minutes, remainingSeconds]
+        .map((value) => String(value).padStart(2, "0"))
+        .join(":");
+    };
+
+    if (start && currentTime < start) return `Starts in ${format(start - currentTime)}`;
+    if (end && currentTime <= end) return `Live • ${format(end - currentTime)} remaining`;
+    return "Exam ended";
+  }
 
   const consistency =
     Number(
@@ -1631,14 +1683,18 @@ export default function DashboardPage() {
                 </span>
               </button>
 
-              <button className="relative w-9 h-9 rounded-xl border border-[#eceef3] bg-white flex items-center justify-center text-[#596275]">
+              <button
+                type="button"
+                onClick={() => document.getElementById("notifications")?.scrollIntoView({ behavior: "smooth" })}
+                className="relative w-9 h-9 rounded-xl border border-[#eceef3] bg-white flex items-center justify-center text-[#596275]"
+              >
                 <MiniIcon
                   type="bell"
                   size={17}
                 />
 
                 <span className="absolute -right-1 -top-1 w-4 h-4 rounded-full bg-[#ed4567] text-white text-[8px] font-bold flex items-center justify-center">
-                  3
+                  {notifications.filter((notification) => !notification.isRead).length}
                 </span>
               </button>
 
@@ -2125,7 +2181,28 @@ export default function DashboardPage() {
                 UPCOMING SCHEDULED TESTS
             ================================================== */}
 
-            {upcomingTests.length >
+            {notifications.length > 0 && (
+              <section id="notifications" className="mt-5 rounded-[14px] border border-[#e8eaf0] bg-white shadow-[0_3px_12px_rgba(30,35,60,.035)]">
+                <div className="border-b border-[#eff0f4] px-5 py-4">
+                  <h2 className="text-[14px] font-extrabold text-[#172033]">Notifications</h2>
+                </div>
+                <div className="divide-y divide-[#eff0f4]">
+                  {notifications.slice(0, 5).map((notification) => (
+                    <button
+                      key={notification.id}
+                      type="button"
+                      onClick={() => router.push(`/scheduled-test/${notification.scheduledTestId}`)}
+                      className="w-full px-5 py-3 text-left hover:bg-[#fafbff]"
+                    >
+                      <p className="text-[12px] font-bold text-[#172033]">{notification.title}</p>
+                      <p className="mt-1 text-[10px] text-[#697386]">{notification.message}</p>
+                    </button>
+                  ))}
+                </div>
+              </section>
+            )}
+
+            {visibleScheduledTests.length >
               0 && (
               <section className="mt-5">
 
@@ -2135,18 +2212,17 @@ export default function DashboardPage() {
 
                     <div>
                       <h2 className="text-[14px] font-extrabold text-[#172033]">
-                        Upcoming Tests
+                        Scheduled Tests
                       </h2>
 
                       <p className="mt-1 text-[10px] text-[#939aa8]">
-                        Tests scheduled
-                        for you
+                        Your upcoming and live exams
                       </p>
                     </div>
 
                     <span className="text-[10px] font-bold text-[#315bea] bg-[#eef2ff] px-2.5 py-1 rounded-full">
                       {
-                        upcomingTests.length
+                        visibleScheduledTests.length
                       }{" "}
                       scheduled
                     </span>
@@ -2155,7 +2231,7 @@ export default function DashboardPage() {
 
                   <div className="divide-y divide-[#eff0f4]">
 
-                    {upcomingTests.map(
+                    {visibleScheduledTests.map(
                       (test) => {
                         const scheduledId =
                           test.scheduledTestId ||
@@ -2214,7 +2290,7 @@ export default function DashboardPage() {
                             <div className="shrink-0 flex items-center gap-2">
 
                               <span className="text-[10px] font-bold text-[#315bea] bg-[#eef2ff] px-3 py-1.5 rounded-lg">
-                                Upcoming
+                                {scheduleCountdown(test)}
                               </span>
 
                               <span className="text-[#9ba1ad]">

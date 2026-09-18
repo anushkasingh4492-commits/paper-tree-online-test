@@ -1,159 +1,26 @@
 "use client";
 
-import { FormEvent, useEffect, useState } from "react";
+import { FormEvent, useEffect, useMemo, useState } from "react";
+import { useRouter } from "next/navigation";
 
-type Teacher = {
-  id: string;
-  name: string;
-  email: string;
-};
+type Teacher = { id: string; name: string; email: string };
 
 export default function AcademyTeachersPage() {
+  const router = useRouter();
   const [teachers, setTeachers] = useState<Teacher[]>([]);
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [message, setMessage] = useState("");
-
-  async function loadTeachers() {
-    const res = await fetch("/api/academy-admin/teachers");
-    const data = await res.json();
-
-    if (data.success) {
-      setTeachers(data.teachers);
-    }
-  }
-
+  const [name, setName] = useState(""); const [email, setEmail] = useState(""); const [password, setPassword] = useState("");
+  const [search, setSearch] = useState(""); const [message, setMessage] = useState(""); const [saving, setSaving] = useState(false);
+  const visibleTeachers = useMemo(() => teachers.filter((teacher) => `${teacher.name} ${teacher.email}`.toLowerCase().includes(search.toLowerCase())), [teachers, search]);
+  async function loadTeachers() { const response = await fetch("/api/academy-admin/teachers", { cache: "no-store" }); const data = await response.json(); if (data.success) setTeachers(data.teachers || []); else setMessage(data.error || "Could not load teachers."); }
   useEffect(() => {
-    loadTeachers();
+    void (async () => {
+      const response = await fetch("/api/academy-admin/teachers", { cache: "no-store" });
+      const data = await response.json();
+      if (data.success) setTeachers(data.teachers || []);
+      else setMessage(data.error || "Could not load teachers.");
+    })();
   }, []);
-
-  async function createTeacher(e: FormEvent) {
-    e.preventDefault();
-    setMessage("");
-
-    const res = await fetch("/api/academy-admin/teachers", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name,
-        email,
-        password,
-      }),
-    });
-
-    const data = await res.json();
-
-    if (!data.success) {
-      setMessage(data.error || "Failed to create teacher");
-      return;
-    }
-
-    setMessage("Teacher created successfully.");
-
-    setName("");
-    setEmail("");
-    setPassword("");
-
-    loadTeachers();
-  }
-
-  return (
-    <main className="min-h-screen bg-slate-50 p-8">
-      <div className="mx-auto max-w-5xl">
-        <button
-          onClick={() => history.back()}
-          className="mb-6 text-sm text-slate-600 hover:text-black"
-        >
-          ← Back
-        </button>
-
-        <h1 className="text-3xl font-bold text-slate-900">
-          Teachers
-        </h1>
-
-        <p className="mt-1 text-slate-500">
-          Manage teachers belonging to your academy.
-        </p>
-
-        <div className="mt-8 grid gap-8 md:grid-cols-[350px_1fr]">
-          <form
-            onSubmit={createTeacher}
-            className="rounded-2xl bg-white p-6 shadow-sm"
-          >
-            <h2 className="text-lg font-semibold">
-              Add Teacher
-            </h2>
-
-            <input
-              className="mt-4 w-full rounded-lg border p-3"
-              placeholder="Teacher name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
-
-            <input
-              className="mt-3 w-full rounded-lg border p-3"
-              placeholder="Email"
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-
-            <input
-              className="mt-3 w-full rounded-lg border p-3"
-              placeholder="Password"
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-
-            <button
-              type="submit"
-              className="mt-4 w-full rounded-lg bg-black px-4 py-3 font-medium text-white"
-            >
-              Create Teacher
-            </button>
-
-            {message && (
-              <p className="mt-4 text-sm text-slate-600">
-                {message}
-              </p>
-            )}
-          </form>
-
-          <section className="rounded-2xl bg-white p-6 shadow-sm">
-            <h2 className="text-lg font-semibold">
-              Academy Teachers
-            </h2>
-
-            <div className="mt-4 space-y-3">
-              {teachers.length === 0 ? (
-                <p className="text-slate-500">
-                  No teachers yet.
-                </p>
-              ) : (
-                teachers.map((teacher) => (
-                  <div
-                    key={teacher.id}
-                    className="rounded-xl border p-4"
-                  >
-                    <div className="font-medium">
-                      {teacher.name}
-                    </div>
-
-                    <div className="text-sm text-slate-500">
-                      {teacher.email}
-                    </div>
-                  </div>
-                ))
-              )}
-            </div>
-          </section>
-        </div>
-      </div>
-    </main>
-  );
+  async function createTeacher(event: FormEvent) { event.preventDefault(); setSaving(true); setMessage(""); try { const response = await fetch("/api/academy-admin/teachers", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ name, email, password }) }); const data = await response.json(); if (!response.ok || !data.success) throw new Error(data.error || "Could not create teacher."); setName(""); setEmail(""); setPassword(""); setMessage("Teacher added successfully."); await loadTeachers(); } catch (error) { setMessage(error instanceof Error ? error.message : "Could not create teacher."); } finally { setSaving(false); } }
+  async function removeTeacher(teacher: Teacher) { if (!window.confirm(`Remove ${teacher.name}? This removes their academy access.`)) return; setMessage(""); const response = await fetch(`/api/academy-admin/teachers?id=${encodeURIComponent(teacher.id)}`, { method: "DELETE" }); const data = await response.json(); if (!response.ok || !data.success) { setMessage(data.error || "Could not remove teacher."); return; } setTeachers((current) => current.filter((item) => item.id !== teacher.id)); setMessage("Teacher removed."); }
+  return <main className="min-h-screen bg-[#f6f8fc] text-[#172033]"><header className="border-b border-[#e7eaf0] bg-white"><div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5"><div><p className="text-xs font-black tracking-[.16em] text-[#315bea]">ACADEMY ADMIN</p><h1 className="mt-1 text-xl font-extrabold">Teachers</h1></div><button onClick={() => router.push("/academy-admin")} className="rounded-xl border px-4 py-2 text-sm font-bold text-[#697386]">← Dashboard</button></div></header><div className="mx-auto max-w-7xl px-6 py-9"><div className="mb-7 flex flex-wrap items-end justify-between gap-4"><div><h2 className="text-3xl font-extrabold">Teaching team</h2><p className="mt-2 text-sm text-[#697386]">Add teachers, review their accounts, or remove academy access.</p></div><span className="rounded-full bg-[#eaf0ff] px-4 py-2 text-sm font-bold text-[#315bea]">{teachers.length} teachers</span></div>{message && <div className="mb-5 rounded-xl border border-[#dce6ff] bg-[#f1f5ff] px-4 py-3 text-sm font-semibold text-[#315bea]">{message}</div>}<div className="grid gap-6 lg:grid-cols-[360px_1fr]"><form onSubmit={createTeacher} className="h-fit rounded-2xl border border-[#e3e8f5] bg-white p-6 shadow-sm"><h3 className="text-lg font-extrabold">Add a teacher</h3><p className="mt-1 text-sm text-[#697386]">They can create and publish papers for this academy.</p><input required value={name} onChange={(event) => setName(event.target.value)} placeholder="Full name" className="mt-5 w-full rounded-xl border border-[#dfe4ee] px-4 py-3 text-sm"/><input required type="email" value={email} onChange={(event) => setEmail(event.target.value)} placeholder="Email address" className="mt-3 w-full rounded-xl border border-[#dfe4ee] px-4 py-3 text-sm"/><input required minLength={6} type="password" value={password} onChange={(event) => setPassword(event.target.value)} placeholder="Temporary password (6+ characters)" className="mt-3 w-full rounded-xl border border-[#dfe4ee] px-4 py-3 text-sm"/><button disabled={saving} className="mt-5 w-full rounded-xl bg-[#315bea] px-4 py-3 text-sm font-bold text-white disabled:opacity-60">{saving ? "Adding…" : "Add teacher"}</button></form><section className="rounded-2xl border border-[#e3e8f5] bg-white p-6 shadow-sm"><div className="flex flex-wrap items-center justify-between gap-3"><h3 className="text-lg font-extrabold">Academy teachers</h3><input value={search} onChange={(event) => setSearch(event.target.value)} placeholder="Search teachers" className="rounded-xl border border-[#dfe4ee] px-3 py-2 text-sm"/></div><div className="mt-5 space-y-3">{visibleTeachers.length ? visibleTeachers.map((teacher) => <div key={teacher.id} className="flex flex-wrap items-center justify-between gap-4 rounded-xl border border-[#e7eaf0] p-4"><div className="flex items-center gap-3"><div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#eaf0ff] font-extrabold text-[#315bea]">{teacher.name.slice(0, 1).toUpperCase()}</div><div><p className="font-bold">{teacher.name}</p><p className="text-sm text-[#697386]">{teacher.email}</p></div></div><button onClick={() => void removeTeacher(teacher)} className="rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-xs font-bold text-red-600">Remove</button></div>) : <div className="rounded-xl border border-dashed p-10 text-center text-sm text-[#697386]">No matching teachers yet.</div>}</div></section></div></div></main>;
 }

@@ -21,7 +21,14 @@ export async function GET(
 
     const { testId } = await params;
     const cookieStore = await cookies();
+    /*
+     * Tests are opened by students, whose login is stored in
+     * student_session. Staff use master_session. The old implementation
+     * checked only the staff cookie, so every correctly logged-in student
+     * received a 401 before the test could load.
+     */
     const sessionCookie =
+      cookieStore.get("student_session")?.value ??
       cookieStore.get("master_session")?.value;
 
     if (!sessionCookie) {
@@ -34,7 +41,7 @@ export async function GET(
       );
     }
 
-    let session: { academyId?: string };
+    let session: { academyId?: string; studentId?: string; id?: string };
 
     try {
       session = JSON.parse(sessionCookie);
@@ -58,6 +65,21 @@ export async function GET(
       );
     }
 
+    if (!session.studentId && !session.id) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: "Invalid login session.",
+        },
+        { status: 401 }
+      );
+    }
+
+    await pool.query(`
+      ALTER TABLE tests
+      ADD COLUMN IF NOT EXISTS academy_id UUID
+    `);
+
     const result = await pool.query(
       `
       SELECT
@@ -68,10 +90,21 @@ export async function GET(
         created_at
       FROM tests
       WHERE id = $1
-        AND academy_id = $2
+        AND (
+          academy_id = $2
+          OR (
+            $3::text IS NOT NULL
+            AND EXISTS (
+              SELECT 1
+              FROM student_tests st
+              WHERE st.test_id = tests.id
+                AND st.student_id::text = $3::text
+            )
+          )
+        )
       LIMIT 1
       `,
-      [testId, session.academyId]
+      [testId, session.academyId, session.studentId ?? null]
     );
 
     const rows = result.rows;

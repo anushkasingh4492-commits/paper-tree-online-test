@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { pool } from "@/lib/db";
+import { parseSessionCookie } from "@/lib/session";
 
 export const runtime = "nodejs";
 
@@ -20,21 +21,22 @@ if (!sessionCookie) {
 let session: {
   role?: string;
   id?: string;
-  academyId?: string;
 };
 
-try {
-  session = JSON.parse(sessionCookie);
-} catch {
+  const parsedSession = parseSessionCookie<Record<string, unknown>>(sessionCookie);
+
+  if (!parsedSession) {
   return NextResponse.json(
     { success: false, error: "Invalid teacher session." },
     { status: 401 }
   );
 }
 
+session = parsedSession as typeof session;
+
 if (
   session.role !== "TEACHER" ||
-  !session.academyId
+  !session.id
 ) {
   return NextResponse.json(
     { success: false, error: "Teacher access required." },
@@ -103,10 +105,6 @@ if (
       WHERE ${conditions.join(" AND ")}
       ORDER BY created_at DESC
       LIMIT 200
-      let session: {
-  role?: string;
-  academyId?: string;
-};
       `,
       values
     );

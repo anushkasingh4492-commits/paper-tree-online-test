@@ -27,6 +27,9 @@ type ScheduledTest = {
   end_time: string;
   duration_minutes: number;
   status: string;
+  assigned_count?: number;
+  completed_count?: number;
+  average_score?: number | null;
 };
 
 export default function AcademyAdminTestsPage() {
@@ -73,8 +76,8 @@ export default function AcademyAdminTestsPage() {
       }
 
       setPapers(papersData.papers || []);
-      setBatches(Array.isArray(batchesData) ? batchesData : []);
-      setTests(Array.isArray(testsData) ? testsData : []);
+      setBatches(Array.isArray(batchesData.batches) ? batchesData.batches : []);
+      setTests(Array.isArray(testsData.tests) ? testsData.tests : Array.isArray(testsData) ? testsData : []);
     } catch (error) {
       setMessage(
         error instanceof Error
@@ -172,6 +175,15 @@ export default function AcademyAdminTestsPage() {
     } finally {
       setSaving(false);
     }
+  }
+
+  async function cancelTest(test: ScheduledTest) {
+    if (!window.confirm(`Cancel ${test.title}? Students will no longer see this scheduled test.`)) return;
+    const response = await fetch(`/api/academy-admin/tests?id=${encodeURIComponent(test.id)}`, { method: "DELETE" });
+    const data = await response.json();
+    if (!response.ok || !data.success) { setMessage(data.error || "Could not cancel test."); return; }
+    setTests((current) => current.filter((item) => item.id !== test.id));
+    setMessage("Scheduled test cancelled.");
   }
 
   function formatDate(value: string) {
@@ -406,7 +418,19 @@ export default function AcademyAdminTestsPage() {
                         </span>{" "}
                         {test.duration_minutes} minutes
                       </p>
+
+                      <p>
+                        <span className="font-semibold">
+                          Results:
+                        </span>{" "}
+                        {Number(test.completed_count || 0)} / {Number(test.assigned_count || 0)} submitted
+                        {test.average_score !== null && test.average_score !== undefined
+                          ? ` • Average ${Number(test.average_score).toFixed(2)}`
+                          : ""}
+                      </p>
                     </div>
+
+                    <button onClick={() => void cancelTest(test)} className="mt-4 rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-xs font-bold text-red-600">Cancel scheduled test</button>
                   </div>
                 ))}
               </div>

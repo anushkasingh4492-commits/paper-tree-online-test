@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { pool } from "@/lib/db";
+import { parseSessionCookie } from "@/lib/session";
 
 async function isMasterAdmin() {
   const cookieStore = await cookies();
@@ -8,15 +9,16 @@ async function isMasterAdmin() {
 
   if (!sessionCookie) return false;
 
-  try {
-    const session = JSON.parse(sessionCookie);
+  const session = parseSessionCookie<Record<string, unknown>>(sessionCookie);
+
+  if (session) {
     return (
       session.role === "ADMIN" ||
       session.role === "MASTER_ADMIN"
     );
-  } catch {
-    return false;
   }
+
+  return false;
 }
 
 export async function GET(
@@ -130,7 +132,19 @@ export async function GET(
             st.paper_id,
             p.code AS paper_code,
             st.batch_id,
-            b.name AS batch_name
+            b.name AS batch_name,
+            (
+              SELECT COUNT(*)::int
+              FROM test_attempts ta
+              WHERE ta.scheduled_test_id::text = st.id::text
+                AND LOWER(REPLACE(ta.status, '-', ' ')) IN ('submitted', 'auto submitted', 'completed')
+            ) AS completed_count,
+            (
+              SELECT ROUND(AVG(ta.score)::numeric, 2)
+              FROM test_attempts ta
+              WHERE ta.scheduled_test_id::text = st.id::text
+                AND LOWER(REPLACE(ta.status, '-', ' ')) IN ('submitted', 'auto submitted', 'completed')
+            ) AS average_score
           FROM scheduled_tests st
           LEFT JOIN papers p ON p.id = st.paper_id
           LEFT JOIN batches b ON b.id = st.batch_id

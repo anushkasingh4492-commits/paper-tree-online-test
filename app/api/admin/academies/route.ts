@@ -3,6 +3,7 @@ import { cookies } from "next/headers";
 import crypto from "crypto";
 import bcrypt from "bcryptjs";
 import { pool } from "@/lib/db";
+import { parseSessionCookie } from "@/lib/session";
 
 export const runtime = "nodejs";
 
@@ -12,12 +13,13 @@ async function isMasterAdmin() {
 
   if (!session) return false;
 
-  try {
-    const data = JSON.parse(session);
+  const data = parseSessionCookie<Record<string, unknown>>(session);
+
+  if (data) {
     return data.role === "ADMIN" || data.role === "MASTER_ADMIN";
-  } catch {
-    return false;
   }
+
+  return false;
 }
 
 async function ensureAcademySettingsColumns() {

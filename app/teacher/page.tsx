@@ -21,10 +21,6 @@ export default function TeacherPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  useEffect(() => {
-    loadPapers();
-  }, []);
-
   async function loadPapers() {
     try {
       const response = await fetch("/api/teacher/papers");
@@ -47,6 +43,14 @@ export default function TeacherPage() {
     }
   }
 
+  useEffect(() => {
+    const timeoutId = window.setTimeout(() => {
+      void loadPapers();
+    }, 0);
+
+    return () => window.clearTimeout(timeoutId);
+  }, []);
+
   return (
     <main className="min-h-screen bg-[#f6f8fc] text-[#172033]">
       <div className="mx-auto max-w-7xl px-6 py-10">
@@ -67,7 +71,16 @@ export default function TeacherPage() {
           </div>
 
           <button
-            onClick={() => router.push("/master-login")}
+          onClick={async () => {
+  try {
+    await fetch("/api/logout", {
+      method: "POST",
+      credentials: "include",
+    });
+  } finally {
+    router.push("/master-login");
+  }
+}}
             className="rounded-xl border border-[#e2e6ee] bg-white px-4 py-2.5 text-sm font-bold text-[#697386] hover:bg-[#f7f8fb]"
           >
             Logout

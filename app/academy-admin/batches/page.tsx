@@ -156,6 +156,15 @@ export default function AcademyBatchesPage() {
     }
   }
 
+  async function removeBatch(batch: Batch) {
+    if (!window.confirm(`Remove ${batch.name}? Students are not deleted, but their membership in this batch will be removed.`)) return;
+    const response = await fetch(`/api/academy-admin/batches?id=${encodeURIComponent(batch.id)}`, { method: "DELETE" });
+    const data = await response.json();
+    if (!response.ok || !data.success) { setMessage(data.error || "Could not remove batch."); return; }
+    setBatches((current) => current.filter((item) => item.id !== batch.id));
+    setMessage("Batch removed.");
+  }
+
   return (
     <main className="min-h-screen bg-[#f6f8fc] text-[#172033]">
       <header className="border-b border-[#e7eaf0] bg-white">
@@ -285,6 +294,8 @@ export default function AcademyBatchesPage() {
                         Manage Students
                       </button>
 
+                      <button onClick={() => void removeBatch(batch)} className="rounded-lg border border-red-200 bg-red-50 px-3 py-1.5 text-xs font-bold text-red-600">Remove</button>
+
                       <span className="rounded-lg bg-[#f4f6fa] px-3 py-1.5 text-xs font-bold text-[#697386]">
                         Batch
                       </span>
@@ -319,7 +330,7 @@ export default function AcademyBatchesPage() {
                 }}
                 className="rounded-lg border border-[#e2e6ee] px-3 py-2 text-sm font-bold text-[#697386]"
               >
-
+                ×
               </button>
             </div>
 
@@ -371,7 +382,7 @@ export default function AcademyBatchesPage() {
                               : "border-[#d8deea] bg-white text-transparent"
                           }`}
                         >
-
+                          {assigned ? "✓" : ""}
                         </div>
                       </button>
                     );

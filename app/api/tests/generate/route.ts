@@ -28,6 +28,17 @@ type GenerateRequest = {
 
   presetId?: string;
 
+  /*
+   * Exact question selection from Teacher Generate page.
+   */
+  questionIds?: string[];
+
+  /*
+   * Used by Teacher Generate page to preview every
+   * matching question without creating a test.
+   */
+  previewOnly?: boolean;
+
   // Backward compatibility
   questionCount?: number;
   duration?: number;
@@ -76,30 +87,6 @@ function normalize(value: unknown): string {
 /*
  * =========================================================
  * EXAM NORMALIZATION
- *
- * IMPORTANT:
- *
- * The database currently contains:
- *
- * MHT-CET
- *
- * The UI may send:
- *
- * MHT CET
- * MHTCET
- * mht-cet
- * mht cet
- *
- * All of these are converted to:
- *
- * MHT-CET
- *
- * NEET stays:
- *
- * NEET
- *
- * This prevents MHT-CET and NEET datasets
- * from getting mixed together.
  * =========================================================
  */
 
@@ -134,19 +121,9 @@ function normalizeExam(value: unknown): string {
  * =========================================================
  * DATABASE EXAM CONDITION
  * =========================================================
- *
- * We normalize common database spellings as well.
- *
- * MHT-CET database rows can therefore be matched even if
- * they contain:
- *
- * MHT-CET
- * MHT CET
- * MHTCET
- *
- * NEET rows remain NEET-only.
- * =========================================================
- */function addExamFilter(
+ */
+
+function addExamFilter(
   exam: string,
   conditions: string[],
   values: unknown[]
@@ -211,6 +188,7 @@ function normalizeExam(value: unknown): string {
     LOWER($${examParam}::text)
   `);
 }
+
 /*
  * =========================================================
  * SUBJECT NORMALIZATION
@@ -318,6 +296,7 @@ function addSubjectFilter(
  * DIFFICULTY FILTER
  * =========================================================
  */
+
 function addDifficultyFilter(
   difficulty: string,
   conditions: string[]
@@ -356,8 +335,6 @@ function addDifficultyFilter(
 
   /*
    * Difficult
-   *
-   * Difficult only
    */
   if (
     normalizedDifficulty === "difficult"
@@ -375,9 +352,6 @@ function addDifficultyFilter(
    * No difficulty filter.
    */
 }
-
-  
-
 
 /*
  * =========================================================
@@ -432,18 +406,18 @@ function addChapterFilter(
 
 /*
  * =========================================================
- * SUBJECT + CHAPTER FILTER FOR NORMAL MODE
+ * SUBJECT + CHAPTER FILTER
  * =========================================================
  *
- * Keeps subject/chapter relationship intact.
+ * Normal mode:
  *
- * Example:
+ * subjects = Physics
+ * chapters = Current Electricity
  *
- * Physics → Current Electricity
- * Chemistry → Chemical Bonding
+ * => Physics + Current Electricity
  *
- * Physics cannot accidentally receive
- * Chemistry chapters.
+ * If chaptersBySubject is supplied, preserve the
+ * subject/chapter relationship.
  * =========================================================
  */
 
@@ -453,8 +427,15 @@ function addSubjectChapterFilters(
   chaptersBySubject:
     | Record<string, string[]>
     | undefined,
-  subjects: string[]
+  subjects: string[],
+  chapters: string[]
 ) {
+  /*
+   * ---------------------------------------------------------
+   * SUBJECT-SPECIFIC CHAPTER MAPPING
+   * ---------------------------------------------------------
+   */
+
   if (
     chaptersBySubject &&
     Object.keys(chaptersBySubject).length > 0
@@ -541,8 +522,9 @@ function addSubjectChapterFilters(
   }
 
   /*
-   * No chapter-specific selection.
-   * Filter only by selected subjects.
+   * ---------------------------------------------------------
+   * NORMAL SUBJECT FILTER
+   * ---------------------------------------------------------
    */
 
   if (subjects.length > 0) {
@@ -565,6 +547,23 @@ function addSubjectChapterFilters(
       )
     `);
   }
+
+  /*
+   * ---------------------------------------------------------
+   * NORMAL CHAPTER FILTER
+   *
+   * This is important:
+   *
+   * The old route only filtered subjects here.
+   * A selected chapter could therefore be ignored.
+   * ---------------------------------------------------------
+   */
+
+  addChapterFilter(
+    chapters,
+    conditions,
+    values
+  );
 }
 
 /*
@@ -626,46 +625,103 @@ export async function POST(
 
     /*
      * -------------------------------------------------------
-     * STUDENT SESSION
+     * SESSION
+     * -------------------------------------------------------
+     *
+     * Student sessions are still supported.
+     *
+     * master_session is now accepted regardless of role.
+     *
+     * Previously the route only accepted:
+     *
+     * parsed.role === "TEACHER"
+     *
+     * That restriction has been removed.
      * -------------------------------------------------------
      */
 
     const cookieStore =
       await cookies();
 
-    const studentSession = cookieStore.get("student_session")?.value;
-    const staffSession = cookieStore.get("master_session")?.value;
+    const studentSession =
+      cookieStore.get(
+        "student_session"
+      )?.value;
+
+    const masterSession =
+      cookieStore.get(
+        "master_session"
+      )?.value;
 
     let studentId = "";
-    let teacherId = "";
+    let masterUserId = "";
+    let academyId = "";
 
+    /*
+     * Student session
+     */
     if (studentSession) {
       try {
-        const parsed = JSON.parse(studentSession);
-        studentId = String(parsed?.studentId ?? "").trim();
+        const parsed =
+          JSON.parse(studentSession);
+
+        studentId = String(
+          parsed?.studentId ?? ""
+        ).trim();
+        academyId = String(
+          parsed?.academyId ?? ""
+        ).trim();
       } catch {
-        studentId = studentSession.trim();
+        studentId =
+          studentSession.trim();
       }
     }
 
-    if (!studentId && staffSession) {
+    /*
+     * Master session
+     *
+     * NO ROLE CHECK.
+     */
+    if (
+      !studentId &&
+      masterSession
+    ) {
       try {
-        const parsed = JSON.parse(staffSession);
+        const parsed =
+          JSON.parse(masterSession);
 
-        if (parsed?.role === "TEACHER") {
-          teacherId = String(parsed?.id ?? "").trim();
-        }
+        masterUserId = String(
+          parsed?.id ??
+          parsed?.userId ??
+          parsed?.masterId ??
+          "master"
+        ).trim();
+        academyId = String(
+          parsed?.academyId ?? ""
+        ).trim();
       } catch {
-        teacherId = "";
+        /*
+         * If the cookie isn't JSON, still treat
+         * the existence of the authenticated
+         * master session as sufficient.
+         */
+        masterUserId =
+          masterSession.trim();
       }
     }
 
-    if (!studentId && !teacherId) {
+    /*
+     * Authentication is still required.
+     */
+    if (
+      !studentId &&
+      !masterUserId
+    ) {
       return Response.json(
         {
           success: false,
           error:
-            "Please log in as a student or teacher before generating a paper.",
+            "Please log in before generating a paper.",
         },
         { status: 401 }
       );
@@ -683,11 +739,6 @@ export async function POST(
     /*
      * -------------------------------------------------------
      * EXAM
-     *
-     * IMPORTANT:
-     *
-     * Do not use course as the database dataset
-     * when a proper exam value exists.
      * -------------------------------------------------------
      */
 
@@ -765,14 +816,49 @@ export async function POST(
 
     /*
      * -------------------------------------------------------
+     * EXACT QUESTION IDS
+     * -------------------------------------------------------
+     */
+
+    const requestedQuestionIds =
+      Array.isArray(body.questionIds)
+        ? body.questionIds
+            .map(clean)
+            .filter(Boolean)
+        : [];
+
+    /*
+     * If questionIds are provided, duplicates are invalid.
+     */
+    if (
+      requestedQuestionIds.length > 0 &&
+      new Set(
+        requestedQuestionIds
+      ).size !==
+        requestedQuestionIds.length
+    ) {
+      return Response.json(
+        {
+          success: false,
+          error:
+            "Duplicate question IDs were selected.",
+        },
+        { status: 400 }
+      );
+    }
+
+    /*
+     * -------------------------------------------------------
      * QUESTION COUNT + DURATION
      * -------------------------------------------------------
      */
 
     let questionCount: number;
     let duration: number;
-    let presetTotalMarks: number | null =
-      null;
+
+    let presetTotalMarks:
+      | number
+      | null = null;
 
     if (preset) {
       const totalQuestions =
@@ -780,7 +866,8 @@ export async function POST(
           preset.subjects
         ).reduce(
           (sum, count) =>
-            sum + (Number(count) || 0),
+            sum +
+            (Number(count) || 0),
           0
         );
 
@@ -838,6 +925,33 @@ export async function POST(
 
     /*
      * -------------------------------------------------------
+     * EXACT QUESTION COUNT VALIDATION
+     * -------------------------------------------------------
+     */
+
+    if (
+      requestedQuestionIds.length > 0 &&
+      requestedQuestionIds.length !==
+        questionCount
+    ) {
+      return Response.json(
+        {
+          success: false,
+          error:
+            `You selected ${requestedQuestionIds.length} questions, but the test requires exactly ${questionCount}.`,
+          details: {
+            selected:
+              requestedQuestionIds.length,
+            required:
+              questionCount,
+          },
+        },
+        { status: 400 }
+      );
+    }
+
+    /*
+     * -------------------------------------------------------
      * LOG REQUEST
      * -------------------------------------------------------
      */
@@ -883,6 +997,16 @@ export async function POST(
     console.log(
       "Duration:",
       duration
+    );
+
+    console.log(
+      "Exact Question IDs:",
+      requestedQuestionIds.length
+    );
+
+    console.log(
+      "Preview Only:",
+      Boolean(body.previewOnly)
     );
 
     console.log(
@@ -938,19 +1062,20 @@ export async function POST(
     }
 
     /*
-     * -------------------------------------------------------
+     * =======================================================
      * BASE CONDITIONS
-     * -------------------------------------------------------
+     * =======================================================
      */
 
-    const conditions: string[] = [];
+    const conditions: string[] =
+      [];
 
-    const values: unknown[] = [];
+    const values: unknown[] =
+      [];
 
     /*
-     * EXAM FILTER
+     * EXAM
      */
-
     addExamFilter(
       exam,
       conditions,
@@ -958,37 +1083,34 @@ export async function POST(
     );
 
     /*
-     * DIFFICULTY FILTER
+     * DIFFICULTY
      */
-
     addDifficultyFilter(
       difficulty,
       conditions
     );
 
     /*
-     * -------------------------------------------------------
      * NORMAL MODE
-     * -------------------------------------------------------
      */
-
     if (!preset) {
       addSubjectChapterFilters(
         values,
         conditions,
         body.chaptersBySubject,
-        subjects
+        subjects,
+        chapters
       );
     }
 
     /*
-     * -------------------------------------------------------
+     * =======================================================
      * SELECTED QUESTIONS
-     * -------------------------------------------------------
+     * =======================================================
      */
 
-    const selectedQuestions: QuestionRow[] =
-      [];
+    const selectedQuestions:
+      QuestionRow[] = [];
 
     /*
      * =======================================================
@@ -1043,8 +1165,8 @@ export async function POST(
          * ---------------------------------------------------
          */
 
-        let selectedSubjectChapters: string[] =
-          [];
+        let selectedSubjectChapters:
+          string[] = [];
 
         if (
           body.chaptersBySubject
@@ -1057,9 +1179,9 @@ export async function POST(
                 normalize(
                   subject
                 ) ===
-                normalize(
-                  databaseSubject
-                ) ||
+                  normalize(
+                    databaseSubject
+                  ) ||
                 normalizePresetSubject(
                   subject
                 ) ===
@@ -1131,7 +1253,11 @@ export async function POST(
               success: false,
 
               error:
-                `Only ${availableForSubject} ${databaseSubject} question${availableForSubject === 1 ? "" : "s"} available for the selected ${exam} criteria, but the "${preset.name}" preset requires ${count}.`,
+                `Only ${availableForSubject} ${databaseSubject} question${
+                  availableForSubject === 1
+                    ? ""
+                    : "s"
+                } available for the selected ${exam} criteria, but the "${preset.name}" preset requires ${count}.`,
 
               details: {
                 exam,
@@ -1168,6 +1294,8 @@ export async function POST(
          * ---------------------------------------------------
          * RANDOM QUESTIONS
          * ---------------------------------------------------
+         *
+         * Preset behavior remains unchanged.
          */
 
         const questionValues =
@@ -1198,7 +1326,6 @@ export async function POST(
         /*
          * Safety check
          */
-
         if (
           subjectQuestions.length <
           count
@@ -1212,10 +1339,13 @@ export async function POST(
 
               details: {
                 exam,
+
                 subject:
                   databaseSubject,
+
                 required:
                   count,
+
                 found:
                   subjectQuestions.length,
               },
@@ -1237,7 +1367,7 @@ export async function POST(
 
       /*
        * -----------------------------------------------------
-       * COUNT
+       * COUNT MATCHING QUESTIONS
        * -----------------------------------------------------
        */
 
@@ -1296,68 +1426,251 @@ export async function POST(
 
       /*
        * -----------------------------------------------------
-       * NOT ENOUGH
+       * PREVIEW MODE
        * -----------------------------------------------------
+       *
+       * Used by:
+       *
+       * app/teacher/generate/page.tsx
+       *
+       * This returns EVERY matching question.
+       *
+       * It does NOT create a test.
        */
 
-      if (
-        available <
-        questionCount
-      ) {
-        return Response.json(
-          {
-            success: false,
+      if (body.previewOnly) {
+        const previewQuery = `
+          ${QUESTION_SELECT}
+          WHERE
+            ${conditions.join(
+              " AND "
+            )}
+          ORDER BY id
+        `;
 
-            error:
-              `Only ${available} ${exam} questions are available for the selected criteria. You requested ${questionCount}.`,
+        const previewResult =
+          await pool.query(
+            previewQuery,
+            values
+          );
 
-            details: {
-              exam,
-              subjects,
-              chapters,
-              difficulty,
+        const availableQuestions =
+          previewResult.rows as QuestionRow[];
 
-              availableQuestions:
-                available,
-
-              requestedQuestions:
-                questionCount,
-            },
-          },
-          { status: 400 }
+        console.log(
+          "PREVIEW QUESTIONS:",
+          availableQuestions.length
         );
+
+        return Response.json({
+          success: true,
+
+          previewOnly: true,
+
+          exam,
+
+          availableQuestionCount:
+            availableQuestions.length,
+
+          availableQuestions,
+
+          requestedQuestionCount:
+            questionCount,
+
+          duration,
+
+          configuration: {
+            exam,
+
+            course:
+              body.course ||
+              exam,
+
+            subject:
+              body.subject ||
+              subjects[0] ||
+              "",
+
+            subjects,
+
+            chapters,
+
+            chaptersBySubject:
+              body.chaptersBySubject ||
+              {},
+
+            difficulty,
+
+            questionCount,
+
+            duration,
+          },
+        });
       }
 
       /*
        * -----------------------------------------------------
-       * RANDOM QUESTIONS
+       * EXACT QUESTION SELECTION
        * -----------------------------------------------------
+       *
+       * If the teacher selected question IDs:
+       *
+       * 1. Fetch ONLY those IDs.
+       * 2. Apply ALL normal filters.
+       * 3. Verify every requested ID exists.
+       * 4. Preserve the teacher's selection order.
        */
 
-      const questionValues = [
-        ...values,
-        questionCount,
-      ];
+      if (
+        requestedQuestionIds.length > 0
+      ) {
+        const questionIdParam =
+          values.length + 1;
 
-      const questionQuery = `
-        ${QUESTION_SELECT}
-        WHERE
-          ${conditions.join(
-            " AND "
-          )}
-        ORDER BY RANDOM()
-        LIMIT $${questionValues.length}
-      `;
+        const exactConditions = [
+          ...conditions,
+          `id = ANY($${questionIdParam}::text[])`,
+        ];
 
-      const result =
-        await pool.query(
-          questionQuery,
-          questionValues
+        const exactValues = [
+          ...values,
+          requestedQuestionIds,
+        ];
+
+        const exactQuestionQuery = `
+          ${QUESTION_SELECT}
+          WHERE
+            ${exactConditions.join(
+              " AND "
+            )}
+          ORDER BY ARRAY_POSITION(
+            $${questionIdParam}::text[],
+            id
+          )
+        `;
+
+        const exactResult =
+          await pool.query(
+            exactQuestionQuery,
+            exactValues
+          );
+
+        const exactQuestions =
+          exactResult.rows as QuestionRow[];
+
+        /*
+         * Every selected ID must still satisfy
+         * the currently selected filters.
+         */
+        if (
+          exactQuestions.length !==
+          requestedQuestionIds.length
+        ) {
+          const foundIds =
+            new Set(
+              exactQuestions.map(
+                (question) =>
+                  String(question.id)
+              )
+            );
+
+          const invalidIds =
+            requestedQuestionIds.filter(
+              (id) =>
+                !foundIds.has(id)
+            );
+
+          return Response.json(
+            {
+              success: false,
+
+              error:
+                "One or more selected questions no longer match the selected exam, subject, chapter, or difficulty.",
+
+              details: {
+                requestedQuestionCount:
+                  requestedQuestionIds.length,
+
+                matchedQuestionCount:
+                  exactQuestions.length,
+
+                invalidQuestionIds:
+                  invalidIds,
+              },
+            },
+            { status: 400 }
+          );
+        }
+
+        /*
+         * This is now EXACTLY the teacher's selection.
+         */
+        selectedQuestions.push(
+          ...exactQuestions
         );
+      } else {
+        /*
+         * -----------------------------------------------------
+         * NORMAL RANDOM GENERATION
+         * -----------------------------------------------------
+         *
+         * Backward-compatible behavior when questionIds
+         * are NOT provided.
+         */
 
-      selectedQuestions.push(
-        ...(result.rows as QuestionRow[])
-      );
+        if (
+          available <
+          questionCount
+        ) {
+          return Response.json(
+            {
+              success: false,
+
+              error:
+                `Only ${available} ${exam} questions are available for the selected criteria. You requested ${questionCount}.`,
+
+              details: {
+                exam,
+                subjects,
+                chapters,
+                difficulty,
+
+                availableQuestions:
+                  available,
+
+                requestedQuestions:
+                  questionCount,
+              },
+            },
+            { status: 400 }
+          );
+        }
+
+        const questionValues = [
+          ...values,
+          questionCount,
+        ];
+
+        const questionQuery = `
+          ${QUESTION_SELECT}
+          WHERE
+            ${conditions.join(
+              " AND "
+            )}
+          ORDER BY RANDOM()
+          LIMIT $${questionValues.length}
+        `;
+
+        const result =
+          await pool.query(
+            questionQuery,
+            questionValues
+          );
+
+        selectedQuestions.push(
+          ...(result.rows as QuestionRow[])
+        );
+      }
     }
 
     /*
@@ -1380,6 +1693,37 @@ export async function POST(
           details: {
             exam,
 
+            requested:
+              questionCount,
+
+            found:
+              selectedQuestions.length,
+          },
+        },
+        { status: 500 }
+      );
+    }
+
+    /*
+     * =======================================================
+     * EXACT COUNT SAFETY
+     * =======================================================
+     *
+     * Especially important for questionIds.
+     */
+
+    if (
+      selectedQuestions.length !==
+      questionCount
+    ) {
+      return Response.json(
+        {
+          success: false,
+
+          error:
+            `The generated test contains ${selectedQuestions.length} questions, but exactly ${questionCount} were required.`,
+
+          details: {
             requested:
               questionCount,
 
@@ -1416,10 +1760,14 @@ export async function POST(
         "BEGIN"
       );
 
+      await client.query(`
+        ALTER TABLE tests
+        ADD COLUMN IF NOT EXISTS academy_id UUID
+      `);
+
       /*
        * Save test
        */
-
       await client.query(
         `
           INSERT INTO tests (
@@ -1427,26 +1775,24 @@ export async function POST(
             exam,
             question_count,
             questions,
-            difficulty
+            difficulty,
+            academy_id
           )
           VALUES (
             $1,
             $2,
             $3,
             $4::jsonb,
-            $5
+            $5,
+            $6
           )
         `,
         [
           testId,
 
           /*
-           * Store the normalized exam.
-           *
-           * MHT CET becomes MHT-CET.
-           * NEET remains NEET.
+           * Store normalized exam.
            */
-
           exam,
 
           selectedQuestions.length,
@@ -1456,13 +1802,14 @@ export async function POST(
           ),
 
           difficulty,
+
+          academyId || null,
         ]
       );
 
       /*
        * Connect test to student
        */
-
       if (studentId) {
         await client.query(
           `
@@ -1486,7 +1833,9 @@ export async function POST(
             `student-test-${Date.now()}-${Math.random()
               .toString(36)
               .slice(2, 8)}`,
+
             studentId,
+
             testId,
           ]
         );
@@ -1540,6 +1889,11 @@ export async function POST(
     );
 
     console.log(
+      "Exact Selection:",
+      requestedQuestionIds.length > 0
+    );
+
+    console.log(
       "Duration:",
       duration
     );
@@ -1585,9 +1939,8 @@ export async function POST(
         testId,
 
         /*
-         * Store normalized exam here too.
+         * Store normalized exam.
          */
-
         exam,
 
         course:
@@ -1631,6 +1984,15 @@ export async function POST(
 
         totalMarks:
           presetTotalMarks,
+
+        /*
+         * Store the exact IDs selected by the teacher.
+         */
+        questionIds:
+          selectedQuestions.map(
+            (question) =>
+              String(question.id)
+          ),
 
         createdAt:
           new Date().toISOString(),

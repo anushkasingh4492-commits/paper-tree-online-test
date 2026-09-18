@@ -9,7 +9,7 @@ async function isMasterAdmin() {
   if (!sessionCookie) return false;
 
   try {
-    const session = JSON.parse(sessionCookie);
+    const session = JSON.parse(decodeURIComponent(sessionCookie));
     return session.role === "ADMIN" || session.role === "MASTER_ADMIN";
   } catch {
     return false;

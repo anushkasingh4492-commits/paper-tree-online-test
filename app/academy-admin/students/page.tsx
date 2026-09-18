@@ -13,6 +13,7 @@ export default function AcademyStudentsPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [className, setClassName] = useState("Class 11");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -43,8 +44,8 @@ export default function AcademyStudentsPage() {
     body: JSON.stringify({
   name,
   email,
-  rollNumber: "",
-  className: "",
+  password,
+  className,
 }),
       });
 
@@ -59,6 +60,7 @@ export default function AcademyStudentsPage() {
 
       setName("");
       setEmail("");
+      setPassword("");
     
 
       await loadStudents();
@@ -67,6 +69,15 @@ export default function AcademyStudentsPage() {
     } finally {
       setLoading(false);
     }
+  }
+
+  async function removeStudent(student: Student) {
+    if (!window.confirm(`Remove ${student.name}? Their login, batch memberships and test history will be deleted.`)) return;
+    const response = await fetch(`/api/academy-admin/students?id=${encodeURIComponent(student.id)}`, { method: "DELETE" });
+    const data = await response.json();
+    if (!response.ok || !data.success) { setMessage(data.error || "Could not remove student."); return; }
+    setStudents((current) => current.filter((item) => item.id !== student.id));
+    setMessage("Student removed.");
   }
 
   return (
@@ -124,6 +135,16 @@ export default function AcademyStudentsPage() {
               placeholder="Student name"
               className="mt-5 w-full rounded-xl border border-[#dfe4ee] px-4 py-3 text-sm outline-none focus:border-[#315bea]"
             />
+
+            <select
+              value={className}
+              onChange={(e) => setClassName(e.target.value)}
+              className="mt-3 w-full rounded-xl border border-[#dfe4ee] bg-white px-4 py-3 text-sm outline-none focus:border-[#315bea]"
+            >
+              <option value="Class 11">Class 11</option>
+              <option value="Class 12">Class 12</option>
+              <option value="Class 11 + 12">Class 11 + 12</option>
+            </select>
 
             <input
               required
@@ -191,9 +212,7 @@ export default function AcademyStudentsPage() {
                       </p>
                     </div>
 
-                    <span className="rounded-lg bg-[#f4f6fa] px-3 py-1.5 text-xs font-bold text-[#697386]">
-                      Student
-                    </span>
+                    <button onClick={() => void removeStudent(student)} className="rounded-lg border border-red-200 bg-red-50 px-3 py-1.5 text-xs font-bold text-red-600">Remove</button>
                   </div>
                 ))
               )}

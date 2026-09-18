@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { pool } from "@/lib/db";
+import { parseSessionCookie } from "@/lib/session";
 
 export const runtime = "nodejs";
 
@@ -22,21 +23,24 @@ export async function GET() {
       academyId?: string;
     };
 
-    try {
-      session = JSON.parse(sessionCookie);
-    } catch {
+    const parsedSession = parseSessionCookie<Record<string, unknown>>(sessionCookie);
+
+    if (!parsedSession) {
       return NextResponse.json(
         { success: false, error: "Invalid session." },
         { status: 401 }
       );
     }
 
-    if (session.role !== "TEACHER" || !session.academyId) {
-      return NextResponse.json(
-        { success: false, error: "Teacher access required." },
-        { status: 403 }
-      );
-    }
+    session = parsedSession;
+
+  
+    if (!session.academyId) {
+  return NextResponse.json(
+    { success: false, error: "Academy access required." },
+    { status: 403 }
+  );
+}
 
     const result = await pool.query(
       `

@@ -10,79 +10,96 @@ export default function Home() {
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+async function handleSubmit(
+  e: FormEvent<HTMLFormElement>
+) {
+  e.preventDefault();
 
-  async function handleSubmit(
-    e: FormEvent<HTMLFormElement>
-  ) {
-    e.preventDefault();
+  setError("");
+  setLoading(true);
 
-    setError("");
-    setLoading(true);
+  try {
+    const response = await fetch("/api/auth/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      credentials: "include",
+      body: JSON.stringify({
+        email,
+        password,
+      }),
+    });
 
-    try {
-      const response = await fetch("/api/auth/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        credentials: "include",
-        body: JSON.stringify({
-          email,
-          password,
-        }),
-      });
+    const text = await response.text();
 
-      const result = await response.json();
+    console.log("LOGIN STATUS:", response.status);
+    console.log("LOGIN RESPONSE:", text);
 
-      if (!response.ok || !result.success) {
+    let result: any = null;
+
+    if (text) {
+      try {
+        result = JSON.parse(text);
+      } catch {
         throw new Error(
-          result?.error || "Invalid email or password."
+          `Login server returned invalid data (${response.status}).`
+        );
+      }
+    }
+
+    if (!response.ok) {
+      throw new Error(
+        result?.error ||
+          `Login failed with status ${response.status}.`
+      );
+    }
+
+    if (!result?.success) {
+      throw new Error(
+        result?.error || "Login failed."
+      );
+    }
+
+    if (result.role === "STUDENT") {
+      if (result.user?.id) {
+        localStorage.setItem(
+          "studentId",
+          String(result.user.id)
         );
       }
 
-      /*
-       * Redirect according to the account role.
-       */
-
-      if (result.role === "STUDENT") {
-        if (result.user?.id) {
-          localStorage.setItem(
-            "studentId",
-            String(result.user.id)
-          );
-        }
-
-        if (result.user?.name) {
-          localStorage.setItem(
-            "studentName",
-            result.user.name
-          );
-        }
-
-        router.replace("/dashboard");
-      } else if (result.role === "TEACHER") {
-        router.replace("/teacher");
-      } else if (result.role === "ACADEMY_ADMIN") {
-        router.replace("/academy-admin");
-      } else if (result.role === "ADMIN") {
-        router.replace("/admin");
-      } else {
-        throw new Error("Unknown account role.");
+      if (result.user?.name) {
+        localStorage.setItem(
+          "studentName",
+          result.user.name
+        );
       }
 
-      router.refresh();
-    } catch (error) {
-      console.error("LOGIN ERROR:", error);
-
-      setError(
-        error instanceof Error
-          ? error.message
-          : "Unable to connect to the server. Please try again."
-      );
-    } finally {
-      setLoading(false);
+      router.replace("/dashboard");
+    } else if (result.role === "TEACHER") {
+      router.replace("/teacher");
+    } else if (result.role === "ACADEMY_ADMIN") {
+      router.replace("/academy-admin");
+    } else if (result.role === "ADMIN") {
+      router.replace("/admin");
+    } else {
+      throw new Error("Unknown account role.");
     }
+
+    router.refresh();
+  } catch (error) {
+    console.error("LOGIN ERROR:", error);
+
+    setError(
+      error instanceof Error
+        ? error.message
+        : "Unable to connect to the server. Please try again."
+    );
+  } finally {
+    setLoading(false);
   }
+}
 
   return (
     <main className="min-h-screen bg-[#f6f8fc] text-[#172033]">

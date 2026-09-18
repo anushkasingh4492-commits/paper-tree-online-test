@@ -395,7 +395,15 @@ let studentId = sessionCookie;
 let academyId = "";
 
 try {
-  const parsed = JSON.parse(sessionCookie);
+  let sessionValue = sessionCookie;
+
+  try {
+    sessionValue = decodeURIComponent(sessionCookie);
+  } catch {
+    sessionValue = sessionCookie;
+  }
+
+  const parsed = JSON.parse(sessionValue);
 
   if (
     parsed &&
@@ -443,8 +451,8 @@ const studentResult =
   email,
   academy_id
 FROM students
-WHERE id = $1
-  AND academy_id = $2
+WHERE id::text = $1::text
+  AND academy_id::text = $2::text
 LIMIT 1
         `,
   [studentId, academyId]
@@ -505,8 +513,8 @@ const attemptsResult =
           ta.created_at,
 
           COALESCE(
-            NULLIF(ta.test_id, ''),
-            NULLIF(ta.scheduled_test_id, '')
+            NULLIF(ta.test_id::text, ''),
+            NULLIF(ta.scheduled_test_id::text, '')
           ) AS resolved_test_id,
 
           t.id AS test_table_id,
@@ -518,12 +526,12 @@ const attemptsResult =
         FROM test_attempts ta
 
         LEFT JOIN tests t
-          ON t.id = COALESCE(
-            NULLIF(ta.test_id, ''),
-            NULLIF(ta.scheduled_test_id, '')
+          ON t.id::text = COALESCE(
+            NULLIF(ta.test_id::text, ''),
+            NULLIF(ta.scheduled_test_id::text, '')
           )
 
-        WHERE ta.student_id = $1
+        WHERE ta.student_id::text = $1::text
 
         ORDER BY
           COALESCE(
@@ -1894,17 +1902,21 @@ const scheduledTestsResult =
     LEFT JOIN papers p
       ON p.id = st.paper_id
 
-    WHERE st.academy_id = $1
+    WHERE st.academy_id::text = $1::text
 
       AND (
-        st.batch_id IS NULL
-
-        OR EXISTS (
+        (st.batch_id IS NOT NULL AND EXISTS (
           SELECT 1
           FROM batch_students bs
           WHERE bs.batch_id = st.batch_id
-            AND bs.student_id = $2
-        )
+            AND bs.student_id::text = $2::text
+        ))
+        OR (st.batch_id IS NULL AND EXISTS (
+          SELECT 1
+          FROM scheduled_test_students sts
+          WHERE sts.scheduled_test_id::text = st.id::text
+            AND sts.student_id::text = $2::text
+        ))
       )
 
     ORDER BY st.start_time ASC
@@ -1914,6 +1926,32 @@ const scheduledTestsResult =
 
     const scheduledTests =
       scheduledTestsResult.rows;
+
+    const notificationsResult = await client.query(
+      `
+      SELECT
+        id,
+        scheduled_test_id,
+        title,
+        message,
+        is_read,
+        created_at
+      FROM notifications
+      WHERE student_id = $1::text
+      ORDER BY created_at DESC
+      LIMIT 20
+      `,
+      [studentId]
+    );
+
+    const notifications = notificationsResult.rows.map((notification: Record<string, unknown>) => ({
+      id: String(notification.id),
+      scheduledTestId: String(notification.scheduled_test_id),
+      title: String(notification.title),
+      message: String(notification.message),
+      isRead: Boolean(notification.is_read),
+      createdAt: String(notification.created_at),
+    }));
 console.log(
   "SCHEDULED TESTS FROM DB:",
   scheduledTests
@@ -2205,11 +2243,11 @@ console.log(
         completedAttempts
           .map(
             (attempt: any) =>
-              attempt.resolved_test_id
-                ? String(
-                    attempt.resolved_test_id
-                  )
-                : null
+              attempt.scheduled_test_id
+                ? String(attempt.scheduled_test_id)
+                : attempt.resolved_test_id
+                  ? String(attempt.resolved_test_id)
+                  : null
           )
           .filter(
             Boolean
@@ -2618,6 +2656,8 @@ console.log(
       completedTests,
 
       missedTests,
+
+      notifications,
 
       /* ------------------------------------------------------
          DASHBOARD COMPATIBILITY

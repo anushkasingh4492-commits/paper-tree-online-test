@@ -34,6 +34,33 @@ type SchemaRow = {
   total: number;
 };
 
+function getOptions(options: unknown): string[] {
+  if (!options) return [];
+  if (Array.isArray(options)) return options.map((option) => String(option));
+
+  if (typeof options === "object") {
+    return Object.entries(options as Record<string, unknown>).map(
+      ([key, value]) => `${key}. ${String(value)}`
+    );
+  }
+
+  if (typeof options === "string") {
+    try {
+      return getOptions(JSON.parse(options));
+    } catch {
+      return [options];
+    }
+  }
+
+  return [];
+}
+
+function getFigureSrc(value: unknown): string | null {
+  if (typeof value !== "string" || !value.trim()) return null;
+  const asset = value.trim();
+  return /^(https?:|data:|blob:|\/)/.test(asset) ? asset : `/${asset}`;
+}
+
 export default function CherryPickPage() {
   const router = useRouter();
 
@@ -185,6 +212,19 @@ export default function CherryPickPage() {
       current.includes(id)
         ? current.filter((item) => item !== id)
         : [...current, id]
+    );
+  }
+
+  function toggleAllQuestions() {
+    const visibleIds = questions.map((question) => question.id);
+    const everyVisibleQuestionIsSelected = visibleIds.every((id) =>
+      selected.includes(id)
+    );
+
+    setSelected((current) =>
+      everyVisibleQuestionIsSelected
+        ? current.filter((id) => !visibleIds.includes(id))
+        : Array.from(new Set([...current, ...visibleIds]))
     );
   }
 
@@ -370,6 +410,18 @@ export default function CherryPickPage() {
             </button>
           )}
 
+          {questions.length > 0 && (
+            <button
+              type="button"
+              onClick={toggleAllQuestions}
+              className="rounded-xl border bg-white px-4 py-2 text-sm font-bold text-[#315bea]"
+            >
+              {questions.every((question) => selected.includes(question.id))
+                ? "Deselect all"
+                : "Select all shown"}
+            </button>
+          )}
+
         </div>
 
         {error && (
@@ -405,6 +457,8 @@ export default function CherryPickPage() {
 
               const isSelected =
                 selected.includes(question.id);
+              const options = getOptions(question.options);
+              const figureSrc = getFigureSrc(question.figure_asset);
 
               return (
                 <button
@@ -429,7 +483,7 @@ export default function CherryPickPage() {
                           : "border-[#cbd3df] text-transparent"
                       }`}
                     >
-
+                      {isSelected ? "✓" : ""}
                     </div>
 
                     <div className="min-w-0 flex-1">
@@ -462,16 +516,27 @@ export default function CherryPickPage() {
                         {question.stem}
                       </p>
 
-                      {Array.isArray(question.options) && (
+                      {figureSrc && (
+                        <img
+                          src={figureSrc}
+                          alt={`Figure for question ${index + 1}`}
+                          className="mt-4 max-h-80 max-w-full rounded-xl border border-[#e5e8ef] bg-white object-contain"
+                          onError={(event) => {
+                            event.currentTarget.style.display = "none";
+                          }}
+                        />
+                      )}
+
+                      {options.length > 0 && (
                         <div className="mt-4 grid gap-2 md:grid-cols-2">
 
-                          {question.options.map(
+                          {options.map(
                             (option, optionIndex) => (
                               <div
                                 key={optionIndex}
                                 className="rounded-lg bg-[#f8f9fc] px-3 py-2 text-xs text-[#697386]"
                               >
-                                {String(option)}
+                                {option}
                               </div>
                             )
                           )}

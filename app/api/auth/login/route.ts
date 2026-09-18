@@ -76,7 +76,6 @@ export async function POST(request: Request) {
         },
       });
 
-      // Remove any old student session.
       response.cookies.delete("student_session");
 
       response.cookies.set(
@@ -137,6 +136,17 @@ export async function POST(request: Request) {
         );
       }
 
+      if (!teacher.academy_id) {
+        return NextResponse.json(
+          {
+            success: false,
+            error:
+              "This teacher account is not assigned to an academy.",
+          },
+          { status: 403 }
+        );
+      }
+
       const response = NextResponse.json({
         success: true,
         role: "TEACHER",
@@ -148,7 +158,6 @@ export async function POST(request: Request) {
         },
       });
 
-      // Remove any old student session.
       response.cookies.delete("student_session");
 
       response.cookies.set(
@@ -156,7 +165,7 @@ export async function POST(request: Request) {
         JSON.stringify({
           id: teacher.id,
           role: "TEACHER",
-          academyId: teacher.academy_id || null,
+          academyId: teacher.academy_id,
         }),
         {
           httpOnly: true,
@@ -184,7 +193,6 @@ export async function POST(request: Request) {
         s.email,
         s.roll_number,
         s.class_name,
-        s.exam,
         s.academy_id,
         a.status AS academy_status,
         a.subscription_end,
@@ -203,11 +211,31 @@ export async function POST(request: Request) {
     if (studentResult.rows.length > 0) {
       const student = studentResult.rows[0];
 
-      if (student.academy_status && student.academy_status !== "ACTIVE") {
-        return NextResponse.json({ success: false, error: "Student access has been restricted by the academy." }, { status: 403 });
+      if (
+        student.academy_status &&
+        student.academy_status !== "ACTIVE"
+      ) {
+        return NextResponse.json(
+          {
+            success: false,
+            error:
+              "Student access has been restricted by the academy.",
+          },
+          { status: 403 }
+        );
       }
-      if (student.subscription_end && new Date(student.subscription_end) < new Date()) {
-        return NextResponse.json({ success: false, error: "The academy subscription has expired." }, { status: 403 });
+
+      if (
+        student.subscription_end &&
+        new Date(student.subscription_end) < new Date()
+      ) {
+        return NextResponse.json(
+          {
+            success: false,
+            error: "The academy subscription has expired.",
+          },
+          { status: 403 }
+        );
       }
 
       const valid = await bcrypt.compare(
@@ -234,12 +262,10 @@ export async function POST(request: Request) {
           email: student.email,
           roll_number: student.roll_number,
           class_name: student.class_name,
-          exam: student.exam,
           academyId: student.academy_id,
         },
       });
 
-      // Remove any old staff/admin session.
       response.cookies.delete("master_session");
 
       response.cookies.set(
@@ -262,10 +288,16 @@ export async function POST(request: Request) {
       return response;
     }
 
+    /*
+     * ==========================================
+     * NO ACCOUNT FOUND
+     * ==========================================
+     */
+
     return NextResponse.json(
       {
         success: false,
-        error: "No account was found for this email. Check the email or run the master account setup.",
+        error: "No account was found for this email.",
       },
       { status: 401 }
     );

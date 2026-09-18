@@ -61,6 +61,11 @@ export async function GET(
       );
     }
 
+    await client.query(`
+      ALTER TABLE scheduled_tests
+      ADD COLUMN IF NOT EXISTS test_id UUID
+    `);
+
     /*
      * Get scheduled test + paper.
      *
@@ -90,16 +95,16 @@ export async function GET(
       LEFT JOIN papers p
         ON p.id = st.paper_id
 
-     WHERE st.id = $1
-       AND st.academy_id = $3
+     WHERE st.id::text = $1::text
+       AND st.academy_id::text = $3::text
        AND (
     (
       st.batch_id IS NOT NULL
           AND EXISTS (
         SELECT 1
         FROM batch_students bs
-        WHERE bs.batch_id = st.batch_id
-          AND bs.student_id = $2
+        WHERE bs.batch_id::text = st.batch_id::text
+          AND bs.student_id::text = $2::text
       )
     )
     OR
@@ -108,8 +113,8 @@ export async function GET(
       AND EXISTS (
         SELECT 1
         FROM scheduled_test_students sts
-        WHERE sts.scheduled_test_id = st.id
-          AND sts.student_id = $2
+        WHERE sts.scheduled_test_id::text = st.id::text
+          AND sts.student_id::text = $2::text
       )
     )
   )
@@ -147,7 +152,7 @@ export async function GET(
       INNER JOIN questions q
         ON q.id = pq.question_id
       WHERE pq.paper_id = $1
-      ORDER BY pq.id ASC
+      ORDER BY pq.question_order ASC
       `,
       [scheduled.paper_id]
     );

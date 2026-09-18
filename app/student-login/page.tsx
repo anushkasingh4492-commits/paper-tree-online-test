@@ -73,17 +73,21 @@ async function handleSubmit(
      * HTTP-only student_session cookie.
      */
 
-    if (result.student?.id) {
+    const loggedInStudent =
+      result.user ||
+      result.student;
+
+    if (loggedInStudent?.id) {
       localStorage.setItem(
         "studentId",
-        String(result.student.id)
+        String(loggedInStudent.id)
       );
     }
 
-    if (result.student?.name) {
+    if (loggedInStudent?.name) {
       localStorage.setItem(
         "studentName",
-        result.student.name
+        loggedInStudent.name
       );
     }
 

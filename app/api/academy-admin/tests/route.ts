@@ -1,10 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { cookies } from "next/headers";
-import { Pool } from "pg";
-
-const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
-});
+import { pool } from "@/lib/db";
+import { parseSessionCookie } from "@/lib/session";
 
 async function getAcademyAdmin() {
   const cookieStore = await cookies();
@@ -12,17 +9,18 @@ async function getAcademyAdmin() {
 
   if (!session) return null;
 
-  try {
-    const data = JSON.parse(session.value);
+  const data = parseSessionCookie<Record<string, unknown>>(session.value);
+
+  if (data) {
 
     if (data.role !== "ACADEMY_ADMIN" || !data.academyId) {
       return null;
     }
 
     return data;
-  } catch {
-    return null;
   }
+
+  return null;
 }
 
 export async function GET() {
@@ -48,7 +46,24 @@ export async function GET() {
         st.duration_minutes,
         st.status,
         st.created_at,
-        b.name AS batch_name
+        b.name AS batch_name,
+        (
+          SELECT COUNT(*)::int
+          FROM batch_students bs
+          WHERE bs.batch_id::text = st.batch_id::text
+        ) AS assigned_count,
+        (
+          SELECT COUNT(*)::int
+          FROM test_attempts ta
+          WHERE ta.scheduled_test_id::text = st.id::text
+            AND LOWER(REPLACE(ta.status, '-', ' ')) IN ('submitted', 'auto submitted', 'completed')
+        ) AS completed_count,
+        (
+          SELECT ROUND(AVG(ta.score)::numeric, 2)
+          FROM test_attempts ta
+          WHERE ta.scheduled_test_id::text = st.id::text
+            AND LOWER(REPLACE(ta.status, '-', ' ')) IN ('submitted', 'auto submitted', 'completed')
+        ) AS average_score
       FROM scheduled_tests st
       LEFT JOIN batches b
         ON b.id = st.batch_id
@@ -58,7 +73,7 @@ export async function GET() {
       [admin.academyId]
     );
 
-    return NextResponse.json(result.rows);
+    return NextResponse.json({ success: true, tests: result.rows });
   } catch (error) {
     console.error("ACADEMY TEST GET ERROR:", error);
 
@@ -190,4 +205,20 @@ export async function POST(req: NextRequest) {
       { status: 500 }
     );
   }
+}
+
+export async function DELETE(req: NextRequest) {
+  const admin = await getAcademyAdmin();
+  const testId = req.nextUrl.searchParams.get("id") || "";
+  if (!admin) return NextResponse.json({ success: false, error: "Unauthorized" }, { status: 401 });
+  const client = await pool.connect();
+  try {
+    await client.query("BEGIN");
+    const owned = await client.query(`SELECT id FROM scheduled_tests WHERE id=$1 AND academy_id=$2`, [testId, admin.academyId]);
+    if (!owned.rowCount) { await client.query("ROLLBACK"); return NextResponse.json({ success: false, error: "Scheduled test not found." }, { status: 404 }); }
+    await client.query(`DELETE FROM notifications WHERE scheduled_test_id=$1::text`, [testId]);
+    await client.query(`DELETE FROM scheduled_tests WHERE id=$1 AND academy_id=$2`, [testId, admin.academyId]);
+    await client.query("COMMIT");
+    return NextResponse.json({ success: true });
+  } catch (error) { await client.query("ROLLBACK"); return NextResponse.json({ success: false, error: error instanceof Error ? error.message : "Could not cancel scheduled test." }, { status: 500 }); } finally { client.release(); }
 }
