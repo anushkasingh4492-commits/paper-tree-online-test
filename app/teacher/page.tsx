@@ -13,6 +13,7 @@ type Paper = {
   created_at: string;
   question_count: number;
 };
+type Branding = { name: string; logo_data?: string | null };
 
 export default function TeacherPage() {
   const router = useRouter();
@@ -20,6 +21,7 @@ export default function TeacherPage() {
   const [papers, setPapers] = useState<Paper[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const [branding, setBranding] = useState<Branding | null>(null);
 
   async function loadPapers() {
     try {
@@ -51,20 +53,23 @@ export default function TeacherPage() {
     return () => window.clearTimeout(timeoutId);
   }, []);
 
+  useEffect(() => {
+    void fetch("/api/academy/branding", { cache: "no-store" }).then((response) => response.json()).then((data) => {
+      if (data.success) setBranding(data.academy);
+    }).catch(() => undefined);
+  }, []);
+
   return (
     <main className="min-h-screen bg-[#f6f8fc] text-[#172033]">
       <div className="mx-auto max-w-7xl px-6 py-10">
 
         <div className="mb-10 flex items-center justify-between">
           <div>
-            <p className="mb-2 text-xs font-bold uppercase tracking-[0.15em] text-[#315bea]">
-              Teacher Portal
-            </p>
+            <div className="mb-2 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.15em] text-[#315bea]">{branding?.logo_data ? <img src={branding.logo_data} alt="Institute logo" className="h-7 w-7 rounded-md object-contain" /> : null}{branding?.name || "Teacher Portal"}</div>
 
-            <h1 className="text-3xl font-extrabold tracking-tight">
-              Create & Publish Tests
-            </h1>
-
+          <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
+  📝 Create & Publish Tests
+</h1>
             <p className="mt-2 text-sm text-[#697386]">
               Create papers automatically or select questions manually.
             </p>
@@ -78,7 +83,7 @@ export default function TeacherPage() {
       credentials: "include",
     });
   } finally {
-    router.push("/master-login");
+    router.push("/");
   }
 }}
             className="rounded-xl border border-[#e2e6ee] bg-white px-4 py-2.5 text-sm font-bold text-[#697386] hover:bg-[#f7f8fb]"
@@ -93,9 +98,10 @@ export default function TeacherPage() {
             onClick={() => router.push("/teacher/generate")}
             className="rounded-2xl border border-[#e3e8f5] bg-white p-7 text-left shadow-sm transition hover:-translate-y-1 hover:shadow-md"
           >
-            <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#eef2ff] text-2xl">
-
-            </div>
+          {/* AUTO GENERATE */}
+<div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#eef2ff] text-2xl">
+  📝
+</div>
 
             <h2 className="text-xl font-extrabold">
               Auto Generate Paper
@@ -115,9 +121,10 @@ export default function TeacherPage() {
             onClick={() => router.push("/teacher/cherry-pick")}
             className="rounded-2xl border border-[#e3e8f5] bg-white p-7 text-left shadow-sm transition hover:-translate-y-1 hover:shadow-md"
           >
-            <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#eef8f2] text-2xl">
-
-            </div>
+          {/* CHERRY PICK */}
+<div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#eef8f2] text-2xl">
+  🎯
+</div>
 
             <h2 className="text-xl font-extrabold">
               Cherry Pick Questions

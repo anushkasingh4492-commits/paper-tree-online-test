@@ -187,6 +187,8 @@ type DashboardPayload = {
   notifications?: NotificationItem[];
 };
 
+type AcademyBranding = { name: string; logo_data?: string | null };
+
 type IconType =
   | "home"
   | "tests"
@@ -925,6 +927,7 @@ export default function DashboardPage() {
   ] = useState(
     "Student"
   );
+  const [academyBranding, setAcademyBranding] = useState<AcademyBranding | null>(null);
 
   const [
     results,
@@ -1267,6 +1270,12 @@ export default function DashboardPage() {
     return () => window.clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    void fetch("/api/academy/branding", { cache: "no-store" }).then((response) => response.json()).then((data) => {
+      if (data.success) setAcademyBranding(data.academy);
+    }).catch(() => undefined);
+  }, []);
+
   /* ==========================================================
      DERIVED DATA
   ========================================================== */
@@ -1534,13 +1543,11 @@ export default function DashboardPage() {
         <aside className="hidden xl:flex w-[220px] shrink-0 bg-white border-r border-[#e9ebf1] flex-col">
 
           <div className="h-[82px] px-5 flex items-center gap-3 border-b border-[#f0f1f5]">
-            <div className="w-9 h-9 rounded-[11px] bg-gradient-to-br from-[#2563eb] to-[#6338e5] text-white flex items-center justify-center font-black text-lg shadow-sm">
-              P
-            </div>
+            {academyBranding?.logo_data ? <img src={academyBranding.logo_data} alt="Institute logo" className="h-9 w-9 rounded-[11px] object-contain shadow-sm" /> : <div className="w-9 h-9 rounded-[11px] bg-gradient-to-br from-[#2563eb] to-[#6338e5] text-white flex items-center justify-center font-black text-lg shadow-sm">P</div>}
 
             <div>
               <div className="font-extrabold text-[15px] leading-4">
-                Paper Tree
+                {academyBranding?.name || "Paper Tree"}
               </div>
 
               <div className="text-[9px] font-semibold tracking-[.17em] text-[#9ba1ad] mt-1">
@@ -1602,30 +1609,6 @@ export default function DashboardPage() {
               </button>
 
             </nav>
-          </div>
-
-          <div className="px-4 pb-3">
-            <div className="rounded-xl bg-gradient-to-br from-[#fff8e9] via-[#fff4fb] to-[#f2edff] border border-[#eee8ff] p-3.5">
-              <div className="flex items-center gap-2 text-[#7357dc]">
-                <span className="w-7 h-7 rounded-lg bg-white flex items-center justify-center">
-
-                </span>
-
-                <span className="text-xs font-extrabold">
-                  Go Premium
-                </span>
-              </div>
-
-              <p className="text-[9px] text-[#818898] leading-4 mt-2">
-                Unlock unlimited
-                tests, detailed
-                analytics and more.
-              </p>
-
-              <button className="mt-2.5 w-full h-8 rounded-lg bg-gradient-to-r from-[#6744e8] to-[#7d31e8] text-white text-[10px] font-bold">
-                Upgrade Now
-              </button>
-            </div>
           </div>
 
           <button

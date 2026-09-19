@@ -74,6 +74,8 @@ export async function GET(
       );
     }
 
+    await pool.query("ALTER TABLE scheduled_tests ADD COLUMN IF NOT EXISTS allow_reattempt BOOLEAN NOT NULL DEFAULT FALSE");
+
     /*
      * -------------------------------------------------------
      * FIND COMPLETED ATTEMPT
@@ -103,7 +105,8 @@ export async function GET(
 
           t.exam,
           t.questions,
-          t.question_count
+          t.question_count,
+          st.allow_reattempt
 
         FROM test_attempts ta
 
@@ -112,6 +115,9 @@ export async function GET(
             ta.test_id,
             ta.scheduled_test_id
           )
+
+        LEFT JOIN scheduled_tests st
+          ON st.id = ta.scheduled_test_id
 
         INNER JOIN students s
           ON s.id = ta.student_id
@@ -337,6 +343,9 @@ for (
 
     const result = {
       testId,
+
+      scheduledTestId: attempt.scheduled_test_id ? String(attempt.scheduled_test_id) : undefined,
+      allowReattempt: Boolean(attempt.allow_reattempt),
 
       attemptId:
         String(

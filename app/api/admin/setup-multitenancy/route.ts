@@ -53,7 +53,8 @@ export async function GET() {
       ADD COLUMN IF NOT EXISTS student_limit INTEGER NOT NULL DEFAULT 10,
       ADD COLUMN IF NOT EXISTS subscription_start DATE,
       ADD COLUMN IF NOT EXISTS subscription_end DATE,
-      ADD COLUMN IF NOT EXISTS subscription_plan VARCHAR(255)
+      ADD COLUMN IF NOT EXISTS subscription_plan VARCHAR(255),
+      ADD COLUMN IF NOT EXISTS logo_data TEXT
     `);
 
     await client.query(`
@@ -63,7 +64,8 @@ export async function GET() {
 
     await client.query(`
       ALTER TABLE scheduled_tests
-      ADD COLUMN IF NOT EXISTS academy_id UUID
+      ADD COLUMN IF NOT EXISTS academy_id UUID,
+      ADD COLUMN IF NOT EXISTS allow_reattempt BOOLEAN NOT NULL DEFAULT FALSE
     `);
 
     /* =============================================

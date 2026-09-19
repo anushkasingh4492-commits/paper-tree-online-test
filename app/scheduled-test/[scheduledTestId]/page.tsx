@@ -224,9 +224,11 @@ export default function ScheduledTestPage() {
           duration: data.duration,
           startTime: data.startTime,
           endTime: data.endTime,
+          reattempt: localStorage.getItem(`reattempt-${data.scheduledTestId}`) === "true",
           createdAt: new Date().toISOString(),
         })
       );
+      localStorage.removeItem(`reattempt-${data.scheduledTestId}`);
 
       router.push(`/test/${data.testId}`);
     } catch (error) {

@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
 type Overview = {
-  academy: { name: string; code?: string; status?: string; student_limit?: number; subscription_end?: string | null };
+  academy: { name: string; code?: string; logo_data?: string | null; status?: string; student_limit?: number; subscription_end?: string | null };
   counts: { teachers: number; students: number; batches: number; scheduled_tests: number };
   batches: Array<{ id: string; name: string; class_name?: string; student_count: number }>;
   tests: Array<{ id: string; title: string; batch_name?: string; start_time: string; status: string }>;
@@ -48,7 +48,7 @@ export default function AcademyAdminPage() {
     <main className="min-h-screen bg-[#f6f8fc] text-[#172033]">
       <header className="border-b border-[#e7eaf0] bg-white">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-          <div><p className="text-xs font-black tracking-[.16em] text-[#315bea]">ACADEMY ADMIN</p><h1 className="mt-1 text-xl font-extrabold">{overview?.academy.name || "Academy control centre"}</h1></div>
+          <div className="flex items-center gap-3">{overview?.academy.logo_data ? <img src={overview.academy.logo_data} alt="Institute logo" className="h-10 w-10 rounded-lg object-contain" /> : null}<div><p className="text-xs font-black tracking-[.16em] text-[#315bea]">ACADEMY ADMIN</p><h1 className="mt-1 text-xl font-extrabold">{overview?.academy.name || "Academy control centre"}</h1></div></div>
           <button onClick={logout} className="rounded-xl border border-[#e2e6ee] px-4 py-2.5 text-sm font-bold text-[#697386]">Logout</button>
         </div>
       </header>

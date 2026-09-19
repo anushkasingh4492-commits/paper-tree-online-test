@@ -1666,6 +1666,7 @@ const figureAsset =
                 "string"
                   ? config.scheduledTestId
                   : undefined,
+              reattempt: config?.reattempt === true,
               studentId,
               answers,
               marked,
@@ -1735,6 +1736,12 @@ const figureAsset =
         attemptId:
           data.attemptId ??
           null,
+
+        scheduledTestId:
+          data.scheduledTestId ??
+          (typeof config?.scheduledTestId === "string" ? config.scheduledTestId : undefined),
+
+        allowReattempt: data.allowReattempt === true,
 
         total,
         correct,

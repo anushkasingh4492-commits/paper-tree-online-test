@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
   id: string;
   name: string;
   code: string;
+  logo_data?: string;
   teacher_count: number;
   student_count: number;
   batch_count?: number;
@@ -72,6 +73,9 @@ export default function AcademiesPage() {
   const [subscriptionSeats, setSubscriptionSeats] = useState("50");
   const [subscriptionMonths, setSubscriptionMonths] = useState("12");
   const [startDate, setStartDate] = useState(new Date().toISOString().slice(0, 10));
+  const [academyBrandName, setAcademyBrandName] = useState("");
+  const [academyLogoData, setAcademyLogoData] = useState("");
+  const [brandSaving, setBrandSaving] = useState(false);
 
   const notify = (text: string, kind: Toast["kind"] = "success") => {
     const id = Date.now() + Math.random();
@@ -137,10 +141,30 @@ export default function AcademiesPage() {
 
   function selectAcademy(academy: Academy, nextSection: Section = "overview") {
     setSelectedAcademy(academy);
+    setAcademyBrandName(academy.name);
+    setAcademyLogoData(academy.logo_data || "");
     setSection(nextSection);
     setOpenBatch(null);
     setBatchStudents({});
     window.setTimeout(() => document.getElementById("academy-manager")?.scrollIntoView({ behavior: "smooth", block: "start" }), 20);
+  }
+
+  async function saveBranding(e: FormEvent) {
+    e.preventDefault();
+    setBrandSaving(true);
+    await patchAcademy({ academyName: academyBrandName, logoData: academyLogoData }, "Academy branding updated");
+    setBrandSaving(false);
+  }
+
+  function readLogo(file: File | undefined) {
+    if (!file) return;
+    if (!file.type.startsWith("image/") || file.size > 1_500_000) {
+      notify("Choose an image smaller than 1.5 MB", "error");
+      return;
+    }
+    const reader = new FileReader();
+    reader.onload = () => setAcademyLogoData(String(reader.result || ""));
+    reader.readAsDataURL(file);
   }
 
   async function createAcademy(e: FormEvent) {
@@ -225,6 +249,21 @@ export default function AcademiesPage() {
       notify(text);
       await refreshEverything();
     } catch (e) { notify(e instanceof Error ? e.message : "Failed to update academy", "error"); }
+  }
+
+  async function deleteAcademy() {
+    if (!selectedAcademy) return;
+    const academy = selectedAcademy;
+    if (!window.confirm(`Delete ${academy.name}? This permanently removes its admin, students, teachers, batches, papers and tests.`)) return;
+    try {
+      const res = await fetch(`/api/admin/academies/${academy.id}`, { method: "DELETE" });
+      const data = await res.json();
+      if (!res.ok || !data.success) throw new Error(data.error || "Academy could not be deleted");
+      setSelectedAcademy(null);
+      setDetails(null);
+      notify(`${academy.name} deleted successfully`);
+      await loadAcademies();
+    } catch (e) { notify(e instanceof Error ? e.message : "Academy could not be deleted", "error"); }
   }
 
   function openSubscription() {
@@ -369,7 +408,8 @@ export default function AcademiesPage() {
         </section>
 
         {selectedAcademy && <section id="academy-manager" className="scroll-mt-24 rounded-3xl border border-[#dce3f3] bg-white shadow-sm">
-          <div className="border-b border-[#e8ecf4] p-6"><div className="flex flex-wrap items-start justify-between gap-4"><div><p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#315bea]">Selected academy</p><h2 className="mt-1 text-2xl font-black">{selectedAcademy.name}</h2><p className="mt-1 text-xs text-[#697386]">Code: {selectedAcademy.code} · {statusLabel(selectedAcademy)}</p></div><button onClick={() => { setSelectedAcademy(null); setDetails(null); }} className="rounded-xl border px-4 py-2 text-xs font-bold">Close</button></div>
+          <form onSubmit={saveBranding} className="flex flex-wrap items-end gap-3 border-b border-[#e8ecf4] bg-[#fafbfe] p-5"><label className="min-w-[220px] flex-1 text-xs font-bold">Institute name<input value={academyBrandName} onChange={(e) => setAcademyBrandName(e.target.value)} className="mt-1 w-full rounded-xl border border-[#dfe4ed] bg-white px-3 py-2.5 text-sm" required /></label><label className="text-xs font-bold">Logo<input type="file" accept="image/*" onChange={(e) => readLogo(e.target.files?.[0])} className="mt-1 block w-full text-xs" /></label>{academyLogoData && <img src={academyLogoData} alt="Logo preview" className="h-11 w-11 rounded-lg border bg-white object-contain" />}<button disabled={brandSaving} className="rounded-xl bg-[#315bea] px-4 py-2.5 text-xs font-black text-white disabled:opacity-50">{brandSaving ? "Saving..." : "Save Branding"}</button></form>
+          <div className="border-b border-[#e8ecf4] p-6"><div className="flex flex-wrap items-start justify-between gap-4"><div><p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#315bea]">Selected academy</p><h2 className="mt-1 text-2xl font-black">{selectedAcademy.name}</h2><p className="mt-1 text-xs text-[#697386]">Code: {selectedAcademy.code} · {statusLabel(selectedAcademy)}</p></div><div className="flex gap-2"><button onClick={deleteAcademy} className="rounded-xl border border-red-200 px-4 py-2 text-xs font-bold text-red-600">Delete Academy</button><button onClick={() => { setSelectedAcademy(null); setDetails(null); }} className="rounded-xl border px-4 py-2 text-xs font-bold">Close</button></div></div>
             <div className="mt-5 grid grid-cols-2 gap-2 md:grid-cols-6">{([ ["overview","🏠 Overview"],["students","🎓 Students"],["teachers","👨‍🏫 Teachers"],["batches","📚 Batches"],["tests","📝 Tests & Papers"],["subscription","🎟️ Subscription"]] as [Section,string][]).map(([id,label]) => <button key={id} onClick={() => setSection(id)} className={`rounded-xl px-3 py-3 text-xs font-black transition ${section === id ? "bg-[#315bea] text-white" : "bg-[#f6f8fc] hover:bg-[#edf1fb]"}`}>{label}</button>)}</div>
           </div>
 
@@ -382,7 +422,7 @@ export default function AcademiesPage() {
             {section === "subscription" && <SubscriptionPanel academy={selectedAcademy} onManage={openSubscription} onExtend={extendSubscription} />}
 
             {section === "overview" && <div className="mt-6 grid gap-4 xl:grid-cols-3">
-              <ManagementCard title="🎓 Add Student" description="Create a real student account for this academy."><form onSubmit={addStudent} className="space-y-2"><Field value={studentName} onChange={setStudentName} placeholder="Student name" label="" /><Field value={studentEmail} onChange={setStudentEmail} placeholder="Student email" type="email" label="" /><Field value={studentPassword} onChange={setStudentPassword} placeholder="Password" type="password" label="" /><Select label="Class" value={studentClass} onChange={setStudentClass} options={CLASS_OPTIONS} /><button className="w-full rounded-xl bg-[#315bea] px-4 py-3 text-xs font-black text-white">➕ Add Student</button></form></ManagementCard>
+              <ManagementCard title="🎓 Add Student" description="Create the student first. Then create a batch and assign this student from Manage Batches."><form onSubmit={addStudent} className="space-y-2"><Field value={studentName} onChange={setStudentName} placeholder="Student name" label="" /><Field value={studentEmail} onChange={setStudentEmail} placeholder="Student email" type="email" label="" /><Field value={studentPassword} onChange={setStudentPassword} placeholder="Password" type="password" label="" /><Select label="Class" value={studentClass} onChange={setStudentClass} options={CLASS_OPTIONS} /><button className="w-full rounded-xl bg-[#315bea] px-4 py-3 text-xs font-black text-white">➕ Add Student</button></form></ManagementCard>
               <ManagementCard title="👨‍🏫 Add Teacher" description="Create an academy-specific teacher account."><form onSubmit={addTeacher} className="space-y-2"><Field value={teacherName} onChange={setTeacherName} placeholder="Teacher name" label="" /><Field value={teacherEmail} onChange={setTeacherEmail} placeholder="Teacher email" type="email" label="" /><Field value={teacherPassword} onChange={setTeacherPassword} placeholder="Password" type="password" label="" /><button className="mt-2 w-full rounded-xl bg-[#172033] px-4 py-3 text-xs font-black text-white">➕ Add Teacher</button></form></ManagementCard>
               <ManagementCard title="📚 Create Batch" description="Create a batch, then add existing academy students to it."><form onSubmit={addBatch} className="space-y-2"><Field value={batchName} onChange={setBatchName} placeholder="Batch name" label="" /><Select label="Class" value={batchClass} onChange={setBatchClass} options={CLASS_OPTIONS} /><button className="w-full rounded-xl bg-[#315bea] px-4 py-3 text-xs font-black text-white">✨ Create Batch</button></form></ManagementCard>
             </div>}

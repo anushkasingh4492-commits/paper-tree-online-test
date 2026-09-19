@@ -40,6 +40,7 @@ type SubmitBody = {
   answers?: AnswerMap;
   marked?: MarkedMap;
   automatic?: boolean;
+  reattempt?: boolean;
   violationCount?: number;
   startedAt?: string;
   submittedAt?: string;
@@ -168,6 +169,11 @@ function isSubmittedStatus(status: unknown): boolean {
     normalized === "auto submitted" ||
     normalized === "auto-submitted"
   );
+}
+
+function isAutomaticStatus(status: unknown): boolean {
+  const normalized = String(status ?? "").trim().toLowerCase();
+  return normalized === "auto submitted" || normalized === "auto-submitted";
 }
 
 /*
@@ -373,6 +379,7 @@ export async function POST(request: NextRequest) {
     `);
 
     let scheduledTestId: string | null = null;
+    let allowReattempt = false;
 
     const requestedScheduledTestId = String(
       body.scheduledTestId ?? ""
@@ -382,6 +389,7 @@ export async function POST(request: NextRequest) {
       const scheduledResult = await client.query(
         `
         SELECT id
+             , allow_reattempt
         FROM scheduled_tests
         WHERE id::text = $1::text
           AND test_id::text = $2::text
@@ -395,6 +403,7 @@ export async function POST(request: NextRequest) {
         scheduledTestId = String(
           scheduledResult.rows[0].id
         );
+        allowReattempt = scheduledResult.rows[0].allow_reattempt === true;
       }
     }
 
@@ -713,9 +722,16 @@ export async function POST(request: NextRequest) {
      * =======================================================
      */
 
-    if (existingAttemptResult.rows.length > 0) {
-      const existing =
-        existingAttemptResult.rows[0];
+    const existingAttempt = existingAttemptResult.rows[0];
+    const canReattempt = Boolean(
+      existingAttempt &&
+      body.reattempt === true &&
+      allowReattempt &&
+      isAutomaticStatus(existingAttempt.status)
+    );
+
+    if (existingAttemptResult.rows.length > 0 && !canReattempt) {
+      const existing = existingAttempt;
 
       /*
        * Already submitted
@@ -731,6 +747,7 @@ export async function POST(request: NextRequest) {
           alreadySubmitted: true,
           attemptId: String(existing.id),
           testId,
+          scheduledTestId,
           total: totalQuestions,
           attempted,
           correct,
@@ -997,6 +1014,8 @@ export async function POST(request: NextRequest) {
       alreadySubmitted: false,
       attemptId,
       testId,
+      scheduledTestId,
+      allowReattempt,
       total: totalQuestions,
       attempted,
       correct,

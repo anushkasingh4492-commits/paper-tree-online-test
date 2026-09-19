@@ -21,7 +21,6 @@ async function isMasterAdmin() {
 
   return false;
 }
-
 async function ensureAcademySettingsColumns() {
   await pool.query(`
     ALTER TABLE academies
@@ -29,10 +28,10 @@ async function ensureAcademySettingsColumns() {
       ADD COLUMN IF NOT EXISTS student_limit INTEGER NOT NULL DEFAULT 10,
       ADD COLUMN IF NOT EXISTS subscription_start DATE,
       ADD COLUMN IF NOT EXISTS subscription_end DATE,
-      ADD COLUMN IF NOT EXISTS subscription_plan VARCHAR(255)
+      ADD COLUMN IF NOT EXISTS subscription_plan VARCHAR(255),
+      ADD COLUMN IF NOT EXISTS logo_data TEXT
   `);
 }
-
 export async function GET() {
   if (!(await isMasterAdmin())) {
     return NextResponse.json(
@@ -54,6 +53,7 @@ export async function GET() {
         a.subscription_start,
         a.subscription_end,
         a.subscription_plan,
+        a.logo_data,
         COUNT(DISTINCT t.id)::int AS teacher_count,
         COUNT(DISTINCT s.id)::int AS student_count
       FROM academies a
@@ -245,3 +245,4 @@ export async function POST(req: NextRequest) {
     client.release();
   }
 }
+

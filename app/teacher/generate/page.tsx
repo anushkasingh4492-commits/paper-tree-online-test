@@ -2,6 +2,8 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
+import "katex/dist/katex.min.css";
+import { BlockMath, InlineMath } from "react-katex";
 
 type SchemaRow = {
   exam: string;
@@ -100,7 +102,36 @@ function getOptions(options: unknown): string[] {
 function getFigureSrc(value: unknown): string | null {
   if (typeof value !== "string" || !value.trim()) return null;
   const asset = value.trim();
-  return /^(https?:|data:|blob:|\/)/.test(asset) ? asset : `/${asset}`;
+  return /^(https?:|data:|blob:|\/)/.test(asset)
+    ? asset
+    : `/api/question-asset?path=${encodeURIComponent(asset)}`;
+}
+
+function MathText({ text }: { text: string }) {
+  const parts = String(text || "").split(
+    /(\$\$[\s\S]*?\$\$|\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\)|\$[^$\n]+\$)/g
+  );
+
+  return (
+    <>
+      {parts.map((part, index) => {
+        if (!part) return null;
+        if (part.startsWith("$$") && part.endsWith("$$")) {
+          return <span key={index} className="my-2 block overflow-x-auto"><BlockMath math={part.slice(2, -2)} errorColor="#64748b" /></span>;
+        }
+        if (part.startsWith("\\[") && part.endsWith("\\]")) {
+          return <span key={index} className="my-2 block overflow-x-auto"><BlockMath math={part.slice(2, -2)} errorColor="#64748b" /></span>;
+        }
+        if (part.startsWith("\\(") && part.endsWith("\\)")) {
+          return <InlineMath key={index} math={part.slice(2, -2)} errorColor="#64748b" />;
+        }
+        if (part.startsWith("$") && part.endsWith("$")) {
+          return <InlineMath key={index} math={part.slice(1, -1)} errorColor="#64748b" />;
+        }
+        return <span key={index}>{part}</span>;
+      })}
+    </>
+  );
 }
 
 export default function TeacherGeneratePage() {
@@ -110,7 +141,7 @@ export default function TeacherGeneratePage() {
 
   const [exam, setExam] = useState("MHT-CET");
   const [subject, setSubject] = useState("Physics");
-  const [chapter, setChapter] = useState("");
+  const [selectedChapters, setSelectedChapters] = useState<string[]>([]);
   const [difficulty, setDifficulty] = useState("Balanced");
 
   const [questionCount, setQuestionCount] = useState(10);
@@ -246,7 +277,7 @@ export default function TeacherGeneratePage() {
 
           subjects: [subject],
 
-          chapters: chapter ? [chapter] : [],
+          chapters: selectedChapters,
 
           difficulty,
 
@@ -285,12 +316,6 @@ export default function TeacherGeneratePage() {
    * so they are intentionally not dependencies here.
    */
   useEffect(() => {
-    if (!subject) {
-      setQuestions([]);
-      setSelectedQuestionIds(new Set());
-      return;
-    }
-
     const timer = window.setTimeout(() => {
       loadQuestions();
     }, 300);
@@ -301,7 +326,7 @@ export default function TeacherGeneratePage() {
 
     // loadQuestions intentionally uses the current filter state.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [exam, subject, chapter, difficulty]);
+  }, [exam, subject, selectedChapters, difficulty]);
 
   /*
    * Reset subject/chapter when exam changes.
@@ -309,7 +334,7 @@ export default function TeacherGeneratePage() {
   function handleExamChange(value: string) {
     setExam(value);
     setSubject("");
-    setChapter("");
+    setSelectedChapters([]);
     setQuestions([]);
     setSelectedQuestionIds(new Set());
   }
@@ -319,9 +344,17 @@ export default function TeacherGeneratePage() {
    */
   function handleSubjectChange(value: string) {
     setSubject(value);
-    setChapter("");
+    setSelectedChapters([]);
     setQuestions([]);
     setSelectedQuestionIds(new Set());
+  }
+
+  function toggleChapter(chapterName: string) {
+    setSelectedChapters((current) =>
+      current.includes(chapterName)
+        ? current.filter((chapter) => chapter !== chapterName)
+        : [...current, chapterName]
+    );
   }
 
   /*
@@ -348,17 +381,6 @@ export default function TeacherGeneratePage() {
 
       return next;
     });
-  }
-
-  /*
-   * Select the first N currently displayed questions.
-   */
-  function selectRequiredQuestions() {
-    const ids = questions
-      .slice(0, questionCount)
-      .map((question) => String(question.id));
-
-    setSelectedQuestionIds(new Set(ids));
   }
 
   /*
@@ -420,7 +442,7 @@ export default function TeacherGeneratePage() {
 
           subjects: [subject],
 
-          chapters: chapter ? [chapter] : [],
+          chapters: selectedChapters,
 
           difficulty,
 
@@ -491,6 +513,21 @@ export default function TeacherGeneratePage() {
             </p>
           </div>
 
+          <div className="sticky top-4 z-10 mb-8 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-blue-200 bg-blue-50/95 p-4 shadow-lg shadow-blue-900/10 backdrop-blur">
+            <div>
+              <p className="text-sm font-bold text-blue-950">{selectedCount} / {questionCount} questions selected</p>
+              <p className="mt-1 text-xs text-blue-800">Choose questions below, then continue to publish.</p>
+            </div>
+            <button
+              type="button"
+              onClick={generatePaper}
+              disabled={loading || loadingQuestions || !subject || !exactCountSelected}
+              className="rounded-xl bg-[#315bea] px-5 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-[#264ac7] disabled:cursor-not-allowed disabled:opacity-50"
+            >
+              {loading ? "Opening Publish..." : "Generate & Publish Paper"}
+            </button>
+          </div>
+
           {/* FILTERS */}
           <div className="grid gap-6 md:grid-cols-2">
             {/* EXAM */}
@@ -536,29 +573,15 @@ export default function TeacherGeneratePage() {
               </select>
             </div>
 
-            {/* CHAPTER */}
+            {/* CHAPTERS */}
             <div className="md:col-span-2">
-              <label className="mb-2 block text-sm font-semibold">
-                Chapter
-              </label>
-
-              <select
-                value={chapter}
-                onChange={(e) =>
-                  setChapter(e.target.value)
-                }
-                className="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 outline-none focus:border-[#315bea]"
-              >
-                <option value="">
-                  All chapters
-                </option>
-
-                {chapters.map((item) => (
-                  <option key={item} value={item}>
-                    {item}
-                  </option>
-                ))}
-              </select>
+              <p className="mb-2 text-sm font-semibold">Chapters</p>
+              <div className="max-h-48 overflow-y-auto rounded-xl border border-gray-300 bg-white p-3">
+                {!subject ? <p className="text-sm text-gray-500">Select a subject first.</p> : chapters.length === 0 ? <p className="text-sm text-gray-500">No chapters found for this subject.</p> : <div className="grid gap-2 sm:grid-cols-2">
+                  {chapters.map((item) => <label key={item} className="flex cursor-pointer items-start gap-2 rounded-lg px-2 py-2 text-sm hover:bg-blue-50"><input type="checkbox" checked={selectedChapters.includes(item)} onChange={() => toggleChapter(item)} className="mt-0.5 h-4 w-4 accent-[#315bea]" /><span>{item}</span></label>)}
+                </div>}
+              </div>
+              <p className="mt-2 text-xs text-gray-500">Select one or more chapters. Leave all unchecked to include every chapter.</p>
             </div>
 
             {/* DIFFICULTY */}
@@ -867,7 +890,7 @@ export default function TeacherGeneratePage() {
                             </div>
 
                             <p className="mt-3 whitespace-pre-wrap text-base font-medium leading-7 text-[#172033]">
-                              {questionText}
+                              <MathText text={questionText} />
                             </p>
 
                             {figureSrc && (
@@ -890,7 +913,7 @@ export default function TeacherGeneratePage() {
                                       key={`${id}-option-${optionIndex}`}
                                       className="rounded-lg border border-gray-200 bg-gray-50 px-3 py-2 text-sm text-gray-700"
                                     >
-                                      {option}
+                                      <MathText text={option} />
                                     </div>
                                   )
                                 )}
@@ -937,33 +960,6 @@ export default function TeacherGeneratePage() {
               )}
           </div>
 
-          {/* GENERATE BUTTON */}
-          <div className="mt-10 border-t pt-8">
-            <button
-              onClick={generatePaper}
-              disabled={
-                loading ||
-                loadingQuestions ||
-                !subject ||
-                !exactCountSelected
-              }
-              className="w-full rounded-xl bg-[#315bea] px-5 py-4 font-bold text-white transition hover:bg-[#264ac7] disabled:cursor-not-allowed disabled:opacity-50"
-            >
-              {loading
-                ? "Generating Paper..."
-                : exactCountSelected
-                ? `Generate Paper with ${questionCount} Selected Questions`
-                : `Select Exactly ${questionCount} Questions`}
-            </button>
-
-            {!exactCountSelected &&
-              questions.length > 0 && (
-                <p className="mt-3 text-center text-sm text-gray-500">
-                  You must select exactly {questionCount} questions
-                  before generating the paper.
-                </p>
-              )}
-          </div>
         </div>
       </div>
     </main>

@@ -19,6 +19,7 @@ type Subject =
   | "Biology";
 
 type DatabaseChapter = {
+  exam: string;
   subject: string;
   chapter: string;
 };
@@ -321,21 +322,15 @@ export default function TestsPage() {
           );
         }
 
+        const schemaRows = Array.isArray(data.data) ? data.data : [];
         setAvailableChapters(
-          Array.isArray(
-            data.chapters
-          )
-            ? data.chapters
-            : []
+          schemaRows.map((row: { exam?: string; subject?: string; chapter_name?: string }) => ({
+            exam: String(row.exam || ""),
+            subject: String(row.subject || ""),
+            chapter: String(row.chapter_name || ""),
+          })).filter((row: DatabaseChapter) => row.exam && row.subject && row.chapter)
         );
-
-        setDatabaseSubjects(
-          Array.isArray(
-            data.subjects
-          )
-            ? data.subjects
-            : []
-        );
+        setDatabaseSubjects(Array.from(new Set(schemaRows.map((row: { subject?: string }) => String(row.subject || "")).filter(Boolean))));
       } catch (error) {
         console.error(
           "Failed to load database data:",
@@ -522,6 +517,8 @@ export default function TestsPage() {
         availableChapters
           .filter(
             (item) =>
+              item.exam.trim().toLowerCase().replace(/[_ -]+/g, "") ===
+                course.trim().toLowerCase().replace(/[_ -]+/g, "") &&
               item.subject
                 .trim()
                 .toLowerCase() ===
@@ -556,6 +553,7 @@ export default function TestsPage() {
     }, [
       availableChapters,
       activeChapterSubject,
+      course,
     ]);
 
   /*

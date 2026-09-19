@@ -58,7 +58,9 @@ function getOptions(options: unknown): string[] {
 function getFigureSrc(value: unknown): string | null {
   if (typeof value !== "string" || !value.trim()) return null;
   const asset = value.trim();
-  return /^(https?:|data:|blob:|\/)/.test(asset) ? asset : `/${asset}`;
+  return /^(https?:|data:|blob:|\/)/.test(asset)
+    ? asset
+    : `/api/question-asset?path=${encodeURIComponent(asset)}`;
 }
 
 export default function CherryPickPage() {

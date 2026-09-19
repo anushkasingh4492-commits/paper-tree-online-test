@@ -7,7 +7,7 @@ export default function AdminPage() {
 
   function logout() {
     document.cookie = "master_session=; Max-Age=0; path=/";
-    router.replace("/master-login");
+    router.replace("/");
   }
 
   return (
@@ -35,7 +35,7 @@ export default function AdminPage() {
             onClick={logout}
             className="rounded-xl border border-[#e2e6ee] bg-white px-4 py-2.5 text-sm font-bold text-[#697386] transition hover:border-[#cfd5df] hover:bg-[#f8f9fb]"
           >
-            Logout
+            🚪 Logout
           </button>
         </div>
       </header>
@@ -51,7 +51,7 @@ export default function AdminPage() {
             </div>
 
             <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
-              Admin Control Center
+              🛡️ Admin Control Center
             </h2>
 
             <p className="mt-3 max-w-xl text-sm leading-6 text-[#697386]">
@@ -62,6 +62,7 @@ export default function AdminPage() {
 
           {/* Decorative element */}
           <div className="pointer-events-none absolute -right-16 -top-20 h-64 w-64 rounded-full bg-[#315bea]/5" />
+
           <div className="pointer-events-none absolute -bottom-28 right-24 h-48 w-48 rounded-full bg-[#315bea]/5" />
         </section>
 
@@ -69,7 +70,7 @@ export default function AdminPage() {
         <section className="mt-10">
           <div className="mb-5">
             <h3 className="text-xl font-extrabold">
-              Academy Management
+              🏢 Academy Management
             </h3>
 
             <p className="mt-1 text-sm text-[#8a93a5]">
@@ -103,19 +104,19 @@ export default function AdminPage() {
 
                   <div className="mt-4 flex flex-wrap gap-2">
                     <span className="rounded-lg bg-[#f7f8fb] px-3 py-1.5 text-xs font-semibold text-[#697386]">
-                      Create
+                      ➕ Create
                     </span>
 
                     <span className="rounded-lg bg-[#f7f8fb] px-3 py-1.5 text-xs font-semibold text-[#697386]">
-                      Update
+                      ✏️ Update
                     </span>
 
                     <span className="rounded-lg bg-[#f7f8fb] px-3 py-1.5 text-xs font-semibold text-[#697386]">
-                      Manage
+                      ⚙️ Manage
                     </span>
 
                     <span className="rounded-lg bg-[#f7f8fb] px-3 py-1.5 text-xs font-semibold text-[#697386]">
-                      Full Access
+                      🔐 Full Access
                     </span>
                   </div>
                 </div>
@@ -130,8 +131,8 @@ export default function AdminPage() {
 
         {/* ACCESS NOTE */}
         <div className="mt-6 flex items-center gap-3 rounded-2xl border border-[#e3e8f5] bg-[#fafbff] px-5 py-4">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#f1f4ff] text-sm">
-            ✓
+          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#f1f4ff] text-sm">
+            🛡️
           </div>
 
           <div>

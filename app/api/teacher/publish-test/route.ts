@@ -13,14 +13,11 @@ type Session = {
 async function getTeacher() {
   const cookieStore = await cookies();
 
-  const value =
-    cookieStore.get("master_session")?.value;
+  const value = cookieStore.get("master_session")?.value;
 
   if (!value) {
     return null;
   }
-
-  let session: Session;
 
   const parsedSession = parseSessionCookie<Session>(value);
 
@@ -28,31 +25,22 @@ async function getTeacher() {
     return null;
   }
 
-  session = parsedSession;
+  const session = parsedSession;
 
-  if (
-    session.role !== "TEACHER" ||
-    !session.id
-  ) {
+  if (session.role !== "TEACHER" || !session.id) {
     return null;
   }
 
-  /*
-   * Always resolve teacher from DB.
-   *
-   * This avoids problems caused by old cookies
-   * that may not contain academyId.
-   */
   const result = await pool.query(
     `
-    SELECT
-      id,
-      name,
-      email,
-      academy_id
-    FROM teachers
-    WHERE id = $1
-    LIMIT 1
+      SELECT
+        id,
+        name,
+        email,
+        academy_id
+      FROM teachers
+      WHERE id::text = $1::text
+      LIMIT 1
     `,
     [session.id]
   );
@@ -72,17 +60,13 @@ async function getTeacher() {
   };
 }
 
-export async function POST(
-  request: Request
-) {
+export async function POST(request: Request) {
   const client = await pool.connect();
 
   try {
-    /*
-     * =======================================================
-     * TEACHER
-     * =======================================================
-     */
+    // =======================================================
+    // TEACHER
+    // =======================================================
 
     const teacher = await getTeacher();
 
@@ -97,13 +81,11 @@ export async function POST(
       );
     }
 
-    const academyId = teacher.academy_id;
+    const academyId = String(teacher.academy_id);
 
-    /*
-     * =======================================================
-     * REQUEST BODY
-     * =======================================================
-     */
+    // =======================================================
+    // REQUEST BODY
+    // =======================================================
 
     const body = await request.json();
 
@@ -111,28 +93,29 @@ export async function POST(
       ? String(body.batchId).trim()
       : null;
 
-    const studentId = body.studentId
-      ? String(body.studentId).trim()
-      : null;
+    const requestedStudentIds = Array.isArray(body.studentIds)
+      ? body.studentIds
+          .map((id: unknown) => String(id).trim())
+          .filter(Boolean)
+      : body.studentId
+        ? [String(body.studentId).trim()]
+        : [];
 
-    /*
-     * =======================================================
-     * TARGET VALIDATION
-     * =======================================================
-     */
+    // =======================================================
+    // TARGET VALIDATION
+    // =======================================================
 
-    if (!batchId && !studentId) {
+    if (!batchId && requestedStudentIds.length === 0) {
       return NextResponse.json(
         {
           success: false,
-          error:
-            "Select a batch or a student.",
+          error: "Select a batch or a student.",
         },
         { status: 400 }
       );
     }
 
-    if (batchId && studentId) {
+    if (batchId && requestedStudentIds.length > 0) {
       return NextResponse.json(
         {
           success: false,
@@ -143,11 +126,9 @@ export async function POST(
       );
     }
 
-    /*
-     * =======================================================
-     * TEST DETAILS
-     * =======================================================
-     */
+    // =======================================================
+    // TEST DETAILS
+    // =======================================================
 
     const title = String(
       body.title || "Scheduled Test"
@@ -157,20 +138,14 @@ export async function POST(
       return NextResponse.json(
         {
           success: false,
-          error:
-            "Test title is required.",
+          error: "Test title is required.",
         },
         { status: 400 }
       );
     }
 
-    const startTime = new Date(
-      body.startTime
-    );
-
-    const endTime = new Date(
-      body.endTime
-    );
+    const startTime = new Date(body.startTime);
+    const endTime = new Date(body.endTime);
 
     if (
       Number.isNaN(startTime.getTime()) ||
@@ -179,8 +154,7 @@ export async function POST(
       return NextResponse.json(
         {
           success: false,
-          error:
-            "Invalid start or end time.",
+          error: "Invalid start or end time.",
         },
         { status: 400 }
       );
@@ -190,8 +164,7 @@ export async function POST(
       return NextResponse.json(
         {
           success: false,
-          error:
-            "End time must be after start time.",
+          error: "End time must be after start time.",
         },
         { status: 400 }
       );
@@ -202,11 +175,12 @@ export async function POST(
       Number(body.duration) || 60
     );
 
-    /*
-     * =======================================================
-     * GENERATED TEST
-     * =======================================================
-     */
+    const allowReattempt =
+      body.allowReattempt === true;
+
+    // =======================================================
+    // GENERATED TEST
+    // =======================================================
 
     const generatedTest = body.test;
 
@@ -214,47 +188,41 @@ export async function POST(
       return NextResponse.json(
         {
           success: false,
-          error:
-            "Generated test data is missing.",
+          error: "Generated test data is missing.",
         },
         { status: 400 }
       );
     }
 
-    const questions =
-      Array.isArray(
-        generatedTest.questions
-      )
-        ? generatedTest.questions
-        : Array.isArray(
-              generatedTest.data?.questions
-            )
-          ? generatedTest.data.questions
-          : [];
+    const questions = Array.isArray(
+      generatedTest.questions
+    )
+      ? generatedTest.questions
+      : Array.isArray(
+            generatedTest.data?.questions
+          )
+        ? generatedTest.data.questions
+        : [];
 
     if (questions.length === 0) {
       return NextResponse.json(
         {
           success: false,
-          error:
-            "No generated questions were found.",
+          error: "No generated questions were found.",
         },
         { status: 400 }
       );
     }
 
-    /*
-     * =======================================================
-     * VERIFY BATCH
-     * =======================================================
-     */
+    // =======================================================
+    // VERIFY BATCH
+    // =======================================================
 
     let recipientStudentIds: string[] = [];
 
     if (batchId) {
-      const batchCheck =
-        await client.query(
-          `
+      const batchCheck = await client.query(
+        `
           SELECT
             b.id,
             b.name,
@@ -262,24 +230,23 @@ export async function POST(
             COUNT(bs.student_id)::int AS student_count
           FROM batches b
           LEFT JOIN batch_students bs
-            ON bs.batch_id = b.id
-          WHERE b.id = $1
-            AND b.academy_id = $2
+            ON bs.batch_id::text = b.id::text
+          WHERE b.id::text = $1::text
+            AND b.academy_id::text = $2::text
           GROUP BY
             b.id,
             b.name,
             b.class_name
           LIMIT 1
-          `,
-          [batchId, academyId]
-        );
+        `,
+        [batchId, academyId]
+      );
 
       if (batchCheck.rowCount === 0) {
         return NextResponse.json(
           {
             success: false,
-            error:
-              "Batch not found in your academy.",
+            error: "Batch not found in your academy.",
           },
           { status: 403 }
         );
@@ -287,18 +254,20 @@ export async function POST(
 
       const recipients = await client.query(
         `
-        SELECT s.id
-        FROM batch_students bs
-        INNER JOIN students s
-          ON s.id = bs.student_id
-        WHERE bs.batch_id = $1
-          AND s.academy_id = $2
-        ORDER BY s.id
+          SELECT s.id
+          FROM batch_students bs
+          INNER JOIN students s
+            ON s.id::text = bs.student_id::text
+          WHERE bs.batch_id::text = $1::text
+            AND s.academy_id::text = $2::text
+          ORDER BY s.id::text
         `,
         [batchId, academyId]
       );
 
-      recipientStudentIds = recipients.rows.map((row) => String(row.id));
+      recipientStudentIds = recipients.rows.map(
+        (row) => String(row.id)
+      );
 
       if (recipientStudentIds.length === 0) {
         return NextResponse.json(
@@ -312,30 +281,29 @@ export async function POST(
       }
     }
 
-    /*
-     * =======================================================
-     * VERIFY STUDENT
-     * =======================================================
-     */
+    // =======================================================
+    // VERIFY STUDENTS
+    // =======================================================
 
-    if (studentId) {
-      const studentCheck =
-        await client.query(
-          `
+    if (requestedStudentIds.length > 0) {
+      const studentCheck = await client.query(
+        `
           SELECT
             id,
             name,
             email,
             class_name
           FROM students
-          WHERE id = $1
-            AND academy_id = $2
-          LIMIT 1
-          `,
-          [studentId, academyId]
-        );
+          WHERE id::text = ANY($1::text[])
+            AND academy_id::text = $2::text
+        `,
+        [requestedStudentIds, academyId]
+      );
 
-      if (studentCheck.rowCount === 0) {
+      if (
+        studentCheck.rowCount !==
+        requestedStudentIds.length
+      ) {
         return NextResponse.json(
           {
             success: false,
@@ -346,27 +314,18 @@ export async function POST(
         );
       }
 
-      recipientStudentIds = [studentId];
+      recipientStudentIds = requestedStudentIds;
     }
 
-    /*
-     * =======================================================
-     * TRANSACTION
-     * =======================================================
-     */
+    // =======================================================
+    // TRANSACTION
+    // =======================================================
 
     await client.query("BEGIN");
 
-    /*
-     * =======================================================
-     * ENSURE TEST ACADEMY COLUMN EXISTS
-     * =======================================================
-     *
-     * IMPORTANT:
-     *
-     * This runs ONCE.
-     * It is NOT inside the question loop.
-     */
+    // =======================================================
+    // ENSURE REQUIRED COLUMNS EXIST
+    // =======================================================
 
     await client.query(`
       ALTER TABLE tests
@@ -375,61 +334,52 @@ export async function POST(
 
     await client.query(`
       ALTER TABLE scheduled_tests
-      ADD COLUMN IF NOT EXISTS test_id UUID
+      ADD COLUMN IF NOT EXISTS test_id UUID,
+      ADD COLUMN IF NOT EXISTS allow_reattempt BOOLEAN NOT NULL DEFAULT FALSE
     `);
 
-    /*
-     * =======================================================
-     * CREATE TEST
-     * =======================================================
-     */
+    // =======================================================
+    // CREATE TEST
+    // =======================================================
 
     const testId = crypto.randomUUID();
 
     await client.query(
       `
-      INSERT INTO tests (
-        id,
-        exam,
-        question_count,
-        questions,
-        created_at,
-        difficulty,
-        academy_id
-      )
-      VALUES (
-        $1,
-        $2,
-        $3,
-        $4::jsonb,
-        NOW(),
-        $5,
-        $6
-      )
+        INSERT INTO tests (
+          id,
+          exam,
+          question_count,
+          questions,
+          created_at,
+          difficulty,
+          academy_id
+        )
+        VALUES (
+          $1::uuid,
+          $2,
+          $3,
+          $4::jsonb,
+          NOW(),
+          $5,
+          $6::uuid
+        )
       `,
       [
         testId,
-        generatedTest.exam ||
-          "MHT-CET",
+        generatedTest.exam || "MHT-CET",
         questions.length,
         JSON.stringify(questions),
-        generatedTest.difficulty ||
-          "Balanced",
+        generatedTest.difficulty || "Balanced",
         academyId,
       ]
     );
 
-    /*
-     * =======================================================
-     * CREATE TEST QUESTIONS
-     * =======================================================
-     */
+    // =======================================================
+    // CREATE TEST QUESTIONS
+    // =======================================================
 
-    for (
-      let i = 0;
-      i < questions.length;
-      i++
-    ) {
+    for (let i = 0; i < questions.length; i++) {
       const questionId = String(
         questions[i]?.id ||
           questions[i]?.question_id ||
@@ -442,24 +392,24 @@ export async function POST(
 
       await client.query(
         `
-        INSERT INTO test_questions (
-          id,
-          test_id,
-          question_id,
-          question_number,
-          marked_for_review,
-          visited,
-          created_at
-        )
-        VALUES (
-          gen_random_uuid(),
-          $1,
-          $2,
-          $3,
-          false,
-          false,
-          NOW()
-        )
+          INSERT INTO test_questions (
+            id,
+            test_id,
+            question_id,
+            question_number,
+            marked_for_review,
+            visited,
+            created_at
+          )
+          VALUES (
+            gen_random_uuid(),
+            $1::uuid,
+            $2,
+            $3,
+            false,
+            false,
+            NOW()
+          )
         `,
         [
           testId,
@@ -469,41 +419,38 @@ export async function POST(
       );
     }
 
-    /*
-     * =======================================================
-     * CREATE PAPER
-     * =======================================================
-     */
+    // =======================================================
+    // CREATE PAPER
+    // =======================================================
 
-    const paperId =
-      crypto.randomUUID();
+    const paperId = crypto.randomUUID();
 
     await client.query(
       `
-      INSERT INTO papers (
-        id,
-        code,
-        exam,
-        description,
-        duration_minutes,
-        created_by,
-        academy_id,
-        created_at,
-        updated_at,
-        status
-      )
-      VALUES (
-        $1,
-        $2,
-        $3,
-        $4,
-        $5,
-        $6,
-        $7,
-        NOW(),
-        NOW(),
-        'Scheduled'
-      )
+        INSERT INTO papers (
+          id,
+          code,
+          exam,
+          description,
+          duration_minutes,
+          created_by,
+          academy_id,
+          created_at,
+          updated_at,
+          status
+        )
+        VALUES (
+          $1::uuid,
+          $2,
+          $3,
+          $4,
+          $5,
+          $6,
+          $7::uuid,
+          NOW(),
+          NOW(),
+          'Scheduled'
+        )
       `,
       [
         paperId,
@@ -512,8 +459,7 @@ export async function POST(
           .slice(0, 8)
           .toUpperCase()}`,
 
-        generatedTest.exam ||
-          "MHT-CET",
+        generatedTest.exam || "MHT-CET",
 
         title,
 
@@ -525,17 +471,11 @@ export async function POST(
       ]
     );
 
-    /*
-     * =======================================================
-     * LINK QUESTIONS TO PAPER
-     * =======================================================
-     */
+    // =======================================================
+    // LINK QUESTIONS TO PAPER
+    // =======================================================
 
-    for (
-      let i = 0;
-      i < questions.length;
-      i++
-    ) {
+    for (let i = 0; i < questions.length; i++) {
       const questionId = String(
         questions[i]?.id ||
           questions[i]?.question_id ||
@@ -548,16 +488,16 @@ export async function POST(
 
       await client.query(
         `
-        INSERT INTO paper_questions (
-          paper_id,
-          question_id,
-          question_order
-        )
-        VALUES (
-          $1,
-          $2,
-          $3
-        )
+          INSERT INTO paper_questions (
+            paper_id,
+            question_id,
+            question_order
+          )
+          VALUES (
+            $1::uuid,
+            $2,
+            $3
+          )
         `,
         [
           paperId,
@@ -567,43 +507,43 @@ export async function POST(
       );
     }
 
-    /*
-     * =======================================================
-     * CREATE SCHEDULED TEST
-     * =======================================================
-     */
+    // =======================================================
+    // CREATE SCHEDULED TEST
+    // =======================================================
 
     const scheduledTestId =
       crypto.randomUUID();
 
     await client.query(
       `
-      INSERT INTO scheduled_tests (
-        id,
-        test_id,
-        paper_id,
-        batch_id,
-        title,
-        start_time,
-        end_time,
-        duration_minutes,
-        status,
-        academy_id,
-        created_at
-      )
-      VALUES (
-        $1,
-        $2,
-        $3,
-        $4,
-        $5,
-        $6,
-        $7,
-        $8,
-        $9,
-        $10,
-        NOW()
-      )
+        INSERT INTO scheduled_tests (
+          id,
+          test_id,
+          paper_id,
+          batch_id,
+          title,
+          start_time,
+          end_time,
+          duration_minutes,
+          allow_reattempt,
+          status,
+          academy_id,
+          created_at
+        )
+        VALUES (
+          $1::uuid,
+          $2::uuid,
+          $3::uuid,
+          $4,
+          $5,
+          $6,
+          $7,
+          $8,
+          $9,
+          $10,
+          $11::uuid,
+          NOW()
+        )
       `,
       [
         scheduledTestId,
@@ -614,101 +554,102 @@ export async function POST(
         startTime.toISOString(),
         endTime.toISOString(),
         duration,
+        allowReattempt,
         "Upcoming",
         academyId,
       ]
     );
 
-    /*
-     * =======================================================
-     * SINGLE STUDENT ASSIGNMENT
-     * =======================================================
-     */
+    // =======================================================
+    // ASSIGN STUDENTS
+    // =======================================================
 
-    if (studentId) {
+    if (recipientStudentIds.length > 0) {
       await client.query(
         `
-        INSERT INTO scheduled_test_students (
-          scheduled_test_id,
-          student_id,
-          created_at
-        )
-        VALUES (
-          $1,
-          $2,
-          NOW()
-        )
-        ON CONFLICT (
-          scheduled_test_id,
-          student_id
-        )
-        DO NOTHING
+          INSERT INTO scheduled_test_students (
+            scheduled_test_id,
+            student_id,
+            created_at
+          )
+          SELECT
+            $1::uuid,
+            recipient.student_id::uuid,
+            NOW()
+          FROM UNNEST($2::text[]) AS recipient(student_id)
+          ON CONFLICT (
+            scheduled_test_id,
+            student_id
+          ) DO NOTHING
         `,
         [
           scheduledTestId,
-          studentId,
+          recipientStudentIds,
         ]
       );
     }
 
-    /*
-     * Notify every actual recipient. Batch members are resolved above from
-     * batch_students, so this cannot notify students from another academy.
-     * This is deliberately part of the same transaction as the paper and
-     * scheduled test: either every recipient sees the exam or none do.
-     */
+    // =======================================================
+    // NOTIFICATIONS
+    // =======================================================
+
     await client.query(
       `
-      INSERT INTO notifications (
-        id,
-        student_id,
-        scheduled_test_id,
-        title,
-        message,
-        is_read,
-        created_at
-      )
-      SELECT
-        gen_random_uuid()::text,
-        recipient.student_id::text,
-        $1::text,
-        $2,
-        $3,
-        false,
-        NOW()
-      FROM UNNEST($4::text[]) AS recipient(student_id)
+        INSERT INTO notifications (
+          id,
+          student_id,
+          scheduled_test_id,
+          title,
+          message,
+          is_read,
+          created_at
+        )
+        SELECT
+          gen_random_uuid()::text,
+          recipient.student_id::text,
+          $1::text,
+          $2,
+          $3,
+          false,
+          NOW()
+        FROM UNNEST($4::text[]) AS recipient(student_id)
       `,
       [
         scheduledTestId,
         "New test scheduled",
-        `${title} starts ${startTime.toLocaleString("en-IN", {
-          day: "2-digit",
-          month: "short",
-          hour: "2-digit",
-          minute: "2-digit",
-        })}.`,
+        `${title} starts ${startTime.toLocaleString(
+          "en-IN",
+          {
+            day: "2-digit",
+            month: "short",
+            hour: "2-digit",
+            minute: "2-digit",
+          }
+        )}.`,
         recipientStudentIds,
       ]
     );
 
-    /*
-     * =======================================================
-     * COMMIT
-     * =======================================================
-     */
+    // =======================================================
+    // COMMIT
+    // =======================================================
 
     await client.query("COMMIT");
 
-    /*
-     * =======================================================
-     * RESPONSE
-     * =======================================================
-     */
+    // =======================================================
+    // RESPONSE
+    // =======================================================
 
     return NextResponse.json({
       success: true,
 
-      message: `Test published! ${recipientStudentIds.length} student${recipientStudentIds.length === 1 ? "" : "s"} notified.`,
+      message: `Test published! ${
+        recipientStudentIds.length
+      } student${
+        recipientStudentIds.length === 1
+          ? ""
+          : "s"
+      } notified.`,
 
       testId,
 
@@ -720,11 +661,11 @@ export async function POST(
 
       targetType: batchId
         ? "batch"
-        : "student",
+        : "students",
 
       batchId,
 
-      studentId,
+      studentIds: recipientStudentIds,
 
       academyId,
 
@@ -739,7 +680,8 @@ export async function POST(
       questionCount:
         questions.length,
 
-      notifiedStudents: recipientStudentIds.length,
+      notifiedStudents:
+        recipientStudentIds.length,
     });
   } catch (error) {
     try {

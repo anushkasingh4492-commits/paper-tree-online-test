@@ -22,6 +22,8 @@ type Question = {
 
 type ResultData = {
   testId: string;
+  scheduledTestId?: string;
+  allowReattempt?: boolean;
   total: number;
   correct: number;
   wrong: number;
@@ -416,6 +418,20 @@ function MathText({
       })}
     </span>
   );
+}
+
+function formatMathForPdf(value: string) {
+  return String(value || "")
+    .replace(/\$\$?/g, "")
+    .replace(/\\displaystyle\s*/g, "")
+    .replace(/\\frac\{([^{}]+)\}\{([^{}]+)\}/g, "($1)/($2)")
+    .replace(/\\sqrt\{([^{}]+)\}/g, "sqrt($1)")
+    .replace(/\\(to|times|cdot|leq|geq|neq)/g, (_, command: string) => ({ to: "->", times: "x", cdot: ".", leq: "<=", geq: ">=", neq: "!=" }[command] || command))
+    .replace(/\\(text|mathrm|mathbf)\{([^{}]+)\}/g, "$2")
+    .replace(/[{}]/g, "")
+    .replace(/\^(-?\d+)/g, "^$1")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 export default function TestResultPage() {
@@ -844,14 +860,6 @@ export default function TestResultPage() {
 
     doc.setFontSize(10);
 
-    doc.text(
-      `Test ID: ${result.testId}`,
-      margin,
-      y
-    );
-
-    y += 5;
-
     if (result.submittedAt) {
       doc.text(
         `Submitted: ${new Date(
@@ -987,9 +995,7 @@ export default function TestResultPage() {
         ensureSpace(18);
 
         addWrappedText(
-          `${question.number || index + 1}. ${
-            question.question
-          }`,
+          `${question.number || index + 1}. ${formatMathForPdf(question.question)}`,
           11,
           6,
           true
@@ -1095,7 +1101,7 @@ export default function TestResultPage() {
                   doc.splitTextToSize(
                     `${String.fromCharCode(
                       65 + optionIndex
-                    )}. ${option}`,
+                    )}. ${formatMathForPdf(option)}`,
                     contentWidth - 8
                   );
 
@@ -1113,7 +1119,7 @@ export default function TestResultPage() {
                 addWrappedText(
                   `${String.fromCharCode(
                     65 + optionIndex
-                  )}. ${option}`,
+                  )}. ${formatMathForPdf(option)}`,
                   10,
                   5
                 );
@@ -1140,7 +1146,7 @@ export default function TestResultPage() {
 
         if (question.solution) {
           addWrappedText(
-            `Solution: ${question.solution}`,
+            `Solution: ${formatMathForPdf(question.solution)}`,
             10,
             5
           );
@@ -1153,6 +1159,17 @@ export default function TestResultPage() {
     doc.save(
       `paper-tree-result-${result.testId}.pdf`
     );
+  }
+
+  function startReattempt() {
+    if (!result?.scheduledTestId || !result.allowReattempt || !result.automatic) return;
+    localStorage.removeItem(`test-${testId}-answers`);
+    localStorage.removeItem(`test-${testId}-marked`);
+    localStorage.removeItem(`test-${testId}-visited`);
+    localStorage.removeItem(`test-${testId}-result`);
+    localStorage.removeItem(`submitted-${testId}`);
+    localStorage.setItem(`reattempt-${result.scheduledTestId}`, "true");
+    router.push(`/scheduled-test/${result.scheduledTestId}`);
   }
 
   if (loading) {
@@ -1188,10 +1205,6 @@ export default function TestResultPage() {
           <p className="mt-2 text-sm leading-6 text-slate-500">
             We could not find the saved
             result for this test.
-          </p>
-
-          <p className="mt-4 text-xs text-slate-400 break-all">
-            {testId}
           </p>
 
           <button
@@ -1246,6 +1259,12 @@ export default function TestResultPage() {
             >
               ↓ Download Result
             </button>
+
+            {result.allowReattempt && result.automatic && result.scheduledTestId && (
+              <button type="button" onClick={startReattempt} className="h-10 px-4 rounded-xl border border-amber-200 bg-amber-50 text-sm font-semibold text-amber-800 hover:bg-amber-100 transition">
+                Reattempt Test
+              </button>
+            )}
 
             <button
               type="button"

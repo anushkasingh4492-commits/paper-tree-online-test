@@ -60,6 +60,7 @@ export default function TeacherPublishPage() {
   const [title, setTitle] = useState("Scheduled Test");
   const [startTime, setStartTime] = useState("");
   const [duration, setDuration] = useState(60);
+  const [allowReattempt, setAllowReattempt] = useState(false);
 
   const [targetType, setTargetType] =
     useState<"batch" | "student">("batch");
@@ -71,7 +72,7 @@ export default function TeacherPublishPage() {
   const [teacher, setTeacher] = useState<Teacher | null>(null);
 
   const [batchId, setBatchId] = useState("");
-  const [studentId, setStudentId] = useState("");
+  const [selectedStudentIds, setSelectedStudentIds] = useState<string[]>([]);
 
   const [loadingTest, setLoadingTest] = useState(true);
   const [loadingTargets, setLoadingTargets] = useState(true);
@@ -161,21 +162,19 @@ export default function TeacherPublishPage() {
             : nextBatches[0].id
         );
 
-        setStudentId("");
+        setSelectedStudentIds([]);
       } else if (nextStudents.length > 0) {
         // If there are no batches, allow individual student assignment.
         setTargetType("student");
 
         setBatchId("");
 
-        setStudentId((current) =>
-          nextStudents.some((student) => student.id === current)
-            ? current
-            : nextStudents[0].id
-        );
+        setSelectedStudentIds((current) => current.filter((id) => nextStudents.some((student) => student.id === id)).length > 0
+          ? current.filter((id) => nextStudents.some((student) => student.id === id))
+          : [nextStudents[0].id]);
       } else {
         setBatchId("");
-        setStudentId("");
+        setSelectedStudentIds([]);
       }
     } catch (err) {
       console.error("LOAD TEACHER TARGETS ERROR:", err);
@@ -198,13 +197,6 @@ export default function TeacherPublishPage() {
     () =>
       batches.find((batch) => batch.id === batchId) || null,
     [batches, batchId]
-  );
-
-  const selectedStudent = useMemo(
-    () =>
-      students.find((student) => student.id === studentId) ||
-      null,
-    [students, studentId]
   );
 
   const questionCount =
@@ -239,8 +231,8 @@ export default function TeacherPublishPage() {
       return;
     }
 
-    if (targetType === "student" && !studentId) {
-      setError("Please select a student.");
+    if (targetType === "student" && selectedStudentIds.length === 0) {
+      setError("Please select at least one student.");
       return;
     }
 
@@ -281,15 +273,16 @@ export default function TeacherPublishPage() {
             startTime: start.toISOString(),
             endTime: end.toISOString(),
             duration,
+            allowReattempt,
             test,
             batchId:
               targetType === "batch"
                 ? batchId
                 : null,
-            studentId:
+            studentIds:
               targetType === "student"
-                ? studentId
-                : null,
+                ? selectedStudentIds
+                : [],
           }),
         }
       );
@@ -469,6 +462,11 @@ export default function TeacherPublishPage() {
                   />
                 </label>
 
+                <label className="md:col-span-2 flex cursor-pointer items-start gap-3 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3.5">
+                  <input type="checkbox" checked={allowReattempt} onChange={(e) => setAllowReattempt(e.target.checked)} className="mt-1 h-4 w-4 accent-blue-600" />
+                  <span><strong className="block text-sm text-slate-800">Allow reattempt after automatic submission</strong><span className="mt-1 block text-xs text-slate-600">Students can start this test again only if it was auto-submitted because they changed tabs or the timer ended.</span></span>
+                </label>
+
                 <label>
                   <span className="mb-2 block text-sm font-semibold text-slate-700">
                     Duration (minutes)
@@ -540,7 +538,7 @@ export default function TeacherPublishPage() {
                     setSuccess("");
 
                     setTargetType("batch");
-                    setStudentId("");
+                    setSelectedStudentIds([]);
 
                     if (!batchId) {
                       setBatchId(batches[0].id);
@@ -588,10 +586,7 @@ export default function TeacherPublishPage() {
 
                     setTargetType("student");
                     setBatchId("");
-
-                    if (!studentId) {
-                      setStudentId(students[0].id);
-                    }
+                    setSelectedStudentIds((current) => current.length > 0 ? current : [students[0].id]);
                   }}
                   className={`rounded-2xl border-2 p-5 text-left transition ${
                     targetType === "student"
@@ -604,11 +599,11 @@ export default function TeacherPublishPage() {
                   </div>
 
                   <p className="mt-3 font-bold">
-                    Assign to one student
+                    Assign to selected students
                   </p>
 
                   <p className="mt-1 text-sm text-slate-500">
-                    Only the selected academy student receives the test.
+                    Select one or more academy students to receive the test.
                   </p>
 
                   <p className="mt-3 text-xs font-semibold text-blue-700">
@@ -716,59 +711,14 @@ export default function TeacherPublishPage() {
                 /* STUDENT */
                 <div className="mt-5">
 
-                  <label className="mb-2 block text-sm font-semibold text-slate-700">
-                    Select student
-                  </label>
+                  <div className="mb-2 flex items-center justify-between">
+                    <p className="text-sm font-semibold text-slate-700">Select students</p>
+                    <span className="text-xs font-semibold text-blue-700">{selectedStudentIds.length} selected</span>
+                  </div>
 
-                  <select
-                    value={studentId}
-                    onChange={(e) =>
-                      setStudentId(e.target.value)
-                    }
-                    disabled={students.length === 0}
-                    className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3.5 text-slate-900 outline-none transition focus:border-blue-600 focus:ring-4 focus:ring-blue-100 disabled:bg-slate-100"
-                  >
-                    <option value="">
-                      {students.length
-                        ? "Select a student"
-                        : "No students available"}
-                    </option>
-
-                    {students.map((student) => (
-                      <option
-                        key={student.id}
-                        value={student.id}
-                      >
-                        {student.name}
-                        {" — "}
-                        {student.email}
-
-                        {student.class_name
-                          ? ` — ${student.class_name}`
-                          : ""}
-                      </option>
-                    ))}
-                  </select>
-
-                  {selectedStudent && (
-                    <div className="mt-3 flex flex-wrap items-center gap-2 rounded-xl bg-emerald-50 px-4 py-3 text-sm text-emerald-800">
-                      <span>👨‍🎓</span>
-
-                      <strong>
-                        {selectedStudent.name}
-                      </strong>
-
-                      <span>
-                        • {selectedStudent.email}
-                      </span>
-
-                      {selectedStudent.class_name && (
-                        <span>
-                          • {selectedStudent.class_name}
-                        </span>
-                      )}
-                    </div>
-                  )}
+                  <div className="max-h-64 overflow-y-auto rounded-xl border border-slate-300 bg-white p-2">
+                    {students.map((student) => <label key={student.id} className="flex cursor-pointer items-start gap-3 rounded-lg px-3 py-3 hover:bg-blue-50"><input type="checkbox" checked={selectedStudentIds.includes(student.id)} onChange={() => setSelectedStudentIds((current) => current.includes(student.id) ? current.filter((id) => id !== student.id) : [...current, student.id])} className="mt-1 h-4 w-4 accent-blue-600" /><span><strong className="block text-sm text-slate-800">{student.name}</strong><span className="text-xs text-slate-500">{student.email}{student.class_name ? ` · ${student.class_name}` : ""}</span></span></label>)}
+                  </div>
 
                   {!students.length && (
                     <p className="mt-3 rounded-xl bg-amber-50 px-4 py-3 text-sm text-amber-700">
@@ -810,8 +760,9 @@ export default function TeacherPublishPage() {
                       {targetType === "batch"
                         ? selectedBatch?.name ||
                           "Select a batch"
-                        : selectedStudent?.name ||
-                          "Select a student"}
+                        : selectedStudentIds.length > 0
+                          ? `${selectedStudentIds.length} student${selectedStudentIds.length === 1 ? "" : "s"}`
+                          : "Select students"}
                     </p>
 
                   </div>
@@ -834,7 +785,7 @@ export default function TeacherPublishPage() {
                       selectedBatch?.student_count || 0
                     ) === 0)) ||
                 (targetType === "student" &&
-                  !studentId)
+                  selectedStudentIds.length === 0)
               }
               className="mt-7 w-full rounded-2xl bg-blue-600 px-5 py-4 text-base font-bold text-white shadow-lg shadow-blue-600/20 transition hover:bg-blue-700 hover:shadow-xl disabled:cursor-not-allowed disabled:bg-slate-300 disabled:shadow-none"
             >

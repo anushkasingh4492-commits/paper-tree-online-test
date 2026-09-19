@@ -14,8 +14,10 @@ export async function GET() {
   session = parsedSession;
   if (session.role !== "ACADEMY_ADMIN" || !session.academyId) return NextResponse.json({ success: false, error: "Unauthorized" }, { status: 401 });
 
+  await pool.query("ALTER TABLE academies ADD COLUMN IF NOT EXISTS logo_data TEXT");
+
   const [academy, counts, batches, tests] = await Promise.all([
-    pool.query(`SELECT name, code, student_limit, subscription_end, status FROM academies WHERE id = $1`, [session.academyId]),
+    pool.query(`SELECT name, code, logo_data, student_limit, subscription_end, status FROM academies WHERE id = $1`, [session.academyId]),
     pool.query(`SELECT
       (SELECT COUNT(*)::int FROM teachers WHERE academy_id = $1) AS teachers,
       (SELECT COUNT(*)::int FROM students WHERE academy_id = $1) AS students,

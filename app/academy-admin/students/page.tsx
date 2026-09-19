@@ -114,7 +114,7 @@ export default function AcademyStudentsPage() {
           </h2>
 
           <p className="mt-2 text-sm text-[#697386]">
-            Create and manage students belonging to your academy.
+            Create students here first. Create a batch separately, then assign students from Batch Management.
           </p>
         </div>
 
