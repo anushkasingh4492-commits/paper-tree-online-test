@@ -33,10 +33,35 @@ export async function POST(req: Request) {
   try {
     const body=await req.json(); const academyId=String(body.academyId||"").trim(); const admin=await getAcademyAdmin(academyId);
     if(!admin)return NextResponse.json({success:false,error:"Unauthorized"},{status:401});
-    const name=String(body.name||"").trim();const email=String(body.email||"").trim().toLowerCase();const password=String(body.password||"");const className=String(body.className||"").trim();
-    if(!name||!email||!password||!className)return NextResponse.json({success:false,error:"Name, email, password and class are required."},{status:400});
+    const name = String(body.name || "").trim();
+const email = String(body.email || "").trim().toLowerCase();
+const password = String(body.password || "");
+const className = String(body.className || "").trim();
+const batchId = String(body.batchId || "").trim();
+  
+ if (!name || !email || !password || !className || !batchId)return NextResponse.json({success:false,error:"Name, email, password and class and batch are required."},{status:400});
     if(!["Class 11","Class 12","Class 11 + 12"].includes(className))return NextResponse.json({success:false,error:"Choose Class 11, Class 12 or Class 11 + 12."},{status:400});
     if(password.length<6)return NextResponse.json({success:false,error:"Student password must be at least 6 characters"},{status:400});
+    const batchCheck = await pool.query(
+  `
+  SELECT id, name, course_name
+  FROM batches
+  WHERE id = $1
+    AND academy_id = $2
+  LIMIT 1
+  `,
+  [batchId, admin.academyId]
+);
+
+if (!batchCheck.rowCount) {
+  return NextResponse.json(
+    {
+      success: false,
+      error: "Please select a valid batch from your academy.",
+    },
+    { status: 400 }
+  );
+}
     const academy=await pool.query(`SELECT student_limit,subscription_end,status,(SELECT COUNT(*)::int FROM students WHERE academy_id=$1) AS student_count FROM academies WHERE id=$1`,[admin.academyId]);
     const settings=academy.rows[0];
     if(!settings)return NextResponse.json({success:false,error:"Academy not found."},{status:404});
@@ -48,6 +73,22 @@ export async function POST(req: Request) {
     const studentId=randomUUID();const passwordHash=await bcrypt.hash(password,10);
     await pool.query(`INSERT INTO students(id,name,email,class_name,academy_id) VALUES($1,$2,$3,$4,$5)`,[studentId,name,email,className,admin.academyId]);
     await pool.query(`INSERT INTO student_credentials(student_id,password_hash) VALUES($1,$2)`,[studentId,passwordHash]);
+    await pool.query(
+  `
+  INSERT INTO batch_students (batch_id, student_id)
+  VALUES ($1, $2)
+  ON CONFLICT DO NOTHING
+  `,
+  [batchId, studentId]
+);
+    await pool.query(
+  `
+  INSERT INTO batch_students (batch_id, student_id)
+  VALUES ($1, $2)
+  ON CONFLICT DO NOTHING
+  `,
+  [batchId, studentId]
+);
     return NextResponse.json({success:true,student:{id:studentId,name,email,className},credentials:{username:email,password}});
   } catch(error){console.error("ACADEMY STUDENTS POST ERROR:",error);return NextResponse.json({success:false,error:error instanceof Error?error.message:"Failed to create student"},{status:500});}
 }

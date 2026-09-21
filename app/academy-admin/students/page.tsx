@@ -8,31 +8,73 @@ type Student = {
   email: string;
 };
 
+type Batch = {
+  id: string;
+  name: string;
+  course_name: string | null;
+};
+
 export default function AcademyStudentsPage() {
   const [students, setStudents] = useState<Student[]>([]);
+  const [batches, setBatches] = useState<Batch[]>([]);
+  const [batchId, setBatchId] = useState("");
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [className, setClassName] = useState("Class 11");
+
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
 
   async function loadStudents() {
-    const res = await fetch("/api/academy-admin/students");
-    const data = await res.json();
+    try {
+      const res = await fetch("/api/academy-admin/students", {
+        cache: "no-store",
+      });
 
-    if (data.success) {
-      setStudents(data.students || []);
+      const data = await res.json();
+
+      if (data.success) {
+        setStudents(data.students || []);
+      }
+    } catch {
+      setMessage("Could not load students.");
+    }
+  }
+
+  async function loadBatches() {
+    try {
+      const res = await fetch("/api/academy-admin/batches", {
+        cache: "no-store",
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        setBatches(data.batches || []);
+      }
+    } catch {
+      setMessage("Could not load batches.");
     }
   }
 
   useEffect(() => {
-    loadStudents();
+    void loadStudents();
+    void loadBatches();
   }, []);
 
   async function createStudent(e: FormEvent) {
     e.preventDefault();
     setMessage("");
+
+    if (!batchId) {
+      setMessage(
+        "Please create and select a batch before adding a student."
+      );
+      return;
+    }
+
     setLoading(true);
 
     try {
@@ -41,12 +83,13 @@ export default function AcademyStudentsPage() {
         headers: {
           "Content-Type": "application/json",
         },
-    body: JSON.stringify({
-  name,
-  email,
-  password,
-  className,
-}),
+        body: JSON.stringify({
+          name,
+          email,
+          password,
+          className,
+          batchId,
+        }),
       });
 
       const data = await res.json();
@@ -61,9 +104,10 @@ export default function AcademyStudentsPage() {
       setName("");
       setEmail("");
       setPassword("");
-    
+      setBatchId("");
 
       await loadStudents();
+      await loadBatches();
     } catch {
       setMessage("Something went wrong.");
     } finally {
@@ -72,11 +116,32 @@ export default function AcademyStudentsPage() {
   }
 
   async function removeStudent(student: Student) {
-    if (!window.confirm(`Remove ${student.name}? Their login, batch memberships and test history will be deleted.`)) return;
-    const response = await fetch(`/api/academy-admin/students?id=${encodeURIComponent(student.id)}`, { method: "DELETE" });
+    if (
+      !window.confirm(
+        `Remove ${student.name}? Their login, batch memberships and test history will be deleted.`
+      )
+    ) {
+      return;
+    }
+
+    const response = await fetch(
+      `/api/academy-admin/students?id=${encodeURIComponent(student.id)}`,
+      {
+        method: "DELETE",
+      }
+    );
+
     const data = await response.json();
-    if (!response.ok || !data.success) { setMessage(data.error || "Could not remove student."); return; }
-    setStudents((current) => current.filter((item) => item.id !== student.id));
+
+    if (!response.ok || !data.success) {
+      setMessage(data.error || "Could not remove student.");
+      return;
+    }
+
+    setStudents((current) =>
+      current.filter((item) => item.id !== student.id)
+    );
+
     setMessage("Student removed.");
   }
 
@@ -114,7 +179,9 @@ export default function AcademyStudentsPage() {
           </h2>
 
           <p className="mt-2 text-sm text-[#697386]">
-            Create students here first. Create a batch separately, then assign students from Batch Management.
+            Create a batch first, then add students to their respective
+            batch. Students automatically get access to the course assigned
+            to their batch.
           </p>
         </div>
 
@@ -128,6 +195,13 @@ export default function AcademyStudentsPage() {
               Add Student
             </h3>
 
+            {batches.length === 0 && (
+              <div className="mt-4 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-xs font-semibold leading-5 text-amber-700">
+                No batches available. Please create a batch first before
+                adding a student.
+              </div>
+            )}
+
             <input
               required
               value={name}
@@ -137,6 +211,7 @@ export default function AcademyStudentsPage() {
             />
 
             <select
+              required
               value={className}
               onChange={(e) => setClassName(e.target.value)}
               className="mt-3 w-full rounded-xl border border-[#dfe4ee] bg-white px-4 py-3 text-sm outline-none focus:border-[#315bea]"
@@ -144,6 +219,26 @@ export default function AcademyStudentsPage() {
               <option value="Class 11">Class 11</option>
               <option value="Class 12">Class 12</option>
               <option value="Class 11 + 12">Class 11 + 12</option>
+            </select>
+
+            {/* Batch selection */}
+            <select
+              required
+              value={batchId}
+              onChange={(e) => setBatchId(e.target.value)}
+              disabled={batches.length === 0}
+              className="mt-3 w-full rounded-xl border border-[#dfe4ee] bg-white px-4 py-3 text-sm outline-none focus:border-[#315bea] disabled:cursor-not-allowed disabled:bg-[#f5f6f8] disabled:text-[#9aa1ad]"
+            >
+              <option value="">Select batch</option>
+
+              {batches.map((batch) => (
+                <option key={batch.id} value={batch.id}>
+                  {batch.name}
+                  {batch.course_name
+                    ? ` — ${batch.course_name}`
+                    : ""}
+                </option>
+              ))}
             </select>
 
             <input
@@ -165,9 +260,9 @@ export default function AcademyStudentsPage() {
             />
 
             <button
-              disabled={loading}
+              disabled={loading || batches.length === 0 || !batchId}
               type="submit"
-              className="mt-5 w-full rounded-xl bg-[#315bea] px-4 py-3 text-sm font-bold text-white disabled:opacity-50"
+              className="mt-5 w-full rounded-xl bg-[#315bea] px-4 py-3 text-sm font-bold text-white disabled:cursor-not-allowed disabled:opacity-50"
             >
               {loading ? "Creating..." : "Create Student"}
             </button>
@@ -212,7 +307,12 @@ export default function AcademyStudentsPage() {
                       </p>
                     </div>
 
-                    <button onClick={() => void removeStudent(student)} className="rounded-lg border border-red-200 bg-red-50 px-3 py-1.5 text-xs font-bold text-red-600">Remove</button>
+                    <button
+                      onClick={() => void removeStudent(student)}
+                      className="rounded-lg border border-red-200 bg-red-50 px-3 py-1.5 text-xs font-bold text-red-600"
+                    >
+                      Remove
+                    </button>
                   </div>
                 ))
               )}

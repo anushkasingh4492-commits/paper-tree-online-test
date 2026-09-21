@@ -5,10 +5,10 @@ import { FormEvent, useEffect, useState } from "react";
 type Batch = {
   id: string;
   name: string;
-  class_name: string | null;
+  course_name: string | null;
+  class_name?: string | null;
   created_at: string;
 };
-
 type Student = {
   id: string;
   name: string;
@@ -24,7 +24,7 @@ export default function AcademyBatchesPage() {
   const [assignedStudents, setAssignedStudents] = useState<string[]>([]);
 
   const [name, setName] = useState("");
-  const [className, setClassName] = useState("");
+const [courseName, setCourseName] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
   const [studentLoading, setStudentLoading] = useState(false);
@@ -131,10 +131,10 @@ export default function AcademyBatchesPage() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          name,
-          className,
-        }),
+      body: JSON.stringify({
+  name,
+  courseName,
+}),
       });
 
       const data = await res.json();
@@ -145,8 +145,8 @@ export default function AcademyBatchesPage() {
       }
 
       setMessage("Batch created successfully.");
-      setName("");
-      setClassName("");
+     setName("");
+setClassName("");
 
       await loadBatches();
     } catch {
@@ -221,18 +221,20 @@ export default function AcademyBatchesPage() {
               className="mt-5 w-full rounded-xl border border-[#dfe4ee] px-4 py-3 text-sm outline-none focus:border-[#315bea]"
             />
 
-            <select
-              value={className}
-              onChange={(e) => setClassName(e.target.value)}
-              className="mt-3 w-full rounded-xl border border-[#dfe4ee] bg-white px-4 py-3 text-sm outline-none focus:border-[#315bea]"
-            >
-              <option value="">Select class</option>
-              <option value="Class 11">Class 11</option>
-              <option value="Class 12">Class 12</option>
-              <option value="NEET">NEET</option>
-              <option value="JEE">JEE</option>
-              <option value="MHT-CET">MHT-CET</option>
-            </select>
+         <select
+  required
+  value={courseName}
+  onChange={(e) => setCourseName(e.target.value)}
+  className="mt-3 w-full rounded-xl border border-[#dfe4ee] bg-white px-4 py-3 text-sm outline-none focus:border-[#315bea]"
+>
+  <option value="">Select course</option>
+  <option value="JEE">JEE</option>
+  <option value="NEET">NEET</option>
+  <option value="MHT-CET">MHT-CET</option>
+  <option value="Class 11">Class 11</option>
+  <option value="Class 12">Class 12</option>
+  <option value="Class 11 + 12">Class 11 + 12</option>
+</select>
 
             <button
               disabled={loading}
@@ -277,11 +279,11 @@ export default function AcademyBatchesPage() {
                         {batch.name}
                       </p>
 
-                      {batch.class_name && (
-                        <p className="mt-1 text-sm text-[#697386]">
-                          {batch.class_name}
-                        </p>
-                      )}
+                     {batch.course_name && (
+  <p className="mt-1 text-sm text-[#697386]">
+    Course: {batch.course_name}
+  </p>
+)}
                     </div>
 
                     <div className="flex items-center gap-3">
@@ -415,3 +417,7 @@ export default function AcademyBatchesPage() {
     </main>
   );
 }
+function setClassName(arg0: string) {
+  throw new Error("Function not implemented.");
+}
+

@@ -129,24 +129,99 @@ export async function GET() {
 
 export async function POST(request: Request) {
   const value = (await cookies()).get("master_session")?.value;
-  if (!value) return NextResponse.json({ success: false, error: "Unauthorized" }, { status: 401 });
-  let session: { id?: string; role?: string; academyId?: string };
-  try { session = JSON.parse(decodeURIComponent(value)); } catch { return NextResponse.json({ success: false, error: "Invalid session" }, { status: 401 }); }
-  if (session.role !== "ACADEMY_ADMIN" || !session.id || !session.academyId) {
-    return NextResponse.json({ success: false, error: "Unauthorized" }, { status: 401 });
+
+  if (!value) {
+    return NextResponse.json(
+      { success: false, error: "Unauthorized" },
+      { status: 401 }
+    );
   }
+
+  let session: {
+    id?: string;
+    role?: string;
+    academyId?: string;
+  };
+
+  try {
+    session = JSON.parse(decodeURIComponent(value));
+  } catch {
+    return NextResponse.json(
+      { success: false, error: "Invalid session" },
+      { status: 401 }
+    );
+  }
+
+  if (
+    session.role !== "ACADEMY_ADMIN" ||
+    !session.id ||
+    !session.academyId
+  ) {
+    return NextResponse.json(
+      { success: false, error: "Unauthorized" },
+      { status: 401 }
+    );
+  }
+
   const body = await request.json();
+
   const name = String(body.name ?? "").trim();
-  const className = String(body.className ?? "").trim();
-  if (!name || !className) return NextResponse.json({ success: false, error: "Batch name and class are required." }, { status: 400 });
+  const courseName = String(body.courseName ?? "").trim();
+
+  if (!name || !courseName) {
+    return NextResponse.json(
+      {
+        success: false,
+        error: "Batch name and course are required.",
+      },
+      { status: 400 }
+    );
+  }
+
+  // Make sure the database has the course column.
+  await pool.query(`
+    ALTER TABLE batches
+    ADD COLUMN IF NOT EXISTS course_name VARCHAR(255)
+  `);
+
   const result = await pool.query(
-    `INSERT INTO batches (id, name, class_name, created_by, academy_id)
-     VALUES ($1, $2, $3, $4, $5)
-     RETURNING id, name, class_name, created_at`,
-    [randomUUID(), name, className, session.id, session.academyId]
+    `
+    INSERT INTO batches (
+      id,
+      name,
+      class_name,
+      course_name,
+      created_by,
+      academy_id
+    )
+    VALUES ($1, $2, NULL, $3, $4, $5)
+    RETURNING
+      id,
+      name,
+      course_name,
+      created_at
+    `,
+    [
+      randomUUID(),
+      name,
+      courseName,
+      session.id,
+      session.academyId,
+    ]
   );
-  return NextResponse.json({ success: true, batch: { ...result.rows[0], student_count: 0 } }, { status: 201 });
+
+  return NextResponse.json(
+    {
+      success: true,
+      batch: {
+        ...result.rows[0],
+        student_count: 0,
+      },
+    },
+    { status: 201 }
+  );
 }
+  
 
 export async function DELETE(request: Request) {
   const value = (await cookies()).get("master_session")?.value;
