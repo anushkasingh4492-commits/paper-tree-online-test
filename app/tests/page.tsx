@@ -168,6 +168,14 @@ export default function TestsPage() {
 
   const [course, setCourse] =
     useState<Course>("MHT-CET");
+    const [assignmentLoading, setAssignmentLoading] =
+  useState(true);
+
+const [assignmentError, setAssignmentError] =
+  useState("");
+
+const [assignedBatchName, setAssignedBatchName] =
+  useState("");
 
   const [subjects, setSubjects] =
     useState<Subject[]>(["Physics"]);
@@ -273,21 +281,159 @@ export default function TestsPage() {
    * ---------------------------------------------------------
    */
 
-  useEffect(() => {
-    const savedGroup =
-      localStorage.getItem(
-        "mhtCETGroup"
+useEffect(() => {
+  async function loadStudentAssignment() {
+    try {
+      setAssignmentLoading(true);
+      setAssignmentError("");
+
+      const response = await fetch(
+        "/api/student/assignment",
+        {
+          method: "GET",
+          cache: "no-store",
+        }
       );
 
-    if (
-      savedGroup === "PCM" ||
-      savedGroup === "PCB"
-    ) {
-      setStudentGroup(
-        savedGroup
+      const data = await response.json();
+
+      if (!response.ok || !data.success) {
+        throw new Error(
+          data.error ||
+            "Could not load your assigned course."
+        );
+      }
+
+      const assignment = data.assignment;
+
+      const courseName = String(
+        assignment.course_name || ""
+      )
+        .trim()
+        .toUpperCase();
+
+      setAssignedBatchName(
+        String(
+          assignment.batch_name || ""
+        )
       );
+
+      /*
+       * NEET
+       */
+      if (courseName.includes("NEET")) {
+        setCourse("NEET");
+        setStudentGroup("PCB");
+
+        setSubjects([
+          "Physics",
+          "Chemistry",
+          "Biology",
+        ]);
+
+        setActiveChapterSubject(
+          "Physics"
+        );
+
+        localStorage.setItem(
+          "mhtCETGroup",
+          "PCB"
+        );
+
+        return;
+      }
+
+      /*
+       * MHT-CET PCB
+       */
+      if (
+        courseName.includes("MHT") &&
+        courseName.includes("PCB")
+      ) {
+        setCourse("MHT-CET");
+        setStudentGroup("PCB");
+
+        setSubjects([
+          "Physics",
+        ]);
+
+        setActiveChapterSubject(
+          "Physics"
+        );
+
+        localStorage.setItem(
+          "mhtCETGroup",
+          "PCB"
+        );
+
+        return;
+      }
+
+      /*
+       * MHT-CET PCM
+       */
+      if (
+        courseName.includes("MHT") &&
+        courseName.includes("PCM")
+      ) {
+        setCourse("MHT-CET");
+        setStudentGroup("PCM");
+
+        setSubjects([
+          "Physics",
+        ]);
+
+        setActiveChapterSubject(
+          "Physics"
+        );
+
+        localStorage.setItem(
+          "mhtCETGroup",
+          "PCM"
+        );
+
+        return;
+      }
+
+      /*
+       * JEE — future support
+       */
+      if (courseName.includes("JEE")) {
+        setCourse("JEE");
+        setStudentGroup("PCM");
+
+        setSubjects([
+          "Physics",
+        ]);
+
+        setActiveChapterSubject(
+          "Physics"
+        );
+
+        return;
+      }
+
+      throw new Error(
+        `Unknown course assigned to your batch: ${assignment.course_name}`
+      );
+    } catch (error) {
+      console.error(
+        "STUDENT ASSIGNMENT LOAD ERROR:",
+        error
+      );
+
+      setAssignmentError(
+        error instanceof Error
+          ? error.message
+          : "Could not load your assigned course."
+      );
+    } finally {
+      setAssignmentLoading(false);
     }
-  }, []);
+  }
+
+  void loadStudentAssignment();
+}, []);
 
   /*
    * ---------------------------------------------------------
@@ -1269,87 +1415,48 @@ if (
 
 
 
-{course === "MHT-CET" && (
+
   <section className="bg-white border border-[#e5e7eb] rounded-2xl shadow-sm p-6">
-              <div className="mb-5">
+  <div className="mb-5">
+    <h2 className="text-lg font-semibold">
+      1. Your Assigned Course
+    </h2>
 
-                <h2 className="text-lg font-semibold">
-                  1. Choose Exam
-                </h2>
+    <p className="text-sm text-[#6b7280] mt-1">
+      Your course is assigned by your academy.
+    </p>
+  </div>
 
-                <p className="text-sm text-[#6b7280] mt-1">
-                  Select the entrance examination
-                  you are preparing for.
-                </p>
+  {assignmentLoading ? (
+    <div className="rounded-xl bg-[#f9fafb] border border-[#e5e7eb] p-4 text-sm text-[#6b7280]">
+      Loading your assigned course...
+    </div>
+  ) : assignmentError ? (
+    <div className="rounded-xl bg-[#fff7ed] border border-[#fed7aa] p-4 text-sm text-[#9a3412]">
+      {assignmentError}
+    </div>
+  ) : (
+    <div className="rounded-xl border-2 border-[#2563eb] bg-[#eff6ff] p-5">
+      <div className="text-lg font-bold text-[#1d4ed8]">
+        {course}
+        {course === "MHT-CET" &&
+          studentGroup &&
+          ` — ${studentGroup}`}
+      </div>
 
-              </div>
+      {assignedBatchName && (
+        <div className="text-sm text-[#6b7280] mt-2">
+          Batch: {assignedBatchName}
+        </div>
+      )}
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-
-                {(
-                  Object.keys(
-                    COURSE_CONFIG
-                  ) as Course[]
-                ).map((item) => {
-
-                  const config =
-                    COURSE_CONFIG[
-                      item
-                    ];
-
-                  const selected =
-                    course === item;
-
-                  return (
-                    <button
-                      key={item}
-                      disabled={
-                        !config.available
-                      }
-                      onClick={() =>
-                        changeCourse(
-                          item
-                        )
-                      }
-                      className={`relative text-left rounded-xl border-2 p-5 transition ${
-                        selected
-                          ? "border-[#2563eb] bg-[#eff6ff]"
-                          : config.available
-                          ? "border-[#e5e7eb] hover:border-[#bfdbfe]"
-                          : "border-[#e5e7eb] bg-[#fafafa] opacity-60 cursor-not-allowed"
-                      }`}
-                    >
-
-                      {selected && (
-                        <div className="absolute top-4 right-4 w-5 h-5 rounded-full bg-[#2563eb] text-white flex items-center justify-center text-xs">
-
-                        </div>
-                      )}
-
-                      {!config.available && (
-                        <span className="absolute top-3 right-3 text-[10px] font-semibold uppercase tracking-wide bg-[#f3f4f6] text-[#6b7280] px-2 py-1 rounded-md">
-                          Coming Soon
-                        </span>
-                      )}
-
-                      <div className="text-lg font-bold">
-                        {item}
-                      </div>
-
-                      <div className="text-xs text-[#6b7280] mt-2 pr-4">
-                        {
-                          config.description
-                        }
-                      </div>
-
-                    </button>
-                  );
-                })}
-
-              </div>
-
-                       </section>
-)}
+      <div className="text-xs text-[#6b7280] mt-3">
+        This course was assigned by your academy and
+        cannot be changed.
+      </div>
+    </div>
+  )}
+</section>
 
 
        {/* GROUP */}
@@ -1557,23 +1664,7 @@ if (
                           {item}
                         </div>
 
-                        {loadingDatabase ? (
-                          <div className="text-[10px] text-[#9ca3af] mt-1">
-                            Loading...
-                          </div>
-                        ) : (
-                          <div
-                            className={`text-[10px] mt-1 ${
-                              hasDatabaseData
-                                ? "text-green-600"
-                                : "text-[#9ca3af]"
-                            }`}
-                          >
-                            {hasDatabaseData
-                              ? "Database available"
-                              : "No database data"}
-                          </div>
-                        )}
+                     
 
                         {blocked && (
                           <div className="text-[9px] text-[#9ca3af] mt-1">
