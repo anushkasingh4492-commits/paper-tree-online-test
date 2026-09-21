@@ -207,7 +207,7 @@ if (!validPortalRole) {
             onClick={() => router.push("/")}
             className="mt-5 w-full text-center text-sm font-semibold text-[#697386] hover:text-[#315bea]"
           >
-            ← Back to portal selection
+            ← Back to Login
           </button>
 
         </div>
