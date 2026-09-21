@@ -8,6 +8,7 @@ export const runtime = "nodejs";
 export async function GET() {
   try {
     const cookieStore = await cookies();
+
     const sessionCookie =
       cookieStore.get("student_session")?.value;
 
@@ -44,10 +45,7 @@ export async function GET() {
       );
     }
 
-    /*
-     * Make sure the batch has a course column.
-     * No psql required.
-     */
+    // Make sure the batch has a course column.
     await pool.query(`
       ALTER TABLE batches
       ADD COLUMN IF NOT EXISTS course_name VARCHAR(255)
@@ -55,6 +53,9 @@ export async function GET() {
 
     /*
      * Get the student's assigned batch.
+     *
+     * batch_students does not have created_at,
+     * so we order by the batch's created_at instead.
      */
     const result = await pool.query(
       `
@@ -71,7 +72,7 @@ export async function GET() {
       WHERE bs.student_id = $1
         AND s.academy_id = $2
         AND b.academy_id = $2
-      ORDER BY bs.created_at DESC
+      ORDER BY b.created_at DESC
       LIMIT 1
       `,
       [studentId, academyId]

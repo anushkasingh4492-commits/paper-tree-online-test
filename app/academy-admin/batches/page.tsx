@@ -9,6 +9,7 @@ type Batch = {
   class_name?: string | null;
   created_at: string;
 };
+
 type Student = {
   id: string;
   name: string;
@@ -17,39 +18,91 @@ type Student = {
   class_name: string | null;
 };
 
+const COURSE_OPTIONS = [
+  {
+    value: "MHT-CET PCM",
+    label: "MHT-CET — PCM",
+  },
+  {
+    value: "MHT-CET PCB",
+    label: "MHT-CET — PCB",
+  },
+  {
+    value: "NEET PCB",
+    label: "NEET — PCB",
+  },
+  {
+    value: "JEE PCM",
+    label: "JEE — PCM",
+  },
+];
+
 export default function AcademyBatchesPage() {
   const [batches, setBatches] = useState<Batch[]>([]);
   const [students, setStudents] = useState<Student[]>([]);
-  const [selectedBatch, setSelectedBatch] = useState<Batch | null>(null);
-  const [assignedStudents, setAssignedStudents] = useState<string[]>([]);
+  const [selectedBatch, setSelectedBatch] =
+    useState<Batch | null>(null);
+  const [assignedStudents, setAssignedStudents] =
+    useState<string[]>([]);
 
   const [name, setName] = useState("");
-const [courseName, setCourseName] = useState("");
+  const [className, setClassName] = useState("");
+  const [courseName, setCourseName] = useState("");
+
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
-  const [studentLoading, setStudentLoading] = useState(false);
+  const [studentLoading, setStudentLoading] =
+    useState(false);
 
   async function loadBatches() {
-    const res = await fetch("/api/academy-admin/batches");
-    const data = await res.json();
+    try {
+      const res = await fetch(
+        "/api/academy-admin/batches",
+        {
+          cache: "no-store",
+        }
+      );
 
-    if (data.success) {
-      setBatches(data.batches || []);
+      const data = await res.json();
+
+      if (data.success) {
+        setBatches(data.batches || []);
+      } else {
+        setMessage(
+          data.error || "Could not load batches."
+        );
+      }
+    } catch {
+      setMessage("Could not load batches.");
     }
   }
 
   async function loadStudents() {
-    const res = await fetch("/api/academy-admin/students");
-    const data = await res.json();
+    try {
+      const res = await fetch(
+        "/api/academy-admin/students",
+        {
+          cache: "no-store",
+        }
+      );
 
-    if (data.success) {
-      setStudents(data.students || []);
+      const data = await res.json();
+
+      if (data.success) {
+        setStudents(data.students || []);
+      } else {
+        setMessage(
+          data.error || "Could not load students."
+        );
+      }
+    } catch {
+      setMessage("Could not load students.");
     }
   }
 
   useEffect(() => {
-    loadBatches();
-    loadStudents();
+    void loadBatches();
+    void loadStudents();
   }, []);
 
   async function openManageStudents(batch: Batch) {
@@ -60,15 +113,18 @@ const [courseName, setCourseName] = useState("");
       const res = await fetch(
         `/api/academy-admin/batches/students?batchId=${encodeURIComponent(
           batch.id
-        )}`
+        )}`,
+        {
+          cache: "no-store",
+        }
       );
 
       const data = await res.json();
 
       if (data.success) {
         setAssignedStudents(
-          (data.students || []).map((student: Student) =>
-            String(student.id)
+          (data.students || []).map(
+            (student: Student) => String(student.id)
           )
         );
       } else {
@@ -84,7 +140,9 @@ const [courseName, setCourseName] = useState("");
   async function toggleStudent(studentId: string) {
     if (!selectedBatch) return;
 
-    const isAssigned = assignedStudents.includes(studentId);
+    const isAssigned =
+      assignedStudents.includes(studentId);
+
     const action = isAssigned ? "remove" : "add";
 
     try {
@@ -106,13 +164,18 @@ const [courseName, setCourseName] = useState("");
       const data = await res.json();
 
       if (!data.success) {
-        alert(data.error || "Failed to update student");
+        alert(
+          data.error ||
+            "Failed to update student"
+        );
         return;
       }
 
       setAssignedStudents((current) =>
         isAssigned
-          ? current.filter((id) => id !== studentId)
+          ? current.filter(
+              (id) => id !== studentId
+            )
           : [...current, studentId]
       );
     } catch {
@@ -123,30 +186,52 @@ const [courseName, setCourseName] = useState("");
   async function createBatch(e: FormEvent) {
     e.preventDefault();
     setMessage("");
+
+    if (
+      !name.trim() ||
+      !className.trim() ||
+      !courseName.trim()
+    ) {
+      setMessage("Please fill all details.");
+      return;
+    }
+
     setLoading(true);
 
     try {
-      const res = await fetch("/api/academy-admin/batches", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      body: JSON.stringify({
-  name,
-  courseName,
-}),
-      });
+      const res = await fetch(
+        "/api/academy-admin/batches",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          credentials: "include",
+          body: JSON.stringify({
+            name: name.trim(),
+            className: className.trim(),
+            courseName: courseName.trim(),
+          }),
+        }
+      );
 
       const data = await res.json();
 
-      if (!data.success) {
-        setMessage(data.error || "Failed to create batch");
+      if (!res.ok || !data.success) {
+        setMessage(
+          data.error ||
+            "Failed to create batch"
+        );
         return;
       }
 
-      setMessage("Batch created successfully.");
-     setName("");
-setClassName("");
+      setMessage(
+        `${courseName} batch created successfully.`
+      );
+
+      setName("");
+      setClassName("");
+      setCourseName("");
 
       await loadBatches();
     } catch {
@@ -157,11 +242,39 @@ setClassName("");
   }
 
   async function removeBatch(batch: Batch) {
-    if (!window.confirm(`Remove ${batch.name}? Students are not deleted, but their membership in this batch will be removed.`)) return;
-    const response = await fetch(`/api/academy-admin/batches?id=${encodeURIComponent(batch.id)}`, { method: "DELETE" });
+    if (
+      !window.confirm(
+        `Remove ${batch.name}? Students are not deleted, but their membership in this batch will be removed.`
+      )
+    ) {
+      return;
+    }
+
+    const response = await fetch(
+      `/api/academy-admin/batches?id=${encodeURIComponent(
+        batch.id
+      )}`,
+      {
+        method: "DELETE",
+      }
+    );
+
     const data = await response.json();
-    if (!response.ok || !data.success) { setMessage(data.error || "Could not remove batch."); return; }
-    setBatches((current) => current.filter((item) => item.id !== batch.id));
+
+    if (!response.ok || !data.success) {
+      setMessage(
+        data.error ||
+          "Could not remove batch."
+      );
+      return;
+    }
+
+    setBatches((current) =>
+      current.filter(
+        (item) => item.id !== batch.id
+      )
+    );
+
     setMessage("Batch removed.");
   }
 
@@ -216,32 +329,68 @@ setClassName("");
             <input
               required
               value={name}
-              onChange={(e) => setName(e.target.value)}
+              onChange={(e) =>
+                setName(e.target.value)
+              }
               placeholder="Batch name"
               className="mt-5 w-full rounded-xl border border-[#dfe4ee] px-4 py-3 text-sm outline-none focus:border-[#315bea]"
             />
 
-         <select
-  required
-  value={courseName}
-  onChange={(e) => setCourseName(e.target.value)}
-  className="mt-3 w-full rounded-xl border border-[#dfe4ee] bg-white px-4 py-3 text-sm outline-none focus:border-[#315bea]"
->
-  <option value="">Select course</option>
-  <option value="JEE">JEE</option>
-  <option value="NEET">NEET</option>
-  <option value="MHT-CET">MHT-CET</option>
-  <option value="Class 11">Class 11</option>
-  <option value="Class 12">Class 12</option>
-  <option value="Class 11 + 12">Class 11 + 12</option>
-</select>
+            <select
+              required
+              value={courseName}
+              onChange={(e) =>
+                setCourseName(e.target.value)
+              }
+              className="mt-3 w-full rounded-xl border border-[#dfe4ee] bg-white px-4 py-3 text-sm outline-none focus:border-[#315bea]"
+            >
+              <option value="">
+                Select course / stream
+              </option>
+
+              {COURSE_OPTIONS.map((option) => (
+                <option
+                  key={option.value}
+                  value={option.value}
+                >
+                  {option.label}
+                </option>
+              ))}
+            </select>
+
+            <select
+              required
+              value={className}
+              onChange={(e) =>
+                setClassName(e.target.value)
+              }
+              className="mt-3 w-full rounded-xl border border-[#dfe4ee] bg-white px-4 py-3 text-sm outline-none focus:border-[#315bea]"
+            >
+              <option value="">
+                Select class
+              </option>
+
+              <option value="11">
+                Class 11
+              </option>
+
+              <option value="12">
+                Class 12
+              </option>
+
+              <option value="11 + 12">
+                Class 11 + 12
+              </option>
+            </select>
 
             <button
               disabled={loading}
               type="submit"
               className="mt-5 w-full rounded-xl bg-[#315bea] px-4 py-3 text-sm font-bold text-white disabled:opacity-50"
             >
-              {loading ? "Creating..." : "Create Batch"}
+              {loading
+                ? "Creating..."
+                : "Create Batch"}
             </button>
 
             {message && (
@@ -279,11 +428,18 @@ setClassName("");
                         {batch.name}
                       </p>
 
-                     {batch.course_name && (
-  <p className="mt-1 text-sm text-[#697386]">
-    Course: {batch.course_name}
-  </p>
-)}
+                      {batch.course_name && (
+                        <p className="mt-1 text-sm font-semibold text-[#315bea]">
+                          {batch.course_name}
+                        </p>
+                      )}
+
+                      {batch.class_name && (
+                        <p className="mt-1 text-sm text-[#697386]">
+                          Class:{" "}
+                          {batch.class_name}
+                        </p>
+                      )}
                     </div>
 
                     <div className="flex items-center gap-3">
@@ -296,7 +452,14 @@ setClassName("");
                         Manage Students
                       </button>
 
-                      <button onClick={() => void removeBatch(batch)} className="rounded-lg border border-red-200 bg-red-50 px-3 py-1.5 text-xs font-bold text-red-600">Remove</button>
+                      <button
+                        onClick={() =>
+                          void removeBatch(batch)
+                        }
+                        className="rounded-lg border border-red-200 bg-red-50 px-3 py-1.5 text-xs font-bold text-red-600"
+                      >
+                        Remove
+                      </button>
 
                       <span className="rounded-lg bg-[#f4f6fa] px-3 py-1.5 text-xs font-bold text-[#697386]">
                         Batch
@@ -323,6 +486,12 @@ setClassName("");
                 <p className="mt-1 text-sm text-[#697386]">
                   {selectedBatch.name}
                 </p>
+
+                {selectedBatch.course_name && (
+                  <p className="mt-1 text-xs font-bold text-[#315bea]">
+                    {selectedBatch.course_name}
+                  </p>
+                )}
               </div>
 
               <button
@@ -348,15 +517,18 @@ setClassName("");
               ) : (
                 <div className="space-y-2">
                   {students.map((student) => {
-                    const assigned = assignedStudents.includes(
-                      String(student.id)
-                    );
+                    const assigned =
+                      assignedStudents.includes(
+                        String(student.id)
+                      );
 
                     return (
                       <button
                         key={student.id}
                         onClick={() =>
-                          toggleStudent(String(student.id))
+                          toggleStudent(
+                            String(student.id)
+                          )
                         }
                         className={`flex w-full items-center justify-between rounded-xl border p-4 text-left transition ${
                           assigned
@@ -371,6 +543,7 @@ setClassName("");
 
                           <p className="mt-1 text-xs text-[#697386]">
                             {student.email}
+
                             {student.roll_number
                               ? ` • Roll No. ${student.roll_number}`
                               : ""}
@@ -384,7 +557,9 @@ setClassName("");
                               : "border-[#d8deea] bg-white text-transparent"
                           }`}
                         >
-                          {assigned ? "✓" : ""}
+                          {assigned
+                            ? "✓"
+                            : ""}
                         </div>
                       </button>
                     );
@@ -396,8 +571,12 @@ setClassName("");
             <div className="border-t border-[#e7eaf0] px-6 py-4">
               <div className="flex items-center justify-between">
                 <p className="text-sm font-bold text-[#697386]">
-                  {assignedStudents.length} student
-                  {assignedStudents.length === 1 ? "" : "s"} assigned
+                  {assignedStudents.length}{" "}
+                  student
+                  {assignedStudents.length === 1
+                    ? ""
+                    : "s"}{" "}
+                  assigned
                 </p>
 
                 <button
@@ -417,7 +596,3 @@ setClassName("");
     </main>
   );
 }
-function setClassName(arg0: string) {
-  throw new Error("Function not implemented.");
-}
-

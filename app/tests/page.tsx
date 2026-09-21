@@ -50,7 +50,7 @@ const COURSE_CONFIG: Record<
       "Chemistry",
       "Mathematics",
     ],
-    available: false,
+    available: true,
   },
 
   NEET: {
@@ -166,51 +166,95 @@ function presetSubjectToSubject(
 export default function TestsPage() {
   const router = useRouter();
 
+  /*
+   * ---------------------------------------------------------
+   * ASSIGNED COURSE
+   * ---------------------------------------------------------
+   *
+   * IMPORTANT:
+   * Course is null until the student's batch assignment
+   * has been loaded successfully.
+   *
+   * The student cannot manually change this value.
+   */
   const [course, setCourse] =
-    useState<Course>("MHT-CET");
-    const [assignmentLoading, setAssignmentLoading] =
-  useState(true);
+    useState<Course | null>(null);
 
-const [assignmentError, setAssignmentError] =
-  useState("");
+  const [
+    assignmentLoading,
+    setAssignmentLoading,
+  ] = useState(true);
 
-const [assignedBatchName, setAssignedBatchName] =
-  useState("");
+  const [
+    assignmentError,
+    setAssignmentError,
+  ] = useState("");
+
+  const [
+    assignedBatchName,
+    setAssignedBatchName,
+  ] = useState("");
+
+  /*
+   * ---------------------------------------------------------
+   * SUBJECTS
+   * ---------------------------------------------------------
+   */
 
   const [subjects, setSubjects] =
     useState<Subject[]>(["Physics"]);
 
-  const [activeChapterSubject, setActiveChapterSubject] =
-    useState<Subject>("Physics");
+  const [
+    activeChapterSubject,
+    setActiveChapterSubject,
+  ] = useState<Subject>("Physics");
 
-  const [chaptersBySubject, setChaptersBySubject] =
-    useState<Record<Subject, string[]>>({
-      Physics: [],
-      Chemistry: [],
-      Mathematics: [],
-      Biology: [],
-    });
+  const [
+    chaptersBySubject,
+    setChaptersBySubject,
+  ] = useState<Record<Subject, string[]>>({
+    Physics: [],
+    Chemistry: [],
+    Mathematics: [],
+    Biology: [],
+  });
 
-  const [availableChapters, setAvailableChapters] =
-    useState<DatabaseChapter[]>([]);
+  const [
+    availableChapters,
+    setAvailableChapters,
+  ] = useState<DatabaseChapter[]>([]);
 
-  const [databaseSubjects, setDatabaseSubjects] =
-    useState<string[]>([]);
+  const [
+    databaseSubjects,
+    setDatabaseSubjects,
+  ] = useState<string[]>([]);
 
-  const [loadingDatabase, setLoadingDatabase] =
-    useState(true);
+  const [
+    loadingDatabase,
+    setLoadingDatabase,
+  ] = useState(true);
 
-  const [difficulty, setDifficulty] =
-    useState("Balanced");
+  const [
+    difficulty,
+    setDifficulty,
+  ] = useState("Balanced");
 
   /*
    * ---------------------------------------------------------
-   * MHT CET GROUP
+   * ASSIGNED GROUP
    * ---------------------------------------------------------
+   *
+   * The group comes from the assigned batch.
+   *
+   * MHT-CET PCM -> PCM
+   * MHT-CET PCB -> PCB
+   * NEET PCB    -> PCB
+   * JEE PCM     -> PCM
    */
-
-  const [studentGroup, setStudentGroup] =
-    useState<StudentGroup | null>(null);
+  const [
+    studentGroup,
+    setStudentGroup,
+  ] = useState<StudentGroup | null>(null);
 
   /*
    * ---------------------------------------------------------
@@ -218,14 +262,23 @@ const [assignedBatchName, setAssignedBatchName] =
    * ---------------------------------------------------------
    */
 
-  const [selectedPreset, setSelectedPreset] =
-    useState<Preset | null>(null);
+  const [
+    selectedPreset,
+    setSelectedPreset,
+  ] = useState<Preset | null>(null);
 
   const [generating, setGenerating] =
     useState(false);
 
-  const courseConfig =
-    COURSE_CONFIG[course];
+  /*
+   * ---------------------------------------------------------
+   * COURSE CONFIG
+   * ---------------------------------------------------------
+   */
+
+  const courseConfig = course
+    ? COURSE_CONFIG[course]
+    : null;
 
   /*
    * ---------------------------------------------------------
@@ -277,163 +330,238 @@ const [assignedBatchName, setAssignedBatchName] =
 
   /*
    * ---------------------------------------------------------
-   * LOAD SAVED GROUP
+   * LOAD STUDENT ASSIGNMENT
+   * ---------------------------------------------------------
+   *
+   * The student's assigned batch is the single source
+   * of truth for course and group.
    * ---------------------------------------------------------
    */
 
-useEffect(() => {
-  async function loadStudentAssignment() {
-    try {
-      setAssignmentLoading(true);
-      setAssignmentError("");
+  useEffect(() => {
+    async function loadStudentAssignment() {
+      try {
+        setAssignmentLoading(true);
+        setAssignmentError("");
 
-      const response = await fetch(
-        "/api/student/assignment",
-        {
-          method: "GET",
-          cache: "no-store",
+        const response = await fetch(
+          "/api/student/assignment",
+          {
+            method: "GET",
+            cache: "no-store",
+          }
+        );
+
+        const data =
+          await response.json();
+
+        if (
+          !response.ok ||
+          !data.success
+        ) {
+          throw new Error(
+            data.error ||
+              "Could not load your assigned course."
+          );
         }
-      );
 
-      const data = await response.json();
+        const assignment =
+          data.assignment;
 
-      if (!response.ok || !data.success) {
+        const courseName =
+          String(
+            assignment?.course_name || ""
+          )
+            .trim()
+            .toUpperCase();
+
+        const batchName =
+          String(
+            assignment?.batch_name || ""
+          ).trim();
+
+        setAssignedBatchName(
+          batchName
+        );
+
+        /*
+         * -----------------------------------------------------
+         * MHT-CET PCB
+         * -----------------------------------------------------
+         */
+
+        if (
+          courseName.includes("MHT") &&
+          courseName.includes("PCB")
+        ) {
+          setCourse("MHT-CET");
+
+          setStudentGroup("PCB");
+
+          setSubjects([
+            "Physics",
+          ]);
+
+          setActiveChapterSubject(
+            "Physics"
+          );
+
+          setChaptersBySubject({
+            Physics: [],
+            Chemistry: [],
+            Mathematics: [],
+            Biology: [],
+          });
+
+          setSelectedPreset(null);
+
+          return;
+        }
+
+        /*
+         * -----------------------------------------------------
+         * MHT-CET PCM
+         * -----------------------------------------------------
+         */
+
+        if (
+          courseName.includes("MHT") &&
+          courseName.includes("PCM")
+        ) {
+          setCourse("MHT-CET");
+
+          setStudentGroup("PCM");
+
+          setSubjects([
+            "Physics",
+          ]);
+
+          setActiveChapterSubject(
+            "Physics"
+          );
+
+          setChaptersBySubject({
+            Physics: [],
+            Chemistry: [],
+            Mathematics: [],
+            Biology: [],
+          });
+
+          setSelectedPreset(null);
+
+          return;
+        }
+
+        /*
+         * -----------------------------------------------------
+         * NEET PCB
+         * -----------------------------------------------------
+         */
+
+        if (
+          courseName.includes("NEET")
+        ) {
+          setCourse("NEET");
+
+          setStudentGroup("PCB");
+
+          setSubjects([
+            "Physics",
+            "Chemistry",
+            "Biology",
+          ]);
+
+          setActiveChapterSubject(
+            "Physics"
+          );
+
+          setChaptersBySubject({
+            Physics: [],
+            Chemistry: [],
+            Mathematics: [],
+            Biology: [],
+          });
+
+          setSelectedPreset(null);
+
+          return;
+        }
+
+        /*
+         * -----------------------------------------------------
+         * JEE PCM
+         * -----------------------------------------------------
+         */
+
+        if (
+          courseName.includes("JEE")
+        ) {
+          setCourse("JEE");
+
+          setStudentGroup("PCM");
+
+          setSubjects([
+            "Physics",
+          ]);
+
+          setActiveChapterSubject(
+            "Physics"
+          );
+
+          setChaptersBySubject({
+            Physics: [],
+            Chemistry: [],
+            Mathematics: [],
+            Biology: [],
+          });
+
+          setSelectedPreset(null);
+
+          return;
+        }
+
+        /*
+         * -----------------------------------------------------
+         * UNKNOWN COURSE
+         * -----------------------------------------------------
+         */
+
         throw new Error(
-          data.error ||
-            "Could not load your assigned course."
+          `Unknown course assigned to your batch: ${
+            assignment?.course_name || "Not specified"
+          }`
         );
+      } catch (error) {
+        console.error(
+          "STUDENT ASSIGNMENT LOAD ERROR:",
+          error
+        );
+
+        /*
+         * Important:
+         * Do not fall back to MHT-CET.
+         *
+         * If assignment loading fails,
+         * course remains null and the student
+         * cannot accidentally generate a test
+         * for the wrong course.
+         */
+
+        setCourse(null);
+        setStudentGroup(null);
+
+        setAssignmentError(
+          error instanceof Error
+            ? error.message
+            : "Could not load your assigned course."
+        );
+      } finally {
+        setAssignmentLoading(false);
       }
-
-      const assignment = data.assignment;
-
-      const courseName = String(
-        assignment.course_name || ""
-      )
-        .trim()
-        .toUpperCase();
-
-      setAssignedBatchName(
-        String(
-          assignment.batch_name || ""
-        )
-      );
-
-      /*
-       * NEET
-       */
-      if (courseName.includes("NEET")) {
-        setCourse("NEET");
-        setStudentGroup("PCB");
-
-        setSubjects([
-          "Physics",
-          "Chemistry",
-          "Biology",
-        ]);
-
-        setActiveChapterSubject(
-          "Physics"
-        );
-
-        localStorage.setItem(
-          "mhtCETGroup",
-          "PCB"
-        );
-
-        return;
-      }
-
-      /*
-       * MHT-CET PCB
-       */
-      if (
-        courseName.includes("MHT") &&
-        courseName.includes("PCB")
-      ) {
-        setCourse("MHT-CET");
-        setStudentGroup("PCB");
-
-        setSubjects([
-          "Physics",
-        ]);
-
-        setActiveChapterSubject(
-          "Physics"
-        );
-
-        localStorage.setItem(
-          "mhtCETGroup",
-          "PCB"
-        );
-
-        return;
-      }
-
-      /*
-       * MHT-CET PCM
-       */
-      if (
-        courseName.includes("MHT") &&
-        courseName.includes("PCM")
-      ) {
-        setCourse("MHT-CET");
-        setStudentGroup("PCM");
-
-        setSubjects([
-          "Physics",
-        ]);
-
-        setActiveChapterSubject(
-          "Physics"
-        );
-
-        localStorage.setItem(
-          "mhtCETGroup",
-          "PCM"
-        );
-
-        return;
-      }
-
-      /*
-       * JEE — future support
-       */
-      if (courseName.includes("JEE")) {
-        setCourse("JEE");
-        setStudentGroup("PCM");
-
-        setSubjects([
-          "Physics",
-        ]);
-
-        setActiveChapterSubject(
-          "Physics"
-        );
-
-        return;
-      }
-
-      throw new Error(
-        `Unknown course assigned to your batch: ${assignment.course_name}`
-      );
-    } catch (error) {
-      console.error(
-        "STUDENT ASSIGNMENT LOAD ERROR:",
-        error
-      );
-
-      setAssignmentError(
-        error instanceof Error
-          ? error.message
-          : "Could not load your assigned course."
-      );
-    } finally {
-      setAssignmentLoading(false);
     }
-  }
 
-  void loadStudentAssignment();
-}, []);
+    void loadStudentAssignment();
+  }, []);
 
   /*
    * ---------------------------------------------------------
@@ -468,15 +596,57 @@ useEffect(() => {
           );
         }
 
-        const schemaRows = Array.isArray(data.data) ? data.data : [];
+        const schemaRows =
+          Array.isArray(data.data)
+            ? data.data
+            : [];
+
+        const mappedRows =
+          schemaRows
+            .map(
+              (row: {
+                exam?: string;
+                subject?: string;
+                chapter_name?: string;
+              }) => ({
+                exam: String(
+                  row.exam || ""
+                ),
+                subject: String(
+                  row.subject || ""
+                ),
+                chapter: String(
+                  row.chapter_name || ""
+                ),
+              })
+            )
+            .filter(
+              (row: DatabaseChapter) =>
+                row.exam &&
+                row.subject &&
+                row.chapter
+            );
+
         setAvailableChapters(
-          schemaRows.map((row: { exam?: string; subject?: string; chapter_name?: string }) => ({
-            exam: String(row.exam || ""),
-            subject: String(row.subject || ""),
-            chapter: String(row.chapter_name || ""),
-          })).filter((row: DatabaseChapter) => row.exam && row.subject && row.chapter)
+          mappedRows
         );
-        setDatabaseSubjects(Array.from(new Set(schemaRows.map((row: { subject?: string }) => String(row.subject || "")).filter(Boolean))));
+
+        setDatabaseSubjects(
+          Array.from(
+            new Set(
+              schemaRows
+                .map(
+                  (row: {
+                    subject?: string;
+                  }) =>
+                    String(
+                      row.subject || ""
+                    )
+                )
+                .filter(Boolean)
+            )
+          )
+        );
       } catch (error) {
         console.error(
           "Failed to load database data:",
@@ -487,76 +657,12 @@ useEffect(() => {
       }
     }
 
-    loadDatabaseData();
+    void loadDatabaseData();
   }, []);
 
   /*
    * ---------------------------------------------------------
-   * GROUP CHANGE
-   * ---------------------------------------------------------
-   */
-
-  function changeStudentGroup(
-    nextGroup: StudentGroup
-  ) {
-    setStudentGroup(nextGroup);
-
-    localStorage.setItem(
-      "mhtCETGroup",
-      nextGroup
-    );
-
-    /*
-     * PCM:
-     * Physics + Chemistry + Mathematics
-     *
-     * PCB:
-     * Physics + Chemistry + Biology
-     */
-
-    if (nextGroup === "PCM") {
-      setSubjects([
-        "Physics",
-      ]);
-
-      setActiveChapterSubject(
-        "Physics"
-      );
-
-      setChaptersBySubject(
-        (previous) => ({
-          ...previous,
-          Biology: [],
-        })
-      );
-    } else {
-      setSubjects([
-        "Physics",
-      ]);
-
-      setActiveChapterSubject(
-        "Physics"
-      );
-
-      setChaptersBySubject(
-        (previous) => ({
-          ...previous,
-          Mathematics: [],
-        })
-      );
-    }
-
-    /*
-     * Group change means an old preset
-     * may no longer be valid.
-     */
-
-    setSelectedPreset(null);
-  }
-
-  /*
-   * ---------------------------------------------------------
-   * KEEP SUBJECTS COMPATIBLE WITH GROUP
+   * KEEP SUBJECTS COMPATIBLE WITH ASSIGNED GROUP
    * ---------------------------------------------------------
    */
 
@@ -625,7 +731,7 @@ useEffect(() => {
 
     /*
      * Remove preset if it no longer
-     * belongs to the selected group.
+     * belongs to the assigned group.
      */
 
     setSelectedPreset(
@@ -659,18 +765,34 @@ useEffect(() => {
 
   const currentSubjectChapters =
     useMemo(() => {
+      if (!course) {
+        return [];
+      }
+
       const databaseChapterNames =
         availableChapters
           .filter(
             (item) =>
-              item.exam.trim().toLowerCase().replace(/[_ -]+/g, "") ===
-                course.trim().toLowerCase().replace(/[_ -]+/g, "") &&
+              item.exam
+                .trim()
+                .toLowerCase()
+                .replace(
+                  /[_ -]+/g,
+                  ""
+                ) ===
+                course
+                  .trim()
+                  .toLowerCase()
+                  .replace(
+                    /[_ -]+/g,
+                    "" 
+                  ) &&
               item.subject
                 .trim()
                 .toLowerCase() ===
-              activeChapterSubject
-                .trim()
-                .toLowerCase()
+                activeChapterSubject
+                  .trim()
+                  .toLowerCase()
           )
           .map(
             (item) =>
@@ -704,87 +826,6 @@ useEffect(() => {
 
   /*
    * ---------------------------------------------------------
-   * CHANGE COURSE
-   * ---------------------------------------------------------
-   */
-  function changeCourse(nextCourse: Course) {
-  setCourse(nextCourse);
-
-  const config = COURSE_CONFIG[nextCourse];
-
-  // NEET automatically uses PCB
-  if (nextCourse === "NEET") {
-    setStudentGroup("PCB");
-
-    localStorage.setItem(
-      "mhtCETGroup",
-      "PCB"
-    );
-
-    setSubjects([
-      "Physics",
-      "Chemistry",
-      "Biology",
-    ]);
-
-    setActiveChapterSubject("Physics");
-
-    setChaptersBySubject({
-      Physics: [],
-      Chemistry: [],
-      Mathematics: [],
-      Biology: [],
-    });
-
-    setSelectedPreset(null);
-
-    return;
-  }
-
-  // MHT-CET
-  // Keep the group selection so user chooses PCM or PCB
-  if (nextCourse === "MHT-CET") {
-    setStudentGroup(null);
-
-    localStorage.removeItem(
-      "mhtCETGroup"
-    );
-
-    setSubjects(["Physics"]);
-
-    setActiveChapterSubject("Physics");
-
-    setChaptersBySubject({
-      Physics: [],
-      Chemistry: [],
-      Mathematics: [],
-      Biology: [],
-    });
-
-    setSelectedPreset(null);
-
-    return;
-  }
-
-  // Other courses
-  if (config.subjects.length > 0) {
-    const firstSubject = config.subjects[0];
-
-    setSubjects([firstSubject]);
-    setActiveChapterSubject(firstSubject);
-  }
-
-  setChaptersBySubject({
-    Physics: [],
-    Chemistry: [],
-    Mathematics: [],
-    Biology: [],
-  });
-
-  setSelectedPreset(null);
-}
-  /*
-   * ---------------------------------------------------------
    * TOGGLE SUBJECT
    * ---------------------------------------------------------
    */
@@ -792,27 +833,29 @@ useEffect(() => {
   function toggleSubject(
     nextSubject: Subject
   ) {
-    if (studentGroup) {
-      const allowedSubjects =
-        studentGroup === "PCM"
-          ? ([
-              "Physics",
-              "Chemistry",
-              "Mathematics",
-            ] as Subject[])
-          : ([
-              "Physics",
-              "Chemistry",
-              "Biology",
-            ] as Subject[]);
+    if (!studentGroup) {
+      return;
+    }
 
-      if (
-        !allowedSubjects.includes(
-          nextSubject
-        )
-      ) {
-        return;
-      }
+    const allowedSubjects =
+      studentGroup === "PCM"
+        ? ([
+            "Physics",
+            "Chemistry",
+            "Mathematics",
+          ] as Subject[])
+        : ([
+            "Physics",
+            "Chemistry",
+            "Biology",
+          ] as Subject[]);
+
+    if (
+      !allowedSubjects.includes(
+        nextSubject
+      )
+    ) {
+      return;
     }
 
     setSubjects(
@@ -983,13 +1026,6 @@ useEffect(() => {
         };
       }
     );
-
-    /*
-     * Selecting/clearing chapters
-     * means a preset can still remain
-     * selected because presets determine
-     * question count, not chapters.
-     */
   }
 
   /*
@@ -1096,23 +1132,25 @@ useEffect(() => {
 
   async function generateTest() {
     if (
+      !course ||
+      !courseConfig ||
       !courseConfig.available
     ) {
       return;
     }
 
-if (
-  course === "MHT-CET" &&
-  !studentGroup
-) {
-  alert(
-    "Please select your MHT CET group: PCM or PCB."
-  );
+    /*
+     * A valid assigned group is required
+     * for every currently supported course.
+     */
 
-  return;
-}
+    if (!studentGroup) {
+      alert(
+        "Your assigned batch does not have a valid course group."
+      );
 
-
+      return;
+    }
 
     if (
       !selectedPreset ||
@@ -1179,10 +1217,11 @@ if (
 
               course,
 
-              studentGroup:
-  course === "NEET"
-    ? "PCB"
-    : studentGroup,
+              /*
+               * Use the assigned group.
+               * It cannot be changed by the student.
+               */
+              studentGroup,
 
               subjects,
 
@@ -1405,502 +1444,377 @@ if (
 
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_330px] gap-6">
+        {/* ASSIGNMENT LOADING */}
 
-          {/* MAIN CONFIGURATION */}
+        {assignmentLoading && (
+          <div className="mb-6 rounded-2xl bg-white border border-[#e5e7eb] shadow-sm p-6">
+            <div className="text-sm font-semibold">
+              Loading your assigned course...
+            </div>
 
-          <div className="space-y-6">
-
-
-
-
-
-
-  <section className="bg-white border border-[#e5e7eb] rounded-2xl shadow-sm p-6">
-  <div className="mb-5">
-    <h2 className="text-lg font-semibold">
-      1. Your Assigned Course
-    </h2>
-
-    <p className="text-sm text-[#6b7280] mt-1">
-      Your course is assigned by your academy.
-    </p>
-  </div>
-
-  {assignmentLoading ? (
-    <div className="rounded-xl bg-[#f9fafb] border border-[#e5e7eb] p-4 text-sm text-[#6b7280]">
-      Loading your assigned course...
-    </div>
-  ) : assignmentError ? (
-    <div className="rounded-xl bg-[#fff7ed] border border-[#fed7aa] p-4 text-sm text-[#9a3412]">
-      {assignmentError}
-    </div>
-  ) : (
-    <div className="rounded-xl border-2 border-[#2563eb] bg-[#eff6ff] p-5">
-      <div className="text-lg font-bold text-[#1d4ed8]">
-        {course}
-        {course === "MHT-CET" &&
-          studentGroup &&
-          ` — ${studentGroup}`}
-      </div>
-
-      {assignedBatchName && (
-        <div className="text-sm text-[#6b7280] mt-2">
-          Batch: {assignedBatchName}
-        </div>
-      )}
-
-      <div className="text-xs text-[#6b7280] mt-3">
-        This course was assigned by your academy and
-        cannot be changed.
-      </div>
-    </div>
-  )}
-</section>
-
-
-       {/* GROUP */}
-
-{course === "MHT-CET" && (
-  <section className="bg-white border border-[#e5e7eb] rounded-2xl shadow-sm p-6">
-
-    <div className="mb-5">
-
-      <h2 className="text-lg font-semibold">
-        2. Choose MHT CET Group
-      </h2>
-
-      <p className="text-sm text-[#6b7280] mt-1">
-        Choose the subject combination you want to practise.
-      </p>
-
-    </div>
-
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-
-      <button
-        type="button"
-        onClick={() => changeStudentGroup("PCM")}
-        className={`relative text-left rounded-xl border-2 p-5 transition ${
-          studentGroup === "PCM"
-            ? "border-[#2563eb] bg-[#eff6ff]"
-            : "border-[#e5e7eb] hover:border-[#bfdbfe]"
-        }`}
-      >
-
-        {studentGroup === "PCM" && (
-          <div className="absolute top-4 right-4 w-5 h-5 rounded-full bg-[#2563eb] text-white flex items-center justify-center text-xs">
-
+            <div className="text-sm text-[#6b7280] mt-2">
+              Please wait while we load the
+              batch assigned to your account.
+            </div>
           </div>
         )}
 
-        <div className="text-lg font-bold">
-          PCM
-        </div>
+        {/* ASSIGNMENT ERROR */}
 
-        <div className="text-sm text-[#6b7280] mt-2">
-          Physics + Chemistry + Mathematics
-        </div>
-
-      </button>
-
-      <button
-        type="button"
-        onClick={() => changeStudentGroup("PCB")}
-        className={`relative text-left rounded-xl border-2 p-5 transition ${
-          studentGroup === "PCB"
-            ? "border-[#2563eb] bg-[#eff6ff]"
-            : "border-[#e5e7eb] hover:border-[#bfdbfe]"
-        }`}
-      >
-
-        {studentGroup === "PCB" && (
-          <div className="absolute top-4 right-4 w-5 h-5 rounded-full bg-[#2563eb] text-white flex items-center justify-center text-xs">
-
-          </div>
-        )}
-
-        <div className="text-lg font-bold">
-          PCB
-        </div>
-
-        <div className="text-sm text-[#6b7280] mt-2">
-          Physics + Chemistry + Biology
-        </div>
-
-      </button>
-
-    </div>
-
-    {!studentGroup && (
-      <div className="mt-4 rounded-xl bg-[#fff7ed] border border-[#fed7aa] p-4 text-sm text-[#9a3412]">
-        Select PCM or PCB to continue.
-      </div>
-    )}
-
-    {studentGroup && (
-      <div className="mt-4 rounded-xl bg-[#f9fafb] border border-[#e5e7eb] p-3">
-
-        <div className="text-xs text-[#6b7280]">
-          Selected group
-        </div>
-
-        <div className="text-sm font-semibold mt-1">
-          {studentGroup}
-        </div>
-
-      </div>
-    )}
-
-  </section>
-)}
-
-            {/* SUBJECT */}
-
-            <section className="bg-white border border-[#e5e7eb] rounded-2xl shadow-sm p-6">
-
-              <div className="mb-5">
-
-                <h2 className="text-lg font-semibold">
-                  3. Choose Subject
-                </h2>
-
-                <p className="text-sm text-[#6b7280] mt-1">
-                  Select one or more subjects.
-                  Mathematics and Biology cannot
-                  be selected together.
-                </p>
-
+        {!assignmentLoading &&
+          assignmentError && (
+            <div className="mb-6 rounded-2xl bg-[#fff7ed] border border-[#fed7aa] p-6">
+              <div className="text-sm font-semibold text-[#9a3412]">
+                Unable to load your assigned course
               </div>
 
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+              <div className="text-sm text-[#9a3412] mt-2">
+                {assignmentError}
+              </div>
 
-                {courseConfig.subjects
-                  .filter(
-                    (item) => {
-                      if (
-                        !studentGroup
-                      ) {
-                        return false;
-                      }
+              <button
+                type="button"
+                onClick={() =>
+                  window.location.reload()
+                }
+                className="mt-4 px-4 py-2 rounded-xl bg-[#1d4ed8] text-white text-sm font-semibold"
+              >
+                Try Again
+              </button>
+            </div>
+          )}
 
-                      if (
-                        studentGroup ===
-                        "PCM"
-                      ) {
-                        return [
-                          "Physics",
-                          "Chemistry",
-                          "Mathematics",
-                        ].includes(
-                          item
-                        );
-                      }
+        {!assignmentLoading &&
+          !assignmentError &&
+          course && (
+            <div className="grid grid-cols-1 lg:grid-cols-[1fr_330px] gap-6">
 
-                      return [
-                        "Physics",
-                        "Chemistry",
-                        "Biology",
-                      ].includes(
-                        item
-                      );
-                    }
-                  )
-                  .map((item) => {
+              {/* MAIN CONFIGURATION */}
 
-                    const selected =
-                      subjects.includes(
-                        item
-                      );
+              <div className="space-y-6">
 
-                    const blocked =
-                      (item ===
-                        "Mathematics" &&
-                        subjects.includes(
-                          "Biology"
-                        )) ||
-                      (item ===
-                        "Biology" &&
-                        subjects.includes(
-                          "Mathematics"
-                        ));
+                {/* ASSIGNED COURSE */}
 
-                    const hasDatabaseData =
-                      databaseSubjects.some(
-                        (
-                          dbSubject
-                        ) =>
-                          dbSubject
-                            .trim()
-                            .toLowerCase() ===
-                          item
-                            .trim()
-                            .toLowerCase()
-                      );
+                <section className="bg-white border border-[#e5e7eb] rounded-2xl shadow-sm p-6">
 
-                    return (
-                      <button
-                        key={item}
-                        onClick={() =>
-                          !blocked &&
-                          toggleSubject(
-                            item
-                          )
-                        }
-                        disabled={
-                          blocked ||
-                          !studentGroup
-                        }
-                        className={`p-4 rounded-xl border-2 text-sm font-semibold transition ${
-                          selected
-                            ? "border-[#2563eb] bg-[#eff6ff] text-[#1d4ed8]"
-                            : blocked
-                            ? "border-[#e5e7eb] bg-[#f9fafb] opacity-50 cursor-not-allowed"
-                            : "border-[#e5e7eb] hover:border-[#bfdbfe]"
-                        }`}
-                      >
+                  <div className="mb-5">
 
-                        <div>
-                          {item}
+                    <h2 className="text-lg font-semibold">
+                      1. Your Assigned Course
+                    </h2>
+
+                    <p className="text-sm text-[#6b7280] mt-1">
+                      Your course is assigned by your academy.
+                    </p>
+
+                  </div>
+
+                  <div className="rounded-xl border-2 border-[#2563eb] bg-[#eff6ff] p-5">
+
+                    <div className="text-lg font-bold text-[#1d4ed8]">
+                      {course}
+
+                      {course ===
+                        "MHT-CET" &&
+                        studentGroup &&
+                        ` — ${studentGroup}`}
+                    </div>
+
+                    {course ===
+                      "NEET" && (
+                      <div className="text-sm text-[#6b7280] mt-2">
+                        PCB — Physics + Chemistry + Biology
+                      </div>
+                    )}
+
+                    {course ===
+                      "JEE" && (
+                      <div className="text-sm text-[#6b7280] mt-2">
+                        PCM — Physics + Chemistry + Mathematics
+                      </div>
+                    )}
+
+                    {assignedBatchName && (
+                      <div className="text-sm text-[#6b7280] mt-2">
+                        Batch:{" "}
+                        {assignedBatchName}
+                      </div>
+                    )}
+
+                    <div className="text-xs text-[#6b7280] mt-3">
+                      This course and group were assigned by
+                      your academy and cannot be changed.
+                    </div>
+
+                  </div>
+
+                </section>
+
+                {/* ASSIGNED GROUP */}
+
+                {course ===
+                  "MHT-CET" && (
+                  <section className="bg-white border border-[#e5e7eb] rounded-2xl shadow-sm p-6">
+
+                    <div className="mb-5">
+
+                      <h2 className="text-lg font-semibold">
+                        2. Your Assigned Group
+                      </h2>
+
+                      <p className="text-sm text-[#6b7280] mt-1">
+                        Your MHT-CET group is assigned by
+                        your academy.
+                      </p>
+
+                    </div>
+
+                    {studentGroup ? (
+                      <div className="rounded-xl border-2 border-[#2563eb] bg-[#eff6ff] p-5">
+
+                        <div className="text-lg font-bold text-[#1d4ed8]">
+                          {studentGroup}
                         </div>
 
-                     
+                        <div className="text-sm text-[#6b7280] mt-2">
+                          {studentGroup ===
+                          "PCM"
+                            ? "Physics + Chemistry + Mathematics"
+                            : "Physics + Chemistry + Biology"}
+                        </div>
 
-                        {blocked && (
-                          <div className="text-[9px] text-[#9ca3af] mt-1">
-                            Cannot combine with{" "}
-                            {item ===
-                            "Mathematics"
-                              ? "Biology"
-                              : "Mathematics"}
-                          </div>
+                        <div className="text-xs text-[#6b7280] mt-3">
+                          This group was assigned by your
+                          academy and cannot be changed.
+                        </div>
+
+                      </div>
+                    ) : (
+                      <div className="rounded-xl bg-[#fff7ed] border border-[#fed7aa] p-4 text-sm text-[#9a3412]">
+                        No valid group has been assigned
+                        to your batch.
+                      </div>
+                    )}
+
+                  </section>
+                )}
+
+                {/* SUBJECT */}
+
+                <section className="bg-white border border-[#e5e7eb] rounded-2xl shadow-sm p-6">
+
+                  <div className="mb-5">
+
+                    <h2 className="text-lg font-semibold">
+                      {course ===
+                      "MHT-CET"
+                        ? "3."
+                        : "2."}{" "}
+                      Choose Subject
+                    </h2>
+
+                    <p className="text-sm text-[#6b7280] mt-1">
+                      Select one or more subjects.
+                      Mathematics and Biology cannot
+                      be selected together.
+                    </p>
+
+                  </div>
+
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+
+                    {courseConfig?.subjects
+                      .filter(
+                        (item) => {
+                          if (
+                            !studentGroup
+                          ) {
+                            return false;
+                          }
+
+                          if (
+                            studentGroup ===
+                            "PCM"
+                          ) {
+                            return [
+                              "Physics",
+                              "Chemistry",
+                              "Mathematics",
+                            ].includes(
+                              item
+                            );
+                          }
+
+                          return [
+                            "Physics",
+                            "Chemistry",
+                            "Biology",
+                          ].includes(
+                            item
+                          );
+                        }
+                      )
+                      .map(
+                        (item) => {
+                          const selected =
+                            subjects.includes(
+                              item
+                            );
+
+                          const blocked =
+                            (item ===
+                              "Mathematics" &&
+                              subjects.includes(
+                                "Biology"
+                              )) ||
+                            (item ===
+                              "Biology" &&
+                              subjects.includes(
+                                "Mathematics"
+                              ));
+
+                          const hasDatabaseData =
+                            databaseSubjects.some(
+                              (
+                                dbSubject
+                              ) =>
+                                dbSubject
+                                  .trim()
+                                  .toLowerCase() ===
+                                item
+                                  .trim()
+                                  .toLowerCase()
+                            );
+
+                          return (
+                            <button
+                              key={item}
+                              type="button"
+                              onClick={() =>
+                                !blocked &&
+                                toggleSubject(
+                                  item
+                                )
+                              }
+                              disabled={
+                                blocked ||
+                                !studentGroup
+                              }
+                              className={`p-4 rounded-xl border-2 text-sm font-semibold transition ${
+                                selected
+                                  ? "border-[#2563eb] bg-[#eff6ff] text-[#1d4ed8]"
+                                  : blocked
+                                  ? "border-[#e5e7eb] bg-[#f9fafb] opacity-50 cursor-not-allowed"
+                                  : "border-[#e5e7eb] hover:border-[#bfdbfe]"
+                              }`}
+                            >
+                              <div>
+                                {item}
+                              </div>
+                            </button>
+                          );
+                        }
+                      )}
+
+                  </div>
+
+                  {studentGroup && (
+                    <div className="mt-4 rounded-xl bg-[#f9fafb] border border-[#e5e7eb] p-3">
+
+                      <div className="text-xs text-[#6b7280] mb-2">
+                        Selected subjects
+                      </div>
+
+                      <div className="flex flex-wrap gap-2">
+
+                        {subjects.map(
+                          (item) => (
+                            <span
+                              key={item}
+                              className="px-3 py-1.5 rounded-lg bg-[#eff6ff] text-[#1d4ed8] text-xs font-semibold"
+                            >
+                              {item}
+                            </span>
+                          )
                         )}
 
-                      </button>
-                    );
-                  })}
-
-              </div>
-
-              {studentGroup && (
-                <div className="mt-4 rounded-xl bg-[#f9fafb] border border-[#e5e7eb] p-3">
-
-                  <div className="text-xs text-[#6b7280] mb-2">
-                    Selected subjects
-                  </div>
-
-                  <div className="flex flex-wrap gap-2">
-
-                    {subjects.map(
-                      (item) => (
-                        <span
-                          key={item}
-                          className="px-3 py-1.5 rounded-lg bg-[#eff6ff] text-[#1d4ed8] text-xs font-semibold"
-                        >
-                          {item}
-                        </span>
-                      )
-                    )}
-
-                  </div>
-
-                </div>
-              )}
-
-            </section>
-
-            {/* CHAPTERS */}
-
-            <section className="bg-white border border-[#e5e7eb] rounded-2xl shadow-sm p-6">
-
-              <div className="mb-5">
-
-                <h2 className="text-lg font-semibold">
-                  4. Choose Chapters
-                </h2>
-
-                <p className="text-sm text-[#6b7280] mt-1">
-                  Select chapters separately for
-                  each selected subject.
-                </p>
-
-              </div>
-
-              {!studentGroup ? (
-                <div className="rounded-xl bg-[#fff7ed] border border-[#fed7aa] p-4 text-sm text-[#9a3412]">
-                  Select PCM or PCB first.
-                </div>
-              ) : (
-                <>
-                  <div className="flex flex-wrap gap-2 mb-5">
-
-                    {subjects.map(
-                      (item) => {
-
-                        const selectedCount =
-                          (
-                            chaptersBySubject[
-                              item
-                            ] || []
-                          ).length;
-
-                        const active =
-                          activeChapterSubject ===
-                          item;
-
-                        return (
-                          <button
-                            key={item}
-                            onClick={() =>
-                              setActiveChapterSubject(
-                                item
-                              )
-                            }
-                            className={`px-4 py-2.5 rounded-xl border-2 text-sm font-semibold transition ${
-                              active
-                                ? "border-[#2563eb] bg-[#eff6ff] text-[#1d4ed8]"
-                                : "border-[#e5e7eb] hover:border-[#bfdbfe]"
-                            }`}
-                          >
-                            {item}
-
-                            {selectedCount >
-                              0 && (
-                              <span className="ml-2 text-xs">
-                                (
-                                {
-                                  selectedCount
-                                }
-                                )
-                              </span>
-                            )}
-
-                          </button>
-                        );
-                      }
-                    )}
-
-                  </div>
-
-                  {loadingDatabase && (
-                    <div className="rounded-xl bg-[#f9fafb] border border-[#e5e7eb] p-4 text-sm text-[#6b7280]">
-                      Loading chapters from
-                      the question bank...
-                    </div>
-                  )}
-
-                  {!loadingDatabase && (
-                    <div className="flex items-center justify-between gap-3 mb-4">
-
-                      <div>
-
-                        <div className="text-sm font-semibold">
-                          {
-                            activeChapterSubject
-                          }
-                        </div>
-
-                        <div className="text-xs text-[#6b7280] mt-1">
-                          Select chapters for{" "}
-                          {
-                            activeChapterSubject
-                          }.
-                        </div>
-
-                      </div>
-
-                      <div className="flex gap-2">
-
-                        <button
-                          onClick={() =>
-                            selectAllChapters(
-                              activeChapterSubject,
-                              currentSubjectChapters
-                            )
-                          }
-                          disabled={
-                            currentSubjectChapters.length ===
-                            0
-                          }
-                          className="text-xs font-semibold text-[#2563eb] hover:underline disabled:text-[#9ca3af] disabled:no-underline"
-                        >
-                          Select All
-                        </button>
-
-                        <span className="text-[#d1d5db]">
-                          |
-                        </span>
-
-                        <button
-                          onClick={() =>
-                            clearChapters(
-                              activeChapterSubject
-                            )
-                          }
-                          className="text-xs font-semibold text-[#6b7280] hover:underline"
-                        >
-                          Clear
-                        </button>
-
                       </div>
 
                     </div>
                   )}
 
-                  {!loadingDatabase &&
-                    currentSubjectChapters.length >
-                      0 && (
-                      <div className="space-y-2">
+                </section>
 
-                        {currentSubjectChapters.map(
-                          (
-                            chapter
-                          ) => {
+                {/* CHAPTERS */}
 
-                            const selected =
+                <section className="bg-white border border-[#e5e7eb] rounded-2xl shadow-sm p-6">
+
+                  <div className="mb-5">
+
+                    <h2 className="text-lg font-semibold">
+                      {course ===
+                      "MHT-CET"
+                        ? "4."
+                        : "3."}{" "}
+                      Choose Chapters
+                    </h2>
+
+                    <p className="text-sm text-[#6b7280] mt-1">
+                      Select chapters separately for
+                      each selected subject.
+                    </p>
+
+                  </div>
+
+                  {!studentGroup ? (
+                    <div className="rounded-xl bg-[#fff7ed] border border-[#fed7aa] p-4 text-sm text-[#9a3412]">
+                      No valid course group is assigned
+                      to your batch.
+                    </div>
+                  ) : (
+                    <>
+                      <div className="flex flex-wrap gap-2 mb-5">
+
+                        {subjects.map(
+                          (item) => {
+                            const selectedCount =
                               (
                                 chaptersBySubject[
-                                  activeChapterSubject
+                                  item
                                 ] || []
-                              ).includes(
-                                chapter
-                              );
+                              ).length;
+
+                            const active =
+                              activeChapterSubject ===
+                              item;
 
                             return (
                               <button
-                                key={
-                                  chapter
-                                }
+                                key={item}
+                                type="button"
                                 onClick={() =>
-                                  toggleChapter(
-                                    activeChapterSubject,
-                                    chapter
+                                  setActiveChapterSubject(
+                                    item
                                   )
                                 }
-                                className={`w-full flex items-center justify-between p-3.5 rounded-xl border transition text-left ${
-                                  selected
-                                    ? "border-[#93c5fd] bg-[#eff6ff]"
-                                    : "border-[#e5e7eb] hover:bg-[#f9fafb]"
+                                className={`px-4 py-2.5 rounded-xl border-2 text-sm font-semibold transition ${
+                                  active
+                                    ? "border-[#2563eb] bg-[#eff6ff] text-[#1d4ed8]"
+                                    : "border-[#e5e7eb] hover:border-[#bfdbfe]"
                                 }`}
                               >
+                                {item}
 
-                                <span className="text-sm font-medium">
-                                  {
-                                    chapter
-                                  }
-                                </span>
-
-                                <span
-                                  className={`w-5 h-5 rounded-md border flex items-center justify-center text-xs ${
-                                    selected
-                                      ? "bg-[#2563eb] border-[#2563eb] text-white"
-                                      : "border-[#d1d5db]"
-                                  }`}
-                                >
-                                  {selected
-                                    ? ""
-                                    : ""}
-                                </span>
+                                {selectedCount >
+                                  0 && (
+                                  <span className="ml-2 text-xs">
+                                    (
+                                    {
+                                      selectedCount
+                                    }
+                                    )
+                                  </span>
+                                )}
 
                               </button>
                             );
@@ -1908,442 +1822,571 @@ if (
                         )}
 
                       </div>
-                    )}
 
-                  {!loadingDatabase &&
-                    currentSubjectChapters.length ===
-                      0 && (
-                      <div className="rounded-xl bg-[#fff7ed] border border-[#fed7aa] p-4 text-sm text-[#9a3412]">
-                        No chapters found in
-                        the database for{" "}
-                        <strong>
-                          {
-                            activeChapterSubject
-                          }
-                        </strong>
-                        .
-                      </div>
-                    )}
+                      {loadingDatabase && (
+                        <div className="rounded-xl bg-[#f9fafb] border border-[#e5e7eb] p-4 text-sm text-[#6b7280]">
+                          Loading chapters from
+                          the question bank...
+                        </div>
+                      )}
 
-                  <div className="mt-5 space-y-2">
+                      {!loadingDatabase && (
+                        <div className="flex items-center justify-between gap-3 mb-4">
 
-                    {subjects.map(
-                      (item) => {
+                          <div>
 
-                        const selected =
-                          chaptersBySubject[
-                            item
-                          ] || [];
-
-                        return (
-                          <div
-                            key={item}
-                            className="rounded-xl bg-[#f9fafb] border border-[#e5e7eb] p-3"
-                          >
-
-                            <div className="flex items-center justify-between">
-
-                              <span className="text-xs font-semibold">
-                                {item}
-                              </span>
-
-                              <span className="text-[11px] text-[#6b7280]">
-                                {
-                                  selected.length
-                                }{" "}
-                                selected
-                              </span>
-
+                            <div className="text-sm font-semibold">
+                              {
+                                activeChapterSubject
+                              }
                             </div>
 
-                            {selected.length >
-                              0 && (
-                              <div className="text-[11px] text-[#6b7280] mt-2">
-                                {selected.join(
-                                  ", "
-                                )}
-                              </div>
+                            <div className="text-xs text-[#6b7280] mt-1">
+                              Select chapters for{" "}
+                              {
+                                activeChapterSubject
+                              }.
+                            </div>
+
+                          </div>
+
+                          <div className="flex gap-2">
+
+                            <button
+                              type="button"
+                              onClick={() =>
+                                selectAllChapters(
+                                  activeChapterSubject,
+                                  currentSubjectChapters
+                                )
+                              }
+                              disabled={
+                                currentSubjectChapters.length ===
+                                0
+                              }
+                              className="text-xs font-semibold text-[#2563eb] hover:underline disabled:text-[#9ca3af] disabled:no-underline"
+                            >
+                              Select All
+                            </button>
+
+                            <span className="text-[#d1d5db]">
+                              |
+                            </span>
+
+                            <button
+                              type="button"
+                              onClick={() =>
+                                clearChapters(
+                                  activeChapterSubject
+                                )
+                              }
+                              className="text-xs font-semibold text-[#6b7280] hover:underline"
+                            >
+                              Clear
+                            </button>
+
+                          </div>
+
+                        </div>
+                      )}
+
+                      {!loadingDatabase &&
+                        currentSubjectChapters.length >
+                          0 && (
+                          <div className="space-y-2">
+
+                            {currentSubjectChapters.map(
+                              (
+                                chapter
+                              ) => {
+                                const selected =
+                                  (
+                                    chaptersBySubject[
+                                      activeChapterSubject
+                                    ] || []
+                                  ).includes(
+                                    chapter
+                                  );
+
+                                return (
+                                  <button
+                                    key={
+                                      chapter
+                                    }
+                                    type="button"
+                                    onClick={() =>
+                                      toggleChapter(
+                                        activeChapterSubject,
+                                        chapter
+                                      )
+                                    }
+                                    className={`w-full flex items-center justify-between p-3.5 rounded-xl border transition text-left ${
+                                      selected
+                                        ? "border-[#93c5fd] bg-[#eff6ff]"
+                                        : "border-[#e5e7eb] hover:bg-[#f9fafb]"
+                                    }`}
+                                  >
+
+                                    <span className="text-sm font-medium">
+                                      {
+                                        chapter
+                                      }
+                                    </span>
+
+                                    <span
+                                      className={`w-5 h-5 rounded-md border flex items-center justify-center text-xs ${
+                                        selected
+                                          ? "bg-[#2563eb] border-[#2563eb] text-white"
+                                          : "border-[#d1d5db]"
+                                      }`}
+                                    >
+                                      {selected
+                                        ? "✓"
+                                        : ""}
+                                    </span>
+
+                                  </button>
+                                );
+                              }
                             )}
 
                           </div>
+                        )}
+
+                      {!loadingDatabase &&
+                        currentSubjectChapters.length ===
+                          0 && (
+                          <div className="rounded-xl bg-[#fff7ed] border border-[#fed7aa] p-4 text-sm text-[#9a3412]">
+                            No chapters found in
+                            the database for{" "}
+                            <strong>
+                              {
+                                activeChapterSubject
+                              }
+                            </strong>
+                            .
+                          </div>
+                        )}
+
+                      <div className="mt-5 space-y-2">
+
+                        {subjects.map(
+                          (item) => {
+                            const selected =
+                              chaptersBySubject[
+                                item
+                              ] || [];
+
+                            return (
+                              <div
+                                key={item}
+                                className="rounded-xl bg-[#f9fafb] border border-[#e5e7eb] p-3"
+                              >
+
+                                <div className="flex items-center justify-between">
+
+                                  <span className="text-xs font-semibold">
+                                    {item}
+                                  </span>
+
+                                  <span className="text-[11px] text-[#6b7280]">
+                                    {
+                                      selected.length
+                                    }{" "}
+                                    selected
+                                  </span>
+
+                                </div>
+
+                                {selected.length >
+                                  0 && (
+                                  <div className="text-[11px] text-[#6b7280] mt-2">
+                                    {selected.join(
+                                      ", "
+                                    )}
+                                  </div>
+                                )}
+
+                              </div>
+                            );
+                          }
+                        )}
+
+                      </div>
+
+                      {selectedChapters.length ===
+                        0 && (
+                        <div className="mt-4 rounded-xl bg-[#f9fafb] border border-[#e5e7eb] p-3 text-xs text-[#6b7280]">
+                          No chapter selected —
+                          questions can be taken
+                          from the selected subjects.
+                        </div>
+                      )}
+                    </>
+                  )}
+
+                </section>
+
+                {/* DIFFICULTY */}
+
+                <section className="bg-white border border-[#e5e7eb] rounded-2xl shadow-sm p-6">
+
+                  <div className="mb-5">
+
+                    <h2 className="text-lg font-semibold">
+                      {course ===
+                      "MHT-CET"
+                        ? "5."
+                        : "4."}{" "}
+                      Difficulty
+                    </h2>
+
+                    <p className="text-sm text-[#6b7280] mt-1">
+                      Choose the difficulty level.
+                    </p>
+
+                  </div>
+
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+
+                    {DIFFICULTIES.map(
+                      (item) => {
+                        const selected =
+                          difficulty ===
+                          item;
+
+                        return (
+                          <button
+                            key={item}
+                            type="button"
+                            onClick={() =>
+                              setDifficulty(
+                                item
+                              )
+                            }
+                            className={`p-3.5 rounded-xl border-2 text-sm font-semibold transition ${
+                              selected
+                                ? "border-[#2563eb] bg-[#eff6ff] text-[#1d4ed8]"
+                                : "border-[#e5e7eb] hover:border-[#bfdbfe]"
+                            }`}
+                          >
+                            {item}
+                          </button>
                         );
                       }
                     )}
 
                   </div>
 
-                  {selectedChapters.length ===
-                    0 && (
-                    <div className="mt-4 rounded-xl bg-[#f9fafb] border border-[#e5e7eb] p-3 text-xs text-[#6b7280]">
-                      No chapter selected —
-                      questions can be taken
-                      from the selected subjects.
-                    </div>
-                  )}
-                </>
-              )}
+                </section>
 
-            </section>
+                {/* PRESETS */}
 
-            {/* DIFFICULTY */}
+                <section className="bg-white border border-[#e5e7eb] rounded-2xl shadow-sm p-6">
 
-            <section className="bg-white border border-[#e5e7eb] rounded-2xl shadow-sm p-6">
+                  <div className="mb-5">
 
-              <div className="mb-5">
+                    <h2 className="text-lg font-semibold">
+                      {course ===
+                      "MHT-CET"
+                        ? "6."
+                        : "5."}{" "}
+                      Choose Test Preset
+                    </h2>
 
-                <h2 className="text-lg font-semibold">
-                  5. Difficulty
-                </h2>
+                    <p className="text-sm text-[#6b7280] mt-1">
+                      Choose a fixed test length.
+                      Questions, marks and duration
+                      are automatically determined.
+                    </p>
 
-                <p className="text-sm text-[#6b7280] mt-1">
-                  Choose the difficulty level.
-                </p>
+                  </div>
 
-              </div>
+                  <div className="space-y-3">
 
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-
-                {DIFFICULTIES.map(
-                  (item) => {
-
-                    const selected =
-                      difficulty ===
-                      item;
-
-                    return (
-                      <button
-                        key={item}
-                        onClick={() =>
-                          setDifficulty(
-                            item
+                    {availablePresets
+                      .filter(
+                        (preset) =>
+                          presetMatchesSelectedSubjects(
+                            preset
                           )
+                      )
+                      .map(
+                        (preset) => {
+                          const details =
+                            calculatePreset(
+                              preset
+                            );
+
+                          const selected =
+                            selectedPreset?.id ===
+                            preset.id;
+
+                          const subjectSplit =
+                            Object.entries(
+                              preset.subjects
+                            )
+                              .map(
+                                (
+                                  [
+                                    subject,
+                                    count,
+                                  ]
+                                ) =>
+                                  `${
+                                    PRESET_SUBJECT_NAMES[
+                                      subject
+                                    ]
+                                  } ${count}`
+                              )
+                              .join(
+                                " + "
+                              );
+
+                          return (
+                            <button
+                              key={
+                                preset.id
+                              }
+                              type="button"
+                              onClick={() =>
+                                setSelectedPreset(
+                                  preset
+                                )
+                              }
+                              className={`relative w-full text-left rounded-xl border-2 p-4 transition ${
+                                selected
+                                  ? "border-[#2563eb] bg-[#eff6ff]"
+                                  : "border-[#e5e7eb] hover:border-[#bfdbfe]"
+                              }`}
+                            >
+
+                              {selected && (
+                                <div className="absolute top-4 right-4 w-5 h-5 rounded-full bg-[#2563eb] text-white flex items-center justify-center text-xs">
+                                  ✓
+                                </div>
+                              )}
+
+                              <div className="flex items-start justify-between gap-4 pr-8">
+
+                                <div>
+
+                                  <div className="font-semibold">
+                                    {
+                                      preset.name
+                                    }
+                                  </div>
+
+                                  <div className="text-xs text-[#6b7280] mt-1">
+                                    {
+                                      subjectSplit
+                                    }
+                                    {" questions per subject"}
+                                  </div>
+
+                                </div>
+
+                                {preset.examAccurate && (
+                                  <span className="shrink-0 text-[10px] font-semibold uppercase tracking-wide bg-green-100 text-green-700 px-2 py-1 rounded-md">
+                                    Actual MHT CET pattern
+                                  </span>
+                                )}
+
+                              </div>
+
+                              <div className="flex flex-wrap gap-2 mt-4">
+
+                                <span className="px-3 py-1.5 rounded-lg bg-white border border-[#e5e7eb] text-xs font-semibold">
+                                  {
+                                    details.totalQuestions
+                                  }{" "}
+                                  questions
+                                </span>
+
+                                <span className="px-3 py-1.5 rounded-lg bg-white border border-[#e5e7eb] text-xs font-semibold">
+                                  {
+                                    details.totalMarks
+                                  }{" "}
+                                  marks
+                                </span>
+
+                                <span className="px-3 py-1.5 rounded-lg bg-white border border-[#e5e7eb] text-xs font-semibold">
+                                  {
+                                    details.durationMinutes
+                                  }{" "}
+                                  minutes
+                                </span>
+
+                              </div>
+
+                            </button>
+                          );
                         }
-                        className={`p-3.5 rounded-xl border-2 text-sm font-semibold transition ${
-                          selected
-                            ? "border-[#2563eb] bg-[#eff6ff] text-[#1d4ed8]"
-                            : "border-[#e5e7eb] hover:border-[#bfdbfe]"
-                        }`}
-                      >
-                        {item}
-                      </button>
-                    );
-                  }
-                )}
+                      )}
 
-              </div>
-
-            </section>
-
-            {/* PRESETS */}
-
-            <section className="bg-white border border-[#e5e7eb] rounded-2xl shadow-sm p-6">
-
-              <div className="mb-5">
-
-                <h2 className="text-lg font-semibold">
-                  6. Choose Test Preset
-                </h2>
-
-                <p className="text-sm text-[#6b7280] mt-1">
-                  Choose a fixed test length.
-                  Questions, marks and duration
-                  are automatically determined.
-                </p>
-
-              </div>
-
-              {!studentGroup && (
-                <div className="rounded-xl bg-[#fff7ed] border border-[#fed7aa] p-4 text-sm text-[#9a3412]">
-                  Select PCM or PCB above to
-                  view the available presets.
-                </div>
-              )}
-
-              {studentGroup && (
-                <div className="space-y-3">
-
-                  {availablePresets
-                    .filter(
+                    {availablePresets.filter(
                       (preset) =>
                         presetMatchesSelectedSubjects(
                           preset
                         )
-                    )
-                    .map(
-                      (preset) => {
-
-                        const details =
-                          calculatePreset(
-                            preset
-                          );
-
-                        const selected =
-                          selectedPreset?.id ===
-                          preset.id;
-
-                        const subjectSplit =
-                          Object.entries(
-                            preset.subjects
-                          )
-                            .map(
-                              (
-                                [
-                                  subject,
-                                  count,
-                                ]
-                              ) =>
-                                `${
-                                  PRESET_SUBJECT_NAMES[
-                                    subject
-                                  ]
-                                } ${count}`
-                            )
-                            .join(
-                              " + "
-                            );
-
-                        return (
-                          <button
-                            key={
-                              preset.id
-                            }
-                            type="button"
-                            onClick={() =>
-                              setSelectedPreset(
-                                preset
-                              )
-                            }
-                            className={`relative w-full text-left rounded-xl border-2 p-4 transition ${
-                              selected
-                                ? "border-[#2563eb] bg-[#eff6ff]"
-                                : "border-[#e5e7eb] hover:border-[#bfdbfe]"
-                            }`}
-                          >
-
-                            {selected && (
-                              <div className="absolute top-4 right-4 w-5 h-5 rounded-full bg-[#2563eb] text-white flex items-center justify-center text-xs">
-
-                              </div>
-                            )}
-
-                            <div className="flex items-start justify-between gap-4 pr-8">
-
-                              <div>
-
-                                <div className="font-semibold">
-                                  {
-                                    preset.name
-                                  }
-                                </div>
-
-                                <div className="text-xs text-[#6b7280] mt-1">
-                                  {
-                                    subjectSplit
-                                  }
-                                  {" questions per subject"}
-                                </div>
-
-                              </div>
-
-                              {preset.examAccurate && (
-                                <span className="shrink-0 text-[10px] font-semibold uppercase tracking-wide bg-green-100 text-green-700 px-2 py-1 rounded-md">
-                                  Actual MHT CET pattern
-                                </span>
-                              )}
-
-                            </div>
-
-                            <div className="flex flex-wrap gap-2 mt-4">
-
-                              <span className="px-3 py-1.5 rounded-lg bg-white border border-[#e5e7eb] text-xs font-semibold">
-                                {
-                                  details.totalQuestions
-                                }{" "}
-                                questions
-                              </span>
-
-                              <span className="px-3 py-1.5 rounded-lg bg-white border border-[#e5e7eb] text-xs font-semibold">
-                                {
-                                  details.totalMarks
-                                }{" "}
-                                marks
-                              </span>
-
-                              <span className="px-3 py-1.5 rounded-lg bg-white border border-[#e5e7eb] text-xs font-semibold">
-                                {
-                                  details.durationMinutes
-                                }{" "}
-                                minutes
-                              </span>
-
-                            </div>
-
-                          </button>
-                        );
-                      }
+                    ).length ===
+                      0 && (
+                      <div className="rounded-xl bg-[#f9fafb] border border-[#e5e7eb] p-4 text-sm text-[#6b7280]">
+                        No presets are available
+                        for the selected subject
+                        combination.
+                      </div>
                     )}
 
-                  {availablePresets.filter(
-                    (preset) =>
-                      presetMatchesSelectedSubjects(
-                        preset
-                      )
-                  ).length ===
-                    0 && (
-                    <div className="rounded-xl bg-[#f9fafb] border border-[#e5e7eb] p-4 text-sm text-[#6b7280]">
-                      No presets are available
-                      for the selected subject
-                      combination.
+                  </div>
+
+                </section>
+
+              </div>
+
+              {/* SUMMARY */}
+
+              <aside className="lg:sticky lg:top-6 h-fit">
+
+                <div className="bg-white border border-[#e5e7eb] rounded-2xl shadow-sm overflow-hidden">
+
+                  <div className="p-6 border-b border-[#e5e7eb]">
+
+                    <div className="text-xs font-semibold uppercase tracking-wider text-[#6b7280]">
+                      Test Summary
                     </div>
-                  )}
 
-                </div>
-              )}
+                    <h2 className="text-2xl font-bold mt-2">
+                      {course}
+                    </h2>
 
-            </section>
+                    <p className="text-sm text-[#6b7280] mt-1">
+                      {subjects.join(
+                        " + "
+                      )}
+                    </p>
 
-          </div>
+                  </div>
 
-          {/* SUMMARY */}
+                  <div className="p-6 space-y-5">
 
-          <aside className="lg:sticky lg:top-6 h-fit">
+                    <SummaryRow
+                      label="Exam"
+                      value={course}
+                    />
 
-            <div className="bg-white border border-[#e5e7eb] rounded-2xl shadow-sm overflow-hidden">
+                    <SummaryRow
+                      label="Group"
+                      value={
+                        studentGroup ||
+                        "Not assigned"
+                      }
+                    />
 
-              <div className="p-6 border-b border-[#e5e7eb]">
+                    <SummaryRow
+                      label="Subjects"
+                      value={
+                        subjects.join(
+                          ", "
+                        )
+                      }
+                    />
 
-                <div className="text-xs font-semibold uppercase tracking-wider text-[#6b7280]">
-                  Test Summary
-                </div>
+                    <SummaryRow
+                      label="Chapters"
+                      value={
+                        selectedChapters.length ===
+                        0
+                          ? "Entire selected subjects"
+                          : `${selectedChapters.length} selected`
+                      }
+                    />
 
-                <h2 className="text-2xl font-bold mt-2">
-                  {course}
-                </h2>
+                    <SummaryRow
+                      label="Difficulty"
+                      value={
+                        difficulty
+                      }
+                    />
 
-                <p className="text-sm text-[#6b7280] mt-1">
-                  {subjects.join(
-                    " + "
-                  )}
-                </p>
+                    <SummaryRow
+                      label="Preset"
+                      value={
+                        selectedPreset
+                          ? selectedPreset.name
+                          : "Not selected"
+                      }
+                    />
 
-              </div>
+                    <SummaryRow
+                      label="Questions"
+                      value={
+                        presetDetails
+                          ? `${presetDetails.totalQuestions}`
+                          : "—"
+                      }
+                    />
 
-              <div className="p-6 space-y-5">
+                    <SummaryRow
+                      label="Marks"
+                      value={
+                        presetDetails
+                          ? `${presetDetails.totalMarks}`
+                          : "—"
+                      }
+                    />
 
-                <SummaryRow
-                  label="Exam"
-                  value={course}
-                />
+                    <SummaryRow
+                      label="Duration"
+                      value={
+                        presetDetails
+                          ? `${presetDetails.durationMinutes} min`
+                          : "—"
+                      }
+                    />
 
-                <SummaryRow
-                  label="Group"
-                  value={
-                    studentGroup ||
-                    "Not selected"
-                  }
-                />
+                    <div className="pt-2">
 
-                <SummaryRow
-                  label="Subjects"
-                  value={
-                    subjects.join(
-                      ", "
-                    )
-                  }
-                />
+                      <button
+                        type="button"
+                        onClick={
+                          generateTest
+                        }
+                        disabled={
+                          generating ||
+                          !course ||
+                          !studentGroup ||
+                          !selectedPreset ||
+                          !presetDetails
+                        }
+                        className="w-full h-12 rounded-xl bg-[#1d4ed8] text-white text-sm font-semibold hover:bg-[#1e40af] disabled:opacity-60 disabled:cursor-not-allowed transition"
+                      >
+                        {generating
+                          ? "Generating Test..."
+                          : "Generate Test →"}
+                      </button>
 
-                <SummaryRow
-                  label="Chapters"
-                  value={
-                    selectedChapters.length ===
-                    0
-                      ? "Entire selected subjects"
-                      : `${selectedChapters.length} selected`
-                  }
-                />
+                    </div>
 
-                <SummaryRow
-                  label="Difficulty"
-                  value={
-                    difficulty
-                  }
-                />
+                    <p className="text-[11px] leading-relaxed text-[#9ca3af] text-center">
+                      Questions will be selected from
+                      the Paper Tree question bank
+                      according to your configuration.
+                    </p>
 
-                <SummaryRow
-                  label="Preset"
-                  value={
-                    selectedPreset
-                      ? selectedPreset.name
-                      : "Not selected"
-                  }
-                />
+                    <div className="rounded-xl bg-[#f9fafb] border border-[#e5e7eb] p-3 text-[11px] text-[#6b7280] text-center">
+                      No negative marking. Wrong and
+                      unattempted questions score zero.
+                    </div>
 
-                <SummaryRow
-                  label="Questions"
-                  value={
-                    presetDetails
-                      ? `${presetDetails.totalQuestions}`
-                      : "—"
-                  }
-                />
-
-                <SummaryRow
-                  label="Marks"
-                  value={
-                    presetDetails
-                      ? `${presetDetails.totalMarks}`
-                      : "—"
-                  }
-                />
-
-                <SummaryRow
-                  label="Duration"
-                  value={
-                    presetDetails
-                      ? `${presetDetails.durationMinutes} min`
-                      : "—"
-                  }
-                />
-
-                <div className="pt-2">
-
-                  <button
-                    onClick={
-                      generateTest
-                    }
-                    disabled={
-  generating ||
-  (course === "MHT-CET" && !studentGroup) ||
-  !selectedPreset ||
-  !presetDetails
-}
-                    className="w-full h-12 rounded-xl bg-[#1d4ed8] text-white text-sm font-semibold hover:bg-[#1e40af] disabled:opacity-60 disabled:cursor-not-allowed transition"
-                  >
-                    {generating
-                      ? "Generating Test..."
-                      : "Generate Test →"}
-                  </button>
+                  </div>
 
                 </div>
 
-                <p className="text-[11px] leading-relaxed text-[#9ca3af] text-center">
-                  Questions will be selected from
-                  the Paper Tree question bank
-                  according to your configuration.
-                </p>
-
-                <div className="rounded-xl bg-[#f9fafb] border border-[#e5e7eb] p-3 text-[11px] text-[#6b7280] text-center">
-                  No negative marking. Wrong and
-                  unattempted questions score zero.
-                </div>
-
-              </div>
+              </aside>
 
             </div>
-
-          </aside>
-
-        </div>
+          )}
 
       </div>
 

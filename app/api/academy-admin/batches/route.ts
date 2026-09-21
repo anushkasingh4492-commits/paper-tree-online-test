@@ -2,117 +2,129 @@ import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { randomUUID } from "crypto";
 import { pool } from "@/lib/db";
+import { parseSessionCookie } from "@/lib/session";
 
 export const runtime = "nodejs";
 
-export async function GET() {
-  try {
-    const cookieStore = await cookies();
-    const sessionCookie = cookieStore.get("master_session")?.value;
+const ALLOWED_COURSES = [
+  "MHT-CET PCM",
+  "MHT-CET PCB",
+  "NEET PCB",
+  "JEE PCM",
+];
 
-    if (!sessionCookie) {
-      return NextResponse.json(
-        {
-          success: false,
-          error: "Teacher is not logged in.",
-        },
-        { status: 401 }
-      );
-    }
+async function getBatchSession(
+  targetAcademyId?: string
+) {
+  const value =
+    (await cookies()).get("master_session")?.value;
 
-    let session: {
-      id?: string;
-      role?: string;
-      academyId?: string | null;
+  if (!value) return null;
+
+  const session = parseSessionCookie<{
+    id?: string;
+    role?: string;
+    academyId?: string;
+  }>(value);
+
+  if (!session) return null;
+
+  // Academy Admin already belongs to one academy.
+  if (
+    session.role === "ACADEMY_ADMIN" &&
+    session.id &&
+    session.academyId
+  ) {
+    return session;
+  }
+
+  // Master Admin / Admin can work with
+  // the academy selected in the UI.
+  if (
+    (session.role === "ADMIN" ||
+      session.role === "MASTER_ADMIN") &&
+    session.id &&
+    targetAcademyId
+  ) {
+    return {
+      ...session,
+      academyId: targetAcademyId,
     };
+  }
 
-    try {
-      session = JSON.parse(decodeURIComponent(sessionCookie));
-    } catch {
+  return null;
+}
+
+export async function GET(request: Request) {
+  try {
+    const { searchParams } =
+      new URL(request.url);
+
+    const academyId =
+      searchParams.get("academyId") ||
+      undefined;
+
+    const session =
+      await getBatchSession(academyId);
+
+    if (
+      !session ||
+      !session.academyId
+    ) {
       return NextResponse.json(
         {
           success: false,
-          error: "Invalid login session. Please log in again.",
+          error: "Unauthorized",
         },
         { status: 401 }
       );
     }
 
-    if (session.role !== "ACADEMY_ADMIN" || !session.id || !session.academyId) {
-      return NextResponse.json(
-        {
-          success: false,
-          error: "Invalid teacher session. Please log in again.",
-        },
-        { status: 401 }
+    await pool.query(`
+      ALTER TABLE batches
+      ADD COLUMN IF NOT EXISTS class_name VARCHAR(255)
+    `);
+
+    await pool.query(`
+      ALTER TABLE batches
+      ADD COLUMN IF NOT EXISTS course_name VARCHAR(255)
+    `);
+
+    const result =
+      await pool.query(
+        `
+        SELECT
+          b.id,
+          b.name,
+          b.class_name,
+          b.course_name,
+          b.created_at,
+          COUNT(bs.student_id)::int AS student_count
+        FROM batches b
+        LEFT JOIN batch_students bs
+          ON bs.batch_id = b.id
+        WHERE b.academy_id = $1
+        GROUP BY
+          b.id,
+          b.name,
+          b.class_name,
+          b.course_name,
+          b.created_at
+        ORDER BY b.name ASC
+        `,
+        [session.academyId]
       );
-    }
-
-    /*
-     * Get the academy from the session first.
-     * If an older session does not contain academyId,
-     * resolve it directly from the teacher account.
-     */
-    const academyId = session.academyId;
-
-    if (!academyId) {
-      return NextResponse.json(
-        {
-          success: false,
-          error:
-            "This teacher is not assigned to an academy yet.",
-        },
-        { status: 403 }
-      );
-    }
-
-    /*
-     * IMPORTANT:
-     * Load actual batches belonging to this academy.
-     */
-    const batchesResult = await pool.query(
-      `
-      SELECT
-        b.id,
-        b.name,
-        b.class_name,
-        b.created_at,
-        COUNT(bs.student_id)::int AS student_count
-      FROM batches b
-      LEFT JOIN batch_students bs ON bs.batch_id = b.id
-      WHERE b.academy_id = $1
-      GROUP BY b.id
-      ORDER BY b.name ASC
-      `,
-      [academyId]
-    );
-
-    /*
-     * Load students belonging to this academy.
-     */
-    const studentsResult = await pool.query(
-      `
-      SELECT
-        id,
-        name,
-        email,
-        roll_number,
-        class_name
-      FROM students
-      WHERE academy_id = $1
-      ORDER BY name ASC
-      `,
-      [academyId]
-    );
 
     return NextResponse.json({
       success: true,
-      academyId,
-      batches: batchesResult.rows,
-      students: studentsResult.rows,
+      academyId: session.academyId,
+      batches: result.rows,
     });
   } catch (error) {
-    console.error("TEACHER TARGETS ERROR:", error);
+    console.error(
+      "ACADEMY BATCHES GET ERROR:",
+      error
+    );
 
     return NextResponse.json(
       {
@@ -120,7 +132,7 @@ export async function GET() {
         error:
           error instanceof Error
             ? error.message
-            : "Could not load batches and students.",
+            : "Could not load batches.",
       },
       { status: 500 }
     );
@@ -128,110 +140,332 @@ export async function GET() {
 }
 
 export async function POST(request: Request) {
-  const value = (await cookies()).get("master_session")?.value;
-
-  if (!value) {
-    return NextResponse.json(
-      { success: false, error: "Unauthorized" },
-      { status: 401 }
-    );
-  }
-
-  let session: {
-    id?: string;
-    role?: string;
-    academyId?: string;
-  };
-
   try {
-    session = JSON.parse(decodeURIComponent(value));
-  } catch {
+    const body = await request.json();
+
+    const requestedAcademyId =
+      String(
+        body.academyId || ""
+      ).trim();
+
+    const session =
+      await getBatchSession(
+        requestedAcademyId ||
+          undefined
+      );
+
+    if (
+      !session ||
+      !session.id ||
+      !session.academyId
+    ) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: "Unauthorized",
+        },
+        { status: 401 }
+      );
+    }
+
+    const name = String(
+      body.name || ""
+    ).trim();
+
+    const className = String(
+      body.className || ""
+    ).trim();
+
+    const courseName = String(
+      body.courseName || ""
+    )
+      .trim()
+      .toUpperCase();
+
+    if (
+      !name ||
+      !className ||
+      !courseName
+    ) {
+      return NextResponse.json(
+        {
+          success: false,
+          error:
+            "Batch name, class and course are required.",
+        },
+        { status: 400 }
+      );
+    }
+
+    if (
+      !ALLOWED_COURSES.includes(
+        courseName
+      )
+    ) {
+      return NextResponse.json(
+        {
+          success: false,
+          error:
+            "Invalid course. Choose MHT-CET PCM, MHT-CET PCB, NEET PCB or JEE PCM.",
+        },
+        { status: 400 }
+      );
+    }
+
+    /*
+     * Make sure these columns exist.
+     */
+    await pool.query(`
+      ALTER TABLE batches
+      ADD COLUMN IF NOT EXISTS class_name VARCHAR(255)
+    `);
+
+    await pool.query(`
+      ALTER TABLE batches
+      ADD COLUMN IF NOT EXISTS course_name VARCHAR(255)
+    `);
+
+    /*
+     * created_by references teachers.
+     *
+     * Academy Admin can use its teacher ID.
+     * Master Admin / Admin are not teachers,
+     * so their batch creator must be NULL.
+     */
+    await pool.query(`
+      ALTER TABLE batches
+      ALTER COLUMN created_by DROP NOT NULL
+    `);
+
+    const createdBy =
+      session.role ===
+      "ACADEMY_ADMIN"
+        ? session.id
+        : null;
+
+    const result =
+      await pool.query(
+        `
+        INSERT INTO batches (
+          id,
+          name,
+          class_name,
+          course_name,
+          created_by,
+          academy_id
+        )
+        VALUES (
+          $1,
+          $2,
+          $3,
+          $4,
+          $5,
+          $6
+        )
+        RETURNING
+          id,
+          name,
+          class_name,
+          course_name,
+          created_at
+        `,
+        [
+          randomUUID(),
+          name,
+          className,
+          courseName,
+          createdBy,
+          session.academyId,
+        ]
+      );
+
     return NextResponse.json(
-      { success: false, error: "Invalid session" },
-      { status: 401 }
+      {
+        success: true,
+
+        batch: {
+          ...result.rows[0],
+          student_count: 0,
+        },
+      },
+      { status: 201 }
     );
-  }
-
-  if (
-    session.role !== "ACADEMY_ADMIN" ||
-    !session.id ||
-    !session.academyId
-  ) {
-    return NextResponse.json(
-      { success: false, error: "Unauthorized" },
-      { status: 401 }
+  } catch (error) {
+    console.error(
+      "ACADEMY BATCHES POST ERROR:",
+      error
     );
-  }
 
-  const body = await request.json();
-
-  const name = String(body.name ?? "").trim();
-  const courseName = String(body.courseName ?? "").trim();
-
-  if (!name || !courseName) {
     return NextResponse.json(
       {
         success: false,
-        error: "Batch name and course are required.",
+        error:
+          error instanceof Error
+            ? error.message
+            : "Could not create batch.",
       },
-      { status: 400 }
+      { status: 500 }
     );
   }
-
-  // Make sure the database has the course column.
-  await pool.query(`
-    ALTER TABLE batches
-    ADD COLUMN IF NOT EXISTS course_name VARCHAR(255)
-  `);
-
-  const result = await pool.query(
-    `
-    INSERT INTO batches (
-      id,
-      name,
-      class_name,
-      course_name,
-      created_by,
-      academy_id
-    )
-    VALUES ($1, $2, NULL, $3, $4, $5)
-    RETURNING
-      id,
-      name,
-      course_name,
-      created_at
-    `,
-    [
-      randomUUID(),
-      name,
-      courseName,
-      session.id,
-      session.academyId,
-    ]
-  );
-
-  return NextResponse.json(
-    {
-      success: true,
-      batch: {
-        ...result.rows[0],
-        student_count: 0,
-      },
-    },
-    { status: 201 }
-  );
 }
-  
 
-export async function DELETE(request: Request) {
-  const value = (await cookies()).get("master_session")?.value;
-  const batchId = new URL(request.url).searchParams.get("id") || "";
-  if (!value) return NextResponse.json({ success: false, error: "Unauthorized" }, { status: 401 });
-  let session: { role?: string; academyId?: string };
-  try { session = JSON.parse(decodeURIComponent(value)); } catch { return NextResponse.json({ success: false, error: "Invalid session" }, { status: 401 }); }
-  if (session.role !== "ACADEMY_ADMIN" || !session.academyId) return NextResponse.json({ success: false, error: "Unauthorized" }, { status: 401 });
-  const scheduled = await pool.query(`SELECT 1 FROM scheduled_tests WHERE batch_id=$1 AND academy_id=$2 LIMIT 1`, [batchId, session.academyId]);
-  if (scheduled.rowCount) return NextResponse.json({ success: false, error: "Cancel this batch's scheduled tests before removing the batch." }, { status: 409 });
-  const client = await pool.connect();
-  try { await client.query("BEGIN"); await client.query(`DELETE FROM batch_students WHERE batch_id=$1`, [batchId]); const result = await client.query(`DELETE FROM batches WHERE id=$1 AND academy_id=$2 RETURNING id`, [batchId, session.academyId]); await client.query("COMMIT"); if (!result.rowCount) return NextResponse.json({ success: false, error: "Batch not found." }, { status: 404 }); return NextResponse.json({ success: true }); } catch (error) { await client.query("ROLLBACK"); return NextResponse.json({ success: false, error: error instanceof Error ? error.message : "Could not remove batch." }, { status: 500 }); } finally { client.release(); }
+export async function DELETE(
+  request: Request
+) {
+  try {
+    const value =
+      (await cookies()).get(
+        "master_session"
+      )?.value;
+
+    const batchId =
+      new URL(request.url)
+        .searchParams.get("id") || "";
+
+    if (!value) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: "Unauthorized",
+        },
+        { status: 401 }
+      );
+    }
+
+    const session =
+      parseSessionCookie<{
+        id?: string;
+        role?: string;
+        academyId?: string;
+      }>(value);
+
+    if (
+      !session ||
+      !session.academyId ||
+      !session.id
+    ) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: "Invalid session",
+        },
+        { status: 401 }
+      );
+    }
+
+    if (
+      session.role !==
+        "ACADEMY_ADMIN" &&
+      session.role !== "ADMIN" &&
+      session.role !== "MASTER_ADMIN"
+    ) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: "Unauthorized",
+        },
+        { status: 401 }
+      );
+    }
+
+    const scheduled =
+      await pool.query(
+        `
+        SELECT 1
+        FROM scheduled_tests
+        WHERE batch_id = $1
+          AND academy_id = $2
+        LIMIT 1
+        `,
+        [
+          batchId,
+          session.academyId,
+        ]
+      );
+
+    if (scheduled.rowCount) {
+      return NextResponse.json(
+        {
+          success: false,
+          error:
+            "Cancel this batch's scheduled tests before removing the batch.",
+        },
+        { status: 409 }
+      );
+    }
+
+    const client =
+      await pool.connect();
+
+    try {
+      await client.query(
+        "BEGIN"
+      );
+
+      await client.query(
+        `
+        DELETE FROM batch_students
+        WHERE batch_id = $1
+        `,
+        [batchId]
+      );
+
+      const result =
+        await client.query(
+          `
+          DELETE FROM batches
+          WHERE id = $1
+            AND academy_id = $2
+          RETURNING id
+          `,
+          [
+            batchId,
+            session.academyId,
+          ]
+        );
+
+      await client.query(
+        "COMMIT"
+      );
+
+      if (!result.rowCount) {
+        return NextResponse.json(
+          {
+            success: false,
+            error:
+              "Batch not found.",
+          },
+          { status: 404 }
+        );
+      }
+
+      return NextResponse.json({
+        success: true,
+      });
+    } catch (error) {
+      await client.query(
+        "ROLLBACK"
+      );
+
+      throw error;
+    } finally {
+      client.release();
+    }
+  } catch (error) {
+    console.error(
+      "ACADEMY BATCHES DELETE ERROR:",
+      error
+    );
+
+    return NextResponse.json(
+      {
+        success: false,
+        error:
+          error instanceof Error
+            ? error.message
+            : "Could not remove batch.",
+      },
+      { status: 500 }
+    );
+  }
 }

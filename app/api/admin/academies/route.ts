@@ -24,22 +24,36 @@ async function isMasterAdmin() {
 async function ensureAcademySettingsColumns() {
   await pool.query(`
     ALTER TABLE academies
-      ADD COLUMN IF NOT EXISTS status VARCHAR(30) NOT NULL DEFAULT 'ACTIVE',
-      ADD COLUMN IF NOT EXISTS student_limit INTEGER NOT NULL DEFAULT 10,
-      ADD COLUMN IF NOT EXISTS subscription_start DATE,
-      ADD COLUMN IF NOT EXISTS subscription_end DATE,
-      ADD COLUMN IF NOT EXISTS subscription_plan VARCHAR(255),
-      ADD COLUMN IF NOT EXISTS logo_data TEXT,
-      ADD COLUMN IF NOT EXISTS domain VARCHAR(255)
-      ADD COLUMN IF NOT EXISTS domain VARCHAR(255)
+      ADD COLUMN IF NOT EXISTS status VARCHAR(30) NOT NULL DEFAULT 'ACTIVE'
   `);
+
+  await pool.query(`
+    ALTER TABLE academies
+      ADD COLUMN IF NOT EXISTS student_limit INTEGER NOT NULL DEFAULT 10
+  `);
+
+  await pool.query(`
+    ALTER TABLE academies
+      ADD COLUMN IF NOT EXISTS subscription_plan VARCHAR(255)
+  `);
+
+  await pool.query(`
+    ALTER TABLE academies
+      ADD COLUMN IF NOT EXISTS subscription_start DATE
+  `);
+
+  await pool.query(`
+    ALTER TABLE academies
+      ADD COLUMN IF NOT EXISTS subscription_end DATE
+  `);
+}
 
   await pool.query(`
     CREATE UNIQUE INDEX IF NOT EXISTS academies_domain_unique
     ON academies (LOWER(domain))
     WHERE domain IS NOT NULL AND domain <> ''
   `);
-}
+
 export async function GET() {
   if (!(await isMasterAdmin())) {
     return NextResponse.json(

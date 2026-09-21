@@ -3,38 +3,45 @@
 import { FormEvent, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
+type Branding = {
+  name: string;
+  logo_data?: string;
+};
+
 export default function Home() {
-  
   const router = useRouter();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-const [branding, setBranding] = useState<{
-  name: string;
-  logo_data?: string;
-} | null>(null);
 
-useEffect(() => {
-  async function loadBranding() {
-    try {
-      const response = await fetch("/api/academy/branding", {
-        cache: "no-store",
-      });
+  const [branding, setBranding] = useState<Branding | null>(null);
 
-      const data = await response.json();
+  useEffect(() => {
+    async function loadBranding() {
+      try {
+        const response = await fetch("/api/academy/branding", {
+          cache: "no-store",
+        });
 
-      if (data.success && data.academy) {
-        setBranding(data.academy);
+        if (!response.ok) {
+          throw new Error("Could not load branding.");
+        }
+
+        const data = await response.json();
+
+        if (data.success && data.academy) {
+          setBranding(data.academy);
+        }
+      } catch (error) {
+        console.error("BRANDING LOAD ERROR:", error);
       }
-    } catch (error) {
-      console.error("BRANDING LOAD ERROR:", error);
     }
-  }
 
-  loadBranding();
-}, []);
+    loadBranding();
+  }, []);
+
   async function handleSubmit(
     e: FormEvent<HTMLFormElement>
   ) {
@@ -126,15 +133,20 @@ useEffect(() => {
     }
   }
 
+  const instituteName = branding?.name || "Paper Tree";
+
   return (
     <main className="min-h-screen bg-[#f4f7fb] text-[#172033]">
       <div className="flex min-h-screen">
 
-        {/* LEFT BRAND / CBT PANEL */}
+        {/* ========================================================= */}
+        {/* LEFT BRAND / CBT PANEL                                   */}
+        {/* ========================================================= */}
 
-        <section className="hidden lg:flex lg:w-[52%] bg-[#173ea5] relative overflow-hidden">
+        <section className="relative hidden min-h-screen overflow-hidden bg-[#173ea5] lg:flex lg:w-[52%]">
 
           {/* Background decoration */}
+
           <div className="absolute -right-40 -top-40 h-[620px] w-[620px] rounded-full border-[90px] border-white/[0.045]" />
 
           <div className="absolute right-20 top-40 h-[300px] w-[300px] rounded-full border-[45px] border-white/[0.035]" />
@@ -143,35 +155,43 @@ useEffect(() => {
 
           <div className="relative z-10 flex w-full flex-col justify-between p-14">
 
-            {/* BRAND */}
+            {/* ===================================================== */}
+            {/* INSTITUTE BRAND                                      */}
+            {/* ===================================================== */}
 
-       <div className="flex items-center gap-3">
-  {branding?.logo_data ? (
-    <div className="flex h-12 w-12 items-center justify-center rounded-[14px] bg-white p-1.5 shadow-lg">
-      <img
-        src={branding.logo_data}
-        alt={`${branding.name} logo`}
-        className="h-full w-full rounded-lg object-contain"
-      />
-    </div>
-  ) : (
-    <div className="flex h-12 w-12 items-center justify-center rounded-[14px] bg-white text-xl font-extrabold text-[#2454d8] shadow-lg">
-      {(branding?.name || "Paper Tree").charAt(0).toUpperCase()}
-    </div>
-  )}
+            <div className="flex items-center gap-3">
 
-  <div>
-    <p className="text-[18px] font-extrabold tracking-tight text-white">
-      {branding?.name || "Paper Tree"}
-    </p>
+              {branding?.logo_data ? (
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-[14px] bg-white p-1.5 shadow-lg">
+                  <img
+                    src={branding.logo_data}
+                    alt={`${instituteName} logo`}
+                    className="h-full w-full rounded-lg object-contain"
+                  />
+                </div>
+              ) : (
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-[14px] bg-white text-xl font-extrabold text-[#2454d8] shadow-lg">
+                  {instituteName
+                    .charAt(0)
+                    .toUpperCase()}
+                </div>
+              )}
 
-    <p className="text-[9px] font-bold tracking-[0.22em] text-blue-100">
-      COMPUTER BASED TESTING
-    </p>
-  </div>
-</div>
+              <div>
+                <p className="text-[18px] font-extrabold tracking-tight text-white">
+                  {instituteName}
+                </p>
 
-            {/* MAIN CONTENT */}
+                <p className="text-[9px] font-bold tracking-[0.22em] text-blue-100">
+                  COMPUTER BASED TESTING
+                </p>
+              </div>
+
+            </div>
+
+            {/* ===================================================== */}
+            {/* MAIN CONTENT                                         */}
+            {/* ===================================================== */}
 
             <div className="relative max-w-[590px]">
 
@@ -257,70 +277,83 @@ useEffect(() => {
               </div>
             </div>
 
-            {/* FOOTER */}
+            {/* ===================================================== */}
+            {/* LEFT FOOTER                                          */}
+            {/* ===================================================== */}
 
             <div className="flex items-center justify-between text-xs text-blue-200/70">
+
               <span>
-  © {new Date().getFullYear()} Paper Tree
-</span>
+                © {new Date().getFullYear()} Paper Tree Educational Studio
+              </span>
 
               <span>
                 Computer Based Testing Platform
               </span>
+
             </div>
 
           </div>
         </section>
 
-        {/* LOGIN SECTION */}
+        {/* ========================================================= */}
+        {/* RIGHT LOGIN PANEL                                        */}
+        {/* ========================================================= */}
 
         <section className="flex flex-1 items-center justify-center px-6 py-10 sm:px-10">
 
-      
+          <div className="w-full max-w-md">
 
-            {/* MOBILE BRAND */}
+            {/* ===================================================== */}
+            {/* MOBILE BRAND                                         */}
+            {/* ===================================================== */}
 
             <div className="mb-10 flex items-center gap-3 lg:hidden">
 
-              <div className="flex h-11 w-11 items-center justify-center rounded-[13px] bg-[#2454d8] text-lg font-extrabold text-white shadow-md">
-                P
+              {branding?.logo_data ? (
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[13px] bg-white p-1.5 shadow-md">
+                  <img
+                    src={branding.logo_data}
+                    alt={`${instituteName} logo`}
+                    className="h-full w-full rounded-lg object-contain"
+                  />
+                </div>
+              ) : (
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[13px] bg-[#2454d8] text-lg font-extrabold text-white shadow-md">
+                  {instituteName
+                    .charAt(0)
+                    .toUpperCase()}
+                </div>
+              )}
+
+              <div>
+
+                <p className="text-[17px] font-extrabold">
+                  {instituteName}
+                </p>
+
+                <p className="text-[9px] font-bold tracking-[0.2em] text-[#98a1b2]">
+                  COMPUTER BASED TESTING
+                </p>
+
               </div>
-<div className="mb-10 flex items-center gap-3 lg:hidden">
-  {branding?.logo_data ? (
-    <div className="flex h-11 w-11 items-center justify-center rounded-[13px] bg-white p-1.5 shadow-md">
-      <img
-        src={branding.logo_data}
-        alt={`${branding.name} logo`}
-        className="h-full w-full rounded-lg object-contain"
-      />
-    </div>
-  ) : (
-    <div className="flex h-11 w-11 items-center justify-center rounded-[13px] bg-[#2454d8] text-lg font-extrabold text-white shadow-md">
-      {(branding?.name || "Paper Tree").charAt(0).toUpperCase()}
-    </div>
-  )}
 
-  <div>
-    <p className="text-[17px] font-extrabold">
-      {branding?.name || "Paper Tree"}
-    </p>
+            </div>
 
-    <p className="text-[9px] font-bold tracking-[0.2em] text-[#98a1b2]">
-      COMPUTER BASED TESTING
-    </p>
-  </div>
-</div>
-
-            {/* LOGIN HEADING */}
+            {/* ===================================================== */}
+            {/* LOGIN HEADING                                        */}
+            {/* ===================================================== */}
 
             <div className="mb-8">
 
               <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-[#eef3ff] px-3 py-1.5">
+
                 <span className="h-1.5 w-1.5 rounded-full bg-[#315bea]" />
 
                 <span className="text-[10px] font-bold uppercase tracking-[0.12em] text-[#315bea]">
                   Computer Based Testing
                 </span>
+
               </div>
 
               <h2 className="mt-2 text-[31px] font-extrabold tracking-[-0.04em] text-[#172033]">
@@ -333,7 +366,9 @@ useEffect(() => {
 
             </div>
 
-            {/* LOGIN CARD */}
+            {/* ===================================================== */}
+            {/* LOGIN FORM                                           */}
+            {/* ===================================================== */}
 
             <form
               onSubmit={handleSubmit}
@@ -424,7 +459,9 @@ useEffect(() => {
 
             </form>
 
-            {/* FOOTER */}
+            {/* ===================================================== */}
+            {/* RIGHT FOOTER                                          */}
+            {/* ===================================================== */}
 
             <div className="mt-7 text-center">
 
@@ -432,9 +469,11 @@ useEffect(() => {
                 Secure access for students, teachers and
                 administrators.
               </p>
-<p className="mt-2 text-[10px] font-medium text-[#c0c5ce]">
-  © {new Date().getFullYear()} Paper Tree
-</p>
+
+              <p className="mt-2 text-[10px] font-medium text-[#c0c5ce]">
+                © {new Date().getFullYear()} Paper Tree Educational Studio
+              </p>
+
             </div>
 
           </div>
