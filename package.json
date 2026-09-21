@@ -2,12 +2,13 @@
   "name": "paper-tree-online-test",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "next dev --webpack",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
-  },
+"scripts": {
+  "dev": "next dev --webpack",
+  "build": "next build --webpack",
+  "prestart": "npm run build",
+  "start": "next start",
+  "lint": "eslint"
+},
   "dependencies": {
     "@neondatabase/serverless": "^1.1.0",
     "bcryptjs": "^3.0.3",

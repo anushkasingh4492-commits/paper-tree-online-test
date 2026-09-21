@@ -29,7 +29,15 @@ async function ensureAcademySettingsColumns() {
       ADD COLUMN IF NOT EXISTS subscription_start DATE,
       ADD COLUMN IF NOT EXISTS subscription_end DATE,
       ADD COLUMN IF NOT EXISTS subscription_plan VARCHAR(255),
-      ADD COLUMN IF NOT EXISTS logo_data TEXT
+      ADD COLUMN IF NOT EXISTS logo_data TEXT,
+      ADD COLUMN IF NOT EXISTS domain VARCHAR(255)
+      ADD COLUMN IF NOT EXISTS domain VARCHAR(255)
+  `);
+
+  await pool.query(`
+    CREATE UNIQUE INDEX IF NOT EXISTS academies_domain_unique
+    ON academies (LOWER(domain))
+    WHERE domain IS NOT NULL AND domain <> ''
   `);
 }
 export async function GET() {
@@ -53,24 +61,26 @@ export async function GET() {
         a.subscription_start,
         a.subscription_end,
         a.subscription_plan,
-        a.logo_data,
-        COUNT(DISTINCT t.id)::int AS teacher_count,
+       a.logo_data,
+a.domain,
+COUNT(DISTINCT t.id)::int AS teacher_count,
         COUNT(DISTINCT s.id)::int AS student_count
       FROM academies a
       LEFT JOIN teachers t
         ON t.academy_id = a.id
       LEFT JOIN students s
         ON s.academy_id = a.id
-      GROUP BY
-        a.id,
-        a.name,
-        a.code,
-        a.created_at,
-        a.status,
-        a.student_limit,
-        a.subscription_start,
-        a.subscription_end,
-        a.subscription_plan
+    GROUP BY
+  a.id,
+  a.name,
+  a.code,
+  a.created_at,
+  a.status,
+  a.student_limit,
+  a.subscription_start,
+  a.subscription_end,
+  a.subscription_plan,
+  a.domain
       ORDER BY a.created_at DESC
     `);
 

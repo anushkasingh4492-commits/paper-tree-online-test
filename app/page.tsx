@@ -1,16 +1,40 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
 export default function Home() {
+  
   const router = useRouter();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+const [branding, setBranding] = useState<{
+  name: string;
+  logo_data?: string;
+} | null>(null);
 
+useEffect(() => {
+  async function loadBranding() {
+    try {
+      const response = await fetch("/api/academy/branding", {
+        cache: "no-store",
+      });
+
+      const data = await response.json();
+
+      if (data.success && data.academy) {
+        setBranding(data.academy);
+      }
+    } catch (error) {
+      console.error("BRANDING LOAD ERROR:", error);
+    }
+  }
+
+  loadBranding();
+}, []);
   async function handleSubmit(
     e: FormEvent<HTMLFormElement>
   ) {
@@ -121,21 +145,31 @@ export default function Home() {
 
             {/* BRAND */}
 
-            <div className="flex items-center gap-3">
-              <div className="flex h-12 w-12 items-center justify-center rounded-[14px] bg-white text-xl font-extrabold text-[#2454d8] shadow-lg">
-                P
-              </div>
+       <div className="flex items-center gap-3">
+  {branding?.logo_data ? (
+    <div className="flex h-12 w-12 items-center justify-center rounded-[14px] bg-white p-1.5 shadow-lg">
+      <img
+        src={branding.logo_data}
+        alt={`${branding.name} logo`}
+        className="h-full w-full rounded-lg object-contain"
+      />
+    </div>
+  ) : (
+    <div className="flex h-12 w-12 items-center justify-center rounded-[14px] bg-white text-xl font-extrabold text-[#2454d8] shadow-lg">
+      {(branding?.name || "Paper Tree").charAt(0).toUpperCase()}
+    </div>
+  )}
 
-              <div>
-                <p className="text-[18px] font-extrabold tracking-tight text-white">
-                  Paper Tree
-                </p>
+  <div>
+    <p className="text-[18px] font-extrabold tracking-tight text-white">
+      {branding?.name || "Paper Tree"}
+    </p>
 
-                <p className="text-[9px] font-bold tracking-[0.22em] text-blue-100">
-                  CBT PLATFORM
-                </p>
-              </div>
-            </div>
+    <p className="text-[9px] font-bold tracking-[0.22em] text-blue-100">
+      COMPUTER BASED TESTING
+    </p>
+  </div>
+</div>
 
             {/* MAIN CONTENT */}
 
@@ -227,8 +261,8 @@ export default function Home() {
 
             <div className="flex items-center justify-between text-xs text-blue-200/70">
               <span>
-                © 2026 Paper Tree
-              </span>
+  © {new Date().getFullYear()} Paper Tree
+</span>
 
               <span>
                 Computer Based Testing Platform
@@ -242,7 +276,7 @@ export default function Home() {
 
         <section className="flex flex-1 items-center justify-center px-6 py-10 sm:px-10">
 
-          <div className="w-full max-w-[430px]">
+      
 
             {/* MOBILE BRAND */}
 
@@ -251,18 +285,31 @@ export default function Home() {
               <div className="flex h-11 w-11 items-center justify-center rounded-[13px] bg-[#2454d8] text-lg font-extrabold text-white shadow-md">
                 P
               </div>
+<div className="mb-10 flex items-center gap-3 lg:hidden">
+  {branding?.logo_data ? (
+    <div className="flex h-11 w-11 items-center justify-center rounded-[13px] bg-white p-1.5 shadow-md">
+      <img
+        src={branding.logo_data}
+        alt={`${branding.name} logo`}
+        className="h-full w-full rounded-lg object-contain"
+      />
+    </div>
+  ) : (
+    <div className="flex h-11 w-11 items-center justify-center rounded-[13px] bg-[#2454d8] text-lg font-extrabold text-white shadow-md">
+      {(branding?.name || "Paper Tree").charAt(0).toUpperCase()}
+    </div>
+  )}
 
-              <div>
-                <p className="text-[17px] font-extrabold">
-                  Paper Tree
-                </p>
+  <div>
+    <p className="text-[17px] font-extrabold">
+      {branding?.name || "Paper Tree"}
+    </p>
 
-                <p className="text-[9px] font-bold tracking-[0.2em] text-[#98a1b2]">
-                  CBT PLATFORM
-                </p>
-              </div>
-
-            </div>
+    <p className="text-[9px] font-bold tracking-[0.2em] text-[#98a1b2]">
+      COMPUTER BASED TESTING
+    </p>
+  </div>
+</div>
 
             {/* LOGIN HEADING */}
 
@@ -385,11 +432,9 @@ export default function Home() {
                 Secure access for students, teachers and
                 administrators.
               </p>
-
-              <p className="mt-2 text-[10px] font-medium text-[#c0c5ce]">
-                Paper Tree · Computer Based Testing
-              </p>
-
+<p className="mt-2 text-[10px] font-medium text-[#c0c5ce]">
+  © {new Date().getFullYear()} Paper Tree
+</p>
             </div>
 
           </div>

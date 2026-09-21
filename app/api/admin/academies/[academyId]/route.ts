@@ -16,13 +16,19 @@ async function isMasterAdmin() {
 export async function PATCH(request: Request, { params }: { params: Promise<{ academyId: string }> }) {
   if (!(await isMasterAdmin())) {
     return NextResponse.json({ success: false, error: "Unauthorized" }, { status: 401 });
+    
   }
 
   const { academyId } = await params;
-  await pool.query("ALTER TABLE academies ADD COLUMN IF NOT EXISTS logo_data TEXT");
+await pool.query(`
+  ALTER TABLE academies
+  ADD COLUMN IF NOT EXISTS logo_data TEXT,
+  ADD COLUMN IF NOT EXISTS domain VARCHAR(255)
+`);
   const body = await request.json();
   const updates: string[] = [];
   const values: unknown[] = [];
+
 
   if (body.academyName !== undefined) {
     const name = String(body.academyName).trim();
@@ -30,6 +36,27 @@ export async function PATCH(request: Request, { params }: { params: Promise<{ ac
     values.push(name);
     updates.push(`name = $${values.length}`);
   }
+  if (body.domain !== undefined) {
+  const domain = String(body.domain || "")
+    .trim()
+    .toLowerCase();
+
+  if (
+    domain &&
+    !/^[a-z0-9](?:[a-z0-9.-]*[a-z0-9])?(?::\d+)?$/.test(domain)
+  ) {
+    return NextResponse.json(
+      {
+        success: false,
+        error: "Please enter a valid domain.",
+      },
+      { status: 400 }
+    );
+  }
+
+  values.push(domain || null);
+  updates.push(`domain = $${values.length}`);
+}
   if (body.logoData !== undefined) {
     const logoData = String(body.logoData || "");
     if (logoData && (!logoData.startsWith("data:image/") || logoData.length > 2_000_000)) {

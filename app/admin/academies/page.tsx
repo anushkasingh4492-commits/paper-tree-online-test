@@ -3,10 +3,11 @@
 import { FormEvent, ReactNode, useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 
- type Academy = {
+type Academy = {
   id: string;
   name: string;
   code: string;
+  domain?: string;
   logo_data?: string;
   teacher_count: number;
   student_count: number;
@@ -73,8 +74,9 @@ export default function AcademiesPage() {
   const [subscriptionSeats, setSubscriptionSeats] = useState("50");
   const [subscriptionMonths, setSubscriptionMonths] = useState("12");
   const [startDate, setStartDate] = useState(new Date().toISOString().slice(0, 10));
-  const [academyBrandName, setAcademyBrandName] = useState("");
-  const [academyLogoData, setAcademyLogoData] = useState("");
+const [academyBrandName, setAcademyBrandName] = useState("");
+const [academyLogoData, setAcademyLogoData] = useState("");
+const [academyDomain, setAcademyDomain] = useState("");
   const [brandSaving, setBrandSaving] = useState(false);
 
   const notify = (text: string, kind: Toast["kind"] = "success") => {
@@ -139,22 +141,42 @@ export default function AcademiesPage() {
     if (selectedAcademy) await loadDetails(selectedAcademy.id);
   }
 
-  function selectAcademy(academy: Academy, nextSection: Section = "overview") {
-    setSelectedAcademy(academy);
-    setAcademyBrandName(academy.name);
-    setAcademyLogoData(academy.logo_data || "");
-    setSection(nextSection);
-    setOpenBatch(null);
-    setBatchStudents({});
-    window.setTimeout(() => document.getElementById("academy-manager")?.scrollIntoView({ behavior: "smooth", block: "start" }), 20);
-  }
+function selectAcademy(academy: Academy, nextSection: Section = "overview") {
+  setSelectedAcademy(academy);
+  setAcademyBrandName(academy.name);
+  setAcademyLogoData(academy.logo_data || "");
+  setAcademyDomain(academy.domain || "");
+  setSection(nextSection);
+  setOpenBatch(null);
+  setBatchStudents({});
+  window.setTimeout(
+    () =>
+      document
+        .getElementById("academy-manager")
+        ?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        }),
+    20
+  );
+}
+   
 
-  async function saveBranding(e: FormEvent) {
-    e.preventDefault();
-    setBrandSaving(true);
-    await patchAcademy({ academyName: academyBrandName, logoData: academyLogoData }, "Academy branding updated");
-    setBrandSaving(false);
-  }
+ async function saveBranding(e: FormEvent) {
+  e.preventDefault();
+  setBrandSaving(true);
+
+  await patchAcademy(
+    {
+      academyName: academyBrandName,
+      logoData: academyLogoData,
+      domain: academyDomain,
+    },
+    "Academy branding updated"
+  );
+
+  setBrandSaving(false);
+}
 
   function readLogo(file: File | undefined) {
     if (!file) return;
@@ -408,7 +430,55 @@ export default function AcademiesPage() {
         </section>
 
         {selectedAcademy && <section id="academy-manager" className="scroll-mt-24 rounded-3xl border border-[#dce3f3] bg-white shadow-sm">
-          <form onSubmit={saveBranding} className="flex flex-wrap items-end gap-3 border-b border-[#e8ecf4] bg-[#fafbfe] p-5"><label className="min-w-[220px] flex-1 text-xs font-bold">Institute name<input value={academyBrandName} onChange={(e) => setAcademyBrandName(e.target.value)} className="mt-1 w-full rounded-xl border border-[#dfe4ed] bg-white px-3 py-2.5 text-sm" required /></label><label className="text-xs font-bold">Logo<input type="file" accept="image/*" onChange={(e) => readLogo(e.target.files?.[0])} className="mt-1 block w-full text-xs" /></label>{academyLogoData && <img src={academyLogoData} alt="Logo preview" className="h-11 w-11 rounded-lg border bg-white object-contain" />}<button disabled={brandSaving} className="rounded-xl bg-[#315bea] px-4 py-2.5 text-xs font-black text-white disabled:opacity-50">{brandSaving ? "Saving..." : "Save Branding"}</button></form>
+          <form
+  onSubmit={saveBranding}
+  className="flex flex-wrap items-end gap-3 border-b border-[#e8ecf4] bg-[#fafbfe] p-5"
+>
+  <label className="min-w-[220px] flex-1 text-xs font-bold">
+    Institute name
+    <input
+      value={academyBrandName}
+      onChange={(e) => setAcademyBrandName(e.target.value)}
+      className="mt-1 w-full rounded-xl border border-[#dfe4ed] bg-white px-3 py-2.5 text-sm"
+      required
+    />
+  </label>
+
+  <label className="min-w-[260px] flex-1 text-xs font-bold">
+    Custom domain
+    <input
+      value={academyDomain}
+      onChange={(e) => setAcademyDomain(e.target.value)}
+      placeholder="web.infinityclasses.net"
+      className="mt-1 w-full rounded-xl border border-[#dfe4ed] bg-white px-3 py-2.5 text-sm"
+    />
+  </label>
+
+  <label className="text-xs font-bold">
+    Logo
+    <input
+      type="file"
+      accept="image/*"
+      onChange={(e) => readLogo(e.target.files?.[0])}
+      className="mt-1 block w-full text-xs"
+    />
+  </label>
+
+  {academyLogoData && (
+    <img
+      src={academyLogoData}
+      alt="Logo preview"
+      className="h-11 w-11 rounded-lg border bg-white object-contain"
+    />
+  )}
+
+  <button
+    disabled={brandSaving}
+    className="rounded-xl bg-[#315bea] px-4 py-2.5 text-xs font-black text-white disabled:opacity-50"
+  >
+    {brandSaving ? "Saving..." : "Save Branding"}
+  </button>
+</form>
           <div className="border-b border-[#e8ecf4] p-6"><div className="flex flex-wrap items-start justify-between gap-4"><div><p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#315bea]">Selected academy</p><h2 className="mt-1 text-2xl font-black">{selectedAcademy.name}</h2><p className="mt-1 text-xs text-[#697386]">Code: {selectedAcademy.code} · {statusLabel(selectedAcademy)}</p></div><div className="flex gap-2"><button onClick={deleteAcademy} className="rounded-xl border border-red-200 px-4 py-2 text-xs font-bold text-red-600">Delete Academy</button><button onClick={() => { setSelectedAcademy(null); setDetails(null); }} className="rounded-xl border px-4 py-2 text-xs font-bold">Close</button></div></div>
             <div className="mt-5 grid grid-cols-2 gap-2 md:grid-cols-6">{([ ["overview","🏠 Overview"],["students","🎓 Students"],["teachers","👨‍🏫 Teachers"],["batches","📚 Batches"],["tests","📝 Tests & Papers"],["subscription","🎟️ Subscription"]] as [Section,string][]).map(([id,label]) => <button key={id} onClick={() => setSection(id)} className={`rounded-xl px-3 py-3 text-xs font-black transition ${section === id ? "bg-[#315bea] text-white" : "bg-[#f6f8fc] hover:bg-[#edf1fb]"}`}>{label}</button>)}</div>
           </div>
