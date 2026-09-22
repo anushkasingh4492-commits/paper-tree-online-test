@@ -95,8 +95,8 @@ async function handleSubmit(
      * Successful login
      */
 
-    router.replace("/dashboard");
-    router.refresh();
+    window.location.replace("/dashboard");
+    return;
 
   } catch (error) {
     console.error("LOGIN ERROR:", error);

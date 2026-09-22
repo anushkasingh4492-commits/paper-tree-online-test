@@ -368,18 +368,47 @@ export default function TestsPage() {
         const assignment =
           data.assignment;
 
-        const courseName =
-          String(
-            assignment?.course_name || ""
-          )
-            .trim()
-            .toUpperCase();
+    const courseName =
+  String(
+    assignment?.course_name || ""
+  )
+    .trim()
+    .toUpperCase();
 
-        const batchName =
-          String(
-            assignment?.batch_name || ""
-          ).trim();
+const className =
+  String(
+    assignment?.class_name || ""
+  )
+    .trim()
+    .toUpperCase();
 
+const batchName =
+  String(
+    assignment?.batch_name || ""
+  ).trim();
+
+/*
+ * Course and group may be stored separately
+ *
+ * Example:
+ * course_name = MHT-CET
+ * class_name  = PCB
+ *
+ * or:
+ * course_name = MHT-CET PCB
+ */
+const assignedCourse =
+  `${courseName} ${className}`.trim();
+
+console.log(
+  "STUDENT ASSIGNMENT:",
+  assignment
+);
+
+console.log(
+  "ASSIGNED COURSE:",
+  assignedCourse
+);
         setAssignedBatchName(
           batchName
         );
@@ -389,18 +418,19 @@ export default function TestsPage() {
          * MHT-CET PCB
          * -----------------------------------------------------
          */
-
-        if (
-          courseName.includes("MHT") &&
-          courseName.includes("PCB")
-        ) {
+if (
+  assignedCourse.includes("MHT") &&
+  assignedCourse.includes("PCB")
+) {
           setCourse("MHT-CET");
 
           setStudentGroup("PCB");
 
-          setSubjects([
-            "Physics",
-          ]);
+setSubjects([
+  "Physics",
+  "Chemistry",
+  "Biology",
+]);
 
           setActiveChapterSubject(
             "Physics"
@@ -423,20 +453,19 @@ export default function TestsPage() {
          * MHT-CET PCM
          * -----------------------------------------------------
          */
-
-        if (
-          courseName.includes("MHT") &&
-          courseName.includes("PCM")
-        ) {
+if (
+  assignedCourse.includes("MHT") &&
+  assignedCourse.includes("PCM")
+) {
           setCourse("MHT-CET");
 
           setStudentGroup("PCM");
 
-          setSubjects([
-            "Physics",
-          ]);
-
-          setActiveChapterSubject(
+setSubjects([
+  "Physics",
+  "Chemistry",
+  "Mathematics",
+]);      setActiveChapterSubject(
             "Physics"
           );
 
@@ -500,9 +529,11 @@ export default function TestsPage() {
 
           setStudentGroup("PCM");
 
-          setSubjects([
-            "Physics",
-          ]);
+         setSubjects([
+  "Physics",
+  "Chemistry",
+  "Mathematics",
+]);
 
           setActiveChapterSubject(
             "Physics"

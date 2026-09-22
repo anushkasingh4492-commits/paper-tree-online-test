@@ -138,33 +138,36 @@ export async function GET(request: Request) {
     );
   }
 }
-
 export async function POST(request: Request) {
   try {
     const body = await request.json();
 
-    const requestedAcademyId =
-      String(
-        body.academyId || ""
-      ).trim();
+    const requestedAcademyId = String(
+      body.academyId || ""
+    ).trim();
 
-    const session =
-      await getBatchSession(
-        requestedAcademyId ||
-          undefined
-      );
+    const session = await getBatchSession(
+      requestedAcademyId || undefined
+    );
 
-    if (
-      !session ||
-      !session.id ||
-      !session.academyId
-    ) {
+    if (!session || !session.id) {
       return NextResponse.json(
         {
           success: false,
           error: "Unauthorized",
         },
         { status: 401 }
+      );
+    }
+
+    if (!session.academyId) {
+      return NextResponse.json(
+        {
+          success: false,
+          error:
+            "Please select an academy before creating a batch.",
+        },
+        { status: 400 }
       );
     }
 
@@ -182,11 +185,7 @@ export async function POST(request: Request) {
       .trim()
       .toUpperCase();
 
-    if (
-      !name ||
-      !className ||
-      !courseName
-    ) {
+    if (!name || !className || !courseName) {
       return NextResponse.json(
         {
           success: false,
@@ -197,11 +196,7 @@ export async function POST(request: Request) {
       );
     }
 
-    if (
-      !ALLOWED_COURSES.includes(
-        courseName
-      )
-    ) {
+    if (!ALLOWED_COURSES.includes(courseName)) {
       return NextResponse.json(
         {
           success: false,
@@ -212,9 +207,6 @@ export async function POST(request: Request) {
       );
     }
 
-    /*
-     * Make sure these columns exist.
-     */
     await pool.query(`
       ALTER TABLE batches
       ADD COLUMN IF NOT EXISTS class_name VARCHAR(255)
@@ -225,59 +217,51 @@ export async function POST(request: Request) {
       ADD COLUMN IF NOT EXISTS course_name VARCHAR(255)
     `);
 
-    /*
-     * created_by references teachers.
-     *
-     * Academy Admin can use its teacher ID.
-     * Master Admin / Admin are not teachers,
-     * so their batch creator must be NULL.
-     */
     await pool.query(`
       ALTER TABLE batches
       ALTER COLUMN created_by DROP NOT NULL
     `);
 
-  const createdBy = null;
+    const createdBy = null;
 
-    const result =
-  await pool.query(
-    `
-    INSERT INTO batches (
-      id,
-      name,
-      class_name,
-      course_name,
-      created_by,
-      academy_id
-    )
-    VALUES (
-      $1,
-      $2,
-      $3,
-      $4,
-      $5,
-      $6
-    )
-    RETURNING
-      id,
-      name,
-      class_name,
-      course_name,
-      created_at
-    `,
-    [
-      randomUUID(),
-      name,
-      className,
-      courseName,
-      createdBy,
-      session.academyId,
-    ]
-  );
+    const result = await pool.query(
+      `
+      INSERT INTO batches (
+        id,
+        name,
+        class_name,
+        course_name,
+        created_by,
+        academy_id
+      )
+      VALUES (
+        $1,
+        $2,
+        $3,
+        $4,
+        $5,
+        $6
+      )
+      RETURNING
+        id,
+        name,
+        class_name,
+        course_name,
+        created_at
+      `,
+      [
+        randomUUID(),
+        name,
+        className,
+        courseName,
+        createdBy,
+        session.academyId,
+      ]
+    );
+
     return NextResponse.json(
       {
         success: true,
-
         batch: {
           ...result.rows[0],
           student_count: 0,

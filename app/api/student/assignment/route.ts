@@ -5,6 +5,11 @@ import { parseSessionCookie } from "@/lib/session";
 
 export const runtime = "nodejs";
 
+type StudentSession = {
+  studentId?: string;
+  email?: string;
+};
+
 export async function GET() {
   try {
     const cookieStore = await cookies();
@@ -23,19 +28,11 @@ export async function GET() {
     }
 
     const session =
-      parseSessionCookie<Record<string, unknown>>(
+      parseSessionCookie<StudentSession>(
         sessionCookie
       );
 
-    const studentId = String(
-      session?.studentId || ""
-    );
-
-    const academyId = String(
-      session?.academyId || ""
-    );
-
-    if (!studentId || !academyId) {
+    if (!session) {
       return NextResponse.json(
         {
           success: false,
@@ -45,38 +42,141 @@ export async function GET() {
       );
     }
 
-    // Make sure the batch has a course column.
+    const sessionStudentId =
+      String(
+        session.studentId || ""
+      ).trim();
+
+    const sessionEmail =
+      String(
+        session.email || ""
+      )
+        .trim()
+        .toLowerCase();
+
+    if (
+      !sessionStudentId &&
+      !sessionEmail
+    ) {
+      return NextResponse.json(
+        {
+          success: false,
+          error:
+            "Student information missing from session.",
+        },
+        { status: 401 }
+      );
+    }
+
+    /*
+     * Make sure batch fields exist.
+     */
     await pool.query(`
       ALTER TABLE batches
       ADD COLUMN IF NOT EXISTS course_name VARCHAR(255)
     `);
 
+    await pool.query(`
+      ALTER TABLE batches
+      ADD COLUMN IF NOT EXISTS class_name VARCHAR(255)
+    `);
+
     /*
-     * Get the student's assigned batch.
-     *
-     * batch_students does not have created_at,
-     * so we order by the batch's created_at instead.
+     * Resolve the student.
      */
-    const result = await pool.query(
-      `
-      SELECT
-        b.id AS batch_id,
-        b.name AS batch_name,
-        b.course_name,
-        b.class_name
-      FROM batch_students bs
-      INNER JOIN batches b
-        ON b.id = bs.batch_id
-      INNER JOIN students s
-        ON s.id = bs.student_id
-      WHERE bs.student_id = $1
-        AND s.academy_id = $2
-        AND b.academy_id = $2
-      ORDER BY b.created_at DESC
-      LIMIT 1
-      `,
-      [studentId, academyId]
-    );
+    let studentResult;
+
+    if (sessionStudentId) {
+      studentResult =
+        await pool.query(
+          `
+          SELECT
+            id,
+            name,
+            email,
+            academy_id
+          FROM students
+          WHERE id = $1
+          LIMIT 1
+          `,
+          [sessionStudentId]
+        );
+    } else {
+      studentResult = {
+        rows: [],
+        rowCount: 0,
+      };
+    }
+
+    /*
+     * Email fallback.
+     */
+    if (
+      !studentResult.rowCount &&
+      sessionEmail
+    ) {
+      studentResult =
+        await pool.query(
+          `
+          SELECT
+            id,
+            name,
+            email,
+            academy_id
+          FROM students
+          WHERE LOWER(email) = $1
+          LIMIT 1
+          `,
+          [sessionEmail]
+        );
+    }
+
+    if (!studentResult.rowCount) {
+      return NextResponse.json(
+        {
+          success: false,
+          error:
+            "Student account could not be found.",
+        },
+        { status: 404 }
+      );
+    }
+
+    const student =
+      studentResult.rows[0];
+
+    /*
+     * Get all batches assigned to this student.
+     *
+     * Prefer batches that have a course_name because
+     * the test generator needs it to determine the
+     * student's course/group.
+     */
+    const result =
+      await pool.query(
+        `
+        SELECT
+          b.id AS batch_id,
+          b.name AS batch_name,
+          b.course_name,
+          b.class_name,
+          b.academy_id,
+          b.created_at
+        FROM batch_students bs
+        INNER JOIN batches b
+          ON b.id = bs.batch_id
+        WHERE bs.student_id = $1
+        ORDER BY
+          CASE
+            WHEN b.course_name IS NOT NULL
+              AND TRIM(b.course_name) <> ''
+            THEN 0
+            ELSE 1
+          END,
+          b.created_at DESC
+        `,
+        [student.id]
+      );
 
     if (!result.rowCount) {
       return NextResponse.json(
@@ -89,7 +189,30 @@ export async function GET() {
       );
     }
 
-    const assignment = result.rows[0];
+    /*
+     * Pick the first valid assignment.
+     */
+    const assignment =
+      result.rows[0];
+
+    /*
+     * Course is required for the test generator.
+     */
+    if (
+      !assignment.course_name ||
+      !String(
+        assignment.course_name
+      ).trim()
+    ) {
+      return NextResponse.json(
+        {
+          success: false,
+          error:
+            `Your batch "${assignment.batch_name}" does not have a course assigned. Please ask the academy admin to update the batch course.`,
+        },
+        { status: 400 }
+      );
+    }
 
     return NextResponse.json({
       success: true,
@@ -107,7 +230,7 @@ export async function GET() {
         error:
           error instanceof Error
             ? error.message
-            : "Could not load student course.",
+            : "Could not load student assignment.",
       },
       { status: 500 }
     );

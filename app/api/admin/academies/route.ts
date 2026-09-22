@@ -46,13 +46,13 @@ async function ensureAcademySettingsColumns() {
     ALTER TABLE academies
       ADD COLUMN IF NOT EXISTS subscription_end DATE
   `);
-}
 
   await pool.query(`
     CREATE UNIQUE INDEX IF NOT EXISTS academies_domain_unique
     ON academies (LOWER(domain))
     WHERE domain IS NOT NULL AND domain <> ''
   `);
+}
 
 export async function GET() {
   if (!(await isMasterAdmin())) {

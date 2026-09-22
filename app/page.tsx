@@ -108,7 +108,8 @@ export default function Home() {
           );
         }
 
-        router.replace("/dashboard");
+        window.location.replace("/dashboard");
+        return;
       } else if (result.role === "TEACHER") {
         router.replace("/teacher");
       } else if (result.role === "ACADEMY_ADMIN") {
