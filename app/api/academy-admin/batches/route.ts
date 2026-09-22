@@ -237,48 +237,43 @@ export async function POST(request: Request) {
       ALTER COLUMN created_by DROP NOT NULL
     `);
 
-    const createdBy =
-      session.role ===
-      "ACADEMY_ADMIN"
-        ? session.id
-        : null;
+  const createdBy = null;
 
     const result =
-      await pool.query(
-        `
-        INSERT INTO batches (
-          id,
-          name,
-          class_name,
-          course_name,
-          created_by,
-          academy_id
-        )
-        VALUES (
-          $1,
-          $2,
-          $3,
-          $4,
-          $5,
-          $6
-        )
-        RETURNING
-          id,
-          name,
-          class_name,
-          course_name,
-          created_at
-        `,
-        [
-          randomUUID(),
-          name,
-          className,
-          courseName,
-          createdBy,
-          session.academyId,
-        ]
-      );
-
+  await pool.query(
+    `
+    INSERT INTO batches (
+      id,
+      name,
+      class_name,
+      course_name,
+      created_by,
+      academy_id
+    )
+    VALUES (
+      $1,
+      $2,
+      $3,
+      $4,
+      $5,
+      $6
+    )
+    RETURNING
+      id,
+      name,
+      class_name,
+      course_name,
+      created_at
+    `,
+    [
+      randomUUID(),
+      name,
+      className,
+      courseName,
+      createdBy,
+      session.academyId,
+    ]
+  );
     return NextResponse.json(
       {
         success: true,
