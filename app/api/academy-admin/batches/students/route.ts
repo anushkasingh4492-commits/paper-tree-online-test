@@ -113,8 +113,7 @@ export async function GET(request: Request) {
         s.id,
         s.name,
         s.email,
-        s.roll_number,
-        s.class_name
+        s.roll_number
       FROM batch_students bs
       INNER JOIN students s
         ON s.id = bs.student_id

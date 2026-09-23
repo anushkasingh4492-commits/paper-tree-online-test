@@ -49,8 +49,6 @@ type Toast = {
   text: string;
 };
 
-
-
 const BATCH_COURSE_OPTIONS = [
   "MHT-CET PCM",
   "MHT-CET PCB",
@@ -124,7 +122,6 @@ export default function AcademiesPage() {
   const [teacherPassword, setTeacherPassword] = useState("");
 
   const [batchName, setBatchName] = useState("");
-
   const [batchCourse, setBatchCourse] = useState("");
 
   const [subscriptionSeats, setSubscriptionSeats] =
@@ -576,16 +573,13 @@ export default function AcademiesPage() {
       return;
     }
 
-   if (
-  !batchName.trim() ||
-  !batchCourse.trim()
-) {
-  notify(
-    "Please fill batch name and course.",
-    "error"
-  );
-  return;
-}
+    if (!batchName.trim() || !batchCourse.trim()) {
+      notify(
+        "Please fill batch name and course.",
+        "error"
+      );
+      return;
+    }
 
     try {
       const res = await fetch(
@@ -600,11 +594,15 @@ export default function AcademiesPage() {
 
           credentials: "include",
 
-        body: JSON.stringify({
-  academyId: selectedAcademy.id,
-  name: batchName.trim(),
-  courseName: batchCourse.trim(),
-}),
+          body: JSON.stringify({
+            academyId:
+              selectedAcademy.id,
+
+            name: batchName.trim(),
+
+            courseName:
+              batchCourse.trim(),
+          }),
         }
       );
 
@@ -622,7 +620,6 @@ export default function AcademiesPage() {
       );
 
       setBatchName("");
-     
       setBatchCourse("");
 
       await refreshEverything();
@@ -886,7 +883,6 @@ export default function AcademiesPage() {
         ? {
             name: modalValue,
             email: modalValue2,
-            className: modalValue3,
           }
         : type === "teacher"
         ? {
@@ -895,7 +891,6 @@ export default function AcademiesPage() {
           }
         : {
             name: modalValue,
-            className: modalValue2,
             courseName: modalValue3,
           };
 
@@ -1077,31 +1072,13 @@ export default function AcademiesPage() {
       setModalValue2(
         String(record.email ?? "")
       );
+      setModalValue3("");
     } else {
-      setModalValue2(
-        String(
-          record.class_name ?? ""
-        )
-      );
-
+      setModalValue2("");
       setModalValue3(
-        String(
-          record.course_name ?? ""
-        )
+        String(record.course_name ?? "")
       );
     }
-
-    setModalValue3(
-      type === "student"
-        ? String(
-            record.class_name ?? ""
-          )
-        : type === "batch"
-        ? String(
-            record.course_name ?? ""
-          )
-        : ""
-    );
   }
 
   const students = (
@@ -1109,8 +1086,6 @@ export default function AcademiesPage() {
   ).filter((s) =>
     `${s.name ?? ""} ${
       s.email ?? ""
-    } ${
-      s.class_name ?? ""
     }`
       .toLowerCase()
       .includes(
@@ -1134,8 +1109,6 @@ export default function AcademiesPage() {
     details?.batches || []
   ).filter((b) =>
     `${b.name ?? ""} ${
-      b.class_name ?? ""
-    } ${
       b.course_name ?? ""
     }`
       .toLowerCase()
@@ -1152,7 +1125,7 @@ export default function AcademiesPage() {
         <div className="mx-auto flex max-w-[1500px] items-center justify-between px-6 py-4">
           <div>
             <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#315bea]">
-              Paper Tree
+              Paper Tree Educational Studio
             </p>
 
             <h1 className="text-xl font-black">
@@ -1705,8 +1678,6 @@ export default function AcademiesPage() {
                           label=""
                         />
 
-
-
                         <button className="w-full rounded-xl bg-[#315bea] px-4 py-3 text-xs font-black text-white">
                           ➕ Add Student
                         </button>
@@ -1784,9 +1755,6 @@ export default function AcademiesPage() {
                           placeholder="Batch name"
                           label=""
                         />
-
-
-                          
 
                         <Select
                           label="Course / Exam"
@@ -1973,7 +1941,7 @@ function StudentsPanel({
       count={students.length}
       search={search}
       setSearch={setSearch}
-      placeholder="Search name, email or class"
+      placeholder="Search name or email"
     >
       <div className="grid gap-3">
         {students.length ? (
@@ -1989,9 +1957,6 @@ function StudentsPanel({
                   s.email || "-"
                 )}
                 lines={[
-                  `Class: ${
-                    s.class_name || "-"
-                  }`,
                   `Password: ${
                     s.has_password
                       ? "Set securely"
@@ -2169,10 +2134,7 @@ function BatchesPanel({
                     </p>
 
                     <p className="mt-1 text-xs text-[#697386]">
-                      Class:{" "}
-                      {b.class_name ||
-                        "-"}{" "}
-                      · Course:{" "}
+                      Course:{" "}
                       {b.course_name ||
                         "Not assigned"}{" "}
                       ·{" "}
@@ -2315,10 +2277,7 @@ function BatchesPanel({
                                   ➕{" "}
                                   {
                                     s.name
-                                  }{" "}
-                                  ·{" "}
-                                  {s.class_name ||
-                                    "-"}
+                                  }
                                 </button>
                               )
                             )}
@@ -2867,8 +2826,6 @@ function Modal({
                   type="email"
                 />
 
-               
-
               </>
             ) : modal.type ===
               "teacher" ? (
@@ -2881,7 +2838,6 @@ function Modal({
               />
             ) : (
               <>
-
                 <Select
                   label="Course / Exam"
                   value={value3}

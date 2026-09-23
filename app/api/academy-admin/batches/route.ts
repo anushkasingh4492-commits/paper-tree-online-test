@@ -13,11 +13,8 @@ const ALLOWED_COURSES = [
   "JEE PCM",
 ];
 
-async function getBatchSession(
-  targetAcademyId?: string
-) {
-  const value =
-    (await cookies()).get("master_session")?.value;
+async function getBatchSession(targetAcademyId?: string) {
+  const value = (await cookies()).get("master_session")?.value;
 
   if (!value) return null;
 
@@ -57,20 +54,14 @@ async function getBatchSession(
 
 export async function GET(request: Request) {
   try {
-    const { searchParams } =
-      new URL(request.url);
+    const { searchParams } = new URL(request.url);
 
     const academyId =
-      searchParams.get("academyId") ||
-      undefined;
+      searchParams.get("academyId") || undefined;
 
-    const session =
-      await getBatchSession(academyId);
+    const session = await getBatchSession(academyId);
 
-    if (
-      !session ||
-      !session.academyId
-    ) {
+    if (!session || !session.academyId) {
       return NextResponse.json(
         {
           success: false,
@@ -82,38 +73,30 @@ export async function GET(request: Request) {
 
     await pool.query(`
       ALTER TABLE batches
-      ADD COLUMN IF NOT EXISTS class_name VARCHAR(255)
-    `);
-
-    await pool.query(`
-      ALTER TABLE batches
       ADD COLUMN IF NOT EXISTS course_name VARCHAR(255)
     `);
 
-    const result =
-      await pool.query(
-        `
-        SELECT
-          b.id,
-          b.name,
-          b.class_name,
-          b.course_name,
-          b.created_at,
-          COUNT(bs.student_id)::int AS student_count
-        FROM batches b
-        LEFT JOIN batch_students bs
-          ON bs.batch_id = b.id
-        WHERE b.academy_id = $1
-        GROUP BY
-          b.id,
-          b.name,
-          b.class_name,
-          b.course_name,
-          b.created_at
-        ORDER BY b.name ASC
-        `,
-        [session.academyId]
-      );
+    const result = await pool.query(
+      `
+      SELECT
+        b.id,
+        b.name,
+        b.course_name,
+        b.created_at,
+        COUNT(bs.student_id)::int AS student_count
+      FROM batches b
+      LEFT JOIN batch_students bs
+        ON bs.batch_id = b.id
+      WHERE b.academy_id = $1
+      GROUP BY
+        b.id,
+        b.name,
+        b.course_name,
+        b.created_at
+      ORDER BY b.name ASC
+      `,
+      [session.academyId]
+    );
 
     return NextResponse.json({
       success: true,
@@ -138,6 +121,7 @@ export async function GET(request: Request) {
     );
   }
 }
+
 export async function POST(request: Request) {
   try {
     const body = await request.json();
@@ -175,22 +159,18 @@ export async function POST(request: Request) {
       body.name || ""
     ).trim();
 
-    const className = String(
-      body.className || ""
-    ).trim();
-
     const courseName = String(
       body.courseName || ""
     )
       .trim()
       .toUpperCase();
 
-    if (!name || !className || !courseName) {
+    if (!name || !courseName) {
       return NextResponse.json(
         {
           success: false,
           error:
-            "Batch name, class and course are required.",
+            "Batch name and course are required.",
         },
         { status: 400 }
       );
@@ -209,11 +189,6 @@ export async function POST(request: Request) {
 
     await pool.query(`
       ALTER TABLE batches
-      ADD COLUMN IF NOT EXISTS class_name VARCHAR(255)
-    `);
-
-    await pool.query(`
-      ALTER TABLE batches
       ADD COLUMN IF NOT EXISTS course_name VARCHAR(255)
     `);
 
@@ -229,7 +204,6 @@ export async function POST(request: Request) {
       INSERT INTO batches (
         id,
         name,
-        class_name,
         course_name,
         created_by,
         academy_id
@@ -239,20 +213,17 @@ export async function POST(request: Request) {
         $2,
         $3,
         $4,
-        $5,
-        $6
+        $5
       )
       RETURNING
         id,
         name,
-        class_name,
         course_name,
         created_at
       `,
       [
         randomUUID(),
         name,
-        className,
         courseName,
         createdBy,
         session.academyId,
@@ -288,14 +259,10 @@ export async function POST(request: Request) {
   }
 }
 
-export async function DELETE(
-  request: Request
-) {
+export async function DELETE(request: Request) {
   try {
     const value =
-      (await cookies()).get(
-        "master_session"
-      )?.value;
+      (await cookies()).get("master_session")?.value;
 
     const batchId =
       new URL(request.url)
@@ -311,12 +278,11 @@ export async function DELETE(
       );
     }
 
-    const session =
-      parseSessionCookie<{
-        id?: string;
-        role?: string;
-        academyId?: string;
-      }>(value);
+    const session = parseSessionCookie<{
+      id?: string;
+      role?: string;
+      academyId?: string;
+    }>(value);
 
     if (
       !session ||
@@ -333,8 +299,7 @@ export async function DELETE(
     }
 
     if (
-      session.role !==
-        "ACADEMY_ADMIN" &&
+      session.role !== "ACADEMY_ADMIN" &&
       session.role !== "ADMIN" &&
       session.role !== "MASTER_ADMIN"
     ) {
@@ -347,20 +312,19 @@ export async function DELETE(
       );
     }
 
-    const scheduled =
-      await pool.query(
-        `
-        SELECT 1
-        FROM scheduled_tests
-        WHERE batch_id = $1
-          AND academy_id = $2
-        LIMIT 1
-        `,
-        [
-          batchId,
-          session.academyId,
-        ]
-      );
+    const scheduled = await pool.query(
+      `
+      SELECT 1
+      FROM scheduled_tests
+      WHERE batch_id = $1
+        AND academy_id = $2
+      LIMIT 1
+      `,
+      [
+        batchId,
+        session.academyId,
+      ]
+    );
 
     if (scheduled.rowCount) {
       return NextResponse.json(
@@ -373,13 +337,10 @@ export async function DELETE(
       );
     }
 
-    const client =
-      await pool.connect();
+    const client = await pool.connect();
 
     try {
-      await client.query(
-        "BEGIN"
-      );
+      await client.query("BEGIN");
 
       await client.query(
         `
@@ -389,30 +350,26 @@ export async function DELETE(
         [batchId]
       );
 
-      const result =
-        await client.query(
-          `
-          DELETE FROM batches
-          WHERE id = $1
-            AND academy_id = $2
-          RETURNING id
-          `,
-          [
-            batchId,
-            session.academyId,
-          ]
-        );
-
-      await client.query(
-        "COMMIT"
+      const result = await client.query(
+        `
+        DELETE FROM batches
+        WHERE id = $1
+          AND academy_id = $2
+        RETURNING id
+        `,
+        [
+          batchId,
+          session.academyId,
+        ]
       );
+
+      await client.query("COMMIT");
 
       if (!result.rowCount) {
         return NextResponse.json(
           {
             success: false,
-            error:
-              "Batch not found.",
+            error: "Batch not found.",
           },
           { status: 404 }
         );
@@ -422,10 +379,7 @@ export async function DELETE(
         success: true,
       });
     } catch (error) {
-      await client.query(
-        "ROLLBACK"
-      );
-
+      await client.query("ROLLBACK");
       throw error;
     } finally {
       client.release();
