@@ -1614,62 +1614,139 @@ export async function POST(
          * NORMAL RANDOM GENERATION
          * -----------------------------------------------------
          *
-         * Backward-compatible behavior when questionIds
-         * are NOT provided.
+         * Multi-subject tests are generated in a fixed subject
+         * order, while questions inside each subject are random.
+         * Chapter selection is only a filter and never determines
+         * question order.
+         *
+         * Physics -> Chemistry -> Biology -> Mathematics
          */
 
-        if (
-          available <
-          questionCount
-        ) {
+        const subjectOrder = [
+          "Physics",
+          "Chemistry",
+          "Biology",
+          "Mathematics",
+        ];
+
+        const normalizedSelectedSubjects = new Set(
+          subjects.map((subject) => normalize(subject))
+        );
+
+        const orderedSubjects = subjectOrder.filter((subject) =>
+          normalizedSelectedSubjects.has(normalize(subject))
+        );
+
+        if (orderedSubjects.length === 0) {
           return Response.json(
             {
               success: false,
-
-              error:
-                `Only ${available} ${exam} questions are available for the selected criteria. You requested ${questionCount}.`,
-
-              details: {
-                exam,
-                subjects,
-                chapters,
-                difficulty,
-
-                availableQuestions:
-                  available,
-
-                requestedQuestions:
-                  questionCount,
-              },
+              error: "Please select at least one subject.",
             },
             { status: 400 }
           );
         }
 
-        const questionValues = [
-          ...values,
-          questionCount,
-        ];
+        const baseCount = Math.floor(
+          questionCount / orderedSubjects.length
+        );
+        let remainder = questionCount % orderedSubjects.length;
 
-        const questionQuery = `
-          ${QUESTION_SELECT}
-          WHERE
-            ${conditions.join(
-              " AND "
-            )}
-          ORDER BY RANDOM()
-          LIMIT $${questionValues.length}
-        `;
+        for (const databaseSubject of orderedSubjects) {
+          const subjectCount =
+            baseCount + (remainder > 0 ? 1 : 0);
 
-        const result =
-          await pool.query(
+          if (remainder > 0) remainder -= 1;
+
+          const subjectConditions = [...conditions];
+          const subjectValues = [...values];
+
+          addSubjectFilter(
+            databaseSubject,
+            subjectConditions,
+            subjectValues
+          );
+
+          let subjectChapters = chapters;
+
+          if (body.chaptersBySubject) {
+            const chapterEntry = Object.entries(
+              body.chaptersBySubject as Record<string, string[]>
+            ).find(
+              ([subject]) => normalize(subject) === normalize(databaseSubject)
+            );
+
+            if (chapterEntry && Array.isArray(chapterEntry[1])) {
+              subjectChapters = chapterEntry[1]
+                .map(clean)
+                .filter(Boolean);
+            }
+          }
+
+          addChapterFilter(
+            subjectChapters,
+            subjectConditions,
+            subjectValues
+          );
+
+          const countQuery = `
+            SELECT COUNT(*)::int AS count
+            FROM questions
+            WHERE
+              ${subjectConditions.join(" AND ")}
+          `;
+
+          const countResult = await pool.query(
+            countQuery,
+            subjectValues
+          );
+
+          const availableForSubject = Number(
+            countResult.rows[0]?.count || 0
+          );
+
+          if (availableForSubject < subjectCount) {
+            return Response.json(
+              {
+                success: false,
+                error:
+                  `Only ${availableForSubject} ${databaseSubject} questions are available for the selected criteria, but ${subjectCount} are required for this test.`,
+                details: {
+                  exam,
+                  subject: databaseSubject,
+                  requestedQuestions: subjectCount,
+                  availableQuestions: availableForSubject,
+                  selectedSubjects: orderedSubjects,
+                  chapters: subjectChapters,
+                  difficulty,
+                },
+              },
+              { status: 400 }
+            );
+          }
+
+          const questionValues = [
+            ...subjectValues,
+            subjectCount,
+          ];
+
+          const questionQuery = `
+            ${QUESTION_SELECT}
+            WHERE
+              ${subjectConditions.join(" AND ")}
+            ORDER BY RANDOM()
+            LIMIT $${questionValues.length}
+          `;
+
+          const result = await pool.query(
             questionQuery,
             questionValues
           );
 
-        selectedQuestions.push(
-          ...(result.rows as QuestionRow[])
-        );
+          selectedQuestions.push(
+            ...(result.rows as QuestionRow[])
+          );
+        }
       }
     }
 

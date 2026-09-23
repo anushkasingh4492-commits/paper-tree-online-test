@@ -132,11 +132,11 @@ async function handleSubmit(
 
               <div>
                 <p className="text-[17px] font-extrabold text-white">
-                  Paper Tree
+                  Paper Tree Educational Studio
                 </p>
 
                 <p className="text-[9px] font-bold tracking-[0.18em] text-blue-100">
-                  ONLINE TEST
+                  EDUCATIONAL STUDIO
                 </p>
               </div>
             </div>
@@ -145,7 +145,7 @@ async function handleSubmit(
 
               <div className="mb-5 inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.12em] text-blue-50">
                 <span className="h-1.5 w-1.5 rounded-full bg-[#8dffb4]" />
-                MHT-CET · 2026
+                COMPETITIVE EXAMS
               </div>
 
               <h1 className="text-[48px] font-extrabold leading-[1.08] tracking-[-0.045em] text-white">
@@ -183,7 +183,7 @@ async function handleSubmit(
             </div>
 
             <p className="text-xs text-blue-200">
-              © 2026 Paper Tree · Online Testing Platform
+              © 2026 Paper Tree Educational Studio
             </p>
 
           </div>
@@ -205,11 +205,11 @@ async function handleSubmit(
 
               <div>
                 <p className="text-[17px] font-extrabold">
-                  Paper Tree
+                  Paper Tree Educational Studio
                 </p>
 
                 <p className="text-[9px] font-bold tracking-[0.18em] text-[#98a1b2]">
-                  ONLINE TEST
+                  EDUCATIONAL STUDIO
                 </p>
               </div>
 
@@ -226,8 +226,7 @@ async function handleSubmit(
               </h2>
 
               <p className="mt-2 text-sm leading-6 text-[#929aaa]">
-                Sign in to continue your MHT-CET
-                preparation.
+                Sign in to continue your exam preparation.
               </p>
 
             </div>
@@ -328,7 +327,7 @@ async function handleSubmit(
         <div className="mt-7 text-center">
 
           <p className="text-[11px] leading-5 text-[#a0a7b4]">
-            MHT-CET Online Testing Platform
+            Competitive Exam Preparation Platform
           </p>
 
           <p className="mt-1 text-[10px] text-[#c0c5ce]">

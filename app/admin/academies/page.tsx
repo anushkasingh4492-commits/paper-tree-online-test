@@ -49,11 +49,7 @@ type Toast = {
   text: string;
 };
 
-const CLASS_OPTIONS = [
-  "Class 11",
-  "Class 12",
-  "Class 11 + 12",
-];
+
 
 const BATCH_COURSE_OPTIONS = [
   "MHT-CET PCM",
@@ -122,7 +118,6 @@ export default function AcademiesPage() {
   const [studentName, setStudentName] = useState("");
   const [studentEmail, setStudentEmail] = useState("");
   const [studentPassword, setStudentPassword] = useState("");
-  const [studentClass, setStudentClass] = useState("");
 
   const [teacherName, setTeacherName] = useState("");
   const [teacherEmail, setTeacherEmail] = useState("");
@@ -483,7 +478,6 @@ export default function AcademiesPage() {
             name: studentName,
             email: studentEmail,
             password: studentPassword,
-            className: studentClass,
           }),
         }
       );
@@ -504,7 +498,6 @@ export default function AcademiesPage() {
       setStudentName("");
       setStudentEmail("");
       setStudentPassword("");
-      setStudentClass("");
 
       await refreshEverything();
     } catch (e) {
@@ -1720,18 +1713,7 @@ export default function AcademiesPage() {
                           label=""
                         />
 
-                        <Select
-                          label="Class"
-                          value={
-                            studentClass
-                          }
-                          onChange={
-                            setStudentClass
-                          }
-                          options={
-                            CLASS_OPTIONS
-                          }
-                        />
+
 
                         <button className="w-full rounded-xl bg-[#315bea] px-4 py-3 text-xs font-black text-white">
                           ➕ Add Student
@@ -1811,18 +1793,8 @@ export default function AcademiesPage() {
                           label=""
                         />
 
-                        <Select
-                          label="Class"
-                          value={
-                            batchClass
-                          }
-                          onChange={
-                            setBatchClass
-                          }
-                          options={
-                            CLASS_OPTIONS
-                          }
-                        />
+
+                          
 
                         <Select
                           label="Course / Exam"
@@ -2903,16 +2875,8 @@ function Modal({
                   type="email"
                 />
 
-                <Select
-                  label="Class"
-                  value={value3}
-                  onChange={
-                    setValue3
-                  }
-                  options={
-                    CLASS_OPTIONS
-                  }
-                />
+               
+
               </>
             ) : modal.type ===
               "teacher" ? (
@@ -2925,16 +2889,6 @@ function Modal({
               />
             ) : (
               <>
-                <Select
-                  label="Class"
-                  value={value2}
-                  onChange={
-                    setValue2
-                  }
-                  options={
-                    CLASS_OPTIONS
-                  }
-                />
 
                 <Select
                   label="Course / Exam"

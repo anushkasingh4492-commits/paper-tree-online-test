@@ -118,6 +118,27 @@ export default function TeacherPage() {
           </button>
 
           <button
+            onClick={() => router.push("/teacher/performance")}
+            className="rounded-2xl border border-[#e3e8f5] bg-white p-7 text-left shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+          >
+            <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#fff6e8] text-2xl">
+              📊
+            </div>
+
+            <h2 className="text-xl font-extrabold">
+              Student Performance
+            </h2>
+
+            <p className="mt-2 text-sm leading-6 text-[#697386]">
+              View test results, accuracy and overall performance for every student in your academy.
+            </p>
+
+            <div className="mt-5 text-sm font-bold text-[#315bea]">
+              View performance →
+            </div>
+          </button>
+
+          <button
             onClick={() => router.push("/teacher/cherry-pick")}
             className="rounded-2xl border border-[#e3e8f5] bg-white p-7 text-left shadow-sm transition hover:-translate-y-1 hover:shadow-md"
           >

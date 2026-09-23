@@ -1551,7 +1551,7 @@ export default function DashboardPage() {
               </div>
 
               <div className="text-[9px] font-semibold tracking-[.17em] text-[#9ba1ad] mt-1">
-                ONLINE TEST
+                EDUCATIONAL STUDIO
               </div>
             </div>
           </div>
@@ -1659,7 +1659,7 @@ export default function DashboardPage() {
                   />
                 </span>
 
-                MHT-CET · 2026
+                COMPETITIVE EXAMS
 
                 <span className="text-[#9da4b1]">
                   ⌄
@@ -1709,7 +1709,7 @@ export default function DashboardPage() {
                 <div className="flex items-center gap-2 text-[11px] font-semibold">
                   <span className="w-2 h-2 rounded-full bg-[#28d48a]" />
 
-                  MHT-CET Preparation
+                  Competitive Exam Preparation
                 </div>
 
                 <h2 className="mt-4 text-[24px] lg:text-[26px] font-extrabold tracking-tight">

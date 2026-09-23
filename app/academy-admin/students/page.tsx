@@ -22,7 +22,6 @@ export default function AcademyStudentsPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [className, setClassName] = useState("Class 11");
 
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
@@ -87,7 +86,6 @@ export default function AcademyStudentsPage() {
           name,
           email,
           password,
-          className,
           batchId,
         }),
       });
@@ -209,17 +207,6 @@ export default function AcademyStudentsPage() {
               placeholder="Student name"
               className="mt-5 w-full rounded-xl border border-[#dfe4ee] px-4 py-3 text-sm outline-none focus:border-[#315bea]"
             />
-
-            <select
-              required
-              value={className}
-              onChange={(e) => setClassName(e.target.value)}
-              className="mt-3 w-full rounded-xl border border-[#dfe4ee] bg-white px-4 py-3 text-sm outline-none focus:border-[#315bea]"
-            >
-              <option value="Class 11">Class 11</option>
-              <option value="Class 12">Class 12</option>
-              <option value="Class 11 + 12">Class 11 + 12</option>
-            </select>
 
             {/* Batch selection */}
             <select

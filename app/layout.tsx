@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Paper Tree Online Test",
-  description: "Online testing platform for competitive exams",
+  title: "Paper Tree Educational Studio",
+  description: "Competitive exam preparation and testing platform",
 };
 
 export default function RootLayout({

@@ -425,12 +425,12 @@ export const PRESETS: Preset[] = [
   },
 
   {
-    id: "PCB-200",
+    id: "PCB-180",
     name: "Full paper",
     subjects: {
-      physics: 50,
-      chemistry: 50,
-      biology: 100,
+      physics: 45,
+      chemistry: 45,
+      biology: 90,
     },
     examAccurate: true,
   },

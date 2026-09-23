@@ -93,7 +93,7 @@ if (!validPortalRole) {
           </div>
 
           <h1 className="text-2xl font-extrabold text-[#172033]">
-            Paper Tree
+            Paper Tree Educational Studio
           </h1>
 
           <p className="mt-1 text-sm text-[#697386]">

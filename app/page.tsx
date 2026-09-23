@@ -134,7 +134,7 @@ export default function Home() {
     }
   }
 
-  const instituteName = branding?.name || "Paper Tree";
+  const instituteName = branding?.name || "Paper Tree Educational Studio";
 
   return (
     <main className="min-h-screen bg-[#f4f7fb] text-[#172033]">

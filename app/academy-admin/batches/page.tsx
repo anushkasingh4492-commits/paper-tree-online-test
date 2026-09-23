@@ -754,32 +754,8 @@ export default function AcademyBatchesPage() {
               )}
             </select>
 
-            <select
-              required
-              value={className}
-              onChange={(e) =>
-                setClassName(
-                  e.target.value
-                )
-              }
-              className="mt-3 w-full rounded-xl border border-[#dfe4ee] bg-white px-4 py-3 text-sm outline-none focus:border-[#315bea]"
-            >
-              <option value="">
-                Select class
-              </option>
-
-              <option value="11">
-                Class 11
-              </option>
-
-              <option value="12">
-                Class 12
-              </option>
-
-              <option value="11 + 12">
-                Class 11 + 12
-              </option>
-            </select>
+          
+           
 
             <button
               disabled={
