@@ -124,7 +124,7 @@ export default function AcademiesPage() {
   const [teacherPassword, setTeacherPassword] = useState("");
 
   const [batchName, setBatchName] = useState("");
-  const [batchClass, setBatchClass] = useState("");
+
   const [batchCourse, setBatchCourse] = useState("");
 
   const [subscriptionSeats, setSubscriptionSeats] =
@@ -576,17 +576,16 @@ export default function AcademiesPage() {
       return;
     }
 
-    if (
-      !batchName.trim() ||
-      !batchClass.trim() ||
-      !batchCourse.trim()
-    ) {
-      notify(
-        "Please fill batch name, class and course.",
-        "error"
-      );
-      return;
-    }
+   if (
+  !batchName.trim() ||
+  !batchCourse.trim()
+) {
+  notify(
+    "Please fill batch name and course.",
+    "error"
+  );
+  return;
+}
 
     try {
       const res = await fetch(
@@ -601,18 +600,11 @@ export default function AcademiesPage() {
 
           credentials: "include",
 
-          body: JSON.stringify({
-            academyId:
-              selectedAcademy.id,
-
-            name: batchName.trim(),
-
-            className:
-              batchClass.trim(),
-
-            courseName:
-              batchCourse.trim(),
-          }),
+        body: JSON.stringify({
+  academyId: selectedAcademy.id,
+  name: batchName.trim(),
+  courseName: batchCourse.trim(),
+}),
         }
       );
 
@@ -630,7 +622,7 @@ export default function AcademiesPage() {
       );
 
       setBatchName("");
-      setBatchClass("");
+     
       setBatchCourse("");
 
       await refreshEverything();
