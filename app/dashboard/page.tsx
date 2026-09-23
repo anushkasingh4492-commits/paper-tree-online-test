@@ -1610,7 +1610,16 @@ export default function DashboardPage() {
 
             </nav>
           </div>
-
+<button
+  type="button"
+  onClick={() => router.push("/change-password")}
+  className="w-full h-10 flex items-center gap-3 px-2.5 rounded-xl text-[#657083] hover:bg-[#f7f8fb] text-xs font-medium"
+>
+  <span className="w-7 h-7 rounded-lg bg-[#f5f6f9] flex items-center justify-center">
+    🔐
+  </span>
+  <span>Change Password</span>
+</button>
           <button
             className="mx-5 mb-5 mt-1 flex items-center gap-3 h-9 text-xs text-[#657083]"
             onClick={logout}

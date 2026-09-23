@@ -309,6 +309,13 @@ async function handleSubmit(
                   ? "Signing in..."
                   : "Sign in"}
               </button>
+              <button
+  type="button"
+  onClick={() => router.push("/change-password")}
+  className="mt-4 w-full rounded-xl border border-[#dfe3ea] bg-white px-4 py-3 text-sm font-bold text-[#315bea] transition hover:bg-[#f7f9ff]"
+>
+  🔐 Change Password
+</button>
 
         </form>
 

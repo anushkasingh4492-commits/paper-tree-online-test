@@ -13,7 +13,11 @@ type Paper = {
   created_at: string;
   question_count: number;
 };
-type Branding = { name: string; logo_data?: string | null };
+
+type Branding = {
+  name: string;
+  logo_data?: string | null;
+};
 
 export default function TeacherPage() {
   const router = useRouter();
@@ -54,42 +58,80 @@ export default function TeacherPage() {
   }, []);
 
   useEffect(() => {
-    void fetch("/api/academy/branding", { cache: "no-store" }).then((response) => response.json()).then((data) => {
-      if (data.success) setBranding(data.academy);
-    }).catch(() => undefined);
+    void fetch("/api/academy/branding", { cache: "no-store" })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.success) setBranding(data.academy);
+      })
+      .catch(() => undefined);
   }, []);
 
   return (
     <main className="min-h-screen bg-[#f6f8fc] text-[#172033]">
       <div className="mx-auto max-w-7xl px-6 py-10">
 
-        <div className="mb-10 flex items-center justify-between">
+        <div className="mb-10 flex items-center justify-between gap-4">
           <div>
-            <div className="mb-2 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.15em] text-[#315bea]">{branding?.logo_data ? <img src={branding.logo_data} alt="Institute logo" className="h-7 w-7 rounded-md object-contain" /> : null}{branding?.name || "Teacher Portal"}</div>
+            <div className="mb-2 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.15em] text-[#315bea]">
+              {branding?.logo_data ? (
+                <img
+                  src={branding.logo_data}
+                  alt="Institute logo"
+                  className="h-7 w-7 rounded-md object-contain"
+                />
+              ) : null}
 
-          <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
-  📝 Create & Publish Tests
-</h1>
+              {branding?.name || "Teacher Portal"}
+            </div>
+
+            <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
+              📝 Create & Publish Tests
+            </h1>
+
             <p className="mt-2 text-sm text-[#697386]">
               Create papers automatically or select questions manually.
             </p>
           </div>
 
-          <button
-          onClick={async () => {
-  try {
-    await fetch("/api/logout", {
-      method: "POST",
-      credentials: "include",
-    });
-  } finally {
-    router.push("/");
-  }
-}}
-            className="rounded-xl border border-[#e2e6ee] bg-white px-4 py-2.5 text-sm font-bold text-[#697386] hover:bg-[#f7f8fb]"
-          >
-            Logout
-          </button>
+          {/* HEADER ACTIONS */}
+          <div className="flex flex-wrap items-center justify-end gap-2">
+
+            {/* CHANGE PASSWORD */}
+            <button
+              type="button"
+              onClick={() => router.push("/change-password")}
+              className="rounded-xl border border-[#e2e6ee] bg-white px-4 py-2.5 text-sm font-bold text-[#315bea] hover:bg-[#f7f9ff]"
+            >
+              🔐 Change Password
+            </button>
+
+            {/* STUDENT PERFORMANCE */}
+            <button
+              type="button"
+              onClick={() => router.push("/teacher/students")}
+              className="rounded-xl border border-[#e2e6ee] bg-white px-4 py-2.5 text-sm font-bold text-[#315bea] hover:bg-[#f7f9ff]"
+            >
+              📊 Student Performance
+            </button>
+
+            {/* LOGOUT */}
+            <button
+              type="button"
+              onClick={async () => {
+                try {
+                  await fetch("/api/logout", {
+                    method: "POST",
+                    credentials: "include",
+                  });
+                } finally {
+                  router.push("/");
+                }
+              }}
+              className="rounded-xl border border-[#e2e6ee] bg-white px-4 py-2.5 text-sm font-bold text-[#697386] hover:bg-[#f7f8fb]"
+            >
+              Logout
+            </button>
+          </div>
         </div>
 
         <div className="mb-10 grid gap-5 md:grid-cols-2">
@@ -98,10 +140,9 @@ export default function TeacherPage() {
             onClick={() => router.push("/teacher/generate")}
             className="rounded-2xl border border-[#e3e8f5] bg-white p-7 text-left shadow-sm transition hover:-translate-y-1 hover:shadow-md"
           >
-          {/* AUTO GENERATE */}
-<div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#eef2ff] text-2xl">
-  📝
-</div>
+            <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#eef2ff] text-2xl">
+              📝
+            </div>
 
             <h2 className="text-xl font-extrabold">
               Auto Generate Paper
@@ -130,7 +171,8 @@ export default function TeacherPage() {
             </h2>
 
             <p className="mt-2 text-sm leading-6 text-[#697386]">
-              View test results, accuracy and overall performance for every student in your academy.
+              View test results, accuracy and overall performance for every
+              student in your academy.
             </p>
 
             <div className="mt-5 text-sm font-bold text-[#315bea]">
@@ -142,10 +184,9 @@ export default function TeacherPage() {
             onClick={() => router.push("/teacher/cherry-pick")}
             className="rounded-2xl border border-[#e3e8f5] bg-white p-7 text-left shadow-sm transition hover:-translate-y-1 hover:shadow-md"
           >
-          {/* CHERRY PICK */}
-<div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#eef8f2] text-2xl">
-  🎯
-</div>
+            <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#eef8f2] text-2xl">
+              🎯
+            </div>
 
             <h2 className="text-xl font-extrabold">
               Cherry Pick Questions
@@ -218,8 +259,6 @@ export default function TeacherPage() {
                       {paper.duration_minutes} minutes
                     </p>
                   </div>
-
-
                 </div>
               ))}
             </div>
