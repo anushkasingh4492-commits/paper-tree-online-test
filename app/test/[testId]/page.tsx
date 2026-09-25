@@ -10,7 +10,7 @@ import { useParams, useRouter } from "next/navigation";
 import jsPDF from "jspdf";
 import "katex/dist/katex.min.css";
 import { InlineMath, BlockMath } from "react-katex";
-
+import AcademyBranding from "@/components/AcademyBranding";
 type Question = {
   id: string;
   number: number;
@@ -807,6 +807,17 @@ export default function TestPage() {
 
         const dbTest =
           data?.test ?? data;
+          console.log(
+  "QUESTION WITH IMAGE DATA:",
+  data?.test?.questions?.find(
+    (q: any) =>
+      q.figureAsset ||
+      q.figure_asset ||
+      q.image ||
+      q.image_url ||
+      q.imageUrl
+  )
+);
 
         if (!dbTest) {
           throw new Error(
@@ -2324,19 +2335,17 @@ const figureAsset =
           <div className="flex items-center gap-3 min-w-0">
             <div className="w-10 h-10 shrink-0 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-lg shadow-sm">
               P
-            </div>
+            </div> </div>
 
-            <div className="min-w-0">
-              <h1 className="font-bold text-sm sm:text-base truncate">
-                {test?.exam ||
-                  "Mock Test"}
-              </h1>
+        <div className="flex items-center gap-3 min-w-0">
+  <AcademyBranding variant="compact" />
 
-              <p className="text-xs text-slate-400">
-                Paper Tree • CBT
-              </p>
-            </div>
-          </div>
+  <div className="min-w-0">
+    <h1 className="font-bold text-sm sm:text-base truncate">
+      {test?.exam || "Mock Test"}
+    </h1>
+  </div>
+</div>
 
           <div className="hidden md:flex items-center gap-2">
             <div className="px-4 py-2 rounded-xl bg-blue-50 border border-blue-100">

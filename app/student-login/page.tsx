@@ -2,7 +2,7 @@
 
 import { FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
-
+import AcademyBranding from "@/components/AcademyBranding";
 export default function Home() {
   const router = useRouter();
 
@@ -125,21 +125,10 @@ async function handleSubmit(
 
           <div className="relative flex w-full flex-col justify-between p-14">
 
-            <div className="flex items-center gap-3">
-              <div className="flex h-11 w-11 items-center justify-center rounded-[13px] bg-white text-lg font-extrabold text-[#315bea]">
-                P
-              </div>
-
-              <div>
-                <p className="text-[17px] font-extrabold text-white">
-                  Paper Tree Educational Studio
-                </p>
-
-                <p className="text-[9px] font-bold tracking-[0.18em] text-blue-100">
-                  EDUCATIONAL STUDIO
-                </p>
-              </div>
-            </div>
+            <AcademyBranding
+              variant="login"
+              className="text-white"
+            />
 
             <div className="relative max-w-[560px]">
 
@@ -159,7 +148,7 @@ async function handleSubmit(
               <p className="mt-6 max-w-[500px] text-[15px] leading-7 text-blue-100">
                 Prepare for your exam with personalised
                 tests, detailed performance tracking and
-                thousands of questions from the Paper Tree
+                thousands of questions from our
                 question bank.
               </p>
 
@@ -192,31 +181,14 @@ async function handleSubmit(
         {/* LOGIN PANEL */}
 
         <section className="flex flex-1 items-center justify-center px-6 py-10 sm:px-10">
+          <div className="w-full max-w-[440px]">
 
-          <div className="w-full max-w-[430px]">
-
-            {/* Mobile logo */}
-
-            <div className="mb-9 flex items-center gap-3 lg:hidden">
-
-              <div className="flex h-11 w-11 items-center justify-center rounded-[13px] bg-[#315bea] text-lg font-extrabold text-white">
-                P
-              </div>
-
-              <div>
-                <p className="text-[17px] font-extrabold">
-                  Paper Tree Educational Studio
-                </p>
-
-                <p className="text-[9px] font-bold tracking-[0.18em] text-[#98a1b2]">
-                  EDUCATIONAL STUDIO
-                </p>
-              </div>
-
+            {/* Mobile branding */}
+            <div className="mb-9 lg:hidden">
+              <AcademyBranding variant="compact" />
             </div>
 
             <div className="mb-8">
-
               <p className="text-xs font-semibold text-[#315bea]">
                 STUDENT PORTAL
               </p>
@@ -228,14 +200,12 @@ async function handleSubmit(
               <p className="mt-2 text-sm leading-6 text-[#929aaa]">
                 Sign in to continue your exam preparation.
               </p>
-
             </div>
 
             <form
               onSubmit={handleSubmit}
               className="rounded-[22px] border border-[#e5e8ee] bg-white p-6 shadow-[0_12px_40px_rgba(20,30,55,0.05)] sm:p-8"
             >
-
               {error && (
                 <div className="mb-5 rounded-xl border border-red-100 bg-red-50 px-4 py-3 text-xs font-medium leading-5 text-red-600">
                   {error}
@@ -243,7 +213,6 @@ async function handleSubmit(
               )}
 
               <div>
-
                 <label
                   htmlFor="email"
                   className="mb-2 block text-xs font-bold text-[#4d5668]"
@@ -255,22 +224,17 @@ async function handleSubmit(
                   id="email"
                   type="email"
                   value={email}
-                  onChange={(e) =>
-                    setEmail(e.target.value)
-                  }
+                  onChange={(e) => setEmail(e.target.value)}
                   placeholder="you@example.com"
                   autoComplete="email"
                   required
                   disabled={loading}
                   className="h-12 w-full rounded-xl border border-[#dfe3ea] bg-white px-4 text-sm text-[#172033] outline-none transition placeholder:text-[#b1b7c2] focus:border-[#315bea] focus:ring-4 focus:ring-[#315bea]/10 disabled:bg-[#f7f8fb]"
                 />
-
               </div>
 
               <div className="mt-5">
-
                 <div className="mb-2 flex items-center justify-between">
-
                   <label
                     htmlFor="password"
                     className="block text-xs font-bold text-[#4d5668]"
@@ -281,23 +245,19 @@ async function handleSubmit(
                   <span className="text-[10px] font-medium text-[#a0a7b4]">
                     Secure login
                   </span>
-
                 </div>
 
                 <input
                   id="password"
                   type="password"
                   value={password}
-                  onChange={(e) =>
-                    setPassword(e.target.value)
-                  }
+                  onChange={(e) => setPassword(e.target.value)}
                   placeholder="Enter your password"
                   autoComplete="current-password"
                   required
                   disabled={loading}
                   className="h-12 w-full rounded-xl border border-[#dfe3ea] bg-white px-4 text-sm text-[#172033] outline-none transition placeholder:text-[#b1b7c2] focus:border-[#315bea] focus:ring-4 focus:ring-[#315bea]/10 disabled:bg-[#f7f8fb]"
                 />
-
               </div>
 
               <button
@@ -305,51 +265,42 @@ async function handleSubmit(
                 disabled={loading}
                 className="mt-7 flex h-12 w-full items-center justify-center rounded-xl bg-[#315bea] text-sm font-bold text-white shadow-[0_8px_20px_rgba(49,91,234,0.18)] transition hover:bg-[#284ed2] active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-60"
               >
-                {loading
-                  ? "Signing in..."
-                  : "Sign in"}
+                {loading ? "Signing in..." : "Sign in"}
               </button>
+
               <button
-  type="button"
-  onClick={() => router.push("/change-password")}
-  className="mt-4 w-full rounded-xl border border-[#dfe3ea] bg-white px-4 py-3 text-sm font-bold text-[#315bea] transition hover:bg-[#f7f9ff]"
->
-  🔐 Change Password
-</button>
+                type="button"
+                onClick={() => router.push("/change-password")}
+                className="mt-4 w-full rounded-xl border border-[#dfe3ea] bg-white px-4 py-3 text-sm font-bold text-[#315bea] transition hover:bg-[#f7f9ff]"
+              >
+                🔐 Change Password
+              </button>
+            </form>
 
-        </form>
+            {/* STAFF LOGIN */}
+            <div className="mt-5">
+              <button
+                type="button"
+                onClick={() => router.push("/master-login")}
+                className="w-full rounded-xl border border-[#dfe3ea] bg-white px-4 py-3 text-sm font-bold text-[#315bea] transition hover:bg-[#f7f9ff]"
+              >
+                Teacher / Admin Login
+              </button>
+            </div>
 
-        {/* STAFF LOGIN */}
+            <div className="mt-7 text-center">
+              <p className="text-[11px] leading-5 text-[#a0a7b4]">
+                Competitive Exam Preparation Platform
+              </p>
 
-        <div className="mt-5">
-          <button
-            type="button"
-            onClick={() => router.push("/master-login")}
-            className="w-full rounded-xl border border-[#dfe3ea] bg-white px-4 py-3 text-sm font-bold text-[#315bea] transition hover:bg-[#f7f9ff]"
-          >
-            Teacher / Admin Login
-          </button>
-        </div>
-
-        <div className="mt-7 text-center">
-
-          <p className="text-[11px] leading-5 text-[#a0a7b4]">
-            Competitive Exam Preparation Platform
-          </p>
-
-          <p className="mt-1 text-[10px] text-[#c0c5ce]">
-            Your account is secured with encrypted
-            authentication.
-          </p>
-
-        </div>
-
+              <p className="mt-1 text-[10px] text-[#c0c5ce]">
+                Your account is secured with encrypted authentication.
+              </p>
+            </div>
 
           </div>
-
         </section>
-
       </div>
     </main>
-  );
+                );
 }

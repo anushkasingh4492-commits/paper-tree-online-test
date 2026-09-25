@@ -1,75 +1,190 @@
 import { NextResponse } from "next/server";
+import { cookies } from "next/headers";
 import { pool } from "@/lib/db";
+import { parseSessionCookie } from "@/lib/session";
 
-export const runtime = "nodejs";
-
-function getHostname(request: Request) {
-  const forwardedHost = request.headers.get("x-forwarded-host");
-
-  if (forwardedHost) {
-    return forwardedHost.split(",")[0].trim().split(":")[0].toLowerCase();
-  }
-
-  const host = request.headers.get("host");
-
-  if (host) {
-    return host.split(":")[0].toLowerCase();
-  }
-
-  return "";
-}
-
-export async function GET(request: Request) {
+export async function GET(req: Request) {
   try {
-    await pool.query(`
-      ALTER TABLE academies
-      ADD COLUMN IF NOT EXISTS domain VARCHAR(255)
-    `);
+    const cookieStore = await cookies();
 
-    const hostname = getHostname(request);
+    /*
+     * ---------------------------------------------------------
+     * 1. Try authenticated academy session first
+     * ---------------------------------------------------------
+     */
 
-    if (!hostname) {
+    let academyId: string | null = null;
+
+    const studentCookie =
+      cookieStore.get("student_session")?.value;
+
+    if (studentCookie) {
+      const session =
+        parseSessionCookie<Record<string, unknown>>(
+          studentCookie
+        );
+
+      if (session?.academyId) {
+        academyId = String(
+          session.academyId
+        );
+      }
+    }
+
+    /*
+     * Teacher / Academy Admin / Master Admin
+     */
+
+    if (!academyId) {
+      const masterCookie =
+        cookieStore.get("master_session")?.value;
+
+      if (masterCookie) {
+        const session =
+          parseSessionCookie<Record<string, unknown>>(
+            masterCookie
+          );
+
+        if (session?.academyId) {
+          academyId = String(
+            session.academyId
+          );
+        }
+      }
+    }
+
+    /*
+     * ---------------------------------------------------------
+     * 2. If not logged in, identify academy from subdomain/domain
+     * ---------------------------------------------------------
+     */
+
+    if (!academyId) {
+      const url = new URL(req.url);
+
+      const forwardedHost =
+        req.headers.get("x-forwarded-host");
+
+      const host =
+        forwardedHost ||
+        req.headers.get("host") ||
+        url.host;
+
+      const hostname =
+        host
+          .split(":")[0]
+          .toLowerCase();
+
+      /*
+       * Find academy whose configured domain matches
+       * the current hostname.
+       */
+      const domainResult =
+        await pool.query(
+          `
+          SELECT id
+          FROM academies
+          WHERE LOWER(domain) = LOWER($1)
+          LIMIT 1
+          `,
+          [hostname]
+        );
+
+      if (domainResult.rows.length) {
+        academyId = String(
+          domainResult.rows[0].id
+        );
+      }
+    }
+
+    /*
+     * ---------------------------------------------------------
+     * 3. If academy still isn't known
+     * ---------------------------------------------------------
+     */
+
+    if (!academyId) {
       return NextResponse.json({
         success: true,
-        academy: null,
+        academy: {
+          name: "Paper Tree",
+          logo_data: null,
+          subtitle:
+            "COMPUTER BASED TESTING",
+        },
       });
     }
 
-    const result = await pool.query(
-      `
-      SELECT
-        id,
-        name,
-        code,
-        domain,
-        logo_data
-      FROM academies
-      WHERE LOWER(domain) = LOWER($1)
-      LIMIT 1
-      `,
-      [hostname]
-    );
+    /*
+     * ---------------------------------------------------------
+     * 4. Load academy branding
+     * ---------------------------------------------------------
+     */
 
-    if (!result.rowCount) {
+    const result =
+      await pool.query(
+        `
+        SELECT
+          id,
+          name,
+          logo_data,
+          domain
+        FROM academies
+        WHERE id = $1
+        LIMIT 1
+        `,
+        [academyId]
+      );
+
+    if (!result.rows.length) {
       return NextResponse.json({
         success: true,
-        academy: null,
+        academy: {
+          name: "Paper Tree",
+          logo_data: null,
+          subtitle:
+            "COMPUTER BASED TESTING",
+        },
       });
     }
+
+    const academy =
+      result.rows[0];
 
     return NextResponse.json({
       success: true,
-      academy: result.rows[0],
+      academy: {
+        id: academy.id,
+        name:
+          academy.name ||
+          "Paper Tree",
+        logo_data:
+          academy.logo_data ||
+          null,
+        domain:
+          academy.domain ||
+          null,
+        subtitle:
+          "COMPUTER BASED TESTING",
+      },
     });
   } catch (error) {
-    console.error("PUBLIC ACADEMY BRANDING ERROR:", error);
+    console.error(
+      "ACADEMY BRANDING ERROR:",
+      error
+    );
 
     return NextResponse.json(
       {
         success: false,
-        error: "Could not load academy branding.",
+        academy: {
+          name: "Paper Tree",
+          logo_data: null,
+          subtitle:
+            "COMPUTER BASED TESTING",
+        },
       },
-      { status: 500 }
+      { status: 200 }
     );
   }
 }
