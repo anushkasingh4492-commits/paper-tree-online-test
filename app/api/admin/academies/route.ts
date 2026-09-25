@@ -1,25 +1,26 @@
 import { NextRequest, NextResponse } from "next/server";
 import { cookies } from "next/headers";
-import crypto from "crypto";
-import bcrypt from "bcryptjs";
 import { pool } from "@/lib/db";
 import { parseSessionCookie } from "@/lib/session";
-
-export const runtime = "nodejs";
+import bcrypt from "bcryptjs";
 
 async function isMasterAdmin() {
-  const cookieStore = await cookies();
-  const session = cookieStore.get("master_session")?.value;
+  const value =
+    (await cookies())
+      .get("master_session")
+      ?.value;
 
-  if (!session) return false;
+  if (!value) return false;
 
-  const data = parseSessionCookie<Record<string, unknown>>(session);
+  const session =
+    parseSessionCookie<
+      Record<string, unknown>
+    >(value);
 
-  if (data) {
-    return data.role === "ADMIN" || data.role === "MASTER_ADMIN";
-  }
-
-  return false;
+  return (
+    session?.role === "ADMIN" ||
+    session?.role === "MASTER_ADMIN"
+  );
 }
 async function ensureAcademySettingsColumns() {
   await pool.query(`
