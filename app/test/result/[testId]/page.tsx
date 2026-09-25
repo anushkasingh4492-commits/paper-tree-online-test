@@ -40,6 +40,12 @@ type ResultData = {
   duration?: number;
 };
 
+type AcademyBranding = {
+  name?: string | null;
+  logo_data?: string | null;
+  subtitle?: string | null;
+};
+
 function normalizeAnswer(value: unknown): number | null {
   if (value === undefined || value === null || value === "") {
     return null;
@@ -102,7 +108,6 @@ function normalizeOptions(question: any): string[] {
     !Array.isArray(options)
   ) {
     const optionObject = options as Record<string, unknown>;
-
     const orderedLetters = ["A", "B", "C", "D", "E", "F"];
 
     const ordered = orderedLetters
@@ -111,7 +116,10 @@ function normalizeOptions(question: any): string[] {
       )
       .map((letter) => optionObject[letter]);
 
-    options = ordered.length > 0 ? ordered : Object.values(optionObject);
+    options =
+      ordered.length > 0
+        ? ordered
+        : Object.values(optionObject);
   }
 
   if (!Array.isArray(options)) {
@@ -203,7 +211,8 @@ function normalizeResultQuestion(
       question?.chapter_name ??
       undefined,
 
-    difficulty: question?.difficulty ?? undefined,
+    difficulty:
+      question?.difficulty ?? undefined,
 
     solution:
       question?.solution ??
@@ -302,7 +311,9 @@ async function fetchJsonSafely(
 }
 
 function getSelectedAnswer(
-  answers: Record<string, number | string | null> | undefined,
+  answers:
+    | Record<string, number | string | null>
+    | undefined,
   question: Question,
   index: number
 ): number | null {
@@ -319,7 +330,12 @@ function getSelectedAnswer(
   ];
 
   for (const key of possibleKeys) {
-    if (Object.prototype.hasOwnProperty.call(answers, key)) {
+    if (
+      Object.prototype.hasOwnProperty.call(
+        answers,
+        key
+      )
+    ) {
       return normalizeAnswer(answers[key]);
     }
   }
@@ -337,8 +353,9 @@ function mergeResultQuestions(
   ) {
     return {
       ...result,
-      questions: result.questions.map((question, index) =>
-        normalizeResultQuestion(question, index)
+      questions: result.questions.map(
+        (question, index) =>
+          normalizeResultQuestion(question, index)
       ),
     };
   }
@@ -379,15 +396,22 @@ function MathText({
                 key={index}
                 className="block my-3 overflow-x-auto"
                 dangerouslySetInnerHTML={{
-                  __html: katex.renderToString(latex, {
-                    throwOnError: false,
-                    displayMode: true,
-                  }),
+                  __html: katex.renderToString(
+                    latex,
+                    {
+                      throwOnError: false,
+                      displayMode: true,
+                    }
+                  ),
                 }}
               />
             );
           } catch {
-            return <span key={index}>{latex}</span>;
+            return (
+              <span key={index}>
+                {latex}
+              </span>
+            );
           }
         }
 
@@ -402,19 +426,30 @@ function MathText({
               <span
                 key={index}
                 dangerouslySetInnerHTML={{
-                  __html: katex.renderToString(latex, {
-                    throwOnError: false,
-                    displayMode: false,
-                  }),
+                  __html: katex.renderToString(
+                    latex,
+                    {
+                      throwOnError: false,
+                      displayMode: false,
+                    }
+                  ),
                 }}
               />
             );
           } catch {
-            return <span key={index}>{latex}</span>;
+            return (
+              <span key={index}>
+                {latex}
+              </span>
+            );
           }
         }
 
-        return <span key={index}>{part}</span>;
+        return (
+          <span key={index}>
+            {part}
+          </span>
+        );
       })}
     </span>
   );
@@ -424,10 +459,30 @@ function formatMathForPdf(value: string) {
   return String(value || "")
     .replace(/\$\$?/g, "")
     .replace(/\\displaystyle\s*/g, "")
-    .replace(/\\frac\{([^{}]+)\}\{([^{}]+)\}/g, "($1)/($2)")
-    .replace(/\\sqrt\{([^{}]+)\}/g, "sqrt($1)")
-    .replace(/\\(to|times|cdot|leq|geq|neq)/g, (_, command: string) => ({ to: "->", times: "x", cdot: ".", leq: "<=", geq: ">=", neq: "!=" }[command] || command))
-    .replace(/\\(text|mathrm|mathbf)\{([^{}]+)\}/g, "$2")
+    .replace(
+      /\\frac\{([^{}]+)\}\{([^{}]+)\}/g,
+      "($1)/($2)"
+    )
+    .replace(
+      /\\sqrt\{([^{}]+)\}/g,
+      "sqrt($1)"
+    )
+    .replace(
+      /\\(to|times|cdot|leq|geq|neq)/g,
+      (_, command: string) =>
+        ({
+          to: "->",
+          times: "x",
+          cdot: ".",
+          leq: "<=",
+          geq: ">=",
+          neq: "!=",
+        }[command] || command)
+    )
+    .replace(
+      /\\(text|mathrm|mathbf)\{([^{}]+)\}/g,
+      "$2"
+    )
     .replace(/[{}]/g, "")
     .replace(/\^(-?\d+)/g, "^$1")
     .replace(/\s+/g, " ")
@@ -443,7 +498,58 @@ export default function TestResultPage() {
   const [result, setResult] =
     useState<ResultData | null>(null);
 
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] =
+    useState(true);
+
+  // Academy-specific branding
+  const [academyBranding, setAcademyBranding] =
+    useState<AcademyBranding | null>(null);
+
+  /*
+   * Load academy branding.
+   *
+   * The API checks the current hostname first,
+   * so:
+   *
+   * web.infinityclasses.net
+   * -> Infinity Classes
+   *
+   * web.vigyanacademy.net
+   * -> Vigyan Academy
+   */
+  useEffect(() => {
+    let active = true;
+
+    fetch("/api/academy/branding", {
+      cache: "no-store",
+      credentials: "include",
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (!active) {
+          return;
+        }
+
+        if (
+          data?.success &&
+          data?.academy
+        ) {
+          setAcademyBranding(
+            data.academy
+          );
+        }
+      })
+      .catch((error) => {
+        console.error(
+          "Failed to load academy branding:",
+          error
+        );
+      });
+
+    return () => {
+      active = false;
+    };
+  }, []);
 
   useEffect(() => {
     let cancelled = false;
@@ -452,32 +558,49 @@ export default function TestResultPage() {
       try {
         setLoading(true);
 
-        const storageKey = `test-${testId}-result`;
-        const storedResult =
-          localStorage.getItem(storageKey);
+        const storageKey =
+          `test-${testId}-result`;
 
-        let loadedResult: ResultData | null = null;
+        const storedResult =
+          localStorage.getItem(
+            storageKey
+          );
+
+        let loadedResult:
+          | ResultData
+          | null = null;
 
         if (storedResult) {
           try {
-            const parsed = JSON.parse(storedResult);
+            const parsed =
+              JSON.parse(
+                storedResult
+              );
 
             loadedResult = {
               ...parsed,
-              testId: parsed?.testId ?? testId,
+              testId:
+                parsed?.testId ??
+                testId,
+
               answers:
                 parsed?.answers &&
-                typeof parsed.answers === "object"
+                typeof parsed.answers ===
+                  "object"
                   ? parsed.answers
                   : {},
+
               marked:
                 parsed?.marked &&
-                typeof parsed.marked === "object"
+                typeof parsed.marked ===
+                  "object"
                   ? parsed.marked
                   : {},
-              questions: normalizeQuestions(
-                parsed?.questions
-              ),
+
+              questions:
+                normalizeQuestions(
+                  parsed?.questions
+                ),
             };
           } catch (error) {
             console.error(
@@ -490,7 +613,9 @@ export default function TestResultPage() {
         if (!loadedResult) {
           const serverResult =
             await fetchJsonSafely(
-              `/api/test-result/${encodeURIComponent(testId)}`
+              `/api/test-result/${encodeURIComponent(
+                testId
+              )}`
             );
 
           if (
@@ -507,20 +632,29 @@ export default function TestResultPage() {
             ) {
               loadedResult = {
                 ...raw,
-                testId: raw.testId ?? testId,
+
+                testId:
+                  raw.testId ??
+                  testId,
+
                 answers:
                   raw.answers &&
-                  typeof raw.answers === "object"
+                  typeof raw.answers ===
+                    "object"
                     ? raw.answers
                     : {},
+
                 marked:
                   raw.marked &&
-                  typeof raw.marked === "object"
+                  typeof raw.marked ===
+                    "object"
                     ? raw.marked
                     : {},
-                questions: normalizeQuestions(
-                  raw.questions
-                ),
+
+                questions:
+                  normalizeQuestions(
+                    raw.questions
+                  ),
               };
             }
           }
@@ -529,7 +663,9 @@ export default function TestResultPage() {
         if (!loadedResult) {
           const summaryResult =
             await fetchJsonSafely(
-              `/api/test-summary?testId=${encodeURIComponent(testId)}`
+              `/api/test-summary?testId=${encodeURIComponent(
+                testId
+              )}`
             );
 
           if (
@@ -547,20 +683,29 @@ export default function TestResultPage() {
             ) {
               loadedResult = {
                 ...raw,
-                testId: raw.testId ?? testId,
+
+                testId:
+                  raw.testId ??
+                  testId,
+
                 answers:
                   raw.answers &&
-                  typeof raw.answers === "object"
+                  typeof raw.answers ===
+                    "object"
                     ? raw.answers
                     : {},
+
                 marked:
                   raw.marked &&
-                  typeof raw.marked === "object"
+                  typeof raw.marked ===
+                    "object"
                     ? raw.marked
                     : {},
-                questions: normalizeQuestions(
-                  raw.questions
-                ),
+
+                questions:
+                  normalizeQuestions(
+                    raw.questions
+                  ),
               };
             }
           }
@@ -569,10 +714,14 @@ export default function TestResultPage() {
         const existingQuestions =
           loadedResult?.questions ?? [];
 
-        if (existingQuestions.length === 0) {
+        if (
+          existingQuestions.length === 0
+        ) {
           const testResponse =
             await fetchJsonSafely(
-              `/api/tests/${encodeURIComponent(testId)}`
+              `/api/tests/${encodeURIComponent(
+                testId
+              )}`
             );
 
           if (
@@ -584,7 +733,9 @@ export default function TestResultPage() {
                 testResponse.data
               );
 
-            if (testQuestions.length > 0) {
+            if (
+              testQuestions.length > 0
+            ) {
               if (loadedResult) {
                 loadedResult =
                   mergeResultQuestions(
@@ -598,27 +749,34 @@ export default function TestResultPage() {
 
                 loadedResult = {
                   testId,
-                  total: testQuestions.length,
+                  total:
+                    testQuestions.length,
                   correct: 0,
                   wrong: 0,
                   unattempted:
                     testQuestions.length,
                   answers: {},
                   marked: {},
-                  questions: testQuestions,
+                  questions:
+                    testQuestions,
+
                   course:
                     test?.course ??
                     test?.title ??
                     undefined,
+
                   subject:
                     test?.subject ??
                     undefined,
+
                   difficulty:
                     test?.difficulty ??
                     undefined,
+
                   duration:
-                    Number(test?.duration) ||
-                    undefined,
+                    Number(
+                      test?.duration
+                    ) || undefined,
                 };
               }
             }
@@ -643,35 +801,56 @@ export default function TestResultPage() {
           ) {
             Object.entries(
               loadedResult.answers
-            ).forEach(([key, value]) => {
-              normalizedAnswers[key] =
-                normalizeAnswer(value);
-            });
+            ).forEach(
+              ([key, value]) => {
+                normalizedAnswers[key] =
+                  normalizeAnswer(
+                    value
+                  );
+              }
+            );
           }
 
           const rawCorrect =
-            Number(loadedResult.correct) || 0;
+            Number(
+              loadedResult.correct
+            ) || 0;
 
           const rawWrong =
-            Number(loadedResult.wrong) || 0;
+            Number(
+              loadedResult.wrong
+            ) || 0;
 
           const total =
-            Number(loadedResult.total) ||
+            Number(
+              loadedResult.total
+            ) ||
             normalizedQuestions.length;
 
           const calculatedUnattempted =
             Math.max(
               0,
-              total - rawCorrect - rawWrong
+              total -
+                rawCorrect -
+                rawWrong
             );
 
-          const finalResult: ResultData = {
+          const finalResult:
+            ResultData = {
             ...loadedResult,
+
             testId:
-              loadedResult.testId || testId,
+              loadedResult.testId ||
+              testId,
+
             total,
-            correct: rawCorrect,
-            wrong: rawWrong,
+
+            correct:
+              rawCorrect,
+
+            wrong:
+              rawWrong,
+
             unattempted:
               Number.isFinite(
                 Number(
@@ -682,13 +861,17 @@ export default function TestResultPage() {
                     loadedResult.unattempted
                   )
                 : calculatedUnattempted,
-            answers: normalizedAnswers,
+
+            answers:
+              normalizedAnswers,
+
             marked:
               loadedResult.marked &&
               typeof loadedResult.marked ===
                 "object"
                 ? loadedResult.marked
                 : {},
+
             questions:
               normalizedQuestions,
           };
@@ -700,7 +883,9 @@ export default function TestResultPage() {
           try {
             localStorage.setItem(
               storageKey,
-              JSON.stringify(finalResult)
+              JSON.stringify(
+                finalResult
+              )
             );
           } catch {
             // Ignore storage failures.
@@ -730,12 +915,17 @@ export default function TestResultPage() {
   }, [testId]);
 
   const percentage = useMemo(() => {
-    if (!result || result.total <= 0) {
+    if (
+      !result ||
+      result.total <= 0
+    ) {
       return 0;
     }
 
     return Math.round(
-      (result.correct / result.total) * 100
+      (result.correct /
+        result.total) *
+        100
     );
   }, [result]);
 
@@ -745,14 +935,17 @@ export default function TestResultPage() {
     }
 
     const attempted =
-      result.correct + result.wrong;
+      result.correct +
+      result.wrong;
 
     if (attempted === 0) {
       return 0;
     }
 
     return Math.round(
-      (result.correct / attempted) * 100
+      (result.correct /
+        attempted) *
+        100
     );
   }, [result]);
 
@@ -780,6 +973,14 @@ export default function TestResultPage() {
     return "Keep Practicing";
   }, [percentage]);
 
+  /*
+   * Academy name used everywhere in the
+   * downloaded result PDF.
+   */
+  const academyName =
+    academyBranding?.name?.trim() ||
+    "Paper Tree";
+
   function downloadResult() {
     if (!result) {
       return;
@@ -800,7 +1001,9 @@ export default function TestResultPage() {
 
     let y = 18;
 
-    const ensureSpace = (height: number) => {
+    const ensureSpace = (
+      height: number
+    ) => {
       if (
         y + height >
         pageHeight - margin
@@ -818,10 +1021,14 @@ export default function TestResultPage() {
     ) => {
       doc.setFont(
         "helvetica",
-        bold ? "bold" : "normal"
+        bold
+          ? "bold"
+          : "normal"
       );
 
-      doc.setFontSize(fontSize);
+      doc.setFontSize(
+        fontSize
+      );
 
       const lines =
         doc.splitTextToSize(
@@ -830,26 +1037,111 @@ export default function TestResultPage() {
         );
 
       const requiredHeight =
-        lines.length * lineHeight;
+        lines.length *
+        lineHeight;
 
       ensureSpace(
         requiredHeight + 3
       );
 
-      doc.text(lines, margin, y);
+      doc.text(
+        lines,
+        margin,
+        y
+      );
 
-      y += requiredHeight + 3;
+      y +=
+        requiredHeight + 3;
     };
 
-    doc.setTextColor(23, 32, 51);
-    doc.setFont("helvetica", "bold");
-    doc.setFontSize(20);
-
-    doc.text(
-      "Paper Tree • Test Result",
-      margin,
-      y
+    /*
+     * RESULT PDF HEADER
+     *
+     * Uses academy name instead of
+     * hardcoded Paper Tree branding.
+     */
+    doc.setTextColor(
+      23,
+      32,
+      51
     );
+
+    /*
+     * Add academy logo to PDF if the
+     * academy has a base64/data-url logo.
+     */
+    if (
+      academyBranding?.logo_data
+    ) {
+      try {
+        const logo =
+          academyBranding.logo_data;
+
+        let format:
+          | "PNG"
+          | "JPEG" =
+          logo
+            .toLowerCase()
+            .startsWith(
+              "data:image/jpeg"
+            )
+            ? "JPEG"
+            : "PNG";
+
+        doc.addImage(
+          logo,
+          format,
+          margin,
+          y - 8,
+          18,
+          18
+        );
+
+        doc.setFont(
+          "helvetica",
+          "bold"
+        );
+
+        doc.setFontSize(20);
+
+        doc.text(
+          `${academyName} • Test Result`,
+          margin + 23,
+          y
+        );
+      } catch (error) {
+        console.error(
+          "Could not add academy logo to PDF:",
+          error
+        );
+
+        doc.setFont(
+          "helvetica",
+          "bold"
+        );
+
+        doc.setFontSize(20);
+
+        doc.text(
+          `${academyName} • Test Result`,
+          margin,
+          y
+        );
+      }
+    } else {
+      doc.setFont(
+        "helvetica",
+        "bold"
+      );
+
+      doc.setFontSize(20);
+
+      doc.text(
+        `${academyName} • Test Result`,
+        margin,
+        y
+      );
+    }
 
     y += 8;
 
@@ -891,7 +1183,8 @@ export default function TestResultPage() {
 
     addWrappedText(
       `Exam: ${
-        result.course || "Mock Test"
+        result.course ||
+        "Mock Test"
       }`,
       11,
       5.5,
@@ -908,7 +1201,8 @@ export default function TestResultPage() {
 
     addWrappedText(
       `Difficulty: ${
-        result.difficulty || "Mixed"
+        result.difficulty ||
+        "Mixed"
       }`,
       11
     );
@@ -984,7 +1278,8 @@ export default function TestResultPage() {
         const isCorrect =
           hasAnswer &&
           question.answer !== null &&
-          selected === question.answer;
+          selected ===
+            question.answer;
 
         const status = isCorrect
           ? "Correct"
@@ -995,7 +1290,9 @@ export default function TestResultPage() {
         ensureSpace(18);
 
         addWrappedText(
-          `${question.number || index + 1}. ${formatMathForPdf(question.question)}`,
+          `${question.number || index + 1}. ${formatMathForPdf(
+            question.question
+          )}`,
           11,
           6,
           true
@@ -1008,7 +1305,8 @@ export default function TestResultPage() {
         );
 
         if (
-          question.options.length === 0
+          question.options.length ===
+          0
         ) {
           addWrappedText(
             "Options unavailable",
@@ -1017,18 +1315,26 @@ export default function TestResultPage() {
           );
         } else {
           question.options.forEach(
-            (option, optionIndex) => {
+            (
+              option,
+              optionIndex
+            ) => {
               const isSelected =
-                selected === optionIndex;
+                selected ===
+                optionIndex;
 
               const isCorrectOption =
-                question.answer !== null &&
+                question.answer !==
+                  null &&
                 question.answer ===
                   optionIndex;
 
-              const labels: string[] = [];
+              const labels: string[] =
+                [];
 
-              if (isCorrectOption) {
+              if (
+                isCorrectOption
+              ) {
                 labels.push(
                   "Correct Answer"
                 );
@@ -1040,7 +1346,9 @@ export default function TestResultPage() {
                 );
               }
 
-              if (labels.length > 0) {
+              if (
+                labels.length > 0
+              ) {
                 ensureSpace(16);
 
                 doc.setDrawColor(
@@ -1079,7 +1387,9 @@ export default function TestResultPage() {
                 );
 
                 doc.text(
-                  labels.join(" • "),
+                  labels.join(
+                    " • "
+                  ),
                   margin + 4,
                   y + 1
                 );
@@ -1089,7 +1399,9 @@ export default function TestResultPage() {
                   "normal"
                 );
 
-                doc.setFontSize(10);
+                doc.setFontSize(
+                  10
+                );
 
                 doc.setTextColor(
                   23,
@@ -1100,9 +1412,13 @@ export default function TestResultPage() {
                 const optionLines =
                   doc.splitTextToSize(
                     `${String.fromCharCode(
-                      65 + optionIndex
-                    )}. ${formatMathForPdf(option)}`,
-                    contentWidth - 8
+                      65 +
+                        optionIndex
+                    )}. ${formatMathForPdf(
+                      option
+                    )}`,
+                    contentWidth -
+                      8
                   );
 
                 doc.text(
@@ -1113,13 +1429,18 @@ export default function TestResultPage() {
 
                 y += Math.max(
                   16,
-                  optionLines.length * 5 + 10
+                  optionLines.length *
+                    5 +
+                    10
                 );
               } else {
                 addWrappedText(
                   `${String.fromCharCode(
-                    65 + optionIndex
-                  )}. ${formatMathForPdf(option)}`,
+                    65 +
+                      optionIndex
+                  )}. ${formatMathForPdf(
+                    option
+                  )}`,
                   10,
                   5
                 );
@@ -1136,7 +1457,8 @@ export default function TestResultPage() {
         ) {
           addWrappedText(
             `Correct Answer: ${String.fromCharCode(
-              65 + question.answer
+              65 +
+                question.answer
             )}`,
             10,
             5,
@@ -1146,7 +1468,9 @@ export default function TestResultPage() {
 
         if (question.solution) {
           addWrappedText(
-            `Solution: ${formatMathForPdf(question.solution)}`,
+            `Solution: ${formatMathForPdf(
+              question.solution
+            )}`,
             10,
             5
           );
@@ -1156,20 +1480,69 @@ export default function TestResultPage() {
       }
     );
 
+    /*
+     * Academy-specific filename.
+     *
+     * Example:
+     * infinity-classes-result-123.pdf
+     */
+    const safeAcademyName =
+      academyName
+        .toLowerCase()
+        .replace(
+          /[^a-z0-9]+/g,
+          "-"
+        )
+        .replace(
+          /^-+|-+$/g,
+          ""
+        );
+
     doc.save(
-      `paper-tree-result-${result.testId}.pdf`
+      `${
+        safeAcademyName ||
+        "academy"
+      }-result-${result.testId}.pdf`
     );
   }
 
   function startReattempt() {
-    if (!result?.scheduledTestId || !result.allowReattempt || !result.automatic) return;
-    localStorage.removeItem(`test-${testId}-answers`);
-    localStorage.removeItem(`test-${testId}-marked`);
-    localStorage.removeItem(`test-${testId}-visited`);
-    localStorage.removeItem(`test-${testId}-result`);
-    localStorage.removeItem(`submitted-${testId}`);
-    localStorage.setItem(`reattempt-${result.scheduledTestId}`, "true");
-    router.push(`/scheduled-test/${result.scheduledTestId}`);
+    if (
+      !result?.scheduledTestId ||
+      !result.allowReattempt ||
+      !result.automatic
+    ) {
+      return;
+    }
+
+    localStorage.removeItem(
+      `test-${testId}-answers`
+    );
+
+    localStorage.removeItem(
+      `test-${testId}-marked`
+    );
+
+    localStorage.removeItem(
+      `test-${testId}-visited`
+    );
+
+    localStorage.removeItem(
+      `test-${testId}-result`
+    );
+
+    localStorage.removeItem(
+      `submitted-${testId}`
+    );
+
+    localStorage.setItem(
+      `reattempt-${result.scheduledTestId}`,
+      "true"
+    );
+
+    router.push(
+      `/scheduled-test/${result.scheduledTestId}`
+    );
   }
 
   if (loading) {
@@ -1225,14 +1598,27 @@ export default function TestResultPage() {
     <main className="min-h-screen bg-[#f5f7fb] text-slate-900">
       <header className="sticky top-0 z-40 h-[72px] bg-white border-b border-slate-200 shadow-sm">
         <div className="max-w-[1400px] mx-auto h-full px-4 lg:px-6 flex items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-lg">
-              P
+          {/* Academy branding */}
+          <div className="flex items-center gap-3 min-w-0">
+            <div className="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-lg overflow-hidden shrink-0">
+              {academyBranding?.logo_data ? (
+                <img
+                  src={
+                    academyBranding.logo_data
+                  }
+                  alt={`${academyName} logo`}
+                  className="w-full h-full object-contain bg-white"
+                />
+              ) : (
+                academyName
+                  .charAt(0)
+                  .toUpperCase()
+              )}
             </div>
 
-            <div>
-              <h1 className="font-bold text-sm sm:text-base">
-                Paper Tree
+            <div className="min-w-0">
+              <h1 className="font-bold text-sm sm:text-base truncate">
+                {academyName}
               </h1>
 
               <p className="text-xs text-slate-400">
@@ -1260,11 +1646,17 @@ export default function TestResultPage() {
               ↓ Download Result
             </button>
 
-            {result.allowReattempt && result.automatic && result.scheduledTestId && (
-              <button type="button" onClick={startReattempt} className="h-10 px-4 rounded-xl border border-amber-200 bg-amber-50 text-sm font-semibold text-amber-800 hover:bg-amber-100 transition">
-                Reattempt Test
-              </button>
-            )}
+            {result.allowReattempt &&
+              result.automatic &&
+              result.scheduledTestId && (
+                <button
+                  type="button"
+                  onClick={startReattempt}
+                  className="h-10 px-4 rounded-xl border border-amber-200 bg-amber-50 text-sm font-semibold text-amber-800 hover:bg-amber-100 transition"
+                >
+                  Reattempt Test
+                </button>
+              )}
 
             <button
               type="button"
@@ -1340,14 +1732,17 @@ export default function TestResultPage() {
                       strokeLinecap="round"
                       className="text-blue-600"
                       strokeDasharray={
-                        2 * Math.PI * 78
+                        2 *
+                        Math.PI *
+                        78
                       }
                       strokeDashoffset={
                         2 *
                         Math.PI *
                         78 *
                         (1 -
-                          percentage / 100)
+                          percentage /
+                            100)
                       }
                     />
                   </svg>
@@ -1367,7 +1762,7 @@ export default function TestResultPage() {
               <div className="grid grid-cols-2 xl:grid-cols-4 gap-3">
                 <div className="rounded-2xl bg-white border border-green-100 p-5">
                   <div className="w-10 h-10 rounded-xl bg-green-50 text-green-600 flex items-center justify-center font-bold">
-
+                    ✓
                   </div>
 
                   <p className="mt-4 text-2xl font-bold text-green-700">
@@ -1517,7 +1912,9 @@ export default function TestResultPage() {
 
               <PerformanceBar
                 label="Unattempted"
-                value={result.unattempted}
+                value={
+                  result.unattempted
+                }
                 total={result.total}
               />
             </div>
@@ -1537,7 +1934,8 @@ export default function TestResultPage() {
           </div>
 
           <div className="divide-y divide-slate-100">
-            {result.questions.length === 0 ? (
+            {result.questions.length ===
+            0 ? (
               <div className="p-10 text-center">
                 <p className="text-sm font-semibold text-slate-700">
                   Questions are not
@@ -1552,7 +1950,10 @@ export default function TestResultPage() {
               </div>
             ) : (
               result.questions.map(
-                (question, index) => {
+                (
+                  question,
+                  index
+                ) => {
                   const selected =
                     getSelectedAnswer(
                       result.answers,
@@ -1570,11 +1971,12 @@ export default function TestResultPage() {
                     selected ===
                       question.answer;
 
-                  const status = isCorrect
-                    ? "Correct"
-                    : hasAnswer
-                      ? "Wrong"
-                      : "Unattempted";
+                  const status =
+                    isCorrect
+                      ? "Correct"
+                      : hasAnswer
+                        ? "Wrong"
+                        : "Unattempted";
 
                   return (
                     <div
@@ -1616,19 +2018,25 @@ export default function TestResultPage() {
 
                             {question.subject && (
                               <span className="px-2.5 py-1 rounded-md bg-slate-50 text-[10px] font-semibold text-slate-500">
-                                {question.subject}
+                                {
+                                  question.subject
+                                }
                               </span>
                             )}
 
                             {question.chapter && (
                               <span className="px-2.5 py-1 rounded-md bg-slate-50 text-[10px] font-semibold text-slate-500">
-                                {question.chapter}
+                                {
+                                  question.chapter
+                                }
                               </span>
                             )}
 
                             {question.difficulty && (
                               <span className="px-2.5 py-1 rounded-md bg-slate-50 text-[10px] font-semibold text-slate-500">
-                                {question.difficulty}
+                                {
+                                  question.difficulty
+                                }
                               </span>
                             )}
                           </div>
@@ -1646,8 +2054,8 @@ export default function TestResultPage() {
                       </div>
 
                       <div className="mt-5 ml-0 sm:ml-14 space-y-2">
-                        {question.options.length >
-                        0 ? (
+                        {question.options
+                          .length > 0 ? (
                           question.options.map(
                             (
                               option,
@@ -1655,7 +2063,9 @@ export default function TestResultPage() {
                             ) => {
                               const isSelected =
                                 hasAnswer &&
-                                Number(selected) ===
+                                Number(
+                                  selected
+                                ) ===
                                   optionIndex;
 
                               const isCorrectOption =
@@ -1689,7 +2099,9 @@ export default function TestResultPage() {
                                   className={[
                                     "rounded-xl border-2 p-4 flex items-start gap-3 transition",
                                     optionClass,
-                                  ].join(" ")}
+                                  ].join(
+                                    " "
+                                  )}
                                 >
                                   <span
                                     className={[
@@ -1699,7 +2111,9 @@ export default function TestResultPage() {
                                         : isSelected
                                           ? "bg-red-600 text-white border-red-600"
                                           : "bg-slate-50 text-slate-500 border-slate-200",
-                                    ].join(" ")}
+                                    ].join(
+                                      " "
+                                    )}
                                   >
                                     {String.fromCharCode(
                                       65 +
@@ -1720,7 +2134,7 @@ export default function TestResultPage() {
                                   <div className="shrink-0 pt-1">
                                     {isCorrectOption && (
                                       <span className="inline-flex items-center rounded-full bg-green-100 px-2.5 py-1 text-[10px] font-bold text-green-700">
-                                         Correct Answer
+                                        Correct Answer
                                       </span>
                                     )}
 
@@ -1948,7 +2362,9 @@ function PerformanceBar({
 }) {
   const percentage =
     total > 0
-      ? Math.round((value / total) * 100)
+      ? Math.round(
+          (value / total) * 100
+        )
       : 0;
 
   return (
