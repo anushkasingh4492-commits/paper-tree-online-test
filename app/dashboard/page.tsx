@@ -7,7 +7,6 @@ import {
   useState,
 } from "react";
 import { useRouter } from "next/navigation";
-
 /* ============================================================
    TYPES
 ============================================================ */
@@ -1620,13 +1619,7 @@ export default function DashboardPage() {
   </span>
   <span>Change Password</span>
 </button>
-          <button
-            className="mx-5 mb-5 mt-1 flex items-center gap-3 h-9 text-xs text-[#657083]"
-            onClick={logout}
-          >
-            <MiniIcon type="logout" />
-            Logout
-          </button>
+         
 
         </aside>
 
