@@ -1449,20 +1449,20 @@ export default function DashboardPage() {
      LOGOUT
   ========================================================== */
 
-  function logout() {
-    localStorage.removeItem(
-      "studentName"
-    );
+ async function logout() {
+  localStorage.removeItem("studentName");
+  localStorage.removeItem("username");
+  localStorage.removeItem("studentId");
 
-    localStorage.removeItem(
-      "username"
-    );
-
-    document.cookie =
-      "student_session=; Max-Age=0; path=/";
-
-    router.push("/");
+  try {
+    await fetch("/api/logout", {
+      method: "POST",
+      credentials: "include",
+    });
+  } finally {
+    router.replace("/");
   }
+}
 
   /* ==========================================================
      LOADING
@@ -1521,6 +1521,33 @@ export default function DashboardPage() {
           >
             Try Again
           </button>
+          <button
+  type="button"
+  onClick={() => router.push("/change-password")}
+  className="flex flex-col items-center gap-1 text-[#7d8595]"
+>
+  <span className="text-[18px] leading-none">
+    🔐
+  </span>
+
+  <span className="text-[9px] font-semibold">
+    Password
+  </span>
+</button>
+<button
+  type="button"
+  onClick={logout}
+  className="flex flex-col items-center gap-1 text-[#7d8595]"
+>
+  <MiniIcon
+    type="logout"
+    size={19}
+  />
+
+  <span className="text-[9px] font-semibold">
+    Logout
+  </span>
+</button>
         </div>
       </main>
     );
