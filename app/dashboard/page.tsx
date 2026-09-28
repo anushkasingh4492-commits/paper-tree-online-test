@@ -1521,33 +1521,7 @@ export default function DashboardPage() {
           >
             Try Again
           </button>
-          <button
-  type="button"
-  onClick={() => router.push("/change-password")}
-  className="flex flex-col items-center gap-1 text-[#7d8595]"
->
-  <span className="text-[18px] leading-none">
-    🔐
-  </span>
-
-  <span className="text-[9px] font-semibold">
-    Password
-  </span>
-</button>
-<button
-  type="button"
-  onClick={logout}
-  className="flex flex-col items-center gap-1 text-[#7d8595]"
->
-  <MiniIcon
-    type="logout"
-    size={19}
-  />
-
-  <span className="text-[9px] font-semibold">
-    Logout
-  </span>
-</button>
+          
         </div>
       </main>
     );
@@ -2693,64 +2667,64 @@ export default function DashboardPage() {
 
       </div>
 
-      {/* =======================================================
+        {/* =======================================================
           MOBILE NAVIGATION
       ======================================================== */}
 
-      <nav className="xl:hidden fixed bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur border-t border-[#e8eaf0] px-5 py-2.5">
-
+      <nav className="xl:hidden fixed bottom-0 inset-x-0 z-50 bg-white/95 backdrop-blur border-t border-[#e8eaf0] px-3 py-2.5">
         <div className="max-w-lg mx-auto flex items-center justify-around">
 
+          {/* Dashboard */}
           <button
-            onClick={() =>
-              router.push(
-                "/dashboard"
-              )
-            }
+            type="button"
+            onClick={() => router.push("/dashboard")}
             className="flex flex-col items-center gap-1 text-[#5b43df]"
           >
-            <MiniIcon
-              type="home"
-              size={19}
-            />
-
+            <MiniIcon type="home" size={19} />
             <span className="text-[9px] font-bold">
               Dashboard
             </span>
           </button>
 
+          {/* My Tests */}
           <button
-            onClick={() =>
-              router.push(
-                "/tests"
-              )
-            }
+            type="button"
+            onClick={() => router.push("/tests")}
             className="flex flex-col items-center gap-1 text-[#7d8595]"
           >
-            <MiniIcon
-              type="tests"
-              size={19}
-            />
-
+            <MiniIcon type="tests" size={19} />
             <span className="text-[9px] font-semibold">
               My Tests
             </span>
           </button>
 
-          <button className="flex flex-col items-center gap-1 text-[#7d8595]">
-
-            <span className="w-5 h-5 rounded-full bg-gradient-to-br from-[#7044e8] to-[#4c2bd0] text-white text-[8px] font-bold flex items-center justify-center">
-              {initialsText[0]}
+          {/* Change Password */}
+          <button
+            type="button"
+            onClick={() => router.push("/change-password")}
+            className="flex flex-col items-center gap-1 text-[#7d8595]"
+          >
+            <span className="text-[18px] leading-none">
+              🔐
             </span>
-
             <span className="text-[9px] font-semibold">
-              Profile
+              Password
             </span>
+          </button>
 
+          {/* Logout */}
+          <button
+            type="button"
+            onClick={logout}
+            className="flex flex-col items-center gap-1 text-[#7d8595]"
+          >
+            <MiniIcon type="logout" size={19} />
+            <span className="text-[9px] font-semibold">
+              Logout
+            </span>
           </button>
 
         </div>
-
       </nav>
 
     </main>
