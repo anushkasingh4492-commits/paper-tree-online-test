@@ -85,6 +85,7 @@ export type BadgeView = {
   id: string;
   name: string;
   icon: string;
+  asset?: string | null;
   category: string;
   tier: number;
   earned: boolean;
@@ -141,9 +142,12 @@ export async function getStudentGamification(studentId: string, academyId: strin
     }
   }
 
-  const days = qualifying.map((a) => istDay(a.submitted_at || a.started_at)).filter(Boolean);
-  const streak = currentStreak(days);
-  const maxStreak = maxConsecutive(days);
+  // Streaks are based on ALL completed tests. The final catalogue says
+  // “take at least one test every day”; it does not restrict streaks to
+  // qualifying tests. Multiple tests on the same IST day count as one day.
+  const allTestDays = attempts.map((a) => istDay(a.submitted_at || a.started_at)).filter(Boolean);
+  const streak = currentStreak(allTestDays);
+  const maxStreak = maxConsecutive(allTestDays);
 
   let levelIndex = 0;
   for (let i = 0; i < LEVELS.length; i++) {
@@ -162,7 +166,7 @@ export async function getStudentGamification(studentId: string, academyId: strin
 
   // Score badges: each test awards only its highest score badge.
   const scoreCounts = { crushing: 0, beast: 0, flawless: 0 };
-  for (const a of qualifying) {
+  for (const a of attempts) {
     const score = pct(a);
     if (score >= 100) scoreCounts.flawless += 1;
     else if (score >= 90) scoreCounts.beast += 1;
@@ -172,12 +176,12 @@ export async function getStudentGamification(studentId: string, academyId: strin
   // Improvement: 15 percentage points over the previous five qualifying tests,
   // matching subject + difficulty. The current test itself is excluded from the five.
   const improvementCounts = new Map<string, number>();
-  for (let i = 0; i < qualifying.length; i++) {
-    const current = qualifying[i];
+  for (let i = 0; i < attempts.length; i++) {
+    const current = attempts[i];
     const subject = String(current.subject || "").trim();
     const difficulty = String(current.difficulty || "").trim().toLowerCase();
     if (!subject || !difficulty) continue;
-    const previous = qualifying.slice(0, i).filter((a) => String(a.subject || "").trim() === subject && String(a.difficulty || "").trim().toLowerCase() === difficulty).slice(-5);
+    const previous = attempts.slice(0, i).filter((a) => String(a.subject || "").trim() === subject && String(a.difficulty || "").trim().toLowerCase() === difficulty).slice(-5);
     if (previous.length === 5) {
       const avgPrev = previous.reduce((s, a) => s + pct(a), 0) / 5;
       if (pct(current) >= avgPrev + 15) improvementCounts.set(`${subject}::${difficulty}`, (improvementCounts.get(`${subject}::${difficulty}`) ?? 0) + 1);
@@ -187,20 +191,20 @@ export async function getStudentGamification(studentId: string, academyId: strin
 
   // Comeback: a qualifying test after at least 14 full calendar days without one.
   let comebackEarns = 0;
-  for (let i = 1; i < qualifying.length; i++) {
-    const previous = istDay(qualifying[i - 1].submitted_at || qualifying[i - 1].started_at);
-    const current = istDay(qualifying[i].submitted_at || qualifying[i].started_at);
+  for (let i = 1; i < attempts.length; i++) {
+    const previous = istDay(attempts[i - 1].submitted_at || attempts[i - 1].started_at);
+    const current = istDay(attempts[i].submitted_at || attempts[i].started_at);
     if (previous && current && daysBetween(previous, current) >= 15) comebackEarns += 1;
   }
 
   // Volume thresholds count answered questions from qualifying tests only.
-  const volume = answeredQualifying;
+  const volume = attempts.reduce((sum, a) => sum + Number(a.answered_count || 0), 0);
 
   // Full-chapter analysis. We use the actual question bank topics represented by
   // major_topic/subtopic and require the test to contain all topics available for
   // that subject/chapter in the question bank.
   const fullChapterAttempts: any[] = [];
-  for (const a of qualifying) {
+  for (const a of attempts) {
     let questionIds: string[] = [];
     if (Array.isArray(a.questions)) questionIds = a.questions.map((q: any) => String(q?.id || q?.question_id || "")).filter(Boolean);
     else if (typeof a.questions === "string") {
@@ -257,20 +261,30 @@ export async function getStudentGamification(studentId: string, academyId: strin
     if (earns) bossEarns.set(key, earns);
   }
 
-  // Rank badges are for teacher-assigned tests only. scheduled_test_id identifies
-  // those attempts in the existing application schema.
+  // Rank badges are based on teacher-assigned tests only. The catalogue does
+  // not require these tests to be “qualifying”. Participants are the students
+  // in the exact batch assigned to that scheduled test who actually submitted it.
   let podiumEarns = 0;
   let mvpEarns = 0;
-  const rankTests = [...new Set(qualifying.filter((a) => a.scheduled_test_id).map((a) => String(a.scheduled_test_id)))];
+  const rankTests = [...new Set(attempts.filter((a) => a.scheduled_test_id).map((a) => String(a.scheduled_test_id)))];
   for (const scheduledTestId of rankTests) {
     const rankResult = await pool.query(
-      `SELECT ta.student_id, ta.score, ta.total_marks
-       FROM test_attempts ta
-       INNER JOIN batch_students bs ON bs.student_id = ta.student_id
-       INNER JOIN batches b ON b.id = bs.batch_id
-       WHERE ta.scheduled_test_id = $1
-         AND b.academy_id = $2
-         AND LOWER(REPLACE(COALESCE(ta.status,''),'-','_')) IN ('submitted','auto_submitted','auto submitted','completed','complete')`,
+      `SELECT student_id, score, total_marks
+       FROM (
+         SELECT DISTINCT ON (ta.student_id)
+                ta.student_id, ta.score, ta.total_marks
+         FROM test_attempts ta
+         INNER JOIN scheduled_tests st ON st.id = ta.scheduled_test_id
+         INNER JOIN batch_students bs
+           ON bs.batch_id = st.batch_id
+          AND bs.student_id = ta.student_id
+         INNER JOIN batches b ON b.id = st.batch_id
+         WHERE ta.scheduled_test_id = $1
+           AND b.academy_id = $2
+           AND COALESCE(ta.total_marks, 0) > 0
+           AND LOWER(REPLACE(COALESCE(ta.status,''),'-','_')) IN ('submitted','auto_submitted','auto submitted','completed','complete')
+         ORDER BY ta.student_id, COALESCE(ta.submitted_at, ta.started_at, ta.created_at) DESC
+       ) participants`,
       [scheduledTestId, academyId]
     );
     const scores = rankResult.rows.map((r) => ({ studentId: String(r.student_id), pct: Number(r.total_marks) > 0 ? (Number(r.score) / Number(r.total_marks)) * 100 : 0 }));
@@ -305,67 +319,97 @@ export async function getStudentGamification(studentId: string, academyId: strin
     const chapters = allChapters.rows.map((r) => String(r.chapter_name || '').trim()).filter(Boolean);
     return { subject, complete: chapters.length > 0 && chapters.every((chapter) => covered.has(chapter)), covered: covered.size, total: chapters.length };
   }));
-  // Immortal is earned once when every subject represented in the student's
-  // batch/test history has 3 recent full-chapter tests averaging >= 90%.
+  // Immortal: every subject the student studies must have at least 3
+  // full-chapter tests, with the average across those full-chapter tests at 90%+.
   const subjectHistory = allAssignedSubjects;
   const immortalSubjects = subjectHistory.filter((subject) => {
-    const list = fullChapterAttempts.filter((a) => a.subject === subject).slice(-3);
-    return list.length === 3 && list.reduce((s, a) => s + a.score, 0) / 3 >= 90;
+    const list = fullChapterAttempts.filter((a) => a.subject === subject);
+    return list.length >= 3 && list.reduce((s, a) => s + a.score, 0) / list.length >= 90;
   });
   const immortalEarned = subjectHistory.length > 0 && immortalSubjects.length === subjectHistory.length;
 
-  const badge = (b: Omit<BadgeView, "tier"> & { count?: number; tier?: number }): BadgeView => {
+  const asset = (path: string) => `/badges/${path}`;
+  const tierThresholds = [0, 1, 10, 25, 50] as const;
+
+  const badge = (b: Omit<BadgeView, "tier"> & { count?: number; tier?: number; asset?: string | null }): BadgeView => {
     const count = Number(b.count ?? b.progress ?? 0);
-    const tier = b.tier ?? (b.count !== undefined ? tierFor(count) : 0);
-    const tiered = ["crushing-it", "beast-mode", "flawless", "glow-up", "boss-level", "podium", "mvp"].includes(b.id);
-    const target = tiered ? (count < 1 ? 1 : count < 10 ? 10 : count < 25 ? 25 : 50) : b.target;
+    const tier = b.tier ?? 0;
     return {
-      id: b.id, name: b.name, icon: b.icon, category: b.category, tier, earned: b.earned,
-      progress: b.progress, target, detail: b.detail, subject: b.subject, earnedAt: b.earnedAt,
+      id: b.id,
+      name: b.name,
+      icon: b.icon,
+      asset: b.asset ?? null,
+      category: b.category,
+      tier,
+      earned: b.earned,
+      progress: b.progress,
+      target: b.target,
+      detail: b.detail,
+      subject: b.subject,
+      earnedAt: b.earnedAt,
     };
   };
 
+  const tieredBadge = (baseId: string, name: string, category: string, count: number, detail: string, folder: string, fileBase: string): BadgeView[] =>
+    [1, 2, 3, 4].map((tier) => {
+      const target = tierThresholds[tier];
+      return badge({
+        id: `${baseId}-t${tier}`,
+        name,
+        icon: "",
+        asset: asset(`${folder}/${fileBase}_t${tier}.png`),
+        category,
+        tier,
+        earned: count >= target,
+        progress: Math.min(count, target),
+        target,
+        detail: `${detail} Earn this badge ${target === 1 ? "once" : `${target} times`}.`,
+        count,
+      });
+    });
+
   const badges: BadgeView[] = [
-    badge({ id: "crushing-it", name: "Crushing It", icon: "💥", category: "Score", earned: scoreCounts.crushing > 0, progress: scoreCounts.crushing, target: 10, detail: "75–89.99% • each test awards only its highest score badge", count: scoreCounts.crushing }),
-    badge({ id: "beast-mode", name: "Beast Mode", icon: "🐺", category: "Score", earned: scoreCounts.beast > 0, progress: scoreCounts.beast, target: 10, detail: "90–99.99%", count: scoreCounts.beast }),
-    badge({ id: "flawless", name: "Flawless", icon: "💎", category: "Score", earned: scoreCounts.flawless > 0, progress: scoreCounts.flawless, target: 10, detail: "100% score", count: scoreCounts.flawless }),
-    badge({ id: "streak-7", name: "7-Day Streak", icon: "🔥", category: "Streak", earned: maxStreak >= 7, progress: Math.min(maxStreak, 7), target: 7, detail: "7 consecutive calendar days in IST" }),
-    badge({ id: "streak-30", name: "30-Day Streak", icon: "🔥", category: "Streak", earned: maxStreak >= 30, progress: Math.min(maxStreak, 30), target: 30, detail: "30 consecutive calendar days in IST" }),
-    badge({ id: "streak-100", name: "100-Day Streak", icon: "🔥", category: "Streak", earned: maxStreak >= 100, progress: Math.min(maxStreak, 100), target: 100, detail: "100 consecutive calendar days in IST" }),
-    badge({ id: "streak-200", name: "200-Day Streak", icon: "🔥", category: "Streak", earned: maxStreak >= 200, progress: Math.min(maxStreak, 200), target: 200, detail: "200 consecutive calendar days in IST" }),
-    badge({ id: "streak-365", name: "365-Day Streak", icon: "🔥", category: "Streak", earned: maxStreak >= 365, progress: Math.min(maxStreak, 365), target: 365, detail: "365 consecutive calendar days in IST" }),
-    badge({ id: "glow-up", name: "Glow Up", icon: "⚡", category: "Improvement", earned: improvementEarns > 0, progress: improvementEarns, target: 10, detail: "+15 percentage points over previous 5 in same subject + difficulty", count: improvementEarns }),
-    badge({ id: "1k-club", name: "1K Club", icon: "📚", category: "Volume", earned: volume >= 1000, progress: Math.min(volume, 1000), target: 1000, detail: "1,000 answered questions from qualifying tests" }),
-    badge({ id: "5k-club", name: "5K Club", icon: "📚", category: "Volume", earned: volume >= 5000, progress: Math.min(volume, 5000), target: 5000, detail: "5,000 answered questions from qualifying tests" }),
-    badge({ id: "10k-club", name: "10K Club", icon: "📚", category: "Volume", earned: volume >= 10000, progress: Math.min(volume, 10000), target: 10000, detail: "10,000 answered questions from qualifying tests" }),
-    badge({ id: "25k-club", name: "25K Club", icon: "📚", category: "Volume", earned: volume >= 25000, progress: Math.min(volume, 25000), target: 25000, detail: "25,000 answered questions from qualifying tests" }),
-    ...explorerSubjects.map((item) => badge({ id: `explorer-${item.subject.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`, name: "Explorer", icon: "🧭", category: "Mastery", earned: item.complete, progress: item.covered, target: item.total, detail: `${item.covered}/${item.total} chapters covered in ${item.subject}`, subject: item.subject })),
-    badge({ id: "boss-level", name: "Boss Level Cleared", icon: "👑", category: "Mastery", earned: [...bossEarns.values()].some((n) => n > 0), progress: [...bossEarns.values()].reduce((a, b) => a + b, 0), target: 10, detail: "85%+ across 3 consecutive full-chapter tests of the same chapter", count: [...bossEarns.values()].reduce((a, b) => a + b, 0) }),
+    ...tieredBadge("crushing-it", "Crushing It", "Score", scoreCounts.crushing, "Score 75% to 89.99% in a test.", "Score-20260930T135946Z-1-001/Score", "crushing-it"),
+    ...tieredBadge("beast-mode", "Beast Mode", "Score", scoreCounts.beast, "Score 90% to 99.99% in a test.", "Score-20260930T135946Z-1-001/Score", "beast-mode"),
+    ...tieredBadge("flawless", "Flawless", "Score", scoreCounts.flawless, "Score a perfect 100% in a test.", "Score-20260930T135946Z-1-001/Score", "flawless"),
+    badge({ id: "streak-7", name: "7-Day Streak", icon: "", asset: asset("Streak-20260930T135944Z-1-001/Streak/streak_007.png"), category: "Streak", earned: maxStreak >= 7, progress: Math.min(maxStreak, 7), target: 7, detail: "Take at least one test every day for 7 days in a row." }),
+    badge({ id: "streak-30", name: "30-Day Streak", icon: "", asset: asset("Streak-20260930T135944Z-1-001/Streak/streak_030.png"), category: "Streak", earned: maxStreak >= 30, progress: Math.min(maxStreak, 30), target: 30, detail: "Take at least one test every day for 30 days in a row." }),
+    badge({ id: "streak-100", name: "100-Day Streak", icon: "", asset: asset("Streak-20260930T135944Z-1-001/Streak/streak_100.png"), category: "Streak", earned: maxStreak >= 100, progress: Math.min(maxStreak, 100), target: 100, detail: "Take at least one test every day for 100 days in a row." }),
+    badge({ id: "streak-200", name: "200-Day Streak", icon: "", asset: asset("Streak-20260930T135944Z-1-001/Streak/streak_200.png"), category: "Streak", earned: maxStreak >= 200, progress: Math.min(maxStreak, 200), target: 200, detail: "Take at least one test every day for 200 days in a row." }),
+    badge({ id: "streak-365", name: "365-Day Streak", icon: "", asset: asset("Streak-20260930T135944Z-1-001/Streak/streak_365.png"), category: "Streak", earned: maxStreak >= 365, progress: Math.min(maxStreak, 365), target: 365, detail: "Take at least one test every day for a full year without missing a day." }),
+    ...tieredBadge("glow-up", "Glow Up", "Improvement", improvementEarns, "Score at least 15 percentage points above your own average of your previous 5 tests in the same subject and difficulty.", "Improvement-20260930T140000Z-1-001/Improvement", "glow-up"),
+    badge({ id: "1k-club", name: "1K Club", icon: "", asset: asset("Volume-20260930T135937Z-1-001/Volume/1k-club.png"), category: "Volume", earned: volume >= 1000, progress: Math.min(volume, 1000), target: 1000, detail: "Answer 1,000 questions in total." }),
+    badge({ id: "5k-club", name: "5K Club", icon: "", asset: asset("Volume-20260930T135937Z-1-001/Volume/5k-club.png"), category: "Volume", earned: volume >= 5000, progress: Math.min(volume, 5000), target: 5000, detail: "Answer 5,000 questions in total." }),
+    badge({ id: "10k-club", name: "10K Club", icon: "", asset: asset("Volume-20260930T135937Z-1-001/Volume/10k-club.png"), category: "Volume", earned: volume >= 10000, progress: Math.min(volume, 10000), target: 10000, detail: "Answer 10,000 questions in total." }),
+    badge({ id: "25k-club", name: "25K Club", icon: "", asset: asset("Volume-20260930T135937Z-1-001/Volume/25k-club.png"), category: "Volume", earned: volume >= 25000, progress: Math.min(volume, 25000), target: 25000, detail: "Answer 25,000 questions in total." }),
+    ...explorerSubjects.map((item) => badge({ id: `explorer-${item.subject.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`, name: "Explorer", icon: "", asset: asset("Mastery-20260930T135949Z-1-001/Mastery/explorer.png"), category: "Mastery", earned: item.complete, progress: item.covered, target: item.total, detail: `Take at least one full-chapter test in every chapter of ${item.subject}.`, subject: item.subject })),
+    ...tieredBadge("boss-level", "Boss Level Cleared", "Mastery", [...bossEarns.values()].reduce((a, b) => a + b, 0), "Average 85% or more across 3 full-chapter tests of the same chapter.", "Mastery-20260930T135949Z-1-001/Mastery", "boss-level"),
     ...allAssignedSubjects.map((subject) => {
       const cleared = [...chapterGroups.entries()].filter(([key, earns]) => key.startsWith(`${subject}::`) && earns.length > 0).length;
-      return badge({ id: `final-boss-${subject.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`, name: "Final Boss", icon: "☠️", category: "Mastery", earned: cleared >= 5, progress: cleared, target: 5, detail: `${cleared}/5 chapters cleared in ${subject}`, subject });
+      return badge({ id: `final-boss-${subject.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`, name: "Final Boss", icon: "", asset: asset("Mastery-20260930T135949Z-1-001/Mastery/final-boss.png"), category: "Mastery", earned: cleared >= 5, progress: cleared, target: 5, detail: `Clear Boss Level in 5 different chapters of ${subject}.`, subject });
     }),
-    badge({ id: "immortal", name: "Immortal", icon: "♾️", category: "Mastery", earned: immortalEarned, progress: immortalSubjects.length, target: Math.max(1, subjectHistory.length), detail: "Most recent 3 full-chapter tests average 90%+ in every assigned subject", earnedAt: immortalEarned ? new Date(Math.max(...fullChapterAttempts.filter((a) => immortalSubjects.includes(a.subject)).map((a) => new Date(a.date).getTime()))).toISOString() : null }),
-    badge({ id: "podium", name: "Podium", icon: "🥈", category: "Rank", earned: podiumEarns > 0, progress: podiumEarns, target: 10, detail: "Rank 2 or 3 in a teacher-assigned batch test", count: podiumEarns }),
-    badge({ id: "mvp", name: "MVP", icon: "🥇", category: "Rank", earned: mvpEarns > 0, progress: mvpEarns, target: 10, detail: "Rank 1 in a teacher-assigned batch test", count: mvpEarns }),
-    badge({ id: "welcome-back", name: "Welcome Back", icon: "🚀", category: "Comeback", earned: comebackEarns > 0, progress: comebackEarns, target: 1, detail: "A qualifying test after 14+ days with no qualifying test" }),
+    badge({ id: "immortal", name: "Immortal", icon: "", asset: asset("Mastery-20260930T135949Z-1-001/Mastery/immortal.png"), category: "Mastery", earned: immortalEarned, progress: immortalSubjects.length, target: Math.max(1, subjectHistory.length), detail: "Average 90% or more in full-chapter tests in every subject you study, with at least 3 tests per subject.", earnedAt: immortalEarned ? new Date(Math.max(...fullChapterAttempts.filter((a) => immortalSubjects.includes(a.subject)).map((a) => new Date(a.date).getTime()))).toISOString() : null }),
+    ...tieredBadge("podium", "Podium", "Rank", podiumEarns, "Finish 2nd or 3rd in your batch in a teacher-assigned test.", "Rank-20260930T135947Z-1-001/Rank", "podium"),
+    ...tieredBadge("mvp", "MVP", "Rank", mvpEarns, "Finish 1st in your batch in a teacher-assigned test.", "Rank-20260930T135947Z-1-001/Rank", "mvp"),
+    badge({ id: "welcome-back", name: "Welcome Back", icon: "", asset: asset("Comeback-20260930T140006Z-1-001/Comeback/welcome-back.png"), category: "Comeback", earned: comebackEarns > 0, progress: Math.min(comebackEarns, 1), target: 1, detail: "Take a test after being away for 14 days or more." }),
+    badge({ id: "hidden-mystery", name: "Secret Badge", icon: "", asset: asset("Hidden-20260930T140002Z-1-001/Hidden/mystery.png"), category: "Hidden", earned: false, progress: 0, target: 1, detail: "Secret badge. The unlock condition is intentionally hidden." }),
   ];
 
-  // Ultimate excludes rank, Welcome Back and Hidden. Explorer + Final Boss must
-  // be present for every subject represented in the student's batch/test history.
-  const scoreComplete = scoreCounts.crushing > 0 && scoreCounts.beast > 0 && scoreCounts.flawless > 0;
+  // Completionist: every badge in the catalogue except Rank, Welcome Back and secret badges.
+  // For tiered families this means all four tiers must have been earned at least once.
+  const scoreComplete = scoreCounts.crushing >= 50 && scoreCounts.beast >= 50 && scoreCounts.flawless >= 50;
   const streakComplete = maxStreak >= 365;
-  const improvementComplete = improvementEarns > 0;
+  const improvementComplete = improvementEarns >= 50;
   const volumeComplete = volume >= 25000;
   const allSubjectsExplorer = allAssignedSubjects.length > 0 && explorerSubjects.every((x) => x.complete);
   const allSubjectsFinalBoss = allAssignedSubjects.length > 0 && allAssignedSubjects.every((subject) => {
     const cleared = [...chapterGroups.entries()].filter(([key, earns]) => key.startsWith(`${subject}::`) && earns.length > 0).length;
     return cleared >= 5;
   });
-  const bossTierOne = [...bossEarns.values()].some((n) => n > 0);
-  const masteryComplete = allSubjectsExplorer && bossTierOne && allSubjectsFinalBoss && immortalEarned;
+  const bossComplete = [...bossEarns.values()].reduce((a, b) => a + b, 0) >= 50;
+  const masteryComplete = allSubjectsExplorer && bossComplete && allSubjectsFinalBoss && immortalEarned;
   const ultimateEarned = scoreComplete && streakComplete && improvementComplete && volumeComplete && masteryComplete;
-  badges.push(badge({ id: "ultimate", name: "Completionist", icon: "🏆", category: "Ultimate", earned: ultimateEarned, progress: ultimateEarned ? 1 : 0, target: 1, detail: "All required Tier I Score, Streak, Improvement, Volume and Mastery badges" }));
+  badges.push(badge({ id: "ultimate", name: "Completionist", icon: "", asset: asset("Ultimate-20260930T135942Z-1-001/Ultimate/completionist.png"), category: "Ultimate", earned: ultimateEarned, progress: ultimateEarned ? 1 : 0, target: 1, detail: "Earn every badge at least once, except rank badges, Welcome Back and secret badges." }));
 
   const weak = await pool.query(
     `SELECT q.chapter_name, q.subject,
@@ -383,7 +427,7 @@ export async function getStudentGamification(studentId: string, academyId: strin
   );
 
   const xp = capped.length * 100 + Math.round(average * 2) + streak * 25 + badges.filter((b) => b.earned).length * 50;
-  const lastActiveDate = qualifying.length ? istDay(qualifying[qualifying.length - 1].submitted_at || qualifying[qualifying.length - 1].started_at) : null;
+  const lastActiveDate = attempts.length ? istDay(attempts[attempts.length - 1].submitted_at || attempts[attempts.length - 1].started_at) : null;
 
   return {
     rank: null as number | null,

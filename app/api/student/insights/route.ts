@@ -32,29 +32,58 @@ export async function GET() {
 
     let rank: number | null = null;
     let batchSize = 0;
+
+    // The dashboard rank is the student's rank in their latest teacher-assigned
+    // test from the selected batch. This is separate from the badge counters:
+    // MVP/Podium are awarded once per teacher-assigned test.
     if (batch) {
-      const rankResult = await pool.query(
-        `WITH scores AS (
-           SELECT s.id AS student_id,
-                  COALESCE(AVG(CASE WHEN LOWER(REPLACE(COALESCE(ta.status,''),'-','_')) IN ('submitted','auto_submitted','auto submitted','completed','complete')
-                    AND COALESCE(ta.total_marks,0) > 0
-                    THEN (ta.score::numeric / ta.total_marks::numeric) * 100 END), 0) AS avg_pct
-           FROM batch_students bs2
-           INNER JOIN students s ON s.id = bs2.student_id
-           LEFT JOIN test_attempts ta ON ta.student_id = s.id
-           WHERE bs2.batch_id = $1 AND s.academy_id = $3
-           GROUP BY s.id
-         ), ranked AS (
-           SELECT *, RANK() OVER (ORDER BY avg_pct DESC) AS rank
-           FROM scores
-         )
-         SELECT *, (SELECT COUNT(*) FROM ranked)::int AS batch_size
-         FROM ranked WHERE student_id = $2`,
-        [batch.id, studentId, academyId]
+      const latestAssigned = await pool.query(
+        `SELECT ta.scheduled_test_id
+         FROM test_attempts ta
+         INNER JOIN scheduled_tests st ON st.id = ta.scheduled_test_id
+         WHERE ta.student_id = $1
+           AND st.batch_id = $2
+           AND LOWER(REPLACE(COALESCE(ta.status,''),'-','_')) IN ('submitted','auto_submitted','auto submitted','completed','complete')
+         ORDER BY COALESCE(ta.submitted_at, ta.started_at, ta.created_at) DESC
+         LIMIT 1`,
+        [studentId, batch.id]
       );
-      if (rankResult.rows[0]) {
-        rank = Number(rankResult.rows[0].rank);
-        batchSize = Number(rankResult.rows[0].batch_size);
+
+      const scheduledTestId = latestAssigned.rows[0]?.scheduled_test_id;
+      if (scheduledTestId) {
+        const rankResult = await pool.query(
+          `WITH participants AS (
+             SELECT DISTINCT ON (ta.student_id)
+                    ta.student_id,
+                    ta.score::numeric AS score,
+                    ta.total_marks::numeric AS total_marks
+             FROM test_attempts ta
+             INNER JOIN scheduled_tests st ON st.id = ta.scheduled_test_id
+             INNER JOIN batch_students bs
+               ON bs.batch_id = st.batch_id
+              AND bs.student_id = ta.student_id
+             INNER JOIN students s ON s.id = ta.student_id
+             WHERE ta.scheduled_test_id = $1
+               AND st.batch_id = $2
+               AND s.academy_id = $3
+               AND COALESCE(ta.total_marks, 0) > 0
+               AND LOWER(REPLACE(COALESCE(ta.status,''),'-','_')) IN ('submitted','auto_submitted','auto submitted','completed','complete')
+             ORDER BY ta.student_id, COALESCE(ta.submitted_at, ta.started_at, ta.created_at) DESC
+           ), ranked AS (
+             SELECT student_id,
+                    (score / NULLIF(total_marks, 0)) * 100 AS percentage,
+                    RANK() OVER (ORDER BY (score / NULLIF(total_marks, 0)) DESC) AS rank
+             FROM participants
+           )
+           SELECT r.rank, (SELECT COUNT(*) FROM ranked)::int AS batch_size
+           FROM ranked r
+           WHERE r.student_id = $4`,
+          [scheduledTestId, batch.id, academyId, studentId]
+        );
+        if (rankResult.rows[0]) {
+          rank = Number(rankResult.rows[0].rank);
+          batchSize = Number(rankResult.rows[0].batch_size);
+        }
       }
     }
 

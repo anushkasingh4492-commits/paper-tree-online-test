@@ -241,28 +241,8 @@ export default function StudentInsights() {
     target: Number(badge.target) || 1,
     earned: Boolean(badge.earned),
   });
-}}className={`group relative overflow-hidden rounded-2xl border p-4 text-left transition duration-300 hover:-translate-y-1 hover:shadow-xl ${
-  badge.earned
-    ? "border-slate-200 bg-white"
-    : "border-slate-200 bg-gradient-to-br from-white to-slate-50"
-}`}
->
-  <div
-    className={`relative mx-auto flex h-20 w-20 items-center justify-center rounded-[22px] ${
-      badge.earned
-        ? `bg-gradient-to-br ${colors} shadow-lg pt-float ${
-            badge.tier === 4
-              ? "ring-4 ring-yellow-300/70 scale-105"
-              : badge.tier === 3
-                ? "ring-2 ring-violet-300/70"
-                : badge.tier === 2
-                  ? "ring-2 ring-cyan-300/60"
-                  : ""
-          }`
-        : "bg-gradient-to-br from-slate-100 to-slate-200 shadow-inner"
-    }`}
-  >
-    {badge.asset ? (
+}} className={`group relative overflow-hidden rounded-2xl border p-4 text-left transition duration-300 hover:-translate-y-1 hover:shadow-xl ${badge.earned?"border-slate-200 bg-white":"border-slate-200 bg-gradient-to-br from-white to-slate-50"}`}><div className={`relative mx-auto flex h-20 w-20 items-center justify-center rounded-[22px] ${badge.earned ? `bg-gradient-to-br ${colors} shadow-lg pt-float ${badge.tier===4?"ring-4 ring-yellow-300/70 scale-105":badge.tier===3?"ring-2 ring-violet-300/70":badge.tier===2?"ring-2 ring-cyan-300/60":""}` : "bg-gradient-to-br from-slate-100 to-slate-200 shadow-inner"}`}>
+  {badge.asset ? (
     <img
       src={badge.asset}
       alt={badge.name}
