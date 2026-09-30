@@ -29,6 +29,7 @@ type ResultData = {
   wrong: number;
   unattempted: number;
   answers: Record<string, number | string | null>;
+  timeSpent?: Record<string, number>;
   marked: Record<string, boolean>;
   questions: Question[];
   submittedAt?: string;
@@ -38,6 +39,8 @@ type ResultData = {
   chapters?: string[];
   difficulty?: string;
   duration?: number;
+  score: number;
+  accuracy: number;
 };
 
 type AcademyBranding = {
@@ -505,6 +508,27 @@ export default function TestResultPage() {
   const [academyBranding, setAcademyBranding] =
     useState<AcademyBranding | null>(null);
 
+  const [gameProgress, setGameProgress] = useState<any>(null);
+  const [celebrationBadge, setCelebrationBadge] = useState<any>(null);
+
+  useEffect(() => {
+    fetch("/api/student/insights", { cache: "no-store", credentials: "include" })
+      .then((r) => r.json())
+      .then((data) => {
+        if (!data?.success) return;
+        setGameProgress(data);
+        const earned = (data.badges || []).filter((b: any) => b.earned).map((b: any) => b.id);
+        try {
+          const key = "paper-tree-earned-badges";
+          const previous = JSON.parse(localStorage.getItem(key) || "[]");
+          const newlyEarned = (data.badges || []).find((b: any) => b.earned && !previous.includes(b.id));
+          if (newlyEarned) setCelebrationBadge(newlyEarned);
+          localStorage.setItem(key, JSON.stringify(earned));
+        } catch {}
+      })
+      .catch(() => undefined);
+  }, []);
+
   /*
    * Load academy branding.
    *
@@ -583,6 +607,9 @@ export default function TestResultPage() {
                 parsed?.testId ??
                 testId,
 
+              score: Number(parsed?.score ?? parsed?.correct ?? 0),
+              accuracy: Number(parsed?.accuracy ?? (Number(parsed?.total ?? 0) > 0 ? (Number(parsed?.correct ?? 0) / Number(parsed?.total ?? 0)) * 100 : 0)),
+
               answers:
                 parsed?.answers &&
                 typeof parsed.answers ===
@@ -637,6 +664,9 @@ export default function TestResultPage() {
                   raw.testId ??
                   testId,
 
+                score: Number(raw.score ?? raw.correct ?? 0),
+                accuracy: Number(raw.accuracy ?? (Number(raw.total ?? 0) > 0 ? (Number(raw.correct ?? 0) / Number(raw.total ?? 0)) * 100 : 0)),
+
                 answers:
                   raw.answers &&
                   typeof raw.answers ===
@@ -687,6 +717,9 @@ export default function TestResultPage() {
                 testId:
                   raw.testId ??
                   testId,
+
+                score: Number(raw.score ?? raw.correct ?? 0),
+                accuracy: Number(raw.accuracy ?? (Number(raw.total ?? 0) > 0 ? (Number(raw.correct ?? 0) / Number(raw.total ?? 0)) * 100 : 0)),
 
                 answers:
                   raw.answers &&
@@ -777,6 +810,8 @@ export default function TestResultPage() {
                     Number(
                       test?.duration
                     ) || undefined,
+                  score: 0,
+                  accuracy: 0,
                 };
               }
             }
@@ -1593,9 +1628,1024 @@ export default function TestResultPage() {
       </main>
     );
   }
+async function shareResultCard() {
+  if (!result) return;
+
+  const canvas = document.createElement("canvas");
+
+  // Portrait format works beautifully for WhatsApp + Instagram
+  canvas.width = 1080;
+  canvas.height = 1350;
+
+
+const context = canvas.getContext("2d");
+
+if (!context) {
+  console.error("Could not create canvas context");
+  return;
+}
+
+const ctx: CanvasRenderingContext2D = context;
+if (ctx === null) {
+  console.error("Could not create 2D canvas context");
+  return;
+}
+
+  const W = canvas.width;
+  const H = canvas.height;
+
+  const studentName =
+    localStorage.getItem("studentName") || "Student";
+
+  const score = Number(result.score || 0);
+  const accuracy = Number(result.accuracy || 0);
+
+  const subject =
+    result.subject ||
+    result.course ||
+    "Practice Test";
+
+  const level = gameProgress?.level || 1;
+  const levelName =
+    gameProgress?.levelName || "Rookie";
+
+  const streak = gameProgress?.streak || 0;
+  const xp = gameProgress?.points || 0;
+
+  const rank =
+    gameProgress?.rank !== null &&
+    gameProgress?.rank !== undefined
+      ? gameProgress.rank
+      : null;
+
+  const batchSize =
+    gameProgress?.batchSize || null;
+
+  const badge =
+    gameProgress?.badges?.find(
+      (b: any) => b.earned
+    )?.name || null;
+
+  /* ---------------------------------------
+     Helpers
+  --------------------------------------- */
+
+  function roundedRect(
+    x: number,
+    y: number,
+    width: number,
+    height: number,
+    radius: number
+  ) {
+    ctx.beginPath();
+    ctx.moveTo(x + radius, y);
+    ctx.lineTo(x + width - radius, y);
+    ctx.quadraticCurveTo(
+      x + width,
+      y,
+      x + width,
+      y + radius
+    );
+    ctx.lineTo(
+      x + width,
+      y + height - radius
+    );
+    ctx.quadraticCurveTo(
+      x + width,
+      y + height,
+      x + width - radius,
+      y + height
+    );
+    ctx.lineTo(
+      x + radius,
+      y + height
+    );
+    ctx.quadraticCurveTo(
+      x,
+      y + height,
+      x,
+      y + height - radius
+    );
+    ctx.lineTo(x, y + radius);
+    ctx.quadraticCurveTo(
+      x,
+      y,
+      x + radius,
+      y
+    );
+    ctx.closePath();
+  }
+
+  function fillRoundRect(
+    x: number,
+    y: number,
+    width: number,
+    height: number,
+    radius: number,
+    fill: string
+  ) {
+    roundedRect(
+      x,
+      y,
+      width,
+      height,
+      radius
+    );
+
+    ctx.fillStyle = fill;
+    ctx.fill();
+  }
+
+  function strokeRoundRect(
+    x: number,
+    y: number,
+    width: number,
+    height: number,
+    radius: number,
+    stroke: string
+  ) {
+    roundedRect(
+      x,
+      y,
+      width,
+      height,
+      radius
+    );
+
+    ctx.strokeStyle = stroke;
+    ctx.lineWidth = 2;
+    ctx.stroke();
+  }
+
+  function drawText(
+    text: string,
+    x: number,
+    y: number,
+    size: number,
+    weight = "600",
+    color = "#ffffff",
+    align: CanvasTextAlign = "left"
+  ) {
+    ctx.font = `${weight} ${size}px Arial, sans-serif`;
+    ctx.fillStyle = color;
+    ctx.textAlign = align;
+    ctx.textBaseline = "middle";
+    ctx.fillText(text, x, y);
+  }
+
+  function drawWrappedText(
+    text: string,
+    x: number,
+    y: number,
+    maxWidth: number,
+    lineHeight: number,
+    size: number,
+    color: string
+  ) {
+    ctx.font = `600 ${size}px Arial, sans-serif`;
+    ctx.fillStyle = color;
+    ctx.textAlign = "left";
+
+    const words = text.split(" ");
+    let line = "";
+    let currentY = y;
+
+    for (const word of words) {
+      const testLine =
+        line.length > 0
+          ? `${line} ${word}`
+          : word;
+
+      if (
+        ctx.measureText(testLine).width >
+          maxWidth &&
+        line
+      ) {
+        ctx.fillText(
+          line,
+          x,
+          currentY
+        );
+
+        line = word;
+        currentY += lineHeight;
+      } else {
+        line = testLine;
+      }
+    }
+
+    if (line) {
+      ctx.fillText(
+        line,
+        x,
+        currentY
+      );
+    }
+
+    return currentY;
+  }
+
+  /* ---------------------------------------
+     Background
+  --------------------------------------- */
+
+  const background =
+    ctx.createLinearGradient(
+      0,
+      0,
+      W,
+      H
+    );
+
+  background.addColorStop(
+    0,
+    "#07152f"
+  );
+
+  background.addColorStop(
+    0.45,
+    "#10275a"
+  );
+
+  background.addColorStop(
+    1,
+    "#24134b"
+  );
+
+  ctx.fillStyle = background;
+  ctx.fillRect(
+    0,
+    0,
+    W,
+    H
+  );
+
+  /* Soft decorative glow */
+
+  const glow1 =
+    ctx.createRadialGradient(
+      150,
+      180,
+      10,
+      150,
+      180,
+      430
+    );
+
+  glow1.addColorStop(
+    0,
+    "rgba(72,187,255,0.28)"
+  );
+
+  glow1.addColorStop(
+    1,
+    "rgba(72,187,255,0)"
+  );
+
+  ctx.fillStyle = glow1;
+  ctx.fillRect(
+    0,
+    0,
+    W,
+    H
+  );
+
+  const glow2 =
+    ctx.createRadialGradient(
+      920,
+      980,
+      10,
+      920,
+      980,
+      450
+    );
+
+  glow2.addColorStop(
+    0,
+    "rgba(214,92,255,0.25)"
+  );
+
+  glow2.addColorStop(
+    1,
+    "rgba(214,92,255,0)"
+  );
+
+  ctx.fillStyle = glow2;
+  ctx.fillRect(
+    0,
+    0,
+    W,
+    H
+  );
+
+  /* ---------------------------------------
+     Academy header
+  --------------------------------------- */
+
+  if (academyBranding?.logo_data) {
+    try {
+      const logo =
+        new Image();
+
+      logo.src =
+        academyBranding.logo_data;
+
+      await new Promise<void>(
+        (resolve) => {
+          logo.onload = () =>
+            resolve();
+
+          logo.onerror = () =>
+            resolve();
+        }
+      );
+
+      if (
+        logo.complete &&
+        logo.naturalWidth > 0
+      ) {
+        ctx.save();
+
+        fillRoundRect(
+          55,
+          48,
+          92,
+          92,
+          24,
+          "rgba(255,255,255,0.96)"
+        );
+
+        ctx.drawImage(
+          logo,
+          69,
+          62,
+          64,
+          64
+        );
+
+        ctx.restore();
+      }
+    } catch {}
+  } else {
+    fillRoundRect(
+      55,
+      48,
+      92,
+      92,
+      24,
+      "rgba(255,255,255,0.12)"
+    );
+
+    drawText(
+      academyName
+        .charAt(0)
+        .toUpperCase(),
+      101,
+      94,
+      38,
+      "800",
+      "#ffffff",
+      "center"
+    );
+  }
+
+  drawText(
+    academyName,
+    170,
+    76,
+    27,
+    "800",
+    "#ffffff"
+  );
+
+  drawText(
+    "LEARN  •  PRACTICE  •  EXCEL",
+    170,
+    111,
+    13,
+    "600",
+    "#9fb6df"
+  );
+
+  /* ---------------------------------------
+     Small top-right label
+  --------------------------------------- */
+
+  fillRoundRect(
+    W - 300,
+    55,
+    245,
+    52,
+    26,
+    "rgba(255,255,255,0.09)"
+  );
+
+  drawText(
+    "✦  ACHIEVEMENT UNLOCKED",
+    W - 177,
+    81,
+    13,
+    "800",
+    "#d8e5ff",
+    "center"
+  );
+
+  /* ---------------------------------------
+     Main achievement
+  --------------------------------------- */
+
+  drawText(
+    "YOU DID IT!",
+    70,
+    210,
+    19,
+    "800",
+    "#7ee7ff"
+  );
+
+  drawText(
+    `${score.toFixed(0)}%`,
+    70,
+    290,
+    92,
+    "900",
+    "#ffffff"
+  );
+
+  drawText(
+    "TEST SCORE",
+    77,
+    350,
+    15,
+    "800",
+    "#91a8d2"
+  );
+
+  /* Decorative score circle */
+
+  ctx.save();
+
+  ctx.beginPath();
+  ctx.arc(
+    865,
+    275,
+    125,
+    0,
+    Math.PI * 2
+  );
+
+  ctx.strokeStyle =
+    "rgba(255,255,255,0.08)";
+  ctx.lineWidth = 24;
+  ctx.stroke();
+
+  ctx.beginPath();
+
+  ctx.arc(
+    865,
+    275,
+    125,
+    -Math.PI / 2,
+    -Math.PI / 2 +
+      Math.PI * 2 *
+        Math.min(
+          1,
+          score / 100
+        )
+  );
+
+  const scoreGradient =
+    ctx.createLinearGradient(
+      740,
+      275,
+      990,
+      275
+    );
+
+  scoreGradient.addColorStop(
+    0,
+    "#62f5c7"
+  );
+
+  scoreGradient.addColorStop(
+    1,
+    "#8d7cff"
+  );
+
+  ctx.strokeStyle =
+    scoreGradient;
+
+  ctx.lineWidth = 24;
+  ctx.lineCap = "round";
+  ctx.stroke();
+
+  drawText(
+    `${accuracy.toFixed(0)}%`,
+    865,
+    265,
+    38,
+    "900",
+    "#ffffff",
+    "center"
+  );
+
+  drawText(
+    "ACCURACY",
+    865,
+    305,
+    12,
+    "800",
+    "#aabce0",
+    "center"
+  );
+
+  ctx.restore();
+
+  /* ---------------------------------------
+     Student identity
+  --------------------------------------- */
+
+  fillRoundRect(
+    55,
+    405,
+    W - 110,
+    130,
+    28,
+    "rgba(255,255,255,0.075)"
+  );
+
+  /* Avatar */
+
+  ctx.beginPath();
+  ctx.arc(
+    120,
+    470,
+    42,
+    0,
+    Math.PI * 2
+  );
+
+  const avatarGradient =
+    ctx.createLinearGradient(
+      80,
+      430,
+      160,
+      510
+    );
+
+  avatarGradient.addColorStop(
+    0,
+    "#64e8ff"
+  );
+
+  avatarGradient.addColorStop(
+    1,
+    "#9b72ff"
+  );
+
+  ctx.fillStyle =
+    avatarGradient;
+
+  ctx.fill();
+
+  drawText(
+    studentName
+      .charAt(0)
+      .toUpperCase(),
+    120,
+    470,
+    30,
+    "900",
+    "#ffffff",
+    "center"
+  );
+
+  drawText(
+    studentName,
+    185,
+    452,
+    28,
+    "800",
+    "#ffffff"
+  );
+
+  drawText(
+    `${subject}  •  ${grade}`,
+    185,
+    490,
+    15,
+    "600",
+    "#a9bddf"
+  );
+
+  /* Level pill */
+
+  fillRoundRect(
+    W - 330,
+    433,
+    240,
+    58,
+    29,
+    "rgba(124,92,255,0.22)"
+  );
+
+  drawText(
+    `LEVEL ${level}  •  ${levelName}`,
+    W - 210,
+    462,
+    14,
+    "800",
+    "#d9d2ff",
+    "center"
+  );
+
+  /* ---------------------------------------
+     Stats
+  --------------------------------------- */
+
+  const statY = 575;
+  const statWidth =
+    (W - 110 - 36) / 4;
+
+  const stats = [
+    {
+      label: "CORRECT",
+      value: String(
+        result.correct
+      ),
+      icon: "✓",
+    },
+    {
+      label: "WRONG",
+      value: String(
+        result.wrong
+      ),
+      icon: "×",
+    },
+    {
+      label: "STREAK",
+      value: `${streak}d`,
+      icon: "🔥",
+    },
+    {
+      label: "XP EARNED",
+      value: `+${xp}`,
+      icon: "✦",
+    },
+  ];
+
+  stats.forEach(
+    (stat, index) => {
+      const x =
+        55 +
+        index *
+          (statWidth + 12);
+
+      fillRoundRect(
+        x,
+        statY,
+        statWidth,
+        112,
+        24,
+        "rgba(255,255,255,0.065)"
+      );
+
+      drawText(
+        stat.icon,
+        x + 25,
+        statY + 31,
+        20,
+        "800",
+        "#ffffff"
+      );
+
+      drawText(
+        stat.value,
+        x + 25,
+        statY + 67,
+        25,
+        "900",
+        "#ffffff"
+      );
+
+      drawText(
+        stat.label,
+        x + 25,
+        statY + 93,
+        10,
+        "800",
+        "#8ea5cd"
+      );
+    }
+  );
+
+  /* ---------------------------------------
+     Rank / badge section
+  --------------------------------------- */
+
+  fillRoundRect(
+    55,
+    715,
+    W - 110,
+    125,
+    28,
+    "rgba(255,255,255,0.075)"
+  );
+
+  if (rank !== null) {
+    drawText(
+      "🏆",
+      90,
+      765,
+      28,
+      "800"
+    );
+
+    drawText(
+      `#${rank}`,
+      135,
+      755,
+      32,
+      "900",
+      "#ffffff"
+    );
+
+    drawText(
+      batchSize
+        ? `in your batch of ${batchSize}`
+        : "in your batch",
+      137,
+      790,
+      13,
+      "600",
+      "#91a8d2"
+    );
+  } else {
+    drawText(
+      "✦",
+      90,
+      765,
+      28,
+      "900",
+      "#8d7cff"
+    );
+
+    drawText(
+      "KEEP CLIMBING",
+      135,
+      755,
+      22,
+      "900",
+      "#ffffff"
+    );
+
+    drawText(
+      "Your next achievement is waiting.",
+      137,
+      790,
+      13,
+      "600",
+      "#91a8d2"
+    );
+  }
+
+  /* Badge */
+
+  if (badge) {
+    fillRoundRect(
+      W - 390,
+      740,
+      285,
+      70,
+      35,
+      "rgba(255,194,77,0.13)"
+    );
+
+    drawText(
+      "★",
+      W - 350,
+      775,
+      24,
+      "900",
+      "#ffd166"
+    );
+
+    drawText(
+      badge,
+      W - 315,
+      775,
+      16,
+      "800",
+      "#ffe3a1"
+    );
+  }
+
+  /* ---------------------------------------
+     Motivation card
+  --------------------------------------- */
+
+  fillRoundRect(
+    55,
+    870,
+    W - 110,
+    205,
+    30,
+    "rgba(255,255,255,0.055)"
+  );
+
+  drawText(
+    "YOUR NEXT STEP",
+    90,
+    915,
+    12,
+    "800",
+    "#75e8d0"
+  );
+
+  let message =
+    "Every test makes you stronger. Keep going!";
+
+  if (score >= 90) {
+    message =
+      "Outstanding work! You're building serious momentum. Keep pushing your limits.";
+  } else if (score >= 75) {
+    message =
+      "Great progress! One more focused round and you'll be even closer to the top.";
+  } else if (score >= 50) {
+    message =
+      "You're getting there. Review your weak areas, practise again, and level up.";
+  }
+
+  drawWrappedText(
+    message,
+    90,
+    970,
+    W - 180,
+    34,
+    24,
+    "#ffffff"
+  );
+
+  drawText(
+    "Small steps today. Big dreams tomorrow. ✦",
+    90,
+    1035,
+    14,
+    "600",
+    "#9eb4d7"
+  );
+
+  /* ---------------------------------------
+     Footer
+  --------------------------------------- */
+
+  const footerGradient =
+    ctx.createLinearGradient(
+      0,
+      1115,
+      W,
+      1115
+    );
+
+  footerGradient.addColorStop(
+    0,
+    "#56e0c1"
+  );
+
+  footerGradient.addColorStop(
+    1,
+    "#8c78ff"
+  );
+
+  ctx.fillStyle =
+    footerGradient;
+
+  ctx.fillRect(
+    55,
+    1120,
+    W - 110,
+    3
+  );
+
+  drawText(
+    academyName,
+    55,
+    1180,
+    17,
+    "800",
+    "#ffffff"
+  );
+
+  drawText(
+    "Powered by Paper Tree",
+    W - 55,
+    1180,
+    13,
+    "600",
+    "#8199c2",
+    "right"
+  );
+
+  drawText(
+    "PROGRESS  •  PRACTICE  •  ACHIEVE",
+    W / 2,
+    1260,
+    12,
+    "800",
+    "#7188ae",
+    "center"
+  );
+
+  /* ---------------------------------------
+     Convert to image
+  --------------------------------------- */
+
+  const blob =
+    await new Promise<Blob | null>(
+      (resolve) =>
+        canvas.toBlob(
+          resolve,
+          "image/png",
+          1
+        )
+    );
+
+  if (!blob) return;
+
+  const safeAcademyName =
+    academyName
+      .replace(
+        /[^a-zA-Z0-9]+/g,
+        "-"
+      )
+      .replace(
+        /^-+|-+$/g,
+        ""
+      );
+
+  const file =
+    new File(
+      [blob],
+      `${safeAcademyName || "academy"}-achievement-${result.testId}.png`,
+      {
+        type: "image/png",
+      }
+    );
+
+  /* ---------------------------------------
+     Native share
+  --------------------------------------- */
+
+  try {
+    if (
+      navigator.share &&
+      navigator.canShare?.({
+        files: [file],
+      })
+    ) {
+      await navigator.share({
+        title: `${academyName} Achievement`,
+        text: `🏆 ${studentName} scored ${score.toFixed(
+          0
+        )}% in ${subject}!`,
+        files: [file],
+      });
+
+      return;
+    }
+  } catch {
+    // User cancelled sharing.
+  }
+
+  /* ---------------------------------------
+     Desktop fallback
+  --------------------------------------- */
+
+  const url =
+    URL.createObjectURL(blob);
+
+  const anchor =
+    document.createElement("a");
+
+  anchor.href = url;
+
+  anchor.download =
+    file.name;
+
+  document.body.appendChild(
+    anchor
+  );
+
+  anchor.click();
+
+  anchor.remove();
+
+  URL.revokeObjectURL(url);
+}
 
   return (
     <main className="min-h-screen bg-[#f5f7fb] text-slate-900">
+      <style jsx>{`@keyframes ptBadgePop {0%{transform:scale(.2) rotate(-12deg);opacity:0}70%{transform:scale(1.12) rotate(3deg);opacity:1}100%{transform:scale(1) rotate(0)}}`}</style>
       <header className="sticky top-0 z-40 h-[72px] bg-white border-b border-slate-200 shadow-sm">
         <div className="max-w-[1400px] mx-auto h-full px-4 lg:px-6 flex items-center justify-between gap-4">
           {/* Academy branding */}
@@ -1646,6 +2696,10 @@ export default function TestResultPage() {
               ↓ Download Result
             </button>
 
+            <button type="button" onClick={() => void shareResultCard()} className="h-10 px-4 rounded-xl bg-violet-600 text-white text-sm font-semibold hover:bg-violet-700 transition">
+            🏆 Share Achievement
+            </button>
+
             {result.allowReattempt &&
               result.automatic &&
               result.scheduledTestId && (
@@ -1672,6 +2726,15 @@ export default function TestResultPage() {
       </header>
 
       <div className="max-w-[1400px] mx-auto p-4 sm:p-6 lg:p-8">
+        {gameProgress && (
+          <div className="mb-6 relative overflow-hidden rounded-[30px] bg-gradient-to-r from-slate-950 via-indigo-950 to-purple-950 p-6 text-white shadow-2xl">
+            <div className="absolute -right-10 -top-16 h-44 w-44 rounded-full bg-fuchsia-500/20 blur-3xl" />
+            <div className="relative flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
+              <div><div className="text-[10px] font-black uppercase tracking-[.25em] text-indigo-200">⚡ Mission Complete</div><div className="mt-1 text-2xl font-black">Level {gameProgress.level} • {gameProgress.levelName}</div><div className="mt-1 text-sm font-semibold text-slate-300">+{gameProgress.points.toLocaleString()} XP • 🔥 {gameProgress.streak} day streak</div></div>
+              <div className="min-w-[240px]"><div className="flex justify-between text-[10px] font-black uppercase tracking-wider text-slate-400"><span>Next level</span><span>{gameProgress.nextLevelName ? `${Math.max(0,(gameProgress.nextLevelAt||0)-gameProgress.qualifyingTests)} tests to ${gameProgress.nextLevelName}` : "GOAT"}</span></div><div className="mt-2 h-3 rounded-full bg-white/10 p-0.5"><div className="h-full rounded-full bg-gradient-to-r from-cyan-300 via-indigo-400 to-fuchsia-400" style={{width:`${gameProgress.levelProgress}%`}}/></div></div>
+            </div>
+          </div>
+        )}
         <div className="bg-white border border-slate-200 rounded-3xl shadow-sm overflow-hidden">
           <div className="p-6 sm:p-8 lg:p-10">
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
@@ -2039,6 +3102,10 @@ export default function TestResultPage() {
                                 }
                               </span>
                             )}
+
+                            <span className="px-2.5 py-1 rounded-md bg-blue-50 text-[10px] font-semibold text-blue-700">
+                              ⏱ {Math.floor(Number(result.timeSpent?.[question.id] || 0) / 60)}m {Number(result.timeSpent?.[question.id] || 0) % 60}s
+                            </span>
                           </div>
 
                           <div className="mt-4 rounded-2xl bg-slate-50 border border-slate-100 p-5">
@@ -2327,6 +3394,26 @@ export default function TestResultPage() {
           </button>
         </div>
       </div>
+
+      {celebrationBadge && (
+        <div className="fixed inset-0 z-[120] flex items-center justify-center bg-slate-950/80 p-4 backdrop-blur-md" onClick={() => setCelebrationBadge(null)}>
+          <div className="w-full max-w-md overflow-hidden rounded-[32px] bg-white shadow-2xl" onClick={(e) => e.stopPropagation()}>
+            <div className="relative bg-gradient-to-br from-slate-950 via-indigo-950 to-purple-950 px-8 py-10 text-center text-white">
+              <div className="text-xs font-black uppercase tracking-[.28em] text-indigo-200">🎉 NEW ACHIEVEMENT</div>
+              <div className="mx-auto mt-6 flex h-32 w-32 items-center justify-center rounded-[32px] bg-gradient-to-br from-amber-300 via-yellow-400 to-orange-500 text-7xl shadow-2xl" style={{animation:"ptBadgePop .7s cubic-bezier(.2,.8,.2,1) both"}}>{celebrationBadge.icon}</div>
+              <h2 className="mt-6 text-3xl font-black">{celebrationBadge.name}{celebrationBadge.tier ? ` ${["I","II","III","IV"][celebrationBadge.tier-1]}` : ""}</h2>
+              <p className="mt-2 text-sm font-semibold text-slate-300">{celebrationBadge.detail}</p>
+            </div>
+            <div className="p-5">
+              <div className="grid grid-cols-2 gap-3">
+                <button type="button" onClick={() => { const text = `🏆 I unlocked ${celebrationBadge.name}! 🔥 ${gameProgress?.streak || 0} day streak • Level ${gameProgress?.level || 1} ${gameProgress?.levelName || "Rookie"}.`; window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank", "noopener,noreferrer"); }} className="rounded-xl bg-[#25D366] px-4 py-3 text-xs font-black text-white">WhatsApp</button>
+                <button type="button" onClick={() => setCelebrationBadge(null)} className="rounded-xl bg-slate-950 px-4 py-3 text-xs font-black text-white">Continue</button>
+              </div>
+              <p className="mt-3 text-center text-[10px] font-semibold text-slate-400">Share your achievement card from the Trophy Wall on your dashboard.</p>
+            </div>
+          </div>
+        </div>
+      )}
     </main>
   );
 }

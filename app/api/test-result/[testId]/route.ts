@@ -244,6 +244,8 @@ const correctness: Record<
   boolean | null
 > = {};
 
+const timeSpent: Record<string, number> = {};
+
 for (
   const answer of
     answersResult.rows
@@ -287,6 +289,8 @@ for (
   ] = Number(
     answer.marks_awarded ?? 0
   );
+
+  timeSpent[questionId] = Number(answer.time_spent_seconds ?? 0);
 }
 
     
@@ -358,6 +362,7 @@ for (
       unattempted,
 
    answers,
+timeSpent,
 marked,
 marksAwarded,
 correctness,

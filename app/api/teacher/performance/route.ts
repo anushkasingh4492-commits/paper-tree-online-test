@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { pool } from "@/lib/db";
 import { parseSessionCookie } from "@/lib/session";
+import { ensureFeatureSchema } from "@/lib/feature-schema";
+import { getStudentGamification } from "@/lib/gamification";
 
 export const runtime = "nodejs";
 
@@ -12,6 +14,7 @@ type TeacherSession = {
 
 export async function GET() {
   try {
+    await ensureFeatureSchema();
     const cookieStore = await cookies();
     const value = cookieStore.get("master_session")?.value;
     const session = value
@@ -62,6 +65,7 @@ export async function GET() {
           s.id,
           s.name,
           s.email,
+          s.parent_phone,
           COALESCE(perf.tests_taken, 0)::int AS tests_taken,
           COALESCE(perf.average_percentage, 0) AS average_percentage,
           COALESCE(perf.best_percentage, 0) AS best_percentage,
@@ -144,6 +148,7 @@ export async function GET() {
           s.id,
           s.name,
           s.email,
+          s.parent_phone,
           perf.tests_taken,
           perf.average_percentage,
           perf.best_percentage,
@@ -155,15 +160,22 @@ export async function GET() {
       [teacher.academy_id]
     );
 
-    const students = result.rows.map((row) => {
+    const students = await Promise.all(result.rows.map(async (row) => {
       const correct = Number(row.correct_answers || 0);
       const wrong = Number(row.wrong_answers || 0);
       const attempted = correct + wrong;
+      let game = null;
+      try {
+        game = await getStudentGamification(String(row.id), String(teacher.academy_id));
+      } catch (error) {
+        console.error("TEACHER GAMIFICATION ERROR", row.id, error);
+      }
 
       return {
         id: String(row.id),
         name: row.name,
         email: row.email,
+        parentPhone: row.parent_phone || null,
         batches: row.batches || "Not assigned",
         testsTaken: Number(row.tests_taken || 0),
         averagePercentage: Number(row.average_percentage || 0),
@@ -171,11 +183,14 @@ export async function GET() {
         correctAnswers: correct,
         wrongAnswers: wrong,
         unansweredQuestions: Number(row.unanswered_questions || 0),
-        accuracy: attempted > 0
-          ? Number(((correct / attempted) * 100).toFixed(2))
-          : 0,
+        accuracy: attempted > 0 ? Number(((correct / attempted) * 100).toFixed(2)) : 0,
+        level: game?.level ?? 1,
+        levelName: game?.levelName ?? "Rookie",
+        currentStreak: game?.streak ?? 0,
+        lastActiveDate: game?.lastActiveDate ?? null,
+        badgesEarned: game?.badges?.filter((b) => b.earned).length ?? 0,
       };
-    });
+    }));
 
     return NextResponse.json({
       success: true,

@@ -78,6 +78,15 @@ export default function CherryPickPage() {
 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const [showCustomForm, setShowCustomForm] = useState(false);
+  const [customStem, setCustomStem] = useState("");
+  const [customOptions, setCustomOptions] = useState(["", "", "", ""]);
+  const [customCorrect, setCustomCorrect] = useState("A");
+  const [customSubject, setCustomSubject] = useState("");
+  const [customChapter, setCustomChapter] = useState("");
+  const [customDifficulty, setCustomDifficulty] = useState("Medium");
+  const [customSolution, setCustomSolution] = useState("");
+  const [customSaving, setCustomSaving] = useState(false);
 
   /*
    * Load the complete database schema.
@@ -278,6 +287,35 @@ export default function CherryPickPage() {
             Select exactly which questions you want in the test.
           </p>
         </div>
+
+        <section className="mb-6 rounded-2xl border border-[#dfe4ee] bg-white p-5 shadow-sm">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <div><h2 className="font-extrabold">Create Your Own Question</h2><p className="mt-1 text-xs text-[#697386]">Write institute-specific questions and immediately add them to your question bank.</p></div>
+            <button type="button" onClick={() => setShowCustomForm((v) => !v)} className="rounded-xl bg-[#315bea] px-4 py-2.5 text-sm font-bold text-white">{showCustomForm ? "Close" : "+ Add Your Own Question"}</button>
+          </div>
+          {showCustomForm && (
+            <div className="mt-5 grid gap-3 md:grid-cols-2">
+              <textarea value={customStem} onChange={(e) => setCustomStem(e.target.value)} placeholder="Question text" rows={4} className="md:col-span-2 rounded-xl border border-[#dfe4ee] px-4 py-3 text-sm" />
+              {customOptions.map((value, index) => <input key={index} value={value} onChange={(e) => setCustomOptions((current) => current.map((item, i) => i === index ? e.target.value : item))} placeholder={`Option ${String.fromCharCode(65 + index)}`} className="rounded-xl border border-[#dfe4ee] px-4 py-3 text-sm" />)}
+              <input value={customSubject} onChange={(e) => setCustomSubject(e.target.value)} placeholder="Subject" className="rounded-xl border border-[#dfe4ee] px-4 py-3 text-sm" />
+              <input value={customChapter} onChange={(e) => setCustomChapter(e.target.value)} placeholder="Chapter" className="rounded-xl border border-[#dfe4ee] px-4 py-3 text-sm" />
+              <select value={customCorrect} onChange={(e) => setCustomCorrect(e.target.value)} className="rounded-xl border border-[#dfe4ee] bg-white px-4 py-3 text-sm">{["A","B","C","D"].map((x) => <option key={x}>{x}</option>)}</select>
+              <select value={customDifficulty} onChange={(e) => setCustomDifficulty(e.target.value)} className="rounded-xl border border-[#dfe4ee] bg-white px-4 py-3 text-sm"><option>Easy</option><option>Medium</option><option>Hard</option></select>
+              <textarea value={customSolution} onChange={(e) => setCustomSolution(e.target.value)} placeholder="Solution / explanation (optional)" rows={3} className="md:col-span-2 rounded-xl border border-[#dfe4ee] px-4 py-3 text-sm" />
+              <button type="button" disabled={customSaving} onClick={async () => {
+                setCustomSaving(true); setError("");
+                try {
+                  const response = await fetch("/api/teacher/questions/create", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ stem: customStem, options: customOptions, correctOption: customCorrect, subject: customSubject, chapterName: customChapter, difficulty: customDifficulty, solution: customSolution, exam }) });
+                  const data = await response.json();
+                  if (!response.ok || !data.success) throw new Error(data.error || "Could not create question.");
+                  setShowCustomForm(false); setCustomStem(""); setCustomOptions(["", "", "", ""]); setCustomSolution("");
+                  await loadQuestions();
+                  setError("Question added successfully.");
+                } catch (err) { setError(err instanceof Error ? err.message : "Could not create question."); } finally { setCustomSaving(false); }
+              }} className="md:col-span-2 rounded-xl bg-[#16a36a] px-4 py-3 text-sm font-bold text-white disabled:opacity-50">{customSaving ? "Saving..." : "Save to Question Bank"}</button>
+            </div>
+          )}
+        </section>
 
         <section className="mb-6 rounded-2xl border border-[#e5e8ef] bg-white p-5 shadow-sm">
 

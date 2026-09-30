@@ -1,5 +1,6 @@
 "use client";
 
+import StudentInsights from "@/components/StudentInsights";
 import {
   useEffect,
   useMemo,
@@ -1608,6 +1609,17 @@ export default function DashboardPage() {
                 Test Summary
               </button>
 
+              <button
+                onClick={() => router.push("/student/batch-leaderboard")}
+                className="w-full h-10 flex items-center gap-3 px-2.5 rounded-xl text-[#657083] hover:bg-[#f7f8fb] text-xs font-medium transition"
+              >
+                <span className="w-7 h-7 rounded-lg bg-gradient-to-br from-amber-50 to-orange-50 flex items-center justify-center text-base">
+                  🏆
+                </span>
+
+                Batch Leaderboard
+              </button>
+
             </nav>
           </div>
 <button
@@ -1918,6 +1930,8 @@ export default function DashboardPage() {
               )}
 
             </section>
+
+            <StudentInsights />
 
             {/* =================================================
                 PERFORMANCE + SCORE DISTRIBUTION
@@ -2696,6 +2710,16 @@ export default function DashboardPage() {
             <span className="text-[9px] font-semibold">
               My Tests
             </span>
+          </button>
+
+          {/* Batch Leaderboard */}
+          <button
+            type="button"
+            onClick={() => router.push("/student/batch-leaderboard")}
+            className="flex flex-col items-center gap-1 text-[#7d8595]"
+          >
+            <span className="text-[18px] leading-none">🏆</span>
+            <span className="text-[9px] font-semibold">Leaderboard</span>
           </button>
 
           {/* Change Password */}

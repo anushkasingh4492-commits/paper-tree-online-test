@@ -44,6 +44,7 @@ type SubmitBody = {
   violationCount?: number;
   startedAt?: string;
   submittedAt?: string;
+  questionTimes?: Record<string, number>;
 };
 
 type EvaluatedAnswer = {
@@ -208,6 +209,15 @@ export async function POST(request: NextRequest) {
         { status: 400 }
       );
     }
+
+    const questionTimes: Record<string, number> =
+      body.questionTimes && typeof body.questionTimes === "object"
+        ? Object.fromEntries(
+            Object.entries(body.questionTimes).map(([key, value]) => [
+              key, Math.max(0, Math.min(36000, Math.round(Number(value) || 0))),
+            ])
+          )
+        : {};
 
     /*
      * =======================================================
@@ -900,7 +910,7 @@ export async function POST(request: NextRequest) {
             answer.selectedAnswer,
             answer.isCorrect,
             answer.marksAwarded,
-            0,
+            questionTimes[answer.questionId] ?? 0,
             answer.markedForReview,
             answer.selectedAnswer === null
               ? null

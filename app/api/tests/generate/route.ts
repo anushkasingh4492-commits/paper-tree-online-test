@@ -1298,11 +1298,19 @@ export async function POST(
          * Preset behavior remains unchanged.
          */
 
-        const questionValues =
-          [
-            ...subjectValues,
-            count,
-          ];
+        const questionValues: unknown[] = [...subjectValues];
+        let orderBy = "RANDOM()";
+        if (studentId) {
+          questionValues.push(studentId);
+          const studentParam = questionValues.length;
+          orderBy = `CASE WHEN NOT EXISTS (
+            SELECT 1 FROM test_answers seen_answer
+            INNER JOIN test_attempts seen_attempt ON seen_attempt.id = seen_answer.attempt_id
+            WHERE seen_attempt.student_id = $${studentParam}
+              AND seen_answer.question_id = questions.id
+          ) THEN 0 ELSE 1 END, RANDOM()`;
+        }
+        questionValues.push(count);
 
         const questionQuery = `
           ${QUESTION_SELECT}
@@ -1310,7 +1318,7 @@ export async function POST(
             ${subjectConditions.join(
               " AND "
             )}
-          ORDER BY RANDOM()
+          ORDER BY ${orderBy}
           LIMIT $${questionValues.length}
         `;
 
@@ -1725,16 +1733,25 @@ export async function POST(
             );
           }
 
-          const questionValues = [
-            ...subjectValues,
-            subjectCount,
-          ];
+          const questionValues: unknown[] = [...subjectValues];
+          let orderBy = "RANDOM()";
+          if (studentId) {
+            questionValues.push(studentId);
+            const studentParam = questionValues.length;
+            orderBy = `CASE WHEN NOT EXISTS (
+              SELECT 1 FROM test_answers seen_answer
+              INNER JOIN test_attempts seen_attempt ON seen_attempt.id = seen_answer.attempt_id
+              WHERE seen_attempt.student_id = $${studentParam}
+                AND seen_answer.question_id = questions.id
+            ) THEN 0 ELSE 1 END, RANDOM()`;
+          }
+          questionValues.push(subjectCount);
 
           const questionQuery = `
             ${QUESTION_SELECT}
             WHERE
               ${subjectConditions.join(" AND ")}
-            ORDER BY RANDOM()
+            ORDER BY ${orderBy}
             LIMIT $${questionValues.length}
           `;
 
@@ -1839,8 +1856,40 @@ export async function POST(
 
       await client.query(`
         ALTER TABLE tests
-        ADD COLUMN IF NOT EXISTS academy_id UUID
+        ADD COLUMN IF NOT EXISTS academy_id UUID,
+        ADD COLUMN IF NOT EXISTS is_full_chapter BOOLEAN NOT NULL DEFAULT FALSE,
+        ADD COLUMN IF NOT EXISTS full_chapter_subject VARCHAR(150),
+        ADD COLUMN IF NOT EXISTS full_chapter_name VARCHAR(255)
       `);
+
+      /*
+       * Automatically tag a generated paper as a full-chapter test
+       * when it contains 25+ questions from one subject/chapter and
+       * covers every topic represented by the question bank for that chapter.
+       */
+      let isFullChapter = false;
+      let fullChapterSubject: string | null = null;
+      let fullChapterName: string | null = null;
+      if (selectedQuestions.length >= 25) {
+        const subjectsFound = new Set(selectedQuestions.map((q) => clean(q.subject)));
+        const chaptersFound = new Set(selectedQuestions.map((q) => clean(q.chapter_name)));
+        if (subjectsFound.size === 1 && chaptersFound.size === 1 && !chaptersFound.has("")) {
+          fullChapterSubject = [...subjectsFound][0] || null;
+          fullChapterName = [...chaptersFound][0] || null;
+          if (fullChapterSubject && fullChapterName) {
+            const topicResult = await client.query(
+              `SELECT DISTINCT COALESCE(NULLIF(subtopic,''), NULLIF(major_topic,'')) AS topic
+               FROM questions
+               WHERE subject = $1 AND chapter_name = $2
+                 AND COALESCE(NULLIF(subtopic,''), NULLIF(major_topic,'')) IS NOT NULL`,
+              [fullChapterSubject, fullChapterName]
+            );
+            const selectedTopics = new Set(selectedQuestions.map((q) => clean(q.subtopic || q.major_topic)).filter(Boolean));
+            const allTopics = topicResult.rows.map((r) => clean(r.topic)).filter(Boolean);
+            isFullChapter = allTopics.length > 0 && allTopics.every((topic) => selectedTopics.has(topic));
+          }
+        }
+      }
 
       /*
        * Save test
@@ -1848,21 +1897,10 @@ export async function POST(
       await client.query(
         `
           INSERT INTO tests (
-            id,
-            exam,
-            question_count,
-            questions,
-            difficulty,
-            academy_id
+            id, exam, question_count, questions, difficulty, academy_id,
+            is_full_chapter, full_chapter_subject, full_chapter_name
           )
-          VALUES (
-            $1,
-            $2,
-            $3,
-            $4::jsonb,
-            $5,
-            $6
-          )
+          VALUES ($1, $2, $3, $4::jsonb, $5, $6, $7, $8, $9)
         `,
         [
           testId,
@@ -1879,8 +1917,10 @@ export async function POST(
           ),
 
           difficulty,
-
           academyId || null,
+          isFullChapter,
+          fullChapterSubject,
+          fullChapterName,
         ]
       );
 

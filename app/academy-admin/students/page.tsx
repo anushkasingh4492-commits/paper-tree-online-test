@@ -22,6 +22,11 @@ export default function AcademyStudentsPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [parentName, setParentName] = useState("");
+  const [parentPhone, setParentPhone] = useState("");
+  const [bulkFile, setBulkFile] = useState<File | null>(null);
+  const [bulkBatchId, setBulkBatchId] = useState("");
+  const [bulkLoading, setBulkLoading] = useState(false);
 
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
@@ -87,6 +92,8 @@ export default function AcademyStudentsPage() {
           email,
           password,
           batchId,
+          parentName,
+          parentPhone,
         }),
       });
 
@@ -102,6 +109,8 @@ export default function AcademyStudentsPage() {
       setName("");
       setEmail("");
       setPassword("");
+      setParentName("");
+      setParentPhone("");
       setBatchId("");
 
       await loadStudents();
@@ -246,6 +255,20 @@ export default function AcademyStudentsPage() {
               className="mt-3 w-full rounded-xl border border-[#dfe4ee] px-4 py-3 text-sm outline-none focus:border-[#315bea]"
             />
 
+            <input
+              value={parentName}
+              onChange={(e) => setParentName(e.target.value)}
+              placeholder="Parent / guardian name (optional)"
+              className="mt-3 w-full rounded-xl border border-[#dfe4ee] px-4 py-3 text-sm outline-none focus:border-[#315bea]"
+            />
+
+            <input
+              value={parentPhone}
+              onChange={(e) => setParentPhone(e.target.value)}
+              placeholder="Parent WhatsApp number (e.g. +91...)"
+              className="mt-3 w-full rounded-xl border border-[#dfe4ee] px-4 py-3 text-sm outline-none focus:border-[#315bea]"
+            />
+
             <button
               disabled={loading || batches.length === 0 || !batchId}
               type="submit"
@@ -260,6 +283,42 @@ export default function AcademyStudentsPage() {
               </p>
             )}
           </form>
+
+          {/* Bulk Excel upload */}
+          <section className="mb-8 rounded-2xl border border-[#e3e8f5] bg-white p-6 shadow-sm lg:col-span-2">
+            <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+              <div>
+                <h3 className="text-lg font-extrabold">Bulk Student Upload</h3>
+                <p className="mt-1 text-sm text-[#697386]">Upload .xlsx, .xls or .csv. Required columns: <b>name, email</b>. Optional: password, parent_phone, parent_name.</p>
+              </div>
+              <div className="flex flex-wrap items-center gap-3">
+                <select value={bulkBatchId} onChange={(e) => setBulkBatchId(e.target.value)} className="rounded-xl border border-[#dfe4ee] bg-white px-3 py-2.5 text-sm">
+                  <option value="">Select batch</option>
+                  {batches.map((batch) => <option key={batch.id} value={batch.id}>{batch.name}</option>)}
+                </select>
+                <input type="file" accept=".xlsx,.xls,.csv" onChange={(e) => setBulkFile(e.target.files?.[0] || null)} className="max-w-[230px] text-sm" />
+                <button
+                  type="button"
+                  disabled={!bulkFile || !bulkBatchId || bulkLoading}
+                  onClick={async () => {
+                    if (!bulkFile || !bulkBatchId) return;
+                    setBulkLoading(true); setMessage("");
+                    try {
+                      const form = new FormData(); form.append("file", bulkFile); form.append("batchId", bulkBatchId);
+                      const response = await fetch("/api/academy-admin/students/bulk-upload", { method: "POST", body: form });
+                      const data = await response.json();
+                      if (!response.ok || !data.success) throw new Error(data.error || "Bulk upload failed.");
+                      setMessage(`Bulk upload complete: ${data.createdCount} created, ${data.skippedCount} skipped.`);
+                      setBulkFile(null); setBulkBatchId(""); await loadStudents(); await loadBatches();
+                    } catch (error) { setMessage(error instanceof Error ? error.message : "Bulk upload failed."); } finally { setBulkLoading(false); }
+                  }}
+                  className="rounded-xl bg-[#315bea] px-4 py-2.5 text-sm font-bold text-white disabled:opacity-50"
+                >
+                  {bulkLoading ? "Importing..." : "Import Students"}
+                </button>
+              </div>
+            </div>
+          </section>
 
           {/* Student list */}
           <section className="rounded-2xl border border-[#e3e8f5] bg-white p-6 shadow-sm">

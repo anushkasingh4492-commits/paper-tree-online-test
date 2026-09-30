@@ -35,6 +35,7 @@ type TestData = {
 type Answers = Record<string, number>;
 type Marked = Record<string, boolean>;
 type Visited = Record<string, boolean>;
+type QuestionTimes = Record<string, number>;
 
 /*
  * =========================================================
@@ -335,6 +336,12 @@ export default function TestPage() {
 
   const [timeLeft, setTimeLeft] =
     useState(0);
+
+  const [questionTimes, setQuestionTimes] = useState<QuestionTimes>({});
+  const [showExplain, setShowExplain] = useState(false);
+  const [explainLoading, setExplainLoading] = useState(false);
+  const [explainText, setExplainText] = useState("");
+  const [explainError, setExplainError] = useState("");
 
   const [
     showWarning,
@@ -1362,6 +1369,21 @@ const figureAsset =
 
   /*
    * =========================================================
+   * PER-QUESTION TIME TRACKING
+   * =========================================================
+   */
+
+  useEffect(() => {
+    const question = questions[currentQuestion];
+    if (!question) return;
+    const interval = window.setInterval(() => {
+      setQuestionTimes((previous) => ({ ...previous, [question.id]: (previous[question.id] || 0) + 1 }));
+    }, 1000);
+    return () => window.clearInterval(interval);
+  }, [currentQuestion, questions]);
+
+  /*
+   * =========================================================
    * VISITED
    * =========================================================
    */
@@ -1681,6 +1703,7 @@ const figureAsset =
               studentId,
               answers,
               marked,
+              questionTimes,
               automatic,
               violationCount:
                 automatic
@@ -1760,6 +1783,7 @@ const figureAsset =
         unattempted,
 
         answers,
+        timeSpent: questionTimes,
         marked,
         questions,
 
@@ -2156,6 +2180,20 @@ const figureAsset =
     visited,
   ]);
 
+  async function explainCurrentQuestion() {
+    if (!current) return;
+    setShowExplain(true); setExplainLoading(true); setExplainError(""); setExplainText("");
+    try {
+      const response = await fetch("/api/ai/explain", {
+        method: "POST", headers: { "Content-Type": "application/json" }, credentials: "include",
+        body: JSON.stringify({ questionId: current.id, question: current.question, options: current.options, answer: current.answer, selectedAnswer: answers[current.id] === undefined ? null : String.fromCharCode(65 + answers[current.id]), solution: current.solution }),
+      });
+      const data = await response.json();
+      if (!response.ok || !data.success) throw new Error(data.error || "Could not explain the question.");
+      setExplainText(data.explanation || "No explanation returned.");
+    } catch (error) { setExplainError(error instanceof Error ? error.message : "Could not explain the question."); } finally { setExplainLoading(false); }
+  }
+
   /*
    * =========================================================
    * ANSWER
@@ -2523,8 +2561,17 @@ const figureAsset =
                           : ""}
                       </div>
                     )}
+                    <div className="mt-1 text-[11px] font-semibold text-slate-400">Time on question: {Math.floor((questionTimes[current.id] || 0) / 60)}m {(questionTimes[current.id] || 0) % 60}s</div>
                   </div>
                 </div>
+
+                <button
+                  type="button"
+                  onClick={() => void explainCurrentQuestion()}
+                  className="px-3 py-2 rounded-lg border border-violet-200 bg-violet-50 text-xs font-bold text-violet-700 hover:bg-violet-100 transition"
+                >
+                  ✨ Explain this
+                </button>
 
                 <button
                   type="button"
@@ -2656,6 +2703,16 @@ const figureAsset =
                   )}
                 </div>
               </div>
+
+              {showExplain && (
+                <div className="border-t border-violet-100 bg-violet-50/60 p-5 sm:p-7">
+                  <div className="flex items-center justify-between gap-3">
+                    <div><h3 className="font-extrabold text-violet-950">AI Doubt Solver</h3><p className="mt-1 text-xs text-violet-700">Step-by-step explanation + why the other options are wrong.</p></div>
+                    <button type="button" onClick={() => setShowExplain(false)} className="text-xs font-bold text-violet-700">Close</button>
+                  </div>
+                  {explainLoading ? <div className="mt-4 rounded-xl bg-white p-4 text-sm text-slate-600">Thinking through the question...</div> : explainError ? <div className="mt-4 rounded-xl bg-red-50 p-4 text-sm font-semibold text-red-700">{explainError}</div> : <div className="mt-4 whitespace-pre-wrap rounded-xl bg-white p-5 text-sm leading-7 text-slate-700 shadow-sm">{explainText}</div>}
+                </div>
+              )}
 
               {/* NAVIGATION */}
 

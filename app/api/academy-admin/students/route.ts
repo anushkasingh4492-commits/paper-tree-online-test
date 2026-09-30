@@ -4,6 +4,7 @@ import { randomUUID } from "crypto";
 import bcrypt from "bcryptjs";
 import { pool } from "@/lib/db";
 import { parseSessionCookie } from "@/lib/session";
+import { ensureFeatureSchema } from "@/lib/feature-schema";
 
 async function getAcademyAdmin(targetAcademyId?: string) {
   const value = (await cookies()).get("master_session")?.value;
@@ -36,6 +37,7 @@ async function getAcademyAdmin(targetAcademyId?: string) {
 }
 
 export async function GET(req: Request) {
+  await ensureFeatureSchema();
   const { searchParams } = new URL(req.url);
 
   const admin = await getAcademyAdmin(
@@ -94,6 +96,7 @@ export async function GET(req: Request) {
 
 export async function POST(req: Request) {
   try {
+    await ensureFeatureSchema();
     const body = await req.json();
 
     const academyId = String(
@@ -129,6 +132,9 @@ export async function POST(req: Request) {
     const batchId = String(
       body.batchId || ""
     ).trim();
+
+    const parentPhone = String(body.parentPhone || "").trim();
+    const parentName = String(body.parentName || "").trim();
 
     if (!name || !email || !password) {
       return NextResponse.json(
@@ -284,13 +290,17 @@ export async function POST(req: Request) {
         id,
         name,
         email,
-        academy_id
+        academy_id,
+        parent_phone,
+        parent_name
       )
       VALUES (
         $1,
         $2,
         $3,
-        $4
+        $4,
+        $5,
+        $6
       )
       `,
       [
@@ -298,6 +308,8 @@ export async function POST(req: Request) {
         name,
         email,
         admin.academyId,
+        parentPhone || null,
+        parentName || null,
       ]
     );
 
