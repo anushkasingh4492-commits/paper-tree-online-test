@@ -392,7 +392,7 @@ export async function getStudentGamification(studentId: string, academyId: strin
     ...tieredBadge("podium", "Podium", "Rank", podiumEarns, "Finish 2nd or 3rd in your batch in a teacher-assigned test.", "Rank-20260930T135947Z-1-001/Rank", "podium"),
     ...tieredBadge("mvp", "MVP", "Rank", mvpEarns, "Finish 1st in your batch in a teacher-assigned test.", "Rank-20260930T135947Z-1-001/Rank", "mvp"),
     badge({ id: "welcome-back", name: "Welcome Back", icon: "", asset: asset("Comeback-20260930T140006Z-1-001/Comeback/welcome-back.png"), category: "Comeback", earned: comebackEarns > 0, progress: Math.min(comebackEarns, 1), target: 1, detail: "Take a test after being away for 14 days or more." }),
-    badge({ id: "hidden-mystery", name: "Secret Badge", icon: "", asset: asset("Hidden-20260930T140002Z-1-001/Hidden/mystery.png"), category: "Hidden", earned: false, progress: 0, target: 1, detail: "Secret badge. The unlock condition is intentionally hidden." }),
+    
   ];
 
   // Completionist: every badge in the catalogue except Rank, Welcome Back and secret badges.
