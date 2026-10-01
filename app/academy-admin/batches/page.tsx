@@ -58,7 +58,7 @@ export default function AcademyBatchesPage() {
     useState<string[]>([]);
 
   const [name, setName] = useState("");
-  const [className, setClassName] = useState("");
+
   const [courseName, setCourseName] = useState("");
 
   const [message, setMessage] = useState("");
@@ -445,16 +445,15 @@ export default function AcademyBatchesPage() {
     e.preventDefault();
     setMessage("");
 
-    if (
-      !name.trim() ||
-      !className.trim() ||
-      !courseName.trim()
-    ) {
-      setMessage(
-        "Please fill all details."
-      );
-      return;
-    }
+ if (
+  !name.trim() ||
+  !courseName.trim()
+) {
+  setMessage(
+    "Please fill all details."
+  );
+  return;
+}
 
     /*
      * Master Admin must select an academy.
@@ -479,12 +478,9 @@ export default function AcademyBatchesPage() {
         string,
         string
       > = {
-        name: name.trim(),
-        className:
-          className.trim(),
-        courseName:
-          courseName.trim(),
-      };
+     name: name.trim(),
+  courseName: courseName.trim(),
+};
 
       if (selectedAcademyId) {
         body.academyId =
@@ -519,7 +515,7 @@ export default function AcademyBatchesPage() {
       );
 
       setName("");
-      setClassName("");
+    
       setCourseName("");
 
       await loadBatches();
