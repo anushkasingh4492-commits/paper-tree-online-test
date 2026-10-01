@@ -301,8 +301,7 @@ function addDifficultyFilter(
   difficulty: string,
   conditions: string[]
 ) {
-  const normalizedDifficulty =
-    normalize(difficulty);
+  const normalizedDifficulty = normalize(difficulty);
 
   /*
    * Easy
@@ -316,41 +315,42 @@ function addDifficultyFilter(
   }
 
   /*
-   * Challenging
-   *
-   * Medium + Difficult
+   * Medium
    */
-  if (
-    normalizedDifficulty === "challenging"
-  ) {
+  if (normalizedDifficulty === "medium") {
     conditions.push(`
-      LOWER(TRIM(difficulty)) IN (
-        'medium',
-        'difficult'
-      )
+      LOWER(TRIM(difficulty)) = 'medium'
     `);
 
     return;
   }
 
   /*
-   * Difficult
+   * Hard
    */
   if (
+    normalizedDifficulty === "hard" ||
     normalizedDifficulty === "difficult"
   ) {
     conditions.push(`
-      LOWER(TRIM(difficulty)) = 'difficult'
+      LOWER(TRIM(difficulty)) = 'hard'
     `);
 
     return;
   }
 
   /*
-   * Balanced / Mixed
-   *
-   * No difficulty filter.
+   * Challenging
    */
+  if (normalizedDifficulty === "challenging") {
+    conditions.push(`
+      LOWER(TRIM(difficulty)) = 'challenging'
+    `);
+
+    return;
+  }
+
+  
 }
 
 /*

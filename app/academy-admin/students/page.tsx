@@ -1,6 +1,6 @@
 "use client";
-
 import { FormEvent, useEffect, useState } from "react";
+import * as XLSX from "xlsx";
 
 type Student = {
   id: string;
@@ -151,7 +151,32 @@ export default function AcademyStudentsPage() {
 
     setMessage("Student removed.");
   }
+function downloadStudentTemplate() {
+  const rows = [
+    {
+      name: "Rahul Sharma",
+      email: "rahul@example.com",
+      password: "Rahul@123",
+      parent_phone: "+919876543210",
+      parent_name: "Rajesh Sharma",
+    },
+  ];
 
+  const worksheet = XLSX.utils.json_to_sheet(rows);
+
+  const workbook = XLSX.utils.book_new();
+
+  XLSX.utils.book_append_sheet(
+    workbook,
+    worksheet,
+    "Students"
+  );
+
+  XLSX.writeFile(
+    workbook,
+    "student-upload-template.xlsx"
+  );
+}
   return (
     <main className="min-h-screen bg-[#f6f8fc] text-[#172033]">
       <header className="border-b border-[#e7eaf0] bg-white">
@@ -289,9 +314,20 @@ export default function AcademyStudentsPage() {
             <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
               <div>
                 <h3 className="text-lg font-extrabold">Bulk Student Upload</h3>
-                <p className="mt-1 text-sm text-[#697386]">Upload .xlsx, .xls or .csv. Required columns: <b>name, email</b>. Optional: password, parent_phone, parent_name.</p>
+                <p className="mt-1 text-sm text-[#697386]">
+  Upload .xlsx, .xls or .csv. Required columns:{" "}
+  <b>name, email, password</b>. Optional:{" "}
+  <b>parent_phone, parent_name</b>.
+</p>
               </div>
               <div className="flex flex-wrap items-center gap-3">
+                <button
+  type="button"
+  onClick={downloadStudentTemplate}
+  className="rounded-xl border border-[#315bea] bg-white px-4 py-2.5 text-sm font-bold text-[#315bea] hover:bg-[#f2f5ff]"
+>
+  ↓ Download Excel Template
+</button>
                 <select value={bulkBatchId} onChange={(e) => setBulkBatchId(e.target.value)} className="rounded-xl border border-[#dfe4ee] bg-white px-3 py-2.5 text-sm">
                   <option value="">Select batch</option>
                   {batches.map((batch) => <option key={batch.id} value={batch.id}>{batch.name}</option>)}

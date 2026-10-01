@@ -9,7 +9,11 @@ async function isMasterAdmin() {
 
   try {
     const session = JSON.parse(decodeURIComponent(value));
-    return session.role === "ADMIN" || session.role === "MASTER_ADMIN";
+
+    return (
+      session.role === "ADMIN" ||
+      session.role === "MASTER_ADMIN"
+    );
   } catch {
     return false;
   }
@@ -20,51 +24,98 @@ export async function POST(
   { params }: { params: Promise<{ academyId: string }> }
 ) {
   if (!(await isMasterAdmin())) {
-    return NextResponse.json({ success: false, error: "Unauthorized" }, { status: 401 });
-  }
-
-  const { academyId } = await params;
-  const body = await request.json();
-  const password = String(body.password || "");
-
-  if (password.length < 6) {
     return NextResponse.json(
-      { success: false, error: "Password must be at least 6 characters." },
-      { status: 400 }
+      { success: false, error: "Unauthorized" },
+      { status: 401 }
     );
   }
 
-  const admin = await pool.query(
-    `
-    SELECT ad.id, ad.name, ad.email, ac.name AS academy_name
-    FROM admins ad
-    INNER JOIN academies ac ON ac.id = ad.academy_id
-    WHERE ad.academy_id = $1 AND ad.is_master = FALSE
-    ORDER BY ad.created_at ASC
-    LIMIT 1
-    `,
-    [academyId]
-  );
+  try {
+    const { academyId } = await params;
+    const body = await request.json();
 
-  if (!admin.rows.length) {
+    const adminId = String(body.adminId || "").trim();
+    const password = String(body.password || "");
+
+    if (!adminId) {
+      return NextResponse.json(
+        { success: false, error: "Admin ID is required." },
+        { status: 400 }
+      );
+    }
+
+    if (password.length < 6) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: "Password must be at least 6 characters.",
+        },
+        { status: 400 }
+      );
+    }
+
+    const admin = await pool.query(
+      `
+      SELECT
+        ad.id,
+        ad.name,
+        ad.email,
+        ac.name AS academy_name
+      FROM admins ad
+      INNER JOIN academies ac
+        ON ac.id = ad.academy_id
+      WHERE ad.id = $1
+        AND ad.academy_id = $2
+        AND ad.is_master = FALSE
+      LIMIT 1
+      `,
+      [adminId, academyId]
+    );
+
+    if (!admin.rows.length) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: "Academy administrator not found.",
+        },
+        { status: 404 }
+      );
+    }
+
+    const passwordHash = await bcrypt.hash(password, 12);
+
+    await pool.query(
+      `
+      UPDATE admins
+      SET password_hash = $1
+      WHERE id = $2
+        AND academy_id = $3
+        AND is_master = FALSE
+      `,
+      [passwordHash, adminId, academyId]
+    );
+
+    return NextResponse.json({
+      success: true,
+      credentials: {
+        academy: admin.rows[0].academy_name,
+        name: admin.rows[0].name,
+        email: admin.rows[0].email,
+        password,
+      },
+    });
+  } catch (error) {
+    console.error("RESET ACADEMY ADMIN ERROR:", error);
+
     return NextResponse.json(
-      { success: false, error: "No academy administrator was found." },
-      { status: 404 }
+      {
+        success: false,
+        error:
+          error instanceof Error
+            ? error.message
+            : "Failed to reset academy admin password.",
+      },
+      { status: 500 }
     );
   }
-
-  const passwordHash = await bcrypt.hash(password, 12);
-  await pool.query(
-    `UPDATE admins SET password_hash = $1 WHERE id = $2`,
-    [passwordHash, admin.rows[0].id]
-  );
-
-  return NextResponse.json({
-    success: true,
-    credentials: {
-      academy: admin.rows[0].academy_name,
-      email: admin.rows[0].email,
-      password,
-    },
-  });
 }

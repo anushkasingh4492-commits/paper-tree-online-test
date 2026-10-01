@@ -41,7 +41,8 @@ type Section =
   | "teachers"
   | "batches"
   | "tests"
-  | "subscription";
+  | "subscription"
+  | "admins";
 
 type Toast = {
   id: number;
@@ -71,7 +72,25 @@ export default function AcademiesPage() {
   const [details, setDetails] = useState<Details | null>(null);
   const [detailsLoading, setDetailsLoading] = useState(false);
   const [saving, setSaving] = useState(false);
+const [academyAdmins, setAcademyAdmins] = useState<
+  Array<{
+    id: string;
+    name: string;
+    email: string;
+    created_at?: string;
+  }>
+>([]);
 
+const [adminsLoading, setAdminsLoading] = useState(false);
+
+const [newAdminName, setNewAdminName] = useState("");
+const [newAdminEmail, setNewAdminEmail] = useState("");
+const [newAdminPassword, setNewAdminPassword] = useState("");
+const [adminSaving, setAdminSaving] = useState(false);
+
+const [resetAdminId, setResetAdminId] = useState<string | null>(null);
+const [resetAdminPassword, setResetAdminPassword] = useState("");
+const [resettingAdmin, setResettingAdmin] = useState(false);
   const [toasts, setToasts] = useState<Toast[]>([]);
 
   const [academySearch, setAcademySearch] = useState("");
@@ -261,7 +280,11 @@ export default function AcademiesPage() {
       setDetails(null);
     }
   }, [selectedAcademy?.id]);
+useEffect(() => {
+  if (!selectedAcademy || section !== "admins") return;
 
+  void loadAcademyAdmins(selectedAcademy.id);
+}, [selectedAcademy, section]);
   const totals = useMemo(
     () => ({
       academies: academies.length,
@@ -675,7 +698,149 @@ export default function AcademiesPage() {
       );
     }
   }
+async function loadAcademyAdmins(academyId: string) {
+  setAdminsLoading(true);
 
+  try {
+    const res = await fetch(
+      `/api/admin/academies/${academyId}/admins`,
+      {
+        cache: "no-store",
+      }
+    );
+
+    const data = await res.json();
+
+    if (!res.ok || !data.success) {
+      throw new Error(
+        data.error || "Failed to load academy admins."
+      );
+    }
+
+    setAcademyAdmins(data.admins || []);
+  } catch (error) {
+    notify(
+      error instanceof Error
+        ? error.message
+        : "Failed to load academy admins.",
+      "error"
+    );
+  } finally {
+    setAdminsLoading(false);
+  }
+}
+
+async function addAcademyAdmin() {
+  if (!selectedAcademy) return;
+
+  if (
+    !newAdminName.trim() ||
+    !newAdminEmail.trim() ||
+    !newAdminPassword
+  ) {
+    notify(
+      "Name, email and password are required.",
+      "error"
+    );
+    return;
+  }
+
+  setAdminSaving(true);
+
+  try {
+    const res = await fetch(
+      `/api/admin/academies/${selectedAcademy.id}/admins`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: newAdminName.trim(),
+          email: newAdminEmail.trim(),
+          password: newAdminPassword,
+        }),
+      }
+    );
+
+    const data = await res.json();
+
+    if (!res.ok || !data.success) {
+      throw new Error(
+        data.error || "Failed to create academy admin."
+      );
+    }
+
+    notify("Academy admin added successfully.", "success");
+
+    setNewAdminName("");
+    setNewAdminEmail("");
+    setNewAdminPassword("");
+
+    await loadAcademyAdmins(selectedAcademy.id);
+  } catch (error) {
+    notify(
+      error instanceof Error
+        ? error.message
+        : "Failed to create academy admin.",
+      "error"
+    );
+  } finally {
+    setAdminSaving(false);
+  }
+}
+
+async function resetAcademyAdmin(adminId: string) {
+  if (!selectedAcademy) return;
+
+  if (resetAdminPassword.length < 6) {
+    notify(
+      "Password must be at least 6 characters.",
+      "error"
+    );
+    return;
+  }
+
+  setResettingAdmin(true);
+
+  try {
+    const res = await fetch(
+      `/api/admin/academies/${selectedAcademy.id}/reset-admin`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          password: resetAdminPassword,
+          adminId,
+        }),
+      }
+    );
+
+    const data = await res.json();
+
+    if (!res.ok || !data.success) {
+      throw new Error(
+        data.error || "Failed to reset admin password."
+      );
+    }
+
+    notify("Admin password reset successfully.", "success");
+
+    setResetAdminId(null);
+    setResetAdminPassword("");
+  } catch (error) {
+    notify(
+      error instanceof Error
+        ? error.message
+        : "Failed to reset admin password.",
+      "error"
+    );
+  } finally {
+    setResettingAdmin(false);
+  }
+}
   async function deleteAcademy() {
     if (!selectedAcademy) return;
 
@@ -1461,6 +1626,10 @@ export default function AcademiesPage() {
                       "subscription",
                       "🎟️ Subscription",
                     ],
+                    [
+                      "admins",
+                      "👤 Academy Admin",
+                   ],
                   ] as [
                     Section,
                     string
@@ -1504,31 +1673,353 @@ export default function AcademiesPage() {
                   />
                 )}
 
-                {section ===
-                  "students" && (
-                  <StudentsPanel
-                    students={students}
-                    search={
-                      studentSearch
-                    }
-                    setSearch={
-                      setStudentSearch
-                    }
-                    onEdit={openEdit}
-                    onDelete={(
-                      id: string,
-                      name: string
-                    ) =>
-                      setModal({
-                        type: "delete",
-                        entityType:
-                          "student",
-                        id,
-                        title: `Remove ${name}?`,
-                      })
-                    }
-                  />
-                )}
+            {section ===
+  "students" && (
+  <StudentsPanel
+    students={students}
+    search={studentSearch}
+    setSearch={setStudentSearch}
+    onEdit={openEdit}
+    onDelete={(
+      id: string,
+      name: string
+    ) =>
+      setModal({
+        type: "delete",
+        entityType: "student",
+        id,
+        title: `Remove ${name}?`,
+      })
+    }
+  />
+)}
+                    {"}"}
+                    {section === "admins" && (
+                    <div className="space-y-6">
+
+                     <div>
+                     <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#315bea]">
+                      Academy administration
+                          </p>
+
+      <h3 className="mt-1 text-xl font-black">
+        Manage Academy Admins
+      </h3>
+
+      <p className="mt-1 text-sm text-[#697386]">
+        View existing administrators, reset their passwords,
+        or create another administrator for this academy.
+      </p>
+    </div>
+
+    <div className="rounded-2xl border border-[#e8ecf4] bg-white p-5">
+      <h4 className="text-sm font-black">
+        Current Academy Admins
+      </h4>
+
+      {adminsLoading ? (
+        <p className="mt-4 text-sm text-[#697386]">
+          Loading admins…
+        </p>
+      ) : academyAdmins.length === 0 ? (
+        <div className="mt-4 rounded-xl bg-[#f6f8fc] p-4">
+          <p className="text-sm font-bold">
+            No academy administrator found.
+          </p>
+
+          <p className="mt-1 text-xs text-[#697386]">
+            Create one using the form below.
+          </p>
+        </div>
+      ) : (
+        <div className="mt-4 space-y-3">
+          {academyAdmins.map((admin) => (
+            <div
+              key={admin.id}
+              className="flex flex-col gap-4 rounded-xl border border-[#e8ecf4] p-4 md:flex-row md:items-center md:justify-between"
+            >
+              <div>
+                <p className="font-black">
+                  {admin.name}
+                </p>
+
+                <p className="mt-1 text-xs text-[#697386]">
+                  {admin.email}
+                </p>
+              </div>
+
+              <button
+                onClick={() => {
+                  setResetAdminId(admin.id);
+                  setResetAdminPassword("");
+                }}
+                className="rounded-xl border border-[#315bea] px-4 py-2 text-xs font-black text-[#315bea]"
+              >
+                Reset Password
+              </button>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+
+    <div className="rounded-2xl border border-[#e8ecf4] bg-white p-5">
+      <h4 className="text-sm font-black">
+        Add New Academy Admin
+      </h4>
+
+      <div className="mt-4 grid gap-4 md:grid-cols-3">
+        <input
+          value={newAdminName}
+          onChange={(e) =>
+            setNewAdminName(e.target.value)
+          }
+          placeholder="Admin name"
+          className="rounded-xl border px-4 py-3 text-sm outline-none focus:border-[#315bea]"
+        />
+
+        <input
+          value={newAdminEmail}
+          onChange={(e) =>
+            setNewAdminEmail(e.target.value)
+          }
+          type="email"
+          placeholder="Admin email"
+          className="rounded-xl border px-4 py-3 text-sm outline-none focus:border-[#315bea]"
+        />
+
+        <input
+          value={newAdminPassword}
+          onChange={(e) =>
+            setNewAdminPassword(e.target.value)
+          }
+          type="password"
+          placeholder="Password (min 6 characters)"
+          className="rounded-xl border px-4 py-3 text-sm outline-none focus:border-[#315bea]"
+        />
+      </div>
+
+      <button
+        onClick={addAcademyAdmin}
+        disabled={adminSaving}
+        className="mt-4 rounded-xl bg-[#315bea] px-5 py-3 text-xs font-black text-white disabled:opacity-50"
+      >
+        {adminSaving
+          ? "Adding Admin..."
+          : "Add Academy Admin"}
+      </button>
+    </div>
+
+    {resetAdminId && (
+      <div className="rounded-2xl border border-amber-200 bg-amber-50 p-5">
+        <h4 className="text-sm font-black">
+          Reset Admin Password
+        </h4>
+
+        <p className="mt-1 text-xs text-[#697386]">
+          Set a new password for the selected academy administrator.
+        </p>
+
+        <div className="mt-4 flex flex-col gap-3 md:flex-row">
+          <input
+            value={resetAdminPassword}
+            onChange={(e) =>
+              setResetAdminPassword(e.target.value)
+            }
+            type="password"
+            placeholder="New password"
+            className="flex-1 rounded-xl border bg-white px-4 py-3 text-sm outline-none focus:border-[#315bea]"
+          />
+
+          <button
+            onClick={() =>
+              resetAcademyAdmin(resetAdminId)
+            }
+            disabled={resettingAdmin}
+            className="rounded-xl bg-[#315bea] px-5 py-3 text-xs font-black text-white disabled:opacity-50"
+          >
+            {resettingAdmin
+              ? "Resetting..."
+              : "Reset Password"}
+          </button>
+
+          <button
+            onClick={() => {
+              setResetAdminId(null);
+              setResetAdminPassword("");
+            }}
+            className="rounded-xl border px-5 py-3 text-xs font-black"
+          >
+            Cancel
+          </button>
+        </div>
+      </div>
+    )}
+  </div>
+)} {section === "admins" && (
+  <div className="space-y-6">
+    <div>
+      <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#315bea]">
+        Academy administration
+      </p>
+
+      <h3 className="mt-1 text-xl font-black">
+        Manage Academy Admins
+      </h3>
+
+      <p className="mt-1 text-sm text-[#697386]">
+        View existing administrators, reset their passwords,
+        or create another administrator for this academy.
+      </p>
+    </div>
+
+    <div className="rounded-2xl border border-[#e8ecf4] bg-white p-5">
+      <h4 className="text-sm font-black">
+        Current Academy Admins
+      </h4>
+
+      {adminsLoading ? (
+        <p className="mt-4 text-sm text-[#697386]">
+          Loading admins…
+        </p>
+      ) : academyAdmins.length === 0 ? (
+        <div className="mt-4 rounded-xl bg-[#f6f8fc] p-4">
+          <p className="text-sm font-bold">
+            No academy administrator found.
+          </p>
+
+          <p className="mt-1 text-xs text-[#697386]">
+            Create one using the form below.
+          </p>
+        </div>
+      ) : (
+        <div className="mt-4 space-y-3">
+          {academyAdmins.map((admin) => (
+            <div
+              key={admin.id}
+              className="flex flex-col gap-4 rounded-xl border border-[#e8ecf4] p-4 md:flex-row md:items-center md:justify-between"
+            >
+              <div>
+                <p className="font-black">
+                  {admin.name}
+                </p>
+
+                <p className="mt-1 text-xs text-[#697386]">
+                  {admin.email}
+                </p>
+              </div>
+
+              <button
+                onClick={() => {
+                  setResetAdminId(admin.id);
+                  setResetAdminPassword("");
+                }}
+                className="rounded-xl border border-[#315bea] px-4 py-2 text-xs font-black text-[#315bea]"
+              >
+                Reset Password
+              </button>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+
+    <div className="rounded-2xl border border-[#e8ecf4] bg-white p-5">
+      <h4 className="text-sm font-black">
+        Add New Academy Admin
+      </h4>
+
+      <div className="mt-4 grid gap-4 md:grid-cols-3">
+        <input
+          value={newAdminName}
+          onChange={(e) =>
+            setNewAdminName(e.target.value)
+          }
+          placeholder="Admin name"
+          className="rounded-xl border px-4 py-3 text-sm outline-none focus:border-[#315bea]"
+        />
+
+        <input
+          value={newAdminEmail}
+          onChange={(e) =>
+            setNewAdminEmail(e.target.value)
+          }
+          type="email"
+          placeholder="Admin email"
+          className="rounded-xl border px-4 py-3 text-sm outline-none focus:border-[#315bea]"
+        />
+
+        <input
+          value={newAdminPassword}
+          onChange={(e) =>
+            setNewAdminPassword(e.target.value)
+          }
+          type="password"
+          placeholder="Password (min 6 characters)"
+          className="rounded-xl border px-4 py-3 text-sm outline-none focus:border-[#315bea]"
+        />
+      </div>
+
+      <button
+        onClick={addAcademyAdmin}
+        disabled={adminSaving}
+        className="mt-4 rounded-xl bg-[#315bea] px-5 py-3 text-xs font-black text-white disabled:opacity-50"
+      >
+        {adminSaving
+          ? "Adding Admin..."
+          : "Add Academy Admin"}
+      </button>
+    </div>
+
+    {resetAdminId && (
+      <div className="rounded-2xl border border-amber-200 bg-amber-50 p-5">
+        <h4 className="text-sm font-black">
+          Reset Admin Password
+        </h4>
+
+        <p className="mt-1 text-xs text-[#697386]">
+          Set a new password for the selected academy administrator.
+        </p>
+
+        <div className="mt-4 flex flex-col gap-3 md:flex-row">
+          <input
+            value={resetAdminPassword}
+            onChange={(e) =>
+              setResetAdminPassword(e.target.value)
+            }
+            type="password"
+            placeholder="New password"
+            className="flex-1 rounded-xl border bg-white px-4 py-3 text-sm outline-none focus:border-[#315bea]"
+          />
+
+          <button
+            onClick={() =>
+              resetAcademyAdmin(resetAdminId)
+            }
+            disabled={resettingAdmin}
+            className="rounded-xl bg-[#315bea] px-5 py-3 text-xs font-black text-white disabled:opacity-50"
+          >
+            {resettingAdmin
+              ? "Resetting..."
+              : "Reset Password"}
+          </button>
+
+          <button
+            onClick={() => {
+              setResetAdminId(null);
+              setResetAdminPassword("");
+            }}
+            className="rounded-xl border px-5 py-3 text-xs font-black"
+          >
+            Cancel
+          </button>
+        </div>
+      </div>
+    )}
+  </div>
+)}
+                  /{">"}
+                ){"}"}
 
                 {section ===
                   "teachers" && (
@@ -1898,6 +2389,7 @@ function Overview({
             "Tests & Papers",
             "tests",
           ],
+
         ].map(
           ([icon, label, id]) => (
             <button
