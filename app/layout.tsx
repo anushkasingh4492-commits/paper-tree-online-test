@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Paper Tree Educational Studio",
+ title: "CBT",
   description: "Competitive exam preparation and testing platform",
 };
 

@@ -50,6 +50,19 @@ export default function AcademyBranding({
     };
   }, []);
 
+  // Update browser tab title dynamically:
+  // Infinity Classes -> "Infinity Classes CBT"
+  // Vigyan Academy -> "Vigyan Academy CBT"
+  useEffect(() => {
+    if (!loaded) return;
+
+    const academyName = academy?.name?.trim();
+
+    document.title = academyName
+      ? `${academyName} CBT`
+      : "CBT";
+  }, [academy, loaded]);
+
   // Prevent fallback branding from flashing before academy data loads
   if (!loaded) {
     return (
