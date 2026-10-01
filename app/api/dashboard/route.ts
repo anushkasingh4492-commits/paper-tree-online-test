@@ -480,6 +480,31 @@ console.log(
 
     const student =
       studentResult.rows[0];
+      const batchCoursesResult = await client.query(
+  `
+  SELECT DISTINCT
+    UPPER(TRIM(b.course_name)) AS course_name
+  FROM batch_students bs
+  INNER JOIN batches b
+    ON b.id = bs.batch_id
+  WHERE bs.student_id::text = $1::text
+    AND b.academy_id::text = $2::text
+    AND b.course_name IS NOT NULL
+  `,
+  [studentId, academyId]
+);
+
+const batchCourses = batchCoursesResult.rows.map(
+  (row: any) => String(row.course_name || "").trim()
+);
+
+const hasPCM = batchCourses.some((course: string) =>
+  course.endsWith("PCM")
+);
+
+const hasPCB = batchCourses.some((course: string) =>
+  course.endsWith("PCB")
+);
 
     /* ========================================================
        ALL ATTEMPTS
@@ -1302,12 +1327,28 @@ FROM questions
        SUBJECT PERFORMANCE
     ======================================================== */
 
-    const dashboardSubjects = [
-      "Physics",
-      "Chemistry",
-      "Mathematics",
-      "Biology",
-    ];
+ const dashboardSubjects =
+  hasPCM && !hasPCB
+    ? [
+        "Physics",
+        "Chemistry",
+        "Mathematics",
+      ]
+    : hasPCB && !hasPCM
+    ? [
+        "Physics",
+        "Chemistry",
+        "Biology",
+      ]
+    : [
+        "Physics",
+        "Chemistry",
+        "Mathematics",
+        "Biology",
+      ];
+
+const allowedDashboardSubjects =
+  new Set(dashboardSubjects);
 
     const subjectPerformance =
       dashboardSubjects.map(
@@ -1390,12 +1431,12 @@ FROM questions
       )
     ) {
       if (
-        dashboardSubjects.includes(
-          subject
-        )
-      ) {
-        continue;
-      }
+  !allowedDashboardSubjects.has(
+    subject
+  )
+) {
+  continue;
+}
 
       const accuracy =
         stats.attempted > 0

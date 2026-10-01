@@ -2,7 +2,175 @@ import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { pool } from "@/lib/db";
 import { parseSessionCookie } from "@/lib/session";
+export async function PATCH(
+  req: Request,
+  { params }: { params: Promise<{ academyId: string }> }
+) {
+  try {
+    const { academyId } = await params;
 
+    const cookieStore = await cookies();
+    const masterCookie =
+      cookieStore.get("master_session")?.value;
+
+    if (!masterCookie) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: "Unauthorized",
+        },
+        { status: 401 }
+      );
+    }
+
+    const session =
+      parseSessionCookie<Record<string, unknown>>(
+        masterCookie
+      );
+
+    const role = String(session?.role || "").toUpperCase();
+
+    if (
+      role !== "ADMIN" &&
+      role !== "MASTER_ADMIN"
+    ) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: "Only master admin can update academy details.",
+        },
+        { status: 403 }
+      );
+    }
+
+    const body = await req.json();
+
+    // Make sure branding columns exist.
+    await pool.query(`
+      ALTER TABLE academies
+      ADD COLUMN IF NOT EXISTS logo_data TEXT,
+      ADD COLUMN IF NOT EXISTS domain VARCHAR(255)
+    `);
+
+    const updates: string[] = [];
+    const values: unknown[] = [];
+
+    if (body.academyName !== undefined) {
+      updates.push(`name = $${values.length + 1}`);
+      values.push(String(body.academyName).trim());
+    }
+
+    if (body.logoData !== undefined) {
+      updates.push(`logo_data = $${values.length + 1}`);
+      values.push(
+        body.logoData
+          ? String(body.logoData)
+          : null
+      );
+    }
+
+    if (body.domain !== undefined) {
+      const domain = String(body.domain || "")
+        .trim()
+        .toLowerCase();
+
+      updates.push(`domain = $${values.length + 1}`);
+      values.push(domain || null);
+    }
+
+    if (body.studentLimit !== undefined) {
+      const studentLimit = Number(body.studentLimit);
+
+      if (
+        !Number.isInteger(studentLimit) ||
+        studentLimit < 1
+      ) {
+        return NextResponse.json(
+          {
+            success: false,
+            error: "Invalid student limit.",
+          },
+          { status: 400 }
+        );
+      }
+
+      updates.push(`student_limit = $${values.length + 1}`);
+      values.push(studentLimit);
+    }
+
+    if (body.subscriptionEnd !== undefined) {
+      updates.push(
+        `subscription_end = $${values.length + 1}`
+      );
+      values.push(
+        body.subscriptionEnd
+          ? String(body.subscriptionEnd)
+          : null
+      );
+    }
+
+    if (!updates.length) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: "No changes provided.",
+        },
+        { status: 400 }
+      );
+    }
+
+    values.push(academyId);
+
+    const result = await pool.query(
+      `
+      UPDATE academies
+      SET ${updates.join(", ")}
+      WHERE id = $${values.length}
+      RETURNING
+        id,
+        name,
+        code,
+        logo_data,
+        domain,
+        status,
+        student_limit,
+        subscription_end
+      `,
+      values
+    );
+
+    if (!result.rows.length) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: "Academy not found.",
+        },
+        { status: 404 }
+      );
+    }
+
+    return NextResponse.json({
+      success: true,
+      academy: result.rows[0],
+    });
+  } catch (error) {
+    console.error(
+      "ACADEMY PATCH ERROR:",
+      error
+    );
+
+    return NextResponse.json(
+      {
+        success: false,
+        error:
+          error instanceof Error
+            ? error.message
+            : "Failed to update academy.",
+      },
+      { status: 500 }
+    );
+  }
+}
 export async function GET(req: Request) {
   try {
     const url = new URL(req.url);
