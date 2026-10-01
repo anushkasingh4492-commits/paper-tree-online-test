@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
+import StudentBadgeModal from "@/components/StudentBadgeModal";
 
 type StudentPerformance = {
   id: string;
@@ -31,6 +32,7 @@ export default function TeacherPerformancePage() {
   const [search, setSearch] = useState("");
   const [sending, setSending] = useState<string | null>(null);
   const [report, setReport] = useState<{ studentId: string; text: string } | null>(null);
+  const [badgeStudent, setBadgeStudent] = useState<StudentPerformance | null>(null);
 
   useEffect(() => {
     let cancelled = false;
@@ -189,8 +191,10 @@ export default function TeacherPerformancePage() {
                       <td className="px-4 py-5 text-center text-sm">
                         {student.wrongAnswers}
                       </td>
-                      <td className="px-4 py-5 text-center font-bold text-violet-600">🏆 {student.badgesEarned}</td>
-                      <td className="px-4 py-5 text-center text-xs text-slate-500">{student.lastActiveDate || "—"}</td>
+                      <td className="px-4 py-5 text-center">
+                        <button type="button" onClick={() => setBadgeStudent(student)} className="rounded-lg bg-violet-50 px-2.5 py-1.5 font-bold text-violet-700 transition hover:bg-violet-100">🏆 {student.badgesEarned}</button>
+                      </td>
+                      <td className="px-4 py-5 text-center text-xs font-medium text-slate-500">{student.lastActiveDate || "—"}</td>
                       <td className="px-4 py-5 text-center">
                         <div className="flex justify-center gap-2">
                           <button type="button" onClick={async () => {
@@ -220,6 +224,14 @@ export default function TeacherPerformancePage() {
             </div>
           )}
         </section>
+
+        {badgeStudent && (
+          <StudentBadgeModal
+            studentId={badgeStudent.id}
+            studentName={badgeStudent.name}
+            onClose={() => setBadgeStudent(null)}
+          />
+        )}
 
         {report && (
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 p-5" onClick={() => setReport(null)}>

@@ -15,6 +15,11 @@ type Test = {
   duration?: string | null;
 };
 
+type BrandingResponse = {
+  success?: boolean;
+  academy?: { name?: string | null; logo_data?: string | null } | null;
+};
+
 type SummaryResponse = {
   success: boolean;
   error?: string;
@@ -32,16 +37,22 @@ const statusClass: Record<string, string> = {
 
 export default function TestSummaryPage() {
   const [data, setData] = useState<SummaryResponse | null>(null);
+  const [branding, setBranding] = useState<BrandingResponse["academy"]>(null);
   const [error, setError] = useState("");
 
   useEffect(() => {
-    fetch("/api/test-summary", { cache: "no-store" })
-      .then(async (response) => {
+    Promise.all([
+      fetch("/api/test-summary", { cache: "no-store" }),
+      fetch("/api/academy/branding", { cache: "no-store", credentials: "include" }),
+    ])
+      .then(async ([response, brandingResponse]) => {
         const result = (await response.json()) as SummaryResponse;
+        const brand = (await brandingResponse.json().catch(() => null)) as BrandingResponse | null;
         if (!response.ok || !result.success) {
           throw new Error(result.error || "Unable to load test summary.");
         }
         setData(result);
+        if (brand?.success && brand.academy) setBranding(brand.academy);
       })
       .catch((reason: unknown) => {
         setError(reason instanceof Error ? reason.message : "Unable to load test summary.");
@@ -70,7 +81,7 @@ export default function TestSummaryPage() {
     <main className="summary-shell">
       <div className="summary-heading">
         <div>
-          <p className="summary-kicker">Paper Tree</p>
+          <p className="summary-kicker">{branding?.name?.trim() || "Paper Tree"}</p>
           <h1>Test summary</h1>
           <p className="summary-subtitle">{data?.student?.name ? `Welcome back, ${data.student.name}.` : "Review your testing activity."}</p>
         </div>

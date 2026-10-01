@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
+import StudentBadgeModal from "@/components/StudentBadgeModal";
 
  type LeaderboardStudent = {
   id: string;
@@ -27,6 +28,7 @@ export default function BatchLeaderboardPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [query, setQuery] = useState("");
+  const [badgeStudent, setBadgeStudent] = useState<LeaderboardStudent | null>(null);
 
   useEffect(() => {
     let active = true;
@@ -52,7 +54,10 @@ export default function BatchLeaderboardPage() {
     return students.filter((student) => student.name.toLowerCase().includes(needle));
   }, [students, query]);
 
-  const topThree = students.slice(0, 3);
+  const topThree = students
+    .filter((student) => student.rank >= 1 && student.rank <= 3)
+    .sort((a, b) => a.rank - b.rank || a.name.localeCompare(b.name))
+    .slice(0, 3);
   const current = data?.currentStudent ?? null;
 
   return (
@@ -115,11 +120,10 @@ export default function BatchLeaderboardPage() {
             )}
 
             <section className="grid md:grid-cols-3 gap-4 items-end mb-8">
-              {[1, 0, 2].map((index) => {
-                const student = topThree[index];
-                if (!student) return <div key={index} className="hidden md:block" />;
-                const place = index === 0 ? 2 : index === 1 ? 1 : 3;
-                return <Podium key={student.id} student={student} place={place} />;
+              {[2, 1, 3].map((rank) => {
+                const student = topThree.find((item) => item.rank === rank);
+                if (!student) return <div key={rank} className="hidden md:block" />;
+                return <Podium key={student.id} student={student} place={rank} onViewBadges={() => setBadgeStudent(student)} />;
               })}
             </section>
 
@@ -136,17 +140,30 @@ export default function BatchLeaderboardPage() {
                 {filtered.map((student) => (
                   <div key={student.id} className={`grid grid-cols-[52px_1fr_auto] sm:grid-cols-[64px_1fr_110px_90px] gap-3 items-center px-4 sm:px-6 py-4 transition ${student.isCurrent ? "bg-indigo-500/[.12]" : "hover:bg-white/[.025]"}`}>
                     <div className={`text-center font-black ${student.rank <= 3 ? "text-xl" : "text-sm text-white/45"}`}>{student.rank <= 3 ? ["🥇","🥈","🥉"][student.rank-1] : `#${student.rank}`}</div>
-                    <div className="min-w-0">
-                      <div className="font-bold truncate">{student.name} {student.isCurrent && <span className="ml-2 text-[9px] uppercase tracking-wider text-indigo-300 bg-indigo-400/10 px-2 py-1 rounded-full">You</span>}</div>
-                      <div className="text-[11px] text-white/35 mt-1">{student.testsTaken} tests · {student.questionsSeen} questions</div>
+                    <div className="min-w-0 flex items-center justify-between gap-2">
+                      <div className="min-w-0">
+                        <div className="font-bold truncate">{student.name} {student.isCurrent && <span className="ml-2 text-[9px] uppercase tracking-wider text-indigo-300 bg-indigo-400/10 px-2 py-1 rounded-full">You</span>}</div>
+                        <div className="text-[11px] text-white/35 mt-1">{student.testsTaken} tests · {student.questionsSeen} questions</div>
+                      </div>
+                      <button type="button" onClick={() => setBadgeStudent(student)} className="shrink-0 rounded-lg bg-violet-400/10 px-2 py-1 text-[10px] font-bold text-violet-200 sm:hidden">🏆</button>
                     </div>
                     <div className="hidden sm:block text-right"><div className="font-black">{student.average}%</div><div className="text-[10px] text-white/30">average</div></div>
-                    <div className="hidden sm:block text-right text-xs text-white/40">Rank {student.rank}</div>
+                    <div className="hidden sm:flex items-center justify-end gap-3 text-xs text-white/40">
+                      <button type="button" onClick={() => setBadgeStudent(student)} className="rounded-lg bg-violet-400/10 px-2.5 py-1.5 font-bold text-violet-200 transition hover:bg-violet-400/20">🏆 Badges</button>
+                      <span>Rank {student.rank}</span>
+                    </div>
                   </div>
                 ))}
               </div>
             </section>
           </>
+        )}
+        {badgeStudent && (
+          <StudentBadgeModal
+            studentId={badgeStudent.id}
+            studentName={badgeStudent.name}
+            onClose={() => setBadgeStudent(null)}
+          />
         )}
       </div>
     </main>
@@ -157,7 +174,7 @@ function Stat({ label, value }: { label: string; value: string }) {
   return <div className="min-w-[88px] rounded-2xl border border-white/10 bg-black/10 px-4 py-3"><div className="text-[9px] uppercase tracking-widest text-white/35">{label}</div><div className="font-black text-lg mt-1">{value}</div></div>;
 }
 
-function Podium({ student, place }: { student: LeaderboardStudent; place: number }) {
+function Podium({ student, place, onViewBadges }: { student: LeaderboardStudent; place: number; onViewBadges: () => void }) {
   const medal = place === 1 ? "🥇" : place === 2 ? "🥈" : "🥉";
   const height = place === 1 ? "h-52" : place === 2 ? "h-44" : "h-40";
   return (
@@ -167,6 +184,7 @@ function Podium({ student, place }: { student: LeaderboardStudent; place: number
       <div className="relative font-black truncate">{student.name}</div>
       <div className="relative text-2xl font-black mt-1">{student.average}%</div>
       <div className="relative text-[10px] uppercase tracking-widest text-white/35 mt-1">#{student.rank} · {student.testsTaken} tests</div>
+      <button type="button" onClick={onViewBadges} className="relative mx-auto mt-3 rounded-lg bg-violet-400/10 px-3 py-1.5 text-[10px] font-black text-violet-200 hover:bg-violet-400/20">🏆 View badges</button>
     </div>
   );
 }

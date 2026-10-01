@@ -149,14 +149,17 @@ export async function getStudentGamification(studentId: string, academyId: strin
   const streak = currentStreak(allTestDays);
   const maxStreak = maxConsecutive(allTestDays);
 
+  // Levels are based on every completed test. Qualifying-test rules are
+  // reserved for XP/advanced metrics and do not block normal level progression.
+  const levelTestCount = attempts.length;
   let levelIndex = 0;
   for (let i = 0; i < LEVELS.length; i++) {
-    if (capped.length >= LEVELS[i].tests) levelIndex = i;
+    if (levelTestCount >= LEVELS[i].tests) levelIndex = i;
   }
   const currentLevel = LEVELS[levelIndex];
   const next = LEVELS[levelIndex + 1] ?? null;
   const progress = next
-    ? Math.min(100, Math.max(0, ((capped.length - currentLevel.tests) / Math.max(1, next.tests - currentLevel.tests)) * 100))
+    ? Math.min(100, Math.max(0, ((levelTestCount - currentLevel.tests) / Math.max(1, next.tests - currentLevel.tests)) * 100))
     : 100;
 
   const answeredQualifying = qualifying.reduce((sum, a) => sum + Number(a.answered_count || 0), 0);
@@ -392,10 +395,9 @@ export async function getStudentGamification(studentId: string, academyId: strin
     ...tieredBadge("podium", "Podium", "Rank", podiumEarns, "Finish 2nd or 3rd in your batch in a teacher-assigned test.", "Rank-20260930T135947Z-1-001/Rank", "podium"),
     ...tieredBadge("mvp", "MVP", "Rank", mvpEarns, "Finish 1st in your batch in a teacher-assigned test.", "Rank-20260930T135947Z-1-001/Rank", "mvp"),
     badge({ id: "welcome-back", name: "Welcome Back", icon: "", asset: asset("Comeback-20260930T140006Z-1-001/Comeback/welcome-back.png"), category: "Comeback", earned: comebackEarns > 0, progress: Math.min(comebackEarns, 1), target: 1, detail: "Take a test after being away for 14 days or more." }),
-    
   ];
 
-  // Completionist: every badge in the catalogue except Rank, Welcome Back and secret badges.
+  // Completionist: every badge in the catalogue except Rank and Welcome Back.
   // For tiered families this means all four tiers must have been earned at least once.
   const scoreComplete = scoreCounts.crushing >= 50 && scoreCounts.beast >= 50 && scoreCounts.flawless >= 50;
   const streakComplete = maxStreak >= 365;
@@ -409,7 +411,7 @@ export async function getStudentGamification(studentId: string, academyId: strin
   const bossComplete = [...bossEarns.values()].reduce((a, b) => a + b, 0) >= 50;
   const masteryComplete = allSubjectsExplorer && bossComplete && allSubjectsFinalBoss && immortalEarned;
   const ultimateEarned = scoreComplete && streakComplete && improvementComplete && volumeComplete && masteryComplete;
-  badges.push(badge({ id: "ultimate", name: "Completionist", icon: "", asset: asset("Ultimate-20260930T135942Z-1-001/Ultimate/completionist.png"), category: "Ultimate", earned: ultimateEarned, progress: ultimateEarned ? 1 : 0, target: 1, detail: "Earn every badge at least once, except rank badges, Welcome Back and secret badges." }));
+  badges.push(badge({ id: "ultimate", name: "Completionist", icon: "", asset: asset("Ultimate-20260930T135942Z-1-001/Ultimate/completionist.png"), category: "Ultimate", earned: ultimateEarned, progress: ultimateEarned ? 1 : 0, target: 1, detail: "Earn every badge at least once, except rank badges and Welcome Back." }));
 
   const weak = await pool.query(
     `SELECT q.chapter_name, q.subject,
@@ -426,8 +428,19 @@ export async function getStudentGamification(studentId: string, academyId: strin
     [studentId]
   );
 
-  const xp = capped.length * 100 + Math.round(average * 2) + streak * 25 + badges.filter((b) => b.earned).length * 50;
-  const lastActiveDate = attempts.length ? istDay(attempts[attempts.length - 1].submitted_at || attempts[attempts.length - 1].started_at) : null;
+  const xp = attempts.length * 100 + Math.round(average * 2) + streak * 25 + badges.filter((b) => b.earned).length * 50;
+  const lastActiveValue = attempts.length ? (attempts[attempts.length - 1].submitted_at || attempts[attempts.length - 1].started_at) : null;
+  const lastActiveDate = lastActiveValue
+    ? new Intl.DateTimeFormat("en-IN", {
+        timeZone: IST,
+        day: "2-digit",
+        month: "short",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: true,
+      }).format(new Date(String(lastActiveValue)))
+    : null;
 
   return {
     rank: null as number | null,

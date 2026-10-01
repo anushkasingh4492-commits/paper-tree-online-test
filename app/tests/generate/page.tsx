@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
+import AcademyBranding from "@/components/AcademyBranding";
 
 const subjects = [
   {
@@ -223,21 +224,7 @@ function toggleSubject(subject: string) {
 
         <aside className="hidden w-[245px] shrink-0 border-r border-[#e8ebf1] bg-white lg:flex lg:flex-col">
           <div className="flex h-[82px] items-center border-b border-[#eef0f4] px-7">
-            <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-[12px] bg-[#315bea] text-lg font-extrabold text-white shadow-sm">
-                P
-              </div>
-
-              <div>
-                <p className="text-[16px] font-extrabold tracking-[-0.02em] text-[#172033]">
-                  Paper Tree
-                </p>
-
-                <p className="mt-0.5 text-[9px] font-bold tracking-[0.18em] text-[#98a1b2]">
-                  ONLINE TEST
-                </p>
-              </div>
-            </div>
+            <AcademyBranding variant="header" />
           </div>
 
           <div className="flex-1 px-4 py-7">
@@ -354,7 +341,7 @@ function toggleSubject(subject: string) {
 
               <p className="mt-2 max-w-2xl text-sm leading-6 text-[#7f899b]">
                 Choose your subjects, difficulty, number of questions and
-                duration. Paper Tree will generate a fresh test from the
+                duration. Your academy will generate a fresh test from the
                 MHT-CET question bank.
               </p>
             </div>
