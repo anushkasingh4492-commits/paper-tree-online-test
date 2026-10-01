@@ -50,7 +50,7 @@ export default function AcademyBranding({
     };
   }, []);
 
-  // Prevent Paper Tree from flashing before academy data loads
+  // Prevent fallback branding from flashing before academy data loads
   if (!loaded) {
     return (
       <div
@@ -64,7 +64,7 @@ export default function AcademyBranding({
   }
 
   const name =
-    academy?.name?.trim() || "Paper Tree";
+    academy?.name?.trim() || "Academy";
 
   const logo =
     academy?.logo_data || null;

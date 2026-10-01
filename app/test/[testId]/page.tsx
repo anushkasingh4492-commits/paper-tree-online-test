@@ -11,6 +11,7 @@ import jsPDF from "jspdf";
 import "katex/dist/katex.min.css";
 import { InlineMath, BlockMath } from "react-katex";
 import AcademyBranding from "@/components/AcademyBranding";
+import StudentAccountMenu from "@/components/StudentAccountMenu";
 type Question = {
   id: string;
   number: number;
@@ -309,6 +310,12 @@ export default function TestPage() {
     params.testId
   );
 
+  const [studentName, setStudentName] = useState("Student");
+
+  useEffect(() => {
+    setStudentName(localStorage.getItem("studentName") || "Student");
+  }, []);
+
   const [test, setTest] =
     useState<TestData | null>(
       null
@@ -339,9 +346,7 @@ export default function TestPage() {
 
   const [questionTimes, setQuestionTimes] = useState<QuestionTimes>({});
   const [showExplain, setShowExplain] = useState(false);
-  const [explainLoading, setExplainLoading] = useState(false);
-  const [explainText, setExplainText] = useState("");
-  const [explainError, setExplainError] = useState("");
+
 
   const [
     showWarning,
@@ -656,7 +661,7 @@ export default function TestPage() {
 
       doc.text(
         test?.exam ||
-          "Paper Tree Mock Test",
+          "Mock Test",
         margin,
         y
       );
@@ -2180,19 +2185,6 @@ const figureAsset =
     visited,
   ]);
 
-  async function explainCurrentQuestion() {
-    if (!current) return;
-    setShowExplain(true); setExplainLoading(true); setExplainError(""); setExplainText("");
-    try {
-      const response = await fetch("/api/ai/explain", {
-        method: "POST", headers: { "Content-Type": "application/json" }, credentials: "include",
-        body: JSON.stringify({ questionId: current.id, question: current.question, options: current.options, answer: current.answer, selectedAnswer: answers[current.id] === undefined ? null : String.fromCharCode(65 + answers[current.id]), solution: current.solution }),
-      });
-      const data = await response.json();
-      if (!response.ok || !data.success) throw new Error(data.error || "Could not explain the question.");
-      setExplainText(data.explanation || "No explanation returned.");
-    } catch (error) { setExplainError(error instanceof Error ? error.message : "Could not explain the question."); } finally { setExplainLoading(false); }
-  }
 
   /*
    * =========================================================
@@ -2371,19 +2363,13 @@ const figureAsset =
       <header className="sticky top-0 z-40 h-[72px] bg-white border-b border-slate-200 shadow-sm">
         <div className="h-full max-w-[1500px] mx-auto px-4 lg:px-6 flex items-center justify-between gap-4">
           <div className="flex items-center gap-3 min-w-0">
-            <div className="w-10 h-10 shrink-0 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-lg shadow-sm">
-              P
-            </div> </div>
-
-        <div className="flex items-center gap-3 min-w-0">
-  <AcademyBranding variant="compact" />
-
-  <div className="min-w-0">
-    <h1 className="font-bold text-sm sm:text-base truncate">
-      {test?.exam || "Mock Test"}
-    </h1>
-  </div>
-</div>
+            <AcademyBranding variant="compact" />
+            <div className="min-w-0">
+              <h1 className="font-bold text-sm sm:text-base truncate">
+                {test?.exam || "Mock Test"}
+              </h1>
+            </div>
+          </div>
 
           <div className="hidden md:flex items-center gap-2">
             <div className="px-4 py-2 rounded-xl bg-blue-50 border border-blue-100">
@@ -2441,6 +2427,8 @@ const figureAsset =
               Time Remaining
             </div>
           </div>
+
+          <StudentAccountMenu studentName={studentName} activeTest />
         </div>
       </header>
 
@@ -2564,14 +2552,6 @@ const figureAsset =
                     <div className="mt-1 text-[11px] font-semibold text-slate-400">Time on question: {Math.floor((questionTimes[current.id] || 0) / 60)}m {(questionTimes[current.id] || 0) % 60}s</div>
                   </div>
                 </div>
-
-                <button
-                  type="button"
-                  onClick={() => void explainCurrentQuestion()}
-                  className="px-3 py-2 rounded-lg border border-violet-200 bg-violet-50 text-xs font-bold text-violet-700 hover:bg-violet-100 transition"
-                >
-                  ✨ Explain this
-                </button>
 
                 <button
                   type="button"
@@ -2710,7 +2690,7 @@ const figureAsset =
                     <div><h3 className="font-extrabold text-violet-950">AI Doubt Solver</h3><p className="mt-1 text-xs text-violet-700">Step-by-step explanation + why the other options are wrong.</p></div>
                     <button type="button" onClick={() => setShowExplain(false)} className="text-xs font-bold text-violet-700">Close</button>
                   </div>
-                  {explainLoading ? <div className="mt-4 rounded-xl bg-white p-4 text-sm text-slate-600">Thinking through the question...</div> : explainError ? <div className="mt-4 rounded-xl bg-red-50 p-4 text-sm font-semibold text-red-700">{explainError}</div> : <div className="mt-4 whitespace-pre-wrap rounded-xl bg-white p-5 text-sm leading-7 text-slate-700 shadow-sm">{explainText}</div>}
+                
                 </div>
               )}
 

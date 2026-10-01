@@ -6,6 +6,7 @@ import katex from "katex";
 import { useEffect, useMemo, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import jsPDF from "jspdf";
+import StudentAccountMenu from "@/components/StudentAccountMenu";
 
 type Question = {
   id: string;
@@ -509,9 +510,12 @@ export default function TestResultPage() {
     useState<AcademyBranding | null>(null);
 
   const [gameProgress, setGameProgress] = useState<any>(null);
+  const [studentName, setStudentName] = useState("Student");
   const [celebrationBadge, setCelebrationBadge] = useState<any>(null);
+  const [levelUp, setLevelUp] = useState<{ level: number; levelName: string } | null>(null);
 
   useEffect(() => {
+    setStudentName(localStorage.getItem("studentName") || "Student");
     fetch("/api/student/insights", { cache: "no-store", credentials: "include" })
       .then((r) => r.json())
       .then((data) => {
@@ -519,11 +523,21 @@ export default function TestResultPage() {
         setGameProgress(data);
         const earned = (data.badges || []).filter((b: any) => b.earned).map((b: any) => b.id);
         try {
-          const key = "paper-tree-earned-badges";
+          const studentKey = localStorage.getItem("studentId") || "current";
+          const key = `paper-tree-earned-badges-${studentKey}`;
           const previous = JSON.parse(localStorage.getItem(key) || "[]");
           const newlyEarned = (data.badges || []).find((b: any) => b.earned && !previous.includes(b.id));
           if (newlyEarned) setCelebrationBadge(newlyEarned);
           localStorage.setItem(key, JSON.stringify(earned));
+
+          // A test result is loaded immediately after submission, so a level
+          // threshold hit is a reliable signal that the student just levelled up.
+          const levelThresholds: Record<number, number> = { 2: 5, 3: 15, 4: 30, 5: 50, 6: 80, 7: 120, 8: 170, 9: 240, 10: 350, 11: 500 };
+          const completedTests = Number(data.testsCompleted || 0);
+          const currentLevel = Number(data.level || 1);
+          if (currentLevel > 1 && levelThresholds[currentLevel] === completedTests) {
+            setLevelUp({ level: currentLevel, levelName: String(data.levelName || "New Level") });
+          }
         } catch {}
       })
       .catch(() => undefined);
@@ -1014,7 +1028,7 @@ export default function TestResultPage() {
    */
   const academyName =
     academyBranding?.name?.trim() ||
-    "Paper Tree";
+    "Academy";
 
   function downloadResult() {
     if (!result) {
@@ -1093,7 +1107,7 @@ export default function TestResultPage() {
      * RESULT PDF HEADER
      *
      * Uses academy name instead of
-     * hardcoded Paper Tree branding.
+     * hardcoded product branding.
      */
     doc.setTextColor(
       23,
@@ -2537,7 +2551,7 @@ if (ctx === null) {
   );
 
   drawText(
-    "Powered by Paper Tree",
+    "Powered by your academy",
     W - 55,
     1180,
     13,
@@ -2645,7 +2659,7 @@ if (ctx === null) {
 
   return (
     <main className="min-h-screen bg-[#f5f7fb] text-slate-900">
-      <style jsx>{`@keyframes ptBadgePop {0%{transform:scale(.2) rotate(-12deg);opacity:0}70%{transform:scale(1.12) rotate(3deg);opacity:1}100%{transform:scale(1) rotate(0)}}`}</style>
+      <style jsx>{`@keyframes ptBadgePop {0%{transform:scale(.2) rotate(-12deg);opacity:0}70%{transform:scale(1.12) rotate(3deg);opacity:1}100%{transform:scale(1) rotate(0)}} @keyframes ptLevelPop {0%{transform:scale(.55);opacity:0}65%{transform:scale(1.08);opacity:1}100%{transform:scale(1);opacity:1}} @keyframes ptConfetti {0%{transform:translateY(-20px) rotate(0deg);opacity:0}15%{opacity:1}100%{transform:translateY(180px) rotate(540deg);opacity:0}}`}</style>
       <header className="sticky top-0 z-40 h-[72px] bg-white border-b border-slate-200 shadow-sm">
         <div className="max-w-[1400px] mx-auto h-full px-4 lg:px-6 flex items-center justify-between gap-4">
           {/* Academy branding */}
@@ -2677,15 +2691,16 @@ if (ctx === null) {
             </div>
           </div>
 
-          <button
-            type="button"
-            onClick={() =>
-              router.push("/dashboard")
-            }
-            className="hidden sm:block h-10 px-4 rounded-xl border border-slate-200 bg-white text-sm font-semibold text-slate-700 hover:bg-slate-50 transition"
-          >
-            Dashboard
-          </button>
+          <div className="flex items-center gap-2">
+            <button
+              type="button"
+              onClick={() => router.push("/dashboard")}
+              className="hidden sm:block h-10 px-4 rounded-xl border border-slate-200 bg-white text-sm font-semibold text-slate-700 hover:bg-slate-50 transition"
+            >
+              Dashboard
+            </button>
+            <StudentAccountMenu studentName={studentName} />
+          </div>
 
           <div className="flex items-center gap-2">
             <button
@@ -3397,10 +3412,15 @@ if (ctx === null) {
 
       {celebrationBadge && (
         <div className="fixed inset-0 z-[120] flex items-center justify-center bg-slate-950/80 p-4 backdrop-blur-md" onClick={() => setCelebrationBadge(null)}>
-          <div className="w-full max-w-md overflow-hidden rounded-[32px] bg-white shadow-2xl" onClick={(e) => e.stopPropagation()}>
+          <div className="relative w-full max-w-md overflow-hidden rounded-[32px] bg-white shadow-2xl" onClick={(e) => e.stopPropagation()}>
+            <div className="pointer-events-none absolute inset-0 overflow-hidden">
+              {[0,1,2,3,4,5,6,7,8,9].map((piece) => <span key={piece} className="absolute top-8 left-1/2 h-2 w-1.5 rounded-full bg-indigo-400" style={{left:`${10 + piece * 9}%`, animation:`ptConfetti ${1.1 + piece * .08}s ease-out ${piece * .04}s both`}} />)}
+            </div>
             <div className="relative bg-gradient-to-br from-slate-950 via-indigo-950 to-purple-950 px-8 py-10 text-center text-white">
               <div className="text-xs font-black uppercase tracking-[.28em] text-indigo-200">🎉 NEW ACHIEVEMENT</div>
-              <div className="mx-auto mt-6 flex h-32 w-32 items-center justify-center rounded-[32px] bg-gradient-to-br from-amber-300 via-yellow-400 to-orange-500 text-7xl shadow-2xl" style={{animation:"ptBadgePop .7s cubic-bezier(.2,.8,.2,1) both"}}>{celebrationBadge.icon}</div>
+              <div className="mx-auto mt-6 flex h-36 w-36 items-center justify-center rounded-[36px] bg-gradient-to-br from-amber-300 via-yellow-400 to-orange-500 shadow-2xl" style={{animation:"ptBadgePop .7s cubic-bezier(.2,.8,.2,1) both"}}>
+                {celebrationBadge.asset ? <img src={celebrationBadge.asset} alt={celebrationBadge.name} className="h-32 w-32 object-contain drop-shadow-2xl" /> : <span className="text-7xl">{celebrationBadge.icon || "🏆"}</span>}
+              </div>
               <h2 className="mt-6 text-3xl font-black">{celebrationBadge.name}{celebrationBadge.tier ? ` ${["I","II","III","IV"][celebrationBadge.tier-1]}` : ""}</h2>
               <p className="mt-2 text-sm font-semibold text-slate-300">{celebrationBadge.detail}</p>
             </div>
@@ -3409,7 +3429,25 @@ if (ctx === null) {
                 <button type="button" onClick={() => { const text = `🏆 I unlocked ${celebrationBadge.name}! 🔥 ${gameProgress?.streak || 0} day streak • Level ${gameProgress?.level || 1} ${gameProgress?.levelName || "Rookie"}.`; window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank", "noopener,noreferrer"); }} className="rounded-xl bg-[#25D366] px-4 py-3 text-xs font-black text-white">WhatsApp</button>
                 <button type="button" onClick={() => setCelebrationBadge(null)} className="rounded-xl bg-slate-950 px-4 py-3 text-xs font-black text-white">Continue</button>
               </div>
-              <p className="mt-3 text-center text-[10px] font-semibold text-slate-400">Share your achievement card from the Trophy Wall on your dashboard.</p>
+              <p className="mt-3 text-center text-[10px] font-semibold text-slate-400">Your new achievement is now visible in the Trophy Wall.</p>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {levelUp && (
+        <div className="fixed inset-0 z-[130] flex items-center justify-center bg-slate-950/85 p-4 backdrop-blur-md" onClick={() => setLevelUp(null)}>
+          <div className="relative w-full max-w-md overflow-hidden rounded-[32px] bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 p-8 text-center text-white shadow-2xl" onClick={(e) => e.stopPropagation()}>
+            <div className="pointer-events-none absolute inset-0 overflow-hidden">
+              {[0,1,2,3,4,5,6,7].map((piece) => <span key={piece} className="absolute top-0 left-1/2 text-2xl" style={{left:`${8 + piece * 12}%`, animation:`ptConfetti ${1.2 + piece * .1}s ease-out ${piece * .05}s both`}}>✦</span>)}
+            </div>
+            <div className="relative" style={{animation:"ptLevelPop .75s cubic-bezier(.2,.8,.2,1) both"}}>
+              <div className="text-xs font-black uppercase tracking-[.3em] text-cyan-200">⭐ LEVEL UP!</div>
+              <div className="mx-auto mt-7 flex h-32 w-32 items-center justify-center rounded-full border-4 border-cyan-300/30 bg-white/10 text-6xl shadow-[0_0_70px_rgba(103,232,249,.28)]">⭐</div>
+              <div className="mt-6 text-6xl font-black tracking-tight">LEVEL {levelUp.level}</div>
+              <div className="mt-2 text-xl font-black text-cyan-200">{levelUp.levelName}</div>
+              <p className="mt-3 text-sm font-semibold text-white/60">You just reached a new milestone. Keep going!</p>
+              <button type="button" onClick={() => setLevelUp(null)} className="mt-7 w-full rounded-xl bg-white px-5 py-3 text-xs font-black text-slate-950">Continue</button>
             </div>
           </div>
         </div>

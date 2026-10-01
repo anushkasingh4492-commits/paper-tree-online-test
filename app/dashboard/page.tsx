@@ -1,6 +1,7 @@
 "use client";
 
 import StudentInsights from "@/components/StudentInsights";
+import StudentAccountMenu from "@/components/StudentAccountMenu";
 import {
   useEffect,
   useMemo,
@@ -1548,7 +1549,7 @@ export default function DashboardPage() {
 
             <div>
               <div className="font-extrabold text-[15px] leading-4">
-                {academyBranding?.name || "Paper Tree"}
+                {academyBranding?.name || "Academy"}
               </div>
 
               <div className="text-[9px] font-semibold tracking-[.17em] text-[#9ba1ad] mt-1">
@@ -1696,9 +1697,7 @@ export default function DashboardPage() {
                 </span>
               </button>
 
-              <div className="w-9 h-9 rounded-full bg-gradient-to-br from-[#6944e8] to-[#4f2bd5] text-white flex items-center justify-center text-sm font-bold">
-                {initialsText[0]}
-              </div>
+              <StudentAccountMenu studentName={studentName} />
 
             </div>
           </header>
@@ -1931,7 +1930,7 @@ export default function DashboardPage() {
 
             </section>
 
-            <StudentInsights />
+            <div id="trophy-wall"><StudentInsights /></div>
 
             {/* =================================================
                 PERFORMANCE + SCORE DISTRIBUTION
