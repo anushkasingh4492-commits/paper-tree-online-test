@@ -31,7 +31,24 @@ export default function AcademyAdminPage() {
       })
       .catch((reason) => setError(reason instanceof Error ? reason.message : "Unable to load academy details."));
   }, []);
+  useEffect(() => {
+    void fetch("/api/academy/branding", {
+      cache: "no-store",
+      credentials: "include",
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        const academyName =
+          data?.success && data?.academy?.name
+            ? String(data.academy.name).trim()
+            : "";
 
+        document.title = academyName ? `${academyName} CBT` : "CBT";
+      })
+      .catch(() => {
+        document.title = "CBT";
+      });
+  }, []);
   function logout() {
     document.cookie = "master_session=; Max-Age=0; path=/";
     router.replace("/");
