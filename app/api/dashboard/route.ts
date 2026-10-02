@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Pool } from "pg";
+import { parseSessionCookie } from "@/lib/session";
 
 export const dynamic = "force-dynamic";
 
@@ -391,33 +392,15 @@ if (!sessionCookie) {
   );
 }
 
-let studentId = sessionCookie;
+let studentId = "";
 let academyId = "";
 
-try {
-  let sessionValue = sessionCookie;
+const parsed = parseSessionCookie<{ studentId?: string; academyId?: string }>(sessionCookie);
 
-  try {
-    sessionValue = decodeURIComponent(sessionCookie);
-  } catch {
-    sessionValue = sessionCookie;
-  }
-
-  const parsed = JSON.parse(sessionValue);
-
-  if (
-    parsed &&
-    typeof parsed === "object" &&
-    parsed.studentId
-  ) {
-    studentId = String(parsed.studentId);
-    academyId = String(parsed.academyId ?? "");
-  }
-
-}catch {
-      studentId =
-        sessionCookie;
-    }
+if (parsed?.studentId) {
+  studentId = String(parsed.studentId).trim();
+  academyId = String(parsed.academyId ?? "").trim();
+}
 
     studentId =
       studentId.trim();

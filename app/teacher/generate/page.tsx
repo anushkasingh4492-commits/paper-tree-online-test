@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import "katex/dist/katex.min.css";
 import { BlockMath, InlineMath } from "react-katex";
@@ -41,6 +41,8 @@ type PreviewResponse = {
   success: boolean;
   availableQuestions?: Question[];
   availableQuestionCount?: number;
+  previewOffset?: number;
+  previewLimit?: number;
   error?: string;
 };
 
@@ -140,8 +142,12 @@ export default function TeacherGeneratePage() {
   const [rows, setRows] = useState<SchemaRow[]>([]);
 
   const [exam, setExam] = useState("MHT-CET");
-  const [subject, setSubject] = useState("Physics");
-  const [selectedChapters, setSelectedChapters] = useState<string[]>([]);
+  const [selectedSubjects, setSelectedSubjects] = useState<string[]>([
+    "Physics",
+  ]);
+  const [chaptersBySubject, setChaptersBySubject] = useState<
+    Record<string, string[]>
+  >({});
   const [difficulty, setDifficulty] = useState("Balanced");
 
   const [questionCount, setQuestionCount] = useState(10);
@@ -157,6 +163,11 @@ export default function TeacherGeneratePage() {
 
   const [schemaError, setSchemaError] = useState("");
   const [error, setError] = useState("");
+
+  const PREVIEW_PAGE_SIZE = 25;
+  const [previewPage, setPreviewPage] = useState(0);
+  const [previewTotal, setPreviewTotal] = useState(0);
+  const previewAbortRef = useRef<AbortController | null>(null);
 
   /*
    * Load the database schema used for the dropdowns.
@@ -207,26 +218,28 @@ export default function TeacherGeneratePage() {
   }, [rows, exam]);
 
   /*
-   * Chapters available for the selected exam + subject.
+   * Chapters available for each selected subject.
    */
-  const chapters = useMemo(() => {
-    if (!subject) {
-      return [];
+  const chaptersBySelectedSubject = useMemo(() => {
+    const result: Record<string, string[]> = {};
+
+    for (const selectedSubject of selectedSubjects) {
+      const values = rows
+        .filter(
+          (row) =>
+            String(row.exam).trim().toLowerCase() ===
+              String(exam).trim().toLowerCase() &&
+            String(row.subject).trim().toLowerCase() ===
+              String(selectedSubject).trim().toLowerCase()
+        )
+        .map((row) => row.chapter_name)
+        .filter(Boolean);
+
+      result[selectedSubject] = Array.from(new Set(values));
     }
 
-    const values = rows
-      .filter(
-        (row) =>
-          String(row.exam).trim().toLowerCase() ===
-            String(exam).trim().toLowerCase() &&
-          String(row.subject).trim().toLowerCase() ===
-            String(subject).trim().toLowerCase()
-      )
-      .map((row) => row.chapter_name)
-      .filter(Boolean);
-
-    return Array.from(new Set(values));
-  }, [rows, exam, subject]);
+    return result;
+  }, [rows, exam, selectedSubjects]);
 
   /*
    * Number of currently selected questions.
@@ -253,14 +266,18 @@ export default function TeacherGeneratePage() {
    *   availableQuestions: [...]
    * }
    */
-  async function loadQuestions() {
+  async function loadQuestions(page = 0) {
     setError("");
-    setSelectedQuestionIds(new Set());
 
-    if (!subject) {
+    if (selectedSubjects.length === 0) {
       setQuestions([]);
+      setPreviewTotal(0);
       return;
     }
+
+    previewAbortRef.current?.abort();
+    const controller = new AbortController();
+    previewAbortRef.current = controller;
 
     setLoadingQuestions(true);
 
@@ -270,19 +287,17 @@ export default function TeacherGeneratePage() {
         headers: {
           "Content-Type": "application/json",
         },
+        signal: controller.signal,
         body: JSON.stringify({
           previewOnly: true,
-
+          previewOffset: page * PREVIEW_PAGE_SIZE,
+          previewLimit: PREVIEW_PAGE_SIZE,
           exam,
-
-          subjects: [subject],
-
-          chapters: selectedChapters,
-
+          subjects: selectedSubjects,
+          chapters: [],
+          chaptersBySubject,
           difficulty,
-
           questionCount,
-
           duration,
         }),
       });
@@ -296,8 +311,15 @@ export default function TeacherGeneratePage() {
       }
 
       setQuestions(data.availableQuestions || []);
+      setPreviewTotal(Number(data.availableQuestionCount || 0));
+      setPreviewPage(page);
     } catch (err) {
+      if (err instanceof DOMException && err.name === "AbortError") {
+        return;
+      }
+
       setQuestions([]);
+      setPreviewTotal(0);
 
       setError(
         err instanceof Error
@@ -305,19 +327,22 @@ export default function TeacherGeneratePage() {
           : "Failed to load matching questions."
       );
     } finally {
-      setLoadingQuestions(false);
+      if (previewAbortRef.current === controller) {
+        setLoadingQuestions(false);
+      }
     }
   }
 
   /*
-   * Automatically reload questions when the filtering options change.
-   *
-   * Question count and duration do not affect which questions match,
-   * so they are intentionally not dependencies here.
+   * Reload only a small page of questions. The old implementation
+   * downloaded every matching question into Chrome, which could
+   * create a very large DOM and cause the browser to freeze.
    */
   useEffect(() => {
+    setPreviewPage(0);
+
     const timer = window.setTimeout(() => {
-      loadQuestions();
+      void loadQuestions(0);
     }, 300);
 
     return () => {
@@ -326,35 +351,85 @@ export default function TeacherGeneratePage() {
 
     // loadQuestions intentionally uses the current filter state.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [exam, subject, selectedChapters, difficulty]);
+  }, [exam, selectedSubjects, chaptersBySubject, difficulty]);
 
-  /*
-   * Reset subject/chapter when exam changes.
-   */
   function handleExamChange(value: string) {
     setExam(value);
-    setSubject("");
-    setSelectedChapters([]);
+    setSelectedSubjects([]);
+    setChaptersBySubject({});
     setQuestions([]);
+    setPreviewTotal(0);
+    setPreviewPage(0);
     setSelectedQuestionIds(new Set());
   }
 
-  /*
-   * Reset chapter when subject changes.
-   */
-  function handleSubjectChange(value: string) {
-    setSubject(value);
-    setSelectedChapters([]);
-    setQuestions([]);
+  function toggleSubject(value: string) {
+    setSelectedSubjects((current) => {
+      const alreadySelected = current.includes(value);
+
+      if (alreadySelected) {
+        setChaptersBySubject((previous) => {
+          const next = { ...previous };
+          delete next[value];
+          return next;
+        });
+        return current.filter((item) => item !== value);
+      }
+
+      /*
+       * MHT-CET can be PCM or PCB, so Mathematics and Biology
+       * remain mutually exclusive, while multiple other subjects
+       * can be selected together.
+       */
+      if (exam === "MHT-CET" && value === "Mathematics") {
+        setChaptersBySubject((previous) => {
+          const next = { ...previous };
+          delete next.Biology;
+          return next;
+        });
+        return [...current.filter((item) => item !== "Biology"), value];
+      }
+
+      if (exam === "MHT-CET" && value === "Biology") {
+        setChaptersBySubject((previous) => {
+          const next = { ...previous };
+          delete next.Mathematics;
+          return next;
+        });
+        return [...current.filter((item) => item !== "Mathematics"), value];
+      }
+
+      return [...current, value];
+    });
+
     setSelectedQuestionIds(new Set());
   }
 
-  function toggleChapter(chapterName: string) {
-    setSelectedChapters((current) =>
-      current.includes(chapterName)
-        ? current.filter((chapter) => chapter !== chapterName)
-        : [...current, chapterName]
+  function toggleChapter(subjectName: string, chapterName: string) {
+    setChaptersBySubject((current) => {
+      const currentChapters = current[subjectName] || [];
+      const nextChapters = currentChapters.includes(chapterName)
+        ? currentChapters.filter((chapter) => chapter !== chapterName)
+        : [...currentChapters, chapterName];
+
+      return {
+        ...current,
+        [subjectName]: nextChapters,
+      };
+    });
+
+    setSelectedQuestionIds(new Set());
+  }
+
+  function goToPreviewPage(nextPage: number) {
+    const maxPage = Math.max(
+      0,
+      Math.ceil(previewTotal / PREVIEW_PAGE_SIZE) - 1
     );
+
+    const safePage = Math.max(0, Math.min(nextPage, maxPage));
+
+    void loadQuestions(safePage);
   }
 
   /*
@@ -410,8 +485,8 @@ export default function TeacherGeneratePage() {
   async function generatePaper() {
     setError("");
 
-    if (!subject) {
-      setError("Please select a subject.");
+    if (selectedSubjects.length === 0) {
+      setError("Please select at least one subject.");
       return;
     }
 
@@ -440,9 +515,11 @@ export default function TeacherGeneratePage() {
         body: JSON.stringify({
           exam,
 
-          subjects: [subject],
+          subjects: selectedSubjects,
 
-          chapters: selectedChapters,
+          chapters: [],
+
+          chaptersBySubject,
 
           difficulty,
 
@@ -508,7 +585,7 @@ export default function TeacherGeneratePage() {
             </h1>
 
             <p className="mt-2 text-gray-500">
-              Select the requirements, review all matching questions,
+              Select multiple subjects and their chapters, review matching questions,
               and choose the exact questions for the test.
             </p>
           </div>
@@ -521,7 +598,7 @@ export default function TeacherGeneratePage() {
             <button
               type="button"
               onClick={generatePaper}
-              disabled={loading || loadingQuestions || !subject || !exactCountSelected}
+              disabled={loading || loadingQuestions || selectedSubjects.length === 0 || !exactCountSelected}
               className="rounded-xl bg-[#315bea] px-5 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-[#264ac7] disabled:cursor-not-allowed disabled:opacity-50"
             >
               {loading ? "Opening Publish..." : "Generate & Publish Paper"}
@@ -548,40 +625,105 @@ export default function TeacherGeneratePage() {
               </select>
             </div>
 
-            {/* SUBJECT */}
-            <div>
+            {/* SUBJECTS */}
+            <div className="md:col-span-2">
               <label className="mb-2 block text-sm font-semibold">
-                Subject
+                Subjects
               </label>
 
-              <select
-                value={subject}
-                onChange={(e) =>
-                  handleSubjectChange(e.target.value)
-                }
-                className="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 outline-none focus:border-[#315bea]"
-              >
-                <option value="">
-                  Select subject
-                </option>
+              <div className="grid gap-3 sm:grid-cols-2">
+                {subjects.map((item) => {
+                  const selected = selectedSubjects.includes(item);
 
-                {subjects.map((item) => (
-                  <option key={item} value={item}>
-                    {item}
-                  </option>
-                ))}
-              </select>
+                  return (
+                    <label
+                      key={item}
+                      className={`flex cursor-pointer items-center gap-3 rounded-xl border px-4 py-3 transition ${
+                        selected
+                          ? "border-[#315bea] bg-blue-50"
+                          : "border-gray-300 bg-white hover:border-blue-300"
+                      }`}
+                    >
+                      <input
+                        type="checkbox"
+                        checked={selected}
+                        onChange={() => toggleSubject(item)}
+                        className="h-4 w-4 accent-[#315bea]"
+                      />
+                      <span className="text-sm font-semibold">{item}</span>
+                    </label>
+                  );
+                })}
+              </div>
+
+              <p className="mt-2 text-xs text-gray-500">
+                Select multiple subjects. For MHT-CET, Mathematics and Biology remain mutually exclusive (PCM or PCB).
+              </p>
             </div>
 
-            {/* CHAPTERS */}
+            {/* CHAPTERS BY SUBJECT */}
             <div className="md:col-span-2">
-              <p className="mb-2 text-sm font-semibold">Chapters</p>
-              <div className="max-h-48 overflow-y-auto rounded-xl border border-gray-300 bg-white p-3">
-                {!subject ? <p className="text-sm text-gray-500">Select a subject first.</p> : chapters.length === 0 ? <p className="text-sm text-gray-500">No chapters found for this subject.</p> : <div className="grid gap-2 sm:grid-cols-2">
-                  {chapters.map((item) => <label key={item} className="flex cursor-pointer items-start gap-2 rounded-lg px-2 py-2 text-sm hover:bg-blue-50"><input type="checkbox" checked={selectedChapters.includes(item)} onChange={() => toggleChapter(item)} className="mt-0.5 h-4 w-4 accent-[#315bea]" /><span>{item}</span></label>)}
-                </div>}
-              </div>
-              <p className="mt-2 text-xs text-gray-500">Select one or more chapters. Leave all unchecked to include every chapter.</p>
+              <p className="mb-2 text-sm font-semibold">Chapters by subject</p>
+
+              {selectedSubjects.length === 0 ? (
+                <div className="rounded-xl border border-dashed border-gray-300 bg-gray-50 p-5 text-sm text-gray-500">
+                  Select at least one subject to choose chapters.
+                </div>
+              ) : (
+                <div className="space-y-4">
+                  {selectedSubjects.map((selectedSubject) => {
+                    const availableChapters =
+                      chaptersBySelectedSubject[selectedSubject] || [];
+                    const chosenChapters =
+                      chaptersBySubject[selectedSubject] || [];
+
+                    return (
+                      <div
+                        key={selectedSubject}
+                        className="rounded-xl border border-gray-200 bg-gray-50 p-4"
+                      >
+                        <div className="mb-3 flex items-center justify-between">
+                          <p className="text-sm font-bold">{selectedSubject}</p>
+                          <span className="text-xs text-gray-500">
+                            {chosenChapters.length === 0
+                              ? "All chapters"
+                              : `${chosenChapters.length} selected`}
+                          </span>
+                        </div>
+
+                        {availableChapters.length === 0 ? (
+                          <p className="text-sm text-gray-500">
+                            No chapters found for this subject.
+                          </p>
+                        ) : (
+                          <div className="grid max-h-56 gap-2 overflow-y-auto sm:grid-cols-2">
+                            {availableChapters.map((chapter) => (
+                              <label
+                                key={chapter}
+                                className="flex cursor-pointer items-start gap-2 rounded-lg px-2 py-2 text-sm hover:bg-white"
+                              >
+                                <input
+                                  type="checkbox"
+                                  checked={chosenChapters.includes(chapter)}
+                                  onChange={() =>
+                                    toggleChapter(selectedSubject, chapter)
+                                  }
+                                  className="mt-0.5 h-4 w-4 accent-[#315bea]"
+                                />
+                                <span>{chapter}</span>
+                              </label>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
+
+              <p className="mt-2 text-xs text-gray-500">
+                Leave a subject's chapters unchecked to include all chapters for that subject.
+              </p>
             </div>
 
             {/* DIFFICULTY */}
@@ -702,9 +844,9 @@ export default function TeacherGeneratePage() {
 
                 <p className="mt-1 text-sm text-gray-500">
                   {loadingQuestions
-                    ? "Loading matching questions..."
-                    : `${questions.length} question${
-                        questions.length === 1 ? "" : "s"
+                    ? "Loading a small page of matching questions..."
+                    : `${previewTotal} question${
+                        previewTotal === 1 ? "" : "s"
                       } match the selected filters.`}
                 </p>
               </div>
@@ -712,9 +854,9 @@ export default function TeacherGeneratePage() {
               <div className="flex flex-wrap gap-2">
                 <button
                   type="button"
-                  onClick={loadQuestions}
+                  onClick={() => void loadQuestions(previewPage)}
                   disabled={
-                    loadingQuestions || !subject
+                    loadingQuestions || selectedSubjects.length === 0
                   }
                   className="rounded-lg border border-gray-300 px-4 py-2 text-sm font-semibold transition hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-50"
                 >
@@ -732,7 +874,7 @@ export default function TeacherGeneratePage() {
                   }
                   className="rounded-lg bg-gray-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-gray-800 disabled:cursor-not-allowed disabled:opacity-50"
                 >
-                  Select First {questionCount}
+                  Select Visible Questions
                 </button>
 
                 <button
@@ -783,7 +925,7 @@ export default function TeacherGeneratePage() {
                   </div>
 
                   <span className="text-sm font-semibold">
-                    {questions.length} available
+                    {previewTotal} available
                   </span>
                 </div>
               </div>
@@ -797,14 +939,14 @@ export default function TeacherGeneratePage() {
                 </p>
 
                 <p className="mt-1 text-sm text-gray-500">
-                  Finding every question matching your selection.
+                  Loading only 25 questions at a time to keep the browser fast.
                 </p>
               </div>
             )}
 
             {/* NO QUESTIONS */}
             {!loadingQuestions &&
-              subject &&
+              selectedSubjects.length > 0 &&
               questions.length === 0 && (
                 <div className="mt-6 rounded-xl border border-dashed bg-gray-50 p-8 text-center">
                   <p className="font-semibold">
@@ -866,7 +1008,7 @@ export default function TeacherGeneratePage() {
                           <div className="min-w-0 flex-1">
                             <div className="flex flex-wrap items-center gap-2">
                               <span className="text-sm font-bold text-[#315bea]">
-                                Question {index + 1}
+                                Question {previewPage * PREVIEW_PAGE_SIZE + index + 1}
                               </span>
 
                               {question.difficulty && (
@@ -958,6 +1100,36 @@ export default function TeacherGeneratePage() {
                   })}
                 </div>
               )}
+
+
+            {!loadingQuestions && previewTotal > PREVIEW_PAGE_SIZE && (
+              <div className="mt-6 flex items-center justify-between rounded-xl border bg-white p-4">
+                <button
+                  type="button"
+                  onClick={() => goToPreviewPage(previewPage - 1)}
+                  disabled={previewPage === 0}
+                  className="rounded-lg border border-gray-300 px-4 py-2 text-sm font-semibold disabled:cursor-not-allowed disabled:opacity-40"
+                >
+                  Previous
+                </button>
+
+                <span className="text-sm font-semibold text-gray-600">
+                  Page {previewPage + 1} of {Math.ceil(previewTotal / PREVIEW_PAGE_SIZE)}
+                </span>
+
+                <button
+                  type="button"
+                  onClick={() => goToPreviewPage(previewPage + 1)}
+                  disabled={
+                    previewPage >=
+                    Math.ceil(previewTotal / PREVIEW_PAGE_SIZE) - 1
+                  }
+                  className="rounded-lg bg-[#315bea] px-4 py-2 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-40"
+                >
+                  Next
+                </button>
+              </div>
+            )}
           </div>
 
         </div>

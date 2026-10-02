@@ -1,10 +1,13 @@
 import { NextResponse } from "next/server";
 import { pool } from "@/lib/db";
 import bcrypt from "bcryptjs";
+import { productionDisabledResponse } from "@/lib/internal-route";
 
 export const runtime = "nodejs";
 
 export async function POST(request: Request) {
+  const blocked = productionDisabledResponse();
+  if (blocked) return blocked;
   try {
     const body = await request.json();
 

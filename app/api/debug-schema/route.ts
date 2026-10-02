@@ -1,9 +1,12 @@
 import { pool } from "@/lib/db";
+import { productionDisabledResponse } from "@/lib/internal-route";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 export async function GET() {
+  const blocked = productionDisabledResponse();
+  if (blocked) return blocked;
   try {
     const tables = await pool.query(`
       SELECT table_name

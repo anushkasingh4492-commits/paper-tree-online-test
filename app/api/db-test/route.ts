@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { Pool } from "pg";
+import { productionDisabledResponse } from "@/lib/internal-route";
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
@@ -9,6 +10,8 @@ const pool = new Pool({
 });
 
 export async function GET() {
+  const blocked = productionDisabledResponse();
+  if (blocked) return blocked;
   try {
     /*
      * ---------------------------------------------------------

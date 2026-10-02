@@ -1,8 +1,24 @@
 import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { pool } from "@/lib/db";
+import { parseSessionCookie } from "@/lib/session";
 
-async function isMasterAdmin(){const v=(await cookies()).get("master_session")?.value;if(!v)return false;try{const s=JSON.parse(v);return s.role==="ADMIN"||s.role==="MASTER_ADMIN";}catch{return false;}}
+async function isMasterAdmin() {
+  const v = (await cookies()).get("master_session")?.value;
+
+  if (!v) return false;
+
+  try {
+    const s = parseSessionCookie<Record<string, unknown>>(v);
+
+    return (
+      s !== null &&
+      (s.role === "ADMIN" || s.role === "MASTER_ADMIN")
+    );
+  } catch {
+    return false;
+  }
+}
 
 export async function PATCH(req:Request,{params}:{params:Promise<{academyId:string;id:string}>}){
   if(!(await isMasterAdmin()))return NextResponse.json({success:false,error:"Unauthorized"},{status:401});

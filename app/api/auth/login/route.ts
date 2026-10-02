@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 import { pool } from "@/lib/db";
+import { createSessionCookie } from "@/lib/session";
 
 export const runtime = "nodejs";
 
@@ -80,7 +81,7 @@ export async function POST(request: Request) {
 
       response.cookies.set(
         "master_session",
-        JSON.stringify({
+        createSessionCookie({
           id: admin.id,
           role,
           academyId: admin.academy_id || null,
@@ -162,7 +163,7 @@ export async function POST(request: Request) {
 
       response.cookies.set(
         "master_session",
-        JSON.stringify({
+        createSessionCookie({
           id: teacher.id,
           role: "TEACHER",
           academyId: teacher.academy_id,
@@ -270,7 +271,7 @@ export async function POST(request: Request) {
 
       response.cookies.set(
         "student_session",
-        JSON.stringify({
+        createSessionCookie({
           studentId: student.id,
           name: student.name,
           email: student.email,

@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Pool } from "pg";
+import { parseSessionCookie } from "@/lib/session";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -41,7 +42,9 @@ function getStudentId(request: NextRequest): string {
   }
 
   try {
-    const parsed = JSON.parse(cookie);
+    const parsed = parseSessionCookie<{ studentId?: string; academyId?: string }>(cookie);
+
+    if (!parsed) return "";
 
     if (
       parsed &&
@@ -52,10 +55,10 @@ function getStudentId(request: NextRequest): string {
       return String(parsed.studentId).trim();
     }
   } catch {
-    // Cookie can directly contain the student ID.
+    return "";
   }
 
-  return cookie.trim();
+  return "";
 }
 
 function getStudentAcademyId(request: NextRequest): string {
@@ -64,7 +67,9 @@ function getStudentAcademyId(request: NextRequest): string {
   if (!cookie) return "";
 
   try {
-    const parsed = JSON.parse(cookie);
+    const parsed = parseSessionCookie<{ studentId?: string; academyId?: string }>(cookie);
+
+    if (!parsed) return "";
     return String(parsed?.academyId ?? "").trim();
   } catch {
     return "";

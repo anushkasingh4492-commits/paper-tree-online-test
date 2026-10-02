@@ -17,11 +17,9 @@ type Question = {
   number: number;
   question: string;
   options: string[];
-  answer: number;
   subject?: string;
   chapter?: string;
   difficulty?: string;
-  solution?: string | null;
   figureAsset?: string | null;
 };
 
@@ -936,60 +934,6 @@ export default function TestPage() {
                 );
 
               /*
-               * ANSWER
-               */
-
-              let answer =
-                question.answer;
-
-              if (
-                answer ===
-                  undefined ||
-                answer === null ||
-                answer === ""
-              ) {
-                answer =
-                  question.correct_option;
-              }
-
-              if (
-                typeof answer ===
-                "string"
-              ) {
-                const trimmed =
-                  answer
-                    .trim()
-                    .toUpperCase();
-
-                const numeric =
-                  Number(
-                    trimmed
-                  );
-
-                if (
-                  Number.isFinite(
-                    numeric
-                  ) &&
-                  trimmed !== ""
-                ) {
-                  answer =
-                    numeric;
-                } else {
-                  const letter =
-                    trimmed.charCodeAt(
-                      0
-                    ) -
-                    65;
-
-                  answer =
-                    letter;
-                }
-              }
-
-              const numericAnswer =
-                Number(answer);
-
-              /*
                * =================================================
                * FIGURE
                * =================================================
@@ -1050,13 +994,6 @@ const figureAsset =
 
                 options,
 
-                answer:
-                  Number.isFinite(
-                    numericAnswer
-                  )
-                    ? numericAnswer
-                    : 0,
-
                 subject:
                   question.subject ??
                   undefined,
@@ -1069,10 +1006,6 @@ const figureAsset =
                 difficulty:
                   question.difficulty ??
                   undefined,
-
-                solution:
-                  question.solution ??
-                  null,
 
                 /*
                  * Correctly initialized.

@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { pool } from "@/lib/db";
 import crypto from "crypto";
+import { parseSessionCookie } from "@/lib/session";
 
 export const runtime = "nodejs";
 
@@ -24,7 +25,7 @@ export async function POST(request: Request) {
     let session: { id?: string; role?: string };
 
     try {
-      session = JSON.parse(sessionCookie);
+      session = parseSessionCookie<{ id?: string; role?: string }>(sessionCookie) || {};
     } catch {
       return NextResponse.json(
         {

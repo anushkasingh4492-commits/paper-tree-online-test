@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { pool } from "@/lib/db";
+import { parseSessionCookie } from "@/lib/session";
 
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
@@ -38,29 +39,14 @@ export async function GET(
       request.cookies.get("student_session")?.value;
 
     if (sessionCookie) {
-      try {
-        const decoded =
-          decodeURIComponent(
-            sessionCookie
-          );
+      const parsed = parseSessionCookie<{
+        studentId?: string;
+        academyId?: string;
+      }>(sessionCookie);
 
-        try {
-          const parsed =
-            JSON.parse(decoded);
-
-          studentId = String(
-            parsed?.studentId ?? ""
-          ).trim();
-          academyId = String(
-            parsed?.academyId ?? ""
-          ).trim();
-        } catch {
-          studentId =
-            decoded.trim();
-        }
-      } catch {
-        studentId =
-          sessionCookie.trim();
+      if (parsed) {
+        studentId = String(parsed.studentId ?? "").trim();
+        academyId = String(parsed.academyId ?? "").trim();
       }
     }
 

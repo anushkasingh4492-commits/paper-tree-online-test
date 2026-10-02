@@ -70,6 +70,7 @@ export default function StudentInsights() {
   const [revisionLoading, setRevisionLoading] = useState(false);
   const [message, setMessage] = useState("");
   const [selectedBadge, setSelectedBadge] = useState<Badge | null>(null);
+  const [levelOpen, setLevelOpen] = useState(false);
   const [sharing, setSharing] = useState(false);
   const [category, setCategory] = useState("All");
 
@@ -199,20 +200,21 @@ export default function StudentInsights() {
     <section className="mt-8 space-y-6">
       <style jsx>{`\n        @keyframes ptFloat {0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}\n        @keyframes ptPulse {0%,100%{box-shadow:0 0 0 0 rgba(129,140,248,0)}50%{box-shadow:0 0 42px 7px rgba(129,140,248,.22)}}\n        @keyframes ptFire {0%,100%{transform:scale(1) rotate(-3deg)}50%{transform:scale(1.14) rotate(3deg)}}\n        @keyframes ptShine {0%{transform:translateX(-140%) rotate(18deg)}100%{transform:translateX(240%) rotate(18deg)}}\n        @keyframes ptPop {0%{transform:scale(.84);opacity:0}100%{transform:scale(1);opacity:1}}\n        @keyframes ptSpark {0%,100%{opacity:.25;transform:scale(.8)}50%{opacity:1;transform:scale(1.2)}}\n        .pt-float{animation:ptFloat 4s ease-in-out infinite}.pt-pulse{animation:ptPulse 3s ease-in-out infinite}.pt-fire{animation:ptFire 1.1s ease-in-out infinite}.pt-pop{animation:ptPop .35s ease-out both}.pt-spark{animation:ptSpark 1.8s ease-in-out infinite}\n      `}</style>
 
-      <div className="relative overflow-hidden rounded-[32px] border border-indigo-400/20 bg-[radial-gradient(circle_at_85%_5%,rgba(99,102,241,.4),transparent_28%),radial-gradient(circle_at_15%_100%,rgba(236,72,153,.2),transparent_30%),linear-gradient(135deg,#060917,#111a39_52%,#2a1452)] p-6 text-white shadow-2xl md:p-8 pt-pulse">
+      <button type="button" onClick={() => setLevelOpen(true)} className="group relative block w-full overflow-hidden rounded-[32px] border border-indigo-400/20 bg-[radial-gradient(circle_at_85%_5%,rgba(99,102,241,.45),transparent_28%),radial-gradient(circle_at_15%_100%,rgba(236,72,153,.22),transparent_30%),linear-gradient(135deg,#060917,#111a39_52%,#2a1452)] p-6 text-left text-white shadow-2xl transition duration-500 hover:-translate-y-1 hover:border-indigo-300/40 hover:shadow-[0_24px_70px_rgba(79,70,229,.28)] md:p-8 pt-pulse">
         <div className="absolute -right-16 -top-20 h-56 w-56 rounded-full bg-indigo-500/20 blur-3xl" />
         <div className="absolute -bottom-20 left-1/3 h-56 w-56 rounded-full bg-fuchsia-500/10 blur-3xl" />
         <div className="pointer-events-none absolute right-[28%] top-8 text-2xl pt-spark">✦</div><div className="pointer-events-none absolute right-[18%] top-28 text-xl pt-spark">✦</div>
         <div className="relative grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
           <div>
-            <div className="flex items-center gap-2 text-[11px] font-black uppercase tracking-[.25em] text-indigo-200"><Sparkles size={15}/> Player Progress</div>
+            <div className="flex items-center justify-between gap-3"><div className="flex items-center gap-2 text-[11px] font-black uppercase tracking-[.25em] text-indigo-200"><Sparkles size={15}/> Player Progress</div><span className="rounded-full border border-white/10 bg-white/10 px-3 py-1.5 text-[9px] font-black uppercase tracking-widest text-indigo-100 opacity-80 transition group-hover:bg-white/15 group-hover:opacity-100">Tap to view level</span></div>
             <div className="mt-3 flex items-end gap-4"><div className="text-7xl font-black leading-none tracking-[-.08em] text-transparent bg-clip-text bg-gradient-to-b from-white to-indigo-200">{data.level}</div><div className="pb-1"><div className="text-2xl font-black uppercase">{data.levelName}</div><div className="mt-1 text-xs font-bold text-slate-400">{data.testsCompleted} completed tests</div></div></div>
             <div className="mt-6 max-w-2xl"><div className="flex items-center justify-between text-[11px] font-black uppercase tracking-wider text-slate-400"><span>Level progress</span><span>{nextName ? `${Math.max(0, (data.nextLevelAt || 0) - data.testsCompleted)} more tests to ${nextName}` : "MAX LEVEL • GOAT"}</span></div><div className="mt-2 h-4 overflow-hidden rounded-full bg-white/10 p-1"><div className="relative h-full overflow-hidden rounded-full bg-gradient-to-r from-cyan-300 via-indigo-400 to-fuchsia-400 transition-all duration-1000" style={{width:`${clamp(data.levelProgress)}%`}}><span className="absolute inset-0 w-1/3 bg-white/30 blur-sm" style={{animation:"ptShine 2.5s linear infinite"}}/></div></div></div>
             <div className="mt-5 flex flex-wrap gap-2 text-xs font-black"><span className="rounded-full border border-white/10 bg-white/10 px-3 py-2">⚡ {data.points.toLocaleString()} XP</span><span className="rounded-full border border-white/10 bg-white/10 px-3 py-2">🏆 {earned.length} badges</span><span className="rounded-full border border-white/10 bg-white/10 px-3 py-2">🎯 {data.averagePercentage}% avg</span></div>
           </div>
-          <div className="pt-float flex min-w-[210px] flex-col items-center rounded-[30px] border border-orange-300/20 bg-orange-400/10 px-9 py-7 backdrop-blur"><div className="pt-fire text-7xl">🔥</div><div className="mt-1 text-6xl font-black tracking-tight">{data.streak}</div><div className="text-[11px] font-black uppercase tracking-[.25em] text-orange-200">Day Streak</div><div className="mt-2 text-center text-[10px] font-semibold text-slate-400">Best: {data.maxStreak} days</div></div>
+          <div className="pt-float flex min-w-[210px] flex-col items-center rounded-[30px] border border-orange-300/20 bg-orange-400/10 px-9 py-7 backdrop-blur transition group-hover:border-orange-200/40 group-hover:bg-orange-400/15"><div className="pt-fire text-7xl">🔥</div><div className="mt-1 text-6xl font-black tracking-tight">{data.streak}</div><div className="text-[11px] font-black uppercase tracking-[.25em] text-orange-200">Day Streak</div><div className="mt-2 text-center text-[10px] font-semibold text-slate-400">Best: {data.maxStreak} days</div></div>
         </div>
-      </div>
+        <div className="pointer-events-none absolute bottom-4 right-6 text-[9px] font-black uppercase tracking-[.25em] text-white/30 transition group-hover:text-white/60">Open level details →</div>
+      </button>
 
       <div className="grid gap-3 sm:grid-cols-3">
         <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"><div className="flex items-center gap-2 text-xs font-black uppercase tracking-wider text-slate-400"><Trophy size={15}/> Batch Rank</div><div className="mt-2 text-3xl font-black text-indigo-600">{data.rank ? `#${data.rank}` : "—"}</div><div className="mt-1 text-xs font-semibold text-slate-500">{data.batchName || "No batch assigned"}{data.batchSize ? ` • ${data.batchSize} students` : ""}</div></div>
@@ -315,9 +317,11 @@ export default function StudentInsights() {
                 : "grayscale"
             }`}
           >
-            {safeSelectedBadge.earned
-              ? safeSelectedBadge.icon
-              : "🔒"}
+            {safeSelectedBadge.earned && safeSelectedBadge.asset ? (
+              <img src={safeSelectedBadge.asset} alt="" className="h-24 w-24 object-contain drop-shadow-[0_12px_30px_rgba(255,255,255,.25)]" />
+            ) : (
+              safeSelectedBadge.earned ? safeSelectedBadge.icon : "🔒"
+            )}
           </div>
 
           {/* NAME */}

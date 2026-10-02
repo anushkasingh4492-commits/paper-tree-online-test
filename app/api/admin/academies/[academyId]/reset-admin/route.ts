@@ -2,18 +2,20 @@ import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import bcrypt from "bcryptjs";
 import { pool } from "@/lib/db";
+import { parseSessionCookie } from "@/lib/session";
 
 async function isMasterAdmin() {
   const value = (await cookies()).get("master_session")?.value;
   if (!value) return false;
 
   try {
-    const session = JSON.parse(decodeURIComponent(value));
+    const session = parseSessionCookie<Record<string, unknown>>(value);
 
-    return (
-      session.role === "ADMIN" ||
-      session.role === "MASTER_ADMIN"
-    );
+ return (
+  session !== null &&
+  (session.role === "ADMIN" ||
+    session.role === "MASTER_ADMIN")
+);
   } catch {
     return false;
   }

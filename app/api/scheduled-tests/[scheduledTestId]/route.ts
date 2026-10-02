@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { pool } from "@/lib/db";
+import { parseSessionCookie } from "@/lib/session";
 
 export const runtime = "nodejs";
 
@@ -35,7 +36,11 @@ export async function GET(
     let academyId = "";
 
     try {
-      const parsed = JSON.parse(sessionCookie);
+      const parsed = parseSessionCookie<{ studentId?: string; academyId?: string }>(sessionCookie);
+
+      if (!parsed) {
+        throw new Error("Invalid signed student session.");
+      }
 
       if (parsed?.studentId) {
         studentId = String(parsed.studentId);
@@ -45,7 +50,8 @@ export async function GET(
         academyId = String(parsed.academyId);
       }
     } catch {
-      studentId = sessionCookie;
+      studentId = "";
+      academyId = "";
     }
 
     studentId = studentId.trim();

@@ -1,8 +1,11 @@
 import { pool } from "@/lib/db";
+import { productionDisabledResponse } from "@/lib/internal-route";
 
 export const runtime = "nodejs";
 
 export async function GET() {
+  const blocked = productionDisabledResponse();
+  if (blocked) return blocked;
   try {
     const result = await pool.query(`
       SELECT

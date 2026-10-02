@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { Pool } from "pg";
+import { productionDisabledResponse } from "@/lib/internal-route";
 
 export const dynamic = "force-dynamic";
 
@@ -29,6 +30,8 @@ function getPool() {
 }
 
 export async function GET() {
+  const blocked = productionDisabledResponse();
+  if (blocked) return blocked;
   try {
     const pool = getPool();
 

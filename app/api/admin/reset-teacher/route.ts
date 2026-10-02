@@ -2,10 +2,17 @@ import { NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 import crypto from "crypto";
 import { pool } from "@/lib/db";
+import { productionDisabledResponse, requireMasterAdmin } from "@/lib/internal-route";
 
 export const runtime = "nodejs";
 
 export async function GET(request: Request) {
+  const blocked = productionDisabledResponse();
+  if (blocked) return blocked;
+  if (!(await requireMasterAdmin())) {
+    return NextResponse.json({ success: false, error: "Unauthorized." }, { status: 401 });
+  }
+
   try {
     const email = "teacher@example.com";
     const password = "Teacher@123";

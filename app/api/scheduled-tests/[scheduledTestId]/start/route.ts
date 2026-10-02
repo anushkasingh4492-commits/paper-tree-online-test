@@ -1,22 +1,16 @@
 import { NextRequest, NextResponse } from "next/server";
 import { pool } from "@/lib/db";
+import { parseSessionCookie } from "@/lib/session";
 
 export const runtime = "nodejs";
 
 function readStudentSession(value: string) {
-  try {
-    const parsed = JSON.parse(decodeURIComponent(value));
+  const parsed = parseSessionCookie<{ studentId?: string; academyId?: string }>(value);
 
-    return {
-      studentId: String(parsed?.studentId ?? "").trim(),
-      academyId: String(parsed?.academyId ?? "").trim(),
-    };
-  } catch {
-    return {
-      studentId: value.trim(),
-      academyId: "",
-    };
-  }
+  return {
+    studentId: String(parsed?.studentId ?? "").trim(),
+    academyId: String(parsed?.academyId ?? "").trim(),
+  };
 }
 
 export async function GET(

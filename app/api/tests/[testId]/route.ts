@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { pool } from "@/lib/db";
 import { cookies } from "next/headers";
+import { parseSessionCookie } from "@/lib/session";
 
 export const runtime = "nodejs";
 
@@ -44,7 +45,7 @@ export async function GET(
     let session: { academyId?: string; studentId?: string; id?: string };
 
     try {
-      session = JSON.parse(sessionCookie);
+      session = parseSessionCookie<{ academyId?: string; studentId?: string; id?: string }>(sessionCookie) || {};
     } catch {
       return NextResponse.json(
         {
@@ -107,7 +108,38 @@ export async function GET(
       [testId, session.academyId, session.studentId ?? null]
     );
 
-    const rows = result.rows;
+    const rows = result.rows.map((row) => {
+      let rawQuestions: unknown = row.questions;
+
+      if (typeof rawQuestions === "string") {
+        try {
+          rawQuestions = JSON.parse(rawQuestions);
+        } catch {
+          rawQuestions = [];
+        }
+      }
+
+      const safeQuestions = Array.isArray(rawQuestions)
+        ? rawQuestions.map((question: Record<string, unknown>) => {
+            const {
+              correct_option: _correctOption,
+              correct_answer_text: _correctAnswerText,
+              solution: _solution,
+              answer: _answer,
+              ...safeQuestion
+            } = question;
+            return safeQuestion;
+          })
+        : [];
+
+      return {
+        id: row.id,
+        exam: row.exam,
+        question_count: row.question_count,
+        created_at: row.created_at,
+        questions: safeQuestions,
+      };
+    });
 
     if (rows.length === 0) {
       return NextResponse.json(

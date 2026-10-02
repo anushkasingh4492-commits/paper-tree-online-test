@@ -1,4 +1,6 @@
 import { cookies } from "next/headers";
+import { parseSessionCookie } from "@/lib/session";
+import { checkRateLimit } from "@/lib/rate-limit";
 import { pool } from "@/lib/db";
 import {
   getPreset,
@@ -38,6 +40,8 @@ type GenerateRequest = {
    * matching question without creating a test.
    */
   previewOnly?: boolean;
+  previewOffset?: number;
+  previewLimit?: number;
 
   // Backward compatibility
   questionCount?: number;
@@ -431,106 +435,93 @@ function addSubjectChapterFilters(
   chapters: string[]
 ) {
   /*
-   * ---------------------------------------------------------
-   * SUBJECT-SPECIFIC CHAPTER MAPPING
-   * ---------------------------------------------------------
+   * If subject-specific chapter selections are supplied, build
+   * an OR group where each selected subject keeps its own
+   * chapter filter. A subject with no selected chapters means
+   * all chapters for that subject.
    */
-
   if (
     chaptersBySubject &&
-    Object.keys(chaptersBySubject).length > 0
+    Object.keys(chaptersBySubject).length > 0 &&
+    subjects.length > 0
   ) {
-    const subjectChapterPairs: {
-      subject: string;
-      chapter: string;
-    }[] = [];
+    const selectedSubjectPairs = subjects.map((subject) => {
+      const entry = Object.entries(chaptersBySubject).find(
+        ([entrySubject]) =>
+          normalize(entrySubject) === normalize(subject)
+      );
 
-    for (
-      const [subject, chapterList] of
-      Object.entries(chaptersBySubject)
-    ) {
-      if (!Array.isArray(chapterList)) {
-        continue;
-      }
+      const selectedChaptersForSubject =
+        entry && Array.isArray(entry[1])
+          ? entry[1].map(clean).filter(Boolean)
+          : [];
 
-      for (const chapter of chapterList) {
-        if (
-          clean(subject) &&
-          clean(chapter)
-        ) {
-          subjectChapterPairs.push({
-            subject: normalize(subject),
-            chapter: normalize(chapter),
-          });
-        }
-      }
-    }
+      return {
+        subject: normalize(subject),
+        chapters: selectedChaptersForSubject,
+      };
+    });
 
-    if (
-      subjectChapterPairs.length > 0
-    ) {
-      const pairConditions =
-        subjectChapterPairs.map(
-          (pair) => {
-            const subjectParam =
-              values.length + 1;
+    const subjectConditions = selectedSubjectPairs.map(
+      ({ subject, chapters: subjectChapters }) => {
+        const subjectParam = values.length + 1;
+        values.push(subject);
 
-            const chapterParam =
-              values.length + 2;
-
-            values.push(
-              pair.subject,
-              pair.chapter
-            );
-
-            return `
-              (
-                LOWER(
-                  REGEXP_REPLACE(
-                    TRIM(subject),
-                    '[_-]+',
-                    ' ',
-                    'g'
-                  )
-                ) =
-                $${subjectParam}
-
-                AND
-
-                LOWER(
-                  REGEXP_REPLACE(
-                    TRIM(chapter_name),
-                    '[_-]+',
-                    ' ',
-                    'g'
-                  )
-                ) =
-                $${chapterParam}
+        const subjectParts = [
+          `
+            LOWER(
+              REGEXP_REPLACE(
+                TRIM(subject),
+                '[_-]+',
+                ' ',
+                'g'
               )
-            `;
-          }
-        );
+            ) = $${subjectParam}
+          `,
+        ];
 
+        if (subjectChapters.length > 0) {
+          const chapterParams = subjectChapters.map((chapter) => {
+            const chapterParam = values.length + 1;
+            values.push(normalize(chapter));
+            return `$${chapterParam}`;
+          });
+
+          subjectParts.push(`
+            LOWER(
+              REGEXP_REPLACE(
+                TRIM(chapter_name),
+                '[_-]+',
+                ' ',
+                'g'
+              )
+            ) = ANY(
+              ARRAY[
+                ${chapterParams.join(", ")}
+              ]::text[]
+            )
+          `);
+        }
+
+        return `(${subjectParts.join(" AND ")})`;
+      }
+    );
+
+    if (subjectConditions.length > 0) {
       conditions.push(`
         (
-          ${pairConditions.join(" OR ")}
+          ${subjectConditions.join(" OR ")}
         )
       `);
-
       return;
     }
   }
 
   /*
-   * ---------------------------------------------------------
-   * NORMAL SUBJECT FILTER
-   * ---------------------------------------------------------
+   * Backward-compatible normal filtering.
    */
-
   if (subjects.length > 0) {
-    const subjectValues =
-      subjects.map(normalize);
-
+    const subjectValues = subjects.map(normalize);
     values.push(subjectValues);
 
     conditions.push(`
@@ -548,22 +539,7 @@ function addSubjectChapterFilters(
     `);
   }
 
-  /*
-   * ---------------------------------------------------------
-   * NORMAL CHAPTER FILTER
-   *
-   * This is important:
-   *
-   * The old route only filtered subjects here.
-   * A selected chapter could therefore be ignored.
-   * ---------------------------------------------------------
-   */
-
-  addChapterFilter(
-    chapters,
-    conditions,
-    values
-  );
+  addChapterFilter(chapters, conditions, values);
 }
 
 /*
@@ -663,7 +639,7 @@ export async function POST(
     if (studentSession) {
       try {
         const parsed =
-          JSON.parse(studentSession);
+          parseSessionCookie<Record<string, unknown>>(studentSession);
 
         studentId = String(
           parsed?.studentId ?? ""
@@ -672,8 +648,8 @@ export async function POST(
           parsed?.academyId ?? ""
         ).trim();
       } catch {
-        studentId =
-          studentSession.trim();
+        studentId = "";
+        academyId = "";
       }
     }
 
@@ -688,7 +664,7 @@ export async function POST(
     ) {
       try {
         const parsed =
-          JSON.parse(masterSession);
+          parseSessionCookie<Record<string, unknown>>(masterSession);
 
         masterUserId = String(
           parsed?.id ??
@@ -700,13 +676,8 @@ export async function POST(
           parsed?.academyId ?? ""
         ).trim();
       } catch {
-        /*
-         * If the cookie isn't JSON, still treat
-         * the existence of the authenticated
-         * master session as sufficient.
-         */
-        masterUserId =
-          masterSession.trim();
+        masterUserId = "";
+        academyId = "";
       }
     }
 
@@ -724,6 +695,30 @@ export async function POST(
             "Please log in before generating a paper.",
         },
         { status: 401 }
+      );
+    }
+
+    const requesterKey = studentId
+      ? `student:${studentId}`
+      : masterUserId
+        ? `staff:${masterUserId}`
+        : `ip:${request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown"}`;
+
+    const rate = checkRateLimit(requesterKey, studentId ? 20 : 60, 10 * 60 * 1000);
+
+    if (!rate.allowed) {
+      return Response.json(
+        {
+          success: false,
+          error: "Too many test-generation requests. Please try again later.",
+          retryAfterSeconds: rate.retryAfterSeconds,
+        },
+        {
+          status: 429,
+          headers: {
+            "Retry-After": String(rate.retryAfterSeconds),
+          },
+        }
       );
     }
 
@@ -1447,70 +1442,74 @@ export async function POST(
        */
 
       if (body.previewOnly) {
+        /*
+         * Never send the entire matching question bank to the
+         * browser. The old behavior could return hundreds or
+         * thousands of questions at once, forcing Chrome to
+         * render a huge DOM with KaTeX and images.
+         *
+         * Preview is paginated: 25 questions per request.
+         */
+        const requestedPreviewLimit = Number(body.previewLimit);
+        const previewLimit = Number.isFinite(requestedPreviewLimit)
+          ? Math.min(25, Math.max(1, Math.floor(requestedPreviewLimit)))
+          : 25;
+
+        const requestedPreviewOffset = Number(body.previewOffset);
+        const previewOffset =
+          Number.isFinite(requestedPreviewOffset) && requestedPreviewOffset >= 0
+            ? Math.floor(requestedPreviewOffset)
+            : 0;
+
+        const previewValues = [...values, previewLimit, previewOffset];
+        const limitParam = previewValues.length - 1;
+        const offsetParam = previewValues.length;
+
         const previewQuery = `
           ${QUESTION_SELECT}
           WHERE
-            ${conditions.join(
-              " AND "
-            )}
+            ${conditions.join(" AND ")}
           ORDER BY id
+          LIMIT $${limitParam}
+          OFFSET $${offsetParam}
         `;
 
-        const previewResult =
-          await pool.query(
-            previewQuery,
-            values
-          );
+        const previewResult = await pool.query(
+          previewQuery,
+          previewValues
+        );
 
         const availableQuestions =
           previewResult.rows as QuestionRow[];
 
         console.log(
           "PREVIEW QUESTIONS:",
-          availableQuestions.length
+          availableQuestions.length,
+          "of",
+          available,
+          "offset",
+          previewOffset
         );
 
         return Response.json({
           success: true,
-
           previewOnly: true,
-
           exam,
-
-          availableQuestionCount:
-            availableQuestions.length,
-
+          availableQuestionCount: available,
           availableQuestions,
-
-          requestedQuestionCount:
-            questionCount,
-
+          previewOffset,
+          previewLimit,
+          requestedQuestionCount: questionCount,
           duration,
-
           configuration: {
             exam,
-
-            course:
-              body.course ||
-              exam,
-
-            subject:
-              body.subject ||
-              subjects[0] ||
-              "",
-
+            course: body.course || exam,
+            subject: body.subject || subjects[0] || "",
             subjects,
-
             chapters,
-
-            chaptersBySubject:
-              body.chaptersBySubject ||
-              {},
-
+            chaptersBySubject: body.chaptersBySubject || {},
             difficulty,
-
             questionCount,
-
             duration,
           },
         });
@@ -2115,8 +2114,18 @@ export async function POST(
           new Date().toISOString(),
       },
 
-      questions:
-        selectedQuestions,
+      questions: studentId
+        ? selectedQuestions.map((question) => {
+            const {
+              correct_option: _correctOption,
+              correct_answer_text: _correctAnswerText,
+              solution: _solution,
+              answer: _answer,
+              ...safeQuestion
+            } = question as Record<string, unknown>;
+            return safeQuestion;
+          })
+        : selectedQuestions,
     });
   } catch (error: unknown) {
     console.error(
