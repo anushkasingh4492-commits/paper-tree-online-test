@@ -1,4 +1,4 @@
-"use client";
+ "use client";
 
 import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
@@ -24,15 +24,37 @@ type StudentPerformance = {
   badgesEarned: number;
 };
 
+type StudentAttempt = {
+  id: string;
+  test_id: string;
+  scheduled_test_id?: string | null;
+  score: number | null;
+  total_marks: number | null;
+  correct_count: number | null;
+  incorrect_count: number | null;
+  unanswered_count: number | null;
+  status: string | null;
+  started_at: string | null;
+  submitted_at: string | null;
+  test_title: string;
+};
+
 export default function TeacherPerformancePage() {
   const router = useRouter();
   const [students, setStudents] = useState<StudentPerformance[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [search, setSearch] = useState("");
+  const [batchFilter, setBatchFilter] = useState("ALL");
+  const [sortBy, setSortBy] = useState("name");
+  const [sortDirection, setSortDirection] = useState<"asc" | "desc">("asc");
   const [sending, setSending] = useState<string | null>(null);
   const [report, setReport] = useState<{ studentId: string; text: string } | null>(null);
   const [badgeStudent, setBadgeStudent] = useState<StudentPerformance | null>(null);
+  const [attemptStudent, setAttemptStudent] = useState<StudentPerformance | null>(null);
+  const [attempts, setAttempts] = useState<StudentAttempt[]>([]);
+  const [attemptLoading, setAttemptLoading] = useState(false);
+  const [attemptError, setAttemptError] = useState("");
 
   useEffect(() => {
     let cancelled = false;
@@ -68,16 +90,121 @@ export default function TeacherPerformancePage() {
     };
   }, []);
 
+  const batchOptions = useMemo(() => {
+    const values = new Set<string>();
+
+    for (const student of students) {
+      student.batches
+        .split(",")
+        .map((batch) => batch.trim())
+        .filter(Boolean)
+        .forEach((batch) => values.add(batch));
+    }
+
+    return Array.from(values).sort((a, b) =>
+      a.localeCompare(b, undefined, { sensitivity: "base" })
+    );
+  }, [students]);
+
   const filteredStudents = useMemo(() => {
     const query = search.trim().toLowerCase();
-    if (!query) return students;
 
-    return students.filter((student) =>
-      [student.name, student.email, student.batches].some((value) =>
-        value.toLowerCase().includes(query)
-      )
-    );
-  }, [students, search]);
+    const filtered = students.filter((student) => {
+      const matchesSearch =
+        !query ||
+        [student.name, student.email, student.batches].some((value) =>
+          value.toLowerCase().includes(query)
+        );
+
+      const matchesBatch =
+        batchFilter === "ALL" ||
+        student.batches
+          .split(",")
+          .map((batch) => batch.trim())
+          .includes(batchFilter);
+
+      return matchesSearch && matchesBatch;
+    });
+
+    const valueForSort = (student: StudentPerformance): string | number => {
+      switch (sortBy) {
+        case "batch":
+          return student.batches;
+        case "level":
+          return student.level;
+        case "streak":
+          return student.currentStreak;
+        case "tests":
+          return student.testsTaken;
+        case "average":
+          return student.averagePercentage;
+        case "best":
+          return student.bestPercentage;
+        case "accuracy":
+          return student.accuracy;
+        case "correct":
+          return student.correctAnswers;
+        case "wrong":
+          return student.wrongAnswers;
+        case "unanswered":
+          return student.unansweredQuestions;
+        case "badges":
+          return student.badgesEarned;
+        case "lastActive":
+          return student.lastActiveDate
+            ? new Date(student.lastActiveDate).getTime()
+            : 0;
+        case "name":
+        default:
+          return student.name;
+      }
+    };
+
+    return [...filtered].sort((a, b) => {
+      const first = valueForSort(a);
+      const second = valueForSort(b);
+      const direction = sortDirection === "asc" ? 1 : -1;
+
+      if (typeof first === "string" && typeof second === "string") {
+        return (
+          first.localeCompare(second, undefined, {
+            sensitivity: "base",
+          }) * direction
+        );
+      }
+
+      return (Number(first) - Number(second)) * direction;
+    });
+  }, [students, search, batchFilter, sortBy, sortDirection]);
+
+  async function openAttempts(student: StudentPerformance) {
+    setAttemptStudent(student);
+    setAttempts([]);
+    setAttemptError("");
+    setAttemptLoading(true);
+
+    try {
+      const response = await fetch(
+        `/api/teacher/performance?studentId=${encodeURIComponent(student.id)}`,
+        { cache: "no-store" }
+      );
+      const data = await response.json();
+
+      if (!response.ok || !data.success) {
+        throw new Error(data.error || "Could not load attempted tests.");
+      }
+
+      setAttempts(data.attempts || []);
+    } catch (error) {
+      setAttemptError(
+        error instanceof Error
+          ? error.message
+          : "Could not load attempted tests."
+      );
+    } finally {
+      setAttemptLoading(false);
+    }
+  }
 
   return (
     <main className="min-h-screen bg-[#f6f8fc] text-[#172033]">
@@ -104,20 +231,73 @@ export default function TeacherPerformancePage() {
         </header>
 
         <section className="rounded-2xl border border-[#e3e8f5] bg-white shadow-sm">
-          <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[#eef0f4] px-6 py-5">
-            <div>
-              <h2 className="text-lg font-extrabold">All Students</h2>
-              <p className="mt-1 text-sm text-[#8a93a5]">
-                Completed tests are used for the performance metrics.
-              </p>
+          <div className="border-b border-[#eef0f4] px-6 py-5">
+            <div className="flex flex-wrap items-center justify-between gap-4">
+              <div>
+                <h2 className="text-lg font-extrabold">All Students</h2>
+                <p className="mt-1 text-sm text-[#8a93a5]">
+                  Filter by batch and sort by any available performance metric.
+                </p>
+              </div>
+
+              <input
+                value={search}
+                onChange={(event) => setSearch(event.target.value)}
+                placeholder="Search student or batch"
+                className="w-full max-w-xs rounded-xl border border-[#dfe4ee] px-4 py-2.5 text-sm outline-none focus:border-[#315bea]"
+              />
             </div>
 
-            <input
-              value={search}
-              onChange={(event) => setSearch(event.target.value)}
-              placeholder="Search student or batch"
-              className="w-full max-w-xs rounded-xl border border-[#dfe4ee] px-4 py-2.5 text-sm outline-none focus:border-[#315bea]"
-            />
+            <div className="mt-4 flex flex-wrap items-center gap-3">
+              <select
+                value={batchFilter}
+                onChange={(event) => setBatchFilter(event.target.value)}
+                className="rounded-xl border border-[#dfe4ee] bg-white px-3 py-2.5 text-sm font-semibold outline-none focus:border-[#315bea]"
+              >
+                <option value="ALL">All batches</option>
+                {batchOptions.map((batch) => (
+                  <option key={batch} value={batch}>
+                    {batch}
+                  </option>
+                ))}
+              </select>
+
+              <select
+                value={sortBy}
+                onChange={(event) => setSortBy(event.target.value)}
+                className="rounded-xl border border-[#dfe4ee] bg-white px-3 py-2.5 text-sm font-semibold outline-none focus:border-[#315bea]"
+              >
+                <option value="name">Sort: Name</option>
+                <option value="batch">Sort: Batch</option>
+                <option value="level">Sort: Level</option>
+                <option value="streak">Sort: Streak</option>
+                <option value="tests">Sort: Number of tests</option>
+                <option value="average">Sort: Average marks</option>
+                <option value="best">Sort: Best marks</option>
+                <option value="accuracy">Sort: Accuracy</option>
+                <option value="correct">Sort: Correct answers</option>
+                <option value="wrong">Sort: Wrong answers</option>
+                <option value="unanswered">Sort: Unanswered</option>
+                <option value="badges">Sort: Badges</option>
+                <option value="lastActive">Sort: Last active</option>
+              </select>
+
+              <button
+                type="button"
+                onClick={() =>
+                  setSortDirection((current) =>
+                    current === "asc" ? "desc" : "asc"
+                  )
+                }
+                className="rounded-xl border border-[#dfe4ee] bg-white px-4 py-2.5 text-sm font-bold text-[#315bea] hover:bg-[#f7f9ff]"
+              >
+                {sortDirection === "asc" ? "↑ Ascending" : "↓ Descending"}
+              </button>
+
+              <span className="text-xs font-semibold text-[#8a93a5]">
+                Showing {filteredStudents.length} of {students.length}
+              </span>
+            </div>
           </div>
 
           {loading && (
@@ -162,10 +342,21 @@ export default function TeacherPerformancePage() {
                   {filteredStudents.map((student) => (
                     <tr key={student.id} className="hover:bg-[#fafbfe]">
                       <td className="px-6 py-5">
-                        <p className="font-bold">{student.name}</p>
-                        <p className="mt-1 text-xs text-[#8a93a5]">
-                          {student.email}
-                        </p>
+                        <button
+                          type="button"
+                          onClick={() => void openAttempts(student)}
+                          className="text-left"
+                        >
+                          <p className="font-bold text-[#172033] hover:text-[#315bea]">
+                            {student.name}
+                          </p>
+                          <p className="mt-1 text-xs text-[#8a93a5]">
+                            {student.email}
+                          </p>
+                          <p className="mt-1 text-[10px] font-bold text-[#315bea]">
+                            View attempted tests →
+                          </p>
+                        </button>
                       </td>
                       <td className="px-4 py-5 text-sm text-[#697386]">
                         {student.batches}
@@ -224,6 +415,103 @@ export default function TeacherPerformancePage() {
             </div>
           )}
         </section>
+
+        {attemptStudent && (
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 p-5"
+            onClick={() => setAttemptStudent(null)}
+          >
+            <div
+              className="max-h-[85vh] w-full max-w-4xl overflow-hidden rounded-2xl bg-white shadow-2xl"
+              onClick={(event) => event.stopPropagation()}
+            >
+              <div className="flex items-center justify-between border-b border-[#eef0f4] px-6 py-5">
+                <div>
+                  <h3 className="text-lg font-extrabold">
+                    {attemptStudent.name}
+                  </h3>
+                  <p className="mt-1 text-sm text-[#8a93a5]">
+                    Attempted tests
+                  </p>
+                </div>
+
+                <button
+                  type="button"
+                  onClick={() => setAttemptStudent(null)}
+                  className="rounded-lg border border-[#e2e6ee] px-3 py-1.5 text-sm font-bold text-[#697386]"
+                >
+                  Close
+                </button>
+              </div>
+
+              <div className="max-h-[65vh] overflow-y-auto p-6">
+                {attemptLoading ? (
+                  <p className="text-sm text-[#697386]">
+                    Loading attempted tests...
+                  </p>
+                ) : attemptError ? (
+                  <p className="rounded-xl bg-red-50 px-4 py-3 text-sm font-semibold text-red-600">
+                    {attemptError}
+                  </p>
+                ) : attempts.length === 0 ? (
+                  <p className="rounded-xl bg-[#f7f8fc] px-4 py-5 text-center text-sm text-[#697386]">
+                    No completed tests found for this student.
+                  </p>
+                ) : (
+                  <div className="space-y-3">
+                    {attempts.map((attempt) => {
+                      const score = Number(attempt.score || 0);
+                      const total = Number(attempt.total_marks || 0);
+                      const percentage =
+                        total > 0
+                          ? ((score / total) * 100).toFixed(1)
+                          : "0.0";
+
+                      return (
+                        <div
+                          key={attempt.id}
+                          className="rounded-xl border border-[#e7eaf0] p-4"
+                        >
+                          <div className="flex flex-wrap items-start justify-between gap-3">
+                            <div>
+                              <p className="font-bold">
+                                {attempt.test_title}
+                              </p>
+                              <p className="mt-1 text-xs text-[#8a93a5]">
+                                {attempt.submitted_at
+                                  ? new Date(
+                                      attempt.submitted_at
+                                    ).toLocaleString("en-IN")
+                                  : "Submission time unavailable"}
+                              </p>
+                            </div>
+
+                            <div className="text-right">
+                              <p className="text-lg font-black text-[#315bea]">
+                                {score.toFixed(1)} / {total.toFixed(1)}
+                              </p>
+                              <p className="text-xs font-bold text-[#697386]">
+                                {percentage}%
+                              </p>
+                            </div>
+                          </div>
+
+                          <div className="mt-3 flex flex-wrap gap-4 text-xs font-semibold text-[#697386]">
+                            <span>✓ Correct: {attempt.correct_count ?? 0}</span>
+                            <span>✕ Wrong: {attempt.incorrect_count ?? 0}</span>
+                            <span>
+                              — Unanswered: {attempt.unanswered_count ?? 0}
+                            </span>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        )}
 
         {badgeStudent && (
           <StudentBadgeModal

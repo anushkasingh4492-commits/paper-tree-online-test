@@ -12,7 +12,7 @@ type TeacherSession = {
   role?: string;
 };
 
-export async function GET() {
+export async function GET(request: Request) {
   try {
     await ensureFeatureSchema();
     const cookieStore = await cookies();
@@ -58,6 +58,75 @@ export async function GET() {
       LOWER(REPLACE(COALESCE(ta.status, ''), '-', '_')) IN
       ('submitted', 'auto_submitted', 'auto submitted', 'completed', 'complete')
     `;
+
+    const studentId = new URL(request.url).searchParams.get("studentId")?.trim();
+
+    if (studentId) {
+      const studentResult = await pool.query(
+        `
+          SELECT id, name
+          FROM students
+          WHERE id::text = $1::text
+            AND academy_id::text = $2::text
+          LIMIT 1
+        `,
+        [studentId, teacher.academy_id]
+      );
+
+      if (!studentResult.rows.length) {
+        return NextResponse.json(
+          { success: false, error: "Student not found in your academy." },
+          { status: 404 }
+        );
+      }
+
+      const attemptsResult = await pool.query(
+        `
+          SELECT
+            ta.id,
+            ta.test_id,
+            ta.scheduled_test_id,
+            ta.score,
+            ta.total_marks,
+            ta.correct_count,
+            ta.incorrect_count,
+            ta.unanswered_count,
+            ta.status,
+            ta.started_at,
+            ta.submitted_at,
+            COALESCE(
+              p.description,
+              st.title,
+              CONCAT('Test ', LEFT(ta.test_id::text, 8))
+            ) AS test_title
+          FROM test_attempts ta
+          LEFT JOIN LATERAL (
+            SELECT
+              st.id,
+              st.title,
+              st.paper_id
+            FROM scheduled_tests st
+            WHERE st.test_id::text = ta.test_id::text
+              AND st.academy_id::text = $2::text
+            ORDER BY st.start_time DESC NULLS LAST
+            LIMIT 1
+          ) st ON TRUE
+          LEFT JOIN papers p
+            ON p.id::text = st.paper_id::text
+           AND p.academy_id::text = $2::text
+          WHERE ta.student_id::text = $1::text
+            AND ${completedStatuses}
+          ORDER BY ta.submitted_at DESC NULLS LAST, ta.started_at DESC NULLS LAST
+        `,
+        [studentId, teacher.academy_id]
+      );
+
+      return NextResponse.json({
+        success: true,
+        student: studentResult.rows[0],
+        attempts: attemptsResult.rows,
+      });
+    }
 
     const result = await pool.query(
       `

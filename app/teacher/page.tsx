@@ -108,7 +108,7 @@ export default function TeacherPage() {
             {/* STUDENT PERFORMANCE */}
             <button
               type="button"
-              onClick={() => router.push("/teacher/students")}
+              onClick={() => router.push("/teacher/performance")}
               className="rounded-xl border border-[#e2e6ee] bg-white px-4 py-2.5 text-sm font-bold text-[#315bea] hover:bg-[#f7f9ff]"
             >
               📊 Student Performance
