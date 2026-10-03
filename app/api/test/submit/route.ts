@@ -1,6 +1,7 @@
 
 import { NextRequest, NextResponse } from "next/server";
 import { Pool } from "pg";
+import { parseSessionCookie } from "@/lib/session";
 
 export const dynamic = "force-dynamic";
 
@@ -255,40 +256,14 @@ export async function POST(request: NextRequest) {
       request.cookies.get("student_session")?.value;
 
     if (sessionCookie) {
-      try {
-        const decoded = decodeURIComponent(sessionCookie);
+      const session = parseSessionCookie<{
+        studentId?: unknown;
+        academyId?: unknown;
+      }>(sessionCookie);
 
-        try {
-          const parsed = JSON.parse(decoded);
-
-          const cookieStudentId = String(
-            parsed?.studentId ?? ""
-          ).trim();
-
-          if (cookieStudentId) {
-            studentId = cookieStudentId;
-          }
-
-          const cookieAcademyId = String(
-            parsed?.academyId ?? ""
-          ).trim();
-
-          if (cookieAcademyId) {
-            academyId = cookieAcademyId;
-          }
-        } catch {
-          const directStudentId = decoded.trim();
-
-          if (directStudentId) {
-            studentId = directStudentId;
-          }
-        }
-      } catch {
-        const directStudentId = sessionCookie.trim();
-
-        if (directStudentId) {
-          studentId = directStudentId;
-        }
+      if (session) {
+        studentId = String(session.studentId ?? "").trim();
+        academyId = String(session.academyId ?? "").trim();
       }
     }
 
