@@ -95,7 +95,9 @@ export async function POST(request: Request) {
       );
     }
 
-    const form = await request.formData();
+    const form = (await request.formData()) as unknown as {
+      get(name: string): unknown;
+    };
     const file = form.get("file");
     const batchId = String(form.get("batchId") || "").trim();
 

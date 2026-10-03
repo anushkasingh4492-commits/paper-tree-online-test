@@ -4,6 +4,7 @@ import { pool } from "@/lib/db";
 import { parseSessionCookie } from "@/lib/session";
 import { ensureFeatureSchema } from "@/lib/feature-schema";
 import { getStudentGamification } from "@/lib/gamification";
+import { getAcademySubscription } from "@/lib/subscription";
 
 export const runtime = "nodejs";
 
@@ -50,6 +51,14 @@ export async function GET(request: Request) {
     if (!teacher.academy_id) {
       return NextResponse.json(
         { success: false, error: "This teacher is not assigned to an academy." },
+        { status: 403 }
+      );
+    }
+
+    const subscription = await getAcademySubscription(String(teacher.academy_id));
+    if (!subscription.features.completeStudentReports) {
+      return NextResponse.json(
+        { success: false, error: "Student performance reports are not available for this academy." },
         { status: 403 }
       );
     }

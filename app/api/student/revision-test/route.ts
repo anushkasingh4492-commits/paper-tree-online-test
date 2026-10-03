@@ -4,6 +4,7 @@ import { randomUUID } from "crypto";
 import { pool } from "@/lib/db";
 import { parseSessionCookie } from "@/lib/session";
 import { ensureFeatureSchema } from "@/lib/feature-schema";
+import { getAcademySubscription } from "@/lib/subscription";
 
 export const runtime = "nodejs";
 
@@ -15,6 +16,11 @@ export async function POST() {
     const studentId = String(session?.studentId ?? "").trim();
     const academyId = String(session?.academyId ?? "").trim();
     if (!studentId || !academyId) return NextResponse.json({ success: false, error: "Student login required." }, { status: 401 });
+
+    const subscription = await getAcademySubscription(academyId);
+    if (!subscription.features.personalizedWeakAreaTests) {
+      return NextResponse.json({ success: false, error: "This personalised revision feature is not available for this academy." }, { status: 403 });
+    }
 
     const examResult = await pool.query(`SELECT t.exam FROM test_attempts ta LEFT JOIN tests t ON t.id = COALESCE(ta.test_id, ta.scheduled_test_id) WHERE ta.student_id = $1 ORDER BY COALESCE(ta.submitted_at, ta.started_at, ta.created_at) DESC LIMIT 1`, [studentId]);
     const exam = String(examResult.rows[0]?.exam || "MHT-CET");

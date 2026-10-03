@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const { neon } = require("@neondatabase/serverless");
+const { Pool } = require("pg");
 require("dotenv").config({ path: ".env.local" });
 
 if (!process.env.DATABASE_URL) {
@@ -8,7 +8,54 @@ if (!process.env.DATABASE_URL) {
   process.exit(1);
 }
 
-const sql = neon(process.env.DATABASE_URL);
+/*
+ * Use the same PostgreSQL TCP connection approach as the working
+ * Next.js API instead of @neondatabase/serverless HTTP.
+ *
+ * The sql() compatibility helper below keeps the existing
+ * sql`... ${value} ...` syntax used throughout this importer.
+ */
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false,
+  },
+});
+
+/*
+ * Compatibility wrapper for the existing Neon tagged-template
+ * syntax.
+ *
+ * Example:
+ *
+ * sql`
+ *   SELECT *
+ *   FROM questions
+ *   WHERE subject = ${subject}
+ * `
+ *
+ * becomes:
+ *
+ * SELECT *
+ * FROM questions
+ * WHERE subject = $1
+ *
+ * with [subject] passed separately.
+ */
+async function sql(strings, ...values) {
+  let text = strings[0];
+
+  for (let i = 0; i < values.length; i++) {
+    text += `$${i + 1}`;
+    text += strings[i + 1];
+  }
+
+  const result = await pool.query(text, values);
+
+  // Return rows so existing code such as result.map(...)
+  // continues to work.
+  return result.rows;
+}
 
 const DATASETS = [
   {
@@ -37,7 +84,9 @@ async function queryWithRetry(queryFn) {
     try {
       return await queryFn();
     } catch (error) {
-      if (attempt === RETRIES) throw error;
+      if (attempt === RETRIES) {
+        throw error;
+      }
 
       console.log(
         `  Database error. Retry ${attempt}/${RETRIES}...`
@@ -91,6 +140,7 @@ function safeInteger(value) {
 
   return Number.isInteger(n) ? n : null;
 }
+
 function getChapterNumber(q) {
   // Chemistry: unit_number is already numeric
   if (q.unit_number != null) {
@@ -141,11 +191,19 @@ function getMajorTopic(q) {
 
 function getFigureAsset(q) {
   if (q.figure_asset) {
-    return String(q.figure_asset);
+    return String(q.figure_asset).trim();
   }
 
   if (Array.isArray(q.figures) && q.figures.length > 0) {
-    return JSON.stringify(q.figures);
+    const firstFigure = q.figures.find(
+      (figure) =>
+        typeof figure === "string" &&
+        figure.trim()
+    );
+
+    return firstFigure
+      ? String(firstFigure).trim()
+      : null;
   }
 
   return null;
@@ -334,18 +392,45 @@ async function getExistingIds(subject) {
   );
 }
 
+async function repairExistingFigureAsset(q, subject) {
+  const figureAsset = getFigureAsset(q);
+
+  if (!figureAsset) {
+    return;
+  }
+
+  await queryWithRetry(() =>
+    sql`
+      UPDATE questions
+      SET figure_asset = ${figureAsset}
+      WHERE id = ${String(q.id)}
+        AND exam = 'NEET'
+        AND subject = ${subject}
+        AND (
+          figure_asset IS NULL
+          OR figure_asset LIKE '[%'
+          OR figure_asset LIKE '{%'
+        )
+    `
+  );
+}
+
 async function main() {
   console.log("========================================");
   console.log(" PAPER TREE ONLINE TEST");
   console.log(" NEET QUESTION IMPORT");
-  console.log(" NEON HTTP RESUMABLE MODE");
+  console.log(" POSTGRES TCP MODE");
   console.log("========================================\n");
 
+  /*
+   * Test the same PostgreSQL connection mechanism
+   * that the application uses.
+   */
   const connectionTest = await sql`
     SELECT NOW() AS time
   `;
 
-  console.log("DATABASE HTTP CONNECTION: OK");
+  console.log("DATABASE CONNECTION: OK");
   console.log(
     `Database time: ${connectionTest[0].time}\n`
   );
@@ -382,11 +467,47 @@ async function main() {
       `Already in database: ${existingIds.size}`
     );
 
-    const remaining =
-      eligible.filter(
-        (q) =>
-          !existingIds.has(String(q.id))
+    /*
+     * Repair figure_asset values for questions that
+     * are already in the database.
+     *
+     * This fixes old rows where figure_asset may have
+     * been stored as a JSON array/object string.
+     */
+    let repairedFigures = 0;
+
+    for (const rawQuestion of eligible) {
+      const figureAsset = getFigureAsset(rawQuestion);
+
+      if (!figureAsset) {
+        continue;
+      }
+
+      if (!existingIds.has(String(rawQuestion.id))) {
+        continue;
+      }
+
+      await repairExistingFigureAsset(
+        rawQuestion,
+        dataset.subject
       );
+
+      repairedFigures++;
+    }
+
+    if (repairedFigures > 0) {
+      console.log(
+        `Figure assets checked/repaired: ${repairedFigures}`
+      );
+    }
+
+    /*
+     * Only import eligible questions that are not
+     * already present in the database.
+     */
+    const remaining = eligible.filter(
+      (q) => !existingIds.has(String(q.id))
+    );
 
     console.log(
       `Remaining to import: ${remaining.length}`
@@ -485,8 +606,12 @@ async function main() {
   console.table(counts);
 }
 
-main().catch((error) => {
-  console.error("\nIMPORT FAILED");
-  console.error(error);
-  process.exitCode = 1;
-});
+main()
+  .catch((error) => {
+    console.error("\nIMPORT FAILED");
+    console.error(error);
+    process.exitCode = 1;
+  })
+  .finally(async () => {
+    await pool.end();
+  });

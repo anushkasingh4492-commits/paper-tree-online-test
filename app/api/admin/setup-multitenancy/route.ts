@@ -57,7 +57,9 @@ export async function GET() {
       ADD COLUMN IF NOT EXISTS subscription_start DATE,
       ADD COLUMN IF NOT EXISTS subscription_end DATE,
       ADD COLUMN IF NOT EXISTS subscription_plan VARCHAR(255),
-      ADD COLUMN IF NOT EXISTS logo_data TEXT
+      ADD COLUMN IF NOT EXISTS subscription_tier VARCHAR(20) DEFAULT 'GOLD',
+      ADD COLUMN IF NOT EXISTS logo_data TEXT,
+      ADD COLUMN IF NOT EXISTS domain VARCHAR(255)
     `);
 
     await client.query(`

@@ -4,6 +4,7 @@ import { randomUUID } from "crypto";
 import { pool } from "@/lib/db";
 import { parseSessionCookie } from "@/lib/session";
 import { ensureFeatureSchema } from "@/lib/feature-schema";
+import { getAcademySubscription } from "@/lib/subscription";
 
 export const runtime = "nodejs";
 
@@ -16,6 +17,11 @@ export async function POST(request: Request) {
 
     const teacher = (await pool.query(`SELECT id, academy_id FROM teachers WHERE id = $1 LIMIT 1`, [session.id])).rows[0];
     if (!teacher?.academy_id) return NextResponse.json({ success: false, error: "Teacher academy not found." }, { status: 403 });
+
+    const subscription = await getAcademySubscription(String(teacher.academy_id));
+    if (!subscription.features.customQuestions) {
+      return NextResponse.json({ success: false, error: "Custom question creation is not available for this academy." }, { status: 403 });
+    }
 
     const body = await request.json();
     const stem = String(body.stem || "").trim();

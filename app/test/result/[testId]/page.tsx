@@ -174,7 +174,29 @@ function getCorrectAnswer(question: any): number | null {
 
   return null;
 }
+function getFigureSrc(value: unknown): string | null {
+  if (typeof value !== "string" || !value.trim()) {
+    return null;
+  }
 
+  const asset = value.trim();
+
+  if (/^(https?:|data:|blob:)/i.test(asset)) {
+    return asset;
+  }
+
+  if (asset.startsWith("/api/")) {
+    return asset;
+  }
+
+  if (asset.startsWith("/figures/")) {
+    return asset;
+  }
+
+  return `/api/question-asset?path=${encodeURIComponent(
+    asset.replace(/^\/+/, "")
+  )}`;
+}
 function normalizeResultQuestion(
   question: any,
   index: number
@@ -224,11 +246,12 @@ function normalizeResultQuestion(
       question?.answer_explanation ??
       null,
 
-    figureAsset:
-      question?.figureAsset ??
-      question?.figure_asset ??
-      question?.figure ??
-      null,
+   figureAsset: getFigureSrc(
+  question?.figureAsset ??
+    question?.figure_asset ??
+    question?.figure ??
+    null
+),
   };
 }
 
@@ -3122,16 +3145,25 @@ if (ctx === null) {
                               ⏱ {Math.floor(Number(result.timeSpent?.[question.id] || 0) / 60)}m {Number(result.timeSpent?.[question.id] || 0) % 60}s
                             </span>
                           </div>
+<div className="mt-4 rounded-2xl bg-slate-50 border border-slate-100 p-5">
+  <div className="text-sm sm:text-base font-medium leading-7 text-slate-800">
+    <MathText
+      text={question.question}
+    />
+  </div>
 
-                          <div className="mt-4 rounded-2xl bg-slate-50 border border-slate-100 p-5">
-                            <div className="text-sm sm:text-base font-medium leading-7 text-slate-800">
-                              <MathText
-                                text={
-                                  question.question
-                                }
-                              />
-                            </div>
-                          </div>
+  {question.figureAsset && (
+    <div className="mt-5 flex justify-center">
+      <img
+        src={question.figureAsset}
+        alt={`Figure for question ${
+          question.number || index + 1
+        }`}
+        className="max-w-full max-h-[420px] w-auto h-auto object-contain rounded-xl border border-slate-200 bg-white p-3"
+      />
+    </div>
+  )}
+</div>
                         </div>
                       </div>
 

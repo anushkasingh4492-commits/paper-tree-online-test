@@ -3,6 +3,7 @@ import { cookies } from "next/headers";
 import { pool } from "@/lib/db";
 import { parseSessionCookie } from "@/lib/session";
 import { ensureFeatureSchema } from "@/lib/feature-schema";
+import { getAcademySubscription } from "@/lib/subscription";
 
 export const runtime = "nodejs";
 
@@ -22,6 +23,11 @@ export async function POST(request: Request) {
     const student = (await pool.query(`SELECT id, name, parent_name, parent_phone, academy_id FROM students WHERE id = $1 LIMIT 1`, [studentId])).rows[0];
     if (!student) return NextResponse.json({ success: false, error: "Student not found." }, { status: 404 });
     if (session.academyId && String(student.academy_id) !== String(session.academyId)) return NextResponse.json({ success: false, error: "Student is outside your academy." }, { status: 403 });
+
+    const subscription = await getAcademySubscription(String(student.academy_id));
+    if (!subscription.features.parentWhatsAppReports) {
+      return NextResponse.json({ success: false, error: "WhatsApp parent reports are not available for this academy." }, { status: 403 });
+    }
 
     const summaryResponse = await fetch(new URL(`/api/ai/parent-summary?studentId=${encodeURIComponent(studentId)}`, request.url), {
       headers: { cookie: request.headers.get("cookie") || "" },

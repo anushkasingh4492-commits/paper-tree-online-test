@@ -19,6 +19,7 @@ type Academy = {
   student_count: number;
   batch_count?: number;
   subscription_plan?: string;
+  subscription_tier?: "BRONZE" | "SILVER" | "GOLD";
   student_limit?: number;
   subscription_start?: string;
   subscription_end?: string;
@@ -148,6 +149,9 @@ const [resettingAdmin, setResettingAdmin] = useState(false);
 
   const [subscriptionMonths, setSubscriptionMonths] =
     useState("12");
+
+  const [subscriptionTier, setSubscriptionTier] =
+    useState<"BRONZE" | "SILVER" | "GOLD">("GOLD");
 
   const [startDate, setStartDate] = useState(
     new Date().toISOString().slice(0, 10)
@@ -430,8 +434,9 @@ useEffect(() => {
             adminEmail,
             adminPassword,
 
+            subscriptionTier,
             subscriptionPlan:
-              `${subscriptionSeats} Students · ${subscriptionMonths} Months`,
+              `${subscriptionTier} · ${subscriptionSeats} Students · ${subscriptionMonths} Months`,
 
             studentLimit:
               Number(subscriptionSeats),
@@ -903,6 +908,10 @@ async function resetAcademyAdmin(adminId: string) {
       )
     );
 
+    setModalValue3(
+      selectedAcademy.subscription_tier || "GOLD"
+    );
+
     setModalValue2(
       selectedAcademy.subscription_end
         ? toDateInput(
@@ -934,6 +943,7 @@ async function resetAcademyAdmin(adminId: string) {
       {
         studentLimit: seats,
         subscriptionEnd: modalValue2,
+        subscriptionTier: modalValue3,
       },
       "🎟️ Subscription updated successfully"
     );
@@ -1397,6 +1407,19 @@ async function resetAcademyAdmin(adminId: string) {
               placeholder="50"
               type="number"
             />
+
+            <label className="text-xs font-bold">
+              Plan tier
+              <select
+                value={subscriptionTier}
+                onChange={(e) => setSubscriptionTier(e.target.value as "BRONZE" | "SILVER" | "GOLD")}
+                className="mt-1 w-full rounded-xl border border-[#dfe4ed] bg-white px-3 py-3 text-sm"
+              >
+                <option value="BRONZE">Bronze</option>
+                <option value="SILVER">Silver</option>
+                <option value="GOLD">Gold</option>
+              </select>
+            </label>
 
             <Field
               label="Subscription months"
@@ -3013,10 +3036,7 @@ function SubscriptionPanel({
         <BigStat
           icon="🎟️"
           label="Plan"
-          value={
-            academy.subscription_plan ||
-            "Custom"
-          }
+          value={academy.subscription_tier || "GOLD"}
           sub="Current plan"
         />
 
@@ -3354,6 +3374,19 @@ function Modal({
               placeholder="50"
               type="number"
             />
+
+            <label className="text-xs font-bold">
+              Plan tier
+              <select
+                value={value3 || "GOLD"}
+                onChange={(e) => setValue3(e.target.value)}
+                className="mt-1 w-full rounded-xl border px-3 py-3 bg-white"
+              >
+                <option value="BRONZE">Bronze</option>
+                <option value="SILVER">Silver</option>
+                <option value="GOLD">Gold</option>
+              </select>
+            </label>
 
             <label className="text-xs font-bold">
               Subscription end

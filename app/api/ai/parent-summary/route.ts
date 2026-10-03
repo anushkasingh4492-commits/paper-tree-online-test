@@ -4,6 +4,7 @@ import { pool } from "@/lib/db";
 import { parseSessionCookie } from "@/lib/session";
 import { ensureFeatureSchema } from "@/lib/feature-schema";
 import { getStudentGamification } from "@/lib/gamification";
+import { getAcademySubscription } from "@/lib/subscription";
 
 export const runtime = "nodejs";
 
@@ -30,6 +31,11 @@ export async function GET(request: Request) {
     const student = studentResult.rows[0];
     if (!student) return NextResponse.json({ success: false, error: "Student not found." }, { status: 404 });
     if (actor.staff && actor.academyId && String(student.academy_id) !== actor.academyId) return NextResponse.json({ success: false, error: "Student is outside your academy." }, { status: 403 });
+
+    const subscription = await getAcademySubscription(String(student.academy_id));
+    if (!subscription.features.aiPerformanceSummaries) {
+      return NextResponse.json({ success: false, error: "AI performance summaries are not available for this academy." }, { status: 403 });
+    }
 
     const game = await getStudentGamification(studentId, String(student.academy_id));
     const monthStart = new Date();

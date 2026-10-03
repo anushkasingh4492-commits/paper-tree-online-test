@@ -3,6 +3,7 @@ import { cookies } from "next/headers";
 import { pool } from "@/lib/db";
 import { parseSessionCookie } from "@/lib/session";
 import bcrypt from "bcryptjs";
+import { ensureSubscriptionSchema, normalizeSubscriptionTier } from "@/lib/subscription";
 
 async function isMasterAdmin() {
   const value =
@@ -38,6 +39,8 @@ async function ensureAcademySettingsColumns() {
       ADD COLUMN IF NOT EXISTS subscription_plan VARCHAR(255)
   `);
 
+  await ensureSubscriptionSchema();
+
   await pool.query(`
     ALTER TABLE academies
       ADD COLUMN IF NOT EXISTS subscription_start DATE
@@ -46,6 +49,11 @@ async function ensureAcademySettingsColumns() {
   await pool.query(`
     ALTER TABLE academies
       ADD COLUMN IF NOT EXISTS subscription_end DATE
+  `);
+
+  await pool.query(`
+    ALTER TABLE academies
+      ADD COLUMN IF NOT EXISTS domain VARCHAR(255)
   `);
 
   await pool.query(`
@@ -76,6 +84,7 @@ export async function GET() {
         a.subscription_start,
         a.subscription_end,
         a.subscription_plan,
+        a.subscription_tier,
        a.logo_data,
 a.domain,
 COUNT(DISTINCT t.id)::int AS teacher_count,
@@ -95,6 +104,7 @@ COUNT(DISTINCT t.id)::int AS teacher_count,
   a.subscription_start,
   a.subscription_end,
   a.subscription_plan,
+  a.subscription_tier,
   a.domain
       ORDER BY a.created_at DESC
     `);
@@ -139,8 +149,9 @@ export async function POST(req: NextRequest) {
     .trim()
     .toLowerCase();
   const adminPassword = String(body.adminPassword || "");
-  const subscriptionPlan = String(body.subscriptionPlan || "Custom").trim();
+  const subscriptionTier = normalizeSubscriptionTier(body.subscriptionTier);
   const studentLimit = Number(body.studentLimit);
+  const subscriptionPlan = String(body.subscriptionPlan || `${subscriptionTier} · ${studentLimit} Students`).trim();
   const subscriptionStart = String(body.subscriptionStart || "").trim();
   const subscriptionEnd = String(body.subscriptionEnd || "").trim();
 
@@ -203,13 +214,14 @@ export async function POST(req: NextRequest) {
         name,
         code,
         subscription_plan,
+        subscription_tier,
         student_limit,
         subscription_start,
         subscription_end
       )
-      VALUES ($1, $2, $3, $4, $5, $6, $7)
+      VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
       `,
-      [academyId, academyName, academyCode, subscriptionPlan, studentLimit, subscriptionStart, subscriptionEnd]
+      [academyId, academyName, academyCode, subscriptionPlan, subscriptionTier, studentLimit, subscriptionStart, subscriptionEnd]
     );
 
     const adminId = crypto.randomUUID();

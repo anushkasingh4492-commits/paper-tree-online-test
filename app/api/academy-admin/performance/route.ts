@@ -1,0 +1,223 @@
+import { NextResponse } from "next/server";
+import { cookies } from "next/headers";
+import { pool } from "@/lib/db";
+import { parseSessionCookie } from "@/lib/session";
+import { ensureFeatureSchema } from "@/lib/feature-schema";
+import { getStudentGamification } from "@/lib/gamification";
+
+export const runtime = "nodejs";
+
+type AdminSession = {
+  id?: string;
+  role?: string;
+  academyId?: string;
+};
+
+async function getAcademyId() {
+  const value = (await cookies()).get("master_session")?.value;
+  const session = value
+    ? parseSessionCookie<AdminSession>(value)
+    : null;
+
+  if (!session?.academyId || session.role !== "ACADEMY_ADMIN") {
+    return null;
+  }
+
+  return String(session.academyId);
+}
+
+export async function GET(request: Request) {
+  try {
+    await ensureFeatureSchema();
+    const academyId = await getAcademyId();
+
+    if (!academyId) {
+      return NextResponse.json(
+        { success: false, error: "Academy admin login required." },
+        { status: 401 }
+      );
+    }
+
+    const completedStatuses = `
+      LOWER(REPLACE(COALESCE(ta.status, ''), '-', '_')) IN
+      ('submitted', 'auto_submitted', 'auto submitted', 'completed', 'complete')
+    `;
+
+    const studentId = new URL(request.url).searchParams.get("studentId")?.trim();
+
+    if (studentId) {
+      const studentResult = await pool.query(
+        `
+          SELECT id, name, email
+          FROM students
+          WHERE id::text = $1::text
+            AND academy_id::text = $2::text
+          LIMIT 1
+        `,
+        [studentId, academyId]
+      );
+
+      if (!studentResult.rows.length) {
+        return NextResponse.json(
+          { success: false, error: "Student not found in this academy." },
+          { status: 404 }
+        );
+      }
+
+      const attemptsResult = await pool.query(
+        `
+          SELECT
+            ta.id,
+            ta.test_id,
+            ta.scheduled_test_id,
+            ta.score,
+            ta.total_marks,
+            ta.correct_count,
+            ta.incorrect_count,
+            ta.unanswered_count,
+            ta.status,
+            ta.started_at,
+            ta.submitted_at,
+            COALESCE(
+              p.description,
+              st.title,
+              CONCAT('Test ', LEFT(ta.test_id::text, 8))
+            ) AS test_title
+          FROM test_attempts ta
+          LEFT JOIN LATERAL (
+            SELECT st.id, st.title, st.paper_id
+            FROM scheduled_tests st
+            WHERE st.test_id::text = ta.test_id::text
+              AND st.academy_id::text = $2::text
+            ORDER BY st.start_time DESC NULLS LAST
+            LIMIT 1
+          ) st ON TRUE
+          LEFT JOIN papers p
+            ON p.id::text = st.paper_id::text
+           AND p.academy_id::text = $2::text
+          WHERE ta.student_id::text = $1::text
+            AND ${completedStatuses}
+          ORDER BY ta.submitted_at DESC NULLS LAST, ta.started_at DESC NULLS LAST
+        `,
+        [studentId, academyId]
+      );
+
+      return NextResponse.json({
+        success: true,
+        student: studentResult.rows[0],
+        attempts: attemptsResult.rows,
+      });
+    }
+
+    const result = await pool.query(
+      `
+        SELECT
+          s.id,
+          s.name,
+          s.email,
+          s.parent_phone,
+          COALESCE(perf.tests_taken, 0)::int AS tests_taken,
+          COALESCE(perf.average_percentage, 0) AS average_percentage,
+          COALESCE(perf.best_percentage, 0) AS best_percentage,
+          COALESCE(perf.correct_answers, 0)::int AS correct_answers,
+          COALESCE(perf.wrong_answers, 0)::int AS wrong_answers,
+          COALESCE(perf.unanswered_questions, 0)::int AS unanswered_questions,
+          COALESCE(
+            STRING_AGG(DISTINCT b.name, ', ' ORDER BY b.name),
+            'Not assigned'
+          ) AS batches
+        FROM students s
+        LEFT JOIN batch_students bs ON bs.student_id = s.id
+        LEFT JOIN batches b
+          ON b.id = bs.batch_id
+         AND b.academy_id = $1
+        LEFT JOIN (
+          SELECT
+            ta.student_id,
+            COUNT(ta.id) FILTER (WHERE ${completedStatuses})::int AS tests_taken,
+            COALESCE(
+              ROUND(
+                AVG(
+                  CASE
+                    WHEN ${completedStatuses}
+                     AND COALESCE(ta.total_marks, 0) > 0
+                    THEN (ta.score::numeric / ta.total_marks::numeric) * 100
+                  END
+                )::numeric,
+                2
+              ),
+              0
+            ) AS average_percentage,
+            COALESCE(
+              ROUND(
+                MAX(
+                  CASE
+                    WHEN ${completedStatuses}
+                     AND COALESCE(ta.total_marks, 0) > 0
+                    THEN (ta.score::numeric / ta.total_marks::numeric) * 100
+                  END
+                )::numeric,
+                2
+              ),
+              0
+            ) AS best_percentage,
+            COALESCE(SUM(CASE WHEN ${completedStatuses} THEN COALESCE(ta.correct_count, 0) ELSE 0 END), 0)::int AS correct_answers,
+            COALESCE(SUM(CASE WHEN ${completedStatuses} THEN COALESCE(ta.incorrect_count, 0) ELSE 0 END), 0)::int AS wrong_answers,
+            COALESCE(SUM(CASE WHEN ${completedStatuses} THEN COALESCE(ta.unanswered_count, 0) ELSE 0 END), 0)::int AS unanswered_questions
+          FROM test_attempts ta
+          GROUP BY ta.student_id
+        ) perf ON perf.student_id = s.id
+        WHERE s.academy_id = $1
+        GROUP BY s.id, s.name, s.email, s.parent_phone,
+          perf.tests_taken, perf.average_percentage, perf.best_percentage,
+          perf.correct_answers, perf.wrong_answers, perf.unanswered_questions
+        ORDER BY s.name ASC
+      `,
+      [academyId]
+    );
+
+    const students = await Promise.all(result.rows.map(async (row) => {
+      const correct = Number(row.correct_answers || 0);
+      const wrong = Number(row.wrong_answers || 0);
+      const attempted = correct + wrong;
+      let game = null;
+
+      try {
+        game = await getStudentGamification(String(row.id), academyId);
+      } catch (error) {
+        console.error("ACADEMY ADMIN GAMIFICATION ERROR", row.id, error);
+      }
+
+      return {
+        id: String(row.id),
+        name: row.name,
+        email: row.email,
+        parentPhone: row.parent_phone || null,
+        batches: row.batches || "Not assigned",
+        testsTaken: Number(row.tests_taken || 0),
+        averagePercentage: Number(row.average_percentage || 0),
+        bestPercentage: Number(row.best_percentage || 0),
+        correctAnswers: correct,
+        wrongAnswers: wrong,
+        unansweredQuestions: Number(row.unanswered_questions || 0),
+        accuracy: attempted > 0 ? Number(((correct / attempted) * 100).toFixed(2)) : 0,
+        level: game?.level ?? 1,
+        levelName: game?.levelName ?? "Rookie",
+        currentStreak: game?.streak ?? 0,
+        lastActiveDate: game?.lastActiveDate ?? null,
+        badgesEarned: game?.badges?.filter((b) => b.earned).length ?? 0,
+      };
+    }));
+
+    return NextResponse.json({ success: true, students });
+  } catch (error) {
+    console.error("ACADEMY ADMIN PERFORMANCE ERROR", error);
+    return NextResponse.json(
+      {
+        success: false,
+        error: error instanceof Error ? error.message : "Could not load student performance.",
+      },
+      { status: 500 }
+    );
+  }
+}

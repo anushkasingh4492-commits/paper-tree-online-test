@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { pool } from "@/lib/db";
 import { parseSessionCookie } from "@/lib/session";
+import { ensureSubscriptionSchema, normalizeSubscriptionTier } from "@/lib/subscription";
 export async function PATCH(
   req: Request,
   { params }: { params: Promise<{ academyId: string }> }
@@ -44,6 +45,8 @@ export async function PATCH(
     }
 
     const body = await req.json();
+
+    await ensureSubscriptionSchema();
 
     // Make sure branding columns exist.
     await pool.query(`
@@ -98,6 +101,11 @@ export async function PATCH(
       values.push(studentLimit);
     }
 
+    if (body.subscriptionTier !== undefined) {
+      updates.push(`subscription_tier = $${values.length + 1}`);
+      values.push(normalizeSubscriptionTier(body.subscriptionTier));
+    }
+
     if (body.subscriptionEnd !== undefined) {
       updates.push(
         `subscription_end = $${values.length + 1}`
@@ -134,7 +142,8 @@ export async function PATCH(
         domain,
         status,
         student_limit,
-        subscription_end
+        subscription_end,
+        subscription_tier
       `,
       values
     );

@@ -55,6 +55,14 @@ export default function TeacherPerformancePage() {
   const [attempts, setAttempts] = useState<StudentAttempt[]>([]);
   const [attemptLoading, setAttemptLoading] = useState(false);
   const [attemptError, setAttemptError] = useState("");
+  const [features, setFeatures] = useState<{ aiPerformanceSummaries: boolean; parentWhatsAppReports: boolean } | null>(null);
+
+  useEffect(() => {
+    void fetch("/api/academy/tier", { cache: "no-store", credentials: "include" })
+      .then((response) => response.json())
+      .then((data) => { if (data?.success) setFeatures(data.features); })
+      .catch(() => undefined);
+  }, []);
 
   useEffect(() => {
     let cancelled = false;
@@ -388,7 +396,7 @@ export default function TeacherPerformancePage() {
                       <td className="px-4 py-5 text-center text-xs font-medium text-slate-500">{student.lastActiveDate || "—"}</td>
                       <td className="px-4 py-5 text-center">
                         <div className="flex justify-center gap-2">
-                          <button type="button" onClick={async () => {
+                          {features?.aiPerformanceSummaries && <button type="button" onClick={async () => {
                             setSending(student.id);
                             try {
                               const response = await fetch(`/api/ai/parent-summary?studentId=${encodeURIComponent(student.id)}`, { cache: "no-store" });
@@ -396,8 +404,8 @@ export default function TeacherPerformancePage() {
                               if (!response.ok || !data.success) throw new Error(data.error || "Could not create summary.");
                               setReport({ studentId: student.id, text: data.summary });
                             } catch (error) { setError(error instanceof Error ? error.message : "Could not create summary."); } finally { setSending(null); }
-                          }} className="rounded-lg border border-violet-200 bg-violet-50 px-2.5 py-1.5 text-[10px] font-bold text-violet-700">{sending === student.id ? "..." : "AI Summary"}</button>
-                          <button type="button" onClick={async () => {
+                          }} className="rounded-lg border border-violet-200 bg-violet-50 px-2.5 py-1.5 text-[10px] font-bold text-violet-700">{sending === student.id ? "..." : "AI Summary"}</button>}
+                          {features?.parentWhatsAppReports && <button type="button" onClick={async () => {
                             setSending(student.id);
                             try {
                               const response = await fetch("/api/whatsapp/report", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ studentId: student.id }) });
@@ -405,7 +413,7 @@ export default function TeacherPerformancePage() {
                               if (!response.ok || !data.success) throw new Error(data.error || "Could not create report.");
                               if (data.sent) alert("WhatsApp report sent."); else window.open(data.clickToChat, "_blank", "noopener,noreferrer");
                             } catch (error) { setError(error instanceof Error ? error.message : "Could not create WhatsApp report."); } finally { setSending(null); }
-                          }} className="rounded-lg bg-[#25D366] px-2.5 py-1.5 text-[10px] font-bold text-white">WhatsApp</button>
+                          }} className="rounded-lg bg-[#25D366] px-2.5 py-1.5 text-[10px] font-bold text-white">WhatsApp</button>}
                         </div>
                       </td>
                     </tr>

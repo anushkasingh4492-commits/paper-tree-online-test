@@ -2,6 +2,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Pool } from "pg";
 import { parseSessionCookie } from "@/lib/session";
+import { getAcademyTier, hasTierFeature } from "@/lib/subscription";
 
 export const dynamic = "force-dynamic";
 
@@ -278,6 +279,9 @@ export async function POST(request: NextRequest) {
     }
 
     console.log("SUBMIT STUDENT:", studentId);
+    if (!hasTierFeature(await getAcademyTier(academyId), "TIME_PER_QUESTION")) {
+      for (const key of Object.keys(questionTimes)) delete questionTimes[key];
+    }
 
     /*
      * =======================================================

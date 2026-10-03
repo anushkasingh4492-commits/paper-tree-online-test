@@ -4,6 +4,7 @@ import bcrypt from "bcryptjs";
 import { randomUUID } from "crypto";
 import { pool } from "@/lib/db";
 import { parseSessionCookie } from "@/lib/session";
+import { getAcademySubscription } from "@/lib/subscription";
 
 async function getAcademyAdmin(targetAcademyId?: string) {
   const cookieStore = await cookies();
@@ -71,6 +72,21 @@ export async function POST(req: NextRequest) {
       { success: false, error: "Unauthorized" },
       { status: 401 }
     );
+  }
+
+  const subscription = await getAcademySubscription(String(admin.academyId));
+  if (subscription.limits.teacherLogins !== null) {
+    const countResult = await pool.query(
+      `SELECT COUNT(*)::int AS count FROM teachers WHERE academy_id = $1`,
+      [admin.academyId]
+    );
+    const teacherCount = Number(countResult.rows[0]?.count || 0);
+    if (teacherCount >= subscription.limits.teacherLogins) {
+      return NextResponse.json(
+        { success: false, error: "The academy has reached its teacher login allowance." },
+        { status: 409 }
+      );
+    }
   }
 
   const name = String(body.name || "").trim();

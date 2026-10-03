@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { pool } from "@/lib/db";
 import { parseSessionCookie } from "@/lib/session";
+import { getAcademySubscription } from "@/lib/subscription";
 
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
@@ -61,6 +62,7 @@ export async function GET(
     }
 
     await pool.query("ALTER TABLE scheduled_tests ADD COLUMN IF NOT EXISTS allow_reattempt BOOLEAN NOT NULL DEFAULT FALSE");
+    const subscription = await getAcademySubscription(academyId);
 
     /*
      * -------------------------------------------------------
@@ -348,7 +350,7 @@ for (
       unattempted,
 
    answers,
-timeSpent,
+timeSpent: subscription.features.timeSpentPerQuestion ? timeSpent : {},
 marked,
 marksAwarded,
 correctness,

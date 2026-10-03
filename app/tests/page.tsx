@@ -65,43 +65,6 @@ const COURSE_CONFIG: Record<
   },
 };
 
-const SAMPLE_CHAPTERS: Record<
-  Subject,
-  string[]
-> = {
-  Physics: [
-    "Rotational Motion",
-    "Thermodynamics",
-    "Current Electricity",
-    "Electrostatics",
-    "Semiconductors",
-  ],
-
-  Chemistry: [
-    "Some Basic Concepts of Chemistry",
-    "Chemical Bonding",
-    "Electrochemistry",
-    "Chemical Kinetics",
-    "Biomolecules",
-  ],
-
-  Mathematics: [
-    "Trigonometry",
-    "Straight Line",
-    "Circle",
-    "Probability",
-    "Differentiation",
-  ],
-
-  Biology: [
-    "Biomolecules",
-    "Respiration and Energy Transfer",
-    "Human Nutrition",
-    "Inheritance and Variation",
-    "Molecular Basis of Inheritance",
-  ],
-};
-
 const DIFFICULTIES = [
   "Easy",
   "Challenging",
@@ -696,98 +659,78 @@ setSubjects([
    * KEEP SUBJECTS COMPATIBLE WITH ASSIGNED GROUP
    * ---------------------------------------------------------
    */
+useEffect(() => {
+  if (!studentGroup) {
+    return;
+  }
 
-  useEffect(() => {
-    if (!studentGroup) {
-      return;
+  const allowedSubjects =
+    studentGroup === "PCM"
+      ? ([
+          "Physics",
+          "Chemistry",
+          "Mathematics",
+        ] as Subject[])
+      : ([
+          "Physics",
+          "Chemistry",
+          "Biology",
+        ] as Subject[]);
+
+  setSubjects((previous) => {
+    const validSubjects = previous.filter(
+      (subject) =>
+        allowedSubjects.includes(subject)
+    );
+
+    if (validSubjects.length > 0) {
+      return validSubjects;
     }
 
-    const allowedSubjects =
+    return ["Physics"];
+  });
+
+  setActiveChapterSubject((previous) =>
+    allowedSubjects.includes(previous)
+      ? previous
+      : "Physics"
+  );
+
+  setChaptersBySubject((previous) => ({
+    ...previous,
+
+    Mathematics:
       studentGroup === "PCM"
-        ? ([
-            "Physics",
-            "Chemistry",
-            "Mathematics",
-          ] as Subject[])
-        : ([
-            "Physics",
-            "Chemistry",
-            "Biology",
-          ] as Subject[]);
+        ? previous.Mathematics
+        : [],
 
-    setSubjects(
-      (previous) => {
-        const validSubjects =
-          previous.filter(
-            (subject) =>
-              allowedSubjects.includes(
-                subject
-              )
-          );
+    Biology:
+      studentGroup === "PCB"
+        ? previous.Biology
+        : [],
+  }));
 
-        if (
-          validSubjects.length > 0
-        ) {
-          return validSubjects;
-        }
+  /*
+   * Remove preset if it no longer
+   * belongs to the assigned group.
+   */
+  setSelectedPreset((previous) => {
+    if (!previous) {
+      return null;
+    }
 
-        return ["Physics"];
-      }
-    );
+    const allowedPresetIds =
+      getPresetsForGroup(studentGroup).map(
+        (preset) => preset.id
+      );
 
-    setActiveChapterSubject(
-      (previous) =>
-        allowedSubjects.includes(
-          previous
-        )
-          ? previous
-          : "Physics"
-    );
-
-    setChaptersBySubject(
-      (previous) => ({
-        ...previous,
-
-        Mathematics:
-          studentGroup === "PCM"
-            ? previous.Mathematics
-            : [],
-
-        Biology:
-          studentGroup === "PCB"
-            ? previous.Biology
-            : [],
-      })
-    );
-
-    /*
-     * Remove preset if it no longer
-     * belongs to the assigned group.
-     */
-
-    setSelectedPreset(
-      (previous) => {
-        if (!previous) {
-          return null;
-        }
-
-        const allowedPresetIds =
-          getPresetsForGroup(
-            studentGroup
-          ).map(
-            (preset) =>
-              preset.id
-          );
-
-        return allowedPresetIds.includes(
-          previous.id
-        )
-          ? previous
-          : null;
-      }
-    );
-  }, [studentGroup]);
-
+    return allowedPresetIds.includes(
+      previous.id
+    )
+      ? previous
+      : null;
+  });
+}, [studentGroup]);
   /*
    * ---------------------------------------------------------
    * CHAPTERS FOR ACTIVE SUBJECT
@@ -795,66 +738,46 @@ setSubjects([
    */
 
   const currentSubjectChapters =
-    useMemo(() => {
-      if (!course) {
-        return [];
-      }
+  useMemo(() => {
+    if (!course) {
+      return [];
+    }
 
-      const databaseChapterNames =
-        availableChapters
-          .filter(
-            (item) =>
-              item.exam
+    const databaseChapterNames =
+      availableChapters
+        .filter(
+          (item) =>
+            item.exam
+              .trim()
+              .toLowerCase()
+              .replace(/[_ -]+/g, "") ===
+              course
                 .trim()
                 .toLowerCase()
-                .replace(
-                  /[_ -]+/g,
-                  ""
-                ) ===
-                course
-                  .trim()
-                  .toLowerCase()
-                  .replace(
-                    /[_ -]+/g,
-                    "" 
-                  ) &&
-              item.subject
+                .replace(/[_ -]+/g, "") &&
+            item.subject
+              .trim()
+              .toLowerCase() ===
+              activeChapterSubject
                 .trim()
-                .toLowerCase() ===
-                activeChapterSubject
-                  .trim()
-                  .toLowerCase()
-          )
-          .map(
-            (item) =>
-              item.chapter
-          );
-
-      const uniqueDatabaseChapters =
-        Array.from(
-          new Set(
-            databaseChapterNames
-          )
+                .toLowerCase()
+        )
+        .map(
+          (item) => item.chapter
         );
 
-      if (
-        uniqueDatabaseChapters.length >
-        0
-      ) {
-        return uniqueDatabaseChapters;
-      }
-
-      return (
-        SAMPLE_CHAPTERS[
-          activeChapterSubject
-        ] || []
+    const uniqueDatabaseChapters =
+      Array.from(
+        new Set(databaseChapterNames)
       );
-    }, [
-      availableChapters,
-      activeChapterSubject,
-      course,
-    ]);
 
+    return uniqueDatabaseChapters;
+  }, [
+    availableChapters,
+    activeChapterSubject,
+    course,
+  ]);
+    
   /*
    * ---------------------------------------------------------
    * TOGGLE SUBJECT

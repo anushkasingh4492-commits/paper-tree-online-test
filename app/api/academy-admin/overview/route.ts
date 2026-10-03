@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { pool } from "@/lib/db";
 import { parseSessionCookie } from "@/lib/session";
+import { ensureSubscriptionSchema } from "@/lib/subscription";
 
 export const runtime = "nodejs";
 
@@ -15,9 +16,10 @@ export async function GET() {
   if (session.role !== "ACADEMY_ADMIN" || !session.academyId) return NextResponse.json({ success: false, error: "Unauthorized" }, { status: 401 });
 
   await pool.query("ALTER TABLE academies ADD COLUMN IF NOT EXISTS logo_data TEXT");
+  await ensureSubscriptionSchema();
 
   const [academy, counts, batches, tests] = await Promise.all([
-    pool.query(`SELECT name, code, logo_data, student_limit, subscription_end, status FROM academies WHERE id = $1`, [session.academyId]),
+    pool.query(`SELECT name, code, logo_data, student_limit, subscription_end, subscription_tier, status FROM academies WHERE id = $1`, [session.academyId]),
     pool.query(`SELECT
       (SELECT COUNT(*)::int FROM teachers WHERE academy_id = $1) AS teachers,
       (SELECT COUNT(*)::int FROM students WHERE academy_id = $1) AS students,

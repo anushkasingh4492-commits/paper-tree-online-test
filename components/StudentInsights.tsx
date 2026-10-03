@@ -73,14 +73,17 @@ export default function StudentInsights() {
   const [levelOpen, setLevelOpen] = useState(false);
   const [sharing, setSharing] = useState(false);
   const [category, setCategory] = useState("All");
+  const [canRevisionTest, setCanRevisionTest] = useState<boolean | null>(null);
 
   useEffect(() => {
     Promise.all([
       fetch("/api/student/insights", { cache: "no-store", credentials: "include" }).then((r) => r.json()),
       fetch("/api/academy/branding", { cache: "no-store", credentials: "include" }).then((r) => r.json()).catch(() => null),
-    ]).then(([insights, brand]) => {
+      fetch("/api/academy/tier", { cache: "no-store", credentials: "include" }).then((r) => r.json()).catch(() => null),
+    ]).then(([insights, brand, tier]) => {
       if (insights?.success) setData(insights);
       if (brand?.success) setBranding(brand);
+      if (tier?.success) setCanRevisionTest(Boolean(tier.features?.personalizedWeakAreaTests));
     }).catch(() => undefined).finally(() => setLoading(false));
   }, []);
 
@@ -222,7 +225,9 @@ export default function StudentInsights() {
         <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"><div className="flex items-center gap-2 text-xs font-black uppercase tracking-wider text-slate-400"><Zap size={15}/> XP Power</div><div className="mt-2 text-3xl font-black text-fuchsia-600">{data.points.toLocaleString()}</div><div className="mt-1 text-xs font-semibold text-slate-500">Keep completing challenges</div></div>
       </div>
 
-      <div className="relative overflow-hidden rounded-[26px] border border-cyan-200 bg-gradient-to-r from-cyan-50 via-white to-indigo-50 p-5 shadow-sm"><div className="absolute right-2 top-0 text-8xl opacity-[.05]">⚔️</div><div className="relative flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"><div><div className="text-[10px] font-black uppercase tracking-[.2em] text-cyan-700">Next Mission</div><h3 className="mt-1 text-2xl font-black text-slate-900">⚔️ Conquer your weak chapters</h3><p className="mt-1 text-xs font-semibold text-slate-500">A personalised challenge built from your performance.</p></div><button type="button" onClick={() => void createRevisionTest()} disabled={revisionLoading} className="rounded-xl bg-slate-950 px-5 py-3 text-xs font-black text-white shadow-lg transition hover:-translate-y-1 hover:shadow-xl disabled:opacity-60"><Swords className="mr-2 inline" size={15}/>{revisionLoading ? "BUILDING MISSION..." : "START MISSION"}</button></div>{message && <p className="mt-2 text-xs font-bold text-red-600">{message}</p>}</div>
+      {canRevisionTest !== false && <div className="relative overflow-hidden rounded-[26px] border border-cyan-200 bg-gradient-to-r from-cyan-50 via-white to-indigo-50 p-5 shadow-sm"><div className="absolute right-2 top-0 text-8xl opacity-[.05]">⚔️</div><div className="relative flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"><div><div className="text-[10px] font-black uppercase tracking-[.2em] text-cyan-700">Next Mission</div><h3 className="mt-1 text-2xl font-black text-slate-900">⚔️ Conquer your weak chapters</h3><p className="mt-1 text-xs font-semibold text-slate-500">A personalised challenge built from your performance.</p></div><button type="button" onClick={() => void createRevisionTest()} disabled={revisionLoading} className="rounded-xl bg-slate-950 px-5 py-3 text-xs font-black text-white shadow-lg transition hover:-translate-y-1 hover:shadow-xl disabled:opacity-60"><Swords className="mr-2 inline" size={15}/>{revisionLoading ? "BUILDING MISSION..." : "START MISSION"}</button></div>{message && <p className="mt-2 text-xs font-bold text-red-600">{message}</p>}</div>
+
+      }
 
       <div className="rounded-[30px] border border-slate-200 bg-white p-5 shadow-sm md:p-7">
         <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between"><div><div className="text-[10px] font-black uppercase tracking-[.2em] text-slate-400">Achievement Vault</div><h2 className="mt-1 text-2xl font-black tracking-tight text-slate-950">🏆 Trophy Wall</h2><p className="mt-1 text-xs font-semibold text-slate-500">Earn them. Upgrade them. Show them off.</p></div><div className="text-xs font-black text-slate-400">{earned.length}/{data.badges.length} unlocked</div></div>

@@ -87,6 +87,7 @@ export default function CherryPickPage() {
   const [customDifficulty, setCustomDifficulty] = useState("Medium");
   const [customSolution, setCustomSolution] = useState("");
   const [customSaving, setCustomSaving] = useState(false);
+  const [canCustomQuestions, setCanCustomQuestions] = useState<boolean | null>(null);
 
   /*
    * Load the complete database schema.
@@ -100,6 +101,13 @@ export default function CherryPickPage() {
    * It does NOT depend on the 200-question limit
    * of /api/teacher/questions.
    */
+  useEffect(() => {
+    void fetch("/api/academy/tier", { cache: "no-store", credentials: "include" })
+      .then((response) => response.json())
+      .then((data) => { if (data?.success) setCanCustomQuestions(Boolean(data.features?.customQuestions)); })
+      .catch(() => undefined);
+  }, []);
+
   useEffect(() => {
     async function loadSchema() {
       try {
@@ -288,6 +296,7 @@ export default function CherryPickPage() {
           </p>
         </div>
 
+        {canCustomQuestions !== false && (
         <section className="mb-6 rounded-2xl border border-[#dfe4ee] bg-white p-5 shadow-sm">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <div><h2 className="font-extrabold">Create Your Own Question</h2><p className="mt-1 text-xs text-[#697386]">Write institute-specific questions and immediately add them to your question bank.</p></div>
@@ -316,6 +325,7 @@ export default function CherryPickPage() {
             </div>
           )}
         </section>
+        )}
 
         <section className="mb-6 rounded-2xl border border-[#e5e8ef] bg-white p-5 shadow-sm">
 

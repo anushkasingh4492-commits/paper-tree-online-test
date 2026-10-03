@@ -293,6 +293,31 @@ function MathText({
     </>
   );
 }
+function getFigureSrc(value: unknown): string | null {
+  if (typeof value !== "string" || !value.trim()) {
+    return null;
+  }
+
+  const asset = value.trim();
+
+  if (/^(https?:|data:|blob:)/i.test(asset)) {
+    return asset;
+  }
+
+  if (asset.startsWith("/api/")) {
+    return asset;
+  }
+
+  if (asset.startsWith("/figures/")) {
+    return asset;
+  }
+
+  const relativeAsset = asset.replace(/^\/+/, "");
+
+  return `/api/question-asset?path=${encodeURIComponent(
+    relativeAsset
+  )}`;
+}
 
 /*
  * =========================================================
@@ -953,12 +978,7 @@ export default function TestPage() {
   null;
 
 const figureAsset =
-  typeof rawFigureAsset === "string" &&
-  rawFigureAsset.trim()
-    ? rawFigureAsset.startsWith("/")
-      ? rawFigureAsset
-      : `/${rawFigureAsset}`
-    : null;
+  getFigureSrc(rawFigureAsset);
 
               /*
                * QUESTION TEXT
