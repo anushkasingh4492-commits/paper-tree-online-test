@@ -42,6 +42,8 @@ type ResultData = {
   duration?: number;
   score: number;
   accuracy: number;
+  correctness?: Record<string, boolean | null>;
+  marksAwarded?: Record<string, number>;
 };
 
 type AcademyBranding = {
@@ -674,7 +676,10 @@ export default function TestResultPage() {
           }
         }
 
-        if (!loadedResult) {
+        {
+          // Always refresh a completed result from the server. Local storage
+          // is only a fallback, so stale cached questions cannot hide the
+          // canonical correct answers or metadata.
           const serverResult =
             await fetchJsonSafely(
               `/api/test-result/${encodeURIComponent(
@@ -716,6 +721,27 @@ export default function TestResultPage() {
                   typeof raw.marked ===
                     "object"
                     ? raw.marked
+                    : {},
+
+                correctness:
+                  raw.correctness &&
+                  typeof raw.correctness ===
+                    "object"
+                    ? raw.correctness
+                    : {},
+
+                marksAwarded:
+                  raw.marksAwarded &&
+                  typeof raw.marksAwarded ===
+                    "object"
+                    ? raw.marksAwarded
+                    : {},
+
+                timeSpent:
+                  raw.timeSpent &&
+                  typeof raw.timeSpent ===
+                    "object"
+                    ? raw.timeSpent
                     : {},
 
                 questions:
@@ -942,6 +968,27 @@ export default function TestResultPage() {
               typeof loadedResult.marked ===
                 "object"
                 ? loadedResult.marked
+                : {},
+
+            correctness:
+              loadedResult.correctness &&
+              typeof loadedResult.correctness ===
+                "object"
+                ? loadedResult.correctness
+                : {},
+
+            marksAwarded:
+              loadedResult.marksAwarded &&
+              typeof loadedResult.marksAwarded ===
+                "object"
+                ? loadedResult.marksAwarded
+                : {},
+
+            timeSpent:
+              loadedResult.timeSpent &&
+              typeof loadedResult.timeSpent ===
+                "object"
+                ? loadedResult.timeSpent
                 : {},
 
             questions:
@@ -3065,12 +3112,16 @@ if (ctx === null) {
                   const hasAnswer =
                     selected !== null;
 
+                  const savedCorrectness =
+                    result.correctness?.[question.id];
+
                   const isCorrect =
-                    hasAnswer &&
-                    question.answer !==
-                      null &&
-                    selected ===
-                      question.answer;
+                    savedCorrectness !== undefined &&
+                    savedCorrectness !== null
+                      ? Boolean(savedCorrectness)
+                      : hasAnswer &&
+                        question.answer !== null &&
+                        selected === question.answer;
 
                   const status =
                     isCorrect

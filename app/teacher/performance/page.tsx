@@ -37,6 +37,13 @@ type StudentAttempt = {
   started_at: string | null;
   submitted_at: string | null;
   test_title: string;
+  exam?: string | null;
+  question_count?: number;
+  subjects?: string[];
+  chapters?: string[];
+  difficulties?: string[];
+  question_types?: string[];
+  percentage?: number;
 };
 
 export default function TeacherPerformancePage() {
@@ -471,9 +478,21 @@ export default function TeacherPerformancePage() {
                       const score = Number(attempt.score || 0);
                       const total = Number(attempt.total_marks || 0);
                       const percentage =
-                        total > 0
-                          ? ((score / total) * 100).toFixed(1)
-                          : "0.0";
+                        typeof attempt.percentage === "number"
+                          ? attempt.percentage.toFixed(1)
+                          : total > 0
+                            ? ((score / total) * 100).toFixed(1)
+                            : "0.0";
+
+                      const subjects = attempt.subjects?.length
+                        ? attempt.subjects.join(", ")
+                        : attempt.exam || "Subject unavailable";
+                      const chapters = attempt.chapters?.length
+                        ? attempt.chapters.join(", ")
+                        : "Chapter unavailable";
+                      const difficulties = attempt.difficulties?.length
+                        ? attempt.difficulties.join(", ")
+                        : "Difficulty unavailable";
 
                       return (
                         <div
@@ -504,12 +523,32 @@ export default function TeacherPerformancePage() {
                             </div>
                           </div>
 
+                          <div className="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2">
+                            <div className="rounded-lg bg-[#f7f8fc] px-3 py-2">
+                              <p className="text-[10px] font-bold uppercase tracking-wide text-[#8a93a5]">Subject</p>
+                              <p className="mt-1 text-xs font-bold text-[#172033]">{subjects}</p>
+                            </div>
+                            <div className="rounded-lg bg-[#f7f8fc] px-3 py-2">
+                              <p className="text-[10px] font-bold uppercase tracking-wide text-[#8a93a5]">Chapter</p>
+                              <p className="mt-1 text-xs font-bold text-[#172033]">{chapters}</p>
+                            </div>
+                            <div className="rounded-lg bg-[#f7f8fc] px-3 py-2">
+                              <p className="text-[10px] font-bold uppercase tracking-wide text-[#8a93a5]">Difficulty</p>
+                              <p className="mt-1 text-xs font-bold text-[#172033]">{difficulties}</p>
+                            </div>
+                            <div className="rounded-lg bg-[#f7f8fc] px-3 py-2">
+                              <p className="text-[10px] font-bold uppercase tracking-wide text-[#8a93a5]">Questions</p>
+                              <p className="mt-1 text-xs font-bold text-[#172033]">{attempt.question_count ?? "—"}</p>
+                            </div>
+                          </div>
+
                           <div className="mt-3 flex flex-wrap gap-4 text-xs font-semibold text-[#697386]">
                             <span>✓ Correct: {attempt.correct_count ?? 0}</span>
                             <span>✕ Wrong: {attempt.incorrect_count ?? 0}</span>
-                            <span>
-                              — Unanswered: {attempt.unanswered_count ?? 0}
-                            </span>
+                            <span>— Unanswered: {attempt.unanswered_count ?? 0}</span>
+                            {attempt.question_types?.length ? (
+                              <span>Type: {attempt.question_types.join(", ")}</span>
+                            ) : null}
                           </div>
                         </div>
                       );

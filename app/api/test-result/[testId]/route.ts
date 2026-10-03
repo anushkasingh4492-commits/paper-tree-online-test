@@ -204,7 +204,8 @@ export async function GET(
       selected_answer,
       is_correct,
       marks_awarded,
-      marked_for_review
+      marked_for_review,
+      time_spent_seconds
     FROM test_answers
     WHERE attempt_id = $1
     ORDER BY question_id
@@ -214,7 +215,7 @@ export async function GET(
 
 const answers: Record<
   string,
-  number
+  number | string
 > = {};
 
 const marked: Record<
@@ -249,11 +250,15 @@ for (
     answer.selected_answer !==
       undefined
   ) {
-    answers[
-      questionId
-    ] = Number(
-      answer.selected_answer
-    );
+    const selected = answer.selected_answer;
+    const numericSelected = Number(selected);
+
+    answers[questionId] =
+      typeof selected === "number"
+        ? selected
+        : Number.isFinite(numericSelected)
+          ? numericSelected
+          : String(selected);
   }
 
   marked[
@@ -282,6 +287,139 @@ for (
 }
 
     
+
+    /*
+     * -------------------------------------------------------
+     * ENRICH QUESTIONS FROM THE CANONICAL QUESTION BANK
+     *
+     * Test snapshots can be incomplete (for example, they may
+     * contain the stem/options but not correct_option,
+     * subject, chapter or difficulty). The questions table is
+     * the canonical source for those fields.
+     * -------------------------------------------------------
+     */
+
+    const questionIds = questions
+      .map((question: any) =>
+        String(
+          question?.id ??
+            question?.question_id ??
+            question?.questionId ??
+            ""
+        ).trim()
+      )
+      .filter(Boolean);
+
+    const questionBank = new Map<string, any>();
+
+    if (questionIds.length > 0) {
+      const questionBankResult = await pool.query(
+        `
+          SELECT
+            id::text AS id,
+            subject,
+            chapter_name,
+            difficulty,
+            question_type,
+            stem,
+            options,
+            correct_option,
+            correct_answer_text,
+            solution,
+            figure_asset
+          FROM questions
+          WHERE id::text = ANY($1::text[])
+        `,
+        [questionIds]
+      );
+
+      for (const row of questionBankResult.rows) {
+        questionBank.set(String(row.id), row);
+      }
+    }
+
+    questions = questions.map((question: any, index: number) => {
+      const id = String(
+        question?.id ??
+          question?.question_id ??
+          question?.questionId ??
+          `question-${index + 1}`
+      );
+
+      const bank = questionBank.get(id);
+
+      if (!bank) {
+        return question;
+      }
+
+      return {
+        ...bank,
+        ...question,
+        id,
+        subject: question?.subject ?? bank.subject ?? undefined,
+        chapter:
+          question?.chapter ??
+          question?.chapter_name ??
+          bank.chapter_name ??
+          undefined,
+        difficulty:
+          question?.difficulty ??
+          bank.difficulty ??
+          undefined,
+        question:
+          question?.question ??
+          question?.stem ??
+          bank.stem ??
+          "",
+        options:
+          question?.options ??
+          question?.choices ??
+          bank.options ??
+          [],
+        correct_option:
+          question?.correct_option ??
+          question?.correctOption ??
+          question?.correct_answer ??
+          bank.correct_option ??
+          undefined,
+        correct_answer_text:
+          question?.correct_answer_text ??
+          bank.correct_answer_text ??
+          undefined,
+        solution:
+          question?.solution ??
+          question?.explanation ??
+          bank.solution ??
+          null,
+        figure_asset:
+          question?.figure_asset ??
+          question?.figureAsset ??
+          bank.figure_asset ??
+          null,
+        question_type:
+          question?.question_type ??
+          bank.question_type ??
+          undefined,
+      };
+    });
+
+    // Reconcile correctness with the value saved at submission time.
+    // This prevents the review screen from inventing a different result.
+    for (const question of questions) {
+      const questionId = String(
+        question?.id ??
+          question?.question_id ??
+          question?.questionId ??
+          ""
+      );
+
+      if (
+        questionId &&
+        Object.prototype.hasOwnProperty.call(correctness, questionId)
+      ) {
+        question.is_correct = correctness[questionId];
+      }
+    }
 
     /*
      * -------------------------------------------------------
@@ -376,10 +514,34 @@ questions,
 
       accuracy,
 
-      course: "",
-      subject: "",
-      chapters: [],
-      difficulty: "",
+      course: String(attempt.exam ?? "").trim(),
+      subject: Array.from(
+        new Set(
+          questions
+            .map((question: any) => String(question?.subject ?? "").trim())
+            .filter(Boolean)
+        )
+      ).join(", "),
+      chapters: Array.from(
+        new Set(
+          questions
+            .map((question: any) =>
+              String(
+                question?.chapter ??
+                  question?.chapter_name ??
+                  ""
+              ).trim()
+            )
+            .filter(Boolean)
+        )
+      ),
+      difficulty: Array.from(
+        new Set(
+          questions
+            .map((question: any) => String(question?.difficulty ?? "").trim())
+            .filter(Boolean)
+        )
+      ).join(", "),
 
       duration:
         attempt.started_at &&
