@@ -203,7 +203,7 @@ export default function StudentInsights() {
     <section className="mt-8 space-y-6">
       <style jsx>{`\n        @keyframes ptFloat {0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}\n        @keyframes ptPulse {0%,100%{box-shadow:0 0 0 0 rgba(129,140,248,0)}50%{box-shadow:0 0 42px 7px rgba(129,140,248,.22)}}\n        @keyframes ptFire {0%,100%{transform:scale(1) rotate(-3deg)}50%{transform:scale(1.14) rotate(3deg)}}\n        @keyframes ptShine {0%{transform:translateX(-140%) rotate(18deg)}100%{transform:translateX(240%) rotate(18deg)}}\n        @keyframes ptPop {0%{transform:scale(.84);opacity:0}100%{transform:scale(1);opacity:1}}\n        @keyframes ptSpark {0%,100%{opacity:.25;transform:scale(.8)}50%{opacity:1;transform:scale(1.2)}}\n        .pt-float{animation:ptFloat 4s ease-in-out infinite}.pt-pulse{animation:ptPulse 3s ease-in-out infinite}.pt-fire{animation:ptFire 1.1s ease-in-out infinite}.pt-pop{animation:ptPop .35s ease-out both}.pt-spark{animation:ptSpark 1.8s ease-in-out infinite}\n      `}</style>
 
-      <button type="button" onClick={() => setLevelOpen(true)} className="group relative block w-full overflow-hidden rounded-[32px] border border-indigo-400/20 bg-[radial-gradient(circle_at_85%_5%,rgba(99,102,241,.45),transparent_28%),radial-gradient(circle_at_15%_100%,rgba(236,72,153,.22),transparent_30%),linear-gradient(135deg,#060917,#111a39_52%,#2a1452)] p-6 text-left text-white shadow-2xl transition duration-500 hover:-translate-y-1 hover:border-indigo-300/40 hover:shadow-[0_24px_70px_rgba(79,70,229,.28)] md:p-8 pt-pulse">
+      <button id="student-level" type="button" onClick={() => setLevelOpen(true)} className="group relative block w-full overflow-hidden rounded-[32px] border border-indigo-400/20 bg-[radial-gradient(circle_at_85%_5%,rgba(99,102,241,.45),transparent_28%),radial-gradient(circle_at_15%_100%,rgba(236,72,153,.22),transparent_30%),linear-gradient(135deg,#060917,#111a39_52%,#2a1452)] p-6 text-left text-white shadow-2xl transition duration-500 hover:-translate-y-1 hover:border-indigo-300/40 hover:shadow-[0_24px_70px_rgba(79,70,229,.28)] md:p-8 pt-pulse">
         <div className="absolute -right-16 -top-20 h-56 w-56 rounded-full bg-indigo-500/20 blur-3xl" />
         <div className="absolute -bottom-20 left-1/3 h-56 w-56 rounded-full bg-fuchsia-500/10 blur-3xl" />
         <div className="pointer-events-none absolute right-[28%] top-8 text-2xl pt-spark">✦</div><div className="pointer-events-none absolute right-[18%] top-28 text-xl pt-spark">✦</div>
@@ -225,14 +225,32 @@ export default function StudentInsights() {
         <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"><div className="flex items-center gap-2 text-xs font-black uppercase tracking-wider text-slate-400"><Zap size={15}/> XP Power</div><div className="mt-2 text-3xl font-black text-fuchsia-600">{data.points.toLocaleString()}</div><div className="mt-1 text-xs font-semibold text-slate-500">Keep completing challenges</div></div>
       </div>
 
-      {canRevisionTest !== false && <div className="relative overflow-hidden rounded-[26px] border border-cyan-200 bg-gradient-to-r from-cyan-50 via-white to-indigo-50 p-5 shadow-sm"><div className="absolute right-2 top-0 text-8xl opacity-[.05]">⚔️</div><div className="relative flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"><div><div className="text-[10px] font-black uppercase tracking-[.2em] text-cyan-700">Next Mission</div><h3 className="mt-1 text-2xl font-black text-slate-900">⚔️ Conquer your weak chapters</h3><p className="mt-1 text-xs font-semibold text-slate-500">A personalised challenge built from your performance.</p></div><button type="button" onClick={() => void createRevisionTest()} disabled={revisionLoading} className="rounded-xl bg-slate-950 px-5 py-3 text-xs font-black text-white shadow-lg transition hover:-translate-y-1 hover:shadow-xl disabled:opacity-60"><Swords className="mr-2 inline" size={15}/>{revisionLoading ? "BUILDING MISSION..." : "START MISSION"}</button></div>{message && <p className="mt-2 text-xs font-bold text-red-600">{message}</p>}</div>
+      {canRevisionTest !== false && <div className="relative overflow-hidden rounded-[26px] border border-cyan-200 bg-gradient-to-r from-cyan-50 via-white to-indigo-50 p-5 shadow-sm"><div className="absolute right-2 top-0 text-8xl opacity-[.05]">⚔️</div><div className="relative flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"><div><div className="text-[10px] font-black uppercase tracking-[.2em] text-cyan-700">Test</div><h3 className="mt-1 text-2xl font-black text-slate-900">🎯 Target your weak areas</h3><p className="mt-1 text-xs font-semibold text-slate-500">Practice the chapters where you need the most improvement.</p></div><button type="button" onClick={() => void createRevisionTest()} disabled={revisionLoading} className="rounded-xl bg-slate-950 px-5 py-3 text-xs font-black text-white shadow-lg transition hover:-translate-y-1 hover:shadow-xl disabled:opacity-60"><Swords className="mr-2 inline" size={15}/>{revisionLoading ? "BUILDING TEST..." : "START TEST"}</button></div>{message && <p className="mt-2 text-xs font-bold text-red-600">{message}</p>}</div>
 
       }
 
-      <div className="rounded-[30px] border border-slate-200 bg-white p-5 shadow-sm md:p-7">
+      <div className="grid gap-3 sm:grid-cols-3">
+        <button type="button" onClick={() => setLevelOpen(true)} className="rounded-2xl border border-indigo-100 bg-indigo-50/70 p-4 text-left transition hover:-translate-y-0.5 hover:shadow-md">
+          <div className="text-xs font-black uppercase tracking-wider text-indigo-500">⭐ Level</div>
+          <div className="mt-1 text-lg font-black text-slate-900">Level {data.level} · {data.levelName}</div>
+          <div className="mt-1 text-xs font-semibold text-slate-500">View your progress and next level.</div>
+        </button>
+        <button type="button" onClick={() => document.getElementById("trophy-wall")?.scrollIntoView({ behavior: "smooth", block: "start" })} className="rounded-2xl border border-amber-100 bg-amber-50/70 p-4 text-left transition hover:-translate-y-0.5 hover:shadow-md">
+          <div className="text-xs font-black uppercase tracking-wider text-amber-600">🏆 Badges</div>
+          <div className="mt-1 text-lg font-black text-slate-900">{earned.length} unlocked</div>
+          <div className="mt-1 text-xs font-semibold text-slate-500">Open your achievement collection.</div>
+        </button>
+        <button type="button" onClick={() => void createRevisionTest()} disabled={revisionLoading || canRevisionTest === false} className="rounded-2xl border border-cyan-100 bg-cyan-50/70 p-4 text-left transition hover:-translate-y-0.5 hover:shadow-md disabled:opacity-60">
+          <div className="text-xs font-black uppercase tracking-wider text-cyan-600">🤖 AI Test</div>
+          <div className="mt-1 text-lg font-black text-slate-900">Target weak areas</div>
+          <div className="mt-1 text-xs font-semibold text-slate-500">Generate a focused practice test.</div>
+        </button>
+      </div>
+
+      <div id="trophy-wall" className="rounded-[30px] border border-slate-200 bg-white p-5 shadow-sm md:p-7">
         <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between"><div><div className="text-[10px] font-black uppercase tracking-[.2em] text-slate-400">Achievement Vault</div><h2 className="mt-1 text-2xl font-black tracking-tight text-slate-950">🏆 Trophy Wall</h2><p className="mt-1 text-xs font-semibold text-slate-500">Earn them. Upgrade them. Show them off.</p></div><div className="text-xs font-black text-slate-400">{earned.length}/{data.badges.length} unlocked</div></div>
         <div className="mt-5 flex gap-2 overflow-x-auto pb-1">{CATEGORIES.map((c)=><button key={c} onClick={()=>setCategory(c)} className={`whitespace-nowrap rounded-full px-3 py-2 text-[10px] font-black transition ${category===c?"bg-slate-950 text-white shadow":"bg-slate-100 text-slate-500 hover:bg-slate-200"}`}>{c}</button>)}</div>
-        <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
+        <div className="mt-5 grid grid-cols-2 gap-2 sm:grid-cols-4 lg:grid-cols-6">
           {filtered.map((badge) => { const pct = badge.target ? clamp((badge.progress / badge.target) * 100) : badge.earned ? 100 : 0; const colors = COLORS[badge.category] || COLORS.Score; return <button key={badge.id} type="button" onClick={() => {
   setSelectedBadge({
     ...badge,
@@ -248,14 +266,14 @@ export default function StudentInsights() {
     target: Number(badge.target) || 1,
     earned: Boolean(badge.earned),
   });
-}}className={`group relative overflow-hidden rounded-2xl border p-4 text-left transition duration-300 hover:-translate-y-1 hover:shadow-xl ${
+}}className={`group relative overflow-hidden rounded-xl border p-2.5 text-left transition duration-300 hover:-translate-y-1 hover:shadow-xl ${
   badge.earned
     ? "border-slate-200 bg-white"
     : "border-slate-200 bg-gradient-to-br from-white to-slate-50"
 }`}
 >
   <div
-    className={`relative mx-auto flex h-20 w-20 items-center justify-center rounded-[22px] ${
+    className={`relative mx-auto flex h-14 w-14 items-center justify-center rounded-[16px] ${
       badge.earned
         ? `bg-gradient-to-br ${colors} shadow-lg pt-float ${
             badge.tier === 4
@@ -273,21 +291,21 @@ export default function StudentInsights() {
     <img
       src={badge.asset}
       alt={badge.name}
-      className={`h-[68px] w-[68px] object-contain drop-shadow-md transition duration-300 group-hover:scale-110 ${badge.earned ? "" : "opacity-65"}`}
+      className={`h-[48px] w-[48px] object-contain drop-shadow-md transition duration-300 group-hover:scale-110 ${badge.earned ? "" : "opacity-65"}`}
     />
   ) : (
-    <span className={`text-4xl ${badge.earned ? "" : "opacity-60 grayscale"}`}>{badge.icon || "🏆"}</span>
+    <span className={`text-2xl ${badge.earned ? "" : "opacity-60 grayscale"}`}>{badge.icon || "🏆"}</span>
   )}
   {!badge.earned && (
     <span className="absolute -right-1 -top-1 flex h-7 w-7 items-center justify-center rounded-full border-2 border-white bg-slate-800 text-white shadow-md">
       <Lock size={13} />
     </span>
   )}
-</div><div className={`mt-3 text-center text-xs font-black ${badge.earned?"text-slate-900":"text-slate-400"}`}>{badge.name}{badge.tier?` ${TIER_NAMES[badge.tier]}`:""}</div><div className="mt-1 text-center text-[9px] font-bold uppercase tracking-wider text-slate-400">{badge.earned ? (badge.tier > 0 && badge.tier < 4 ? `${badge.progress.toLocaleString()} / ${TIER_TARGETS[badge.tier + 1].toLocaleString()} to Tier ${TIER_NAMES[badge.tier + 1]}` : badge.detail) : `${badge.progress.toLocaleString()} / ${badge.target.toLocaleString()}`}</div>{!badge.earned&&<div className="mt-2 h-1.5 overflow-hidden rounded-full bg-slate-200"><div className="h-full rounded-full bg-slate-400 transition-all" style={{width:`${pct}%`}}/></div>}</button>})}
+</div><div className={`mt-2 text-center text-[10px] leading-tight font-black ${badge.earned?"text-slate-900":"text-slate-400"}`}>{badge.name}{badge.tier?` ${TIER_NAMES[badge.tier]}`:""}</div><div className="mt-1 text-center text-[8px] font-bold uppercase tracking-wider text-slate-400">{badge.earned ? (badge.tier > 0 && badge.tier < 4 ? `${badge.progress.toLocaleString()} / ${TIER_TARGETS[badge.tier + 1].toLocaleString()} to Tier ${TIER_NAMES[badge.tier + 1]}` : badge.detail) : `${badge.progress.toLocaleString()} / ${badge.target.toLocaleString()}`}</div>{!badge.earned&&<div className="mt-1.5 h-1 overflow-hidden rounded-full bg-slate-200"><div className="h-full rounded-full bg-slate-400 transition-all" style={{width:`${pct}%`}}/></div>}</button>})}
         </div>
       </div>
 
-      {data.weakAreas.length>0&&<div className="rounded-[26px] border border-rose-100 bg-white p-5 shadow-sm"><div className="text-[10px] font-black uppercase tracking-[.2em] text-rose-500">Boss Fight Queue</div><div className="mt-1 text-xl font-black text-slate-900">Chapters to conquer</div><div className="mt-4 grid gap-2 md:grid-cols-2">{data.weakAreas.map((area)=><div key={`${area.subject}-${area.chapter}`} className="rounded-xl border border-slate-100 bg-slate-50 p-3"><div className="flex items-center justify-between gap-3"><span className="truncate text-sm font-black text-slate-700">{area.chapter}</span><span className="text-xs font-black text-rose-500">{area.rate}% misses</span></div><div className="mt-2 h-1.5 overflow-hidden rounded-full bg-slate-200"><div className="h-full rounded-full bg-gradient-to-r from-amber-400 to-rose-500" style={{width:`${clamp(area.rate)}%`}}/></div></div>)}</div></div>}
+      {data.weakAreas.length>0&&<div className="rounded-[26px] border border-rose-100 bg-white p-5 shadow-sm"><div className="text-[10px] font-black uppercase tracking-[.2em] text-rose-500">Boss Fight Queue</div><div className="mt-1 text-xl font-black text-slate-900">Chapters to conquer</div><div className="mt-4 grid gap-2 md:grid-cols-2">{data.weakAreas.map((area)=><div key={`${area.subject}-${area.chapter}`} className="rounded-xl border border-slate-100 bg-slate-50 p-3"><div className="flex items-center justify-between gap-3"><span className="truncate text-sm font-black text-slate-700">{area.chapter}</span><span className="text-xs font-black text-rose-500">{area.rate}% misses</span></div><div className="mt-1.5 h-1 overflow-hidden rounded-full bg-slate-200"><div className="h-full rounded-full bg-gradient-to-r from-amber-400 to-rose-500" style={{width:`${clamp(area.rate)}%`}}/></div></div>)}</div></div>}
 
      {safeSelectedBadge && (
   <div

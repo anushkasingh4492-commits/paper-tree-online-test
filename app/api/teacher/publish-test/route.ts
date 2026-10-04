@@ -329,13 +329,24 @@ export async function POST(request: Request) {
 
     await client.query(`
       ALTER TABLE tests
-      ADD COLUMN IF NOT EXISTS academy_id UUID
+      ADD COLUMN IF NOT EXISTS academy_id UUID,
+      ADD COLUMN IF NOT EXISTS created_by_teacher_id UUID,
+      ADD COLUMN IF NOT EXISTS title VARCHAR(255),
+      ADD COLUMN IF NOT EXISTS duration_minutes INTEGER
     `);
 
     await client.query(`
       ALTER TABLE scheduled_tests
       ADD COLUMN IF NOT EXISTS test_id UUID,
       ADD COLUMN IF NOT EXISTS allow_reattempt BOOLEAN NOT NULL DEFAULT FALSE
+    `);
+
+    // A scheduled test may target either a whole batch or selected
+    // students. Older databases sometimes had batch_id marked NOT NULL,
+    // which made individual-student scheduling fail at INSERT time.
+    await client.query(`
+      ALTER TABLE scheduled_tests
+      ALTER COLUMN batch_id DROP NOT NULL
     `);
 
     // =======================================================
@@ -353,7 +364,10 @@ export async function POST(request: Request) {
           questions,
           created_at,
           difficulty,
-          academy_id
+          academy_id,
+          created_by_teacher_id,
+          title,
+          duration_minutes
         )
         VALUES (
           $1::uuid,
@@ -362,7 +376,10 @@ export async function POST(request: Request) {
           $4::jsonb,
           NOW(),
           $5,
-          $6::uuid
+          $6::uuid,
+          $7::uuid,
+          $8,
+          $9
         )
       `,
       [
@@ -372,6 +389,9 @@ export async function POST(request: Request) {
         JSON.stringify(questions),
         generatedTest.difficulty || "Balanced",
         academyId,
+        teacher.id,
+        title,
+        duration,
       ]
     );
 

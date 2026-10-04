@@ -9,6 +9,8 @@ type Paper = {
   exam?: string;
   description?: string;
   duration_minutes?: number;
+  question_count?: number;
+  source_type?: string;
 };
 
 type Batch = {
@@ -240,10 +242,12 @@ export default function AcademyAdminTestsPage() {
 
                   {papers.map((paper) => (
                     <option key={paper.id} value={paper.id}>
-                      {paper.code ||
-                        paper.description ||
+                      {paper.description ||
+                        paper.code ||
                         paper.exam ||
                         "Paper"}
+                      {paper.source_type === "TEST" ? " · Teacher Generated" : ""}
+                      {paper.question_count ? ` (${paper.question_count} Q)` : ""}
                     </option>
                   ))}
                 </select>

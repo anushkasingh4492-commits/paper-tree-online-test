@@ -30,6 +30,8 @@ export default function HomeScreen() {
           thirdPartyCookiesEnabled
           originWhitelist={["https://*"]}
           allowsBackForwardNavigationGestures
+          automaticallyAdjustContentInsets={false}
+          contentInsetAdjustmentBehavior="never"
           setSupportMultipleWindows={false}
           onLoadStart={() => {
             setLoading(true);

@@ -1891,6 +1891,9 @@ export async function POST(
       await client.query(`
         ALTER TABLE tests
         ADD COLUMN IF NOT EXISTS academy_id UUID,
+        ADD COLUMN IF NOT EXISTS created_by_teacher_id UUID,
+        ADD COLUMN IF NOT EXISTS title VARCHAR(255),
+        ADD COLUMN IF NOT EXISTS duration_minutes INTEGER,
         ADD COLUMN IF NOT EXISTS is_full_chapter BOOLEAN NOT NULL DEFAULT FALSE,
         ADD COLUMN IF NOT EXISTS full_chapter_subject VARCHAR(150),
         ADD COLUMN IF NOT EXISTS full_chapter_name VARCHAR(255)
@@ -1932,9 +1935,10 @@ export async function POST(
         `
           INSERT INTO tests (
             id, exam, question_count, questions, difficulty, academy_id,
+            created_by_teacher_id, title, duration_minutes,
             is_full_chapter, full_chapter_subject, full_chapter_name
           )
-          VALUES ($1, $2, $3, $4::jsonb, $5, $6, $7, $8, $9)
+          VALUES ($1, $2, $3, $4::jsonb, $5, $6, $7, $8, $9, $10, $11, $12)
         `,
         [
           testId,
@@ -1952,6 +1956,9 @@ export async function POST(
 
           difficulty,
           academyId || null,
+          masterRole === "TEACHER" ? (masterUserId || null) : null,
+          `${exam} Teacher Test`,
+          duration,
           isFullChapter,
           fullChapterSubject,
           fullChapterName,

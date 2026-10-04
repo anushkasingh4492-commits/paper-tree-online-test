@@ -120,6 +120,27 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    // Both legacy paper records and teacher-generated tests can be
+    // scheduled by an Academy Admin. Generated tests use TEST:<uuid>
+    // as their dropdown ID.
+    await pool.query(`
+      ALTER TABLE scheduled_tests
+      ADD COLUMN IF NOT EXISTS test_id UUID
+    `);
+
+    await pool.query(`
+      ALTER TABLE scheduled_tests
+      ALTER COLUMN paper_id DROP NOT NULL
+    `);
+
+    await pool.query(`
+      ALTER TABLE tests
+      ADD COLUMN IF NOT EXISTS academy_id UUID,
+      ADD COLUMN IF NOT EXISTS created_by_teacher_id UUID,
+      ADD COLUMN IF NOT EXISTS title VARCHAR(255),
+      ADD COLUMN IF NOT EXISTS duration_minutes INTEGER
+    `);
+
     // Make sure the batch belongs to this academy
     const batchCheck = await pool.query(
       `
@@ -138,30 +159,154 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // Make sure the paper belongs to this academy
-    const paperCheck = await pool.query(
-      `
-      SELECT id
-      FROM papers
-      WHERE id = $1
-        AND academy_id = $2
-      `,
-      [paperId, admin.academyId]
-    );
+    let testId = "";
+    let scheduledPaperId: string | null = null;
+    let exam = "MHT-CET";
+    let effectiveDuration = Number(durationMinutes);
 
-    if (paperCheck.rowCount === 0) {
-      return NextResponse.json(
-        { error: "Paper not found in your academy" },
-        { status: 403 }
+    if (String(paperId).startsWith("TEST:")) {
+      // Schedule an already-generated teacher test directly.
+      const sourceTestId = String(paperId).slice("TEST:".length).trim();
+
+      const testCheck = await pool.query(
+        `
+        SELECT
+          id,
+          exam,
+          question_count,
+          questions,
+          duration_minutes,
+          title
+        FROM tests
+        WHERE id::text = $1::text
+          AND academy_id::text = $2::text
+          AND created_by_teacher_id IS NOT NULL
+        LIMIT 1
+        `,
+        [sourceTestId, admin.academyId]
+      );
+
+      if (testCheck.rowCount === 0) {
+        return NextResponse.json(
+          { error: "Generated test not found in your academy." },
+          { status: 403 }
+        );
+      }
+
+      const source = testCheck.rows[0];
+      testId = String(source.id);
+      exam = String(source.exam || "MHT-CET");
+      effectiveDuration = Number(source.duration_minutes || durationMinutes || 60);
+    } else {
+      // Legacy paper path.
+      const paperCheck = await pool.query(
+        `
+        SELECT id, exam, duration_minutes
+        FROM papers p
+        WHERE p.id = $1
+          AND (
+            p.academy_id = $2
+            OR (
+              p.academy_id IS NULL
+              AND EXISTS (
+                SELECT 1 FROM teachers t
+                WHERE t.id::text = p.created_by::text
+                  AND t.academy_id::text = $2::text
+              )
+            )
+          )
+        `,
+        [paperId, admin.academyId]
+      );
+
+      if (paperCheck.rowCount === 0) {
+        return NextResponse.json(
+          { error: "Paper not found in your academy" },
+          { status: 403 }
+        );
+      }
+
+      scheduledPaperId = String(paperId);
+      exam = String(paperCheck.rows[0]?.exam || "MHT-CET");
+      effectiveDuration = Number(paperCheck.rows[0]?.duration_minutes || durationMinutes || 60);
+
+      const paperQuestions = await pool.query(
+        `
+        SELECT
+          q.id,
+          q.subject,
+          q.chapter_name,
+          q.stem,
+          q.options,
+          q.correct_option,
+          q.correct_answer_text,
+          q.solution,
+          q.difficulty,
+          q.question_type,
+          q.figure_asset
+        FROM paper_questions pq
+        INNER JOIN questions q
+          ON q.id = pq.question_id
+        WHERE pq.paper_id::text = $1::text
+        ORDER BY pq.question_order ASC
+        `,
+        [paperId]
+      );
+
+      if (paperQuestions.rows.length === 0) {
+        return NextResponse.json(
+          { error: "The selected paper has no questions." },
+          { status: 409 }
+        );
+      }
+
+      testId = crypto.randomUUID();
+
+      await pool.query(
+        `
+        INSERT INTO tests (
+          id,
+          exam,
+          question_count,
+          questions,
+          created_at,
+          difficulty,
+          academy_id,
+          title,
+          duration_minutes
+        )
+        VALUES (
+          $1::uuid,
+          $2,
+          $3,
+          $4::jsonb,
+          NOW(),
+          $5,
+          $6::uuid,
+          $7,
+          $8
+        )
+        `,
+        [
+          testId,
+          exam,
+          paperQuestions.rows.length,
+          JSON.stringify(paperQuestions.rows),
+          "Balanced",
+          admin.academyId,
+          title,
+          effectiveDuration,
+        ]
       );
     }
 
-    const testId = crypto.randomUUID();
+    const scheduledTestId = crypto.randomUUID();
 
     const result = await pool.query(
       `
       INSERT INTO scheduled_tests (
         id,
+        test_id,
         paper_id,
         batch_id,
         title,
@@ -172,31 +317,36 @@ export async function POST(req: NextRequest) {
         academy_id
       )
       VALUES (
-        $1,
-        $2,
-        $3,
+        $1::uuid,
+        $2::uuid,
+        $3::uuid,
         $4,
         $5,
         $6,
         $7,
+        $8,
         'Upcoming',
-        $8
+        $9::uuid
       )
       RETURNING *
       `,
       [
+        scheduledTestId,
         testId,
-        paperId,
+        scheduledPaperId,
         batchId,
         title,
         startTime,
         endTime,
-        Number(durationMinutes),
+        effectiveDuration,
         admin.academyId,
       ]
     );
 
-    return NextResponse.json(result.rows[0], { status: 201 });
+    return NextResponse.json(
+      { success: true, ...result.rows[0], test_id: testId },
+      { status: 201 }
+    );
   } catch (error) {
     console.error("ACADEMY TEST POST ERROR:", error);
 

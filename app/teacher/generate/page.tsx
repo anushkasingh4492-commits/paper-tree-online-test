@@ -158,6 +158,16 @@ export default function TeacherGeneratePage() {
     new Set()
   );
 
+  const [showCustomForm, setShowCustomForm] = useState(false);
+  const [customStem, setCustomStem] = useState("");
+  const [customOptions, setCustomOptions] = useState(["", "", "", ""]);
+  const [customCorrect, setCustomCorrect] = useState("A");
+  const [customSubject, setCustomSubject] = useState("Physics");
+  const [customChapter, setCustomChapter] = useState("Custom Questions");
+  const [customDifficulty, setCustomDifficulty] = useState("Medium");
+  const [customSolution, setCustomSolution] = useState("");
+  const [customSaving, setCustomSaving] = useState(false);
+
   const [loadingQuestions, setLoadingQuestions] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -216,6 +226,20 @@ export default function TeacherGeneratePage() {
         String(item).trim().toLowerCase() !== "mathematics"
     );
   }, [rows, exam]);
+
+  useEffect(() => {
+    if (selectedSubjects.length > 0) {
+      const nextSubject = selectedSubjects.includes(customSubject)
+        ? customSubject
+        : selectedSubjects[0];
+      setCustomSubject(nextSubject);
+
+      const selectedChapters = chaptersBySubject[nextSubject] || [];
+      if (selectedChapters.length > 0 && !selectedChapters.includes(customChapter)) {
+        setCustomChapter(selectedChapters[0]);
+      }
+    }
+  }, [selectedSubjects, chaptersBySubject, customSubject, customChapter]);
 
   /*
    * Chapters available for each selected subject.
@@ -479,6 +503,82 @@ export default function TeacherGeneratePage() {
     setSelectedQuestionIds(new Set());
   }
 
+  async function createCustomQuestion() {
+    setError("");
+
+    if (!customStem.trim()) {
+      setError("Write the custom question first.");
+      return;
+    }
+
+    const options = customOptions.map((value) => value.trim()).filter(Boolean);
+
+    if (options.length < 2) {
+      setError("Add at least two answer options.");
+      return;
+    }
+
+    const correctIndex = ["A", "B", "C", "D"].indexOf(customCorrect);
+    if (correctIndex < 0 || correctIndex >= options.length) {
+      setError("Choose a valid correct option.");
+      return;
+    }
+
+    if (!customSubject.trim()) {
+      setError("Choose a subject for the custom question.");
+      return;
+    }
+
+    setCustomSaving(true);
+
+    try {
+      const response = await fetch("/api/teacher/questions/create", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        credentials: "include",
+        body: JSON.stringify({
+          exam,
+          subject: customSubject,
+          chapterName: customChapter.trim() || "Custom Questions",
+          difficulty: customDifficulty,
+          stem: customStem.trim(),
+          options,
+          correctOption: customCorrect,
+          solution: customSolution.trim(),
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok || !data.success) {
+        throw new Error(data.error || "Could not create custom question.");
+      }
+
+      const created = data.question as Question | null;
+      const createdId = String(data.questionId || created?.id || "");
+
+      if (!createdId || !created) {
+        throw new Error("Custom question was created but could not be loaded.");
+      }
+
+      setQuestions((current) => [created, ...current.filter((item) => String(item.id) !== createdId)]);
+      setSelectedQuestionIds((current) => {
+        const next = new Set(current);
+        if (next.size < questionCount) next.add(createdId);
+        return next;
+      });
+      setPreviewTotal((current) => current + 1);
+      setCustomStem("");
+      setCustomOptions(["", "", "", ""]);
+      setCustomSolution("");
+      setShowCustomForm(false);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Could not create custom question.");
+    } finally {
+      setCustomSaving(false);
+    }
+  }
+
   /*
    * Generate the actual test from the exact selected question IDs.
    */
@@ -604,6 +704,104 @@ export default function TeacherGeneratePage() {
               {loading ? "Opening Publish..." : "Generate & Publish Paper"}
             </button>
           </div>
+
+          {/* CUSTOM QUESTION */}
+          <section className="mb-8 rounded-2xl border border-emerald-200 bg-emerald-50/60 p-5">
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+              <div>
+                <h2 className="text-lg font-extrabold text-emerald-950">Add a custom question</h2>
+                <p className="mt-1 text-sm text-emerald-800">
+                  Professors can write institute-specific questions and add them directly to this test.
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setShowCustomForm((value) => !value)}
+                className="rounded-xl bg-emerald-600 px-4 py-2.5 text-sm font-bold text-white hover:bg-emerald-700"
+              >
+                {showCustomForm ? "Close" : "+ Add Custom Question"}
+              </button>
+            </div>
+
+            {showCustomForm && (
+              <div className="mt-5 grid gap-3 md:grid-cols-2">
+                <textarea
+                  value={customStem}
+                  onChange={(e) => setCustomStem(e.target.value)}
+                  placeholder="Write the question"
+                  rows={4}
+                  className="md:col-span-2 w-full rounded-xl border border-emerald-200 bg-white px-4 py-3 text-sm outline-none focus:border-emerald-500"
+                />
+
+                {customOptions.map((value, index) => (
+                  <input
+                    key={index}
+                    value={value}
+                    onChange={(e) =>
+                      setCustomOptions((current) =>
+                        current.map((item, itemIndex) =>
+                          itemIndex === index ? e.target.value : item
+                        )
+                      )
+                    }
+                    placeholder={`Option ${String.fromCharCode(65 + index)}`}
+                    className="rounded-xl border border-emerald-200 bg-white px-4 py-3 text-sm outline-none focus:border-emerald-500"
+                  />
+                ))}
+
+                <select
+                  value={customSubject}
+                  onChange={(e) => setCustomSubject(e.target.value)}
+                  className="rounded-xl border border-emerald-200 bg-white px-4 py-3 text-sm"
+                >
+                  <option value="">Select subject</option>
+                  {subjects.map((item) => <option key={item} value={item}>{item}</option>)}
+                </select>
+
+                <input
+                  value={customChapter}
+                  onChange={(e) => setCustomChapter(e.target.value)}
+                  placeholder="Chapter"
+                  className="rounded-xl border border-emerald-200 bg-white px-4 py-3 text-sm"
+                />
+
+                <select
+                  value={customCorrect}
+                  onChange={(e) => setCustomCorrect(e.target.value)}
+                  className="rounded-xl border border-emerald-200 bg-white px-4 py-3 text-sm"
+                >
+                  {['A','B','C','D'].map((option) => <option key={option} value={option}>Correct answer: {option}</option>)}
+                </select>
+
+                <select
+                  value={customDifficulty}
+                  onChange={(e) => setCustomDifficulty(e.target.value)}
+                  className="rounded-xl border border-emerald-200 bg-white px-4 py-3 text-sm"
+                >
+                  <option>Easy</option>
+                  <option>Medium</option>
+                  <option>Hard</option>
+                </select>
+
+                <textarea
+                  value={customSolution}
+                  onChange={(e) => setCustomSolution(e.target.value)}
+                  placeholder="Solution / explanation (optional)"
+                  rows={3}
+                  className="md:col-span-2 rounded-xl border border-emerald-200 bg-white px-4 py-3 text-sm outline-none focus:border-emerald-500"
+                />
+
+                <button
+                  type="button"
+                  onClick={() => void createCustomQuestion()}
+                  disabled={customSaving || loading || selectedQuestionIds.size >= questionCount}
+                  className="md:col-span-2 rounded-xl bg-emerald-600 px-4 py-3 text-sm font-bold text-white hover:bg-emerald-700 disabled:cursor-not-allowed disabled:opacity-50"
+                >
+                  {customSaving ? "Saving..." : selectedQuestionIds.size >= questionCount ? "Question limit reached" : "Add Question to This Test"}
+                </button>
+              </div>
+            )}
+          </section>
 
           {/* FILTERS */}
           <div className="grid gap-6 md:grid-cols-2">

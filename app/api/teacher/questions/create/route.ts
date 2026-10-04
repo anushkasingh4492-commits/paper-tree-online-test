@@ -65,7 +65,24 @@ export async function POST(request: Request) {
         JSON.stringify({ source: "teacher", academyId: teacher.academy_id }),
       ]
     );
-    return NextResponse.json({ success: true, questionId: id });
+    const created = await pool.query(
+      `
+      SELECT
+        id, exam, subject, standard, chapter_number, chapter_name,
+        stem, options, correct_option, correct_answer_text, solution,
+        difficulty, estimated_time, question_type, figure_asset
+      FROM questions
+      WHERE id = $1
+      LIMIT 1
+      `,
+      [id]
+    );
+
+    return NextResponse.json({
+      success: true,
+      questionId: id,
+      question: created.rows[0] || null,
+    });
   } catch (error) {
     console.error("CREATE CUSTOM QUESTION ERROR", error);
     return NextResponse.json({ success: false, error: error instanceof Error ? error.message : "Could not create question." }, { status: 500 });
