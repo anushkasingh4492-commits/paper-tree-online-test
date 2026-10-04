@@ -665,7 +665,7 @@ export default function TeacherGeneratePage() {
 
   return (
     <main className="min-h-screen bg-[#f6f8fc] text-[#172033]">
-      <div className="mx-auto max-w-6xl px-6 py-10">
+      <div className="mx-auto w-full max-w-6xl px-3 py-5 sm:px-6 sm:py-10">
         <button
           onClick={() => router.push("/teacher")}
           className="mb-6 text-sm font-semibold text-[#315bea]"
@@ -673,7 +673,7 @@ export default function TeacherGeneratePage() {
           ← Back to Teacher Portal
         </button>
 
-        <div className="rounded-2xl bg-white p-8 shadow-sm">
+        <div className="rounded-2xl bg-white p-4 shadow-sm sm:p-8">
           {/* HEADER */}
           <div className="mb-8">
             <p className="text-sm font-bold uppercase tracking-wider text-[#315bea]">
@@ -690,7 +690,7 @@ export default function TeacherGeneratePage() {
             </p>
           </div>
 
-          <div className="sticky top-4 z-10 mb-8 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-blue-200 bg-blue-50/95 p-4 shadow-lg shadow-blue-900/10 backdrop-blur">
+          <div className="sticky top-2 z-10 mb-6 flex flex-col items-stretch justify-between gap-3 sm:top-4 sm:mb-8 sm:flex-row sm:items-center sm:gap-4 rounded-2xl border border-blue-200 bg-blue-50/95 p-4 shadow-lg shadow-blue-900/10 backdrop-blur">
             <div>
               <p className="text-sm font-bold text-blue-950">{selectedCount} / {questionCount} questions selected</p>
               <p className="mt-1 text-xs text-blue-800">Choose questions below, then continue to publish.</p>
@@ -699,17 +699,17 @@ export default function TeacherGeneratePage() {
               type="button"
               onClick={generatePaper}
               disabled={loading || loadingQuestions || selectedSubjects.length === 0 || !exactCountSelected}
-              className="rounded-xl bg-[#315bea] px-5 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-[#264ac7] disabled:cursor-not-allowed disabled:opacity-50"
+              className="w-full rounded-xl bg-[#315bea] px-5 py-3 text-sm font-bold sm:w-auto text-white shadow-sm transition hover:bg-[#264ac7] disabled:cursor-not-allowed disabled:opacity-50"
             >
               {loading ? "Opening Publish..." : "Generate & Publish Paper"}
             </button>
           </div>
 
           {/* CUSTOM QUESTION */}
-          <section className="mb-8 rounded-2xl border border-emerald-200 bg-emerald-50/60 p-5">
+          <section className="mb-8 rounded-2xl border border-emerald-200 bg-emerald-50/60 p-4 sm:p-5">
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
               <div>
-                <h2 className="text-lg font-extrabold text-emerald-950">Add a custom question</h2>
+                <h2 className="text-base font-extrabold text-emerald-950 sm:text-lg">Add a custom question</h2>
                 <p className="mt-1 text-sm text-emerald-800">
                   Professors can write institute-specific questions and add them directly to this test.
                 </p>
@@ -717,7 +717,7 @@ export default function TeacherGeneratePage() {
               <button
                 type="button"
                 onClick={() => setShowCustomForm((value) => !value)}
-                className="rounded-xl bg-emerald-600 px-4 py-2.5 text-sm font-bold text-white hover:bg-emerald-700"
+                className="w-full rounded-xl bg-emerald-600 px-4 py-2.5 text-sm font-bold sm:w-auto text-white hover:bg-emerald-700"
               >
                 {showCustomForm ? "Close" : "+ Add Custom Question"}
               </button>
@@ -1181,7 +1181,7 @@ export default function TeacherGeneratePage() {
                     return (
                       <label
                         key={id}
-                        className={`block cursor-pointer rounded-2xl border p-5 transition ${
+                        className={`block cursor-pointer rounded-2xl border p-3 transition sm:p-5 ${
                           selected
                             ? "border-[#315bea] bg-blue-50"
                             : "border-gray-200 bg-white hover:border-gray-300"
@@ -1301,7 +1301,7 @@ export default function TeacherGeneratePage() {
 
 
             {!loadingQuestions && previewTotal > PREVIEW_PAGE_SIZE && (
-              <div className="mt-6 flex items-center justify-between rounded-xl border bg-white p-4">
+              <div className="mt-6 flex items-center justify-between gap-2 rounded-xl border bg-white p-3 sm:p-4">
                 <button
                   type="button"
                   onClick={() => goToPreviewPage(previewPage - 1)}

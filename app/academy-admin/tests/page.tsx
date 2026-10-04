@@ -197,7 +197,7 @@ export default function AcademyAdminTestsPage() {
 
   return (
     <main className="min-h-screen bg-[#f6f8fc]">
-      <div className="mx-auto max-w-6xl px-6 py-10">
+      <div className="mx-auto w-full max-w-6xl px-3 py-5 sm:px-6 sm:py-10">
         <button
           onClick={() => router.push("/academy-admin")}
           className="mb-6 text-sm font-semibold text-[#315bea]"
@@ -210,7 +210,7 @@ export default function AcademyAdminTestsPage() {
             Academy Admin
           </p>
 
-          <h1 className="mt-2 text-3xl font-bold text-gray-900">
+          <h1 className="mt-2 text-2xl font-bold text-gray-900 sm:text-3xl">
             Scheduled Tests
           </h1>
 
@@ -219,10 +219,10 @@ export default function AcademyAdminTestsPage() {
           </p>
         </div>
 
-        <div className="grid gap-8 lg:grid-cols-[1fr_1.2fr]">
+        <div className="grid gap-5 lg:grid-cols-[1fr_1.2fr] lg:gap-8">
           {/* Schedule form */}
-          <div className="rounded-2xl bg-white p-6 shadow-sm">
-            <h2 className="text-xl font-bold text-gray-900">
+          <div className="rounded-2xl bg-white p-4 shadow-sm sm:p-6">
+            <h2 className="text-lg font-bold text-gray-900 sm:text-xl">
               Schedule New Test
             </h2>
 
@@ -353,9 +353,9 @@ export default function AcademyAdminTestsPage() {
           </div>
 
           {/* Existing tests */}
-          <div className="rounded-2xl bg-white p-6 shadow-sm">
-            <div className="flex items-center justify-between">
-              <h2 className="text-xl font-bold text-gray-900">
+          <div className="rounded-2xl bg-white p-4 shadow-sm sm:p-6">
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <h2 className="text-lg font-bold text-gray-900 sm:text-xl">
                 Scheduled Tests
               </h2>
 

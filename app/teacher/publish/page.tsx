@@ -339,10 +339,10 @@ export default function TeacherPublishPage() {
 
   return (
     <main className="min-h-screen bg-slate-50 text-slate-900">
-      <div className="mx-auto max-w-5xl px-5 py-8 md:px-8">
+      <div className="mx-auto w-full max-w-5xl px-3 py-5 sm:px-5 sm:py-8 md:px-8">
 
         {/* TOP BAR */}
-        <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
+        <div className="mb-5 flex flex-col items-stretch justify-between gap-3 sm:mb-6 sm:flex-row sm:items-center sm:gap-4">
           <button
             type="button"
             onClick={() =>
@@ -353,7 +353,7 @@ export default function TeacherPublishPage() {
             ← Back to Generator
           </button>
 
-          <div className="text-right">
+          <div className="text-left sm:text-right">
             <p className="text-xs font-bold uppercase tracking-wider text-blue-600">
               Teacher Portal
             </p>
@@ -372,7 +372,7 @@ export default function TeacherPublishPage() {
         <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-xl shadow-slate-200/50">
 
           {/* HEADER */}
-          <div className="bg-gradient-to-r from-blue-700 to-indigo-700 px-6 py-7 text-white md:px-8">
+          <div className="bg-gradient-to-r from-blue-700 to-indigo-700 px-4 py-5 text-white sm:px-6 sm:py-7 md:px-8">
             <div className="flex flex-wrap items-end justify-between gap-5">
 
               <div>
@@ -380,7 +380,7 @@ export default function TeacherPublishPage() {
                   READY TO PUBLISH
                 </p>
 
-                <h1 className="mt-1 text-3xl font-bold tracking-tight">
+                <h1 className="mt-1 text-2xl font-bold tracking-tight sm:text-3xl">
                   Schedule Test
                 </h1>
 
@@ -389,7 +389,7 @@ export default function TeacherPublishPage() {
                 </p>
               </div>
 
-              <div className="rounded-2xl bg-white/10 px-5 py-4 backdrop-blur">
+              <div className="w-full rounded-2xl bg-white/10 px-4 py-3 backdrop-blur sm:w-auto sm:px-5 sm:py-4">
                 <p className="text-xs text-blue-100">
                   Generated questions
                 </p>
@@ -403,7 +403,7 @@ export default function TeacherPublishPage() {
           </div>
 
           {/* CONTENT */}
-          <div className="p-6 md:p-8">
+          <div className="p-4 sm:p-6 md:p-8">
 
             {/* MESSAGE */}
             {(error || success) && (
@@ -430,7 +430,7 @@ export default function TeacherPublishPage() {
                 </p>
               </div>
 
-              <div className="grid gap-5 md:grid-cols-2">
+              <div className="grid gap-4 sm:gap-5 md:grid-cols-2">
 
                 <label className="md:col-span-2">
                   <span className="mb-2 block text-sm font-semibold text-slate-700">
@@ -544,7 +544,7 @@ export default function TeacherPublishPage() {
                       setBatchId(batches[0].id);
                     }
                   }}
-                  className={`rounded-2xl border-2 p-5 text-left transition ${
+                  className={`rounded-2xl border-2 p-4 text-left transition sm:p-5 ${
                     targetType === "batch"
                       ? "border-blue-600 bg-blue-50 shadow-sm"
                       : "border-slate-200 bg-white hover:border-slate-300"
@@ -588,7 +588,7 @@ export default function TeacherPublishPage() {
                     setBatchId("");
                     setSelectedStudentIds((current) => current.length > 0 ? current : [students[0].id]);
                   }}
-                  className={`rounded-2xl border-2 p-5 text-left transition ${
+                  className={`rounded-2xl border-2 p-4 text-left transition sm:p-5 ${
                     targetType === "student"
                       ? "border-blue-600 bg-blue-50 shadow-sm"
                       : "border-slate-200 bg-white hover:border-slate-300"
@@ -750,7 +750,7 @@ export default function TeacherPublishPage() {
                     </p>
                   </div>
 
-                  <div className="text-right">
+                  <div className="text-left sm:text-right">
 
                     <p className="text-xs uppercase tracking-wide text-slate-400">
                       Destination
