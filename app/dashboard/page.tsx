@@ -1,6 +1,7 @@
 "use client";
 
 import StudentInsights from "@/components/StudentInsights";
+import StudentTestHub from "@/components/StudentTestHub";
 import StudentAccountMenu from "@/components/StudentAccountMenu";
 import {
   useEffect,
@@ -1704,116 +1705,13 @@ export default function DashboardPage() {
 
           {/* Dashboard body */}
 
-          <div className="w-full min-w-0 p-4 sm:p-5 lg:p-6 xl:p-7 max-w-[1500px] mx-auto pb-24 xl:pb-7">
+          <div className="w-full min-w-0 p-4 sm:p-5 lg:p-6 xl:p-7 max-w-[1500px] mx-auto pb-7">
 
             {/* =================================================
-                HERO
+                TEST HUB
             ================================================== */}
 
-            <section className="relative overflow-hidden rounded-[16px] min-h-[198px] bg-gradient-to-r from-[#2460ef] via-[#4b3fe8] to-[#8735ee] text-white px-7 py-6 shadow-[0_8px_24px_rgba(83,65,220,.14)]">
-
-              <div className="absolute -right-16 -top-20 w-56 h-56 rounded-full bg-white/[.07]" />
-
-              <div className="absolute right-10 -bottom-36 w-80 h-80 rounded-full bg-white/[.07]" />
-
-              <div className="absolute right-[34%] -top-20 w-28 h-28 rounded-full bg-white/[.05]" />
-
-              <div className="relative w-full md:max-w-[53%]">
-
-                <div className="flex items-center gap-2 text-[11px] font-semibold">
-                  <span className="w-2 h-2 rounded-full bg-[#28d48a]" />
-
-                  Competitive Exam Preparation
-                </div>
-
-                <h2 className="mt-4 text-[22px] sm:text-[24px] lg:text-[26px] font-extrabold tracking-tight leading-tight">
-                  Keep pushing
-                  forward,{" "}
-                  {studentName}!
-                </h2>
-
-                <p className="mt-1.5 text-[12px] text-white/85">
-                  Consistency today
-                  leads to success
-                  tomorrow.
-                </p>
-
-                <button
-                  onClick={() =>
-                    router.push(
-                      "/tests"
-                    )
-                  }
-                  className="mt-5 h-9 px-4 rounded-lg bg-white text-[#2f58e8] text-[11px] font-bold shadow-sm"
-                >
-                  Start New Test
-                  <span className="ml-2">
-                    →
-                  </span>
-                </button>
-              </div>
-
-              {/* Illustration */}
-
-              <div className="hidden md:flex absolute right-[23%] bottom-0 w-[245px] h-[145px] items-end">
-
-                <div className="absolute left-0 bottom-5 w-[235px] h-4 rounded-full bg-[#58a8f3]/70 shadow-lg" />
-
-                <div className="absolute left-8 bottom-9 w-10 h-9 rounded-sm bg-[#e9f1ff] border-4 border-[#3b5878] rotate-[-2deg]" />
-
-                <div className="absolute left-15 bottom-9 w-28 h-5 rounded-sm bg-[#f0c6c6] border border-[#34465e]" />
-
-                <div className="absolute left-[115px] bottom-9 w-[105px] h-[82px] rounded-md bg-[#dce7f9] border-[6px] border-[#283951] rotate-[2deg]">
-                  <div className="m-3 space-y-2">
-                    {[1, 2, 3].map(
-                      (item) => (
-                        <div
-                          className="flex gap-2"
-                          key={item}
-                        >
-                          <span className="text-[#26bd84]">
-
-                          </span>
-
-                          <span className="h-1.5 bg-white rounded w-14 mt-1.5" />
-                        </div>
-                      )
-                    )}
-                  </div>
-                </div>
-
-                <div className="absolute right-0 bottom-[91px] w-2 h-12 bg-[#26334a] rotate-[22deg]" />
-
-                <div className="absolute right-[-5px] bottom-[101px] w-7 h-5 rounded-full bg-[#17263b] rotate-[22deg]" />
-
-                <div className="absolute left-[55px] bottom-10 w-7 h-12 rounded-b-xl bg-[#6ac16c]" />
-
-                <div className="absolute left-[51px] bottom-[57px] w-8 h-8 rounded-full bg-[#84d777]" />
-
-              </div>
-
-              <div className="hidden lg:block absolute right-7 top-8 w-[210px] text-right">
-
-                <div className="text-4xl font-serif leading-none text-white/45">
-                  “
-                </div>
-
-                <p className="text-[12px] leading-5 font-medium">
-                  Success is the sum
-                  of
-                  <br />
-                  small efforts
-                  repeated
-                  <br />
-                  day in and day out.
-                </p>
-
-                <p className="mt-2 text-[10px] font-semibold text-white/80">
-                  — Robert Collier
-                </p>
-
-              </div>
-            </section>
+            <StudentTestHub />
 
             {/* =================================================
                 STATS
@@ -2680,75 +2578,7 @@ export default function DashboardPage() {
 
       </div>
 
-        {/* =======================================================
-          MOBILE NAVIGATION
-      ======================================================== */}
 
-      <nav className="xl:hidden fixed bottom-0 inset-x-0 z-50 bg-white/95 backdrop-blur border-t border-[#e8eaf0] px-3 py-2.5">
-        <div className="max-w-lg mx-auto flex items-center justify-around">
-
-          {/* Dashboard */}
-          <button
-            type="button"
-            onClick={() => router.push("/dashboard")}
-            className="flex flex-col items-center gap-1 text-[#5b43df]"
-          >
-            <MiniIcon type="home" size={19} />
-            <span className="text-[9px] font-bold">
-              Dashboard
-            </span>
-          </button>
-
-          {/* My Tests */}
-          <button
-            type="button"
-            onClick={() => router.push("/test-summary")}
-            className="flex flex-col items-center gap-1 text-[#7d8595]"
-          >
-            <MiniIcon type="tests" size={19} />
-            <span className="text-[9px] font-semibold">
-              My Tests
-            </span>
-          </button>
-
-          {/* Batch Leaderboard */}
-          <button
-            type="button"
-            onClick={() => router.push("/student/batch-leaderboard")}
-            className="flex flex-col items-center gap-1 text-[#7d8595]"
-          >
-            <span className="text-[18px] leading-none">🏆</span>
-            <span className="text-[9px] font-semibold">Leaderboard</span>
-          </button>
-
-          {/* Change Password */}
-          <button
-            type="button"
-            onClick={() => router.push("/change-password")}
-            className="flex flex-col items-center gap-1 text-[#7d8595]"
-          >
-            <span className="text-[18px] leading-none">
-              🔐
-            </span>
-            <span className="text-[9px] font-semibold">
-              Password
-            </span>
-          </button>
-
-          {/* Logout */}
-          <button
-            type="button"
-            onClick={logout}
-            className="flex flex-col items-center gap-1 text-[#7d8595]"
-          >
-            <MiniIcon type="logout" size={19} />
-            <span className="text-[9px] font-semibold">
-              Logout
-            </span>
-          </button>
-
-        </div>
-      </nav>
 
     </main>
   );
