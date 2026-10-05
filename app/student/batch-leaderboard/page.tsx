@@ -54,10 +54,9 @@ export default function BatchLeaderboardPage() {
     return students.filter((student) => student.name.toLowerCase().includes(needle));
   }, [students, query]);
 
-  const topThree = students
-    .filter((student) => student.rank >= 1 && student.rank <= 3)
-    .sort((a, b) => a.rank - b.rank || a.name.localeCompare(b.name))
-    .slice(0, 3);
+  const topThree = [1, 2, 3]
+    .map((rank) => students.find((student) => student.rank === rank))
+    .filter((student): student is LeaderboardStudent => Boolean(student));
   const current = data?.currentStudent ?? null;
 
   return (
@@ -119,8 +118,8 @@ export default function BatchLeaderboardPage() {
               </section>
             )}
 
-            <section className="grid md:grid-cols-3 gap-4 items-end mb-8">
-              {[2, 1, 3].map((rank) => {
+            <section className="grid grid-cols-1 md:grid-cols-3 gap-4 items-end mb-8">
+              {[1, 2, 3].map((rank) => {
                 const student = topThree.find((item) => item.rank === rank);
                 if (!student) return <div key={rank} className="hidden md:block" />;
                 return <Podium key={student.id} student={student} place={rank} onViewBadges={() => setBadgeStudent(student)} />;
@@ -181,7 +180,7 @@ function Podium({ student, place, onViewBadges }: { student: LeaderboardStudent;
     <div className={`relative ${height} rounded-[28px] border ${student.isCurrent ? "border-indigo-300/40" : "border-white/10"} bg-white/[.06] p-5 flex flex-col justify-end text-center overflow-hidden ${place === 1 ? "shadow-[0_0_50px_rgba(250,204,21,.12)]" : ""}`}>
       <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-white/[.06] to-transparent" />
       <div className="relative text-4xl mb-2">{medal}</div>
-      <div className="relative font-black truncate">{student.name}</div>
+      <div className="relative font-black truncate">{student.name?.trim() || "Student"}</div>
       <div className="relative text-2xl font-black mt-1">{student.average}%</div>
       <div className="relative text-[10px] uppercase tracking-widest text-white/35 mt-1">#{student.rank} · {student.testsTaken} tests</div>
       <button type="button" onClick={onViewBadges} className="relative mx-auto mt-3 rounded-lg bg-violet-400/10 px-3 py-1.5 text-[10px] font-black text-violet-200 hover:bg-violet-400/20">🏆 View badges</button>

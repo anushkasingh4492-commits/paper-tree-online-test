@@ -2730,8 +2730,8 @@ if (ctx === null) {
   return (
     <main className="min-h-screen bg-[#f5f7fb] text-slate-900">
       <style jsx>{`@keyframes ptBadgePop {0%{transform:scale(.2) rotate(-12deg);opacity:0}70%{transform:scale(1.12) rotate(3deg);opacity:1}100%{transform:scale(1) rotate(0)}} @keyframes ptLevelPop {0%{transform:scale(.55);opacity:0}65%{transform:scale(1.08);opacity:1}100%{transform:scale(1);opacity:1}} @keyframes ptConfetti {0%{transform:translateY(-20px) rotate(0deg);opacity:0}15%{opacity:1}100%{transform:translateY(180px) rotate(540deg);opacity:0}}`}</style>
-      <header className="sticky top-0 z-40 h-[72px] bg-white border-b border-slate-200 shadow-sm">
-        <div className="max-w-[1400px] mx-auto h-full px-4 lg:px-6 flex items-center justify-between gap-4">
+      <header className="sticky top-0 z-40 bg-white border-b border-slate-200 shadow-sm">
+        <div className="max-w-[1400px] mx-auto min-h-[72px] px-4 lg:px-6 py-3 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           {/* Academy branding */}
           <div className="flex items-center gap-3 min-w-0">
             <div className="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-lg overflow-hidden shrink-0">
@@ -2772,16 +2772,16 @@ if (ctx === null) {
             <StudentAccountMenu studentName={studentName} />
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 w-full sm:w-auto">
             <button
               type="button"
               onClick={downloadResult}
-              className="h-10 px-4 rounded-xl bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 transition"
+              className="flex-1 sm:flex-none h-10 px-3 sm:px-4 rounded-xl bg-blue-600 text-white text-xs sm:text-sm font-semibold hover:bg-blue-700 transition touch-manipulation"
             >
               ↓ Download Result
             </button>
 
-            <button type="button" onClick={() => void shareResultCard()} className="h-10 px-4 rounded-xl bg-violet-600 text-white text-sm font-semibold hover:bg-violet-700 transition">
+            <button type="button" onClick={() => void shareResultCard()} className="flex-1 sm:flex-none h-10 px-3 sm:px-4 rounded-xl bg-violet-600 text-white text-xs sm:text-sm font-semibold hover:bg-violet-700 transition touch-manipulation">
             🏆 Share Achievement
             </button>
 
@@ -2800,7 +2800,7 @@ if (ctx === null) {
             <button
               type="button"
               onClick={() =>
-                router.push("/tests")
+                router.push("/test-summary")
               }
               className="hidden sm:block h-10 px-4 rounded-xl border border-slate-200 bg-white text-sm font-semibold text-slate-700 hover:bg-slate-50 transition"
             >

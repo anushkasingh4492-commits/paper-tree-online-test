@@ -1534,9 +1534,9 @@ export default function DashboardPage() {
   ============================================================ */
 
   return (
-    <main className="min-h-screen bg-[#f8f9fc] text-[#1d2435]">
+    <main className="min-h-screen w-full max-w-full overflow-x-hidden bg-[#f8f9fc] text-[#1d2435]">
 
-      <div className="flex min-h-screen">
+      <div className="flex min-h-screen w-full min-w-0">
 
         {/* =====================================================
             SIDEBAR
@@ -1645,10 +1645,10 @@ export default function DashboardPage() {
 
           {/* Header */}
 
-          <header className="h-[82px] bg-white border-b border-[#e9ebf1] px-5 lg:px-8 flex items-center justify-between">
+          <header className="min-h-[82px] w-full bg-white border-b border-[#e9ebf1] px-4 sm:px-5 lg:px-8 py-3 sm:py-0 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
 
-            <div>
-              <h1 className="text-[20px] font-extrabold tracking-tight">
+            <div className="min-w-0 w-full sm:w-auto">
+              <h1 className="text-[18px] sm:text-[20px] leading-tight font-extrabold tracking-tight break-words">
                 Welcome back,{" "}
                 <span className="text-[#315fea]">
                   {studentName}
@@ -1665,7 +1665,7 @@ export default function DashboardPage() {
               </p>
             </div>
 
-            <div className="flex items-center gap-2.5">
+            <div className="flex items-center justify-end gap-2.5 w-full sm:w-auto">
 
               <button className="hidden sm:flex items-center gap-2 px-3.5 h-9 rounded-xl border border-[#e8eaf1] bg-white text-[11px] font-semibold text-[#33405a] shadow-[0_2px_8px_rgba(30,35,60,.03)]">
                 <span className="text-[#6544e8]">
@@ -1704,7 +1704,7 @@ export default function DashboardPage() {
 
           {/* Dashboard body */}
 
-          <div className="p-5 lg:p-6 xl:p-7 max-w-[1500px] mx-auto pb-24 xl:pb-7">
+          <div className="w-full min-w-0 p-4 sm:p-5 lg:p-6 xl:p-7 max-w-[1500px] mx-auto pb-24 xl:pb-7">
 
             {/* =================================================
                 HERO
@@ -1718,7 +1718,7 @@ export default function DashboardPage() {
 
               <div className="absolute right-[34%] -top-20 w-28 h-28 rounded-full bg-white/[.05]" />
 
-              <div className="relative max-w-[53%]">
+              <div className="relative w-full md:max-w-[53%]">
 
                 <div className="flex items-center gap-2 text-[11px] font-semibold">
                   <span className="w-2 h-2 rounded-full bg-[#28d48a]" />
@@ -1726,7 +1726,7 @@ export default function DashboardPage() {
                   Competitive Exam Preparation
                 </div>
 
-                <h2 className="mt-4 text-[24px] lg:text-[26px] font-extrabold tracking-tight">
+                <h2 className="mt-4 text-[22px] sm:text-[24px] lg:text-[26px] font-extrabold tracking-tight leading-tight">
                   Keep pushing
                   forward,{" "}
                   {studentName}!
@@ -2702,7 +2702,7 @@ export default function DashboardPage() {
           {/* My Tests */}
           <button
             type="button"
-            onClick={() => router.push("/tests")}
+            onClick={() => router.push("/test-summary")}
             className="flex flex-col items-center gap-1 text-[#7d8595]"
           >
             <MiniIcon type="tests" size={19} />

@@ -69,7 +69,7 @@ export async function GET() {
            AND s.academy_id = $2
          GROUP BY s.id, s.name
        ), ranked AS (
-         SELECT *, RANK() OVER (ORDER BY avg_pct DESC) AS rank
+         SELECT *, ROW_NUMBER() OVER (ORDER BY avg_pct DESC, name ASC, student_id ASC) AS rank
          FROM scores
        )
        SELECT * FROM ranked ORDER BY rank ASC, name ASC`,
