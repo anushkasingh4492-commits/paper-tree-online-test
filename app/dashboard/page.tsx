@@ -1593,7 +1593,7 @@ export default function DashboardPage() {
                   <MiniIcon type="tests" />
                 </span>
 
-                My Tests
+                Tests
               </button>
 
               <button

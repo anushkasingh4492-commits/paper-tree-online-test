@@ -69,7 +69,22 @@ export default function StudentTestHub() {
           </p>
         </div>
 
-        <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-3">
+        <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4">
+          <button
+            type="button"
+            onClick={() => router.push("/tests")}
+            className="group min-h-[112px] rounded-2xl bg-indigo-600 p-4 text-left text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-indigo-700 hover:shadow-md"
+          >
+            <div className="flex items-center justify-between">
+              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/15 text-lg">📝</span>
+              <span className="text-[10px] font-black uppercase tracking-wider text-indigo-100">Practice</span>
+            </div>
+            <div className="mt-3 text-sm font-black">Self Practice</div>
+            <div className="mt-1 text-[11px] font-semibold text-indigo-100">
+              Choose your exam, subjects and chapters, then start a test.
+            </div>
+          </button>
+
           <button
             type="button"
             onClick={() => document.getElementById("student-level")?.scrollIntoView({ behavior: "smooth", block: "start" })}
