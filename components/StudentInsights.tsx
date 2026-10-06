@@ -267,6 +267,80 @@ export default function StudentInsights() {
 
       {data.weakAreas.length>0&&<div className="rounded-[26px] border border-rose-100 bg-white p-5 shadow-sm"><div className="text-[10px] font-black uppercase tracking-[.2em] text-rose-500">Boss Fight Queue</div><div className="mt-1 text-xl font-black text-slate-900">Chapters to conquer</div><div className="mt-4 grid gap-2 md:grid-cols-2">{data.weakAreas.map((area)=><div key={`${area.subject}-${area.chapter}`} className="rounded-xl border border-slate-100 bg-slate-50 p-3"><div className="flex items-center justify-between gap-3"><span className="truncate text-sm font-black text-slate-700">{area.chapter}</span><span className="text-xs font-black text-rose-500">{area.rate}% misses</span></div><div className="mt-2 h-1.5 overflow-hidden rounded-full bg-slate-200"><div className="h-full rounded-full bg-gradient-to-r from-amber-400 to-rose-500" style={{width:`${clamp(area.rate)}%`}}/></div></div>)}</div></div>}
 
+      {levelOpen && (
+        <div
+          className="fixed inset-0 z-[110] flex items-center justify-center bg-slate-950/80 p-4 backdrop-blur-md"
+          onClick={() => setLevelOpen(false)}
+        >
+          <div
+            className="pt-pop w-full max-w-lg overflow-hidden rounded-[28px] bg-white shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-indigo-950 to-purple-950 p-6 text-white sm:p-7">
+              <div className="absolute -right-16 -top-16 h-44 w-44 rounded-full bg-indigo-500/25 blur-3xl" />
+              <div className="absolute -bottom-16 left-1/4 h-40 w-40 rounded-full bg-fuchsia-500/20 blur-3xl" />
+              <div className="relative flex items-start justify-between gap-4">
+                <div>
+                  <div className="text-[10px] font-black uppercase tracking-[.25em] text-indigo-200">Player Progress</div>
+                  <h3 className="mt-2 text-2xl font-black sm:text-3xl">Level {data.level} · {data.levelName}</h3>
+                  <p className="mt-1 text-xs font-semibold text-slate-300">{data.points.toLocaleString()} XP · {data.testsCompleted} completed tests</p>
+                </div>
+                <div className="rounded-2xl bg-white/10 px-4 py-3 text-center backdrop-blur">
+                  <div className="text-2xl">🔥</div>
+                  <div className="text-xl font-black">{data.streak}</div>
+                  <div className="text-[9px] font-black uppercase tracking-widest text-orange-200">Day streak</div>
+                </div>
+              </div>
+
+              <div className="relative mt-6">
+                <div className="mb-2 flex items-center justify-between text-[10px] font-black uppercase tracking-wider text-slate-300">
+                  <span>Level progress</span>
+                  <span>{nextName ? `${data.levelProgress}% · Next: ${nextName}` : "MAX LEVEL"}</span>
+                </div>
+                <div className="h-3 overflow-hidden rounded-full bg-white/10">
+                  <div
+                    className="h-full rounded-full bg-gradient-to-r from-cyan-400 via-indigo-400 to-fuchsia-400 transition-all"
+                    style={{ width: `${clamp(data.levelProgress)}%` }}
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className="p-5 sm:p-6">
+              <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+                <div className="rounded-2xl bg-slate-50 p-4 text-center">
+                  <div className="text-xl font-black text-indigo-600">{data.testsCompleted}</div>
+                  <div className="mt-1 text-[9px] font-black uppercase tracking-wider text-slate-400">Tests</div>
+                </div>
+                <div className="rounded-2xl bg-slate-50 p-4 text-center">
+                  <div className="text-xl font-black text-fuchsia-600">{data.points.toLocaleString()}</div>
+                  <div className="mt-1 text-[9px] font-black uppercase tracking-wider text-slate-400">XP</div>
+                </div>
+                <div className="rounded-2xl bg-slate-50 p-4 text-center col-span-2 sm:col-span-1">
+                  <div className="text-xl font-black text-orange-500">{data.maxStreak}</div>
+                  <div className="mt-1 text-[9px] font-black uppercase tracking-wider text-slate-400">Best streak</div>
+                </div>
+              </div>
+
+              <div className="mt-4 rounded-2xl border border-indigo-100 bg-indigo-50/60 p-4">
+                <div className="text-[10px] font-black uppercase tracking-[.18em] text-indigo-500">Next milestone</div>
+                <div className="mt-1 text-sm font-black text-slate-900">
+                  {data.nextLevelAt ? `${Math.max(0, data.nextLevelAt - data.points).toLocaleString()} XP to ${nextName || "the next level"}` : "You have reached the highest level."}
+                </div>
+              </div>
+
+              <button
+                type="button"
+                onClick={() => setLevelOpen(false)}
+                className="mt-5 w-full rounded-xl bg-slate-950 px-4 py-3 text-xs font-black text-white transition hover:bg-slate-800"
+              >
+                CLOSE
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
      {safeSelectedBadge && (
   <div
     className="fixed inset-0 z-[100] flex items-center justify-center bg-slate-950/75 p-4 backdrop-blur-md"
