@@ -744,7 +744,7 @@ export default function TeacherGeneratePage() {
                       </button>
                     ))}
                   </div>
-                  <p className="mt-2 text-xs text-emerald-800">Tap a symbol to insert it into the question. For formatted equations, use LaTeX between $...$ for inline math or $$...$$ for a separate equation. Example: <code>$\\frac{a}{b}$</code>, <code>$x^{2}$</code>.</p>
+                  <p className="mt-2 text-xs text-emerald-800">Tap a symbol to insert it into the question. For formatted equations, use LaTeX between $...$ for inline math or $$...$$ for a separate equation. Example: <code>{"$\\frac{a}{b}$"}</code>, <code>{"$x^{2}$"}</code>.</p>
                 </div>
                 <textarea
                   value={customStem}
