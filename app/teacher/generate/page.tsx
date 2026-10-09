@@ -725,6 +725,27 @@ export default function TeacherGeneratePage() {
 
             {showCustomForm && (
               <div className="mt-5 grid gap-3 md:grid-cols-2">
+                <div className="md:col-span-2 rounded-xl border border-emerald-200 bg-emerald-50 p-3">
+                  <p className="mb-2 text-xs font-bold uppercase tracking-wide text-emerald-900">Scientific symbols & equations</p>
+                  <div className="flex flex-wrap gap-2">
+                    {[
+                      ["α β γ", "α β γ"], ["θ λ μ", "θ λ μ"], ["∞", "∞"],
+                      ["±", "±"], ["× ÷", "× ÷"], ["→ ⇌", "→ ⇌"],
+                      ["°", "°"], ["≤ ≥ ≠", "≤ ≥ ≠"], ["∑ ∫ √", "∑ ∫ √"],
+                      ["♀ ♂", "♀ ♂"], ["⊕", "⊕"], ["K₅ C₅ A∞ G₅", "K₅ C₅ A∞ G₅"],
+                      ["Subscript: H₂O", "H₂O"], ["Charge: Ca²⁺", "Ca²⁺"],
+                      ["Superscript: x²", "x²"], ["Fraction", "$\\frac{a}{b}$"],
+                      ["Square root", "$\\sqrt{x}$"], ["Power", "$x^{2}$"],
+                      ["Inline equation", "$\\alpha + \\beta = \\gamma$"],
+                      ["Display equation", "\\n$$\\frac{-b \\pm \\sqrt{b^2-4ac}}{2a}$$"]
+                    ].map(([label, value]) => (
+                      <button key={label} type="button" onClick={() => setCustomStem((current) => current + (current && !current.endsWith(" ") ? " " : "") + value)} className="rounded-lg border border-emerald-200 bg-white px-2.5 py-1.5 text-xs font-semibold text-emerald-900 hover:bg-emerald-100">
+                        {label}
+                      </button>
+                    ))}
+                  </div>
+                  <p className="mt-2 text-xs text-emerald-800">Tap a symbol to insert it into the question. For formatted equations, use LaTeX between $...$ for inline math or $$...$$ for a separate equation. Example: <code>$\\frac{a}{b}$</code>, <code>$x^{2}$</code>.</p>
+                </div>
                 <textarea
                   value={customStem}
                   onChange={(e) => setCustomStem(e.target.value)}
@@ -734,6 +755,7 @@ export default function TeacherGeneratePage() {
                 />
 
                 {customOptions.map((value, index) => (
+                  <div key={index} className="space-y-1">
                   <input
                     key={index}
                     value={value}
@@ -745,8 +767,10 @@ export default function TeacherGeneratePage() {
                       )
                     }
                     placeholder={`Option ${String.fromCharCode(65 + index)}`}
-                    className="rounded-xl border border-emerald-200 bg-white px-4 py-3 text-sm outline-none focus:border-emerald-500"
+                    className="w-full rounded-xl border border-emerald-200 bg-white px-4 py-3 text-sm outline-none focus:border-emerald-500"
                   />
+                  <p className="text-xs text-gray-500">Unicode symbols work here too (e.g. H₂O, x², α, ∞).</p>
+                  </div>
                 ))}
 
                 <select
@@ -786,7 +810,7 @@ export default function TeacherGeneratePage() {
                 <textarea
                   value={customSolution}
                   onChange={(e) => setCustomSolution(e.target.value)}
-                  placeholder="Solution / explanation (optional)"
+                  placeholder="Solution / explanation (optional). Supports symbols and LaTeX such as $\\frac{a}{b}$ or $x^{2}$."
                   rows={3}
                   className="md:col-span-2 rounded-xl border border-emerald-200 bg-white px-4 py-3 text-sm outline-none focus:border-emerald-500"
                 />
