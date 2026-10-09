@@ -134,7 +134,7 @@ export default function TeacherPage() {
                     credentials: "include",
                   });
                 } finally {
-                  router.push("/");
+                  router.push("/login");
                 }
               }}
               className="rounded-xl border border-[#e2e6ee] bg-white px-4 py-2.5 text-sm font-bold text-[#697386] hover:bg-[#f7f8fb]"

@@ -1,487 +1,127 @@
 "use client";
 
-import { FormEvent, useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import { FormEvent, useState } from "react";
+import Link from "next/link";
+import {
+  ArrowRight, Check, ChevronDown, Clock3, GraduationCap, LineChart,
+  Menu, ShieldCheck, Sparkles, Target, Users, X, Zap, BookOpenCheck,
+  MessageCircle, ChartNoAxesCombined,
+} from "lucide-react";
 
-type Branding = {
-  name: string;
-  logo_data?: string;
-};
+const plans = [
+  {
+    name: "Bronze", price: "₹500", oldPrice: "₹750", note: "A confident start",
+    features: ["Online tests for your students", "10 self-practice tests / month", "Up to 3 teacher logins", "Instant result summaries"],
+  },
+  {
+    name: "Silver", price: "₹700", oldPrice: "₹900", note: "For growing institutes", popular: true,
+    features: ["Everything in Bronze", "30 self-practice tests / month", "Up to 8 teacher logins", "Student performance insights", "Chapter-wise progress tracking"],
+  },
+  {
+    name: "Gold", price: "₹800", oldPrice: "₹1,100", note: "The complete learning experience",
+    features: ["Everything in Silver", "AI weak-area practice tests", "Unlimited self-practice tests", "Custom questions and own app options", "WhatsApp parent reports"],
+  },
+];
 
-export default function Home() {
-  const router = useRouter();
+const faqs = [
+  ["Which exams does Paper Tree CBT support?", "Paper Tree CBT is designed for institutes preparing students for NEET, JEE Main and MHT-CET. Contact us to discuss your institute's setup."],
+  ["How quickly can our institute go live?", "The onboarding target is 48 hours after the required institute details and setup information are ready."],
+  ["Can teachers create and schedule tests?", "Yes. Teachers can prepare tests and schedule them for their own institute's batches and students."],
+  ["Can students see their weak areas?", "Students can review performance and use available practice features to focus on subjects and chapters that need more work."],
+  ["How do we get a demo?", "Use the demo form on this page. It opens WhatsApp with your details so our team can follow up."],
+];
 
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
+export default function MarketingHomePage() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [openFaq, setOpenFaq] = useState<number | null>(0);
+  const [form, setForm] = useState({ name: "", institute: "", city: "", phone: "", students: "" });
+  const [formError, setFormError] = useState("");
 
-  const [branding, setBranding] = useState<Branding | null>(null);
-
-  useEffect(() => {
-    async function loadBranding() {
-      try {
-        const response = await fetch("/api/academy/branding", {
-          cache: "no-store",
-        });
-
-        if (!response.ok) {
-          throw new Error("Could not load branding.");
-        }
-
-        const data = await response.json();
-
-        if (data.success && data.academy) {
-          setBranding(data.academy);
-        }
-      } catch (error) {
-        console.error("BRANDING LOAD ERROR:", error);
-      }
+  function requestDemo(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setFormError("");
+    if (!form.name.trim() || !form.institute.trim() || !form.phone.trim()) {
+      setFormError("Please add your name, institute and WhatsApp number.");
+      return;
     }
-
-    loadBranding();
-  }, []);
-
-  async function handleSubmit(
-    e: FormEvent<HTMLFormElement>
-  ) {
-    e.preventDefault();
-
-    setError("");
-    setLoading(true);
-
-    try {
-      const response = await fetch("/api/auth/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        credentials: "include",
-        body: JSON.stringify({
-          email,
-          password,
-        }),
-      });
-
-      const text = await response.text();
-
-      console.log("LOGIN STATUS:", response.status);
-      console.log("LOGIN RESPONSE:", text);
-
-      let result: any = null;
-
-      if (text) {
-        try {
-          result = JSON.parse(text);
-        } catch {
-          throw new Error(
-            `Login server returned invalid data (${response.status}).`
-          );
-        }
-      }
-
-      if (!response.ok) {
-        throw new Error(
-          result?.error ||
-            `Login failed with status ${response.status}.`
-        );
-      }
-
-      if (!result?.success) {
-        throw new Error(
-          result?.error || "Login failed."
-        );
-      }
-
-      if (result.role === "STUDENT") {
-        if (result.user?.id) {
-          localStorage.setItem(
-            "studentId",
-            String(result.user.id)
-          );
-        }
-
-        if (result.user?.name) {
-          localStorage.setItem(
-            "studentName",
-            result.user.name
-          );
-        }
-
-        window.location.replace("/dashboard");
-        return;
-      } else if (result.role === "TEACHER") {
-        router.replace("/teacher");
-      } else if (result.role === "ACADEMY_ADMIN") {
-        router.replace("/academy-admin");
-      } else if (result.role === "ADMIN") {
-        router.replace("/admin");
-      } else {
-        throw new Error("Unknown account role.");
-      }
-
-      router.refresh();
-    } catch (error) {
-      console.error("LOGIN ERROR:", error);
-
-      setError(
-        error instanceof Error
-          ? error.message
-          : "Unable to connect to the server. Please try again."
-      );
-    } finally {
-      setLoading(false);
-    }
+    const message = [
+      "Hi Paper Tree CBT! I'd like to book a free demo.",
+      `Name: ${form.name.trim()}`,
+      `Institute: ${form.institute.trim()}`,
+      `City: ${form.city.trim() || "Not provided"}`,
+      `WhatsApp: ${form.phone.trim()}`,
+      `Approx. students: ${form.students || "Not provided"}`,
+    ].join("\n");
+    window.open(`https://wa.me/918869036903?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
   }
 
-  const instituteName = branding?.name || "Paper Tree Educational Studio";
-
   return (
-    <main className="min-h-screen bg-[#f4f7fb] text-[#172033]">
-      <div className="flex min-h-screen">
-
-        {/* ========================================================= */}
-        {/* LEFT BRAND / CBT PANEL                                   */}
-        {/* ========================================================= */}
-
-        <section className="relative hidden min-h-screen overflow-hidden bg-[#173ea5] lg:flex lg:w-[52%]">
-
-          {/* Background decoration */}
-
-          <div className="absolute -right-40 -top-40 h-[620px] w-[620px] rounded-full border-[90px] border-white/[0.045]" />
-
-          <div className="absolute right-20 top-40 h-[300px] w-[300px] rounded-full border-[45px] border-white/[0.035]" />
-
-          <div className="absolute -bottom-48 -left-32 h-[560px] w-[560px] rounded-full bg-white/[0.035]" />
-
-          <div className="relative z-10 flex w-full flex-col justify-between p-14">
-
-            {/* ===================================================== */}
-            {/* INSTITUTE BRAND                                      */}
-            {/* ===================================================== */}
-
-            <div className="flex items-center gap-3">
-
-              {branding?.logo_data ? (
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-[14px] bg-white p-1.5 shadow-lg">
-                  <img
-                    src={branding.logo_data}
-                    alt={`${instituteName} logo`}
-                    className="h-full w-full rounded-lg object-contain"
-                  />
-                </div>
-              ) : (
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-[14px] bg-white text-xl font-extrabold text-[#2454d8] shadow-lg">
-                  {instituteName
-                    .charAt(0)
-                    .toUpperCase()}
-                </div>
-              )}
-
-              <div>
-                <p className="text-[18px] font-extrabold tracking-tight text-white">
-                  {instituteName}
-                </p>
-
-                <p className="text-[9px] font-bold tracking-[0.22em] text-blue-100">
-                  COMPUTER BASED TESTING
-                </p>
-              </div>
-
-            </div>
-
-            {/* ===================================================== */}
-            {/* MAIN CONTENT                                         */}
-            {/* ===================================================== */}
-
-            <div className="relative max-w-[590px]">
-
-              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-blue-50 backdrop-blur">
-                <span className="h-1.5 w-1.5 rounded-full bg-emerald-300" />
-                Computer Based Testing
-              </div>
-
-              <h1 className="text-[50px] font-extrabold leading-[1.07] tracking-[-0.045em] text-white xl:text-[58px]">
-                Test smarter.
-                <br />
-                <span className="text-blue-100">
-                  Perform better.
-                </span>
-              </h1>
-
-              <p className="mt-7 max-w-[510px] text-[15px] leading-7 text-blue-100/90">
-                A secure and modern computer-based testing
-                platform for online examinations, practice
-                tests and assessments.
-              </p>
-
-              {/* CBT FEATURES */}
-
-              <div className="mt-9 grid max-w-[470px] grid-cols-2 gap-3">
-
-                <div className="rounded-xl border border-white/10 bg-white/[0.08] px-4 py-3.5 backdrop-blur">
-                  <div className="mb-2 flex h-7 w-7 items-center justify-center rounded-lg bg-white/10 text-sm text-white">
-                    ✓
-                  </div>
-
-                  <p className="text-xs font-bold text-white">
-                    Secure Exams
-                  </p>
-
-                  <p className="mt-1 text-[10px] text-blue-100/70">
-                    Reliable online testing
-                  </p>
-                </div>
-
-                <div className="rounded-xl border border-white/10 bg-white/[0.08] px-4 py-3.5 backdrop-blur">
-                  <div className="mb-2 flex h-7 w-7 items-center justify-center rounded-lg bg-white/10 text-sm text-white">
-                    ◷
-                  </div>
-
-                  <p className="text-xs font-bold text-white">
-                    Live Testing
-                  </p>
-
-                  <p className="mt-1 text-[10px] text-blue-100/70">
-                    Timed examinations
-                  </p>
-                </div>
-
-                <div className="rounded-xl border border-white/10 bg-white/[0.08] px-4 py-3.5 backdrop-blur">
-                  <div className="mb-2 flex h-7 w-7 items-center justify-center rounded-lg bg-white/10 text-sm text-white">
-                    ▣
-                  </div>
-
-                  <p className="text-xs font-bold text-white">
-                    Instant Results
-                  </p>
-
-                  <p className="mt-1 text-[10px] text-blue-100/70">
-                    Fast performance insights
-                  </p>
-                </div>
-
-                <div className="rounded-xl border border-white/10 bg-white/[0.08] px-4 py-3.5 backdrop-blur">
-                  <div className="mb-2 flex h-7 w-7 items-center justify-center rounded-lg bg-white/10 text-sm text-white">
-                    ◉
-                  </div>
-
-                  <p className="text-xs font-bold text-white">
-                    Smart Assessment
-                  </p>
-
-                  <p className="mt-1 text-[10px] text-blue-100/70">
-                    Structured test experience
-                  </p>
-                </div>
-
-              </div>
-            </div>
-
-            {/* ===================================================== */}
-            {/* LEFT FOOTER                                          */}
-            {/* ===================================================== */}
-
-            <div className="flex items-center justify-between text-xs text-blue-200/70">
-
-              <span>
-                © {new Date().getFullYear()} Paper Tree Educational Studio
-              </span>
-
-              <span>
-                Computer Based Testing Platform
-              </span>
-
-            </div>
-
-          </div>
-        </section>
-
-        {/* ========================================================= */}
-        {/* RIGHT LOGIN PANEL                                        */}
-        {/* ========================================================= */}
-
-        <section className="flex flex-1 items-center justify-center px-6 py-10 sm:px-10">
-
-          <div className="w-full max-w-md">
-
-            {/* ===================================================== */}
-            {/* MOBILE BRAND                                         */}
-            {/* ===================================================== */}
-
-            <div className="mb-10 flex items-center gap-3 lg:hidden">
-
-              {branding?.logo_data ? (
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[13px] bg-white p-1.5 shadow-md">
-                  <img
-                    src={branding.logo_data}
-                    alt={`${instituteName} logo`}
-                    className="h-full w-full rounded-lg object-contain"
-                  />
-                </div>
-              ) : (
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[13px] bg-[#2454d8] text-lg font-extrabold text-white shadow-md">
-                  {instituteName
-                    .charAt(0)
-                    .toUpperCase()}
-                </div>
-              )}
-
-              <div>
-
-                <p className="text-[17px] font-extrabold">
-                  {instituteName}
-                </p>
-
-                <p className="text-[9px] font-bold tracking-[0.2em] text-[#98a1b2]">
-                  COMPUTER BASED TESTING
-                </p>
-
-              </div>
-
-            </div>
-
-            {/* ===================================================== */}
-            {/* LOGIN HEADING                                        */}
-            {/* ===================================================== */}
-
-            <div className="mb-8">
-
-              <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-[#eef3ff] px-3 py-1.5">
-
-                <span className="h-1.5 w-1.5 rounded-full bg-[#315bea]" />
-
-                <span className="text-[10px] font-bold uppercase tracking-[0.12em] text-[#315bea]">
-                  Computer Based Testing
-                </span>
-
-              </div>
-
-              <h2 className="mt-2 text-[31px] font-extrabold tracking-[-0.04em] text-[#172033]">
-                Welcome back
-              </h2>
-
-              <p className="mt-2 text-sm leading-6 text-[#929aaa]">
-                Sign in to access your testing dashboard.
-              </p>
-
-            </div>
-
-            {/* ===================================================== */}
-            {/* LOGIN FORM                                           */}
-            {/* ===================================================== */}
-
-            <form
-              onSubmit={handleSubmit}
-              className="rounded-[22px] border border-[#e4e8ef] bg-white p-6 shadow-[0_15px_45px_rgba(20,30,55,0.06)] sm:p-8"
-            >
-
-              {/* ERROR */}
-
-              {error && (
-                <div className="mb-5 rounded-xl border border-red-100 bg-red-50 px-4 py-3 text-xs font-medium leading-5 text-red-600">
-                  {error}
-                </div>
-              )}
-
-              {/* EMAIL */}
-
-              <div>
-
-                <label
-                  htmlFor="email"
-                  className="mb-2 block text-xs font-bold text-[#4d5668]"
-                >
-                  Email address
-                </label>
-
-                <input
-                  id="email"
-                  type="email"
-                  value={email}
-                  onChange={(e) =>
-                    setEmail(e.target.value)
-                  }
-                  placeholder="you@example.com"
-                  autoComplete="email"
-                  required
-                  disabled={loading}
-                  className="h-12 w-full rounded-xl border border-[#dfe3ea] bg-white px-4 text-sm text-[#172033] outline-none transition placeholder:text-[#b1b7c2] focus:border-[#315bea] focus:ring-4 focus:ring-[#315bea]/10 disabled:bg-[#f7f8fb]"
-                />
-
-              </div>
-
-              {/* PASSWORD */}
-
-              <div className="mt-5">
-
-                <div className="mb-2 flex items-center justify-between">
-
-                  <label
-                    htmlFor="password"
-                    className="block text-xs font-bold text-[#4d5668]"
-                  >
-                    Password
-                  </label>
-
-                  <span className="text-[10px] font-medium text-[#a0a7b4]">
-                    Secure login
-                  </span>
-
-                </div>
-
-                <input
-                  id="password"
-                  type="password"
-                  value={password}
-                  onChange={(e) =>
-                    setPassword(e.target.value)
-                  }
-                  placeholder="Enter your password"
-                  autoComplete="current-password"
-                  required
-                  disabled={loading}
-                  className="h-12 w-full rounded-xl border border-[#dfe3ea] bg-white px-4 text-sm text-[#172033] outline-none transition placeholder:text-[#b1b7c2] focus:border-[#315bea] focus:ring-4 focus:ring-[#315bea]/10 disabled:bg-[#f7f8fb]"
-                />
-
-              </div>
-
-              {/* LOGIN BUTTON */}
-
-              <button
-                type="submit"
-                disabled={loading}
-                className="mt-7 flex h-12 w-full items-center justify-center rounded-xl bg-[#315bea] text-sm font-bold text-white shadow-[0_8px_20px_rgba(49,91,234,0.18)] transition hover:bg-[#284ed2] active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-60"
-              >
-                {loading
-                  ? "Signing in..."
-                  : "Sign in to CBT"}
-              </button>
-
-            </form>
-
-            {/* ===================================================== */}
-            {/* RIGHT FOOTER                                          */}
-            {/* ===================================================== */}
-
-            <div className="mt-7 text-center">
-
-              <p className="text-[11px] leading-5 text-[#a0a7b4]">
-                Secure access for students, teachers and
-                administrators.
-              </p>
-
-              <p className="mt-2 text-[10px] font-medium text-[#c0c5ce]">
-                © {new Date().getFullYear()} Paper Tree Educational Studio
-              </p>
-
-            </div>
-
-          </div>
-
-        </section>
-
+    <main className="min-h-screen overflow-hidden bg-[#fbfaf7] text-[#20251f] selection:bg-[#d8f36a] selection:text-[#172014]">
+      <div className="bg-[#202b22] px-4 py-2.5 text-center text-xs font-semibold tracking-wide text-white sm:text-sm">
+        <span className="mr-2 inline-flex rounded-full bg-[#d8f36a] px-2.5 py-1 text-[10px] font-black uppercase tracking-widest text-[#202b22]">Launch offer</span>
+        Plans from ₹500/student/year · Offer valid till 31 October
       </div>
+
+      <header className="sticky top-0 z-40 border-b border-[#e9e9df] bg-[#fbfaf7]/95 backdrop-blur-xl">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
+          <Link href="#top" className="flex items-center gap-3" aria-label="Paper Tree CBT home">
+            <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#25372a] text-xl font-black text-[#d8f36a] shadow-lg shadow-[#25372a]/15">P<span className="text-white">.</span></span>
+            <span><span className="block text-lg font-black leading-tight tracking-tight">paper tree<span className="text-[#6e8a43]">.</span></span><span className="block text-[9px] font-bold uppercase tracking-[0.23em] text-[#73796e]">CBT · built for institutes</span></span>
+          </Link>
+          <nav className="hidden items-center gap-8 text-sm font-semibold text-[#555d52] md:flex">
+            <a className="transition hover:text-[#25372a]" href="#platform">Platform</a><a className="transition hover:text-[#25372a]" href="#features">Features</a><a className="transition hover:text-[#25372a]" href="#pricing">Pricing</a><a className="transition hover:text-[#25372a]" href="#faq">FAQs</a>
+          </nav>
+          <div className="hidden items-center gap-3 md:flex"><Link href="/login" className="rounded-full px-4 py-2.5 text-sm font-bold text-[#25372a] transition hover:bg-[#eeefe7]">Institute login</Link><a href="#demo" className="rounded-full bg-[#d8f36a] px-5 py-3 text-sm font-extrabold text-[#202b22] shadow-sm transition hover:-translate-y-0.5 hover:bg-[#c8e65a]">Book a free demo <ArrowRight className="ml-1 inline" size={15} /></a></div>
+          <button aria-label={menuOpen ? "Close navigation" : "Open navigation"} className="rounded-xl border border-[#e4e5dc] p-2.5 md:hidden" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X size={20} /> : <Menu size={20} />}</button>
+        </div>
+        {menuOpen && <nav className="grid gap-1 border-t border-[#e9e9df] px-5 py-4 md:hidden"><a onClick={() => setMenuOpen(false)} className="rounded-lg px-3 py-2.5" href="#platform">Platform</a><a onClick={() => setMenuOpen(false)} className="rounded-lg px-3 py-2.5" href="#features">Features</a><a onClick={() => setMenuOpen(false)} className="rounded-lg px-3 py-2.5" href="#pricing">Pricing</a><a onClick={() => setMenuOpen(false)} className="rounded-lg px-3 py-2.5" href="#faq">FAQs</a><Link onClick={() => setMenuOpen(false)} className="rounded-lg bg-[#25372a] px-3 py-3 font-bold text-white" href="/login">Institute login <ArrowRight className="ml-1 inline" size={16} /></Link></nav>}
+      </header>
+
+      <section id="top" className="relative isolate">
+        <div className="pointer-events-none absolute -right-28 top-10 -z-10 h-[440px] w-[440px] rounded-full bg-[#e7efc7] blur-3xl opacity-70" /><div className="pointer-events-none absolute -left-32 top-72 -z-10 h-[360px] w-[360px] rounded-full bg-[#f4e9d6] blur-3xl opacity-60" />
+        <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 pb-20 pt-16 md:pt-24 lg:grid-cols-[1.02fr_.98fr] lg:px-8 lg:pb-28">
+          <div>
+            <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#dfe5d1] bg-white/80 px-3.5 py-2 text-xs font-bold text-[#4d6541] shadow-sm"><span className="h-2 w-2 rounded-full bg-[#83a847]" /> A smarter way to run your institute</div>
+            <h1 className="max-w-3xl text-5xl font-black leading-[1.02] tracking-[-0.055em] sm:text-6xl lg:text-[4.5rem]">Your institute’s tests.<br /><span className="relative inline-block text-[#657f42]">A clearer path to rank.</span></h1>
+            <p className="mt-7 max-w-xl text-lg leading-8 text-[#63695f]">A modern online testing platform for NEET, JEE Main and MHT-CET institutes—with instant results, meaningful performance insights and an AI coach to help every student improve.</p>
+            <div className="mt-9 flex flex-col gap-3 sm:flex-row"><a href="#demo" className="inline-flex items-center justify-center rounded-full bg-[#25372a] px-7 py-4 font-extrabold text-white shadow-xl shadow-[#25372a]/15 transition hover:-translate-y-1 hover:bg-[#344a37]">Book a free demo <ArrowRight className="ml-2" size={18} /></a><a href="#platform" className="inline-flex items-center justify-center rounded-full border border-[#dfe1d7] bg-white/70 px-7 py-4 font-extrabold text-[#303a30] transition hover:border-[#a8b994] hover:bg-white">Explore the platform <ChevronDown className="ml-2" size={17} /></a></div>
+            <div className="mt-9 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm font-semibold text-[#63695f]"><span className="inline-flex items-center gap-2"><Check size={16} className="text-[#6e8a43]" /> Built for coaching institutes</span><span className="inline-flex items-center gap-2"><Check size={16} className="text-[#6e8a43]" /> Quick onboarding</span><span className="inline-flex items-center gap-2"><Check size={16} className="text-[#6e8a43]" /> Student-first insights</span></div>
+          </div>
+          <div id="platform" className="relative mx-auto w-full max-w-[590px] lg:ml-auto">
+            <div className="absolute -left-5 top-16 z-10 hidden rounded-2xl border border-[#e7e9df] bg-white p-4 shadow-xl shadow-[#243329]/10 sm:block"><div className="flex items-center gap-2 text-xs font-bold text-[#72796d]"><span className="flex h-8 w-8 items-center justify-center rounded-xl bg-[#eef5dc] text-[#59723b]"><Target size={16} /></span> Focus area</div><p className="mt-2 text-sm font-extrabold">Physics · Mechanics</p><p className="mt-1 text-xs text-[#718064]">Practice recommended</p></div>
+            <div className="overflow-hidden rounded-[2rem] border border-[#e2e5d9] bg-white shadow-2xl shadow-[#263328]/15">
+              <div className="flex items-center justify-between bg-[#25372a] px-6 py-5 text-white"><div><p className="text-xs font-semibold text-[#c6d1bf]">INSTITUTE DASHBOARD</p><p className="mt-1 text-lg font-extrabold">Your students, at a glance</p></div><span className="rounded-xl bg-white/10 p-3"><ChartNoAxesCombined size={22} /></span></div>
+              <div className="p-5 sm:p-7"><div className="flex items-center justify-between gap-3"><div><p className="text-sm font-bold text-[#687064]">Good afternoon, Sunrise Academy</p><p className="mt-1 text-2xl font-black tracking-tight">Learning in motion<span className="text-[#8ca95b]">.</span></p></div><span className="rounded-xl bg-[#f2f5e9] p-3 text-[#668347]"><GraduationCap size={23} /></span></div>
+                <div className="mt-6 grid grid-cols-2 gap-3"><div className="rounded-2xl bg-[#f7f8f3] p-4"><p className="text-xs font-semibold text-[#777f70]">Tests completed</p><p className="mt-2 text-3xl font-black">1,284</p><p className="mt-1 text-xs font-bold text-[#6b8c42]">Across your batches</p></div><div className="rounded-2xl bg-[#f7f8f3] p-4"><p className="text-xs font-semibold text-[#777f70]">Avg. accuracy</p><p className="mt-2 text-3xl font-black">76<span className="text-xl">%</span></p><p className="mt-1 text-xs font-bold text-[#6b8c42]">Performance snapshot</p></div></div>
+                <div className="mt-5 rounded-2xl border border-[#edf0e7] p-4"><div className="flex items-center justify-between"><p className="text-sm font-extrabold">Subject accuracy</p><span className="text-xs font-semibold text-[#8a9084]">Sample view</span></div>{[["Biology",84,"#829d55"],["Chemistry",73,"#d4a35f"],["Physics",61,"#7e9fb2"]].map(([subject, value, color]) => <div key={String(subject)} className="mt-4"><div className="mb-2 flex justify-between text-xs font-bold"><span>{subject}</span><span>{value}%</span></div><div className="h-2 overflow-hidden rounded-full bg-[#edf0e8]"><div className="h-full rounded-full" style={{ width: `${value}%`, backgroundColor: String(color) }} /></div></div>)}</div>
+                <div className="mt-5 flex items-start gap-3 rounded-2xl bg-[#f0f5e4] p-4"><span className="rounded-xl bg-white p-2.5 text-[#5f7b3e]"><Sparkles size={19} /></span><div><p className="text-sm font-extrabold">AI coach insight</p><p className="mt-1 text-xs leading-5 text-[#626f57]">Help students turn weak chapters into a focused practice plan.</p></div></div>
+              </div>
+            </div><div className="absolute -bottom-5 right-7 flex items-center gap-3 rounded-2xl border border-[#e6e8df] bg-white px-4 py-3 shadow-xl"><span className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#f8eddd] text-[#b5813c]"><Zap size={20} /></span><span><span className="block text-sm font-extrabold">Less admin. More teaching.</span><span className="block text-xs text-[#798071]">Designed around your workflow</span></span></div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-[#e7e8df] bg-white/70"><div className="mx-auto grid max-w-7xl grid-cols-2 gap-5 px-5 py-8 sm:grid-cols-4 lg:px-8"><div className="flex items-center gap-3"><span className="rounded-xl bg-[#eef4df] p-3 text-[#688548]"><Clock3 size={20} /></span><span className="text-sm font-bold">Quick onboarding</span></div><div className="flex items-center gap-3"><span className="rounded-xl bg-[#f6ead9] p-3 text-[#b27e3b]"><BookOpenCheck size={20} /></span><span className="text-sm font-bold">Online test creation</span></div><div className="flex items-center gap-3"><span className="rounded-xl bg-[#e6eff3] p-3 text-[#537e91]"><LineChart size={20} /></span><span className="text-sm font-bold">Clear performance data</span></div><div className="flex items-center gap-3"><span className="rounded-xl bg-[#f1e8f3] p-3 text-[#906b9a]"><ShieldCheck size={20} /></span><span className="text-sm font-bold">Institute-focused access</span></div></div></section>
+
+      <section id="features" className="mx-auto max-w-7xl px-5 py-20 sm:py-24 lg:px-8"><div className="max-w-2xl"><p className="text-xs font-black uppercase tracking-[0.2em] text-[#6b8747]">One platform, connected progress</p><h2 className="mt-4 text-4xl font-black leading-tight tracking-[-0.04em] sm:text-5xl">Everything between a test and a breakthrough.</h2><p className="mt-5 text-lg leading-8 text-[#686e63]">Give your teachers useful tools, your students a clearer next step, and your institute a better view of progress.</p></div>
+        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3"><article className="rounded-[1.75rem] border border-[#e6e8de] bg-white p-7 transition hover:-translate-y-1 hover:shadow-xl hover:shadow-[#263328]/5"><span className="inline-flex rounded-2xl bg-[#eef4df] p-3.5 text-[#668347]"><Users size={24} /></span><h3 className="mt-6 text-xl font-extrabold">Built for your institute</h3><p className="mt-3 leading-7 text-[#6c7268]">Organise batches, manage teachers and schedule tests for the students who need to take them.</p><a href="#demo" className="mt-6 inline-flex items-center font-extrabold text-[#526d37]">See how it works <ArrowRight className="ml-2" size={16} /></a></article>
+        <article className="rounded-[1.75rem] border border-[#e6e8de] bg-white p-7 transition hover:-translate-y-1 hover:shadow-xl hover:shadow-[#263328]/5"><span className="inline-flex rounded-2xl bg-[#f7ead9] p-3.5 text-[#b27e3b]"><ChartNoAxesCombined size={24} /></span><h3 className="mt-6 text-xl font-extrabold">Insights that guide action</h3><p className="mt-3 leading-7 text-[#6c7268]">Review subject and chapter performance to spot strengths, gaps and the next areas to focus on.</p><a href="#demo" className="mt-6 inline-flex items-center font-extrabold text-[#526d37]">Explore insights <ArrowRight className="ml-2" size={16} /></a></article>
+        <article className="rounded-[1.75rem] border border-[#e6e8de] bg-white p-7 transition hover:-translate-y-1 hover:shadow-xl hover:shadow-[#263328]/5"><span className="inline-flex rounded-2xl bg-[#e6eff3] p-3.5 text-[#537e91]"><Sparkles size={24} /></span><h3 className="mt-6 text-xl font-extrabold">Practice with a purpose</h3><p className="mt-3 leading-7 text-[#6c7268]">Support independent practice and help students spend more time on the topics they find difficult.</p><a href="#pricing" className="mt-6 inline-flex items-center font-extrabold text-[#526d37]">Compare plans <ArrowRight className="ml-2" size={16} /></a></article></div>
+      </section>
+
+      <section className="bg-[#25372a] py-20 text-white sm:py-24"><div className="mx-auto grid max-w-7xl items-center gap-12 px-5 lg:grid-cols-[.85fr_1.15fr] lg:px-8"><div><p className="text-xs font-black uppercase tracking-[0.2em] text-[#d8f36a]">Made for the people who teach</p><h2 className="mt-4 text-4xl font-black leading-tight tracking-[-0.04em] sm:text-5xl">More clarity for teachers. More confidence for students.</h2><p className="mt-5 text-lg leading-8 text-[#d0d8cd]">Bring tests, results and targeted practice into one connected experience—so the next step feels easier to see.</p><a href="#demo" className="mt-8 inline-flex items-center rounded-full bg-[#d8f36a] px-6 py-3.5 font-extrabold text-[#202b22] transition hover:-translate-y-0.5 hover:bg-[#c8e65a]">See Paper Tree in action <ArrowRight className="ml-2" size={17} /></a></div><div className="grid gap-4 sm:grid-cols-2"><div className="rounded-3xl border border-white/10 bg-white/[0.07] p-6"><span className="inline-flex rounded-xl bg-white/10 p-3 text-[#d8f36a]"><GraduationCap size={23} /></span><h3 className="mt-5 text-lg font-extrabold">For students</h3><p className="mt-2 text-sm leading-6 text-[#c5d0c1]">Take tests, understand results and keep working towards your target score.</p></div><div className="rounded-3xl border border-white/10 bg-white/[0.07] p-6"><span className="inline-flex rounded-xl bg-white/10 p-3 text-[#d8f36a]"><BookOpenCheck size={23} /></span><h3 className="mt-5 text-lg font-extrabold">For teachers</h3><p className="mt-2 text-sm leading-6 text-[#c5d0c1]">Prepare assessments and schedule them for your own batches and students.</p></div><div className="rounded-3xl border border-white/10 bg-white/[0.07] p-6"><span className="inline-flex rounded-xl bg-white/10 p-3 text-[#d8f36a]"><LineChart size={23} /></span><h3 className="mt-5 text-lg font-extrabold">For institute leaders</h3><p className="mt-2 text-sm leading-6 text-[#c5d0c1]">Get a clearer view of activity, performance and student progress.</p></div><div className="rounded-3xl border border-white/10 bg-white/[0.07] p-6"><span className="inline-flex rounded-xl bg-white/10 p-3 text-[#d8f36a]"><MessageCircle size={23} /></span><h3 className="mt-5 text-lg font-extrabold">For parent updates</h3><p className="mt-2 text-sm leading-6 text-[#c5d0c1]">Eligible plans include WhatsApp parent reports to support communication.</p></div></div></div></section>
+
+      <section id="pricing" className="mx-auto max-w-7xl px-5 py-20 sm:py-24 lg:px-8"><div className="mx-auto max-w-2xl text-center"><p className="text-xs font-black uppercase tracking-[0.2em] text-[#6b8747]">Simple annual pricing</p><h2 className="mt-4 text-4xl font-black tracking-[-0.04em] sm:text-5xl">A plan for your next stage.</h2><p className="mt-5 text-lg leading-8 text-[#686e63]">Choose the tools that fit your institute today. We’ll help you find the right setup.</p><p className="mt-3 text-xs text-[#858a7f]">Prices shown per student, per year. Confirm final terms during your demo.</p></div>
+        <div className="mt-12 grid items-stretch gap-5 lg:grid-cols-3">{plans.map((plan) => <article key={plan.name} className={`relative flex flex-col rounded-[1.75rem] border p-7 ${plan.popular ? "border-[#25372a] bg-[#25372a] text-white shadow-2xl shadow-[#25372a]/15 lg:-translate-y-2" : "border-[#e3e5db] bg-white"}`}>{plan.popular && <span className="absolute -top-3 left-7 rounded-full bg-[#d8f36a] px-3 py-1 text-[10px] font-black uppercase tracking-widest text-[#25372a]">Most popular</span>}<p className={`text-sm font-extrabold ${plan.popular ? "text-[#d8f36a]" : "text-[#688548]"}`}>{plan.name}</p><h3 className="mt-2 text-2xl font-black">{plan.note}</h3><div className="mt-6 flex items-end gap-2"><span className="text-5xl font-black tracking-[-0.05em]">{plan.price}</span><span className={`pb-1 text-sm ${plan.popular ? "text-[#c7d2c3]" : "text-[#7b8176]"}`}>/ student / year</span></div><p className={`mt-2 text-sm line-through ${plan.popular ? "text-[#a6b4a3]" : "text-[#95998f]"}`}>{plan.oldPrice} original price</p><div className={`my-7 h-px ${plan.popular ? "bg-white/15" : "bg-[#eceee6]"}`} /> <ul className="flex-1 space-y-4">{plan.features.map((feature) => <li key={feature} className="flex gap-3 text-sm leading-6"><Check className={`mt-0.5 shrink-0 ${plan.popular ? "text-[#d8f36a]" : "text-[#6d8b47]"}`} size={17} /><span className={plan.popular ? "text-[#e5ebe1]" : "text-[#555d52]"}>{feature}</span></li>)}</ul><a href="#demo" className={`mt-8 inline-flex items-center justify-center rounded-full px-5 py-3.5 text-sm font-extrabold transition hover:-translate-y-0.5 ${plan.popular ? "bg-[#d8f36a] text-[#25372a] hover:bg-[#c8e65a]" : "bg-[#25372a] text-white hover:bg-[#344a37]"}`}>Talk about {plan.name} <ArrowRight className="ml-2" size={16} /></a></article>)}</div>
+      </section>
+
+      <section id="demo" className="bg-[#f0f1e8] py-20 sm:py-24"><div className="mx-auto grid max-w-7xl gap-12 px-5 lg:grid-cols-[.85fr_1.15fr] lg:px-8"><div className="pt-2"><p className="text-xs font-black uppercase tracking-[0.2em] text-[#6b8747]">Your institute, one step ahead</p><h2 className="mt-4 text-4xl font-black leading-tight tracking-[-0.04em] sm:text-5xl">Let’s make your next test count.</h2><p className="mt-5 max-w-lg text-lg leading-8 text-[#686e63]">Tell us a little about your institute and we’ll help you explore the right setup for your students and teachers.</p><div className="mt-8 space-y-4 text-sm font-semibold text-[#555e51]"><p className="flex items-center gap-3"><span className="rounded-xl bg-white p-3 text-[#688548]"><Clock3 size={19} /></span> Onboarding target: 48 hours</p><p className="flex items-center gap-3"><span className="rounded-xl bg-white p-3 text-[#688548]"><MessageCircle size={19} /></span> Follow up directly over WhatsApp</p><p className="flex items-center gap-3"><span className="rounded-xl bg-white p-3 text-[#688548]"><ShieldCheck size={19} /></span> A walkthrough tailored to your institute</p></div></div>
+        <form onSubmit={requestDemo} className="rounded-[2rem] border border-[#e0e3d8] bg-white p-6 shadow-xl shadow-[#263328]/5 sm:p-9"><div className="mb-7"><h3 className="text-2xl font-black">Book your free demo</h3><p className="mt-2 text-sm text-[#73796e]">Complete the form and continue to WhatsApp to send your request.</p></div><div className="grid gap-5 sm:grid-cols-2"><label className="text-sm font-bold text-[#3c4639]">Your name *<input required value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} className="mt-2 w-full rounded-xl border border-[#dfe3d8] bg-[#fcfcf9] px-4 py-3.5 font-medium outline-none transition placeholder:text-[#a0a59b] focus:border-[#8da46c] focus:ring-4 focus:ring-[#8da46c]/15" placeholder="e.g. Anushka Singh" /></label><label className="text-sm font-bold text-[#3c4639]">Institute name *<input required value={form.institute} onChange={(e) => setForm({ ...form, institute: e.target.value })} className="mt-2 w-full rounded-xl border border-[#dfe3d8] bg-[#fcfcf9] px-4 py-3.5 font-medium outline-none transition placeholder:text-[#a0a59b] focus:border-[#8da46c] focus:ring-4 focus:ring-[#8da46c]/15" placeholder="Your coaching institute" /></label><label className="text-sm font-bold text-[#3c4639]">City<input value={form.city} onChange={(e) => setForm({ ...form, city: e.target.value })} className="mt-2 w-full rounded-xl border border-[#dfe3d8] bg-[#fcfcf9] px-4 py-3.5 font-medium outline-none transition placeholder:text-[#a0a59b] focus:border-[#8da46c] focus:ring-4 focus:ring-[#8da46c]/15" placeholder="City, state" /></label><label className="text-sm font-bold text-[#3c4639]">WhatsApp number *<input required type="tel" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} className="mt-2 w-full rounded-xl border border-[#dfe3d8] bg-[#fcfcf9] px-4 py-3.5 font-medium outline-none transition placeholder:text-[#a0a59b] focus:border-[#8da46c] focus:ring-4 focus:ring-[#8da46c]/15" placeholder="+91 ..." /></label><label className="text-sm font-bold text-[#3c4639] sm:col-span-2">Approximate student count<select value={form.students} onChange={(e) => setForm({ ...form, students: e.target.value })} className="mt-2 w-full rounded-xl border border-[#dfe3d8] bg-[#fcfcf9] px-4 py-3.5 font-medium outline-none transition focus:border-[#8da46c] focus:ring-4 focus:ring-[#8da46c]/15"><option value="">Select student count (optional)</option><option>Under 100</option><option>100–300</option><option>301–500</option><option>501–1,000</option><option>1,000+</option></select></label></div>{formError && <p role="alert" className="mt-4 rounded-xl bg-red-50 px-4 py-3 text-sm font-semibold text-red-700">{formError}</p>}<button type="submit" className="mt-6 flex w-full items-center justify-center rounded-full bg-[#25372a] px-6 py-4 font-extrabold text-white transition hover:-translate-y-0.5 hover:bg-[#344a37]">Request demo on WhatsApp <ArrowRight className="ml-2" size={18} /></button><p className="mt-3 text-center text-xs leading-5 text-[#898f83]">This opens WhatsApp with your details ready to send. Nothing is submitted until you send the message.</p></form>
+      </div></section>
+
+      <section id="faq" className="mx-auto max-w-4xl px-5 py-20 sm:py-24"><div className="text-center"><p className="text-xs font-black uppercase tracking-[0.2em] text-[#6b8747]">Good to know</p><h2 className="mt-4 text-4xl font-black tracking-[-0.04em] sm:text-5xl">Questions, answered.</h2></div><div className="mt-10 divide-y divide-[#e5e7de] border-y border-[#e5e7de]">{faqs.map(([question, answer], index) => <div key={question}><button className="flex w-full items-center justify-between gap-4 py-5 text-left font-extrabold sm:text-lg" aria-expanded={openFaq === index} onClick={() => setOpenFaq(openFaq === index ? null : index)}>{question}<ChevronDown className={`shrink-0 transition-transform ${openFaq === index ? "rotate-180" : ""}`} size={20} /></button>{openFaq === index && <p className="max-w-3xl pb-6 pr-8 leading-7 text-[#697064]">{answer}</p>}</div>)}</div></section>
+
+      <footer className="bg-[#202b22] text-white"><div className="mx-auto flex max-w-7xl flex-col gap-8 px-5 py-10 sm:flex-row sm:items-center sm:justify-between lg:px-8"><div className="flex items-center gap-3"><span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#d8f36a] text-xl font-black text-[#25372a]">P.</span><span><span className="block text-lg font-black">Paper Tree CBT</span><span className="block text-xs text-[#c2cdbd]">A smarter testing experience for institutes</span></span></div><div className="text-sm leading-7 text-[#c2cdbd]"><a className="transition hover:text-[#d8f36a]" href="mailto:info@papertreestudio.in">info@papertreestudio.in</a><span className="mx-2">·</span><a className="transition hover:text-[#d8f36a]" href="https://wa.me/918869036903">+91 88690 36903</a></div><div className="flex items-center gap-4 text-sm font-bold"><Link className="text-[#e0e7dc] hover:text-[#d8f36a]" href="/login">Institute login</Link><a className="text-[#e0e7dc] hover:text-[#d8f36a]" href="#top">Back to top ↑</a></div></div><div className="border-t border-white/10 px-5 py-4 text-center text-xs text-[#aeb9aa]">© {new Date().getFullYear()} Paper Tree Educational Studio. All rights reserved.</div></footer>
     </main>
   );
 }

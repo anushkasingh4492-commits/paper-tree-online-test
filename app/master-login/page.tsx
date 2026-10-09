@@ -211,7 +211,7 @@ if (!validPortalRole) {
 
           <button
             type="button"
-            onClick={() => router.push("/")}
+            onClick={() => router.push("/login")}
             className="mt-5 w-full text-center text-sm font-semibold text-[#697386] hover:text-[#315bea]"
           >
             ← Back to Login

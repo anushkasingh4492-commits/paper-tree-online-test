@@ -1462,7 +1462,7 @@ export default function DashboardPage() {
       credentials: "include",
     });
   } finally {
-    router.replace("/");
+    router.replace("/login");
   }
 }
 

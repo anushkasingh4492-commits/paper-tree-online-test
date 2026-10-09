@@ -52,7 +52,7 @@ export default function AcademyAdminPage() {
   }, []);
   function logout() {
     document.cookie = "master_session=; Max-Age=0; path=/";
-    router.replace("/");
+    router.replace("/login");
   }
 
   const countCards = [
