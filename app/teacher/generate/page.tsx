@@ -734,7 +734,7 @@ export default function TeacherGeneratePage() {
                       ["°", "°"], ["≤ ≥ ≠", "≤ ≥ ≠"], ["∑ ∫ √", "∑ ∫ √"],
                       ["♀ ♂", "♀ ♂"], ["⊕", "⊕"], ["K₅ C₅ A∞ G₅", "K₅ C₅ A∞ G₅"],
                       ["Subscript: H₂O", "H₂O"], ["Charge: Ca²⁺", "Ca²⁺"],
-                      ["Superscript: x²", "x²"], ["Fraction", "$\\frac{a}{b}$"],
+                     ["Superscript: x²", "x²"],["Fraction", "$\\frac{a}{b}$"],
                       ["Square root", "$\\sqrt{x}$"], ["Power", "$x^{2}$"],
                       ["Inline equation", "$\\alpha + \\beta = \\gamma$"],
                       ["Display equation", "\\n$$\\frac{-b \\pm \\sqrt{b^2-4ac}}{2a}$$"]
