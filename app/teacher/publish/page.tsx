@@ -39,6 +39,20 @@ type TargetResponse = {
   students?: Student[];
 };
 
+function getQuestionText(q: any): string {
+  return String(q?.stem ?? q?.question ?? q?.question_text ?? q?.text ?? "");
+}
+
+function getQuestionOptions(q: any): string[] {
+  const raw = q?.options ?? q?.choices ?? [];
+  if (Array.isArray(raw)) return raw.map((item: any) => typeof item === "string" ? item : String(item?.text ?? item?.label ?? item?.value ?? ""));
+  if (raw && typeof raw === "object") return Object.entries(raw).map(([key, value]) => `${key}. ${String(value ?? "")}`);
+  if (typeof raw === "string") {
+    try { const parsed = JSON.parse(raw); if (Array.isArray(parsed)) return parsed.map((item: any) => typeof item === "string" ? item : String(item?.text ?? item?.label ?? "")); } catch {}
+  }
+  return [];
+}
+
 function toLocalDateTimeValue(date: Date) {
   const pad = (n: number) => String(n).padStart(2, "0");
 
@@ -199,13 +213,41 @@ export default function TeacherPublishPage() {
     [batches, batchId]
   );
 
-  const questionCount =
-    Number(test?.questionCount) ||
-    (Array.isArray(test?.questions)
-      ? test.questions.length
-      : Array.isArray(test?.data?.questions)
-        ? test.data.questions.length
-        : 0);
+  const questionCount = Array.isArray(test?.questions)
+    ? test.questions.length
+    : Array.isArray(test?.data?.questions) ? test.data.questions.length : (Number(test?.questionCount) || 0);
+
+  const reviewedQuestions: any[] = Array.isArray(test?.questions)
+    ? test.questions
+    : Array.isArray(test?.data?.questions) ? test.data.questions : [];
+
+  function updateQuestion(index: number, patch: Record<string, any>) {
+    setTest((current: any) => {
+      if (!current) return current;
+      const nested = !Array.isArray(current.questions) && Array.isArray(current.data?.questions);
+      const list = nested ? current.data.questions : (Array.isArray(current.questions) ? current.questions : []);
+      const next = list.map((q: any, i: number) => i === index ? { ...q, ...patch } : q);
+      const updated = nested ? { ...current, data: { ...current.data, questions: next }, questions: next } : { ...current, questions: next };
+      localStorage.setItem("teacherGeneratedTest", JSON.stringify(updated));
+      return updated;
+    });
+  }
+
+  function removeQuestion(index: number) {
+    if (reviewedQuestions.length <= 1) {
+      setError("A test must contain at least one question.");
+      return;
+    }
+    setTest((current: any) => {
+      if (!current) return current;
+      const list = Array.isArray(current.questions) ? current.questions : (current.data?.questions || []);
+      const next = list.filter((_: any, i: number) => i !== index);
+      const updated = { ...current, questions: next, questionCount: next.length, ...(current.data ? { data: { ...current.data, questions: next } } : {}) };
+      localStorage.setItem("teacherGeneratedTest", JSON.stringify(updated));
+      return updated;
+    });
+    setError("");
+  }
 
   async function publishTest() {
     setError("");
@@ -733,6 +775,37 @@ export default function TeacherPublishPage() {
 
             <div className="my-8 border-t border-slate-200" />
 
+            {/* QUESTION REVIEW — must be checked before publishing */}
+            <section className="mb-8">
+              <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
+                <div>
+                  <h2 className="text-lg font-bold">3. Review your questions</h2>
+                  <p className="mt-1 text-sm text-slate-500">Check each question, edit wording/options/answer/explanation, or remove a question before students receive the paper.</p>
+                </div>
+                <span className="rounded-full bg-amber-100 px-3 py-1 text-xs font-bold text-amber-800">Professor review required</span>
+              </div>
+              <div className="space-y-4">
+                {reviewedQuestions.map((q: any, index: number) => {
+                  const text = getQuestionText(q);
+                  const options = getQuestionOptions(q);
+                  const answerValue = String(q?.correct_option ?? q?.correctOption ?? q?.correct_answer ?? q?.answer ?? "");
+                  const explanation = String(q?.solution ?? q?.explanation ?? q?.correct_answer_text ?? "");
+                  const figure = q?.figure_asset ?? q?.figureAsset ?? q?.figure_url ?? null;
+                  return <article key={String(q?.id ?? index) + "-" + index} className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-5">
+                    <div className="mb-3 flex items-start justify-between gap-3">
+                      <div><p className="text-xs font-bold uppercase tracking-wide text-blue-700">Question {index + 1}</p><p className="mt-1 text-xs text-slate-500">{q?.subject || "Subject"}{q?.chapter_name || q?.chapter ? ` · ${q.chapter_name || q.chapter}` : ""}{q?.difficulty ? ` · ${q.difficulty}` : ""}</p></div>
+                      <button type="button" onClick={() => removeQuestion(index)} className="shrink-0 rounded-lg border border-red-200 px-3 py-2 text-xs font-bold text-red-700 hover:bg-red-50">Remove</button>
+                    </div>
+                    <label className="block"><span className="mb-1 block text-xs font-semibold text-slate-600">Question text</span><textarea rows={3} value={text} onChange={(e) => updateQuestion(index, { stem: e.target.value, question: e.target.value, question_text: e.target.value })} className="w-full rounded-xl border border-slate-300 px-3 py-2.5 text-sm text-slate-900 focus:border-blue-500 focus:outline-none" /></label>
+                    {figure && <div className="mt-3 rounded-lg bg-slate-50 p-2 text-xs text-slate-600">Diagram/figure attached: {String(figure).slice(0, 140)}</div>}
+                    {options.length > 0 && <div className="mt-3 grid gap-3 sm:grid-cols-2">{options.map((option, oi) => <label key={oi} className="block"><span className="mb-1 block text-xs font-semibold text-slate-600">Option {String.fromCharCode(65 + oi)}</span><input value={option} onChange={(e) => { const next = [...options]; next[oi] = e.target.value; updateQuestion(index, { options: next }); }} className="w-full rounded-xl border border-slate-300 px-3 py-2.5 text-sm text-slate-900 focus:border-blue-500 focus:outline-none" /></label>)}</div>}
+                    <div className="mt-3 grid gap-3 sm:grid-cols-2"><label className="block"><span className="mb-1 block text-xs font-semibold text-slate-600">Correct answer (option letter or answer)</span><input value={answerValue} onChange={(e) => updateQuestion(index, { correct_option: e.target.value, correctOption: e.target.value, correct_answer: e.target.value })} className="w-full rounded-xl border border-slate-300 px-3 py-2.5 text-sm text-slate-900 focus:border-blue-500 focus:outline-none" /></label><label className="block"><span className="mb-1 block text-xs font-semibold text-slate-600">Explanation / solution</span><textarea rows={2} value={explanation} onChange={(e) => updateQuestion(index, { solution: e.target.value, explanation: e.target.value, correct_answer_text: e.target.value })} className="w-full rounded-xl border border-slate-300 px-3 py-2.5 text-sm text-slate-900 focus:border-blue-500 focus:outline-none" /></label></div>
+                  </article>;
+                })}
+              </div>
+              <p className="mt-3 text-xs text-slate-500">Changes are saved in this draft on your device. Review the correct answer carefully before publishing.</p>
+            </section>
+
             {/* SUMMARY */}
             <section>
               <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
@@ -791,7 +864,7 @@ export default function TeacherPublishPage() {
             >
               {loading
                 ? "Publishing test…"
-                : "🚀 Publish & Notify Students"}
+                : "✓ Approve Questions & Publish Test"}
             </button>
 
           </div>
