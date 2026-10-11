@@ -91,10 +91,13 @@ export async function GET(
           ta.started_at,
           ta.submitted_at,
 
-          t.exam,
-          t.questions,
-          t.question_count,
-          st.allow_reattempt
+         
+t.exam,
+t.questions,
+t.question_count,
+t.difficulty AS test_difficulty,
+st.allow_reattempt
+
 
         FROM test_attempts ta
 
@@ -535,13 +538,11 @@ questions,
             .filter(Boolean)
         )
       ),
-      difficulty: Array.from(
-        new Set(
-          questions
-            .map((question: any) => String(question?.difficulty ?? "").trim())
-            .filter(Boolean)
-        )
-      ).join(", "),
+     
+difficulty: String(
+  attempt.test_difficulty ?? ""
+).trim() || "Balanced",
+
 
       duration:
         attempt.started_at &&
