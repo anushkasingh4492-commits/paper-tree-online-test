@@ -490,9 +490,29 @@ export default function TeacherPerformancePage() {
                       const chapters = attempt.chapters?.length
                         ? attempt.chapters.join(", ")
                         : "Chapter unavailable";
-                      const difficulties = attempt.difficulties?.length
-                        ? attempt.difficulties.join(", ")
-                        : "Difficulty unavailable";
+                      const difficultyOrder = ["Easy", "Medium", "Hard", "Challenging"];
+
+const normalizedDifficulties = [
+  ...new Set(
+    (attempt.difficulties ?? [])
+      .flatMap((value: string) => value.split(","))
+      .map((value: string) => value.trim().toLowerCase())
+      .filter(Boolean)
+  ),
+];
+
+const difficulties = difficultyOrder.filter((level) =>
+  normalizedDifficulties.includes(level.toLowerCase())
+);
+
+const otherDifficulties = normalizedDifficulties
+  .filter(
+    (level) =>
+      !difficultyOrder.some(
+        (known) => known.toLowerCase() === level
+      )
+  )
+  .map((level) => level.charAt(0).toUpperCase() + level.slice(1));
 
                       return (
                         <div
@@ -533,9 +553,44 @@ export default function TeacherPerformancePage() {
                               <p className="mt-1 text-xs font-bold text-[#172033]">{chapters}</p>
                             </div>
                             <div className="rounded-lg bg-[#f7f8fc] px-3 py-2">
-                              <p className="text-[10px] font-bold uppercase tracking-wide text-[#8a93a5]">Difficulty</p>
-                              <p className="mt-1 text-xs font-bold text-[#172033]">{difficulties}</p>
-                            </div>
+  <p className="text-[10px] font-bold uppercase tracking-wide text-[#8a93a5]">
+    Difficulty levels
+  </p>
+
+  {difficulties.length === 0 && otherDifficulties.length === 0 ? (
+    <p className="mt-2 text-xs font-medium text-[#697386]">
+      Difficulty unavailable
+    </p>
+  ) : (
+    <div className="mt-2 flex flex-wrap gap-1.5">
+      {difficulties.map((level) => (
+        <span
+          key={level}
+          className={`rounded-full px-2 py-1 text-[11px] font-bold ${
+            level === "Easy"
+              ? "bg-green-100 text-green-800"
+              : level === "Medium"
+                ? "bg-amber-100 text-amber-800"
+                : level === "Hard"
+                  ? "bg-red-100 text-red-800"
+                  : "bg-purple-100 text-purple-800"
+          }`}
+        >
+          {level}
+        </span>
+      ))}
+
+      {otherDifficulties.map((level) => (
+        <span
+          key={level}
+          className="rounded-full bg-slate-200 px-2 py-1 text-[11px] font-bold text-slate-700"
+        >
+          {level}
+        </span>
+      ))}
+    </div>
+  )}
+</div>
                             <div className="rounded-lg bg-[#f7f8fc] px-3 py-2">
                               <p className="text-[10px] font-bold uppercase tracking-wide text-[#8a93a5]">Questions</p>
                               <p className="mt-1 text-xs font-bold text-[#172033]">{attempt.question_count ?? "—"}</p>
