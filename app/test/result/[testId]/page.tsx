@@ -2800,7 +2800,7 @@ if (ctx === null) {
             <button
               type="button"
               onClick={() =>
-                router.push("/test-summary")
+                router.push("/tests/test-summary")
               }
               className="hidden sm:block h-10 px-4 rounded-xl border border-slate-200 bg-white text-sm font-semibold text-slate-700 hover:bg-slate-50 transition"
             >

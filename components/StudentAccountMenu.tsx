@@ -70,7 +70,7 @@ export default function StudentAccountMenu({ studentName, activeTest = false }: 
           <div className="p-2">
             <MenuItem icon="👤" label="My Profile" onClick={() => router.push("/profile")} />
             <MenuItem icon="📊" label="My Stats" onClick={() => router.push("/stats")} />
-            <MenuItem icon="📝" label="Test History" onClick={() => router.push("/history")} />
+            <MenuItem icon="📝" label="My Tests" onClick={() => router.push("/tests/test-summary")} />
             <MenuItem icon="🏆" label="My Achievements" onClick={() => router.push("/dashboard#trophy-wall")} />
             <MenuItem icon="🔐" label="Change Password" onClick={() => router.push("/change-password")} />
 

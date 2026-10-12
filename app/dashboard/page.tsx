@@ -2335,9 +2335,7 @@ export default function DashboardPage() {
 
                   <button
                     onClick={() =>
-                      router.push(
-                        "/tests"
-                      )
+                      router.push("/tests/test-summary")
                     }
                     className="h-8 px-3 rounded-lg border border-[#dedaff] text-[10px] font-bold text-[#5541dd]"
                   >
