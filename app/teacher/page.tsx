@@ -195,6 +195,20 @@ export default function TeacherPage() {
           )}
 
           <button
+            onClick={() => router.push("/teacher/collaborative-papers")}
+            className="rounded-2xl border border-[#e3e8f5] bg-white p-7 text-left shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+          >
+            <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#f3edff] text-2xl">
+              👥
+            </div>
+            <h2 className="text-xl font-extrabold">Collaborative Question Papers</h2>
+            <p className="mt-2 text-sm leading-6 text-[#697386]">
+              Invite subject professors, save shared drafts, build sections manually or automatically, and review one combined paper.
+            </p>
+            <div className="mt-5 text-sm font-bold text-[#315bea]">Open collaborative builder →</div>
+          </button>
+
+          <button
             onClick={() => router.push("/teacher/cherry-pick")}
             className="rounded-2xl border border-[#e3e8f5] bg-white p-7 text-left shadow-sm transition hover:-translate-y-1 hover:shadow-md"
           >
