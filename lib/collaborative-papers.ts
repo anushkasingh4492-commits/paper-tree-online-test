@@ -35,7 +35,7 @@ export async function canEditSection(paperId: string, sectionId: string, teacher
   const paper = await canViewPaper(paperId, teacher);
   if (!paper) return { paper: null, section: null, allowed: false };
   const result = await pool.query(
-    `SELECT * FROM paper_sections WHERE id::text = $1::text AND paper_id::text = $2::text LIMIT 1`,
+    `SELECT * FROM collaborative_paper_sections WHERE id::text = $1::text AND paper_id::text = $2::text LIMIT 1`,
     [sectionId, paperId],
   );
   const section = result.rows[0] ?? null;
@@ -51,7 +51,7 @@ export async function logPaperActivity(paperId: string, teacherId: string, actio
 export async function recordSectionRevision(paperId: string, sectionId: string, teacherId: string, revisionType: string) {
   const result = await pool.query(
     `SELECT s.*, COALESCE(jsonb_agg(jsonb_build_object('id', q.id, 'questionId', q.question_id, 'snapshot', q.question_snapshot, 'sourceType', q.source_type, 'displayOrder', q.display_order, 'marks', q.marks) ORDER BY q.display_order) FILTER (WHERE q.id IS NOT NULL), '[]'::jsonb) AS questions
-     FROM paper_sections s LEFT JOIN paper_section_questions q ON q.section_id = s.id
+     FROM collaborative_paper_sections s LEFT JOIN collaborative_paper_section_questions q ON q.section_id = s.id
      WHERE s.id::text = $1::text AND s.paper_id::text = $2::text GROUP BY s.id`,
     [sectionId, paperId],
   );

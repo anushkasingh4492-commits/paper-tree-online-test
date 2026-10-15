@@ -11,9 +11,9 @@ export async function GET() {
       `SELECT p.id::text, p.title, p.exam, p.class_name, p.board, p.duration_minutes, p.total_marks, p.status, p.updated_at,
         p.owner_teacher_id::text, owner.name AS owner_name,
         (p.owner_teacher_id::text = $1::text) AS is_owner,
-        COALESCE((SELECT COUNT(*)::int FROM paper_sections s WHERE s.paper_id = p.id),0) AS section_count,
-        COALESCE((SELECT COUNT(*)::int FROM paper_sections s WHERE s.paper_id = p.id AND s.status = 'approved'),0) AS approved_sections,
-        COALESCE((SELECT COUNT(*)::int FROM paper_section_questions q JOIN paper_sections s ON s.id=q.section_id WHERE s.paper_id=p.id),0) AS question_count
+        COALESCE((SELECT COUNT(*)::int FROM collaborative_paper_sections s WHERE s.paper_id = p.id),0) AS section_count,
+        COALESCE((SELECT COUNT(*)::int FROM collaborative_paper_sections s WHERE s.paper_id = p.id AND s.status = 'approved'),0) AS approved_sections,
+        COALESCE((SELECT COUNT(*)::int FROM collaborative_paper_section_questions q JOIN collaborative_paper_sections s ON s.id=q.section_id WHERE s.paper_id=p.id),0) AS question_count
        FROM collaborative_papers p JOIN teachers owner ON owner.id = p.owner_teacher_id
        WHERE p.academy_id::text = $2::text AND (p.owner_teacher_id::text = $1::text OR EXISTS (
          SELECT 1 FROM paper_collaborators c WHERE c.paper_id=p.id AND c.teacher_id::text=$1::text AND c.invitation_status='accepted'))
@@ -59,7 +59,7 @@ export async function POST(request: Request) {
         assignedTeacherId = String(check.rows[0].id);
       }
       await client.query(
-        `INSERT INTO paper_sections (paper_id, subject, title, assigned_teacher_id, display_order, marks_target, question_count_target)
+        `INSERT INTO collaborative_paper_sections (paper_id, subject, title, assigned_teacher_id, display_order, marks_target, question_count_target)
          VALUES ($1::uuid,$2,$3,$4::uuid,$5,$6,$7)`,
         [paper.id, subject, String(section.title || subject).trim(), assignedTeacherId, Number(section.displayOrder) || i + 1, section.marksTarget == null || section.marksTarget === "" ? null : Number(section.marksTarget), section.questionCountTarget == null || section.questionCountTarget === "" ? null : Number(section.questionCountTarget)]);
       if (assignedTeacherId) {

@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS paper_collaborators (
 );
 CREATE INDEX IF NOT EXISTS paper_collaborators_teacher_idx ON paper_collaborators (teacher_id, invitation_status);
 
-CREATE TABLE IF NOT EXISTS paper_sections (
+CREATE TABLE IF NOT EXISTS collaborative_paper_sections (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   paper_id UUID NOT NULL REFERENCES collaborative_papers(id) ON DELETE CASCADE,
   subject TEXT NOT NULL,
@@ -55,12 +55,12 @@ CREATE TABLE IF NOT EXISTS paper_sections (
   created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
   updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
-CREATE INDEX IF NOT EXISTS paper_sections_paper_idx ON paper_sections (paper_id, display_order);
-CREATE INDEX IF NOT EXISTS paper_sections_assignee_idx ON paper_sections (assigned_teacher_id, status);
+CREATE INDEX IF NOT EXISTS collaborative_paper_sections_paper_idx ON collaborative_paper_sections (paper_id, display_order);
+CREATE INDEX IF NOT EXISTS collaborative_paper_sections_assignee_idx ON collaborative_paper_sections (assigned_teacher_id, status);
 
-CREATE TABLE IF NOT EXISTS paper_section_questions (
+CREATE TABLE IF NOT EXISTS collaborative_paper_section_questions (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  section_id UUID NOT NULL REFERENCES paper_sections(id) ON DELETE CASCADE,
+  section_id UUID NOT NULL REFERENCES collaborative_paper_sections(id) ON DELETE CASCADE,
   question_id TEXT NOT NULL,
   question_snapshot JSONB NOT NULL DEFAULT '{}'::jsonb,
   source_type TEXT NOT NULL DEFAULT 'manual'
@@ -72,12 +72,12 @@ CREATE TABLE IF NOT EXISTS paper_section_questions (
   UNIQUE (section_id, question_id),
   UNIQUE (section_id, display_order)
 );
-CREATE INDEX IF NOT EXISTS paper_section_questions_order_idx ON paper_section_questions (section_id, display_order);
+CREATE INDEX IF NOT EXISTS collaborative_paper_section_questions_order_idx ON collaborative_paper_section_questions (section_id, display_order);
 
 CREATE TABLE IF NOT EXISTS paper_activity_log (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   paper_id UUID NOT NULL REFERENCES collaborative_papers(id) ON DELETE CASCADE,
-  section_id UUID REFERENCES paper_sections(id) ON DELETE SET NULL,
+  section_id UUID REFERENCES collaborative_paper_sections(id) ON DELETE SET NULL,
   actor_teacher_id TEXT NOT NULL,
   action TEXT NOT NULL,
   details JSONB NOT NULL DEFAULT '{}'::jsonb,
@@ -88,7 +88,7 @@ CREATE INDEX IF NOT EXISTS paper_activity_log_paper_idx ON paper_activity_log (p
 CREATE TABLE IF NOT EXISTS paper_revisions (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   paper_id UUID NOT NULL REFERENCES collaborative_papers(id) ON DELETE CASCADE,
-  section_id UUID REFERENCES paper_sections(id) ON DELETE SET NULL,
+  section_id UUID REFERENCES collaborative_paper_sections(id) ON DELETE SET NULL,
   created_by TEXT NOT NULL,
   revision_type TEXT NOT NULL,
   snapshot JSONB NOT NULL,
