@@ -517,6 +517,8 @@ questions,
           attempt.score ?? 0
         ),
 
+      totalMarks: Number(attempt.total_marks ?? (questions.length * (/neet/i.test(String(attempt.exam ?? "")) ? 4 : 1))),
+
       accuracy,
 
       course: String(attempt.exam ?? "").trim(),

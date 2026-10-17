@@ -41,6 +41,7 @@ type ResultData = {
   difficulty?: string;
   duration?: number;
   score: number;
+  totalMarks?: number;
   accuracy: number;
   correctness?: Record<string, boolean | null>;
   marksAwarded?: Record<string, number>;
@@ -1039,6 +1040,11 @@ export default function TestResultPage() {
       result.total <= 0
     ) {
       return 0;
+    }
+
+    const totalMarks = Number(result.totalMarks ?? 0);
+    if (totalMarks > 0) {
+      return Math.max(0, Math.min(100, Math.round((Number(result.score ?? 0) / totalMarks) * 100)));
     }
 
     return Math.round(
@@ -2903,6 +2909,11 @@ if (ctx === null) {
                     <span className="mt-1 text-xs font-semibold text-slate-400">
                       SCORE
                     </span>
+                    {result.totalMarks !== undefined && result.totalMarks > 0 && (
+                      <span className="mt-2 text-sm font-bold text-slate-600">
+                        {Number(result.score ?? 0)} / {Number(result.totalMarks)} marks
+                      </span>
+                    )}
                   </div>
                 </div>
               </div>

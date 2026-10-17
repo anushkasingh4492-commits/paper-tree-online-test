@@ -87,6 +87,8 @@ export default function CherryPickPage() {
   const [customChapter, setCustomChapter] = useState("");
   const [customDifficulty, setCustomDifficulty] = useState("Medium");
   const [customSolution, setCustomSolution] = useState("");
+  const [customFigureAsset, setCustomFigureAsset] = useState("");
+  const [customImageError, setCustomImageError] = useState("");
   const [customSaving, setCustomSaving] = useState(false);
   const [canCustomQuestions, setCanCustomQuestions] = useState<boolean | null>(null);
 
@@ -321,14 +323,47 @@ export default function CherryPickPage() {
               <input value={customChapter} onChange={(e) => setCustomChapter(e.target.value)} placeholder="Chapter" className="rounded-xl border border-[#dfe4ee] px-4 py-3 text-sm" />
               <select value={customCorrect} onChange={(e) => setCustomCorrect(e.target.value)} className="rounded-xl border border-[#dfe4ee] bg-white px-4 py-3 text-sm">{["A","B","C","D"].map((x) => <option key={x}>{x}</option>)}</select>
               <select value={customDifficulty} onChange={(e) => setCustomDifficulty(e.target.value)} className="rounded-xl border border-[#dfe4ee] bg-white px-4 py-3 text-sm"><option>Easy</option><option>Medium</option><option>Hard</option></select>
+              <div className="md:col-span-2 rounded-xl border border-dashed border-[#cbd5e1] p-4">
+                <label className="block text-sm font-semibold text-[#273449]" htmlFor="custom-question-image">Question image (optional)</label>
+                <p className="mt-1 text-xs text-[#697386]">PNG, JPG, WEBP, or GIF · maximum 3 MB</p>
+                <input
+                  id="custom-question-image"
+                  type="file"
+                  accept="image/png,image/jpeg,image/webp,image/gif"
+                  className="mt-3 block w-full text-sm"
+                  onChange={(event) => {
+                    setCustomImageError("");
+                    const file = event.currentTarget.files?.[0];
+                    if (!file) return;
+                    if (!file.type.startsWith("image/")) {
+                      setCustomImageError("Choose a valid image file.");
+                      event.currentTarget.value = "";
+                      return;
+                    }
+                    if (file.size > 3 * 1024 * 1024) {
+                      setCustomImageError("Image must be 3 MB or smaller.");
+                      event.currentTarget.value = "";
+                      return;
+                    }
+                    const reader = new FileReader();
+                    reader.onload = () => {
+                      if (typeof reader.result === "string") setCustomFigureAsset(reader.result);
+                    };
+                    reader.onerror = () => setCustomImageError("Could not read this image. Please try another file.");
+                    reader.readAsDataURL(file);
+                  }}
+                />
+                {customImageError && <p role="alert" className="mt-2 text-xs font-semibold text-red-600">{customImageError}</p>}
+                {customFigureAsset && <div className="mt-3 flex items-start gap-3"><img src={customFigureAsset} alt="Question image preview" className="max-h-40 max-w-full rounded-lg border border-slate-200 object-contain" /><button type="button" onClick={() => { setCustomFigureAsset(""); const input = document.getElementById("custom-question-image") as HTMLInputElement | null; if (input) input.value = ""; }} className="rounded-lg border px-3 py-2 text-xs font-semibold">Remove image</button></div>}
+              </div>
               <textarea value={customSolution} onChange={(e) => setCustomSolution(e.target.value)} placeholder="Solution / explanation (optional)" rows={3} className="md:col-span-2 rounded-xl border border-[#dfe4ee] px-4 py-3 text-sm" />
               <button type="button" disabled={customSaving} onClick={async () => {
                 setCustomSaving(true); setError("");
                 try {
-                  const response = await fetch("/api/teacher/questions/create", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ stem: customStem, options: customOptions, correctOption: customCorrect, subject: customSubject, chapterName: customChapter, difficulty: customDifficulty, solution: customSolution, exam }) });
+                  const response = await fetch("/api/teacher/questions/create", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ stem: customStem, options: customOptions, correctOption: customCorrect, subject: customSubject, chapterName: customChapter, difficulty: customDifficulty, solution: customSolution, figureAsset: customFigureAsset, exam }) });
                   const data = await response.json();
                   if (!response.ok || !data.success) throw new Error(data.error || "Could not create question.");
-                  setShowCustomForm(false); setCustomStem(""); setCustomOptions(["", "", "", ""]); setCustomSolution("");
+                  setShowCustomForm(false); setCustomStem(""); setCustomOptions(["", "", "", ""]); setCustomSolution(""); setCustomFigureAsset(""); setCustomImageError("");
                   await loadQuestions();
                   setError("Question added successfully.");
                 } catch (err) { setError(err instanceof Error ? err.message : "Could not create question."); } finally { setCustomSaving(false); }
