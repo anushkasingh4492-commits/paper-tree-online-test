@@ -689,18 +689,23 @@ export async function POST(request: NextRequest) {
           scheduled_test_id,
           status,
           submitted_at,
-          started_at
+          started_at,
+          score,
+          total_marks,
+          correct_count,
+          incorrect_count,
+          unanswered_count
         FROM test_attempts
         WHERE (
           test_id::text = $1::text
-          OR scheduled_test_id::text = $1::text
+          OR ($3::text <> '' AND scheduled_test_id::text = $3::text)
         )
         AND student_id::text = $2::text
         ORDER BY started_at DESC NULLS LAST
         LIMIT 1
         FOR UPDATE
         `,
-        [testId, studentId]
+        [testId, studentId, requestedScheduledTestId]
       );
 
     let attemptId: string;
@@ -738,12 +743,15 @@ export async function POST(request: NextRequest) {
           testId,
           scheduledTestId,
           total: totalQuestions,
-          attempted,
-          correct,
-          wrong,
-          unattempted,
-          score,
-          accuracy,
+          attempted: Number(existing.correct_count ?? 0) + Number(existing.incorrect_count ?? 0),
+          correct: Number(existing.correct_count ?? 0),
+          wrong: Number(existing.incorrect_count ?? 0),
+          unattempted: Number(existing.unanswered_count ?? 0),
+          score: Number(existing.score ?? 0),
+          totalMarks: Number(existing.total_marks ?? totalMarks),
+          accuracy: (Number(existing.correct_count ?? 0) + Number(existing.incorrect_count ?? 0)) > 0
+            ? Number((Number(existing.correct_count ?? 0) / (Number(existing.correct_count ?? 0) + Number(existing.incorrect_count ?? 0)) * 100).toFixed(2))
+            : 0,
           automatic,
           violationCount,
         });
@@ -797,6 +805,7 @@ export async function POST(request: NextRequest) {
         INSERT INTO test_attempts (
           id,
           test_id,
+          scheduled_test_id,
           student_id,
           started_at,
           submitted_at,
@@ -818,12 +827,14 @@ export async function POST(request: NextRequest) {
           $8,
           $9,
           $10,
-          $11
+          $11,
+          $12
         )
         `,
         [
           attemptId,
           testId,
+          scheduledTestId,
           studentId,
           safeStartedAt,
           safeSubmittedAt,

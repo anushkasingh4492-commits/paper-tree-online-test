@@ -69,6 +69,7 @@ export default function CherryPickPage() {
   const [questions, setQuestions] = useState<Question[]>([]);
   const [schemaRows, setSchemaRows] = useState<SchemaRow[]>([]);
   const [selected, setSelected] = useState<string[]>([]);
+  const [questionCache, setQuestionCache] = useState<Record<string, Question>>({});
 
   const [exam, setExam] = useState("MHT-CET");
   const [subject, setSubject] = useState("");
@@ -207,7 +208,12 @@ export default function CherryPickPage() {
         );
       }
 
-      setQuestions(data.questions || []);
+      const loadedQuestions: Question[] = data.questions || [];
+      setQuestions(loadedQuestions);
+      setQuestionCache((current) => ({
+        ...current,
+        ...Object.fromEntries(loadedQuestions.map((question) => [String(question.id), question])),
+      }));
     } catch (err) {
       setError(
         err instanceof Error
@@ -253,9 +259,14 @@ export default function CherryPickPage() {
       return;
     }
 
-    const selectedQuestions = questions.filter((q) =>
-      selected.includes(q.id)
-    );
+    const selectedQuestions = selected
+      .map((id) => questionCache[id])
+      .filter((question): question is Question => Boolean(question));
+
+    if (selectedQuestions.length !== selected.length) {
+      setError("Some selected questions are no longer available. Please reload the question list and select them again.");
+      return;
+    }
 
     localStorage.setItem(
       "teacherGeneratedTest",

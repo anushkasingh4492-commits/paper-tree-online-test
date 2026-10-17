@@ -25,6 +25,16 @@ export async function POST(request: Request) {
 
     const body = await request.json();
     const stem = String(body.stem || "").trim();
+    const figureAssetInput = String(body.figureAsset ?? body.figure_asset ?? "").trim();
+    // Custom-question images are stored as data URLs so the feature does not
+    // depend on a separate storage service or change the existing upload flow.
+    if (figureAssetInput && !/^data:image\/(png|jpeg|jpg|webp|gif);base64,[A-Za-z0-9+/=\r\n]+$/i.test(figureAssetInput)) {
+      return NextResponse.json({ success: false, error: "Please upload a valid PNG, JPG, WEBP, or GIF image." }, { status: 400 });
+    }
+    if (figureAssetInput.length > 4_500_000) {
+      return NextResponse.json({ success: false, error: "Image is too large. Please choose an image under 3 MB." }, { status: 413 });
+    }
+    const figureAsset = figureAssetInput || null;
     const options = Array.isArray(body.options) ? body.options.map((v: unknown) => String(v).trim()).filter(Boolean) : [];
     const correctOption = String(body.correctOption ?? "").trim().toUpperCase();
     if (!stem || options.length < 2 || !correctOption) return NextResponse.json({ success: false, error: "Question, at least two options and the correct option are required." }, { status: 400 });
@@ -38,8 +48,8 @@ export async function POST(request: Request) {
         id, exam, subject, standard, chapter_number, chapter_name, major_topic, subtopic,
         concept_tested, stem, options, correct_option, correct_answer_text, solution,
         formula_principle, common_misconception, difficulty, estimated_time, question_type,
-        generator_eligible_strict_cet, generator_eligible_extended_revision, academy_id, created_by_teacher_id, raw_data
-      ) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11::jsonb,$12,$13,$14,$15,$16,$17,$18,$19,false,true,$20,$21,$22::jsonb)`,
+        generator_eligible_strict_cet, generator_eligible_extended_revision, academy_id, created_by_teacher_id, raw_data, figure_asset
+      ) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11::jsonb,$12,$13,$14,$15,$16,$17,$18,$19,false,true,$20,$21,$22::jsonb,$23)`,
       [
         id,
         String(body.exam || "MHT-CET"),
@@ -63,6 +73,7 @@ export async function POST(request: Request) {
         teacher.academy_id,
         teacher.id,
         JSON.stringify({ source: "teacher", academyId: teacher.academy_id }),
+        figureAsset,
       ]
     );
     const created = await pool.query(

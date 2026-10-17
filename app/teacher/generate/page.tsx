@@ -488,13 +488,18 @@ export default function TeacherGeneratePage() {
    * If there are more questions than requested, only the first N
    * are selected because the test must contain exactly questionCount.
    */
-  function selectAllRequired() {
-    const ids = questions
-      .slice(0, questionCount)
-      .map((question) => String(question.id));
+ function selectAllRequired() {
+  setSelectedQuestionIds((previous) => {
+    const next = new Set(previous);
 
-    setSelectedQuestionIds(new Set(ids));
-  }
+    for (const question of questions) {
+      if (next.size >= questionCount) break;
+      next.add(String(question.id));
+    }
+
+    return next;
+  });
+}
 
   /*
    * Clear all selections.
@@ -1069,7 +1074,7 @@ export default function TeacherGeneratePage() {
                     ? "Loading a small page of matching questions..."
                     : `${previewTotal} question${
                         previewTotal === 1 ? "" : "s"
-                      } match the selected filters.`}
+                      } match the selected filters. ${selectedCount} selected across all pages.`}
                 </p>
               </div>
 

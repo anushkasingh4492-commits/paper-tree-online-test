@@ -101,25 +101,27 @@ st.allow_reattempt
 
         FROM test_attempts ta
 
+        LEFT JOIN scheduled_tests st
+          ON st.id::text = ta.scheduled_test_id::text
+
         LEFT JOIN tests t
-          ON t.id = COALESCE(
-            ta.test_id,
-            ta.scheduled_test_id
+          ON t.id::text = COALESCE(
+            NULLIF(ta.test_id::text, ''),
+            st.test_id::text,
+            ta.scheduled_test_id::text
           )
 
-        LEFT JOIN scheduled_tests st
-          ON st.id = ta.scheduled_test_id
-
         INNER JOIN students s
-          ON s.id = ta.student_id
-          AND s.academy_id = t.academy_id
+          ON s.id::text = ta.student_id::text
+          AND s.academy_id::text = $2::text
 
         WHERE
-          ta.student_id = $1
-          AND t.academy_id = $2
+          ta.student_id::text = $1::text
+          AND COALESCE(t.academy_id::text, st.academy_id::text) = $2::text
           AND (
-            ta.test_id = $3
-            OR ta.scheduled_test_id = $3
+            ta.test_id::text = $3::text
+            OR ta.scheduled_test_id::text = $3::text
+            OR st.test_id::text = $3::text
           )
 
         ORDER BY
