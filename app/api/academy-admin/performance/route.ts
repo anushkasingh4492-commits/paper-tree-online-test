@@ -183,7 +183,7 @@ export async function GET(request: Request) {
       let game = null;
 
       try {
-        game = await getStudentGamification(String(row.id), academyId);
+        game = await getStudentGamification(String(row.id), academyId, true);
       } catch (error) {
         console.error("ACADEMY ADMIN GAMIFICATION ERROR", row.id, error);
       }

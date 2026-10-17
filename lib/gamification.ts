@@ -96,8 +96,8 @@ export type BadgeView = {
   earnedAt?: string | null;
 };
 
-export async function getStudentGamification(studentId: string, academyId: string) {
-  await ensureFeatureSchema();
+export async function getStudentGamification(studentId: string, academyId: string, schemaReady = false) {
+  if (!schemaReady) await ensureFeatureSchema();
 
   const attemptsResult = await pool.query(
     `SELECT

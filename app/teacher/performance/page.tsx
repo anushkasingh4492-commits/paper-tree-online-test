@@ -334,7 +334,11 @@ export default function TeacherPerformancePage() {
           )}
 
           {!loading && !error && filteredStudents.length > 0 && (
-            <div className="overflow-x-auto">
+            <div className="w-full min-w-0 max-w-full">
+              <p className="mb-2 flex items-center gap-2 px-4 text-xs font-semibold text-[#697386] sm:px-6">
+                <span aria-hidden="true">↔</span> Scroll horizontally to view all performance columns
+              </p>
+              <div className="w-full max-w-full overflow-x-scroll overscroll-x-contain rounded-b-xl border-t border-[#e7ebf3] [scrollbar-gutter:stable]">
               <table className="min-w-[1280px] w-full text-left">
                 <thead className="bg-[#fafbfe] text-[11px] uppercase tracking-wider text-[#8a93a5]">
                   <tr>
@@ -427,6 +431,7 @@ export default function TeacherPerformancePage() {
                   ))}
                 </tbody>
               </table>
+              </div>
             </div>
           )}
         </section>

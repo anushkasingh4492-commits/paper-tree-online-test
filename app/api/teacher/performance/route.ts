@@ -379,7 +379,7 @@ export async function GET(request: Request) {
       const attempted = correct + wrong;
       let game = null;
       try {
-        game = await getStudentGamification(String(row.id), String(teacher.academy_id));
+        game = await getStudentGamification(String(row.id), String(teacher.academy_id), true);
       } catch (error) {
         console.error("TEACHER GAMIFICATION ERROR", row.id, error);
       }
