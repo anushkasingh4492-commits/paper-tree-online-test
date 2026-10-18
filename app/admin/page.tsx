@@ -128,6 +128,31 @@ export default function AdminPage() {
             </div>
           </button>
           <button
+            type="button"
+            onClick={() => router.push("/academy-admin/batches")}
+            className="mt-5 group w-full rounded-3xl border border-[#e0e5f0] bg-white p-7 text-left shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-[#cbd5f5] hover:shadow-lg sm:p-8"
+          >
+            <div className="flex items-center justify-between gap-5">
+              <div className="flex items-start gap-5">
+                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-[#ecfdf5] text-3xl">
+                  📚
+                </div>
+                <div>
+                  <h4 className="text-xl font-extrabold">
+                    Batch Course Setup
+                  </h4>
+                  <p className="mt-2 text-sm leading-6 text-[#697386]">
+                    Create academy batches for MHT-CET, NEET, JEE, and CAT.
+                    CAT question-bank import is available with the bundled CAT data.
+                  </p>
+                </div>
+              </div>
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#e2e6ee] text-lg text-[#315bea] transition group-hover:border-[#315bea] group-hover:bg-[#315bea] group-hover:text-white">
+                →
+              </div>
+            </div>
+          </button>
+          <button
   type="button"
   onClick={() => router.push("/admin/password-reset")}
   className="mt-5 group w-full rounded-3xl border border-[#e0e5f0] bg-white p-7 text-left shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-[#cbd5f5] hover:shadow-lg sm:p-8"

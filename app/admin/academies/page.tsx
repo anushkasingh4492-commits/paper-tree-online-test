@@ -55,6 +55,7 @@ const BATCH_COURSE_OPTIONS = [
   "MHT-CET PCM",
   "MHT-CET PCB",
   "NEET PCB",
+  "CAT",
   "JEE PCM",
 ];
 

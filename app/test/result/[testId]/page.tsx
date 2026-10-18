@@ -13,7 +13,10 @@ type Question = {
   number: number;
   question: string;
   options: string[];
-  answer: number | null;
+  answer: number | string | null;
+  questionType?: string;
+  acceptedAnswers?: string[];
+  correctAnswerText?: string;
   subject?: string;
   chapter?: string;
   difficulty?: string;
@@ -158,20 +161,76 @@ function normalizeOptions(question: any): string[] {
   return options.map((option) => String(option ?? ""));
 }
 
-function getCorrectAnswer(question: any): number | null {
+function getCorrectAnswer(
+  question: any,
+  options: string[]
+): number | string | null {
+  const questionType = String(
+    question?.question_type ??
+      question?.questionType ??
+      question?.answer_format ??
+      ""
+  )
+    .trim()
+    .toUpperCase();
+
+  if (
+    questionType === "TITA" ||
+    question?.tita_answer !== undefined ||
+    question?.raw_data?.tita_answer !== undefined
+  ) {
+    const candidate = [
+      question?.tita_answer,
+      ...(Array.isArray(question?.accepted_answers)
+        ? question.accepted_answers
+        : []),
+      ...(Array.isArray(question?.acceptedAnswers)
+        ? question.acceptedAnswers
+        : []),
+      question?.correct_answer_text,
+      question?.correct_answer,
+      question?.correctAnswer,
+      question?.answer,
+    ].find(
+      (value) =>
+        value !== undefined &&
+        value !== null &&
+        String(value).trim() !== ""
+    );
+
+    return candidate === undefined ? null : String(candidate);
+  }
+
   const possibleAnswers = [
-    question?.answer,
     question?.correct_option,
     question?.correctOption,
     question?.correct_answer,
     question?.correctAnswer,
+    question?.answer,
   ];
 
   for (const value of possibleAnswers) {
     const normalized = normalizeAnswer(value);
-
-    if (normalized !== null) {
+    if (
+      normalized !== null &&
+      (options.length === 0 || normalized < options.length)
+    ) {
       return normalized;
+    }
+  }
+
+  const answerText = String(
+    question?.correct_answer_text ?? ""
+  ).trim();
+  if (answerText && options.length > 0) {
+    const normalizedText = answerText.toLocaleLowerCase().replace(/\s+/g, " ");
+    const matchingOption = options.findIndex(
+      (option) =>
+        option.trim().toLocaleLowerCase().replace(/\s+/g, " ") ===
+        normalizedText
+    );
+    if (matchingOption >= 0) {
+      return matchingOption;
     }
   }
 
@@ -204,6 +263,29 @@ function normalizeResultQuestion(
   question: any,
   index: number
 ): Question {
+  const reportedQuestionType = String(
+    question?.question_type ??
+      question?.questionType ??
+      question?.answer_format ??
+      ""
+  )
+    .trim()
+    .toUpperCase();
+  const questionType =
+    reportedQuestionType === "TITA" ||
+    question?.tita_answer !== undefined ||
+    question?.raw_data?.tita_answer !== undefined
+      ? "TITA"
+      : reportedQuestionType;
+
+  const acceptedAnswers = [
+    question?.accepted_answers,
+    question?.acceptedAnswers,
+    question?.raw_data?.accepted_answers,
+    question?.raw_data?.acceptedAnswers,
+  ].find(Array.isArray);
+  const options = normalizeOptions(question);
+
   return {
     id:
       String(
@@ -226,9 +308,19 @@ function normalizeResultQuestion(
         ""
     ),
 
-    options: normalizeOptions(question),
+    options,
 
-    answer: getCorrectAnswer(question),
+    answer: getCorrectAnswer(question, options),
+    questionType,
+    acceptedAnswers: Array.isArray(acceptedAnswers)
+      ? acceptedAnswers.map((answer) => String(answer))
+      : [],
+    correctAnswerText:
+      question?.correct_answer_text === undefined ||
+      question?.correct_answer_text === null ||
+      String(question.correct_answer_text).trim() === ""
+        ? undefined
+        : String(question.correct_answer_text),
 
     subject:
       question?.subject ??
@@ -346,7 +438,7 @@ function getSelectedAnswer(
     | undefined,
   question: Question,
   index: number
-): number | null {
+): number | string | null {
   if (!answers) {
     return null;
   }
@@ -366,7 +458,15 @@ function getSelectedAnswer(
         key
       )
     ) {
-      return normalizeAnswer(answers[key]);
+      const answer = answers[key];
+      if (question.questionType === "TITA") {
+        return answer === null ||
+          answer === undefined ||
+          String(answer).trim() === ""
+          ? null
+          : String(answer);
+      }
+      return normalizeAnswer(answer);
     }
   }
 
@@ -1401,10 +1501,12 @@ export default function TestResultPage() {
           selected !== null;
 
         const isCorrect =
-          hasAnswer &&
-          question.answer !== null &&
-          selected ===
-            question.answer;
+          result.correctness?.[question.id] !== undefined &&
+          result.correctness?.[question.id] !== null
+            ? Boolean(result.correctness[question.id])
+            : hasAnswer &&
+              question.answer !== null &&
+              selected === question.answer;
 
         const status = isCorrect
           ? "Correct"
@@ -1429,10 +1531,28 @@ export default function TestResultPage() {
           5
         );
 
-        if (
-          question.options.length ===
-          0
-        ) {
+        if (question.questionType === "TITA") {
+          addWrappedText(
+            `Your Answer: ${hasAnswer ? String(selected) : "Not Attempted"}`,
+            10,
+            5
+          );
+          if (question.answer !== null) {
+            addWrappedText(
+              `Correct Answer: ${String(question.answer)}`,
+              10,
+              5,
+              true
+            );
+          }
+          if (question.acceptedAnswers?.length) {
+            addWrappedText(
+              `Also accepted: ${question.acceptedAnswers.join(", ")}`,
+              10,
+              5
+            );
+          }
+        } else if (question.options.length === 0) {
           addWrappedText(
             "Options unavailable",
             10,
@@ -1575,15 +1695,27 @@ export default function TestResultPage() {
         }
 
         if (
-          question.answer !== null &&
-          !question.options[
-            question.answer
-          ]
+          question.questionType !== "TITA" &&
+          typeof question.answer === "number" &&
+          !question.options[question.answer]
         ) {
           addWrappedText(
             `Correct Answer: ${String.fromCharCode(
               65 +
                 question.answer
+            )}`,
+            10,
+            5,
+            true
+          );
+        } else if (
+          question.questionType !== "TITA" &&
+          question.answer === null &&
+          question.correctAnswerText
+        ) {
+          addWrappedText(
+            `Correct Answer: ${formatMathForPdf(
+              question.correctAnswerText
             )}`,
             10,
             5,
@@ -3230,7 +3362,13 @@ if (ctx === null) {
                       </div>
 
                       <div className="mt-5 ml-0 sm:ml-14 space-y-2">
-                        {question.options
+                        {question.questionType === "TITA" ? (
+                          <div className="rounded-xl border border-blue-200 bg-blue-50 p-4">
+                            <p className="text-xs font-semibold text-blue-800">
+                              Typed-answer question
+                            </p>
+                          </div>
+                        ) : question.options
                           .length > 0 ? (
                           question.options.map(
                             (
@@ -3358,38 +3496,29 @@ if (ctx === null) {
                                   : "text-red-700",
                               ].join(" ")}
                             >
-                              <div className="flex items-start gap-2">
-                                <span className="shrink-0">
-                                  {String.fromCharCode(
-                                    65 +
-                                      Number(
-                                        selected
-                                      )
-                                  )}
-                                  .
-                                </span>
-
+                              {question.questionType === "TITA" ? (
                                 <MathText
-                                  text={
-                                    question
-                                      .options[
-                                      Number(
-                                        selected
-                                      )
-                                    ]
-                                      ? String(
-                                          question
-                                            .options[
-                                            Number(
-                                              selected
-                                            )
-                                          ]
-                                        )
-                                      : ""
-                                  }
+                                  text={String(selected)}
                                   className="leading-7"
                                 />
-                              </div>
+                              ) : (
+                                <div className="flex items-start gap-2">
+                                  <span className="shrink-0">
+                                    {String.fromCharCode(
+                                      65 + Number(selected)
+                                    )}
+                                    .
+                                  </span>
+                                  <MathText
+                                    text={
+                                      question.options[Number(selected)]
+                                        ? String(question.options[Number(selected)])
+                                        : ""
+                                    }
+                                    className="leading-7"
+                                  />
+                                </div>
+                              )}
                             </div>
                           ) : (
                             <p className="mt-2 text-sm font-bold text-slate-500">
@@ -3403,48 +3532,52 @@ if (ctx === null) {
                             Correct Answer
                           </p>
 
-                          {question.answer !==
-                            null &&
-                          question.answer !==
-                            undefined &&
-                          Number.isFinite(
-                            Number(
-                              question.answer
+                          {question.questionType === "TITA" ? (
+                            question.answer !== null ? (
+                              <div className="mt-2 space-y-2 text-sm font-bold text-green-800">
+                                <MathText
+                                  text={String(question.answer)}
+                                  className="leading-7"
+                                />
+                                {question.acceptedAnswers
+                                  ?.filter(
+                                    (answer) =>
+                                      answer.trim().toLowerCase() !==
+                                      String(question.answer).trim().toLowerCase()
+                                  )
+                                  .map((answer, answerIndex) => (
+                                    <p
+                                      key={`${answer}-${answerIndex}`}
+                                      className="text-xs font-medium text-green-700"
+                                    >
+                                      Also accepted: {answer}
+                                    </p>
+                                  ))}
+                              </div>
+                            ) : (
+                              <p className="mt-2 text-sm font-bold text-green-800">
+                                Correct answer unavailable
+                              </p>
                             )
-                          ) ? (
+                          ) : typeof question.answer === "number" &&
+                            question.options[question.answer] ? (
                             <div className="mt-2 text-sm font-bold text-green-800">
                               <div className="flex items-start gap-2">
                                 <span className="shrink-0">
-                                  {String.fromCharCode(
-                                    65 +
-                                      Number(
-                                        question.answer
-                                      )
-                                  )}
-                                  .
+                                  {String.fromCharCode(65 + question.answer)}.
                                 </span>
-
                                 <MathText
-                                  text={
-                                    question
-                                      .options[
-                                      Number(
-                                        question.answer
-                                      )
-                                    ]
-                                      ? String(
-                                          question
-                                            .options[
-                                            Number(
-                                              question.answer
-                                            )
-                                          ]
-                                        )
-                                      : ""
-                                  }
+                                  text={String(question.options[question.answer])}
                                   className="leading-7"
                                 />
                               </div>
+                            </div>
+                          ) : question.correctAnswerText ? (
+                            <div className="mt-2 text-sm font-bold text-green-800">
+                              <MathText
+                                text={question.correctAnswerText}
+                                className="leading-7"
+                              />
                             </div>
                           ) : (
                             <p className="mt-2 text-sm font-bold text-green-800">

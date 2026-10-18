@@ -38,6 +38,10 @@ const COURSE_OPTIONS = [
     label: "NEET — PCB",
   },
   {
+    value: "CAT",
+    label: "CAT",
+  },
+  {
     value: "JEE PCM",
     label: "JEE — PCM",
   },

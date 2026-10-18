@@ -391,6 +391,7 @@ export default function CherryPickPage() {
             >
               <option value="MHT-CET">MHT-CET</option>
               <option value="NEET">NEET</option>
+              <option value="CAT">CAT</option>
             </select>
 
             {/* SUBJECT */}

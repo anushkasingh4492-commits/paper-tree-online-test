@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  useCallback,
   useEffect,
   useMemo,
   useRef,
@@ -21,6 +22,10 @@ type Question = {
   chapter?: string;
   difficulty?: string;
   figureAsset?: string | null;
+  question_type?: "MCQ" | "MULTI_SELECT" | "TITA";
+  answer_format?: string;
+  max_selections?: number;
+  accepted_answers?: string[];
 };
 
 type TestData = {
@@ -31,10 +36,18 @@ type TestData = {
   created_at?: string;
 };
 
-type Answers = Record<string, number>;
+type Answers = Record<string, number | number[] | string>;
 type Marked = Record<string, boolean>;
 type Visited = Record<string, boolean>;
 type QuestionTimes = Record<string, number>;
+type CalculatorOperation = "+" | "-" | "*" | "/";
+type CalculatorState = {
+  display: string;
+  accumulator: number | null;
+  operation: CalculatorOperation | null;
+  waitingForOperand: boolean;
+  error: string | null;
+};
 
 /*
  * =========================================================
@@ -385,6 +398,30 @@ export default function TestPage() {
     downloadingPaper,
     setDownloadingPaper,
   ] = useState(false);
+
+
+  /* =========================================================
+   * CAT-SPECIFIC STATE (calculator)
+   * Only used when the exam is CAT.
+   * ========================================================= */
+  const [calculatorOpen, setCalculatorOpen] = useState(false);
+  const [calculatorState, setCalculatorState] =
+    useState<CalculatorState>({
+      display: "0",
+      accumulator: null,
+      operation: null,
+      waitingForOperand: false,
+      error: null,
+    });
+
+  const isCAT =
+    test != null &&
+    (String(test.exam ?? "").trim().toLowerCase() === "cat" ||
+      String(test.exam ?? "").trim().toLowerCase() === "cat 2025" ||
+      String(test.exam ?? "").trim().toLowerCase() === "cat 2026");
+
+  const [titaInputs, setTitaInputs] = useState<Record<string, string>>({});
+  const [titaKeyboardShift, setTitaKeyboardShift] = useState(false);
 
   const submittedRef =
     useRef(false);
@@ -892,14 +929,14 @@ export default function TestPage() {
         const normalizedQuestions: Question[] =
           rawQuestions.map(
             (
-              question: any,
+              question: Record<string, unknown>,
               index: number
             ) => {
               /*
                * OPTIONS
                */
 
-              let options =
+              let options: unknown =
                 question.options;
 
               if (
@@ -910,6 +947,9 @@ export default function TestPage() {
                 typeof options ===
                   "object"
               ) {
+                const optionRecord =
+                  options as Record<string, unknown>;
+
                 const orderedOptions =
                   [
                     "A",
@@ -921,13 +961,13 @@ export default function TestPage() {
                     .filter(
                       (letter) =>
                         Object.prototype.hasOwnProperty.call(
-                          options,
+                          optionRecord,
                           letter
                         )
                     )
                     .map(
                       (letter) =>
-                        options[
+                        optionRecord[
                           letter
                         ]
                     );
@@ -936,27 +976,21 @@ export default function TestPage() {
                   orderedOptions.length
                     ? orderedOptions
                     : Object.values(
-                        options
+                        optionRecord
                       );
               }
 
-              if (
-                !Array.isArray(
-                  options
-                )
-              ) {
-                options = [];
-              }
-
-              options =
-                options.map(
-                  (
-                    option: unknown
-                  ) =>
-                    String(
-                      option ?? ""
+              const normalizedOptions: string[] =
+                Array.isArray(options)
+                  ? options.map(
+                      (
+                        option: unknown
+                      ) =>
+                        String(
+                          option ?? ""
+                        )
                     )
-                );
+                  : [];
 
               /*
                * =================================================
@@ -990,6 +1024,13 @@ const figureAsset =
                     question.stem ??
                     ""
                 );
+              const questionType = String(
+                question.question_type ??
+                  question.answer_format ??
+                  ""
+              )
+                .trim()
+                .toUpperCase();
 
               /*
                * NORMALIZED QUESTION
@@ -1012,20 +1053,50 @@ const figureAsset =
                 question:
                   questionText,
 
-                options,
+                options: normalizedOptions,
+
+                question_type:
+                  questionType === "TITA"
+                    ? "TITA"
+                    : questionType === "MULTI_SELECT"
+                      ? "MULTI_SELECT"
+                      : questionType === "MCQ"
+                        ? "MCQ"
+                        : undefined,
+
+                answer_format:
+                  typeof question.answer_format === "string"
+                    ? question.answer_format
+                    : undefined,
+
+                accepted_answers:
+                  Array.isArray(question.accepted_answers)
+                    ? question.accepted_answers.map((answer) =>
+                        String(answer)
+                      )
+                    : undefined,
+
+                max_selections:
+                  typeof question.max_selections === "number"
+                    ? question.max_selections
+                    : undefined,
 
                 subject:
-                  question.subject ??
-                  undefined,
+                  typeof question.subject === "string"
+                    ? question.subject
+                    : undefined,
 
                 chapter:
-                  question.chapter ??
-                  question.chapter_name ??
-                  undefined,
+                  typeof question.chapter === "string"
+                    ? question.chapter
+                    : typeof question.chapter_name === "string"
+                      ? question.chapter_name
+                      : undefined,
 
                 difficulty:
-                  question.difficulty ??
-                  undefined,
+                  typeof question.difficulty === "string"
+                    ? question.difficulty
+                    : undefined,
 
                 /*
                  * Correctly initialized.
@@ -2039,17 +2110,10 @@ const figureAsset =
       } catch {}
     }
 
-    function handleVisibilityChange() {
+    function submitForLeavingTest() {
       if (
         submittedRef.current ||
         navigatingToResultRef.current
-      ) {
-        return;
-      }
-
-      if (
-        document.visibilityState !==
-        "hidden"
       ) {
         return;
       }
@@ -2068,23 +2132,13 @@ const figureAsset =
         true
       );
 
-      /*
-       * Give React a moment to display the warning,
-       * then submit.
-       */
+      submitTest(true);
+    }
 
-      window.setTimeout(() => {
-        if (
-          submittedRef.current ||
-          navigatingToResultRef.current
-        ) {
-          return;
-        }
-
-        submitTest(
-          true
-        );
-      }, 150);
+    function handleVisibilityChange() {
+      if (document.visibilityState === "hidden") {
+        submitForLeavingTest();
+      }
     }
 
     /*
@@ -2112,7 +2166,6 @@ const figureAsset =
       "visibilitychange",
       handleVisibilityChange
     );
-
     window.addEventListener(
       "beforeunload",
       handleBeforeUnload
@@ -2123,7 +2176,6 @@ const figureAsset =
         "visibilitychange",
         handleVisibilityChange
       );
-
       window.removeEventListener(
         "beforeunload",
         handleBeforeUnload
@@ -2152,6 +2204,17 @@ const figureAsset =
       return;
     }
 
+    /* CAT MULTI_SELECT: toggle instead of replace. */
+    if (
+      isCAT &&
+      (current.question_type === "MULTI_SELECT" ||
+        current.max_selections != null &&
+        current.max_selections > 1)
+    ) {
+      toggleMultiSelectAnswer(optionIndex);
+      return;
+    }
+
     setAnswers(
       (previous) => ({
         ...previous,
@@ -2160,6 +2223,262 @@ const figureAsset =
       })
     );
   }
+
+  function setTitaAnswer(value: string) {
+    if (!current) return;
+    setTitaInputs((previous) => ({
+      ...previous,
+      [current.id]: value,
+    }));
+    setAnswers((previous) => ({
+      ...previous,
+      [current.id]: value,
+    }));
+  }
+
+  function pressTitaKey(key: string) {
+    if (!current) return;
+
+    const value = titaInputs[current.id] ?? "";
+
+    if (key === "clear") {
+      setTitaAnswer("");
+    } else if (key === "backspace") {
+      setTitaAnswer(value.slice(0, -1));
+    } else if (value.length < 500) {
+      setTitaAnswer(value + key);
+    }
+  }
+
+  /* =========================================================
+   * CAT CALCULATOR
+   * ========================================================= */
+  const calculatorPress = useCallback((key: string) => {
+    setCalculatorState((previous) => {
+      const initialState: CalculatorState = {
+        display: "0",
+        accumulator: null,
+        operation: null,
+        waitingForOperand: false,
+        error: null,
+      };
+
+      if (key === "C") {
+        return initialState;
+      }
+
+      if (/^\d$/.test(key)) {
+        const display =
+          previous.error || previous.waitingForOperand
+            ? key
+            : previous.display === "0"
+              ? key
+              : previous.display + key;
+
+        return {
+          ...previous,
+          display,
+          waitingForOperand: false,
+          error: null,
+        };
+      }
+
+      if (previous.error) {
+        return previous;
+      }
+
+      const currentValue = Number(previous.display);
+
+      if (key === ".") {
+        return {
+          ...previous,
+          display: previous.waitingForOperand
+            ? "0."
+            : previous.display.includes(".")
+              ? previous.display
+              : `${previous.display}.`,
+          waitingForOperand: false,
+        };
+      }
+
+      if (key === "+/-") {
+        return {
+          ...previous,
+          display: currentValue === 0 ? "0" : String(-currentValue),
+          waitingForOperand: false,
+        };
+      }
+
+      if (key === "%") {
+        return {
+          ...previous,
+          display: String(currentValue / 100),
+          waitingForOperand: false,
+        };
+      }
+
+      if (key === "backspace") {
+        const display = previous.waitingForOperand
+          ? "0"
+          : previous.display.slice(0, -1) || "0";
+        return {
+          ...previous,
+          display: display === "-" ? "0" : display,
+          waitingForOperand: false,
+        };
+      }
+
+      const calculate = (
+        left: number,
+        operation: CalculatorOperation,
+        right: number
+      ): number | null => {
+        if (operation === "+") return left + right;
+        if (operation === "-") return left - right;
+        if (operation === "*") return left * right;
+        if (right === 0) return null;
+        return left / right;
+      };
+
+      const formatResult = (value: number) =>
+        String(Number(value.toPrecision(12)));
+
+      if (key === "=") {
+        if (
+          !previous.operation ||
+          previous.accumulator === null
+        ) {
+          return previous;
+        }
+
+        const result = calculate(
+          previous.accumulator,
+          previous.operation,
+          currentValue
+        );
+
+        if (result === null || !Number.isFinite(result)) {
+          return {
+            ...previous,
+            accumulator: null,
+            operation: null,
+            waitingForOperand: true,
+            error: "Cannot divide by zero.",
+          };
+        }
+
+        return {
+          display: formatResult(result),
+          accumulator: null,
+          operation: null,
+          waitingForOperand: true,
+          error: null,
+        };
+      }
+
+      if (["+", "-", "*", "/"].includes(key)) {
+        const operation = key as CalculatorOperation;
+
+        if (
+          previous.operation &&
+          previous.accumulator !== null &&
+          !previous.waitingForOperand
+        ) {
+          const result = calculate(
+            previous.accumulator,
+            previous.operation,
+            currentValue
+          );
+
+          if (result === null || !Number.isFinite(result)) {
+            return {
+              ...previous,
+              accumulator: null,
+              operation: null,
+              waitingForOperand: true,
+              error: "Cannot divide by zero.",
+            };
+          }
+
+          return {
+            display: formatResult(result),
+            accumulator: result,
+            operation,
+            waitingForOperand: true,
+            error: null,
+          };
+        }
+
+        return {
+          ...previous,
+          accumulator: previous.waitingForOperand
+            ? previous.accumulator ?? currentValue
+            : currentValue,
+          operation,
+          waitingForOperand: true,
+        };
+      }
+
+      return previous;
+    });
+  }, []);
+
+  useEffect(() => {
+    if (!calculatorOpen) return;
+
+    function handleCalculatorKeydown(event: KeyboardEvent) {
+      const key = event.key;
+      const mappedKey =
+        /^\d$/.test(key) ||
+        ["+", "-", "*", "/", ".", "%"].includes(key)
+          ? key
+          : key === "×"
+            ? "*"
+            : key === "÷"
+              ? "/"
+          : key.toLowerCase() === "c"
+            ? "C"
+          : key === "Enter" || key === "="
+            ? "="
+            : key === "Backspace" || key === "Delete"
+              ? "backspace"
+              : null;
+
+      if (key === "Escape") {
+        event.preventDefault();
+        setCalculatorOpen(false);
+        return;
+      }
+
+      if (mappedKey) {
+        event.preventDefault();
+        calculatorPress(mappedKey);
+      }
+    }
+
+    window.addEventListener("keydown", handleCalculatorKeydown);
+    return () =>
+      window.removeEventListener("keydown", handleCalculatorKeydown);
+  }, [calculatorOpen, calculatorPress]);
+
+  function toggleMultiSelectAnswer(optionIndex: number) {
+  if (!current) return;
+
+  setAnswers((previous) => {
+    const existing = Array.isArray(previous[current.id])
+      ? (previous[current.id] as number[])
+      : [];
+
+    const selected = existing.includes(optionIndex)
+      ? existing.filter((index) => index !== optionIndex)
+      : [...existing, optionIndex];
+
+    return {
+      ...previous,
+      [current.id]: selected,
+    };
+  });
+}
 
   /*
    * =========================================================
@@ -2475,11 +2794,9 @@ const figureAsset =
                       )
                     )}%`,
                   }}
-                />
+                ></div>
               </div>
             </div>
-
-            {/* QUESTION CARD */}
 
             <div className="bg-white border border-slate-200 rounded-2xl shadow-sm overflow-hidden">
               <div className="px-5 sm:px-7 py-5 border-b border-slate-100 flex items-center justify-between gap-4">
@@ -2539,6 +2856,18 @@ const figureAsset =
                   />
                 </div>
 
+                {isCAT && (
+                  <div className="mt-5">
+                    <button
+                      type="button"
+                      onClick={() => setCalculatorOpen(true)}
+                      className="rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
+                    >
+                      Open calculator
+                    </button>
+                  </div>
+                )}
+
                 {/* FIGURE */}
 
                 {current.figureAsset && (
@@ -2566,86 +2895,159 @@ const figureAsset =
                   </div>
                 )}
 
-                {/* OPTIONS */}
+                {/* OPTIONS / TITA INPUT */}
 
-                <div className="mt-7 space-y-3">
-                  {current.options.map(
-                    (
-                      option,
-                      index
-                    ) => {
-                      const selected =
-                        answers[
-                          current.id
-                        ] ===
-                        index;
-
-                      return (
+                {isCAT &&
+                (current.question_type === "TITA" ||
+                  current.answer_format === "TITA") ? (
+                  <div className="mt-7 space-y-3">
+                    <textarea
+                      inputMode="text"
+                      autoComplete="off"
+                      maxLength={500}
+                      rows={3}
+                      value={titaInputs[current.id] ?? ""}
+                      onChange={(e) => setTitaAnswer(e.target.value.slice(0, 500))}
+                      placeholder="Type your answer"
+                      aria-label="TITA answer"
+                      className="w-full resize-y rounded-xl border border-slate-200 bg-white px-4 py-4 text-lg font-mono text-slate-900 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
+                    />
+                    <div className="space-y-2 rounded-xl border border-slate-200 bg-slate-50 p-3">
+                      {[
+                        ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"],
+                        ["a", "s", "d", "f", "g", "h", "j", "k", "l"],
+                        ["shift", "z", "x", "c", "v", "b", "n", "m", "backspace"],
+                      ].map((row, rowIndex) => (
+                        <div key={rowIndex} className="flex justify-center gap-1.5">
+                          {row.map((key) => (
+                            <button
+                              key={key}
+                              type="button"
+                              onClick={() =>
+                                key === "shift"
+                                  ? setTitaKeyboardShift((value) => !value)
+                                  : pressTitaKey(
+                                      key === "backspace"
+                                        ? key
+                                        : titaKeyboardShift
+                                          ? key.toUpperCase()
+                                          : key
+                                    )
+                              }
+                              aria-label={
+                                key === "backspace"
+                                  ? "Delete last character"
+                                  : key === "shift"
+                                    ? "Toggle uppercase"
+                                    : `Enter ${key}`
+                              }
+                              className="min-w-0 flex-1 rounded-lg border border-slate-200 bg-white px-1 py-2.5 text-sm font-semibold text-slate-700 shadow-sm hover:bg-blue-50 active:bg-blue-100"
+                            >
+                              {key === "backspace"
+                                ? "⌫"
+                                : key === "shift"
+                                  ? "⇧"
+                                  : titaKeyboardShift
+                                    ? key.toUpperCase()
+                                    : key}
+                            </button>
+                          ))}
+                        </div>
+                      ))}
+                      <div className="grid grid-cols-7 gap-1.5">
+                        {["1", "2", "3", "4", "5", "6", "7", "8", "9", "-", ".", "0", ",", "?", "!", "'", "clear"].map(
+                        (key) => (
+                          <button
+                            key={key}
+                            type="button"
+                            onClick={() => pressTitaKey(key)}
+                            aria-label={
+                              key === "clear" ? "Clear answer" : `Enter ${key}`
+                            }
+                            className="rounded-lg border border-slate-200 bg-white py-2.5 font-semibold text-slate-700 hover:bg-slate-50"
+                          >
+                            {key === "clear" ? "Clear" : key}
+                          </button>
+                        )
+                      )}
                         <button
                           type="button"
-                          key={index}
-                          onClick={() =>
-                            selectAnswer(
-                              index
-                            )
-                          }
-                          className={[
-                            "w-full text-left rounded-xl border p-4 sm:p-5 flex items-start gap-4 transition-all",
-                            selected
-                              ? "border-blue-500 bg-blue-50 shadow-sm"
-                              : "border-slate-200 bg-white hover:border-blue-300 hover:bg-slate-50",
-                          ].join(" ")}
+                          onClick={() => pressTitaKey(" ")}
+                          className="col-span-7 rounded-lg border border-slate-200 bg-white py-2.5 font-semibold text-slate-700 hover:bg-slate-50"
                         >
-                          <span
-                            className={[
-                              "w-9 h-9 shrink-0 rounded-lg flex items-center justify-center font-bold text-sm border",
-                              selected
-                                ? "bg-blue-600 text-white border-blue-600"
-                                : "bg-slate-50 text-slate-600 border-slate-200",
-                            ].join(" ")}
-                          >
-                            {String.fromCharCode(
-                              65 +
-                                index
-                            )}
-                          </span>
-
-                          <span
-                            className={[
-                              "pt-1 text-sm sm:text-base leading-6 flex-1",
-                              selected
-                                ? "text-blue-900 font-semibold"
-                                : "text-slate-700",
-                            ].join(" ")}
-                          >
-                            <MathText
-                              text={
-                                option
-                              }
-                            />
-                          </span>
-
-                          {selected && (
-                            <span className="ml-auto text-blue-600 font-bold">
-
-                            </span>
-                          )}
+                          Space
                         </button>
-                      );
-                    }
-                  )}
-                </div>
-              </div>
-
-              {showExplain && (
-                <div className="border-t border-violet-100 bg-violet-50/60 p-5 sm:p-7">
-                  <div className="flex items-center justify-between gap-3">
-                    <div><h3 className="font-extrabold text-violet-950">AI Doubt Solver</h3><p className="mt-1 text-xs text-violet-700">Step-by-step explanation + why the other options are wrong.</p></div>
-                    <button type="button" onClick={() => setShowExplain(false)} className="text-xs font-bold text-violet-700">Close</button>
+                    </div>
+                    </div>
+                    <p className="text-xs text-slate-400">
+                      Enter a number or text answer using your device keyboard or the on-screen keyboard. If multiple answer forms are configured, any accepted form is graded correct.
+                    </p>
                   </div>
-                
-                </div>
-              )}
+                ) : (
+                  <div className="mt-7 space-y-3">
+                    {current.options.map(
+                      (option, index) => {
+                        const isMulti =
+                          current.question_type === "MULTI_SELECT" ||
+                          (current.max_selections != null &&
+                            current.max_selections > 1);
+                        const selected = isMulti
+                          ? Array.isArray(answers[current.id]) &&
+                            (answers[current.id] as number[]).includes(index)
+                          : answers[current.id] === index;
+                        return (
+                          <button
+                            type="button"
+                            key={index}
+                            onClick={() => selectAnswer(index)}
+                            className={[
+                              "w-full text-left rounded-xl border p-4 sm:p-5 flex items-start gap-4 transition-all",
+                              selected
+                                ? "border-blue-500 bg-blue-50 shadow-sm"
+                                : "border-slate-200 bg-white hover:border-blue-300 hover:bg-slate-50",
+                            ].join(" ")}
+                          >
+                            <span
+                              className={[
+                                "w-9 h-9 shrink-0 rounded-lg flex items-center justify-center font-bold text-sm border",
+                                selected
+                                  ? "bg-blue-600 text-white border-blue-600"
+                                  : "bg-slate-50 text-slate-600 border-slate-200",
+                              ].join(" ")}
+                            >
+                              {isMulti ? (
+                                selected ? (
+                                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
+                                ) : (
+                                  String.fromCharCode(65 + index)
+                                )
+                              ) : (
+                                String.fromCharCode(65 + index)
+                              )}
+                            </span>
+                            <span
+                              className={[
+                                "pt-1 text-sm sm:text-base leading-6 flex-1",
+                                selected
+                                  ? "text-blue-900 font-semibold"
+                                  : "text-slate-700",
+                              ].join(" ")}
+                            >
+                              <MathText text={option} />
+                            </span>
+                            {selected && (
+                              <span className="ml-auto text-blue-600 font-bold">
+                                {isMulti ? "Selected" : ""}
+                              </span>
+                            )}
+                          </button>
+                        );
+                      }
+                    )}
+                  </div>
+                )
+              }
+              </div>
 
               {/* NAVIGATION */}
 
@@ -2712,6 +3114,82 @@ const figureAsset =
               </div>
             </div>
           </section>
+
+          {/* CAT CALCULATOR OVERLAY */}
+          {isCAT && calculatorOpen && (
+            <div
+              className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm"
+              onClick={() => setCalculatorOpen(false)}
+            >
+              <div
+                className="bg-white rounded-2xl p-6 shadow-2xl w-full max-w-md mx-4 border border-slate-200"
+                role="dialog"
+                aria-modal="true"
+                aria-label="CAT calculator"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="font-bold text-slate-900">Calculator</h3>
+                  <button
+                    type="button"
+                    onClick={() => setCalculatorOpen(false)}
+                    className="text-slate-500 hover:text-slate-700"
+                  >
+                    &times;
+                  </button>
+                </div>
+
+                <div className="mb-4">
+                  <div
+                    className="mb-1 min-h-5 text-right text-xs font-mono text-slate-500"
+                    aria-live="polite"
+                  >
+                    {calculatorState.operation &&
+                    calculatorState.accumulator !== null
+                      ? `${calculatorState.accumulator} ${calculatorState.operation}`
+                      : "\u00a0"}
+                  </div>
+                  <div
+                    className="text-right text-2xl font-mono text-slate-900 bg-slate-50 rounded-xl p-3 border border-slate-200 min-h-[48px] flex items-end justify-end"
+                    aria-live="polite"
+                    aria-label={`Calculator display: ${calculatorState.display}`}
+                  >
+                    {calculatorState.display}
+                  </div>
+                  {calculatorState.error && (
+                    <p role="alert" className="mt-2 text-right text-sm text-red-600">
+                      {calculatorState.error}
+                    </p>
+                  )}
+                </div>
+
+                <div className="grid grid-cols-4 gap-2">
+                  <button type="button" onClick={() => calculatorPress("C")} className="py-3 rounded-xl border border-slate-200 bg-slate-100 text-slate-700 font-semibold hover:bg-slate-200">C</button>
+                  <button type="button" onClick={() => calculatorPress("+/-")} className="py-3 rounded-xl border border-slate-200 bg-slate-100 text-slate-700 font-semibold hover:bg-slate-200">+/-</button>
+                  <button type="button" onClick={() => calculatorPress("%")} className="py-3 rounded-xl border border-slate-200 bg-slate-100 text-slate-700 font-semibold hover:bg-slate-200">%</button>
+                  <button type="button" onClick={() => calculatorPress("/")} className="py-3 rounded-xl border border-slate-200 bg-blue-50 text-blue-600 font-semibold hover:bg-blue-100">&divide;</button>
+                  <button type="button" onClick={() => calculatorPress("7")} className="py-3 rounded-xl border border-slate-200 bg-white text-slate-900 font-semibold hover:bg-slate-50">7</button>
+                  <button type="button" onClick={() => calculatorPress("8")} className="py-3 rounded-xl border border-slate-200 bg-white text-slate-900 font-semibold hover:bg-slate-50">8</button>
+                  <button type="button" onClick={() => calculatorPress("9")} className="py-3 rounded-xl border border-slate-200 bg-white text-slate-900 font-semibold hover:bg-slate-50">9</button>
+                  <button type="button" onClick={() => calculatorPress("*")} className="py-3 rounded-xl border border-slate-200 bg-blue-50 text-blue-600 font-semibold hover:bg-blue-100">&times;</button>
+                  <button type="button" onClick={() => calculatorPress("4")} className="py-3 rounded-xl border border-slate-200 bg-white text-slate-900 font-semibold hover:bg-slate-50">4</button>
+                  <button type="button" onClick={() => calculatorPress("5")} className="py-3 rounded-xl border border-slate-200 bg-white text-slate-900 font-semibold hover:bg-slate-50">5</button>
+                  <button type="button" onClick={() => calculatorPress("6")} className="py-3 rounded-xl border border-slate-200 bg-white text-slate-900 font-semibold hover:bg-slate-50">6</button>
+                  <button type="button" onClick={() => calculatorPress("-")} className="py-3 rounded-xl border border-slate-200 bg-blue-50 text-blue-600 font-semibold hover:bg-blue-100">&#8722;</button>
+                  <button type="button" onClick={() => calculatorPress("1")} className="py-3 rounded-xl border border-slate-200 bg-white text-slate-900 font-semibold hover:bg-slate-50">1</button>
+                  <button type="button" onClick={() => calculatorPress("2")} className="py-3 rounded-xl border border-slate-200 bg-white text-slate-900 font-semibold hover:bg-slate-50">2</button>
+                  <button type="button" onClick={() => calculatorPress("3")} className="py-3 rounded-xl border border-slate-200 bg-white text-slate-900 font-semibold hover:bg-slate-50">3</button>
+                  <button type="button" onClick={() => calculatorPress("+")} className="py-3 rounded-xl border border-slate-200 bg-blue-50 text-blue-600 font-semibold hover:bg-blue-100">+</button>
+                  <button type="button" onClick={() => calculatorPress("0")} className="py-3 rounded-xl border border-slate-200 bg-white text-slate-900 font-semibold hover:bg-slate-50 col-span-2">0</button>
+                  <button type="button" onClick={() => calculatorPress(".")} className="py-3 rounded-xl border border-slate-200 bg-white text-slate-900 font-semibold hover:bg-slate-50">.</button>
+                  <button type="button" onClick={() => calculatorPress("=")} className="py-3 rounded-xl border border-slate-200 bg-blue-600 text-white font-semibold hover:bg-blue-700">=</button>
+                  <button type="button" onClick={() => calculatorPress("backspace")} className="py-3 rounded-xl border border-slate-200 bg-slate-100 text-slate-700 font-semibold hover:bg-slate-200 col-span-4" aria-label="Delete last calculator digit">⌫ Backspace</button>
+                </div>
+
+                <p className="mt-4 text-xs text-slate-400 text-center">Choose an operator, enter the next number, then press =. You can use the buttons or keyboard. Press Esc to close.</p>
+              </div>
+            </div>
+          )}
 
           {/* SIDEBAR */}
 

@@ -330,6 +330,13 @@ for (
             options,
             correct_option,
             correct_answer_text,
+            raw_data->>'tita_answer' AS tita_answer,
+            COALESCE(
+              raw_data->'accepted_answers',
+              raw_data->'acceptedAnswers',
+              raw_data->'correct_answers',
+              raw_data->'correctAnswers'
+            ) AS accepted_answers,
             solution,
             figure_asset
           FROM questions
@@ -382,14 +389,25 @@ for (
           bank.options ??
           [],
         correct_option:
-          question?.correct_option ??
-          question?.correctOption ??
-          question?.correct_answer ??
-          bank.correct_option ??
+          bank.correct_option ||
+          question?.correct_option ||
+          question?.correctOption ||
+          question?.correct_answer ||
           undefined,
         correct_answer_text:
-          question?.correct_answer_text ??
-          bank.correct_answer_text ??
+          bank.correct_answer_text ||
+          question?.correct_answer_text ||
+          undefined,
+        tita_answer:
+          bank.tita_answer ||
+          question?.tita_answer ||
+          question?.raw_data?.tita_answer ||
+          undefined,
+        accepted_answers:
+          bank.accepted_answers ??
+          question?.accepted_answers ??
+          question?.raw_data?.accepted_answers ??
+          question?.raw_data?.acceptedAnswers ??
           undefined,
         solution:
           question?.solution ??
@@ -402,8 +420,8 @@ for (
           bank.figure_asset ??
           null,
         question_type:
-          question?.question_type ??
           bank.question_type ??
+          question?.question_type ??
           undefined,
       };
     });

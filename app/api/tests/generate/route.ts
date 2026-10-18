@@ -6,6 +6,7 @@ import { getAcademySubscription } from "@/lib/subscription";
 import { ensureFeatureSchema } from "@/lib/feature-schema";
 import {
   getPreset,
+  MARKS_PER_QUESTION,
   type Preset,
   type PresetSubject,
 } from "@/lib/test-presets";
@@ -70,6 +71,7 @@ type QuestionRow = {
   estimated_time?: number | null;
   question_type?: string | null;
   figure_asset?: string | null;
+  accepted_answers?: unknown;
 };
 
 /*
@@ -114,6 +116,14 @@ function normalizeExam(value: unknown): string {
     exam === "neet 2026"
   ) {
     return "NEET";
+  }
+
+  if (
+    exam === "cat" ||
+    exam === "cat 2025" ||
+    exam === "cat 2026"
+  ) {
+    return "CAT";
   }
 
   if (!exam) {
@@ -226,6 +236,14 @@ function normalizePresetSubject(
     return "biology";
   }
 
+  if (
+    subject === "quantitative ability" ||
+    subject === "quantitative aptitude" ||
+    subject === "cat qa"
+  ) {
+    return "cat-qa";
+  }
+
   return null;
 }
 
@@ -250,6 +268,9 @@ function displaySubject(
 
     case "biology":
       return "Biology";
+
+    case "cat-qa":
+      return "Quantitative Ability";
 
     default:
       return subject;
@@ -309,54 +330,38 @@ function addDifficultyFilter(
 ) {
   const normalizedDifficulty = normalize(difficulty);
 
-  /*
-   * Easy
-   */
   if (normalizedDifficulty === "easy") {
     conditions.push(`
       LOWER(TRIM(difficulty)) = 'easy'
     `);
-
     return;
   }
 
-  /*
-   * Medium
-   */
   if (normalizedDifficulty === "medium") {
     conditions.push(`
       LOWER(TRIM(difficulty)) = 'medium'
     `);
-
     return;
   }
 
-  /*
-   * Hard
-   */
   if (
     normalizedDifficulty === "hard" ||
     normalizedDifficulty === "difficult"
   ) {
     conditions.push(`
-      LOWER(TRIM(difficulty)) = 'hard'
+      LOWER(TRIM(difficulty)) IN ('hard', 'difficult')
     `);
-
     return;
   }
 
-  /*
-   * Challenging
-   */
   if (normalizedDifficulty === "challenging") {
     conditions.push(`
       LOWER(TRIM(difficulty)) = 'challenging'
     `);
-
     return;
   }
 
-  
+  // Balanced or an unrecognized value: don't filter by difficulty.
 }
 
 /*
@@ -570,7 +575,13 @@ const QUESTION_SELECT = `
     difficulty,
     estimated_time,
     question_type,
-    figure_asset
+    figure_asset,
+    COALESCE(
+      raw_data->'accepted_answers',
+      raw_data->'acceptedAnswers',
+      raw_data->'correct_answers',
+      raw_data->'correctAnswers'
+    ) AS accepted_answers
   FROM questions
 `;
 
@@ -910,9 +921,9 @@ export async function POST(
             [subject, count]
           ) => {
             const marksPerQuestion =
-              subject === "maths"
-                ? 2
-                : 1;
+              MARKS_PER_QUESTION[
+                subject as PresetSubject
+              ];
 
             return (
               sum +
@@ -1669,6 +1680,7 @@ export async function POST(
           "Chemistry",
           "Biology",
           "Mathematics",
+          "Quantitative Ability",
         ];
 
         const normalizedSelectedSubjects = new Set(

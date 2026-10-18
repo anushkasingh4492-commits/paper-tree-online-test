@@ -31,7 +31,25 @@ function getPool() {
   return global.__paperTreePool;
 }
 
-type AnswerMap = Record<string, number | string | null>;
+type AnswerMap = Record<string, number | string | number[] | null>;
+
+type QuestionAnswerData = {
+  id?: unknown;
+  question_id?: unknown;
+  question_type?: unknown;
+  questionType?: unknown;
+  answer_format?: unknown;
+  tita_answer?: unknown;
+  accepted_answers?: unknown;
+  acceptedAnswers?: unknown;
+  correct_option?: unknown;
+  correctOption?: unknown;
+  correct_answers?: unknown;
+  correctAnswers?: unknown;
+  correct_answer_text?: unknown;
+  correct_answer?: unknown;
+  answer?: unknown;
+};
 
 type MarkedMap = Record<string, boolean>;
 
@@ -51,7 +69,7 @@ type SubmitBody = {
 
 type EvaluatedAnswer = {
   questionId: string;
-  selectedAnswer: number | null;
+  selectedAnswer: number | number[] | string | null;
   isCorrect: boolean | null;
   marksAwarded: number;
   markedForReview: boolean;
@@ -112,48 +130,160 @@ function normalizeAnswer(value: unknown): number | null {
  * =========================================================
  */
 
-function getCorrectAnswer(question: any): number | null {
-  if (
-    question.answer !== undefined &&
-    question.answer !== null &&
-    question.answer !== ""
-  ) {
-    const normalized = normalizeAnswer(question.answer);
+function isTitaQuestion(question: QuestionAnswerData): boolean {
+  return (
+    String(question.question_type ?? question.questionType ?? question.answer_format ?? "")
+      .trim()
+      .toUpperCase() === "TITA"
+  );
+}
 
-    if (normalized !== null) {
-      return normalized;
-    }
+function normalizeTitaAnswer(value: unknown): string | null {
+  if (typeof value === "number") {
+    return Number.isFinite(value) ? String(value) : null;
   }
 
-  if (
-    question.correct_option !== undefined &&
-    question.correct_option !== null &&
-    question.correct_option !== ""
-  ) {
-    const normalized = normalizeAnswer(
-      question.correct_option
-    );
+  if (typeof value !== "string") return null;
 
-    if (normalized !== null) {
-      return normalized;
-    }
+  let cleaned = value.trim();
+  if (!cleaned) return null;
+
+  // Accept plain numbers, $160$, \(160\), and \boxed{160}.
+  cleaned = cleaned
+    .replace(/^\\\(([\s\S]*)\\\)$/, "$1")
+    .replace(/^\$([\s\S]*)\$$/, "$1")
+    .replace(/^\\boxed\{([^{}]+)\}$/, "$1")
+    .trim();
+
+  // Remove commas only when they form valid thousands grouping.
+  if (/^[+-]?\d{1,3}(?:,\d{3})+(?:\.\d+)?$/.test(cleaned)) {
+    cleaned = cleaned.replace(/,/g, "");
   }
 
-  if (
-    question.correctOption !== undefined &&
-    question.correctOption !== null &&
-    question.correctOption !== ""
-  ) {
-    const normalized = normalizeAnswer(
-      question.correctOption
-    );
+  if (/^[+-]?\d+(?:\.\d+)?$/.test(cleaned)) {
+    const number = Number(cleaned);
+    return Number.isFinite(number) ? String(number) : null;
+  }
 
-    if (normalized !== null) {
-      return normalized;
+  return cleaned.toLocaleLowerCase().replace(/\s+/g, " ");
+}
+
+function isMultiSelectQuestion(question: QuestionAnswerData): boolean {
+  return (
+    String(question.question_type ?? question.questionType ?? "")
+      .trim()
+      .toUpperCase() === "MULTI_SELECT"
+  );
+}
+
+function normalizeMultiSelectAnswer(
+  value: unknown
+): number[] | null {
+  if (Array.isArray(value)) {
+    const result: number[] = [];
+    for (const item of value) {
+      const n = normalizeAnswer(item);
+      if (n !== null) result.push(n);
+    }
+    return result.length > 0 ? result : null;
+  }
+
+  if (typeof value === "string") {
+    const trimmed = value.trim();
+    if (!trimmed) return null;
+    const parts = trimmed.split(/[,;\s]+/).filter(Boolean);
+    const result: number[] = [];
+    for (const part of parts) {
+      const n = normalizeAnswer(part);
+      if (n !== null) result.push(n);
+    }
+    return result.length > 0 ? result : null;
+  }
+
+  return null;
+}
+
+function getCorrectMultiSelectAnswer(
+  question: QuestionAnswerData
+): number[] | null {
+  const raw =
+    question.correct_option ??
+    question.correctOption ??
+    question.correct_answers ??
+    question.correctAnswers ??
+    null;
+
+  if (raw === null || raw === undefined) return null;
+
+  if (Array.isArray(raw)) {
+    const result: number[] = [];
+    for (const item of raw) {
+      const n = normalizeAnswer(item);
+      if (n !== null) result.push(n);
+    }
+    return result.length > 0 ? result : null;
+  }
+
+  return normalizeMultiSelectAnswer(raw);
+}
+
+function arraysEqual(a: number[] | null, b: number[] | null): boolean {
+  if (a === null || b === null) return false;
+  if (a.length !== b.length) return false;
+  const sortedA = [...a].sort((x, y) => x - y);
+  const sortedB = [...b].sort((x, y) => x - y);
+  for (let i = 0; i < sortedA.length; i++) {
+    if (sortedA[i] !== sortedB[i]) return false;
+  }
+  return true;
+}
+
+function isNumberArray(value: unknown): value is number[] {
+  return Array.isArray(value) && value.every((item) => typeof item === "number");
+}
+
+function isStringArray(value: unknown): value is string[] {
+  return Array.isArray(value) && value.every((item) => typeof item === "string");
+}
+
+function getCorrectAnswer(
+  question: QuestionAnswerData
+): number | null {
+  for (const candidate of [
+    question.answer,
+    question.correct_option,
+    question.correctOption,
+  ]) {
+    if (candidate !== undefined && candidate !== null && candidate !== "") {
+      const normalized = normalizeAnswer(candidate);
+      if (normalized !== null) return normalized;
     }
   }
 
   return null;
+}
+
+function getCorrectTitaAnswers(
+  question: QuestionAnswerData
+): string[] | null {
+  const candidates = [
+    question.accepted_answers,
+    question.acceptedAnswers,
+    question.correct_answers,
+    question.correctAnswers,
+    question.tita_answer,
+    question.correct_answer_text,
+    question.correct_answer,
+    question.answer,
+  ];
+  const normalizedAnswers = candidates
+    .flatMap((candidate) =>
+      Array.isArray(candidate) ? candidate : [candidate]
+    )
+    .map(normalizeTitaAnswer)
+    .filter((answer): answer is string => answer !== null);
+  const uniqueAnswers = [...new Set(normalizedAnswers)];
+  return uniqueAnswers.length > 0 ? uniqueAnswers : null;
 }
 
 /*
@@ -433,7 +563,12 @@ export async function POST(request: NextRequest) {
       examName === "neet-ug" ||
       examName === "neet ug";
 
-    const marksCorrect = isNEET ? 4 : 1;
+    const isCAT =
+      examName === "cat" ||
+      examName === "cat 2025" ||
+      examName === "cat 2026";
+
+    const marksCorrect = isNEET ? 4 : isCAT ? 3 : 1;
     const marksIncorrect = isNEET ? -1 : 0;
     const marksUnattempted = 0;
 
@@ -451,18 +586,28 @@ export async function POST(request: NextRequest) {
      * =======================================================
      */
 
-    let questions: any[] = [];
+    let questions: QuestionAnswerData[] = [];
 
-    if (Array.isArray(test.questions)) {
-      questions = test.questions;
-    } else if (typeof test.questions === "string") {
+    const rawQuestions: unknown = test.questions;
+
+    if (Array.isArray(rawQuestions)) {
+      questions = rawQuestions.filter(
+        (question): question is QuestionAnswerData =>
+          typeof question === "object" &&
+          question !== null &&
+          !Array.isArray(question)
+      );
+    } else if (typeof rawQuestions === "string") {
       try {
-        const parsedQuestions = JSON.parse(
-          test.questions
-        );
+        const parsedQuestions: unknown = JSON.parse(rawQuestions);
 
         if (Array.isArray(parsedQuestions)) {
-          questions = parsedQuestions;
+          questions = parsedQuestions.filter(
+            (question): question is QuestionAnswerData =>
+              typeof question === "object" &&
+              question !== null &&
+              !Array.isArray(question)
+          );
         }
       } catch (error) {
         console.error(
@@ -509,11 +654,23 @@ export async function POST(request: NextRequest) {
 
       const selectedRaw = answers[questionId];
 
-      const selectedAnswer =
-        normalizeAnswer(selectedRaw);
+      const titaQuestion = isTitaQuestion(question);
+      const multiSelectQuestion = isMultiSelectQuestion(question);
 
-      const correctAnswer =
-        getCorrectAnswer(question);
+      const selectedAnswer: number | number[] | string | null = multiSelectQuestion
+        ? normalizeMultiSelectAnswer(selectedRaw)
+        : titaQuestion
+          ? normalizeTitaAnswer(selectedRaw)
+          : normalizeAnswer(selectedRaw);
+
+      const correctAnswer: number | number[] | string[] | null = multiSelectQuestion
+        ? getCorrectMultiSelectAnswer(question)
+        : titaQuestion
+          ? getCorrectTitaAnswers(question)
+        : getCorrectAnswer(question);
+
+      // CAT has no negative marking (MCQ and TITA both: +3 correct, 0 wrong).
+      const questionMarksIncorrect = marksIncorrect;
 
       let isCorrect: boolean | null = null;
 
@@ -541,7 +698,17 @@ export async function POST(request: NextRequest) {
 
       else if (
         correctAnswer !== null &&
-        selectedAnswer === correctAnswer
+        (titaQuestion
+          ? typeof selectedAnswer === "string" &&
+            isStringArray(correctAnswer) &&
+            correctAnswer.includes(selectedAnswer)
+          : multiSelectQuestion
+            ? Array.isArray(selectedAnswer) &&
+              isNumberArray(correctAnswer) &&
+              arraysEqual(selectedAnswer, correctAnswer)
+            : typeof selectedAnswer === "number" &&
+              typeof correctAnswer === "number" &&
+              selectedAnswer === correctAnswer)
       ) {
         correct++;
 
@@ -561,7 +728,7 @@ export async function POST(request: NextRequest) {
 
         isCorrect = false;
 
-        marksAwarded = marksIncorrect;
+        marksAwarded = questionMarksIncorrect;
       }
 
       evaluatedAnswers.push({
@@ -1064,4 +1231,3 @@ export async function POST(request: NextRequest) {
     client.release();
   }
 }
-

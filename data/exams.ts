@@ -12,9 +12,13 @@ export const exams: Exam[] = [
     enabled: false,
   },
   {
+    id: "cat",
+    name: "CAT",
+    enabled: true,
+  },
+  {
     id: "jee-main",
     name: "JEE Main",
     enabled: false,
   },
 ];
-

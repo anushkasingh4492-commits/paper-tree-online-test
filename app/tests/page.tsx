@@ -10,13 +10,14 @@ import {
   type Preset,
 } from "@/lib/test-presets";
 
-type Course = "MHT-CET" | "JEE" | "NEET";
+type Course = "MHT-CET" | "JEE" | "NEET" | "CAT";
 
 type Subject =
   | "Physics"
   | "Chemistry"
   | "Mathematics"
-  | "Biology";
+  | "Biology"
+  | "Quantitative Ability";
 
 type DatabaseChapter = {
   exam: string;
@@ -63,6 +64,12 @@ const COURSE_CONFIG: Record<
     ],
     available: true,
   },
+
+  CAT: {
+    description: "Common Admission Test",
+    subjects: ["Quantitative Ability"],
+    available: true,
+  },
 };
 
 const DIFFICULTIES = [
@@ -80,15 +87,12 @@ const PRESET_SUBJECT_NAMES: Record<
   chemistry: "Chemistry",
   maths: "Mathematics",
   biology: "Biology",
+  "cat-qa": "Quantitative Ability",
 };
 
 function subjectToPresetSubject(
   subject: Subject
-):
-  | "physics"
-  | "chemistry"
-  | "maths"
-  | "biology" {
+): "physics" | "chemistry" | "maths" | "biology" | "cat-qa" {
   switch (subject) {
     case "Physics":
       return "physics";
@@ -101,15 +105,14 @@ function subjectToPresetSubject(
 
     case "Biology":
       return "biology";
+
+    case "Quantitative Ability":
+      return "cat-qa";
   }
 }
 
 function presetSubjectToSubject(
-  subject:
-    | "physics"
-    | "chemistry"
-    | "maths"
-    | "biology"
+  subject: "physics" | "chemistry" | "maths" | "biology" | "cat-qa"
 ): Subject {
   switch (subject) {
     case "physics":
@@ -123,6 +126,9 @@ function presetSubjectToSubject(
 
     case "biology":
       return "Biology";
+
+    case "cat-qa":
+      return "Quantitative Ability";
   }
 }
 
@@ -180,17 +186,13 @@ export default function TestsPage() {
     Chemistry: [],
     Mathematics: [],
     Biology: [],
+    "Quantitative Ability": [],
   });
 
   const [
     availableChapters,
     setAvailableChapters,
   ] = useState<DatabaseChapter[]>([]);
-
-  const [
-    databaseSubjects,
-    setDatabaseSubjects,
-  ] = useState<string[]>([]);
 
   const [
     loadingDatabase,
@@ -376,6 +378,22 @@ console.log(
           batchName
         );
 
+        if (courseName.includes("CAT")) {
+          setCourse("CAT");
+          setStudentGroup("CAT");
+          setSubjects(["Quantitative Ability"]);
+          setActiveChapterSubject("Quantitative Ability");
+          setChaptersBySubject({
+            Physics: [],
+            Chemistry: [],
+            Mathematics: [],
+            Biology: [],
+            "Quantitative Ability": [],
+          });
+          setSelectedPreset(null);
+          return;
+        }
+
         /*
          * -----------------------------------------------------
          * MHT-CET PCB
@@ -404,6 +422,7 @@ setSubjects([
             Chemistry: [],
             Mathematics: [],
             Biology: [],
+            "Quantitative Ability": [],
           });
 
           setSelectedPreset(null);
@@ -437,6 +456,7 @@ setSubjects([
             Chemistry: [],
             Mathematics: [],
             Biology: [],
+            "Quantitative Ability": [],
           });
 
           setSelectedPreset(null);
@@ -472,6 +492,7 @@ setSubjects([
             Chemistry: [],
             Mathematics: [],
             Biology: [],
+            "Quantitative Ability": [],
           });
 
           setSelectedPreset(null);
@@ -507,6 +528,7 @@ setSubjects([
             Chemistry: [],
             Mathematics: [],
             Biology: [],
+            "Quantitative Ability": [],
           });
 
           setSelectedPreset(null);
@@ -625,22 +647,6 @@ setSubjects([
           mappedRows
         );
 
-        setDatabaseSubjects(
-          Array.from(
-            new Set(
-              schemaRows
-                .map(
-                  (row: {
-                    subject?: string;
-                  }) =>
-                    String(
-                      row.subject || ""
-                    )
-                )
-                .filter(Boolean)
-            )
-          )
-        );
       } catch (error) {
         console.error(
           "Failed to load database data:",
@@ -654,83 +660,6 @@ setSubjects([
     void loadDatabaseData();
   }, []);
 
-  /*
-   * ---------------------------------------------------------
-   * KEEP SUBJECTS COMPATIBLE WITH ASSIGNED GROUP
-   * ---------------------------------------------------------
-   */
-useEffect(() => {
-  if (!studentGroup) {
-    return;
-  }
-
-  const allowedSubjects =
-    studentGroup === "PCM"
-      ? ([
-          "Physics",
-          "Chemistry",
-          "Mathematics",
-        ] as Subject[])
-      : ([
-          "Physics",
-          "Chemistry",
-          "Biology",
-        ] as Subject[]);
-
-  setSubjects((previous) => {
-    const validSubjects = previous.filter(
-      (subject) =>
-        allowedSubjects.includes(subject)
-    );
-
-    if (validSubjects.length > 0) {
-      return validSubjects;
-    }
-
-    return ["Physics"];
-  });
-
-  setActiveChapterSubject((previous) =>
-    allowedSubjects.includes(previous)
-      ? previous
-      : "Physics"
-  );
-
-  setChaptersBySubject((previous) => ({
-    ...previous,
-
-    Mathematics:
-      studentGroup === "PCM"
-        ? previous.Mathematics
-        : [],
-
-    Biology:
-      studentGroup === "PCB"
-        ? previous.Biology
-        : [],
-  }));
-
-  /*
-   * Remove preset if it no longer
-   * belongs to the assigned group.
-   */
-  setSelectedPreset((previous) => {
-    if (!previous) {
-      return null;
-    }
-
-    const allowedPresetIds =
-      getPresetsForGroup(studentGroup).map(
-        (preset) => preset.id
-      );
-
-    return allowedPresetIds.includes(
-      previous.id
-    )
-      ? previous
-      : null;
-  });
-}, [studentGroup]);
   /*
    * ---------------------------------------------------------
    * CHAPTERS FOR ACTIVE SUBJECT
@@ -791,18 +720,7 @@ useEffect(() => {
       return;
     }
 
-    const allowedSubjects =
-      studentGroup === "PCM"
-        ? ([
-            "Physics",
-            "Chemistry",
-            "Mathematics",
-          ] as Subject[])
-        : ([
-            "Physics",
-            "Chemistry",
-            "Biology",
-          ] as Subject[]);
+    const allowedSubjects = courseConfig?.subjects ?? [];
 
     if (
       !allowedSubjects.includes(
@@ -887,6 +805,7 @@ useEffect(() => {
                     | "chemistry"
                     | "maths"
                     | "biology"
+                    | "cat-qa"
               );
 
             const updatedPresetStillValid =
@@ -1040,6 +959,7 @@ useEffect(() => {
             | "chemistry"
             | "maths"
             | "biology"
+            | "cat-qa"
       );
 
     const selectedSubjectKeys =
@@ -1568,9 +1488,9 @@ useEffect(() => {
                     </h2>
 
                     <p className="text-sm text-[#6b7280] mt-1">
-                      Select one or more subjects.
-                      Mathematics and Biology cannot
-                      be selected together.
+                      {course === "CAT"
+                        ? "Select the CAT section for your practice test."
+                        : "Select one or more subjects. Mathematics and Biology cannot be selected together."}
                     </p>
 
                   </div>
@@ -1584,6 +1504,10 @@ useEffect(() => {
                             !studentGroup
                           ) {
                             return false;
+                          }
+
+                          if (studentGroup === "CAT") {
+                            return item === "Quantitative Ability";
                           }
 
                           if (
@@ -1626,19 +1550,6 @@ useEffect(() => {
                               subjects.includes(
                                 "Mathematics"
                               ));
-
-                          const hasDatabaseData =
-                            databaseSubjects.some(
-                              (
-                                dbSubject
-                              ) =>
-                                dbSubject
-                                  .trim()
-                                  .toLowerCase() ===
-                                item
-                                  .trim()
-                                  .toLowerCase()
-                            );
 
                           return (
                             <button

@@ -1,10 +1,11 @@
-export type StudentGroup = "PCM" | "PCB";
+export type StudentGroup = "PCM" | "PCB" | "CAT";
 
 export type PresetSubject =
   | "physics"
   | "chemistry"
   | "maths"
-  | "biology";
+  | "biology"
+  | "cat-qa";
 
 export type Preset = {
   id: string;
@@ -27,6 +28,7 @@ export const MARKS_PER_QUESTION: Record<
   chemistry: 1,
   maths: 2,
   biology: 1,
+  "cat-qa": 3,
 };
 
 /*
@@ -62,6 +64,8 @@ export const GROUP_SUBJECTS: Record<
     "chemistry",
     "biology",
   ],
+
+  CAT: ["cat-qa"],
 };
 
 /*
@@ -431,6 +435,31 @@ export const PRESETS: Preset[] = [
       physics: 45,
       chemistry: 45,
       biology: 90,
+    },
+    examAccurate: true,
+  },
+
+  {
+    id: "CAT-QA-10",
+    name: "Quick drill",
+    subjects: {
+      "cat-qa": 10,
+    },
+  },
+
+  {
+    id: "CAT-QA-15",
+    name: "Standard",
+    subjects: {
+      "cat-qa": 15,
+    },
+  },
+
+  {
+    id: "CAT-QA-22",
+    name: "Full section",
+    subjects: {
+      "cat-qa": 22,
     },
     examAccurate: true,
   },

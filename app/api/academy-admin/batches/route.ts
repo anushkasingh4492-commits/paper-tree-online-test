@@ -10,6 +10,7 @@ const ALLOWED_COURSES = [
   "MHT-CET PCM",
   "MHT-CET PCB",
   "NEET PCB",
+  "CAT",
   "JEE PCM",
 ];
 
@@ -181,7 +182,7 @@ export async function POST(request: Request) {
         {
           success: false,
           error:
-            "Invalid course. Choose MHT-CET PCM, MHT-CET PCB, NEET PCB or JEE PCM.",
+            "Invalid course. Choose MHT-CET PCM, MHT-CET PCB, NEET PCB, CAT or JEE PCM.",
         },
         { status: 400 }
       );

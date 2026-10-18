@@ -8,4 +8,10 @@ export type Question = {
   options: string[];
   answer: number;
   explanation: string;
+  question_type?: "MCQ" | "MULTI_SELECT" | "TITA";
+  answer_format?: "MCQ" | "TITA";
+  tita_answer?: number | null;
+  marks_correct?: number;
+  marks_incorrect?: number;
+  marks_unattempted?: number;
 };

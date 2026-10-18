@@ -1,0 +1,390 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "urn:paper-tree:cat-qa:2.0.0",
+ "title": "CAT Quantitative Ability bank (schema v2)",
+ "description": "Array of canonical records. Mathematics is LaTeX inline ($...$), rendered with KaTeX. Records are either MCQ (four options, one correct, +3/-1) or TITA (type a non-negative integer, +3/0). set_id is reserved for set-based items (RC passages, DILR sets) and is null for QA. Cross-record rules (key balance, families) are checked by verify_release.py.",
+ "type": "array",
+ "items": {
+  "type": "object",
+  "properties": {
+   "id": {
+    "type": "string",
+    "pattern": "^CAT-QA-C\\d{2}-\\d{3}$"
+   },
+   "section": {
+    "const": "Quantitative Ability"
+   },
+   "area": {
+    "enum": [
+     "Arithmetic",
+     "Algebra",
+     "Geometry",
+     "Number System",
+     "Modern Maths"
+    ]
+   },
+   "chapter_number": {
+    "type": "integer",
+    "minimum": 1,
+    "maximum": 28
+   },
+   "chapter": {
+    "type": "string",
+    "minLength": 1
+   },
+   "topic": {
+    "type": "string",
+    "minLength": 1
+   },
+   "subtopic": {
+    "type": "string",
+    "minLength": 1
+   },
+   "standard": {
+    "const": "CAT"
+   },
+   "exam_tags": {
+    "type": "array",
+    "items": {
+     "enum": [
+      "CAT",
+      "XAT",
+      "NMAT",
+      "SNAP",
+      "CMAT",
+      "MAH-CET"
+     ]
+    },
+    "contains": {
+     "const": "CAT"
+    },
+    "uniqueItems": true
+   },
+   "question": {
+    "type": "string",
+    "minLength": 1
+   },
+   "answer_format": {
+    "enum": [
+     "MCQ",
+     "TITA"
+    ]
+   },
+   "options": {
+    "oneOf": [
+     {
+      "type": "null"
+     },
+     {
+      "type": "object",
+      "properties": {
+       "A": {
+        "type": "string",
+        "minLength": 1
+       },
+       "B": {
+        "type": "string",
+        "minLength": 1
+       },
+       "C": {
+        "type": "string",
+        "minLength": 1
+       },
+       "D": {
+        "type": "string",
+        "minLength": 1
+       }
+      },
+      "required": [
+       "A",
+       "B",
+       "C",
+       "D"
+      ],
+      "additionalProperties": false
+     }
+    ]
+   },
+   "correct_option": {
+    "enum": [
+     "A",
+     "B",
+     "C",
+     "D",
+     null
+    ]
+   },
+   "tita_answer": {
+    "oneOf": [
+     {
+      "type": "null"
+     },
+     {
+      "type": "integer",
+      "minimum": 0
+     }
+    ]
+   },
+   "correct_answer": {
+    "type": "string",
+    "minLength": 1
+   },
+   "explanation": {
+    "type": "string",
+    "minLength": 1
+   },
+   "common_misconception": {
+    "type": "string",
+    "minLength": 1
+   },
+   "tita_common_wrong_entries": {
+    "type": "array",
+    "items": {
+     "type": "object",
+     "required": [
+      "value",
+      "reason"
+     ],
+     "properties": {
+      "value": {
+       "type": "integer"
+      },
+      "reason": {
+       "type": "string",
+       "minLength": 1
+      }
+     }
+    }
+   },
+   "difficulty": {
+    "enum": [
+     "Easy",
+     "Medium",
+     "Difficult"
+    ]
+   },
+   "difficulty_reason": {
+    "type": "string",
+    "minLength": 1
+   },
+   "difficulty_basis": {
+    "type": "string",
+    "minLength": 1
+   },
+   "cognitive_level": {
+    "enum": [
+     "Recall",
+     "Understanding",
+     "Application",
+     "Analysis"
+    ]
+   },
+   "question_type": {
+    "enum": [
+     "Single-step computation",
+     "Multi-step word problem",
+     "Inverse/parameter",
+     "Conceptual/application",
+     "Casework/optimisation"
+    ]
+   },
+   "concept_family": {
+    "type": "string",
+    "minLength": 1
+   },
+   "family_dependencies": {
+    "type": "array",
+    "items": {
+     "type": "string",
+     "minLength": 1
+    },
+    "minItems": 1,
+    "uniqueItems": true
+   },
+   "max_per_family_per_paper": {
+    "const": 1
+   },
+   "set_id": {
+    "type": [
+     "string",
+     "null"
+    ]
+   },
+   "figures": {
+    "type": "array",
+    "items": {
+     "type": "object",
+     "required": [
+      "file",
+      "alt_text"
+     ],
+     "properties": {
+      "file": {
+       "type": "string",
+       "minLength": 1
+      },
+      "alt_text": {
+       "type": "string",
+       "minLength": 1
+      }
+     }
+    }
+   },
+   "figure_required": {
+    "type": "boolean"
+   },
+   "assumptions": {
+    "type": "array",
+    "items": {
+     "type": "string",
+     "minLength": 1
+    }
+   },
+   "notation": {
+    "const": "latex-inline"
+   },
+   "machine_check": {
+    "type": "object",
+    "required": [
+     "method",
+     "status",
+     "computed_value"
+    ]
+   },
+   "marks_correct": {
+    "const": 3
+   },
+   "marks_incorrect": {
+    "enum": [
+     -1,
+     0
+    ]
+   },
+   "marks_unattempted": {
+    "const": 0
+   },
+   "provenance": {
+    "type": "object"
+   },
+   "exam_reference": {
+    "type": "string",
+    "minLength": 1
+   },
+   "release_version": {
+    "type": "string",
+    "minLength": 1
+   },
+   "generator_eligible": {
+    "type": "boolean"
+   },
+   "validation_status": {
+    "type": "string",
+    "minLength": 1
+   },
+   "human_subject_expert_reviewed": {
+    "type": "boolean"
+   },
+   "tags": {
+    "type": "array",
+    "items": {
+     "type": "string",
+     "minLength": 1
+    }
+   }
+  },
+  "required": [
+   "id",
+   "section",
+   "area",
+   "chapter_number",
+   "chapter",
+   "topic",
+   "subtopic",
+   "standard",
+   "exam_tags",
+   "question",
+   "answer_format",
+   "options",
+   "correct_option",
+   "tita_answer",
+   "correct_answer",
+   "explanation",
+   "common_misconception",
+   "tita_common_wrong_entries",
+   "difficulty",
+   "difficulty_reason",
+   "cognitive_level",
+   "question_type",
+   "concept_family",
+   "family_dependencies",
+   "max_per_family_per_paper",
+   "set_id",
+   "figures",
+   "figure_required",
+   "notation",
+   "machine_check",
+   "marks_correct",
+   "marks_incorrect",
+   "marks_unattempted",
+   "release_version",
+   "generator_eligible"
+  ],
+  "allOf": [
+   {
+    "if": {
+     "properties": {
+      "answer_format": {
+       "const": "MCQ"
+      }
+     }
+    },
+    "then": {
+     "properties": {
+      "options": {
+       "type": "object"
+      },
+      "correct_option": {
+       "enum": [
+        "A",
+        "B",
+        "C",
+        "D"
+       ]
+      },
+      "tita_answer": {
+       "type": "null"
+      },
+      "marks_incorrect": {
+       "const": -1
+      }
+     }
+    }
+   },
+   {
+    "if": {
+     "properties": {
+      "answer_format": {
+       "const": "TITA"
+      }
+     }
+    },
+    "then": {
+     "properties": {
+      "options": {
+       "type": "null"
+      },
+      "correct_option": {
+       "type": "null"
+      },
+      "tita_answer": {
+       "type": "integer"
+      },
+      "marks_incorrect": {
+       "const": 0
+      }
+     }
+    }
+   }
+  ]
+ }
+}
