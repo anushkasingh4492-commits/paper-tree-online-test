@@ -563,13 +563,19 @@ export async function POST(request: NextRequest) {
       examName === "neet-ug" ||
       examName === "neet ug";
 
+    const isJEE =
+      examName === "jee" ||
+      examName === "jee main" ||
+      examName === "jee 2026" ||
+      examName === "jee advanced";
+
     const isCAT =
       examName === "cat" ||
       examName === "cat 2025" ||
       examName === "cat 2026";
 
-    const marksCorrect = isNEET ? 4 : isCAT ? 3 : 1;
-    const marksIncorrect = isNEET ? -1 : 0;
+    const marksCorrect = isNEET || isJEE ? 4 : isCAT ? 3 : 1;
+    const marksIncorrect = isNEET || isJEE ? -1 : 0;
     const marksUnattempted = 0;
 
     console.log("MARKING SCHEME:", {

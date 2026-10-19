@@ -1,11 +1,14 @@
-export type StudentGroup = "PCM" | "PCB" | "CAT";
+export type StudentGroup = "PCM" | "PCB" | "CAT" | "JEE";
 
 export type PresetSubject =
   | "physics"
   | "chemistry"
   | "maths"
   | "biology"
-  | "cat-qa";
+  | "cat-qa"
+  | "jee-physics"
+  | "jee-chemistry"
+  | "jee-maths";
 
 export type Preset = {
   id: string;
@@ -29,6 +32,9 @@ export const MARKS_PER_QUESTION: Record<
   maths: 2,
   biology: 1,
   "cat-qa": 3,
+  "jee-physics": 4,
+  "jee-chemistry": 4,
+  "jee-maths": 4,
 };
 
 /*
@@ -66,6 +72,12 @@ export const GROUP_SUBJECTS: Record<
   ],
 
   CAT: ["cat-qa"],
+
+  JEE: [
+    "jee-physics",
+    "jee-chemistry",
+    "jee-maths",
+  ],
 };
 
 /*
@@ -460,6 +472,93 @@ export const PRESETS: Preset[] = [
     name: "Full section",
     subjects: {
       "cat-qa": 22,
+    },
+    examAccurate: true,
+  },
+
+  /* -------------------------------------------------------
+   * JEE PHYSICS
+   * ------------------------------------------------------- */
+
+  {
+    id: "JEE-PHY-15",
+    name: "Quick drill",
+    subjects: {
+      "jee-physics": 15,
+    },
+  },
+
+  {
+    id: "JEE-PHY-30",
+    name: "Standard",
+    subjects: {
+      "jee-physics": 30,
+    },
+  },
+
+  {
+    id: "JEE-PHY-50",
+    name: "Full section",
+    subjects: {
+      "jee-physics": 50,
+    },
+    examAccurate: true,
+  },
+
+  /* -------------------------------------------------------
+   * JEE CHEMISTRY
+   * ------------------------------------------------------- */
+
+  {
+    id: "JEE-CHEM-15",
+    name: "Quick drill",
+    subjects: {
+      "jee-chemistry": 15,
+    },
+  },
+
+  {
+    id: "JEE-CHEM-30",
+    name: "Standard",
+    subjects: {
+      "jee-chemistry": 30,
+    },
+  },
+
+  {
+    id: "JEE-CHEM-50",
+    name: "Full section",
+    subjects: {
+      "jee-chemistry": 50,
+    },
+    examAccurate: true,
+  },
+
+  /* -------------------------------------------------------
+   * JEE MATHEMATICS
+   * ------------------------------------------------------- */
+
+  {
+    id: "JEE-MATH-15",
+    name: "Quick drill",
+    subjects: {
+      "jee-maths": 15,
+    },
+  },
+
+  {
+    id: "JEE-MATH-30",
+    name: "Standard",
+    subjects: {
+      "jee-maths": 30,
+    },
+  },
+
+  {
+    id: "JEE-MATH-50",
+    name: "Full section",
+    subjects: {
+      "jee-maths": 50,
     },
     examAccurate: true,
   },

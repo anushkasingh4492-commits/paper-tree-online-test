@@ -126,6 +126,15 @@ function normalizeExam(value: unknown): string {
     return "CAT";
   }
 
+  if (
+    exam === "jee" ||
+    exam === "jee main" ||
+    exam === "jee 2026" ||
+    exam === "jee advanced"
+  ) {
+    return "JEE";
+  }
+
   if (!exam) {
     return "MHT-CET";
   }
@@ -242,6 +251,31 @@ function normalizePresetSubject(
     subject === "cat qa"
   ) {
     return "cat-qa";
+  }
+
+  if (
+    subject === "jee physics" ||
+    subject === "jee-physics" ||
+    subject === "physics (jee)"
+  ) {
+    return "jee-physics";
+  }
+
+  if (
+    subject === "jee chemistry" ||
+    subject === "jee-chemistry" ||
+    subject === "chemistry (jee)"
+  ) {
+    return "jee-chemistry";
+  }
+
+  if (
+    subject === "jee maths" ||
+    subject === "jee-maths" ||
+    subject === "mathematics (jee)" ||
+    subject === "math (jee)"
+  ) {
+    return "jee-maths";
   }
 
   return null;
