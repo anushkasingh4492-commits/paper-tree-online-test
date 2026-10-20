@@ -1,0 +1,90 @@
+[
+ {
+  "id": "V03-G-003",
+  "category": "E5",
+  "severity": "major",
+  "finding": "Explanation used a placeholder range 'Sentences [[1]] to [[4]]' (and in 009 a trap 'sentences [[1]] to [[3]]'); after label substitution this prints as a meaningless span of printed labels (e.g. 'Sentences 1 to 3' that includes the odd sentence, or 'Sentences 5 to 1').",
+  "fix": "Replaced the range with an explicit list of the four coherent sentences' placeholders.",
+  "changed": true
+ },
+ {
+  "id": "V03-G-007",
+  "category": "E5",
+  "severity": "major",
+  "finding": "Explanation used a placeholder range 'Sentences [[1]] to [[4]]' (and in 009 a trap 'sentences [[1]] to [[3]]'); after label substitution this prints as a meaningless span of printed labels (e.g. 'Sentences 1 to 3' that includes the odd sentence, or 'Sentences 5 to 1').",
+  "fix": "Replaced the range with an explicit list of the four coherent sentences' placeholders.",
+  "changed": true
+ },
+ {
+  "id": "V03-G-009",
+  "category": "E5",
+  "severity": "major",
+  "finding": "Explanation used a placeholder range 'Sentences [[1]] to [[4]]' (and in 009 a trap 'sentences [[1]] to [[3]]'); after label substitution this prints as a meaningless span of printed labels (e.g. 'Sentences 1 to 3' that includes the odd sentence, or 'Sentences 5 to 1').",
+  "fix": "Replaced the range with an explicit list of the four coherent sentences' placeholders.",
+  "changed": true
+ },
+ {
+  "id": "V03-G-014",
+  "category": "E5",
+  "severity": "major",
+  "finding": "Explanation used a placeholder range 'Sentences [[1]] to [[4]]' (and in 009 a trap 'sentences [[1]] to [[3]]'); after label substitution this prints as a meaningless span of printed labels (e.g. 'Sentences 1 to 3' that includes the odd sentence, or 'Sentences 5 to 1').",
+  "fix": "Replaced the range with an explicit list of the four coherent sentences' placeholders.",
+  "changed": true
+ },
+ {
+  "id": "V03-G-018",
+  "category": "E5",
+  "severity": "major",
+  "finding": "Explanation used a placeholder range 'Sentences [[1]] to [[4]]' (and in 009 a trap 'sentences [[1]] to [[3]]'); after label substitution this prints as a meaningless span of printed labels (e.g. 'Sentences 1 to 3' that includes the odd sentence, or 'Sentences 5 to 1').",
+  "fix": "Replaced the range with an explicit list of the four coherent sentences' placeholders.",
+  "changed": true
+ },
+ {
+  "id": "V03-G-020",
+  "category": "E5",
+  "severity": "major",
+  "finding": "Explanation used a placeholder range 'Sentences [[1]] to [[4]]' (and in 009 a trap 'sentences [[1]] to [[3]]'); after label substitution this prints as a meaningless span of printed labels (e.g. 'Sentences 1 to 3' that includes the odd sentence, or 'Sentences 5 to 1').",
+  "fix": "Replaced the range with an explicit list of the four coherent sentences' placeholders.",
+  "changed": true
+ },
+ {
+  "id": "V03-G-025",
+  "category": "E5",
+  "severity": "major",
+  "finding": "Explanation used a placeholder range 'Sentences [[1]] to [[4]]' (and in 009 a trap 'sentences [[1]] to [[3]]'); after label substitution this prints as a meaningless span of printed labels (e.g. 'Sentences 1 to 3' that includes the odd sentence, or 'Sentences 5 to 1').",
+  "fix": "Replaced the range with an explicit list of the four coherent sentences' placeholders.",
+  "changed": true
+ },
+ {
+  "id": "V03-G-002",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "The paper-calculation sentence sits after the 'therefore' conclusion with no contrast marker, so it reads like a loose add-on and could tempt a solver to remove it instead of the odd sentence.",
+  "fix": "Added 'by contrast' to that sentence to bind it to the hidden-formula point; odd sentence and key unchanged.",
+  "changed": true
+ },
+ {
+  "id": "V03-G-017",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Blind solver S2 noted that the internal order of the bedside-rub and general-lesson sentences is flexible.",
+  "fix": "none: order of the coherent four is not tested in odd sentence out; both solvers reached the correct answer.",
+  "changed": false
+ },
+ {
+  "id": "V03-G-019",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Blind solver S1 noted the odd sentence (ethical objection to presumed consent) is on topic and close; the inertia/signal sentence could also look detachable.",
+  "fix": "none: the coherent four form a tight effectiveness chain (report, explanation, 'however' qualification, 'therefore' conclusion) and the ethical objection is taken up by nothing; both solvers reached the correct answer and the item is labelled Difficult.",
+  "changed": false
+ },
+ {
+  "id": "V03-G-005",
+  "category": "E4",
+  "severity": "minor",
+  "finding": "Labelled Difficult, though the odd sentence (early dance-hall audiences) is a fairly visible shift to history; Medium would also be fair.",
+  "fix": "none: quota fixed at 7 Difficult and the claim/rebuttal structure plus two detachable-looking sentences gives some upper-band difficulty.",
+  "changed": false
+ }
+]

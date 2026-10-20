@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "ids": [
+    "JEE27-PHY-1318",
+    "JEE27-PHY-1321"
+  ],
+  "family": "GLOBAL-CURIE-LAW",
+  "counterexample_unique_families": 24,
+  "counterexample_rejected": true
+}

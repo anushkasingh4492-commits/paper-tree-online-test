@@ -1,0 +1,22 @@
+[
+ {
+  "id": "V02-C-008",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "A",
+    "key": "A",
+    "working": "Both approaches have costs, but only accepting a smaller city is honest about the likely future.",
+    "alternative": "B is the neutral trap that omits the author's preference.",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "B",
+    "key": "B",
+    "working": "Both costly but only the smaller-city approach is honest about the future; A misses the verdict, C 'always'.",
+    "alternative": "",
+    "issue": ""
+   }
+  }
+ }
+]

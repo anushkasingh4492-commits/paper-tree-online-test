@@ -1,0 +1,22 @@
+[
+ {
+  "id": "R06-G-03-3",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "A",
+    "key": "A",
+    "working": "'The worry was reasonable, but ... aimed at the lesser target.'",
+    "alternative": "",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "D",
+    "key": "D",
+    "working": "P2: 'The worry was reasonable, but... aimed at the lesser target'.",
+    "alternative": "",
+    "issue": "Key D echoes the passage's 'lesser target' wording almost verbatim, a mild giveaway."
+   }
+  }
+ }
+]

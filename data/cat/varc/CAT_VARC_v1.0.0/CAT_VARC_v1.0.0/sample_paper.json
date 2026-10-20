@@ -1,0 +1,56 @@
+{
+ "seed": 42,
+ "description": "CAT-style VARC section of 24 questions: 4 reading passages and 8 verbal ability items.",
+ "time_minutes": 40,
+ "max_marks": 72,
+ "marking": {
+  "MCQ": {
+   "correct": 3,
+   "incorrect": -1,
+   "unattempted": 0
+  },
+  "TITA": {
+   "correct": 3,
+   "incorrect": 0,
+   "unattempted": 0
+  }
+ },
+ "passages": [
+  "CAT-VARC-P03-037",
+  "CAT-VARC-P06-054",
+  "CAT-VARC-P01-050",
+  "CAT-VARC-P07-013"
+ ],
+ "questions": [
+  "CAT-VARC-P03-037-Q1",
+  "CAT-VARC-P03-037-Q2",
+  "CAT-VARC-P03-037-Q3",
+  "CAT-VARC-P03-037-Q4",
+  "CAT-VARC-P06-054-Q1",
+  "CAT-VARC-P06-054-Q2",
+  "CAT-VARC-P06-054-Q3",
+  "CAT-VARC-P06-054-Q4",
+  "CAT-VARC-P01-050-Q1",
+  "CAT-VARC-P01-050-Q2",
+  "CAT-VARC-P01-050-Q3",
+  "CAT-VARC-P01-050-Q4",
+  "CAT-VARC-P07-013-Q1",
+  "CAT-VARC-P07-013-Q2",
+  "CAT-VARC-P07-013-Q3",
+  "CAT-VARC-P07-013-Q4",
+  "CAT-VARC-C09-255",
+  "CAT-VARC-C09-315",
+  "CAT-VARC-C10-006",
+  "CAT-VARC-C10-159",
+  "CAT-VARC-C10-148",
+  "CAT-VARC-C11-026",
+  "CAT-VARC-C11-153",
+  "CAT-VARC-C12-078"
+ ],
+ "difficulty": {
+  "Medium": 11,
+  "Difficult": 6,
+  "Easy": 7
+ },
+ "difficulty_deviation": 0
+}

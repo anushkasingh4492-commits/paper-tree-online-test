@@ -1,0 +1,22 @@
+[
+ {
+  "id": "R01-G-04-3",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "C",
+    "key": "C",
+    "working": "Objection rests on asymmetry of attitudes; equal regret for pre-birth goods restores symmetry.",
+    "alternative": "",
+    "issue": "C is a counterfactual about people's attitudes; author's deeper point (goods never ours to lose) is metaphysical and might survive C, but C is still the best option."
+   },
+   "S2": {
+    "answer": "D",
+    "key": "D",
+    "working": "Objection rests on asymmetry of attitudes and goods; D restores symmetry of regret.",
+    "alternative": "",
+    "issue": ""
+   }
+  }
+ }
+]

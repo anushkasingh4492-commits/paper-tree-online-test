@@ -1,0 +1,392 @@
+import sys, os; sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from vlib import *
+
+# ------------------------------------------------------------------ 001 Technology, Medium
+ooo("V03-G-001", "Technology",
+    "An inferior keyboard layout persists because its value lies in the skills and machines already built around it.",
+    "Medium",
+    ["The arrangement of letters on most keyboards was settled in the era of mechanical typewriters, when the machines themselves imposed constraints that no longer apply.",
+     "Alternative layouts have since been proposed that, their advocates argue, would reduce finger travel and let typists work with less strain.",
+     "Yet almost none of these has spread, because the value of a layout lies less in its design than in the millions of people already trained on it.",
+     "A typist who switches must relearn a skill built over years, and gains nothing on any shared machine that keeps the old arrangement."],
+    "Touchscreen keyboards on phones now predict the next word, so that many people type with their thumbs at speeds that once required formal training.",
+    "The paragraph explains why an old keyboard layout survives: sentence [[1]] gives its origin, sentence [[2]] introduces rival layouts, sentence [[3]] ('Yet almost none of these has spread') explains their failure by the value of existing training, and sentence [[4]] spells out the cost of switching. Sentence [[X]] is about keyboards and typing speed too, but word prediction on phones has nothing to do with why one letter arrangement persists over another.",
+    "Choosing a sentence because it mentions history or advocates, and keeping sentence [[X]] because it shares the words 'keyboards' and 'type'.",
+    "V03G-keyboard-layout-persistence",
+    "The odd sentence shares the subject and vocabulary (keyboards, typing, training) and must be rejected on function.",
+    traps=[(1, "Sentence [[1]] can look like background trivia, but 'constraints that no longer apply' sets up the puzzle of why the layout survives, which sentences [[3]] and [[4]] answer."),
+           (4, "Sentence [[4]] may seem to add a new point, but it explains concretely why the existing base of trained typists makes switching unattractive, completing the claim in sentence [[3]].")])
+
+# ------------------------------------------------------------------ 002 Technology, Difficult
+ooo("V03-G-002", "Technology",
+    "Spreadsheet errors are dangerous less because they are frequent than because a polished surface hides them.",
+    "Difficult",
+    ["Spreadsheets invite a peculiar kind of confidence, because a figure that appears in a neat cell, to two decimal places, looks as though it has been checked.",
+     "In fact the formula behind it is usually invisible, and a single reference that points one row too low can travel silently through every total that depends on it.",
+     "What makes such slips dangerous is therefore not their frequency, which is probably no higher than in calculations done by hand, but the polish of the surface that conceals them.",
+     "A calculation worked out on paper, by contrast, at least displayed its steps, so that a reader could follow each one and notice where it went astray."],
+    "Many firms now train their staff in advanced spreadsheet functions, on the view that errors arise mainly from users who do not understand the software well enough.",
+    "Sentences [[1]], [[2]], [[3]] and [[4]] make one argument: the neat appearance of a cell breeds confidence, the formula beneath it is hidden, so the danger lies in concealment rather than frequency, and paper calculations at least showed their workings. Sentence [[X]] uses the same vocabulary but locates the problem in users' ignorance of the software and proposes training, a cause and remedy the paragraph never discusses; its argument is about what the format hides, not what users know.",
+    "Treating sentence [[X]] as a natural practical conclusion, without noticing that it assigns the errors a different cause from the one the paragraph argues for.",
+    "V03G-spreadsheet-errors",
+    "The odd sentence reads like a plausible follow-up on the same subject, and the sentence about paper calculations looks like a digression, so two candidates must be weighed on function.",
+    traps=[(4, "Sentence [[4]] seems to drift to paper, but it supplies the contrast the argument needs: paper showed its steps where the cell in sentence [[2]] hides its formula, and sentence [[3]] already mentions 'calculations done by hand'."),
+           (1, "Sentence [[1]] can look like an opinionated aside, but the 'confidence' it describes is exactly what makes the hidden errors of sentences [[2]] and [[3]] dangerous.")],
+    exams=("CAT", "XAT"))
+
+# ------------------------------------------------------------------ 003 Technology, Easy
+ooo("V03-G-003", "Technology",
+    "Postponing software updates out of irritation is itself a security risk.",
+    "Easy",
+    ["Software updates arrive so often that many users have learned to postpone them, clicking 'remind me later' until the prompt becomes a background annoyance.",
+     "This habit is understandable, since updates sometimes move familiar buttons, slow older devices or interrupt work at inconvenient moments.",
+     "But the same stream of notices also carries security fixes, and a device left unpatched for months remains open to flaws that attackers already know how to exploit.",
+     "The fatigue that updates produce is thus a security problem in its own right, and not merely a matter of user irritation."],
+    "The first electronic computers filled entire rooms and were often programmed by rewiring panels rather than by installing new code.",
+    "Sentences [[1]], [[2]], [[3]] and [[4]] form a chain: users postpone updates, the habit is understandable, but updates carry security fixes, so update fatigue is a security problem. Sentence [[X]] is about early computing history and connects to none of this.",
+    "Picking sentence [[2]] because it seems to excuse the habit the paragraph criticises.",
+    "V03G-software-update-fatigue",
+    "The odd sentence is on a different focus (computing history) and is rejected once the chain of the other four is seen.",
+    traps=[(2, "Sentence [[2]] concedes why people postpone updates; the 'But' of sentence [[3]] answers that concession, so it is part of the argument.")])
+
+# ------------------------------------------------------------------ 004 Technology, Medium
+ooo("V03-G-004", "Technology",
+    "The abundance of digital photographs makes them less useful as aids to memory.",
+    "Medium",
+    ["When each photograph cost money to develop, people chose their shots carefully and later gathered the prints into albums that were looked at again and again.",
+     "Now that a phone can store tens of thousands of images at no visible cost, we photograph almost everything and choose almost nothing.",
+     "The result is an archive so large that it is rarely opened, and a picture that is never revisited does little to keep a memory alive.",
+     "Abundance, in other words, has not made our records of the past richer so much as harder to use."],
+    "Phone cameras have improved so much that many amateur photographs now rival the sharpness of images once taken only with professional equipment.",
+    "The paragraph contrasts the scarce, carefully chosen prints of sentence [[1]] with the indiscriminate phone archive of sentence [[2]], draws the consequence in sentence [[3]] (the archive is rarely opened, so it fails memory) and sums up in sentence [[4]]. Sentence [[X]] is about phone photography too, but it concerns image quality, not how the quantity of pictures affects their use.",
+    "Keeping sentence [[X]] because it shares 'phone' and 'photographs' and rejecting sentence [[1]] as old history.",
+    "V03G-digital-photo-hoarding",
+    "The odd sentence shares subject and vocabulary; it must be rejected because quality is not the paragraph's concern.",
+    traps=[(1, "Sentence [[1]] describes the past, but the whole argument is a contrast between then and 'Now' in sentence [[2]], so it cannot go.")])
+
+# ------------------------------------------------------------------ 005 Arts and literature, Difficult
+ooo("V03-G-005", "Arts and literature",
+    "Freedom in jazz improvisation depends on a shared framework of conventions rather than on their absence.",
+    "Difficult",
+    ["Improvisation in jazz is often praised as pure spontaneity, as though the player simply follows inspiration wherever it leads.",
+     "Yet a soloist who invents a line on the spot is working within a chord sequence that every member of the band knows, and within a stock of phrases absorbed over years of listening.",
+     "It is precisely this shared framework that allows the others to anticipate, answer and support what the soloist plays.",
+     "Freedom in improvisation, then, is not the absence of rules but a fluency so complete that the rules no longer need to be consulted."],
+    "In its early decades jazz was heard mostly in dance halls, where audiences cared more about a steady rhythm than about the inventiveness of any solo.",
+    "Sentence [[1]] states a popular view, sentence [[2]] answers it with 'Yet' (the soloist works within a known chord sequence and absorbed phrases), sentence [[3]] says this 'shared framework' lets the band respond, and sentence [[4]] concludes what freedom in improvisation really is. Sentence [[X]] mentions jazz and solos, but it is about early audiences and venues, a historical point that does not bear on whether improvisation rests on structure.",
+    "Rejecting sentence [[1]] because it states a view the author disagrees with, or rejecting the abstract sentence [[4]].",
+    "V03G-jazz-improvisation",
+    "Two coherent sentences look removable (a rejected view and an abstract conclusion), while the odd sentence shares vocabulary; the solver must follow the claim and reply structure.",
+    traps=[(1, "Sentence [[1]] is the view the paragraph argues against; without it the 'Yet' of sentence [[2]] and the 'then' of sentence [[4]] have nothing to answer."),
+           (4, "Sentence [[4]] may look like a vague flourish, but it is the conclusion that turns the evidence of sentences [[2]] and [[3]] into a claim about freedom.")],
+    exams=("CAT", "XAT"))
+
+# ------------------------------------------------------------------ 006 Arts and literature, Medium
+ooo("V03-G-006", "Arts and literature",
+    "Literary prizes shape which books matter more than they discover them.",
+    "Medium",
+    ["Literary prizes present themselves as judgments of quality, rewarding the best book of a given year.",
+     "Their larger effect, however, lies in what happens after the announcement, when the winning title is stocked in every bookshop and translated into languages it might never have reached.",
+     "A handful of judges, reading under pressure of time, thus decide which few novels out of thousands will be read widely.",
+     "The prize, in short, does not so much discover the books that matter as make them matter."],
+    "Some authors have declined prizes altogether, arguing that a writer should not be made to compete with other writers as if in a race.",
+    "The paragraph moves from what prizes claim to do (sentence [[1]]) to their 'larger effect' after the announcement (sentence [[2]]), to the power this gives a few judges (sentence [[3]]) and to the conclusion that prizes 'make' books matter (sentence [[4]]). Sentence [[X]] is about prizes but turns to authors' objections to competition, which plays no part in the argument about the prize's effect on readership.",
+    "Choosing sentence [[3]] because the judges seem to be a new topic, or keeping sentence [[X]] because it sounds critical of prizes as the paragraph is.",
+    "V03G-literary-prizes",
+    "The odd sentence shares the subject and a sceptical tone, so it must be rejected on its different focus.",
+    traps=[(3, "Sentence [[3]] is the consequence ('thus') of the effect described in sentence [[2]]: because a win brings wide circulation, the judges effectively choose what is read.")])
+
+# ------------------------------------------------------------------ 007 Arts and literature, Easy
+ooo("V03-G-007", "Arts and literature",
+    "Studios favour sequels because their earnings are more predictable.",
+    "Easy",
+    ["Film studios increasingly prefer sequels to original stories, even when critics complain that the results feel repetitive.",
+     "The reason is largely financial: a film costs a great deal to make and promote, and most new titles fail to recover that cost.",
+     "A sequel arrives with an audience that already knows its characters, which makes its earnings far easier to predict.",
+     "For a studio deciding where to place a large bet, that predictability is worth more than the chance of an unexpected hit."],
+    "Silent films relied on exaggerated gestures and printed title cards to convey dialogue and emotion to their audiences.",
+    "Sentences [[1]], [[2]], [[3]] and [[4]] explain one preference: studios choose sequels (sentence [[1]]) for financial reasons (sentence [[2]]), because sequels have predictable earnings (sentence [[3]]), and predictability is worth more than a gamble (sentence [[4]]). Sentence [[X]] is about silent-film technique and has no link to sequels or studio finance.",
+    "Picking sentence [[2]] because general facts about film costs seem not to be about sequels.",
+    "V03G-film-sequels",
+    "The odd sentence is clearly off the paragraph's focus once the causal chain is read.",
+    traps=[(2, "Sentence [[2]] gives 'The reason' for the preference in sentence [[1]]; without it sentence [[4]] has no 'large bet' to refer to.")])
+
+# ------------------------------------------------------------------ 008 Arts and literature, Medium
+ooo("V03-G-008", "Arts and literature",
+    "Because dance is passed on from body to body, old works change as they are handed down.",
+    "Medium",
+    ["Unlike music, which has long been written down in a notation most trained performers can read, dance has mostly been passed on from one body to another.",
+     "Systems for recording movement on paper do exist, but they are so intricate that few dancers or choreographers ever learn them.",
+     "As a result, a ballet survives largely in the memories of those who have performed it, and each generation that teaches it to the next alters it slightly.",
+     "What audiences see under an old title may therefore differ considerably from what was first performed, without anyone having meant to change it."],
+    "Many choreographers draw on folk traditions, borrowing steps from village dances and setting them to new music.",
+    "The paragraph explains how dance is transmitted: unlike music it is passed body to body (sentence [[1]]), written notation is too intricate to be widely used (sentence [[2]]), so works live in memory and drift (sentence [[3]]), and old titles therefore differ from their originals (sentence [[4]]). Sentence [[X]] is about dance and music as well, but it concerns where choreographers find their material, not how works are preserved.",
+    "Rejecting sentence [[1]] because it begins with music, a different art.",
+    "V03G-dance-notation",
+    "The odd sentence shares the subject and words (choreographers, music, dances) and must be rejected on function.",
+    traps=[(1, "Sentence [[1]] mentions music only as a contrast that defines the problem: dance lacks a widely read notation, which sentences [[2]] and [[3]] develop.")])
+
+# ------------------------------------------------------------------ 009 Language and media, Easy
+ooo("V03-G-009", "Language and media",
+    "Slang changes constantly because its job is to mark group membership.",
+    "Easy",
+    ["Slang does more than name things; it signals that the speaker belongs to a particular group, usually a young one.",
+     "Its value therefore depends on outsiders not using it, since a word everyone knows can no longer mark anyone as an insider.",
+     "This is why a term tends to fall out of favour among the young soon after parents, teachers and advertisers begin to use it.",
+     "The constant turnover of slang is thus not a sign of carelessness with language but a consequence of the work slang is meant to do."],
+    "Dictionaries are usually compiled by teams of editors who collect examples of words from books, newspapers and recorded speech.",
+    "Sentences [[1]], [[2]], [[3]] and [[4]] argue that slang marks group membership, so it loses value when outsiders adopt it, which explains why terms are dropped and why slang turns over constantly. Sentence [[X]] is about how dictionaries are made and is unconnected to the argument.",
+    "Picking sentence [[4]] because it sounds like a general remark rather than part of the explanation.",
+    "V03G-slang-group-identity",
+    "The odd sentence moves to a different topic (lexicography) and is rejected quickly.",
+    traps=[(4, "Sentence [[4]] is the conclusion ('thus') of sentences [[1]], [[2]] and [[3]], so it belongs.")])
+
+# ------------------------------------------------------------------ 010 Language and media, Medium
+ooo("V03-G-010", "Language and media",
+    "Listening and reading differ mainly in who controls the pace, which matters for difficult texts.",
+    "Medium",
+    ["People who ask whether an audiobook 'really' counts as a book read usually treat the matter as one of status, as though one form were more respectable than the other.",
+     "A more useful question is what each form allows, and here the main difference lies in who controls the pace.",
+     "A reader can pause on a difficult sentence, glance back a page or skim a dull passage, while a listener is carried along at the speed of the narrator.",
+     "Listening may suit a gripping story well, but a dense argument that needs to be reread is harder to follow when the voice moves on regardless."],
+    "Audiobooks are often narrated by professional actors, whose voices can make a familiar story feel new.",
+    "Sentence [[1]] sets aside the status debate, sentence [[2]] replaces it with the question of pace, sentence [[3]] illustrates the difference in control, and sentence [[4]] draws the consequence for stories and arguments. Sentence [[X]] is about audiobooks and narrators, but praising actors' voices has nothing to do with who controls the pace.",
+    "Keeping sentence [[X]] because 'narrator' and 'story' echo sentences [[3]] and [[4]].",
+    "V03G-audiobooks-as-reading",
+    "The odd sentence repeats key words (narrated, story) and is rejected only because it does not serve the pace argument.",
+    traps=[(1, "Sentence [[1]] is the framing that sentence [[2]] corrects with 'A more useful question'; without it that comparison has nothing to refer to.")])
+
+# ------------------------------------------------------------------ 011 Language and media, Difficult
+ooo("V03-G-011", "Language and media",
+    "Faded metaphors can shape thought more than vivid ones because we no longer notice them.",
+    "Difficult",
+    ["When we speak of the leg of a table or the mouth of a river, we no longer picture a body; the metaphor has died and become an ordinary word.",
+     "It is tempting to conclude that such dead metaphors are harmless, mere fossils of a comparison that once had force.",
+     "Yet some of them continue to steer thought unnoticed, as when calling an economy 'overheated' quietly invites the idea that it needs cooling, as a machine would.",
+     "The danger lies not in the vivid metaphors we recognise and can question, but in the faded ones whose assumptions travel with us because we have stopped seeing them."],
+    "Poets often revive dead metaphors deliberately, restoring the image so that a worn phrase startles the reader again.",
+    "Sentence [[1]] defines a dead metaphor, sentence [[2]] states the tempting view that such metaphors are harmless, sentence [[3]] rebuts it ('Yet') with an example of unnoticed framing, and sentence [[4]] concludes that faded metaphors are the dangerous ones. Sentence [[X]] is about dead metaphors too, but deliberate poetic revival is a separate topic; the paragraph is concerned with how unnoticed metaphors steer thought, not with how writers make them vivid again.",
+    "Removing sentence [[2]] because it states a conclusion the author rejects, or keeping sentence [[X]] because it seems to echo 'vivid metaphors' in sentence [[4]].",
+    "V03G-dead-metaphors",
+    "The odd sentence uses the paragraph's central term and seems to echo its last sentence; the solver must see that it serves a different purpose.",
+    traps=[(2, "Sentence [[2]] states the view that sentence [[3]] answers with 'Yet'; without it the rebuttal has no target."),
+           (1, "Sentence [[1]] supplies the definition and the examples that 'such dead metaphors' in sentence [[2]] refers to.")],
+    exams=("CAT", "XAT"))
+
+# ------------------------------------------------------------------ 012 Language and media, Medium
+ooo("V03-G-012", "Language and media",
+    "Unmoderated comment sections narrow debate, so some moderation can widen participation.",
+    "Medium",
+    ["Websites that leave their comment sections unmoderated often defend the choice as a commitment to open debate.",
+     "In practice, a space with no rules tends to be taken over by its most aggressive voices, and other readers stop contributing once they expect to be insulted.",
+     "The discussion that remains is open in name but narrow in fact, reflecting the views of the few who are willing to endure hostility.",
+     "Some moderation, far from restricting debate, may therefore be the condition that allows a wider range of people to take part in it."],
+    "Many news sites have closed their comment sections altogether and moved discussion to social media platforms they do not control.",
+    "Sentence [[1]] gives the defence of unmoderated comments, sentence [[2]] shows what happens 'In practice', sentence [[3]] describes the narrowed discussion that results, and sentence [[4]] concludes that moderation can widen debate. Sentence [[X]] is about comment sections, but closing them and moving discussion elsewhere is a different matter from whether moderation helps or hinders debate within them.",
+    "Keeping sentence [[X]] because it seems to report a response to the problem in sentence [[2]].",
+    "V03G-comment-section-moderation",
+    "The odd sentence shares the subject and could pass as a related development; it must be rejected on function.",
+    traps=[(3, "Sentence [[3]] is the link between the takeover in sentence [[2]] and the conclusion in sentence [[4]]: it shows that the 'open' space has become narrow.")])
+
+# ------------------------------------------------------------------ 013 Education, Difficult
+ooo("V03-G-013", "Education",
+    "Memorisation supports understanding; what deserves criticism is memorising facts that are never used.",
+    "Difficult",
+    ["Rote memorisation has become a term of abuse in discussions of schooling, set against the understanding that education is supposed to produce.",
+     "The contrast is overdrawn, because understanding a subject depends on having its basic facts available in memory, ready to be connected without being looked up.",
+     "A student who must stop to recall each multiplication fact has little attention left for the problem that the facts are meant to solve.",
+     "What deserves criticism is not memorising as such but memorising that is never put to use, so that the facts sit in isolation and are soon forgotten."],
+    "Facts reviewed at intervals over several weeks are retained far better than the same facts crammed into a single evening before a test.",
+    "The paragraph argues about the value of memorisation: sentence [[1]] states the common opposition between memory and understanding, sentence [[2]] calls it overdrawn, sentence [[3]] illustrates why facts in memory free attention, and sentence [[4]] locates the real fault in memorising without use. Sentence [[X]] shares the vocabulary of memory and forgetting, but it is a point about technique (spacing review versus cramming), not about whether memorisation helps or hinders understanding; its remedy for forgetting is timing, whereas sentence [[4]] locates the cure in use.",
+    "Keeping sentence [[X]] as a natural follow-up to 'soon forgotten' in sentence [[4]], or rejecting the example in sentence [[3]].",
+    "V03G-rote-memorisation",
+    "The odd sentence seems to continue the last sentence's idea of forgetting, so the solver must distinguish the paragraph's argument about value from a point about study method.",
+    traps=[(3, "Sentence [[3]] is the concrete case that supports the claim in sentence [[2]]: facts held in memory leave attention free for the problem."),
+           (1, "Sentence [[1]] states the contrast that sentence [[2]] calls 'overdrawn'; without it sentence [[2]] has no referent.")],
+    exams=("CAT", "XAT"))
+
+# ------------------------------------------------------------------ 014 Education, Easy
+ooo("V03-G-014", "Education",
+    "School uniforms reduce only one visible sign of wealth, so they cannot stop children comparing.",
+    "Easy",
+    ["School uniforms are often defended on the ground that they hide differences of wealth among pupils, so that no child is judged by the price of their clothes.",
+     "The argument has some force, since clothing is one of the most visible markers of a family's income.",
+     "But wealth finds other ways to show itself, in shoes, bags, phones and the holidays children describe when they return to school.",
+     "Uniforms may soften one form of comparison, then, but they cannot by themselves prevent children from noticing who has more."],
+    "Some schools allow pupils to wear their own clothes on one day each term, usually in return for a small donation to charity.",
+    "Sentences [[1]], [[2]], [[3]] and [[4]] weigh one argument for uniforms: they hide wealth (sentence [[1]]), which has some force (sentence [[2]]), but wealth shows in other ways (sentence [[3]]), so uniforms only soften comparison (sentence [[4]]). Sentence [[X]] mentions school clothing, but a charity day of home clothes has nothing to do with whether uniforms hide differences of wealth.",
+    "Picking sentence [[2]] because a concession seems to interrupt the criticism.",
+    "V03G-school-uniforms",
+    "The odd sentence shares the subject of school clothing but plainly does no work in the argument.",
+    traps=[(2, "Sentence [[2]] concedes the argument's 'some force' before the 'But' of sentence [[3]]; the balanced conclusion of sentence [[4]] depends on both.")])
+
+# ------------------------------------------------------------------ 015 Education, Medium
+ooo("V03-G-015", "Education",
+    "Widespread coaching makes an aptitude test measure access to preparation as well as ability.",
+    "Medium",
+    ["An entrance test is meant to measure aptitude, the capacity a candidate brings to the course rather than what the candidate has been drilled to do.",
+     "Once coaching for the test becomes widespread, however, scores begin to reflect how thoroughly a candidate has practised its particular question types.",
+     "Candidates who can afford long and expensive preparation then gain an advantage that has little to do with the aptitude the test claims to detect.",
+     "The test is left measuring a mixture of ability and access to coaching, and the two are difficult to separate in any single score."],
+    "Some students find that preparing alongside peers at a coaching centre keeps them more disciplined than studying alone at home.",
+    "The paragraph is about what an entrance test measures: aptitude in principle (sentence [[1]]), practice once coaching spreads (sentence [[2]]), so affluent candidates gain an unrelated advantage (sentence [[3]]), and scores mix ability with access (sentence [[4]]). Sentence [[X]] is about coaching too, but it concerns students' discipline and study habits, not the validity of the test.",
+    "Keeping sentence [[X]] because it shares 'coaching centre' and 'studying' with the paragraph.",
+    "V03G-entrance-test-coaching",
+    "The odd sentence shares the subject and vocabulary of coaching and is rejected because it addresses motivation, not measurement.",
+    traps=[(3, "Sentence [[3]] links the practice effect in sentence [[2]] to the conclusion about 'access to coaching' in sentence [[4]]; without it the idea of access is never introduced.")])
+
+# ------------------------------------------------------------------ 016 Education, Medium
+ooo("V03-G-016", "Education",
+    "Cutting recess to gain teaching time is self-defeating because play restores attention and teaches social skills.",
+    "Medium",
+    ["When schools are pressed to raise results, recess is often the first part of the day to be shortened, on the assumption that time spent playing is time lost to learning.",
+     "Yet teachers commonly observe that children who have had a break for unstructured play return to lessons more attentive than those kept at their desks.",
+     "The minutes taken from recess may thus be repaid with interest in the quality of attention during the remaining lessons.",
+     "Play also teaches what no lesson easily can, such as how to settle a dispute over the rules of a game without an adult stepping in."],
+    "Playgrounds in many older schools were paved with concrete, which made falls more painful than on the grass or rubber surfaces now preferred.",
+    "Sentence [[1]] states the assumption that play is time lost to learning, sentence [[2]] answers it with the effect of play on attention, sentence [[3]] draws the consequence for lesson time, and sentence [[4]] adds a second kind of learning that play provides. Sentence [[X]] is about school playgrounds, but surfaces and the safety of falls have no bearing on whether recess is time lost to learning.",
+    "Rejecting sentence [[4]] because it introduces a new benefit after the conclusion in sentence [[3]].",
+    "V03G-recess-and-play",
+    "The odd sentence shares the subject (playgrounds, play) and the paragraph has a late 'also' sentence that looks detachable.",
+    traps=[(4, "Sentence [[4]] answers the same assumption in sentence [[1]] from another side: play is itself a kind of learning, so it is not 'time lost to learning'.")])
+
+# ------------------------------------------------------------------ 017 Health and medicine, Medium
+ooo("V03-G-017", "Health and medicine",
+    "Hand hygiene in hospitals improves when the right action is made convenient, not when staff are lectured.",
+    "Medium",
+    ["Few measures in hospitals are as well established as cleaning hands between patients, and few are as often neglected.",
+     "The lapse is rarely a matter of ignorance; staff know the rule but face dozens of contacts an hour, and a sink at the end of a corridor turns each wash into a detour.",
+     "For this reason, placing alcohol rub at every bedside has often done more to raise compliance than lectures on the dangers of infection.",
+     "When the right action is made the easiest one, good practice depends less on the memory and goodwill of exhausted people."],
+    "Patients and visitors can also carry infections into wards, which is why some hospitals restrict visiting hours during outbreaks.",
+    "Sentence [[1]] states the gap between knowledge and practice, sentence [[2]] explains it by workload and distance rather than ignorance, sentence [[3]] ('For this reason') gives the remedy of bedside rub, and sentence [[4]] states the general lesson. Sentence [[X]] is about infection in hospitals, but visitors and visiting hours are a different route of infection and play no part in the argument about staff hand cleaning.",
+    "Keeping sentence [[X]] because it shares 'infections' and 'hospitals' with the paragraph.",
+    "V03G-hand-hygiene-in-hospitals",
+    "The odd sentence shares the setting and vocabulary of infection control and must be rejected on function.",
+    traps=[(4, "Sentence [[4]] generalises the bedside example of sentence [[3]]; it is the paragraph's conclusion, not a stray remark.")])
+
+# ------------------------------------------------------------------ 018 Health and medicine, Easy
+ooo("V03-G-018", "Health and medicine",
+    "Generic medicines work like branded ones, and patients' distrust of them has real costs.",
+    "Easy",
+    ["A generic medicine contains the same active ingredient as the branded version, in the same dose, and is required to act in the body in the same way.",
+     "It is cheaper mainly because its maker did not bear the cost of discovering the drug or of marketing it under a famous name.",
+     "Many patients nonetheless distrust generics, assuming that a lower price must mean a weaker or less carefully made product.",
+     "Overcoming this suspicion matters, because the savings from generics can make long courses of treatment affordable for families who would otherwise stop them early."],
+    "Some herbal remedies are sold without any requirement to prove that they work, a gap that critics have long complained about.",
+    "Sentences [[1]], [[2]], [[3]] and [[4]] form one argument about generics: they are equivalent (sentence [[1]]), cheaper for reasons unrelated to quality (sentence [[2]]), distrusted all the same (sentence [[3]]), and that distrust is costly (sentence [[4]]). Sentence [[X]] is about herbal remedies and their regulation, not generic medicines.",
+    "Picking sentence [[2]] because it is about cost rather than quality.",
+    "V03G-generic-medicines",
+    "The odd sentence moves to a different product and is rejected once the chain about generics is followed.",
+    traps=[(2, "Sentence [[2]] explains why the lower price does not signal lower quality, which is exactly the assumption sentence [[3]] says patients make.")])
+
+# ------------------------------------------------------------------ 019 Health and medicine, Difficult
+ooo("V03-G-019", "Health and medicine",
+    "An opt-out default raises donor registration, but more transplants also need families who know the deceased's wishes.",
+    "Difficult",
+    ["Countries that register citizens as organ donors unless they opt out are often found to have far more registered donors than countries that ask people to opt in.",
+     "Part of the effect is inertia, but part is that a default is read as a signal of what the state considers normal and right.",
+     "Higher registration, however, does not translate directly into more transplants, since in many places doctors still defer to the wishes of grieving families.",
+     "A change of default may therefore help without being enough on its own, unless it is matched by efforts to make families aware of what the deceased would have wanted."],
+    "Critics object that treating silence as consent is ethically troubling, since many people never learn that they have been registered at all.",
+    "Sentence [[1]] reports that opt-out defaults raise registration, sentence [[2]] explains the effect, sentence [[3]] qualifies it ('however') because families still decide, and sentence [[4]] concludes ('therefore') that a default needs to be matched by work with families. The paragraph is about how far defaults raise donation. Sentence [[X]] is on the same subject, but it raises an ethical objection to presumed consent, which none of the other sentences takes up and which does not bear on the gap between registration and transplants.",
+    "Keeping sentence [[X]] as a balancing concession, because the paragraph itself contains a 'however'.",
+    "V03G-organ-donation-defaults",
+    "The odd sentence is a plausible objection on the very same subject, and the paragraph already contains a qualification, so the solver must see that the qualification concerns effectiveness while the objection concerns ethics.",
+    traps=[(2, "Sentence [[2]] can look like a detachable aside, but it explains the effect reported in sentence [[1]], and the idea that defaults work partly as signals is what makes sentence [[4]]'s 'help without being enough' a measured conclusion."),
+           (3, "Sentence [[3]] is the qualification on which the conclusion in sentence [[4]] depends; without it there is no reason to mention families.")],
+    exams=("CAT", "XAT"))
+
+# ------------------------------------------------------------------ 020 Health and medicine, Easy
+ooo("V03-G-020", "Health and medicine",
+    "Walking is underrated as exercise, and its ease of sustaining is its main advantage.",
+    "Easy",
+    ["Walking is rarely taken seriously as exercise, perhaps because it requires no special equipment and produces little visible exertion.",
+     "Yet a brisk daily walk can strengthen the heart, help control weight and improve mood, benefits that many people seek through more strenuous routines.",
+     "Its great advantage is that it is easy to sustain, so that people who would abandon a demanding programme within weeks often keep walking for years.",
+     "An exercise performed steadily for a lifetime may do more good than a harder one attempted briefly and then given up."],
+    "Marathon runners often follow strict diets in the weeks before a race, increasing the share of carbohydrates in their meals.",
+    "Sentences [[1]], [[2]], [[3]] and [[4]] argue that walking is undervalued: it is not taken seriously (sentence [[1]]), yet it has real benefits (sentence [[2]]), it is easy to sustain (sentence [[3]]), and lasting exercise beats brief hard exercise (sentence [[4]]). Sentence [[X]] is about runners' diets, which has nothing to do with walking.",
+    "Picking sentence [[4]] because it does not mention walking by name.",
+    "V03G-walking-as-exercise",
+    "The odd sentence is about a different activity and topic and is rejected quickly.",
+    traps=[(4, "Sentence [[4]] generalises the point of sentence [[3]] and is the paragraph's conclusion, even though it does not name walking.")])
+
+# ------------------------------------------------------------------ 021 Health and medicine, Difficult
+ooo("V03-G-021", "Health and medicine",
+    "Patient satisfaction ratings fairly measure how care is delivered but not whether it was medically sound.",
+    "Difficult",
+    ["Hospitals increasingly judge doctors partly by patient satisfaction ratings, on the reasonable ground that care should answer to the people who receive it.",
+     "Patients are well placed to report whether they were listened to, kept waiting or treated with courtesy.",
+     "They are less able to judge whether a diagnosis was correct, and a doctor who refuses an unnecessary scan or a requested drug may be rated poorly for exactly the right decision.",
+     "Satisfaction scores are thus a fair measure of how care is delivered but a misleading one of whether it was sound, and they can reward doctors for simply yielding to requests."],
+    "Patients who leave satisfied are more likely to follow the advice they were given, since trust in a doctor makes instructions easier to accept.",
+    "The paragraph asks what satisfaction ratings can measure: sentence [[1]] introduces them and their rationale, sentence [[2]] says what patients can judge (manner, waiting, courtesy), sentence [[3]] says what they cannot (soundness of decisions), and sentence [[4]] concludes that the scores measure delivery but not soundness. Sentence [[X]] is about patient satisfaction too and even sounds favourable to it, but it makes a claim about the effects of satisfaction on following advice, which is not part of the argument about what the ratings can reliably capture.",
+    "Keeping sentence [[X]] as a further point in favour of ratings, alongside the concession in sentence [[2]].",
+    "V03G-patient-satisfaction-ratings",
+    "The odd sentence shares the subject, vocabulary and the favourable tone of the paragraph's concession, so it must be rejected on its function, which is to argue a consequence rather than assess what ratings measure.",
+    traps=[(2, "Sentence [[2]] is the concession that sentence [[3]] answers with 'They are less able'; the contrast in sentence [[4]] between delivery and soundness depends on both."),
+           (1, "Sentence [[1]] can look like neutral background, but it introduces the ratings and the 'reasonable ground' for them that the rest of the paragraph tests.")],
+    exams=("CAT", "XAT"))
+
+# ------------------------------------------------------------------ 022 Cities and geography, Medium
+ooo("V03-G-022", "Cities and geography",
+    "Pedestrian skywalks often serve motorists more than the pedestrians they claim to help.",
+    "Medium",
+    ["Elevated walkways over busy roads are usually presented as gifts to pedestrians, sparing them the danger of crossing traffic.",
+     "Yet they demand long climbs up stairs, which the elderly, the disabled and people carrying loads often cannot manage.",
+     "Many pedestrians therefore keep crossing at street level, now without a signal to protect them, since the skywalk was built in place of one.",
+     "The real beneficiary of such structures is often the motorist, whose road has been cleared of people on foot."],
+    "Some cities have lined their skywalks with shops and kiosks, hoping to turn them into busy commercial corridors.",
+    "Sentence [[1]] gives the usual justification of skywalks, sentence [[2]] objects that many cannot climb them, sentence [[3]] shows the result (people cross unprotected), and sentence [[4]] concludes that motorists benefit most. Sentence [[X]] is about skywalks, but turning them into shopping corridors is unrelated to the question of whom they serve.",
+    "Keeping sentence [[X]] because it seems to describe a way of making skywalks more attractive to pedestrians.",
+    "V03G-pedestrian-skywalks",
+    "The odd sentence shares the subject and is rejected because commerce plays no part in the argument about who benefits.",
+    traps=[(3, "Sentence [[3]] is the consequence ('therefore') of the stairs in sentence [[2]] and the evidence for sentence [[4]]'s claim that the road has been cleared for cars.")])
+
+# ------------------------------------------------------------------ 023 Cities and geography, Medium
+ooo("V03-G-023", "Cities and geography",
+    "Urban monsoon flooding results more from how cities have grown than from the rain itself.",
+    "Medium",
+    ["When a city floods after a heavy monsoon downpour, the rain is usually blamed, as though the water had simply been too much for any place to absorb.",
+     "But the same rainfall once soaked into open ground, collected in lakes and wetlands, and drained away along natural channels.",
+     "As these have been paved over, filled in and built upon, water that the land once held now runs across streets and into homes.",
+     "Much of the flooding, then, is less a natural disaster than the result of decisions about where and how the city has grown."],
+    "Monsoon rains also bring relief from summer heat and refill the reservoirs on which cities depend for drinking water.",
+    "Sentence [[1]] states the usual explanation (too much rain), sentence [[2]] says the land once absorbed such rain, sentence [[3]] shows how building over it has turned the water onto streets, and sentence [[4]] concludes that flooding results from urban growth. Sentence [[X]] is about monsoon rain and cities, but the benefits of the rain have nothing to do with the cause of flooding.",
+    "Keeping sentence [[X]] because 'monsoon', 'rains' and 'cities' echo the paragraph.",
+    "V03G-monsoon-urban-flooding",
+    "The odd sentence repeats the paragraph's key words and is rejected only on function.",
+    traps=[(2, "Sentence [[2]] is needed because 'these' in sentence [[3]] refers to the open ground, lakes and channels it lists.")])
+
+# ------------------------------------------------------------------ 024 Cities and geography, Difficult
+ooo("V03-G-024", "Cities and geography",
+    "Heritage rules that protect only buildings can preserve a neighbourhood's look while its community is displaced.",
+    "Difficult",
+    ["Heritage precincts are usually protected by rules about what may be built, so that old facades, rooflines and street patterns survive the pressure to redevelop.",
+     "Such rules can preserve the look of a neighbourhood while doing nothing to keep the people and trades that gave it its character.",
+     "As rents rise with the area's new prestige, longtime residents and small workshops give way to boutiques and cafes, and the streets become a setting rather than a community.",
+     "Conservation that cares only for buildings risks keeping the shell of a place while losing the life it was meant to protect."],
+    "Restoring old buildings is often more expensive than replacing them, because traditional materials and skilled craftsmen are increasingly hard to find.",
+    "Sentence [[1]] describes how heritage precincts are protected, sentence [[2]] ('Such rules') says the rules protect appearance but not people, sentence [[3]] shows how rising rents displace residents, and sentence [[4]] concludes that conservation of buildings alone loses the life of a place. Sentence [[X]] is about conservation too, but the cost of restoration is a separate problem; the paragraph's argument concerns who is displaced, not what restoration costs.",
+    "Keeping sentence [[X]] because it shares the subject of old buildings, or rejecting sentence [[1]] as neutral background.",
+    "V03G-heritage-precincts",
+    "The odd sentence is squarely on heritage conservation and sounds like a serious point, while the opening sentence looks merely descriptive; the solver must follow the argument about displacement.",
+    traps=[(1, "Sentence [[1]] is needed because 'Such rules' in sentence [[2]] refers to the building rules it describes."),
+           (3, "Sentence [[3]] supplies the mechanism (rising rents) by which the people of sentence [[2]] are lost, so the conclusion in sentence [[4]] rests on it.")],
+    exams=("CAT", "XAT"))
+
+# ------------------------------------------------------------------ 025 Cities and geography, Easy
+ooo("V03-G-025", "Cities and geography",
+    "A shortage of public toilets restricts who can use the city, so toilets are a matter of equal access.",
+    "Easy",
+    ["The shortage of public toilets in many cities is usually treated as a minor matter of sanitation.",
+     "In fact it shapes who can use the city, because people who cannot count on finding a clean toilet plan their days around that uncertainty.",
+     "Women, the elderly and people with certain medical conditions are affected most, and some avoid long journeys or drink less water before leaving home.",
+     "A decent network of toilets is therefore not a mere convenience but a condition of equal access to public space."],
+    "Street food is one of the great pleasures of city life, and vendors often gather wherever crowds of commuters pass.",
+    "Sentences [[1]], [[2]], [[3]] and [[4]] argue that public toilets are more than sanitation: the shortage limits who can use the city (sentence [[2]]), certain groups are affected most (sentence [[3]]), and toilets are therefore a condition of equal access (sentence [[4]]). Sentence [[X]] is about street food and has no link to the argument.",
+    "Picking sentence [[3]] because it lists particular groups and looks like a digression.",
+    "V03G-public-toilets",
+    "The odd sentence is on a different city topic and is rejected easily.",
+    traps=[(3, "Sentence [[3]] gives the evidence for sentence [[2]]'s claim that the shortage 'shapes who can use the city'.")])

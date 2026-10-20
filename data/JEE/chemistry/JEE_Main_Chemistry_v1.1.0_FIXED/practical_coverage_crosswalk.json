@@ -1,0 +1,327 @@
+[
+  {
+    "requirement": "Nitrogen detection",
+    "evidence_ids": [
+      "JEE-CHEM-1409"
+    ],
+    "status": "PRESENT",
+    "note": "Evidence IDs rechecked after replacement; presence does not imply equal depth."
+  },
+  {
+    "requirement": "Sulfur detection",
+    "evidence_ids": [
+      "JEE-CHEM-1377"
+    ],
+    "status": "PRESENT",
+    "note": "Evidence IDs rechecked after replacement; presence does not imply equal depth."
+  },
+  {
+    "requirement": "Organic halogen detection",
+    "evidence_ids": [
+      "JEE-CHEM-1405",
+      "JEE-CHEM-1406"
+    ],
+    "status": "PRESENT",
+    "note": "Evidence IDs rechecked after replacement; presence does not imply equal depth."
+  },
+  {
+    "requirement": "Alcohol group",
+    "evidence_ids": [
+      "JEE-CHEM-2067",
+      "JEE-CHEM-2089",
+      "JEE-CHEM-2148"
+    ],
+    "status": "PRESENT",
+    "note": "Evidence IDs rechecked after replacement; presence does not imply equal depth."
+  },
+  {
+    "requirement": "Phenolic group",
+    "evidence_ids": [
+      "JEE-CHEM-2050"
+    ],
+    "status": "PRESENT",
+    "note": "Evidence IDs rechecked after replacement; presence does not imply equal depth."
+  },
+  {
+    "requirement": "Aldehyde/ketone groups",
+    "evidence_ids": [
+      "JEE-CHEM-2098",
+      "JEE-CHEM-2157",
+      "JEE-CHEM-2158"
+    ],
+    "status": "PRESENT",
+    "note": "Evidence IDs rechecked after replacement; presence does not imply equal depth."
+  },
+  {
+    "requirement": "Carboxyl group",
+    "evidence_ids": [
+      "JEE-CHEM-2050"
+    ],
+    "status": "PRESENT",
+    "note": "Evidence IDs rechecked after replacement; presence does not imply equal depth."
+  },
+  {
+    "requirement": "Amino group",
+    "evidence_ids": [
+      "JEE-CHEM-2063",
+      "JEE-CHEM-2075",
+      "JEE-CHEM-2144",
+      "JEE-CHEM-2146"
+    ],
+    "status": "PRESENT",
+    "note": "Evidence IDs rechecked after replacement; presence does not imply equal depth."
+  },
+  {
+    "requirement": "Mohr salt preparation",
+    "evidence_ids": [
+      "JEE-CHEM-2122"
+    ],
+    "status": "PRESENT",
+    "note": "Evidence IDs rechecked after replacement; presence does not imply equal depth."
+  },
+  {
+    "requirement": "Potash alum preparation",
+    "evidence_ids": [
+      "JEE-CHEM-2095"
+    ],
+    "status": "PRESENT",
+    "note": "Evidence IDs rechecked after replacement; presence does not imply equal depth."
+  },
+  {
+    "requirement": "Acetanilide preparation",
+    "evidence_ids": [
+      "JEE-CHEM-2130"
+    ],
+    "status": "PRESENT",
+    "note": "Evidence IDs rechecked after replacement; presence does not imply equal depth."
+  },
+  {
+    "requirement": "p-Nitroacetanilide preparation",
+    "evidence_ids": [
+      "JEE-CHEM-2091"
+    ],
+    "status": "PRESENT",
+    "note": "Evidence IDs rechecked after replacement; presence does not imply equal depth."
+  },
+  {
+    "requirement": "Aniline yellow preparation",
+    "evidence_ids": [
+      "JEE-CHEM-2108"
+    ],
+    "status": "PRESENT",
+    "note": "Evidence IDs rechecked after replacement; presence does not imply equal depth."
+  },
+  {
+    "requirement": "Iodoform preparation",
+    "evidence_ids": [
+      "JEE-CHEM-2124"
+    ],
+    "status": "PRESENT",
+    "note": "Evidence IDs rechecked after replacement; presence does not imply equal depth."
+  },
+  {
+    "requirement": "Acid-base titration and indicators",
+    "evidence_ids": [
+      "JEE-CHEM-2102"
+    ],
+    "status": "PRESENT",
+    "note": "Evidence IDs rechecked after replacement; presence does not imply equal depth."
+  },
+  {
+    "requirement": "Oxalic acid versus permanganate",
+    "evidence_ids": [
+      "JEE-CHEM-2128"
+    ],
+    "status": "PRESENT",
+    "note": "Evidence IDs rechecked after replacement; presence does not imply equal depth."
+  },
+  {
+    "requirement": "Mohr salt versus permanganate",
+    "evidence_ids": [
+      "JEE-CHEM-2152"
+    ],
+    "status": "PRESENT",
+    "note": "Evidence IDs rechecked after replacement; presence does not imply equal depth."
+  },
+  {
+    "requirement": "CuSO4 enthalpy of solution",
+    "evidence_ids": [
+      "JEE-CHEM-2133"
+    ],
+    "status": "PRESENT",
+    "note": "Evidence IDs rechecked after replacement; presence does not imply equal depth."
+  },
+  {
+    "requirement": "Strong-acid/strong-base neutralisation enthalpy",
+    "evidence_ids": [
+      "JEE-CHEM-2043"
+    ],
+    "status": "PRESENT",
+    "note": "Evidence IDs rechecked after replacement; presence does not imply equal depth."
+  },
+  {
+    "requirement": "Lyophilic and lyophobic sols",
+    "evidence_ids": [
+      "JEE-CHEM-2094",
+      "JEE-CHEM-2138",
+      "JEE-CHEM-2149"
+    ],
+    "status": "PRESENT",
+    "note": "Evidence IDs rechecked after replacement; presence does not imply equal depth."
+  },
+  {
+    "requirement": "Iodide-hydrogen peroxide kinetics",
+    "evidence_ids": [
+      "JEE-CHEM-2125"
+    ],
+    "status": "PRESENT",
+    "note": "Evidence IDs rechecked after replacement; presence does not imply equal depth."
+  },
+  {
+    "requirement": "Salt analysis: Pb²⁺",
+    "evidence_ids": [
+      "JEE-CHEM-2131"
+    ],
+    "status": "PRESENT",
+    "note": "Evidence IDs rechecked after replacement; presence does not imply equal depth."
+  },
+  {
+    "requirement": "Salt analysis: Cu²⁺",
+    "evidence_ids": [
+      "JEE-CHEM-2070",
+      "JEE-CHEM-2107"
+    ],
+    "status": "PRESENT",
+    "note": "Evidence IDs rechecked after replacement; presence does not imply equal depth."
+  },
+  {
+    "requirement": "Salt analysis: Al³⁺",
+    "evidence_ids": [
+      "JEE-CHEM-2105"
+    ],
+    "status": "PRESENT",
+    "note": "Evidence IDs rechecked after replacement; presence does not imply equal depth."
+  },
+  {
+    "requirement": "Salt analysis: Fe³⁺",
+    "evidence_ids": [
+      "JEE-CHEM-2141"
+    ],
+    "status": "PRESENT",
+    "note": "Evidence IDs rechecked after replacement; presence does not imply equal depth."
+  },
+  {
+    "requirement": "Salt analysis: Zn²⁺",
+    "evidence_ids": [
+      "JEE-CHEM-2078"
+    ],
+    "status": "PRESENT",
+    "note": "Evidence IDs rechecked after replacement; presence does not imply equal depth."
+  },
+  {
+    "requirement": "Salt analysis: Ni²⁺",
+    "evidence_ids": [
+      "JEE-CHEM-2129"
+    ],
+    "status": "PRESENT",
+    "note": "Evidence IDs rechecked after replacement; presence does not imply equal depth."
+  },
+  {
+    "requirement": "Salt analysis: Ca²⁺",
+    "evidence_ids": [
+      "JEE-CHEM-2137"
+    ],
+    "status": "PRESENT",
+    "note": "Evidence IDs rechecked after replacement; presence does not imply equal depth."
+  },
+  {
+    "requirement": "Salt analysis: Ba²⁺",
+    "evidence_ids": [
+      "JEE-CHEM-2093"
+    ],
+    "status": "PRESENT",
+    "note": "Evidence IDs rechecked after replacement; presence does not imply equal depth."
+  },
+  {
+    "requirement": "Salt analysis: Mg²⁺",
+    "evidence_ids": [
+      "JEE-CHEM-2159"
+    ],
+    "status": "PRESENT",
+    "note": "Evidence IDs rechecked after replacement; presence does not imply equal depth."
+  },
+  {
+    "requirement": "Salt analysis: NH₄⁺",
+    "evidence_ids": [
+      "JEE-CHEM-2081"
+    ],
+    "status": "PRESENT",
+    "note": "Evidence IDs rechecked after replacement; presence does not imply equal depth."
+  },
+  {
+    "requirement": "Salt analysis: CO₃²⁻",
+    "evidence_ids": [
+      "JEE-CHEM-2047"
+    ],
+    "status": "PRESENT",
+    "note": "Evidence IDs rechecked after replacement; presence does not imply equal depth."
+  },
+  {
+    "requirement": "Salt analysis: S²⁻",
+    "evidence_ids": [
+      "JEE-CHEM-1405",
+      "JEE-CHEM-2156"
+    ],
+    "status": "PRESENT",
+    "note": "Evidence IDs rechecked after replacement; presence does not imply equal depth."
+  },
+  {
+    "requirement": "Salt analysis: SO₄²⁻",
+    "evidence_ids": [
+      "JEE-CHEM-2048"
+    ],
+    "status": "PRESENT",
+    "note": "Evidence IDs rechecked after replacement; presence does not imply equal depth."
+  },
+  {
+    "requirement": "Salt analysis: NO₃⁻",
+    "evidence_ids": [
+      "JEE-CHEM-2054"
+    ],
+    "status": "PRESENT",
+    "note": "Evidence IDs rechecked after replacement; presence does not imply equal depth."
+  },
+  {
+    "requirement": "Salt analysis: NO₂⁻",
+    "evidence_ids": [
+      "JEE-CHEM-2147"
+    ],
+    "status": "PRESENT",
+    "note": "Evidence IDs rechecked after replacement; presence does not imply equal depth."
+  },
+  {
+    "requirement": "Salt analysis: Cl⁻",
+    "evidence_ids": [
+      "JEE-CHEM-2071"
+    ],
+    "status": "PRESENT",
+    "note": "Evidence IDs rechecked after replacement; presence does not imply equal depth."
+  },
+  {
+    "requirement": "Salt analysis: Br⁻",
+    "evidence_ids": [
+      "JEE-CHEM-2103"
+    ],
+    "status": "PRESENT",
+    "note": "Evidence IDs rechecked after replacement; presence does not imply equal depth."
+  },
+  {
+    "requirement": "Salt analysis: I⁻",
+    "evidence_ids": [
+      "JEE-CHEM-2041",
+      "JEE-CHEM-2125"
+    ],
+    "status": "PRESENT",
+    "note": "Evidence IDs rechecked after replacement; presence does not imply equal depth."
+  }
+]

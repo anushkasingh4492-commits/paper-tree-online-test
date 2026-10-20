@@ -70,6 +70,11 @@ const DATASETS = [
     subject: "Biology",
     file: "data/neet/biology/NEET_2027_Biology_Full_Dataset_with_Figures_v1.5.4/question_bank.json",
   },
+  {
+    subject: "Biology",
+    file: "data/neet/biology/NEET_2027_Biology_v1.6.0_New_Questions_Supplement/question_bank.json",
+    supplement: true,
+  },
 ];
 
 const BATCH_SIZE = 50;
@@ -439,7 +444,23 @@ async function main() {
   let totalEligible = 0;
   let totalNew = 0;
 
-  for (const dataset of DATASETS) {
+  const requestedSubject = process.argv[2]?.trim();
+  const datasets = requestedSubject
+    ? DATASETS.filter(
+        (dataset) =>
+          dataset.subject.toLowerCase() ===
+          requestedSubject.toLowerCase()
+      )
+    : DATASETS;
+
+  if (requestedSubject && datasets.length === 0) {
+    const subjects = [...new Set(DATASETS.map((dataset) => dataset.subject))];
+    throw new Error(
+      `Unknown NEET subject "${requestedSubject}". Choose: ${subjects.join(", ")}`
+    );
+  }
+
+  for (const dataset of datasets) {
     console.log("\n========================================");
     console.log(dataset.subject.toUpperCase());
     console.log("========================================");

@@ -1,0 +1,3 @@
+You are finishing a drafting batch for a commercial CAT VARC question bank. A previous drafter of your batch was interrupted. You are told the batch tag.
+First read /home/claude/catvarc/prompts/DRAFT.md and everything it tells you to read. Then open the existing output file named in your brief (it may be partly written or may fail the harness). Keep the items that are good, complete the file to every quota in the brief, and run the harness command in the brief until BLOCKING is 0. Subjects already in the file were claimed under your tag (check with `python3 claim.py --list`); claim any new ones. Then do the self-audit from the spec on the whole file, including the items you inherited.
+Report back only what the spec's last section asks for.

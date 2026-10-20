@@ -1,0 +1,682 @@
+[
+ {
+  "id": "R06-G-07-1",
+  "answer": "C",
+  "working": "P4: judgement exercised at threshold, where panels are reasonably good at separating sound from unsound.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-G-07-2",
+  "answer": "A",
+  "working": "P2: efficiency claim 'is true, but it is the weakest part of the case'; then 'the stronger argument is about honesty'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-G-07-3",
+  "answer": "A",
+  "working": "P3: when merit cannot decide, mild biases fill the gap and tilt the line toward the safe; chance is not neutral.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-G-07-4",
+  "answer": "C",
+  "working": "Reply rests on the belief that reward follows merit being 'already false' at the margin; consistent outperformance above the line shows ranking there does track merit.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-G-07-5",
+  "answer": "C",
+  "working": "Thesis: where judgement reaches its limit, lottery is more honest than ranking that hides chance; A, B, D overreach or pick the weak argument.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-D-02-1",
+  "answer": "B",
+  "working": "P2 last line: differences became a problem only when goods and people moved quickly enough for minutes to matter.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-D-02-2",
+  "answer": "A",
+  "working": "P4: 'Nothing here suggests standard time was a mistake' (benefits) but standardisation 'was not the discovery of a correct time'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-D-02-3",
+  "answer": "D",
+  "working": "Single tracks: a few minutes' mismatch could put two trains on the same stretch, a safety danger.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-D-02-4",
+  "answer": "B",
+  "working": "Author says calling local time confusion judges it by needs of a world not yet arrived; local time suited a self-contained community.",
+  "confidence": "medium",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-F-05-1",
+  "answer": "D",
+  "working": "P3: formulaic songs, place names and fixed ritual phrases transmitted with fidelity even when no one understands them.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-F-05-2",
+  "answer": "B",
+  "working": "Knowing the function (charter for office) lets the historian distrust convenient links and trust details serving no present interest.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-F-05-3",
+  "answer": "A",
+  "working": "Sceptic: errors are random and uncorrectable without an original; author: changes follow function and can partly be anticipated and read through. Both agree traditions change.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-F-05-4",
+  "answer": "B",
+  "working": "Author's case depends on change being non-random and tied to present needs; change unrelated to alliances or landholding undercuts it.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-F-06-1",
+  "answer": "B",
+  "working": "The prison image sums up the listed objections (learning distinctions, translation, wordless thought) against the strong view.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-F-06-2",
+  "answer": "A",
+  "working": "P3: verbal interference removes the advantage, so words are recruited on the spot, not permanently altering vision.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-F-06-3",
+  "answer": "D",
+  "working": "Author's 'tool' reading rests on the advantage vanishing under verbal load; persistence under full verbal load would suggest a lasting perceptual change.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-F-06-4",
+  "answer": "A",
+  "working": "P4: the interesting question is not whether language has engraved categories on perception; defenders and critics both judge by that lasting effect (vindication vs deflation).",
+  "confidence": "medium",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-C-04-1",
+  "answer": "B",
+  "working": "P2: soil rule reflected interest in numbers (soldiers, taxpayers), 'less a generous conception of belonging'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-C-04-2",
+  "answer": "D",
+  "working": "If the birth rule reliably predicts ease of naturalisation, the contrast would be a good guide after all.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-C-04-3",
+  "answer": "B",
+  "working": "P4 grants soil principle guarantees something valuable but calls it one protection among several, not the defining mark of openness.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-C-04-4",
+  "answer": "A",
+  "working": "P2: descent rule served countries with large populations abroad, letting emigrants' children keep a tie to the homeland.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-F-08-1",
+  "answer": "B",
+  "working": "P2: file depends on the disk surviving, a machine to read it and software to interpret it.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-F-08-2",
+  "answer": "A",
+  "working": "Persistence depends on reasons to copy; explains both complaints; preservation is institutional.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-F-08-3",
+  "answer": "D",
+  "working": "Material most likely to vanish is often the unglamorous record that matters most to a later historian.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-F-08-4",
+  "answer": "B",
+  "working": "P1 sets two seemingly contradictory complaints; P2 'the puzzle dissolves'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-F-08-5",
+  "answer": "C",
+  "working": "Passage says print archives faced the difficulty 'less acutely', not never; A, B, D are stated.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-D-06-1",
+  "answer": "B",
+  "working": "Conservation laws are consequences of symmetry; theorem changes direction of explanation and does not prove them.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-D-06-2",
+  "answer": "C",
+  "working": "Passage pairs time with energy, space with momentum, orientation with angular momentum; speed of motion is never mentioned.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-D-06-3",
+  "answer": "A",
+  "working": "P3: evidence for the symmetry and for the conservation law are in effect the same evidence.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-D-06-4",
+  "answer": "A",
+  "working": "P4: where the symmetry fails the law loses its footing; principle becomes a claim whose limits can be foreseen.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-F-01-1",
+  "answer": "B",
+  "working": "Gesture also does something for the person producing it (P2, P3); listener account not wrong but incomplete.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-F-01-2",
+  "answer": "B",
+  "working": "'A habit that persists when it can no longer inform anyone' is unlikely to be explained only by what it does for others.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-F-01-3",
+  "answer": "C",
+  "working": "Economical means accounting for the persisting gestures most simply, without strained assumptions.",
+  "confidence": "medium",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-F-01-4",
+  "answer": "C",
+  "working": "P3: such children are often on the verge of learning the correct method; hands arrive before speech.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-D-02-1",
+  "answer": "C",
+  "working": "P2: companies still rely on direct teaching and treat written record as an aid to memory.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-D-02-2",
+  "answer": "A",
+  "working": "P3: a film includes the dancer's idiosyncrasies and mistakes and cannot say which belong to the choreography.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-D-02-3",
+  "answer": "C",
+  "working": "Values the method (things notation misses, drift not mere corruption) while admitting each transmission drifts.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-D-02-4",
+  "answer": "D",
+  "working": "P1 'it is tempting to conclude'; rest of passage qualifies: documentation valuable but has not displaced bodily transmission.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-F-04-1",
+  "answer": "A",
+  "working": "P2: texts frequently written without spaces between words, making voicing useful.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-F-04-2",
+  "answer": "B",
+  "working": "Surprise shows a practice was unusual where observed, not that it was unknown.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-F-04-3",
+  "answer": "D",
+  "working": "Not impossible but not default; setting changed from shared to private; history still matters for owning thoughts.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-F-04-4",
+  "answer": "A",
+  "working": "'Too much to say it created the private self... too little to say it changed nothing'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-D-03-1",
+  "answer": "C",
+  "working": "Punishing an innocent could serve deterrence; most find this monstrous, so effects cannot be whole justification.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-D-03-2",
+  "answer": "D",
+  "working": "P2: a tax carries no message of blame, while a fine carries little else; toll is the tax analogue.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-D-03-3",
+  "answer": "C",
+  "working": "Reply: costless declarations are heard as saying the wrong did not matter; if penalty-free verdicts are judged as serious as imprisonment, words alone do carry the message.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-D-03-4",
+  "answer": "C",
+  "working": "Passage says 'perhaps of proportion or of humanity'; 'only constraint' unsupported. A, B, D are stated.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-A-07-1",
+  "answer": "A",
+  "working": "P3: dead metaphors are inert and cannot be extended (legs to knees or gait) and understood.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-A-07-2",
+  "answer": "A",
+  "working": "Last paragraph: metaphors are living tools of expression; influence on thought beyond expression is open, needing non-linguistic evidence.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-A-07-3",
+  "answer": "C",
+  "working": "P4: availability of a pattern for making expressions does not show it governs reasoning outside speech.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-A-07-4",
+  "answer": "A",
+  "working": "Evidence must not consist of the expressions themselves: silent non-verbal ordering task showing the metaphor's mark.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-A-07-5",
+  "answer": "A",
+  "working": "P4: alive 'in the sense that speakers can use them as patterns for making and understanding new expressions'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-E-03-1",
+  "answer": "D",
+  "working": "P1: extends autonomy so her values continue to govern what is done to her body.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-E-03-2",
+  "answer": "A",
+  "working": "Patient had views about dying at home but none about dialysis; counterfactual with no fact of the matter.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-E-03-3",
+  "answer": "D",
+  "working": "Second cost: relatives who later doubt suffer more than if told from the start they were judging best interests; D denies that.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-E-03-4",
+  "answer": "C",
+  "working": "P4: in other cases say plainly that the surrogate is choosing what seems best for her.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-B-04-1",
+  "answer": "C",
+  "working": "P2: low-intensity fires cleared undergrowth, branches and young trees while leaving older thick-barked trees largely unharmed.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-B-04-2",
+  "answer": "B",
+  "working": "Drought, heat, housing and fuel build-up are mentioned; thin-barked planting is not.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": "Options A and C cite paragraph locations and 'lists alongside' wording, flagging them as mentioned."
+ },
+ {
+  "id": "R06-B-04-3",
+  "answer": "D",
+  "working": "P3: in wet forests where fire was rare, increased burning is a threat rather than a return to normal.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-B-04-4",
+  "answer": "B",
+  "working": "Harm of acting visible, harm of not acting deferred; easiest course is to keep doing what made the problem worse.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-D-01-1",
+  "answer": "D",
+  "working": "P3-4: renaming cannot change feelings alone but buys an interval of courteous speech; a temporary courtesy.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-D-01-2",
+  "answer": "D",
+  "working": "P2: attitudes give colouring; any word that reliably points at the thing absorbs them.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-D-01-3",
+  "answer": "B",
+  "working": "'A way of feeling that something has been done while the underlying attitude goes untouched'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-D-01-4",
+  "answer": "C",
+  "working": "P4: cycle slows when the thing named stops being a mark of shame; the word has nothing to absorb.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-F-04-1",
+  "answer": "C",
+  "working": "P2: much of what the perfect-fit curve reproduced is noise.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-F-04-2",
+  "answer": "B",
+  "working": "Simplicity protects against noise; value shrinks with abundant precise data; so justified with few, noisy data.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-F-04-3",
+  "answer": "C",
+  "working": "'More promising answer' but 'has a cost' and does not show simpler hypothesis more likely true.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-F-04-4",
+  "answer": "C",
+  "working": "Discount claim implies simplicity's value shrinks with abundant clean data; persistent advantage even then would contradict it.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-B-08-1",
+  "answer": "B",
+  "working": "P2: household often divides when the father dies and brothers set up separate hearths.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-B-08-2",
+  "answer": "D",
+  "working": "Hypothetical shows a one-day count finds many nuclear households even when nearly everyone lives jointly at some stage.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-B-08-3",
+  "answer": "A",
+  "working": "Remittances, joint decisions, common funds that bind relatives apart; census by residence misses this.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-B-08-4",
+  "answer": "D",
+  "working": "P2 argues a snapshot count hides a life-cycle in which nearly everyone lives jointly; longitudinal evidence that most never did undercuts it.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-B-08-5",
+  "answer": "B",
+  "working": "P4: census defining jointness by shared residence records dispersed joint families as nuclear ones.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-D-06-1",
+  "answer": "A",
+  "working": "P2: such a singer was not corrupting a text but doing what singers had always done.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-D-06-2",
+  "answer": "D",
+  "working": "Manuscript editing is where the method 'makes good sense'; a folk song is a fundamentally different object.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-D-06-3",
+  "answer": "B",
+  "working": "Variety that the collectors' theory treated as decay/noise obscuring an original.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-D-06-4",
+  "answer": "C",
+  "working": "Record valuable to the extent it preserves variety; separate attributed variants preserve it.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-C-03-1",
+  "answer": "B",
+  "working": "Best customers judged by measures the new technology did not yet meet, said no, so money went to existing profits.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-C-03-2",
+  "answer": "D",
+  "working": "P3 raises the hindsight objection and says it 'strengthens rather than weakens the point'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-C-03-3",
+  "answer": "C",
+  "working": "Customers say no, margins thin, market small are given; engineering skill is not mentioned.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-C-03-4",
+  "answer": "B",
+  "working": "Separate unit with own costs and measures, small enough for a small market to excite it; parent's rules judge it not worth the trouble.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-A-08-1",
+  "answer": "A",
+  "working": "P2: giving up the mug registers as a loss, weighing more than the equal gain.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-A-08-2",
+  "answer": "A",
+  "working": "Investor reluctance shows the loss-aversion account connects mugs to wider behaviour.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-A-08-3",
+  "answer": "B",
+  "working": "Held as stock to exchange, parting does not register as a loss, so smaller gap than a person given one to use.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-A-08-4",
+  "answer": "B",
+  "working": "Rival view says gap shrinks once procedure is practised and misstating cannot help; gap staying as large weakens it.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-A-08-5",
+  "answer": "C",
+  "working": "Gap depends on frame: held for use and integrated into possessions over months is the strongest 'own' frame.",
+  "confidence": "medium",
+  "alternative": "",
+  "issue": ""
+ }
+]

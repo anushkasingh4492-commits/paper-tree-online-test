@@ -1,0 +1,34 @@
+[
+ {
+  "id": "V01-L-001",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Blind solver S2 noted that 'that very immediacy' could weakly point back to the 'most direct access' of the opener, giving orig order 1-3-2-4 (printed 1342).",
+  "fix": "Changed 'that very immediacy' to 'that very spontaneity', which can refer only to writing 'in the heat of the moment'; updated explanation, misconception, difficulty reason and trap text.",
+  "changed": true
+ },
+ {
+  "id": "V01-L-017",
+  "category": "E1",
+  "severity": "major",
+  "finding": "Both blind solvers found a second plausible order (printed 3241: towns built, builders imitate home, imitation interpreted, then the naming/growth sentence last), because 'Their builders laid them out' could follow the opener directly.",
+  "fix": "Rewrote the design sentence as 'Whether summer retreat or seasonal capital, each hill station was laid out by its builders...', which needs both the name and the seat-of-government role from the naming sentence; updated explanation, misconception, difficulty reason, revised the existing trap and added a trap for the solvers' alternative.",
+  "changed": true
+ },
+ {
+  "id": "V01-L-015",
+  "category": "E6",
+  "severity": "minor",
+  "finding": "Checked facts: variolation's risks (deaths, transmission of full smallpox) and its replacement by cowpox inoculation are well established; no attribution to named persons.",
+  "fix": "none: accurate.",
+  "changed": false
+ },
+ {
+  "id": "V01-L-023",
+  "category": "E6",
+  "severity": "minor",
+  "finding": "Checked the brave-officer transitivity objection; correctly stated and left unattributed ('A well-known objection'), so no false attribution.",
+  "fix": "none: accurate.",
+  "changed": false
+ }
+]

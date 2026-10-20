@@ -1,0 +1,658 @@
+[
+ {
+  "id": "R07-D-01-1",
+  "answer": "C",
+  "working": "P1 attacks spontaneity image; P4 freedom is fluency in form.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-D-01-2",
+  "answer": "B",
+  "working": "P3: 'produces something shapeless, or falls back on a handful of habits picked up by accident'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-D-01-3",
+  "answer": "B",
+  "working": "P3: imitation is how constraints are absorbed; only then can student vary them with confidence.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-D-01-4",
+  "answer": "C",
+  "working": "P4: convention bent in a way that still makes sense, possible only to one who knows boundaries; long-practised sonnet writer breaking rhyme aptly.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-C-03-1",
+  "answer": "A",
+  "working": "P2-P4: judgement cannot be removed; reform should record, review and guide it.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-C-03-2",
+  "answer": "D",
+  "working": "P2: rule requires proof of address but 'does not say how hard the clerk should look'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-C-03-3",
+  "answer": "B",
+  "working": "Judgement shifts to whose file to open first, i.e. scheduling, a less visible choice.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-C-03-4",
+  "answer": "D",
+  "working": "P3 not romanticising, open to abuse; choice is acknowledged vs underground discretion.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-G-04-1",
+  "answer": "C",
+  "working": "P1: 'It rarely asks what claiming actually involves'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-G-04-2",
+  "answer": "D",
+  "working": "P3: recipients fall while rules of entitlement stay exactly as they were.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-G-04-3",
+  "answer": "B",
+  "working": "P4 weigh claimant time/strain; P1 documents held by three offices; using existing records cuts claimant burden while keeping checks.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-G-04-4",
+  "answer": "B",
+  "working": "P3 'Whether or not anyone intends this'; passage never says burdens are chiefly introduced to cut spending.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-F-07-1",
+  "answer": "C",
+  "working": "P4-P5: tacit expectations collide with explicit theory; 'exactly as reliable as that knowledge'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-F-07-2",
+  "answer": "C",
+  "working": "P3: 'noticed a contradiction in what he and his readers already believed'; the pair should fall both slower and faster.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-F-07-3",
+  "answer": "A",
+  "working": "P5: very fast cases lie outside the band where tacit expectations were formed; others are everyday moderate cases.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-F-07-4",
+  "answer": "D",
+  "working": "P3: 'The argument reading can reconstruct this', only by writing in new premises; so D is contradicted.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-F-07-5",
+  "answer": "B",
+  "working": "P3 criticises insight reading for treating result as glimpsed law rather than contradiction in existing beliefs.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-F-07-1",
+  "answer": "C",
+  "working": "P2: 'Neither of us thinks the other has missed something; we simply report different reactions'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-F-07-2",
+  "answer": "D",
+  "working": "P4: careful readers agree on every feature yet differ, one prizing austerity, the other abundance.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-F-07-3",
+  "answer": "C",
+  "working": "P3: argument aims at change in perception, not proof; such moments not rare, remembered as learning.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-F-07-4",
+  "answer": "A",
+  "working": "If 'being shown' is really yielding to the most confident arguer, it is persuasion into preference, not learning, undermining the reply.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-F-07-5",
+  "answer": "D",
+  "working": "P5: 'something less humble in the maxim than it appears'; real respect would consist in disputing.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-E-06-1",
+  "answer": "A",
+  "working": "P2 responsibility assigned to one side of a two-sided contract; P4 obligation runs both ways.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-E-06-2",
+  "answer": "D",
+  "working": "P3: 'a person crushed by debts that can never be paid produces little for anyone, creditors included'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-E-06-3",
+  "answer": "D",
+  "working": "P2: lender paid for bearing risk; treating default as sin disowns the risk while keeping the premium.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-E-06-4",
+  "answer": "C",
+  "working": "P3 claims lenders judge less carefully and borrowers conceal distress rather than renegotiate early; C matches both.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-A-04-1",
+  "answer": "D",
+  "working": "P2: 'only because the reader knows where turns are expected'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-A-04-2",
+  "answer": "A",
+  "working": "P4: literary fiction 'has its own conventions' and writers who 'complete them dutifully'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-A-04-3",
+  "answer": "C",
+  "working": "P3: pleasure is 'the active one of comparison', resting on reading a hundred novels on the same frame.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-A-04-4",
+  "answer": "C",
+  "working": "P2: precision depends on settled expectation; unconventional novel 'has no settled expectation to depart from'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-C-02-1",
+  "answer": "B",
+  "working": "P2-P3: settles practical questions in advance; 'Its main work was coordination'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-C-02-2",
+  "answer": "C",
+  "working": "P2: bereaved spared the labour of inventing their own conduct while exhausted, i.e. working out how to behave.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-C-02-3",
+  "answer": "A",
+  "working": "P3: friends hesitate, colleagues say nothing, nobody knows what part to play.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-C-02-4",
+  "answer": "A",
+  "working": "P3-P4 values coordinating function; P4 widow 'policed as much as consoled'; not restoring every rule.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-B-05-1",
+  "answer": "C",
+  "working": "P1: number above fixed age divided by number of working age 15-64.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-B-05-2",
+  "answer": "D",
+  "working": "P2: grandparents' childcare allows both parents to hold jobs; ratio counts them only as cost.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-B-05-3",
+  "answer": "C",
+  "working": "P4: count activity by circumstance, and specifically very late life care needs.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-B-05-4",
+  "answer": "A",
+  "working": "P4: exaggerates problem in general form and obscures it in specific form; i.e. how accurately size and location are gauged.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-A-03-1",
+  "answer": "D",
+  "working": "P2: catastrophe imposed the same way 'is no less arbitrary and, being arbitrary, no more truthful'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-A-03-2",
+  "answer": "A",
+  "working": "P3: 'they leave the reader reassured about the world the book has shown'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-A-03-3",
+  "answer": "A",
+  "working": "Author says some happy and some tragic endings are honest; never says readers ought to prefer happy ones. B, C, D are stated in P3/P2/P3.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-A-03-4",
+  "answer": "A",
+  "working": "P3: objects to consolation, then mistakes the objection for an argument against closure itself.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-F-06-1",
+  "answer": "A",
+  "working": "P2: features we find cute are those of the very young: large head, big low-set eyes.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-F-06-2",
+  "answer": "A",
+  "working": "P2: care explanation 'does not tell us why we find the same tenderness stirred by a cartoon kettle'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-F-06-3",
+  "answer": "A",
+  "working": "P3: 'The cute flatters our power as much as it summons our care'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-F-06-4",
+  "answer": "C",
+  "working": "P1 power of response, P3 ambivalence, P4 disarms judgement so should be taken seriously.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-D-03-1",
+  "answer": "A",
+  "working": "P2: value chosen 'so that the new kilogram would match the old one as closely as instruments could tell'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-D-03-2",
+  "answer": "D",
+  "working": "P3: cylinder was kilogram by definition, so no way 'even in principle' to say it had changed.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-D-03-3",
+  "answer": "C",
+  "working": "P3: copies gained or cylinder lost or both; drift detected but cause undeterminable.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-D-03-4",
+  "answer": "A",
+  "working": "Final claim: dependence now on a procedure 'that can be checked and repeated'; uncheckable unique designs undercut it.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-F-03-1",
+  "answer": "A",
+  "working": "P2: each knows 'people are not uniform in their heights'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-F-03-2",
+  "answer": "A",
+  "working": "P3 domain facts license induction; P4 regress real but science need not meet the demand to be rational.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-F-03-3",
+  "answer": "A",
+  "working": "Botanist uses domain knowledge of low variation to generalise from few samples, like the melting-point case.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-F-03-4",
+  "answer": "A",
+  "working": "P4: 'The regress it describes is real'; author does not claim it disappears. B, C, D all stated.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-B-02-1",
+  "answer": "D",
+  "working": "P2: 'sometimes the effect appeared, sometimes it vanished, and sometimes larger assortments made people more likely to buy'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-B-02-2",
+  "answer": "B",
+  "working": "P3: 'What differs is whether the chooser has a way of sorting them'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-B-02-3",
+  "answer": "D",
+  "working": "P4: 'Cutting still has its place, particularly when most of the options are poor or nearly identical'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-B-02-4",
+  "answer": "D",
+  "working": "Author says structure (sorting, defaults) removes the burden; if structured funds were as paralysing, the account fails.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-C-03-1",
+  "answer": "B",
+  "working": "P3-P4: implicit conditions of the promise, set by what a reasonable promisee would understand.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-C-03-2",
+  "answer": "A",
+  "working": "P3: promisee acquired only a right against change of mind for convenience; cyclist reveals promise never extended so far.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-C-03-3",
+  "answer": "A",
+  "working": "P4 reply relies on a reasonable-person standard keeping exceptions public; if reasonable people sharply disagree for most promises, the standard fails. D is conceded ('will not settle every case').",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-C-03-4",
+  "answer": "D",
+  "working": "P3: 'the cyclist does not outweigh the promise'; author rejects the outweighing picture. A, B, C stated.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-C-01-1",
+  "answer": "B",
+  "working": "P1 founding preventive ideal; P2 drift toward what can be counted; P4 arrests may erode trust.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-C-01-2",
+  "answer": "A",
+  "working": "P1: claim that 'a salaried, disciplined body of officers, visible on the street at all hours, could prevent offences'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-C-01-3",
+  "answer": "B",
+  "working": "P2: quiet street after patrol 'looks exactly like a street that would have stayed quiet anyway'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-C-01-4",
+  "answer": "D",
+  "working": "P2-P4 contrast: arrests countable, reportable upward; legible output = most readily counted.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-G-05-1",
+  "answer": "A",
+  "working": "P2: 'her standard of success is the coherence of a narrative that accounts for scattered evidence'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-G-05-2",
+  "answer": "A",
+  "working": "P1: a recipe general enough to cover all sciences no longer guides anyone, i.e. too vague to direct work.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-G-05-3",
+  "answer": "A",
+  "working": "Criticism by colleagues is what the author says the sciences share (P4); the textbook does not overweight it. B, C, D are P2/P3 objections.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-G-05-4",
+  "answer": "B",
+  "working": "P4 claims all sciences share exposure to attack and revision; a productive science lacking these norms is a counterexample.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-B-04-1",
+  "answer": "C",
+  "working": "P2: canonical work is one you must have read to understand many others; status from replies, not verdict on quality.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-B-04-2",
+  "answer": "B",
+  "working": "P2: canons exclude 'works of great finish that simply provoked no answer'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-B-04-3",
+  "answer": "C",
+  "working": "P4: conversational account 'relocates their complaint' to conditions of who could write.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-B-04-4",
+  "answer": "C",
+  "working": "Account says canonical works are those later writers cannot leave alone; canonical works never answered contradicts it directly.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-C-04-1",
+  "answer": "D",
+  "working": "P4: debunker owes account of standpoint; hard to find one not relying on a judgement of the same kind.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-C-04-2",
+  "answer": "D",
+  "working": "P2: 'Every method of inquiry begins with some judgements it does not, at that moment, question'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-C-04-3",
+  "answer": "B",
+  "working": "Author claims dismissal relies on a judgement of the same kind; a purely non-moral justification would refute that.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-C-04-4",
+  "answer": "C",
+  "working": "P3: mutual adjustment across principles and cases; circular but wide, so not vacuous.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-A-04-1",
+  "answer": "A",
+  "working": "P3: 'Termites, whose inheritance has no such peculiarity, have sterile castes too'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-A-04-2",
+  "answer": "C",
+  "working": "P2: sterility 'not an anomaly to be explained away' but same kin-helping principle at its extreme.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-A-04-3",
+  "answer": "C",
+  "working": "P3: elegant haplodiploidy argument, widely taught, 'has not survived well', with counterevidence.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-A-04-4",
+  "answer": "A",
+  "working": "P4: ecological conditions can tip balance even where relatedness modest; so surroundings can decide between similar-relatedness species.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ }
+]

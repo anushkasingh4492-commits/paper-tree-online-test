@@ -1,0 +1,34 @@
+[
+ {
+  "id": "V01-M-005",
+  "category": "E1",
+  "severity": "major",
+  "finding": "Order 3214 (gym, new plan, 'Marketers call such an option a decoy', result) was defensible: 'such an option' could refer to the six-month plan as soon as sentence 2 introduces it, so the definition and the result sentence could swap.",
+  "fix": "Rewrote the definition sentence to open 'Having done its work without being bought, the six-month plan is what marketers call a decoy...', which needs the sales result first; updated explanation, misconception and traps (added 3214 trap).",
+  "changed": true
+ },
+ {
+  "id": "V01-M-005",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "difficulty_reason cited a non-existent phrase 'the new medium size' (editing leftover).",
+  "fix": "Replaced with phrases that occur in the item ('the new six-month plan', 'without being bought').",
+  "changed": true
+ },
+ {
+  "id": "V01-M-024",
+  "category": "E7",
+  "severity": "major",
+  "finding": "Same subject and argument (eruptions cool the planet through stratospheric sulphur droplets, not ash, which falls out within weeks; no rain to wash it out) as V01-N-007 in the sibling batch; the subject claims 'volcanic winter' and 'volcanic eruption cooling' slipped past the claim check.",
+  "fix": "none: kept this item (Difficult, the richer of the two) and replaced V01-N-007 with a new subject.",
+  "changed": false
+ },
+ {
+  "id": "V01-M (blind solvers)",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Blind-solver notes file is empty: both solvers reached the correct order on all 25 items with no flags.",
+  "fix": "none: nothing to dismiss.",
+  "changed": false
+ }
+]

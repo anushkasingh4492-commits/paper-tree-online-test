@@ -1,0 +1,1188 @@
+{
+ "kind": "RC",
+ "passages": [
+  {
+   "passage_id": "R02-B-01",
+   "passage": [
+    "Experts who manage risk often speak of the public with weary patience. People, they observe, fear the wrong things. They worry about a nuclear plant that has never harmed anyone in the district while driving, without a second thought, along a road that kills several of their neighbours every year. They demand inquiries after a single dramatic accident and shrug at the steady toll of falls in the home. On this account the task of policy is to correct a problem of perception: to replace vivid fears with sober numbers, so that resources follow expected deaths rather than headlines.",
+    "There is something to this, but less than its confidence suggests. When people are asked to describe what makes a hazard frightening, their answers are not random. Risks feel worse when they are imposed rather than chosen, when they could kill many people at once rather than a few at a time, when their effects are delayed or invisible, and when those who create them are not those who bear them. None of these features is captured by a count of expected fatalities, yet none of them is obviously foolish. A person who accepts the dangers of rock climbing but objects to a factory releasing an untested chemical into the river is not confused about arithmetic. She is drawing a distinction between a risk she has consented to and one that has been placed on her by others, and that distinction is a moral one that most legal systems also recognise.",
+    "Seen this way, the gap between expert and lay rankings of hazards is partly a disagreement about what the question is. The expert asks how many people will die; the citizen asks, in addition, whether the arrangement that produces those deaths is fair, controllable and worthy of trust. To call the second question irrational is to settle a dispute about values by redescribing it as a dispute about facts.",
+    "None of this makes dread a reliable guide. The features that make a hazard feel threatening can be manufactured by vivid reporting, and fear can drive choices that increase the very danger it is meant to avoid. If travellers abandon aircraft for cars after a well-publicised crash, they may exchange a small risk for a larger one without noticing the trade. The sensible response is neither to dismiss public fear as noise nor to treat it as a verdict. It is to take it apart: to ask which of its components reflect values that deserve a hearing in policy, and which reflect only the salience of a recent and alarming image."
+   ],
+   "questions": [
+    {
+     "id": "R02-B-01-1",
+     "type": "RC",
+     "options": {
+      "A": "argue that resources for safety should be allocated strictly in proportion to the number of deaths each hazard is expected to cause.",
+      "B": "argue that public fear of some hazards partly expresses defensible values, while warning that such fear still needs to be examined.",
+      "C": "show that expert rankings of hazards are mistaken and that policy should defer to the rankings the public prefers.",
+      "D": "explain how vivid news reporting manufactures public fear of dramatic accidents that are in fact very unlikely to happen."
+     },
+     "question": "The primary purpose of the passage is to"
+    },
+    {
+     "id": "R02-B-01-2",
+     "type": "RC",
+     "options": {
+      "A": "Its having been studied for a long time by experts who publish their estimates of the danger.",
+      "B": "Its being so familiar from everyday life, like driving, that people rarely stop to think about it.",
+      "C": "Its producing deaths a few at a time, spread out over many years, rather than all at once.",
+      "D": "Its being placed on people by others rather than accepted by them through their own choice."
+     },
+     "question": "According to the passage, which of the following makes a hazard feel more frightening?"
+    },
+    {
+     "id": "R02-B-01-3",
+     "type": "RC",
+     "options": {
+      "A": "support the claim that legal systems ought to prohibit factories from releasing any untested chemicals into rivers.",
+      "B": "show that a preference which ignores expected deaths can rest on a coherent distinction between risks that are chosen and risks that are imposed.",
+      "C": "demonstrate that recreational activities such as climbing are in fact more dangerous than most forms of industrial pollution.",
+      "D": "illustrate the kind of error in arithmetic that leads ordinary people to rank hazards differently from experts."
+     },
+     "question": "The example of the rock climber who objects to a factory's chemical release serves mainly to"
+    },
+    {
+     "id": "R02-B-01-4",
+     "type": "RC",
+     "options": {
+      "A": "Show residents vivid images of road accidents in the town, so that their fears are redirected toward the hazards that really matter.",
+      "B": "Abandon the incinerator, since strong public dread is itself a verdict that a council has a duty to accept without question.",
+      "C": "Proceed as planned, since the expected toll is small and residents' fear is a problem of perception to be corrected with figures.",
+      "D": "Sort the objections into those about consent, fairness or control, which deserve weight, and those that stem only from a recent alarming story."
+     },
+     "question": "A town council meets strong local opposition to a planned waste incinerator whose expected effect on health is small. Which course of action is most consistent with the author's recommendation?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R01-A-03",
+   "passage": [
+    "When two experts disagree about a question the rest of us cannot assess, it can seem that the layperson has only two options: to become an expert herself, or to pick a side at random. Neither is attractive. The first is usually impossible within the time available, and the second makes a mockery of the idea that belief should answer to evidence. But the dilemma is false. Although the layperson cannot judge the dispute directly, she can often judge the disputants, and judgements of that kind can be reasonable even when the subject matter remains opaque to her.",
+    "Several kinds of evidence are available. She can ask whether either expert has a record of predictions that can be checked, and how those predictions fared. She can ask whether one of them stands to gain from being believed, through money, reputation or loyalty to an institution. She can ask how the rest of the field divides, bearing in mind that a majority counts for more when its members reached their views independently than when they all learned them from the same teacher. None of these questions requires understanding the dispute itself. Each concerns the circumstances in which a claim is advanced rather than its technical content, and each can be answered, at least roughly, by an attentive citizen with no specialised training whatever.",
+    "One tempting source of evidence is less useful than it looks. Laypeople often favour the expert who argues more fluently, answers objections more quickly and seems more at ease. Yet these are skills of performance, and they are only loosely connected with being right. A careful scientist may hedge, pause and admit uncertainties that a confident charlatan would brush aside, and an audience that rewards confidence is, in effect, rewarding the very habit that should make it suspicious. The difficulty is compounded by the fact that public debate, with its brief exchanges and its appetite for memorable phrases, is arranged almost entirely so as to display performance, and so to favour the disputant who has mastered it.",
+    "It would be a mistake to conclude that the layperson's position is comfortable. Track records are often unavailable for the questions that matter most, interests can be hidden, and a field can be captured by a fashion that makes its consensus less independent than it appears. The indirect methods narrow the range of reasonable belief; they rarely close it. Still, a choice made on such grounds is not a coin toss, and treating it as one hands an advantage to whoever is most willing to exploit the public's sense of helplessness."
+   ],
+   "questions": [
+    {
+     "id": "R01-A-03-1",
+     "type": "RC",
+     "options": {
+      "A": "its members arrived at their views independently of one another rather than from one common source.",
+      "B": "its members were all trained by the most eminent teacher working in that particular field.",
+      "C": "its members defend their position more fluently and confidently than the dissenters can.",
+      "D": "it outnumbers the dissenting minority by a wide margin and has done so for a long time."
+     },
+     "question": "According to the passage, a majority of experts counts for more when"
+    },
+    {
+     "id": "R01-A-03-2",
+     "type": "RC",
+     "options": {
+      "A": "whether either expert has made checkable predictions, and how those predictions turned out.",
+      "B": "how the other members of the field divide on the question in dispute between them.",
+      "C": "the number of years each expert has spent working in the field concerned.",
+      "D": "whether either expert stands to gain money or reputation from being believed by the public."
+     },
+     "question": "The passage mentions each of the following as evidence a layperson can use in judging between disagreeing experts EXCEPT"
+    },
+    {
+     "id": "R01-A-03-3",
+     "type": "RC",
+     "options": {
+      "A": "illustrate how an expert's financial or institutional interests can be hidden from the public.",
+      "B": "suggest that scientists are, on the whole, less trustworthy than other kinds of experts on most questions.",
+      "C": "explain why an expert's fluency and ease are poor guides to whether that expert is right.",
+      "D": "argue that experts ought to hedge their claims and admit uncertainty more often than they now do."
+     },
+     "question": "The contrast between the careful scientist and the confident charlatan in paragraph 3 serves to"
+    },
+    {
+     "id": "R01-A-03-4",
+     "type": "RC",
+     "options": {
+      "A": "are of no use when the question in dispute is among the questions that matter most to the public.",
+      "B": "can make some lay beliefs about an expert dispute more reasonable than others without guaranteeing a correct choice.",
+      "C": "allow a layperson to become as certain about the dispute as the experts themselves are about it.",
+      "D": "are reliable only in the hands of people who also understand the subject matter of the dispute."
+     },
+     "question": "The author would most likely agree that the indirect methods described in paragraph 2"
+    }
+   ]
+  },
+  {
+   "passage_id": "R08-A-01",
+   "passage": [
+    "In a number of countries a newborn cannot simply be given whatever name the parents choose. A registrar may refuse a name that is judged offensive, that does not clearly indicate whether the bearer is male or female, that is spelt in a way the national orthography does not allow, or that does not appear on an official list. Defenders of such rules usually present them as a modest form of child protection. Parents, the argument runs, are fallible and sometimes vain; the child carries the name for a lifetime and had no say in choosing it; and the state, which already requires that children be schooled and vaccinated, may reasonably insist that they not be saddled with a label that will invite mockery.",
+    "There is something to this. A name is not a private ornament but a tool that other people use, and a name that cannot be pronounced, written on a form or read out in a classroom without laughter does impose a cost on the person who bears it. Cases in which parents have tried to register a brand name, a string of numbers or an insult are real enough, and few people would object to a registrar declining them. If the rules went no further than this, they would hardly be worth arguing about.",
+    "But they usually go much further, and the further they go, the less work the child-protection argument does. A rule that a name must indicate the bearer's sex protects no child from ridicule; it protects a social expectation. A rule that a name may use only the letters of the national alphabet does not shield the daughter of immigrant parents from mockery; if anything, it obliges her to carry an altered spelling of her grandmother's name, one that marks her at every roll call as someone whose family had to be corrected. An approved list, finally, protects children chiefly from novelty, and novelty is not a harm. Many names now regarded as solid and traditional were once eccentric inventions, and a register that had frozen the stock of names a century ago would have prevented most of them.",
+    "What the stricter rules actually defend, then, is the stock of names itself, treated as a piece of national heritage that private choices might erode. That is a coherent aim, and some will think it a worthy one. It should, however, be argued for openly as cultural policy and weighed against the interest parents have in naming their children as their own traditions require, rather than smuggled in under the language of protecting the young. A state that wishes to guard children from cruel names needs a short list of what is forbidden, not a long list of what is allowed."
+   ],
+   "questions": [
+    {
+     "id": "R08-A-01-1",
+     "type": "RC",
+     "options": {
+      "A": "defend approved lists of names as a legitimate means of protecting a nation's linguistic heritage.",
+      "B": "trace how naming laws grew out of earlier state measures for schooling and vaccinating the young.",
+      "C": "argue that states should abolish every legal restriction on the names that parents may give their children, however unusual those names are.",
+      "D": "show that strict naming rules really guard a stock of names, not children, and need defending as cultural policy."
+     },
+     "question": "The primary purpose of the passage is to"
+    },
+    {
+     "id": "R08-A-01-2",
+     "type": "RC",
+     "options": {
+      "A": "protect immigrant children from mockery by giving them names that classmates find familiar and easy to read.",
+      "B": "single out a child of immigrant parents by imposing a corrected spelling of a family name.",
+      "C": "prevent parents from registering brand names and strings of numbers as the names of their children.",
+      "D": "make it difficult for teachers and officials to pronounce the names of children from other countries."
+     },
+     "question": "According to the passage, a rule that names may use only the letters of the national alphabet can"
+    },
+    {
+     "id": "R08-A-01-3",
+     "type": "RC",
+     "options": {
+      "A": "It reports the view of the rules' defenders, which the author goes on to reject in every particular.",
+      "B": "It argues that names matter more to the people who hear them than to the person who bears them.",
+      "C": "It supplies the main evidence for the author's claim that naming rules are really a form of cultural policy.",
+      "D": "It grants that the protective argument justifies some refusals before the author shows that most rules go beyond them."
+     },
+     "question": "Which of the following best describes the role of paragraph 2 in the passage?"
+    },
+    {
+     "id": "R08-A-01-4",
+     "type": "RC",
+     "options": {
+      "A": "Any name may be registered unless a registrar finds that it would expose the child to serious ridicule, with a right of appeal.",
+      "B": "Parents may register any name at all, including brand names and numbers, because the choice belongs entirely to them.",
+      "C": "A name not found on the approved list may be registered once the parents pay a fee and wait a year for approval.",
+      "D": "Names from other traditions are welcome, provided they are respelt to follow the national alphabet and pronunciation."
+     },
+     "question": "Which of the following naming policies would the author of the passage most likely find acceptable?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R02-C-01",
+   "passage": [
+    "Boredom is usually described as a kind of emptiness, the feeling of having nothing to feel. On this view it is a residue, what remains when interest drains away, and the natural response is to fill the space with whatever is at hand, much as one might fill an awkward silence with remarks about the weather. The description is understandable, since boredom rarely announces any object of its own, but it gets the state almost exactly backwards. Boredom is not an absence. It is an active and often insistent signal that the activity in front of us is failing to engage the capacities we have available, and it exists to make us do something about that.",
+    "The comparison with other unpleasant states is instructive. Hunger is disagreeable, but nobody concludes from this that hunger is a defect; its discomfort is the means by which it gets us to eat. Boredom works in a similar way. A person bored by a repetitive clerical task does not merely register that the task is dull; she feels restless, glances at the clock, begins to imagine alternatives. The unpleasantness is doing work. It pushes attention away from a situation that offers too little and towards a search for one that offers more, whether that means a harder problem, a different companion or simply a walk.",
+    "None of this implies that boredom is always benign. A signal is useful only when there is some way to act on it, and many situations offer none. The patient in a waiting room, the passenger on a delayed train and the worker who cannot leave a monotonous post all receive the message without being able to respond, and in such cases boredom curdles into frustration or something close to despair. There are also signs that people will sometimes reach for almost any stimulation rather than endure an unoccupied mind, even stimulation they would otherwise find unpleasant. The signal, in other words, can be loud enough to drive choices that serve no one, and a theory of boredom that celebrated it without reservation would be as misleading as one that dismissed it.",
+    "What follows is a reason to be wary of the most popular remedy. If boredom is a message about the fit between a person and an activity, then an endless supply of small distractions does not answer the message; it merely muffles it. Someone who reaches for a screen at every lull may never feel bored for long, but may also never learn what the boredom was pointing at: a job that has stopped stretching them, a routine that has outlived its purpose, a curiosity that has gone unfed. The more useful question, when boredom arrives, is not how to make it stop but what it is about."
+   ],
+   "questions": [
+    {
+     "id": "R02-C-01-1",
+     "type": "RC",
+     "options": {
+      "A": "is a state of the same kind as hunger, since both are unpleasant and both disappear once they are satisfied.",
+      "B": "is harmless in most settings, because people can nearly always find some more engaging activity to turn to.",
+      "C": "has become harder for people to tolerate because a constant supply of entertainment is now available to them.",
+      "D": "is better understood as a prompt to change an unengaging activity than as a mere absence of feeling."
+     },
+     "question": "The central argument of the passage is that boredom"
+    },
+    {
+     "id": "R02-C-01-2",
+     "type": "RC",
+     "options": {
+      "A": "turns into a more painful state when the person has no means of responding to it.",
+      "B": "becomes a more useful signal the longer a person is prevented from acting on it.",
+      "C": "is hidden from the person feeling it, who mistakes it for some other emotion entirely.",
+      "D": "slowly disappears once the person accepts that nothing else can be done."
+     },
+     "question": "In paragraph 3, the statement that boredom 'curdles into frustration or something close to despair' means that boredom"
+    },
+    {
+     "id": "R02-C-01-3",
+     "type": "RC",
+     "options": {
+      "A": "illustrate that boredom is a more disagreeable experience than most of the other unpleasant states people know.",
+      "B": "suggest that boredom, like hunger, is a bodily need that must be met at regular intervals through the day.",
+      "C": "argue that people should be less worried about boredom than about the physical needs of their bodies.",
+      "D": "show that a state can be unpleasant and still have a purpose, as the author claims boredom does."
+     },
+     "question": "The reference to hunger in paragraph 2 serves mainly to"
+    },
+    {
+     "id": "R02-C-01-4",
+     "type": "RC",
+     "options": {
+      "A": "more likely than other people to fall into frustration and despair whenever they cannot act on the signal.",
+      "B": "confirming the common view that boredom is an empty space which can be filled with anything at hand.",
+      "C": "possibly missing information about parts of their life, such as work or routine, that no longer suit them.",
+      "D": "having solved the problem that boredom poses, since the unpleasant feeling no longer arises for them."
+     },
+     "question": "The author would most likely regard a person who never feels bored because every pause is filled with small distractions as"
+    }
+   ]
+  },
+  {
+   "passage_id": "R01-B-02",
+   "passage": [
+    "A man resolves to give up sweets, believes sincerely that he should, and then, at the end of a long and exhausting day, eats the cake anyway. The episode is so ordinary that its strangeness is easy to miss. If he really judged that refusing was better, what moved him to do otherwise? One very old answer is that nothing did: no one knowingly chooses the worse course, and the man must have ceased to believe, at least temporarily, that refusing was better. Most people find this answer too clever by half. They are convinced that they have acted against their own considered judgement, and they describe the experience in the vocabulary of force, of being overcome by something stronger than resolution.",
+    "The popular picture that develops from this description treats the will as a kind of muscle. Judgement indicates the direction, and the will either possesses the strength to follow or it does not; lapses are failures of strength, to be corrected by training, rest or improved nutrition. The picture has the merit of matching how lapses feel, and it explains why they cluster at the end of tiring days. But it makes the lapse strangely external to the person, as though desire were a weight imposed from outside and the self merely a lifter who happened to be exhausted that particular evening.",
+    "Closer examination of such moments suggests a different interpretation. The man with the cake does not usually go on thinking, clearly and vividly, that he should refuse while his hand reaches out. Instead his attention narrows: the considerations favouring refusal, which seemed compelling in the morning, become abstract and distant, while the cake is immediate, particular and present. He does not abandon his judgement so much as stop looking at it. On this interpretation the lapse is neither a mere deficiency of strength nor a simple change of mind but a failure to keep one's own reasons in view.",
+    "This does not mean that fatigue is irrelevant, or that every lapse is a matter of attention; some temptations are simply strong, and some people are considerably more depleted than others. But the attentional account has a practical advantage. If lapses were exclusively failures of strength, the only remedy would be additional strength. If they are often failures of attention, the remedy can be arrangement: keeping one's reasons concrete, placing the cake out of sight, deciding in advance what one will do when the moment arrives. People who manage their weaknesses successfully tend to do precisely this, and the muscle picture has trouble explaining why such strategies work."
+   ],
+   "questions": [
+    {
+     "id": "R01-B-02-1",
+     "type": "RC",
+     "options": {
+      "A": "present an ordinary lapse whose puzzling features the rest of the passage sets out to explain.",
+      "B": "illustrate how tiredness at the end of a day corrupts a person's judgement of what is good for him.",
+      "C": "establish the old view that nobody ever knowingly chooses the worse of two courses.",
+      "D": "show that most people lack the willpower needed to keep their resolutions about food."
+     },
+     "question": "The example of the man and the cake in paragraph 1 serves mainly to"
+    },
+    {
+     "id": "R01-B-02-2",
+     "type": "RC",
+     "options": {
+      "A": "treating a lapse as something internal to the person rather than as something imposed on her.",
+      "B": "fitting the way lapses feel and accounting for why they are more frequent late in tiring days.",
+      "C": "explaining why putting temptations out of sight helps people keep their resolutions.",
+      "D": "showing that people who give in to temptation have, for the moment, changed their minds about what is best."
+     },
+     "question": "According to the passage, the muscle picture of the will has the merit of"
+    },
+    {
+     "id": "R01-B-02-3",
+     "type": "RC",
+     "options": {
+      "A": "still holds that refusing is better but has, in the moment, stopped keeping that reason vividly before him.",
+      "B": "has temporarily concluded that eating the cake is the better course after all.",
+      "C": "lacks the strength to act on a judgement that remains clear and vivid to him as he reaches out.",
+      "D": "will certainly give in again unless someone else removes the cake from his sight."
+     },
+     "question": "It can be inferred that, according to the attentional account, the man who eats the cake"
+    },
+    {
+     "id": "R01-B-02-4",
+     "type": "RC",
+     "options": {
+      "A": "People who kept tempting food out of view and planned their responses in advance lapsed as often as people who did neither.",
+      "B": "Lapses of resolution are considerably more frequent in the evening than in the morning, especially after demanding work.",
+      "C": "People who give in to temptation usually report afterwards that they felt overcome at the time by a desire that seemed stronger than they were.",
+      "D": "Some temptations prove strong enough to defeat even people who have planned carefully how they will respond."
+     },
+     "question": "Which of the following findings, if true, would most weaken the practical advantage the author claims for the attentional account?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R01-D-07",
+   "passage": [
+    "For much of modern political thought, to be free has meant to be left alone. On this view a person's liberty is diminished whenever someone interferes with her choices, by force, by threat or by the closing off of options, and it is enlarged whenever such interference is removed. The view has the merit of simplicity, and it gives a clear direction to political argument: other things being equal, less interference means more freedom. An older tradition, recently revived, holds that this account misses something essential. What makes a person unfree, it says, is not interference as such but dependence on the will of another who could interfere at pleasure, whether or not he ever does.",
+    "The point is easiest to see in a case where the two accounts come apart. Imagine a tenant whose lease allows the landlord to evict her at any time and for any reason, and whose landlord happens to be a mild man who has never troubled anyone. On the non-interference view the tenant is perfectly free, since nobody is stopping her from doing anything. Yet she knows her position. She will think twice before complaining about a broken boiler, she will keep her opinion of the landlord to herself, and she may find herself anticipating his preferences in matters he has never raised. The absence of interference in her life is not evidence that she is free; it may be, in part, an effect of her unfreedom, since a person who must stay in another's good graces learns to make interference unnecessary. The rival tradition calls her condition domination, and it defines freedom as the absence of domination.",
+    "The shift has striking consequences. Interference, on this view, does not always reduce freedom. A law that restrains me, but that I and others like me can contest through courts, elections and other channels that force those who make it to take our interests into account, does not subject me to anyone's arbitrary will, and so does not make me less free, even though it limits what I may do. Conversely, a benevolent ruler who chooses to interfere very little may still leave his subjects unfree, because what they are permitted to do depends on his continued goodwill.",
+    "Critics reply that the notion of arbitrary power is too elastic to do the work asked of it. Almost every relationship, from employment to marriage to the ordinary dealings of neighbours, contains some capacity of one party to make the other's life worse. If all such capacities count as domination, then domination is everywhere and the concept loses its edge; if only some do, we need a criterion, and the obvious candidates seem to smuggle back the very judgements about interference that the theory hoped to avoid. Defenders answer that power is arbitrary when it is not forced to track the interests of those subject to it, and that whether it is so forced is a question about institutions: about rights of exit, of appeal and of collective voice.",
+    "This answer is better than the critics allow, but it is not quite enough to turn non-domination into a measure. It tells us where to look rather than how much freedom we will find there. That may be its real value. The non-interference view, by counting acts, trains attention on what happens; the rival view, by asking about standing, trains it on what could happen, and on the structures that make some things unthinkable to attempt. Even if it cannot yield a neat scale, the second view identifies a kind of unfreedom that a tally of interferences would never register."
+   ],
+   "questions": [
+    {
+     "id": "R01-D-07-1",
+     "type": "RC",
+     "options": {
+      "A": "She is able to contest the landlord's decisions in court whenever he acts against her interests.",
+      "B": "She shapes her own conduct to stay in the landlord's good graces, so he rarely has any reason to intervene.",
+      "C": "Her lease forbids the landlord from interfering with the choices she makes about how to live in the flat.",
+      "D": "The law prevents landlords from evicting tenants who have complained to them about necessary repairs."
+     },
+     "question": "According to the passage, why might the tenant's life contain little interference even though she is not free?"
+    },
+    {
+     "id": "R01-D-07-2",
+     "type": "RC",
+     "options": {
+      "A": "social customs that make certain choices look irrational to every member of a society, whatever their position.",
+      "B": "laws that explicitly forbid certain actions and punish those who are caught attempting them.",
+      "C": "arrangements of power under which people do not even try certain things because of how others could respond.",
+      "D": "institutions that guarantee rights of exit, of appeal and of collective voice to those subject to power."
+     },
+     "question": "As used in paragraph 5, 'the structures that make some things unthinkable to attempt' refers to"
+    },
+    {
+     "id": "R01-D-07-3",
+     "type": "RC",
+     "options": {
+      "A": "On the non-interference view, his subjects could count as freer than citizens restrained by laws they are able to contest.",
+      "B": "His subjects would become free in the rival tradition's sense if he publicly promised never to interfere with them.",
+      "C": "His rule is legitimate in the rival tradition's sense provided his subjects remain free to leave his territory.",
+      "D": "He dominates his subjects only on those occasions when he actually chooses to interfere with their choices."
+     },
+     "question": "Which of the following can be inferred about the benevolent ruler described in paragraph 3?"
+    },
+    {
+     "id": "R01-D-07-4",
+     "type": "RC",
+     "options": {
+      "A": "Granting workers rights of appeal and collective voice has, in several firms, reduced how often they defer to managers.",
+      "B": "Tenants whose leases permit eviction at will report far more anxiety than tenants whose leases are secure.",
+      "C": "Some relationships, such as long friendships, contain no capacity at all for either party to make the other's life worse.",
+      "D": "Efforts to decide which forms of power over others are arbitrary have repeatedly turned on how much each form lets its holder interfere."
+     },
+     "question": "Which of the following, if true, would most strengthen the critics' objection in paragraph 4?"
+    },
+    {
+     "id": "R01-D-07-5",
+     "type": "RC",
+     "options": {
+      "A": "appreciative of its diagnostic insight, while doubting that it can serve as a precise measure of freedom.",
+      "B": "sceptical, regarding it as an elastic notion that in the end collapses back into the non-interference view.",
+      "C": "convinced that it should replace the non-interference view as the single correct account of political freedom.",
+      "D": "neutral, presenting the two traditions side by side without venturing any judgement on their relative merits."
+     },
+     "question": "The author's overall attitude towards the view of freedom as non-domination is best described as"
+    }
+   ]
+  },
+  {
+   "passage_id": "R03-C-04",
+   "passage": [
+    "There are two familiar ways of misunderstanding pilgrimage, and they are mirror images of each other. The first treats the journey as mere transport: what matters is arrival at the shrine, the sight of the image or the relic, the bath in the river, and the road is simply the price paid to get there. The second, popular among those who walk old pilgrim routes for reasons they would not call religious, reverses the emphasis. The destination, on this view, is almost a pretext; the real value lies in the walking itself, the days of effort, the strangers met on the way, the slow emptying of the mind.",
+    "Each view captures something that pilgrims genuinely report, but both detach two elements that draw their meaning from each other, and neither can be made intelligible without the other. The hardships of the road are not valuable in the abstract. Blistered feet on a hiking holiday are an inconvenience; the same blisters on the way to a sacred place become an offering, a sign of seriousness, a story to be told on return. What converts them is the fixed point towards which they are directed. Equally, the shrine does not possess its full weight for the pilgrim independently of the effort spent reaching it. A visitor who arrives by car on a whim may see exactly what the pilgrim sees and still not have had the pilgrim's experience.",
+    "The history of easier travel bears this interdependence out in an unexpected way, and it is worth dwelling on because it runs against a natural expectation. One might have predicted that when roads, railways and buses made distant shrines accessible within hours, the effortful element would simply vanish. In many places it has instead been reintroduced by choice. Pilgrims who have covered most of the distance in comfort often leave the vehicle to walk the final stretch, sometimes barefoot, sometimes on their knees. The effort has been condensed rather than abandoned, as though people sense that arrival without cost would not count as arrival at all.",
+    "None of this means that the walker who sets out with no particular reverence is deceived about what he finds. Long days on foot do change people, and the change can be real without being religious. But it is worth noticing what such a walker relinquishes, perhaps without realising it, when the destination becomes optional rather than obligatory. The pilgrim cannot decide halfway that another town would do just as well, and that inability is part of what lends the road its gravity. A journey that could end anywhere is a fine thing; it is simply a different thing from one that must end in a particular place."
+   ],
+   "questions": [
+    {
+     "id": "R03-C-04-1",
+     "type": "RC",
+     "options": {
+      "A": "Pilgrims have come to value the sight of the shrine far more than any hardship they might meet on the road leading to it.",
+      "B": "Pilgrimage has dwindled, because the effort that once gave the journey its meaning has disappeared.",
+      "C": "The authorities at many shrines now require pilgrims to cover the whole route to them on foot.",
+      "D": "Pilgrims have chosen to bring back some of the effort, for instance by walking the last part of the way."
+     },
+     "question": "According to the passage, what has happened in many places since modern transport made distant shrines easy to reach?"
+    },
+    {
+     "id": "R03-C-04-2",
+     "type": "RC",
+     "options": {
+      "A": "pilgrims value suffering for its own sake, wherever and for whatever purpose it is undergone.",
+      "B": "the same bodily hardship can carry different meanings depending on the goal towards which it is directed.",
+      "C": "hardships on pilgrimage routes are usually more severe than those met with on ordinary walking holidays.",
+      "D": "hikers come to regard their discomfort as an offering once they reach the end of a long trail."
+     },
+     "question": "The contrast between blisters on a hiking holiday and blisters on the way to a sacred place (paragraph 2) implies that"
+    },
+    {
+     "id": "R03-C-04-3",
+     "type": "RC",
+     "options": {
+      "A": "The chief value of pilgrimage lies in the inner change produced by long days of walking, whatever the destination happens to be.",
+      "B": "Modern transport has emptied pilgrimage of its meaning, which can be recovered only by walking the whole of the route.",
+      "C": "The effort of the road and the fixed destination give each other their significance in pilgrimage, so neither can be understood on its own.",
+      "D": "People who walk old pilgrim routes for reasons they would not call religious are deceived about the value of what they find."
+     },
+     "question": "Which of the following best expresses the central claim of the passage?"
+    },
+    {
+     "id": "R03-C-04-4",
+     "type": "RC",
+     "options": {
+      "A": "he is having the pilgrim's experience in a secular form, since the walking itself is where the value lies.",
+      "B": "he would have the pilgrim's experience if he happened to end his walk at a famous shrine along the route.",
+      "C": "his experience must be illusory, because a change in a person that is not religious cannot be a real one.",
+      "D": "the walk may change him genuinely, though it lacks the gravity that a fixed and unchangeable destination helps to give a journey."
+     },
+     "question": "The author would most likely say of someone who walks an old pilgrim route with no fixed destination in mind that"
+    }
+   ]
+  },
+  {
+   "passage_id": "R07-E-04",
+   "passage": [
+    "A curious reversal has taken place in the market for handmade goods. For most of history, the aim of a skilled potter or weaver was regularity: bowls that stacked, threads of even thickness, a pattern that repeated without drift. Irregularity was the mark of an apprentice or of a hurried job, and the master's pride lay in eliminating it. Today, by contrast, the small wobble in a glaze or the slight lean of a hand-thrown cup is what many buyers are paying for. It has become the proof that a person, and not a machine, was involved.",
+    "The trouble with this proof is that it can be forged. A machine that can make a perfect cup can be programmed to make an imperfect one, and to vary the imperfection from piece to piece so that no two look alike. Tableware with deliberately uneven rims and glazes is already produced in quantity, and an ordinary buyer cannot tell it from the real thing. If what we value in the handmade is irregularity as such, then the handmade has no defence against its imitation, and the premium paid for it is a premium paid for a story.",
+    "But irregularity was never the point, and treating it as the point misunderstands what a craftsperson does. A turner working a piece of wood meets a knot, a change in the grain, a softer patch, and alters the cut to suit it; a weaver feels the tension of the warp change with the damp in the air and corrects for it. The handmade object is the record of many such small judgements, each a response to the particular material in front of the maker. Its variations, where they occur, are traces of that responsiveness, not ornaments added afterwards. A machine-made irregularity, however convincing, responds to nothing; it is a pattern generated in advance and imposed on material treated as uniform.",
+    "This distinction can be pressed too far. Machines can be built to sense and respond to their material, and a good deal of hand production is as mechanical as anything in a factory, the same motion repeated on identical parts without a thought. The line between craft and its imitation, then, is not drawn by the presence of a hand. It is drawn by whether the making involved attention to the particular, and by that test some machine work would count as craft while much of what is sold as handmade would not."
+   ],
+   "questions": [
+    {
+     "id": "R07-E-04-1",
+     "type": "RC",
+     "options": {
+      "A": "a sign of inexperience or haste, which skilled makers took pride in removing from their work.",
+      "B": "a welcome trace of the material's character that a master would leave deliberately in place.",
+      "C": "the proof that a person rather than a machine had made the object, which buyers valued most of all.",
+      "D": "a decorative effect that weavers and potters added at the end to make each piece distinctive."
+     },
+     "question": "According to the passage, in earlier periods irregularity in a crafted object was generally regarded as"
+    },
+    {
+     "id": "R07-E-04-2",
+     "type": "RC",
+     "options": {
+      "A": "buyers knowingly pay more for objects whose irregularities they understand to be produced by machines.",
+      "B": "handmade goods are usually sold together with invented accounts of the lives of the people who made them.",
+      "C": "the extra price buys a belief about how an object was made, not a quality visible in it.",
+      "D": "the prices of handmade goods are set mainly by advertising rather than by the cost of the materials used."
+     },
+     "question": "The phrase 'a premium paid for a story' (paragraph 2) implies that, if irregularity is what buyers value,"
+    },
+    {
+     "id": "R07-E-04-3",
+     "type": "RC",
+     "options": {
+      "A": "Some goods that are sold as handmade are produced without any attention to the particular piece being made.",
+      "B": "Machines are in principle incapable of responding to the particular qualities of the material they work on.",
+      "C": "An ordinary buyer is generally unable to distinguish simulated irregularity from that of a hand-thrown piece.",
+      "D": "A weaver may adjust the work in progress in response to changes in the moisture of the surrounding air."
+     },
+     "question": "Each of the following is supported by the passage EXCEPT:"
+    },
+    {
+     "id": "R07-E-04-4",
+     "type": "RC",
+     "options": {
+      "A": "A factory press that stamps a different random dent into every metal bowl so that no two bowls are ever identical.",
+      "B": "A bread machine that measures the moisture of each batch of flour and changes its kneading time to suit that batch.",
+      "C": "A workshop in which each worker performs one hand motion all day on identical parts that have been cut in advance.",
+      "D": "A hand-knitted scarf made by repeating a fixed chart row after row, without any notice taken when the yarn thickens."
+     },
+     "question": "By the test proposed in the final paragraph, which of the following would most clearly count as craft?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R08-D-01",
+   "passage": [
+    "Every generation of reformers discovers that words wear out. A term introduced to replace a cruder one, chosen precisely because it carried none of the old contempt, acquires that contempt within a few decades, and a new term is proposed to replace it in turn. Students of language sometimes call this cycle a treadmill, and the image is apt: a great deal of effort is expended, and the speaker seems to remain in the same place. Words for bodily functions, for old age, for poverty and for conditions of the mind have all passed through several such rotations, each new coinage arriving clean and departing stained.",
+    "The usual explanation is that the stain was never in the word. Attitudes towards the thing named are what give a word its colouring, and so long as those attitudes persist, any word that reliably points at the thing will soon absorb them. On this view the replacement of terms is a kind of displacement activity, a way of feeling that something has been done while the underlying attitude goes untouched. Critics who hold this view tend to conclude that the whole enterprise of renaming is futile, and some go further and call it dishonest, since the fresh term flatters the speaker as much as it spares the listener.",
+    "The first half of this argument seems to me largely right, and the second half too hasty. It is true that a new word cannot by itself change what people feel about the thing it names. But the treadmill is not simply a record of failure. A replacement term, for the years before it darkens, often gives people a way of speaking about a subject without signalling contempt, and in that interval conversations become possible that were not possible before. A parent can ask a teacher about a child's difficulty in terms that do not insult the child; an official form can ask about a condition without reading like an accusation. These are small goods, but they are not nothing, and they are purchased cheaply.",
+    "What the treadmill does show is that renaming cannot carry the whole burden of reform. A society that changes its vocabulary for poverty while leaving the poor exactly as they were will find that its new word sours as fast as the old one, and perhaps faster, since the gap between the gentle name and the harsh reality invites irony. The cycle slows, where it slows at all, when the thing named stops being a mark of shame. The word then has nothing to absorb. Renaming is best understood not as a substitute for that change but as a temporary courtesy that can accompany it."
+   ],
+   "questions": [
+    {
+     "id": "R08-D-01-1",
+     "type": "RC",
+     "options": {
+      "A": "can be halted altogether once schools and officials agree to adopt one carefully chosen set of terms.",
+      "B": "proves that renaming is futile and that reformers should give up trying to replace words that have become offensive.",
+      "C": "reflects a dishonest habit through which speakers flatter themselves while only appearing to spare their listeners.",
+      "D": "shows that renaming alone cannot change attitudes, though each new term briefly allows more courteous speech."
+     },
+     "question": "The author's main point about the cycle of replacement terms is that it"
+    },
+    {
+     "id": "R08-D-01-2",
+     "type": "RC",
+     "options": {
+      "A": "each new term is usually borrowed from an older vocabulary that already carried traces of contempt.",
+      "B": "attitudes towards the thing a word names pass, while they last, to any word that reliably refers to it.",
+      "C": "the reformers who choose replacement terms misjudge how ordinary speakers will actually use them.",
+      "D": "speakers soon grow tired of any word that is introduced through official forms and school teaching."
+     },
+     "question": "According to the usual explanation described in the passage, replacement terms lose their neutrality because"
+    },
+    {
+     "id": "R08-D-01-3",
+     "type": "RC",
+     "options": {
+      "A": "an activity that shifts the work of reform from public officials onto ordinary speakers.",
+      "B": "an action that gives a sense of having dealt with a problem while leaving its cause untouched.",
+      "C": "a process through which the meaning of one word is gradually transferred to another.",
+      "D": "a deliberate effort to push a disliked word out of polite speech and into the slang of everyday talk."
+     },
+     "question": "As used in paragraph 2, 'displacement activity' refers to"
+    },
+    {
+     "id": "R08-D-01-4",
+     "type": "RC",
+     "options": {
+      "A": "the term has been chosen by a body of experts rather than by reformers.",
+      "B": "officials use the term consistently on forms and in their public documents.",
+      "C": "what the term names has largely ceased to be treated as something shameful.",
+      "D": "the new term is gentler and more delicate than any of the terms before it."
+     },
+     "question": "It can be inferred that the author would expect a replacement term to keep its neutrality longest in a society where"
+    }
+   ]
+  },
+  {
+   "passage_id": "R05-C-06",
+   "passage": [
+    "Inquiries into industrial disasters have a way of finding a culprit. An operator ignored a warning, an inspector signed a form he had not read, a manager overruled an engineer whose objections were inconvenient. Such findings are rarely false, but they are often beside the point, because they treat as a single failure of judgement what was in fact the end of a long and orderly process. Many organisations do not stumble into catastrophe; they walk towards it by steps that each seemed reasonable at the time.",
+    "Consider a hypothetical chemical plant whose procedures say that a certain vessel must be shut down if its pressure exceeds a stated limit. One night the gauge registers a reading marginally above the permitted limit. Shutting down would be expensive, the excess is small, and the engineers on duty judge, correctly as it turns out, that the vessel is in no danger. Nothing untoward happens, and the next time the reading creeps over the limit there is a precedent, which makes the decision considerably easier. After a dozen such nights the limit has quietly moved: the written figure still stands in the manual, but the working figure, the one people actually act on, is higher. No one decided to change it. The change was made by the accumulated absence of harm.",
+    "This is what makes the process so difficult to detect from within the organisation itself. Each step is defended by evidence, and the evidence is genuine, for the vessel really did not fail. What is mistaken is the inference drawn from it, that a risk which has not yet produced harm has thereby been shown to be small. Success becomes a reason for confidence, and confidence a reason to look less closely, so that the organisation's sense of its own safety grows at the same rate as its actual exposure to danger. By the time an outsider asks why the plant routinely runs above its limit, the question sounds naive, because everyone inside knows that it always has.",
+    "It does not follow that every departure from the rules is a step towards disaster. Written procedures are drafted in advance by people who cannot foresee every situation, and an organisation whose staff never deviated from them would be unable to adapt; much good practice begins as a sensible exception. The danger lies not in deviation itself but in deviation that is never recognised as such. A departure that is noticed, argued over and formally adopted is a decision; one that simply accumulates is drift, and drift answers to no one."
+   ],
+   "questions": [
+    {
+     "id": "R05-C-06-1",
+     "type": "RC",
+     "options": {
+      "A": "illustrate how a working standard can shift through decisions that are each sensible, without anyone choosing to change it.",
+      "B": "show that engineers at hazardous plants often disregard written procedures because they care more about cost than about safety.",
+      "C": "demonstrate that the safety limits written into plant manuals are usually set lower than they need to be.",
+      "D": "provide an instance of the kind of individual culprit whom inquiries into disasters rightly hold responsible."
+     },
+     "question": "The example of the chemical plant in paragraph 2 serves mainly to"
+    },
+    {
+     "id": "R05-C-06-2",
+     "type": "RC",
+     "options": {
+      "A": "the outsider lacks the technical training needed to understand how the pressure vessel actually works.",
+      "B": "running above the limit has become so habitual that insiders no longer perceive it as a departure from the rules.",
+      "C": "insiders know that the plant has been running above its limit only for a few nights and see no cause for alarm.",
+      "D": "the written limit in the manual has been officially revised and the outsider has consulted an old copy."
+     },
+     "question": "The passage suggests that the outsider's question in paragraph 3 'sounds naive' to those inside the plant because"
+    },
+    {
+     "id": "R05-C-06-3",
+     "type": "RC",
+     "options": {
+      "A": "a gradual change in practice cannot be reversed once it has continued for long enough within an organisation.",
+      "B": "a change that accumulates without ever being decided leaves no one accountable for having made it.",
+      "C": "informal departures from procedure are never reported to the senior managers who are formally in charge.",
+      "D": "staff who allow standards to slip usually refuse to explain their actions when an inquiry questions them."
+     },
+     "question": "In the final sentence of the passage, the phrase 'drift answers to no one' most nearly means that"
+    },
+    {
+     "id": "R05-C-06-4",
+     "type": "RC",
+     "options": {
+      "A": "The deviations most likely to end in disaster are those large enough to attract attention at the moment they are made.",
+      "B": "An inquiry that names a person at fault may be accurate about the facts and still mistaken about the cause.",
+      "C": "The fact that a risky choice caused no harm is not, by itself, good evidence that the risk was small.",
+      "D": "Some departures from written procedures improve the way an organisation works and are worth keeping."
+     },
+     "question": "The author would agree with each of the following statements EXCEPT:"
+    }
+   ]
+  },
+  {
+   "passage_id": "R04-E-04",
+   "passage": [
+    "Among the arguments made for nuclear deterrence, the strongest is also the simplest: when two states can each destroy the other, neither can hope to gain from a general war, and so neither starts one. Whatever its moral costs, a balance of terror of this kind has a claim to have kept the largest powers from fighting each other directly for a long time. But the logic that makes the largest war unthinkable may make smaller ones more thinkable, and this possibility, sometimes called the stability-instability paradox, deserves more attention than the reassuring half of the argument usually receives.",
+    "The reasoning runs as follows. If both sides are confident that neither will ever risk a nuclear exchange, then each can assume that a limited clash, whether a border skirmish, a proxy war or a raid by irregular forces, will stay limited. The fear that once restrained such ventures, the fear that they might spiral into catastrophe, is weakened precisely by the confidence that catastrophe will be avoided. Stability at the top of the ladder of escalation thus loosens the rungs near the bottom. A state that would never dare a full invasion may feel free to probe, provoke and nibble, reasoning that its opponent will not answer with anything that could lead to the unthinkable.",
+    "It is important to be precise about what this claims. It does not say that nuclear weapons cause small wars, which have many causes and were common long before such weapons existed. It says only that mutual deterrence can lower the perceived risk of low-level aggression and so remove one brake on it. Nor does the paradox operate automatically. Its force depends on how confident each side is that escalation can be controlled. Where leaders doubt that a skirmish can be kept small, the old fear returns, and with it some of the old caution.",
+    "The implication is uncomfortable for those who credit deterrence with keeping the peace. What deterrence may secure is not peace in general but the absence of one particular kind of war, while the violence that remains is pushed downward and outward, into contested borderlands and into the hands of proxies. That is no small achievement, given what the alternative might be, and nothing in the paradox implies that the world would be safer if the largest powers could once again contemplate fighting each other directly. But the achievement should be described accurately. A system that prevents catastrophe partly by making lesser conflicts safer to start is not a system of peace; it is a way of choosing which wars will be fought."
+   ],
+   "questions": [
+    {
+     "id": "R04-E-04-1",
+     "type": "RC",
+     "options": {
+      "A": "whether small wars were already common in the region before nuclear weapons appeared there.",
+      "B": "how confident each side is that a limited clash can be prevented from escalating.",
+      "C": "whether the rival states fight through proxies or commit their own regular forces to a clash.",
+      "D": "how many nuclear weapons each side possesses in comparison with the arsenal of its rival."
+     },
+     "question": "According to paragraph 3, how strongly the stability-instability paradox operates depends on"
+    },
+    {
+     "id": "R04-E-04-2",
+     "type": "RC",
+     "options": {
+      "A": "the lowest levels of military force become too expensive for states to keep up once nuclear arms exist.",
+      "B": "the weakest states in the system lose their capacity to resist the demands made on them by stronger states.",
+      "C": "the restraints that once discouraged minor acts of aggression grow weaker as fear of the largest war recedes.",
+      "D": "minor clashes become more likely than before to climb rapidly into a general war between the two powers."
+     },
+     "question": "In paragraph 2, the statement that stability at the top 'loosens the rungs near the bottom' most nearly means that"
+    },
+    {
+     "id": "R04-E-04-3",
+     "type": "RC",
+     "options": {
+      "A": "Soon after two rival states acquired nuclear weapons, a minor border incident between them led within hours to a nuclear alert on both sides.",
+      "B": "Two rival states fought several border wars against each other in the decades before either of them acquired nuclear weapons.",
+      "C": "Several non-nuclear states bordering a nuclear power reduced the size of their armies in the years after it acquired its arsenal.",
+      "D": "After two rivals acquired secure nuclear arsenals, raids across their border grew more frequent, with officials on both sides expecting the raids to stay contained."
+     },
+     "question": "Which of the following, if true, would most strengthen the reasoning set out in paragraph 2?"
+    },
+    {
+     "id": "R04-E-04-4",
+     "type": "RC",
+     "options": {
+      "A": "The paradox shows that the largest powers have in fact become more willing to fight each other directly once both are armed.",
+      "B": "Where leaders doubt that clashes can be contained, deterrence will probably weaken restraint on low-level aggression less than the paradox alone would predict.",
+      "C": "Small wars in the nuclear age are caused mainly by the confidence that mutual deterrence gives to the leaders of rival nuclear-armed states.",
+      "D": "The author regards nuclear deterrence as a failure, since it has not succeeded in removing organised violence between rival states."
+     },
+     "question": "Which of the following can most reasonably be inferred from the passage?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R05-B-07",
+   "passage": [
+    "Why are some countries rich and others poor? For several decades the question has been staged as a contest between two answers. One points to geography: to climate, soils, disease and distance from the sea, which shape what can be grown, how healthy workers are and how cheaply goods can be moved. The other points to institutions: to whether property is secure, contracts are enforced and rulers are constrained, which shape whether people find it worth their while to invest, innovate and trade. Each side has its favourite evidence, and each has scored points against the other.",
+    "The institutional camp's strongest card is the observation that geography changes slowly while fortunes can change fast. Two halves of a peninsula with the same climate, the same soils and, until the middle of the twentieth century, a shared history can diverge dramatically within a couple of generations once they are placed under different political systems. Institutionalists have also pointed to a pattern among formerly colonised regions: some of those that were relatively densely settled and prosperous five centuries ago are relatively poor today, while some that were thinly populated then are rich now. Geography did not flip in the interval. What changed, the argument goes, were the institutions that colonisers imposed, extractive where there was wealth and labour to seize, more inclusive where settlers came to live.",
+    "The geographers' reply is that these comparisons, however striking, do not dispose of their case. A landlocked country far from major markets pays more to export every tonne it produces, whatever its laws say, and a tropical region where malaria is endemic carries a burden of illness that good government can reduce but not abolish overnight. These are direct effects, and no amount of constitutional reform makes a mountain range easier to cross. Geographers add that the peninsula, however vivid, is a single case, and that a single case can show that institutions are capable of mattering without showing how much they usually matter across the wide run of countries.",
+    "What both camps tend to overlook is how much of their contest is artificial. The reversal story itself, read carefully, is a story about geography working through institutions. Colonisers chose to settle or to extract partly according to how likely they were to survive the local diseases, and the soils of some regions suited crops that were profitable to grow with coerced labour on large estates. The institutions that resulted were, in this sense, partly geographical in origin, even if they later took on a life of their own. To ask, as statistical exercises often do, how much of the variation in income is due to geography and how much to institutions is to treat as rival causes what are frequently links in a single chain. The exercise can produce a number, but the number answers a question that the history does not pose.",
+    "None of this restores geography as destiny. The institutionalists are right that the same land can support very different outcomes, and that a country is not condemned by its latitude. The point is rather that the question 'which matters more?' should give way to the question 'how did they combine here?', which has a different answer in different places and cannot be settled by a single coefficient. For one country the answer may lie largely in a coastline that made trade cheap long before anyone drafted a constitution; for another, in rules imposed by outsiders that outlived the conditions which first made them profitable."
+   ],
+   "questions": [
+    {
+     "id": "R05-B-07-1",
+     "type": "RC",
+     "options": {
+      "A": "real constraints on prosperity that better laws and government cannot simply remove.",
+      "B": "minor in comparison with institutional effects, which explain most of the differences between countries.",
+      "C": "illusions created by comparing countries whose histories and political systems were quite different.",
+      "D": "the only effects of geography that statistical exercises are able to measure with any reliability."
+     },
+     "question": "It can be inferred that the author regards the effects of geography described in paragraph 3 as"
+    },
+    {
+     "id": "R05-B-07-2",
+     "type": "RC",
+     "options": {
+      "A": "show that large differences in prosperity can open up between places that do not differ in geography.",
+      "B": "support the geographers' view that places with a shared climate and soils will tend to share outcomes.",
+      "C": "illustrate how colonisers chose institutions according to the disease environment they met on arrival.",
+      "D": "show that political division of a country makes both of its resulting halves poorer than they would have been."
+     },
+     "question": "The example of the two halves of a peninsula in paragraph 2 is used to"
+    },
+    {
+     "id": "R05-B-07-3",
+     "type": "RC",
+     "options": {
+      "A": "statistical estimates of the effect of geography on income are too large, because they wrongly include effects of institutions.",
+      "B": "the regions that were prosperous five centuries ago owed their early prosperity to good institutions rather than to geography.",
+      "C": "institutions have no influence on prosperity apart from what the underlying geography of a region has given them.",
+      "D": "evidence the institutional camp cites against geography is partly evidence of geography's indirect influence."
+     },
+     "question": "The author's claim that the reversal story is 'a story about geography working through institutions' implies that"
+    },
+    {
+     "id": "R05-B-07-4",
+     "type": "RC",
+     "options": {
+      "A": "Several landlocked countries have reached high incomes despite the extra cost of moving their goods to distant markets.",
+      "B": "Statistical studies that include both geography and institutions find that institutions account for more of the variation in income.",
+      "C": "Public health campaigns have greatly reduced the burden of malaria in a number of tropical regions over recent decades.",
+      "D": "Colonial records show that the choice between settling and extracting followed home-country policy, without regard to local disease or soils."
+     },
+     "question": "Which of the following, if true, would most weaken the argument of paragraph 4?"
+    },
+    {
+     "id": "R05-B-07-5",
+     "type": "RC",
+     "options": {
+      "A": "by raising the cost of moving the goods a country produces to the markets where they are sold.",
+      "B": "by fixing the prices that the country's minerals and crops will fetch on world markets.",
+      "C": "by imposing a burden of disease that reduces the health of a country's workers.",
+      "D": "by favouring crops suited to large estates worked with coerced labour, and so shaping institutions."
+     },
+     "question": "The passage mentions each of the following as a way in which geography may affect a country's prosperity EXCEPT"
+    }
+   ]
+  },
+  {
+   "passage_id": "R03-G-07",
+   "passage": [
+    "Every few years a new survey announces that trust in public institutions has fallen again. Respondents are asked how much confidence they have in parliament, the courts, the police or the press, their answers are averaged, and the declining line is offered as evidence of a crisis. The finding is treated as self-interpreting: less trust is bad, more trust is good, and the task of leaders is to restore it. Each step of that reasoning deserves more scrutiny than it usually receives.",
+    "Begin with what the question measures. A person asked how far she trusts the courts may be reporting her estimate of their competence, her view of their honesty, her approval of recent verdicts, or simply her mood about public life in general. Answers about quite different institutions tend to rise and fall together, which suggests that much of what is captured is a general disposition rather than a considered judgement about any particular body. Nor does the answer reliably predict conduct. People who tell interviewers that they distrust the courts continue to sign contracts that only courts can enforce, and people who profess little confidence in the health service continue to take the medicines it prescribes. If trust is fundamentally a matter of what we are prepared to rely on, the survey and the behaviour can come apart, and it is not obvious that the survey is the better witness.",
+    "A second difficulty is that falling trust is ambiguous even where it is real. It may mean that institutions have become less reliable. It may also mean that citizens have come to expect more of them, or that information about their failures, once hidden, now circulates freely. In the last case the decline records not a deterioration in the institution but an improvement in the public's knowledge of it. The philosophical point beneath this is simple and often forgotten: trust is valuable only when it is placed in what is trustworthy. A population that trusted a corrupt police force completely would not be enjoying a civic good; it would be making a mistake, and one that the corrupt would be glad to exploit. What we should want is not high trust but well-calibrated trust, trust that rises and falls with the reliability of its object.",
+    "This does not license complacency. Distrust, warranted or not, has consequences of its own. Citizens who doubt that taxes are spent honestly may be readier to evade them; communities that expect the police to be indifferent may stop reporting crimes, which in turn makes the police less effective and the distrust more justified. A decline in measured trust can therefore be the beginning of a spiral that no recalibration will halt by itself, because the institution's reliability depends partly on the cooperation that distrust withdraws. The point is not that the numbers are meaningless but that they cannot, on their own, tell us whether we face a failing institution, a better-informed public or a passing mood.",
+    "What would tell us more is evidence of a different kind: whether expressions of trust track independent measures of institutional performance over time, whether people who say they distrust an institution still rely on it when something important is at stake, and whether trust differs between those who have dealt with an institution directly and those who know it only by reputation. Such evidence is harder to gather than a single question repeated every few years, and it yields no simple line on a chart for commentators to lament. That is precisely its value."
+   ],
+   "questions": [
+    {
+     "id": "R03-G-07-1",
+     "type": "RC",
+     "options": {
+      "A": "survey responses largely reflect a general disposition rather than considered judgements about particular bodies.",
+      "B": "respondents are much better informed about some public institutions than they are about others.",
+      "C": "the various institutions have tended to improve or to decline in their performance at the same times.",
+      "D": "people trust the courts and the press for exactly the same reasons as each other."
+     },
+     "question": "According to the passage, the tendency of answers about quite different institutions to rise and fall together suggests that"
+    },
+    {
+     "id": "R03-G-07-2",
+     "type": "RC",
+     "options": {
+      "A": "rises or falls according to how reliable the institution in which it is placed actually is.",
+      "B": "is based on direct personal dealings with an institution rather than on its reputation alone.",
+      "C": "remains steady over the years regardless of how an institution's record happens to change.",
+      "D": "stays at a moderate level, avoiding both complete confidence and complete suspicion of an institution."
+     },
+     "question": "As used in paragraph 3, 'well-calibrated trust' refers to trust that"
+    },
+    {
+     "id": "R03-G-07-3",
+     "type": "RC",
+     "options": {
+      "A": "people who express distrust of institutions while continuing to use them are being hypocritical.",
+      "B": "contracts would be signed far less often than they now are if the courts were trusted more.",
+      "C": "trust in the courts is, in general, considerably higher than trust in the health service.",
+      "D": "survey answers may be a weaker guide to trust, understood as reliance, than what people actually do."
+     },
+     "question": "The example of people who distrust the courts yet 'continue to sign contracts that only courts can enforce' is used to suggest that"
+    },
+    {
+     "id": "R03-G-07-4",
+     "type": "RC",
+     "options": {
+      "A": "The fall was steepest among people who had seen no reports of the institutions' failures, while trust held steady among those who followed such reports closely.",
+      "B": "People who had dealt with the courts directly reported higher trust in them than people who knew the courts only by their reputation among friends and neighbours.",
+      "C": "Information about the failures of these institutions became far more widely available during the period in which measured trust fell.",
+      "D": "The fall in measured trust coincided with the publication of several well-documented reports of misconduct within the police."
+     },
+     "question": "Which of the following, if true, would most weaken the explanation that a particular fall in measured trust records 'an improvement in the public's knowledge' of the institutions concerned?"
+    },
+    {
+     "id": "R03-G-07-5",
+     "type": "RC",
+     "options": {
+      "A": "Because survey answers about trust are unreliable, a decline in measured trust has no practical consequences.",
+      "B": "A sharp rise in measured trust in a police force would not, by itself, be a reason for satisfaction.",
+      "C": "Public policy should aim to raise citizens' trust in institutions to the highest level that they are willing to accept.",
+      "D": "A fall in measured trust in institutions is usually a sign that citizens have become better informed about them."
+     },
+     "question": "The author would most likely agree with which of the following?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R02-C-07",
+   "passage": [
+    "The word 'stress' entered the study of living things from the study of materials, where its meaning is reasonably exact: the internal force per unit area within a body subjected to a load. In engineering, stress is distinguished from strain, the deformation that the load produces, and both are distinguished from the load itself. When the word was borrowed to describe what happens to organisms under pressure, these distinctions did not travel with it. In ordinary speech, and in a good deal of research, 'stress' can refer to the demanding situation, to the bodily and emotional reaction it provokes, or to the relation between the two, and it is often far from clear which of these is meant. A survey announcing that most workers feel stressed may be measuring their workloads, their symptoms or their sense of being overwhelmed, and the headline rarely says which.",
+    "The slippage is not merely a matter of untidy usage. Consider the familiar claim that stress is bad for health. If stress means the reaction, and the reaction is defined partly by its harmful effects, the claim is close to true by definition. If stress means the demanding situation, the claim is plainly false as a generalisation, since many people meet heavy demands without harm and some appear to thrive on them. Only if stress means a particular relation, demands that exceed what a person believes they can manage, does the claim become a substantive hypothesis that could turn out to be wrong. Much popular discussion moves among these meanings without noticing, and so acquires the authority of the first reading and the scope of the second.",
+    "The same confusion shadows the more recent enthusiasm for 'good stress'. To say that some stress is beneficial may mean that some demanding situations are worth seeking out, which is uncontroversial; or that some physiological reactions to demand improve performance, which is plausible within limits; or that people who interpret their reactions as helpful fare better than those who do not, which is a specific claim requiring specific evidence. Advice built on the phrase often slides from the first meaning, which everyone accepts, to the third, which is the one actually being sold. Each of the three deserves to be judged on its own evidence, and the plausibility of the first lends nothing to the third.",
+    "It might seem that the remedy is to abandon the word altogether. That would be a mistake, and not only because ordinary language is not so easily reformed. The very breadth of the term has allowed researchers in physiology, psychology, sociology and medicine to recognise that they were studying related things, and it has drawn attention to connections, between working conditions and heart disease, say, that narrower vocabularies might have kept apart. Whole programmes of research, on bereavement, on unemployment, on the burdens of caring for a sick relative, found a common frame in it. A concept can be scientifically fruitful precisely because it is loose at the edges, so long as those who use it know where the looseness lies.",
+    "What the word cannot do is carry an argument by itself. The useful discipline is to ask, whenever a claim about stress is made, which of its meanings is in play, and whether the evidence offered supports the claim under that meaning or only under a different one. A finding about reactions does not automatically license advice about situations, and a finding about interpretations says little about either. Keeping the senses apart costs a few extra words; failing to keep them apart has cost a good deal of confusion, some of it in the very places where clarity matters most."
+   ],
+   "questions": [
+    {
+     "id": "R02-C-07-1",
+     "type": "RC",
+     "options": {
+      "A": "the internal force per unit area within a body that is subjected to a load.",
+      "B": "the deformation that a load produces in a body.",
+      "C": "the load itself, considered apart from the body that has to bear its weight.",
+      "D": "the relation between a load and the capacity of a body to withstand it."
+     },
+     "question": "According to the passage, in engineering the term 'strain' refers to"
+    },
+    {
+     "id": "R02-C-07-2",
+     "type": "RC",
+     "options": {
+      "A": "show that borrowing the word 'stress' from engineering was a mistake that the sciences of living things should now correct.",
+      "B": "demonstrate that claims about 'good stress' are false and are promoted mainly by people who have advice to sell.",
+      "C": "explain how the breadth of the term 'stress' allowed researchers in several separate disciplines to discover connections.",
+      "D": "argue that 'stress' is worth keeping but that claims using it must be clear about which sense they rely on."
+     },
+     "question": "The primary purpose of the passage is to"
+    },
+    {
+     "id": "R02-C-07-3",
+     "type": "RC",
+     "options": {
+      "A": "is more trustworthy when it concerns people's reactions to demands than when it concerns the demands themselves.",
+      "B": "gets the effects of reactions right but goes wrong by leaving out the part played by how people interpret their situation.",
+      "C": "borrows a certainty available only when the claim is nearly true by definition and applies it to demanding situations generally.",
+      "D": "relies on the standing of experts to support claims that hold good only for the small number of people they have studied."
+     },
+     "question": "The remark in paragraph 2 that popular discussion 'acquires the authority of the first reading and the scope of the second' implies that such discussion"
+    },
+    {
+     "id": "R02-C-07-4",
+     "type": "RC",
+     "options": {
+      "A": "Researchers in different disciplines use the phrase 'good stress' in noticeably different ways from one another.",
+      "B": "Physiological reactions to demand improve performance only up to a moderate level and impair it beyond that point.",
+      "C": "Most such advice states plainly that it concerns how people interpret their reactions, and it cites studies that test this claim.",
+      "D": "Some demanding situations, such as training for a long race, are widely regarded as experiences worth seeking out."
+     },
+     "question": "Which of the following, if true, would most weaken the author's criticism, in paragraph 3, of advice built on the phrase 'good stress'?"
+    },
+    {
+     "id": "R02-C-07-5",
+     "type": "RC",
+     "options": {
+      "A": "concede that the confusions described in the earlier paragraphs have in practice done very little harm.",
+      "B": "show that ordinary language cannot be reformed, so the word must simply be accepted as people use it.",
+      "C": "give an example of a substantive hypothesis about stress that research has since gone on to confirm.",
+      "D": "head off an apparently natural conclusion by pointing to a benefit of the word's looseness."
+     },
+     "question": "Paragraph 4 functions in the passage chiefly to"
+    }
+   ]
+  },
+  {
+   "passage_id": "R06-C-05",
+   "passage": [
+    "Each summer, the arrival of the monsoon over the southern tip of the Indian peninsula is announced on a particular day, and the date is reported as if something had been observed to happen: the rains have come. Newspapers compare it with the long-term average, and a delay of a week becomes a story about anxious farmers and rising food prices. Behind the announcement, however, lies not an event but a decision. The monsoon has no sharp leading edge. Showers build over days or weeks, winds shift gradually, and early bursts of rain may be followed by long dry spells. To fix a single day, forecasters must apply criteria, thresholds of rainfall across a set of stations and of wind and cloud, chosen so that the date can be determined consistently from one year to the next.",
+    "Calling the onset a convention is not to call it arbitrary. Good criteria pick out a real change in the behaviour of the atmosphere, and fixing them in advance prevents the date from being adjusted to suit hopes or headlines. A consistent definition also makes years comparable, so that researchers can ask whether onsets have tended to come earlier or later over many decades. Conventions of this kind are the ordinary machinery of science; the point at which a heavy shower counts as an extreme rainfall event, or a tropical storm as a cyclone, is fixed in the same way.",
+    "The trouble begins when the convention is mistaken for the thing it marks. A declared onset tells a farmer that a threshold was crossed somewhere along the coast; it does not tell her whether the soil in her own district holds enough moisture for seed to survive the next fortnight. In some years the rains, having satisfied the criteria, stall for weeks, and farmers who sowed on the strength of the announcement watch their seedlings wither. The date did nothing wrong; it was simply asked to answer a question it was never designed to answer.",
+    "The lesson is not that the onset date should be abolished, since it serves research and public communication reasonably well, but that a single number cannot serve every purpose at once. A measure built for comparing years across a century need not be the measure that should guide a decision about sowing next week. Agricultural advice would be better anchored in local indicators, such as accumulated rainfall and soil moisture in the district concerned, with the national date treated as background rather than as a signal to act. Definitions in climate science, like definitions elsewhere, should be judged by whether they fit the decision they are used to inform."
+   ],
+   "questions": [
+    {
+     "id": "R06-C-05-1",
+     "type": "RC",
+     "options": {
+      "A": "the date is moved from year to year to suit public hopes and the headlines that a delay is likely to produce.",
+      "B": "officials use the announcement to decide on behalf of farmers the day on which sowing should begin across the country.",
+      "C": "the onset date results from forecasters applying chosen criteria to a gradual change, not from observing one sharp moment.",
+      "D": "forecasters decide each year, after the season ends, whether the monsoon as a whole should be called normal or poor."
+     },
+     "question": "By saying that behind the announcement lies 'not an event but a decision' (paragraph 1), the author means that"
+    },
+    {
+     "id": "R06-C-05-2",
+     "type": "RC",
+     "options": {
+      "A": "It forestalls the reading that a conventional date must be baseless, by showing what consistent criteria achieve.",
+      "B": "It argues that the criteria for onset should be revised each year so that they keep pace with the latest observations.",
+      "C": "It reports that onsets have come steadily earlier over many decades, as consistent records now make plain.",
+      "D": "It presents the main objection to the declared date, namely that farmers are misled into sowing too early."
+     },
+     "question": "Which of the following best describes the role of paragraph 2 in the passage?"
+    },
+    {
+     "id": "R06-C-05-3",
+     "type": "RC",
+     "options": {
+      "A": "followed local measures of soil moisture that had been recorded in a different district from the one they farmed.",
+      "B": "were never told that the long-term average onset date had moved later than the one they remembered from earlier years.",
+      "C": "took a threshold crossed somewhere on the coast as information about the moisture in their own fields.",
+      "D": "relied on forecasters who had declared the onset before its criteria had in fact been satisfied along the coast."
+     },
+     "question": "The passage suggests that the farmers whose seedlings withered (paragraph 3) were misled chiefly because they"
+    },
+    {
+     "id": "R06-C-05-4",
+     "type": "RC",
+     "options": {
+      "A": "Farmers far from the coast often begin sowing several days before the onset is declared, prompted by early showers nearby.",
+      "B": "Onset dates worked out with one consistent definition show no clear trend toward earlier or later arrival over the past century.",
+      "C": "Where sowing advice followed local soil moisture, crop losses after stalled rains were clearly lower than where it followed the declared onset.",
+      "D": "Rainfall along the southern coast in the week of onset closely tracks how much rain the rest of the country receives that season."
+     },
+     "question": "Which of the following, if true, would most strengthen the recommendation the author makes in paragraph 4?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R05-F-05",
+   "passage": [
+    "When a country lowers its barriers to imports, the gains and the losses arrive in very different forms. The gains are spread thinly across millions of households, each of which pays a little less for clothing, appliances or food, usually without noticing why. The losses fall heavily on a few: the workers of a particular mill, the shops that depended on their wages, the town whose tax base was the mill. A small saving that nobody notices is politically weightless; a closed factory is a photograph on the front page. Those who lose know exactly what they have lost and whom to blame, while those who gain rarely connect their small savings to a decision taken in a distant ministry. It is not surprising that the politics of trade so often seems out of proportion to its economics.",
+    "Economists have a standard reply. Because the total gains exceed the total losses, the winners could in principle compensate the losers and still come out ahead, so that everyone ends up better off. The argument is correct as arithmetic, and it is the foundation of the case that open trade raises national welfare. But the word that carries the weight is 'could'. A compensation that is possible but never paid is no comfort to the people who bore the losses, and to present it as though it settled the matter is to confuse a hypothetical with a policy.",
+    "Where governments have tried to pay, the record is unimpressive, though the reasons are instructive. Programmes reserved for workers who could prove that their jobs were lost to imports required them to establish a cause that is often impossible to isolate, since a plant may close because of foreign competition, new machinery and poor management all at once. Many eligible workers never applied; many who applied were retrained for occupations that were themselves shrinking. The failure lay less in the idea of compensation than in tying it to a cause that could not be reliably identified.",
+    "This suggests that the better course is not a trade-specific remedy at all but support that follows the worker regardless of why the job disappeared: insurance against lost earnings, help with moving to where work exists, and training linked to employers who are actually hiring. Such measures cannot be justified as payment for trade alone, and they will cost more than narrow programmes did. Yet the case for open trade has always rested on the claim that its benefits are broadly shared. If that claim is to be more than an assertion, the sharing has to be done by someone, and it will not happen by itself."
+   ],
+   "questions": [
+    {
+     "id": "R05-F-05-1",
+     "type": "RC",
+     "options": {
+      "A": "Open trade reduces a country's welfare, because the losses suffered by displaced workers are larger than the gains spread across households.",
+      "B": "The claim that open trade benefits everyone needs compensation actually paid, through support for displaced workers that does not depend on proving trade caused the loss.",
+      "C": "Economists are mistaken in believing that the total gains from open trade exceed the total losses that it imposes on particular towns.",
+      "D": "Since compensation programmes have repeatedly failed, governments should shield the industries that face the strongest competition from imports."
+     },
+     "question": "Which of the following best expresses the central argument of the passage?"
+    },
+    {
+     "id": "R05-F-05-2",
+     "type": "RC",
+     "options": {
+      "A": "been retrained for an occupation that was growing, since the programmes were linked to hiring employers.",
+      "B": "qualified without difficulty, since foreign competition was at least one cause of the closure.",
+      "C": "found it hard to qualify for help, since the loss could not be clearly traced to imports.",
+      "D": "received more help than a worker whose job was lost to imports alone, since two causes were involved."
+     },
+     "question": "The passage suggests that, under the programmes described in paragraph 3, a worker whose plant closed because of both foreign competition and new machinery would probably have"
+    },
+    {
+     "id": "R05-F-05-3",
+     "type": "RC",
+     "options": {
+      "A": "acceptance of its arithmetic, joined to impatience with its use as though it settled the question.",
+      "B": "amused indifference to it as an academic exercise with no bearing on what governments actually do.",
+      "C": "warm endorsement of it as a complete answer to those who complain about the effects of imports.",
+      "D": "outright rejection of its reasoning as a mistake that has misled policy about the effects of trade."
+     },
+     "question": "The author's attitude towards the economists' 'standard reply' in paragraph 2 is best described as"
+    },
+    {
+     "id": "R05-F-05-4",
+     "type": "RC",
+     "options": {
+      "A": "Where help was open to all who lost jobs, whatever the cause, more displaced workers applied and found work than where help was limited to job losses blamed on imports.",
+      "B": "Training courses tied to employers who were hiring cost noticeably more per worker than the classroom courses offered under earlier programmes.",
+      "C": "Residents of towns where a large plant closed tend to express much stronger hostility to imports than residents of towns where none closed.",
+      "D": "Most economists continue to agree that the total gains from lowering barriers to imports are larger than the total losses those barriers prevent."
+     },
+     "question": "Which of the following, if true, would most strengthen the author's recommendation in paragraph 4?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R06-D-05",
+   "passage": [
+    "Astronomers cannot lay a measuring tape across the sky, and almost every distance beyond the nearest stars is therefore inferred rather than measured. The method is usually described as a ladder. At the bottom are stars close enough for their apparent shift against the background, as the earth travels around the sun, to be observed and converted into a distance by simple geometry. Among those stars are certain pulsating ones whose rhythm of brightening and fading is tied to their true brightness, so that once the rhythm has been timed, a comparison of true with apparent brightness yields a distance. Such stars can be picked out in nearby galaxies, where they in turn calibrate brighter markers still, among them a class of exploding stars that can be seen across a large part of the observable universe.",
+    "Critics of the ladder, and many popular accounts of it, dwell on its fragility. Every rung rests on the one beneath, so an error at the bottom is carried, and perhaps magnified, all the way to the top. A small mistake in the geometry of nearby stars would misplace the pulsating stars, which would misplace the exploding ones, which would in turn misplace the remote galaxies whose distances tell us how fast the universe is expanding. On this view the ladder is really a chain, and a chain is only as strong as its weakest link.",
+    "The image is apt, but only half of it. A chain fails at its weakest link because each link is tested by nothing except the load it bears. The rungs of the distance ladder are tested by one another. Wherever two methods can both be applied to the same objects, their answers ought to agree, and when they do not, the disagreement points to a fault in one of them. Several of the largest revisions of cosmic distances in the past century came about in just this way, when a comparison between overlapping rungs exposed a hidden assumption, such as the neglect of dust that dims starlight or the confusion of two kinds of pulsating star with one. Interdependence, in other words, is not only a route by which errors travel upward; it is also the means by which they are caught.",
+    "This is no reason for complacency. Cross-checks catch only the errors that differ between methods; a mistake shared by every rung, or built into a calibration on which all of them rely, would pass each comparison untouched. That is why the present disagreement between the expansion rate measured with the ladder and the rate inferred from observations of the early universe is taken so seriously. It may expose a flaw common to the ladder's rungs, or it may reveal something new about the cosmos itself. Either outcome would be informative, and the fact that the question can be posed so sharply is itself a tribute to how far the ladder has been tightened. A structure that could not be checked could never have produced a disagreement worth arguing about."
+   ],
+   "questions": [
+    {
+     "id": "R06-D-05-1",
+     "type": "RC",
+     "options": {
+      "A": "they shine so brilliantly when they explode that they can be seen across much of the universe.",
+      "B": "their shift against the background as the earth travels around the sun can be converted into a distance.",
+      "C": "the timing of their cycle of brightening and fading reveals how bright they truly are.",
+      "D": "their light, unlike that of ordinary stars, is not dimmed by the dust lying between the stars."
+     },
+     "question": "According to the passage, the pulsating stars can serve as measures of distance because"
+    },
+    {
+     "id": "R06-D-05-2",
+     "type": "RC",
+     "options": {
+      "A": "the ladder is far stronger than its weakest rung, because errors made at the bottom are never carried upward.",
+      "B": "the image fits the lower rungs of the ladder well but fails for the upper rungs that rely on exploding stars.",
+      "C": "the rungs do depend on one another, but that dependence also lets them test one another, as links cannot.",
+      "D": "only about half of the rungs rest on the rungs beneath them, while the others are measured independently."
+     },
+     "question": "By saying that the chain image is apt 'but only half of it' (paragraph 3), the author means that"
+    },
+    {
+     "id": "R06-D-05-3",
+     "type": "RC",
+     "options": {
+      "A": "came about because distances found by different rungs for the same objects failed to agree.",
+      "B": "showed that the ladder as a whole is too unreliable to be used in measuring how fast the universe expands.",
+      "C": "was made by geometry alone, without any appeal to the other methods by which astronomers measure distance.",
+      "D": "is an instance of an error common to every rung, of the kind that comparisons between methods could not catch."
+     },
+     "question": "The passage suggests that the discovery that two kinds of pulsating star had been taken for one"
+    },
+    {
+     "id": "R06-D-05-4",
+     "type": "RC",
+     "options": {
+      "A": "The expansion rate inferred from the early universe is more trustworthy than the rate found with the ladder.",
+      "B": "At least some of the errors that affect one method of finding distances do not also affect another method used on the same objects.",
+      "C": "The geometric measurements of the nearest stars are free from any error that could be carried up the ladder.",
+      "D": "Methods that can be applied to the same objects nearly always give answers that agree within their stated uncertainties."
+     },
+     "question": "The claim in paragraph 3 that interdependence is 'the means by which they are caught' depends on which of the following assumptions?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R03-B-07",
+   "passage": [
+    "Every few years a new generation is given a name, and with the name comes a character. One cohort is said to be idealistic and later complacent, another cynical, another anxious, entitled or unusually attached to its telephones. The labels are used by marketers, journalists and employers with a confidence that would be remarkable in any other classification of human beings. We would hesitate to say that everyone born under a given star sign shares a temperament; we say something not very different, and with far less hesitation, about everyone born within a given span of fifteen years. The labels are also remarkably durable: once a cohort has been named and described, the description tends to follow it into middle age, revised only when a newer cohort arrives to take its place as the subject of worry.",
+    "The trouble begins with a problem of method that social scientists have long recognised. When one group of people differs from another, the difference may reflect their age (the young almost everywhere change jobs more often than the middle-aged), the period in which they are observed (everyone, of whatever age, was affected by a recession or a new technology), or the cohort into which they were born, meaning a lasting imprint left by the conditions of their early years. Only the last is a generational effect in the strict sense. But the three are bound together by arithmetic: a person's age is simply the current year minus the year of birth, so that once any two are known the third is fixed. No set of observations can by itself pull them apart; some assumption from outside the data is always required. Much of what is confidently attributed to a generation turns out, on inspection, to be what people of that age have always done, or what people of every age were doing at the time.",
+    "A second difficulty concerns boundaries. The years at which one generation is said to end and the next to begin are chosen by convention, and different sources disagree about them by several years. A person born on the last day of one span and a person born on the first day of the next are assigned different characters, while two people born fourteen years apart within one span are assigned the same. Differences within a labelled cohort, by class, region, education and much else, are typically far larger than the differences between cohorts, which is to say that the label groups people along the axis on which they least differ.",
+    "None of this shows that generations are a fiction. There is a serious idea buried under the marketing: that people who come of age during a war, a depression or a political upheaval may carry its mark for life, and may differ in lasting ways from those who met the same events earlier or later in their lives. Such effects have been found, and they are not trivial. But they are anchored to events rather than to calendars; they mark some members of a cohort far more deeply than others, depending on where and how the event touched them; and they rarely produce a single character that an entire cohort shares.",
+    "Why, then, do the calendar labels persist? Part of the answer is that they are convenient, turning a tangle of causes into a story with protagonists. Part of it is that they flatter, inviting each cohort to see itself as distinctive and its elders or juniors as the problem. The cost of the story is easy to miss. When young adults find housing unaffordable or work insecure, attributing their situation to a generational temperament converts a question about economic arrangements into a question about character, and a question about character has no obvious policy answer."
+   ],
+   "questions": [
+    {
+     "id": "R03-B-07-1",
+     "type": "RC",
+     "options": {
+      "A": "demonstrate that genuine differences between generations can never be detected in survey data, whatever methods researchers choose to use.",
+      "B": "show that differences in age and period matter less for explaining how people behave than differences of class and region do.",
+      "C": "argue that calendar-based generation labels misplace the causes of difference, while granting a narrower, event-anchored notion of generation.",
+      "D": "explain why marketers, journalists and employers have come to depend so heavily on labels for each new generation."
+     },
+     "question": "The primary purpose of the passage is to"
+    },
+    {
+     "id": "R03-B-07-2",
+     "type": "RC",
+     "options": {
+      "A": "has shown that the difference is a period effect, since every person surveyed was observed in the same year.",
+      "B": "has established that the difference is an age effect, because paragraph 2 says that young people change jobs more often.",
+      "C": "cannot by itself show whether the difference reflects age or a lasting imprint of the younger group's birth cohort.",
+      "D": "would separate age from cohort effects if it were simply repeated with a much larger and more representative sample."
+     },
+     "question": "A survey carried out in a single year finds that people then in their twenties change jobs more often than people then in their fifties. On the reasoning of paragraph 2, the survey"
+    },
+    {
+     "id": "R03-B-07-3",
+     "type": "RC",
+     "options": {
+      "A": "People who came of age during a major war have been found to show lasting differences in their attitudes to saving and spending money.",
+      "B": "Attitudes shift sharply among people born within a year or two of the usual dividing line between two named generations but change little within each span.",
+      "C": "Different sources that use generational labels routinely disagree by four or five years about where each generation begins and ends.",
+      "D": "People born within any one fifteen-year span differ widely in their incomes and outlooks according to their class, region and schooling."
+     },
+     "question": "Which of the following, if true, would most weaken the author's objection to generational boundaries in paragraph 3?"
+    },
+    {
+     "id": "R03-B-07-4",
+     "type": "RC",
+     "options": {
+      "A": "indifferent, mentioning it only so that it can be set aside as irrelevant to the argument against the labels.",
+      "B": "respectful but restrictive, accepting it as real provided it is not stretched into a character shared by a whole cohort.",
+      "C": "dismissive, treating it as a piece of marketing that has merely been dressed up in the language of social science.",
+      "D": "enthusiastic, presenting it as proof that the calendar-based generational labels are broadly accurate after all."
+     },
+     "question": "The author's attitude towards the idea that people who come of age during a war or a depression may carry its mark for life is best described as"
+    },
+    {
+     "id": "R03-B-07-5",
+     "type": "RC",
+     "options": {
+      "A": "Some members of a cohort may be marked by a formative event far more deeply than others who were born in the same year.",
+      "B": "Attributing young adults' insecure work to their temperament makes the problem seem less open to a remedy through policy.",
+      "C": "A lasting difference between cohorts is more credible as generational when it can be traced to a specific event in their early years.",
+      "D": "A difference between two cohorts observed at the same age in different decades must be a cohort effect, with no further assumption needed."
+     },
+     "question": "With which of the following statements would the author be LEAST likely to agree?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R05-G-07",
+   "passage": [
+    "The quarrel between advocates of green growth and advocates of degrowth is usually staged as a dispute about a single empirical question: can economic output keep rising while the pressure it places on the planet falls? Green growth answers yes. Rich economies, it observes, have already shown that output and emissions can move apart, as electricity is generated from cleaner sources, heavy industry gives way to services, and the same goods are made with less material. Degrowth answers no, or not fast enough. Some of the apparent separation, it replies, reflects production moved abroad rather than pollution avoided; much of the rest is merely relative, a fall in emissions per unit of output that is swamped by the growth of output itself. On this view the only reliable way for rich countries to shrink their ecological footprint is to shrink their economies, or at least to stop enlarging them.",
+    "Both sides are right about something, and the way they frame the dispute obscures what it is really about. That emissions and output can diverge in absolute terms is no longer a mere hypothesis; it has happened in a number of countries, even after allowing for the carbon embodied in their imports. But the existence of absolute decoupling settles less than its champions suppose. The relevant question is not whether emissions can fall while output rises but whether they can fall fast enough, given how little more carbon the atmosphere can absorb before the damage becomes severe. A rate of decline that would be impressive in almost any other context may still be far too slow in this one. Equally, the degrowth case proves less than its champions suppose. That past decoupling has been too slow does not show that it must remain so; the pace of change in energy technology has repeatedly surprised forecasters, and the costs of some forms of clean power have fallen faster than most people expected a generation ago.",
+    "The deeper difficulty is that both camps take GDP as the variable of interest, one wishing to keep it rising and the other to see it fall. Yet GDP is neither the cause of environmental damage nor its cure. It is a sum of market transactions, some of which burn fuel and clear land and some of which, such as teaching, nursing or repairing, do very little of either. An economy could grow while its emissions fell sharply, if the growth came from activities of the second kind; it could shrink while its emissions rose, if a recession struck services harder than it struck heavy industry. To make the size of GDP the target, in either direction, is to aim at a proxy that is only loosely tied to the thing that matters.",
+    "A more productive stance would be indifference to growth as such. Policy would set limits directly on what does harm, through carbon prices, caps on extraction and the protection of land, and then let output rise or fall as it will within those limits. Such a stance asks something uncomfortable of each side. Advocates of green growth would have to accept that if the limits prove binding, slower growth may be the price, and that this would be not a failure of policy but a possible result of it. Advocates of degrowth would have to accept that if the limits are met while output rises, there is no further environmental case for shrinking the economy, whatever other reasons they may have for wanting a different kind of society. Neither concession is trivial, which may explain why the debate is so seldom conducted on these terms."
+   ],
+   "questions": [
+    {
+     "id": "R05-G-07-1",
+     "type": "RC",
+     "options": {
+      "A": "costs of clean power falling much faster than forecasters had predicted only a generation ago.",
+      "B": "polluting production having been moved to other countries instead of being avoided altogether.",
+      "C": "recessions that struck services harder than heavy industry and so reduced output faster than emissions.",
+      "D": "electricity being generated from cleaner sources and heavy industry giving way to services at home."
+     },
+     "question": "According to the passage, advocates of degrowth explain part of the apparent separation of output from emissions in rich economies as the result of"
+    },
+    {
+     "id": "R05-G-07-2",
+     "type": "RC",
+     "options": {
+      "A": "each unit of output has become cleaner, but output has grown enough to keep total emissions from falling.",
+      "B": "emissions have fallen in some rich countries only in relation to the higher emissions of poorer ones.",
+      "C": "emissions and output have separated in absolute terms, though rather less in some sectors of the economy than in others.",
+      "D": "the separation can be seen only when emissions are measured relative to imports instead of to output."
+     },
+     "question": "In paragraph 1, the claim that much of the separation of output from emissions is 'merely relative' means that"
+    },
+    {
+     "id": "R05-G-07-3",
+     "type": "RC",
+     "options": {
+      "A": "Proof that a rich country's emissions fell while its output rose would not by itself show that green growth is an adequate response.",
+      "B": "Once the carbon embodied in imports is counted, no rich country has reduced its emissions while its output grew.",
+      "C": "Those who favour degrowth are mistaken in wanting a different kind of society from the one that now exists.",
+      "D": "Because the cost of clean power has fallen so fast, emissions in rich countries will now decline quickly enough."
+     },
+     "question": "The author would most likely agree with which of the following?"
+    },
+    {
+     "id": "R05-G-07-4",
+     "type": "RC",
+     "options": {
+      "A": "show that the size of GDP is only loosely tied to environmental harm, so making it the target in either direction is a mistake.",
+      "B": "show that recessions do more environmental damage than periods of growth, which counts against the case for degrowth.",
+      "C": "show that green growth is correct to hold that output and emissions can move apart in rich economies.",
+      "D": "show that policy should aim to shift output from heavy industry towards services such as teaching, nursing and repairing."
+     },
+     "question": "The two hypothetical economies in paragraph 3, one growing while its emissions fall and one shrinking while its emissions rise, serve mainly to"
+    },
+    {
+     "id": "R05-G-07-5",
+     "type": "RC",
+     "options": {
+      "A": "could still argue for a smaller economy, but not on the ground that the environment requires it once the limits are being met.",
+      "B": "would have to give up any wish for a different kind of society once the environmental limits were being met.",
+      "C": "would have to agree that output must keep rising, since growth within the limits would then be the aim of policy.",
+      "D": "would treat any fall in output within the limits as a failure of policy that ought to be corrected."
+     },
+     "question": "It follows from the stance proposed in paragraph 4 that an advocate of degrowth who accepted it"
+    }
+   ]
+  },
+  {
+   "passage_id": "R08-D-07",
+   "passage": [
+    "Critics of political language have long treated the slogan as its lowest form. A slogan, they point out, asserts nothing that could be checked. Words such as renewal, fairness, security or change are compatible with almost any programme, and a campaign that rallies behind one of them has, in effect, declined to say what it will do. On this account the vagueness of the slogan is a species of evasion, and the remedy is to demand specifics: costed proposals, timetables, named measures that a voter can hold against the candidate once the votes have been counted.",
+    "There is a good deal of sense in this, but it rests on a picture of the voter as an individual buyer comparing the contents of rival packages. Politics in most large societies does not work like that. A party seeking a majority must assemble people whose interests and hopes overlap only partly: the worker and the small employer, the city and the countryside, the young and the retired. A precise programme would divide them at once, since each specific measure pleases some members of the coalition at the expense of others. A slogan holds them together by offering a phrase into which each can read a version of what he or she wants. Its emptiness is not a failure of communication; it is what allows a heterogeneous coalition to communicate with itself at all.",
+    "To see the slogan in this way is not to absolve it, for the difficulty has merely been postponed. A coalition assembled on an open phrase must, once it wins, translate the phrase into decisions, and each decision closes off some of the readings that brought supporters in. Those whose reading is closed off do not usually feel that a compromise has been struck; they feel that a promise has been broken, and in a sense they are right, since the slogan let each of them believe that it had been made to them. The disillusionment that so regularly follows electoral victory is often attributed to the cynicism of politicians, but a good deal of it is built into the structure of the appeal. Vagueness borrows support from the future, and the future presents the bill.",
+    "Nor is the critics' remedy as clean as it looks. A detailed platform has its own dishonesty, of a quieter kind. It implies a control over events that no government possesses, and its specific commitments are routinely overtaken by a recession, a war or some crisis that no one foresaw. A voter who holds a government to the letter of such a platform may end up rewarding rigidity over judgement. Specificity, in other words, can be as much a performance as vagueness is, a display of seriousness staged for an audience that has learned to distrust slogans.",
+    "What, then, should a careful listener ask of political language? Not that it abandon general phrases, which coalitions cannot do without, nor that it supply a detailed plan for every contingency. A more useful question is whether the speaker, pressed on how the slogan would decide a real conflict between its own supporters, can name the principle that would settle it. A slogan backed by such a principle is simply a commitment stated at a high level of generality, and it can be held to account at that level. One that dissolves into a different answer for each audience that asks is merely a mirror, and it is the mirror, not the generality, that deserves the critics' contempt."
+   ],
+   "questions": [
+    {
+     "id": "R08-D-07-1",
+     "type": "RC",
+     "options": {
+      "A": "voters who support a vague slogan eventually demand that the full costs of its policies be published.",
+      "B": "campaigns built on slogans tend to spend more on later advertising than campaigns that publish detailed and costed plans.",
+      "C": "governments elected on slogans tend to run up debts that their successors are then forced to repay.",
+      "D": "support gained through an open phrase is paid for later, when decisions disappoint supporters who read it differently."
+     },
+     "question": "The sentence 'Vagueness borrows support from the future, and the future presents the bill' (paragraph 3) most nearly means that"
+    },
+    {
+     "id": "R08-D-07-2",
+     "type": "RC",
+     "options": {
+      "A": "the politicians they supported had privately settled on their policies well before the campaign began.",
+      "B": "the compromises reached after a victory are usually worse for supporters than those proposed in campaigns.",
+      "C": "the open phrase let each of them believe that the promise was made to their own reading.",
+      "D": "a slogan, unlike a detailed platform, amounts to a binding commitment that voters can enforce in law."
+     },
+     "question": "The passage suggests that supporters who feel betrayed after an election won on a slogan are 'in a sense' right because"
+    },
+    {
+     "id": "R08-D-07-3",
+     "type": "RC",
+     "options": {
+      "A": "Disappointment after a victory was greatest among supporters whose reading of the winning slogan differed most from the policies chosen.",
+      "B": "Campaigns that relied on vague slogans were found to win elections more often than campaigns with detailed programmes.",
+      "C": "Trust in politicians was found to fall most sharply in years when several leading figures were caught in personal scandals.",
+      "D": "Supporters of losing campaigns were found to be more disillusioned with politics in general than supporters of winning ones."
+     },
+     "question": "Which of the following, if true, would most strengthen the author's explanation of post-election disillusionment in paragraph 3?"
+    },
+    {
+     "id": "R08-D-07-4",
+     "type": "RC",
+     "options": {
+      "A": "offer evidence that governments elected on detailed platforms handle crises worse than those elected on slogans.",
+      "B": "show that the critics' preferred alternative involves a pretence of its own, so that detail is no simple cure for vagueness.",
+      "C": "concede that the critics were right after all to demand specific and costed proposals from every campaign.",
+      "D": "explain why the coalitions described in paragraph 2 are unable to agree on any detailed programme of policy."
+     },
+     "question": "The primary function of paragraph 4 in the argument of the passage is to"
+    },
+    {
+     "id": "R08-D-07-5",
+     "type": "RC",
+     "options": {
+      "A": "It is the generality of a slogan that makes it the feature of political language most deserving of criticism.",
+      "B": "A slogan can serve a coalition well even though it asserts little that a voter could check.",
+      "C": "Holding a government strictly to a detailed platform may reward an unwillingness to adapt to events.",
+      "D": "Some of the disappointment usually blamed on politicians' cynicism arises from how their appeals are built."
+     },
+     "question": "The author would agree with each of the following statements EXCEPT"
+    }
+   ]
+  }
+ ]
+}

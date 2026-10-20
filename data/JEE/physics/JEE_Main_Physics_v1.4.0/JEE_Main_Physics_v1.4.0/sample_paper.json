@@ -1,0 +1,464 @@
+{
+  "seed": 27,
+  "max_marks": 100,
+  "marking": {
+    "correct": 4,
+    "incorrect": -1,
+    "unattempted": 0
+  },
+  "basis": "Official JEE Main 2026 Paper 1 Physics format",
+  "questions": [
+    {
+      "id": "JEE27-PHY-0504",
+      "source_class": "XI",
+      "unit_number": 5,
+      "difficulty": "Medium",
+      "assumptions": "Rigid bodies and fixed axes are ideal unless specified otherwise; moments of inertia refer to the named axis.",
+      "figures": [],
+      "concept_family": "JM-two_mass_com",
+      "number": 1,
+      "section": "A",
+      "question": "Two particles of masses 1 kg and ξ kg lie at x = 0 and x = 2 m on a smooth horizontal line. A compressed ideal spring between them is released from rest and ultimately gives them total kinetic energy 40 J. No external horizontal force acts. The spring becomes detached after release. The recorded value of the centre-of-mass coordinate when the lighter particle has moved 1 m to the left of its initial position is 1.6 m. Which listed positive value of ξ is consistent with this measurement?",
+      "options": {
+        "A": "6",
+        "B": "8",
+        "C": "4",
+        "D": "2"
+      }
+    },
+    {
+      "id": "JEE27-PHY-1163",
+      "source_class": "XII",
+      "unit_number": 11,
+      "difficulty": "Medium",
+      "assumptions": "Use vacuum/air and ideal linear isotropic dielectrics unless specified otherwise. Neglect capacitor fringing, leakage and test-charge disturbance. Set potential zero at infinity for isolated finite charges; for a dipole set U=0 at 90°. Slow external work is quasistatic.",
+      "figures": [],
+      "concept_family": "JM-series_dielectric",
+      "number": 2,
+      "section": "A",
+      "question": "Capacitors C₁ = 3 μF and C₂ = ξ μF are in series across a constant 120 V ideal battery. A dielectric of relative permittivity 2 completely fills C₁ without changing its geometry. The battery stays connected; changes are quasistatic. The recorded value of the additional charge supplied by the battery is 120 μC. Which listed positive value of ξ is consistent with this measurement?",
+      "options": {
+        "A": "6",
+        "B": "9",
+        "C": "12",
+        "D": "3"
+      }
+    },
+    {
+      "id": "JEE27-PHY-0989",
+      "source_class": "XI",
+      "unit_number": 10,
+      "difficulty": "Medium",
+      "assumptions": "Use linear, lossless sinusoidal waves and small-amplitude pendulum motion unless stated otherwise. Organ-pipe lengths are effective lengths if no end correction is supplied. Path-difference interference assumes initially in-phase coherent sources.",
+      "figures": [],
+      "concept_family": "SRC-e581a46369f3",
+      "number": 3,
+      "section": "A",
+      "question": "Two points on the path of a sound wave are separated by a distance equal to one quarter of the wavelength. The phase difference between the oscillations at these two points is:",
+      "options": {
+        "A": "2 π rad",
+        "B": "π / 2 rad",
+        "C": "π / 4 rad",
+        "D": "π rad"
+      }
+    },
+    {
+      "id": "JEE27-PHY-0014",
+      "source_class": "XI",
+      "unit_number": 1,
+      "difficulty": "Easy",
+      "assumptions": "Use SI units unless specified. Treat reported measurement errors as small first-order uncertainties.",
+      "figures": [],
+      "concept_family": "SRC-70c86d91c780",
+      "number": 4,
+      "section": "A",
+      "question": "Five readings of a length are 2.63, 2.65, 2.64, 2.62 and 2.66 cm. The mean value is:",
+      "options": {
+        "A": "2.63 cm",
+        "B": "2.64 cm",
+        "C": "2.65 cm",
+        "D": "2.60 cm"
+      }
+    },
+    {
+      "id": "JEE27-PHY-0517",
+      "source_class": "XI",
+      "unit_number": 6,
+      "difficulty": "Medium",
+      "assumptions": "Use Newtonian gravity, a spherical nonrotating planet and vacuum unless stated otherwise. Potential is zero at infinity; small-height/depth formulae are first-order approximations.",
+      "figures": [],
+      "concept_family": "SRC-3890839f8ec8",
+      "number": 5,
+      "section": "A",
+      "question": "A planet has the same mean density as the Earth but a radius four times as large. Taking the escape velocity from the Earth as 11.2 km s⁻¹, that from this planet is:",
+      "options": {
+        "A": "22.4 km s⁻¹",
+        "B": "89.6 km s⁻¹",
+        "C": "44.8 km s⁻¹",
+        "D": "11.2 km s⁻¹"
+      }
+    },
+    {
+      "id": "JEE27-PHY-0075",
+      "source_class": "XI",
+      "unit_number": 2,
+      "difficulty": "Medium",
+      "assumptions": "Use ideal particle motion with uniform gravity and negligible air resistance unless stated otherwise.",
+      "figures": [],
+      "concept_family": "SRC-c6b9ca70a724",
+      "number": 6,
+      "section": "A",
+      "question": "The sum of the magnitudes of two forces acting at a point is 18 N. Their resultant has magnitude 12 N and is perpendicular to the smaller force. The magnitude of the smaller force is:",
+      "options": {
+        "A": "3 N",
+        "B": "9 N",
+        "C": "6 N",
+        "D": "5 N"
+      }
+    },
+    {
+      "id": "JEE27-PHY-1833",
+      "source_class": "XII",
+      "unit_number": 17,
+      "difficulty": "Easy",
+      "assumptions": "Use ordinary single-photon emission, fixed work function and nonrelativistic matter waves. Neglect contact potentials and space charge; emission comparisons use frequencies above threshold unless stated otherwise.",
+      "figures": [],
+      "concept_family": "SRC-0ed617029cc8",
+      "number": 7,
+      "section": "A",
+      "question": "The speed of an electron is doubled. Its de Broglie wavelength becomes:",
+      "options": {
+        "A": "half its earlier value",
+        "B": "twice its earlier value",
+        "C": "four times its earlier value",
+        "D": "one fourth of its earlier value"
+      }
+    },
+    {
+      "id": "JEE27-PHY-1567",
+      "source_class": "XII",
+      "unit_number": 15,
+      "difficulty": "Easy",
+      "assumptions": "Use a plane wave in vacuum unless stated otherwise. Spectrum boundaries are approximate conventional bands, not sharp universal cutoffs; diagrams are schematic.",
+      "figures": [
+        {
+          "file": "figures/spectrum-4.png",
+          "alt_text": "Seven adjacent bands in increasing frequency order; band 4 is highlighted. The bands have equal drawing widths, with no quantitative scale.",
+          "source": "ORIGINAL",
+          "width": 1600,
+          "height": 900
+        }
+      ],
+      "concept_family": "SRC-EM-SPECTRUM",
+      "number": 8,
+      "section": "A",
+      "question": "Which wavelength range correctly matches the band highlighted in the accompanying electromagnetic-spectrum diagram? Use the diagram with band 4 highlighted.",
+      "options": {
+        "A": "wavelengths from about 400 nm to 700 nm",
+        "B": "wavelengths from about 1 mm to 0.1 m",
+        "C": "wavelengths from about 700 nm to 1 mm",
+        "D": "wavelengths longer than about 0.1 m"
+      }
+    },
+    {
+      "id": "JEE27-PHY-1203",
+      "source_class": "XII",
+      "unit_number": 12,
+      "difficulty": "Difficult",
+      "assumptions": "Use steady currents, ideal connecting wires and uniform ohmic conductors at fixed temperature unless specified otherwise. Resistivity is unchanged by stretching in the stated elementary model. Wheatstone arms P,Q,R,S mean AB,BC,AD,DC; source AC and detector BD.",
+      "figures": [],
+      "concept_family": "SRC-EXPERIMENT-10",
+      "number": 9,
+      "section": "A",
+      "question": "A uniform 100 cm metre-bridge wire has total resistance 8.0 Ω. An unknown nonnegative contact resistance e lies only at its left end, before the uniform wire begins. With unknown resistance X in the left gap and 14.0 Ω in the right gap, balance occurs 30.0 cm from the left end of the uniform wire. Interchanging the gap resistances gives balance at 50.0 cm. The contact resistance remains at the same physical end. Temperature is unchanged. The original gap connection is restored and the contact resistance is then removed. By how many centimetres does the balance point move to the right of its original 30.0 cm position? Choose the closest value.",
+      "options": {
+        "A": "5 cm",
+        "B": "11.6667 cm",
+        "C": "8 cm",
+        "D": "20 cm"
+      }
+    },
+    {
+      "id": "JEE27-PHY-0497",
+      "source_class": "XI",
+      "unit_number": 5,
+      "difficulty": "Difficult",
+      "assumptions": "Rigid bodies and fixed axes are ideal unless specified otherwise; moments of inertia refer to the named axis.",
+      "figures": [],
+      "concept_family": "JM-rotational_brake",
+      "number": 10,
+      "section": "A",
+      "question": "A rigid rotor starts from rest. A constant driving torque 15 N m acts for ξ s while a constant opposing friction torque also acts. It then coasts to rest in 6 s after the drive is removed. Its measured angle during the driven stage is 27 rad. Assume friction torque is independent of speed. The recorded value of the opposing friction torque is 5 N m. Which listed positive value of ξ is consistent with this measurement?",
+      "options": {
+        "A": "2",
+        "B": "4",
+        "C": "3",
+        "D": "6"
+      }
+    },
+    {
+      "id": "JEE27-PHY-2059",
+      "source_class": "XII",
+      "unit_number": 20,
+      "difficulty": "Medium",
+      "assumptions": "Treat drawings as schematic. Apply zero-error and parallax corrections; instrument idealisations and experimental limits stated in the question take precedence.",
+      "figures": [
+        {
+          "file": "figures/experiment-15-readings.png",
+          "alt_text": "Travelling microscope readings, increasing upward; Bottom reference mark without slab: 10 mm; Top of glass slab: 22 mm; Apparent bottom mark through slab: 14 mm; Common additive zero offset; near-normal viewing",
+          "source": "ORIGINAL",
+          "width": 1600,
+          "height": 900
+        }
+      ],
+      "concept_family": "SRC-EXPERIMENT-15",
+      "number": 11,
+      "section": "A",
+      "question": "Find the slab refractive index from the coordinate differences. Use the readings in experimental panel 15. Choose the closest value.",
+      "options": {
+        "A": "1.5",
+        "B": "3",
+        "C": "-1.5",
+        "D": "0.75"
+      }
+    },
+    {
+      "id": "JEE27-PHY-0583",
+      "source_class": "XI",
+      "unit_number": 6,
+      "difficulty": "Medium",
+      "assumptions": "Use Newtonian gravity, a spherical nonrotating planet and vacuum unless stated otherwise. Potential is zero at infinity; small-height/depth formulae are first-order approximations.",
+      "figures": [],
+      "concept_family": "JM-satellite_energy",
+      "number": 12,
+      "section": "A",
+      "question": "A satellite of mass 200 kg moves in a circular orbit of radius 8000000 m around a spherical planet whose gravitational parameter GM is 4 × 10¹⁴ m³/s². It is transferred to a circular orbit of twice that radius. Ignore other bodies and compare the two circular orbits only. What net increase in orbital mechanical energy is required? Choose the closest value.",
+      "options": {
+        "A": "2.5 × 10⁹ J",
+        "B": "5 × 10⁹ J",
+        "C": "-2.5 × 10⁹ J",
+        "D": "1.25 × 10⁹ J"
+      }
+    },
+    {
+      "id": "JEE27-PHY-1271",
+      "source_class": "XII",
+      "unit_number": 12,
+      "difficulty": "Difficult",
+      "assumptions": "Use steady currents, ideal connecting wires and uniform ohmic conductors at fixed temperature unless specified otherwise. Resistivity is unchanged by stretching in the stated elementary model. Wheatstone arms P,Q,R,S mean AB,BC,AD,DC; source AC and detector BD.",
+      "figures": [],
+      "concept_family": "JM-cell_inverse",
+      "number": 13,
+      "section": "A",
+      "question": "A cell with constant emf and internal resistance supplies current 3 A through an external resistance 2 Ω, and 2 A when the external resistance is changed to ξ Ω. Treat the cell as an ideal emf in series with an ohmic internal resistance. The recorded value of the greatest power deliverable to an adjustable external resistor is 20.25 W. Which listed positive value of ξ is consistent with this measurement?",
+      "options": {
+        "A": "5.25",
+        "B": "3.5",
+        "C": "7",
+        "D": "1.75"
+      }
+    },
+    {
+      "id": "JEE27-PHY-2154",
+      "source_class": "XII",
+      "unit_number": 20,
+      "difficulty": "Difficult",
+      "assumptions": "Treat drawings as schematic. Apply zero-error and parallax corrections; instrument idealisations and experimental limits stated in the question take precedence.",
+      "figures": [],
+      "concept_family": "SRC-EXPERIMENT-12",
+      "number": 14,
+      "section": "A",
+      "question": "A cell of emf 3 V and negligible internal resistance drives a galvanometer through series resistance 1500 Ω. Its deflection is 30 divisions. Connecting a shunt ξ Ω directly across the galvanometer halves its deflection, while the series resistor remains connected. Deflection is proportional to coil current. The recorded value of the total current drawn from the cell after the shunt is connected is 0.00196 A. Which listed positive value of ξ is consistent with this measurement?",
+      "options": {
+        "A": "90",
+        "B": "120",
+        "C": "60",
+        "D": "30"
+      }
+    },
+    {
+      "id": "JEE27-PHY-0219",
+      "source_class": "XI",
+      "unit_number": 3,
+      "difficulty": "Easy",
+      "assumptions": "Use the stated friction model, massless inextensible strings and massless frictionless pulleys unless specified otherwise.",
+      "figures": [],
+      "concept_family": "SRC-d966568d399e",
+      "number": 15,
+      "section": "A",
+      "question": "A block of mass 5 kg rests on a horizontal floor for which the coefficient of static friction is 0.4. Taking g = 10 m s⁻², the limiting force of friction is:",
+      "options": {
+        "A": "50 N",
+        "B": "2 N",
+        "C": "125 N",
+        "D": "20 N"
+      }
+    },
+    {
+      "id": "JEE27-PHY-1710",
+      "source_class": "XII",
+      "unit_number": 16,
+      "difficulty": "Easy",
+      "assumptions": "Use paraxial geometrical optics, thin lenses in air and small diffraction/interference angles unless specified otherwise. Sources in path-difference questions are coherent, initially in phase and equally polarised. Media are transparent, isotropic and normally dispersive.",
+      "figures": [],
+      "concept_family": "SRC-4df02b64db41",
+      "number": 16,
+      "section": "A",
+      "question": "A point source of light is placed at the principal focus of a concave mirror. After reflection the rays:",
+      "options": {
+        "A": "converge to the centre of curvature",
+        "B": "converge to a point midway between the focus and the pole",
+        "C": "diverge as if coming from the pole",
+        "D": "travel parallel to the principal axis"
+      }
+    },
+    {
+      "id": "JEE27-PHY-0979",
+      "source_class": "XI",
+      "unit_number": 10,
+      "difficulty": "Easy",
+      "assumptions": "Use linear, lossless sinusoidal waves and small-amplitude pendulum motion unless stated otherwise. Organ-pipe lengths are effective lengths if no end correction is supplied. Path-difference interference assumes initially in-phase coherent sources.",
+      "figures": [],
+      "concept_family": "SRC-5a1cc1d0bb7c",
+      "number": 17,
+      "section": "A",
+      "question": "The SI unit of the quantity m that appears in the expression n = (1/2L) √(T/m) for a stretched string is:",
+      "options": {
+        "A": "kg",
+        "B": "kg m⁻³",
+        "C": "kg m⁻²",
+        "D": "kg m⁻¹"
+      }
+    },
+    {
+      "id": "JEE27-PHY-0813",
+      "source_class": "XI",
+      "unit_number": 8,
+      "difficulty": "Medium",
+      "assumptions": "Work done BY the gas is positive. Unless a process is explicitly irreversible, gas-law path calculations are quasistatic and reversible with constant stated heat capacities; the only mechanical work is p–V work.",
+      "figures": [],
+      "concept_family": "JM-engine_cascade",
+      "number": 18,
+      "section": "A",
+      "question": "Two reversible heat engines operate in series between reservoirs at 900 K and 400 K, sharing an intermediate reservoir at T. Their efficiencies are equal. The first engine absorbs 900 J per cycle from the hot reservoir; the second receives all the heat rejected by the first. Find the total work produced by both engines per cycle. Choose the closest value.",
+      "options": {
+        "A": "1125 J",
+        "B": "500 J",
+        "C": "600 J",
+        "D": "300 J"
+      }
+    },
+    {
+      "id": "JEE27-PHY-1009",
+      "source_class": "XI",
+      "unit_number": 10,
+      "difficulty": "Medium",
+      "assumptions": "Use linear, lossless sinusoidal waves and small-amplitude pendulum motion unless stated otherwise. Organ-pipe lengths are effective lengths if no end correction is supplied. Path-difference interference assumes initially in-phase coherent sources.",
+      "figures": [],
+      "concept_family": "JM-spring_cut",
+      "number": 19,
+      "section": "A",
+      "question": "A uniform spring of force constant 60 N/m is cut into lengths in the ratio 1:2. The two pieces are connected in parallel to a 1 kg block on a smooth horizontal surface. The block is pulled 0.1 m from the common equilibrium position and released. Suitably offset fixed supports make BOTH spring pieces unstretched at the common equilibrium. Their axes are parallel to the motion, and they remain Hookean throughout. Find the oscillation period. Choose the closest value.",
+      "options": {
+        "A": "0.1912 s",
+        "B": "0.7648 s",
+        "C": "0.8112 s",
+        "D": "0.3824 s"
+      }
+    },
+    {
+      "id": "JEE27-PHY-0126",
+      "source_class": "XI",
+      "unit_number": 2,
+      "difficulty": "Easy",
+      "assumptions": "Use ideal particle motion with uniform gravity and negligible air resistance unless stated otherwise.",
+      "figures": [],
+      "concept_family": "SRC-600fd50ce110",
+      "number": 20,
+      "section": "A",
+      "question": "The magnitude of the vector 2 i + 3 j + 6 k is:",
+      "options": {
+        "A": "√(13) units",
+        "B": "49 units",
+        "C": "7 units",
+        "D": "11 units"
+      }
+    },
+    {
+      "id": "JEE27-PHY-1551",
+      "source_class": "XII",
+      "unit_number": 14,
+      "difficulty": "Medium",
+      "assumptions": "AC voltages/currents are sinusoidal RMS values unless a waveform or peak value is given. Components are ideal and linear; magnetic-field/rod/rail geometry is mutually perpendicular where the motional-emf formula is invoked. Neglect self-inductance in purely resistive induction loops.",
+      "figures": [],
+      "concept_family": "JM-mutual_induction",
+      "number": 21,
+      "section": "B",
+      "question": "Two stationary coils have mutual inductance 0.2 H. Current in coil 1 increases uniformly from 1 A to 5 A in 0.4 s. Coil 2 forms a closed circuit of resistance 2 Ω; its self-inductance and all capacitive effects are negligible. Find the heat generated in coil 2 during the ramp. Express the result in units of 10^(-3) J, and give the nearest integer."
+    },
+    {
+      "id": "JEE27-PHY-1767",
+      "source_class": "XII",
+      "unit_number": 16,
+      "difficulty": "Easy",
+      "assumptions": "Use paraxial geometrical optics, thin lenses in air and small diffraction/interference angles unless specified otherwise. Sources in path-difference questions are coherent, initially in phase and equally polarised. Media are transparent, isotropic and normally dispersive.",
+      "figures": [
+        {
+          "file": "figures/model-three_polaroids.png",
+          "alt_text": "Physical arrangement for three polaroids; supplied quantities are in the question, and no requested result is labelled.",
+          "source": "ORIGINAL",
+          "width": 1600,
+          "height": 900
+        }
+      ],
+      "concept_family": "JM-three_polaroids",
+      "number": 22,
+      "section": "B",
+      "question": "Unpolarised light passes through three ideal polaroids. Their transmission axes make angles 0°, 30° and 60° with a reference line. The emerging intensity is measured as 9 W/m². Ignore absorption except that described by ideal polariser transmission and Malus’s law. With all three present, find the intensity just after the second polaroid. Give the numerical value in W/m², rounded to the nearest integer."
+    },
+    {
+      "id": "JEE27-PHY-1561",
+      "source_class": "XII",
+      "unit_number": 14,
+      "difficulty": "Medium",
+      "assumptions": "AC voltages/currents are sinusoidal RMS values unless a waveform or peak value is given. Components are ideal and linear; magnetic-field/rod/rail geometry is mutually perpendicular where the motional-emf formula is invoked. Neglect self-inductance in purely resistive induction loops.",
+      "figures": [],
+      "concept_family": "JM-transformer_load",
+      "number": 23,
+      "section": "B",
+      "question": "An ideal transformer has 1000 primary turns and 200 secondary turns. The primary receives 240 V rms AC. A 12 Ω resistor is the only secondary load. Ignore magnetising current and losses. Find the primary rms current. Express the result in units of 10^(-3) A, and give the nearest integer."
+    },
+    {
+      "id": "JEE27-PHY-0164",
+      "source_class": "XI",
+      "unit_number": 2,
+      "difficulty": "Difficult",
+      "assumptions": "Use ideal particle motion with uniform gravity and negligible air resistance unless stated otherwise.",
+      "figures": [],
+      "concept_family": "JM-relative_closest",
+      "number": 24,
+      "section": "B",
+      "question": "At t = 0 the position of B relative to A is (30 i + 40 j) m. Their constant velocities relative to the ground are vA = (5 i + 1 j) m/s and vB = (1 i + -1 j) m/s. Consider t ≥ 0. What is their minimum separation? Express the result in units of 10^(-1) m, and give the nearest integer."
+    },
+    {
+      "id": "JEE27-PHY-1555",
+      "source_class": "XII",
+      "unit_number": 14,
+      "difficulty": "Difficult",
+      "assumptions": "AC voltages/currents are sinusoidal RMS values unless a waveform or peak value is given. Components are ideal and linear; magnetic-field/rod/rail geometry is mutually perpendicular where the motional-emf formula is invoked. Neglect self-inductance in purely resistive induction loops.",
+      "figures": [
+        {
+          "file": "figures/model-sliding_rod.png",
+          "alt_text": "Physical arrangement for sliding rod; supplied quantities are in the question, and no requested result is labelled.",
+          "source": "ORIGINAL",
+          "width": 1600,
+          "height": 900
+        }
+      ],
+      "concept_family": "GLOBAL-ROD-MAGNETIC-DRAG",
+      "number": 25,
+      "section": "B",
+      "question": "A conducting rod of length 0.50 m moves to the right on horizontal rails in an unknown uniform perpendicular magnetic field B. The total circuit resistance is initially 4.0 Ω, inductance is negligible, and a constant kinetic friction force opposes the motion. A rightward external force of 3.0 N maintains a steady speed of 4.0 m/s; a force of 5.0 N maintains 8.0 m/s. In a third steady-motion trial the total resistance is changed to 8.0 Ω and the applied force is 2.0 N. The magnetic field and kinetic friction force are unchanged, with sufficient rail length for steady motion. Find the electrical power dissipated in the complete circuit during the third trial. Give the numerical value in W, rounded to the nearest integer."
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+ "dataset": "NEET_2027_Biology_v1.6.0_New_Questions_Supplement",
+ "version": "1.6.0-supplement",
+ "build_date": "2026-10-19",
+ "hash_algorithm": "SHA-256",
+ "manifest_self_reference_policy": "manifest.json is excluded from its own file table because embedding its final hash would change that hash.",
+ "file_count_excluding_manifest": 10,
+ "files": [
+  {
+   "relative_path": "README.md",
+   "file_size": 2256,
+   "sha256": "f4d316d4d19adf92f78a4a0ae9ebd24f31e44445a22620fa97614e24b212ebc5"
+  },
+  {
+   "relative_path": "answers_and_explanations.json",
+   "file_size": 3076343,
+   "sha256": "6d41c6e69a87842bffe34f3d521dfa22670178e50113830da3f4fe08f36b022d"
+  },
+  {
+   "relative_path": "coverage_blueprint.json",
+   "file_size": 123197,
+   "sha256": "966135878177c08dbbebefb70e95de7e9af36fe92d546f0dafc319fd5f42606e"
+  },
+  {
+   "relative_path": "errata_report.json",
+   "file_size": 61017,
+   "sha256": "d69b61250f503ecb97efe0ce6243583717834d63a52c1eb41ed0728f5439fe3b"
+  },
+  {
+   "relative_path": "errata_report.md",
+   "file_size": 261,
+   "sha256": "c52b5c63f5f15e889151a0123325be4346304e5304de8beca574cd78aee77a2e"
+  },
+  {
+   "relative_path": "independent_validation.json",
+   "file_size": 1557,
+   "sha256": "9aba34e035dd9088ef9cf6e2f55b4ffac9a15994de47c8291f86584c5207f8bd"
+  },
+  {
+   "relative_path": "question_bank.json",
+   "file_size": 8274696,
+   "sha256": "d06b27fd6fd4a8cc4dcb6dd6c82feb01f1cc61f6375ad6e507c53024b4bdd8c1"
+  },
+  {
+   "relative_path": "question_index.csv",
+   "file_size": 835586,
+   "sha256": "bbd13be0ac925a08359856f486e86d55f2b809f4a1e5df0f78ec8cb08ef93b24"
+  },
+  {
+   "relative_path": "questions_only.json",
+   "file_size": 6993176,
+   "sha256": "a6c53469123880038807be00fef5e7955dffa3dbf7c499d83ff462bbcb0ed1ff"
+  },
+  {
+   "relative_path": "schema_and_generator_contract.json",
+   "file_size": 3547,
+   "sha256": "1d2479f9cfdaaa4efd47f80a6ade4aeee7e4af777eb0fbf28194ade40e4914bd"
+  }
+ ]
+}

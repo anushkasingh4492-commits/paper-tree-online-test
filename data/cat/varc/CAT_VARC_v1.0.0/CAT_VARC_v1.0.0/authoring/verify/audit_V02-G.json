@@ -1,0 +1,210 @@
+[
+ {
+  "id": "V02-G-001",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Blind-solver flag: S1 noted the compatibility option captures only the middle sentence; both solvers reached the correct answer.",
+  "fix": "none: the note confirms the option is too narrow (omits the 'record of its success' conclusion); no second defensible answer.",
+  "changed": false
+ },
+ {
+  "id": "V02-G-001",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation (student-facing) refers to 'the key'.",
+  "fix": "Replaced 'the key' with 'the correct answer' throughout the item.",
+  "changed": true
+ },
+ {
+  "id": "V02-G-002",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation (student-facing) refers to 'the key'.",
+  "fix": "Replaced 'the key' with 'the correct answer' throughout the item.",
+  "changed": true
+ },
+ {
+  "id": "V02-G-003",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation (student-facing) refers to 'the key'.",
+  "fix": "Replaced 'the key' with 'the correct answer' throughout the item.",
+  "changed": true
+ },
+ {
+  "id": "V02-G-004",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation (student-facing) refers to 'the key'.",
+  "fix": "Replaced 'the key' with 'the correct answer' throughout the item.",
+  "changed": true
+ },
+ {
+  "id": "V02-G-005",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation (student-facing) refers to 'the key'.",
+  "fix": "Replaced 'the key' with 'the correct answer' throughout the item.",
+  "changed": true
+ },
+ {
+  "id": "V02-G-006",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation (student-facing) refers to 'the key'.",
+  "fix": "Replaced 'the key' with 'the correct answer' throughout the item.",
+  "changed": true
+ },
+ {
+  "id": "V02-G-007",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation (student-facing) refers to 'the key'.",
+  "fix": "Replaced 'the key' with 'the correct answer' throughout the item.",
+  "changed": true
+ },
+ {
+  "id": "V02-G-008",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation (student-facing) refers to 'the key'.",
+  "fix": "Replaced 'the key' with 'the correct answer' throughout the item.",
+  "changed": true
+ },
+ {
+  "id": "V02-G-009",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation (student-facing) refers to 'the key'.",
+  "fix": "Replaced 'the key' with 'the correct answer' throughout the item.",
+  "changed": true
+ },
+ {
+  "id": "V02-G-010",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation (student-facing) refers to 'the key'.",
+  "fix": "Replaced 'the key' with 'the correct answer' throughout the item.",
+  "changed": true
+ },
+ {
+  "id": "V02-G-011",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation (student-facing) refers to 'the key'.",
+  "fix": "Replaced 'the key' with 'the correct answer' throughout the item.",
+  "changed": true
+ },
+ {
+  "id": "V02-G-012",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation (student-facing) refers to 'the key'.",
+  "fix": "Replaced 'the key' with 'the correct answer' throughout the item.",
+  "changed": true
+ },
+ {
+  "id": "V02-G-013",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation (student-facing) refers to 'the key'.",
+  "fix": "Replaced 'the key' with 'the correct answer' throughout the item.",
+  "changed": true
+ },
+ {
+  "id": "V02-G-014",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation (student-facing) refers to 'the key'.",
+  "fix": "Replaced 'the key' with 'the correct answer' throughout the item.",
+  "changed": true
+ },
+ {
+  "id": "V02-G-015",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation (student-facing) refers to 'the key'.",
+  "fix": "Replaced 'the key' with 'the correct answer' throughout the item.",
+  "changed": true
+ },
+ {
+  "id": "V02-G-016",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation (student-facing) refers to 'the key'.",
+  "fix": "Replaced 'the key' with 'the correct answer' throughout the item.",
+  "changed": true
+ },
+ {
+  "id": "V02-G-017",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation (student-facing) refers to 'the key'.",
+  "fix": "Replaced 'the key' with 'the correct answer' throughout the item.",
+  "changed": true
+ },
+ {
+  "id": "V02-G-018",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation (student-facing) refers to 'the key'.",
+  "fix": "Replaced 'the key' with 'the correct answer' throughout the item.",
+  "changed": true
+ },
+ {
+  "id": "V02-G-019",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation (student-facing) refers to 'the key'.",
+  "fix": "Replaced 'the key' with 'the correct answer' throughout the item.",
+  "changed": true
+ },
+ {
+  "id": "V02-G-020",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation (student-facing) refers to 'the key'.",
+  "fix": "Replaced 'the key' with 'the correct answer' throughout the item.",
+  "changed": true
+ },
+ {
+  "id": "V02-G-021",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation (student-facing) refers to 'the key'.",
+  "fix": "Replaced 'the key' with 'the correct answer' throughout the item.",
+  "changed": true
+ },
+ {
+  "id": "V02-G-022",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation (student-facing) refers to 'the key'.",
+  "fix": "Replaced 'the key' with 'the correct answer' throughout the item.",
+  "changed": true
+ },
+ {
+  "id": "V02-G-023",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation (student-facing) refers to 'the key'.",
+  "fix": "Replaced 'the key' with 'the correct answer' throughout the item.",
+  "changed": true
+ },
+ {
+  "id": "V02-G-024",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation (student-facing) refers to 'the key'.",
+  "fix": "Replaced 'the key' with 'the correct answer' throughout the item.",
+  "changed": true
+ },
+ {
+  "id": "V02-G-025",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation (student-facing) refers to 'the key'.",
+  "fix": "Replaced 'the key' with 'the correct answer' throughout the item.",
+  "changed": true
+ }
+]

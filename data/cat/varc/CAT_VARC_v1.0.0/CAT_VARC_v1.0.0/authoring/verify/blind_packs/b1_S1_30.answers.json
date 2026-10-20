@@ -1,0 +1,882 @@
+[
+ {
+  "id": "V01-G-016",
+  "answer": "4132",
+  "working": "4 sets premise; 1 'such trips' problem; 3 'rescues'; 2 'without that framing' closes.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V01-I-010",
+  "answer": "1342",
+  "working": "1 old mental map; 3 satnav removes 'that burden'; 4 'convenient as this is'; 2 researchers worry.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V02-A-007",
+  "answer": "A",
+  "working": "Keeps both halves: people know feelings/attention, but causes are inferred while felt as direct knowledge.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V03-H-013",
+  "answer": "5",
+  "working": "2-4-3-1 is about queues self-policed without enforcement; 5 on numbered tokens is an off-topic aside.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V03-E-008",
+  "answer": "2",
+  "working": "1-3-5-4 trace punctuation from aid to voice to aid to eye; 2 on spelling vs pronunciation is off-topic.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V02-F-020",
+  "answer": "B",
+  "working": "Efficiency plus rare sweeping vulnerability that mixed planting reduces; A says 'immune', D overstates.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V02-F-024",
+  "answer": "C",
+  "working": "Captures attention mechanism and 'depends on how tool is used', not lasting harm; D is only an example.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V01-L-025",
+  "answer": "41532",
+  "working": "4 odd duty; 1 'Yet we do blame'; 5 'The blame suggests'; 3 'Perhaps the duty is'; 2 'Understood this way'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V03-A-008",
+  "answer": "5",
+  "working": "4-3-2-1 on curiosity peaking at partial knowledge and teaching; 5 on incidental memory is off-thread.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V03-E-013",
+  "answer": "1",
+  "working": "3-4-2-5 about open-book papers not being soft; 1 on unsupervised home exams/cheating is a different issue.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V01-B-003",
+  "answer": "3142",
+  "working": "3 visible rivers; 1 groundwater 'no such visibility'; 4 'as a result' overpumping; 2 'by the time that happens'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V01-B-015",
+  "answer": "24315",
+  "working": "2 euphemism; 4 works for a while; 3 'But contempt never in sounds'; 1 'those attitudes' attach; 5 'then' conclusion.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V01-L-007",
+  "answer": "4132",
+  "working": "4 indirect requests seem pointless; 1 'After all' nobody takes literally; 3 'But' form leaves freedom; 2 'That freedom'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V01-I-011",
+  "answer": "1432",
+  "working": "1 misconception; 4 'In fact' own grammars; 3 examples; 2 'Such features show'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V03-I-001",
+  "answer": "2",
+  "working": "4-3-5-1 on bank runs and deposit guarantees; 2 on mobile banking costs is off-topic.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V02-I-011",
+  "answer": "A",
+  "working": "Consistent application of learned bias plus impartial look shielding it from scrutiny; B is the view rejected.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V01-I-023",
+  "answer": "2431",
+  "working": "2 appears to help; 4 'The appearance depends'; 3 'In practice' placement shapes; 1 self-confirming 'thus'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V02-D-013",
+  "answer": "A",
+  "working": "Trust exceeds checks, review advised, review would not remove error; C says eliminate, B says more error-prone.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V01-K-025",
+  "answer": "1342",
+  "working": "1 blurbs on cover; 3 'These blurbs' meant to reassure; 4 'however' readers learned; 2 'As a result'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V01-M-004",
+  "answer": "3241",
+  "working": "3 universalisability test; 2 lying promise fails neatly; 4 critics: tennis case; 1 'then' need a way of describing.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V02-D-025",
+  "answer": "C",
+  "working": "Selection vs harm cannot be distinguished by the discount alone; A says no harm, D asserts misallocation.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V01-F-003",
+  "answer": "2143",
+  "working": "2 symbiosis; 1 'this partnership' breaks; 4 'Without them' bleaching; 3 bleached not yet dead.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V02-H-001",
+  "answer": "D",
+  "working": "Pedestrianisation helps only where customers already arrive on foot/transit; B says 'always'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V02-B-014",
+  "answer": "A",
+  "working": "Origin in narrow columns, persistence via familiarity and brevity, cost of ambiguity; D says 'purely habit'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V02-B-021",
+  "answer": "B",
+  "working": "Two objections pull in different directions, cannot both be pressed fully; D wrongly says both fail.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V03-B-022",
+  "answer": "3",
+  "working": "1-5-4-2 on deliberately misleading narrators detected via details; 3 on all first-person narrators being biased is a tangent.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V02-F-004",
+  "answer": "B",
+  "working": "Brief boredom a useful signal, problem is silencing it, chronic boredom harmful; D omits the main point.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V01-N-019",
+  "answer": "3214",
+  "working": "3 predator story; 2 'Its appeal' moral shape; 1 ecologists wary of 'this tidiness'; 4 'None of this shows'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V03-E-009",
+  "answer": "2",
+  "working": "1-4-3-5 on sign languages as independent languages; 2 on facial expression in spoken conversation is off-topic.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V02-K-017",
+  "answer": "C",
+  "working": "Persistence explained by reasonable reluctance to switch alone; dominance no evidence of merit; B overclaims inferiority.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V03-J-013",
+  "answer": "1",
+  "working": "5-2-3-4 contrast forgiving and forgetting; 1 on resentment harming the holder is a separate claim.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V04-B-022",
+  "answer": "3",
+  "working": "'That shift in the starting point' = clock started earlier in sentence before gap 3; 'second distortion' after overdiagnosis.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V01-K-017",
+  "answer": "13524",
+  "working": "1 mangroves; 3 'Their roots'; 5 'For this reason'; 2 'Yet' cut down; 4 replanting.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V01-I-014",
+  "answer": "3421",
+  "working": "3 no predators; 4 'Over that time' defences fade; 2 invaders arrive; 1 'This is why' extinctions.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V02-N-014",
+  "answer": "B",
+  "working": "Two sources (prejudice and processing effort) and why the difference matters; D denies prejudice, C conflates.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V03-H-002",
+  "answer": "3",
+  "working": "1-2-5-4 on how gated communities widen urban divides; 3 on developer naming/marketing is off-topic.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V03-B-006",
+  "answer": "5",
+  "working": "4-2-1-3 on citizen science bird counts; 5 on migration navigation is off-topic.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V04-F-012",
+  "answer": "2",
+  "working": "'they argued' needs 'Later cartographers' (gap 1 sentence); 'on this view' after gap 2 refers to it.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V02-K-005",
+  "answer": "A",
+  "working": "Decimal success owed to state backing, old units had real uses, convenience not denied; B and D overstate.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V01-N-003",
+  "answer": "3142",
+  "working": "3 judged by sound in an ordinary seat; 1 'that listener'; 4 reflections timing; 2 'therefore' architects.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V01-A-017",
+  "answer": "1432",
+  "working": "1 complaints in every age; 4 if accurate, endless decline; 3 'that conclusion is absurd' read as evidence about complainers; 2 'such evidence' shows habit.",
+  "confidence": "medium",
+  "alternative": "1243 is weaker: 3 restates 2's point; 1432 gives clean 'that conclusion'/'such evidence' links.",
+  "issue": ""
+ },
+ {
+  "id": "V02-N-022",
+  "answer": "C",
+  "working": "Tracks within-patient change, misleads across patients or as targets; A too strong, D invents exaggeration.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V01-D-012",
+  "answer": "3124",
+  "working": "3 below-cost staple; 1 each sale loses money; 2 'calculation changes'; 4 loss recovered from baskets.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V04-D-021",
+  "answer": "1",
+  "working": "'Their alternative' follows the modernists' attack on ornament and precedes 'Such surfaces were meant to be honest'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V03-G-022",
+  "answer": "3",
+  "working": "2-1-5-4 (or 2-1-4-5) on skywalks failing pedestrians; 3 on shops lining skywalks is off-topic.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V02-C-001",
+  "answer": "D",
+  "working": "Benefits mostly realised but depend on planning, not mere permission; A unconditional, B reversed.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V02-J-003",
+  "answer": "C",
+  "working": "Scores track surface features, shortening can strip connectives; A and D overstate, B 'worthless'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V02-I-007",
+  "answer": "A",
+  "working": "Instruments set agenda but theory needed to interpret; B is the rejected view.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V04-A-002",
+  "answer": "3",
+  "working": "'them' = interruptions just mentioned ('intentions contain no interruptions'); then remedy follows.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V03-B-012",
+  "answer": "4",
+  "working": "2-5-1-3 on trade-offs in translating poetry; 4 about readers learning languages is off-topic.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V03-A-009",
+  "answer": "2",
+  "working": "4-5-1-3 on modern libraries as social infrastructure; 2 on ancient restricted libraries is off-topic.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V01-A-008",
+  "answer": "2314",
+  "working": "2 judgement view; 3 explains anger fading; 1 'however' struggles with fearful flyer; 4 'her fear'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V01-G-020",
+  "answer": "4312",
+  "working": "4 delay with hearing aids; 3 obstacle is what device announces; 1 spectacles 'similar way'; 2 'Their example'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V01-G-021",
+  "answer": "32415",
+  "working": "3 restricted hours; 2 'The rule' treated relatives as disturbance; 4 relaxed 'it'; 1 'On this understanding' partner; 5 costs.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V01-F-002",
+  "answer": "15423",
+  "working": "1 longitude guesswork; 5 'The difficulty' time difference; 4 knowing home time; 2 'however' clocks drift; 3 solved by chronometers.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V02-F-013",
+  "answer": "B",
+  "working": "Anchor makes price feel like a saving even if inflated, knowing the trick hardly helps; A contradicts, D is detail.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V02-J-002",
+  "answer": "D",
+  "working": "Initial claim tempered by measurement issues; real but smaller and inconsistent, cannot alone explain gap; C overclaims.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V03-A-015",
+  "answer": "1",
+  "working": "2-4-5-3 on oral epics rebuilt from formulas; 1 on writing preserving poems is off-thread (and 'by contrast' dangles).",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V01-N-007",
+  "answer": "34215",
+  "working": "3 cooling; 4 cause sulphur gas into stratosphere; 2 'There' droplets; 1 no rain, linger; 5 'Once they finally settle'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V01-M-009",
+  "answer": "3124",
+  "working": "3 limited items; 1 'however' items not information; 2 chess example; 4 'on this account' expertise.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V01-L-005",
+  "answer": "12543",
+  "working": "1 pidgin; 2 features; 5 'Something remarkable' children; 4 'those children' creole; 3 'The change suggests'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V01-J-011",
+  "answer": "2413",
+  "working": "2 experience machine; 4 if pleasure only, eager; 1 'however' most recoil; 3 'therefore' evidence.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V01-H-024",
+  "answer": "1243",
+  "working": "1 auto-renewing trials; 2 firms favour because people forget; 4 'however' rests on inattention; 3 'correspondingly fragile'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V03-J-001",
+  "answer": "3",
+  "working": "2-1-4-5 on wait time after questions; 3 about projectors is off-topic.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V01-G-008",
+  "answer": "52143",
+  "working": "5 lit auditoria; 2 'In such a hall'; 1 gas lighting changed 'this'; 4 'The change was social'; 3 'If so' manners.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V03-H-021",
+  "answer": "4",
+  "working": "5-1-3-2 on monopsony and minimum wage effects; 4 on who bears the cost is off-thread.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V01-L-009",
+  "answer": "4213",
+  "working": "4 students cram; 2 feels productive; 1 'That familiarity fades'; 3 spacing better.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V01-K-005",
+  "answer": "1324",
+  "working": "1 harvested ice; 3 packed, lasts; 2 shipped abroad; 4 trade collapsed.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V03-E-018",
+  "answer": "4",
+  "working": "5-3-2-1 on hindsight bias and fair assessment; 4 on overconfident expert forecasts is a different bias.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V04-B-004",
+  "answer": "1",
+  "working": "'But the extra water is borrowed' answers 'read this abundance as a sign all is well' and precedes ice retreating beyond threshold.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V04-E-014",
+  "answer": "3",
+  "working": "'The reverse... as well' after induced-demand account, then 'Neither observation' needs two observations.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V02-M-021",
+  "answer": "C",
+  "working": "Gains and real losses, net effect depends on place and profession; A dismisses loss, D is an example.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V02-G-013",
+  "answer": "C",
+  "working": "Recall beats rereading though it feels worse, but works after understanding and does not replace teaching.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V01-H-012",
+  "answer": "3241",
+  "working": "3 information asymmetry; 2 buyers offer average; 4 good-car owners withdraw; 1 'As they do' spiral.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V01-D-004",
+  "answer": "3124",
+  "working": "3 nightly copy to adjacent drive; 1 guards against disk failure; 2 'however' no protection from fire; 4 off-site copy.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V02-K-007",
+  "answer": "B",
+  "working": "Telegraph shifted decision-making from embassy to capital, shrinking envoy discretion; C 'unnecessary' contradicts.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V04-F-025",
+  "answer": "1",
+  "working": "Open counters (inside letters) before 'gaps between neighbouring letters... for a similar reason' at gap 1.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V02-K-010",
+  "answer": "A",
+  "working": "Overbooking reasonable; real question is treatment of bumped passengers, volunteers paid vs random removal.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V03-F-015",
+  "answer": "2",
+  "working": "5-1-3-4 argue network-effect leaders can be eroded group by group; 2 on buying rivals is off-thread.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V02-J-010",
+  "answer": "C",
+  "working": "Impervious surfaces deliver rain all at once causing floods; cities now slow runoff; B contradicts.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V02-E-019",
+  "answer": "A",
+  "working": "Wrong lies in division of gains, exchange still benefits, banning would not fix unfairness.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V01-H-010",
+  "answer": "15324",
+  "working": "1 hygiene defence; 5 'Yet' predates germ theory; 3 'real function' social; 2 'also explain'; 4 'None of this means'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V01-M-019",
+  "answer": "2143",
+  "working": "2 lean ordering; 1 savings real; 4 'What it had traded away' cushion; 3 disruptions came.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V02-K-013",
+  "answer": "A",
+  "working": "Keep metaphor but read as context-dependent role; C abandons, B and D distort.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V03-C-010",
+  "answer": "5",
+  "working": "4-3-1-2 on when promises may be broken; 5 on the consequentialist ground of the duty is off-thread.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V03-B-008",
+  "answer": "1",
+  "working": "5-3-2-4 on corrections columns building trust; 1 on online puzzle pages is off-topic.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V02-H-020",
+  "answer": "C",
+  "working": "Both arguments against duties to future people fail: basic needs knowable, buried hazard example; A is only the example.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V01-H-002",
+  "answer": "4312",
+  "working": "4 testimony; 3 reductionist tradition; 1 'difficulty' cannot check enough; 2 'that demand' collapses.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V03-H-012",
+  "answer": "5",
+  "working": "4-2-1-3 on framing effects and charitable reading; 5 on default effects is a different phenomenon.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V01-J-006",
+  "answer": "35421",
+  "working": "3 summer forgetting; 5 'not spread evenly'; 4 'by contrast' poorer fall back; 2 'repeated over summers'; 1 'If that is so'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V04-B-012",
+  "answer": "1",
+  "working": "'Both reactions' = revelation/harsh just described; then 'The deeper dispute' contrasts with taste.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V04-E-003",
+  "answer": "3",
+  "working": "'that room' needs 'The room she imagines' (sentence before gap 3); 'Television, by contrast' after 'she built it herself'.",
+  "confidence": "medium",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V01-E-011",
+  "answer": "1342",
+  "working": "1 warnings cause symptoms; 3 'This nocebo effect' dilemma; 4 withholding no answer; 2 'more promising' framing.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V03-J-016",
+  "answer": "3",
+  "working": "4-5-1-2 on the paradox of owed but undemandable gratitude; 3 on gratitude journals and mood is off-topic.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V02-H-002",
+  "answer": "D",
+  "working": "Outcome-based blame clashes with control principle, yet strict control leaves little to blame; B, C overclaim.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V01-L-002",
+  "answer": "14325",
+  "working": "1 ruins in paintings; 4 usual explanation; 3 'however' invented ruins; 2 cannot be history lesson; 5 real attraction.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V01-I-007",
+  "answer": "3241",
+  "working": "3 bubbles trapped; 2 'therefore' sample; 4 drilling cores; 1 'these cores' deepest.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V03-B-005",
+  "answer": "3",
+  "working": "5-2-1-4 on surgical checklists; 3 on anaesthetics is off-topic.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V04-E-019",
+  "answer": "2",
+  "working": "'this account' = expectations explanation just given; 'promises on which nobody relies' introduces the dying-friend case.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V01-I-024",
+  "answer": "3214",
+  "working": "3 franchise for fees; 2 'fees, though, not real price' freedom; 1 'for instance' cafe; 4 whether bargain good.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V02-I-003",
+  "answer": "D",
+  "working": "Failure was of a cheap imitation lacking supplier knowledge; thin buffers safe only with those conditions; C 'every setting'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V03-A-011",
+  "answer": "3",
+  "working": "4-2-1-5 on overbooking economics; 3 on late-booking fares is off-topic.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V02-N-006",
+  "answer": "D",
+  "working": "Scrolling owes to removed stopping points, not willpower; restoring edges helps; B and C off-target.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V01-F-023",
+  "answer": "14325",
+  "working": "1 bread; 4 telephone contrast; 3 value grows with users, lead feeds on itself; 2 'such markets therefore' dominance; 5 'same feature' also shields.",
+  "confidence": "medium",
+  "alternative": "14352: 5 can follow 3 ('rewards the leader') with 2 as the 'therefore' conclusion; 2/5 order weakly fixed.",
+  "issue": ""
+ },
+ {
+  "id": "V03-I-013",
+  "answer": "4",
+  "working": "5-2-1-3 on safety brake enabling tall buildings; 4 on express lift zoning is off-thread.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V01-G-007",
+  "answer": "1423",
+  "working": "1 audiobook as reading by ear; 4 'In fact' narrator decisions; 2 'These choices'; 3 'therefore' interpretation.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V02-F-007",
+  "answer": "A",
+  "working": "Meaning of a tip depends on how pay is organised; D is a detail, B and C off.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V01-J-005",
+  "answer": "1243",
+  "working": "1 rising costs; 2 'One reason' display; 4 nobody wants to look meaner; 3 'therefore' shared change.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V02-E-025",
+  "answer": "D",
+  "working": "Self-handicapping protects sense of competence, raises failure risk, commonest among unsure; C endorses it.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "V01-C-012",
+  "answer": "4312",
+  "working": "4 no duty to rescue; 3 'This strikes' perverse; 1 defenders reply; 2 'Their worry, in other words'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ }
+]

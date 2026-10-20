@@ -1,0 +1,74 @@
+[
+ {
+  "id": "R02-F-03-4",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation says 'The key asserts exactly the inference the author rejects'.",
+  "fix": "Changed to 'The correct answer asserts ...'.",
+  "changed": true
+ },
+ {
+  "id": "R02-F-07-5",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation says 'Only the key treats both hypotheses'.",
+  "fix": "Changed to 'Only the correct answer treats ...'.",
+  "changed": true
+ },
+ {
+  "id": "R02-F-08-5",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation says 'The key captures both the claim and its limit'.",
+  "fix": "Changed to 'The correct answer captures ...'.",
+  "changed": true
+ },
+ {
+  "id": "R02-F-02-3",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Correct option garbled: 'limbs that can bend anywhere from any single centre' reads as if the limbs bend from a centre.",
+  "fix": "Reworded to 'the difficulty, for any single centre, of controlling flexible and boneless limbs that can bend at any point.'",
+  "changed": true
+ },
+ {
+  "id": "R02-F-06-2",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Defence of the shared-store option claimed the spatial task 'separates the systems', conflating spatial memory with the visual system; the reasoning was imprecise.",
+  "fix": "Rewrote defence: the passage tests only verbal interference against a spatial control, never the reverse, and explains the result by on-the-spot recruitment of words.",
+  "changed": true
+ },
+ {
+  "id": "R02-F-03-3",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Blind-solver flag (S1) considered the monkey option; dismissed, since memory and problem solving are not self-recognition. Separately, the correct option's wording ('respond very differently when they encounter their own scent after it has been altered') was vague about what the dogs do.",
+  "fix": "Tightened the correct option to dogs sniffing their own scent far longer when altered with an added odour than when unchanged; monkey option and defence unchanged.",
+  "changed": true
+ },
+ {
+  "id": "R02-F-03-2",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Defence of the language option said great apes 'are said to pass without language', which the passage does not say.",
+  "fix": "Defence now says the passage reports that great apes generally pass and nowhere ties passing to language.",
+  "changed": true
+ },
+ {
+  "id": "R02-F-05-3",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Blind-solver flag (S2) weighed the familiar-walk option as a perception-bias analogy before choosing the correct answer.",
+  "fix": "none: the familiar-walk option rests on familiarity, not on a hidden mass beneath a visible part; its defence states this and both solvers reached the correct answer.",
+  "changed": false
+ },
+ {
+  "id": "R02-F-08-4",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "R02-F-08-1's correct answer (a circle of mutual checking need not be vicious) previews the structure tested in 08-4; similarly 05-1 previews the hidden-from-awareness mechanism used in 05-3.",
+  "fix": "none: both later questions are answerable directly from explicitly stated morals in the passage, so the overlap does not change difficulty materially; rewriting would cost a full question.",
+  "changed": false
+ }
+]

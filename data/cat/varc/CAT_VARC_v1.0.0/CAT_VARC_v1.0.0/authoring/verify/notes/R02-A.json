@@ -1,0 +1,22 @@
+[
+ {
+  "id": "R02-A-01-3",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "A",
+    "key": "A",
+    "working": "If assumptions formed in one environment misled no more in a violating environment, their truth-to-environment is not what keeps them reliable.",
+    "alternative": "",
+    "issue": "Option A's scenario is somewhat odd (newcomers misled no more than natives) but it is the only option that tests the explanation."
+   },
+   "S2": {
+    "answer": "B",
+    "key": "B",
+    "working": "If people in environments violating their assumptions are misled no more than natives, the 'true of the environment' explanation loses force.",
+    "alternative": "",
+    "issue": "Weakener works only via 'from the start'; slightly convoluted stem-option fit but B is clearly best."
+   }
+  }
+ }
+]

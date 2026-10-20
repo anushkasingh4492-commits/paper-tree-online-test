@@ -1,0 +1,265 @@
+{
+ "seed": 42,
+ "mode": "Mathematics subject section",
+ "restarts_used": 0,
+ "description": "Mathematics subject section: Section A 20 MCQs, Section B 5 integer-answer questions.",
+ "section_a": [
+  "JEE-MATH-U11-103",
+  "JEE-MATH-U11-089",
+  "JEE-MATH-U06-100",
+  "JEE-MATH-U04-024",
+  "JEE-MATH-U11-114",
+  "JEE-MATH-U01-018",
+  "JEE-MATH-U01-058",
+  "JEE-MATH-U08-120",
+  "JEE-MATH-U12-001",
+  "JEE-MATH-U13-033",
+  "JEE-MATH-U06-098",
+  "JEE-MATH-U08-014",
+  "JEE-MATH-U03-126",
+  "JEE-MATH-U02-166",
+  "JEE-MATH-U06-023",
+  "JEE-MATH-U14-131",
+  "JEE-MATH-U10-090",
+  "JEE-MATH-U04-104",
+  "JEE-MATH-U04-138",
+  "JEE-MATH-U08-228"
+ ],
+ "section_b": [
+  "JEE-MATH-U03-167",
+  "JEE-MATH-U03-077",
+  "JEE-MATH-U13-155",
+  "JEE-MATH-U13-172",
+  "JEE-MATH-U10-095"
+ ],
+ "marking": {
+  "correct": 4,
+  "incorrect": -1,
+  "unattempted": 0
+ },
+ "max_marks": 100,
+ "items_a": [
+  {
+   "id": "JEE-MATH-U11-103",
+   "question": "The distance between the $z$-axis and the line $\\frac{x-3}{0} = \\frac{y+4}{0} = \\frac{z-1}{1}$ is",
+   "options": {
+    "A": "$\\sqrt{26}$",
+    "B": "$5$",
+    "C": "$7$",
+    "D": "$25$"
+   }
+  },
+  {
+   "id": "JEE-MATH-U11-089",
+   "question": "The lines $L_1: \\frac{x-1}{1} = \\frac{y}{2} = \\frac{z+1}{2}$ and $L_2: \\frac{x-12}{11} = \\frac{y-10}{10} = \\frac{z+3}{-2}$ intersect. $Q_1$ and $Q_2$ are the two points of $L_2$ whose perpendicular distance from $L_1$ is $4$. Then $Q_1Q_2$ equals",
+   "options": {
+    "A": "$10$",
+    "B": "$5$",
+    "C": "$8$",
+    "D": "$\\frac{40}{3}$"
+   }
+  },
+  {
+   "id": "JEE-MATH-U06-100",
+   "question": "The set of all real $x$ for which the infinite geometric series $1 + \\frac{2x - 1}{3} + \\left(\\frac{2x - 1}{3}\\right)^2 + \\cdots$ has a finite sum is",
+   "options": {
+    "A": "$(-1, 2)$",
+    "B": "$[-1, 2]$",
+    "C": "$(-2, 1)$",
+    "D": "$\\left(\\frac{1}{2}, 2\\right)$"
+   }
+  },
+  {
+   "id": "JEE-MATH-U04-024",
+   "question": "The number of six-digit numbers that can be formed using all the digits $1, 1, 2, 2, 2, 0$ is",
+   "options": {
+    "A": "$60$",
+    "B": "$600$",
+    "C": "$50$",
+    "D": "$40$"
+   }
+  },
+  {
+   "id": "JEE-MATH-U11-114",
+   "question": "The shortest distance between the lines $\\frac{1-x}{2} = \\frac{y-2}{3} = \\frac{z+1}{1}$ and $\\frac{x-6}{1} = \\frac{y-4}{-1} = \\frac{z+1}{1}$ is",
+   "options": {
+    "A": "$\\frac{3\\sqrt{42}}{7}$",
+    "B": "$\\frac{17\\sqrt{26}}{13}$",
+    "C": "$26$",
+    "D": "$\\sqrt{26}$"
+   }
+  },
+  {
+   "id": "JEE-MATH-U01-018",
+   "question": "Let $P$, $Q$, $R$ be any three sets. Statement I: $P - (Q \\cup R) = (P - Q) \\cap (P - R)$. Statement II: $P - (Q \\cap R) = (P - Q) \\cap (P - R)$. In the light of the above statements, choose the correct answer.",
+   "options": {
+    "A": "Both Statement I and Statement II are true",
+    "B": "Both Statement I and Statement II are false",
+    "C": "Statement I is false but Statement II is true",
+    "D": "Statement I is true but Statement II is false"
+   }
+  },
+  {
+   "id": "JEE-MATH-U01-058",
+   "question": "Let $X$ and $Y$ be sets with $n(X) = 5$ and $n(Y) = 4$. If $(X \\times Y) \\cap (Y \\times X)$ has $9$ elements, then the number of elements in $(X \\times Y) \\cup (Y \\times X)$ is",
+   "options": {
+    "A": "$37$",
+    "B": "$31$",
+    "C": "$40$",
+    "D": "$36$"
+   }
+  },
+  {
+   "id": "JEE-MATH-U08-120",
+   "question": "$\\int \\sqrt{x^2+4}\\,dx$ equals (where $C$ is the constant of integration)",
+   "options": {
+    "A": "$\\frac{x}{2}\\sqrt{x^2+4} - 2\\log_e\\left|x+\\sqrt{x^2+4}\\right| + C$",
+    "B": "$\\frac{x}{2}\\sqrt{x^2+4} + 2\\log_e\\left|x+\\sqrt{x^2+4}\\right| + C$",
+    "C": "$x\\sqrt{x^2+4} + 2\\log_e\\left|x+\\sqrt{x^2+4}\\right| + C$",
+    "D": "$\\frac{x}{2}\\sqrt{x^2+4} + 4\\log_e\\left|x+\\sqrt{x^2+4}\\right| + C$"
+   }
+  },
+  {
+   "id": "JEE-MATH-U12-001",
+   "question": "If $\\vec{a} = 2\\hat{i} - \\hat{j} + 2\\hat{k}$ and $\\vec{b} = -\\hat{i} + 3\\hat{j} + \\hat{k}$, then the unit vector in the direction of $\\vec{a} + \\vec{b}$ is",
+   "options": {
+    "A": "$\\frac{1}{\\sqrt{6}}(\\hat{i}+2\\hat{j}+3\\hat{k})$",
+    "B": "$\\frac{1}{14}(\\hat{i}+2\\hat{j}+3\\hat{k})$",
+    "C": "$\\frac{1}{\\sqrt{14}}(\\hat{i}+2\\hat{j}+3\\hat{k})$",
+    "D": "$\\frac{1}{\\sqrt{26}}(3\\hat{i}-4\\hat{j}+\\hat{k})$"
+   }
+  },
+  {
+   "id": "JEE-MATH-U13-033",
+   "question": "The classes $0\\text{-}10, 10\\text{-}30, 30\\text{-}40, 40\\text{-}60$ have frequencies $6, 16, 10, 8$ respectively. The median of the distribution is",
+   "options": {
+    "A": "$\\frac{225}{8}$",
+    "B": "$\\frac{55}{2}$",
+    "C": "$\\frac{35}{2}$",
+    "D": "$\\frac{75}{4}$"
+   }
+  },
+  {
+   "id": "JEE-MATH-U06-098",
+   "question": "An infinite geometric progression of positive terms has sum $9$, and the sum of its first two terms is $5$. Its common ratio is",
+   "options": {
+    "A": "$\\frac{2}{3}$",
+    "B": "$\\frac{\\sqrt{5}}{3}$",
+    "C": "$\\frac{4}{9}$",
+    "D": "$\\frac{5}{9}$"
+   }
+  },
+  {
+   "id": "JEE-MATH-U08-014",
+   "question": "For $-1 < x < 1$, $\\int \\frac{x}{\\sqrt{1 - x^2}}\\,dx$ (where $C$ is the constant of integration) equals",
+   "options": {
+    "A": "$-\\frac{1}{2}\\sqrt{1 - x^2} + C$",
+    "B": "$-2\\sqrt{1 - x^2} + C$",
+    "C": "$\\sqrt{1 - x^2} + C$",
+    "D": "$-\\sqrt{1 - x^2} + C$"
+   }
+  },
+  {
+   "id": "JEE-MATH-U03-126",
+   "question": "If $X$ is a $2 \\times 2$ matrix such that $\\begin{bmatrix} 2 & 1 \\\\ 5 & 3 \\end{bmatrix} X = \\begin{bmatrix} 1 & 0 \\\\ 2 & 1 \\end{bmatrix}$, then $X$ equals",
+   "options": {
+    "A": "$\\begin{bmatrix} -1 & 1 \\\\ 1 & -2 \\end{bmatrix}$",
+    "B": "$\\begin{bmatrix} 3 & -1 \\\\ 1 & 0 \\end{bmatrix}$",
+    "C": "$\\begin{bmatrix} 1 & -1 \\\\ -1 & 2 \\end{bmatrix}$",
+    "D": "$\\begin{bmatrix} 4 & 1 \\\\ 11 & 3 \\end{bmatrix}$"
+   }
+  },
+  {
+   "id": "JEE-MATH-U02-166",
+   "question": "If $\\alpha$ and $\\beta$ are the roots of $x^2 - 7x + 4 = 0$, then $\\frac{1}{\\alpha} + \\frac{1}{\\beta}$ equals",
+   "options": {
+    "A": "$\\frac{4}{7}$",
+    "B": "$\\frac{1}{7}$",
+    "C": "$-\\frac{7}{4}$",
+    "D": "$\\frac{7}{4}$"
+   }
+  },
+  {
+   "id": "JEE-MATH-U06-023",
+   "question": "The number of terms common to the arithmetic progressions $3, 7, 11, \\ldots, 407$ and $2, 9, 16, \\ldots, 709$ is",
+   "options": {
+    "A": "$15$",
+    "B": "$13$",
+    "C": "$14$",
+    "D": "$25$"
+   }
+  },
+  {
+   "id": "JEE-MATH-U14-131",
+   "question": "The value of $\\sum_{r=1}^{\\infty} \\tan^{-1}\\left(\\frac{1}{2r^2}\\right)$ is",
+   "options": {
+    "A": "$\\frac{\\pi}{8}$",
+    "B": "$\\frac{3\\pi}{4}$",
+    "C": "$\\frac{\\pi}{2}$",
+    "D": "$\\frac{\\pi}{4}$"
+   }
+  },
+  {
+   "id": "JEE-MATH-U10-090",
+   "question": "The lines $kx + y + 1 = 0$, $x + ky + 1 = 0$ and $x + y + k = 0$ are three distinct concurrent lines. The set of all real values of $k$ is",
+   "options": {
+    "A": "$\\{-2\\}$",
+    "B": "$\\{-1, 2\\}$",
+    "C": "$\\{1, -2\\}$",
+    "D": "$\\{1\\}$"
+   }
+  },
+  {
+   "id": "JEE-MATH-U04-104",
+   "question": "The number of positive divisors of $N = 2^4 \\cdot 3^4 \\cdot 5^2$ that are of the form $4k + 1$, where $k$ is a non-negative integer, is",
+   "options": {
+    "A": "$9$",
+    "B": "$15$",
+    "C": "$6$",
+    "D": "$27$"
+   }
+  },
+  {
+   "id": "JEE-MATH-U04-138",
+   "question": "A coach chooses $4$ training days from the days numbered $1, 2, \\ldots, 20$ of a month so that day $1$ is one of the chosen days and no two chosen days are consecutive. The number of possible choices is",
+   "options": {
+    "A": "$2380$",
+    "B": "$455$",
+    "C": "$560$",
+    "D": "$680$"
+   }
+  },
+  {
+   "id": "JEE-MATH-U08-228",
+   "question": "The area of the region in the first quadrant enclosed by the ellipse $\\frac{x^2}{16} + \\frac{y^2}{9} = 1$ and the coordinate axes is",
+   "options": {
+    "A": "$12\\pi$",
+    "B": "$3\\pi$",
+    "C": "$6\\pi$",
+    "D": "$12$"
+   }
+  }
+ ],
+ "items_b": [
+  {
+   "id": "JEE-MATH-U03-167",
+   "question": "If the system $x + 2y + z = 0$, $2x - y + z = 0$, $3x + y + kz = 0$ has a non-trivial solution, then the value of $k$ is"
+  },
+  {
+   "id": "JEE-MATH-U03-077",
+   "question": "One root of $\\begin{vmatrix} x & 3 & 7 \\\\ 2 & x & 2 \\\\ 7 & 6 & x \\end{vmatrix} = 0$ is $x = -9$. The product of the other two roots is"
+  },
+  {
+   "id": "JEE-MATH-U13-155",
+   "question": "A random variable $X$ takes the values $0, 1, 2, 3$ with $P(X=0) = \\frac{1}{6}$, $P(X=1) = a$, $P(X=2) = b$, $P(X=3) = \\frac{1}{4}$. If $E(X) = \\frac{3}{2}$, then $a$ multiplied by $12$ is"
+  },
+  {
+   "id": "JEE-MATH-U13-172",
+   "question": "$10\\%$ of the people in a town have a certain infection. A test detects the infection in $90\\%$ of infected people and wrongly shows positive for $10\\%$ of uninfected people. A person chosen at random is tested twice, the results of the two tests being independent given the person's actual condition, and both results are positive. If $p$ is the probability that the person is infected, then $p$ multiplied by $10$ is"
+  },
+  {
+   "id": "JEE-MATH-U10-095",
+   "question": "$P$ is a point on the line $x + y = 2$, and $M(1, 4)$, $N(4, -4)$ are fixed points. If $\\mu$ is the maximum value of $|PM - PN|$, then $\\mu^2$ is"
+  }
+ ]
+}

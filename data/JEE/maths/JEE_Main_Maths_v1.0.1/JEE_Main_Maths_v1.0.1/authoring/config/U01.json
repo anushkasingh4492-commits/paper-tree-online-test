@@ -1,0 +1,41 @@
+{
+ "unit_number": 1,
+ "unit_name": "Sets, Relations and Functions",
+ "branch": "Algebra",
+ "count": 140,
+ "draft_files": [
+  "drafts/u01_a.py",
+  "drafts/u01_b.py",
+  "drafts/u01_c.py"
+ ],
+ "alias_groups": {
+  "ALIAS-ERR-U01-C-01": [
+   "U01-C-004",
+   "U01-C-010"
+  ],
+  "ALIAS-ERR-U01-C-02": [
+   "U01-C-009",
+   "U01-C-016"
+  ]
+ },
+ "numerical_selection": [
+  "U01-A-037",
+  "U01-B-010",
+  "U01-C-037",
+  "U01-A-038",
+  "U01-B-011",
+  "U01-C-038",
+  "U01-A-040",
+  "U01-B-038",
+  "U01-C-039",
+  "U01-A-015",
+  "U01-B-005",
+  "U01-C-016",
+  "U01-A-017",
+  "U01-B-006",
+  "U01-C-017",
+  "U01-A-001",
+  "U01-B-003",
+  "U01-C-001"
+ ]
+}

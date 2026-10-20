@@ -1,0 +1,18 @@
+[
+ {
+  "id": "V03-D-006",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Student-facing explanation used the word 'trap' ('the statistical trap of being the most optimistic estimator').",
+  "fix": "Changed to 'the statistical pitfall'.",
+  "changed": true
+ },
+ {
+  "id": "V03-D-024",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "difficulty_reason said 'shares the key term', which reads as house-banned 'key' wording.",
+  "fix": "Changed to 'shares the central term'.",
+  "changed": true
+ }
+]

@@ -1,0 +1,22 @@
+[
+ {
+  "id": "R01-C-08-3",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "A",
+    "key": "A",
+    "working": "P5: theory can keep account of the ideal or realism about ordinary people, not both - map as expert ideal vs record of actual paths.",
+    "alternative": "",
+    "issue": "Option A's wording ('cannot pass off the first as the second') captures the trade-off only loosely, but B-D are clearly off."
+   },
+   "S2": {
+    "answer": "B",
+    "key": "B",
+    "working": "P5: keep ideal (ought) or realism (actual), not both; map analogy fits best",
+    "alternative": "",
+    "issue": ""
+   }
+  }
+ }
+]

@@ -1,0 +1,393 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:paper-tree:jee-main-chemistry:1.1.0",
+  "title": "Complete JEE Main Chemistry bank",
+  "description": "Array of 2160 canonical records. Semantic key agreement and cross-record quotas are checked separately. No edition-specific textbook page is asserted.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^JEE-CHEM-\\d{4}$"
+      },
+      "candidate_id": {
+        "type": "string",
+        "minLength": 1
+      },
+      "unit": {
+        "type": "string",
+        "minLength": 1
+      },
+      "chapter": {
+        "type": "string",
+        "minLength": 1
+      },
+      "topic": {
+        "type": "string",
+        "minLength": 1
+      },
+      "subtopic": {
+        "type": "string",
+        "minLength": 1
+      },
+      "question": {
+        "type": "string",
+        "minLength": 1
+      },
+      "explanation": {
+        "type": "string",
+        "minLength": 1
+      },
+      "difficulty_reason": {
+        "type": "string",
+        "minLength": 1
+      },
+      "concept_family": {
+        "type": "string",
+        "minLength": 1
+      },
+      "standard": {
+        "const": "JEE Main"
+      },
+      "subject": {
+        "const": "Chemistry"
+      },
+      "discipline": {
+        "type": "string",
+        "minLength": 1
+      },
+      "source_document": {
+        "type": "string",
+        "minLength": 1
+      },
+      "source_chapter": {
+        "type": "string",
+        "minLength": 1
+      },
+      "syllabus_reference": {
+        "type": "string",
+        "minLength": 1
+      },
+      "source_verification_note": {
+        "type": "string",
+        "minLength": 1
+      },
+      "cognitive_level": {
+        "type": "string",
+        "minLength": 1
+      },
+      "validation_status": {
+        "type": "string",
+        "minLength": 1
+      },
+      "unit_number": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 20
+      },
+      "source_class": {
+        "enum": [
+          "XI",
+          "XII"
+        ]
+      },
+      "branch": {
+        "enum": [
+          "Physical Chemistry",
+          "Inorganic Chemistry",
+          "Organic Chemistry",
+          "Practical Chemistry"
+        ]
+      },
+      "difficulty": {
+        "enum": [
+          "Easy",
+          "Medium",
+          "Difficult"
+        ]
+      },
+      "family_dependencies": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "minLength": 1
+        },
+        "minItems": 1,
+        "uniqueItems": true
+      },
+      "figures": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "file": {
+              "type": "string",
+              "minLength": 1
+            },
+            "alt_text": {
+              "type": "string",
+              "minLength": 1
+            },
+            "source": {
+              "type": "string",
+              "minLength": 1
+            },
+            "width": {
+              "const": 1600
+            },
+            "height": {
+              "const": 900
+            }
+          },
+          "required": [
+            "file",
+            "alt_text",
+            "source",
+            "width",
+            "height"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "figure_required": {
+        "type": "boolean"
+      },
+      "assumptions": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "calculation": {
+        "anyOf": [
+          {
+            "type": "null"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "model": {
+                "type": "string",
+                "minLength": 1
+              },
+              "case": {
+                "type": "integer"
+              },
+              "inputs": {
+                "type": "object"
+              },
+              "result": {
+                "type": "number"
+              },
+              "unit": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "model",
+              "case",
+              "inputs",
+              "result",
+              "unit"
+            ],
+            "additionalProperties": false
+          }
+        ]
+      },
+      "provenance": {
+        "type": "object",
+        "required": [
+          "kind"
+        ],
+        "properties": {
+          "kind": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "question_type": {
+        "enum": [
+          "Foundational chemistry MCQ",
+          "Conceptual/application MCQ",
+          "Numerical application MCQ",
+          "Graph/data interpretation MCQ",
+          "Paired application MCQ",
+          "Molecular geometry MCQ"
+        ]
+      },
+      "options": {
+        "type": "object",
+        "properties": {
+          "A": {
+            "type": "string",
+            "minLength": 1
+          },
+          "B": {
+            "type": "string",
+            "minLength": 1
+          },
+          "C": {
+            "type": "string",
+            "minLength": 1
+          },
+          "D": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "additionalProperties": false
+      },
+      "correct_option": {
+        "enum": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ]
+      },
+      "correct_answer": {
+        "type": "string",
+        "minLength": 1
+      },
+      "release_version": {
+        "const": "1.1.0"
+      },
+      "syllabus_basis_year": {
+        "const": 2026
+      },
+      "source_page": {
+        "type": "null"
+      },
+      "marks_correct": {
+        "const": 4
+      },
+      "marks_incorrect": {
+        "const": -1
+      },
+      "marks_unattempted": {
+        "const": 0
+      },
+      "generator_eligible": {
+        "const": true
+      },
+      "max_per_family_per_paper": {
+        "const": 1
+      },
+      "tags": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "minLength": 1
+        },
+        "minItems": 1
+      },
+      "numerical_variant": {
+        "anyOf": [
+          {
+            "type": "null"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "question": {
+                "type": "string",
+                "minLength": 1
+              },
+              "unrounded_value": {
+                "type": "number"
+              },
+              "answer_integer": {
+                "type": "integer"
+              },
+              "unit": {
+                "type": "string"
+              },
+              "unit_scale_power10": {
+                "type": "integer"
+              },
+              "rounding": {
+                "const": "nearest integer; exact halves away from zero"
+              },
+              "parent_candidate": {
+                "type": "string",
+                "minLength": 1
+              },
+              "verification_basis": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "question",
+              "unrounded_value",
+              "answer_integer",
+              "unit",
+              "unit_scale_power10",
+              "rounding",
+              "parent_candidate",
+              "verification_basis"
+            ],
+            "additionalProperties": false
+          }
+        ]
+      }
+    },
+    "required": [
+      "id",
+      "candidate_id",
+      "unit",
+      "chapter",
+      "topic",
+      "subtopic",
+      "question",
+      "explanation",
+      "difficulty_reason",
+      "concept_family",
+      "standard",
+      "subject",
+      "discipline",
+      "source_document",
+      "source_chapter",
+      "syllabus_reference",
+      "source_verification_note",
+      "cognitive_level",
+      "validation_status",
+      "unit_number",
+      "source_class",
+      "branch",
+      "difficulty",
+      "family_dependencies",
+      "figures",
+      "figure_required",
+      "assumptions",
+      "calculation",
+      "provenance",
+      "question_type",
+      "options",
+      "correct_option",
+      "correct_answer",
+      "release_version",
+      "syllabus_basis_year",
+      "source_page",
+      "marks_correct",
+      "marks_incorrect",
+      "marks_unattempted",
+      "generator_eligible",
+      "max_per_family_per_paper",
+      "tags",
+      "numerical_variant"
+    ],
+    "additionalProperties": false
+  },
+  "minItems": 2160,
+  "maxItems": 2160
+}

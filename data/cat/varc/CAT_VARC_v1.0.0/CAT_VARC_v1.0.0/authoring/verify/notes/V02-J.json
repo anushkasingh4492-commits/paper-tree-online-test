@@ -1,0 +1,22 @@
+[
+ {
+  "id": "V02-J-008",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "A",
+    "key": "A",
+    "working": "Observation changes behaviour so audits overstate routine compliance; watching does help for a time.",
+    "alternative": "",
+    "issue": "'the routine figures have often turned out higher' is ambiguous: should mean observed audit figures exceeded dispenser counts; 'routine' could be misread as the unobserved figures, which would invert the logic."
+   },
+   "S2": {
+    "answer": "A",
+    "key": "A",
+    "working": "Observed audits measure watched behaviour; observation helps briefly but cannot show unwatched behaviour.",
+    "alternative": "",
+    "issue": ""
+   }
+  }
+ }
+]

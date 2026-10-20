@@ -1,0 +1,3061 @@
+{
+ "U01-B": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U01-053",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed: U01-B-006 was the exact inverse of U01-B-001 (n(X)=3, n(Y)=4, 2^12). Rewritten with new data and a different unknown: n(X)=n(Y)+1, relations X to Y = 2^20 gives n(Y)=4, n(X)=5 via a quadratic; asks k where relations on X = 2^k times relations on Y (k=9). New family U01-B-relations-ratio-sizes; numerical alternate updated; distractors 1, 41, 5 each from a named slip."
+   },
+   {
+    "finding_id": "JEE-MATH-U01-062",
+    "category": "E5",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Confirmed with enumeration: reading pairs as unordered makes R the full relation (all three properties), not option 'reflexive and symmetric but not transitive'. Rationale rewritten to a concrete slip that yields exactly that option: swapping the symmetry and transitivity definitions (chain test passes, reversal test fails on (2,1))."
+   }
+  ],
+  "changed_stem_or_options": [
+   "U01-B-006"
+  ],
+  "alias_requests": []
+ },
+ "U01-C": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U01-134",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Statement II (involution count on 3 elements) duplicated 133's task. Rewrote the item on a 4-element set: Statement I idempotent count f o f = f (41, true), Statement II number of f with f o f constant (true 40, claimed 92, false). Key unchanged (I true, II false); new family U01-C-idempotent-constant-square. Brute-force verified."
+   },
+   {
+    "finding_id": "JEE-MATH-U01-104",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Related task (inverse of a different bijection), not the same data or answer; alias with U01-C-004 requested."
+   },
+   {
+    "finding_id": "JEE-MATH-U01-110",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Same method (onto count) with different sizes; brute force confirms 6 and 36. Alias with U01-C-009 requested."
+   },
+   {
+    "finding_id": "JEE-MATH-U01-109",
+    "category": "E7",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "difficulty_reason now says 'Factorising $256$'."
+   },
+   {
+    "finding_id": "JEE-MATH-U01-115",
+    "category": "E8",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Onto argument now uses conjugate pairs of non-real roots of x^3 - 3x - c = 0 (real coefficients), no limits/continuity. Key unchanged (onto, not one-one; sympy range = R)."
+   },
+   {
+    "finding_id": "JEE-MATH-U01-126",
+    "category": "E5",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Rationale for 'neither one-one nor onto' made self-contained, naming both slips explicitly."
+   },
+   {
+    "finding_id": "JEE-MATH-U01-097",
+    "category": "E9",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Subtopic now 'Onto functions impossible when $n(P) < n(Q)$'."
+   }
+  ],
+  "changed_stem_or_options": [
+   "U01-C-040"
+  ],
+  "alias_requests": [
+   [
+    "U01-C-004",
+    "U01-C-010"
+   ],
+   [
+    "U01-C-009",
+    "U01-C-016"
+   ]
+  ]
+ },
+ "U02-A": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U02-008",
+    "category": "E6",
+    "severity": "minor",
+    "action": "rewritten",
+    "note": "Confirmed: inverse of (2 - i)^2 = 3 - 4i is the conjugate of U02-002's answer over the same denominator 25. Rewritten with base (3 - i)^2 = 8 - 6i and a different unknown, |w| for w = z^{-1} (key 1/10, via |z^{-1}| = 1/|z| = 1/|3 - i|^2); new distractors 1/sqrt(10), 1/100, 1/(2 sqrt 7), each from a named slip; new family U02-A-inverse-modulus. Still Easy, XI."
+   },
+   {
+    "finding_id": "JEE-MATH-U02-033",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Related task only: U02-033 asks for square roots, U02-020/021 ask for a least n; the shared step (1+i)/(1-i) = i is a common sub-step, not the same task or answer. Alias group requested with U02-A-020 and U02-A-021."
+   },
+   {
+    "finding_id": "JEE-MATH-U02-047",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed overlap with U02-004 (residue table of S_n gives S_2027 = -1). Different unknown (a count), so aliased rather than rewritten: alias group U02-A-004, U02-A-047. U02-052 was rewritten for its E7 finding and no longer uses the S_n table."
+   },
+   {
+    "finding_id": "JEE-MATH-U02-034",
+    "category": "E3",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Verified with sympy: (y + ix)^2 = -a + ib, (y - ix)^2 = -a - ib, (x + iy)^2 = a + ib. Explanation now pairs each expression with its square by value, without option positions or letters."
+   },
+   {
+    "finding_id": "JEE-MATH-U02-033",
+    "category": "E5",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Confirmed: the old rationale did not produce +-(1 + i). Rationale now: simplifies the quotient as (1 + i)^2 = 2i, forgetting to divide by (1 - i)(1 + i) = 2; square roots of 2i are +-(1 + i) (sympy verified). Explanation already correct."
+   },
+   {
+    "finding_id": "JEE-MATH-U02-052",
+    "category": "E7",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Kept Difficult to preserve batch quotas (17/25/13) and made the item genuinely harder: the sum is now sum_{k=1}^{30} i^{k^2}, where the exponent has only residues 0 and 1 mod 4 (trap: applying the period-4 cancellation of i^k). Sum 15 + 15i, x + iy = 3 + 9i, x^2 + y^2 = 90 (sympy). Distractors 2/5 (reads i^{k^2} as i^k), 450 (divides by |2 - i| not |2 - i|^2), 18 (divides by |2 - i|^4). Numerical alternate now asks x^2 + y^2 = 90. New family U02-A-sum-square-powers-equality."
+   }
+  ],
+  "changed_stem_or_options": [
+   "U02-A-008",
+   "U02-A-052"
+  ],
+  "alias_requests": [
+   [
+    "U02-A-020",
+    "U02-A-021",
+    "U02-A-033"
+   ],
+   [
+    "U02-A-004",
+    "U02-A-047"
+   ]
+  ]
+ },
+ "U02-B": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U02-091",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed: U02-B-036 reused the exact brackets of U02-B-014 ($-2\\omega$, $-2\\omega^2$). Rewritten as a counting question: number of $n$ in $1..20$ with $(1 + \\omega)^n + (1 + \\omega^2)^n = 2$ (key 3; distractors 6, 10, 7 from named slips, all brute-force verified). New family U02-omega-power-count; Medium kept; numerical alternate updated to 3."
+   },
+   {
+    "finding_id": "JEE-MATH-U02-077",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Same method (distance to centre minus radius) as U02-B-016/U02-B-021 with different numbers; related task, not a duplicate. Alias requested."
+   },
+   {
+    "finding_id": "JEE-MATH-U02-109",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "U02-B-054 key step $|z-1|^2 + |z+1|^2 = 4$ on $|z| = 1$ is the U02-B-024 identity with the same numbers, but U02-B-054 asks a different extremal question; alias requested with U02-B-024."
+   },
+   {
+    "finding_id": "JEE-MATH-U02-106",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "U02-B-035 gives away the degenerate-segment insight used in U02-B-051; related task, alias requested."
+   }
+  ],
+  "changed_stem_or_options": [
+   "U02-B-036"
+  ],
+  "alias_requests": [
+   [
+    "U02-B-022",
+    "U02-B-016",
+    "U02-B-021"
+   ],
+   [
+    "U02-B-054",
+    "U02-B-024"
+   ],
+   [
+    "U02-B-051",
+    "U02-B-035"
+   ]
+  ]
+ },
+ "U02-C": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U02-125",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Verified: both are complete-the-square vertex value on a monic quadratic with different data and different asks (minimum vs range); related task, not a repeat, so aliased U02-C-015 with U02-C-006."
+   },
+   {
+    "finding_id": "JEE-MATH-U02-154",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Verified: same discriminant-method structure as U02-C-029 with different coefficients plus an integer count; related, not the same data or answer, so aliased U02-C-044 with U02-C-029."
+   },
+   {
+    "finding_id": "JEE-MATH-U02-134",
+    "category": "E5",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Verified with sympy: the named slip gives k^2 + 2k + 9 (D = -32), never negative. Rationale rewritten: correct k^2 - 10k + 9 < 0 factorised as (k + 1)(k + 9), giving exactly (-9, -1)."
+   },
+   {
+    "finding_id": "JEE-MATH-U02-148",
+    "category": "E5",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Verified: 4 - 3 = 1 is correct. Rationale rewritten: product computed as 4 + 3 = 7, so Statement I rejected, Statement II correctly rejected, giving 'Both false'."
+   },
+   {
+    "finding_id": "JEE-MATH-U02-133",
+    "category": "E5",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Verified: parenthetical gave away k != 0. Stem reworded to 'If kx^2 + 4x + 1 = 0 is a quadratic equation with real roots, then the set of all possible values of k is'; option (-inf, 4] now a live trap."
+   },
+   {
+    "finding_id": "JEE-MATH-U02-142",
+    "category": "E5",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Verified: [1, 4] contains the excluded k = 1. Replaced with (1, 4] (product <= 0 slip, accepts k = 4 where the roots are 0 and -1); value updated."
+   },
+   {
+    "finding_id": "JEE-MATH-U02-120",
+    "category": "E5",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Verified: under b^2 + 4ac every option was non-square. Replaced all four equations: key 2x^2 - 5x - 6 (D = 73); distractors 2x^2 - 7x + 6 (only non-square under b^2 + 4ac), x^2 - 4x - 12 (only under b^2 - 2ac), 3x^2 - x - 4 (only under b^2 - 4c). Under each slip exactly one option looks irrational and the key looks rational. Check, explanation, misconception updated."
+   },
+   {
+    "finding_id": "JEE-MATH-U02-127",
+    "category": "E7",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Moved U02-C-017, 018, 019 and 021 to topic 'Quadratics with complex coefficients' (matching U02-D); subtopics of 017/018 now 'Solving with a complex discriminant'."
+   },
+   {
+    "finding_id": "JEE-MATH-U02-141",
+    "category": "E9",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Stem reworded to 'The set of all real k for which both roots of ... are real and positive (possibly equal) is'; same change applied to U02-C-042 (U02-152) and U02-C-050 (U02-160)."
+   }
+  ],
+  "changed_stem_or_options": [
+   "U02-C-010",
+   "U02-C-023",
+   "U02-C-031",
+   "U02-C-032",
+   "U02-C-042",
+   "U02-C-050"
+  ],
+  "alias_requests": [
+   [
+    "U02-C-006",
+    "U02-C-015"
+   ],
+   [
+    "U02-C-029",
+    "U02-C-044"
+   ]
+  ]
+ },
+ "U02-D": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U02-168",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed: U02-C-038 Statement I derives q = 1 for root 2 + sqrt(3), giving away U02-D-003's answer. Rewrote U02-D-003 as a different task: monic rational-coefficient quadratic with root (sqrt(3) - 1)^2 = 4 - 2sqrt(3), so the root must first be expanded; key x^2 - 8x + 4 = 0 (sympy-verified), distractors from sign slip, dropped middle term (x^2 - 8x + 13), and product slip (x^2 - 8x + 28). New family U02-form-squared-surd-root; still Easy."
+   },
+   {
+    "finding_id": "JEE-MATH-U02-216",
+    "category": "E6",
+    "severity": "minor",
+    "action": "rewritten",
+    "note": "Confirmed: U02-D-015 Statement I states alpha^2 + beta^2 = 14 for x^2 - 4x + 1 = 0, which is exactly U02-D-051's answer S_2. Since one item gives the other's answer directly, rewrote U02-D-051: x^2 - 5x + 1 = 0, find (S_12 - S_8)/(S_11 - S_9) = 5 via the recurrence at n = 11 and n = 9 (sympy-verified). New family U02-recurrence-difference-ratio; still Difficult; numerical alternate updated to 5."
+   },
+   {
+    "finding_id": "JEE-MATH-U02-178",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed related task (conjugate complex root, product 13) but different data and unknown (full equation vs q). Alias U02-D-013 with U02-C-005."
+   },
+   {
+    "finding_id": "JEE-MATH-U02-205",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed: with alpha*beta = -1 the item reduces to alpha^3 + beta^3 = 36, the sum-of-cubes task. Different data and answer from U02-D-006 (45). Alias U02-D-040 with the U02-sum-cubes family items U02-D-006 and U02-D-018."
+   },
+   {
+    "finding_id": "JEE-MATH-U02-200",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed: Statement I repeats the reciprocal-roots transformation of U02-D-004 with different numbers; related task only. Alias U02-D-035 with U02-D-004."
+   },
+   {
+    "finding_id": "JEE-MATH-U02-202",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed: Statement II iterates the power-sum recurrence like U02-D-036 with different equation and index; related task only. Alias U02-D-037 with U02-D-036."
+   }
+  ],
+  "changed_stem_or_options": [
+   "U02-D-003",
+   "U02-D-051"
+  ],
+  "alias_requests": [
+   [
+    "U02-D-013",
+    "U02-C-005"
+   ],
+   [
+    "U02-D-040",
+    "U02-D-006",
+    "U02-D-018"
+   ],
+   [
+    "U02-D-035",
+    "U02-D-004"
+   ],
+   [
+    "U02-D-037",
+    "U02-D-036"
+   ]
+  ]
+ },
+ "U03-A": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U03-008",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed near-duplicate of U03-C-031 (both reduce P^2 = I to (9 - ck)I = I). Rewrote U03-A-008 (still Easy, Inverse/parameter): P = [[a, 4], [-6, b]], P^2 = I, find ab; the off-diagonal entries force b = -a before the diagonal gives a^2 = 25, so ab = -25 (sympy solve: (5, -5), (-5, 5)). New distractors 25, -23, -24 each from a named slip; new family U03-A-involutory-trace-zero."
+   },
+   {
+    "finding_id": "JEE-MATH-U03-019",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed: U03-A-019 and U03-A-036 used the same matrix [[1, 2], [0, 1]] and the same fact P^n = [[1, 2n], [0, 1]]. Rewrote U03-A-019 (still Medium): P = [[2, 1], [0, 2]] = 2I + N, P^n = [[alpha, beta], [0, alpha]], beta = 6 alpha gives n/2 = 6, n = 12 (verified by sympy loop). Different matrix, binomial scalar-plus-nilpotent method and a ratio twist; new family U03-A-power-scalar-plus-nilpotent; numerical alternate updated to 12."
+   },
+   {
+    "finding_id": "JEE-MATH-U03-039",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed related, not duplicate: U03-A-039 computes tr(P^2) = -2(sum of squares) for given entries, U03-A-051 counts matrices using that identity (sympy: tr(P^2) = -2x^2 - 2y^2 - 2z^2). Alias requested so they never share a paper."
+   },
+   {
+    "finding_id": "JEE-MATH-U03-013",
+    "category": "E5",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Rationale for the 'Statement I false, Statement II true' distractor reworded: student thinks P + P^T is skew-symmetric (Statement I false) and P P^T is skew-symmetric (Statement II true), confusing both with P - P^T. Stem and options unchanged."
+   },
+   {
+    "finding_id": "JEE-MATH-U03-041",
+    "category": "E3",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Count 12 re-verified by brute force over 81 matrices. Explanation now derives the case split: if a + d != 1 then b = c = 0, a = d in {0, 1}, giving only O and I; if a + d = 1 then bc = a - a^2 = ad = 0 for entries in {0, 1, 2}, giving 5 + 5 = 10 matrices; total 12."
+   }
+  ],
+  "changed_stem_or_options": [
+   "U03-A-008",
+   "U03-A-019"
+  ],
+  "alias_requests": [
+   [
+    "U03-A-039",
+    "U03-A-051"
+   ]
+  ]
+ },
+ "U03-B": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U03-070",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Related but not the same task: U03-B-015 tests the general facts (|P^T| = |P|, sign of |-P|); U03-B-034 uses numerical data (|-2P| with |P| = 3, |P^T P|). Different data and answers, so no rewrite; alias link requested."
+   },
+   {
+    "finding_id": "JEE-MATH-U03-070",
+    "category": "E5",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Rationale for 'Statement I is false but Statement II is true' now names the slips (believes transpose changes sign; uses (-1)^2). Rationale for 'Both false' also made explicit."
+   },
+   {
+    "finding_id": "JEE-MATH-U03-095",
+    "category": "E3",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Verified: stated order gives (4, 5, 11). Explanation now says C3 -> C3 - C2 and then C2 -> C2 - C1 (and orders the row operations explicitly). Value -8 unchanged."
+   },
+   {
+    "finding_id": "JEE-MATH-U03-101",
+    "category": "E3",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Verified. Explanation now says R3 -> R3 - R2 and then R2 -> R2 - R1. Value unchanged; misconception LaTeX tidied."
+   },
+   {
+    "finding_id": "JEE-MATH-U03-076",
+    "category": "E8",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Span/dependence argument replaced by the zero-padding factorisation PQ = [P|0][Q;0] into 3x3 factors with zero determinant, plus the explicit PQ; checked in sympy. Difficulty reason updated."
+   },
+   {
+    "finding_id": "JEE-MATH-U03-094",
+    "category": "E9",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Wrapped $x$ and $R_1 \\to R_1 - 2R_2 + R_3$ in LaTeX."
+   },
+   {
+    "finding_id": "JEE-MATH-U03-084",
+    "category": "E9",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Wrapped $x = 0$."
+   },
+   {
+    "finding_id": "JEE-MATH-U03-103",
+    "category": "E9",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Wrapped $(a+b+c)$."
+   }
+  ],
+  "changed_stem_or_options": [],
+  "alias_requests": [
+   [
+    "U03-B-015",
+    "U03-B-034"
+   ]
+  ]
+ },
+ "U03-C": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U03-141",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed near-duplicate of U03-A-008 (involutory 2x2, off-diagonal product -8). U03-C-031 rewritten: abstract real 2x2 P with P^{-1} = P, P != +-I; using the stated identity P^2 - (tr P)P + |P|I = O deduce tr P = 0, |P| = -1, then |adj P + 3P^{-1}| = |2P| = -4. New family U03-C-involutory-adj-det; sympy check solves P^2 = I generically and confirms the value is -4 for every non-scalar solution. Difficulty Medium kept; qtype now Conceptual/application MCQ. Note U03-A-008 was itself independently rewritten by batch A (trace-zero family), no overlap with the new item."
+   },
+   {
+    "finding_id": "JEE-MATH-U03-155",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed: 045 recovers Q via adj(adj Q) = |Q|Q, same core task as 042 (P = |P|(adj P)^{-1}) with an extra parameter step. Related, not a copy (different data, unknown is a trace). Alias requested [U03-C-045, U03-C-042]; qlib has no family_dependencies field, so linkage is via alias_requests."
+   },
+   {
+    "finding_id": "JEE-MATH-U03-154",
+    "category": "E2",
+    "severity": "critical",
+    "action": "fixed",
+    "note": "Confirmed with sympy: for P = [[0,1,0],[-1,0,0],[0,0,1]] (non-symmetric, orthogonal, normal) Q^2 = PP^T = QQ^T = I. Stem now says 'real' and 'for every such P, QQ^T necessarily equals'; distractors PP^T and Q^2 replaced by -I and Q^T. Options now I, -I, Q, Q^T: Q = I iff P symmetric (excluded), so Q != I and Q^T = Q^{-1} != I; QQ^T has non-negative diagonal so never -I. Exactly one option holds for every admissible P. Rationales, values and explanation updated."
+   }
+  ],
+  "changed_stem_or_options": [
+   "U03-C-031",
+   "U03-C-044"
+  ],
+  "alias_requests": [
+   [
+    "U03-C-045",
+    "U03-C-042"
+   ]
+  ]
+ },
+ "U03-D": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U03-213",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed: 048 used the same rows (1,1,1),(1,2,3),(1,3,5) as U03-D-022, so 022's A.P. answer gave away its key step. 048 also solved a trigonometric equation on an interval, which is out of scope. Rewritten as a new item: x + 2y - z = p, 2x - y + 3z = q, 4x + 3y + z = pq - 4 with p, q positive integers. R3 = 2R1 + R2 gives (p - 1)(q - 2) = 6, so there are 4 ordered pairs. New family U03-D-consistency-integer-pairs. Difficult kept. Sympy check finds the left null vector and scans the pairs; numerical alternate is 4."
+   },
+   {
+    "finding_id": "JEE-MATH-U03-219",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed: Statement I of U03-D-035 states X1 + t(X2 - X1), and 054's key was that formula with t = -1. Rewritten as a new item: P = [[1,1,1],[1,2,alpha],[2,beta,4]] with solutions (1,1,1) and (2,-1,2) of PX = Q. P(X2 - X1) = O gives alpha = beta = 3. The row relation R3 = R1 + R2 then makes PX = (2,k,7)^T consistent iff k = 5. Distractors: 9/2 (column relation applied to the RHS), 9 and -5. New family U03-D-solutions-fix-matrix. Difficult kept; qtype is now Inverse/parameter MCQ. Sympy check solves for alpha and beta and runs a rank test."
+   },
+   {
+    "finding_id": "JEE-MATH-U03-186",
+    "category": "E6",
+    "severity": "major",
+    "action": "aliased",
+    "note": "Confirmed overlap: the determinant (k-1)^2(k+2) is shared by U03-C-039 (singular values {1,-2}), U03-D-021 and U03-D-051. This is a related task, not a copy. 021 still needs the constants tested at each root (only k = -2 gives no solution), and 051 is a two-variable concurrency sum. Alias requested for the group. qlib has no family_dependencies field, so the link is made through alias_requests."
+   },
+   {
+    "finding_id": "JEE-MATH-U03-180",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed: 015 (only the trivial solution, k != 10) is the complementary criterion of 002 (non-trivial solution, k = 2), with Delta linear in k in both. It is a related task with different data and a different answer. Alias requested [U03-D-015, U03-D-002]."
+   },
+   {
+    "finding_id": "JEE-MATH-U03-219",
+    "category": "E3",
+    "severity": "minor",
+    "action": "rewritten",
+    "note": "Confirmed: the explanation listed the distractor results out of option order. This is moot because 054 was fully rewritten (see the E6 closure). The new explanation does not refer to options by position."
+   },
+   {
+    "finding_id": "JEE-MATH-U03-172",
+    "category": "E7",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Confirmed: the item needs Delta and Delta_3. question_type changed to Multi-step computation MCQ. Difficulty Easy kept, so the quotas are unchanged."
+   }
+  ],
+  "changed_stem_or_options": [
+   "U03-D-048",
+   "U03-D-054"
+  ],
+  "alias_requests": [
+   [
+    "U03-D-021",
+    "U03-C-039",
+    "U03-D-051"
+   ],
+   [
+    "U03-D-015",
+    "U03-D-002"
+   ]
+  ]
+ },
+ "U04-A": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U04-047",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Verified: old item (5-digit strings over {1,2,3}, all used) = 150 = onto maps 5 balls to 3 boxes in U04-C-022. Rewritten to five-digit numbers using each of 0,1,2,3 at least once (key 180): four-symbol alphabet with leading-zero correction split into two cases; new family U04-A-every-digit-zero; distractors 240, 144, 360 recomputed; numerical alternate 180."
+   },
+   {
+    "finding_id": "JEE-MATH-U04-036",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Verified: key k = r states the correct recurrence and so refutes U04-A-009 Statement II. Rewritten to a different unknown: P(m+n,2)=90, P(m-n,2)=30, find P(m,n) (key 56); new family U04-A-Pnr-system; sympy check solves the system; numerical alternate 56."
+   },
+   {
+    "finding_id": "JEE-MATH-U04-028",
+    "category": "E6",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Verified: BANANA reused and the check line stated U04-A-003's key 60. Word changed to BALLOON (L's apart, key 900; check line 1260 - 360) so no U04-A-003 data or key appears; distractors 360, 1800, 540 recomputed; numerical alternate 900."
+   },
+   {
+    "finding_id": "JEE-MATH-U04-040",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Verified: complement route uses 648 (U04-A-002 key). Related task, not the same task; alias requested for U04-A-040 with U04-A-002."
+   },
+   {
+    "finding_id": "JEE-MATH-U04-049",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Verified: Statement I (rank of SMALL = 58) is the rank-with-repeated-letter task of U04-A-020/U04-A-044. Alias requested for U04-A-049 with U04-A-020 and U04-A-044."
+   },
+   {
+    "finding_id": "JEE-MATH-U04-004",
+    "category": "E9",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "P(n, r) definition moved to the start of the stem ('Here $P(n, r)$ denotes ...') in U04-A-004, 012, 017, 035 and the rewritten 036; stems now end with 'equals'/'is'. Options unchanged."
+   }
+  ],
+  "changed_stem_or_options": [
+   "U04-A-004",
+   "U04-A-012",
+   "U04-A-017",
+   "U04-A-028",
+   "U04-A-035",
+   "U04-A-036",
+   "U04-A-047"
+  ],
+  "alias_requests": [
+   [
+    "U04-A-040",
+    "U04-A-002"
+   ],
+   [
+    "U04-A-049",
+    "U04-A-020",
+    "U04-A-044"
+   ]
+  ]
+ },
+ "U04-B": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U04-073",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "U04-B-019 rewritten as an inverse at-least-k problem: group of 3 from n men and 5 women, 80 groups with at least 2 women, find n (= 7). New data, new unknown, new family U04-B-at-least-k-inverse; distractors from dropping the all-women case (8), fill-minimum overcount (5), at-least-1 misreading (4). Numerical alternate updated."
+   },
+   {
+    "finding_id": "JEE-MATH-U04-066",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "U04-B-012 both statements replaced: I = triangles formed by 8 lines in general position (claimed 28, true 56); II = triangles through a fixed point among 9 concyclic points (claimed 36, true 28). No grid rectangles or collinear-points line count remains. Key stays both false. New family U04-B-statement-lines-circle; brute-force check."
+   },
+   {
+    "finding_id": "JEE-MATH-U04-092",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "U04-B-038 both statements replaced, using N = 2^6 * 3^5: I = perfect-cube divisors (claimed 2, true 6); II = divisors that are squares or cubes (16, with the sixth-power overlap removed). Diagonal and multiples-of-6 tasks are gone. Key stays I false, II true. New family U04-B-statement-power-divisors; subtopic and cognitive level updated."
+   },
+   {
+    "finding_id": "JEE-MATH-U04-069",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed: Statement I uses the symmetry from U04-B-001 and Statement II the Pascal step from U04-B-002, with different numbers. Related tasks, not the same data, so the item is kept and an alias group is requested."
+   }
+  ],
+  "changed_stem_or_options": [
+   "U04-B-012",
+   "U04-B-019",
+   "U04-B-038"
+  ],
+  "alias_requests": [
+   [
+    "U04-B-015",
+    "U04-B-001",
+    "U04-B-002"
+   ]
+  ]
+ },
+ "U04-C": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U04-120",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed: same data as U04-B-008 and 9P3-5P3 = 6 x 74. Rewritten to 6 men and 4 women seated in 3 chairs, complement of 'both end chairs men' (720 - 240 = 480); new family U04-C-complement-positions."
+   },
+   {
+    "finding_id": "JEE-MATH-U04-128",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed: same equation as U04-C-003 (66). Rewritten to three coloured dice summing to 12 (lower and upper bounds together): 55 - 30 = 25; new family U04-C-stars-bars-two-sided; numerical alternate updated."
+   },
+   {
+    "finding_id": "JEE-MATH-U04-116",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed: same 6 books / 3 pairs data as U04-C-008, keys mutually present. Rewritten to 8 books, 4 students, 2 each, atlas and dictionary with the same student: 4 x 90 = 360; new family U04-C-groups-labelled-pair."
+   },
+   {
+    "finding_id": "JEE-MATH-U04-152",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed: brute force 25 vs 150 on same data as U04-C-022. Rewritten to 7 distinct balls in 3 identical non-empty boxes with at least one box of exactly 3: 70 + 105 = 175; new family U04-C-identical-boxes-condition."
+   },
+   {
+    "finding_id": "JEE-MATH-U04-113",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed: repeats U04-A-006 data and U04-A-010 task. Replaced by 6 different novels and 3 identical dictionaries, no two dictionaries adjacent: 6! x 7C3 = 25200; new family U04-C-gap-mixed-identical."
+   },
+   {
+    "finding_id": "JEE-MATH-U04-140",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed: Statement II was the U04-B-042 no-consecutive task. Statement II replaced by a lower-bound stars and bars count (x+y+z=15, x>=3, y>=4, z>=5 gives 5C2 = 10, true); key unchanged, rationales and explanation updated."
+   },
+   {
+    "finding_id": "JEE-MATH-U04-145",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed: positive solutions of a 4-variable sum, same as U04-C-004. Rewritten to 8 coins with unlimited Rs 1, 2, 5 and only two Rs 10 coins: 45 + 36 + 28 = 109; new family U04-C-selection-limited-supply."
+   },
+   {
+    "finding_id": "JEE-MATH-U04-118",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Related task (positive stars and bars with different numbers and contexts), not a copy; alias group requested."
+   },
+   {
+    "finding_id": "JEE-MATH-U04-157",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Statement items reuse the labelled / unlabelled equal-group tasks with different numbers; alias groups requested (U04-C-009 included since it is now a labelled equal-group item)."
+   },
+   {
+    "finding_id": "JEE-MATH-U04-114",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Same complement-of-all-distinct idea in a different setting; alias requested with U04-A-026."
+   },
+   {
+    "finding_id": "JEE-MATH-U04-108",
+    "category": "E9",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "All batch C stems, explanations and rationales normalised to ${}^{n}C_{r}$ and ${}^{n}P_{r}$ (no \\binom left). Batch A (P(n, r), C(n, r)) is outside this file and needs its own normalisation."
+   },
+   {
+    "finding_id": "JEE-MATH-U04-110",
+    "category": "E7",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Topics re-tagged: Selection and arrangement (12), Permutations with restrictions (6), Selections with restrictions (1), Division into groups (10), Distribution and integer solutions (24)."
+   }
+  ],
+  "changed_stem_or_options": [
+   "U04-C-006",
+   "U04-C-009",
+   "U04-C-013",
+   "U04-C-021",
+   "U04-C-033",
+   "U04-C-038",
+   "U04-C-045"
+  ],
+  "alias_requests": [
+   [
+    "U04-C-004",
+    "U04-C-011",
+    "U04-C-032",
+    "U04-C-037"
+   ],
+   [
+    "U04-C-050",
+    "U04-C-028",
+    "U04-C-009"
+   ],
+   [
+    "U04-C-032",
+    "U04-C-008",
+    "U04-C-029"
+   ],
+   [
+    "U04-C-007",
+    "U04-A-026"
+   ]
+  ]
+ },
+ "U05-A": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U05-040",
+    "category": "E5",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Confirmed: the 'both slips' rationale referred to slips listed after it. Rewrote it to be self-contained: requiring only 5 | r gives 5 rational terms (r = 0, 5, 10, 15, 20, verified), and using (n-r+1)/r for C(20,r+1)/C(20,r) gives 21 - r = 2r, r = 7; so both statements rejected. Key (both true) re-verified with sympy: rational r = 0, 10, 20 and C(20,7) = 2 C(20,6) only at r = 6. Stem, options and key unchanged."
+   },
+   {
+    "finding_id": "JEE-MATH-U05-040",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Statement I counts rational terms of (sqrt2 + 3^(1/5))^20 (answer 3), the same method as U05-A-009 (answer 3) and U05-A-019 with different data; it is one half of a statement item, so a related task, not a duplicate. Alias group requested; no rewrite."
+   },
+   {
+    "finding_id": "JEE-MATH-U05-010",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Statement I (no constant term in (x + 1/x)^11, powers 11 - 2r always odd, verified) is the existence task of U05-A-013 and U05-A-046 with different data, inside a two-statement item. Related task; alias group requested; no rewrite."
+   }
+  ],
+  "changed_stem_or_options": [],
+  "alias_requests": [
+   [
+    "U05-A-040",
+    "U05-A-009",
+    "U05-A-019"
+   ],
+   [
+    "U05-A-010",
+    "U05-A-013",
+    "U05-A-046"
+   ]
+  ]
+ },
+ "U05-B": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U05-077",
+    "category": "E2",
+    "severity": "critical",
+    "action": "fixed",
+    "note": "Confirmed with sympy: at n = 1 distractor 2n equals the key 2. Stem now reads 'For every positive integer n'; distractor 2n replaced by (2n+1)/(n+1) (indices one more than given, mirroring the existing one-less slip (2n-1)/n). sympy: no option equals 2 and no two options coincide for any positive integer n; check extended to n = 1..10; rationales now show the computation."
+   },
+   {
+    "finding_id": "JEE-MATH-U05-058",
+    "category": "E5",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Rationales made self-contained: the two Statement I rejections now state the slip (odd positions hold 7 coefficients against 6, so the odd sum is assumed larger); the TT rationale states Statement I was verified correctly."
+   },
+   {
+    "finding_id": "JEE-MATH-U05-082",
+    "category": "E5",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "FF rationale rewritten to name both slips explicitly ((2^5)^2 = 1024 for the sum of squares; even-index sum assumed larger because it starts with C(9,0)) instead of 'both of the above errors'."
+   },
+   {
+    "finding_id": "JEE-MATH-U05-082",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Related tasks with different data and answers, not duplicates. Alias pairs requested with U05-B-008 (sum of squares), U05-B-005 and U05-B-011 (odd/even equal sums)."
+   },
+   {
+    "finding_id": "JEE-MATH-U05-058",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Related tasks with different data; alias pairs requested with U05-B-005 (odd/even sums) and U05-B-009 (middle-term position)."
+   },
+   {
+    "finding_id": "JEE-MATH-U05-058",
+    "category": "E9",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Ordinals written as $1$st, $3$rd, $5$th, $\\ldots$ and $6$th in stem, rationales and explanation."
+   },
+   {
+    "finding_id": "JEE-MATH-U05-049",
+    "category": "E9",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Wrapped all listed numbers in $...$ in explanations (049, 060, 067, 071, 072, 073, 080, 089, 093); also swept rationales, misconceptions and difficulty reasons batch-wide (004, 006, 007, 010, 012, 016, 017, 021, 025, 026, 027, 028, 033, 039, 040, 042, 043, 047 local items). Regex scan now finds no digits outside math mode."
+   }
+  ],
+  "changed_stem_or_options": [
+   "U05-B-030",
+   "U05-B-011"
+  ],
+  "alias_requests": [
+   [
+    "U05-B-035",
+    "U05-B-008"
+   ],
+   [
+    "U05-B-035",
+    "U05-B-005"
+   ],
+   [
+    "U05-B-035",
+    "U05-B-011"
+   ],
+   [
+    "U05-B-011",
+    "U05-B-005"
+   ],
+   [
+    "U05-B-011",
+    "U05-B-009"
+   ]
+  ]
+ },
+ "U05-C": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U05-106",
+    "category": "E5",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Confirmed with sympy: n = 2 gives 49 (odd), so 'always even' alone does not yield 14. Rationale for the 14 distractor rewritten: sees the multiple of 7, wrongly believes the expression is always even, gives 2*7 = 14. Stem, options and key unchanged."
+   }
+  ],
+  "changed_stem_or_options": [],
+  "alias_requests": []
+ },
+ "U06-A": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U06-011",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed with sympy: old 011 (a=500, d=100, S_12=12600) was the same S_n-from-a,d,n task as 004 (S_20=860) with a context wrapper. Rewritten with new data and a different unknown: savings a=300, d=150; find n such that the nth month's saving equals the total of the first 3 months (S_3=1350, n=8). New family U06-A-word-term-equals-sum; qtype Multi-step; numerical alternate added (8). Distractors 7 (a+nd), 17 (half dropped in S_3), 5 (S_3 taken as 3a), each verified."
+   },
+   {
+    "finding_id": "JEE-MATH-U06-017",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed: old 017 (a=20, d=2, n=25, S=1100) repeated 004's task. Rewritten to find the first term from the total: 16 rows, d=2, 800 seats gives front row a=35. New family U06-A-word-first-term-from-sum; numerical alternate added (35). Distractors 34 (nd for (n-1)d), 10 (half dropped), 50 (S/n average row), each verified. Checked it does not duplicate 016 (finds d from a, l, S) or 038 (last term from sum)."
+   },
+   {
+    "finding_id": "JEE-MATH-U06-046",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed: 046 finds d=-4 from S_10=S_15, then maximises S_n (S_12=S_13=312), whose second half is the greatest-partial-sum skill of 022 (S_14=287). Related task with different data and an extra first step, so not rewritten; alias requested so 022 and 046 never appear in one paper."
+   }
+  ],
+  "changed_stem_or_options": [
+   "U06-A-011",
+   "U06-A-017"
+  ],
+  "alias_requests": [
+   [
+    "U06-A-022",
+    "U06-A-046"
+   ]
+  ]
+ },
+ "U06-B": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U06-107",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed with sympy: 107 (S = 4/3, sum of squares 16/3) gives a = 2, r = -1/2 by the same elimination as 080 (r = 1/2). Different data, different answer and 107 goes on to a tail estimate, so it is a related task, not a duplicate. Alias requested for U06-B-047 with U06-B-020; no text changed."
+   },
+   {
+    "finding_id": "JEE-MATH-U06-081",
+    "category": "E7",
+    "severity": "minor",
+    "action": "rewritten",
+    "note": "Confirmed: T_6 = S_6 - S_5 = 160 is one-step work, not Medium. Instead of relabelling, the item was made genuinely Medium to keep quotas: same S_n = 5(2^n - 1), now asks for the sum of the squares of the first 5 terms (recover T_n = 5*2^(n-1), squares form a GP with a = 25, r = 4, sum 8525). New distractors 34125 (six terms), 1705 (squares only the ratio), 24025 (S_5 squared), all verified. question_type changed to Multi-step computation MCQ; difficulty_reason, explanation, check and numerical alternate (8525) updated."
+   },
+   {
+    "finding_id": "JEE-MATH-U06-114",
+    "category": "E5",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Key rewritten as $(0, 5) \\cup (5, 10)$, matching the form of the other interval options; explanation updated to the same form. Value (sympy Union) unchanged."
+   }
+  ],
+  "changed_stem_or_options": [
+   "U06-B-021",
+   "U06-B-054"
+  ],
+  "alias_requests": [
+   [
+    "U06-B-047",
+    "U06-B-020"
+   ]
+  ]
+ },
+ "U06-C": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U06-161",
+    "category": "E6",
+    "severity": "minor",
+    "action": "rewritten",
+    "note": "Confirmed: after substitution both items minimise t + 4/t (t > 0) with key 4. Rewrote U06-C-041 as a reverse (parameter) item: least value of log_3 x + log_x k over x > 1 is 6, find k (key 3^9); new numbers, different unknown, new family U06-C-amgm-logs-param; question_type now Inverse/parameter MCQ, still Medium."
+   },
+   {
+    "finding_id": "JEE-MATH-U06-146",
+    "category": "E7",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Confirmed no AP condition is used. Topic changed to 'Geometric progression' (subtopic 'Exponents in GP, bases unknown' kept), matching U06-B-033."
+   },
+   {
+    "finding_id": "JEE-MATH-U06-170",
+    "category": "E7",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Confirmed only a GP and r + 1/r bounds are used. Topic changed to 'Relation between AM and GM'."
+   }
+  ],
+  "changed_stem_or_options": [
+   "U06-C-041"
+  ],
+  "alias_requests": []
+ },
+ "U07-A": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U07-040",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed related, not duplicate: 040 (sin(pi x/2) + cos(pi x/3), periods 4 and 6, period 12) and 031 (sin 3x + cos 2x, periods 2pi/3 and pi, period 2pi) use the same LCM-of-periods method with different data and different answers (both re-verified by the min_period check). Alias group requested; no rewrite."
+   },
+   {
+    "finding_id": "JEE-MATH-U07-034",
+    "category": "E6",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Confirmed: 034 used f(x) = x^3 + x + 1 with f^{-1}(3) = 1, the key intermediate of U07-D-030 (g'(3)) and U07-D-047 (g''(3)). Changed the function to f(x) = x^3 + 2x - 1 and asked f^{-1}(2): x^3 + 2x - 3 = (x - 1)(x^2 + x + 3), discriminant -11, so the key stays 1 (sympy solveset gives {1}). Distractors updated to 11 (f(2)), 1/11 (1/f(2)) and cbrt(2) (cubic term only); explanation and numerical alternate updated. The function no longer coincides with the U07-D items, so no alias is needed."
+   },
+   {
+    "finding_id": "JEE-MATH-U07-051",
+    "category": "E3",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Confirmed: for n <= -4 the candidate x = -sqrt(3 - n) fails the upper bound x < n + 1, not the lower bound. Explanation now states (n + 1)^2 - (3 - n) = n^2 + 3n - 2 > 0, so x > n + 1 and lies outside [n, n + 1) (checked numerically for n = -4 to -12). Key 2 unchanged, check passes."
+   },
+   {
+    "finding_id": "JEE-MATH-U07-032",
+    "category": "E7",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Modulus/greatest-integer/signum graph item; source_class XII -> XI per NCERT Class XI placement."
+   },
+   {
+    "finding_id": "JEE-MATH-U07-036",
+    "category": "E7",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Modulus graph item; source_class XII -> XI."
+   },
+   {
+    "finding_id": "JEE-MATH-U07-037",
+    "category": "E7",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Modulus graph item; source_class XII -> XI."
+   },
+   {
+    "finding_id": "JEE-MATH-U07-038",
+    "category": "E7",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Greatest integer item; source_class XII -> XI."
+   },
+   {
+    "finding_id": "JEE-MATH-U07-043",
+    "category": "E7",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Modulus graph item; source_class XII -> XI."
+   },
+   {
+    "finding_id": "JEE-MATH-U07-044",
+    "category": "E7",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Signum item; source_class XII -> XI."
+   },
+   {
+    "finding_id": "JEE-MATH-U07-049",
+    "category": "E7",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Greatest integer and signum statements; source_class XII -> XI."
+   },
+   {
+    "finding_id": "JEE-MATH-U07-051",
+    "category": "E7",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Greatest integer equation; source_class XII -> XI."
+   },
+   {
+    "finding_id": "JEE-MATH-U07-053",
+    "category": "E7",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Signum and greatest integer item; source_class XII -> XI."
+   },
+   {
+    "finding_id": "JEE-MATH-U07-054",
+    "category": "E7",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Greatest integer item; source_class XII -> XI. Batch class split is now 38 XI / 18 XII (was 28/28 per the original brief); difficulty quotas unchanged."
+   }
+  ],
+  "changed_stem_or_options": [
+   "U07-A-034"
+  ],
+  "alias_requests": [
+   [
+    "U07-A-040",
+    "U07-A-031"
+   ]
+  ]
+ },
+ "U07-B": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U07-093",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed with sympy: (1 - cos kx)/(x sin x) and (1 - cos kx)/x^2 share the limit k^2/2, so with value 8 the item is U07-B-004 run backwards (k = 4). Rewrote U07-B-037 as: lim (1 - cos x cos 2x)/sin^2 kx = 1/2, k nonzero, find k^2 (key 5). New numbers, parameter moved to the denominator, product-of-cosines twist; distractors 10, 3, 9 each verified from the named slip. New family U07-B-param-cos-product; still Medium, Inverse/parameter MCQ, numerical alternate answer 5."
+   }
+  ],
+  "changed_stem_or_options": [
+   "U07-B-037"
+  ],
+  "alias_requests": []
+ },
+ "U07-C": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U07-116",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed: 116 evaluated [x] + [-x] at x = 2, which gives U07-090's answer outright and repeats the fact used in U07-049 and U07-148. Rewrote U07-C-008 with a different function and point: g(x) = x + [-x] at x = 3, asking lim_{3^-} g, lim_{3^+} g and g(3). Key is now 0, -1, 0, re-verified by one-sided numeric evaluation. Distractors: 1, 0, 0 from [-x] = -[x]; 0, 0, 0 from substituting x = 3 in both limits; 0, -1, -1 from applying -[x] - 1 at the integer. New family U07-C-gif-x-plus-neg-gif. Still Easy."
+   },
+   {
+    "finding_id": "JEE-MATH-U07-140",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed: 140 used the same f(x) = lim (x^{2n} - 1)/(x^{2n} + 1) as U07-B-046. Rewrote U07-C-032 with f(x) = lim (x^{2n+1} + x^2)/(x^{2n} + 1), which is x^2 for |x| < 1 and x for |x| > 1, with f(1) = 1 and f(-1) = 0. f is continuous at 1 but jumps at -1, so the key is now 1 (re-checked with mpmath at n = 10^7). The new twist is the asymmetry between the two boundary points. Distractors are 2 (counts both boundary points), 0 (wrong symmetry argument) and 3. New family U07-C-limit-defined-fn-odd; it does not share data with U07-C-049. Still Medium."
+   },
+   {
+    "finding_id": "JEE-MATH-U07-110",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed: sin 3x / tan 2x reduces to the same a/b task as U07-B-003. Rewrote U07-C-002 as f(x) = sin 2x / x + x sin(1/x) with f(0) = k. The sandwich bound |x sin(1/x)| <= |x| gives k = 2 (sympy limit). Distractors: 3 from misusing sin(theta)/theta with theta = 1/x -> infinity, 1 from dropping the coefficient, 1/2 from inverting it. New family U07-C-squeeze-removable. Still Easy."
+   },
+   {
+    "finding_id": "JEE-MATH-U07-109",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed: (x^3 - 27)/(x - 3) is the x^n - a^n task of U07-B-015. Rewrote U07-C-001 as (x^3 - x^2 - 8x + 12)/(x - 2)^2 with f(2) = k. The numerator is (x - 2)^2 (x + 3), a double factor, so k = 5 (sympy limit). Distractors: 0 from cancelling only once, 2 from keeping leading terms only, -1 from a sign slip in the cofactor. Uses a different cubic from U07-C-035. New family U07-C-removable-double-factor. The numerical alternate now has answer 5. Still Easy."
+   },
+   {
+    "finding_id": "JEE-MATH-U07-138",
+    "category": "E6",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Confirmed: the left piece was exactly U07-B-004. Changed it to (1 - cos 8x)/(4x^2), whose limit is still 8, so it matches the unchanged right piece and the key stays 8 (sympy). The 16 distractor (no 1/2 factor: 64/4) still holds. The k-not-squared distractor is now 1 instead of 2. Explanation and numerical alternate updated. The item no longer contains U07-060, so no alias is needed."
+   },
+   {
+    "finding_id": "JEE-MATH-U07-124",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Related, not a duplicate. 124 asks for the jump size of (x^2 - 9)/|x - 3| at 3 (key 12, needs both one-sided limits). 065 asks for one left-hand limit of a different quadratic (key -4). Same modulus-resolution mechanism, different data and answers, so I requested an alias with U07-B-009. The U07-148 overlap is gone because U07-C-040 was rewritten."
+   },
+   {
+    "finding_id": "JEE-MATH-U07-148",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed: Statement I repeated [x] + [-x] at an integer, and Statement II repeated the (x^2 - a^2)/|x - a| jump. Rewrote U07-C-040 with new statements on the order of composition. Statement I: [|x|] is continuous at 0 (true; it is constant 0 on (-1, 1)). Statement II: |[x]| is continuous at 0 (false; the left limit is 1 and g(0) = 0). Both were checked numerically with one-sided evaluation. The key is now 'Statement I is true but Statement II is false'. New family U07-C-stmt-gif-mod-order. Still Medium."
+   },
+   {
+    "finding_id": "JEE-MATH-U07-161",
+    "category": "E5",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Confirmed: [x]^2 - [x] = 0 on all of [0, 2), not only at two points. Reworded the rationale for 2: 'Thinks f is continuous at every integer m where m^2 - m = 0, i.e. m = 0 and m = 1, leaving only -1 and 2.' Options and key 3 are unchanged."
+   }
+  ],
+  "changed_stem_or_options": [
+   "U07-C-001",
+   "U07-C-002",
+   "U07-C-008",
+   "U07-C-030",
+   "U07-C-032",
+   "U07-C-040"
+  ],
+  "alias_requests": [
+   [
+    "U07-C-016",
+    "U07-B-009"
+   ]
+  ]
+ },
+ "U07-D": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U07-217",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Related task, not a duplicate: different expression (double-angle vs triple-angle), different interval and branch, different answer (-2 vs 3; both re-verified with sympy). Aliased U07-D-052 with U07-D-042 so they never share a paper."
+   },
+   {
+    "finding_id": "JEE-MATH-U07-166",
+    "category": "E7",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Product rule on polynomials is NCERT Class XI; source_class set to XI. Key 66 re-verified."
+   },
+   {
+    "finding_id": "JEE-MATH-U07-167",
+    "category": "E7",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Quotient rule on a rational function is Class XI; source_class set to XI. Key -5/4 re-verified."
+   },
+   {
+    "finding_id": "JEE-MATH-U07-176",
+    "category": "E7",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Quotient rule with sin and cos is Class XI; source_class set to XI. Key 1/(1+cos x) re-verified."
+   },
+   {
+    "finding_id": "JEE-MATH-U07-180",
+    "category": "E7",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Product rule on linear factors is Class XI; source_class set to XI. Key 11 re-verified."
+   },
+   {
+    "finding_id": "JEE-MATH-U07-209",
+    "category": "E5",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Rationale reworded to use the explanation's angles: P + Q constant, so dP = -dQ."
+   },
+   {
+    "finding_id": "JEE-MATH-U07-189",
+    "category": "E5",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Rationale made self-contained: y'' = e^x cos x gives 1 + k = 0 at x = 0, solved as k = 1 by a sign slip. Key -2 re-verified."
+   }
+  ],
+  "changed_stem_or_options": [],
+  "alias_requests": [
+   [
+    "U07-D-042",
+    "U07-D-052"
+   ]
+  ]
+ },
+ "U07-E": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U07-263",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed: 263 (r = 6h, dV/dt = 12, h = 4, dh/dt = 1/(48 pi)) repeated the task of 241 (find dh/dt in a cone with fixed r:h ratio). Rewritten to a different unknown: sand pile with h = r/3, dV/dt = 12 cm^3/s, find the rate of increase of the BASE AREA when h = 3 (r = 9): V = pi r^3/9, dr/dt = 4/(9 pi), dA/dt = 2 pi r dr/dt = 8 cm^2/s (sympy check). Distractors 8/3 (missing 1/3 in V), 24 (missing factor 3 in d(r^3)), 4 (dA/dt taken as pi r dr/dt), each re-derived. New family U07-E-rate-cone-base-area; numerical alternate (8) added. Difficulty Medium unchanged."
+   },
+   {
+    "finding_id": "JEE-MATH-U07-235",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed related, not duplicate: 224 (dr/dt = 1/2, r = 4, dV/dt = 32 pi) and 235 (dV/dt = 18 pi, diameter 6, dr/dt = 1/2) use the same relation dV/dt = 4 pi r^2 dr/dt in opposite directions with different data. Alias group requested."
+   },
+   {
+    "finding_id": "JEE-MATH-U07-274",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed: Statement II of 274 (max of x^{1/x} is e^{1/e}, via (1 - ln x)/x^2) states the monotonicity fact behind 261, though 261 still needs the comparison across x = e (2^{1/2} = 4^{1/4} vs 3^{1/3}). Related, not a copy; alias group requested so they never share a paper."
+   },
+   {
+    "finding_id": "JEE-MATH-U07-259",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed: 244 (x^3 + ax^2 + 3x + 5 increasing iff a in [-3, 3]) and 259 (x^3 + 3kx^2 + 12x + 1 has both extrema iff |k| > 2) use complementary discriminant conditions; each answer mirrors the other's distractor. Different data and answers, so alias rather than rewrite."
+   },
+   {
+    "finding_id": "JEE-MATH-U07-271",
+    "category": "E6",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Confirmed: Statement II of 252 (U07-E-030) used h(x) = x^3 - 3x on [0, 2], the function of 271, revealing f(2) > f(0). Changed 252 Statement II to h(x) = x^3 - 12x on [0, 4]: stationary point x = 2 with h(2) = -16, h(0) = 0, h(4) = 16, so the maximum is at x = 4 and the statement stays true (key Both true unchanged, sympy check updated). Rationales and explanation of 252 updated. 271 untouched; no alias needed."
+   }
+  ],
+  "changed_stem_or_options": [
+   "U07-E-041",
+   "U07-E-030"
+  ],
+  "alias_requests": [
+   [
+    "U07-E-013",
+    "U07-E-002"
+   ],
+   [
+    "U07-E-052",
+    "U07-E-039"
+   ],
+   [
+    "U07-E-037",
+    "U07-E-022"
+   ]
+  ]
+ },
+ "U08-A": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U08-047",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed related, not duplicate: sympy confirms sin^6 x + cos^6 x = 1 - 3 sin^2 x cos^2 x, so 047's integrand is 013's integrand minus 3 and 047's key tan x - cot x - 3x builds on 013's key tan x - cot x. Different integrand, different answer, and 047 adds the sixth-power identity step, so no rewrite. Alias group requested so the two never share a paper."
+   },
+   {
+    "finding_id": "JEE-MATH-U08-042",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed related, not duplicate: sympy confirms d/dx(x/2 + sin2x/4) = cos^2 x, so Statement I of 042 (false, sin^2 x form) mirrors 004 (int sin^2 x = x/2 - sin2x/4) and one item hints at the other. 042 also tests int 3^{2x} dx (9^x/log 9, not 9^x/log 3) and asks a different task, so no rewrite. Alias group requested."
+   },
+   {
+    "finding_id": "JEE-MATH-U08-002",
+    "category": "E9",
+    "severity": "minor",
+    "action": "retained",
+    "note": "Log-notation finding; per errata instructions it is ignored here because the editor unifies \\log notation bank-wide afterwards. No change to U08-A-002, 012, 017, 042, 050."
+   }
+  ],
+  "changed_stem_or_options": [],
+  "alias_requests": [
+   [
+    "U08-A-047",
+    "U08-A-013"
+   ],
+   [
+    "U08-A-042",
+    "U08-A-004"
+   ]
+  ]
+ },
+ "U08-B": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U08-091",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed: 1/(x(x^4+1)) and U08-B-010's 1/(x(x^2+1)) are the same task (1/(x(x^n+1))) with the same answer shape. Rewrote U08-B-035 as the integral of x^3/((x^2+1)(x^2+3)): substitute t = x^2 for the odd integrand, then split t/((t+1)(t+3)) = -1/(2(t+1)) + 3/(2(t+3)); key (3/4)log(x^2+3) - (1/4)log(x^2+1) (sympy apart and derivative check). New distractors from dropping the 1/2 of x dx = dt/2, swapping the cover-up coefficients, and a numerator sign slip at t = -1. New family U08-B-pf-odd-power-sub; still Medium. Not of the form 1/(x(x^n+1)), so no alias needed."
+   },
+   {
+    "finding_id": "JEE-MATH-U08-092",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed: 1/(e^x - 1) is U08-A-037's 1/(1 + e^x) with one sign changed, solvable by the same add-and-subtract trick. The suggested quadratic in e^x is already used by U08-B-054, so U08-B-036 was rewritten as the integral of (log x)^2/(x(log x + 1)(log x + 2)): t = log x, then the improper fraction needs division, t^2/((t+1)(t+2)) = 1 + 1/(t+1) - 4/(t+2); key log x + log|log x + 1| - 4log|log x + 2| (sympy verified). Distractors: skipping the division (loses the log x term), a remainder sign slip, back-substituting t as x. New family U08-B-pf-log-sub-improper; still Medium."
+   },
+   {
+    "finding_id": "JEE-MATH-U08-098",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed related: after x = e^t, U08-B-042 reduces to U08-B-005's integral of e^t(sin t + cos t). The extra substitution step makes it a related task rather than a copy, so per the minor-severity rule the two are aliased (never in the same paper) instead of rewritten."
+   },
+   {
+    "finding_id": "JEE-MATH-U08-097",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed: Statement II of U08-B-041 (integral of x cos^2 x) uses U08-B-002's result for the integral of x cos 2x. It is a related task, not a duplicate, so the two are aliased."
+   },
+   {
+    "finding_id": "JEE-MATH-U08-075",
+    "category": "E5",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Confirmed: under 1 + cos x = 2sin^2(x/2) the bracket is (1/2)cosec^2(x/2) + cot(x/2), and f = -cot(x/2) gives f + f' = -cot(x/2) + (1/2)cosec^2(x/2), which is not that bracket (sympy). The rationale for -e^x cot(x/2) is now self-contained: it uses the wrong identity, integrates only the (1/2)cosec^2(x/2) piece to -cot(x/2), drops the cot(x/2) term and attaches e^x. Options and key unchanged."
+   }
+  ],
+  "changed_stem_or_options": [
+   "U08-B-035",
+   "U08-B-036"
+  ],
+  "alias_requests": [
+   [
+    "U08-B-042",
+    "U08-B-005"
+   ],
+   [
+    "U08-B-041",
+    "U08-B-002"
+   ]
+  ]
+ },
+ "U08-C": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U08-124",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed with sympy: U08-C-012 (x/(x^4+1)), U08-A-027 (x^3/(1+x^8)) and U08-C-031 (x^2/(x^6+16)) are the same t = x^n to inverse tangent task. Rewrote U08-C-012 (still Easy, Single-step) as a logarithmic substitution into the 1/sqrt(u^2+a^2) log form: int dx/(x sqrt((log x)^2+4)) = log|log x + sqrt((log x)^2+4)| + C; new distractors, new family U08-C-sub-log-sqrt-standard. The remaining pair U08-C-031 / U08-A-027 is aliased."
+   },
+   {
+    "finding_id": "JEE-MATH-U08-139",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed: (x-1)(3-x) = 1-(x-2)^2 repeats U08-C-011 and Statement II of U08-C-038 with only the roots changed. Rewrote U08-C-027 (still Medium) as an Inverse/parameter item with a different answer form: int dx/sqrt((x-2)(8-x)) = k sin^-1 sqrt((x-2)/m) + C, k, m > 0; key k + m = 8 (k = 2, m = 6, verified by sympy coefficient matching); numerical alternate added; new family U08-C-sqrt-product-root-form. U08-C-011 / U08-C-038 aliased under U08-150."
+   },
+   {
+    "finding_id": "JEE-MATH-U08-128",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed: Statement I of U08-C-016 is the task of U08-C-001 and Statement II is the U08-C-004 task with its ratio-inversion distractor. Related statement-check items, not copies: alias links requested (U08-C-016 with U08-C-001 and with U08-C-004). The U08-C-008 / U08-C-038 pattern mentioned here is aliased under U08-150."
+   },
+   {
+    "finding_id": "JEE-MATH-U08-138",
+    "category": "E5",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Confirmed the placeholder rationale. Rewrote it: the slip treats x^2-4x+3 as (x-1)^2-a^2 with u = x-1 (shifting by the smaller root) and writes log|u + sqrt(x^2-4x+3)|, which is exactly the option log|x-1+sqrt(x^2-4x+3)|; noted that x^2-4x+3 = (x-1)^2-2(x-1) is not of that form."
+   },
+   {
+    "finding_id": "JEE-MATH-U08-147",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed: U08-C-035 prints (1/2)log|(x-3)/(x-1)|, which is U08-C-029's key with x for e^x. Rewrote U08-C-035 (still Medium) with a new quadratic and a different unknown: f:(-inf,2) -> R, f'(x) = 1/(x^2-6x+8), f(0) = 0, find lim_{x->-inf} f(x) = -(1/2)log 2 (sympy: definite integral from 0 to X, then limit). Distractors: constant taken as 0, inverted ratio, 1/a instead of 1/(2a). New family U08-C-fvalue-log-limit."
+   },
+   {
+    "finding_id": "JEE-MATH-U08-168",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed: after u = x^2, U08-C-056 is half of Statement II of U08-C-037. Rewrote U08-C-056 (still Difficult) as int x^3/(x^4+6x^2+10) dx: power substitution then a linear-over-quadratic split, key (1/4)log(x^4+6x^2+10) - (3/2)tan^-1(x^2+3) + C (sympy verified; quadratic u^2+6u+10 used nowhere else in the batch). New family U08-C-sub-power-linear-quad."
+   },
+   {
+    "finding_id": "JEE-MATH-U08-164",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed: Statement I of U08-C-052 is the U08-C-024 task and Statement II is the U08-C-039 coefficient task with a = 1. Related statement checks, not copies: alias links requested (U08-C-052 with U08-C-024 and with U08-C-039)."
+   },
+   {
+    "finding_id": "JEE-MATH-U08-150",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed: Statement I of U08-C-038 is decided by U08-C-008's key, and Statement II is the U08-C-011 task (2x-x^2 = 1-(x-1)^2). Alias links requested (U08-C-038 with U08-C-008 and with U08-C-011). U08-C-027 has been rewritten (U08-139), so it no longer needs a link."
+   },
+   {
+    "finding_id": "JEE-MATH-U08-165",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed: the non-log part of U08-C-053 is 6 times the U08-C-025 integral on the same interval, and U08-C-043 uses the same split method. U08-C-053 is a function-value item with a nonzero constant and two sign traps, so it is a related task, not a copy: alias links requested (U08-C-053 with U08-C-025 and with U08-C-043)."
+   },
+   {
+    "finding_id": "JEE-MATH-U08-141",
+    "category": "E9",
+    "severity": "minor",
+    "action": "retained",
+    "note": "Log-notation finding; per the errata instructions the editor unifies \\log notation bank-wide afterwards. No change in this batch."
+   }
+  ],
+  "changed_stem_or_options": [
+   "U08-C-012",
+   "U08-C-027",
+   "U08-C-035",
+   "U08-C-056"
+  ],
+  "alias_requests": [
+   [
+    "U08-C-031",
+    "U08-A-027"
+   ],
+   [
+    "U08-C-016",
+    "U08-C-001"
+   ],
+   [
+    "U08-C-016",
+    "U08-C-004"
+   ],
+   [
+    "U08-C-038",
+    "U08-C-008"
+   ],
+   [
+    "U08-C-038",
+    "U08-C-011"
+   ],
+   [
+    "U08-C-052",
+    "U08-C-024"
+   ],
+   [
+    "U08-C-052",
+    "U08-C-039"
+   ],
+   [
+    "U08-C-053",
+    "U08-C-025"
+   ],
+   [
+    "U08-C-053",
+    "U08-C-043"
+   ]
+  ]
+ },
+ "U08-D": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U08-211",
+    "category": "E6",
+    "severity": "minor",
+    "action": "rewritten",
+    "note": "Confirmed with sympy: after the parity step the old item was exactly 4 x U08-D-019 (int_0^pi x sin x/(1+cos^2 x) dx = pi^2/4), so it got its key directly from that item. Rewritten into a different chain on the same subtopic and difficulty: int_{-pi}^{pi} (x cos x + sin^4 x)/(sin^4 x + cos^4 x) dx = pi (odd part vanishes over an even denominator; f(2a - x) = f(x) doubling; King's property in ratio form). No x f(sin x) step remains. New family U08-D-odd-even-king-ratio; distractors pi/2, 2pi, pi/4 each from a named lost or extra doubling; check recomputes by numerical integration from the stem (matches pi to 30 digits). Difficult label kept. No alias needed."
+   },
+   {
+    "finding_id": "JEE-MATH-U08-220",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed related, not duplicate: Statement II of U08-D-052 (int_0^{pi/2} sin 2x log_e(tan x) dx = 0) uses the same sign flip of log_e(tan x) under x -> pi/2 - x as U08-D-008 (int_0^{pi/2} log_e(tan x) dx = 0), but it is one half of a two-statement item with a different integrand and a separate fractional-part statement (Statement I re-verified: integral = 5/2, so false; Statement II re-verified numerically = 0). Alias group requested; no rewrite."
+   }
+  ],
+  "changed_stem_or_options": [
+   "U08-D-043"
+  ],
+  "alias_requests": [
+   [
+    "U08-D-052",
+    "U08-D-008"
+   ]
+  ]
+ },
+ "U08-E": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U08-264",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "U08-E-040 rewritten: parameter a from the area of {x^2 <= y <= ax^2, y <= 1} = 1/3 (key 16/9; horizontal strips between two coaxial parabolas). New family U08-E-param-nested-parabolas; no longer shares the 16a^2/3 result with U08-E-017. Distractors 4 (one half only), 4/3 (half-width sqrt(y)/a), 16 (area inside y = ax^2 alone) re-verified with sympy."
+   },
+   {
+    "finding_id": "JEE-MATH-U08-256",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Verified: Statement I of U08-E-032 (|x|+|y|=3, true area 18) uses the same method as U08-E-010 (|x|+|y|=2, area 8) with different data and answer; related task, so alias requested rather than rewrite."
+   },
+   {
+    "finding_id": "JEE-MATH-U08-246",
+    "category": "E6",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "U08-E-022 moved to the ellipse x^2/25 + y^2/4 = 1 with chord x/5 + y/2 = 1; key 5pi/2 - 5, distractors 5pi/2, 15pi/2 + 5, 5pi - 5. No longer shares the ellipse or quarter-ellipse value with U08-E-004."
+   },
+   {
+    "finding_id": "JEE-MATH-U08-255",
+    "category": "E5",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "U08-E-031 'both false' rationale rewritten to be self-contained: reads semi-axes as 9 and 4 (36pi) and integrates sin x as cos x (-2)."
+   },
+   {
+    "finding_id": "JEE-MATH-U08-229",
+    "category": "E7",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Graph/diagram MCQ removed from figure-less items: U08-E-005 and U08-E-014 now Single-step computation MCQ; U08-E-024, U08-E-041, U08-E-044, U08-E-048 now Multi-step computation MCQ."
+   }
+  ],
+  "changed_stem_or_options": [
+   "U08-E-022",
+   "U08-E-040"
+  ],
+  "alias_requests": [
+   [
+    "U08-E-010",
+    "U08-E-032"
+   ]
+  ]
+ },
+ "U09-A": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U09-018",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed: same equation y'' = [1+(y')^2]^{3/2} as U09-A-002 with sides swapped; either key gives the other. The auditor's suggested equation would have duplicated U09-A-015 ((y'')^{2/3} = (1+y')^{1/2}), so rewrote 018 with a new twist: sqrt(1 + y'') = (y')^3 + y, where squaring leaves the highest derivative linear (order 2, degree 1, verified by sympy via the od() polynomial check). New distractors 2 and 2 / 2 and 6 / 1 and 6 from named slips; new family U09-A-degree-radical-on-highest. Still Medium, XII."
+   },
+   {
+    "finding_id": "JEE-MATH-U09-027",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed with sympy: 019's family y - x = C(1+xy) with (0,1) gives C = 1 and y(1/2) = 3, 027's key. Rewrote 027 as (1+x^2) dy = 2(1+y^2) dx, y(0) = 1, domain 0 <= x < sqrt2 - 1, asking y(1/3): tan^{-1} y = 2 tan^{-1} x + pi/4, tan(2 tan^{-1}(1/3)) = 3/4, y = 7 (sympy). Distractors 2 (drops the 2), 5 (2 tan^{-1} x as tan^{-1} 2x), 1/7 (tan(pi/4 - theta)). New family U09-A-ps-tan-double-angle; numerical alternate updated to 7."
+   },
+   {
+    "finding_id": "JEE-MATH-U09-035",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed relation: 021's key with the x^2 term removed gives the correct family for Statement I. It is a related task (different equation, one half of a statement item), not a duplicate, so no rewrite; alias group requested with U09-A-021."
+   },
+   {
+    "finding_id": "JEE-MATH-U09-017",
+    "category": "E3",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Confirmed: 'the last has degree 3' was positional and wrong (the cube-root equation, degree 1, was last). Replaced with the equation itself: (y'')^3 = (y')^2 + y has degree 3. Stem, options, key unchanged."
+   },
+   {
+    "finding_id": "JEE-MATH-U09-025",
+    "category": "E5",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Confirmed: distractor 10 contradicts the stem (the body is at 50 C at t = 10). Replaced with 30: counting excess temperatures 60, 30, 15 as three 10-minute stages instead of two halvings. Value updated; key 20 re-verified with sympy."
+   }
+  ],
+  "changed_stem_or_options": [
+   "U09-A-018",
+   "U09-A-027",
+   "U09-A-025"
+  ],
+  "alias_requests": [
+   [
+    "U09-A-035",
+    "U09-A-021"
+   ]
+  ]
+ },
+ "U09-B": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U09-066",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed with sympy: U09-B-019 (x dy - y dx = sqrt(x^2+y^2) dx) reduces under y = vx to dv/sqrt(1+v^2) = dx/x, which is the key of U09-B-005. Related task (005 asks only for the separated form; 019 needs integration, the initial condition y(1) = 0 and y(3) = 4), not a duplicate. Alias requested [U09-B-005, U09-B-019]. U09-B-042 uses sqrt(x^2 - y^2), a different equation, so it is not included."
+   },
+   {
+    "finding_id": "JEE-MATH-U09-088",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed with sympy: U09-B-041 gives dx/dy = x/y + y/x, the x-y swap of U09-B-017 (dy/dx = x/y + y/x), and U09-B-004's key x v' = 1/v is 017's first step. Data and unknowns differ (017: y(1) = 2, find y(e); 041: y(1) = 1, find x0 with y(x0) = e, testing the choice of x = vy; 004: transformed equation only). Alias requested [U09-B-004, U09-B-017, U09-B-041]."
+   },
+   {
+    "finding_id": "JEE-MATH-U09-083",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed with sympy: the tangent condition in U09-B-036 gives y' = (y^2 - x^2)/(2xy), the equation of U09-B-035, family x^2 + y^2 = Cx. Different points and unknowns (035: radius 5 through (1,3); 036: beta = 1 through (2,1)), and 036 adds the geometric translation step. Alias requested [U09-B-035, U09-B-036]."
+   },
+   {
+    "finding_id": "JEE-MATH-U09-077",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed: Statement I of U09-B-030 (family 3x^2 + y^2 = Cx) is a rescaling of U09-B-035 (x^2 + y^2 = Cx). Different task (judging a claimed general solution inside a two-statement item, vs the radius of a particular circle). Alias requested [U09-B-030, U09-B-035]."
+   },
+   {
+    "finding_id": "JEE-MATH-U09-073",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed with sympy: U09-B-026 (2xy y' = 2x^2 + y^2, family 2x^2 - y^2 = Cx) and U09-B-007 (2xy y' = x^2 + y^2, family x^2 - y^2 = Cx) differ in one coefficient. Different task (007: general solution; 026: curve through (3,6), find k at x = 1, k = 2 sqrt 2). Alias requested [U09-B-007, U09-B-026]."
+   },
+   {
+    "finding_id": "JEE-MATH-U09-092",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed with sympy: Statement II of U09-B-045 has solution y = x/(1 + log x) and U09-B-023 has y = x/(1 - log x); same steps up to one sign. Different tasks (023: value y(sqrt e) = 2 sqrt e; 045 II: blow-up as x -> 1/e from the right, inside a two-statement item). Alias requested [U09-B-023, U09-B-045]."
+   }
+  ],
+  "changed_stem_or_options": [],
+  "alias_requests": [
+   [
+    "U09-B-005",
+    "U09-B-019"
+   ],
+   [
+    "U09-B-004",
+    "U09-B-017",
+    "U09-B-041"
+   ],
+   [
+    "U09-B-035",
+    "U09-B-036"
+   ],
+   [
+    "U09-B-030",
+    "U09-B-035"
+   ],
+   [
+    "U09-B-007",
+    "U09-B-026"
+   ],
+   [
+    "U09-B-023",
+    "U09-B-045"
+   ]
+  ]
+ },
+ "U09-C": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U09-127",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed: same Newton-cooling task as U09-A-025 (excess halves in 10 min, quarter point at 20 min). Rewrote U09-C-033 with a different unknown: room temperature S is unknown, readings 100, 70, 52 at t = 0, 10, 20 (excess ratio 3/5, not 1/2); key S = 25 from (70 - S)^2 = (100 - S)(52 - S). New family U09-C-app-cooling-ambient; question_type now Inverse/parameter MCQ; still Medium; numerical alternate answer 25; units as $^\\circ\\mathrm{C}$."
+   },
+   {
+    "finding_id": "JEE-MATH-U09-127",
+    "category": "E5",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Distractor 30 (room temperature) removed by the rewrite of U09-C-033. New distractors 7, 10, 46 each come from one named slip (double-counted GP sum, decay ratio taken on temperatures not excess, falls taken in AP) and all lie below 52, verified in sympy."
+   },
+   {
+    "finding_id": "JEE-MATH-U09-126",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed overlap is partial: Statement II of U09-C-032 is the integrating factor step of U09-C-015, whose asked value y(pi/3) is not given away. Related task, not a duplicate, so aliased."
+   },
+   {
+    "finding_id": "JEE-MATH-U09-113",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed U09-C-019 reduces to y' - y/x = -x, mirroring U09-C-018 (y' - y/x = x); different geometric translation and answer (-3 vs 6). Related task, aliased."
+   },
+   {
+    "finding_id": "JEE-MATH-U09-097",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed U09-C-003 (y' + y = e^{-x}, IVP) and U09-C-011 (y' - y = e^x, general solution) are mirror resonant cases; different tasks and answers. Aliased."
+   },
+   {
+    "finding_id": "JEE-MATH-U09-110",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed U09-C-009's distractor value 3/e and rationale give the solution of U09-C-016's IVP (y' + y = 2x, y(0) = 1). Neither item's key is the other's answer; aliased so they never share a paper."
+   },
+   {
+    "finding_id": "JEE-MATH-U09-102",
+    "category": "E5",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Confirmed 20 is below the room temperature 25. Replaced it in U09-C-008 with 65: finds the excess 60e^{-t/10} = 20 correctly but treats it as the fall, 85 - 20 = 65 (checked in sympy). Values updated."
+   },
+   {
+    "finding_id": "JEE-MATH-U09-116",
+    "category": "E5",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "U09-C-022 rationales rewritten to single concrete slips: (I true, II false) takes y = Ce^{-x^2}, so y(0) = 0 forces y = 0 and y(1) = 0; (both false) solves 0 = 1 + C as C = 1, giving y(1) = 1 + 1/e. Both verified."
+   },
+   {
+    "finding_id": "JEE-MATH-U09-106",
+    "category": "E5",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "U09-C-012 'both false' rationale now one slip: writes the factor as e^{P} = e^2 without integrating, rejecting e^{2x}. Also tightened the 'I false, II true' rationale to one slip (using e^{-int P dx}, which gives e^{-2x} and x)."
+   },
+   {
+    "finding_id": "JEE-MATH-U09-102",
+    "category": "E9",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "U09-C-008 now writes $^\\circ\\mathrm{C}$; rewritten U09-C-033 uses $^\\circ\\mathrm{C}$ too, matching U09-A-025."
+   }
+  ],
+  "changed_stem_or_options": [
+   "U09-C-033",
+   "U09-C-008"
+  ],
+  "alias_requests": [
+   [
+    "U09-C-032",
+    "U09-C-015"
+   ],
+   [
+    "U09-C-019",
+    "U09-C-018"
+   ],
+   [
+    "U09-C-003",
+    "U09-C-011"
+   ],
+   [
+    "U09-C-016",
+    "U09-C-009"
+   ]
+  ]
+ },
+ "U10-A": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U10-036",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed: 036 used the triangle (0,0),(4,0),(0,3) of U10-C-037 and its statements repeated 011 (circumcentre of a right triangle) and 012 (orthocentre at the right-angled vertex). Rewritten into a different question on the same subtopic (centres of a triangle), same difficulty (Medium) and type (Statement-based): the acute isosceles triangle (-3,0),(3,0),(0,4). Statement I asks whether the incentre lies between the centroid and circumcentre on x = 0 (false: circumcentre 7/8 < centroid 4/3 < incentre 3/2); Statement II claims circumradius 25/4 (false: R = 25/8, the 25/4 slip is abc/(2 Delta)). Key stays 'both false'; check recomputes centroid, incentre, circumcentre and R with sympy. New family U10-A-isosceles-centres-order. No right triangle and no shared data with 011, 012 or U10-C-037, so no alias needed."
+   },
+   {
+    "finding_id": "JEE-MATH-U10-045",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed related, not duplicate: 045 (fourth vertices of a parallelogram; PQR is the medial triangle, area 4 x 11/2 = 22) and 028 (triangle from its side midpoints, area 4 x 13/2 = 26) share the medial-triangle area relation with different data and answers (sympy shoelace re-verified 22 and 26). Alias group requested; no rewrite."
+   },
+   {
+    "finding_id": "JEE-MATH-U10-023",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed related: 003 (x-axis divides segment, lambda = 2/3) is the special case y = 0 of 023's line-divides-segment task (lambda = 2/9); same lambda : 1 method and sign reading, different data and answers (both re-verified with sympy solve). Alias group requested; no rewrite."
+   },
+   {
+    "finding_id": "JEE-MATH-U10-034",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed related: 034 (vertices from three lines, then orthocentre (2,2)) extends 018 (orthocentre from vertices, (1,1)) by one step; same two-altitude method and parallel distractor logic, different data and answers (both re-verified). Alias group requested; no rewrite."
+   }
+  ],
+  "changed_stem_or_options": [
+   "U10-A-036"
+  ],
+  "alias_requests": [
+   [
+    "U10-A-045",
+    "U10-A-028"
+   ],
+   [
+    "U10-A-023",
+    "U10-A-003"
+   ],
+   [
+    "U10-A-034",
+    "U10-A-018"
+   ]
+  ]
+ },
+ "U10-B": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U10-095",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed: 095 (min PM + PN on x + y = 2, same side, reflect one point) was U10-A-044's task with new data. Rewritten into a maximum problem with points on opposite sides: P on x + y = 2, M(1, 4), N(4, -4), maximum of |PM - PN|. Reflect N to N'(6, -2) on M's side; max = MN' = sqrt(61), attained at (16, -14) where line MN' meets the line (PM = 3 sqrt(61), PN = 2 sqrt(61)). Verified by sympy and a numeric scan. Distractors: sqrt(73) (bound MN, not attainable for opposite sides), sqrt(101) (wrong sign of lambda), sqrt(65) (foot in place of image). New family U10-B-max-diff-reflection; numerical alternate mu^2 = 61. Still Difficult."
+   },
+   {
+    "finding_id": "JEE-MATH-U10-083",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed: 083 and 077 both computed a distance along a given direction with the distance form. Rewritten with the unknown reversed: a line through P(1, 1), not parallel to the x-axis, meets 2x + y = 13 at Q with PQ = 5; find the slope of PQ. 2cos t + sin t = 2 gives cos t = 1 (horizontal, excluded) or (3/5, 4/5), slope 4/3 (sympy solve over the unit circle, exactly one admissible root). Distractors 3/4 (cos/sin swapped), 1/2 (assumes PQ perpendicular), 4/5 (reports sin t). New family U10-B-direction-from-distance; numerical alternate 3m = 4. Still Medium; question_type now Inverse/parameter MCQ."
+   },
+   {
+    "finding_id": "JEE-MATH-U10-070",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed: 070 repeated 061's task (line from a point and its foot) plus one substitution. Rewritten to ask for the image of the origin in L (the auditor's suggested twist): L is 2x - y - 1 = 0, image (4/5, -2/5), checked with sympy and the midpoint test. Distractors: (2/5, -1/5) (foot formula), (6/5, 12/5) (L along PQ), (-4/5, 2/5) (dropped minus sign). New family U10-B-foot-then-image. Still Medium; question_type now Multi-step computation MCQ."
+   },
+   {
+    "finding_id": "JEE-MATH-U10-052",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed related, not duplicate: 052 (midpoint case, intercepts 4 and 6) and U10-A-029 (ratio 1:2, intercepts 9/2 and -12) use the same section-formula method with different data and answers. Alias group requested; no rewrite."
+   },
+   {
+    "finding_id": "JEE-MATH-U10-065",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed related: Statement I of 065 (distance 1/2 after rescaling) uses 054's rescaling method on different lines; Statement II (sign test) is a separate idea. Alias group with U10-B-004 and U10-B-030 (the dist-parallel family) requested; no rewrite."
+   },
+   {
+    "finding_id": "JEE-MATH-U10-079",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed related: the statements of 079 apply the foot and image formulas (foot (8/5, 9/5), image of O (72/25, 96/25), both re-verified) on new data, as do 057 and 058. Two alias groups requested (079 with 057, 079 with 058) so that 057 and 058 can still appear together; no rewrite."
+   }
+  ],
+  "changed_stem_or_options": [
+   "U10-B-020",
+   "U10-B-033",
+   "U10-B-045"
+  ],
+  "alias_requests": [
+   [
+    "U10-B-002",
+    "U10-A-029"
+   ],
+   [
+    "U10-B-015",
+    "U10-B-004",
+    "U10-B-030"
+   ],
+   [
+    "U10-B-029",
+    "U10-B-007"
+   ],
+   [
+    "U10-B-029",
+    "U10-B-008"
+   ]
+  ]
+ },
+ "U10-C": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U10-110",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed: radius of the circle through three given points including the origin repeats U10-A-019's task, and the right-angle/diameter route repeats U10-C-037. Rewrote U10-C-010: circle x^2 + y^2 + px + qy - 20 = 0 through (4, 2) and (-2, 2), find the radius (key 5; p = -2, q = 4, centre (1, -2)); no axis points, no right angle, unknown coefficients rather than three points. New family U10-C-coefficients-from-points; still Easy; integer numerical alternate added. Also requested alias U10-C-017 with U10-A-019 (same circumcentre computation)."
+   },
+   {
+    "finding_id": "JEE-MATH-U10-145",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed: the intersection step of 145 gives (4, 3), (-3, -4), which is 105's task with the reflected line and equals 105's distractor. Related task, not a duplicate (145's unknown is the circle through P, Q and O). Alias U10-C-045 with U10-C-005."
+   },
+   {
+    "finding_id": "JEE-MATH-U10-144",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed: after the max-area step (angle 90 degrees), 144 is the chord-angle-at-origin computation of 143 (and related to 142). Alias U10-C-044 with U10-C-043 and U10-C-042."
+   },
+   {
+    "finding_id": "JEE-MATH-U10-140",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed: same two-parallel-lines-versus-radius casework as 139, parametrised; key (-25,-15) U (15,25) re-verified. Alias U10-C-040 with U10-C-039."
+   },
+   {
+    "finding_id": "JEE-MATH-U10-133",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed: Statement I is the S1 position test of 104 and Statement II the tangency test of 106/111 (distance 4/sqrt(2) = 2sqrt(2) = r). Aliases U10-C-033 with U10-C-004, U10-C-006 and U10-C-011 (as pairs, so 004 and 006/011 stay independent)."
+   },
+   {
+    "finding_id": "JEE-MATH-U10-129",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed: Statement I (chord 5sqrt(2)) is the chord-length task of 109/120; Statement II uses the diameter form of 103. Aliases U10-C-029 with U10-C-009, U10-C-020 and U10-C-003 (pairs)."
+   },
+   {
+    "finding_id": "JEE-MATH-U10-138",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed: the closing distance check in 138's explanation computed 127's least-distance quantity. Removed that sentence from U10-C-038's explanation (it still reaches (4, 2)) and aliased U10-C-038 with U10-C-027, since both rest on the perpendicular from the centre to the line."
+   },
+   {
+    "finding_id": "JEE-MATH-U10-101",
+    "category": "E5",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Confirmed with sympy: g = -4, f = 6, c = 4 gives centre (4, -6), r^2 = 48 = (4sqrt(3))^2; the old wording (2g, 2f) gives the key. Rationale reworded: takes -4 and 6 themselves as g and f, forgetting the factor 2."
+   }
+  ],
+  "changed_stem_or_options": [
+   "U10-C-010"
+  ],
+  "alias_requests": [
+   [
+    "U10-C-017",
+    "U10-A-019"
+   ],
+   [
+    "U10-C-045",
+    "U10-C-005"
+   ],
+   [
+    "U10-C-044",
+    "U10-C-043",
+    "U10-C-042"
+   ],
+   [
+    "U10-C-040",
+    "U10-C-039"
+   ],
+   [
+    "U10-C-033",
+    "U10-C-004"
+   ],
+   [
+    "U10-C-033",
+    "U10-C-006"
+   ],
+   [
+    "U10-C-033",
+    "U10-C-011"
+   ],
+   [
+    "U10-C-029",
+    "U10-C-009"
+   ],
+   [
+    "U10-C-029",
+    "U10-C-020"
+   ],
+   [
+    "U10-C-029",
+    "U10-C-003"
+   ],
+   [
+    "U10-C-038",
+    "U10-C-027"
+   ]
+  ]
+ },
+ "U10-D": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U10-163",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed: 163's key 3y^2 = 16x was the stem of 153. U10-D-013 rewritten into a different task: vertex at origin, axis along the y-axis, focus located as the intercept of 3x + 2y - 12 = 0 on the axis; key x^2 = 24y. New distractors, explanation, sympy check and new family U10-D-eqn-focus-on-line. No longer shares any data or answer with 153 or 160."
+   },
+   {
+    "finding_id": "JEE-MATH-U10-160",
+    "category": "E6",
+    "severity": "minor",
+    "action": "retained",
+    "note": "Overlap was only with 163 (single substitution of a point into y^2 = 4ax). 163 (U10-D-013) has been rewritten into a focus-on-a-line task with the axis along the y-axis, so U10-D-010 no longer has a near-duplicate; no alias needed."
+   }
+  ],
+  "changed_stem_or_options": [
+   "U10-D-013"
+  ],
+  "alias_requests": []
+ },
+ "U10-E": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U10-212",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed: 5x^2 + 9y^2 = 45 is the ellipse of U10-E-010, whose key (2, 5/3) shows c = 2 and so 2c = 4. Rewritten: the ellipse is now given by its axis lengths (major 34, minor 16), a = 17, b = 8, c = 15, key 30 (sympy via _ell). Distractors 15 (c only), 2sqrt(353) (c^2 = a^2 + b^2), 60 (full lengths in c^2 = a^2 - b^2, then doubled). New family U10-E-focal-gap-from-axes; numerical alternate 30."
+   },
+   {
+    "finding_id": "JEE-MATH-U10-232",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed: the stem printed x^2/16 + y^2/12 = 1 with focus (2, 0) and line x = 8, which is exactly U10-E-017's data and key. Rebuilt on x^2/36 + y^2/32 = 1 (a = 6, c = 2, e = 1/3) and the unknown is reversed: P is 15 from the directrix x = 18, find PS' to the far focus (-2, 0). PS = 5 by the focus-directrix property, PS' = 12 - 5 = 7 (sympy solves for x = 3 and computes the distance). Distractors 5 (near focus), 9 (e dropped in a + ex), 31/3 (e^2 used for e). New family U10-E-directrix-to-far-focus."
+   },
+   {
+    "finding_id": "JEE-MATH-U10-237",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed: foci (0, +-4) with focal sum 10 is U10-E-027's ellipse (b = 3). The suggested foci (0, +-3) would reproduce U10-E-023's ellipse, so that suggestion was not used. Rewritten with a shifted centre: foci (1, 2) and (1, -4), sum 10, key (x - 1)^2/16 + (y + 1)^2/25 = 1 (centre (1, -1), a = 5, c = 3, b = 4). The check removes the radicals and verifies sample points give a sum of exactly 10. Distractors: wrong orientation, a sign slip in the shift, and c^2 used for b^2. New family U10-E-locus-focal-sum-shifted. Translated conics are in scope per the E8 ruling."
+   },
+   {
+    "finding_id": "JEE-MATH-U10-201",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed: 013, 021 and 030 print x^2/25 + y^2/16 = 1 with focus (3, 0), which gives e = 3/5 at once. Rewritten as an eccentricity item with a vertical major axis: x^2/40 + y^2/49 = 1, e = 3/7. Distractors 2sqrt(10)/7 (b/a), 3sqrt(10)/20 (c/b), 9/49 (e^2). New family U10-E-ecc-vertical. Still Easy."
+   },
+   {
+    "finding_id": "JEE-MATH-U10-250",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed: 011 states that x^2/16 + y^2/b^2 has e = sqrt(3)/2, which is 050's key. Rewritten with E1 = x^2/169 + y^2/b^2 and e2 = 12/13, and a new unknown, the latus rectum of E2. The key step is unchanged: the semi-major axis of E2 is sqrt(c1^2 + b^2) = 13. That gives b = 12, c1 = 5, so E2 is x^2/25 + y^2/169 = 1 with latus rectum 50/13. Distractors 288/13 (E1's latus rectum), 25/13 (semi-latus rectum), 338/5 (axes swapped). Numerical alternate 13l = 50. New family U10-E-two-ellipses-lr."
+   },
+   {
+    "finding_id": "JEE-MATH-U10-229",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed related, not duplicate: 229 uses 209's shape condition (b = c) as its first step, but then asks for the major axis from the latus rectum 10 (key 20). That is a different unknown and needs more work. Alias requested for U10-E-009 and U10-E-029; no rewrite."
+   },
+   {
+    "finding_id": "JEE-MATH-U10-207",
+    "category": "E6",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Confirmed: the key x^2/25 + y^2/9 = 1 is printed in the stems of 015, 025 and 040. The data is now vertices (+-10, 0) and foci (+-8, 0), key x^2/100 + y^2/36 = 1. The suggested 13/12/5 data was avoided because 050 now uses a = 13. Distractors are re-derived: c^2 for b^2 gives 64, a^2 + c^2 gives 164, and the axes swapped gives x^2/36 + y^2/100. No other stem in the batch prints this ellipse."
+   },
+   {
+    "finding_id": "JEE-MATH-U10-248",
+    "category": "E5",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Confirmed: the admissible c form a symmetric interval about 0, so the count must be odd and 4 was ruled out on sight. Replaced it with 1, which comes from dropping the cross term: (2x + c)^2 = 4x^2 + c^2 gives 17x^2 + 4c^2 - 4 = 0, which needs c^2 < 1, so only c = 0. Key 9 is unchanged (brute-force check). The misconception text is updated to match."
+   }
+  ],
+  "changed_stem_or_options": [
+   "U10-E-001",
+   "U10-E-007",
+   "U10-E-012",
+   "U10-E-032",
+   "U10-E-037",
+   "U10-E-048",
+   "U10-E-050"
+  ],
+  "alias_requests": [
+   [
+    "U10-E-009",
+    "U10-E-029"
+   ]
+  ]
+ },
+ "U10-F": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U10-252",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed: 9x^2 - 16y^2 = 144 is 251's curve and the foci (+-5, 0) with a = 4 give 251's key. Rewritten to a different curve and unknown: distance between the foci of 5x^2 - 4y^2 = 20 (x^2/4 - y^2/5 = 1, c = 3, key 6; sympy via _hyp foci). New distractors 2 (ellipse relation), 4 (2a), 3 (c); numerical alternate 6 added. New family U10-F-focal-separation."
+   },
+   {
+    "finding_id": "JEE-MATH-U10-262",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed: exact inverse of 251 with the same numbers. Rewritten with a different unknown and new data: x^2/a^2 - y^2/45 = 1 with e = 3/2, find a^2 = 36 (sympy solve). Distractors 90 (e not squared), 225/4 (inverted relation), 6 (a for a^2); numerical answer 36. New family U10-F-transverse-from-ecc. Curve x^2/36 - y^2/45 is not used elsewhere in U10."
+   },
+   {
+    "finding_id": "JEE-MATH-U10-283",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed: the 25/16 ellipse gave a = 3, c = 5, exactly 260's data. Rewritten with ellipse x^2/289 + y^2/225 = 1 (hyperbola a = 8, c = 17) and a different unknown, the distance between the hyperbola's directrices, 2a/e = 128/17 (sympy via _hyp directrices). Distractors 64/17 (a/e), 289/4 (ellipse directrices), 34 (2ae). New family U10-F-from-ellipse-directrix. The suggested 169/144 ellipse was avoided because it reproduces 254's curve x^2/25 - y^2/144."
+   },
+   {
+    "finding_id": "JEE-MATH-U10-270",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed: 292's stem states the directrix 9/5 and focus (5, 0), giving 270's key. Rewritten as a reversed problem with no fixed curve: e = 3 and focus-to-nearer-directrix distance 8, find the latus rectum. 8a/3 = 8 gives a = 3, b^2 = 72, LR = 48 (sympy solve plus _hyp lr and a gap assertion). Distractors 192/5 (farther directrix), 24 (semi-latus rectum), 64 (focus-to-vertex). Numerical alternate 48 added. New family U10-F-focus-directrix-lr. The suggested 36/64 curve was avoided because it is 258's curve."
+   },
+   {
+    "finding_id": "JEE-MATH-U10-285",
+    "category": "E6",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Confirmed: 264's stem 16y^2 - 9x^2 = 576 is 285's key unreduced. Changed 285's data to foci (0, +-15), e = 5/3: a = 9, b^2 = 144, key y^2/81 - x^2/144 = 1; distractors rebuilt with the same slips (orientation, swap, b^2 = a^2 + c^2 = 306). The suggested foci (0, +-13), e = 13/5 was avoided because it gives the conjugate in 256 and 256's key."
+   },
+   {
+    "finding_id": "JEE-MATH-U10-298",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed related, not a duplicate: Statement I of 298 (conjugate of x^2/12 - y^2/4, e' = 2) uses the same method as 256 (conjugate of x^2/144 - y^2/25, e' = 13/5) with different data, and 298 also tests the foci-square fact. Alias group requested; no rewrite."
+   },
+   {
+    "finding_id": "JEE-MATH-U10-266",
+    "category": "E6",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Confirmed: 266's key x^2/16 - y^2/9 = 1 is printed in 272's stem. Changed 266 to foci (+-6, 0) through P(6, 11/5): PS = 11/5, PS' = 61/5, a = 5, b^2 = 11, key x^2/25 - y^2/11 = 1 (sympy). Distractors rebuilt (swap, b = c, b^2 = a^2 + c^2). The 16/9 curve now remains only in 251 and 272, neither of which states the other's key."
+   },
+   {
+    "finding_id": "JEE-MATH-U10-297",
+    "category": "E5",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Confirmed: no lattice point lies on an axis, so the count is a multiple of 4 and 6 and 3 were ruled out on sight. Replaced them with 8 (discarding the factorisation 1 x 45, losing (+-23, +-22)) and 16 (divisors 1, 3, 5, 9 with four signs each, counting (+-7, +-2) twice). Key 12 unchanged (brute-force enumeration)."
+   },
+   {
+    "finding_id": "JEE-MATH-U10-275",
+    "category": "E8",
+    "severity": "minor",
+    "action": "retained",
+    "note": "Errata ruling: translated (shifted) standard conics are in scope. Completing squares only; no out-of-unit tools in the explanation."
+   },
+   {
+    "finding_id": "JEE-MATH-U10-276",
+    "category": "E8",
+    "severity": "minor",
+    "action": "retained",
+    "note": "Errata ruling: translated (shifted) standard conics are in scope. Completing squares only; no out-of-unit tools in the explanation."
+   },
+   {
+    "finding_id": "JEE-MATH-U10-284",
+    "category": "E8",
+    "severity": "minor",
+    "action": "retained",
+    "note": "Errata ruling: translated (shifted) standard conics are in scope. Completing squares only; no out-of-unit tools in the explanation."
+   },
+   {
+    "finding_id": "JEE-MATH-U10-296",
+    "category": "E8",
+    "severity": "minor",
+    "action": "retained",
+    "note": "Errata ruling: translated (shifted) standard conics are in scope. Finding the centre by intersecting the two asymptotes is intersection of lines, which is in Unit 10, so the explanation uses no out-of-unit tools."
+   },
+   {
+    "finding_id": "JEE-MATH-U10-300",
+    "category": "E8",
+    "severity": "minor",
+    "action": "retained",
+    "note": "Errata ruling: translated (shifted) standard conics are in scope. Uses the focal-difference definition, midpoint and c^2 = a^2 + b^2 only."
+   }
+  ],
+  "changed_stem_or_options": [
+   "U10-F-002",
+   "U10-F-012",
+   "U10-F-016",
+   "U10-F-020",
+   "U10-F-033",
+   "U10-F-035",
+   "U10-F-047"
+  ],
+  "alias_requests": [
+   [
+    "U10-F-048",
+    "U10-F-006"
+   ],
+   [
+    "U10-F-010",
+    "U10-F-042",
+    "U10-F-043"
+   ]
+  ]
+ },
+ "U11-A": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U11-028",
+    "category": "E5",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Verified: testing l+m+n=1 rejects both statements (2.073 and sqrt 2), giving the both-false option. Rationales rewritten: that slip now drives the both-false distractor; the I-true-II-false distractor now comes from one consistent wrong criterion (requiring every direction angle strictly between 0 and 90 degrees without testing the identity)."
+   },
+   {
+    "finding_id": "JEE-MATH-U11-001",
+    "category": "E7",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "source_class set to XI (3D distance formula is NCERT XI)."
+   },
+   {
+    "finding_id": "JEE-MATH-U11-002",
+    "category": "E7",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "source_class set to XI."
+   },
+   {
+    "finding_id": "JEE-MATH-U11-012",
+    "category": "E7",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "source_class set to XI."
+   },
+   {
+    "finding_id": "JEE-MATH-U11-020",
+    "category": "E7",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "source_class set to XI."
+   },
+   {
+    "finding_id": "JEE-MATH-U11-021",
+    "category": "E7",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "source_class set to XI."
+   },
+   {
+    "finding_id": "JEE-MATH-U11-024",
+    "category": "E7",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "source_class set to XI."
+   },
+   {
+    "finding_id": "JEE-MATH-U11-033",
+    "category": "E7",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "source_class set to XI."
+   },
+   {
+    "finding_id": "JEE-MATH-U11-045",
+    "category": "E7",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "source_class set to XI."
+   },
+   {
+    "finding_id": "JEE-MATH-U11-003",
+    "category": "E7",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Rule applied per errata policy (3D coordinates, distance, section formula are Class XI): all 22 'Coordinates of a point in space' items in batch A (001-004, 009, 010, 012-014, 020, 021, 024-027, 029, 033, 038, 041, 043, 045, 046) now source_class XI. Direction-cosine and angle-between-lines items stay XII."
+   },
+   {
+    "finding_id": "JEE-MATH-U11-043",
+    "category": "E9",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Misconception rewritten with $\\frac{1}{3}$ in LaTeX; key 8 re-verified (k = -6, -4/3)."
+   }
+  ],
+  "changed_stem_or_options": [],
+  "alias_requests": []
+ },
+ "U11-B": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U11-072",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed with sympy: old U11-B-025 (DRs (2,-1,2),(-1,k,0), acute angle pi/4, 7k^2-8k+1=0, sum 8/7) repeats U11-A-044's method and keep-both-roots trap. Rewrote U11-B-025: perpendicularity to L1 fixes a = 2 in L2's direction (-1,a,2), then cos of the acute angle between L2 and a third line L3 with direction (2,3,6) is 16/21. New unknown and twist, no quadratic; distractors 4/21 (sign slip a = -2), 13/21 (angle of L1 with L3), 20/21 (dropped sign of -i) each verified. Parameter renamed to a to avoid clash with k-hat. New family U11-B-perp-then-angle; still Medium, XII; numerical alternate 21 cos(theta) = 16."
+   },
+   {
+    "finding_id": "JEE-MATH-U11-080",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Verified (sums 2 and 10). Related task (nearest point = foot) with different data and answer, not a duplicate; alias U11-B-033 with U11-B-015."
+   },
+   {
+    "finding_id": "JEE-MATH-U11-068",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Verified (3 and 6 = 2 x 3). Same foot-then-distance method with different data; alias U11-B-021 with U11-B-011."
+   },
+   {
+    "finding_id": "JEE-MATH-U11-079",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Verified (k = 5; k + m = 16). Same collinearity method with different data and unknowns; alias U11-B-032 with U11-A-009."
+   },
+   {
+    "finding_id": "JEE-MATH-U11-061",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Verified (U11-A-018 sum -1 via quadratic; U11-B-014 k = 2, linear). Same perpendicularity condition, different second direction and answer; alias U11-B-014 with U11-A-018."
+   }
+  ],
+  "changed_stem_or_options": [
+   "U11-B-025"
+  ],
+  "alias_requests": [
+   [
+    "U11-B-033",
+    "U11-B-015"
+   ],
+   [
+    "U11-B-021",
+    "U11-B-011"
+   ],
+   [
+    "U11-B-032",
+    "U11-A-009"
+   ],
+   [
+    "U11-B-014",
+    "U11-A-018"
+   ]
+  ]
+ },
+ "U11-C": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U11-098",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed with sympy: old U11-C-004 (k = 8) was the same task as U11-B-018 (k = -2), an unknown in the point of a second line made to intersect the first, with only the numbers changed. Rewritten into a different task on the same subtopic and difficulty (Easy, Inverse/parameter): find k so that the line (x-1)/2 = (y-k)/3 = (z+2)/1 meets the x-axis (key k = -6, common point (5,0,0)), solved by imposing y = z = 0 on the general point; check also confirms via the coplanarity test against the x-axis. New family U11-C-meets-axis-param. Distractors 6, 3/2, -2/3 each reproduced from the named slip. Numerical alternate dropped (negative key); batch still has 12."
+   },
+   {
+    "finding_id": "JEE-MATH-U11-110",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed with sympy: old U11-C-016 (lambda = 3) was the same task as U11-B-028 (k = 2), an unknown direction ratio fixed by the intersection condition. Batch C already has quadratic-parameter intersection items (C-025, C-040), so the rewrite uses a different unknown and twist: lambda is fixed by perpendicularity (b1.b2 = 0 gives lambda = 2), then the skew lines' shortest distance is asked (key 2; triple product 18, |b1 x b2| = 9). Still Medium. New family U11-C-perp-param-sd, topic moved to shortest distance, type Multi-step computation. Distractors 6 sqrt(65)/65, sqrt(6), 2/9 verified. Integer numerical alternate (answer 2) added."
+   },
+   {
+    "finding_id": "JEE-MATH-U11-103",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed related, not duplicate: U11-C-009 (distance between the z-axis and the line x = 3, y = -4, key 5) reduces to the distance of a point from an axis, as in U11-A-002 (distance of (3,-4,12) from the y-axis, sqrt(153)). Different data, axis and answer, and C-009 adds recognising parallel lines, so no rewrite. Alias group requested."
+   },
+   {
+    "finding_id": "JEE-MATH-U11-105",
+    "category": "E5",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Confirmed: the coincident option was ruled out on sight and its rationale admitted it caught only guessers. Second line changed to (x-2)/1 = (y+1)/(-1) = z/1 so the directions (2,1,-1), (1,-1,1) are perpendicular (dot product 0) while the triple product is 9 (skew). Options are now 'skew and perpendicular' (key), 'skew but not perpendicular' (belief that perpendicular lines must meet), 'intersecting and perpendicular' (solves x and y equations, s = -1, t = -3, without checking z), 'parallel and distinct' (no common point taken as parallel). Mutually exclusive; check returns (nature, perpendicular) from sympy; explanation updated."
+   }
+  ],
+  "changed_stem_or_options": [
+   "U11-C-004",
+   "U11-C-011",
+   "U11-C-016"
+  ],
+  "alias_requests": [
+   [
+    "U11-C-009",
+    "U11-A-002"
+   ]
+  ]
+ },
+ "U12-A": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U12-050",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed with sympy (hexagon sum = 6 PO, octagon sum = 8 P1O). Same principle but different polygon, different unknown form (basis vector vs scalar lambda); related task, so aliased with U12-A-022 rather than rewritten."
+   },
+   {
+    "finding_id": "JEE-MATH-U12-036",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed by enumeration (8 integer vectors of magnitude sqrt(3), 30 of magnitude 3). Statement II is a small related count inside a statement item; aliased with U12-A-041."
+   },
+   {
+    "finding_id": "JEE-MATH-U12-044",
+    "category": "E5",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Rationale for the -2 distractor rewritten to be self-contained: sign slip gives lambda^2 - lambda - 6 = 0, roots 3 and -2, picks -2 (verified with sympy)."
+   }
+  ],
+  "changed_stem_or_options": [],
+  "alias_requests": [
+   [
+    "U12-A-050",
+    "U12-A-022"
+   ],
+   [
+    "U12-A-036",
+    "U12-A-041"
+   ]
+  ]
+ },
+ "U12-B": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U12-093",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Verified: |a^+b^| = sqrt 3 gives a^.b^ = 1/2 (sympy), which is the whole of U12-B-005's task and the first step of U12-C-016. U12-B-039 asks a different unknown (a four-term expansion, key -11/2), so it is a related task, not a duplicate; linked as an alias group with U12-B-005 and U12-C-016."
+   },
+   {
+    "finding_id": "JEE-MATH-U12-060",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Verified: |a+b|^2 - |a-b|^2 = 4 a.b, so U12-B-011 Statement II states the key step of U12-B-006 (key 5). Different tasks, so aliased U12-B-006 with U12-B-011 rather than rewritten."
+   },
+   {
+    "finding_id": "JEE-MATH-U12-061",
+    "category": "E9",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "All two-letter \\vec{XY} replaced with \\overrightarrow{XY} in explanation and rationales; values re-verified (work 3, distractors -3, 7, 11)."
+   },
+   {
+    "finding_id": "JEE-MATH-U12-082",
+    "category": "E9",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "All two-letter \\vec{XY} replaced with \\overrightarrow{XY} in explanation and rationales; cos QPR = sqrt6/3 and distractor arithmetic re-verified."
+   },
+   {
+    "finding_id": "JEE-MATH-U12-083",
+    "category": "E9",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Two-letter \\vec{XY} replaced with \\overrightarrow{XY} in explanation and rationale; work 40 and distractors -40, 39, 24 re-verified."
+   },
+   {
+    "finding_id": "JEE-MATH-U12-103",
+    "category": "E9",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Two-letter \\vec{PQ} replaced with \\overrightarrow{PQ} in the rationale; work 22 and distractors 11, 42, 74 re-verified."
+   }
+  ],
+  "changed_stem_or_options": [],
+  "alias_requests": [
+   [
+    "U12-B-039",
+    "U12-B-005",
+    "U12-C-016"
+   ],
+   [
+    "U12-B-006",
+    "U12-B-011"
+   ]
+  ]
+ },
+ "U12-C": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U12-123",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed: same hypothesis |a^+b^| = sqrt(3) as U12-B-005, whose answer pi/3 gives sin(pi/3) at once. Rewrote U12-C-016 as a new Easy item: |a| = 4, |b| = 5, scalar projection of b on a is 3, find |a x b| (= 16 via a.b = 12 and Lagrange's identity). New family U12-C-cross-from-projection; numerical alternate 16 added."
+   },
+   {
+    "finding_id": "JEE-MATH-U12-134",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed with sympy: sum |a x e_k|^2 = 28 = 2|a|^2, which U12-C-045 Statement II's explanation states. Rewrote U12-C-027 (Medium): given a x i = 3j + k and a x j = -3i + 2k, find a.(i + j + k) = 4 (a = 2i - j + 3k, unique). New family U12-C-recover-from-unit-cross; distractors from order reversal and unit-vector sign slips; numerical alternate 4."
+   },
+   {
+    "finding_id": "JEE-MATH-U12-154",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Related task only: U12-B-046 Statement I supplies the dot-product step (each pairwise dot = -1/2) but not the cross-product reduction or the answer 3sqrt(3)/2. Alias requested."
+   },
+   {
+    "finding_id": "JEE-MATH-U12-117",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed same diagonals as U12-A-038 (sides (2,-1,1), (1,2,-3), cross (1,7,5), magnitude 5sqrt(3)), but the tasks differ (longer side vs area). Related task, so alias requested rather than rewrite."
+   },
+   {
+    "finding_id": "JEE-MATH-U12-147",
+    "category": "E2",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Stem and explanation now say 'obtuse angle with the positive y-axis'; key unchanged."
+   }
+  ],
+  "changed_stem_or_options": [
+   "U12-C-016",
+   "U12-C-027",
+   "U12-C-040"
+  ],
+  "alias_requests": [
+   [
+    "U12-C-047",
+    "U12-B-046"
+   ],
+   [
+    "U12-C-010",
+    "U12-A-038"
+   ]
+  ]
+ },
+ "U13-A": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U13-035",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed with sympy: Statement II of U13-A-035 (median of 3x-2 is 3M-2) states the general rule that U13-A-013 applies (-2(12)+5 = -19). Related principle, different data and answer, so not rewritten; alias requested so they never share a paper. Records carry no family_dependencies field, so the link goes through alias_requests."
+   },
+   {
+    "finding_id": "JEE-MATH-U13-040",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed with sympy: both use inclusion-exclusion on partial sums (52+64=105+x4 gives 11; 2880+3300=5000+S gives S=1180, mean 59). Different data, unknown (single term vs block mean) and difficulty, so related rather than duplicate; alias requested."
+   },
+   {
+    "finding_id": "JEE-MATH-U13-019",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed with sympy: same missing-frequency-from-mean equation (k=5 discrete, k=12 grouped with class marks). Different data and answers, and the grouped item adds a class-mark step, so related rather than duplicate; alias requested."
+   }
+  ],
+  "changed_stem_or_options": [],
+  "alias_requests": [
+   [
+    "U13-A-035",
+    "U13-A-013"
+   ],
+   [
+    "U13-A-040",
+    "U13-A-029"
+   ],
+   [
+    "U13-A-019",
+    "U13-A-009"
+   ]
+  ]
+ },
+ "U13-B": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U13-046",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed related, not duplicate: sympy gives mean of 1^2..10^2 = 77/2 (U13-A-001 key) and variance of 1..10 = 77/2 - 121/4 = 33/4 (U13-B-001 key). U13-B-001 asks a different quantity (variance) with a different answer, and 77/2 is a legitimate forgot-to-subtract-mean-squared distractor, but one item exposes the other's key. Alias group requested so they never share a paper."
+   },
+   {
+    "finding_id": "JEE-MATH-U13-070",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed related, not duplicate: sympy confirms variance of 2,4,...,2n is 4(n^2-1)/12 (U13-B-025 Statement II, false as 'twice'), m = 5 from 4(m^2-1)/12 = 8 in U13-B-024, and variance of 1,3,...,19 = 33 in U13-B-007. Each asks a different task (statement truth, inverse m+n = 24, direct value 33), so no rewrite; 025's explanation states the scaling fact the others use. Alias group requested."
+   },
+   {
+    "finding_id": "JEE-MATH-U13-050",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed related, not duplicate: U13-B-005 mean 3(10)+2 = 32 repeats the mean rule of U13-A-003 (3(15)-4 = 41) with different numbers, but the discriminating part of 005 is the variance 9*4 = 36 (all options share the mean), which A-003 does not test. Different data and answer, so no rewrite. Alias group requested."
+   },
+   {
+    "finding_id": "JEE-MATH-U13-068",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed related, not duplicate: sympy solves U13-B-006 to {4, 10}, ab = 40, and U13-B-023 to {6, 8}, ab = 48 (a+b = 14, a^2+b^2 = 210-110 = 100). Same reconstruction method but different data, different answers, and 023 adds removal of three known observations, so no rewrite. Alias group requested."
+   },
+   {
+    "finding_id": "JEE-MATH-U13-082",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed related, not duplicate: sympy gives least of (1/6) sum |x_i - a| = 19/3 for U13-B-037; U13-B-030 ratio 17/18 for 2,6,7,9,16; U13-B-010 Statement II (median minimises mean deviation) is the property 037 applies and 030's explanation cites. Different tasks and answers, so no rewrite. Alias group requested."
+   },
+   {
+    "finding_id": "JEE-MATH-U13-060",
+    "category": "E9",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Stem of U13-B-015 reworded so the data precedes the question: 'The values $x$: $3, 5, 7, 9, 11$ occur with frequencies $f$: $2, 4, 6, 5, 3$ respectively. The mean deviation about the median is'. Key re-verified with sympy: median 7, sum f|x-7| = 38, MD = 19/10; distractor 49/25 re-verified (mean 7.3, sum 39.2)."
+   }
+  ],
+  "changed_stem_or_options": [
+   "U13-B-015"
+  ],
+  "alias_requests": [
+   [
+    "U13-B-001",
+    "U13-A-001"
+   ],
+   [
+    "U13-B-025",
+    "U13-B-007",
+    "U13-B-024"
+   ],
+   [
+    "U13-B-005",
+    "U13-A-003"
+   ],
+   [
+    "U13-B-023",
+    "U13-B-006"
+   ],
+   [
+    "U13-B-037",
+    "U13-B-010",
+    "U13-B-030"
+   ]
+  ]
+ },
+ "U13-C": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U13-092",
+    "category": "E9",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Verified bare numerals in stem; wrapped every stem number in $...$ (also in the numerical alternate stem and in explanation/rationale/difficulty_reason text where present). No change to maths, key or options."
+   },
+   {
+    "finding_id": "JEE-MATH-U13-094",
+    "category": "E9",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Verified bare numerals in stem; wrapped every stem number in $...$ (also in the numerical alternate stem and in explanation/rationale/difficulty_reason text where present). No change to maths, key or options."
+   },
+   {
+    "finding_id": "JEE-MATH-U13-096",
+    "category": "E9",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Verified bare numerals in stem; wrapped every stem number in $...$ (also in the numerical alternate stem and in explanation/rationale/difficulty_reason text where present). No change to maths, key or options."
+   },
+   {
+    "finding_id": "JEE-MATH-U13-097",
+    "category": "E9",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Verified bare numerals in stem; wrapped every stem number in $...$ (also in the numerical alternate stem and in explanation/rationale/difficulty_reason text where present). No change to maths, key or options."
+   },
+   {
+    "finding_id": "JEE-MATH-U13-099",
+    "category": "E9",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Verified bare numerals in stem; wrapped every stem number in $...$ (also in the numerical alternate stem and in explanation/rationale/difficulty_reason text where present). No change to maths, key or options."
+   },
+   {
+    "finding_id": "JEE-MATH-U13-102",
+    "category": "E9",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Verified bare numerals in stem; wrapped every stem number in $...$ (also in the numerical alternate stem and in explanation/rationale/difficulty_reason text where present). No change to maths, key or options."
+   },
+   {
+    "finding_id": "JEE-MATH-U13-103",
+    "category": "E9",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Verified bare numerals in stem; wrapped every stem number in $...$ (also in the numerical alternate stem and in explanation/rationale/difficulty_reason text where present). No change to maths, key or options."
+   },
+   {
+    "finding_id": "JEE-MATH-U13-107",
+    "category": "E9",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Verified bare numerals in stem; wrapped every stem number in $...$ (also in the numerical alternate stem and in explanation/rationale/difficulty_reason text where present). No change to maths, key or options."
+   },
+   {
+    "finding_id": "JEE-MATH-U13-109",
+    "category": "E9",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Verified bare numerals in stem; wrapped every stem number in $...$ (also in the numerical alternate stem and in explanation/rationale/difficulty_reason text where present). No change to maths, key or options."
+   },
+   {
+    "finding_id": "JEE-MATH-U13-112",
+    "category": "E9",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Verified bare numerals in stem; wrapped every stem number in $...$ (also in the numerical alternate stem and in explanation/rationale/difficulty_reason text where present). No change to maths, key or options."
+   },
+   {
+    "finding_id": "JEE-MATH-U13-114",
+    "category": "E9",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Verified bare numerals in stem; wrapped every stem number in $...$ (also in the numerical alternate stem and in explanation/rationale/difficulty_reason text where present). No change to maths, key or options."
+   },
+   {
+    "finding_id": "JEE-MATH-U13-119",
+    "category": "E9",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Verified bare numerals in stem; wrapped every stem number in $...$ (also in the numerical alternate stem and in explanation/rationale/difficulty_reason text where present). No change to maths, key or options."
+   },
+   {
+    "finding_id": "JEE-MATH-U13-121",
+    "category": "E9",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Verified bare numerals in stem; wrapped every stem number in $...$ (also in the numerical alternate stem and in explanation/rationale/difficulty_reason text where present). No change to maths, key or options."
+   },
+   {
+    "finding_id": "JEE-MATH-U13-123",
+    "category": "E9",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Verified bare numerals in stem; wrapped every stem number in $...$ (also in the numerical alternate stem and in explanation/rationale/difficulty_reason text where present). No change to maths, key or options."
+   },
+   {
+    "finding_id": "JEE-MATH-U13-125",
+    "category": "E9",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Verified bare numerals in stem; wrapped every stem number in $...$ (also in the numerical alternate stem and in explanation/rationale/difficulty_reason text where present). No change to maths, key or options."
+   },
+   {
+    "finding_id": "JEE-MATH-U13-126",
+    "category": "E9",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Verified bare numerals in stem; wrapped every stem number in $...$ (also in the numerical alternate stem and in explanation/rationale/difficulty_reason text where present). No change to maths, key or options."
+   },
+   {
+    "finding_id": "JEE-MATH-U13-127",
+    "category": "E9",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Verified bare numerals in stem; wrapped every stem number in $...$ (also in the numerical alternate stem and in explanation/rationale/difficulty_reason text where present). No change to maths, key or options."
+   },
+   {
+    "finding_id": "JEE-MATH-U13-132",
+    "category": "E9",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Verified bare numerals in stem; wrapped every stem number in $...$ (also in the numerical alternate stem and in explanation/rationale/difficulty_reason text where present). No change to maths, key or options."
+   },
+   {
+    "finding_id": "JEE-MATH-U13-133",
+    "category": "E9",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Verified bare numerals in stem; wrapped every stem number in $...$ (also in the numerical alternate stem and in explanation/rationale/difficulty_reason text where present). No change to maths, key or options."
+   },
+   {
+    "finding_id": "JEE-MATH-U13-134",
+    "category": "E9",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Verified bare numerals in stem; wrapped every stem number in $...$ (also in the numerical alternate stem and in explanation/rationale/difficulty_reason text where present). No change to maths, key or options."
+   }
+  ],
+  "changed_stem_or_options": [
+   "U13-C-002",
+   "U13-C-004",
+   "U13-C-006",
+   "U13-C-007",
+   "U13-C-009",
+   "U13-C-012",
+   "U13-C-013",
+   "U13-C-017",
+   "U13-C-019",
+   "U13-C-022",
+   "U13-C-024",
+   "U13-C-029",
+   "U13-C-031",
+   "U13-C-033",
+   "U13-C-035",
+   "U13-C-036",
+   "U13-C-037",
+   "U13-C-042",
+   "U13-C-043",
+   "U13-C-044"
+  ],
+  "alias_requests": []
+ },
+ "U13-D": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U13-158",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed: same task as U13-C-029 (P(1st of type | 2nd of type) = (r-1)/(N-1), 1/3 re-verified). Rewritten as a swap urn (3 red, 5 black; drawn ball replaced by one of the other colour), given 2nd red find P(1st red) = 3/13 via total probability and Bayes; no symmetry shortcut applies. New family U13-D-bayes-swap-draw. Still Medium."
+   },
+   {
+    "finding_id": "JEE-MATH-U13-166",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed: key 33/221 equals the denominator printed in U13-C-035's explanation. Rewritten to number of face cards in two cards without replacement, P(X = 1) = 80/221 (brute-force check); not recoverable from U13-C-035. New family U13-D-rv-cards-face. Still Medium."
+   },
+   {
+    "finding_id": "JEE-MATH-U13-178",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed: (2n+1)/3 = 7 gives n = 10, matching U13-A-042 distractor, U13-B-038 mean 7 and U13-A-025 setup. Rewritten with P(X = k) = c/(k(k+1)) and the unknown n found from a tail probability P(X >= 2) = 9/20 (telescoping normalisation; n = 10, unique, brute-force confirmed). Distractors 19, 9, 8 from no normalisation and two off-by-one telescoping slips, each re-solved in sympy. New family U13-D-rv-pmf-telescoping-find-n. Still Difficult; numerical alternate kept (answer 10)."
+   }
+  ],
+  "changed_stem_or_options": [
+   "U13-D-023",
+   "U13-D-031",
+   "U13-D-043"
+  ],
+  "alias_requests": []
+ },
+ "U14-A": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U14-023",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed related, not duplicate: sympy confirms cos(pi/15)cos(2pi/15)cos(4pi/15)cos(8pi/15) = -1/16 via the same doubling telescoping as 005 (cos20cos40cos80 = 1/8) and 024 (six factors, k = 6). 023 has different data, a different answer and an extra allied-angle sign twist (sin(16pi/15) = -sin(pi/15)), so no rewrite. The bank has no family_dependencies field, so an alias group 023/005/024 is requested so the three never share a paper."
+   },
+   {
+    "finding_id": "JEE-MATH-U14-037",
+    "category": "E5",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Confirmed: the rationale for the both-false distractor referred back to a mix-up only described in another rationale. Rewritten self-contained: evaluates Statement I correctly as -3/8 (sympy confirms) but rejects Statement II, believing sin^3 theta = (sin 3theta + 3 sin theta)/4 by analogy with cos 3theta = 4cos^3 theta - 3cos theta. Option text unchanged."
+   }
+  ],
+  "changed_stem_or_options": [],
+  "alias_requests": [
+   [
+    "U14-A-023",
+    "U14-A-005",
+    "U14-A-024"
+   ]
+  ]
+ },
+ "U14-B": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U14-097",
+    "category": "E8",
+    "severity": "minor",
+    "action": "rewritten",
+    "note": "Ruling applied: trigonometric equations solved in an interval are out of scope, so U14-B-042 (count of |cos x| = sin x on [0, 5pi], key 6, which sympy grid count confirms) was replaced in place, same difficulty (Medium) and class (XI). New item: number of integers in the range of 8(sin^6 x + cos^6 x); sympy gives range [2, 8], key 7; distractors 3 (cube identity without factor 3, range [6, 8]), 9 (minimum taken as 0), 13 (sin^2 x cos^2 x = (1/2) sin^2 2x, range [-4, 8]) all re-derived. New family U14-B-sixth-power-range; numerical alternate kept (answer 7)."
+   },
+   {
+    "finding_id": "JEE-MATH-U14-069",
+    "category": "E8",
+    "severity": "minor",
+    "action": "rewritten",
+    "note": "Ruling applied: counting solutions of |cos x| = 1/2 on [0, 3pi] is solving a trigonometric equation in an interval, so U14-B-014 was replaced in place, same difficulty (Easy) and class (XI). New item: range of 7 - 3|cos 2x| is [m, M], find m + M; sympy gives [4, 7], key 11; distractors 14 (modulus dropped, [4, 10]), 8 (amplitude doubled by the 2x, [1, 7]), 17 (sign slip, 7 + 3|cos 2x|, [7, 10]). New family U14-B-abs-shift-range; numerical alternate kept (answer 11)."
+   },
+   {
+    "finding_id": "JEE-MATH-U14-099",
+    "category": "E7",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Confirmed: no parameter in U14-B-044. question_type changed to Conceptual/application MCQ. Key re-verified with sympy: solveset gives the single value atan(2/sqrt5) in [0, 2pi], count 1."
+   },
+   {
+    "finding_id": "JEE-MATH-U14-109",
+    "category": "E7",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Confirmed: U14-B-054 is solved by a bound (AM-GM) argument, not a graph. question_type changed to Multi-step computation MCQ. Key 0 re-verified: at x = 1 the left side is 2cos^2(1/2)sin^2(1) = 1.0906 < 2."
+   },
+   {
+    "finding_id": "JEE-MATH-U14-062",
+    "category": "E5",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Confirmed: the old rationale was self-contradictory. Rewritten for the third-quadrant distractor of U14-B-007: keeps only the case cos theta < 0 from sin theta cos theta < 0, then a sign slip in cos theta tan theta > 0 gives tan theta > 0 instead of < 0; cos < 0 with tan > 0 is the third quadrant (sign table checked). Option text unchanged."
+   },
+   {
+    "finding_id": "JEE-MATH-U14-071",
+    "category": "E5",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Confirmed: Statement II is about a product. Rationale for the both-true distractor of U14-B-016 rewritten: takes sin x and cos x equal to 1 (and -1) at the same x in both statements, giving range [-2, 2] and product maximum 1 x 1 = 1. Option text unchanged."
+   }
+  ],
+  "changed_stem_or_options": [
+   "U14-B-014",
+   "U14-B-042"
+  ],
+  "alias_requests": []
+ },
+ "U14-C": {
+  "closures": [
+   {
+    "finding_id": "JEE-MATH-U14-144",
+    "category": "E6",
+    "severity": "major",
+    "action": "rewritten",
+    "note": "Confirmed: tan^-1 2 + tan^-1 3 + tan^-1 k = pi with k = 1 is the same task, numbers and key as U14-A-014, and U14-C-016 (sum = 3pi/4) gives it away. Rewritten as a different unknown and twist: tan^-1 k + tan^-1(2k) + tan^-1(3k) = pi/2, needing a sign argument for k > 0 and the pi/2 condition; sympy gives the unique root k = 1/sqrt(11). New distractors from real slips (pi condition gives 1; 1 + xy denominator gives 1/sqrt(7); dropped pairwise product gives 1/sqrt(5)), new explanation, numerical alternate now asks 1/k^2 = 11, new family U14-C-tan-three-sum-param. Still Medium."
+   },
+   {
+    "finding_id": "JEE-MATH-U14-147",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed related, not duplicate: 147 (cot^-1(-1/2) + cot^-1(-1/3) = 5pi/4, sympy confirms) uses tan^-1 2 + tan^-1 3 = 3pi/4 from U14-C-016 as an intermediate step but adds the negative-argument rule and a different answer. Alias U14-C-037 with U14-C-016 requested."
+   },
+   {
+    "finding_id": "JEE-MATH-U14-133",
+    "category": "E6",
+    "severity": "minor",
+    "action": "rewritten",
+    "note": "Confirmed: Statement I (2tan^-1(1/3) + tan^-1(1/7) = pi/4) states the answer of U14-A-018 directly and repeats the main step of U14-C-025. Statement I replaced by tan^-1(1/2) + tan^-1(1/5) + tan^-1(1/8) = pi/4 (sympy confirms true), so the key (both true) is unchanged; Statement II unchanged. Rationales for the Statement I false options rewritten self-contained (dropping 1 - xy gives tan^-1(66/73), sympy confirms), explanation and check updated."
+   },
+   {
+    "finding_id": "JEE-MATH-U14-154",
+    "category": "E6",
+    "severity": "minor",
+    "action": "aliased",
+    "note": "Confirmed related, not duplicate: 154 uses the same telescoping split as 130 but with cot^-1 input, an index shift and an inverse unknown (n = 10, sympy confirms). Alias U14-C-044 with U14-C-020 requested."
+   },
+   {
+    "finding_id": "JEE-MATH-U14-125",
+    "category": "E5",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Confirmed: rationale for 2 - sqrt(3) pointed to another rationale. Rewritten self-contained: keeps 2cot^-1 x after using tan^-1 x + cot^-1 x = pi/2, so cot^-1 x = pi/12, then writes x = tan(pi/12) = 2 - sqrt(3). Option text unchanged."
+   },
+   {
+    "finding_id": "JEE-MATH-U14-132",
+    "category": "E5",
+    "severity": "minor",
+    "action": "fixed",
+    "note": "Confirmed: rationale for {1} pointed to another rationale. Rewritten self-contained: sign slip gives 6x^2 - 5x - 1 = 0 (roots 1, -1/6, sympy confirms), rejects the negative root and keeps x = 1. Option text unchanged."
+   }
+  ],
+  "changed_stem_or_options": [
+   "U14-C-034",
+   "U14-C-023"
+  ],
+  "alias_requests": [
+   [
+    "U14-C-037",
+    "U14-C-016"
+   ],
+   [
+    "U14-C-044",
+    "U14-C-020"
+   ]
+  ]
+ }
+}

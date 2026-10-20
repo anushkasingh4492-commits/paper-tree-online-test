@@ -1,0 +1,42 @@
+[
+ {
+  "id": "V03-C-007",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "1",
+    "key": "1",
+    "working": "2-5-3-4 on visible benefits to sitting tenants vs dispersed costs on seekers; 1 landlords' repair argument breaks the voter-politics thread.",
+    "alternative": "",
+    "issue": "1 is a related cost of rent control, but 3 ('The costs, if any') and 4 ('Such people') form a chain it cannot join."
+   },
+   "S2": {
+    "answer": "1",
+    "key": "1",
+    "working": "Rent-control politics chain 2, 5, 3, 4 ('such people' = home-seekers); 1 on landlords and repairs is a separate argument.",
+    "alternative": "",
+    "issue": ""
+   }
+  }
+ },
+ {
+  "id": "V03-C-023",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "2",
+    "key": "2",
+    "working": "1-5-3-4 archives' institutional bias and reading against grain; 2 on physical losses",
+    "alternative": "",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "2",
+    "key": "2",
+    "working": "1-5-3-4: archive deposit, non-random silences, read against purpose, limits. 2 on accidental losses breaks the 'not random' thread.",
+    "alternative": "2 could loosely fit as another source of silence, but 'resulting silences are not random' must follow 1.",
+    "issue": ""
+   }
+  }
+ }
+]

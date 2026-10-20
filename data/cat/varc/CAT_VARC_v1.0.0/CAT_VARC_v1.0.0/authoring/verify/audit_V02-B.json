@@ -1,0 +1,42 @@
+[
+ {
+  "id": "V02-B-001,V02-B-002,V02-B-003,V02-B-004,V02-B-005,V02-B-006,V02-B-007,V02-B-008,V02-B-009,V02-B-010,V02-B-011,V02-B-012,V02-B-013,V02-B-014,V02-B-015,V02-B-016,V02-B-017,V02-B-018,V02-B-019,V02-B-020,V02-B-021,V02-B-022,V02-B-023,V02-B-024,V02-B-025",
+  "category": "E3",
+  "severity": "major",
+  "finding": "Every explanation (and some difficulty_reason fields) referred to 'the key' (e.g. 'The key keeps both the dismissal...'), banned in student-facing text.",
+  "fix": "Replaced 'the key' with 'the correct answer' throughout the file (30 occurrences).",
+  "changed": true
+ },
+ {
+  "id": "V02-B-012",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Defence of the 'most effective way' option said 'the paragraph says the evidence is partly true'; the paragraph calls the claim that prizes help good writing find readers 'partly true', not the evidence.",
+  "fix": "Defence now reads: 'The paragraph grants that the claim about prizes is only 'partly true' and says the effect is concentrated; ...'",
+  "changed": true
+ },
+ {
+  "id": "V02-B-001..025",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "difficulty_reason fields use 'distractor' and 'the solver'.",
+  "fix": "none: difficulty_reason is internal metadata, not student-facing; left as written.",
+  "changed": false
+ },
+ {
+  "id": "V02-B",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Blind-solver notes file verify/notes/V02-B.json is empty (no disagreements or flags). Cold solve of all 25 items found each correct answer uniquely defensible; closest calls (003 'buys time so count as equal', 008 'main force', 021 'both objections fail') are excluded by quoted lines.",
+  "fix": "none: no key defect found.",
+  "changed": false
+ },
+ {
+  "id": "V02-B-017,V02-B-019,V02-B-022",
+  "category": "E6",
+  "severity": "minor",
+  "finding": "Paragraphs refer to research findings (homework and achievement, learning-styles matching, open-label placebo trials).",
+  "fix": "none: findings are stated generically, hedged ('have tended to find', 'some small trials'), match the established literature and are attributed to no named person or study.",
+  "changed": false
+ }
+]

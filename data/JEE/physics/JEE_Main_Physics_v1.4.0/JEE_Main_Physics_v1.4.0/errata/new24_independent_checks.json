@@ -1,0 +1,764 @@
+[
+  {
+    "id": "JEE27-PHY-0098",
+    "calculated_value": 13.183346173608031,
+    "key": "C",
+    "matching_options": [
+      "C"
+    ],
+    "method": "Chronological ballistic event roots",
+    "details": {
+      "ceiling": 1.0,
+      "wall": 1.5,
+      "floor": 2.302775637731995,
+      "y_at_wall": 11.25
+    },
+    "printed_input_anchors": [
+      "(12 i + 20 j)",
+      "y=15 m",
+      "x=18 m",
+      "floor is y=0",
+      "restitution 0.5",
+      "10 m/s² downward"
+    ],
+    "status": "PASS"
+  },
+  {
+    "id": "JEE27-PHY-0175",
+    "calculated_value": 21.17647058823529,
+    "key": "B",
+    "matching_options": [
+      "B"
+    ],
+    "method": "Interval roots and numerical speed integration",
+    "details": {
+      "active_intervals": [
+        [
+          0,
+          1.679552318263104
+        ],
+        [
+          4.202800622913365,
+          5.882352941176471
+        ]
+      ],
+      "turn": 4
+    },
+    "printed_input_anchors": [
+      "0 ≤ t ≤ 8 s",
+      "v(t)=12−3t",
+      "starts at x=5 m",
+      "x_D(t)=5+2t+0.2t²",
+      "between 0 and 12 m",
+      "laboratory frame"
+    ],
+    "status": "PASS"
+  },
+  {
+    "id": "JEE27-PHY-0225",
+    "calculated_value": 5.454545454545455,
+    "key": "D",
+    "matching_options": [
+      "D"
+    ],
+    "method": "Two Newton-law equations followed by a work-energy stop",
+    "details": {
+      "M": 6.0,
+      "friction": 12.0,
+      "third_a": 3.4545454545454546,
+      "speed_squared": 13.818181818181818,
+      "coast": 3.4545454545454546
+    },
+    "printed_input_anchors": [
+      "3 kg hanging mass descends with acceleration 2",
+      "2 kg hanging mass is initially moving upward",
+      "downward acceleration 4",
+      "5 kg hanging mass",
+      "descended 2 m",
+      "cut without an impulse",
+      "g=10"
+    ],
+    "status": "PASS"
+  },
+  {
+    "id": "JEE27-PHY-0263",
+    "calculated_value": 5.733333333333334,
+    "key": "C",
+    "matching_options": [
+      "C"
+    ],
+    "method": "Impulse equations for the two coupled subsystems and stopping energy",
+    "details": {
+      "v0": 1.8708286933869707,
+      "v_after": 1.4966629547095767,
+      "string_impulse": 1.870828693386971,
+      "static_margin": 5.0
+    },
+    "printed_input_anchors": [
+      "A (3 kg)",
+      "B (5 kg)",
+      "30°",
+      "sin β=0.6 and cos β=0.8",
+      "μ_k=0.20 and μ_s=0.25",
+      "moved 2 m",
+      "2 kg lump initially at rest",
+      "neglect gravity and friction impulses",
+      "g=10"
+    ],
+    "status": "PASS"
+  },
+  {
+    "id": "JEE27-PHY-0395",
+    "calculated_value": 27.0,
+    "key": "B",
+    "matching_options": [
+      "B"
+    ],
+    "method": "Successive work-zero roots with static tests at every stop",
+    "details": {
+      "legs": [
+        {
+          "start": 0.0,
+          "end": 15.0,
+          "direction": 1
+        },
+        {
+          "start": 15.0,
+          "end": 6.0,
+          "direction": -1
+        },
+        {
+          "start": 6.0,
+          "end": 9.0,
+          "direction": 1
+        }
+      ],
+      "final_x": 9.0,
+      "final_force": 0.0
+    },
+    "printed_input_anchors": [
+      "3 kg",
+      "x=0",
+      "F(x)=18−2x",
+      "0.10 and 0.15",
+      "g=10",
+      "static-friction condition"
+    ],
+    "status": "PASS"
+  },
+  {
+    "id": "JEE27-PHY-0492",
+    "calculated_value": 44.80384757729337,
+    "key": "B",
+    "matching_options": [
+      "B"
+    ],
+    "method": "Energy partition at detachment and radial Newton equation",
+    "details": {
+      "rod_energy_at_bottom": 12.401923788646684,
+      "omega_squared": 16.535898384862247
+    },
+    "printed_input_anchors": [
+      "mass 2 kg and length 1.5 m",
+      "1 kg point mass",
+      "released from rest",
+      "60° below",
+      "detached without any impulse",
+      "g=10"
+    ],
+    "status": "PASS"
+  },
+  {
+    "id": "JEE27-PHY-0573",
+    "calculated_value": 33.34999999999999,
+    "key": "B",
+    "matching_options": [
+      "B"
+    ],
+    "method": "Apsis quadratic from energy and angular momentum",
+    "details": {
+      "apocentre": 5999999.999999995,
+      "apocentre_speed": 66.68333125052072,
+      "circular_speed": 94.304471438704,
+      "work_J": 3.3349999999999984e+23
+    },
+    "printed_input_anchors": [
+      "2×10²⁰ kg and 6×10²⁰ kg",
+      "d=2×10⁶ m",
+      "√(3/2)",
+      "equal and opposite tangential impulses",
+      "G=6.67×10⁻¹¹",
+      "10²² J"
+    ],
+    "status": "PASS"
+  },
+  {
+    "id": "JEE27-PHY-0576",
+    "calculated_value": 1.2575449232466525,
+    "key": "C",
+    "matching_options": [
+      "C"
+    ],
+    "method": "Subtract centre-of-mass energy after a one-body impulse and solve marginal binding",
+    "details": {
+      "light_mass": 1.0119940029985008e+21,
+      "heavy_mass": 3.035982008995502e+21,
+      "initial_velocities": [
+        225.00000000000003,
+        -75.0
+      ],
+      "impulse": 1.2575449232466523e+23
+    },
+    "printed_input_anchors": [
+      "separation 3×10⁶ m",
+      "period 2π×10⁴ s",
+      "three times as far",
+      "only to the lighter body",
+      "direction of its initial velocity",
+      "G=6.67×10⁻¹¹",
+      "10²³ kg m/s"
+    ],
+    "status": "PASS"
+  },
+  {
+    "id": "JEE27-PHY-0811",
+    "calculated_value": 128.57142857142856,
+    "key": "C",
+    "matching_options": [
+      "C"
+    ],
+    "method": "Solve heat-split work balance, then use refrigerator entropy balance",
+    "details": {
+      "T": 642.8571428571429,
+      "W1": 342.8571428571428,
+      "W2": 342.85714285714295,
+      "engine_rejection": 299.99999999999994,
+      "fridge_removal": 171.4285714285714
+    },
+    "printed_input_anchors": [
+      "900 K",
+      "300 K",
+      "absorbs 1200 J",
+      "Only 75%",
+      "produce equal work",
+      "All the work of the first engine",
+      "removes heat from the 300 K"
+    ],
+    "status": "PASS"
+  },
+  {
+    "id": "JEE27-PHY-0814",
+    "calculated_value": 74.66666666666666,
+    "key": "A",
+    "matching_options": [
+      "A"
+    ],
+    "method": "Two independent device heat/work balances",
+    "details": {
+      "engine_work": 700.0,
+      "refrigerator_work": 200.0,
+      "actual_efficiency": 0.4666666666666667,
+      "carnot_efficiency": 0.625
+    },
+    "printed_input_anchors": [
+      "1500 J",
+      "800 K",
+      "300 K",
+      "200 K",
+      "remaining 500 J",
+      "together is 1400 J",
+      "engine need not be reversible"
+    ],
+    "status": "PASS"
+  },
+  {
+    "id": "JEE27-PHY-0887",
+    "calculated_value": 5881.347438630599,
+    "key": "A",
+    "matching_options": [
+      "A"
+    ],
+    "method": "Solve composition from two heat-capacity regimes; integrate adiabatic state law",
+    "details": {
+      "monatomic_mol": 1.0,
+      "diatomic_mol": 2.0,
+      "Cv": 52.0,
+      "gamma": 1.4615384615384615,
+      "final_T": 413.10283535828074
+    },
+    "printed_input_anchors": [
+      "40 K increase requires 2080 J",
+      "40 K increase requires 2720 J",
+      "R=8",
+      "prepared at 300 K",
+      "half its initial volume",
+      "vibration remains frozen"
+    ],
+    "status": "PASS"
+  },
+  {
+    "id": "JEE27-PHY-1017",
+    "calculated_value": 616.0000000000002,
+    "key": "D",
+    "matching_options": [
+      "D"
+    ],
+    "method": "Enumerate both beat branches in both experiments",
+    "details": {
+      "initial_candidates": [
+        96,
+        104
+      ],
+      "valid_initial": [
+        96
+      ],
+      "final_candidates": [
+        145,
+        155
+      ],
+      "valid_final": [
+        155
+      ],
+      "T0": 9.216000000000001,
+      "T1": 15.376000000000003
+    },
+    "printed_input_anchors": [
+      "length 0.50 m",
+      "0.001 kg/m",
+      "4 beats/s with a 100 Hz",
+      "1.5625",
+      "20 beats/s",
+      "0.40 m",
+      "5 beats/s with a 150 Hz",
+      "increases this beat frequency",
+      "g=10"
+    ],
+    "status": "PASS"
+  },
+  {
+    "id": "JEE27-PHY-1020",
+    "calculated_value": 11.107199999999999,
+    "key": "B",
+    "matching_options": [
+      "B"
+    ],
+    "method": "Enumerate absolute-value branches and apply harmonic resonance",
+    "details": {
+      "f": 120.0,
+      "fork": 125.0,
+      "initial_density": 0.002,
+      "coated_density": 0.0131072
+    },
+    "printed_input_anchors": [
+      "length 0.40 m",
+      "tension 18.432 N",
+      "5 beats/s",
+      "decreases the beat frequency",
+      "1.21",
+      "7 beats/s",
+      "0.30 m",
+      "second harmonic"
+    ],
+    "status": "PASS"
+  },
+  {
+    "id": "JEE27-PHY-1275",
+    "calculated_value": 10.79999999999998,
+    "key": "D",
+    "matching_options": [
+      "D"
+    ],
+    "method": "Numerical positive-root solution of both loaded measurements and tolerance boundary",
+    "details": {
+      "R1_kohm": 1.9999999999999996,
+      "R2_kohm": 2.999999999999999,
+      "open_circuit_V": 7.199999999999999,
+      "minimum_load_kohm": 10.79999999999998
+    },
+    "printed_input_anchors": [
+      "source is 12 V",
+      "resistance is 6 kΩ",
+      "across R2 as drawn, it reads 6 V",
+      "across R1 and reads 4 V",
+      "at least 90%"
+    ],
+    "status": "PASS"
+  },
+  {
+    "id": "JEE27-PHY-1424",
+    "calculated_value": 107.71173740091301,
+    "key": "B",
+    "matching_options": [
+      "B"
+    ],
+    "method": "First forward trajectory/boundary intersection after electrostatic slowing",
+    "details": {
+      "q_over_m": 19999999.999999996,
+      "speed": 126491.10640673518,
+      "radius": 0.0158113883008419,
+      "first_exit_s": 1.07711737400913e-07
+    },
+    "printed_input_anchors": [
+      "E=20000 V/m",
+      "B₁=0.10 T",
+      "B₂=0.20 T",
+      "radius 0.050 m",
+      "600 V",
+      "0.40 T",
+      "0.012 m apart",
+      "in ns"
+    ],
+    "status": "PASS"
+  },
+  {
+    "id": "JEE27-PHY-1546",
+    "calculated_value": 0.402359478108525,
+    "key": "D",
+    "matching_options": [
+      "D"
+    ],
+    "method": "Fit initial growth, carry continuous current into a signed reverse-source transient",
+    "details": {
+      "r": 6.0,
+      "L": 3.0,
+      "switch_current": 2.25,
+      "steady_after": -1.5,
+      "zero_crossing": 0.22907268296853872
+    },
+    "printed_input_anchors": [
+      "18 V",
+      "steady current is 3 A",
+      "1.5 A at time (ln 2)/2 s",
+      "At twice that time",
+      "reverses the source polarity",
+      "extra 6 Ω",
+      "0.75 A",
+      "opposite"
+    ],
+    "status": "PASS"
+  },
+  {
+    "id": "JEE27-PHY-1547",
+    "calculated_value": 86.6433975699931,
+    "key": "A",
+    "matching_options": [
+      "A"
+    ],
+    "method": "Infer coil from energy and integrated decay charge, then solve the reconnect transient",
+    "details": {
+      "r": 6.0,
+      "L": 1.5,
+      "new_steady": 1.5,
+      "time_constant": 0.125
+    },
+    "printed_input_anchors": [
+      "18 V",
+      "6.75 J",
+      "extra 6 Ω",
+      "0.375 C",
+      "falls to 1 A",
+      "extra 6 Ω remains",
+      "reach 1.25 A",
+      "in ms"
+    ],
+    "status": "PASS"
+  },
+  {
+    "id": "JEE27-PHY-1556",
+    "calculated_value": 5.772588722239781,
+    "key": "B",
+    "matching_options": [
+      "B"
+    ],
+    "method": "Numerically integrate electrical and frictional dissipation over the velocity decay",
+    "details": {
+      "initial_speed": 6.0,
+      "joule_heat": 5.772588722239781,
+      "friction_heat": 3.227411277760218,
+      "initial_energy": 9.0
+    },
+    "printed_input_anchors": [
+      "mass 0.50 kg",
+      "length 0.50 m",
+      "2.0 T",
+      "4.0 Ω",
+      "friction force",
+      "0.50 N",
+      "2.0 N force",
+      "force is then removed"
+    ],
+    "status": "PASS"
+  },
+  {
+    "id": "JEE27-PHY-1618",
+    "calculated_value": 0.9999999999999999,
+    "key": "B",
+    "matching_options": [
+      "B"
+    ],
+    "method": "Invert both photon-momentum components and the absorbed-power measurement",
+    "details": {
+      "angle_degrees": 36.86989764584402,
+      "absorption_fraction": 0.6,
+      "intercepted_power": 0.004248,
+      "intensity": 53.1
+    },
+    "printed_input_anchors": [
+      "peak electric field 200 V/m",
+      "0.0025488 W",
+      "1.58592×10⁻¹¹ N",
+      "5.0976×10⁻¹² N",
+      "reflects the rest specularly",
+      "ε₀=8.85×10⁻¹²",
+      "c=3×10⁸"
+    ],
+    "status": "PASS"
+  },
+  {
+    "id": "JEE27-PHY-1752",
+    "calculated_value": 1.5897459621556156,
+    "key": "C",
+    "matching_options": [
+      "C"
+    ],
+    "method": "Recover amplitudes and add the filtered complex field phasors",
+    "details": {
+      "strong_intensity": 25.0,
+      "weak_intensity": 4.0,
+      "total_phase": 2.617993877991494
+    },
+    "printed_input_anchors": [
+      "maximum intensity 49",
+      "minimum intensity 9",
+      "exceeds that of the weaker by λ/6",
+      "intensity by 1/4",
+      "index 1.5 and thickness λ/2",
+      "replacing the same thickness of air"
+    ],
+    "status": "PASS"
+  },
+  {
+    "id": "JEE27-PHY-1788",
+    "calculated_value": 0.1999999999999995,
+    "key": "B",
+    "matching_options": [
+      "B"
+    ],
+    "method": "De Broglie/acceleration energy followed by simultaneous affine-calibration equations",
+    "details": {
+      "emission_energy": 1.5000000000000004,
+      "work_function": 2.4999999999999996,
+      "gain": 1.2000000000000002,
+      "offset": 0.1999999999999995
+    },
+    "printed_input_anchors": [
+      "S=aV_stop+δ",
+      "3 eV and 5 eV",
+      "0.8 V and 3.2 V",
+      "using 4 eV photons",
+      "additional 2 V",
+      "√(0.0150/3.5) nm"
+    ],
+    "status": "PASS"
+  },
+  {
+    "id": "JEE27-PHY-2043",
+    "calculated_value": 68.125,
+    "key": "C",
+    "matching_options": [
+      "C"
+    ],
+    "method": "Solve each DC diode state and numerically integrate resistor power over both ramps",
+    "details": {
+      "threshold_V": 4.5,
+      "cycle_seconds": 1,
+      "always_clamped_wrong_mJ": 69.99999999999999
+    },
+    "printed_input_anchors": [
+      "300 Ω",
+      "600 Ω",
+      "anode is at X",
+      "cathode at a fixed +3 V",
+      "0 to 12 V in 0.5 s",
+      "next 0.5 s",
+      "no capacitance or inductance",
+      "in mJ"
+    ],
+    "status": "PASS"
+  },
+  {
+    "id": "JEE27-PHY-2135",
+    "calculated_value": 10.0222551816275,
+    "key": "B",
+    "matching_options": [
+      "B"
+    ],
+    "method": "Enumerate all 16 corners of the independent reading/mass bounds with one common zero error",
+    "details": {
+      "maximum_corner": {
+        "mass": 16.020000000000003,
+        "d": 10.049999999999999,
+        "h": 20.150000000000002,
+        "zero": 0.17500000000000002,
+        "density": 10.0222551816275
+      },
+      "corners": [
+        {
+          "mass": 16.0,
+          "d": 10.1,
+          "h": 20.200000000000003,
+          "zero": 0.12499999999999997,
+          "density": 9.886350063283738
+        },
+        {
+          "mass": 16.0,
+          "d": 10.049999999999999,
+          "h": 20.150000000000002,
+          "zero": 0.17500000000000002,
+          "density": 10.009743002873906
+        },
+        {
+          "mass": 16.0,
+          "d": 10.1,
+          "h": 20.25,
+          "zero": 0.12499999999999997,
+          "density": 9.86193932238674
+        },
+        {
+          "mass": 16.0,
+          "d": 10.049999999999999,
+          "h": 20.2,
+          "zero": 0.17500000000000002,
+          "density": 9.984966411282635
+        },
+        {
+          "mass": 16.0,
+          "d": 10.15,
+          "h": 20.200000000000003,
+          "zero": 0.12499999999999997,
+          "density": 9.789187507152064
+        },
+        {
+          "mass": 16.0,
+          "d": 10.1,
+          "h": 20.150000000000002,
+          "zero": 0.17500000000000002,
+          "density": 9.910881949296847
+        },
+        {
+          "mass": 16.0,
+          "d": 10.15,
+          "h": 20.25,
+          "zero": 0.12499999999999997,
+          "density": 9.765016673801073
+        },
+        {
+          "mass": 16.0,
+          "d": 10.1,
+          "h": 20.2,
+          "zero": 0.17500000000000002,
+          "density": 9.88635006328374
+        },
+        {
+          "mass": 16.020000000000003,
+          "d": 10.1,
+          "h": 20.200000000000003,
+          "zero": 0.12499999999999997,
+          "density": 9.898708000862845
+        },
+        {
+          "mass": 16.020000000000003,
+          "d": 10.049999999999999,
+          "h": 20.150000000000002,
+          "zero": 0.17500000000000002,
+          "density": 10.0222551816275
+        },
+        {
+          "mass": 16.020000000000003,
+          "d": 10.1,
+          "h": 20.25,
+          "zero": 0.12499999999999997,
+          "density": 9.874266746539726
+        },
+        {
+          "mass": 16.020000000000003,
+          "d": 10.049999999999999,
+          "h": 20.2,
+          "zero": 0.17500000000000002,
+          "density": 9.99744761929674
+        },
+        {
+          "mass": 16.020000000000003,
+          "d": 10.15,
+          "h": 20.200000000000003,
+          "zero": 0.12499999999999997,
+          "density": 9.801423991536007
+        },
+        {
+          "mass": 16.020000000000003,
+          "d": 10.1,
+          "h": 20.150000000000002,
+          "zero": 0.17500000000000002,
+          "density": 9.92327055173347
+        },
+        {
+          "mass": 16.020000000000003,
+          "d": 10.15,
+          "h": 20.25,
+          "zero": 0.12499999999999997,
+          "density": 9.777222944643327
+        },
+        {
+          "mass": 16.020000000000003,
+          "d": 10.1,
+          "h": 20.2,
+          "zero": 0.17500000000000002,
+          "density": 9.898708000862845
+        }
+      ]
+    },
+    "printed_input_anchors": [
+      "20 divisions equal to 19",
+      "division is 1 mm",
+      "reading 10 mm and coincidence 5",
+      "reading 20 mm and coincidence 7",
+      "error is 0.15 mm",
+      "half a least count",
+      "same unknown actual zero error",
+      "16.01±0.01",
+      "π=3.141592654"
+    ],
+    "status": "PASS"
+  },
+  {
+    "id": "JEE27-PHY-2160",
+    "calculated_value": 5.024000000000001,
+    "key": "D",
+    "matching_options": [
+      "D"
+    ],
+    "method": "Directly solve end-resistance equations in ohms per centimetre, then apply the corrected gauge area",
+    "details": {
+      "X": 6.0,
+      "ohms_per_cm": 0.0010000000000000002,
+      "left_end_ohms": 0.002,
+      "right_end_ohms": 0.003,
+      "diameter_m": 0.0008
+    },
+    "printed_input_anchors": [
+      "r_b=0.003 Ω",
+      "4 Ω",
+      "61 cm",
+      "40 cm",
+      "90 J",
+      "0.50 A for 60 s",
+      "pitch 0.5 mm",
+      "50 circular divisions",
+      "reading 0.5 mm",
+      "reading 32",
+      "zero error 2 divisions",
+      "π=3.14"
+    ],
+    "status": "PASS"
+  }
+]

@@ -1,0 +1,50 @@
+[
+ {
+  "id": "V02-I-ALL",
+  "category": "E2",
+  "severity": "major",
+  "finding": "Measured in characters the correct summary was the longest option in 17 of 25 items (word-count check passed), a length cue a test-wise student could exploit.",
+  "fix": "Lengthened one distractor or trimmed the key in 002, 004, 008, 011, 014, 017, 019, 020, 024; key now longest by characters in 8/25, all options within about 30%.",
+  "changed": true
+ },
+ {
+  "id": "V02-I-017",
+  "category": "E1",
+  "severity": "major",
+  "finding": "Key said the longer visits 'show at most that they are not hurrying'; the paragraph says the finding shows 'at least' that and supports 'a weaker claim', so 'at most' overstated the author's limit and 'block inferring' overstated the doubt.",
+  "fix": "Key rewritten: visits show they are not hurrying but support less than deeper engagement, since self-selection and the time/attention gap weaken that inference.",
+  "changed": true
+ },
+ {
+  "id": "V02-I-002",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Key said 'most buyers should decline them'; the paragraph speaks of buyers who can afford occasional repairs, not most buyers.",
+  "fix": "Key now says 'buyers able to pay for repairs should decline them'.",
+  "changed": true
+ },
+ {
+  "id": "V02-I-014",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Key's 'sole authorship is expected elsewhere' overgeneralised the paragraph's 'as with a novel or a scholarly article'.",
+  "fix": "Changed to 'while novels still imply sole authorship'.",
+  "changed": true
+ },
+ {
+  "id": "V02-I-022",
+  "category": "E6",
+  "severity": "minor",
+  "finding": "Key phrase 'it can console failure' was garbled.",
+  "fix": "Now 'it can reward hopeless methods or sound like consolation'.",
+  "changed": true
+ },
+ {
+  "id": "V02-I-007",
+  "category": "E4",
+  "severity": "minor",
+  "finding": "Labelled Difficult although distractors are fairly easy to reject once the concession is read; passage abstraction keeps it at the low end of Difficult.",
+  "fix": "none: label defensible and quota fixed at 7/11/7",
+  "changed": false
+ }
+]

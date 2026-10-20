@@ -1,0 +1,50 @@
+[
+ {
+  "id": "V01-I-019",
+  "category": "E7",
+  "severity": "major",
+  "finding": "Blind solver S2 flagged, and inspection confirms, that the item is a near-duplicate of V01-H-006 (same menu-cost puzzle, same explanation, same smallness objection and reply, same aggregation close). V01-I holds the earlier claim but the other file cannot be edited here, and two copies in one pack is a real defect.",
+  "fix": "Rewrote the item on a new claimed subject (gift card breakage): 5 sentences, Difficult, same id, family V01I-gift-card-breakage; claim 'menu costs sticky prices' released and 'gift card breakage' claimed. Order locked by the 'For the retailer, however' turn, the compact phrase 'the spending it never has to honour' unpacked by the next sentence, 'such losses', and 'therefore'; explanation, misconception and two traps rewritten.",
+  "changed": true
+ },
+ {
+  "id": "V01-I-016",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Trap reason quotes 'harder to notice', which is not in the sentence (it reads 'the harder kind to notice').",
+  "fix": "Quotation corrected to 'the harder kind to notice'.",
+  "changed": true
+ },
+ {
+  "id": "V01-I-001",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Trap reason quotes 'prop up the ordinary income' but the sentence says 'props up'; misconception reasoning ('both speak of wages', 'nothing yet to be the result of') was loose, since in the wrong order the result sentence does follow the expectation.",
+  "fix": "Quotation corrected (with 'the custom' as subject); misconception now says the wrong order puts 'with basic pay cut to match' before any cut has been described.",
+  "changed": true
+ },
+ {
+  "id": "V01-I-022",
+  "category": "E7",
+  "severity": "minor",
+  "finding": "Harness advisory: the opening sentence shares an 8-word run ('of the software on which businesses depend is') with V03-F-024.",
+  "fix": "Opening sentence reworded ('A great deal of the code that businesses rely on every day is maintained...'); no quotation depended on it.",
+  "changed": true
+ },
+ {
+  "id": "V01-I-020",
+  "category": "E4",
+  "severity": "minor",
+  "finding": "Labelled Difficult, but the chain is carried by fairly explicit cues ('The trouble', 'That objection'); closer to upper Medium. Both solvers reached the key.",
+  "fix": "none: the order rests on tracking evidence, objection and reply, which is defensible at the lower end of Difficult, and the difficulty quota is fixed.",
+  "changed": false
+ },
+ {
+  "id": "V01-I-022",
+  "category": "E4",
+  "severity": "minor",
+  "finding": "Labelled Difficult, but the life-cycle chronology plus 'When they do' makes it close to Medium.",
+  "fix": "none: the middle three sentences carry no strong connectives and must be ordered by the logic of growth; acceptable at the lower end of Difficult with a fixed quota.",
+  "changed": false
+ }
+]

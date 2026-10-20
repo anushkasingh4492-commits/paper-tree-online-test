@@ -1,0 +1,42 @@
+[
+ {
+  "id": "V01-K-009",
+  "category": "E1",
+  "severity": "major",
+  "finding": "Both blind solvers flagged that 'Such demands' in the political-debate sentence could refer back to the states' demand for universal military service, making the order with the debate sentence before the 'men ask for a voice' sentence (printed 12345) defensible; the trap rationale also falsely claimed 'Such demands' had no referent after the conscription sentence.",
+  "fix": "Changed 'Such demands' to 'Such demands for a voice' so it can only follow the voice sentence; updated the explanation and the 12345 trap rationale.",
+  "changed": true
+ },
+ {
+  "id": "V01-K-009",
+  "category": "E4",
+  "severity": "minor",
+  "finding": "With the new lock the item is at the easier end of Difficult, though the conscription opener temptation and few connectives keep it upper Medium to Difficult.",
+  "fix": "none: label kept to preserve the exact 7/11/7 quota; still the hardest of the history items in the file.",
+  "changed": false
+ },
+ {
+  "id": "V01-K-007",
+  "category": "E4",
+  "severity": "minor",
+  "finding": "Labelled Difficult, but 'however', 'these marks' and 'If so' lock every link fairly mechanically once the opener is found; closer to Medium.",
+  "fix": "none: quota is exact (Easy 7, Medium 11, Difficult 7) and the tempting misreading of 'If so' gives it some upper-end difficulty.",
+  "changed": false
+ },
+ {
+  "id": "V01-K-011",
+  "category": "E4",
+  "severity": "minor",
+  "finding": "Labelled Difficult; 'in this way' and 'answer for a partner's default' make the order fairly easy to lock.",
+  "fix": "none: quota constraint; the summary/mechanism swap remains a real temptation.",
+  "changed": false
+ },
+ {
+  "id": "V01-K-016",
+  "category": "E4",
+  "severity": "minor",
+  "finding": "Labelled Difficult; 'these glaciers' and 'The extra flow' lock the first three, leaving only the analogy/shortage ordering as the hard step.",
+  "fix": "none: quota constraint; the 'temporary surplus' dependency is a genuine inference step.",
+  "changed": false
+ }
+]

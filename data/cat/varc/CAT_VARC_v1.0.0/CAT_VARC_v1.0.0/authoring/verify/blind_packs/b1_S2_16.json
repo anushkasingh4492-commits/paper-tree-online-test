@@ -1,0 +1,1177 @@
+{
+ "kind": "RC",
+ "passages": [
+  {
+   "passage_id": "R06-A-01",
+   "passage": [
+    "When a trait is described as highly heritable, many readers hear a claim about destiny: if height or some aspect of temperament is 'mostly genetic', then upbringing can do little to alter it. The inference feels natural, but it rests on a misunderstanding of what heritability measures. Heritability is a statistic about a population, not about a person. It estimates what share of the variation in a trait, across a particular group living in a particular range of environments, can be statistically associated with genetic differences among the members of that group. It says nothing about how much of any one individual's height was produced by genes, a question that is not even coherent, since every centimetre of a person's height required both genes and food.",
+    "Two consequences follow, and both tend to surprise people. First, heritability depends on the environment in which it is measured. If every child in a group were given exactly the same diet, schooling and care, the remaining differences among them would be largely genetic, and the heritability of almost any trait would rise, not because genes had become more powerful but because the environmental differences had been taken away. Conversely, in a group where some children are well fed and others go hungry, differences in nutrition will account for much of the variation in height, and the measured heritability will fall. Second, a trait can be built almost entirely by genes and still show low heritability. Nearly everyone is born with five fingers on each hand because a developmental programme laid down in the genome builds them; most people who have fewer have lost them through injury. Variation in finger number is therefore mainly environmental, even though the fingers themselves are anything but.",
+    "The most consequential error concerns differences between groups. Suppose a trait is highly heritable within each of two populations. It is tempting to conclude that the average difference between the populations must also be largely genetic. It need not be. Picture two handfuls of seed taken from the same genetically varied sack, one sown in rich soil and the other in poor soil. Within each plot, differences in height will be largely genetic, since the soil is uniform; between the plots, the difference is due entirely to the soil. High heritability within groups is compatible with a gap between them that has no genetic basis at all.",
+    "None of this makes heritability useless. Breeders rely on it to predict how quickly a herd will respond to selection, and researchers use it to judge where genetic studies are likely to find something. The fault lies not with the statistic but with the habit of reading it as a measure of fixity. A highly heritable trait may still be changed by changing the environment; short sight is substantially heritable, and spectacles correct it all the same."
+   ],
+   "questions": [
+    {
+     "id": "R06-A-01-1",
+     "type": "RC",
+     "options": {
+      "A": "explain how breeders use heritability to predict how quickly a herd will respond to selection.",
+      "B": "correct a widespread habit of treating heritability as a measure of how unchangeable a trait is.",
+      "C": "show that heritability estimates are too unreliable to be of use to breeders or to researchers.",
+      "D": "argue that average differences between human populations are environmental rather than genetic."
+     },
+     "question": "The primary purpose of the passage is to"
+    },
+    {
+     "id": "R06-A-01-2",
+     "type": "RC",
+     "options": {
+      "A": "the environmental differences among the children would have been removed, leaving mainly genetic ones.",
+      "B": "identical upbringing would allow the children's genes to exert a stronger influence on development.",
+      "C": "children raised in identical conditions come to resemble their parents more closely in every trait.",
+      "D": "measurements taken in uniform settings are more precise than measurements taken in varied ones."
+     },
+     "question": "According to the passage, if every child in a group received exactly the same diet, schooling and care, the heritability of most traits would rise because"
+    },
+    {
+     "id": "R06-A-01-3",
+     "type": "RC",
+     "options": {
+      "A": "developmental programmes are more dependable than environmental influences on the body.",
+      "B": "accidents are the main source of variation in most human physical traits.",
+      "C": "a trait built by a genetic programme can still show low heritability.",
+      "D": "heritability rises whenever the environments of a group are made more uniform."
+     },
+     "question": "The example of finger number in paragraph 2 is used to show that"
+    },
+    {
+     "id": "R06-A-01-4",
+     "type": "RC",
+     "options": {
+      "A": "Reading scores in the lower town cannot be raised much by improving its schools or its libraries.",
+      "B": "The gap between the towns must be largely genetic, since heritability is high within each town.",
+      "C": "The study must be mistaken, since a trait cannot be heritable within towns that differ on average.",
+      "D": "The gap between the towns could be produced entirely by differences between their schools or homes."
+     },
+     "question": "A study finds that within each of two towns, differences in children's reading scores are highly heritable, and that the average score in one town is well above that in the other. Which conclusion is most consistent with the passage?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R06-C-08",
+   "passage": [
+    "The founders of modern geology won their central argument so completely that its terms are now remembered mainly as a caricature. Against older accounts that explained mountains, valleys and buried shells by a few vast upheavals, they proposed that the Earth's features had been shaped by the same slow processes that can be watched today: rivers cutting their beds, waves wearing down cliffs, sediment settling grain by grain on the floors of lakes and seas. Given enough time, such ordinary causes could account for extraordinary results, and the immense age of the Earth that this view required became one of its most consequential implications. The doctrine came to be called uniformitarianism, and its rival, the appeal to sudden and violent change, catastrophism. In the familiar telling, patient observation defeated speculation.",
+    "The telling is unfair to both sides. Uniformitarianism bundled together several claims of very different standing. One was that the laws of nature have not changed, so that water flowed and rock fractured in the past as it does now. Another was methodological: that a geologist should first try to explain the record by causes known to operate, and invoke unobserved ones only when those fail. A third was a claim about the Earth itself, that change had generally proceeded at gentle and roughly steady rates. The first two are close to the preconditions of any historical science. The third is an empirical hypothesis, and it could have turned out false.",
+    "In part, it did. Through much of the twentieth century, geologists who proposed sudden events of enormous scale met resistance out of proportion to their evidence. A landscape of deep channels and giant ripples in the north-western United States was long attributed to ordinary erosion before it was accepted as the work of floods released when ice dams failed; the suggestion that the mass extinction at the end of the age of dinosaurs followed the impact of a large asteroid met at first with widespread doubt, some of it dismissive. In both cases the objection was less that the evidence was weak than that the explanation sounded like the discredited catastrophism of the past. A rule of method, prefer known causes, had hardened into a belief about what the Earth was permitted to have done.",
+    "It would be wrong, however, to conclude that the old suspicion of catastrophes was mere prejudice. Many early catastrophist explanations could not be tested: they posited events of unspecified cause that left no trace except the very features they were invoked to explain. Against such accounts, a demand for known causes was a reasonable discipline, and it is part of why the later catastrophes were eventually accepted. The flood hypothesis prevailed when the lake held back by the ice and the shorelines it left were identified; the impact hypothesis prevailed when a thin layer rich in a rare metal was traced around the world and a buried crater of the right age was found. What persuaded geologists was not a relaxation of the old standard but evidence that met it.",
+    "The view that now prevails keeps the uniformity of laws and the preference for testable causes while abandoning the assumption of uniform rates. The Earth's history includes long stretches of slow change punctuated by rare events of great violence, and both are explained by the same physics; neither the slow nor the violent is an exception that must apologise for itself. The lesson reaches beyond geology. A principle adopted to keep inquiry honest can, if it is mistaken for a description of the world, end by closing questions it was meant to keep open."
+   ],
+   "questions": [
+    {
+     "id": "R06-C-08-1",
+     "type": "RC",
+     "options": {
+      "A": "the evidence offered for each hypothesis was too thin to justify any firm conclusion at that time.",
+      "B": "the proposals resembled a style of explanation that geologists had long since learned to distrust.",
+      "C": "the rule of preferring known causes forbade geologists from ever accepting an unobserved cause.",
+      "D": "the hypotheses required the laws of nature to have worked differently in the past from the way they work now."
+     },
+     "question": "The passage suggests that the twentieth-century resistance to the flood and impact hypotheses arose mainly because"
+    },
+    {
+     "id": "R06-C-08-2",
+     "type": "RC",
+     "options": {
+      "A": "add further examples of sudden events whose acceptance was delayed because they sounded like the catastrophism of the past.",
+      "B": "show that the early catastrophist accounts were largely correct and had simply been rejected before the necessary evidence was available.",
+      "C": "withdraw the criticism made in paragraph 3, by showing that twentieth-century geologists were right to doubt the flood and impact hypotheses.",
+      "D": "guard against an overcorrection that paragraph 3 might invite, by showing that the demand for known causes was reasonable and helped the later catastrophes win acceptance."
+     },
+     "question": "Paragraph 4 serves chiefly to"
+    },
+    {
+     "id": "R06-C-08-3",
+     "type": "RC",
+     "options": {
+      "A": "the hypothesis of a large impact gained acceptance by meeting, rather than escaping, the standard of evidence that had been applied to it.",
+      "B": "the preference for explaining the record by known causes was the root of the twentieth-century error and has since been given up.",
+      "C": "the rates at which the Earth has changed have varied widely, from long slow stretches to rare episodes of great violence.",
+      "D": "the assumption that the laws of nature have not changed is close to a precondition of reconstructing the Earth's past."
+     },
+     "question": "Each of the following is supported by the passage EXCEPT"
+    },
+    {
+     "id": "R06-C-08-4",
+     "type": "RC",
+     "options": {
+      "A": "Doctors taught to consider common illnesses before rare ones come to dismiss a rare illness even when test results clearly point to it.",
+      "B": "Doctors who suspect a rare illness withhold the diagnosis until a confirming test is found, and the diagnosis is then accepted by colleagues.",
+      "C": "Doctors taught to rule out rare illnesses first order expensive tests for every patient, including those with obvious common complaints.",
+      "D": "A hospital requires a second opinion before major surgery, and the rule sometimes delays treatment for patients whose need is urgent."
+     },
+     "question": "Which of the following most closely parallels the error described in the last sentence of paragraph 3?"
+    },
+    {
+     "id": "R06-C-08-5",
+     "type": "RC",
+     "options": {
+      "A": "respectful but discriminating: crediting their rules of method while treating their claim about steady rates as a hypothesis that partly failed.",
+      "B": "dismissive: regarding their doctrine as a speculation that replaced one unsupported story about the Earth with another.",
+      "C": "admiring without reservation: endorsing the familiar account in which patient observation defeated speculation.",
+      "D": "regretful: holding that their victory set geology back by locking it into a belief it took over a century to escape."
+     },
+     "question": "The author's attitude toward the founders of uniformitarianism is best described as"
+    }
+   ]
+  },
+  {
+   "passage_id": "R07-E-05",
+   "passage": [
+    "Every few generations someone tries to rescue a dying craft by writing it down. A retiring stonemason or bell founder is interviewed at length, his methods are photographed and measured, and the results are published as a manual that, it is hoped, will allow the craft to survive its last practitioners. The manuals are often admirable documents, careful, accurate and lovingly illustrated. They are also, as anyone who has tried to learn from one discovers, strangely inert: the reader can follow every step and still produce work that a practitioner would reject at a glance.",
+    "The reason is that much of what a skilled worker knows is not a set of steps at all but a way of perceiving. A smith judges the heat of iron by its colour, and the relevant differences of colour are ones that a novice literally does not see; a joiner hears in the note of a mallet whether a joint has seated; a plasterer feels through the trowel the moment at which the mix has begun to stiffen. Such judgements can be described, but the description presupposes the perception it describes. An instruction to work the metal when it turns the colour of straw is useful only to someone who already knows which straw, in which light, and how much variation is allowed.",
+    "Apprenticeship solved this problem not by explaining more but by arranging for the learner to perceive under guidance. The apprentice stood beside the master for years and was told 'now' and 'not yet' thousands of times, until he slowly came to see what the master saw. The words mattered, but chiefly as pointers to experiences the learner was having at that very moment. What passed from one generation to the next was less a body of information than a trained attention.",
+    "It would be sentimental to conclude that apprenticeship should simply be restored. It was slow, it was often exploitative, and the guilds that ran it guarded their knowledge as much to keep out competitors as to preserve standards. Nor are manuals useless: to a learner who has already begun to see, a good written account can organise and extend what practice has started. The lesson is narrower. A craft cannot be stored in a text in the way a recipe can, because what has to be preserved is a capacity of persons, and the only reliable way to keep it alive is to keep people practising it alongside others who already can."
+   ],
+   "questions": [
+    {
+     "id": "R07-E-05-1",
+     "type": "RC",
+     "options": {
+      "A": "are written in such dry and technical prose that ordinary readers lose interest in them.",
+      "B": "fail to make their readers competent even though what they record is accurate.",
+      "C": "contain so many errors of measurement that following them leads readers astray.",
+      "D": "are rarely read, because they sit unopened in libraries long after their publication."
+     },
+     "question": "As used in paragraph 1, 'strangely inert' describes manuals that"
+    },
+    {
+     "id": "R07-E-05-2",
+     "type": "RC",
+     "options": {
+      "A": "colour is a less dependable guide to the heat of iron than the sound or feel of the work.",
+      "B": "smiths historically chose vague comparisons on purpose, so as to keep their methods secret from outsiders.",
+      "C": "a spoken or written instruction can rely on the very perception that it is meant to pass on.",
+      "D": "manuals would succeed if their authors replaced comparisons with precise measurements of temperature."
+     },
+     "question": "The example of metal that 'turns the colour of straw' (paragraph 2) is used to show that"
+    },
+    {
+     "id": "R07-E-05-3",
+     "type": "RC",
+     "options": {
+      "A": "kept the apprentice obedient and dependent on the master during the long years of his training.",
+      "B": "supplied a fixed technical vocabulary that could later be collected and published in manuals.",
+      "C": "reminded the apprentice of rules that he had already learned from older written sources on the craft.",
+      "D": "joined words to what the apprentice was perceiving at that instant, gradually training where he looked."
+     },
+     "question": "It can be inferred that the master's repeated 'now' and 'not yet' were valuable chiefly because they"
+    },
+    {
+     "id": "R07-E-05-4",
+     "type": "RC",
+     "options": {
+      "A": "Some tasks, such as baking a cake from a printed recipe, can be learned almost entirely from written instructions.",
+      "B": "Novices who studied only a detailed manual for a year matched, in masters' judgement, apprentices trained for that year.",
+      "C": "Many apprentices in earlier centuries left their masters before finishing their training because they were badly treated and poorly fed.",
+      "D": "Experienced joiners who read a good manual improved their technique noticeably over the following months of ordinary work."
+     },
+     "question": "Which of the following, if true, would most seriously weaken the author's argument?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R06-F-07",
+   "passage": [
+    "Suppose a lender uses a scoring system to estimate how likely each applicant is to default, and suppose applicants belong to two groups that differ, for whatever historical reasons, in how often their members in fact default. There are several natural ways to ask whether the system treats the groups fairly. One may ask whether a given score means the same thing in both groups, so that among applicants scored as having a one-in-five chance of default, roughly one in five defaults whichever group they belong to. One may ask instead whether applicants who would in fact have repaid are wrongly refused at the same rate in both groups, or whether those who would in fact have defaulted are wrongly approved at the same rate. Each of these looks like a reasonable requirement, and each has been proposed as the meaning of fairness.",
+    "It turns out that they cannot, in general, all be satisfied together. When the groups' underlying default rates differ and the prediction is less than perfect, a score that means the same thing in both groups will produce different rates of error between them, in wrongful refusals, wrongful approvals or both, and equalising both kinds of error will make the same score mean different things in different groups. This is not a defect of any particular system that better engineering might remove; it follows from the arithmetic of prediction under unequal base rates. The finding was greeted in some quarters as a kind of scandal, and two conclusions were quickly drawn from it: that the idea of a fair algorithm is incoherent, or, conversely, that since some criterion must be chosen, the choice is a technical matter best left to the people who build the systems.",
+    "Both conclusions seem to me mistaken, and for related reasons. The impossibility does not show that fairness is incoherent; it shows that our everyday notion of fairness bundles together several demands that usually travel together and part company only under specific conditions. Discovering that two values can conflict is not the same as discovering that one of them is empty, any more than the occasional conflict between honesty and kindness shows that one of these is an illusion. Nor does the need to choose make the choice technical. Which criterion should give way depends on what the decision does to the people it touches: who bears the cost of being wrongly refused, how severe that cost is, and whether the different base rates are themselves the residue of earlier unfairness that the decision would perpetuate. Those are questions about harm and responsibility, not about arithmetic.",
+    "It is worth adding that the dilemma is not peculiar to algorithms. A loan officer who judges applicants by experience faces exactly the same trade-off whenever the groups differ in base rates; the officer simply does not have to declare which criterion is being sacrificed, and may not know. In this respect the formal analysis has done something valuable. By making the conflict explicit, it has turned a choice that was always being made silently into one that must be made in the open, and has removed the comfortable belief that a sufficiently careful decision maker could satisfy every reasonable demand at once. The danger is that the explicitness is squandered, that the choice is buried again inside the system, this time under a layer of technical vocabulary instead of a layer of personal discretion."
+   ],
+   "questions": [
+    {
+     "id": "R06-F-07-1",
+     "type": "RC",
+     "options": {
+      "A": "the difference in default rates between the groups is itself the result of earlier unfair treatment.",
+      "B": "the groups differ in how often their members actually default and the predictions are less than perfect.",
+      "C": "the lender relies on more than one measure of creditworthiness when it decides whether to approve a loan.",
+      "D": "the scoring system has been poorly engineered or built from too small a body of past lending records."
+     },
+     "question": "According to the passage, the criteria of fairness described in paragraph 1 cannot all be met together when"
+    },
+    {
+     "id": "R06-F-07-2",
+     "type": "RC",
+     "options": {
+      "A": "illustrate that everyday moral notions are too vague to offer any guidance to those who design algorithms.",
+      "B": "show that the builders of scoring systems ought to be guided by their personal virtues rather than by arithmetic.",
+      "C": "suggest that fairness, like kindness, ought to give way whenever it comes into conflict with truthfulness.",
+      "D": "support the claim that a conflict between two demands does not show that either demand is empty."
+     },
+     "question": "The reference to the conflict between honesty and kindness in paragraph 3 serves to"
+    },
+    {
+     "id": "R06-F-07-3",
+     "type": "RC",
+     "options": {
+      "A": "cannot be made on any principled basis, because the competing criteria have been shown to be incompatible.",
+      "B": "should favour whichever criterion produces the smallest total number of errors across both groups combined.",
+      "C": "should be left to those who build the scoring system, since they understand the arithmetic of prediction best.",
+      "D": "should depend in part on whether the groups' differing default rates reflect past injustice that the decision would carry forward."
+     },
+     "question": "The author would most likely agree that the decision about which fairness criterion should give way"
+    },
+    {
+     "id": "R06-F-07-4",
+     "type": "RC",
+     "options": {
+      "A": "dismissive, since it only restates a dilemma that loan officers had always acknowledged openly in their decisions.",
+      "B": "appreciative of its having exposed a hidden trade-off, but wary that the clarity it brings may be wasted.",
+      "C": "suspicious, holding that its technical vocabulary was deliberately designed to hide choices that belong to discretion.",
+      "D": "enthusiastic, regarding it as having shown how every reasonable demand of fairness can at last be met together."
+     },
+     "question": "The author's attitude towards the formal analysis of fairness criteria is best described as"
+    },
+    {
+     "id": "R06-F-07-5",
+     "type": "RC",
+     "options": {
+      "A": "escapes the trade-off, because without an explicit score none of the criteria is ever strictly applied to the decisions.",
+      "B": "treats applicants more fairly than an algorithm, since personal discretion allows the special features of each case to count.",
+      "C": "sacrifices at least one of the criteria just as a scoring system must, though possibly without knowing which one.",
+      "D": "can satisfy every criterion together, provided that the officer takes enough care over each individual application."
+     },
+     "question": "The passage implies that a loan officer who judges applicants by experience, when the groups differ in base rates,"
+    }
+   ]
+  },
+  {
+   "passage_id": "R07-E-01",
+   "passage": [
+    "When a person pushes a door that should have been pulled, the usual verdict is that the person was careless, and the verdict is so automatic that we rarely notice how strange it is. A door has one job that involves its user, which is to tell an approaching hand what to do, and a door that sends the wrong message has failed at that job as surely as a door that sticks in its frame. Yet the failure is booked to the person, who apologises and blushes, while the door goes on misleading everyone who comes after.",
+    "The habit of blaming users has a simple source, which is that designers judge their objects from the inside. They know which way the door swings because they drew it, and they know which button on the oven sets the timer because they chose its position. What is obvious to someone who already knows the answer tells us very little about what an object communicates to someone meeting it for the first time, in a hurry, with a bag in one hand. A flat plate invites pushing and a vertical bar invites pulling, whatever the small sign above them says. When the hardware and the sign disagree, people follow the hardware, and they are not foolish to do so, since the shape of a thing is read faster than words are.",
+    "There is a practical cost to the blaming habit beyond the irritation it causes. Errors that are attributed to individuals are treated by asking individuals to try harder: more signs, more training, more warnings printed in red. Errors that are attributed to design are treated by changing the design, which removes the error for everyone at once. Imagine a hospital in which two different medicines are supplied in bottles of the same size and colour. If it blames the nurse who confuses them, it may discipline that nurse and still find the confusion repeated next year by someone else; if it makes the bottles look different, it removes the occasion for the mistake altogether.",
+    "This is not to say that every mistake is the designer's fault, or that objects can be made so clear that nobody ever misuses them. Some tasks are intrinsically demanding, and some carelessness is simply carelessness. But the sensible default runs the other way from the usual one. When many people make the same mistake with the same object, the repetition is itself a kind of evidence, and it points less at the people than at the thing they all share."
+   ],
+   "questions": [
+    {
+     "id": "R07-E-01-1",
+     "type": "RC",
+     "options": {
+      "A": "every error that people make with everyday objects is the fault of the designers who made those objects.",
+      "B": "designers ought to test every new product on hurried first-time users before it is allowed to reach the market.",
+      "C": "written signs and printed warnings are useless and should be removed from doors, appliances and public buildings.",
+      "D": "a mistake that many people repeat with one object usually signals poor design rather than personal carelessness."
+     },
+     "question": "The passage is primarily concerned with arguing that"
+    },
+    {
+     "id": "R07-E-01-2",
+     "type": "RC",
+     "options": {
+      "A": "push the door whatever its fittings, since pushing is the most natural movement for someone in a hurry.",
+      "B": "wait until someone else uses the door so that they can copy whatever that person does first.",
+      "C": "act on what the shape of the hardware suggests, since form is read faster than printed words.",
+      "D": "stop and read the sign with care before deciding whether they should push the door or pull it."
+     },
+     "question": "According to the passage, when the hardware on a door and the sign above it give conflicting messages, people tend to"
+    },
+    {
+     "id": "R07-E-01-3",
+     "type": "RC",
+     "options": {
+      "A": "Reshaping the slot and ticket so that a ticket can enter the gate only the right way up.",
+      "B": "Placing staff beside each gate to remind passengers, politely but firmly, how to hold their tickets.",
+      "C": "Printing a large red arrow on every ticket showing passengers which way up it should be inserted.",
+      "D": "Fining passengers who jam the gates, so that they learn to take more care with their tickets next time."
+     },
+     "question": "At a railway station, many passengers keep inserting their tickets upside down into the entry gates. Which response would the author most clearly favour?"
+    },
+    {
+     "id": "R07-E-01-4",
+     "type": "RC",
+     "options": {
+      "A": "contrast what follows from treating a mistake as a personal failing with treating it as a design problem.",
+      "B": "illustrate the claim that look-alike containers are the most common cause of serious errors in hospitals.",
+      "C": "show that hospital staff are, as a rule, more careless than the people working in most other occupations.",
+      "D": "prove that disciplining an employee never does anything at all to reduce the number of mistakes made at work."
+     },
+     "question": "The hospital example in paragraph 3 serves mainly to"
+    }
+   ]
+  },
+  {
+   "passage_id": "R03-C-06",
+   "passage": [
+    "For much of the twentieth century, social scientists took it nearly for granted that modernisation and religion were locked in a zero-sum relationship. As societies industrialised, urbanised and educated their populations, faith would retreat, first from public life and then from private conviction. When the last decades of the century brought vigorous religious movements on several continents, and when religion returned to the centre of political argument in places where it had supposedly been tamed, many concluded that the secularisation thesis had simply been refuted. Some of its former defenders said as much.",
+    "Both the confidence and the recantation, however, rested on treating as one hypothesis what was really a bundle of several. One strand concerns differentiation: the process by which law, medicine, education, science and the economy come to operate by their own criteria, no longer answerable to religious authority. A second concerns decline: a fall in belief, membership and practice among individuals. A third concerns privatisation: the withdrawal of religion from public argument into the domain of personal choice. These claims are logically independent. A society could see religious practice flourish while its hospitals, courts and universities remain entirely outside clerical control, and that combination is in fact common.",
+    "Once the strands are separated, the evidence looks different. The decline thesis has fared poorly as a universal law; patterns of belief vary too widely between societies at similar levels of wealth to support it. The privatisation thesis has fared worse still, since religious voices are plainly present in public debate. But differentiation has held up remarkably well, and the point most often missed is that the religious resurgence itself tends to presuppose it. Movements that seek public influence organise as voluntary associations, compete for members, lobby legislatures, commission surveys and appeal to rights. They act, that is, as one set of claimants among many within institutions they do not control, which is precisely the condition that differentiation describes.",
+    "It would be too quick to declare the older thesis vindicated by this route. A theory that predicted the fading of faith and got that prediction wrong in much of the world cannot be rescued by pointing to the part that survived, and some of its proponents did expect the strands to move together. The more modest conclusion is that the debate has been conducted at the wrong level of generality. To ask whether the world is becoming secular is to ask a question with no single answer; to ask which institutions have slipped free of religious authority, and on what terms religion now competes for influence within them, is to ask questions that the evidence can actually settle."
+   ],
+   "questions": [
+    {
+     "id": "R03-C-06-1",
+     "type": "RC",
+     "options": {
+      "A": "demonstrate that religion has been confined to private life in most societies that have modernised.",
+      "B": "explain why religious movements revived in the late twentieth century in societies that were growing wealthier.",
+      "C": "argue that the secularisation debate went astray by treating several independent claims as a single thesis.",
+      "D": "show that the secularisation thesis was right after all, once the evidence of its critics is properly understood."
+     },
+     "question": "The primary purpose of the passage is to"
+    },
+    {
+     "id": "R03-C-06-2",
+     "type": "RC",
+     "options": {
+      "A": "consistent with the differentiation strand of the thesis while failing to fit the decline strand.",
+      "B": "proof that privatisation has taken place in that society even though decline has plainly not.",
+      "C": "evidence that the secularisation thesis has now been refuted in every one of its forms.",
+      "D": "an unusual and unstable combination that the pressures of modernisation will sooner or later break apart."
+     },
+     "question": "The author would most likely regard a society in which religious attendance is high but courts and hospitals operate free of clerical control as"
+    },
+    {
+     "id": "R03-C-06-3",
+     "type": "RC",
+     "options": {
+      "A": "In several countries resurgent movements won influence mainly by restoring clerical authority over courts and schools, not by competing within independent institutions.",
+      "B": "Some religious movements commission surveys and use the language of rights more skilfully than many secular campaigning groups.",
+      "C": "Membership of religious organisations fell steadily in several wealthy countries over the same decades in which the resurgence occurred elsewhere.",
+      "D": "Religious movements that lobby legislatures and contest elections tend to attract more members than those that stay out of politics."
+     },
+     "question": "Which of the following, if true, would most weaken the author's claim that the religious resurgence 'tends to presuppose' differentiation?"
+    },
+    {
+     "id": "R03-C-06-4",
+     "type": "RC",
+     "options": {
+      "A": "sympathetic, since the author believes that their original prediction was correct and that they abandoned it too readily.",
+      "B": "critical of their recantation for sharing the confusion behind their earlier confidence, without endorsing their original prediction.",
+      "C": "approving, since the author agrees that the evidence of religious resurgence refuted the secularisation thesis as a whole.",
+      "D": "dismissive, since the author regards every question about secularisation as one that no evidence could ever settle."
+     },
+     "question": "The author's attitude towards those former defenders of the thesis who 'said as much' (paragraph 1) is best described as"
+    }
+   ]
+  },
+  {
+   "passage_id": "R01-E-08",
+   "passage": [
+    "When a child falls into a disused well or a group of miners is trapped underground, communities will spend almost without limit to bring them out. Engineers are flown in, machines are diverted from other work, and no one asks whether the money might have been better used. The same communities, meanwhile, routinely decline measures that would save far more lives at far lower cost: safer road junctions, better lighting on rural highways, routine screening for common diseases. To many economists and policy analysts, the contrast is simply an error. A life saved by a guardrail is no less a life than one saved by a rescue shaft; that we cannot name the person in advance makes no difference to the value of what is saved. On this view the preference for identified over statistical lives is a bias, and a costly one, to be corrected by accounting that treats every life saved alike.",
+    "Much of this critique seems to me correct. The people whose deaths a guardrail prevents are not abstractions; they are as real as the trapped miners, and they would have suffered and been mourned in the same way. If we spend a hundred times more per life on rescue than on prevention, a great many people die who need not have, and the fact that we never learn their names does not make their deaths any less our doing. It is worth noticing, too, that the identified lives we rush to save are often identified by chance: they are the victims whose plight happens to be reported, while others in similar danger elsewhere receive nothing, because no one is watching.",
+    "Yet the critique moves too quickly when it concludes that the impulse to rescue has no rational content. What a community expresses when it refuses to abandon a known person in peril is a commitment that has value beyond the life in question: an assurance, to everyone, that if they are ever in that position they will not be left to die because the arithmetic was unfavourable. This assurance is a real good, and it is one that statistical accounting, which counts only lives saved, has no column for. It is enjoyed by people who are never in danger, and it shapes how the members of a community regard one another.",
+    "Nor need this good conflict with the analyst's preferred standpoint. The strongest case for prevention is made from the position of someone who does not yet know whether he will be a victim: from there, each of us would prefer the policy that most improves our own chances, and that is usually prevention. But someone in that position would also want the assurance that rescue provides, and would be willing to pay something for it. Properly understood, then, the choice made under that uncertainty is not between rescue and prevention but about the proportion in which to buy them, and it is hard to believe that the proportion would resemble our present spending, in which prevention is starved while rescue is limitless.",
+    "The lesson is not that rescue should be abandoned in the name of consistency, a policy that would purchase a few more statistical lives at the price of a community in which no one could count on being saved. It is that the scandal lies on the other side of the ledger. We do not rescue too much; we prevent too little, and the impulse to rescue, rightly valued, gives no excuse for that neglect."
+   ],
+   "questions": [
+    {
+     "id": "R01-E-08-1",
+     "type": "RC",
+     "options": {
+      "A": "those whose rescue costs less per life than the measures that would prevent similar deaths.",
+      "B": "those of people living close to the engineers and machines that are needed to rescue them.",
+      "C": "those of people who are already personally known to the rescuers or to their communities.",
+      "D": "those of victims whose danger happens to be reported, not all who face similar danger."
+     },
+     "question": "According to paragraph 2, the identified lives that communities rush to save are often"
+    },
+    {
+     "id": "R01-E-08-2",
+     "type": "RC",
+     "options": {
+      "A": "concede that, from that standpoint, prevention is always to be chosen over rescue whatever the cost of either.",
+      "B": "explain why advocates of prevention are wrong to reason from the position of someone not knowing his fate.",
+      "C": "argue that the standpoint used to favour prevention can also make room for the value of rescue.",
+      "D": "show that the assurance rescue provides is worth more than all the lives that prevention could save."
+     },
+     "question": "Paragraph 4 serves mainly to"
+    },
+    {
+     "id": "R01-E-08-3",
+     "type": "RC",
+     "options": {
+      "A": "shows that the value of assurance is greater than the value of the lives that each rescue saves.",
+      "B": "is right to ignore assurance, because a benefit of that kind cannot be given any value at all.",
+      "C": "omits a benefit of rescue that is enjoyed even by people who are never themselves in danger.",
+      "D": "has been designed by economists deliberately to conceal the value of rescue and favour prevention."
+     },
+     "question": "The remark that statistical accounting 'has no column for' assurance (paragraph 3) suggests that such accounting"
+    },
+    {
+     "id": "R01-E-08-4",
+     "type": "RC",
+     "options": {
+      "A": "Residents feel equally sure of being helped in an emergency whether their town spares no expense on rescues or strictly caps what any rescue may cost.",
+      "B": "Some rescues fail despite enormous expense and effort, and the people who were trapped die long before the rescuers are able to reach them.",
+      "C": "Measures such as guardrails, better lighting and screening save many more lives for each rupee spent than even the best-run rescues do.",
+      "D": "Most people greatly overestimate the chance that they themselves will ever be trapped, lost or stranded in a disaster that requires a costly rescue."
+     },
+     "question": "Which of the following, if true, would most weaken the author's argument in paragraph 3?"
+    },
+    {
+     "id": "R01-E-08-5",
+     "type": "RC",
+     "options": {
+      "A": "Rescuing identified people has a real value that its critics miss, but that value offers no excuse for how little is spent on prevention.",
+      "B": "Communities spend too much on rescue and should move that money into prevention until the spending per life saved is equal.",
+      "C": "The preference for identified lives is a costly bias that consistent accounting should remove, though the assurance that it brings to everyone deserves a little weight.",
+      "D": "Rescue and prevention serve such different values that neither can sensibly be judged by the standard that is used to judge the other."
+     },
+     "question": "Which of the following best captures the author's overall position?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R02-D-02",
+   "passage": [
+    "Few ideas about teaching have travelled as far, or met as little resistance, as the notion that each learner has a style. Some children, it is said, are visual learners, others auditory, others kinaesthetic, and each will learn best when lessons are delivered in the matching form. The idea is attractive for honest reasons: it seems to respect individual difference, it gives teachers something concrete to do with that respect, and it fits the everyday experience that people do prefer some ways of taking in information to others.",
+    "The trouble lies in the step from preference to performance. That people report preferences is not in dispute. What the theory needs is something stronger: that a learner labelled visual will learn more from a visual lesson than from a spoken one, while a learner labelled auditory will show the reverse. Testing this requires sorting learners by style, teaching each group in both ways, and checking whether the advantage flips from one group to the other. When the claim has been tested in this demanding way, the predicted crossover has generally failed to appear. Learners tend, on the whole, to benefit from the same methods whatever label they carry, and whatever preference they would have reported if asked.",
+    "What does seem to matter is the fit between the form of a lesson and the content being taught. A coastline is better learned from a map than from a description, whoever the learner is; the sound of a language is better learned by listening; a knot is learned by tying it. Here the mode is chosen for the material, not for the student. The same holds in reverse: a pupil who insists that she learns best by listening will not master the shape of a coastline sooner because it is described to her aloud, however vivid the description. A teacher who presents geography through maps is not catering to visual learners, but simply using the form in which geographical knowledge is most naturally held.",
+    "None of this means that variety in the classroom is pointless. Moving between pictures, speech and activity can hold attention and can give a learner several routes back to the same idea. The objection is to the diagnosis rather than to the variety. Labelling a child as one kind of learner invites both the child and the teacher to treat the other channels as closed, and a child told that she is 'not a reading person' may come to believe it. The cost of the theory is not that it wastes a few lessons, but that it narrows expectations while appearing to widen them."
+   ],
+   "questions": [
+    {
+     "id": "R02-D-02-1",
+     "type": "RC",
+     "options": {
+      "A": "The best form for a lesson depends on its subject matter, which is why maps are the natural way to teach geography.",
+      "B": "The belief that matching lessons to a learner's style improves learning lacks support, and labelling learners by style can do harm.",
+      "C": "Teachers should present every lesson in visual, spoken and active forms so that learners of every style are reached.",
+      "D": "People do not really have preferences about how they take in information, so the idea of learning styles is a myth."
+     },
+     "question": "Which of the following best expresses the main point of the passage?"
+    },
+    {
+     "id": "R02-D-02-2",
+     "type": "RC",
+     "options": {
+      "A": "Learners classed as visual outperform learners classed as auditory whatever form the lesson is delivered in.",
+      "B": "Learners who state a clear preference for one form of instruction learn faster than learners who state none at all.",
+      "C": "The advantage of one teaching method over another reverses depending on which style a group of learners has been assigned.",
+      "D": "Learners of every style do better when a lesson combines visual, spoken and practical elements in a single session."
+     },
+     "question": "According to paragraph 2, which pattern of results is the learning styles theory committed to predicting?"
+    },
+    {
+     "id": "R02-D-02-3",
+     "type": "RC",
+     "options": {
+      "A": "has been borne out by studies teaching learners both in their own style and in another.",
+      "B": "gives teachers something practical and concrete to do with their respect for individual difference among pupils.",
+      "C": "seems to show proper respect for the many differences between individual learners in a class.",
+      "D": "fits the ordinary, everyday experience that people favour some ways of receiving information over others."
+     },
+     "question": "The passage gives each of the following as a reason the learning styles idea is appealing EXCEPT that it"
+    },
+    {
+     "id": "R02-D-02-4",
+     "type": "RC",
+     "options": {
+      "A": "Most learners, when asked, can readily name a way of receiving information that they prefer over the others available.",
+      "B": "Students taught a stretch of coastline from maps remembered it better than students given only a spoken description of it.",
+      "C": "Learners sorted by style and taught in both formats showed a reversal: visual learners gained more from diagrams, auditory learners more from talk.",
+      "D": "Teachers who accept the theory of learning styles report feeling noticeably more confident when they plan lessons for mixed classes."
+     },
+     "question": "Which of the following findings, if true, would most weaken the argument of paragraph 2?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R03-C-03",
+   "passage": [
+    "Anthropologists have long described rites of passage as moving in three phases. The person undergoing the rite is first separated from an existing status, then passes through a transitional period in which he or she belongs to neither the old condition nor the new, and is finally incorporated into the community in a new role: adult, married, initiated, ordained. Of these phases the middle one, often called liminal, from the Latin word for a threshold, has attracted by far the most attention, and for good reason. It is there that most of the strange features of such rites are concentrated: seclusion in the forest or a special hut, the shaving of heads, the wearing of identical plain garments, the suspension of names, the imposition of hardship and silence.",
+    "A simple reading treats these features as a waiting room, a pause while the real change, the conferral of new status, is prepared offstage. This misses their function. Stripping novices of names, clothing and possessions removes the markers by which they were previously ranked, so that for a time sons of important families and sons of poor ones are indistinguishable. Shared hardship then does two things at once. It makes the novices receptive to instruction, since people deprived of their usual footing listen differently, and it binds them to one another in a way that often outlasts the ritual, creating cohorts whose loyalty cuts across lineage and wealth.",
+    "In recent decades, however, the idea has travelled far from its origins, and something has been lost on the way. The liminal phase is now often celebrated as a zone of freedom, creativity and play, and the word is applied to almost any in-between experience: the years after school, a period of unemployment, a long journey abroad. This enthusiasm overlooks how tightly the traditional threshold was managed. Elders set its length, prescribed what novices could eat and say, and decided when it was over. Its ambiguity was real, but it was ambiguity held inside a firm frame, and its whole point was the return.",
+    "That frame is what most modern transitions lack. A young person who drifts between education and employment may experience the disorientation of the threshold without its discipline, its companions or, above all, its exit. There is no moment at which the community declares the passage complete and receives the person in a new capacity. None of this implies that the old rites should be revived, since their authority rested on forms of social life that no longer exist. But the comparison suggests that what made liminality productive was not the openness that its modern admirers praise. It was the certainty that the openness would end."
+   ],
+   "questions": [
+    {
+     "id": "R03-C-03-1",
+     "type": "RC",
+     "options": {
+      "A": "establish that every rite of passage, in every culture, uses exactly the same set of practices.",
+      "B": "show why the transitional phase of such rites has drawn more attention than the other two.",
+      "C": "suggest that rites of passage are often cruel to novices and ought to be reformed for that reason.",
+      "D": "contrast the transitional phase with the more elaborate ceremonies that mark incorporation."
+     },
+     "question": "The list of features at the end of paragraph 1 (seclusion, shaved heads, identical garments and so on) serves mainly to"
+    },
+    {
+     "id": "R03-C-03-2",
+     "type": "RC",
+     "options": {
+      "A": "permanently erases the differences of rank between the families from which the novices come.",
+      "B": "is an unintended side effect of seclusion that the organisers of the rite neither foresee nor value.",
+      "C": "helps to create bonds among novices that are not organised by the standing or wealth of their families.",
+      "D": "makes novices less willing to accept instruction from elders who come from humbler families."
+     },
+     "question": "It can be inferred from paragraph 2 that removing the markers by which novices were ranked"
+    },
+    {
+     "id": "R03-C-03-3",
+     "type": "RC",
+     "options": {
+      "A": "firm limits on its duration and on the novices' conduct, set by the community's elders.",
+      "B": "a temporary removal of the markers by which novices had previously been ranked.",
+      "C": "a heightened readiness to learn among people deprived of their usual footing.",
+      "D": "an open-ended freedom in which novices themselves decided when their transition was complete."
+     },
+     "question": "The passage attributes each of the following to the traditional liminal phase EXCEPT"
+    },
+    {
+     "id": "R03-C-03-4",
+     "type": "RC",
+     "options": {
+      "A": "In some societies the period of seclusion during initiation lasted several years rather than a few weeks.",
+      "B": "Many young people who drift between education and employment say that they feel disoriented, lack companions and cannot tell when, if ever, their transition will be over.",
+      "C": "Elders in some traditional societies extended the seclusion of novices who had broken the rules of the rite.",
+      "D": "Young people passing through open-ended, unmarked transitions are found to form lasting ties and take on new roles as well as novices in bounded rites."
+     },
+     "question": "Which of the following, if true, would most weaken the author's conclusion about what made liminality productive?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R02-A-04",
+   "passage": [
+    "We tend to speak of forgetting as a failure, the mind's equivalent of a leaking roof: students blame it for poor marks, older people fear it as a sign of decline, and whole industries promise to reduce it. Behind these attitudes lies an assumption that an ideal memory would keep everything. Even our vocabulary betrays the attitude, since we speak of 'losing' a memory as though it were a possession that had slipped out of a pocket. It is worth asking whether the assumption behind such talk is true.",
+    "Consider what such a memory would be like to live with. Every time you parked your car, you would recall not only today's space but every space you had ever used, each with equal force. Every time you met a friend, you would be confronted with each version of her face across the years. The problem would not be a shortage of information but a surplus of it, because the memory you needed would be buried among the memories you did not. Some people who report unusually complete recall of their own lives describe the gift less as a pleasure than as a burden, a past that will not stay in the past.",
+    "Seen in this light, much forgetting looks less like decay than like editing. Memories that are rarely used become harder to reach, while those that are used often stay accessible, and the effect is less a loss than a reordering of priorities. This is roughly what a sensible filing system would do: it would keep the files you consult near at hand and move the rest to the back, on the reasonable bet that the past use of a memory predicts its future use. Some evidence even suggests that recalling one memory actively suppresses its competitors, so that using your new phone number makes the old one fade faster.",
+    "This argument has limits, and it is easy to push it too far, for not all forgetting is useful: the losses caused by brain injury or dementia are not editing but damage, and nothing said here makes them less painful. Nor does a system that is well designed on average serve every individual case: the name you cannot recall at an important meeting is a real cost, even if it is the price of a sensible policy. The point is only that the capacity to forget is part of what makes memory useful, not simply a flaw in it. A memory that never let go would be a worse memory, not a better one."
+   ],
+   "questions": [
+    {
+     "id": "R02-A-04-1",
+     "type": "RC",
+     "options": {
+      "A": "describing the biological processes through which memories that are seldom used gradually decay in the brain.",
+      "B": "questioning the belief that an ideal memory would keep everything, by showing how forgetting helps memory work.",
+      "C": "recommending that people give up memory aids so that their minds can edit stored information more efficiently.",
+      "D": "arguing that the fear of forgetting in old age is unfounded, since most memory loss turns out to be beneficial."
+     },
+     "question": "The passage is primarily concerned with"
+    },
+    {
+     "id": "R02-A-04-2",
+     "type": "RC",
+     "options": {
+      "A": "illustrate how holding every memory with equal force would bury the one that is needed.",
+      "B": "demonstrate that most forgetting is caused by the brain running short of room in which to store information.",
+      "C": "suggest that memories of places are forgotten more readily than memories of faces.",
+      "D": "show that people with very complete recall are unusually good at everyday tasks such as finding their cars."
+     },
+     "question": "The example of recalling every parking space one has ever used serves to"
+    },
+    {
+     "id": "R02-A-04-3",
+     "type": "RC",
+     "options": {
+      "A": "A library that sends rarely borrowed books to a distant store, keeping much-borrowed titles on the open shelves.",
+      "B": "A library that withdraws books from its shelves once readers report that they contain factual errors.",
+      "C": "A library that destroys a share of its old books at random each year to free space for new acquisitions.",
+      "D": "A library that shelves every book it has ever owned in the main hall, arranged strictly in order of arrival."
+     },
+     "question": "Which of the following is most closely analogous to the account of forgetting given in paragraph 3?"
+    },
+    {
+     "id": "R02-A-04-4",
+     "type": "RC",
+     "options": {
+      "A": "Because forgetting is the price of a sensible policy, the cost of any particular memory lapse is more apparent than real.",
+      "B": "A memory that held on to everything would be more useful, though less comfortable to live with, than the one we have.",
+      "C": "The memory losses caused by dementia are best understood as an extreme form of the useful editing that all memories perform.",
+      "D": "Failing to recall a name at an important moment can be a genuine loss even when the forgetting comes from a sound design."
+     },
+     "question": "The author would most likely agree with which of the following?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R01-A-06",
+   "passage": [
+    "'I did not know' is among the oldest excuses there is, and often among the best. We do not blame a pharmacist who dispenses a medicine that was contaminated at the factory in a way no inspection could detect, nor a traveller who carries a parcel for a friend without any reason to suspect what it contains. In such cases ignorance breaks the link between what a person did and what she intended, and blame that disregarded this would be blame for bad luck.",
+    "But the excuse has a counterfeit form. Consider a manager who tells his staff that he wants results and does not want to hear how they are achieved. When it later emerges that the results were achieved by falsifying safety records, he can say, truthfully, that he did not know. Yet his not knowing was not something that happened to him; it was something he arranged. He foresaw that there might be facts he would be obliged to act on, and he took steps to ensure that he would never be in possession of them. To accept his excuse would be to reward precisely the foresight that makes him responsible.",
+    "The distinction, then, is not between knowing and not knowing but between ignorance a person suffers and ignorance a person cultivates. The cultivated kind does not cancel responsibility; if anything, it adds a second fault to the first, since the person has both allowed a wrong to occur and taken care to shield himself from ever having to confront it. This is why such a person can seem, on reflection, no better and perhaps rather worse than someone who knew the facts plainly and still did nothing about them.",
+    "One should not push this too far. No one can investigate everything, and a demand that we trace the full history of every product we buy and every institution we deal with would be impossible to meet and would make ordinary life unworkable. Routine purchases, everyday dealings with banks and employers, and the countless small transactions of daily life proceed, quite properly, on the assumption that things are roughly as they appear. The charge of cultivated ignorance is fair only where a person had some particular reason to suspect a problem and chose not to look because looking might oblige him to act. Without such a reason, not inquiring is simply the normal condition of finite beings, and it is no more blameworthy than failing to read every book in a library."
+   ],
+   "questions": [
+    {
+     "id": "R01-A-06-1",
+     "type": "RC",
+     "options": {
+      "A": "illustrate cases in which a person's ignorance properly excuses her from blame for what she did.",
+      "B": "show that whether someone deserves blame depends on how her action turns out rather than on what she intended.",
+      "C": "suggest that most appeals to ignorance are counterfeit and should be met with suspicion by those who hear them.",
+      "D": "show that people who handle goods on behalf of others ought to inspect those goods far more carefully."
+     },
+     "question": "The examples of the pharmacist and the traveller in paragraph 1 are used to"
+    },
+    {
+     "id": "R01-A-06-2",
+     "type": "RC",
+     "options": {
+      "A": "failed to check every record that his staff produced, as any responsible manager must.",
+      "B": "deliberately kept himself from learning facts that he foresaw he might be obliged to act on.",
+      "C": "lied when he later claimed that he had not known how the results were being achieved.",
+      "D": "personally instructed his staff to falsify the safety records in order to meet their targets."
+     },
+     "question": "The passage suggests that the manager in paragraph 2 is responsible because he"
+    },
+    {
+     "id": "R01-A-06-3",
+     "type": "RC",
+     "options": {
+      "A": "a version in which the person lies about what he knew at the time he acted.",
+      "B": "a version of the excuse that courts and other authorities almost never accept in practice.",
+      "C": "a version that looks like the genuine excuse but lacks any title to the force the genuine one has.",
+      "D": "a version of the excuse that is used chiefly by people who hold positions of power over others."
+     },
+     "question": "In paragraph 2, the phrase 'counterfeit form' of the excuse refers to"
+    },
+    {
+     "id": "R01-A-06-4",
+     "type": "RC",
+     "options": {
+      "A": "A tourist who dines at a popular restaurant without knowing that its kitchen recently failed a hygiene inspection carried out by the local authorities.",
+      "B": "A clerk who routinely files a forged contract whose forgery an expert examiner later needed specialised laboratory equipment to detect at all.",
+      "C": "A shopper who buys a cheap shirt at a busy market without first researching the conditions in the distant factory where it happens to have been made.",
+      "D": "A landlord who, after a tenant reports a smell of gas, decides against having the boiler inspected because a fault would oblige him to pay for repairs."
+     },
+     "question": "Which of the following people would the author most likely regard as guilty of cultivated ignorance?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R04-C-05",
+   "passage": [
+    "There is an old argument, revived by students of public finance, that the way a state raises its money shapes the kind of state it becomes. A government that depends on taxing its own population must, to some degree, negotiate with that population. It needs to know who earns what and where they live; it needs officials who can assess, collect and keep accounts; and it needs taxpayers who will comply without being coerced at every turn. Each of these needs creates leverage for the governed. Those who pay can demand to know how their money is spent, and rulers who want a steady revenue have reason to listen.",
+    "A government that draws most of its income from a single lucrative resource, such as oil or minerals sold abroad, faces no comparable pressure. Its revenue arrives through a handful of contracts with foreign buyers and requires little cooperation from ordinary citizens. It has no need to build an apparatus that knows the population in detail, and no need to trade services or a voice in decisions for compliance. Proponents of the argument suggest that such states can afford to be both unresponsive and administratively thin, buying acquiescence with subsidies and public employment rather than earning consent through bargaining.",
+    "Stated baldly, the thesis is too mechanical. Taxation has often been extracted by force rather than negotiated, and many heavily taxed populations have obtained neither representation nor accountability in return. Nor are all resource-rich states alike: where competent institutions and habits of public scrutiny were established before a windfall arrived, the revenue has sometimes been managed with considerable openness. The sequence appears to matter as much as the source. A resource boom that lands on a weak state may keep it weak; one that lands on a state already accustomed to accounting for itself need not.",
+    "What survives these qualifications is a narrower but sturdier claim. The point is not that taxes make governments good or that resource revenue makes them bad, but that accountability tends to grow where rulers need something from the ruled that cannot simply be seized. Taxation is one common source of that need, perhaps historically the most important, but it is the dependence, not the tax form as such, that does the work. A reform that raised more revenue from citizens without increasing what citizens could demand in return would therefore miss the point entirely, and might even entrench the habits of command it was meant to cure. Equally, a resource-rich government that chose to make itself dependent on its citizens, by funding services through broad taxes and setting its windfall aside, would be doing something more significant than balancing its books."
+   ],
+   "questions": [
+    {
+     "id": "R04-C-05-1",
+     "type": "RC",
+     "options": {
+      "A": "a rejection of the claim that the way a state raises its money has any real bearing on how it treats its own citizens.",
+      "B": "an examination of a thesis linking sources of revenue to accountability, which keeps a narrowed form of it after weighing objections.",
+      "C": "a defence of the thesis that resource revenue inevitably makes governments unaccountable, against critics who doubt that it does.",
+      "D": "an account of how particular resource-rich states built competent institutions before their revenue arrived and so avoided its harms."
+     },
+     "question": "The passage as a whole is best described as"
+    },
+    {
+     "id": "R04-C-05-2",
+     "type": "RC",
+     "options": {
+      "A": "is unable to provide subsidies to its citizens, because its income depends on a few foreign contracts.",
+      "B": "must negotiate constantly with its own citizens in order to keep its contracts with foreign buyers.",
+      "C": "usually builds a larger administrative apparatus than a government that relies on taxing its people.",
+      "D": "can sustain itself without detailed knowledge of who its citizens are or what they earn."
+     },
+     "question": "It can be inferred from paragraph 2 that a government living mainly on resource sales abroad"
+    },
+    {
+     "id": "R04-C-05-3",
+     "type": "RC",
+     "options": {
+      "A": "Several resource-rich states that had strong institutions before their windfalls arrived went on to manage the revenue with notable openness.",
+      "B": "A ruler funded by customs duties collected at a few ports, needing no cooperation from most citizens, proves as unresponsive as rulers funded by mineral sales.",
+      "C": "Citizens of states that tax heavily are more likely than others to tell survey researchers that they follow public affairs closely.",
+      "D": "Two governments equally dependent on their citizens' compliance, one funded by income taxes and the other by sales taxes, differ sharply in how openly they account for spending."
+     },
+     "question": "Which of the following, if true, would most support the claim in paragraph 4 that 'it is the dependence, not the tax form as such, that does the work'?"
+    },
+    {
+     "id": "R04-C-05-4",
+     "type": "RC",
+     "options": {
+      "A": "The timing of a resource boom relative to the growth of institutions affects what the boom does to a state.",
+      "B": "Raising more revenue from citizens is in itself a dependable way of making a government more accountable to them.",
+      "C": "A government that needs its citizens' compliance has some reason to attend to what they demand.",
+      "D": "Taxation obtained by force need not bring the people who pay it any representation in return."
+     },
+     "question": "The author would agree with each of the following statements EXCEPT"
+    }
+   ]
+  },
+  {
+   "passage_id": "R04-D-07",
+   "passage": [
+    "When a town loses its newspaper, the loss is usually mourned in the language of community: the obituaries, the school sports results, the notices of births and marriages that no one else will print. These are real losses, but they are not the ones that matter most for self-government. What disappears with the local paper is something duller and more important, namely the habit of attendance. For decades, in many places, a reporter sat through the meetings of the council, the planning committee and the school board, read the budget documents that nobody else read, and noticed when a contract went to the same firm for the third time without a tender.",
+    "Most of what such reporters wrote was unremarkable, and much of it was barely read. Its value lay less in any particular story than in the knowledge, shared by every official in the room, that someone was taking notes. Officials who know that a question may be asked in print tomorrow tend to ask it of themselves today. Monitoring of this kind works rather as a speed camera does: its effect is measured not by the fines it issues but by the careless driving it prevents. Remove it, and the immediate result is not a wave of scandal, since there is no longer anyone to report one, but a gradual loosening of the restraint that observation imposed. The absence of bad news, in a town without a reporter, is not evidence of good government.",
+    "It is often said that the internet has more than made up the difference, since anyone can now publish and residents can share information instantly. This confuses the supply of commentary with the supply of attention. A neighbourhood forum can spread a rumour about the council in minutes, but it seldom has anyone willing to spend three evenings a month in council meetings, or the training to read a set of accounts. National outlets, for their part, cover local government only when it produces a story large enough to interest a national audience, which is usually to say only after the damage is done. What the internet has multiplied is reaction; what has thinned out is the patient, unglamorous observation on which informed reaction depends.",
+    "None of this should be allowed to turn into nostalgia. Many local papers were timid with powerful advertisers, cosy with the town's leading figures and given to boosterism, celebrating every new development while asking few questions about who would profit from it. A press that depends on the goodwill of the people it covers is a weak watchdog, and some of the papers now lamented were weak in exactly this way, flattering the very people they ought to have been questioning. The case for local journalism does not rest on the virtue of the institutions that happened to provide it.",
+    "It rests, rather, on the function those institutions performed, however imperfectly. If that function is to survive the collapse of the business model that once paid for it, it will have to be supported deliberately: by newsrooms funded as public goods, by universities that send students to cover meetings, perhaps by public records published in forms that a busy citizen can actually read. Each of these options carries hazards, and money from the very governments that journalists are meant to watch carries the most obvious one. But a democracy that leaves the observation of its local governments to chance should not be surprised when those governments begin to behave as if no one is looking."
+   ],
+   "questions": [
+    {
+     "id": "R04-D-07-1",
+     "type": "RC",
+     "options": {
+      "A": "The internet has replaced local newspapers as a source of information about councils, though it spreads rumours more quickly than facts.",
+      "B": "Local newspapers were the most trustworthy watchdogs that democracies have ever had, and their closure has left local government without any honest observers at all.",
+      "C": "The chief democratic loss when local papers close is routine scrutiny of local government, which must now be sustained by other means despite the papers' own failings.",
+      "D": "The closure of local papers matters mainly because communities lose the obituaries, sports results and notices that bound their members together."
+     },
+     "question": "Which of the following best captures the central argument of the passage?"
+    },
+    {
+     "id": "R04-D-07-2",
+     "type": "RC",
+     "options": {
+      "A": "argue that local governments should be watched by automatic recording devices rather than by journalists.",
+      "B": "show that most of what local reporters wrote led to fines or penalties for the officials they wrote about.",
+      "C": "suggest that local reporters, like speed cameras, were resented by the officials whose meetings they attended.",
+      "D": "illustrate that the value of monitoring lies mainly in the misconduct it deters rather than in what it exposes."
+     },
+     "question": "The comparison with a speed camera in paragraph 2 is used to"
+    },
+    {
+     "id": "R04-D-07-3",
+     "type": "RC",
+     "options": {
+      "A": "a dangerous source of misinformation that local governments would be justified in regulating closely.",
+      "B": "an adequate substitute for a local reporter wherever its members are willing to attend council meetings.",
+      "C": "more useful than a national outlet, because it reports on local government before the damage is done.",
+      "D": "quick to circulate claims about local government but poorly placed to scrutinise it in a sustained way."
+     },
+     "question": "It can be inferred that the author regards a neighbourhood online forum as"
+    },
+    {
+     "id": "R04-D-07-4",
+     "type": "RC",
+     "options": {
+      "A": "contemptuous, since the author believes that their timidity with advertisers made their coverage worthless.",
+      "B": "appreciative of the observation they performed while critical of their deference to local power.",
+      "C": "nostalgic, since the author regards their disappearance as the loss of a better and more honest era of journalism.",
+      "D": "indifferent, since the author thinks any institution could have performed their work equally well or better."
+     },
+     "question": "The author's attitude towards the local newspapers of the past is best described as"
+    },
+    {
+     "id": "R04-D-07-5",
+     "type": "RC",
+     "options": {
+      "A": "In their final decade, the papers that eventually closed had published very few investigative reports about their councils.",
+      "B": "Officials in towns with a local paper said that they seldom read the paper's reports of their own meetings.",
+      "C": "In towns whose papers closed, residents said they now read more news about their council online than they had before.",
+      "D": "In towns whose papers closed, the cost of public contracts rose steadily over the next few years, although no new scandals were reported there."
+     },
+     "question": "Which of the following, if true, would most strengthen the author's claim about how monitoring works in paragraph 2?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R01-B-07",
+   "passage": [
+    "Arguments about free will customarily proceed in a fixed order. First we are asked to settle a question about the world: whether every event, including every human choice, is determined by antecedent causes. Only then, it is assumed, can we know whether anyone is genuinely responsible for anything, and therefore whether blame and praise are ever deserved. If the causal question is answered one way, our practices of holding one another responsible are vindicated; if it is answered the other way, those practices are exposed as resting on an illusion, and intellectual honesty requires us to abandon them.",
+    "An influential alternative reverses this order. It begins not with metaphysics but with the attitudes we actually adopt toward one another: resentment when we are injured through someone's indifference, gratitude when we are helped through their goodwill, indignation on behalf of others who have been mistreated. These attitudes, the alternative maintains, are not conclusions derived from a theory about causation. They are constitutive of what it is to live among persons rather than merely alongside objects, and to suppose that a philosophical thesis could oblige us to relinquish them is to misunderstand both the thesis and ourselves. We do suspend them in particular cases: when someone acted under duress, or did not know what he was doing, or is a young child. But these suspensions are made within the practice, for reasons the practice itself recognises, and none of them amounts to a general verdict on human agency.",
+    "There is much to admire in this reversal. It explains why the free will debate so often seems unreal to people outside it, who continue resenting and forgiving whatever the latest argument concludes, and it rightly insists that responsibility is something we do together rather than a concealed property awaiting detection. Responsibility, on this picture, resembles a language more than a fact of nature: it is sustained by shared expectations, and its rules are learned by taking part in it. The reversal also shows why the most sweeping sceptical arguments overreach: from the bare claim that choices have causes, nothing follows about whether a particular person was acting under duress, or in ignorance, or as a child acts.",
+    "Yet the reversal is sometimes taken to establish more than it can. If the practice is answerable only to itself, it may seem immune to criticism, and its present configuration may seem beyond question. The history of the practice tells against such complacency. Over time, many societies have come to regard certain compulsions, illnesses and conditions of upbringing as diminishing responsibility where they were formerly treated as plain wickedness. These revisions were not imposed by metaphysics; they arose when people learned more about how particular capacities can fail, and then applied excusing principles the practice already contained to cases it had previously judged harshly.",
+    "This is where the sciences of the mind may matter after all, though not in the way the traditional debate supposed. No general thesis about determinism will tell us whether blame is ever deserved. But detailed findings about how self-control develops, or how it is impaired, can reveal that the conditions our practice already counts as excusing are more common, or less conspicuous, than we had assumed. A discovery that some apparent callousness is in fact an inability to register the distress of others, for instance, would not refute the practice; it would require the practice to be consistent with itself. The practice of holding responsible is neither a fixed point beyond inquiry nor a conclusion awaiting metaphysical proof. It is a body of standards that can be held to its own commitments, and inquiry into the mind is one of the ways in which that is done."
+   ],
+   "questions": [
+    {
+     "id": "R01-B-07-1",
+     "type": "RC",
+     "options": {
+      "A": "justified only after the question of whether every choice is determined has been settled.",
+      "B": "suspended whenever it can be shown that a person's choice had antecedent causes.",
+      "C": "part of living among persons, not conclusions drawn from a theory of causation.",
+      "D": "feelings that a careful moral philosopher should try to exclude from judgements of blame."
+     },
+     "question": "According to the alternative view described in paragraph 2, attitudes such as resentment and gratitude are"
+    },
+    {
+     "id": "R01-B-07-2",
+     "type": "RC",
+     "options": {
+      "A": "show that the practice of blame has been revised by applying its own excusing principles to new cases.",
+      "B": "suggest that people affected by such conditions should no longer be held responsible for anything they do.",
+      "C": "illustrate how metaphysical arguments eventually forced societies to soften their harsh moral judgements.",
+      "D": "establish that most societies have gradually come to accept the thesis that every human choice is causally determined."
+     },
+     "question": "The reference to compulsions, illnesses and conditions of upbringing in paragraph 4 serves to"
+    },
+    {
+     "id": "R01-B-07-3",
+     "type": "RC",
+     "options": {
+      "A": "the general fact that choices have causes does not show that any particular excusing condition applies.",
+      "B": "people outside philosophy continue resenting and forgiving whatever the latest argument happens to conclude.",
+      "C": "the evidence that every choice has antecedent causes is considerably weaker than sceptics usually suppose.",
+      "D": "reactive attitudes are natural to human beings and so can never be shown to be mistaken in any case."
+     },
+     "question": "The passage suggests that the most sweeping sceptical arguments overreach because"
+    },
+    {
+     "id": "R01-B-07-4",
+     "type": "RC",
+     "options": {
+      "A": "Because responsibility is a shared practice answerable only to itself, its present standards of blame and excuse are beyond rational criticism.",
+      "B": "The free will debate is unreal, and findings about self-control are therefore irrelevant to the question of when people deserve blame for what they do.",
+      "C": "Whether anyone is responsible depends on whether determinism is true, a question that the sciences of the mind will eventually settle.",
+      "D": "Responsibility rests on a shared practice rather than on metaphysics, yet that practice can be corrected, partly with help from the study of the mind."
+     },
+     "question": "Which of the following best states the main argument of the passage?"
+    },
+    {
+     "id": "R01-B-07-5",
+     "type": "RC",
+     "options": {
+      "A": "Judges who were taught the general philosophical arguments for determinism became noticeably more lenient toward every kind of offender.",
+      "B": "Findings that a condition once dismissed as laziness impairs planning led schools to stop punishing pupils who have it.",
+      "C": "Societies have differed widely, across history and across regions, in which conditions they treat as diminishing responsibility.",
+      "D": "A rigorous philosophical proof that every human choice is determined leaves most people's feelings of resentment entirely unchanged."
+     },
+     "question": "Which of the following, if true, would most strengthen the author's claim in paragraph 5?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R06-F-03",
+   "passage": [
+    "Debates about privacy in the age of large data sets usually begin from an image of ownership. Each person, on this view, holds a store of information about themselves, and the moral question is whether that information is taken with or without their permission. Hence the enormous weight placed on consent: the checkbox, the privacy notice, the setting that lets a user decline to share. If people are told what will happen to their data and agree to it, the transaction is treated as legitimate, and if they refuse, they are thought to have protected themselves.",
+    "The difficulty is that much personal information is not individual in the way the image assumes. A person who uploads their contact list discloses the names and numbers of people who agreed to nothing. Someone who submits a sample to a genetic testing service reveals facts about parents, siblings and cousins, some of whom may not know the test was taken. More subtly, when enough people share information about their habits, a system can learn the patterns that link one trait to another, and then infer those traits in people who shared nothing at all. A person who declines to disclose, say, a health condition may find that it has been estimated, with fair accuracy, from purchases and movements that resemble those of people who did disclose it.",
+    "One might reply that the refuser has still kept their own data, and that what others choose to reveal is their own affair. But this misses what the refuser was trying to protect. Nobody declines to share a fact for the sake of a particular row in a database; they decline because they do not want the fact known. If it can be known anyway, through the choices of others, then the refusal has secured very little, and the consent framework, which places the whole burden of protection on individual decisions, has quietly ceased to describe what is actually happening.",
+    "This does not make individual consent worthless. Being asked still matters, and a person who is deceived about how their information will be used has been wronged in a way that the collective character of data does not erase. The point is that consent cannot carry the load it has been given. Privacy behaves in part like clean air or quiet streets: a condition that each person's conduct affects for others, and that no one can secure for themselves by private choice alone. Protecting it therefore requires rules about what may be inferred and done, not merely about who has clicked agree."
+   ],
+   "questions": [
+    {
+     "id": "R06-F-03-1",
+     "type": "RC",
+     "options": {
+      "A": "can protect their relatives fully by refusing permission for the results to be used in research.",
+      "B": "may disclose facts about relatives, some of whom may not even know that the test was taken.",
+      "C": "reveals information only about themselves, provided that they have read the privacy notice first.",
+      "D": "gives up legal ownership of the sample and of any information that may later be drawn from it."
+     },
+     "question": "According to the passage, a person who submits a sample to a genetic testing service"
+    },
+    {
+     "id": "R06-F-03-2",
+     "type": "RC",
+     "options": {
+      "A": "people are now asked for consent so often that they agree to requests without considering them.",
+      "B": "consent has been relied on to provide more protection than individual choices are able to supply.",
+      "C": "consent forms have grown too long and too complicated for most people to read with any care.",
+      "D": "consent has turned out to be worthless and ought to be dropped in favour of rules on inference."
+     },
+     "question": "In paragraph 4, the statement that 'consent cannot carry the load it has been given' means that"
+    },
+    {
+     "id": "R06-F-03-3",
+     "type": "RC",
+     "options": {
+      "A": "A tenant who refuses to sign an unfair lease is turned away, and so ends up with no flat on that street at all.",
+      "B": "A shopper who reads the terms carefully before signing is later charged a fee that the terms had deliberately concealed.",
+      "C": "A household that stops burning wood in its stove still breathes smoky air, because most of the town keeps burning wood.",
+      "D": "A gardener who fences her own plot keeps out the deer that go on damaging the unfenced plots beside it."
+     },
+     "question": "Which of the following situations is most closely analogous to the condition the author has in mind when comparing privacy to 'clean air or quiet streets'?"
+    },
+    {
+     "id": "R06-F-03-4",
+     "type": "RC",
+     "options": {
+      "A": "Traits inferred about non-sharers from other people's data prove so unreliable that they seldom reveal what a refuser hoped to keep hidden.",
+      "B": "Many people who upload their contact lists do not realise that they are disclosing information about other people.",
+      "C": "Systems that infer traits from shared data become steadily more accurate as more people choose to disclose those traits.",
+      "D": "Deceiving people about how their information will be used remains a serious wrong even when the data involved is collective."
+     },
+     "question": "Which of the following, if true, would most weaken the author's argument in paragraph 3?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R07-C-05",
+   "passage": [
+    "When a painting sells at auction for a sum that would fund a hospital, two responses compete for the headlines. The first treats the price as a verdict: the market, pooling the judgements of many informed buyers, has declared this one of the most important works of its kind. The second treats it as a scandal: the sum has nothing to do with art and everything to do with vanity, speculation and the search for places to park wealth. Each response captures something, but both share a mistaken premise, which is that the price is either a measure of artistic value or a measure of nothing at all.",
+    "A price measures what someone will pay to own a thing, and owning a painting is not the same as valuing it as a painting. The buyer acquires an object that is unique, that cannot be reproduced without losing the very property being purchased, and that carries a name capable of conferring distinction on whoever holds it. Each of these features has a market logic of its own. Scarcity helps explain why a minor work by a celebrated painter can outsell a masterpiece by an obscure one; the name explains why a newly accepted attribution can multiply a canvas's price overnight without a single brushstroke changing. In neither case has anyone's experience of looking at the picture altered.",
+    "This does not mean that prices float free of critical judgement. Over long periods, the artists whom critics, historians and museums take seriously tend also to be the ones whose works command high prices, and it would be perverse to call this coincidence. But the connection runs largely through reputation rather than through the works themselves: esteem builds a name, the name creates demand, and demand sets the price. The market thus registers critical judgement at second hand, much as a credit rating registers a company's prospects without being the same thing as its earnings.",
+    "The real danger lies in the return journey. Once prices are reported as verdicts, they begin to shape the judgements they supposedly reflect. Visitors crowd around the record-breaking canvas while the room beside it stands empty; institutions hesitate to show or lend works whose insurance values have become unmanageable; young artists learn which styles sell. A measure of ownership, mistaken for a measure of worth, ends by teaching people what to look at. Resisting that confusion requires nothing more radical than remembering what a price is the price of."
+   ],
+   "questions": [
+    {
+     "id": "R07-C-05-1",
+     "type": "RC",
+     "options": {
+      "A": "experts who examine the painting again find qualities in its brushwork that earlier owners had failed to notice.",
+      "B": "the painting becomes scarcer once it is known to be by a celebrated artist who produced very few works.",
+      "C": "buyers pay partly for the name on a work, which can change while the picture stays the same.",
+      "D": "museums begin competing to acquire the painting so that they can display it to large numbers of visitors."
+     },
+     "question": "According to the passage, a newly accepted attribution can raise a painting's price sharply because"
+    },
+    {
+     "id": "R07-C-05-2",
+     "type": "RC",
+     "options": {
+      "A": "might fetch very different prices if one were by a far more famous artist than the other.",
+      "B": "would reach equal prices at auction, since informed buyers pool their judgements of quality.",
+      "C": "would eventually fetch similar prices once critics had studied both of them for long enough.",
+      "D": "could not be compared at all, because artistic merit has no connection with what buyers pay."
+     },
+     "question": "It can be inferred from the passage that two paintings of equal artistic merit"
+    },
+    {
+     "id": "R07-C-05-3",
+     "type": "RC",
+     "options": {
+      "A": "warn that the art market, like the market for company debt, is liable to sudden collapses in value.",
+      "B": "illustrate how one measure can follow another faithfully enough while remaining a different kind of thing.",
+      "C": "suggest that auction prices are as carefully calculated by experts as the ratings given to companies.",
+      "D": "argue that buying paintings is a sounder investment than lending money to companies with good ratings."
+     },
+     "question": "The comparison with a credit rating in paragraph 3 is used to"
+    },
+    {
+     "id": "R07-C-05-4",
+     "type": "RC",
+     "options": {
+      "A": "artists early in their careers taking note of what kinds of work the market rewards.",
+      "B": "galleries raising the asking prices of other works whose style resembles that of the record-breaking canvas.",
+      "C": "museums becoming reluctant to put certain works on display or send them to other institutions.",
+      "D": "people gathering in front of the most expensive work in a gallery while neighbouring works go unvisited."
+     },
+     "question": "Each of the following is presented in the passage as an effect of treating prices as verdicts EXCEPT:"
+    }
+   ]
+  },
+  {
+   "passage_id": "R06-C-02",
+   "passage": [
+    "For much of the twentieth century, weather forecasting was imagined as a problem of insufficient detail. If the atmosphere obeyed known physical laws, then better observations and faster calculation should, in principle, allow the future to be computed as far ahead as anyone liked. The recognition that the atmosphere is chaotic, in the technical sense that tiny differences in its starting state grow until they dominate the outcome, seemed at first to end that hope. Beyond a horizon of a week or two, no conceivable improvement in measurement would make a single calculated forecast reliable, because no measurement can be perfect and every imperfection is eventually amplified.",
+    "What is striking is how the discipline turned this limit into a method. Instead of running a model once from the best available estimate of the present, forecasting centres now run it dozens of times, each from a starting state nudged slightly within the range of what observations allow. If the runs stay close together, the atmosphere is in a predictable mood and the forecast can be stated with confidence; if they fan out, the spread itself is the information, telling forecasters that several quite different outcomes remain live. Chaos, which looked like a verdict against prediction, became a way of measuring how much prediction a given situation permits.",
+    "Much of this gain is lost in the last step, when forecasts reach the public. A phone application that shows a single icon for Thursday, a cloud with three raindrops, has quietly discarded the ensemble and kept only something like its average. Users then judge the forecast by whether it rained, and a forecast that correctly said the outcome was uncertain is remembered as a forecast that was wrong. The habit is understandable, since most people want a decision rather than a distribution, but it trains the public to expect a kind of certainty the science has explicitly given up.",
+    "It would be a mistake, however, to treat the ensemble as a perfectly honest witness. Every run in it uses the same model, with the same simplified treatment of clouds, mountains and ocean surfaces, so errors built into the model are shared by all the members and do not show up as spread. An ensemble can therefore agree with itself and still be wrong, and forecasters spend considerable effort checking whether its spread matches the errors actually observed over many past forecasts. The spread is a measure of uncertainty, not a guarantee of it, and its value depends on that continual comparison with what the weather in fact did."
+   ],
+   "questions": [
+    {
+     "id": "R06-C-02-1",
+     "type": "RC",
+     "options": {
+      "A": "show how a single summary symbol throws away the information about uncertainty that running many forecasts provides.",
+      "B": "show that the models used by phone applications are cruder than the ones that forecasting centres run many times.",
+      "C": "support the view that forecasts ought to be issued to the public only by meteorologists trained in reading ensembles.",
+      "D": "prove that weather forecasts presented to the public turn out to be wrong about rainfall more often than not."
+     },
+     "question": "The example of the phone application in paragraph 3 serves mainly to"
+    },
+    {
+     "id": "R06-C-02-2",
+     "type": "RC",
+     "options": {
+      "A": "a test that forecasters would like the public to apply more strictly to every forecast they publish.",
+      "B": "the very method that forecasting centres use to check whether the spread of an ensemble can be trusted.",
+      "C": "a reasonable test for forecasts made more than two weeks ahead but an unfair one for forecasts of the next few days.",
+      "D": "a poor test of a forecast that expressed uncertainty, since such a forecast allowed for more than one outcome."
+     },
+     "question": "The author implies that judging a forecast by whether it rained on the day is"
+    },
+    {
+     "id": "R06-C-02-3",
+     "type": "RC",
+     "options": {
+      "A": "wholly enthusiastic: convinced that running many forecasts has removed the uncertainty that chaos once seemed to impose.",
+      "B": "suspicious: inclined to treat the method as an elaborate way of disguising the failure of weather prediction.",
+      "C": "detached: describing how ensembles are run and what they show while declining to judge whether the approach is a good one.",
+      "D": "appreciative but qualified: impressed that a limit became a method, yet alert to what the method cannot reveal."
+     },
+     "question": "The author's attitude toward ensemble forecasting is best described as"
+    },
+    {
+     "id": "R06-C-02-4",
+     "type": "RC",
+     "options": {
+      "A": "A phone application shows a sun for Saturday although about half of the ensemble's runs had forecast showers for that day.",
+      "B": "Every run of an ensemble forecasts a dry week for a valley because the shared model mishandles air rising over nearby hills, and heavy rain falls there.",
+      "C": "The runs of an ensemble fan out widely after a few days, and forecasters announce that several quite different outcomes are still possible.",
+      "D": "A single forecast run from a slightly inaccurate measurement of today's winds drifts further from reality with each passing day."
+     },
+     "question": "Which of the following situations best illustrates the specific weakness described in paragraph 4?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R02-A-02",
+   "passage": [
+    "Most people believe that anything sufficiently striking will catch their eye. If a person in a gorilla suit walked through a game of catch we were watching, we assume we would notice. A well-known series of experiments suggests otherwise. When viewers are asked to count the passes made by one team in a short video, a large share of them fail to see an unexpected figure stroll through the middle of the scene, even when it pauses to face the camera. Asked afterwards, many insist that nothing unusual happened, and some are indignant when the recording is replayed.",
+    "The phenomenon, usually called inattentional blindness, is easy to misread as a failure of the eyes. It is not, or at least not in any sense that an optician could detect: the light from the unexpected figure reaches the retina as surely as the light from the ball. What fails is the selection that decides which parts of the scene will be built into conscious experience. Attention is not a spotlight that merely brightens what we are looking at; it is closer to a gate, and what does not pass through the gate is not dimly seen but, for practical purposes, not seen at all.",
+    "The finding matters less because of its surprise value than because of the confidence it exposes. We are poor judges of what we would notice, because the things we miss leave no trace in experience from which we could learn that we missed them. Ordinary experience, which might be expected to correct our overconfidence, cannot do so, because an occasion on which we failed to notice something is, from the inside, indistinguishable from an occasion on which there was nothing to notice. A driver who looks at a junction while thinking about something else may have no sense that a cyclist was in view. Afterwards he will report, quite sincerely, that the cyclist came from nowhere. His honesty is not in question; his access to his own lapse is.",
+    "This should not be taken to mean that attention is simply defective. A mind that admitted everything in the visual field to awareness would be overwhelmed, unable to follow the ball, read a page or hold a conversation in a crowded room. Selectivity is the price of focus, and on most days, when little that we fail to notice turns out to matter, the price is low. The lesson is narrower and more practical: where the cost of missing something is high, we should not rely on the conviction that we would have seen it, and should instead design tasks, roads and warning signals on the assumption that attention is already spoken for."
+   ],
+   "questions": [
+    {
+     "id": "R02-A-02-1",
+     "type": "RC",
+     "options": {
+      "A": "they do notice the figure faintly but forget the impression before they are questioned about the video.",
+      "B": "attention lets only part of what reaches the eye into conscious experience.",
+      "C": "the figure appears too briefly and too indistinctly to register clearly on a short recording.",
+      "D": "the light from an unexpected object does not reach the retina while the eyes are busy tracking a moving ball."
+     },
+     "question": "According to the passage, viewers fail to see the unexpected figure because"
+    },
+    {
+     "id": "R02-A-02-2",
+     "type": "RC",
+     "options": {
+      "A": "he glimpsed the cyclist dimly at the junction but has since lost the memory of that fleeting impression.",
+      "B": "his account is sincere yet mistaken, since a cyclist he never consciously saw left nothing in his experience to report.",
+      "C": "he is probably concealing his inattention at the junction in order to avoid being blamed for what happened.",
+      "D": "cyclists who appear suddenly at junctions are among the most common causes of collisions with careful drivers."
+     },
+     "question": "The remark that the driver's 'honesty is not in question; his access to his own lapse is' implies that"
+    },
+    {
+     "id": "R02-A-02-3",
+     "type": "RC",
+     "options": {
+      "A": "accepting, treating it as the price of focus while warning against trusting it where misses are costly.",
+      "B": "alarmed, regarding it as a serious defect of the mind that ought to be corrected through training.",
+      "C": "admiring, holding that attention can be relied on to admit whatever genuinely matters in a scene.",
+      "D": "dismissive, treating the experiments as amusing curiosities with little bearing on ordinary life."
+     },
+     "question": "The author's attitude towards the selectivity of attention is best described as"
+    },
+    {
+     "id": "R02-A-02-4",
+     "type": "RC",
+     "options": {
+      "A": "Fitting a machine with an alarm that halts the task in progress, so that an operator is not relied on to glance at a light.",
+      "B": "Asking pilots how confident they are that they would spot an unexpected obstacle, and grounding those who report low confidence.",
+      "C": "Training drivers to widen their attention so that they take in the whole visual field at once rather than one part of it.",
+      "D": "Placing a warning light directly in the operator's line of sight, on the grounds that anything plainly in view will be noticed."
+     },
+     "question": "Which of the following design decisions best reflects the lesson drawn in the final paragraph?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R02-E-03",
+   "passage": [
+    "Imagine being told, after a brief task in which you estimated the number of dots flashed on a screen, that you belong to the group of 'overestimators'. You never meet another member of your group; you do not know who they are; nothing hangs on the label. You are then asked to divide small sums of money between two anonymous people, one described as an overestimator and the other as an underestimator. Experiments built on this design, which came to be called the minimal group paradigm, found that people reliably gave a little more to members of their own arbitrary category. Some even preferred allocations that maximised the gap between the groups over allocations that would have given their own group more in absolute terms.",
+    "The result has often been read as a revelation about human nature. If a meaningless label is enough to produce favouritism, the argument runs, then tribalism must be wired into us, waiting for any pretext, and the deeper divisions of nation, religion and ethnicity are only this primitive tendency writ large. The reading is dramatic, but it outruns the evidence in two ways.",
+    "First, what the experiments mostly showed was favouritism, not hostility. Participants tilted rewards towards their own side, but they were generally reluctant to impose costs on the other side when the task was framed as distributing penalties rather than rewards. Giving one's own a little more is not the same as wishing the others harm, and a theory of intergroup conflict that treats the two as interchangeable will misunderstand both. Second, the favouritism itself may be less mindless than it looks. Several later studies suggested that it shrinks when participants are told that members of their group will not know how they allocated, as though people were partly acting on an expectation that their own side would reciprocate. On that account the label is not a trigger for blind loyalty but a cue about whom one is in a cooperative relationship with.",
+    "None of this makes the original finding trivial. It remains striking that so thin a basis for belonging should shape behaviour at all, and the speed with which people adopt a category as their own deserves to be taken seriously. But the lesson that follows is not the fatalistic one. If group membership can be conjured from a coin toss or a dot-counting task, then it can also be redrawn: categories that are learned so easily are not fixed, and identities that cut across existing divisions can be built by the same mechanism that builds divisions in the first place.",
+    "What the laboratory cannot tell us is why particular divisions in the world become bitter. Real groups have histories, grievances and competing claims on land, jobs and power, and a five-minute label carries none of these. The minimal group paradigm shows where the raw material of loyalty comes from; it does not show what turns that material into enmity."
+   ],
+   "questions": [
+    {
+     "id": "R02-E-03-1",
+     "type": "RC",
+     "options": {
+      "A": "preferred divisions that widened the difference between the two groups even when another division would have given their own group more.",
+      "B": "refused to give any money at all to members of the other group once they learned which group they belonged to.",
+      "C": "gave more to the other group when they believed that members of their own group were watching their choices.",
+      "D": "met the other members of their category before the task and divided the money according to friendships they had formed."
+     },
+     "question": "According to the passage, some participants in the minimal group experiments"
+    },
+    {
+     "id": "R02-E-03-2",
+     "type": "RC",
+     "options": {
+      "A": "Participants were reluctant to impose penalties on the other group even when they were free to impose any penalty they liked.",
+      "B": "Participants favoured their own group more strongly when the allocation involved large sums of money than when it involved small sums.",
+      "C": "Participants assigned to groups by an openly random coin toss showed favouritism as readily as those grouped by a dot-counting task.",
+      "D": "Participants favoured their own group just as strongly when assured that nobody would ever learn how they had allocated."
+     },
+     "question": "Which of the following findings, if true, would most weaken the reciprocity account described in paragraph 3?"
+    },
+    {
+     "id": "R02-E-03-3",
+     "type": "RC",
+     "options": {
+      "A": "withdraw the hopeful conclusion of paragraph 4 by conceding that real divisions are too deep to be redrawn by any mechanism.",
+      "B": "set a limit on what the experiments can explain, separating the origins of group loyalty from the causes of bitter conflict.",
+      "C": "dismiss the minimal group paradigm as irrelevant to the study of how real groups behave in the world outside the laboratory.",
+      "D": "argue that intergroup conflict is caused by competition over land, jobs and power rather than by any sense of shared identity."
+     },
+     "question": "The final paragraph functions primarily to"
+    },
+    {
+     "id": "R02-E-03-4",
+     "type": "RC",
+     "options": {
+      "A": "That arbitrary categories take hold so easily gives grounds for hope as well as for concern about relations between groups.",
+      "B": "Since a label can be conjured from a coin toss, the categories people adopt have little real effect on how they treat others.",
+      "C": "Favouritism towards an arbitrary group is the same tendency that, when intensified, produces conflicts between nations and religions.",
+      "D": "Because the experiments found favouritism rather than hostility, prejudice between real groups is largely a matter of rational reciprocity."
+     },
+     "question": "The author would most likely agree with which of the following?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R03-E-07",
+   "passage": [
+    "Marketers like to say that the strongest brands have communities rather than customers. They point to the owners of a particular make of motorcycle who ride together on weekends and have its emblem tattooed on their arms, to the users of a computer maker's products who queue overnight for a new model and argue online with the users of its rivals, and to the enthusiasts who restore and exhibit a discontinued car long after its manufacturer has stopped caring about it. Some commentators go further and call such groups tribes, or even congregations, complete with rituals, myths and heretics, as though buying a product were the first step in a conversion.",
+    "The comparison is not empty. Members of these groups share a body of lore, the founding story, the legendary models, the right and wrong ways to use the product, and newcomers learn it much as initiates learn a tradition. They define themselves partly against outsiders, often the owners of a rival brand, and they police their own boundaries, distinguishing the real enthusiast from the person who has merely bought the thing. Most strikingly, they develop a sense of ownership over the brand that is not legal but moral. When a company alters a celebrated design or moves production to another country, its most loyal customers frequently respond not as disappointed consumers but as betrayed members, as though something that belonged to them had been taken without their consent.",
+    "Yet the tribal analogy conceals as much as it reveals. Membership of a tribe is not usually something one buys, and leaving it is not usually as easy as buying something else. A brand community, by contrast, is entered through a purchase and can be abandoned at the price of another. More important, the symbols around which it gathers are the legal property of a firm whose interests are not the members' interests. The firm can redesign the emblem, discontinue the product or sell the brand to a competitor, and the members, however devoted, have no formal say in any of it. A tribe whose totem could be sold at auction would be a strange tribe indeed.",
+    "It is tempting to resolve the tension by declaring one side the truth: either the community is an illusion manufactured by advertising, or the commercial setting is incidental and the solidarity is all that matters. Neither will do. The solidarity is real; people form friendships, give one another practical help and find meaning in these groups, and much of this happens without the company's involvement or even against its wishes. But the solidarity is organised around something its members do not control, and that fact shapes it. The anger that follows an unpopular redesign is the anger of people discovering, often for the first time, the limits of an ownership they had felt but never possessed.",
+    "A brand community, then, is best understood neither as a tribe that happens to shop nor as a market that happens to feel warm, but as a peculiar hybrid: a genuine collective built on borrowed ground. Firms that grasp this tend to treat their communities with caution, consulting them, deferring to them on matters of heritage and sometimes ceding them real influence over decisions. Firms that do not, and that treat the community merely as a marketing asset to be managed, are apt to learn how quickly devotion can turn into grievance, and how little the language of community protects a firm once its members conclude that they have been treated as an audience rather than as partners."
+   ],
+   "questions": [
+    {
+     "id": "R03-E-07-1",
+     "type": "RC",
+     "options": {
+      "A": "Brand communities are an illusion created by advertisers, who borrow the language of tribes to make ordinary customers feel they belong.",
+      "B": "Brand communities are true tribes in every important respect, and firms that fail to see this lose the loyalty of their best customers.",
+      "C": "Brand communities involve real solidarity, but because they gather around symbols a firm owns, the tribal comparison is only partly apt.",
+      "D": "Firms ought to give the members of their brand communities legal rights over the designs and emblems that the members care about."
+     },
+     "question": "Which of the following best states the main point of the passage?"
+    },
+    {
+     "id": "R03-E-07-2",
+     "type": "RC",
+     "options": {
+      "A": "As enthusiasts who quietly accept the change because the product remains largely the same.",
+      "B": "As betrayed members who feel something belonging to them has been taken without their consent.",
+      "C": "As disappointed consumers who decide to transfer their loyalty to the brand of a rival firm.",
+      "D": "As owners who take legal action to stop the company from altering the products they bought."
+     },
+     "question": "According to the passage, how do the most loyal customers often respond when a company moves production to another country?"
+    },
+    {
+     "id": "R03-E-07-3",
+     "type": "RC",
+     "options": {
+      "A": "a shared body of lore that newcomers are expected to learn.",
+      "B": "the difficulty of leaving the group once one has joined it.",
+      "C": "the policing of boundaries between real and false members.",
+      "D": "a habit of defining the group partly against outsiders."
+     },
+     "question": "The passage mentions each of the following as a respect in which brand communities resemble tribes EXCEPT"
+    },
+    {
+     "id": "R03-E-07-4",
+     "type": "RC",
+     "options": {
+      "A": "Owners of one brand of motorcycle are found to speak more unfavourably of a rival brand than the owners of that rival speak of theirs.",
+      "B": "Members of a computer brand's online forums spend considerably more each year on the brand's products than its other customers do.",
+      "C": "Attendance at events organised and paid for by a motorcycle maker rises sharply in the years when the firm spends heavily on advertising.",
+      "D": "An owners' club for a long-discontinued car continues to meet, share spare parts and help members with repairs, decades after all promotion by its maker ended."
+     },
+     "question": "Which of the following, if true, would most strengthen the author's claim in paragraph 4 that the solidarity of brand communities is real?"
+    },
+    {
+     "id": "R03-E-07-5",
+     "type": "RC",
+     "options": {
+      "A": "members' moral sense of owning the brand had outrun any power they actually held over it.",
+      "B": "the community had never been more than an illusion, which the redesign finally exposed.",
+      "C": "members had cared mainly about the product and not about one another all along.",
+      "D": "members' legal rights over the brand had been violated when the firm altered its design."
+     },
+     "question": "The author's remark that the anger after an unpopular redesign reveals 'the limits of an ownership they had felt but never possessed' (paragraph 4) implies that"
+    }
+   ]
+  }
+ ]
+}

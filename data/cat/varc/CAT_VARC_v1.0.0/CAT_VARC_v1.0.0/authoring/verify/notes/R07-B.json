@@ -1,0 +1,22 @@
+[
+ {
+  "id": "R07-B-03-1",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "D",
+    "key": "D",
+    "working": "P1: space is precious; spending it on bad books denies it to deserving ones.",
+    "alternative": "",
+    "issue": "Pack has a key-position cluster: all four R07-B-03 answers are D."
+   },
+   "S2": {
+    "answer": "D",
+    "key": "D",
+    "working": "P1: space 'precious', spending it on a bad book denies it to a book that deserves attention.",
+    "alternative": "",
+    "issue": ""
+   }
+  }
+ }
+]

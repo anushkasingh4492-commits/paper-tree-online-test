@@ -1,0 +1,42 @@
+[
+ {
+  "id": "V04-E-008",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "4",
+    "key": "4",
+    "working": "'In short' summary and 'expensive' opportunity follow the closing point about the same money spent better on teaching.",
+    "alternative": "",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "4",
+    "key": "4",
+    "working": "'in short' summary fits the end, after both modest-cut and cost points; 'expensive opportunity' ties to the money sentence",
+    "alternative": "3: after modest cuts change little because teachers teach the same way, 'opportunity that goes unused' also fits, though 'in short' is premature there",
+    "issue": ""
+   }
+  }
+ },
+ {
+  "id": "V04-E-012",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "4",
+    "key": "4",
+    "working": "'Thus stands as a model' is a closing verdict after cost, taste, and programme-failure points.",
+    "alternative": "",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "4",
+    "key": "4",
+    "working": "'Thus stands as a model' is a concluding summary after the cost, taste and lapses points.",
+    "alternative": "3 is conceivable but would interrupt remedy and its explanation.",
+    "issue": ""
+   }
+  }
+ }
+]

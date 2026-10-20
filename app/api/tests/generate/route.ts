@@ -254,6 +254,14 @@ function normalizePresetSubject(
   }
 
   if (
+    subject === "verbal ability and reading comprehension" ||
+    subject === "cat varc" ||
+    subject === "varc"
+  ) {
+    return "cat-varc";
+  }
+
+  if (
     subject === "jee physics" ||
     subject === "jee-physics" ||
     subject === "physics (jee)"
@@ -305,6 +313,9 @@ function displaySubject(
 
     case "cat-qa":
       return "Quantitative Ability";
+
+    case "cat-varc":
+      return "Verbal Ability and Reading Comprehension";
 
     default:
       return subject;
@@ -1715,6 +1726,7 @@ export async function POST(
           "Biology",
           "Mathematics",
           "Quantitative Ability",
+          "Verbal Ability and Reading Comprehension",
         ];
 
         const normalizedSelectedSubjects = new Set(

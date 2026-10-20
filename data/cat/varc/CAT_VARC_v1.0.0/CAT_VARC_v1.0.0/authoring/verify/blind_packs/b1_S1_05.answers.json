@@ -1,0 +1,690 @@
+[
+ {
+  "id": "R06-B-08-1",
+  "answer": "A",
+  "working": "P5: choice relocated from end to beginning; advocates should own those decisions.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-B-08-2",
+  "answer": "A",
+  "working": "'those who set the density know this'; consequences often foreseen from initial choices.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-B-08-3",
+  "answer": "B",
+  "working": "P4 checkable process commitments: river allowed to flood, no habitat target.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-B-08-4",
+  "answer": "A",
+  "working": "P2 gives choice of reference state, climate change, gardening intervention; funder appeal never mentioned.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-B-08-5",
+  "answer": "D",
+  "working": "P3 ends 'a claim that nothing could count against is not much of a claim' - falsifiability principle.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-B-02-1",
+  "answer": "B",
+  "working": "'existing and quite fluid materials were pressed until they set'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-B-02-2",
+  "answer": "B",
+  "working": "P2: weaver described himself variously without any one being his real identity; multiplicity was normal.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-B-02-3",
+  "answer": "C",
+  "working": "Author reads petitions as campaigns over labels that govern lives; equal petitioning where labels had no consequences undercuts this.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-B-02-4",
+  "answer": "D",
+  "working": "'The argument has done valuable work... Yet in its strongest form it claims too much... obscures what was genuinely new'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-E-07-1",
+  "answer": "D",
+  "working": "'Nothing about her death has changed, but the survival figure has more than tripled'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-E-07-2",
+  "answer": "A",
+  "working": "'rigged... by the arithmetic of detection rather than by anyone's intent'; survival improves even with no deaths prevented.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-E-07-3",
+  "answer": "A",
+  "working": "'Screening thus produces its own most sincere advocates... more it overdiagnoses, the more grateful survivors'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-E-07-4",
+  "answer": "D",
+  "working": "P4: right test is fewer deaths in the population, from carefully conducted trials comparing screened and unscreened populations; randomised comparison.",
+  "confidence": "high",
+  "alternative": "A is also a mortality comparison but self-selected attenders; passage does not explicitly discuss selection bias, so A is weaker but not explicitly excluded.",
+  "issue": ""
+ },
+ {
+  "id": "R06-E-07-5",
+  "answer": "A",
+  "working": "P3: overdiagnosis 'is not an error in the usual sense, since the cells are what the pathologist says they are'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-A-06-1",
+  "answer": "D",
+  "working": "P2: 'depends largely on how much attention we pay to time itself'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-A-06-2",
+  "answer": "B",
+  "working": "P3: 'The complaint is almost always retrospective... last year, viewed as a whole'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-A-06-3",
+  "answer": "C",
+  "working": "Final sentence: caution against speaking of how long something 'really' felt 'as though there were only one answer'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-A-06-4",
+  "answer": "C",
+  "working": "Explanation: fewer firsts/routine leads to fewer memories; adults with novel lives showing same speed-up undercuts it.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-C-05-1",
+  "answer": "D",
+  "working": "P3: 'some authority... insists that the site be registered, restored or claimed as belonging to one tradition alone'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-C-05-2",
+  "answer": "A",
+  "working": "P2 gives observed parallel use and practical accommodations; P3 uses it to reject both harmony and truce stories.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-C-05-3",
+  "answer": "B",
+  "working": "Parallel use at different times, different names, custodian not asking: mirrors P2.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-C-05-4",
+  "answer": "B",
+  "working": "Ambiguity is 'carefully maintained'; custodians 'refrain from asking visitors what they believe'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-E-05-1",
+  "answer": "D",
+  "working": "Format (counter, fixed price, assembly-line kitchen) travels intact carrying assumptions; local dish delivered through it.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-E-05-2",
+  "answer": "B",
+  "working": "Three layers: global format, local meanings, menu in between; menu-centred debate misreads influence.",
+  "confidence": "high",
+  "alternative": "D captures P2 but ignores P3, where customers bring their own meanings, so it is one-sided.",
+  "issue": ""
+ },
+ {
+  "id": "R03-E-05-3",
+  "answer": "C",
+  "working": "Format is the real export; local eateries adopting counter, fixed prices, standardised kitchens shows format influence.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-E-05-4",
+  "answer": "A",
+  "working": "Lingering is a local meaning customers bring (P3), not part of the exported format (P2).",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-C-04-1",
+  "answer": "D",
+  "working": "Systematic error about how much a leader controls (P1) and its costs: boards pay for saviours (P4).",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-C-04-2",
+  "answer": "D",
+  "working": "'None of this means that leaders are irrelevant... The error lies in degree, not in kind'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-C-04-3",
+  "answer": "B",
+  "working": "'Such comparisons are rarely made, because the second firm has no story to tell.'",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-C-04-4",
+  "answer": "C",
+  "working": "Credit to new leader for results from products conceived under predecessors (P2) parallels predecessor's reforms.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-B-05-1",
+  "answer": "B",
+  "working": "'A good edit, like good stage lighting, is meant to pass unnoticed'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-B-05-2",
+  "answer": "C",
+  "working": "'they are exceptions precisely because they unsettle us' - presupposes author as main maker.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-B-05-3",
+  "answer": "B",
+  "working": "'One tempting response... This overcorrects' - grants appeal, rejects as overstatement.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-B-05-4",
+  "answer": "D",
+  "working": "P4: 'Our habits treat authorship as an all-or-nothing property... graded collaboration'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-A-01-1",
+  "answer": "C",
+  "working": "P3: effect strongest when buyers unsure/inexperienced; weakens when decoy plainly inferior.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-A-01-2",
+  "answer": "A",
+  "working": "Regular who knows what she wants 'is rarely moved' - settled preference limits effect.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-A-01-3",
+  "answer": "C",
+  "working": "Standard account: decoy should be inert, leaving ranking of small vs large untouched.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-A-01-4",
+  "answer": "C",
+  "working": "P4: 'the background is part of the decision... what people chose cannot be separated from what they were shown'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-F-01-1",
+  "answer": "D",
+  "working": "'the speed of her reply announces that she wants the account closed'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-F-01-2",
+  "answer": "A",
+  "working": "Free gifts 'are precisely those designed to prevent any relationship between giver and receiver from forming'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-F-01-3",
+  "answer": "A",
+  "working": "Author: bond sustained by delayed, unequal return; immediate exact returns with strong friendships contradicts this.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-F-01-4",
+  "answer": "C",
+  "working": "P4: unrepayable gift binds receiver to debt; 'gratitude hardens into dependence'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-D-05-1",
+  "answer": "B",
+  "working": "P2: 'their answers are often not very different from those of adults'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-D-05-2",
+  "answer": "B",
+  "working": "'What distinguishes them is less what they know than what happens to that knowledge in particular situations'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-D-05-3",
+  "answer": "B",
+  "working": "P4 favours changing situations, making the safe choice socially easy; supervised bus does this.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-D-05-4",
+  "answer": "C",
+  "working": "P3: systems that make rewards, 'especially social rewards', feel intense; C contradicts.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-C-06-1",
+  "answer": "B",
+  "working": "P2: confidence and recantation both treated a bundle of independent claims as one hypothesis.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-C-06-2",
+  "answer": "B",
+  "working": "P2 calls this combination common; fits differentiation, not decline.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-C-06-3",
+  "answer": "A",
+  "working": "Claim: resurgent movements act as claimants within institutions they do not control; restoring clerical control contradicts it.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-C-06-4",
+  "answer": "D",
+  "working": "'Both the confidence and the recantation... rested on treating as one hypothesis'; P4 declines to vindicate old thesis.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-C-04-1",
+  "answer": "D",
+  "working": "P1: 'we cannot notice a gap in a field we cannot see'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-C-04-2",
+  "answer": "C",
+  "working": "Objection: if any movement can be redescribed after the fact, it 'becomes a vocabulary rather than a hypothesis'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-C-04-3",
+  "answer": "A",
+  "working": "Targetless wandering curiosity (library shelves, footnotes) parallels leafing an atlas with no place in mind.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-C-04-4",
+  "answer": "C",
+  "working": "'The account has much to recommend it'... 'a good theory of the first' kind only.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-A-08-1",
+  "answer": "D",
+  "working": "Thermometer 'supposed to leave the thing it measures unchanged'; passage says retrieval changes memory.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-A-08-2",
+  "answer": "C",
+  "working": "'The advantage of retrieval... is easily hidden by the timing of the measurement'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-A-08-3",
+  "answer": "B",
+  "working": "Recommended: 'frequent, low-stakes attempts to recall, each followed by a chance to check'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-A-08-4",
+  "answer": "D",
+  "working": "If formal exam conditions, not retrieval effort itself, produced the gain, the claim is undercut.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-A-08-5",
+  "answer": "B",
+  "working": "P4: a wrong answer recalled is strengthened; benefit is from effort of retrieval, and P3 says recall 'exposes gaps'; author never says only successful recall helps.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-C-05-1",
+  "answer": "D",
+  "working": "P1: began as description of dying patients, migrated to grieving and from observations to a timetable.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-C-05-2",
+  "answer": "A",
+  "working": "P2: resilience 'is not denial in disguise'; it seems the ordinary course for many.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-C-05-3",
+  "answer": "C",
+  "working": "P3 lists widow told she has not faced loss, son wondering, friends pressing; research stopping is never claimed.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-C-05-4",
+  "answer": "C",
+  "working": "P3 harm lies in use as a standard; P4 'That was a real service'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-F-08-1",
+  "answer": "B",
+  "working": "P4: 'to replace the story of liberation with a story of discipline would be to make the opposite mistake'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-F-08-2",
+  "answer": "D",
+  "working": "'a time in which the authority of the day ran only weakly and in which much that could not be done openly was done'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-F-08-3",
+  "answer": "C",
+  "working": "'a recognition, however inarticulate, that the lamps were an extension of an authority that the crowd had reason to resist'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-F-08-4",
+  "answer": "C",
+  "working": "Lighting abolished night as distinct social time: day's rules and people displaced the night's holders; beach case matches.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-F-08-5",
+  "answer": "C",
+  "working": "'the habit of imagining only one kind of walker' made the history easy to tell and hard to tell well.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-F-06-1",
+  "answer": "C",
+  "working": "P2: 'Each exchange added a margin, which is one reason why goods from the far end of the chain were so costly'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-F-06-2",
+  "answer": "A",
+  "working": "'because no one they dealt with had seen the source'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-F-06-3",
+  "answer": "A",
+  "working": "P3 lists resilience, poor knowledge transmission, junction wealth; famous travellers are exceptions (P4), not a consequence of the relay.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-F-06-4",
+  "answer": "D",
+  "working": "'A history built on the exceptional journey will see a road... it is the web that explains how the trade actually worked'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-B-08-1",
+  "answer": "C",
+  "working": "P1: normative form says a life not gathered into a coherent narrative is 'impoverished or broken'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-B-08-2",
+  "answer": "D",
+  "working": "'A novelist may legitimately omit... a life conducted on the same principle may lose precisely the evidence it most needs'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-B-08-3",
+  "answer": "B",
+  "working": "P2: 'narrative self-understanding is one way of being a self rather than the condition of being one'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-B-08-4",
+  "answer": "C",
+  "working": "Making narrative essential treats non-narrative temperaments as deficient.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-B-08-5",
+  "answer": "D",
+  "working": "P2: descriptive 'plausible for many people, but its generality is doubtful'; P3: 'The normative claim is more troubling'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-D-03-1",
+  "answer": "C",
+  "working": "P2: 'chosen precisely so that the new kilogram would match the old one as closely as instruments could tell'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-D-03-2",
+  "answer": "D",
+  "working": "P3: cylinder was the kilogram by definition, so 'no way, even in principle, to say that it had changed'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-D-03-3",
+  "answer": "A",
+  "working": "'Either the copies had gained mass, or the cylinder had lost it, or both' - change detected, source undeterminable.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-D-03-4",
+  "answer": "B",
+  "working": "Final claim: dependence on a procedure that can be checked and repeated; uncheckable unique designs undercut it.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-A-08-1",
+  "answer": "B",
+  "working": "P2 lists degree, topic/speed, lopsidedness, non-transitivity; pretending not to understand is absent.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-A-08-2",
+  "answer": "D",
+  "working": "'Where on such a chain does one language stop and the next begin? Intelligibility alone gives no answer'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-A-08-3",
+  "answer": "B",
+  "working": "Label tracks written standard, state, schooling, not linguistic distance; a dialect lacks the institutions that would make it a language.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-A-08-4",
+  "answer": "D",
+  "working": "Accepts that boundary is drawn by institutions; 'It does not follow' that it is empty.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-A-08-5",
+  "answer": "B",
+  "working": "P5: difference is a property of a society's arrangements, not of the speech; campaign should be judged on those terms.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ }
+]

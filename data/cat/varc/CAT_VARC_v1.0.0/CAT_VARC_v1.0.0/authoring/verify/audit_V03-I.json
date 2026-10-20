@@ -1,0 +1,5 @@
+[
+ {"id": "V03-I-004", "category": "E6", "severity": "minor", "finding": "Odd sentence says 'Many whodunits of the period', but no period is named anywhere, so 'the period' has no antecedent.", "fix": "Changed to 'Many classic whodunits take place ...'.", "changed": true},
+ {"id": "V03-I-012", "category": "E6", "severity": "minor", "finding": "Sentence 3 is a run-on with stacked 'since ... so' clauses ('depended on agreement, since a box ... saved little, so sizes ... had to be standardised').", "fix": "Replaced ', since' with a colon: 'depended on agreement: a box that fitted ...'. No quoted phrase in the explanation or traps is affected.", "changed": true},
+ {"id": "V03-I-ALL", "category": "E1", "severity": "minor", "finding": "Blind-solver notes file is empty: both solvers reached every key with no flags. I solved all 25 cold and found no second removable sentence in any item. Each odd sentence fails on function, and each coherent sentence is held in place by a backward reference or connective.", "fix": "none: no defect found", "changed": false}
+]

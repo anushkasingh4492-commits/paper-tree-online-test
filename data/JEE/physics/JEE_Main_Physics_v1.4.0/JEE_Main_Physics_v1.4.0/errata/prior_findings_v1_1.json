@@ -1,0 +1,123 @@
+[
+  {
+    "code": "R01",
+    "severity": "P1",
+    "category": "Ambiguous physical initial conditions",
+    "title": "Fresh calorimetry trial does not identify which water mass is reused",
+    "ids": [
+      "JEE27-PHY-0620",
+      "JEE27-PHY-0623",
+      "JEE27-PHY-0664",
+      "JEE27-PHY-0676",
+      "JEE27-PHY-0679",
+      "JEE27-PHY-0684"
+    ],
+    "status": "OPEN",
+    "confidence": "High",
+    "summary": "The stem gives two different water masses, then says the same water mass for the ice trial. The calculation silently reuses the first mass. Reusing the most recently stated second mass changes the result and can change the closest-option key.",
+    "recommendation": "State explicitly that the solid is removed and a fresh water charge equal to the FIRST trial water mass is placed in the calorimeter. Give that mass numerically in every forward and inverse stem. Then recheck all six options, explanations and exports."
+  },
+  {
+    "code": "R02",
+    "severity": "P2",
+    "category": "Physical consistency",
+    "title": "Three helical-orbit questions require an unphysical ordinary positive ion",
+    "ids": [
+      "JEE27-PHY-1299",
+      "JEE27-PHY-1332",
+      "JEE27-PHY-1402"
+    ],
+    "status": "OPEN",
+    "confidence": "High for an ordinary atomic ion",
+    "summary": "The first helical dataset implies q/m=2.5e8 C/kg, about 2.61 times the proton charge-to-mass ratio. That is not consistent with an ordinary positive atomic ion. The mathematical keys do follow the stated ideal equations.",
+    "recommendation": "Either identify the object as an ideal positive charged particle, without claiming it is an atomic ion, or choose mutually consistent ion/voltage/field/radius/pitch data and regenerate the three answers. Add a species plausibility check."
+  },
+  {
+    "code": "R03",
+    "severity": "P2",
+    "category": "Difficulty calibration",
+    "title": "Difficult labels still include direct and routine solution paths",
+    "ids": [
+      "JEE27-PHY-0923",
+      "JEE27-PHY-1872",
+      "JEE27-PHY-1203",
+      "JEE27-PHY-0240",
+      "JEE27-PHY-0235",
+      "JEE27-PHY-0095",
+      "JEE27-PHY-0349",
+      "JEE27-PHY-0260",
+      "JEE27-PHY-1276",
+      "JEE27-PHY-1555",
+      "JEE27-PHY-1994",
+      "JEE27-PHY-2010",
+      "JEE27-PHY-2103",
+      "JEE27-PHY-0972"
+    ],
+    "status": "OPEN",
+    "confidence": "High for the direct-subtraction/trigonometric cases; editorial for Medium recommendations",
+    "summary": "Fourteen concrete Difficult items have a shorter path than the multi-stage model rationale suggests. The strongest cases require only a trigonometric identity or subtraction of two stated masses. The numerical 30/45/25 label quota passes, but does not establish the intended challenge mix.",
+    "recommendation": "Review each delivered task using its shortest valid solution. Preserve the requested bank totals by strengthening/replacing under-level Difficult items or by a documented compensating regrade; do not merely keep the labels to meet the quota."
+  },
+  {
+    "code": "R04",
+    "severity": "P2",
+    "category": "Generator family separation",
+    "title": "Equivalent formula variants still have different selectable families",
+    "ids": [
+      "JEE27-PHY-0412",
+      "JEE27-PHY-0424",
+      "JEE27-PHY-0433",
+      "JEE27-PHY-0435",
+      "JEE27-PHY-0863",
+      "JEE27-PHY-0869",
+      "JEE27-PHY-2013",
+      "JEE27-PHY-2016"
+    ],
+    "status": "OPEN",
+    "confidence": "High for equation equivalence; family grouping is an editorial policy",
+    "summary": "Four pairs are equation/truth-table variants but carry different family tags. Seed 3391 actually selects 0863 and 0869 as questions 2 and 11. Every question has a different declared family, so a tag-only check passes.",
+    "recommendation": "Unify the four reviewed pairs under appropriate concept-family guards, inspect the resulting transitive groups, and rerun generation including seed 3391 and the preserved Kepler seed 830. These are near-repeat families, not byte-identical questions."
+  },
+  {
+    "code": "R05",
+    "severity": "P2",
+    "category": "Image-dependency metadata",
+    "title": "Three reading-panel items are self-contained despite figure_required=true",
+    "ids": [
+      "JEE27-PHY-2067",
+      "JEE27-PHY-2078",
+      "JEE27-PHY-2104"
+    ],
+    "status": "OPEN",
+    "confidence": "High",
+    "summary": "All information needed for the requested calculation is in the question text. Removing the panel leaves the correct answer determinable without reconstructing any diagram.",
+    "recommendation": "Mark the figure as optional, or move necessary measurements into the panel and rewrite the question so the figure contributes essential information. Recompute the genuinely dependent figure count; 104 is currently a flag count."
+  },
+  {
+    "code": "R06",
+    "severity": "P3",
+    "category": "Editorial presentation",
+    "title": "Comma-colon punctuation remains in fifteen question stems",
+    "ids": [
+      "JEE27-PHY-0114",
+      "JEE27-PHY-0608",
+      "JEE27-PHY-0628",
+      "JEE27-PHY-0734",
+      "JEE27-PHY-0737",
+      "JEE27-PHY-0748",
+      "JEE27-PHY-0759",
+      "JEE27-PHY-0875",
+      "JEE27-PHY-0879",
+      "JEE27-PHY-0916",
+      "JEE27-PHY-1031",
+      "JEE27-PHY-1297",
+      "JEE27-PHY-1335",
+      "JEE27-PHY-1385",
+      "JEE27-PHY-1805"
+    ],
+    "status": "OPEN",
+    "confidence": "High",
+    "summary": "Fifteen stems end a clause with the literal sequence ,:. This is a visible punctuation defect in the student exports; it does not change the physics key.",
+    "recommendation": "Replace the malformed ending with a single colon or a complete question, then propagate the change across JSON, JSONL, CSV, student/review HTML and generated-paper text."
+  }
+]

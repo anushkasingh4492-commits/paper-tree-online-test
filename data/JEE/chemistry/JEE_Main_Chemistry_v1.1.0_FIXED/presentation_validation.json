@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "html_static_checks": [
+    {
+      "file": "Sample_Paper.html",
+      "articles": 25,
+      "images": 0,
+      "local_links_valid": true
+    },
+    {
+      "file": "Sample_Solutions.html",
+      "articles": 25,
+      "images": 0,
+      "local_links_valid": true
+    },
+    {
+      "file": "START_HERE.html",
+      "articles": 0,
+      "images": 0,
+      "local_links_valid": true
+    },
+    {
+      "file": "Student_Complete_Bank.html",
+      "articles": 2160,
+      "images": 61,
+      "local_links_valid": true
+    },
+    {
+      "file": "Teacher_Complete_Bank.html",
+      "articles": 2160,
+      "images": 61,
+      "local_links_valid": true
+    }
+  ],
+  "pdf": "7 pages rendered and visually reviewed; final unit table header width corrected",
+  "new_figures": "Newman and sawhorse PNGs visually reviewed",
+  "html_browser_preview": "Not performed: file URL was blocked by browser policy. HTML evidence is static content/link validation, not an interactive browser test."
+}

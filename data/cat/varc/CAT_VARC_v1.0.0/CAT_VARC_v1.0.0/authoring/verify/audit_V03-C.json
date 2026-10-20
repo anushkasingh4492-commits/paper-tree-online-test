@@ -1,0 +1,50 @@
+[
+ {
+  "id": "V03-C-007",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Blind solver flag: sentence 1 (landlords and repairs) is a related cost of rent control. Checked: inserting it before the costs sentence clashes with 'The costs, if there are any', and after it leaves 'Such people' pointing at landlords; removing sentence 5 instead still leaves sentence 1 unplaceable. Key holds.",
+  "fix": "none: both solvers reached the correct answer and the reference chain rules sentence 1 out",
+  "changed": false
+ },
+ {
+  "id": "V03-C-023",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Blind solver note: sentence 2 (accidental losses) could loosely fit as another source of silence. Checked: placed before 'The resulting silences are not random' it would make the silences the product of fire and flood, contradicting 'not random'; reading 'against their purpose' answers selection, not destruction. Key holds.",
+  "fix": "none: the 'not random' link excludes sentence 2 at every position",
+  "changed": false
+ },
+ {
+  "id": "V03-C-004",
+  "category": "E5",
+  "severity": "minor",
+  "finding": "Explanation overstated that the odd sentence's conclusion 'contradicts' the paragraph and 'cannot sit anywhere'; the sentence reports what some clinicians prefer rather than asserting it.",
+  "fix": "Reworded the last sentence of the explanation: the dismissal cuts against the 'most trustworthy' claim and nothing in the anchoring argument builds on the exaggeration worry.",
+  "changed": true
+ },
+ {
+  "id": "V03-C-005",
+  "category": "E5",
+  "severity": "minor",
+  "finding": "Explanation and trap used ranges 'sentences [[1]] to [[4]]' and '[[1]] to [[3]]'; after relabelling these print as 'Sentences 4 to 3' and 'sentences 4 to 5', which are meaningless to a student.",
+  "fix": "Replaced ranges with explicit lists of placeholders.",
+  "changed": true
+ },
+ {
+  "id": "V03-C-015",
+  "category": "E5",
+  "severity": "minor",
+  "finding": "Trap used the range '[[1]] to [[3]]', printed as 'sentences 5 to 4'.",
+  "fix": "Replaced with explicit list '[[1]], [[2]] and [[3]]'.",
+  "changed": true
+ },
+ {
+  "id": "V03-C-021",
+  "category": "E5",
+  "severity": "minor",
+  "finding": "Trap used the range '[[1]] to [[3]]', printed as 'sentences 1 to 4', which reads as including the trap sentence itself (printed 3).",
+  "fix": "Replaced with explicit list '[[1]], [[2]] and [[3]]'.",
+  "changed": true
+ }
+]

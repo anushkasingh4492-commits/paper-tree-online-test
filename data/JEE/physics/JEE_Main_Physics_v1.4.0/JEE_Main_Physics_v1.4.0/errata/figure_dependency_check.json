@@ -1,0 +1,24 @@
+{
+  "id": "JEE27-PHY-2129",
+  "status": "PASS",
+  "cases": [
+    {
+      "m1_side": "left",
+      "dx1_cm": 1,
+      "dx2_cm": -2,
+      "key": "C"
+    },
+    {
+      "m1_side": "right",
+      "dx1_cm": -1,
+      "dx2_cm": 2,
+      "key": "A"
+    }
+  ],
+  "without_figure_possible_options": [
+    "A",
+    "C"
+  ],
+  "necessary_visual_information": "Which side of the knife edge carries m1.",
+  "check": "The actual image places m1 on the left; its reflected arrangement requires the other direction."
+}

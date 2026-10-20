@@ -1,0 +1,90 @@
+[
+ {
+  "id": "R01-A-04-4",
+  "category": "E1",
+  "severity": "major",
+  "finding": "Key scenario said the historians date a letter 'in the same archive' but did not state that they share the same evidence, which the principle (paragraph 1) and the explanation require; a strong reader could argue one may have seen documents the other has not.",
+  "fix": "Key reworded: 'Two equally careful historians, working from the same documents, date the same undated letter to different decades, ...'.",
+  "changed": true
+ },
+ {
+  "id": "R01-A-03-4",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "All three distractors were absolute ('of no use', 'as certain', 'reliable only') while the key alone was hedged, so the key could be picked on form.",
+  "fix": "Replaced the 'reliable only in the hands of' distractor with a non-absolute one ('are most useful to a layperson who can also follow the technical arguments...') and rewrote its defence citing paragraph 2 ('rather than its technical content').",
+  "changed": true
+ },
+ {
+  "id": "R01-A-04-1",
+  "category": "E4",
+  "severity": "minor",
+  "finding": "Easy question tagged CAT/XAT only; spec says Easy and Medium items take all six exams.",
+  "fix": "Removed exams=HARD (default six exams).",
+  "changed": true
+ },
+ {
+  "id": "R01-A-04-3",
+  "category": "E4",
+  "severity": "minor",
+  "finding": "Medium question tagged CAT/XAT only.",
+  "fix": "Removed exams=HARD.",
+  "changed": true
+ },
+ {
+  "id": "R01-A-08-1",
+  "category": "E4",
+  "severity": "minor",
+  "finding": "Medium question tagged CAT/XAT only.",
+  "fix": "Removed exams=HARD.",
+  "changed": true
+ },
+ {
+  "id": "R01-A-08-3",
+  "category": "E4",
+  "severity": "minor",
+  "finding": "Medium question tagged CAT/XAT only.",
+  "fix": "Removed exams=HARD.",
+  "changed": true
+ },
+ {
+  "id": "R01-A-08-5",
+  "category": "E4",
+  "severity": "minor",
+  "finding": "Medium question tagged CAT/XAT only.",
+  "fix": "Removed exams=HARD.",
+  "changed": true
+ },
+ {
+  "id": "R01-A-02-4",
+  "category": "E4",
+  "severity": "minor",
+  "finding": "Labelled Difficult, but the three distractors are fairly easy to eliminate (one irrelevant, one supporting, one already conceded); sits at the lower edge of Difficult.",
+  "fix": "none: the item still needs the reader to see that the account rests on the claim about ordinary practice ('we nowhere apply that standard outside the philosophy seminar'); the Difficult quota of 7 is exact, and making a distractor more tempting would risk a second defensible weakener.",
+  "changed": false
+ },
+ {
+  "id": "R01-A-05-3",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "The main-idea key ('settling our own commitments') hints at the answer to R01-A-05-4 (accepting a job offer is a commitment one settles).",
+  "fix": "none: a main-idea key has to state the thesis, and 05-4 still requires separating the paragraph 3 authority from the sensation authority of paragraph 1 and from causes of past choices.",
+  "changed": false
+ },
+ {
+  "id": "R01-A-06-2",
+  "category": "E7",
+  "severity": "minor",
+  "finding": "R01-A-06-2 and R01-A-06-3 both carry a 'he lied' distractor rebutted by the same word 'truthfully' in paragraph 2.",
+  "fix": "none: the items ask different things (why the manager is responsible; the meaning of 'counterfeit form'), and neither key gives the other away.",
+  "changed": false
+ },
+ {
+  "id": "verify/notes/R01-A.json",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "The blind-solver notes file is an empty list: no disagreements or flags were recorded for any item.",
+  "fix": "none: nothing to dismiss; every item was solved cold in this audit and the keys were confirmed.",
+  "changed": false
+ }
+]

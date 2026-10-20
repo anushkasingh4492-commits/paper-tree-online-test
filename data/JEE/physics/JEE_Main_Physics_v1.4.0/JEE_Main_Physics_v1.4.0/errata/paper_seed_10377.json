@@ -1,0 +1,448 @@
+{
+  "seed": 10377,
+  "max_marks": 100,
+  "marking": {
+    "correct": 4,
+    "incorrect": -1,
+    "unattempted": 0
+  },
+  "basis": "Official JEE Main 2026 Paper 1 Physics format",
+  "questions": [
+    {
+      "id": "JEE27-PHY-1967",
+      "source_class": "XII",
+      "unit_number": 19,
+      "difficulty": "Easy",
+      "assumptions": "Use the elementary low-field semiconductor model at room temperature unless specified otherwise; silicon/germanium forward drops, when approximated, are 0.7/0.3 V. Reverse characteristics refer to operation below breakdown unless breakdown is stated.",
+      "figures": [],
+      "concept_family": "SRC-1bbf1a271579",
+      "number": 1,
+      "section": "A",
+      "question": "Three materials, glass, germanium and silver, are compared at room temperature. Arranged in order of increasing electrical conductivity they are:",
+      "options": {
+        "A": "glass, germanium, silver",
+        "B": "silver, germanium, glass",
+        "C": "germanium, glass, silver",
+        "D": "glass, silver, germanium"
+      }
+    },
+    {
+      "id": "JEE27-PHY-0632",
+      "source_class": "XI",
+      "unit_number": 7,
+      "difficulty": "Medium",
+      "assumptions": "Use the specified ideal-fluid or Stokes-flow model. Neglect losses and end/wall effects where the ideal model is invoked; thermal-expansion formulae are first order.",
+      "figures": [],
+      "concept_family": "SRC-6bfcb69cb95f",
+      "number": 2,
+      "section": "A",
+      "question": "In a hydraulic lift the two pistons have areas in the ratio 1 : 50. A force of 100 N is applied on the smaller piston. The maximum load that can be raised on the larger piston is:",
+      "options": {
+        "A": "150 N",
+        "B": "100 N",
+        "C": "2 N",
+        "D": "5000 N"
+      }
+    },
+    {
+      "id": "JEE27-PHY-1219",
+      "source_class": "XII",
+      "unit_number": 12,
+      "difficulty": "Medium",
+      "assumptions": "Use steady currents, ideal connecting wires and uniform ohmic conductors at fixed temperature unless specified otherwise. Resistivity is unchanged by stretching in the stated elementary model. Wheatstone arms P,Q,R,S mean AB,BC,AD,DC; source AC and detector BD.",
+      "figures": [],
+      "concept_family": "SRC-ec650dddb754",
+      "number": 3,
+      "section": "A",
+      "question": "A battery of emf 12 V and internal resistance 2 Ω is connected across a parallel combination of a 3 Ω and a 6 Ω resistor. The power dissipated in the 3 Ω resistor is:",
+      "options": {
+        "A": "27 W",
+        "B": "6 W",
+        "C": "12 W",
+        "D": "48 W"
+      }
+    },
+    {
+      "id": "JEE27-PHY-0107",
+      "source_class": "XI",
+      "unit_number": 2,
+      "difficulty": "Easy",
+      "assumptions": "Use ideal particle motion with uniform gravity and negligible air resistance unless stated otherwise.",
+      "figures": [],
+      "concept_family": "SRC-79c2ea2752bc",
+      "number": 4,
+      "section": "A",
+      "question": "For a projectile in flight, the way in which the components of velocity depend on time is best described by saying that:",
+      "options": {
+        "A": "the horizontal component stays constant while the vertical component changes as the square of the time",
+        "B": "both components change linearly with time",
+        "C": "the horizontal component decreases linearly with time while the vertical component stays constant",
+        "D": "the horizontal component stays constant while the vertical component changes linearly with time"
+      }
+    },
+    {
+      "id": "JEE27-PHY-1681",
+      "source_class": "XII",
+      "unit_number": 16,
+      "difficulty": "Medium",
+      "assumptions": "Use paraxial geometrical optics, thin lenses in air and small diffraction/interference angles unless specified otherwise. Sources in path-difference questions are coherent, initially in phase and equally polarised. Media are transparent, isotropic and normally dispersive.",
+      "figures": [],
+      "concept_family": "SRC-fcacf476484d",
+      "number": 5,
+      "section": "A",
+      "question": "A mark on a sheet of paper is viewed from directly above through a glass slab 6 cm thick of refractive index 1.5. The mark appears to be raised by:",
+      "options": {
+        "A": "9 cm",
+        "B": "2 cm",
+        "C": "4 cm",
+        "D": "3 cm"
+      }
+    },
+    {
+      "id": "JEE27-PHY-0442",
+      "source_class": "XI",
+      "unit_number": 5,
+      "difficulty": "Easy",
+      "assumptions": "Rigid bodies and fixed axes are ideal unless specified otherwise; moments of inertia refer to the named axis.",
+      "figures": [],
+      "concept_family": "GLOBAL-ROTATIONAL-KINETIC-ENERGY",
+      "number": 6,
+      "section": "A",
+      "question": "A wheel of moment of inertia 4 kg m² rotates at 3 rad s⁻¹. Its rotational kinetic energy is:",
+      "options": {
+        "A": "6 J",
+        "B": "18 J",
+        "C": "12 J",
+        "D": "36 J"
+      }
+    },
+    {
+      "id": "JEE27-PHY-1895",
+      "source_class": "XII",
+      "unit_number": 18,
+      "difficulty": "Medium",
+      "assumptions": "Use the stated Bohr/nuclear approximations. Nuclear targets are fixed in closest-approach calculations; quoted mass defects correspond to energy Δmc². Line counts refer to all allowed cascades across a sample, ignoring fine structure.",
+      "figures": [],
+      "concept_family": "GLOBAL-REVIEW-1886",
+      "number": 7,
+      "section": "A",
+      "question": "For hydrogen E_n = -13.6/n² eV and h c = 12400 eV angstrom. The wavelength of the second line of the Balmer series is nearest to:",
+      "options": {
+        "A": "4341 Å",
+        "B": "3647 Å",
+        "C": "4863 Å",
+        "D": "6563 Å"
+      }
+    },
+    {
+      "id": "JEE27-PHY-0178",
+      "source_class": "XI",
+      "unit_number": 2,
+      "difficulty": "Difficult",
+      "assumptions": "Use ideal particle motion with uniform gravity and negligible air resistance unless stated otherwise.",
+      "figures": [],
+      "concept_family": "JM-velocity_turn",
+      "number": 8,
+      "section": "A",
+      "question": "A particle has v(t) = 10−2t m/s for 0 ≤ t ≤ ξ s. It starts at x = -4 m. Positive velocity is along the positive x-axis. The recorded value of total distance travelled during the interval is 74 m. Which listed positive value of ξ is consistent with this measurement?",
+      "options": {
+        "A": "6",
+        "B": "18",
+        "C": "24",
+        "D": "12"
+      }
+    },
+    {
+      "id": "JEE27-PHY-1336",
+      "source_class": "XII",
+      "unit_number": 13,
+      "difficulty": "Medium",
+      "assumptions": "Use steady source currents and vacuum unless specified otherwise. Particle motion is nonrelativistic, with other forces neglected in magnetic-orbit questions. Listed charge magnitudes are positive. Neglect end and demagnetising effects in ideal long-solenoid models.",
+      "figures": [],
+      "concept_family": "SRC-a9eeb6a7b5a9",
+      "number": 9,
+      "section": "A",
+      "question": "A wire of a certain length carrying a current I is first bent into a single circular turn and then rewound into two turns of half the original radius, the current remaining the same. The magnetic field at the centre in the second case, compared with the first, is:",
+      "options": {
+        "A": "four times as large",
+        "B": "one quarter as large",
+        "C": "eight times as large",
+        "D": "twice as large"
+      }
+    },
+    {
+      "id": "JEE27-PHY-1773",
+      "source_class": "XII",
+      "unit_number": 16,
+      "difficulty": "Difficult",
+      "assumptions": "Use paraxial geometrical optics, thin lenses in air and small diffraction/interference angles unless specified otherwise. Sources in path-difference questions are coherent, initially in phase and equally polarised. Media are transparent, isotropic and normally dispersive.",
+      "figures": [
+        {
+          "file": "figures/model-two_lenses.png",
+          "alt_text": "Physical arrangement for two lenses; supplied quantities are in the question, and no requested result is labelled.",
+          "source": "ORIGINAL",
+          "width": 1600,
+          "height": 900
+        }
+      ],
+      "concept_family": "JM-two_lenses",
+      "number": 10,
+      "section": "A",
+      "question": "Two thin convex lenses L₁ and L₂ of focal lengths 10 cm and 15 cm are 50 cm apart on a common axis. An object is 30 cm to the left of L₁. Light travels left to right. Use paraxial optics in air; report distances relative to L₂. Find the distance from the original object to the final image. Choose the closest value.",
+      "options": {
+        "A": "95 cm",
+        "B": "76.25 cm",
+        "C": "106.2 cm",
+        "D": "56.25 cm"
+      }
+    },
+    {
+      "id": "JEE27-PHY-0807",
+      "source_class": "XI",
+      "unit_number": 8,
+      "difficulty": "Easy",
+      "assumptions": "Work done BY the gas is positive. Unless a process is explicitly irreversible, gas-law path calculations are quasistatic and reversible with constant stated heat capacities; the only mechanical work is p–V work.",
+      "figures": [],
+      "concept_family": "JM-adiabatic_then_isochoric",
+      "number": 11,
+      "section": "A",
+      "question": "One mole of a monatomic ideal gas initially at 600 K and volume V expands reversibly and adiabatically to 8V, then is heated at fixed volume back to 600 K. Use γ = 5/3 and R = 8 J/(mol K). Find the final-to-initial pressure ratio after both stages.",
+      "options": {
+        "A": "0.03125",
+        "B": "0.125",
+        "C": "0.3536",
+        "D": "1"
+      }
+    },
+    {
+      "id": "JEE27-PHY-1357",
+      "source_class": "XII",
+      "unit_number": 13,
+      "difficulty": "Medium",
+      "assumptions": "Use steady source currents and vacuum unless specified otherwise. Particle motion is nonrelativistic, with other forces neglected in magnetic-orbit questions. Listed charge magnitudes are positive. Neglect end and demagnetising effects in ideal long-solenoid models.",
+      "figures": [],
+      "concept_family": "SRC-b0af28ff31e0",
+      "number": 12,
+      "section": "A",
+      "question": "Three long parallel wires A, B and C lie in one plane with AB = BC = 10 cm. They carry currents of 10 A, 20 A and 30 A respectively, all in the same direction. The force per unit length on wire B is (take μ₀ = 4 π x 10⁻⁷ T m A⁻¹):",
+      "options": {
+        "A": "zero",
+        "B": "1.6 × 10⁻³ N m⁻¹ directed towards C",
+        "C": "8 × 10⁻⁴ N m⁻¹ directed towards A",
+        "D": "8 × 10⁻⁴ N m⁻¹ directed towards C"
+      }
+    },
+    {
+      "id": "JEE27-PHY-1788",
+      "source_class": "XII",
+      "unit_number": 17,
+      "difficulty": "Difficult",
+      "assumptions": "Use the idealisations, constants, geometry and sign conventions stated in this question. Any accompanying drawing is schematic.",
+      "figures": [],
+      "concept_family": "REV-photoelectric_unknown_offset",
+      "number": 13,
+      "section": "A",
+      "question": "A photoelectric apparatus displays S=aV_stop+δ, with unknown positive dimensionless gain a and unknown constant offset δ in volts. For photon energies 3 eV and 5 eV on the same metal, the readings are 0.8 V and 3.2 V respectively. In a separate measurement using 4 eV photons on this metal, the fastest photoelectrons are accelerated through an additional 2 V; their final de Broglie wavelength is √(0.0150/3.5) nm. Use λ(nm)=√[0.0150/K(eV)] for a nonrelativistic electron. The work function, gain and offset stay fixed; there are no contact-potential shifts. Find the offset δ. Choose the closest value.",
+      "options": {
+        "A": "0.1 V",
+        "B": "0.2 V",
+        "C": "0.4 V",
+        "D": "0.6 V"
+      }
+    },
+    {
+      "id": "JEE27-PHY-1081",
+      "source_class": "XII",
+      "unit_number": 11,
+      "difficulty": "Medium",
+      "assumptions": "Use vacuum/air and ideal linear isotropic dielectrics unless specified otherwise. Neglect capacitor fringing, leakage and test-charge disturbance. Set potential zero at infinity for isolated finite charges; for a dipole set U=0 at 90°. Slow external work is quasistatic.",
+      "figures": [],
+      "concept_family": "SRC-208f59d4a1ec",
+      "number": 14,
+      "section": "A",
+      "question": "A particle of mass 1 g and charge 1 microC enters a uniform electric field of 1000 N C⁻¹ with a speed of 10 m s⁻¹ directed at right angles to the field. Neglecting gravity, its sideways deflection after it has travelled 1 m along its original direction is:",
+      "options": {
+        "A": "50 mm",
+        "B": "2.5 mm",
+        "C": "5 mm",
+        "D": "10 mm"
+      }
+    },
+    {
+      "id": "JEE27-PHY-0323",
+      "source_class": "XI",
+      "unit_number": 4,
+      "difficulty": "Difficult",
+      "assumptions": "Use nonrelativistic mechanics. Springs are ideal and uniform; quoted external work for a slow change assumes negligible kinetic-energy change.",
+      "figures": [],
+      "concept_family": "REV-rough_rebound",
+      "number": 15,
+      "section": "A",
+      "question": "A block of mass 1 kg approaches an initially uncompressed spring with speed 6 m/s on a horizontal rough track. The spring constant is 100 N/m and the kinetic friction coefficient is 0.2; take g=10 m/s². The block is not attached to the spring. It compresses the spring, reverses and leaves it; assume the maximum static friction coefficient also equals 0.2. Find the speed when the block returns to the spring’s natural length. Choose the closest value.",
+      "options": {
+        "A": "-5.6 m/s",
+        "B": "5.6 m/s",
+        "C": "11.2 m/s",
+        "D": "2.8 m/s"
+      }
+    },
+    {
+      "id": "JEE27-PHY-1346",
+      "source_class": "XII",
+      "unit_number": 13,
+      "difficulty": "Easy",
+      "assumptions": "Use steady source currents and vacuum unless specified otherwise. Particle motion is nonrelativistic, with other forces neglected in magnetic-orbit questions. Listed charge magnitudes are positive. Neglect end and demagnetising effects in ideal long-solenoid models.",
+      "figures": [],
+      "concept_family": "SRC-b569d6b8f286",
+      "number": 16,
+      "section": "A",
+      "question": "A circular loop lies in the plane of the paper and carries a current in the anticlockwise sense as seen by the reader. At the centre of the loop the magnetic field is directed:",
+      "options": {
+        "A": "along the circumference in the anticlockwise sense",
+        "B": "radially outward from the centre",
+        "C": "into the plane of the paper",
+        "D": "out of the plane of the paper, towards the reader"
+      }
+    },
+    {
+      "id": "JEE27-PHY-1127",
+      "source_class": "XII",
+      "unit_number": 11,
+      "difficulty": "Medium",
+      "assumptions": "Use vacuum/air and ideal linear isotropic dielectrics unless specified otherwise. Neglect capacitor fringing, leakage and test-charge disturbance. Set potential zero at infinity for isolated finite charges; for a dipole set U=0 at 90°. Slow external work is quasistatic.",
+      "figures": [],
+      "concept_family": "SRC-4173fc97f622",
+      "number": 17,
+      "section": "A",
+      "question": "A set of point charges, initially at rest and infinitely far from one another, is brought slowly to a final configuration. The work done by the external agent is equal to:",
+      "options": {
+        "A": "the total electrostatic potential energy of the final configuration",
+        "B": "the potential energy of the closest pair of charges in the final configuration",
+        "C": "zero, since the charges start and end at rest",
+        "D": "the total kinetic energy the charges would gain if released from the final configuration"
+      }
+    },
+    {
+      "id": "JEE27-PHY-0187",
+      "source_class": "XI",
+      "unit_number": 3,
+      "difficulty": "Easy",
+      "assumptions": "Use the stated friction model, massless inextensible strings and massless frictionless pulleys unless specified otherwise.",
+      "figures": [],
+      "concept_family": "SRC-1c22c31ca08b",
+      "number": 18,
+      "section": "A",
+      "question": "The work done by the centripetal force on a body in uniform circular motion over one complete revolution is:",
+      "options": {
+        "A": "positive and equal to the kinetic energy",
+        "B": "equal to the centripetal force times the circumference",
+        "C": "zero",
+        "D": "negative"
+      }
+    },
+    {
+      "id": "JEE27-PHY-0981",
+      "source_class": "XI",
+      "unit_number": 10,
+      "difficulty": "Medium",
+      "assumptions": "Use linear, lossless sinusoidal waves and small-amplitude pendulum motion unless stated otherwise. Organ-pipe lengths are effective lengths if no end correction is supplied. Path-difference interference assumes initially in-phase coherent sources.",
+      "figures": [],
+      "concept_family": "SRC-e9e5b211a6e0",
+      "number": 19,
+      "section": "A",
+      "question": "A sonometer wire of vibrating length 0.4 m sounds a note of 256 Hz. Keeping the tension unchanged, the vibrating length required to obtain a note of 320 Hz is:",
+      "options": {
+        "A": "0.32 m",
+        "B": "0.2 m",
+        "C": "0.5 m",
+        "D": "0.256 m"
+      }
+    },
+    {
+      "id": "JEE27-PHY-0450",
+      "source_class": "XI",
+      "unit_number": 5,
+      "difficulty": "Easy",
+      "assumptions": "Rigid bodies and fixed axes are ideal unless specified otherwise; moments of inertia refer to the named axis.",
+      "figures": [],
+      "concept_family": "SRC-d4325de01822",
+      "number": 20,
+      "section": "A",
+      "question": "In static equilibrium, taking moments about any point gives:",
+      "options": {
+        "A": "The same zero net torque",
+        "B": "Maximum potential energy",
+        "C": "Zero net force but arbitrary torque",
+        "D": "A different non-zero torque"
+      }
+    },
+    {
+      "id": "JEE27-PHY-0495",
+      "source_class": "XI",
+      "unit_number": 5,
+      "difficulty": "Medium",
+      "assumptions": "Rigid bodies and fixed axes are ideal unless specified otherwise; moments of inertia refer to the named axis.",
+      "figures": [],
+      "concept_family": "JM-rotational_brake",
+      "number": 21,
+      "section": "B",
+      "question": "A rigid rotor starts from rest. A constant driving torque 12 N m acts for 4 s while a constant opposing friction torque also acts. It then coasts to rest in 8 s after the drive is removed. Its measured angle during the driven stage is 32 rad. Assume friction torque is independent of speed. Find the angle rotated during the coasting stage. Give the numerical value in rad, rounded to the nearest integer."
+    },
+    {
+      "id": "JEE27-PHY-0151",
+      "source_class": "XI",
+      "unit_number": 2,
+      "difficulty": "Difficult",
+      "assumptions": "Use ideal particle motion with uniform gravity and negligible air resistance unless stated otherwise.",
+      "figures": [],
+      "concept_family": "JM-meeting_delay",
+      "number": 22,
+      "section": "B",
+      "question": "Car A passes a marker at constant speed 10 m/s at t = 0. Car B starts from rest at the marker after a delay of 4 s and then accelerates uniformly at 2 m/s². Both travel along the same straight road in the same direction. Let τ be the time B has been moving when it first catches A. How long after A passed the marker does the catch occur? Express the result in units of 10^(-1) s, and give the nearest integer."
+    },
+    {
+      "id": "JEE27-PHY-0578",
+      "source_class": "XI",
+      "unit_number": 6,
+      "difficulty": "Medium",
+      "assumptions": "Use Newtonian gravity, a spherical nonrotating planet and vacuum unless stated otherwise. Potential is zero at infinity; small-height/depth formulae are first-order approximations.",
+      "figures": [],
+      "concept_family": "JM-radial_launch",
+      "number": 23,
+      "section": "B",
+      "question": "A particle is projected radially outward from a spherical planet’s surface at a speed equal to 0.6 times its surface escape speed. The planet radius is 6000000 m and surface gravitational acceleration is 10 m/s². Ignore rotation, atmosphere and other bodies. Find the gravitational acceleration magnitude at the highest point. Express the result in units of 10^(-2) m/s², and give the nearest integer."
+    },
+    {
+      "id": "JEE27-PHY-1766",
+      "source_class": "XII",
+      "unit_number": 16,
+      "difficulty": "Difficult",
+      "assumptions": "Use paraxial geometrical optics, thin lenses in air and small diffraction/interference angles unless specified otherwise. Sources in path-difference questions are coherent, initially in phase and equally polarised. Media are transparent, isotropic and normally dispersive.",
+      "figures": [
+        {
+          "file": "figures/model-three_polaroids.png",
+          "alt_text": "Physical arrangement for three polaroids; supplied quantities are in the question, and no requested result is labelled.",
+          "source": "ORIGINAL",
+          "width": 1600,
+          "height": 900
+        }
+      ],
+      "concept_family": "JM-three_polaroids",
+      "number": 24,
+      "section": "B",
+      "question": "Unpolarised light passes through three ideal polaroids. Their transmission axes make angles 0°, 30° and 60° with a reference line. The emerging intensity is measured as 9 W/m². Ignore absorption except that described by ideal polariser transmission and Malus’s law. Find the final intensity if the middle polaroid is removed and the other axes are unchanged. Give the numerical value in W/m², rounded to the nearest integer."
+    },
+    {
+      "id": "JEE27-PHY-0890",
+      "source_class": "XI",
+      "unit_number": 9,
+      "difficulty": "Easy",
+      "assumptions": "Use the classical ideal-gas model and the stated active degrees of freedom; molecular size is fixed in mean-free-path comparisons unless specified otherwise.",
+      "figures": [],
+      "concept_family": "JM-mean_free_path",
+      "number": 25,
+      "section": "B",
+      "question": "For a dilute ideal gas, take the mean free path to be λ = 1/(√2πd²n), where d is collision diameter and n is number density. A comparison gas at the same pressure has absolute temperature 4 times the original, molecular mass 1 times the original and collision diameter 2 times the original. Find the new-to-original rms-speed ratio. Give the nearest integer."
+    }
+  ]
+}

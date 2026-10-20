@@ -1,0 +1,375 @@
+[
+  {
+    "id": "JEE27-PHY-0095",
+    "calculated_value": -0.7999999999999998,
+    "key": "A",
+    "matching_options": [
+      "A"
+    ],
+    "method": "Successive collision events, checked against the ballistic floor time.",
+    "details": [
+      {
+        "t": 1.0,
+        "x": 10,
+        "vx_after": -5.0
+      },
+      {
+        "t": 3.4,
+        "x": -2,
+        "vx_after": 2.0
+      }
+    ],
+    "printed_input_anchors": [
+      "(10 i + 20 j)",
+      "x=10 m",
+      "x=-2 m",
+      "0.5 at the right wall",
+      "0.4 at the left wall",
+      "10 m/s² downward"
+    ],
+    "status": "PASS"
+  },
+  {
+    "id": "JEE27-PHY-0235",
+    "calculated_value": 0.4999999999375426,
+    "key": "D",
+    "matching_options": [
+      "D"
+    ],
+    "method": "Invert the measured kinetic work, then check every static-coefficient option.",
+    "details": {
+      "measured_speed": 2.34482021,
+      "P": 21.818181817834947,
+      "N": 6.109090909299034,
+      "predicted_speeds": {
+        "A": 1.4342743312012742,
+        "B": 1.9689903699416833,
+        "C": 2.636612246412247,
+        "D": 2.3448202102041455
+      }
+    },
+    "printed_input_anchors": [
+      "2 m/s²",
+      "2 kg",
+      "0.8P",
+      "0.6P",
+      "0.20",
+      "3.0 m"
+    ],
+    "status": "PASS"
+  },
+  {
+    "id": "JEE27-PHY-0240",
+    "calculated_value": 0.3014354066985643,
+    "key": "A",
+    "matching_options": [
+      "A"
+    ],
+    "method": "Work-energy over powered motion followed by unpowered stopping.",
+    "details": {
+      "P_threshold": 21.818181818181817,
+      "N_powered": 6.109090909090909,
+      "kinetic_gain": 5.498181818181813,
+      "stopping_resistance": 18.24
+    },
+    "printed_input_anchors": [
+      "0.50",
+      "0.20",
+      "0.8P",
+      "0.6P",
+      "3.0 m",
+      "switched off instantaneously"
+    ],
+    "status": "PASS"
+  },
+  {
+    "id": "JEE27-PHY-0260",
+    "calculated_value": 2.9177935478453927,
+    "key": "B",
+    "matching_options": [
+      "B"
+    ],
+    "method": "Connected-system work, kinetic-energy sharing, then post-cut stopping work.",
+    "details": {
+      "friction": 3.4641016151377544,
+      "totalK": 37.07179676972449,
+      "KA_at_cut": 12.357265589908163,
+      "additional_ascent": 0.9177935478453929
+    },
+    "printed_input_anchors": [
+      "Block A (2 kg)",
+      "Block B (4 kg)",
+      "30°",
+      "sinβ=0.8",
+      "0.20",
+      "2.0 m",
+      "without imparting an impulse"
+    ],
+    "status": "PASS"
+  },
+  {
+    "id": "JEE27-PHY-0349",
+    "calculated_value": 0.29343136195018527,
+    "key": "B",
+    "matching_options": [
+      "B"
+    ],
+    "method": "Vector momentum and energy, then monotone compression-energy root.",
+    "details": {
+      "second_velocity": [
+        2.499999999999999,
+        -4.330127018922193
+      ],
+      "second_K": 24.999999999999993,
+      "residual": 3.552713678800501e-15
+    },
+    "printed_input_anchors": [
+      "mass 2 kg",
+      "10 m/s",
+      "30°",
+      "sinθ=0.6",
+      "cosθ=0.8",
+      "0.25",
+      "1.0 m",
+      "100 N/m"
+    ],
+    "status": "PASS"
+  },
+  {
+    "id": "JEE27-PHY-0923",
+    "calculated_value": 5.000000003280052,
+    "key": "B",
+    "matching_options": [
+      "B"
+    ],
+    "method": "Eliminate the common horizontal component between two squared effective gravities.",
+    "details": {
+      "T1": 1.777153175,
+      "T2": 1.879110698,
+      "horizontal_acceleration": 20.000000006801486,
+      "upward_acceleration": 5.000000003280052
+    },
+    "printed_input_anchors": [
+      "length 2.0 m",
+      "b>0",
+      "upward acceleration is set to zero",
+      "g=10 m/s²"
+    ],
+    "status": "PASS"
+  },
+  {
+    "id": "JEE27-PHY-0972",
+    "calculated_value": 453.4359861591696,
+    "key": "C",
+    "matching_options": [
+      "C"
+    ],
+    "method": "Independent end-correction calibration and both beat-temperature branches.",
+    "details": {
+      "end_correction_m": 0.010000000000000009,
+      "frequency": 499.99999999999994,
+      "possible_temperatures": [
+        303.5397923875431,
+        453.4359861591696
+      ]
+    },
+    "printed_input_anchors": [
+      "300 K",
+      "16.0 cm",
+      "50.0 cm",
+      "340 m/s",
+      "50 beats",
+      "400 K and 500 K",
+      "18.0 cm"
+    ],
+    "status": "PASS"
+  },
+  {
+    "id": "JEE27-PHY-1203",
+    "calculated_value": 11.666666666666664,
+    "key": "B",
+    "matching_options": [
+      "B"
+    ],
+    "method": "Eliminate end resistance to solve for the gap ratio directly.",
+    "details": {
+      "ratio": 0.7142857142857143,
+      "end_resistance": 1.6,
+      "unknown_resistance": 10.0
+    },
+    "printed_input_anchors": [
+      "8.0 Ω",
+      "14.0 Ω",
+      "30.0 cm",
+      "50.0 cm",
+      "nonnegative contact resistance"
+    ],
+    "status": "PASS"
+  },
+  {
+    "id": "JEE27-PHY-1276",
+    "calculated_value": 12.0,
+    "key": "B",
+    "matching_options": [
+      "B"
+    ],
+    "method": "Two linear node equations in conductances; no authored resistor elimination used.",
+    "details": {
+      "R1_kohm": 3.0,
+      "R2_kohm": 6.0,
+      "determinant": -81.0
+    },
+    "printed_input_anchors": [
+      "18.0 V",
+      "6.0 kΩ",
+      "9.0 V",
+      "4.5 V",
+      "removed completely"
+    ],
+    "status": "PASS"
+  },
+  {
+    "id": "JEE27-PHY-1555",
+    "calculated_value": 3.999999999999999,
+    "key": "B",
+    "matching_options": [
+      "B"
+    ],
+    "method": "Infer the field and friction, then compute the third-trial current and I²R.",
+    "details": {
+      "B": 2.8284271247461903,
+      "friction": 1.0,
+      "speed": 3.999999999999999,
+      "current": 0.7071067811865475
+    },
+    "printed_input_anchors": [
+      "0.50 m",
+      "4.0 Ω",
+      "3.0 N",
+      "4.0 m/s",
+      "5.0 N",
+      "8.0 m/s",
+      "8.0 Ω",
+      "2.0 N"
+    ],
+    "status": "PASS"
+  },
+  {
+    "id": "JEE27-PHY-1872",
+    "calculated_value": 3.9999999999970357,
+    "key": "B",
+    "matching_options": [
+      "B"
+    ],
+    "method": "Compute the COM relative kinetic energy using the reduced mass.",
+    "details": {
+      "v1": 18032096.321141914,
+      "v2": -6016048.160535246,
+      "parent_velocity": 2000000.0000238074,
+      "relative_energy_MeV": 3.9999999999970357
+    },
+    "printed_input_anchors": [
+      "masses 2u and 4u",
+      "travels along +x",
+      "travels along -x",
+      "1.66×10⁻²⁷",
+      "1.60×10⁻¹³"
+    ],
+    "status": "PASS"
+  },
+  {
+    "id": "JEE27-PHY-1994",
+    "calculated_value": 0.04800000000000003,
+    "key": "C",
+    "matching_options": [
+      "C"
+    ],
+    "method": "Piecewise node solution with energy conservation checked in each state.",
+    "details": {
+      "high": {
+        "node": 6,
+        "reference_power": 0.24000000000000005,
+        "resistor_power": 1.0000000000000002,
+        "free": 8.0
+      },
+      "low": {
+        "node": 2,
+        "reference_power": -0.08,
+        "resistor_power": 0.04,
+        "free": 0.0
+      }
+    },
+    "printed_input_anchors": [
+      "100 Ω",
+      "+6.0 V",
+      "+2.0 V",
+      "6.0 V gives X=3.0 V",
+      "40%",
+      "60%",
+      "16.0 V",
+      "at 0 V"
+    ],
+    "status": "PASS"
+  },
+  {
+    "id": "JEE27-PHY-2010",
+    "calculated_value": 200.00000002919708,
+    "key": "B",
+    "matching_options": [
+      "B"
+    ],
+    "method": "Substitute all four loads into both diode states and the measured power.",
+    "details": {
+      "measured": 0.3044444444,
+      "predicted_powers": {
+        "A": 0.608888888888889,
+        "B": 0.3044444444444445,
+        "C": 0.40592592592592597,
+        "D": 0.20296296296296298
+      }
+    },
+    "printed_input_anchors": [
+      "10.0 V gives X=4.0 V",
+      "+8.0 V",
+      "+3.0 V",
+      "24.0 V",
+      "one-third",
+      "two-thirds"
+    ],
+    "status": "PASS"
+  },
+  {
+    "id": "JEE27-PHY-2103",
+    "calculated_value": 0.9477741072833107,
+    "key": "C",
+    "matching_options": [
+      "C"
+    ],
+    "method": "Enumerate all eight error-bound corners for the common-offset model.",
+    "details": {
+      "least_count": 0.050000000000000044,
+      "D": 20.2,
+      "d": 12.4,
+      "relative_error_corners": [
+        0.0046012269938650345,
+        0.009477741072833107,
+        0.0033427717476797267,
+        0.0015337423312883453,
+        0.0015337423312883453,
+        0.0033427717476797267,
+        0.009477741072833107,
+        0.0046012269938650345
+      ]
+    },
+    "printed_input_anchors": [
+      "20 divisions equal to 19",
+      "division 2 coincides",
+      "20 mm with division 6",
+      "12 mm with division 10",
+      "SAME additive error",
+      "half a least count",
+      "first-order"
+    ],
+    "status": "PASS"
+  }
+]

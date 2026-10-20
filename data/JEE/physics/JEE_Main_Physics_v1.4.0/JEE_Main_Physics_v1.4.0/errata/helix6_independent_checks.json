@@ -1,0 +1,152 @@
+[
+  {
+    "id": "JEE27-PHY-1299",
+    "printed_inputs": {
+      "V": 1000.0,
+      "B": 0.2,
+      "r": 0.01,
+      "p": 0.06283185307,
+      "V2": 2000.0,
+      "B2": 0.4
+    },
+    "target": "period",
+    "computed_or_observed": 6.283185307000002e-08,
+    "option_predictions_or_values": {
+      "A": 6.283e-08,
+      "B": -6.283e-08,
+      "C": 3.142e-08,
+      "D": 1.257e-07
+    },
+    "matches": [
+      "A"
+    ],
+    "key": "A",
+    "status": "PASS",
+    "method": "Printed-input energy and helical geometry; second trial independently from rest."
+  },
+  {
+    "id": "JEE27-PHY-1332",
+    "printed_inputs": {
+      "V": 1000.0,
+      "B": 0.2,
+      "r": 0.01,
+      "p": 0.06283185307,
+      "V2": 2000.0,
+      "B2": 0.4
+    },
+    "target": "path",
+    "computed_or_observed": 0.06283185307089793,
+    "option_predictions_or_values": {
+      "A": 0.03142,
+      "B": 0.06283,
+      "C": 0.1257,
+      "D": -0.06283
+    },
+    "matches": [
+      "B"
+    ],
+    "key": "B",
+    "status": "PASS",
+    "method": "Printed-input energy and helical geometry; second trial independently from rest."
+  },
+  {
+    "id": "JEE27-PHY-1402",
+    "printed_inputs": {
+      "V": 1000.0,
+      "B": 0.2,
+      "r": 0.01,
+      "p": 0.06283185307,
+      "V2": 2000.0,
+      "B2": 0.4
+    },
+    "target": "pitch",
+    "computed_or_observed": 0.0444288293803138,
+    "option_predictions_or_values": {
+      "A": 0.02221,
+      "B": 0.08886,
+      "C": 0.04443,
+      "D": -0.04443
+    },
+    "matches": [
+      "C"
+    ],
+    "key": "C",
+    "status": "PASS",
+    "method": "Printed-input energy and helical geometry; second trial independently from rest."
+  },
+  {
+    "id": "JEE27-PHY-1317",
+    "printed_inputs": {
+      "V": 2000.0,
+      "B": null,
+      "r": 0.02,
+      "p": 0.06283185307,
+      "V2": 8000.0,
+      "B2": 0.25
+    },
+    "target": "period",
+    "computed_or_observed": 7.853981634e-07,
+    "option_predictions_or_values": {
+      "A": 3.141592653553876e-06,
+      "B": 1.7671458676240556e-06,
+      "C": 7.85398163388469e-07,
+      "D": 1.9634954084711726e-07
+    },
+    "matches": [
+      "C"
+    ],
+    "key": "C",
+    "status": "PASS",
+    "method": "Printed-input energy and helical geometry; second trial independently from rest."
+  },
+  {
+    "id": "JEE27-PHY-1389",
+    "printed_inputs": {
+      "V": 2000.0,
+      "B": 0.5,
+      "r": 0.02,
+      "p": 0.06283185307,
+      "V2": 8000.0,
+      "B2": null
+    },
+    "target": "path",
+    "computed_or_observed": 0.5619851785,
+    "option_predictions_or_values": {
+      "A": 0.5619851784800456,
+      "B": 0.2809925892400228,
+      "C": 0.3746567856533637,
+      "D": 1.1239703569600912
+    },
+    "matches": [
+      "A"
+    ],
+    "key": "A",
+    "status": "PASS",
+    "method": "Printed-input energy and helical geometry; second trial independently from rest."
+  },
+  {
+    "id": "JEE27-PHY-1326",
+    "printed_inputs": {
+      "V": null,
+      "B": 0.5,
+      "r": 0.02,
+      "p": 0.06283185307,
+      "V2": 8000.0,
+      "B2": 0.25
+    },
+    "target": "pitch",
+    "computed_or_observed": 0.2513274123,
+    "option_predictions_or_values": {
+      "A": 0.3554306350425104,
+      "B": 0.1777153175212552,
+      "C": 0.20520797282003297,
+      "D": 0.25132741228
+    },
+    "matches": [
+      "D"
+    ],
+    "key": "D",
+    "status": "PASS",
+    "method": "Printed-input energy and helical geometry; second trial independently from rest."
+  }
+]

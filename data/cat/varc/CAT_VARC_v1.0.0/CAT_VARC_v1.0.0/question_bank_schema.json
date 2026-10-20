@@ -1,0 +1,285 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "urn:paper-tree:cat-varc:2.0.0",
+ "title": "CAT VARC bank (schema v2, set-based)",
+ "description": "Object with meta, sets (RC passages) and questions. RC questions link to their passage by set_id; VA questions have set_id null. MCQ: four options, one correct (+3/-1). TITA: para jumbles key a digit string (e.g. 3142), odd sentence out a single digit (+3/0). Cross-record rules (set membership, key balance, families) are checked by verify_release.py.",
+ "type": "object",
+ "required": [
+  "meta",
+  "sets",
+  "questions"
+ ],
+ "properties": {
+  "meta": {
+   "type": "object"
+  },
+  "sets": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "set_id",
+     "set_type",
+     "chapter_number",
+     "chapter",
+     "topic",
+     "subtopic",
+     "paragraphs",
+     "word_count",
+     "difficulty",
+     "question_ids",
+     "question_count",
+     "exam_tags",
+     "concept_family",
+     "family_dependencies"
+    ],
+    "properties": {
+     "set_id": {
+      "type": "string",
+      "pattern": "^CAT-VARC-P0[1-8]-\\d{3}$"
+     },
+     "set_type": {
+      "const": "RC passage"
+     },
+     "paragraphs": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "minLength": 1
+      },
+      "minItems": 1,
+      "maxItems": 6
+     },
+     "question_ids": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 5
+     },
+     "question_count": {
+      "enum": [
+       4,
+       5
+      ]
+     },
+     "difficulty": {
+      "enum": [
+       "Easy",
+       "Medium",
+       "Difficult"
+      ]
+     }
+    }
+   }
+  },
+  "questions": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "id",
+     "section",
+     "area",
+     "chapter_number",
+     "chapter",
+     "topic",
+     "question_type",
+     "standard",
+     "exam_tags",
+     "set_id",
+     "answer_format",
+     "question",
+     "options",
+     "correct_option",
+     "tita_answer",
+     "correct_answer",
+     "explanation",
+     "option_rationales",
+     "tita_common_wrong_entries",
+     "common_misconception",
+     "difficulty",
+     "difficulty_reason",
+     "cognitive_level",
+     "concept_family",
+     "family_dependencies",
+     "generator_eligible",
+     "provenance"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^CAT-VARC-(P(0[1-8])-\\d{3}-Q[1-5]|C(09|1[0-2])-\\d{3})$"
+     },
+     "section": {
+      "const": "Verbal Ability and Reading Comprehension"
+     },
+     "area": {
+      "enum": [
+       "Reading Comprehension",
+       "Verbal Ability"
+      ]
+     },
+     "chapter_number": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 12
+     },
+     "question_type": {
+      "type": "string",
+      "minLength": 1
+     },
+     "standard": {
+      "const": "CAT"
+     },
+     "exam_tags": {
+      "type": "array",
+      "items": {
+       "enum": [
+        "CAT",
+        "XAT",
+        "NMAT",
+        "SNAP",
+        "CMAT",
+        "MAH-CET"
+       ]
+      },
+      "contains": {
+       "const": "CAT"
+      },
+      "uniqueItems": true
+     },
+     "set_id": {
+      "oneOf": [
+       {
+        "type": "null"
+       },
+       {
+        "type": "string",
+        "pattern": "^CAT-VARC-P0[1-8]-\\d{3}$"
+       }
+      ]
+     },
+     "answer_format": {
+      "enum": [
+       "MCQ",
+       "TITA"
+      ]
+     },
+     "question": {
+      "type": "string",
+      "minLength": 1
+     },
+     "options": {
+      "oneOf": [
+       {
+        "type": "null"
+       },
+       {
+        "type": "object",
+        "properties": {
+         "A": {
+          "type": "string",
+          "minLength": 1
+         },
+         "B": {
+          "type": "string",
+          "minLength": 1
+         },
+         "C": {
+          "type": "string",
+          "minLength": 1
+         },
+         "D": {
+          "type": "string",
+          "minLength": 1
+         }
+        },
+        "required": [
+         "A",
+         "B",
+         "C",
+         "D"
+        ],
+        "additionalProperties": false
+       }
+      ]
+     },
+     "correct_option": {
+      "enum": [
+       "A",
+       "B",
+       "C",
+       "D",
+       null
+      ]
+     },
+     "tita_answer": {
+      "oneOf": [
+       {
+        "type": "null"
+       },
+       {
+        "type": "string",
+        "pattern": "^[1-5]{1,5}$"
+       }
+      ]
+     },
+     "sentences": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "required": [
+        "label",
+        "text"
+       ]
+      }
+     },
+     "explanation": {
+      "type": "string",
+      "minLength": 40
+     },
+     "option_rationales": {
+      "type": "object"
+     },
+     "tita_common_wrong_entries": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "required": [
+        "value",
+        "reason"
+       ]
+      }
+     },
+     "difficulty": {
+      "enum": [
+       "Easy",
+       "Medium",
+       "Difficult"
+      ]
+     },
+     "cognitive_level": {
+      "enum": [
+       "Recall",
+       "Understanding",
+       "Application",
+       "Analysis"
+      ]
+     },
+     "family_dependencies": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      },
+      "minItems": 1
+     },
+     "generator_eligible": {
+      "type": "boolean"
+     },
+     "provenance": {
+      "type": "object"
+     }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,666 @@
+[
+ {
+  "id": "R01-A-04-1",
+  "answer": "A",
+  "working": "P2: 'the reasoning simply assumes what is in question' - her dissent is the only evidence of error.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-A-04-2",
+  "answer": "B",
+  "working": "P3 ends: principle is a claim about what to do when independent grounds are absent.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-A-04-3",
+  "answer": "A",
+  "working": "P4: recommending reduced confidence in itself does not make it false; reveals conciliation cannot be the whole story.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-A-04-4",
+  "answer": "D",
+  "working": "Equal peers, no dispute-independent ground (only fault is the conclusion); A absurd, B independent ground, C not peers.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-A-07-1",
+  "answer": "A",
+  "working": "P1 lists low confidence, deference, modest manner; indifference to credit never mentioned.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-A-07-2",
+  "answer": "C",
+  "working": "Modest manner 'can coexist with a private conviction that one is never mistaken'; costless phrase proves nothing.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-A-07-3",
+  "answer": "C",
+  "working": "P3: humility 'compatible with great confidence where her grounds are good', alert to where grounds are poor.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-A-07-4",
+  "answer": "C",
+  "working": "Reply is that humility and good reasoning 'can come apart'; C says blindness to ambition always distorts world-reasoning equally, so they never come apart.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-A-07-5",
+  "answer": "A",
+  "working": "P5: 'Owning one's limitations includes keeping them in proportion'; paralysed thinker misjudged them.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-D-02-1",
+  "answer": "C",
+  "working": "P2: still rely on teaching when a work is revived; record treated as 'an aid to memory'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-D-02-2",
+  "answer": "B",
+  "working": "P3: film shows her idiosyncrasies and mistakes, cannot say which belong to the choreography.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-D-02-3",
+  "answer": "B",
+  "working": "P4: admits 'obvious cost' and drift but says drift is 'not simply a corruption', gaps 'price of its being alive'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-D-02-4",
+  "answer": "A",
+  "working": "'It is tempting to conclude...' then P2-P4 qualify: documentation valuable but has not displaced studio teaching.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-G-01-1",
+  "answer": "D",
+  "working": "P3: 'less a case against regulation than a map of where it is needed'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-G-01-2",
+  "answer": "A",
+  "working": "P2 gives small share, hard attribution, free-riding; disagreement about value of clean air not given.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-G-01-3",
+  "answer": "D",
+  "working": "'The striking result holds only when bargaining is nearly costless'; reading treats it as general advice.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-G-01-4",
+  "answer": "C",
+  "working": "'it matters a great deal who pays whom' even with same physical outcome; efficiency blind, downwind residents not.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-F-05-1",
+  "answer": "B",
+  "working": "P2: others 'associated with particular trades or with neighbours who were disliked, drew sustained protest'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-F-05-2",
+  "answer": "D",
+  "working": "P3: wrong theory justified works like covered sewers that 'did reduce disease'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-F-05-3",
+  "answer": "B",
+  "working": "Strong stable stench tolerated, fainter dyeworks smell protested: meaning over strength.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-F-05-4",
+  "answer": "D",
+  "working": "Older towns already linked smells to disliked neighbours (P2); after germ theory vocabulary 'attached itself more firmly to persons'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-B-03-1",
+  "answer": "D",
+  "working": "P1: space 'precious', spending it on a bad book denies it to a book that deserves attention.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-B-03-2",
+  "answer": "B",
+  "working": "Reader 'may end unconvinced, yet he will read the next novel more alertly'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-B-03-3",
+  "answer": "C",
+  "working": "P2: argument 'quietly assumes that the only job of criticism is to guide readers in choosing what to read'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-B-03-4",
+  "answer": "D",
+  "working": "P3: 'A notice that can only ever say yes tells the reader very little'; 'possibility of dispraise is what gives praise its meaning'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-C-06-1",
+  "answer": "A",
+  "working": "P2: praise 'feeds the sense of competence that made the activity enjoyable'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-C-06-2",
+  "answer": "A",
+  "working": "Tangible, announced in advance, for doing the task (per hour), on an already-loved activity - the P2 conditions.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-C-06-3",
+  "answer": "D",
+  "working": "P3: reward 'may keep someone at a dull task long enough for skill to grow' and interest to arrive.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-C-06-4",
+  "answer": "D",
+  "working": "Play turned into work (done for prize); once unpaid the child draws less.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-F-01-1",
+  "answer": "C",
+  "working": "P2: speed of reply 'announces that she wants the account closed'; declined a friendship.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-F-01-2",
+  "answer": "C",
+  "working": "'gifts we most often describe as free... are precisely those designed to prevent any relationship... from forming'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-F-01-3",
+  "answer": "A",
+  "working": "Author says bond sustained by delayed, slightly unequal returns; immediate exact returns with close friendships contradicts this.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-F-01-4",
+  "answer": "A",
+  "working": "P4: receiver 'bound by a debt that cannot be cleared, and gratitude hardens into dependence'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-A-03-1",
+  "answer": "D",
+  "working": "P3: for inspectable goods 'advertising informs directly and requires no signalling story at all'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-A-03-2",
+  "answer": "D",
+  "working": "P2: lavish advertising 'worth far more to the first firm than to the second'; C overstates (not 'could not afford').",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-A-03-3",
+  "answer": "B",
+  "working": "Cheap experience good with repeat purchase; A once-in-a-lifetime, C and D inspectable goods.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-A-03-4",
+  "answer": "C",
+  "working": "Consumer-reasoning point is an objection the author rebuts ('misunderstands what the argument requires'), not a limit; A,B in P3, D in P4.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-D-02-1",
+  "answer": "D",
+  "working": "P2: 'resist the urge to compose a reply while the speaker is still in the middle of a sentence'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-D-02-2",
+  "answer": "C",
+  "working": "Follows 'each can be done well or badly' - shows what happens when done badly.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-D-02-3",
+  "answer": "A",
+  "working": "P4 suggests restating might take 'longer at each step and less time overall'; A confirms fewer total hours.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-D-02-4",
+  "answer": "C",
+  "working": "'There is something to this' then 'the objection mistakes the purpose' (useful to listener, not fairness).",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-F-04-1",
+  "answer": "C",
+  "working": "P2 lists winter-feeding limit, rotation, watchman, escalating fines; no auction.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-F-04-2",
+  "answer": "A",
+  "working": "Open access is 'a resource that belongs to no community at all'; commons governed by community rules with enforcement.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-F-04-3",
+  "answer": "C",
+  "working": "P3: commons fail 'when outsiders who are not bound by local rules can enter freely'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-F-04-4",
+  "answer": "A",
+  "working": "P2: parable herders have 'no means of watching one another and no way of punishing those who cheat'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-C-03-1",
+  "answer": "C",
+  "working": "P2: new tech worse by measures best customers care about; they say no, so firm invests where profits are.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-C-03-2",
+  "answer": "D",
+  "working": "Hindsight objection: 'fair, but it strengthens rather than weakens the point'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-C-03-3",
+  "answer": "A",
+  "working": "P2 cites customers' refusal, thin margins, small market; engineering skill never mentioned (managers 'doing... well').",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-C-03-4",
+  "answer": "D",
+  "working": "Separate unit with 'its own costs and its own measures of success, small enough that a small market can still excite it'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-F-06-1",
+  "answer": "C",
+  "working": "P3: 'Validation... can be a means of transfer as much as of recognition'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-F-06-2",
+  "answer": "D",
+  "working": "P2: concluding her knowledge failed would 'mistake a judgement for a list of rules'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-F-06-3",
+  "answer": "C",
+  "working": "P1: 'improvement on simple dismissal. Yet... assumptions that deserve more scrutiny'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-F-06-4",
+  "answer": "D",
+  "working": "Final para: farmers help decide questions, scientific claims also tested against their observations - two-way checking.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-D-07-1",
+  "answer": "B",
+  "working": "P2: mass production and supply chains put passable imitations within reach of almost anyone.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-D-07-2",
+  "answer": "B",
+  "working": "Diamond can be sold; good-school childhood 'becomes part of a person', 'passes it on'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-D-07-3",
+  "answer": "D",
+  "working": "'In part it is [an improvement]... few would wish the rich to return to buying gold-plated taps' - concession.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-D-07-4",
+  "answer": "B",
+  "working": "Directly negates claim that schooling-type spending reproduces advantage better than luxuries.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-D-07-5",
+  "answer": "C",
+  "working": "Critical of structural effects (less legible inequality) while P5: 'None of this is an accusation of bad faith'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-C-06-1",
+  "answer": "B",
+  "working": "P2: renewed 'because... no official wants to be blamed if it returns'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-C-06-2",
+  "answer": "C",
+  "working": "P2 normalisation: exceptions 'written into ordinary statutes, where they no longer need renewal'; final: test is whether it can end. B is the author's design working.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-C-06-3",
+  "answer": "A",
+  "working": "Without provision governments act outside the law with no limits: justifies emergency provisions despite risks later described.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-C-06-4",
+  "answer": "A",
+  "working": "'Sunset clauses are better than nothing, but they tend to turn renewal into a formality'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-D-02-1",
+  "answer": "A",
+  "working": "P1: toleration 'the decision not to act against something that one continues to regard as mistaken'; indifference has no objection.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-D-02-2",
+  "answer": "A",
+  "working": "Mother 'has not abandoned her objection. She has ranked it beneath something she values more'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-D-02-3",
+  "answer": "C",
+  "working": "'There is something in this complaint' but 'modesty of toleration is also its strength' in a diverse society.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-D-02-4",
+  "answer": "D",
+  "working": "Keeps objection (tells him so) yet refrains from acting against it; A objection gone, B indifferent, C interferes.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-A-02-1",
+  "answer": "B",
+  "working": "Eleven years of marriage 'present precisely because they are withheld'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-A-02-2",
+  "answer": "C",
+  "working": "P2: novel 'earns its effects through duration, letting the reader live alongside its people'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-A-02-3",
+  "answer": "C",
+  "working": "Final para: 'judging it by the novel's standards will reliably mistake its strengths for omissions'; P1 critiques the phrase.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-A-02-4",
+  "answer": "D",
+  "working": "Directly contradicts 'expanding a fine story so rarely improves it'; C is consistent with author's own P4 concession.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-E-08-1",
+  "answer": "A",
+  "working": "P2: 'trying several reasonable ways of analysing the data and reporting the one that worked'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-E-08-2",
+  "answer": "D",
+  "working": "'They do not show that priming in general is an illusion'; disputed claim is the narrower social-behaviour one.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-E-08-3",
+  "answer": "A",
+  "working": "Criticised: post hoc appeal to hidden moderators never specified in advance; A mirrors this. C mirrors file-drawer (P2), not P4.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-E-08-4",
+  "answer": "A",
+  "working": "P2: trial asks who was dishonest, 'when the more troubling lesson is that dishonesty was largely unnecessary'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-E-08-5",
+  "answer": "B",
+  "working": "Final para: reforms 'have costs of their own... That is the right trade'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-D-06-1",
+  "answer": "A",
+  "working": "P2: groups without money, office or press access have few ways to place an issue on the agenda; disruption is one.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-D-06-2",
+  "answer": "A",
+  "working": "P1: 'Part of the point of gathering in public is to make a claim that others cannot easily ignore'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-D-06-3",
+  "answer": "A",
+  "working": "Author never makes later vindication the test; legitimacy depends on hearing vs outcome and proportion. B,C,D stated in P1/P4.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-D-06-4",
+  "answer": "A",
+  "working": "P3 example: 'preventing a lawful vote from taking place' - chaining doors so vote cannot be held.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-D-01-1",
+  "answer": "A",
+  "working": "Tacit consent fails (no real alternative), but exit is a genuine good/condition of legitimacy, not its source.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-D-01-2",
+  "answer": "A",
+  "working": "P2: 'almost every habitable stretch of the earth is now claimed by some state'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-D-01-3",
+  "answer": "C",
+  "working": "Emigrant 'merely exchanges one authority for another' - not freedom from rule.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-D-01-4",
+  "answer": "C",
+  "working": "P3-4: free exit passes 'one important test of legitimacy', but justification comes from what the state does for those who stay.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ }
+]

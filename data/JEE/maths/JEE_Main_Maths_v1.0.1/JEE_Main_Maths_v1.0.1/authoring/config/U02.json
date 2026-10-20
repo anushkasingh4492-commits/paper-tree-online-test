@@ -1,0 +1,111 @@
+{
+ "unit_number": 2,
+ "unit_name": "Complex Numbers and Quadratic Equations",
+ "branch": "Algebra",
+ "count": 220,
+ "draft_files": [
+  "drafts/u02_a.py",
+  "drafts/u02_b.py",
+  "drafts/u02_c.py",
+  "drafts/u02_d.py"
+ ],
+ "alias_groups": {
+  "ALIAS-U02-z2-equals-conjugate": [
+   "U02-A-035",
+   "U02-A-049"
+  ],
+  "ALIAS-U02-z2-plus-mod-squared": [
+   "U02-A-046",
+   "U02-A-049"
+  ],
+  "ALIAS-U02-opposite-directions-args": [
+   "U02-B-047",
+   "U02-B-055"
+  ],
+  "ALIAS-U02-x2-3x-fourth-powers": [
+   "U02-D-017",
+   "U02-D-042"
+  ],
+  "ALIAS-ERR-U02-A-01": [
+   "U02-A-020",
+   "U02-A-021",
+   "U02-A-033"
+  ],
+  "ALIAS-ERR-U02-A-02": [
+   "U02-A-004",
+   "U02-A-047"
+  ],
+  "ALIAS-ERR-U02-B-01": [
+   "U02-B-016",
+   "U02-B-021",
+   "U02-B-022"
+  ],
+  "ALIAS-ERR-U02-B-02": [
+   "U02-B-024",
+   "U02-B-054"
+  ],
+  "ALIAS-ERR-U02-B-03": [
+   "U02-B-035",
+   "U02-B-051"
+  ],
+  "ALIAS-ERR-U02-C-01": [
+   "U02-C-006",
+   "U02-C-015"
+  ],
+  "ALIAS-ERR-U02-C-02": [
+   "U02-C-029",
+   "U02-C-044"
+  ],
+  "ALIAS-ERR-U02-D-01": [
+   "U02-C-005",
+   "U02-D-013"
+  ],
+  "ALIAS-ERR-U02-D-02": [
+   "U02-D-006",
+   "U02-D-018",
+   "U02-D-040"
+  ],
+  "ALIAS-ERR-U02-D-03": [
+   "U02-D-004",
+   "U02-D-035"
+  ],
+  "ALIAS-ERR-U02-D-04": [
+   "U02-D-036",
+   "U02-D-037"
+  ],
+  "ALIAS-ERR-DUPSCAN-01": [
+   "U02-D-025",
+   "U02-D-051"
+  ]
+ },
+ "numerical_selection": [
+  "U02-C-006",
+  "U02-D-006",
+  "U02-B-015",
+  "U02-A-036",
+  "U02-B-021",
+  "U02-B-032",
+  "U02-C-034",
+  "U02-C-037",
+  "U02-D-021",
+  "U02-D-040",
+  "U02-A-044",
+  "U02-A-045",
+  "U02-A-047",
+  "U02-A-052",
+  "U02-B-043",
+  "U02-B-045",
+  "U02-B-050",
+  "U02-C-044",
+  "U02-C-046",
+  "U02-C-048",
+  "U02-C-051",
+  "U02-D-041",
+  "U02-D-042",
+  "U02-D-044",
+  "U02-D-047",
+  "U02-D-051",
+  "U02-D-052",
+  "U02-D-054"
+ ]
+}

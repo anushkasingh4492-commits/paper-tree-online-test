@@ -1,0 +1,1153 @@
+{
+ "kind": "RC",
+ "passages": [
+  {
+   "passage_id": "R06-F-04",
+   "passage": [
+    "When an automated system fails and a human operator fails to rescue it, the official account usually ends with the words 'human error'. The phrase is accurate in a narrow sense, since a person did do the wrong thing, but it hides the way the situation was produced. Automation is typically introduced to take over the parts of a task that are routine and well understood. What remains for the human is whatever the designers could not automate: the rare, ambiguous, fast-moving situations in which the machine gives up or behaves strangely. The person is thus left with the hardest part of the job, and is expected to perform it suddenly, after long periods of doing almost nothing.",
+    "Those long periods matter. Skill at controlling a process is kept alive by exercising it, and an operator who has spent months watching a screen rather than flying, steering or adjusting will have less of it than one who did the work by hand. Worse, the automation removes the everyday experience through which people build an intuitive model of how the system behaves, so that when something goes wrong they must reason about it from first principles, under pressure, with alarms sounding. Monitoring is also something human beings do badly. Attention drifts when nothing happens for hours, and the more reliable the machine, the longer the stretches in which nothing happens.",
+    "The result is a curious inversion. The better the automation works in ordinary conditions, the less prepared its human supervisors may be for the extraordinary ones, and the more surprising their failure will look when it comes. Calling that failure human error locates the fault in the individual at the very moment when the design of the whole arrangement deserves scrutiny.",
+    "None of this is a case against automation, which has removed a great deal of tedium and many kinds of mistake. It is a case for designing automated systems around the people who must step in when they fail. That might mean having operators run the process manually at regular intervals so that their skill does not decay, building displays that show what the machine is doing and why rather than only whether it is working, or deciding deliberately that some tasks should remain shared even when they could be fully automated. Such measures cost efficiency in the short run. Their justification is that the moments they prepare for, although rare, are the ones in which the most is at stake."
+   ],
+   "questions": [
+    {
+     "id": "R06-F-04-1",
+     "type": "RC",
+     "options": {
+      "A": "explain why official accident reports are required to name a single cause for every failure they describe.",
+      "B": "show that operators of automated systems are usually careless and need stricter supervision and training.",
+      "C": "argue that failures blamed on operators often stem from how automation shapes their role, and to suggest design responses.",
+      "D": "argue that automated systems are more dangerous than manual ones and should be introduced only where unavoidable."
+     },
+     "question": "The primary purpose of the passage is to"
+    },
+    {
+     "id": "R06-F-04-2",
+     "type": "RC",
+     "options": {
+      "A": "Attention drifts over the long stretches in which nothing happens, and a reliable machine makes those stretches longer.",
+      "B": "They have been given less training than the operators who used to do the work by hand.",
+      "C": "They trust the machine so completely that they decide there is no longer any need to watch it.",
+      "D": "The displays they watch are usually too complicated to be read quickly in an emergency."
+     },
+     "question": "According to paragraph 2, why do people supervising a highly reliable machine tend to monitor it poorly?"
+    },
+    {
+     "id": "R06-F-04-3",
+     "type": "RC",
+     "options": {
+      "A": "leave its supervisors less ready for rare emergencies and make their eventual failure seem more surprising.",
+      "B": "make supervisors more attentive, since a dependable machine frees them to concentrate on what remains.",
+      "C": "remove the need for human supervisors, since rare emergencies would then be handled by the machine itself.",
+      "D": "make emergencies so infrequent that the skill of the people supervising the system would hardly matter."
+     },
+     "question": "The passage suggests that an improvement in how well an automated system works under ordinary conditions could"
+    },
+    {
+     "id": "R06-F-04-4",
+     "type": "RC",
+     "options": {
+      "A": "approving, since it correctly points to the operator as the part of the system most in need of reform.",
+      "B": "dismissive, on the ground that operators are never really responsible for what goes wrong in such systems.",
+      "C": "sceptical of it as an explanation of failure, while granting that it is accurate in a narrow sense.",
+      "D": "indifferent, treating it as a harmless habit of official reports that has no real effect on what happens."
+     },
+     "question": "The author's attitude towards the label 'human error' is best described as"
+    }
+   ]
+  },
+  {
+   "passage_id": "R06-E-01",
+   "passage": [
+    "Public health suffers from a peculiar handicap: when it succeeds, nothing happens. A hospital can display the patients it has cured and a surgeon can point to the tumour she removed, but the officials who ran a vaccination campaign have nothing to show for their work except an absence. The measles outbreak that did not occur leaves no photographs, no grateful survivors and no line in the local newspaper. Success in prevention is a count of events that never took place, and such a count is always an estimate rather than an observation.",
+    "This invisibility is more than an inconvenience for those who would like credit. It changes how the public weighs risk. When a disease has been made rare, the vaccine against it becomes more noticeable than the disease itself. A parent who has never seen a child struggle to breathe with diphtheria, but who has heard about a neighbour's child running a fever after an injection, is weighing something vivid against something abstract. From where that parent stands, the calculation is not foolish; the danger really has receded from ordinary experience. What the parent may not see is that it receded because of the very programme now being doubted, and that it can return if enough people reach the same conclusion.",
+    "The same pattern appears wherever the benefit of a measure is an event that fails to happen. A food inspection service that keeps contaminated products off the shelves is easy to cut in a lean year, because the year after the cut looks much like the year before it. The costs of neglect arrive slowly, are spread thinly, and are usually blamed on something else by the time they become visible. Spending on treatment, by contrast, answers a need that is present and named. It is not surprising that budgets drift towards cure and away from prevention even when prevention is the cheaper way to buy the same health.",
+    "None of this means that the public should simply take officials at their word. Claims about disasters averted are claims about a world that did not happen, and they can be inflated by any agency that wants to protect its budget. The answer to invisibility is not deference but better ways of making the counterfactual visible: comparisons with places and periods that lacked the measure, honest accounting of the measure's own costs and side effects, and records kept carefully enough that a sceptic could check them. Prevention will never be as photogenic as rescue, but it can be made legible, and a public that can read its record is more likely to keep paying for it."
+   ],
+   "questions": [
+    {
+     "id": "R06-E-01-1",
+     "type": "RC",
+     "options": {
+      "A": "governments spend too much on hospitals and should move that money to food inspection, where it would buy more health.",
+      "B": "vaccines against rare diseases have become more dangerous than the diseases themselves, which explains why many parents now hesitate.",
+      "C": "the benefits of preventive measures are hard to perceive, which erodes support for them unless their record can be checked.",
+      "D": "officials who run prevention programmes deserve far more public trust than they now receive, since their claims about averted outbreaks are accurate."
+     },
+     "question": "The central concern of the passage is that"
+    },
+    {
+     "id": "R06-E-01-2",
+     "type": "RC",
+     "options": {
+      "A": "health officials have exaggerated the dangers of diphtheria in order to protect their budgets.",
+      "B": "the disease really has become uncommon in the parent's daily life, so its danger seems remote.",
+      "C": "the parent has personally watched a child struggle to breathe and so understands the risk at first hand.",
+      "D": "the side effects of the vaccine are in fact more serious than the disease would have been for the child."
+     },
+     "question": "According to paragraph 2, the doubting parent's calculation is 'not foolish' because"
+    },
+    {
+     "id": "R06-E-01-3",
+     "type": "RC",
+     "options": {
+      "A": "its officials have often been caught exaggerating the number of outbreaks it has prevented.",
+      "B": "the harm done by weakening it appears slowly and thinly and is usually blamed on something else.",
+      "C": "it usually costs considerably more to run than treating the illnesses that contaminated food would otherwise cause.",
+      "D": "the public has come to believe that contaminated food no longer poses any real danger in modern shops."
+     },
+     "question": "The passage suggests that a food inspection service is especially easy to cut because"
+    },
+    {
+     "id": "R06-E-01-4",
+     "type": "RC",
+     "options": {
+      "A": "A health department reports outbreaks averted alongside comparisons with similar districts that lacked the measure and an account of its side effects.",
+      "B": "A health department launches a campaign in which senior doctors explain why the public should trust their expertise on vaccination.",
+      "C": "A health department stops publishing any estimates of illnesses averted, since such estimates concern events that never happened and can be inflated.",
+      "D": "A health department shifts much of its budget from prevention to treatment so that its spending produces results people can see."
+     },
+     "question": "Which of the following actions best fits the response to invisibility that the author recommends in the final paragraph?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R06-A-08",
+   "passage": [
+    "Suppose the history of life could be rewound to some early point and allowed to run again. Would anything like the present living world appear a second time? One school answers no. Evolution, on this view, is a chain of contingencies, each step dependent on the particular steps before it and on unrepeatable accidents of climate, geology and mutation. Alter any early link, and the chain would run off in another direction entirely; the existence of vertebrates, of flowering plants or of our own species would be no more to be expected than a particular sequence of cards in a shuffled deck. The rival school points to the remarkable frequency with which evolution arrives at the same solution independently. Camera-like eyes have arisen separately in vertebrates and in octopuses; streamlined bodies have evolved in fish, in extinct marine reptiles and in dolphins; flight has been achieved by insects, pterosaurs, birds and bats. If the same designs keep recurring, the argument runs, the outcome of a second run would be broadly familiar.",
+    "Each school has a strong case, and each tends to treat the other's evidence as anecdote. Convergence enthusiasts can list hundreds of cases, but the list is assembled after the fact from the solutions that did recur, and it says nothing about the far larger number of forms that appeared once and never again. Contingency enthusiasts can point to those unrepeated forms, but they often treat the mere fact that a lineage had a particular history as proof that its outcome depended on that history, which does not follow: a ball may take a unique path down a hillside and still come to rest in the only hollow at the bottom.",
+    "Much of the disagreement, I want to suggest, dissolves once we notice that the two schools are describing life at different levels of detail. At the level of broad functional solutions, a second run would very probably produce organisms that see, swim, fly and filter food, because the physical problems of moving through water or air, or of forming an image from light, admit only a few good solutions. At the level of particular lineages, the replay would almost certainly differ: there is no reason to expect that the flying creatures would be birds, or that the swimmers would have backbones. Convergence is a claim about the space of workable designs; contingency is a claim about which occupants of that space history happens to supply. The two are compatible, and both are probably true.",
+    "This reconciliation has a cost, and it is worth stating plainly. If the question that matters is whether a replay would produce something like us, a self-aware animal that makes tools and uses language, then neither school's best evidence is decisive. Intelligence of our kind has arisen, so far as we know, only once, and a single case cannot reveal whether it was a likely destination or a fluke. The recurrence of eyes and wings tells us that some problems have few solutions; it does not tell us that every capacity we value is among those solutions. On the questions that most excite the public, the honest answer is that the evidence does not yet discriminate between the two views."
+   ],
+   "questions": [
+    {
+     "id": "R06-A-08-1",
+     "type": "RC",
+     "options": {
+      "A": "contingency enthusiasts are wrong to claim that many forms appeared only once.",
+      "B": "the outcomes of evolution are fixed in advance by the physical shape of the environment.",
+      "C": "an end point reached by a route no one could repeat may still have been very likely to be reached.",
+      "D": "the history of a lineage is of no use in understanding what that lineage became."
+     },
+     "question": "The image of the ball in paragraph 2 implies that"
+    },
+    {
+     "id": "R06-A-08-2",
+     "type": "RC",
+     "options": {
+      "A": "dismissive, regarding the entire debate between them as confused and not worth pursuing.",
+      "B": "partisan, favouring the convergence school and treating the contingency school's case as anecdote.",
+      "C": "even-handed, crediting each with a real insight while faulting how it treats evidence.",
+      "D": "deferential, accepting the claims of each school and declining to judge between them."
+     },
+     "question": "The author's attitude towards the two schools is best described as"
+    },
+    {
+     "id": "R06-A-08-3",
+     "type": "RC",
+     "options": {
+      "A": "Intelligence that is capable of language and the making of tools has arisen in only one lineage of animals so far.",
+      "B": "Most supposed independent origins of eyes, wings and streamlined bodies turn out to descend from one shared ancestral form.",
+      "C": "A replay of evolution would probably not produce birds as the main flying animals, nor backboned animals as the main swimmers.",
+      "D": "Far more forms of life have appeared once in the history of life and never recurred than have appeared repeatedly."
+     },
+     "question": "Which of the following, if true, would most weaken the reconciliation proposed in paragraph 3?"
+    },
+    {
+     "id": "R06-A-08-4",
+     "type": "RC",
+     "options": {
+      "A": "insufficient grounds for expecting a replay of evolution to produce a creature like us.",
+      "B": "irrelevant to any question about what a replay of evolution would be likely to produce.",
+      "C": "good evidence that intelligence like ours was most probably a fluke of one lineage's history.",
+      "D": "good evidence that intelligence like ours is a likely outcome of any rerun of evolution."
+     },
+     "question": "It can be inferred from paragraph 4 that the author regards the repeated evolution of eyes and wings as"
+    },
+    {
+     "id": "R06-A-08-5",
+     "type": "RC",
+     "options": {
+      "A": "A chess game replayed from the same opening position follows a different course every time and ends in a different result.",
+      "B": "A town rebuilt after a flood would almost surely again have bakeries and schools, though chance would decide who ran them.",
+      "C": "A river floods on a different day each year but, because of the shape of its valley, always rises to the same height.",
+      "D": "Two engineers working apart design nearly identical bridges because both have copied the same famous earlier bridge."
+     },
+     "question": "Which of the following situations is most analogous to the reconciliation of the two schools in paragraph 3?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R03-G-02",
+   "passage": [
+    "Over the past few decades many voluntary organisations have come to manage their volunteers much as firms manage staff. There are role descriptions and application forms, induction sessions, supervisors and annual counts of hours given. The change is usually presented as simple progress. Volunteers who know what is expected of them are said to stay longer, and organisations that can report their hours to funders are better placed to win support. Funders, understandably, prefer measurable outputs, and organisations competing for limited grants have every incentive to supply them. Both claims are plausible, and neither is the whole story.",
+    "What the managerial model tends to forget is that volunteering was never only a cheaper form of labour. People who give their time without pay are also choosing what to do, with whom and on what terms, and that choice is part of what they value. A retired teacher who helped run a reading club because she liked the children and the other helpers may find, once the club has become a programme with targets and a coordinator, that she has been turned into an unpaid employee of something she no longer recognises. She has lost not her wages, which she never had, but her say. Many such volunteers do not complain; they simply drift away, and their departure is recorded, if at all, as a problem of retention.",
+    "There is also a quieter loss. Informal associations of volunteers have long been places where people who would never meet at work learn to cooperate, argue and decide things together. A committee that argues for an entire evening over the date of a jumble sale is, among other things, rehearsing the arts of compromise and accountability on which larger institutions depend. When decisions are taken by paid staff and volunteers are slotted into predefined roles, that practice of self-government shrinks. The organisation may deliver its service more reliably while doing less to cultivate the habits that made voluntary life worth defending.",
+    "None of this is an argument against training or rules as such. A rescue team on a mountain cannot depend on whoever turns up with good intentions, and anyone who works with children ought to be checked. The difficulty arises when standards suited to such demanding tasks are applied across the board, to the allotment society and the neighbourhood library as much as to the lifeboat crew. The sensible question is not whether to professionalise but where, and the answer should depend on what the task requires rather than on what funders find easy to count."
+   ],
+   "questions": [
+    {
+     "id": "R03-G-02-1",
+     "type": "RC",
+     "options": {
+      "A": "volunteers who leave reorganised clubs are mainly those who had hoped that the new arrangements would bring them some form of payment.",
+      "B": "the reading club ceased to be of any benefit to the children once it was turned into a programme with targets.",
+      "C": "part of what volunteers value is control over how and with whom they contribute, which managerial roles can take away.",
+      "D": "retired teachers are especially ill suited to working under coordinators because they are used to running their own classrooms."
+     },
+     "question": "The remark that the retired teacher 'has lost not her wages, which she never had, but her say' implies that"
+    },
+    {
+     "id": "R03-G-02-2",
+     "type": "RC",
+     "options": {
+      "A": "outright hostility: treating any form of training or rules for volunteers as a betrayal of what voluntary life stands for.",
+      "B": "detached neutrality: reporting what supporters and critics claim without offering any judgement of the author's own.",
+      "C": "qualified scepticism: accepting it for demanding tasks but doubting it as a general model for voluntary bodies.",
+      "D": "warm approval: welcoming it as clear evidence that voluntary bodies have at last matured into reliable organisations."
+     },
+     "question": "The author's attitude towards the professionalisation of volunteering is best described as"
+    },
+    {
+     "id": "R03-G-02-3",
+     "type": "RC",
+     "options": {
+      "A": "It offers evidence that professionalised organisations deliver their services less reliably than informal groups of volunteers do.",
+      "B": "It identifies a second cost, beyond individual volunteers' loss of say, that falls on the practice of collective self-government.",
+      "C": "It explains why funders prefer to support organisations that can report the hours their volunteers have given.",
+      "D": "It answers the objection that rules are needed for demanding tasks such as rescue work on a mountain or work with children."
+     },
+     "question": "Which of the following best describes the role of the third paragraph in the passage?"
+    },
+    {
+     "id": "R03-G-02-4",
+     "type": "RC",
+     "options": {
+      "A": "Many newly recruited volunteers say that clear role descriptions made them more willing to join an organisation in the first place.",
+      "B": "Among comparable groups, long-serving volunteers left at the same rate whether or not their group had adopted role descriptions and supervisors.",
+      "C": "Some volunteers who left professionalised organisations later joined informal groups such as allotment societies and reading clubs.",
+      "D": "Organisations that adopted role descriptions and supervisors reported more volunteer hours to their funders than they had before."
+     },
+     "question": "Which of the following, if true, would most weaken the author's suggestion that managerial practices lead some long-standing volunteers to drift away?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R02-E-07",
+   "passage": [
+    "In most human groups some people are listened to more than others, get their way more often and receive a larger share of whatever the group values. Students of status have long suspected that this single word conceals two different arrangements. In one, a person rises because others fear him: he can hurt them, withhold what they need or make their lives difficult, and they defer in order to avoid those costs. In the other, a person rises because others want something from him that he gives freely, usually knowledge or skill, and they defer in order to stay close enough to learn. The first route is commonly called dominance and the second prestige, and an influential line of thought in evolutionary anthropology holds that the second is a distinctively human addition to an older primate inheritance.",
+    "The argument for that view rests on the peculiar importance of cultural learning in our species. A creature that acquires most of its survival skills by copying others faces a constant problem of whom to copy, and a strong incentive to secure access to the best models. Deference, on this account, is a kind of payment: the learner offers attention, praise, small services and a willingness to yield in disputes, and in return is tolerated at the elbow of the skilled. If the account is right, it explains why prestige is freely conferred rather than extracted, why prestigious people are approached rather than avoided, and why we find ourselves imitating not only what admired people do well but much else about them besides.",
+    "That last consequence deserves more attention than it usually receives, because it shows that prestige is not simply the benign twin of dominance. Imitation guided by prestige is broad and indiscriminate. A learner cannot always tell which of a successful person's habits are responsible for the success, and so tends to copy a bundle of them: the method, but also the dress, the opinions and the manner of speech. In a small community this overspill is cheap and may even be useful, since the bundle often travels together for good reasons. In a large society with mass media, it allows people who are prestigious in one domain to exert influence far outside it, and the deference they receive bears no relation to any competence they have in the matters on which they are now heeded.",
+    "There is a further complication. The two routes are clean in theory and tangled in practice. A person who gains prestige acquires allies, resources and a following, and these are exactly the instruments with which dominance is exercised; prestige can thus be converted into the power to coerce, and the conversion is not always visible to those who continue to admire. Conversely, a dominant figure may cultivate the outward marks of prestige, surrounding himself with displays of learning or generosity that make submission feel like admiration. Observers who ask simply whether a leader is feared or respected will often find that the honest answer is both.",
+    "None of this undermines the distinction; it is precisely because the two routes can be told apart in principle that their mixture in practice becomes something to look for. What it undermines is the comfortable assumption that a society which replaces dominance with prestige has thereby solved the problem of status. Prestige allocates influence according to perceived excellence, and perception can be managed. The practical question for any institution is therefore not whether it rewards prestige rather than force, which most modern institutions at least claim to do, but whether it keeps the deference people receive tied to the domain in which they have actually earned it."
+   ],
+   "questions": [
+    {
+     "id": "R02-E-07-1",
+     "type": "RC",
+     "options": {
+      "A": "extracted by skilled people who threaten to withhold their knowledge from anyone who refuses it.",
+      "B": "a sign that learners have already mastered the skills of the person they defer to and wish to show it.",
+      "C": "a payment that learners make in return for being allowed close to those with skill.",
+      "D": "an inheritance shared with other primates that predates the human reliance on cultural learning."
+     },
+     "question": "On the cultural-learning account described in paragraph 2, deference to prestigious people is"
+    },
+    {
+     "id": "R02-E-07-2",
+     "type": "RC",
+     "options": {
+      "A": "the surplus of deference that a prestigious person receives over and above what his real skill would justify.",
+      "B": "the spread of a skilled person's methods to more learners than he could ever teach directly in person.",
+      "C": "the conversion of a prestigious person's following into allies and resources that can be used to coerce.",
+      "D": "learners copying traits of an admired person that have nothing to do with the skill for which the person is admired."
+     },
+     "question": "As used in paragraph 3, 'overspill' refers to"
+    },
+    {
+     "id": "R02-E-07-3",
+     "type": "RC",
+     "options": {
+      "A": "prestigious people in small communities are seldom able to convert their following into the power to coerce.",
+      "B": "people in small communities defer to skilled individuals far less than people living in large societies do.",
+      "C": "learners in small communities can always tell which of a successful person's habits are responsible for the success.",
+      "D": "the habits that accompany a person's skill there are more likely to be connected with it for good reasons."
+     },
+     "question": "The passage suggests that indiscriminate imitation is less costly in a small community chiefly because"
+    },
+    {
+     "id": "R02-E-07-4",
+     "type": "RC",
+     "options": {
+      "A": "A factory manager who threatens to dismiss workers is obeyed promptly, although the workers neither admire him nor try to learn from him.",
+      "B": "A young musician copies her teacher's practice routine and posture and becomes noticeably better at playing her instrument as a result.",
+      "C": "A famous athlete's opinions on diet and politics are widely adopted by fans who know nothing of his views on either subject beyond his fame.",
+      "D": "A scholar admired for her research uses the loyalty of her many students to block the appointment of critics, while her admirers see only her brilliance."
+     },
+     "question": "Which of the following situations best illustrates the complication the author describes in paragraph 4?"
+    },
+    {
+     "id": "R02-E-07-5",
+     "type": "RC",
+     "options": {
+      "A": "defend the cultural-learning explanation of prestige against the objection that prestige is merely dominance in a more respectable disguise.",
+      "B": "argue that modern institutions, by rewarding prestige rather than force, have largely solved the problem of how status is distributed.",
+      "C": "show that the distinction between dominance and prestige breaks down in practice and should therefore be abandoned by students of status.",
+      "D": "accept that status can rest on fear or on freely given deference, while showing that prestige has hazards of its own and mixes with dominance."
+     },
+     "question": "The primary purpose of the passage is to"
+    }
+   ]
+  },
+  {
+   "passage_id": "R05-E-08",
+   "passage": [
+    "The textbook account of banking runs roughly as follows. Savers deposit money; a bank keeps a fraction of each deposit as reserves and lends out the rest; the borrower spends the loan, the recipient deposits it at another bank, which in turn lends out most of it, and so on, until the original deposit has been multiplied by a factor that depends on the fraction held back. On this account banks are intermediaries, passing the savings of some people on to the projects of others, and the quantity of money in an economy is ultimately governed by the central bank's control over the quantity of reserves.",
+    "As a description of what actually happens when a loan is made, this has the sequence backwards. A bank that approves a loan does not hand over notes taken from a vault of accumulated deposits; it credits the borrower's account with a new deposit, and the money the borrower then spends did not exist a moment earlier. Lending creates deposits rather than the reverse. What limits a lender is therefore not a pool of prior savings but its judgement of whether a loan will be repaid at a profit, the capital it must hold against possible losses, the demand from creditworthy borrowers, and the price at which it can obtain the reserves needed to settle payments with other banks, a price that the central bank sets through the rate of interest rather than through the quantity of reserves.",
+    "The textbook is not simply wrong. A single bank that lends freely will soon find its new deposits draining away as borrowers pay people who bank elsewhere, and it must then attract deposits or borrow reserves to cover the outflow; from the standpoint of one institution, lending does seem to require funding. The error lies in generalising from the single bank to the system. What is a drain for one bank is an inflow for another, and the system as a whole is constrained less by the deposits it has gathered than by the willingness of banks to lend and of borrowers to borrow.",
+    "The difference matters for policy. If the multiplier story were right, a central bank that supplied banks with abundant reserves would set off a roughly proportionate expansion of lending. On the alternative account, when borrowers are cautious and banks are worried about losses, additional reserves may simply sit unused, because nothing in the decision to lend was waiting for them. Arguments about why lending has stalled are then better directed at the demand for credit and the condition of banks' balance sheets than at the quantity of reserves.",
+    "A further implication is drawn less often. If banks merely passed on existing savings, the direction of their lending would be a secondary matter, a question of how efficiently funds that already exist are placed. If instead banks create money when they lend, then their decisions about whom to lend to determine what new purchasing power enters the economy, and where. A boom in lending against existing houses and a boom in lending to firms that build new things both enlarge the supply of money, yet they do very different things with it: the first mainly raises the price of what is already there, while the second adds to what there is. Banking, on this view, is not a neutral pipe between savers and borrowers but one of the principal means by which a society decides what its new money will be used for."
+   ],
+   "questions": [
+    {
+     "id": "R05-E-08-1",
+     "type": "RC",
+     "options": {
+      "A": "hands the borrower notes drawn from the deposits that savers have accumulated in its vaults over time.",
+      "B": "credits the borrower's account with a new deposit that did not exist before the loan was made.",
+      "C": "transfers the amount of the loan from the account of a saver who has agreed to lend to that borrower.",
+      "D": "first obtains from the central bank enough extra reserves to match the full amount of the loan."
+     },
+     "question": "According to the passage, when a bank approves a loan it"
+    },
+    {
+     "id": "R05-E-08-2",
+     "type": "RC",
+     "options": {
+      "A": "illustrate that lending booms which enlarge the money supply alike may differ greatly in what the new money does.",
+      "B": "argue that banks should be prohibited from lending against existing houses so that more new money flows to productive firms.",
+      "C": "show that lending against houses expands the supply of money less than lending to firms, which creates more deposits.",
+      "D": "support the textbook claim that banks are intermediaries that place existing savings with the most efficient borrowers."
+     },
+     "question": "The comparison between lending against existing houses and lending to firms that build new things (paragraph 5) is used to"
+    },
+    {
+     "id": "R05-E-08-3",
+     "type": "RC",
+     "options": {
+      "A": "a single bank can lend without limit, since any deposits it loses to other banks are bound to return to it.",
+      "B": "banks are not constrained by anything at all, since they can create whatever deposits their borrowers happen to request.",
+      "C": "the total of deposits across all banks can rise even though no saver has brought any new money to any bank.",
+      "D": "the central bank can determine the total amount of bank lending by deciding how many reserves to supply to banks."
+     },
+     "question": "It can be inferred from the passage that, on the author's account,"
+    },
+    {
+     "id": "R05-E-08-4",
+     "type": "RC",
+     "options": {
+      "A": "approving of it as a simplification that is accurate for the system, though misleading about how a single bank operates.",
+      "B": "neutral towards it, presenting it alongside the alternative without saying which is the better account of modern banking.",
+      "C": "dismissive of it as a mistake with no basis, since even individual banks never need deposits or reserves to fund their lending.",
+      "D": "critical of its picture of the system as a whole, while granting that it describes the funding problem of one bank fairly."
+     },
+     "question": "The author's attitude towards the textbook account of banking is best described as"
+    },
+    {
+     "id": "R05-E-08-5",
+     "type": "RC",
+     "options": {
+      "A": "A bank that expanded its lending faster than its rivals found that many of the new deposits it created moved to other banks.",
+      "B": "In several periods when reserves were made abundant while borrowers were cautious and banks feared losses, lending still rose in near proportion to reserves.",
+      "C": "Banks that held more capital relative to their loans tended to lend more freely than banks with thin capital during a slowdown.",
+      "D": "In several periods when reserves were made abundant, lending stayed flat because borrowers were reluctant to take on new debts."
+     },
+     "question": "Which of the following, if true, would most weaken the author's argument in paragraph 4?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R05-A-04",
+   "passage": [
+    "Defenders of nudging, the practice of steering choices by altering how options are presented rather than by forbidding or taxing any of them, have a ready answer to the charge that it is manipulative. Someone, they point out, must decide which option on a form is pre-selected, which dish stands at eye level in a canteen and which paragraph of a letter comes first; since there is no presentation without some arrangement, the choice is not between influencing people and leaving them alone but between influencing them thoughtfully and influencing them carelessly. The argument is sound as far as it goes, and critics who speak as though an unarranged menu were available are attacking a position nobody holds.",
+    "Yet the argument from inevitability answers a weaker objection than the one that matters. What troubles the more careful critics is not that choice architects influence us, which is unavoidable, but that many of the most effective nudges work precisely to the extent that they go unnoticed. A default enrolment in a savings scheme succeeds partly because inertia keeps people where they were placed, but also because many never register that a decision was made on their behalf; a smaller plate reduces consumption chiefly when diners do not reflect that they have been served less. Influence of this sort does not engage the faculties by which people govern themselves, but routes around them.",
+    "One way to sharpen the worry is to ask whether a given nudge would survive disclosure. Suppose a canteen posted a notice explaining that fruit had been placed at the front because the management wanted employees to eat more of it. If the arrangement continues to work, its power did not depend on concealment, and it begins to look less like manipulation than like a reminder. If it stops working once explained, that is evidence that it relied on a gap between what people were doing and what they understood themselves to be doing, and an institution that relies on such gaps owes its public a justification that it cannot easily give in public.",
+    "The test is not decisive in every case, and it should not be mistaken for a general condemnation. Some nudges would plainly survive disclosure: a letter telling people that most of their neighbours pay their taxes on time would plausibly work whether or not recipients knew why it had been sent, since the information is itself the influence. Others might fail it for innocent reasons, because a disclosure can itself distract, or can provoke a reflexive contrariness that has nothing to do with the merits of the option. What the test accomplishes is to shift the debate from an unanswerable question, whether influence is present, to an answerable one, whether the influence could be avowed. That shift concedes to the defenders everything their best argument actually establishes, and withholds from them only what it never established."
+   ],
+   "questions": [
+    {
+     "id": "R05-A-04-1",
+     "type": "RC",
+     "options": {
+      "A": "no different in principle from one that survives, since every presentation of options influences choice.",
+      "B": "conclusive proof that the institution using it has acted manipulatively and must abandon it.",
+      "C": "evidence, though not proof, that it depended on people not understanding what they were doing.",
+      "D": "a sign that disclosure is itself distracting and so should not be expected of institutions."
+     },
+     "question": "The author would most likely regard a nudge that stops working as soon as its purpose is explained as"
+    },
+    {
+     "id": "R05-A-04-2",
+     "type": "RC",
+     "options": {
+      "A": "most of the nudges now used by public bodies would fail if their purposes were explained.",
+      "B": "people who are paying attention are almost never affected by the way in which their options are presented.",
+      "C": "the critics who deny that any arrangement of options is inevitable are more numerous than the careful critics.",
+      "D": "an influence's being unavoidable does not show that every way of exercising it is equally acceptable."
+     },
+     "question": "The author's claim that the argument from inevitability 'answers a weaker objection than the one that matters' assumes that"
+    },
+    {
+     "id": "R05-A-04-3",
+     "type": "RC",
+     "options": {
+      "A": "dismissive: their reply to critics is treated as confused and as missing the obvious unavailability of any neutral menu.",
+      "B": "partly sympathetic: their central argument is accepted, but not as settling the issue that matters most.",
+      "C": "deferential: their reply to critics is taken to have answered the charge that nudging is manipulative.",
+      "D": "suspicious: they are suggested to be hiding their real motives from the people whose choices they steer."
+     },
+     "question": "The author's attitude towards the defenders of nudging is best described as"
+    },
+    {
+     "id": "R05-A-04-4",
+     "type": "RC",
+     "options": {
+      "A": "A clinic's texted appointment reminders that keep cutting missed visits after patients are told they are sent for that reason.",
+      "B": "A bank's default savings option, explained in the fine print of a long contract, whose take-up is unchanged though almost no customers read that section.",
+      "C": "A website's pre-ticked box for marketing emails, whose sign-ups fall sharply once a notice explains that the box was ticked to raise them.",
+      "D": "A government form redesigned so that the most common answer appears first, its designers never having asked what would happen if the reason were stated."
+     },
+     "question": "Which of the following practices would most clearly pass the test proposed in paragraph 3?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R06-D-05",
+   "passage": [
+    "Astronomers cannot lay a measuring tape across the sky, and almost every distance beyond the nearest stars is therefore inferred rather than measured. The method is usually described as a ladder. At the bottom are stars close enough for their apparent shift against the background, as the earth travels around the sun, to be observed and converted into a distance by simple geometry. Among those stars are certain pulsating ones whose rhythm of brightening and fading is tied to their true brightness, so that once the rhythm has been timed, a comparison of true with apparent brightness yields a distance. Such stars can be picked out in nearby galaxies, where they in turn calibrate brighter markers still, among them a class of exploding stars that can be seen across a large part of the observable universe.",
+    "Critics of the ladder, and many popular accounts of it, dwell on its fragility. Every rung rests on the one beneath, so an error at the bottom is carried, and perhaps magnified, all the way to the top. A small mistake in the geometry of nearby stars would misplace the pulsating stars, which would misplace the exploding ones, which would in turn misplace the remote galaxies whose distances tell us how fast the universe is expanding. On this view the ladder is really a chain, and a chain is only as strong as its weakest link.",
+    "The image is apt, but only half of it. A chain fails at its weakest link because each link is tested by nothing except the load it bears. The rungs of the distance ladder are tested by one another. Wherever two methods can both be applied to the same objects, their answers ought to agree, and when they do not, the disagreement points to a fault in one of them. Several of the largest revisions of cosmic distances in the past century came about in just this way, when a comparison between overlapping rungs exposed a hidden assumption, such as the neglect of dust that dims starlight or the confusion of two kinds of pulsating star with one. Interdependence, in other words, is not only a route by which errors travel upward; it is also the means by which they are caught.",
+    "This is no reason for complacency. Cross-checks catch only the errors that differ between methods; a mistake shared by every rung, or built into a calibration on which all of them rely, would pass each comparison untouched. That is why the present disagreement between the expansion rate measured with the ladder and the rate inferred from observations of the early universe is taken so seriously. It may expose a flaw common to the ladder's rungs, or it may reveal something new about the cosmos itself. Either outcome would be informative, and the fact that the question can be posed so sharply is itself a tribute to how far the ladder has been tightened. A structure that could not be checked could never have produced a disagreement worth arguing about."
+   ],
+   "questions": [
+    {
+     "id": "R06-D-05-1",
+     "type": "RC",
+     "options": {
+      "A": "the timing of their cycle of brightening and fading reveals how bright they truly are.",
+      "B": "their shift against the background as the earth travels around the sun can be converted into a distance.",
+      "C": "their light, unlike that of ordinary stars, is not dimmed by the dust lying between the stars.",
+      "D": "they shine so brilliantly when they explode that they can be seen across much of the universe."
+     },
+     "question": "According to the passage, the pulsating stars can serve as measures of distance because"
+    },
+    {
+     "id": "R06-D-05-2",
+     "type": "RC",
+     "options": {
+      "A": "the image fits the lower rungs of the ladder well but fails for the upper rungs that rely on exploding stars.",
+      "B": "only about half of the rungs rest on the rungs beneath them, while the others are measured independently.",
+      "C": "the ladder is far stronger than its weakest rung, because errors made at the bottom are never carried upward.",
+      "D": "the rungs do depend on one another, but that dependence also lets them test one another, as links cannot."
+     },
+     "question": "By saying that the chain image is apt 'but only half of it' (paragraph 3), the author means that"
+    },
+    {
+     "id": "R06-D-05-3",
+     "type": "RC",
+     "options": {
+      "A": "was made by geometry alone, without any appeal to the other methods by which astronomers measure distance.",
+      "B": "is an instance of an error common to every rung, of the kind that comparisons between methods could not catch.",
+      "C": "came about because distances found by different rungs for the same objects failed to agree.",
+      "D": "showed that the ladder as a whole is too unreliable to be used in measuring how fast the universe expands."
+     },
+     "question": "The passage suggests that the discovery that two kinds of pulsating star had been taken for one"
+    },
+    {
+     "id": "R06-D-05-4",
+     "type": "RC",
+     "options": {
+      "A": "Methods that can be applied to the same objects nearly always give answers that agree within their stated uncertainties.",
+      "B": "At least some of the errors that affect one method of finding distances do not also affect another method used on the same objects.",
+      "C": "The expansion rate inferred from the early universe is more trustworthy than the rate found with the ladder.",
+      "D": "The geometric measurements of the nearest stars are free from any error that could be carried up the ladder."
+     },
+     "question": "The claim in paragraph 3 that interdependence is 'the means by which they are caught' depends on which of the following assumptions?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R06-C-01",
+   "passage": [
+    "Few scientific failures are held against a discipline as often as seismology's inability to say when the next large earthquake will strike. The public imagines that a sufficiently clever instrument, placed in the right fault zone, ought eventually to detect a warning sign, much as a barometer falls before a storm. Over the past century researchers have pursued many such signs, from changes in groundwater levels and gas emissions to swarms of small tremors and odd animal behaviour. Each has, at one time or another, appeared to precede a particular earthquake, and each has failed when tested against the many earthquakes that came without it and the many apparent warnings that were followed by nothing.",
+    "It is worth separating two activities that ordinary speech runs together. A prediction, in the sense the public wants, names a place, a magnitude and a narrow window of time: a strong earthquake near this town within the next week. A forecast states a probability over a longer period: a given chance of shaking above some level in this region within the next thirty years. The first remains beyond reach, and many seismologists suspect it may stay there, because whether a small rupture grows into a large one seems to depend on conditions deep in the crust that no instrument can survey in detail. The second is routine, and it is far from useless.",
+    "Forecasts are what building codes are written from. When engineers decide how strongly a hospital must be braced, or which soils are too loose to build on, they are acting on probabilities of exactly this kind. A city that has absorbed its long-term hazard into the way it builds has, in effect, already received the most valuable warning seismology can give, though nobody experiences it as a warning, since it arrives years before the event and asks for money rather than flight.",
+    "The objection that a probability is too vague to act on mistakes the kind of decision at stake. Few people would evacuate a city on the strength of a one-in-twenty chance spread over three decades, and nobody should. But a decision about whether to reinforce a school is not a decision about this week; it is a decision about the lifetime of a building, and over that lifetime a one-in-twenty chance is large. This does not mean that the search for warning signs should be abandoned, since a reliable one would save lives that codes cannot. It means that the discipline should not be judged by its failure at a task it may never accomplish while its success at a quieter task goes unremarked."
+   ],
+   "questions": [
+    {
+     "id": "R06-C-01-1",
+     "type": "RC",
+     "options": {
+      "A": "show that the search for warning signs before earthquakes has been a waste of effort and ought now to be given up.",
+      "B": "argue that seismology deserves credit for long-term probabilities that guide construction, rather than blame for failing to predict individual earthquakes.",
+      "C": "explain why the conditions deep in the crust that decide the size of an earthquake can never be measured by any instrument.",
+      "D": "criticise engineers for designing hospitals and schools without making use of the probabilities that seismologists already publish."
+     },
+     "question": "The primary purpose of the passage is to"
+    },
+    {
+     "id": "R06-C-01-2",
+     "type": "RC",
+     "options": {
+      "A": "names a place, a magnitude and a short time window, while a forecast gives a probability over a longer period.",
+      "B": "concerns large and destructive earthquakes only, whereas a forecast also covers the small tremors that people barely feel.",
+      "C": "is issued by seismologists to the public, whereas a forecast is prepared by engineers for use in drafting building codes.",
+      "D": "relies on instruments placed in fault zones, whereas a forecast is built only from historical records of earlier earthquakes."
+     },
+     "question": "According to the passage, a prediction differs from a forecast in that a prediction"
+    },
+    {
+     "id": "R06-C-01-3",
+     "type": "RC",
+     "options": {
+      "A": "officials keep the probabilities from residents for fear that publishing them would cause needless panic.",
+      "B": "it is written in technical language that only the engineers who design hospitals are able to understand.",
+      "C": "the probabilities on which building codes rest usually turn out to be wrong about which buildings will fail.",
+      "D": "it arrives years before any earthquake and asks for spending rather than a decision to leave."
+     },
+     "question": "The passage suggests that nobody experiences a city's absorbed long-term hazard 'as a warning' because"
+    },
+    {
+     "id": "R06-C-01-4",
+     "type": "RC",
+     "options": {
+      "A": "Many residents of earthquake-prone cities ignore official orders to leave their homes, even when a strong earthquake later follows.",
+      "B": "A newly proposed warning sign appears to have preceded several recent earthquakes in widely separated parts of the world.",
+      "C": "In most earthquake-prone regions, buildings are demolished or replaced within a few years of construction, long before a thirty-year hazard is likely to occur.",
+      "D": "Engineers in several countries already decide how much to reinforce schools by consulting thirty-year probabilities of strong shaking."
+     },
+     "question": "Which of the following, if true, would most weaken the author's reply to the objection that a probability is too vague to act on?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R02-E-03",
+   "passage": [
+    "Imagine being told, after a brief task in which you estimated the number of dots flashed on a screen, that you belong to the group of 'overestimators'. You never meet another member of your group; you do not know who they are; nothing hangs on the label. You are then asked to divide small sums of money between two anonymous people, one described as an overestimator and the other as an underestimator. Experiments built on this design, which came to be called the minimal group paradigm, found that people reliably gave a little more to members of their own arbitrary category. Some even preferred allocations that maximised the gap between the groups over allocations that would have given their own group more in absolute terms.",
+    "The result has often been read as a revelation about human nature. If a meaningless label is enough to produce favouritism, the argument runs, then tribalism must be wired into us, waiting for any pretext, and the deeper divisions of nation, religion and ethnicity are only this primitive tendency writ large. The reading is dramatic, but it outruns the evidence in two ways.",
+    "First, what the experiments mostly showed was favouritism, not hostility. Participants tilted rewards towards their own side, but they were generally reluctant to impose costs on the other side when the task was framed as distributing penalties rather than rewards. Giving one's own a little more is not the same as wishing the others harm, and a theory of intergroup conflict that treats the two as interchangeable will misunderstand both. Second, the favouritism itself may be less mindless than it looks. Several later studies suggested that it shrinks when participants are told that members of their group will not know how they allocated, as though people were partly acting on an expectation that their own side would reciprocate. On that account the label is not a trigger for blind loyalty but a cue about whom one is in a cooperative relationship with.",
+    "None of this makes the original finding trivial. It remains striking that so thin a basis for belonging should shape behaviour at all, and the speed with which people adopt a category as their own deserves to be taken seriously. But the lesson that follows is not the fatalistic one. If group membership can be conjured from a coin toss or a dot-counting task, then it can also be redrawn: categories that are learned so easily are not fixed, and identities that cut across existing divisions can be built by the same mechanism that builds divisions in the first place.",
+    "What the laboratory cannot tell us is why particular divisions in the world become bitter. Real groups have histories, grievances and competing claims on land, jobs and power, and a five-minute label carries none of these. The minimal group paradigm shows where the raw material of loyalty comes from; it does not show what turns that material into enmity."
+   ],
+   "questions": [
+    {
+     "id": "R02-E-03-1",
+     "type": "RC",
+     "options": {
+      "A": "refused to give any money at all to members of the other group once they learned which group they belonged to.",
+      "B": "met the other members of their category before the task and divided the money according to friendships they had formed.",
+      "C": "preferred divisions that widened the difference between the two groups even when another division would have given their own group more.",
+      "D": "gave more to the other group when they believed that members of their own group were watching their choices."
+     },
+     "question": "According to the passage, some participants in the minimal group experiments"
+    },
+    {
+     "id": "R02-E-03-2",
+     "type": "RC",
+     "options": {
+      "A": "Participants were reluctant to impose penalties on the other group even when they were free to impose any penalty they liked.",
+      "B": "Participants assigned to groups by an openly random coin toss showed favouritism as readily as those grouped by a dot-counting task.",
+      "C": "Participants favoured their own group more strongly when the allocation involved large sums of money than when it involved small sums.",
+      "D": "Participants favoured their own group just as strongly when assured that nobody would ever learn how they had allocated."
+     },
+     "question": "Which of the following findings, if true, would most weaken the reciprocity account described in paragraph 3?"
+    },
+    {
+     "id": "R02-E-03-3",
+     "type": "RC",
+     "options": {
+      "A": "argue that intergroup conflict is caused by competition over land, jobs and power rather than by any sense of shared identity.",
+      "B": "withdraw the hopeful conclusion of paragraph 4 by conceding that real divisions are too deep to be redrawn by any mechanism.",
+      "C": "set a limit on what the experiments can explain, separating the origins of group loyalty from the causes of bitter conflict.",
+      "D": "dismiss the minimal group paradigm as irrelevant to the study of how real groups behave in the world outside the laboratory."
+     },
+     "question": "The final paragraph functions primarily to"
+    },
+    {
+     "id": "R02-E-03-4",
+     "type": "RC",
+     "options": {
+      "A": "Favouritism towards an arbitrary group is the same tendency that, when intensified, produces conflicts between nations and religions.",
+      "B": "Because the experiments found favouritism rather than hostility, prejudice between real groups is largely a matter of rational reciprocity.",
+      "C": "Since a label can be conjured from a coin toss, the categories people adopt have little real effect on how they treat others.",
+      "D": "That arbitrary categories take hold so easily gives grounds for hope as well as for concern about relations between groups."
+     },
+     "question": "The author would most likely agree with which of the following?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R04-D-06",
+   "passage": [
+    "A common complaint about protest is that it inconveniences people who have done nothing wrong. Commuters are delayed, shops lose trade, ambulances must find another route. The complaint has some force, but it often hides an assumption that deserves to be questioned: that legitimate protest would cause no inconvenience at all. A march that nobody notices, held where nobody has to walk around it, is hardly a protest. Part of the point of gathering in public is to make a claim that others cannot easily ignore.",
+    "This is why disruption has always been close to the centre of democratic protest rather than at its edge. Groups without money, office or access to the press have few ways of placing an issue on the public agenda, and a temporary cost imposed on the wider community is one of them. Many causes now regarded as plainly just were first brought to public notice by people who were considered a nuisance, and their critics complained, in much the same terms as are heard today, that they had chosen the wrong methods and the wrong moment.",
+    "None of this means that any disruption is acceptable. The useful distinction is between disruption that seeks a hearing and disruption that seeks to impose an outcome. The first imposes a cost in order to make others pay attention; it accepts that, once they have paid attention, they may still disagree. The second tries to make it impossible for others to act on their own decision, for instance by preventing a lawful vote from taking place or by keeping people from a service they are entitled to use. Protest of the first kind is part of the argument on which democracy runs. Protest of the second kind substitutes pressure for persuasion, and a democracy can rightly limit it.",
+    "Proportion matters as well. A blockade that delays traffic for an afternoon is different from one that prevents a hospital from receiving supplies, even if both are aimed only at securing attention. Those who protest have a responsibility to choose methods whose costs bear some relation to the importance of what they are saying, and those who govern have a responsibility not to treat every inconvenience as an emergency. Neither responsibility can be reduced to a simple rule, and particular cases will always be argued over; but the alternative to such argument is worse. A society that tolerates no disruption at all has, in effect, decided that only those who already have a hearing deserve one."
+   ],
+   "questions": [
+    {
+     "id": "R04-D-06-1",
+     "type": "RC",
+     "options": {
+      "A": "the public has always come to regard the causes of disruptive protesters as just once their methods are forgotten.",
+      "B": "groups lacking money, office or press access have few other ways of bringing an issue to public notice.",
+      "C": "governments in most democracies treat every inconvenience caused by protesters as an emergency requiring a response.",
+      "D": "protesters who cause no disruption are usually breaking the law, while those who cause disruption usually are not."
+     },
+     "question": "According to the passage, disruption is close to the centre of democratic protest because"
+    },
+    {
+     "id": "R04-D-06-2",
+     "type": "RC",
+     "options": {
+      "A": "protests should be held in the busiest places available, whatever inconvenience this causes to the public.",
+      "B": "imposing some cost on others is part of what lets a protest function as a public claim.",
+      "C": "most protests fail because their organisers choose places where they will not be noticed by anyone.",
+      "D": "complaints about inconvenience caused by protests are unfair and should be ignored by those who govern."
+     },
+     "question": "The remark that 'A march that nobody notices, held where nobody has to walk around it, is hardly a protest' suggests that the author believes"
+    },
+    {
+     "id": "R04-D-06-3",
+     "type": "RC",
+     "options": {
+      "A": "Governments should avoid treating every inconvenience caused by protesters as if it were an emergency.",
+      "B": "Protesters ought to weigh the harm that their methods cause against the importance of their message.",
+      "C": "Disruption is legitimate whenever the cause it serves is later judged by most people to have been just.",
+      "D": "A protest may legitimately impose costs on people who bear no responsibility for the grievance concerned."
+     },
+     "question": "The author would agree with each of the following statements EXCEPT:"
+    },
+    {
+     "id": "R04-D-06-4",
+     "type": "RC",
+     "options": {
+      "A": "Protesters occupy a public square for a weekend, holding speeches and handing out leaflets to passers-by.",
+      "B": "Protesters stand silently outside a council chamber with banners while councillors arrive for a scheduled vote.",
+      "C": "Protesters march through the city centre during the evening rush hour, delaying traffic for most of the evening.",
+      "D": "Protesters chain shut the doors of a council chamber so that a scheduled vote cannot be held."
+     },
+     "question": "Which of the following would the author most clearly regard as disruption that 'seeks to impose an outcome'?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R04-A-06",
+   "passage": [
+    "The names we give to periods of the past look like neutral conveniences, markers on a timeline that allow us to say roughly when something happened. In fact most of them are compressed arguments. 'The Middle Ages' is the clearest case. The phrase took hold among European writers who believed that they were reviving the learning of the ancient world after a long interruption, and who therefore saw the intervening thousand years as an interval, a middle that mattered chiefly as the gap between two moments of achievement. A period named in this way has been judged before it has been studied.",
+    "Generations of historians have since shown how little that judgement fits the evidence. The centuries in question saw the founding of universities, the building of great cathedrals, the elaboration of law and the slow growth of towns and trade; far from being an interruption, they laid much of the ground on which later achievements stood. Yet the name has survived the demolition of the view that produced it, and it continues to whisper that the period was something to be got through. Words outlast the arguments that coined them.",
+    "The difficulty grows when such a label is exported. To speak of a 'medieval' period in the history of a region far from Europe is to import a chronology built for one part of the world, with its own sense of what came before and after, and to invite the historian to look there for whatever the label suggests, such as a decline and a later rebirth, whether or not the evidence of that region points to anything of the kind.",
+    "It does not follow that we should try to do without period names. History cannot be written without some way of grouping years together, and the alternatives are not innocent either: centuries are as arbitrary as any label, cutting through lives and movements at points chosen by arithmetic, and they bring a peculiar habit of their own, the tendency to treat each hundred years as having a single character. The sensible course is to keep the names while holding them lightly, treating each as a hypothesis about what a stretch of time had in common, to be tested against the evidence and abandoned where it fails. The danger lies not in having labels but in letting the label arrive before the research and decide what the research will look for."
+   ],
+   "questions": [
+    {
+     "id": "R04-A-06-1",
+     "type": "RC",
+     "options": {
+      "A": "a time of steady decline that began long before the ancient world had reached its height.",
+      "B": "a stretch of years grouped together merely for convenience, without any particular judgement implied.",
+      "C": "the period in which universities, cathedrals and towns first laid the ground for later achievement.",
+      "D": "a gap between the learning of the ancient world and its revival in their own time."
+     },
+     "question": "According to the passage, the writers among whom the phrase 'The Middle Ages' took hold regarded the centuries it named as"
+    },
+    {
+     "id": "R04-A-06-2",
+     "type": "RC",
+     "options": {
+      "A": "may lead historians to seek a pattern such as decline and rebirth that the region's own evidence does not show.",
+      "B": "wrongly suggests that the region was less advanced than Europe during the same span of years.",
+      "C": "uses a European word for a period that the region's own historians had already named differently.",
+      "D": "implies that the region had no universities, cathedrals or growing towns during the centuries the label covers."
+     },
+     "question": "The passage suggests that calling a period in the history of a region far from Europe 'medieval' is problematic chiefly because it"
+    },
+    {
+     "id": "R04-A-06-3",
+     "type": "RC",
+     "options": {
+      "A": "A historian refuses to group years together at all and narrates events year by year, leaving readers to form their own periods.",
+      "B": "A historian chooses a period name at the outset of a project and then organises the search for sources around the features the name suggests.",
+      "C": "A historian keeps an established name for an era, checks whether its implied features appear in the sources, and drops it where they do not.",
+      "D": "A historian replaces all named periods with numbered centuries, so that no judgement about the character of an age enters the account."
+     },
+     "question": "Which of the following practices would the author most likely regard as following the recommendation in the final paragraph?"
+    },
+    {
+     "id": "R04-A-06-4",
+     "type": "RC",
+     "options": {
+      "A": "Some period names carry a judgement about the worth of the period that was made before the period was closely studied.",
+      "B": "Dividing the past into numbered centuries would avoid the distortions that named periods introduce into historical writing.",
+      "C": "Achievements of the period called the Middle Ages contributed to developments that came after it.",
+      "D": "A name for a period can go on shaping how the period is perceived after the view behind the name has been abandoned."
+     },
+     "question": "Each of the following can be inferred from the passage EXCEPT:"
+    }
+   ]
+  },
+  {
+   "passage_id": "R01-B-01",
+   "passage": [
+    "When a person who keeps all her appointments in a phone loses the phone, she often says that she has lost her memory, and the phrase is less of an exaggeration than it sounds. For a growing number of thinkers, the boundary of the mind is not the skin or the skull but the reach of the processes that do a mind's work. If a notebook is consulted as automatically as recollection, trusted as fully and available as readily, then, the argument goes, the information it holds is as much a part of its owner's beliefs as anything stored in the brain. To insist otherwise is, on this view, a mere prejudice in favour of the inside.",
+    "The argument has real force, and much of it should be accepted. It is hard to say what principled difference there is between a fact that I must work to recall and a fact that I can retrieve, with less effort, from a list I always carry. Both are stored, both are retrieved, and both guide what I do. Ordinary practice already reflects this: we hold someone responsible for knowing what is written in the diary she relies on, and we speak of a shopping list as remembering things for us. When a skill depends on a tool, as a carpenter's feel for the wood depends on a plane he has used for years, the tool can seem less an object he handles than a part of how he perceives.",
+    "Yet the stronger conclusion, that the mind simply is whatever system includes the tool, moves too quickly. Devices differ from memory in a way the argument tends to pass over: they can be edited by other people. A notebook can be altered while its owner sleeps; the contents of a phone can be changed by whoever manages the service on which it depends. Biological memory is fallible, and it too can be distorted by suggestion, but it is not open in the same routine way to the revisions of strangers. The difference is not one of storage but of authority, of who has the standing to change what a person takes to be true.",
+    "The better lesson, then, is not that minds are everywhere but that trust has become a part of cognition. Once we lean on external stores, the question of whether our beliefs are sound becomes partly a question about the institutions and people who maintain those stores. That is why the loss, or the quiet alteration, of a device can feel like an injury to the self and not merely an inconvenience. The thesis that the mind extends into its tools is right to notice the injury; it is wrong to think that calling the device a part of the mind explains it."
+   ],
+   "questions": [
+    {
+     "id": "R01-B-01-1",
+     "type": "RC",
+     "options": {
+      "A": "warn people who keep their appointments in phones that strangers are likely to tamper with what they have stored.",
+      "B": "accept that tools can do memory's work while arguing that this reveals a new reliance on trust, not a larger mind.",
+      "C": "show that biological memory is more trustworthy than notebooks and phones because it cannot be distorted by anyone.",
+      "D": "defend the claim that the mind includes every device its owner consults, against critics who would confine it to the brain."
+     },
+     "question": "The primary purpose of the passage is to"
+    },
+    {
+     "id": "R01-B-01-2",
+     "type": "RC",
+     "options": {
+      "A": "they let a person retrieve stored facts with no effort at all, whereas memory always requires some work to search.",
+      "B": "they store information more accurately, whereas memory steadily loses and distorts what it holds over time.",
+      "C": "they influence what a person does only when consulted, whereas memory guides action without being consulted.",
+      "D": "others can routinely change what they hold, whereas memory is not open to such revision in the same way."
+     },
+     "question": "According to the passage, devices differ from biological memory in that"
+    },
+    {
+     "id": "R01-B-01-3",
+     "type": "RC",
+     "options": {
+      "A": "who is entitled to revise the information on which a person's beliefs rest.",
+      "B": "the legal ownership of a device and of the data that are stored in it.",
+      "C": "the expertise that makes a particular source of information worth trusting.",
+      "D": "the degree of confidence a person places in her own recollections."
+     },
+     "question": "As used in paragraph 3, 'authority' refers to"
+    },
+    {
+     "id": "R01-B-01-4",
+     "type": "RC",
+     "options": {
+      "A": "evidence that the diary had become part of her mind, which is the full explanation of why the change feels so harmful.",
+      "B": "a real injury to what she knows, best understood as a betrayal of the trust on which her beliefs had come to depend.",
+      "C": "proof that the diary was never part of her mind, since nothing belonging to a mind can be altered by someone else.",
+      "D": "an inconvenience no worse than mislaying a shopping list, since the true entries in her diary can usually be reconstructed later from other records."
+     },
+     "question": "Based on the passage, the author would most likely describe the case of a woman whose diary has been secretly rewritten by a colleague as"
+    }
+   ]
+  },
+  {
+   "passage_id": "R03-D-02",
+   "passage": [
+    "We tend to think of the weekend as a natural feature of the calendar, as if two days of rest had always followed five of work. In fact the arrangement is fairly recent, and its history suggests that free time is not simply the absence of work but something that has to be made, defended and shaped. Before the factory, many artisans worked in bursts, labouring late into the night to finish an order and then taking a day or two off whenever it suited them; in parts of England the habit of stretching Sunday's rest into Monday was common enough to be given a mock saint's name, 'Saint Monday'.",
+    "Factory production could not tolerate this irregularity. Machines were expensive and had to run whenever the hands were present, and an employer could not plan production around workers who might drift in on Tuesday, so the long struggle over hours was therefore also a struggle over the shape of time. Workers wanted fewer hours; employers wanted predictable ones. The compromise that eventually emerged, first a half-day on Saturday and later the whole of it, gave each side part of what it sought. Workers won rest that was guaranteed rather than snatched, and employers won a workforce that turned up, sober, on Monday morning.",
+    "It would be wrong to see the outcome merely as a defeat dressed up as a victory. For most working people, guaranteed free time was a real gain, and it was won against resistance. But the weekend also changed what free time was. Leisure that had once been taken at the worker's discretion became a fixed block, the same for everyone, and a block that was the same for everyone could be sold to. Football matches, excursion trains and seaside resorts arranged themselves around Saturday afternoon and Sunday, and leisure came increasingly to mean something one went out and paid for at a scheduled time.",
+    "The lesson is not that the old irregular rhythm was better; it was often tied to poverty, to insecurity and to binges of overwork that left people exhausted. It is that arguments about working hours are never only about quantity. When people today argue over flexible schedules or a four-day week, they are reopening a question that the industrial age settled in one particular way: not merely how much time should be free, but who decides when it falls and what it is for."
+   ],
+   "questions": [
+    {
+     "id": "R03-D-02-1",
+     "type": "RC",
+     "options": {
+      "A": "leisure became so expensive that most working families could no longer afford to enjoy the free time they had won.",
+      "B": "free time falling at the same hours for everyone became a market that businesses could plan to serve.",
+      "C": "employers could buy back their workers' Saturdays by offering them extra pay for working at the weekend.",
+      "D": "workers were now free to sell their weekend hours to whichever employer offered them the best terms."
+     },
+     "question": "In paragraph 3, the remark that 'a block that was the same for everyone could be sold to' most nearly means that"
+    },
+    {
+     "id": "R03-D-02-2",
+     "type": "RC",
+     "options": {
+      "A": "A longer total working week overall, since Saturday afternoons were exchanged for extra hours on the other weekdays.",
+      "B": "Workers who could be relied upon to arrive, in a fit state, at the start of the week.",
+      "C": "Lower wage bills, since workers accepted reduced pay in return for having all of Saturday free.",
+      "D": "Influence over how workers spent their Sundays, since leisure was now organised and supplied by employers themselves."
+     },
+     "question": "According to the passage, what did employers gain from the compromise that produced the weekend?"
+    },
+    {
+     "id": "R03-D-02-3",
+     "type": "RC",
+     "options": {
+      "A": "grateful, crediting factory owners with the generosity that first gave workers a Saturday free of labour.",
+      "B": "appreciative of what it won for workers, while noting how it reshaped the nature of leisure.",
+      "C": "nostalgic, regarding the irregular rhythm of pre-factory work as a freer and healthier way of living.",
+      "D": "dismissive, treating the weekend as a defeat for workers that was presented to them as a victory."
+     },
+     "question": "The author's attitude towards the weekend is best described as"
+    },
+    {
+     "id": "R03-D-02-4",
+     "type": "RC",
+     "options": {
+      "A": "Freelance musicians who rested whenever bookings dried up join an orchestra with a fixed August holiday, and travel firms begin selling August packages to its players.",
+      "B": "A town council turns a disused railway yard into a public park so that residents have somewhere to spend their free afternoons.",
+      "C": "Workers in a factory strike for higher wages and win a large raise, though their daily hours of work stay exactly as they were.",
+      "D": "A company abolishes its fixed holiday calendar and allows staff to take leave whenever they choose, provided their work is done."
+     },
+     "question": "Which of the following situations most closely parallels the change described in paragraphs 2 and 3?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R04-F-01",
+   "passage": [
+    "It is tempting to picture the great periodic fair of the pre-modern world as a market that happened to be very large. Merchants arrived with bales of cloth, casks and livestock; buyers came from the surrounding districts; for a few weeks a meadow outside a town became a crowded street of stalls, and then it emptied again until the following year. On this view the fair existed because trade was too thin to support permanent shops, and it faded once towns grew large enough to sustain them. The account is not wrong, but it describes the visible part of the fair and mistakes it for the whole.",
+    "Much of what happened at a fair left no bales behind. Merchants who met there once or twice a year used the occasion to settle accounts that had been running since the previous meeting, cancelling what one owed another against what a third owed the first, so that relatively little coin had to change hands. Promises to pay at the next fair circulated as a kind of credit, and their value rested on the expectation that everyone would return. A fair, in this sense, was a calendar as much as a place: it fixed the dates on which obligations fell due and gave distant traders a reason to keep faith with one another. A merchant who failed to appear risked more than a season's sales; he risked his standing with every partner who had expected to meet him.",
+    "It was also a clearing house for news. Prices in distant regions, the solvency of a trading house, a harvest failure, rumours of war: all of this travelled with the people who came, and a merchant who stayed at home was not only missing customers but trading blind. The gossip of the fair was not idle. It was the means by which a scattered commercial world kept a rough common picture of itself. A thinly attended fair was therefore a loss twice over, since the absence of buyers was also an absence of reports, and those who controlled the best information often profited more than those who carried the most goods.",
+    "Seen this way, the decline of the great fairs looks different. Permanent shops certainly took over much of the retail business, but the deeper loss was of the fair's other functions, which passed to institutions that did not depend on bodily presence: banks that kept accounts all year round, regular postal services and, later, printed lists of prices. None of this means that fairs ceased to matter as markets; many survived for centuries as places to buy animals or household goods. What they lost was their role as the hinge on which a whole year of commerce turned, and that role had never been visible in the stalls."
+   ],
+   "questions": [
+    {
+     "id": "R04-F-01-1",
+     "type": "RC",
+     "options": {
+      "A": "argue that the great fairs mattered chiefly as fixed meetings for settling credit and sharing news, functions that the view of them as large markets overlooks.",
+      "B": "explain how permanent shops in growing towns gradually took away the retail trade on which the great periodic fairs had always depended.",
+      "C": "show that the great fairs were never important as markets for goods, since most of their business was carried on in promises to pay rather than in coin.",
+      "D": "describe the kinds of commercial news, such as distant prices and harvest failures, that merchants exchanged when they met each year."
+     },
+     "question": "The primary purpose of the passage is to"
+    },
+    {
+     "id": "R04-F-01-2",
+     "type": "RC",
+     "options": {
+      "A": "most merchants preferred to pay one another in goods such as cloth and livestock rather than in money.",
+      "B": "banks that kept accounts all year round had already settled most debts before the fair opened.",
+      "C": "the merchants who attended were generally too poor to carry significant quantities of coin with them.",
+      "D": "what one merchant owed another could be cancelled against debts owed among other merchants present."
+     },
+     "question": "According to the passage, relatively little coin had to change hands when merchants settled their accounts at a fair because"
+    },
+    {
+     "id": "R04-F-01-3",
+     "type": "RC",
+     "options": {
+      "A": "the fair was important chiefly as a holiday that broke the routine of the working year for ordinary townspeople.",
+      "B": "merchants used the fair mainly to learn the dates of harvests and religious festivals in distant regions.",
+      "C": "the fair was held in a different town each year, so that merchants had to follow a calendar to find it.",
+      "D": "much of its value lay in fixing recurring dates by which debts fell due and to which traders were expected to return."
+     },
+     "question": "In paragraph 2, the statement that a fair 'was a calendar as much as a place' most nearly means that"
+    },
+    {
+     "id": "R04-F-01-4",
+     "type": "RC",
+     "options": {
+      "A": "Merchants in several regions kept settling their year's accounts at the fairs for decades after banks and regular posts were established there.",
+      "B": "In several regions merchants who attended the fairs were sometimes ruined by false rumours about the solvency of trading houses.",
+      "C": "In several regions the great fairs continued for centuries as the main places where farmers bought and sold livestock.",
+      "D": "In several regions permanent shops had taken over most of the retail trade in cloth before the fairs themselves began to decline."
+     },
+     "question": "Which of the following, if true, would most weaken the author's explanation of why the great fairs declined?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R04-D-01",
+   "passage": [
+    "Elections are so closely identified with democracy that it can seem perverse to ask whether they are democratic at all. Yet consider what an election rewards. To win, a candidate must stand out from the crowd: be better known, better funded, better connected or simply more persuasive on a platform than the people whose votes are sought. An election is, in this sense, a procedure for picking a distinguished few, and the chambers it fills tend to resemble the electorate less closely than a random sample of that electorate would. Many ancient Greek writers saw the point clearly; for them, filling offices by lot was the characteristically democratic method, and election was a device that favoured the prominent.",
+    "The modern case for selection by lot builds on that old intuition. A body drawn at random from the adult population brings into the room the people who are usually spoken about rather than heard: the shift worker, the pensioner, the young parent who would never run for anything. Its members owe nothing to donors or to party managers, since nobody campaigned to put them there. Above all, they are free to change their minds. An elected representative who revises a position after hearing the evidence risks being called a turncoat; a citizen chosen by lot has no platform to betray, and so can treat a question as something to be worked out rather than a position to be defended.",
+    "Critics usually reply that ordinary citizens lack the competence to legislate. This objection is weaker than it sounds. Few elected legislators are experts in more than a sliver of what they vote on; they rely on staff, committees and witnesses, and there is no reason a randomly chosen body could not do the same. A more serious difficulty concerns accountability. An elected member who disappoints can be removed at the next election, and the prospect of removal disciplines conduct in between. A member chosen by lot answers to no one, and the very independence that shields such a member from donors also shields him or her from voters. Those who propose replacing elected chambers with lotteries have not, to my mind, answered this objection.",
+    "The sensible conclusion is not that lot should displace election but that it can do something election does badly. On some questions elected politicians have every incentive to avoid committing themselves, because any clear answer will cost them votes. A panel chosen at random, given time, evidence and a duty to hear opposing witnesses, can show what ordinary people conclude once they have actually thought the matter through, and its recommendations can then be put to the legislature or to the voters for decision. The lottery's virtue is that it reveals considered public judgement; its limit is that no one has authorised the people it selects to rule."
+   ],
+   "questions": [
+    {
+     "id": "R04-D-01-1",
+     "type": "RC",
+     "options": {
+      "A": "defend elections against the charge that they systematically keep ordinary citizens such as shift workers and pensioners out of public office.",
+      "B": "argue that selection by lot has genuine democratic merits but is better suited to supplementing elected bodies than to replacing them.",
+      "C": "trace how the ancient Greek preference for filling offices by lot came to be abandoned in favour of the elections that modern states now hold.",
+      "D": "show that randomly chosen citizens would legislate more competently than elected politicians and should therefore take their place in most chambers."
+     },
+     "question": "The author's main purpose in the passage is to"
+    },
+    {
+     "id": "R04-D-01-2",
+     "type": "RC",
+     "options": {
+      "A": "allowed wealthy donors and party managers to decide in advance which candidates the citizens would be permitted to choose between.",
+      "B": "favours people who already stand out from their fellow citizens, whereas lot gives everyone an equal chance.",
+      "C": "made it impossible for those holding office to be removed by the citizens before their term of office had ended.",
+      "D": "required ordinary citizens to judge the competence of candidates on matters of law about which they knew very little."
+     },
+     "question": "It can be inferred that the ancient Greek writers mentioned in paragraph 1 regarded election as less democratic than lot because election"
+    },
+    {
+     "id": "R04-D-01-3",
+     "type": "RC",
+     "options": {
+      "A": "criticise elected representatives for caring more about appearing consistent than about reaching the right answer.",
+      "B": "explain why members chosen by lot are in a better position to let evidence change their views.",
+      "C": "concede that selection by lot shares a weakness with election that its defenders usually prefer to overlook.",
+      "D": "illustrate the problem of accountability that the author says the defenders of lot have never answered."
+     },
+     "question": "The author mentions that an elected representative who revises a position 'risks being called a turncoat' in order to"
+    },
+    {
+     "id": "R04-D-01-4",
+     "type": "RC",
+     "options": {
+      "A": "Citizens who serve on panels chosen by lot frequently report that the experience led them to change their minds about the question under discussion.",
+      "B": "Most elected legislators possess specialist knowledge of at least one policy area, usually drawn from the occupation they followed before entering politics.",
+      "C": "Panels chosen by lot, unlike legislators, prove unable to judge which of their expert witnesses are reliable, and tend to adopt the view of whoever spoke last.",
+      "D": "Legislators who disappoint their voters are often re-elected anyway, because voters remain loyal to the party under whose name they stand."
+     },
+     "question": "Which of the following, if true, would most weaken the author's reply to the competence objection in paragraph 3?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R01-F-03",
+   "passage": [
+    "The sceptical argument about induction, usually traced to David Hume, has a disarming simplicity. Every inference from observed cases to unobserved ones assumes that the future will resemble the past, or more generally that nature is uniform. That assumption cannot be proved by logic, since its denial involves no contradiction, and it cannot be supported by experience without circularity, since the support would itself be an inference from observed cases. Philosophers have spent a long time looking for a way out, usually by searching for a single principle that would license inductive inference in general.",
+    "The search may be misconceived, because there is no such thing as inductive inference in general. Consider two investigators. One measures the melting point of a newly prepared sample of a pure compound and concludes, from a single careful trial, that every sample of that compound will melt at the same temperature. Another measures the height of one adult and draws no conclusion at all about the heights of adults. Both are reasoning well, and they differ not because one has found the universal principle and the other has not, but because each knows something about the kind of thing being studied: that pure compounds are uniform in their melting points, and that people are not uniform in their heights.",
+    "On this picture, what licenses an inductive step is not a principle of uniformity but particular facts about particular domains, which tell us how far a sample can be trusted to stand in for the whole. The obvious objection is that this merely relocates the problem. Our confidence that compounds are uniform in their melting points was itself acquired by induction, and so the sceptic can ask what licenses that.",
+    "The objection is fair, but it is less damaging than it looks, because it trades on an ambiguity between justifying each belief and justifying all of them together. The regress it describes is real, yet it never requires us to justify all our inductive habits at once. At any moment we lean on some background knowledge in order to test some other part of it, and any item can in turn be questioned while the rest is held fixed. This does not answer the sceptic on the sceptic's own terms, which demand a foundation lying outside experience altogether. It does show that the demand is not one that science, as actually practised, needs to meet in order to be rational, any more than a household needs to audit every account on the same afternoon in order to keep honest books."
+   ],
+   "questions": [
+    {
+     "id": "R01-F-03-1",
+     "type": "RC",
+     "options": {
+      "A": "the investigator knew that adults vary in height, so one case could not stand in for the rest.",
+      "B": "human height is too difficult to measure with the precision that a melting point allows.",
+      "C": "a single measurement of any quantity, however carefully it is taken, is never enough to support a general conclusion.",
+      "D": "the investigator lacked the principle of uniformity that the other investigator had managed to find."
+     },
+     "question": "The passage suggests that the investigator who measured one adult's height drew no general conclusion because"
+    },
+    {
+     "id": "R01-F-03-2",
+     "type": "RC",
+     "options": {
+      "A": "Because every inductive step depends on earlier inductions, scientific knowledge rests in the end on nothing more than habit.",
+      "B": "The sceptical argument about induction fails, since a principle of uniformity can be supported by the record of past successful inferences.",
+      "C": "Inductive steps are licensed by knowledge of particular domains, and the regress this creates does not make scientific practice irrational.",
+      "D": "A single careful trial is more trustworthy than a large sample whenever the substance under study is chemically pure."
+     },
+     "question": "Which of the following best expresses the main point of the passage?"
+    },
+    {
+     "id": "R01-F-03-3",
+     "type": "RC",
+     "options": {
+      "A": "A physician who tests a new drug on one patient and, finding it effective, prescribes it to all patients alike.",
+      "B": "A pollster who simply assumes that nature is uniform concludes that every future election will go the way the last one did.",
+      "C": "A geologist who refuses to generalise from any finite set of rock samples, on the ground that induction can never be justified.",
+      "D": "A botanist, knowing that a certain trait hardly varies within a plant species, judges a new population's trait from a handful of specimens."
+     },
+     "question": "Which of the following reasoners proceeds in the way the passage regards as sound?"
+    },
+    {
+     "id": "R01-F-03-4",
+     "type": "RC",
+     "options": {
+      "A": "any single item of background knowledge can be questioned while the rest of it is held fixed.",
+      "B": "two investigators may both reason well while generalising very differently from one observation.",
+      "C": "the background knowledge that licenses an inductive step was itself acquired by inductive means.",
+      "D": "a domain-based account of induction makes the regress that the sceptic describes disappear altogether."
+     },
+     "question": "The author would accept each of the following EXCEPT the claim that"
+    }
+   ]
+  },
+  {
+   "passage_id": "R01-D-08",
+   "passage": [
+    "Egalitarians hold that there is something wrong with inequality as such: that when some people are much worse off than others through no fault of their own, the situation is bad, and bad in part simply because of the gap. The most famous objection to this view asks us to consider what follows from it. Suppose that the only way to remove an inequality were to make the better off worse off, with no benefit to anyone, as if a town in which some households had gardens and others had none could reach equality only by paving over every garden. If inequality is bad in itself, then such a change would remove something bad, and so would be in one respect an improvement. Yet the change helps no one and harms many. To call it an improvement in any respect, the objectors say, is absurd.",
+    "Many philosophers have been moved by this objection to give up equality as a fundamental value. Some have adopted the view that benefits matter more the worse off their recipient is, so that a gain to a poor person counts for more than the same gain to a rich one; others hold that what matters is that everyone should have enough, after which differences cease to be of moral concern. Neither view is troubled by levelling down, since on neither does reducing the well-being of the better off, by itself, improve anything. Both also capture much of what drew people to equality in the first place, which was a concern for those who are badly off.",
+    "Yet the objection is less decisive than it is usually taken to be. The egalitarian need not claim that a levelled-down world is better all things considered, only that it is better in one respect while much worse in others. Plural values often pull apart in this way. We can think that a promise kept at terrible cost was in one respect admirable without thinking that it should have been kept. Seen this way, the levelling-down case shows only that equality is not the only thing that matters, which almost no egalitarian ever believed.",
+    "This defence succeeds, but at a price. It keeps equality as a value only by making it a strangely impersonal one: something that can make a state of affairs better while making it better for no one at all. Many will find such a value hard to care about. There is, however, another way to understand what egalitarians were after. On a relational view, the core of equality lies not in how goods are distributed but in how people stand to one another: in the absence of rank, servility and contempt, in a society where no one must bow and no one may command another merely by virtue of birth or wealth. Inequalities of resources matter on this view chiefly because, beyond some point, they turn into inequalities of standing, as when wealth buys influence over others or poverty forces deference to them.",
+    "The relational view is untouched by the levelling-down objection, because paving over gardens neither creates nor abolishes any relation of rank between neighbours. Whether it can say enough about distribution is a further question. A society might abolish titles and deference while leaving vast differences in income intact, and the relational egalitarian owes us an account of when such differences begin to corrode equal standing. But the view has at least located the value of equality in a relation between persons, which is where most of its defenders always felt it to be."
+   ],
+   "questions": [
+    {
+     "id": "R01-D-08-1",
+     "type": "RC",
+     "options": {
+      "A": "treat inequality as bad in itself, but as much less bad than the suffering of people who lack enough to live on.",
+      "B": "attach no value to narrowing a gap between people when that narrowing raises no one's well-being.",
+      "C": "require that every inequality above a minimum standard of living be removed, whatever the cost to the better off.",
+      "D": "deny that people who are badly off have any special claim on the resources that a society has to distribute."
+     },
+     "question": "It can be inferred that the two views described in paragraph 2 escape the levelling-down objection because they"
+    },
+    {
+     "id": "R01-D-08-2",
+     "type": "RC",
+     "options": {
+      "A": "something can be good in one respect even when it is not the right choice overall.",
+      "B": "equality and the keeping of promises are two values that usually come into conflict with each other.",
+      "C": "promises ought to be kept even when keeping them causes great harm to the person who made them.",
+      "D": "egalitarians, like people who keep costly promises, are often admired chiefly for their consistency."
+     },
+     "question": "The example of a promise kept at terrible cost (paragraph 3) is offered to show that"
+    },
+    {
+     "id": "R01-D-08-3",
+     "type": "RC",
+     "options": {
+      "A": "expresses a concern for abstract principles rather than a concern for the needs of the badly off.",
+      "B": "can be assessed only by impartial officials who have no personal stake in how goods are distributed.",
+      "C": "could make a situation better even though the situation was better for no particular person.",
+      "D": "applies to the design of public institutions rather than to private relationships between individuals."
+     },
+     "question": "In paragraph 4, calling equality, on the defence just given, 'a strangely impersonal' value means that it"
+    },
+    {
+     "id": "R01-D-08-4",
+     "type": "RC",
+     "options": {
+      "A": "set aside questions of income entirely, since the relational view is concerned with standing and not distribution.",
+      "B": "favour reducing everyone's wealth to the level of the poorest, since this would make all the citizens equal.",
+      "C": "ask whether those differences have become large enough to give some people standing over others.",
+      "D": "regard that society as fully equal in the relevant sense, since no one in it holds any formal rank."
+     },
+     "question": "The author would most likely agree that a relational egalitarian, considering a society that has abolished titles but retains very large differences in wealth, should"
+    },
+    {
+     "id": "R01-D-08-5",
+     "type": "RC",
+     "options": {
+      "A": "The levelling-down objection shows that egalitarians should give priority to benefits for the worse off rather than value equality as such.",
+      "B": "The levelling-down objection is decisive against every form of egalitarianism except one concerned with relations of rank between persons.",
+      "C": "The levelling-down objection can be answered, but the answer makes equality impersonal, which favours a relational account despite its open questions.",
+      "D": "Equality cannot be a genuine value in its own right, because every genuine value must make situations better for some person."
+     },
+     "question": "Which of the following best states the main argument of the passage?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R02-F-04",
+   "passage": [
+    "It has become a commonplace that every age describes the brain in the image of its most impressive machine. When ornamental gardens were fitted with water-driven statues that moved as visitors stepped on hidden plates, nerves were pictured as pipes and the animal spirits as fluid pressed through them. When the telegraph and then the telephone exchange spread across cities, the nervous system became a network of wires, with the brain as the central office where calls were connected. In our own time it is a computer, processing information, storing memories and running programs. The pattern is real, and critics have drawn a sharp lesson from it: the metaphors are fashions, each as quaint as the last will soon appear, and the computer image will go the way of the fountain.",
+    "The lesson is half right. It is true that none of these images was the whole truth, and that each looks dated once the technology behind it is familiar. But to call them mere fashions is to miss what each one got right. The hydraulic picture captured the idea that something must travel from the senses to the centre and back to the muscles. The switchboard captured the importance of connections, of which signal is routed to which destination. The computer captured the idea that what matters about these signals is the information they carry and the transformations performed on it, rather than the stuff that carries them. Each metaphor, in other words, was adopted because it made some feature of the nervous system thinkable, and each left behind a contribution that survived its own retirement.",
+    "The real danger lies elsewhere, because a metaphor brings with it not only the features that fit but a whole set of features that come along unexamined. The computer image invites us to think of memory as storage, a place where a record sits unchanged until retrieved, when remembering appears to be closer to reconstruction, the record altered a little each time it is used. It invites a sharp division between hardware and software, when in the brain the program and the machine are hard to tell apart, since use reshapes the very structures that do the work. These are not reasons to abandon the metaphor but reasons to keep asking which of its features we are actually entitled to.",
+    "The sensible course, then, is neither to treat the current metaphor as a literal description nor to dismiss it as a passing fashion, but to use it while keeping an account of where it fails. Metaphors are tools for thinking about something that cannot be seen directly, and the history of brain science suggests that thinking without any of them is not an available option. What can be avoided is the habit of mistaking the tool for the thing."
+   ],
+   "questions": [
+    {
+     "id": "R02-F-04-1",
+     "type": "RC",
+     "options": {
+      "A": "partial agreement, accepting that no metaphor was the whole truth while denying that they were merely fashionable.",
+      "B": "firm rejection, holding that the computer metaphor, unlike earlier ones, describes the brain literally and exactly.",
+      "C": "complete agreement, accepting that the computer image will soon look as quaint and empty as the hydraulic one.",
+      "D": "indifference, treating the question of whether the metaphors are fashions as unimportant to understanding the brain."
+     },
+     "question": "The author's attitude towards the critics' view that brain metaphors are 'fashions' is best described as"
+    },
+    {
+     "id": "R02-F-04-2",
+     "type": "RC",
+     "options": {
+      "A": "what matters about neural signals is the information they carry and how it is transformed, not the material that carries them.",
+      "B": "memories are held in fixed locations in the brain, where each record remains unaltered until it is retrieved.",
+      "C": "the brain can be divided into hardware and software, with programs that run independently of the structures doing the work.",
+      "D": "signals must travel from the senses to the centre and back again to the muscles along definite routes."
+     },
+     "question": "It can be inferred that the author regards the main contribution of the computer metaphor as the idea that"
+    },
+    {
+     "id": "R02-F-04-3",
+     "type": "RC",
+     "options": {
+      "A": "Researchers who used the switchboard image also held many beliefs about the brain that later turned out to be false.",
+      "B": "The ideas credited to each metaphor were already established by direct study of nerves before that metaphor came into use.",
+      "C": "Some present-day researchers prefer to describe the brain using images drawn from biology rather than from machines.",
+      "D": "The hydraulic picture of the nerves was far more widely accepted among scholars than the switchboard picture ever was."
+     },
+     "question": "Which of the following, if true, would most weaken the author's reply to the critics in paragraph 2?"
+    },
+    {
+     "id": "R02-F-04-4",
+     "type": "RC",
+     "options": {
+      "A": "Memory is better described as reconstruction than as storage, contrary to what the computer image of the brain suggests.",
+      "B": "The computer is the most accurate metaphor for the brain yet devised, because it is the most complex machine so far built.",
+      "C": "Machine metaphors for the brain have each made something real thinkable, and the risk is in mistaking them for literal descriptions.",
+      "D": "Brain metaphors drawn from machines are passing fashions, and brain science would progress faster if it gave them up."
+     },
+     "question": "Which of the following best expresses the central claim of the passage?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R01-A-04",
+   "passage": [
+    "Suppose you and a colleague whom you regard as your equal in competence and care examine the same evidence and reach opposite conclusions. Neither of you has information the other lacks; neither has reason to think the other was tired or distracted. What should you do? An influential answer holds that you should move towards your colleague's view, giving her opinion the same weight as your own. The thought behind it is simple. From a neutral standpoint, the disagreement is evidence that one of you has erred, and you have no reason, independent of the dispute itself, to think the error is hers rather than yours. To stand firm would be to treat the mere fact that a conclusion is yours as a reason to favour it.",
+    "This principle seems to me correct over a wide range of cases, and it is more demanding than most people find comfortable. It condemns the familiar move of discounting a dissenter precisely because she dissents: 'she is usually so sensible, but on this question she has plainly lost her way'. If the only evidence that she has lost her way is that she disagrees with you, the reasoning simply assumes what is in question.",
+    "Yet the principle cannot be applied without qualification. Imagine two equally able auditors reviewing the same short ledger, one of whom concludes that the accounts balance while the other reports that the firm's assets exceed the number of grains of sand on the earth. The first auditor need not split the difference. Her confidence that her colleague has blundered does not rest on her own conclusion about the ledger; it rests on the absurdity of his, which she can recognise without relying on the reasoning they disagree about. What licenses holding firm, then, is not that a view is one's own but that one has grounds, independent of the dispute, for locating the error on the other side. The equal-weight principle survives, but it turns out to be a claim about what to do when such independent grounds are absent, not a rule that applies whatever one knows.",
+    "Critics sometimes press a further objection: since thoughtful people disagree about the equal-weight principle itself, the principle seems to require its own defenders to lose confidence in it. This is less damaging than it first appears. A principle about how to respond to disagreement may well recommend reduced confidence in itself without thereby becoming false; it would show only that the matter is genuinely hard, which no one denied. What the objection does reveal is that conciliation cannot be the whole story about rational belief. A thinker who revised every view the moment a peer dissented would soon have no settled views left to revise, and some account is still owed of what entitles anyone to a starting point."
+   ],
+   "questions": [
+    {
+     "id": "R01-A-04-1",
+     "type": "RC",
+     "options": {
+      "A": "it gives the dissenter's view more weight than one's own view on the question under dispute.",
+      "B": "it ignores information that the dissenter possesses and that the person discounting her lacks.",
+      "C": "it uses the disputed conclusion itself as the only evidence that the dissenter has gone wrong.",
+      "D": "it shows disrespect towards a colleague whose competence and care one has already acknowledged."
+     },
+     "question": "According to the passage, discounting a dissenter because she dissents is faulty reasoning because"
+    },
+    {
+     "id": "R01-A-04-2",
+     "type": "RC",
+     "options": {
+      "A": "show that the equal-weight principle must be given up, since some disagreements between equals call for no change of view.",
+      "B": "show that the equal-weight principle applies only where one lacks dispute-independent grounds for thinking the other party erred.",
+      "C": "show that auditors and similar specialists are seldom true peers, because one of them is usually more careful than the other.",
+      "D": "show that one may hold firm against a peer whenever one is confident that one's own conclusion is correct."
+     },
+     "question": "The example of the two auditors in paragraph 3 functions in the argument primarily to"
+    },
+    {
+     "id": "R01-A-04-3",
+     "type": "RC",
+     "options": {
+      "A": "It is decisive, because a principle that recommends doubting itself cannot coherently be held by anyone at all.",
+      "B": "It is beside the point, because the principle governs disagreements about particular bodies of evidence and not disagreements about principles themselves.",
+      "C": "It does not show that the principle is false, though it does show that conciliation cannot be all there is to rational belief.",
+      "D": "It succeeds only if the principle's critics outnumber its defenders among the thoughtful people who have considered it with care."
+     },
+     "question": "Which of the following best describes the author's view of the objection that the equal-weight principle undermines itself?"
+    },
+    {
+     "id": "R01-A-04-4",
+     "type": "RC",
+     "options": {
+      "A": "Two equally careful historians date an undated letter in the same archive to different decades, and neither can fault the other's reasoning except by its conclusion.",
+      "B": "Two equally careful chemists disagree about a reaction, but one of them knows that the other's sample was contaminated in a way the other has not noticed.",
+      "C": "Two students disagree about a proof, one of whom has studied the topic for years while the other first met it in yesterday's lecture.",
+      "D": "Two equally able judges disagree about a verdict, and one of them maintains that the accused was in two different cities at the same moment."
+     },
+     "question": "In which of the following situations would the author most clearly hold that a person ought to move towards a disagreeing colleague's view?"
+    }
+   ]
+  }
+ ]
+}

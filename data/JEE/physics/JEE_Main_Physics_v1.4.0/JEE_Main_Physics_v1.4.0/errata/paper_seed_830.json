@@ -1,0 +1,448 @@
+{
+  "seed": 830,
+  "max_marks": 100,
+  "marking": {
+    "correct": 4,
+    "incorrect": -1,
+    "unattempted": 0
+  },
+  "basis": "Official JEE Main 2026 Paper 1 Physics format",
+  "questions": [
+    {
+      "id": "JEE27-PHY-1977",
+      "source_class": "XII",
+      "unit_number": 19,
+      "difficulty": "Easy",
+      "assumptions": "Use the elementary low-field semiconductor model at room temperature unless specified otherwise; silicon/germanium forward drops, when approximated, are 0.7/0.3 V. Reverse characteristics refer to operation below breakdown unless breakdown is stated.",
+      "figures": [],
+      "concept_family": "SRC-2c3c15670231",
+      "number": 1,
+      "section": "A",
+      "question": "A silicon diode carries a forward current of 7 mA when the voltage across it is 0.7 V. Its static resistance at this point is:",
+      "options": {
+        "A": "0.1 Ω",
+        "B": "0.01 Ω",
+        "C": "42.9 Ω",
+        "D": "100 Ω"
+      }
+    },
+    {
+      "id": "JEE27-PHY-0075",
+      "source_class": "XI",
+      "unit_number": 2,
+      "difficulty": "Medium",
+      "assumptions": "Use ideal particle motion with uniform gravity and negligible air resistance unless stated otherwise.",
+      "figures": [],
+      "concept_family": "SRC-c6b9ca70a724",
+      "number": 2,
+      "section": "A",
+      "question": "The sum of the magnitudes of two forces acting at a point is 18 N. Their resultant has magnitude 12 N and is perpendicular to the smaller force. The magnitude of the smaller force is:",
+      "options": {
+        "A": "3 N",
+        "B": "9 N",
+        "C": "6 N",
+        "D": "5 N"
+      }
+    },
+    {
+      "id": "JEE27-PHY-1180",
+      "source_class": "XII",
+      "unit_number": 12,
+      "difficulty": "Difficult",
+      "assumptions": "Use steady currents, ideal connecting wires and uniform ohmic conductors at fixed temperature unless specified otherwise. Resistivity is unchanged by stretching in the stated elementary model. Wheatstone arms P,Q,R,S mean AB,BC,AD,DC; source AC and detector BD.",
+      "figures": [],
+      "concept_family": "REV-two_meter_loading",
+      "number": 3,
+      "section": "A",
+      "question": "A source has unknown emf E and internal resistance r. A voltmeter of resistance 200 Ω reads 12 V when connected alone across it. A second voltmeter of resistance ξ Ω reads 10 V when connected alone. Both voltmeters and an external resistor 100 Ω are now connected simultaneously in parallel across the source. All resistances are constant. In this arrangement, the following outcome is measured: the power dissipated in the external resistor = 0.4444444444 W. Which listed positive value of ξ is consistent with that outcome?",
+      "options": {
+        "A": "150",
+        "B": "200",
+        "C": "100",
+        "D": "50"
+      }
+    },
+    {
+      "id": "JEE27-PHY-1687",
+      "source_class": "XII",
+      "unit_number": 16,
+      "difficulty": "Medium",
+      "assumptions": "Use paraxial geometrical optics, thin lenses in air and small diffraction/interference angles unless specified otherwise. Sources in path-difference questions are coherent, initially in phase and equally polarised. Media are transparent, isotropic and normally dispersive.",
+      "figures": [],
+      "concept_family": "SRC-c9eb5e788fff",
+      "number": 4,
+      "section": "A",
+      "question": "An equiconvex lens of glass of refractive index 1.5 has a focal length of 20 cm in air. One of its faces is silvered. The silvered lens now behaves as a mirror of focal length:",
+      "options": {
+        "A": "5 cm, diverging like a convex mirror",
+        "B": "10 cm, converging like a concave mirror",
+        "C": "20 cm, converging like a concave mirror",
+        "D": "5 cm, converging like a concave mirror"
+      }
+    },
+    {
+      "id": "JEE27-PHY-0923",
+      "source_class": "XI",
+      "unit_number": 10,
+      "difficulty": "Difficult",
+      "assumptions": "Use linear, lossless sinusoidal waves and small-amplitude pendulum motion unless stated otherwise. Organ-pipe lengths are effective lengths if no end correction is supplied. Path-difference interference assumes initially in-phase coherent sources.",
+      "figures": [],
+      "concept_family": "REV-accelerating_pendulum_inverse",
+      "number": 5,
+      "section": "A",
+      "question": "A pendulum of length 2.0 m is in a vehicle with constant unknown horizontal acceleration a>0 and constant unknown upward acceleration b>0. Its small-oscillation period about the tilted equilibrium is 1.777153175 s. In a second trial the upward acceleration is set to zero, the horizontal acceleration stays a, and the period is 1.879110698 s. Take g=10 m/s². The string is light and inextensible; oscillations are small about each equilibrium. Find the upward acceleration b in the first trial. Choose the closest value.",
+      "options": {
+        "A": "2 m/s²",
+        "B": "5 m/s²",
+        "C": "10 m/s²",
+        "D": "15 m/s²"
+      }
+    },
+    {
+      "id": "JEE27-PHY-1497",
+      "source_class": "XII",
+      "unit_number": 14,
+      "difficulty": "Medium",
+      "assumptions": "AC voltages/currents are sinusoidal RMS values unless a waveform or peak value is given. Components are ideal and linear; magnetic-field/rod/rail geometry is mutually perpendicular where the motional-emf formula is invoked. Neglect self-inductance in purely resistive induction loops.",
+      "figures": [],
+      "concept_family": "SRC-ba7e676d000f",
+      "number": 6,
+      "section": "A",
+      "question": "A steady direct current flows in the primary of a pair of closely coupled coils. The emf induced in the secondary is:",
+      "options": {
+        "A": "large, because the coupling between the coils is strong",
+        "B": "equal to M times the primary current",
+        "C": "zero, because the current in the primary is not changing",
+        "D": "equal to the primary emf multiplied by the turns ratio"
+      }
+    },
+    {
+      "id": "JEE27-PHY-2095",
+      "source_class": "XI",
+      "unit_number": 20,
+      "difficulty": "Medium",
+      "assumptions": "Treat drawings as schematic. Apply zero-error and parallax corrections; instrument idealisations and experimental limits stated in the question take precedence.",
+      "figures": [
+        {
+          "file": "figures/experiment-03-readings.png",
+          "alt_text": "Pendulum amplitude at t = 0 s: 8.0 cm; Amplitude at t = 60 s: 6.0 cm; Amplitude at t = 120 s: 4.5 cm; Small oscillations; mass and length unchanged",
+          "source": "ORIGINAL",
+          "width": 1600,
+          "height": 900
+        }
+      ],
+      "concept_family": "SRC-EXPERIMENT-3",
+      "number": 7,
+      "section": "A",
+      "question": "If the same amplitude ratio continues for the next 60 s, find the fraction of the original energy remaining at 180 s. Use the readings in experimental panel 03. Choose the closest value.",
+      "options": {
+        "A": "0.08899",
+        "B": "0.356",
+        "C": "-0.178",
+        "D": "0.178"
+      }
+    },
+    {
+      "id": "JEE27-PHY-0286",
+      "source_class": "XI",
+      "unit_number": 4,
+      "difficulty": "Medium",
+      "assumptions": "Use nonrelativistic mechanics. Springs are ideal and uniform; quoted external work for a slow change assumes negligible kinetic-energy change.",
+      "figures": [],
+      "concept_family": "SRC-b9d8d3b80d8b",
+      "number": 8,
+      "section": "A",
+      "question": "A ball dropped from a height of 10 m onto a floor rebounds to a height of 2.5 m. The coefficient of restitution between the ball and the floor is:",
+      "options": {
+        "A": "0.25",
+        "B": "0.5",
+        "C": "0.75",
+        "D": "0.2"
+      }
+    },
+    {
+      "id": "JEE27-PHY-1650",
+      "source_class": "XII",
+      "unit_number": 16,
+      "difficulty": "Easy",
+      "assumptions": "Use paraxial geometrical optics, thin lenses in air and small diffraction/interference angles unless specified otherwise. Sources in path-difference questions are coherent, initially in phase and equally polarised. Media are transparent, isotropic and normally dispersive.",
+      "figures": [],
+      "concept_family": "SRC-72a0fc9e37e8",
+      "number": 9,
+      "section": "A",
+      "question": "In a homogeneous isotropic medium, which statement correctly relates a light ray to its wavefront?",
+      "options": {
+        "A": "The ray is the locus of points having the same phase",
+        "B": "The ray and the wavefront always make an angle of 45° with each other",
+        "C": "The ray is always perpendicular to the wavefront at the point where it meets it",
+        "D": "The ray always lies along the wavefront"
+      }
+    },
+    {
+      "id": "JEE27-PHY-1649",
+      "source_class": "XII",
+      "unit_number": 16,
+      "difficulty": "Easy",
+      "assumptions": "Use paraxial geometrical optics, thin lenses in air and small diffraction/interference angles unless specified otherwise. Sources in path-difference questions are coherent, initially in phase and equally polarised. Media are transparent, isotropic and normally dispersive.",
+      "figures": [],
+      "concept_family": "SRC-779511edaf17",
+      "number": 10,
+      "section": "A",
+      "question": "A point source of light is placed in a homogeneous isotropic medium. At a short distance from the source the wavefront is:",
+      "options": {
+        "A": "spherical",
+        "B": "plane",
+        "C": "elliptical",
+        "D": "cylindrical"
+      }
+    },
+    {
+      "id": "JEE27-PHY-1428",
+      "source_class": "XII",
+      "unit_number": 13,
+      "difficulty": "Difficult",
+      "assumptions": "Use steady source currents and vacuum unless specified otherwise. Particle motion is nonrelativistic, with other forces neglected in magnetic-orbit questions. Listed charge magnitudes are positive. Neglect end and demagnetising effects in ideal long-solenoid models.",
+      "figures": [],
+      "concept_family": "JM-selector_orbit",
+      "number": 11,
+      "section": "A",
+      "question": "Positive ions pass undeflected through crossed uniform fields E = ξ V/m and B₁ = 0.2 T, with velocity perpendicular to both. They then enter a second region containing only a perpendicular magnetic field B₂ = 0.3 T and describe circles of radius 0.04 m. Neglect gravity and relativistic effects. The recorded value of the accelerating potential difference that would produce this speed from rest is 900 V. Which listed positive value of ξ is consistent with this measurement?",
+      "options": {
+        "A": "30000",
+        "B": "45000",
+        "C": "60000",
+        "D": "15000"
+      }
+    },
+    {
+      "id": "JEE27-PHY-0885",
+      "source_class": "XI",
+      "unit_number": 9,
+      "difficulty": "Medium",
+      "assumptions": "Use the classical ideal-gas model and the stated active degrees of freedom; molecular size is fixed in mean-free-path comparisons unless specified otherwise.",
+      "figures": [],
+      "concept_family": "JM-gas_mixture",
+      "number": 12,
+      "section": "A",
+      "question": "An ideal-gas mixture contains 2 mol of a monatomic gas and 1 mol of a rigid diatomic gas at the same temperature. Vibrational modes are frozen. The mixture is heated by 50 K at constant volume. Use R = 8 J/(mol K); composition stays fixed. What fraction of the increase in internal energy belongs to the diatomic component?",
+      "options": {
+        "A": "0.4545",
+        "B": "0.2273",
+        "C": "0.3333",
+        "D": "0.6667"
+      }
+    },
+    {
+      "id": "JEE27-PHY-0478",
+      "source_class": "XI",
+      "unit_number": 5,
+      "difficulty": "Difficult",
+      "assumptions": "Rigid bodies and fixed axes are ideal unless specified otherwise; moments of inertia refer to the named axis.",
+      "figures": [],
+      "concept_family": "JM-massive_pulley",
+      "number": 13,
+      "section": "A",
+      "question": "Two masses ξ kg and 6 kg hang on opposite sides of a light string over a uniform solid-disc pulley of mass 6 kg and radius 0.3 m. The axle is frictionless and the string does not slip. The heavier mass starts from rest and descends 2 m. Use g = 10 m/s². The recorded value of the tension on the lighter-mass side is 37.5 N. Which listed positive value of ξ is consistent with this measurement?",
+      "options": {
+        "A": "6",
+        "B": "4",
+        "C": "2",
+        "D": "3"
+      }
+    },
+    {
+      "id": "JEE27-PHY-0921",
+      "source_class": "XI",
+      "unit_number": 10,
+      "difficulty": "Easy",
+      "assumptions": "Use linear, lossless sinusoidal waves and small-amplitude pendulum motion unless stated otherwise. Organ-pipe lengths are effective lengths if no end correction is supplied. Path-difference interference assumes initially in-phase coherent sources.",
+      "figures": [],
+      "concept_family": "SRC-56f81362450e",
+      "number": 14,
+      "section": "A",
+      "question": "A particle completes 40 oscillations in 20 s. Its angular frequency is:",
+      "options": {
+        "A": "4π rad s⁻¹",
+        "B": "π rad s⁻¹",
+        "C": "2 rad s⁻¹",
+        "D": "0.5 rad s⁻¹"
+      }
+    },
+    {
+      "id": "JEE27-PHY-0134",
+      "source_class": "XI",
+      "unit_number": 2,
+      "difficulty": "Easy",
+      "assumptions": "Use ideal particle motion with uniform gravity and negligible air resistance unless stated otherwise.",
+      "figures": [],
+      "concept_family": "SRC-e21a6b4fd32a",
+      "number": 15,
+      "section": "A",
+      "question": "Which one of the following physical quantities is a vector?",
+      "options": {
+        "A": "Electric potential",
+        "B": "Pressure",
+        "C": "Impulse",
+        "D": "Work"
+      }
+    },
+    {
+      "id": "JEE27-PHY-0711",
+      "source_class": "XI",
+      "unit_number": 7,
+      "difficulty": "Medium",
+      "assumptions": "Use the specified ideal-fluid or Stokes-flow model. Neglect losses and end/wall effects where the ideal model is invoked; thermal-expansion formulae are first order.",
+      "figures": [],
+      "concept_family": "JM-thermal_series",
+      "number": 16,
+      "section": "A",
+      "question": "Two plane slabs of equal area 0.1 m² are joined in series. Their thicknesses are 0.02 m and 0.04 m, and their thermal conductivities are 20 and 10 W/(m K). Their outer faces are maintained at 100 °C and 0 °C, with slab 1 adjacent to the hot face. Contact resistance and side heat losses are negligible. Find the conductivity of one uniform slab of the same total thickness and area that gives the same heat flow. Choose the closest value.",
+      "options": {
+        "A": "6 W/(m K)",
+        "B": "15 W/(m K)",
+        "C": "12 W/(m K)",
+        "D": "30 W/(m K)"
+      }
+    },
+    {
+      "id": "JEE27-PHY-1553",
+      "source_class": "XII",
+      "unit_number": 14,
+      "difficulty": "Medium",
+      "assumptions": "AC voltages/currents are sinusoidal RMS values unless a waveform or peak value is given. Components are ideal and linear; magnetic-field/rod/rail geometry is mutually perpendicular where the motional-emf formula is invoked. Neglect self-inductance in purely resistive induction loops.",
+      "figures": [],
+      "concept_family": "JM-mutual_induction",
+      "number": 17,
+      "section": "A",
+      "question": "Two stationary coils have mutual inductance 0.3 H. Current in coil 1 increases uniformly from 2 A to 8 A in 0.6 s. Coil 2 forms a closed circuit of resistance ξ Ω; its self-inductance and all capacitive effects are negligible. The recorded value of the magnitude of transported charge during the ramp is 0.6 C. Which listed positive value of ξ is consistent with this measurement?",
+      "options": {
+        "A": "3",
+        "B": "2",
+        "C": "4",
+        "D": "6"
+      }
+    },
+    {
+      "id": "JEE27-PHY-0510",
+      "source_class": "XI",
+      "unit_number": 6,
+      "difficulty": "Easy",
+      "assumptions": "Use Newtonian gravity, a spherical nonrotating planet and vacuum unless stated otherwise. Potential is zero at infinity; small-height/depth formulae are first-order approximations.",
+      "figures": [],
+      "concept_family": "SRC-641c29490948",
+      "number": 18,
+      "section": "A",
+      "question": "A planet has a mass one ninth that of the Earth and a radius one half that of the Earth. If g is the acceleration due to gravity at the surface of the Earth, its value at the surface of this planet is:",
+      "options": {
+        "A": "g / 9",
+        "B": "4 g / 9",
+        "C": "2 g / 9",
+        "D": "9 g / 4"
+      }
+    },
+    {
+      "id": "JEE27-PHY-1197",
+      "source_class": "XII",
+      "unit_number": 12,
+      "difficulty": "Medium",
+      "assumptions": "Use steady currents, ideal connecting wires and uniform ohmic conductors at fixed temperature unless specified otherwise. Resistivity is unchanged by stretching in the stated elementary model. Wheatstone arms P,Q,R,S mean AB,BC,AD,DC; source AC and detector BD.",
+      "figures": [],
+      "concept_family": "SRC-dfb27fd432b9",
+      "number": 19,
+      "section": "A",
+      "question": "A uniform wire of resistance 8 Ω is bent into a circle. Two points on the circle divide it into arcs whose lengths are in the ratio 1 : 3. The resistance between these two points is:",
+      "options": {
+        "A": "2 Ω",
+        "B": "1.5 Ω",
+        "C": "6 Ω",
+        "D": "8 Ω"
+      }
+    },
+    {
+      "id": "JEE27-PHY-2128",
+      "source_class": "XI",
+      "unit_number": 20,
+      "difficulty": "Easy",
+      "assumptions": "Treat drawings as schematic. Apply zero-error and parallax corrections; instrument idealisations and experimental limits stated in the question take precedence.",
+      "figures": [
+        {
+          "file": "figures/experiment-09.png",
+          "alt_text": "Insulated vessel, thermometer and stirrer immersed in its contents. Schematic, not to scale.",
+          "source": "ORIGINAL",
+          "width": 1600,
+          "height": 900
+        }
+      ],
+      "concept_family": "SRC-EXPERIMENT-9",
+      "number": 20,
+      "section": "A",
+      "question": "Which procedure helps the particular measurement made with the vessel and immersed instruments shown? Refer to experimental arrangement 09.",
+      "options": {
+        "A": "Move the observation pin until its image has no relative parallax",
+        "B": "Transfer the hot specimen quickly, stir gently, and record the equilibrium temperature while limiting heat exchange",
+        "C": "Vary the length of the air column and listen for a resonance maximum",
+        "D": "Adjust the jockey along the bridge wire until the galvanometer reads zero"
+      }
+    },
+    {
+      "id": "JEE27-PHY-2151",
+      "source_class": "XII",
+      "unit_number": 20,
+      "difficulty": "Difficult",
+      "assumptions": "Treat drawings as schematic. Apply zero-error and parallax corrections; instrument idealisations and experimental limits stated in the question take precedence.",
+      "figures": [],
+      "concept_family": "SRC-EXPERIMENT-12",
+      "number": 21,
+      "section": "B",
+      "question": "A cell of emf 2 V and negligible internal resistance drives a galvanometer through series resistance 1000 Ω. Its deflection is 20 divisions. Connecting a shunt 50 Ω directly across the galvanometer halves its deflection, while the series resistor remains connected. Deflection is proportional to coil current. Find the total current drawn from the cell after the shunt is connected. Express the result in units of 10^(-5) A, and give the nearest integer."
+    },
+    {
+      "id": "JEE27-PHY-1153",
+      "source_class": "XII",
+      "unit_number": 11,
+      "difficulty": "Medium",
+      "assumptions": "Use vacuum/air and ideal linear isotropic dielectrics unless specified otherwise. Neglect capacitor fringing, leakage and test-charge disturbance. Set potential zero at infinity for isolated finite charges; for a dipole set U=0 at 90°. Slow external work is quasistatic.",
+      "figures": [],
+      "concept_family": "JM-null_charge",
+      "number": 22,
+      "section": "B",
+      "question": "Positive point charges Q = 4 μC and q are fixed at x = 0 and x = d = 3 m. The total electric field vanishes at x = 1 m between them. Let k = 9 × 10⁹ N m²/C² and take potential zero at infinity. Find the unknown charge. Give the numerical value in μC, rounded to the nearest integer."
+    },
+    {
+      "id": "JEE27-PHY-0999",
+      "source_class": "XI",
+      "unit_number": 10,
+      "difficulty": "Easy",
+      "assumptions": "Use linear, lossless sinusoidal waves and small-amplitude pendulum motion unless stated otherwise. Organ-pipe lengths are effective lengths if no end correction is supplied. Path-difference interference assumes initially in-phase coherent sources.",
+      "figures": [],
+      "concept_family": "GLOBAL-RESONANCE-TUBE",
+      "number": 23,
+      "section": "B",
+      "question": "A tube closed by water at one end resonates with the same tuning fork at air-column lengths 16 cm and 50 cm in two successive resonances. The fork frequency is 500 Hz. Assume the open-end correction is the same in both readings and these are the first and second resonances. Find the air-column length at the third resonance. Give the numerical value in cm, rounded to the nearest integer."
+    },
+    {
+      "id": "JEE27-PHY-1149",
+      "source_class": "XII",
+      "unit_number": 11,
+      "difficulty": "Medium",
+      "assumptions": "Use vacuum/air and ideal linear isotropic dielectrics unless specified otherwise. Neglect capacitor fringing, leakage and test-charge disturbance. Set potential zero at infinity for isolated finite charges; for a dipole set U=0 at 90°. Slow external work is quasistatic.",
+      "figures": [],
+      "concept_family": "JM-dipole_energy",
+      "number": 24,
+      "section": "B",
+      "question": "A rigid electric dipole of moment 2 μC m is in a uniform 5000 N/C electric field. Initially its axis makes 60° with the field. A slow external rotation brings it to 120°. The dipole’s moment of inertia about the rotation axis is 0.0001 kg m². In a separate trial the dipole is released from rest at its initial angle. With no damping, find its angular speed when it first aligns with the field. Give the numerical value in rad/s, rounded to the nearest integer."
+    },
+    {
+      "id": "JEE27-PHY-1850",
+      "source_class": "XII",
+      "unit_number": 17,
+      "difficulty": "Difficult",
+      "assumptions": "Use ordinary single-photon emission, fixed work function and nonrelativistic matter waves. Neglect contact potentials and space charge; emission comparisons use frequencies above threshold unless stated otherwise.",
+      "figures": [],
+      "concept_family": "JM-photon_current",
+      "number": 25,
+      "section": "B",
+      "question": "A monochromatic source of wavelength 400 nm emits 10 mW isotropically. A photocathode of area 4 cm² is normal to the rays at distance 1 m, with negligible variation over its small area. A fraction 0.2 of incident photons release one collected electron each. Take h=6.63 × 10⁻³⁴ J s, c=3 × 10⁸ m/s and e=1.60 × 10⁻¹⁹ C. Find the number of collected electrons per second. Express the result in units of 10^(9) s⁻¹, and give the nearest integer."
+    }
+  ]
+}

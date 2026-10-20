@@ -1,0 +1,42 @@
+[
+ {
+  "id": "R06-F-02-4",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "A",
+    "key": "A",
+    "working": "Final sentence: asking how much apparent demand is echo of earlier exposure.",
+    "alternative": "",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "A",
+    "key": "A",
+    "working": "P4 last sentence: remedy lies 'in asking how much of what looks like popular demand is an echo of earlier exposure'.",
+    "alternative": "",
+    "issue": "Option A lifts the passage's final sentence almost verbatim ('an echo of earlier exposure'); easy giveaway for a remedy question."
+   }
+  }
+ },
+ {
+  "id": "R06-F-07-3",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "C",
+    "key": "C",
+    "working": "P3: which criterion gives way depends partly on whether base rates are residue of earlier unfairness.",
+    "alternative": "",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "D",
+    "key": "D",
+    "working": "Choice depends on 'whether the different base rates are themselves the residue of earlier unfairness'.",
+    "alternative": "",
+    "issue": "Key D echoes para 3 wording closely ('residue of earlier unfairness'); easy giveaway but correct."
+   }
+  }
+ }
+]

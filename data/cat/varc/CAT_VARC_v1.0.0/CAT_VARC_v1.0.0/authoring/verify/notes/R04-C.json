@@ -1,0 +1,22 @@
+[
+ {
+  "id": "R04-C-05-3",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "C",
+    "key": "C",
+    "working": "Customs duties are a tax yet without dependence produce the same unresponsiveness, isolating dependence.",
+    "alternative": "",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "B",
+    "key": "B",
+    "working": "Non-resource tax form without dependence yields same unresponsiveness: dependence, not form, matters. D would weaken.",
+    "alternative": "",
+    "issue": "Option A supports the sequence point of para 3 rather than the dependence claim; not a real competitor, but some solvers may hesitate."
+   }
+  }
+ }
+]

@@ -1,0 +1,66 @@
+[
+ {
+  "id": "R03-D-08",
+  "category": "E6",
+  "severity": "major",
+  "finding": "Blind solvers S1 and S2 both flagged paragraph 3: an editing leftover ('though their chances against the children of the office managers may be exactly what their parents' chances were') was followed by a redundant 'But on the measures that track relative position, the chances may be much as they were', where 'But' contrasted with nothing.",
+  "fix": "Merged into one sentence: 'When the offices stop hiring, the grandchildren find that the climb has ended. Yet on the measures that track their position against the children of the office managers, the chances may be much as they were: ...'. Quoted phrases used by 08-2 and 08-3 ('the chances may be much as they were', 'is not openness but the rising tide', 'The sense of closure is real') still match; passage is 576 words (within 570 to 730).",
+  "changed": true
+ },
+ {
+  "id": "R03-D-08-2",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Solver flag on this item concerned only the passage leftover; both solvers reached the correct answer.",
+  "fix": "none: key sound; passage defect fixed under R03-D-08.",
+  "changed": false
+ },
+ {
+  "id": "R03-D-03-4",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation (student-facing) said 'The key holds both halves.'",
+  "fix": "Changed to 'The correct answer holds both halves.'",
+  "changed": true
+ },
+ {
+  "id": "R03-D-07",
+  "category": "E6",
+  "severity": "minor",
+  "finding": "Paragraph 2 says 'Call this inconspicuous consumption', presenting as the author's coinage a term already established in the literature on affluent spending.",
+  "fix": "Changed to 'The pattern has come to be called inconspicuous consumption.' No question quotes the sentence.",
+  "changed": true
+ },
+ {
+  "id": "R03-D-02-4",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Correct option (167 chars) was about 30% longer than every other option, a length cue.",
+  "fix": "Shortened the correct option and lengthened one distractor; explanation wording aligned ('when bookings ran out').",
+  "changed": true
+ },
+ {
+  "id": "R03-D-05-4",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Correct option noticeably longer than the distractors (156 vs at most 124 chars).",
+  "fix": "Lengthened the geographic-spread distractor; still clearly wrong (paragraph 4 says nothing about geography).",
+  "changed": true
+ },
+ {
+  "id": "R03-D-07-4",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Correct option noticeably longer than the distractors (162 vs at most 134 chars).",
+  "fix": "Lengthened the sincerity distractor; it remains answered by paragraph 5's disclaimer about motives.",
+  "changed": true
+ },
+ {
+  "id": "R03-D-file",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Several difficulty_reason fields use 'key' and 'distractor'.",
+  "fix": "none: difficulty_reason is internal metadata, not student-facing text.",
+  "changed": false
+ }
+]

@@ -1,0 +1,464 @@
+{
+  "seed": 3391,
+  "max_marks": 100,
+  "marking": {
+    "correct": 4,
+    "incorrect": -1,
+    "unattempted": 0
+  },
+  "basis": "Official JEE Main 2026 Paper 1 Physics format",
+  "questions": [
+    {
+      "id": "JEE27-PHY-1567",
+      "source_class": "XII",
+      "unit_number": 15,
+      "difficulty": "Easy",
+      "assumptions": "Use a plane wave in vacuum unless stated otherwise. Spectrum boundaries are approximate conventional bands, not sharp universal cutoffs; diagrams are schematic.",
+      "figures": [
+        {
+          "file": "figures/spectrum-4.png",
+          "alt_text": "Seven adjacent bands in increasing frequency order; band 4 is highlighted. The bands have equal drawing widths, with no quantitative scale.",
+          "source": "ORIGINAL",
+          "width": 1600,
+          "height": 900
+        }
+      ],
+      "concept_family": "SRC-EM-SPECTRUM",
+      "number": 1,
+      "section": "A",
+      "question": "Which wavelength range correctly matches the band highlighted in the accompanying electromagnetic-spectrum diagram? Use the diagram with band 4 highlighted.",
+      "options": {
+        "A": "wavelengths from about 400 nm to 700 nm",
+        "B": "wavelengths from about 1 mm to 0.1 m",
+        "C": "wavelengths from about 700 nm to 1 mm",
+        "D": "wavelengths longer than about 0.1 m"
+      }
+    },
+    {
+      "id": "JEE27-PHY-0780",
+      "source_class": "XI",
+      "unit_number": 8,
+      "difficulty": "Easy",
+      "assumptions": "Work done BY the gas is positive. Unless a process is explicitly irreversible, gas-law path calculations are quasistatic and reversible with constant stated heat capacities; the only mechanical work is p–V work.",
+      "figures": [],
+      "concept_family": "SRC-e18047240112",
+      "number": 2,
+      "section": "A",
+      "question": "For a quasi static adiabatic change of an ideal gas, the pressure and the volume are related by:",
+      "options": {
+        "A": "P^gamma V = constant",
+        "B": "P V^(gamma minus 1) = constant",
+        "C": "P V = constant",
+        "D": "P V^gamma = constant"
+      }
+    },
+    {
+      "id": "JEE27-PHY-0919",
+      "source_class": "XI",
+      "unit_number": 10,
+      "difficulty": "Medium",
+      "assumptions": "Use linear, lossless sinusoidal waves and small-amplitude pendulum motion unless stated otherwise. Organ-pipe lengths are effective lengths if no end correction is supplied. Path-difference interference assumes initially in-phase coherent sources.",
+      "figures": [],
+      "concept_family": "SRC-87da4c5b6ddf",
+      "number": 3,
+      "section": "A",
+      "question": "A sound wave of frequency 500 Hz travels in air with speed 340 m s⁻¹. The amplitude of oscillation of an air particle is 1 mm. Taking π = 3.14, the maximum speed of an air particle is about:",
+      "options": {
+        "A": "0.5 m s⁻¹",
+        "B": "6.28 m s⁻¹",
+        "C": "3.14 m s⁻¹",
+        "D": "340 m s⁻¹"
+      }
+    },
+    {
+      "id": "JEE27-PHY-0960",
+      "source_class": "XI",
+      "unit_number": 10,
+      "difficulty": "Easy",
+      "assumptions": "Use linear, lossless sinusoidal waves and small-amplitude pendulum motion unless stated otherwise. Organ-pipe lengths are effective lengths if no end correction is supplied. Path-difference interference assumes initially in-phase coherent sources.",
+      "figures": [],
+      "concept_family": "SRC-12e600843eeb",
+      "number": 4,
+      "section": "A",
+      "question": "The speed of sound in a given sample of air at a fixed temperature is:",
+      "options": {
+        "A": "greater for lower frequencies, because long wavelengths meet less resistance from the air",
+        "B": "the same for all audible frequencies, which is why a distant band is heard in tune and in time",
+        "C": "greater for louder sounds of any frequency, because they carry more energy",
+        "D": "greater for higher frequencies, which is why the shriller instruments of a distant band are heard first"
+      }
+    },
+    {
+      "id": "JEE27-PHY-0466",
+      "source_class": "XI",
+      "unit_number": 5,
+      "difficulty": "Medium",
+      "assumptions": "Rigid bodies and fixed axes are ideal unless specified otherwise; moments of inertia refer to the named axis.",
+      "figures": [],
+      "concept_family": "SRC-1bfbd81f568b",
+      "number": 5,
+      "section": "A",
+      "question": "For a rigid body with constant moment of inertia rotating about a fixed axis, zero angular acceleration about that axis requires:",
+      "options": {
+        "A": "the angular momentum is zero",
+        "B": "the net force is zero",
+        "C": "the net torque component along that axis is zero",
+        "D": "the moment of inertia is zero"
+      }
+    },
+    {
+      "id": "JEE27-PHY-0116",
+      "source_class": "XI",
+      "unit_number": 2,
+      "difficulty": "Medium",
+      "assumptions": "Use ideal particle motion with uniform gravity and negligible air resistance unless stated otherwise.",
+      "figures": [],
+      "concept_family": "SRC-688cf1507c46",
+      "number": 6,
+      "section": "A",
+      "question": "A package is released from an aeroplane flying horizontally with constant velocity. Neglect air resistance and Earth’s curvature. As seen by the pilot, the package appears to move:",
+      "options": {
+        "A": "vertically downwards but drifting steadily behind the aeroplane",
+        "B": "forwards along a curved path, moving ahead of the aeroplane",
+        "C": "vertically downwards, staying directly below the aeroplane",
+        "D": "backwards along a curved path, falling behind the aeroplane"
+      }
+    },
+    {
+      "id": "JEE27-PHY-0911",
+      "source_class": "XI",
+      "unit_number": 10,
+      "difficulty": "Medium",
+      "assumptions": "Use linear, lossless sinusoidal waves and small-amplitude pendulum motion unless stated otherwise. Organ-pipe lengths are effective lengths if no end correction is supplied. Path-difference interference assumes initially in-phase coherent sources.",
+      "figures": [],
+      "concept_family": "SRC-b47e77374a69",
+      "number": 7,
+      "section": "A",
+      "question": "A block of mass 0.5 kg on a spring of force constant 50 N m⁻¹ oscillates with amplitude 0.2 m. Its kinetic energy at a displacement of 0.1 m is:",
+      "options": {
+        "A": "1 J",
+        "B": "0.75 J",
+        "C": "0.25 J",
+        "D": "0.5 J"
+      }
+    },
+    {
+      "id": "JEE27-PHY-0865",
+      "source_class": "XI",
+      "unit_number": 9,
+      "difficulty": "Easy",
+      "assumptions": "Use the classical ideal-gas model and the stated active degrees of freedom; molecular size is fixed in mean-free-path comparisons unless specified otherwise.",
+      "figures": [],
+      "concept_family": "SRC-7e8dc3409bbd",
+      "number": 8,
+      "section": "A",
+      "question": "Two different gases are found to have the same pressure and the same density. Then:",
+      "options": {
+        "A": "their molecules have the same root mean square speed",
+        "B": "their molecules have the same average kinetic energy",
+        "C": "they are necessarily at the same temperature",
+        "D": "their molecules have the same mass"
+      }
+    },
+    {
+      "id": "JEE27-PHY-1991",
+      "source_class": "XII",
+      "unit_number": 19,
+      "difficulty": "Easy",
+      "assumptions": "Use the elementary low-field semiconductor model at room temperature unless specified otherwise; silicon/germanium forward drops, when approximated, are 0.7/0.3 V. Reverse characteristics refer to operation below breakdown unless breakdown is stated.",
+      "figures": [],
+      "concept_family": "SRC-510b6bc17def",
+      "number": 9,
+      "section": "A",
+      "question": "The forbidden energy gap of pure silicon at room temperature is nearly:",
+      "options": {
+        "A": "5.0 eV",
+        "B": "1.1 eV",
+        "C": "0.05 eV",
+        "D": "0.7 eV"
+      }
+    },
+    {
+      "id": "JEE27-PHY-2149",
+      "source_class": "XII",
+      "unit_number": 20,
+      "difficulty": "Difficult",
+      "assumptions": "Treat drawings as schematic. Apply zero-error and parallax corrections; instrument idealisations and experimental limits stated in the question take precedence.",
+      "figures": [],
+      "concept_family": "SRC-EXPERIMENT-12",
+      "number": 10,
+      "section": "A",
+      "question": "A cell of emf 2 V and negligible internal resistance drives a galvanometer through series resistance 1000 Ω. Its deflection is 20 divisions. Connecting a shunt 50 Ω directly across the galvanometer halves its deflection, while the series resistor remains connected. Deflection is proportional to coil current. Find the galvanometer resistance without assuming R is infinite. Choose the closest value.",
+      "options": {
+        "A": "50 Ω",
+        "B": "52.63 Ω",
+        "C": "26.32 Ω",
+        "D": "47.62 Ω"
+      }
+    },
+    {
+      "id": "JEE27-PHY-2134",
+      "source_class": "XII",
+      "unit_number": 20,
+      "difficulty": "Easy",
+      "assumptions": "Treat drawings as schematic. Apply zero-error and parallax corrections; instrument idealisations and experimental limits stated in the question take precedence.",
+      "figures": [
+        {
+          "file": "figures/experiment-14.png",
+          "alt_text": "Triangular prism and refraction through its two sloping, nonparallel faces. Schematic, not to scale.",
+          "source": "ORIGINAL",
+          "width": 1600,
+          "height": 900
+        }
+      ],
+      "concept_family": "SRC-EXPERIMENT-14",
+      "number": 11,
+      "section": "A",
+      "question": "Which of these standard results applies to the optical element in this drawing? Refer to experimental arrangement 14.",
+      "options": {
+        "A": "At minimum deviation, the internal refraction angles at the two sloping faces are equal",
+        "B": "The object and its real image lie at twice the focal length on opposite sides of a thin converging lens",
+        "C": "The emergent and incident rays from a parallel-sided slab are parallel",
+        "D": "The angle of incidence equals the angle of reflection at a plane mirror"
+      }
+    },
+    {
+      "id": "JEE27-PHY-1839",
+      "source_class": "XII",
+      "unit_number": 17,
+      "difficulty": "Medium",
+      "assumptions": "Use ordinary single-photon emission, fixed work function and nonrelativistic matter waves. Neglect contact potentials and space charge; emission comparisons use frequencies above threshold unless stated otherwise.",
+      "figures": [],
+      "concept_family": "JM-debroglie_accelerate",
+      "number": 12,
+      "section": "A",
+      "question": "An electron initially has de Broglie wavelength 0.2 nm. It is then accelerated through an additional 0.625 V in vacuum. Use the nonrelativistic approximation K(eV)=0.0150/[λ(nm)]² and take e=1.60 × 10⁻¹⁹ C. No energy is lost. Find the final kinetic energy. Choose the closest value.",
+      "options": {
+        "A": "6 × 10⁻²⁰ J",
+        "B": "8 × 10⁻²⁰ J",
+        "C": "1.6 × 10⁻¹⁹ J",
+        "D": "1 × 10⁻¹⁹ J"
+      }
+    },
+    {
+      "id": "JEE27-PHY-1380",
+      "source_class": "XII",
+      "unit_number": 13,
+      "difficulty": "Medium",
+      "assumptions": "Use steady source currents and vacuum unless specified otherwise. Particle motion is nonrelativistic, with other forces neglected in magnetic-orbit questions. Listed charge magnitudes are positive. Neglect end and demagnetising effects in ideal long-solenoid models.",
+      "figures": [],
+      "concept_family": "SRC-f6145f84c8db",
+      "number": 13,
+      "section": "A",
+      "question": "A galvanometer of resistance 100 Ω gives full-scale deflection at 1 mA. The shunt needed for a 1 A ammeter is approximately:",
+      "options": {
+        "A": "100 Ω",
+        "B": "99.9 Ω",
+        "C": "1.0 kΩ",
+        "D": "0.10 Ω"
+      }
+    },
+    {
+      "id": "JEE27-PHY-1376",
+      "source_class": "XII",
+      "unit_number": 13,
+      "difficulty": "Medium",
+      "assumptions": "Use steady source currents and vacuum unless specified otherwise. Particle motion is nonrelativistic, with other forces neglected in magnetic-orbit questions. Listed charge magnitudes are positive. Neglect end and demagnetising effects in ideal long-solenoid models.",
+      "figures": [],
+      "concept_family": "SRC-8729a9fd9d14",
+      "number": 14,
+      "section": "A",
+      "question": "A magnetic dipole of moment 0.5 A m² is at 30° to a uniform field of 0.2 T. The torque magnitude is:",
+      "options": {
+        "A": "0.05 N m",
+        "B": "0.025 N m",
+        "C": "0.20 N m",
+        "D": "0.10 N m"
+      }
+    },
+    {
+      "id": "JEE27-PHY-0724",
+      "source_class": "XI",
+      "unit_number": 8,
+      "difficulty": "Difficult",
+      "assumptions": "Work done BY the gas is positive. Unless a process is explicitly irreversible, gas-law path calculations are quasistatic and reversible with constant stated heat capacities; the only mechanical work is p–V work.",
+      "figures": [],
+      "concept_family": "REV-cascade_power_constraint",
+      "number": 15,
+      "section": "A",
+      "question": "Two reversible engines operate in cascade from 800 K through an unknown intermediate temperature T to ξ K. All heat rejected by the first engine enters the second. The first absorbs 2400 J per cycle and delivers 3 times the work of the second. A refrigerator working reversibly between Tc and T is later driven by the second engine’s entire work per cycle. In this arrangement, the following outcome is measured: the intermediate reservoir temperature = 350 K. Which listed positive value of ξ is consistent with that outcome?",
+      "options": {
+        "A": "300",
+        "B": "100",
+        "C": "400",
+        "D": "200"
+      }
+    },
+    {
+      "id": "JEE27-PHY-0869",
+      "source_class": "XI",
+      "unit_number": 9,
+      "difficulty": "Easy",
+      "assumptions": "Use the classical ideal-gas model and the stated active degrees of freedom; molecular size is fixed in mean-free-path comparisons unless specified otherwise.",
+      "figures": [],
+      "concept_family": "GLOBAL-GAS-PRESSURE-RMS",
+      "number": 16,
+      "section": "A",
+      "question": "The pressure of a gas of density 3 kg m⁻³ is 1.6 × 10⁵ Pa. The root mean square speed of its molecules is:",
+      "options": {
+        "A": "231 m s⁻¹",
+        "B": "400 m s⁻¹",
+        "C": "1.6 × 10⁵ m s⁻¹",
+        "D": "693 m s⁻¹"
+      }
+    },
+    {
+      "id": "JEE27-PHY-2110",
+      "source_class": "XI",
+      "unit_number": 20,
+      "difficulty": "Medium",
+      "assumptions": "Treat drawings as schematic. Apply zero-error and parallax corrections; instrument idealisations and experimental limits stated in the question take precedence.",
+      "figures": [
+        {
+          "file": "figures/experiment-02-readings.png",
+          "alt_text": "Screw pitch: 0.5 mm; Circular scale: 50 divisions; Closed gap: +3 circular divisions; Wire: sleeve 0.5 mm; circular reading 28",
+          "source": "ORIGINAL",
+          "width": 1600,
+          "height": 900
+        }
+      ],
+      "concept_family": "SRC-EXPERIMENT-2",
+      "number": 17,
+      "section": "A",
+      "question": "Keeping all other measurements exact, find the maximum percentage uncertainty of resistivity for diameter uncertainty of one least count. Use the readings in experimental panel 02. Choose the closest value.",
+      "options": {
+        "A": "2.667 %",
+        "B": "5.333 %",
+        "C": "-2.667 %",
+        "D": "1.333 %"
+      }
+    },
+    {
+      "id": "JEE27-PHY-0870",
+      "source_class": "XI",
+      "unit_number": 9,
+      "difficulty": "Difficult",
+      "assumptions": "Use the classical ideal-gas model and the stated active degrees of freedom; molecular size is fixed in mean-free-path comparisons unless specified otherwise.",
+      "figures": [],
+      "concept_family": "REV-gas_composition_inverse",
+      "number": 18,
+      "section": "A",
+      "question": "A mixture contains a monatomic gas of molar mass 4 g/mol and a rigid diatomic gas of molar mass 28 g/mol. The total mass is 64 g. Heating at constant volume through 20 K requires 1040 J. Use R=8 J/(mol K). Initially both gases are at ξ K. No rotational modes freeze out and vibration is inactive. The mixture is then reversibly compressed adiabatically to half its volume. In this arrangement, the following outcome is measured: the final rms speed of the diatomic molecules = 610.4857565 m/s. Which listed positive value of ξ is consistent with that outcome?",
+      "options": {
+        "A": "160",
+        "B": "640",
+        "C": "480",
+        "D": "320"
+      }
+    },
+    {
+      "id": "JEE27-PHY-0707",
+      "source_class": "XI",
+      "unit_number": 7,
+      "difficulty": "Medium",
+      "assumptions": "Use the specified ideal-fluid or Stokes-flow model. Neglect losses and end/wall effects where the ideal model is invoked; thermal-expansion formulae are first order.",
+      "figures": [],
+      "concept_family": "JM-stokes_inverse",
+      "number": 19,
+      "section": "A",
+      "question": "A spherical bead of radius 0.5 mm and density ξ kg/m³ falls at terminal speed 10 mm/s through a liquid of density 1000 kg/m³. Assume Stokes flow, no wall effects and g = 10 m/s². The recorded value of the rate of energy dissipation due to viscous drag on this bead is 2.094395102 × 10⁻⁷ W. Which listed positive value of ξ is consistent with this measurement?",
+      "options": {
+        "A": "10000",
+        "B": "7500",
+        "C": "5000",
+        "D": "2500"
+      }
+    },
+    {
+      "id": "JEE27-PHY-1546",
+      "source_class": "XII",
+      "unit_number": 14,
+      "difficulty": "Difficult",
+      "assumptions": "Use the idealisations, constants, geometry and sign conventions stated in this question. Any accompanying drawing is schematic.",
+      "figures": [],
+      "concept_family": "JM-lr_switch",
+      "number": 20,
+      "section": "A",
+      "question": "A coil with unknown inductance L and positive resistance r is connected to an ideal 18 V source at t=0 with zero current. The steady current is 3 A, and the current first reaches 1.5 A at time (ln 2)/2 s. At twice that time, a switch instantaneously reverses the source polarity and inserts an extra 6 Ω in series. The coil current is continuous at switching and the circuit remains closed. Inductance is constant. Find the time after switching at which the current first becomes 0.75 A in the direction opposite to its original direction. Choose the closest value.",
+      "options": {
+        "A": "0.173287 s",
+        "B": "0.274653 s",
+        "C": "0.804719 s",
+        "D": "0.402359 s"
+      }
+    },
+    {
+      "id": "JEE27-PHY-1137",
+      "source_class": "XII",
+      "unit_number": 11,
+      "difficulty": "Difficult",
+      "assumptions": "Use vacuum/air and ideal linear isotropic dielectrics unless specified otherwise. Neglect capacitor fringing, leakage and test-charge disturbance. Set potential zero at infinity for isolated finite charges; for a dipole set U=0 at 90°. Slow external work is quasistatic.",
+      "figures": [],
+      "concept_family": "JM-charged_particle",
+      "number": 21,
+      "section": "B",
+      "question": "A particle with positive charge-to-mass ratio 1000000 C/kg starts from rest and is accelerated through 200 V. It then enters horizontally between parallel plates of length 0.2 m with uniform vertical electric field 1000 N/C. Ignore gravity and edge fields; the particle does not hit a plate. Find tan θ, where θ is the exit-velocity angle to the original direction. Express the result in units of 10^(-3) (dimensionless), and give the nearest integer."
+    },
+    {
+      "id": "JEE27-PHY-1556",
+      "source_class": "XII",
+      "unit_number": 14,
+      "difficulty": "Difficult",
+      "assumptions": "Use the idealisations, constants, geometry and sign conventions stated in this question. Any accompanying drawing is schematic.",
+      "figures": [
+        {
+          "file": "figures/model-sliding_rod.png",
+          "alt_text": "Physical arrangement for sliding rod; supplied quantities are in the question, and no requested result is labelled.",
+          "source": "ORIGINAL",
+          "width": 1600,
+          "height": 900
+        }
+      ],
+      "concept_family": "GLOBAL-ROD-MAGNETIC-DRAG",
+      "number": 22,
+      "section": "B",
+      "question": "A conducting rod of mass 0.50 kg and length 0.50 m slides to the right on horizontal rails as illustrated. The uniform field into the page is 2.0 T; total closed-loop resistance is 4.0 Ω and inductance is negligible. The kinetic friction force on the rod has constant magnitude 0.50 N while it moves. A constant 2.0 N force to the right first maintains steady motion. This applied force is then removed abruptly. The rails and magnetic field extend through the entire subsequent motion; the rod eventually stops. Neglect all other losses. Find the total Joule heat generated after the applied force is removed. Give the numerical value in J, rounded to the nearest integer."
+    },
+    {
+      "id": "JEE27-PHY-0061",
+      "source_class": "XI",
+      "unit_number": 1,
+      "difficulty": "Easy",
+      "assumptions": "Use SI units unless specified. Treat reported measurement errors as small first-order uncertainties.",
+      "figures": [],
+      "concept_family": "JM-hollow_density",
+      "number": 23,
+      "section": "B",
+      "question": "A hollow cylindrical specimen has outer radius 2 cm, inner radius 1 cm, length 10 cm and mass 942 g. The maximum absolute errors in each radius, length and mass are 0.01 cm, 0.02 cm and 1 g respectively. Treat the errors as independent bounds and use first-order maximum-error propagation; take π = 3.14. What is the nominal density? Give the numerical value in g/cm³, rounded to the nearest integer."
+    },
+    {
+      "id": "JEE27-PHY-1291",
+      "source_class": "XII",
+      "unit_number": 12,
+      "difficulty": "Medium",
+      "assumptions": "Use steady currents, ideal connecting wires and uniform ohmic conductors at fixed temperature unless specified otherwise. Resistivity is unchanged by stretching in the stated elementary model. Wheatstone arms P,Q,R,S mean AB,BC,AD,DC; source AC and detector BD.",
+      "figures": [],
+      "concept_family": "JM-wire_stretch_heat",
+      "number": 24,
+      "section": "B",
+      "question": "An initially uniform wire has resistance 4 Ω at 20 °C. It is stretched uniformly to 2 times its original length without changing its volume or resistivity at 20 °C, and then heated to 70 °C. Use a temperature coefficient 0.004 K⁻¹ referred to 20 °C and a linear resistivity law. A constant 24 V is applied to the final wire. Find the final resistance. Express the result in units of 10^(-1) Ω, and give the nearest integer."
+    },
+    {
+      "id": "JEE27-PHY-1417",
+      "source_class": "XII",
+      "unit_number": 13,
+      "difficulty": "Medium",
+      "assumptions": "Use steady source currents and vacuum unless specified otherwise. Particle motion is nonrelativistic, with other forces neglected in magnetic-orbit questions. Listed charge magnitudes are positive. Neglect end and demagnetising effects in ideal long-solenoid models.",
+      "figures": [],
+      "concept_family": "JM-loop_balance",
+      "number": 25,
+      "section": "B",
+      "question": "A coil with 100 turns and area 20 cm² carries 0.2 A in a uniform 0.5 T magnetic field. It is attached to a torsion spring. The coil’s normal makes 30° with the field and the spring is twisted through 0.1 rad at equilibrium. The spring follows torque = κ × twist and balances the magnetic torque. Find the torsion constant. Express the result in units of 10^(-3) N m/rad, and give the nearest integer."
+    }
+  ]
+}

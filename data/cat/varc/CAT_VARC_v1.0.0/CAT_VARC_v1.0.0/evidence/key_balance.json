@@ -1,0 +1,65 @@
+{
+ "mcq_letters_by_chapter": {
+  "01": {
+   "B": 60,
+   "D": 59,
+   "C": 60,
+   "A": 59
+  },
+  "02": {
+   "D": 51,
+   "C": 51,
+   "A": 51,
+   "B": 51
+  },
+  "03": {
+   "B": 60,
+   "D": 59,
+   "A": 60,
+   "C": 59
+  },
+  "04": {
+   "D": 51,
+   "A": 51,
+   "C": 51,
+   "B": 51
+  },
+  "05": {
+   "B": 60,
+   "A": 59,
+   "D": 60,
+   "C": 59
+  },
+  "06": {
+   "B": 59,
+   "A": 59,
+   "C": 60,
+   "D": 60
+  },
+  "07": {
+   "A": 51,
+   "B": 51,
+   "D": 51,
+   "C": 51
+  },
+  "08": {
+   "C": 34,
+   "B": 34,
+   "D": 34,
+   "A": 34
+  },
+  "10": {
+   "D": 88,
+   "A": 87,
+   "C": 87,
+   "B": 88
+  },
+  "12": {
+   "B": 36,
+   "C": 38,
+   "A": 40,
+   "D": 36
+  }
+ },
+ "rules": "MCQ letters assigned by code, balanced per chapter (difference at most 1 for RC and para summary), no run longer than 3 in chapter order, no letter more than twice inside one RC passage. Sentence-placement blanks balanced by authors; para-jumble and odd-sentence labels shuffled by code."
+}

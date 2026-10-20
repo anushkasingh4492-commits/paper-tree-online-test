@@ -1,0 +1,42 @@
+[
+ {
+  "id": "V01-F-023",
+  "kind": "DISAGREEMENT",
+  "solvers": {
+   "S1": {
+    "answer": "14325",
+    "key": "14352",
+    "working": "1 bread; 4 telephone contrast; 3 value grows with users, lead feeds on itself; 2 'such markets therefore' dominance; 5 'same feature' also shields.",
+    "alternative": "14352: 5 can follow 3 ('rewards the leader') with 2 as the 'therefore' conclusion; 2/5 order weakly fixed.",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "14325",
+    "key": "14352",
+    "working": "1 bread; 4 telephone; 3 early lead feeds itself; 2 'such markets therefore' settle on early-large providers; 5 same feature also shields",
+    "alternative": "14352: 5 ('rewards the leader also shields it') could follow 3 directly with 2 as the closing conclusion; 2's 'grew large first' links more tightly to 3",
+    "issue": ""
+   }
+  }
+ },
+ {
+  "id": "V01-F-018",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "1324",
+    "key": "1324",
+    "working": "1 layout steers; 3 examples 'work this way'; 2 'Such designs' dark patterns do not forbid; 4 'this' (not forbidding, unnoticed) is what troubles.",
+    "alternative": "1234: 2 could directly follow 1 and 3 give examples, though 'Such designs' needs concrete designs and 4's 'this' links best to 2.",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "1324",
+    "key": "1324",
+    "working": "3 'works this way' = steering unnoticed; 2 'Such designs' names them; 4 'this...them' = not forbidding, dark patterns.",
+    "alternative": "1234 is arguable (2 after 1 defining the designs, 3 as example), though 'Such designs' reads better after the concrete examples in 3.",
+    "issue": ""
+   }
+  }
+ }
+]

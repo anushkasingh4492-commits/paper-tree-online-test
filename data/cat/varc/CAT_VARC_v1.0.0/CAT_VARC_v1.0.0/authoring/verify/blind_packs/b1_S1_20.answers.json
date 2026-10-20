@@ -1,0 +1,682 @@
+[
+ {
+  "id": "R01-G-06-1",
+  "answer": "D",
+  "working": "P2: loneliness is the painful sense of too few connections, felt in a crowded room.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-G-06-2",
+  "answer": "A",
+  "working": "P3: one who cannot bear own company depends on others in a way that makes relationships less free.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-G-06-3",
+  "answer": "A",
+  "working": "P4: solitude that stretches on with no prospect of return turns into loneliness, so A contradicts author.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-G-06-4",
+  "answer": "A",
+  "working": "Warning is that such measures crowd out chosen solitude; A shows no chosen time is lost.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-A-04-1",
+  "answer": "B",
+  "working": "P3: termites lack the peculiarity yet have sterile castes.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-A-04-2",
+  "answer": "C",
+  "working": "P2: sterility is 'not an anomaly' but an extreme of helping, same explanation applies.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-A-04-3",
+  "answer": "A",
+  "working": "P3 presents the haplodiploidy refinement as elegant, then 'It has not survived well.'",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-A-04-4",
+  "answer": "D",
+  "working": "P4: ecological conditions can tip the balance even where relatedness is modest.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-E-02-1",
+  "answer": "A",
+  "working": "P2: claims rise relative to premiums as safe customers leave.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-E-02-2",
+  "answer": "D",
+  "working": "P3: pool sorted by risk shares little risk; premium near expected cost.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-E-02-3",
+  "answer": "C",
+  "working": "Voluntary pool loses low-risk after each price rise until only high-risk remain: unravelling.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-E-02-4",
+  "answer": "A",
+  "working": "P4: fair for chosen risks, penalising twice for risks of birth or chance.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-E-06-1",
+  "answer": "C",
+  "working": "P2: amputees feel pain 'where there is no tissue left to report anything'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-E-06-2",
+  "answer": "D",
+  "working": "P3: brain combines signals with context, expectation and memory.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-E-06-3",
+  "answer": "B",
+  "working": "P4: verdict is as real as any bodily event; operating on scan findings may do little good.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-E-06-4",
+  "answer": "B",
+  "working": "Gauge vs verdict, with treatment implications for pain outlasting healing.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-A-01-1",
+  "answer": "D",
+  "working": "P4: fault lies with the habit of reading heritability as a measure of fixity.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-A-01-2",
+  "answer": "D",
+  "working": "P2: not because genes became more powerful but because environmental differences were taken away.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-A-01-3",
+  "answer": "A",
+  "working": "P2: 'a trait can be built almost entirely by genes and still show low heritability'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-A-01-4",
+  "answer": "B",
+  "working": "P3 seed analogy: high within-group heritability compatible with an entirely environmental gap.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-F-07-1",
+  "answer": "B",
+  "working": "P2: with coriander 'Neither of us thinks the other has missed something'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-F-07-2",
+  "answer": "C",
+  "working": "P4: readers agree on every feature yet differ because one prizes austerity, the other abundance.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-F-07-3",
+  "answer": "C",
+  "working": "P3: aesthetic argument aims at a change in perception, not proof; such moments are not rare.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-F-07-4",
+  "answer": "A",
+  "working": "Author claims such experiences are learning, not being talked into a preference; A suggests mere persuasion by confidence.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-F-07-5",
+  "answer": "B",
+  "working": "P5: 'something less humble in the maxim'; real respect would consist in disputing.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-A-07-1",
+  "answer": "C",
+  "working": "P2: RNA can not only carry information but also catalyse reactions.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-A-07-2",
+  "answer": "C",
+  "working": "Responds to replicator claim that a network without heredity cannot accumulate improvements (end of P2).",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-A-07-3",
+  "answer": "D",
+  "working": "P4: metabolism side asks where materials and energy came from; vacuum = no prior chemistry supplying them.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-A-07-4",
+  "answer": "D",
+  "working": "P5: problem of sequence rather than priority; successive stages.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-A-07-5",
+  "answer": "D",
+  "working": "Easy points are against each side's weakest claim, which the P5 sequential view drops.",
+  "confidence": "medium",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-D-02-1",
+  "answer": "B",
+  "working": "P2: fixed shifts, minimum hours 'and the rest of the employment bundle' attached to status (P3).",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-D-02-2",
+  "answer": "D",
+  "working": "P2: 'Each side is right about what the other ignores.'",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-D-02-3",
+  "answer": "D",
+  "working": "Shows minimum rate does depend on fixed schedules, directly contradicting the claim.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-D-02-4",
+  "answer": "C",
+  "working": "P4: unbundling has dangers, but the binary has already failed.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-B-04-1",
+  "answer": "B",
+  "working": "P2: canonical because later writers cannot leave it alone, not because judged excellent.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-B-04-2",
+  "answer": "A",
+  "working": "P2: canons exclude works of great finish that provoked no answer.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-B-04-3",
+  "answer": "D",
+  "working": "P4: conversational account relocates the critics' complaint rather than answering it.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-B-04-4",
+  "answer": "C",
+  "working": "Canonical works rarely answered would break the link between canonicity and replies.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-F-08-1",
+  "answer": "A",
+  "working": "P4: circle of mutual calibration is vicious only if it never widens; thermometers came to correct sensations.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-F-08-2",
+  "answer": "A",
+  "working": "P3: stimulus constant so differences attributed to experience rather than stimulus.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-F-08-3",
+  "answer": "D",
+  "working": "P2: report is evidence about experience, fallible but informative.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-F-08-4",
+  "answer": "C",
+  "working": "Independent imperfect methods agreeing and refining each other mirrors mutual calibration.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-F-08-5",
+  "answer": "B",
+  "working": "P2 calibrated evidence; P5 doubt concerns reach, not data.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-D-08-1",
+  "answer": "D",
+  "working": "P4: ageing changes the mix of capacities; loss depends on the task.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-D-08-2",
+  "answer": "C",
+  "working": "P3: proposal contested, cannot explain every loss, but shows the same observation can be read two ways.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-D-08-3",
+  "answer": "C",
+  "working": "P2: those who stay are healthier and more able than drop-outs, so decline understated.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-D-08-4",
+  "answer": "D",
+  "working": "Larger store alone, processing unchanged, produces slowing: direct support for the library mechanism.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-D-08-5",
+  "answer": "A",
+  "working": "P4 rejects the wisdom narrative; older people not uniformly wise, so A is not a shortcoming the author cites.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-G-04-1",
+  "answer": "C",
+  "working": "P2: decisive against death pictured as a condition one finds oneself in.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-G-04-2",
+  "answer": "B",
+  "working": "Same person could die later but not be born earlier; goods lost belong to this life.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-G-04-3",
+  "answer": "C",
+  "working": "Objection rests on asymmetry of attitudes; equal regret for pre-birth goods restores symmetry.",
+  "confidence": "medium",
+  "alternative": "",
+  "issue": "C is a counterfactual about people's attitudes; author's deeper point (goods never ours to lose) is metaphysical and might survive C, but C is still the best option."
+ },
+ {
+  "id": "R01-G-04-4",
+  "answer": "C",
+  "working": "Consolation working perfectly would teach us to care less about our future, which author treats as legitimate.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-D-07-1",
+  "answer": "A",
+  "working": "P1 habit of attendance; P4 papers' failings; P5 support deliberately.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-D-07-2",
+  "answer": "D",
+  "working": "P2: effect measured by careless driving prevented, not fines issued.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-D-07-3",
+  "answer": "C",
+  "working": "P3: forum spreads rumour in minutes but seldom has anyone to attend meetings or read accounts.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-D-07-4",
+  "answer": "D",
+  "working": "P4 critical of timidity and cosiness; P5 values the function they performed.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-D-07-5",
+  "answer": "D",
+  "working": "Loosening of restraint without scandal reports matches P2's prediction exactly.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-C-01-1",
+  "answer": "B",
+  "working": "P4: bargaining view best guide to boundary, but hides shared competence (P3).",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-C-01-2",
+  "answer": "A",
+  "working": "P2: brings in-house activities specific to own operations where a supplier could hold them to ransom.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-C-01-3",
+  "answer": "D",
+  "working": "P3: described only by costs avoided, at best matching an ideal costless market.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-C-01-4",
+  "answer": "B",
+  "working": "P4: 'shared competence of people who have learned to work together'; tacit, not purchasable.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-C-04-1",
+  "answer": "C",
+  "working": "P1 manipulation is least interesting; P4 value lies in surroundings.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-C-04-2",
+  "answer": "B",
+  "working": "P2: entirely truthful image cannot say whether square was full, moment typical, etc.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-C-04-3",
+  "answer": "A",
+  "working": "P3: check says nothing about selection, timing or framing.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-C-04-4",
+  "answer": "C",
+  "working": "Passing the alteration check taken as reliability, ignoring framing/location.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-B-04-1",
+  "answer": "D",
+  "working": "P2 habit explanation; P4 'none of this shows medium makes no difference'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-B-04-2",
+  "answer": "A",
+  "working": "P4: thickness of pages, position on page, chapter length help recall where ideas appeared.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-B-04-3",
+  "answer": "B",
+  "working": "P3: gaps narrow when readers are asked to slow down and summarise.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-B-04-4",
+  "answer": "A",
+  "working": "Habit explanation predicts no gap for non-habitual screen users; same gap weakens it.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-C-05-1",
+  "answer": "C",
+  "working": "P1: no sharp leading edge; forecasters apply criteria to fix a day.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-C-05-2",
+  "answer": "B",
+  "working": "P2: 'Calling the onset a convention is not to call it arbitrary.'",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-C-05-3",
+  "answer": "A",
+  "working": "P3: declared onset says a threshold crossed on the coast, not soil moisture in her district.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-C-05-4",
+  "answer": "A",
+  "working": "Direct evidence that local indicators serve sowing decisions better.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-D-01-1",
+  "answer": "C",
+  "working": "Rejects lump of labour; P4 grants harm to particular lives and places.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-D-01-2",
+  "answer": "D",
+  "working": "P2: closed mill is a single event with an address; expansions are scattered.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-D-01-3",
+  "answer": "D",
+  "working": "Assumes fixed pool of filmgoing/work merely split; ignores demand growth.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-D-01-4",
+  "answer": "B",
+  "working": "P4: correct argument about totals is cold comfort to the displaced weaver.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-F-02-1",
+  "answer": "C",
+  "working": "P2: both are effects of a drop in atmospheric pressure.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-F-02-2",
+  "answer": "C",
+  "working": "P2: 'we can often explain what we could never have predicted'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-F-02-3",
+  "answer": "B",
+  "working": "P3: factors such that, had they been different, the outcome would have been different.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-F-02-4",
+  "answer": "B",
+  "working": "Symmetry view requires explanation to serve as prediction 'in principle'; B shows hillside was predictable in principle, defusing that counterexample.",
+  "confidence": "medium",
+  "alternative": "",
+  "issue": "B weakens only one half of the two-direction case (barometer counterexample untouched); acceptable as 'most weaken' but not decisive."
+ },
+ {
+  "id": "R07-B-03-1",
+  "answer": "D",
+  "working": "P1: space is precious; spending it on bad books denies it to deserving ones.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": "Pack has a key-position cluster: all four R07-B-03 answers are D."
+ },
+ {
+  "id": "R07-B-03-2",
+  "answer": "D",
+  "working": "P2: reader may end unconvinced, yet reads next novel more alertly.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-B-03-3",
+  "answer": "D",
+  "working": "P2: argument 'quietly assumes that the only job of criticism is to guide readers in choosing'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-B-03-4",
+  "answer": "D",
+  "working": "P3: a notice that can only say yes tells the reader very little.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ }
+]

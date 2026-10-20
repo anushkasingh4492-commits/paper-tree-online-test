@@ -1,0 +1,674 @@
+[
+ {
+  "id": "R07-F-08-1",
+  "answer": "B",
+  "working": "P2 shows exclusive ownership of characters arose with printing and copyright law, 'not a natural fact', weakening the authors' claim.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-F-08-2",
+  "answer": "D",
+  "working": "P3: an author can object to 'having her own work altered and passed off as hers'; D is exactly that.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": "Minor: 'under her name' is slightly ambiguous between author and reader, though either reading still points to D."
+ },
+ {
+  "id": "R07-F-08-3",
+  "answer": "D",
+  "working": "'still to speak of belonging, merely moving the title deeds from one party to another'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-F-08-4",
+  "answer": "C",
+  "working": "P4 ends: the impulse to guard boundaries is 'not peculiar to authors but a temptation that comes with loving any story'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-F-08-5",
+  "answer": "B",
+  "working": "Final para: integrity of a particular telling deserves defence; boundaries of an imagined world never defensible; both sides misdescribed.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-F-06-1",
+  "answer": "C",
+  "working": "P2: 'Each exchange added a margin, which is one reason why goods from the far end ... were so costly'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-F-06-2",
+  "answer": "A",
+  "working": "P3: fanciful beliefs 'because no one they dealt with had seen the source'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-F-06-3",
+  "answer": "A",
+  "working": "P3 lists resilience (D), poor knowledge transmission (B), junction middlemen (C); fame of exceptional travellers is in P4 and is not a consequence of the relay structure.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-F-06-4",
+  "answer": "D",
+  "working": "Final para: fame of exceptional journeys shaped the picture; 'it is the web that explains how the trade actually worked'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-D-03-1",
+  "answer": "A",
+  "working": "P2: on the tenth hearing a wrong note is 'no longer a passing accident but a permanent blemish'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-D-03-2",
+  "answer": "C",
+  "working": "P3: recording meant as copy has become 'the original, and the performance its imperfect copy'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-D-03-3",
+  "answer": "A",
+  "working": "If the same kinds of performers took risks equally often before and after edited recordings, the claimed cautious response is undercut.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-D-03-4",
+  "answer": "C",
+  "working": "P4: 'not a simple story of decline' yet 'recording is not neutral'; transformation, not mere extension.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-E-06-1",
+  "answer": "D",
+  "working": "P3: balance of power cares only about 'the rise of a power that could threaten them'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-E-06-2",
+  "answer": "C",
+  "working": "P4 credits the norm with legitimacy/public justification; P2 says states would not pay the price.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-E-06-3",
+  "answer": "A",
+  "working": "P1 introduces both, P2 weakness of collective security, P3 price of balance of power, P4 lasting orders combine them.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-E-06-4",
+  "answer": "C",
+  "working": "Balancing motive (uneasy about growth) plus norm against conquest as public justification to win wider support.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-F-04-1",
+  "answer": "B",
+  "working": "Thesis: 'human error' hides how the situation was produced; P4 proposes design measures.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-F-04-2",
+  "answer": "C",
+  "working": "P2: 'Attention drifts when nothing happens for hours, and the more reliable the machine, the longer the stretches'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-F-04-3",
+  "answer": "C",
+  "working": "P3: better automation leaves supervisors less prepared and makes failure look more surprising.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-F-04-4",
+  "answer": "B",
+  "working": "P1: 'accurate in a narrow sense' but 'hides the way the situation was produced'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-A-05-1",
+  "answer": "B",
+  "working": "P2: 'For the length of the pause the woman refuses to leave at all; the next line shrinks the refusal to a matter of weather.'",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-A-05-2",
+  "answer": "B",
+  "working": "P4: if no meaning created by the breaks vanishes and no pace is flattened, 'the breaks were decoration'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-A-05-3",
+  "answer": "A",
+  "working": "The prose test: work is shown when something (a meaning the breaks created) is lost in the prose version.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-A-05-4",
+  "answer": "B",
+  "working": "P4: objection 'simply correct' for many poems but the test 'cannot condemn the form as such'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-F-08-1",
+  "answer": "C",
+  "working": "'The relevant knowledge ... does not yet exist'; knowledge of what a region could produce, learned only by trying.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-F-08-2",
+  "answer": "D",
+  "working": "Challenges the 'menu is known' picture; 'genuine danger lies elsewhere': ability to let losers go.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-F-08-3",
+  "answer": "C",
+  "working": "P2: investors' advantage presupposes a known menu; for new activities 'both would be guessing'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-F-08-4",
+  "answer": "C",
+  "working": "Defends the discovery rationale; P5 admits capture risk with 'no formula', only mitigating practices.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-F-08-5",
+  "answer": "B",
+  "working": "P3 rests on later entrants copying discoveries cheaply; if they cannot copy, the free-rider argument fails.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-C-06-1",
+  "answer": "A",
+  "working": "P2: readers revert 'not because they disbelieve the correction but because the correction left them with no story'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-C-06-2",
+  "answer": "D",
+  "working": "Supplying an alternative cause reducing reversion directly supports the missing-link explanation.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-C-06-3",
+  "answer": "D",
+  "working": "P3: the familiarity worry 'should not lead editors to issue vague notices that never say what was wrong'; A, B, C are endorsed.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-C-06-4",
+  "answer": "A",
+  "working": "Cause unknown, so best is explaining why the original claim seemed plausible (P3); C and D give no replacement, D does not even name the target.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-E-05-1",
+  "answer": "B",
+  "working": "P2: 'by clearing out the resident species, the drug removes the competitors that had kept a harmful one in check'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-E-05-2",
+  "answer": "B",
+  "working": "P1 credits it with saving 'an enormous number of lives'; P2: most microbes 'are not enemies', metaphor 'crude'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-E-05-3",
+  "answer": "C",
+  "working": "P3: promise 'specifying nothing that could be measured', vagueness 'protects it from ever being shown false'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-E-05-4",
+  "answer": "D",
+  "working": "P4: valuable when it brings working concepts like succession and disturbance that 'generate predictions that can be tested'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-A-01-1",
+  "answer": "A",
+  "working": "P3: the best uses change 'how the reader regards narration as such'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-A-01-2",
+  "answer": "B",
+  "working": "P4: 'they tend to go flat, because the only question they posed has been answered'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-A-01-3",
+  "answer": "D",
+  "working": "P2: the true story is 'built from the materials of the account we have decided to distrust'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-A-01-4",
+  "answer": "A",
+  "working": "Catching one voice out leads to questioning voices 'that give no sign of strain'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-C-03-1",
+  "answer": "A",
+  "working": "P1: balance 'is a good one wherever the disagreement is about values or interests'; road example illustrates this.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-C-03-2",
+  "answer": "A",
+  "working": "'The format has communicated a falsehood that neither speaker uttered'; reader's assumption is called reasonable, so not B.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-C-03-3",
+  "answer": "A",
+  "working": "Reply says distribution of opinion 'is itself a matter of fact that can be checked'; A denies it can be checked.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-C-03-4",
+  "answer": "B",
+  "working": "P4: where science is unsettled, presenting rival hypotheses side by side is right; author never wants majority presented as settled by default.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-F-07-1",
+  "answer": "D",
+  "working": "P3: tailor's earnings kept distinct allow her to claim 'a sphere of decision that pooled money would not give her'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-F-07-2",
+  "answer": "D",
+  "working": "Money strips goods of their histories and lets them be compared on one measure; D captures 'comparable'.",
+  "confidence": "medium",
+  "alternative": "B is tempting since it echoes the 'strips goods of their particular histories' clause, but that is a separate clause from 'renders them comparable'.",
+  "issue": ""
+ },
+ {
+  "id": "R03-F-07-3",
+  "answer": "A",
+  "working": "Author's claim: keeping earnings distinct gives her decision power that pooling would not; A shows exactly that contrast.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-F-07-4",
+  "answer": "B",
+  "working": "'The objection is correct about the shopkeeper. But it concedes the point'; fungibility holds only where histories are ignored.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-F-07-5",
+  "answer": "B",
+  "working": "P4 and P5: fungibility is a local social achievement holding where people agree to ignore histories.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-B-08-1",
+  "answer": "B",
+  "working": "P2: Chinese characters 'are in large part compounds in which one component indicates meaning and another ... sound'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-B-08-2",
+  "answer": "D",
+  "working": "The sequence is the history of one lineage presented as 'the path that all writing must follow'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-B-08-3",
+  "answer": "A",
+  "working": "P4: a ranking 'relative to a purpose', designed with less-schooled learners in mind.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-B-08-4",
+  "answer": "D",
+  "working": "Author says literacy owes far more to schools, reading matter and rewards; D shows script matters greatly with those held equal.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-B-08-5",
+  "answer": "D",
+  "working": "P3 says Japanese mixed system aids rapid reading 'once the system is mastered', nothing about ease for beginners; A, B, C supported.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-F-02-1",
+  "answer": "B",
+  "working": "P2: 'Both are effects of a drop in atmospheric pressure ... riding on that common cause'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-F-02-2",
+  "answer": "B",
+  "working": "'we can often explain what we could never have predicted ... The explanation is sound even though the forecast was out of reach'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-F-02-3",
+  "answer": "D",
+  "working": "P3: an explanation identifies factors 'such that, had they been different, the outcome would have been different too'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-F-02-4",
+  "answer": "D",
+  "working": "D shows the hillside could in principle have been predicted, rescuing the symmetry in the explain-without-predict direction.",
+  "confidence": "medium",
+  "alternative": "B is weak: it attacks barometer reliability, but even a perfect predictor would not explain; D is clearly stronger.",
+  "issue": ""
+ },
+ {
+  "id": "R07-D-06-1",
+  "answer": "A",
+  "working": "P2: she 'was doing what singers of such songs had always done'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-D-06-2",
+  "answer": "A",
+  "working": "P2: method borrowed from manuscript editing, 'where it makes good sense'; a folk song is 'a fundamentally different kind of object'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-D-06-3",
+  "answer": "B",
+  "working": "The collectors' theory treated variation as decay; the record's value lies in preserving that variety.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-D-06-4",
+  "answer": "B",
+  "working": "Value lies in preserving variety; six separate versions with singer names and occasions does so best.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-C-02-1",
+  "answer": "C",
+  "working": "P2: 'when the war ended the requirement was not withdrawn'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-C-02-2",
+  "answer": "D",
+  "working": "P3: statelessness 'shows how much that claim is worth'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-C-02-3",
+  "answer": "D",
+  "working": "P4: identical design, 'very different power': one admits holder 'to most of the world without a visa'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-C-02-4",
+  "answer": "D",
+  "working": "P2: railways led to controls being relaxed; passports were demanded because of war anxieties, not to speed travel.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-F-01-1",
+  "answer": "A",
+  "working": "P1: electronic computer 'inherited an idea that human computing offices had already worked out in detail'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-F-01-2",
+  "answer": "D",
+  "working": "P2: 'two people would compute the same column independently, and any disagreement sent the column back'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-F-01-3",
+  "answer": "C",
+  "working": "It prevents the continuity thesis being read as 'machines merely did faster'; speed changed which problems were posed.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-F-01-4",
+  "answer": "B",
+  "working": "P2: 'the scheme was in fact designed so that they would not need to'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-D-04-1",
+  "answer": "B",
+  "working": "P2-3: distinction is whether display is 'specified, monitored and sold by someone else'; 'the employer ... sets its terms'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-D-04-2",
+  "answer": "B",
+  "working": "Like the surgeon, his management is left to him and unscripted, so not emotional labour in the strict sense.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-D-04-3",
+  "answer": "D",
+  "working": "Same customers, scripted-and-scored vs free staff isolates the on-demand, monitored element the author locates the cost in.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-D-04-4",
+  "answer": "D",
+  "working": "'The objection is fair against the loose use of the term, but it misses what the original idea was pointing at'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-D-01-1",
+  "answer": "C",
+  "working": "'Each employer is behaving sensibly ... no one sees better than before, and everyone is more tired'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-D-01-2",
+  "answer": "A",
+  "working": "P2: 'selecting a small group who were, on average, more persistent and better connected'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-D-01-3",
+  "answer": "A",
+  "working": "P1: explanation 'offered far more often than it is checked'; change in work often modest beside the change in paperwork.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-D-01-4",
+  "answer": "D",
+  "working": "The account treats the degree as signal not skill; D shows coursework produced real skill gains.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-E-02-1",
+  "answer": "A",
+  "working": "P2 gives severe settlements that held and lenient ones that failed, then names balance of strength and will to enforce.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-E-02-2",
+  "answer": "C",
+  "working": "P2: 'the loser read leniency as a sign that it had not really been beaten'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-E-02-3",
+  "answer": "B",
+  "working": "Both of the author's conditions met yet the settlement still collapsed from resentment of harshness, as the popular lesson predicts.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-E-02-4",
+  "answer": "C",
+  "working": "'the record does not sort so neatly'; P4: 'Generosity has a real role' after defeat is unmistakable.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ }
+]

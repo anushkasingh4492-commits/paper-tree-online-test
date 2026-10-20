@@ -1,0 +1,698 @@
+[
+ {
+  "id": "R02-B-01-1",
+  "answer": "B",
+  "working": "P2-P3 defend lay fear as value-laden; P4 says take it apart, not a verdict.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-B-01-2",
+  "answer": "D",
+  "working": "P2: risks feel worse when imposed rather than chosen.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-B-01-3",
+  "answer": "B",
+  "working": "P2: she is not confused about arithmetic; distinction between consented and imposed risk.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-B-01-4",
+  "answer": "D",
+  "working": "P4: take fear apart, weigh components reflecting values vs salience of a recent image.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-A-03-1",
+  "answer": "A",
+  "working": "P2: majority counts more when views reached independently, not from the same teacher.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-A-03-2",
+  "answer": "C",
+  "working": "P2 lists track record, interests, division of field; years in field never mentioned.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-A-03-3",
+  "answer": "C",
+  "working": "P3: performance skills only loosely connected with being right.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-A-03-4",
+  "answer": "B",
+  "working": "P4: indirect methods narrow the range of reasonable belief, rarely close it; not a coin toss.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-A-01-1",
+  "answer": "D",
+  "working": "P4: stricter rules defend the stock of names; should be argued openly as cultural policy.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-A-01-2",
+  "answer": "B",
+  "working": "P3: obliges her to carry altered spelling that marks her at roll call.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-A-01-3",
+  "answer": "D",
+  "working": "P2 \"There is something to this\": concedes refusals of brand names/insults; P3 \"But they usually go much further\".",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-A-01-4",
+  "answer": "A",
+  "working": "P4: short list of what is forbidden (cruel names), not a long list of what is allowed.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-C-01-1",
+  "answer": "D",
+  "working": "P1: boredom not an absence but an active signal that the activity fails to engage us.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-C-01-2",
+  "answer": "A",
+  "working": "P3: receive the message without being able to respond, and boredom curdles into frustration.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-C-01-3",
+  "answer": "D",
+  "working": "P2: hunger disagreeable yet not a defect; its discomfort gets us to eat; boredom works similarly.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-C-01-4",
+  "answer": "C",
+  "working": "P4: may never learn what boredom pointed at: job, routine, unfed curiosity.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-B-02-1",
+  "answer": "A",
+  "working": "P1 \"strangeness is easy to miss... what moved him?\"; rest of passage offers accounts.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-B-02-2",
+  "answer": "B",
+  "working": "P2: matches how lapses feel and explains why they cluster at end of tiring days.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-B-02-3",
+  "answer": "A",
+  "working": "P3: does not abandon his judgement so much as stop looking at it.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-B-02-4",
+  "answer": "A",
+  "working": "P4 practical advantage is that arrangement strategies work; A shows they do not.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-D-07-1",
+  "answer": "B",
+  "working": "P2: a person who must stay in good graces learns to make interference unnecessary.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-D-07-2",
+  "answer": "C",
+  "working": "P5: rival view trains attention on what could happen, standing/structures of power that deter attempts.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-D-07-3",
+  "answer": "A",
+  "working": "P3: ruler interferes little; on non-interference view subjects thus freer than those restrained by contestable law.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-D-07-4",
+  "answer": "D",
+  "working": "P4 critics: criteria for arbitrariness smuggle back judgements about interference; D confirms this.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-D-07-5",
+  "answer": "A",
+  "working": "P5: answer better than critics allow but not a measure; identifies unfreedom a tally would miss.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-C-04-1",
+  "answer": "D",
+  "working": "P3: effort reintroduced by choice, walking the final stretch.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-C-04-2",
+  "answer": "B",
+  "working": "P2: what converts blisters is the fixed point towards which they are directed.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-C-04-3",
+  "answer": "C",
+  "working": "P2: both views detach two elements that draw meaning from each other.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-C-04-4",
+  "answer": "D",
+  "working": "P4: change can be real without being religious; but loses gravity of an obligatory destination.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-E-04-1",
+  "answer": "A",
+  "working": "P1: irregularity was the mark of an apprentice or hurried job; master eliminated it.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-E-04-2",
+  "answer": "C",
+  "working": "P2: buyer cannot tell imitation; premium pays for a narrative of making, not a visible quality.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-E-04-3",
+  "answer": "B",
+  "working": "P4: machines can be built to sense and respond to material, contradicting B.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-E-04-4",
+  "answer": "B",
+  "working": "P4 test: attention to the particular; bread machine adjusts to each batch.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-D-01-1",
+  "answer": "D",
+  "working": "P3-P4: new word cannot change feelings, but gives an interval of courteous speech; cannot carry whole burden.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-D-01-2",
+  "answer": "B",
+  "working": "P2: attitudes towards the thing give the word its colouring; any word reliably pointing absorbs them.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-D-01-3",
+  "answer": "B",
+  "working": "P2: a way of feeling something has been done while the underlying attitude goes untouched.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-D-01-4",
+  "answer": "C",
+  "working": "P4: cycle slows when the thing named stops being a mark of shame.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-C-06-1",
+  "answer": "A",
+  "working": "P2: limit quietly moved; no one decided to change it; each night judged correctly.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-C-06-2",
+  "answer": "B",
+  "working": "P3: everyone inside knows that it always has; deviation normalised.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-C-06-3",
+  "answer": "B",
+  "working": "P4: departure that simply accumulates is never decided, so no one is accountable.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-C-06-4",
+  "answer": "A",
+  "working": "P4: danger lies in deviation never recognised; noticed deviations become decisions, so A contradicts author.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-E-04-1",
+  "answer": "B",
+  "working": "P3: force depends on how confident each side is that escalation can be controlled.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-E-04-2",
+  "answer": "C",
+  "working": "P2: fear that restrained limited ventures weakened by confidence catastrophe avoided.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-E-04-3",
+  "answer": "D",
+  "working": "P2 predicts more low-level aggression expected to stay limited; D matches exactly. A shows fear of escalation, opposite.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-E-04-4",
+  "answer": "B",
+  "working": "P3: where leaders doubt a skirmish can be kept small, old caution returns.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-B-07-1",
+  "answer": "A",
+  "working": "P3 granted by author in P4-P5 framing: direct effects good government cannot abolish overnight; author does not dispute them.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-B-07-2",
+  "answer": "A",
+  "working": "P2: same climate, soils, history, diverge under different political systems.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-B-07-3",
+  "answer": "D",
+  "working": "P4: settling/extracting chosen by disease and soils; reversal evidence partly geographical in origin.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-B-07-4",
+  "answer": "D",
+  "working": "P4 rests on colonisers choosing by disease and soils; D removes that link.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-B-07-5",
+  "answer": "B",
+  "working": "P1/P3/P4 mention transport cost, disease, crops for estates; world prices never mentioned.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-G-07-1",
+  "answer": "A",
+  "working": "P2: suggests a general disposition rather than a considered judgement about any body.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-G-07-2",
+  "answer": "A",
+  "working": "P3: trust that rises and falls with the reliability of its object.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-G-07-3",
+  "answer": "D",
+  "working": "P2: if trust is what we rely on, survey and behaviour come apart; survey may not be better witness.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-G-07-4",
+  "answer": "A",
+  "working": "Knowledge explanation predicts the fall among the informed; A shows the fall among the uninformed only.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-G-07-5",
+  "answer": "B",
+  "working": "P3: want well-calibrated not high trust; P4 numbers alone cannot tell us what is happening.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-C-07-1",
+  "answer": "B",
+  "working": "P1: strain, the deformation that the load produces.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-C-07-2",
+  "answer": "D",
+  "working": "P4 keep the word; P5 ask which meaning is in play and whether evidence supports it.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-C-07-3",
+  "answer": "C",
+  "working": "P2: first reading true by definition (reaction); second is the demanding situation generally.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-C-07-4",
+  "answer": "C",
+  "working": "P3 criticism: advice slides from meaning 1 to 3 without specific evidence; C says it states meaning 3 and cites tests.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-C-07-5",
+  "answer": "D",
+  "working": "P4: \"It might seem that the remedy is to abandon the word... That would be a mistake\"; breadth fruitful.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-C-05-1",
+  "answer": "C",
+  "working": "P1: no sharp leading edge; forecasters apply criteria to fix a single day.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-C-05-2",
+  "answer": "A",
+  "working": "P2: \"Calling the onset a convention is not to call it arbitrary\"; criteria pick out real change, comparability.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-C-05-3",
+  "answer": "C",
+  "working": "P3: onset tells a threshold crossed along the coast, not soil moisture in her district.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-C-05-4",
+  "answer": "C",
+  "working": "P4 recommends local indicators for sowing advice; C shows lower losses with them.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-F-05-1",
+  "answer": "B",
+  "working": "P2 \"could\" vs paid; P4 support that follows the worker regardless of cause; sharing must be done.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-F-05-2",
+  "answer": "C",
+  "working": "P3: had to prove job lost to imports; cause often impossible to isolate when several combine.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-F-05-3",
+  "answer": "A",
+  "working": "P2: correct as arithmetic, but presenting it as settling the matter confuses hypothetical with policy.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-F-05-4",
+  "answer": "A",
+  "working": "P4 recommends cause-neutral support; A shows it reached and helped more workers.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-D-05-1",
+  "answer": "C",
+  "working": "P1: rhythm of brightening and fading tied to true brightness.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-D-05-2",
+  "answer": "C",
+  "working": "P3: rungs depend on each other but are tested by one another, unlike links.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-D-05-3",
+  "answer": "A",
+  "working": "P3: revisions came when comparison between overlapping rungs exposed hidden assumptions, including two kinds of pulsating star.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-D-05-4",
+  "answer": "B",
+  "working": "P4: cross-checks catch only errors that differ between methods; so the claim assumes some errors are not shared.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-B-07-1",
+  "answer": "C",
+  "working": "P2-P3 criticise calendar labels; P4 grants event-anchored generational effects.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-B-07-2",
+  "answer": "C",
+  "working": "P2: single year fixes period; age and birth cohort then determine each other and cannot be separated.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-B-07-3",
+  "answer": "B",
+  "working": "P3 objects that boundaries are conventional and arbitrary; sharp shifts at the line show real boundaries.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-B-07-4",
+  "answer": "B",
+  "working": "P4: effects found and not trivial, but anchored to events, uneven, rarely a single shared character.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-B-07-5",
+  "answer": "D",
+  "working": "P2: no set of observations can pull age/period/cohort apart without outside assumption; D claims none needed.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-G-07-1",
+  "answer": "B",
+  "working": "P1: some separation reflects production moved abroad rather than pollution avoided.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-G-07-2",
+  "answer": "A",
+  "working": "P1: fall in emissions per unit output swamped by growth of output itself.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-G-07-3",
+  "answer": "A",
+  "working": "P2: existence of absolute decoupling settles less than champions suppose; question is whether fast enough.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-G-07-4",
+  "answer": "A",
+  "working": "P3: GDP is a proxy only loosely tied to what matters; target in either direction is a mistake.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-G-07-5",
+  "answer": "A",
+  "working": "P4: no further environmental case for shrinking, whatever other reasons they may have.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-D-07-1",
+  "answer": "D",
+  "working": "P3: each decision closes off readings that brought supporters in; disillusionment follows.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-D-07-2",
+  "answer": "C",
+  "working": "P3: the slogan let each of them believe it had been made to them.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-D-07-3",
+  "answer": "A",
+  "working": "P3 explains disillusionment by closed-off readings; A shows disappointment scales with divergence of reading.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-D-07-4",
+  "answer": "B",
+  "working": "P4: detailed platform has its own quieter dishonesty; specificity can be a performance.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-D-07-5",
+  "answer": "A",
+  "working": "P5: it is the mirror, not the generality, that deserves contempt.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ }
+]

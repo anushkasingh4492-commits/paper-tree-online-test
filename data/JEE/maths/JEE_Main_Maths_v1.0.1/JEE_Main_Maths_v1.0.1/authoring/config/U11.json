@@ -1,0 +1,53 @@
+{
+ "unit_number": 11,
+ "unit_name": "Three Dimensional Geometry",
+ "branch": "Vectors and 3D Geometry",
+ "count": 140,
+ "draft_files": [
+  "drafts/u11_a.py",
+  "drafts/u11_b.py",
+  "drafts/u11_c.py"
+ ],
+ "alias_groups": {
+  "ALIAS-ERR-U11-B-01": [
+   "U11-B-015",
+   "U11-B-033"
+  ],
+  "ALIAS-ERR-U11-B-02": [
+   "U11-B-011",
+   "U11-B-021"
+  ],
+  "ALIAS-ERR-U11-B-03": [
+   "U11-A-009",
+   "U11-B-032"
+  ],
+  "ALIAS-ERR-U11-B-04": [
+   "U11-A-018",
+   "U11-B-014"
+  ],
+  "ALIAS-ERR-U11-C-01": [
+   "U11-A-002",
+   "U11-C-009"
+  ]
+ },
+ "numerical_selection": [
+  "U11-A-043",
+  "U11-B-036",
+  "U11-C-037",
+  "U11-B-037",
+  "U11-C-039",
+  "U11-B-039",
+  "U11-C-044",
+  "U11-B-042",
+  "U11-C-046",
+  "U11-A-019",
+  "U11-B-015",
+  "U11-C-015",
+  "U11-A-024",
+  "U11-B-021",
+  "U11-C-025",
+  "U11-A-001",
+  "U11-B-010",
+  "U11-A-006"
+ ]
+}

@@ -1,0 +1,267 @@
+[
+  {
+    "number": 1,
+    "id": "JEE27-PHY-1977",
+    "section": "A",
+    "answer": "D",
+    "answer_text": "100 Ω",
+    "explanation": "Converting the current, I = 7 mA = 7 × 10⁻³ A. Then R = 0.7 / (7 × 10⁻³) = 100 Ω. This is the ratio of the coordinates of one point on the characteristic and it changes from point to point because the curve is not a straight line through the origin.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 2,
+    "id": "JEE27-PHY-0075",
+    "section": "A",
+    "answer": "D",
+    "answer_text": "5 N",
+    "explanation": "Since the resultant is perpendicular to the smaller force Q, the relation R² = P² - Q² holds, so P² - Q² = 144. Writing this as (P - Q)(P + Q) = 144 and using P + Q = 18 gives P - Q = 8. Solving, P = 13 N and Q = 5 N, so the smaller force is 5 N.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 3,
+    "id": "JEE27-PHY-1180",
+    "section": "A",
+    "answer": "C",
+    "answer_text": "100",
+    "explanation": "Use the coupled physical relations below. The missing input is ξ=100 in the units assigned in the stem.\nEach reading obeys E=Vi(1+r/Ri). Solving the two equations gives r=50 Ω and E=15 V. The three loads have parallel resistance 40 Ω. Their common voltage is 6.666666667 V. External resistor power is 0.4444444444 W, whereas source internal heating uses the total current and is 1.388888889 W.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 4,
+    "id": "JEE27-PHY-1687",
+    "section": "A",
+    "answer": "D",
+    "answer_text": "5 cm, converging like a concave mirror",
+    "explanation": "For an equiconvex lens 1/f = (mu - 1)(2/R) gives 1/20 = 0.5 × 2/R = 1/R, so R = 20 cm. The silvered face acts as a mirror of focal length R/2 = 10 cm. Light crosses the lens, reflects and crosses the lens again, so the equivalent power is 1/F = 2/f_lens + 1/f_mirror = 2/20 + 1/10 = 0.1 + 0.1 = 0.2, giving F = 5 cm. The positive total power means it converges like a concave mirror.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 5,
+    "id": "JEE27-PHY-0923",
+    "section": "A",
+    "answer": "B",
+    "answer_text": "5 m/s²",
+    "explanation": "Each period gives the magnitude of effective gravity, ge=4π²L/T². The two magnitudes are 25 m/s² and √500 m/s². The second trial gives a²+10²=500, hence a=20 m/s². The first then gives (10+b)²+20²=25². Since b>0, 10+b=15, so b=5 m/s².",
+    "numerical_scaling": null
+  },
+  {
+    "number": 6,
+    "id": "JEE27-PHY-1497",
+    "section": "A",
+    "answer": "C",
+    "answer_text": "zero, because the current in the primary is not changing",
+    "explanation": "The induced emf in the secondary depends on the rate of change of the primary current. For a steady direct current dI_1/dt = 0, so no emf is induced however strong the coupling.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 7,
+    "id": "JEE27-PHY-2095",
+    "section": "A",
+    "answer": "D",
+    "answer_text": "0.178",
+    "explanation": "The amplitude multiplies by 3/4 every 60 s. After three intervals E/E0=(3/4)^6=0.177979.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 8,
+    "id": "JEE27-PHY-0286",
+    "section": "A",
+    "answer": "B",
+    "answer_text": "0.5",
+    "explanation": "The speed at any height is proportional to the square root of that height, since v is the square root of 2 g h. Hence e equals the square root of (2.5/10), which is the square root of 0.25, that is 0.5. Equivalently, the height ratio is the square of the coefficient.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 9,
+    "id": "JEE27-PHY-1650",
+    "section": "A",
+    "answer": "C",
+    "answer_text": "The ray is always perpendicular to the wavefront at the point where it meets it",
+    "explanation": "Energy travels outward along the shortest path from one wavefront to the next, which is along the normal to the wavefront. Hence the ray is drawn perpendicular to the wavefront everywhere.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 10,
+    "id": "JEE27-PHY-1649",
+    "section": "A",
+    "answer": "A",
+    "answer_text": "spherical",
+    "explanation": "In time t the disturbance from the point source covers the same distance v x t in every direction, so all points in the same phase lie on a sphere of radius v x t centred on the source. The wavefront is therefore spherical.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 11,
+    "id": "JEE27-PHY-1428",
+    "section": "A",
+    "answer": "A",
+    "answer_text": "30000",
+    "explanation": "Use the physical relations below with the missing input ξ. The recorded value of the accelerating potential difference that would produce this speed from rest gives ξ=30000 in the unit assigned to ξ in the question. Substitution checks the observation:\nZero force in the selector requires qE=qvB₁, hence v=150000 m/s. In the second region qvB₂=mv²/r, giving q/m=12500000 C/kg. T=2πr/v=1.675516082 × 10⁻⁶ s. Acceleration from rest uses qΔV=mv²/2, so ΔV=900 V.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 12,
+    "id": "JEE27-PHY-0885",
+    "section": "A",
+    "answer": "A",
+    "answer_text": "0.4545",
+    "explanation": "Heat capacities add in extensive form: CV = (3a/2+5b/2)R = 44 J/K; CP = CV+(a+b)R = 68 J/K. Therefore γ = 1.545454545, QV = 2200 J. The diatomic energy increase is (5bR/2)ΔT, a fraction 0.4545454545 of the total.\nFor the requested outcome — What fraction of the increase in internal energy belongs to the diatomic component? — the result is 0.4545.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 13,
+    "id": "JEE27-PHY-0478",
+    "section": "A",
+    "answer": "D",
+    "answer_text": "3",
+    "explanation": "Use the physical relations below with the missing input ξ. The recorded value of the tension on the lighter-mass side gives ξ=3 in the unit assigned to ξ in the question. Substitution checks the observation:\nFor the masses, T₁−m₁g = m₁a and m₂g−T₂ = m₂a. The pulley satisfies (T₂−T₁)r = I(a/r), with I = Mpr²/2. Thus a = 2.5 m/s², T₁ = 37.5 N, T₂ = 45 N. From v² = 2ad and v = ωr, ω = 10.54092553 rad/s.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 14,
+    "id": "JEE27-PHY-0921",
+    "section": "A",
+    "answer": "A",
+    "answer_text": "4π rad s⁻¹",
+    "explanation": "f = 40/20 = 2 Hz, so the period is 0.5 s. Then ω = 2 π f = 2 π x 2 = 4 π rad s⁻¹, about 12.6 rad s⁻¹.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 15,
+    "id": "JEE27-PHY-0134",
+    "section": "A",
+    "answer": "C",
+    "answer_text": "Impulse",
+    "explanation": "Impulse is force multiplied by the time interval for which it acts. Time is a scalar and force is a vector, so impulse is a vector directed along the force. Work, electric potential and pressure are all scalars.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 16,
+    "id": "JEE27-PHY-0711",
+    "section": "A",
+    "answer": "C",
+    "answer_text": "12 W/(m K)",
+    "explanation": "The thermal resistances L/(kA) add. Their sum gives heat rate 2000 W; the drop across slab 1 is rate×R₁, so the interface is 80 °C. Equating the series resistance to (L₁+L₂)/(keff A) gives keff = 12 W/(m K).\nFor the requested outcome — Find the conductivity of one uniform slab of the same total thickness and area that gives the same heat flow. — the result is 12 W/(m K).",
+    "numerical_scaling": null
+  },
+  {
+    "number": 17,
+    "id": "JEE27-PHY-1553",
+    "section": "A",
+    "answer": "A",
+    "answer_text": "3",
+    "explanation": "Use the physical relations below with the missing input ξ. The recorded value of the magnitude of transported charge during the ramp gives ξ=3 in the unit assigned to ξ in the question. Substitution checks the observation:\nMutual emf magnitude is MΔI/Δt=3 V, constant during the linear ramp. It drives 1 A. Integrating gives charge MΔI/R=0.6 C; I²RΔt gives 1.8 J of heat.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 18,
+    "id": "JEE27-PHY-0510",
+    "section": "A",
+    "answer": "B",
+    "answer_text": "4 g / 9",
+    "explanation": "g' / g = (1/9) × (1 / (1/2))² = (1/9) × 4 = 4 / 9. Hence g' = 4g / 9.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 19,
+    "id": "JEE27-PHY-1197",
+    "section": "A",
+    "answer": "B",
+    "answer_text": "1.5 Ω",
+    "explanation": "The arcs have resistances 8 × (1/4) = 2 Ω and 8 × (3/4) = 6 Ω. In parallel these give (2 × 6) / (2 + 6) = 12 / 8 = 1.5 Ω.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 20,
+    "id": "JEE27-PHY-2128",
+    "section": "A",
+    "answer": "B",
+    "answer_text": "Transfer the hot specimen quickly, stir gently, and record the equilibrium temperature while limiting heat exchange",
+    "explanation": "The drawing is an insulated calorimeter with a thermometer and stirrer. Prompt transfer and mixing help establish a meaningful equilibrium temperature with small environmental heat exchange. The alternatives concern optical, acoustic and electrical arrangements.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 21,
+    "id": "JEE27-PHY-2151",
+    "section": "B",
+    "answer": 195,
+    "answer_text": "195",
+    "explanation": "Before shunting Ig=E/(R+G). After shunting, coil current is Ig/2 and the shunt current is IgG/(2S). Applying the loop equation gives G=SR/(R−S)=52.63157895 Ω. Thus initial Ig=0.0019 A, figure of merit=9.5 × 10⁻⁵ A/division, and final total current=0.00195 A.\nFor the requested outcome — Find the total current drawn from the cell after the shunt is connected. — the result is 0.00195 A.",
+    "numerical_scaling": {
+      "question": "A cell of emf 2 V and negligible internal resistance drives a galvanometer through series resistance 1000 Ω. Its deflection is 20 divisions. Connecting a shunt 50 Ω directly across the galvanometer halves its deflection, while the series resistor remains connected. Deflection is proportional to coil current. Find the total current drawn from the cell after the shunt is connected. Express the result in units of 10^(-5) A, and give the nearest integer.",
+      "unrounded_value": 195.0,
+      "answer_integer": 195,
+      "unit": "A",
+      "unit_scale_power10": -5,
+      "rounding": "nearest integer; exact half away from zero",
+      "parent_candidate": "NEW-U20-galvanometer_half-1-3"
+    }
+  },
+  {
+    "number": 22,
+    "id": "JEE27-PHY-1153",
+    "section": "B",
+    "answer": 16,
+    "answer_text": "16",
+    "explanation": "At the point between positive charges the fields oppose. Set Q/x² = q/(d−x)² to obtain q = 16 μC. Potentials add as scalars, giving 108000 V there even though the field is zero. At x=2d both fields point to the right and add to 17000 N/C.\nFor the requested outcome — Find the unknown charge. — the result is 16 μC.",
+    "numerical_scaling": {
+      "question": "Positive point charges Q = 4 μC and q are fixed at x = 0 and x = d = 3 m. The total electric field vanishes at x = 1 m between them. Let k = 9 × 10⁹ N m²/C² and take potential zero at infinity. Find the unknown charge. Give the numerical value in μC, rounded to the nearest integer.",
+      "unrounded_value": 16.0,
+      "answer_integer": 16,
+      "unit": "μC",
+      "unit_scale_power10": 0,
+      "rounding": "nearest integer; exact half away from zero",
+      "parent_candidate": "NEW-U11-null_charge-1-1"
+    }
+  },
+  {
+    "number": 23,
+    "id": "JEE27-PHY-0999",
+    "section": "B",
+    "answer": 84,
+    "answer_text": "84",
+    "explanation": "For a closed tube, l₁+e = λ/4 and l₂+e = 3λ/4. Subtracting gives λ = 0.68 m, hence v = 340 m/s. Back-substitution gives e = 1 cm. The next length increases by another λ/2 and is 84 cm.\nFor the requested outcome — Find the air-column length at the third resonance. — the result is 84 cm.",
+    "numerical_scaling": {
+      "question": "A tube closed by water at one end resonates with the same tuning fork at air-column lengths 16 cm and 50 cm in two successive resonances. The fork frequency is 500 Hz. Assume the open-end correction is the same in both readings and these are the first and second resonances. Find the air-column length at the third resonance. Give the numerical value in cm, rounded to the nearest integer.",
+      "unrounded_value": 84.0,
+      "answer_integer": 84,
+      "unit": "cm",
+      "unit_scale_power10": 0,
+      "rounding": "nearest integer; exact half away from zero",
+      "parent_candidate": "NEW-U10-resonance_end-1-3"
+    }
+  },
+  {
+    "number": 24,
+    "id": "JEE27-PHY-1149",
+    "section": "B",
+    "answer": 10,
+    "answer_text": "10",
+    "explanation": "The dipole potential is U = −pE cosθ. A slow rotation therefore requires ΔU = 0.01 J; the initial torque is pE sinθ = 0.008660254038 N m. For free rotation, the drop pE(1−cosθinitial) becomes Iω²/2, giving ω = 10 rad/s at alignment.\nFor the requested outcome — In a separate trial the dipole is released from rest at its initial angle. With no damping, find its angular speed when it first aligns with the field. — the result is 10 rad/s.",
+    "numerical_scaling": {
+      "question": "A rigid electric dipole of moment 2 μC m is in a uniform 5000 N/C electric field. Initially its axis makes 60° with the field. A slow external rotation brings it to 120°. The dipole’s moment of inertia about the rotation axis is 0.0001 kg m². In a separate trial the dipole is released from rest at its initial angle. With no damping, find its angular speed when it first aligns with the field. Give the numerical value in rad/s, rounded to the nearest integer.",
+      "unrounded_value": 10.0,
+      "answer_integer": 10,
+      "unit": "rad/s",
+      "unit_scale_power10": 0,
+      "rounding": "nearest integer; exact half away from zero",
+      "parent_candidate": "NEW-U11-dipole_energy-1-3"
+    }
+  },
+  {
+    "number": 25,
+    "id": "JEE27-PHY-1850",
+    "section": "B",
+    "answer": 128,
+    "answer_text": "128",
+    "explanation": "The detector intercepts the area fraction A/(4πr²), giving incident power 3.183098862 × 10⁻⁷ W. Divide by photon energy hc/λ to obtain 6.401405454 × 10¹¹ photons/s, then multiply by yield to get 1.280281091 × 10¹¹ electrons/s. Current is 2.048449745 × 10⁻⁸ A and charge in 120 s is 2.458139694 × 10⁻⁶ C.\nFor the requested outcome — Find the number of collected electrons per second. — the result is 1.28 × 10¹¹ s⁻¹.",
+    "numerical_scaling": {
+      "question": "A monochromatic source of wavelength 400 nm emits 10 mW isotropically. A photocathode of area 4 cm² is normal to the rays at distance 1 m, with negligible variation over its small area. A fraction 0.2 of incident photons release one collected electron each. Take h=6.63 × 10⁻³⁴ J s, c=3 × 10⁸ m/s and e=1.60 × 10⁻¹⁹ C. Find the number of collected electrons per second. Express the result in units of 10^(9) s⁻¹, and give the nearest integer.",
+      "unrounded_value": 128.02810907342015,
+      "answer_integer": 128,
+      "unit": "s⁻¹",
+      "unit_scale_power10": 9,
+      "rounding": "nearest integer; exact half away from zero",
+      "parent_candidate": "NEW-U17-photon_current-1-2"
+    }
+  }
+]

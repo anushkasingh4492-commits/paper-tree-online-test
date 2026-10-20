@@ -1,0 +1,690 @@
+[
+ {
+  "id": "R02-A-06-1",
+  "answer": "D",
+  "working": "P2: sense of length while passing depends largely on attention paid to time itself.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-A-06-2",
+  "answer": "C",
+  "working": "P3: complaint is almost always retrospective; last year viewed as a whole seems brief.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-A-06-3",
+  "answer": "A",
+  "working": "Last sentence cautions against speaking of how long something 'really' felt, as though only one answer.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-A-06-4",
+  "answer": "D",
+  "working": "Explanation: routine means fewer distinct memories; if novelty-rich adults report same speeding up, the explanation fails.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-E-05-1",
+  "answer": "D",
+  "working": "P1: public anticipates loosening and builds expected inflation into wages and prices, so output boost never materialises.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-E-05-2",
+  "answer": "C",
+  "working": "P3: legislature fixes target, bank chooses means and explains misses publicly; C mirrors exactly.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-E-05-3",
+  "answer": "D",
+  "working": "P3 reconciles via instrument independence; P4 says settlement weakens as mandate widens.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-E-05-4",
+  "answer": "C",
+  "working": "P4: the more a central bank is asked to do, the weaker its claim to be left alone.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-A-01-1",
+  "answer": "D",
+  "working": "Passage argues perception is active inference; P4 denies this makes it unreliable.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-A-01-2",
+  "answer": "C",
+  "working": "P1: small image could be small near or large far object; same pattern fits several worlds.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-A-01-3",
+  "answer": "B",
+  "working": "If people in environments violating their assumptions are misled no more than natives, the 'true of the environment' explanation loses force.",
+  "confidence": "medium",
+  "alternative": "",
+  "issue": "Weakener works only via 'from the start'; slightly convoluted stem-option fit but B is clearly best."
+ },
+ {
+  "id": "R02-A-01-4",
+  "answer": "B",
+  "working": "P3: guess is tightly disciplined by evidence, i.e. constrained by the incoming signal.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-B-06-1",
+  "answer": "D",
+  "working": "P2: decisions individually beyond reproach; defect lies upstream in pattern of attention.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-B-06-2",
+  "answer": "C",
+  "working": "Upstream = the pattern of attention that settles what the situation is before choice (P1).",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-B-06-3",
+  "answer": "D",
+  "working": "Objection: noticing is not done at will, so we cannot be blamed; assumes blame requires voluntary control.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-B-06-4",
+  "answer": "B",
+  "working": "P3: no single lapse is a choice, but attention is shaped over time by things we influence, so we can be answerable.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-B-07-1",
+  "answer": "A",
+  "working": "P1: same crossing; label depends on whether it came by itself or in grain shipment.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-B-07-2",
+  "answer": "D",
+  "working": "P3: 'their alternative assumes that effects can be known at the moment a decision has to be made... often false'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-B-07-3",
+  "answer": "A",
+  "working": "Presumption rests on harm surfacing only when removal is impossible; if removal stays cheap after harm is evident, waiting for evidence is fine.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-B-07-4",
+  "answer": "C",
+  "working": "P4: weight changes with time; after a century the case should rest on observed effects.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-B-07-5",
+  "answer": "A",
+  "working": "P2: herbicides, disturbance of the ground, stripping out shelter native animals depended on.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-G-03-1",
+  "answer": "B",
+  "working": "Warbler example illustrates the misidentification critics feared.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-G-03-2",
+  "answer": "A",
+  "working": "P3: 'may simply be living where the watchers live'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-G-03-3",
+  "answer": "D",
+  "working": "P2: 'The worry was reasonable, but... aimed at the lesser target'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": "Key D echoes the passage's 'lesser target' wording almost verbatim, a mild giveaway."
+ },
+ {
+  "id": "R06-G-03-4",
+  "answer": "D",
+  "working": "P4: assigned locations at fixed times address where/when sampling bias; D is exactly that.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-E-01-1",
+  "answer": "B",
+  "working": "Challenges gold's protection (P2-P3) while granting the legitimate demand for trust (P4).",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-E-01-2",
+  "answer": "D",
+  "working": "P2: depended on pace of mining and flow of metal between countries, unrelated to trade needs.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-E-01-3",
+  "answer": "B",
+  "working": "Harvest fetched less while sum owed stayed same: falling prices raise real debt burden.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-E-01-4",
+  "answer": "A",
+  "working": "A rule no one made comforts (impersonal) but no one can adjust it when circumstances change.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-E-07-1",
+  "answer": "D",
+  "working": "P2: collapse consistent with the original bet having been sensible.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-E-07-2",
+  "answer": "A",
+  "working": "P3-P4: passers-on buy only expecting someone else to pay more.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-E-07-3",
+  "answer": "D",
+  "working": "Dealer would not hold painting on its merits, buys only to sell higher: narrow speculation.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-E-07-4",
+  "answer": "C",
+  "working": "P4: distinguishing mark is motive, prices do not record motives; objection needs regulators to lack another timely source.",
+  "confidence": "medium",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-E-07-5",
+  "answer": "A",
+  "working": "P4 says such measures would fall on sound and unsound investments alike; A contradicts.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-B-03-1",
+  "answer": "B",
+  "working": "P2: definition written only after slips sorted into piles by sense.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-B-03-2",
+  "answer": "B",
+  "working": "Definition is a summary of quotations; quotations are its grounds and can be checked (P4).",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-B-03-3",
+  "answer": "C",
+  "working": "P3: labels such as 'nonstandard' are verdicts even when offered as descriptions.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-B-03-4",
+  "answer": "A",
+  "working": "P4: authority of careful witness, checkable against citations, revisable with new evidence.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-C-07-1",
+  "answer": "C",
+  "working": "P4: psychological portrait is one historical form, not the genre's essence; whole passage builds to this.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-C-07-2",
+  "answer": "A",
+  "working": "P3: face had to be recognisable enough to attach the role to the right person.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-C-07-3",
+  "answer": "D",
+  "working": "P2: purpose to establish a position; contemporaries read rank, not character.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-C-07-4",
+  "answer": "D",
+  "working": "P4: photography took over cheap likenesses, leaving painters free or obliged to offer something else.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-C-07-5",
+  "answer": "D",
+  "working": "P3: likeness was not irrelevant; face had to be recognisable. D contradicts.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-C-07-1",
+  "answer": "B",
+  "working": "P3: criteria for useful boundary not faithful to gradual process; P4: concept needs no spike.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-C-07-2",
+  "answer": "A",
+  "working": "P2: later dates favoured because sharp, signal laid down within a few years everywhere.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-C-07-3",
+  "answer": "C",
+  "working": "Contrast with 'began in a particular year'; P3 'at different times on different continents'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-C-07-4",
+  "answer": "A",
+  "working": "P3: boundary accurate about rocks, misleading about the history that produced them.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-C-07-5",
+  "answer": "A",
+  "working": "P3 rests on influence being gradual and uneven; A says it was negligible then simultaneous.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-A-08-1",
+  "answer": "A",
+  "working": "P2: recurring figures with distinctive speech helped her find her place after a month's absence.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-A-08-2",
+  "answer": "B",
+  "working": "P1: 'the real novel, the one the author would have written in better conditions, lies beneath'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-A-08-3",
+  "answer": "A",
+  "working": "P3: 'A purist may regard this as... It can as easily be seen as a kind of conversation'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-A-08-4",
+  "answer": "B",
+  "working": "P4: unified ideal gained authority later among writers for a different market; no causal link to serial length.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-A-08-5",
+  "answer": "D",
+  "working": "P5: TV praised for the very qualities the instalment novel was once excused for.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-D-04-1",
+  "answer": "C",
+  "working": "P3: keep rewarding achievement without pretending rewards measure moral worth.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-D-04-2",
+  "answer": "D",
+  "working": "P2: entitlement depends only on fairness of rules and compliance; rigged rules remove it.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-D-04-3",
+  "answer": "B",
+  "working": "Valid claim under fair rules of the draw, nobody thinks she deserves it.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-D-04-4",
+  "answer": "C",
+  "working": "Luck argument undermines the desert story, not the practice of rewarding achievement under fair rules.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-F-03-1",
+  "answer": "A",
+  "working": "P2: must grasp figure is not another individual and corresponds to its own body.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-F-03-2",
+  "answer": "B",
+  "working": "P3: failing a test designed around another's priorities is weak evidence of lacking the capacity.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-F-03-3",
+  "answer": "C",
+  "working": "Dogs showing self-related discrimination via scent supports that mirror failure reflects modality, not missing capacity.",
+  "confidence": "medium",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-F-03-4",
+  "answer": "A",
+  "working": "P4: passing does not show the animal reflects on past or imagines future.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-A-05-1",
+  "answer": "B",
+  "working": "P2: archive holds evidence of practice, not the practice; photos are not the trees.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-A-05-2",
+  "answer": "A",
+  "working": "P3: documentation outputs are countable for funders; transmission is hard to evaluate.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-A-05-3",
+  "answer": "A",
+  "working": "P4: 'None of this is an argument against archives'; mistake is treating documentation as the rescue.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-A-05-4",
+  "answer": "B",
+  "working": "'Accepted defeat' only if transmission effort could still keep children acquiring the language.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-F-03-1",
+  "answer": "A",
+  "working": "P2: if listener shares, nothing lost; if listener sneers, she sneered first.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-F-03-2",
+  "answer": "C",
+  "working": "P3: pleasures called guilty are those of low-prestige audiences, while the respected's predictable pleasures are not.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-F-03-3",
+  "answer": "A",
+  "working": "P1-P3 sceptical of apparent modesty; P4 grants some pleasures deserve unease.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-F-03-4",
+  "answer": "B",
+  "working": "If users rate guilty-pleasure works as highly as approved ones, the phrase is not preserving the ranking.",
+  "confidence": "medium",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-F-04-1",
+  "answer": "A",
+  "working": "P2: 'The gains were real...' then 'But a system tuned... can perform very badly'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-F-04-2",
+  "answer": "D",
+  "working": "P3: redundancy, multiple suppliers in places unlikely to suffer same shock, protects; proximity does not.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-F-04-3",
+  "answer": "D",
+  "working": "P4 says firms weigh expense against expected losses; they did consider disruption, just undervalued external costs.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": "D is a partial inference (managers weighed only own losses), still clearly unsupported by 'took no account whatever'."
+ },
+ {
+  "id": "R05-F-04-4",
+  "answer": "A",
+  "working": "P4 problem: firms under-insure because costs fall on others; public co-funded reserve stocks address who pays for resilience.",
+  "confidence": "medium",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-B-08-1",
+  "answer": "A",
+  "working": "P2: meaning depends on context, irony, dramatic situation, none of which a frequency table records.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-B-08-2",
+  "answer": "B",
+  "working": "P3: anomalies tell a scholar where to look; understanding comes from returning to read the books.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-B-08-3",
+  "answer": "B",
+  "working": "P3: count poses questions for close reading; P4: tests claims drawn from canon sample.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-B-08-4",
+  "answer": "B",
+  "working": "P4 contribution depends on processing books the canon left out; if digitised corpus is mostly the canon, it cannot.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-B-08-5",
+  "answer": "B",
+  "working": "Claim describes only the selected books, so it is about the tastes of the selectors.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-F-04-1",
+  "answer": "D",
+  "working": "P2: texts frequently written without spaces between words, so voicing them was a useful aid.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-F-04-2",
+  "answer": "C",
+  "working": "P2: surprise shows a practice was unusual where observed, not that it was unknown.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-F-04-3",
+  "answer": "D",
+  "working": "P2-P3: not impossible, not default; setting shifted to private; P4 the history matters.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-F-04-4",
+  "answer": "A",
+  "working": "Too much to say it created the private self; too little to say it changed nothing.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-G-06-1",
+  "answer": "C",
+  "working": "P2: errors fell, over a season, on all sides alike, so the price seemed bearable.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-G-06-2",
+  "answer": "D",
+  "working": "P3: judgement made openly versus question presented as fact that depends on frame and line choices concealed by precision.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-G-06-3",
+  "answer": "D",
+  "working": "P4: replays remove real injustices cheaply; extended to the margins they dissolve finality.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-G-06-4",
+  "answer": "B",
+  "working": "Author blames extension to marginal calls; if clear-error-only regimes have equally long disputes, the explanation fails.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ }
+]

@@ -1,0 +1,64 @@
+[
+  {
+    "id": "JEE27-PHY-2129",
+    "standard": "JEE Main",
+    "subject": "Physics",
+    "branch": "Experimental Skills",
+    "source_class": "XI",
+    "unit": "Unit 20: Experimental Skills",
+    "chapter": "NCERT Physics Laboratory Manual and official Experimental Skills list",
+    "topic": "Experimental skills",
+    "subtopic": "Identify and interpret the depicted apparatus",
+    "question_type": "Experimental skills MCQ",
+    "question": "The displayed scale is initially balanced with its knife edge exactly under its own centre of gravity and m1=2m2. The point of suspension of m1 is shifted 1 cm toward the knife edge, remaining on its original side of the pivot. Which shift of m2 restores balance if the knife edge stays fixed? Refer to experimental arrangement 04.",
+    "options": {
+      "A": "Move m2 2 cm to the right",
+      "B": "Move m2 1 cm to the left",
+      "C": "Move m2 2 cm to the left",
+      "D": "Move m2 1 cm to the right"
+    },
+    "correct_option": "C",
+    "correct_answer": "Move m2 2 cm to the left",
+    "explanation": "The drawing places m1 to the left of the knife edge and m2 to the right. Moving m1 toward the knife edge means moving it rightward by 1 cm. With the pivot fixed, the change in total gravitational moment is zero only if m1 Δx1+m2 Δx2=0, taking right as positive. Since m1=2m2 and Δx1=+1 cm, Δx2=−2 cm: m2 must move 2 cm to the left, toward the pivot. If the depicted mass positions were reversed, the same inward movement of m1 would instead require m2 to move rightward; the figure supplies the necessary orientation.",
+    "difficulty": "Easy",
+    "cognitive_level": "Application",
+    "marks_correct": 4,
+    "marks_incorrect": -1,
+    "marks_unattempted": 0,
+    "source_document": "NTA JEE Main 2026 official syllabus (scope reference; questions are internally authored/adapted)",
+    "source_chapter": "Experimental Skills",
+    "source_page": "Physics syllabus: PDF pages 3–6; no textbook-page attribution is claimed.",
+    "syllabus_reference": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2025/10/202510311323551056.pdf#page=3",
+    "figures": [
+      {
+        "file": "figures/experiment-04.png",
+        "alt_text": "m1 is on the left and m2 on the right of the knife edge. Schematic, not to scale.",
+        "source": "ORIGINAL",
+        "width": 1600,
+        "height": 900
+      }
+    ],
+    "figure_required": true,
+    "tags": [
+      "Physics",
+      "Unit 20: Experimental Skills",
+      "Experimental skills",
+      "SRC-EXPERIMENT-4"
+    ],
+    "generator_eligible": true,
+    "validation_status": "STRUCTURE_CHECKED_CONTENT_REVIEWED",
+    "candidate_id": "REV14-FIG-2129",
+    "unit_number": 20,
+    "difficulty_reason": "Read which labelled mass lies on each side of the pivot, translate the stated inward movement into a signed displacement, and balance the changes of moment.",
+    "concept_family": "SRC-EXPERIMENT-4",
+    "numerical_variant": null,
+    "provenance": {
+      "kind": "Figure-dependent correction resolving v1.3.0 erratum E03",
+      "replaces_candidate": "REV13-FIG-2129",
+      "visual_dependency": "The diagram places m1 left and m2 right of the pivot; the text supplies only an inward displacement, not an absolute direction."
+    },
+    "assumptions": "Treat drawings as schematic. Apply zero-error and parallax corrections; instrument idealisations and experimental limits stated in the question take precedence.",
+    "syllabus_basis_year": 2026,
+    "max_per_family_per_paper": 1
+  }
+]

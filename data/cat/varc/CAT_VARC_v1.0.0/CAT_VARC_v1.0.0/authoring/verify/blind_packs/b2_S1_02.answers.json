@@ -1,0 +1,226 @@
+[
+ {
+  "id": "R08-A-03-3",
+  "answer": "D",
+  "working": "Final para: error is treating keeping languages apart as the measure of competence and combining them as its absence; D maps both halves.",
+  "confidence": "high",
+  "alternative": "B is a weaker partial fit (judging on one mode only), but lacks the 'blending as poor training' half.",
+  "issue": "D closely paraphrases the passage's wording, making it easy to spot."
+ },
+ {
+  "id": "R03-G-04-4",
+  "answer": "C",
+  "working": "Para 3 says 'Whether or not anyone intends this'; passage never says burdens come chiefly from governments seeking cuts. A, B, D are stated.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-C-08-3",
+  "answer": "D",
+  "working": "Para 5: theory can keep the ideal (guide aspirants) or realism (describe formed characters) but hardly both; D's map does one or the other.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-A-06-4",
+  "answer": "A",
+  "working": "Para 2 says the stayer loses her place 'as surely as if she had' left: equal, not more. B, C, D stated in paras 3, 4, 2.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-B-03-3",
+  "answer": "D",
+  "working": "Para 2: the argument 'quietly assumes that the only job of criticism is to guide readers in choosing what to read'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-F-04-2",
+  "answer": "A",
+  "working": "Para 2: 'Attention drifts when nothing happens for hours, and the more reliable the machine, the longer the stretches'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-F-04-3",
+  "answer": "D",
+  "working": "Para 3: the better automation works in ordinary conditions, the less prepared supervisors are for extraordinary ones and the more surprising their failure.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-D-06-2",
+  "answer": "A",
+  "working": "Para 3: 'That complaint misses what they are for. They are not a lazy substitute... but a written prosody'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": "C is internally contradictory (approving yet calling the signals improper), so it is a weak distractor."
+ },
+ {
+  "id": "R01-D-04-3",
+  "answer": "C",
+  "working": "Entitlement = meeting the conditions of fair rules laid down in advance, independent of deep desert; lottery winner has a valid claim under the rules but did not earn it.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-A-08-1",
+  "answer": "D",
+  "working": "Ball takes a unique path yet comes to rest in the only hollow: an unrepeatable route need not make the outcome unlikely.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-A-08-2",
+  "answer": "A",
+  "working": "Author says each school has a strong case, faults convergence lists as assembled after the fact and contingency reasoning as a non sequitur, then holds both probably true.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-A-08-3",
+  "answer": "D",
+  "working": "The reconciliation rests on convergence showing a limited space of workable designs; if supposed independent origins share an ancestor, the recurrence evidence evaporates.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-A-08-4",
+  "answer": "D",
+  "working": "Para 4: recurrence of eyes and wings 'does not tell us that every capacity we value is among those solutions'; evidence is not decisive about something like us.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-A-08-5",
+  "answer": "B",
+  "working": "Broad functions (bakeries, schools) recur as in convergence; which particular occupants fill them is down to chance as in contingency.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-F-05-1",
+  "answer": "B",
+  "working": "Para 2: protest was drawn by odours 'associated with particular trades or with neighbours who were disliked'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-F-05-2",
+  "answer": "A",
+  "working": "Para 3 goes on: measures based on the miasma theory did reduce disease 'for reasons they did not understand'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-F-05-3",
+  "answer": "D",
+  "working": "Strong own-stable stench tolerated while a fainter dyeworks smell is protested: meaning outweighs strength.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-F-05-4",
+  "answer": "A",
+  "working": "Para 4: smell 'attached itself more firmly to persons' after losing medical authority; para 2 shows earlier complaints about disliked neighbours, so it pre-dated germ theory.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-G-03-2",
+  "answer": "C",
+  "working": "Para 2: 'If harm accelerates sharply past some threshold, a fixed quantity matters more than a stable price'; here the threshold applies per season, so overshoots matter.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": "D's price ceiling would let quantity exceed the cap, defeating the point, so it is correctly wrong."
+ },
+ {
+  "id": "R06-D-02-4",
+  "answer": "A",
+  "working": "Para 4: standardisation was not discovery of a correct time; calling solar time confusion judges it by needs of a world not yet arrived, i.e. judge by fit to users' needs.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-G-02-2",
+  "answer": "C",
+  "working": "Para 3: a null result is mute about its meaning, and 'the researcher who obtained it is often the person least able to tell which'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-D-03-3",
+  "answer": "A",
+  "working": "Reply: words alone are too cheap and a costless declaration would be heard as saying the wrong did not matter; if penalty-free guilty verdicts are seen as just as serious, the reply fails.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-E-08-4",
+  "answer": "C",
+  "working": "Author attributes adaptability to slack such as generous ceilings and regular column grids; if buildings lacking these converted as easily, the explanation weakens.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-C-05-1",
+  "answer": "B",
+  "working": "Context: months of documents and checking 'only to discover at the end that the story cannot be stood up', i.e. the evidence will not support it.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-F-02-3",
+  "answer": "B",
+  "working": "Para 4: eight boneless arms that bend anywhere pose 'a control problem that no single centre could easily solve'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-B-08-4",
+  "answer": "C",
+  "working": "The narrative view makes story indispensable, so people who live in the present (a temperament) are cast as deficient, as para 2 also argues.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-A-03-4",
+  "answer": "A",
+  "working": "Para 4: indirect methods 'narrow the range of reasonable belief; they rarely close it' and a choice on such grounds 'is not a coin toss'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-C-03-3",
+  "answer": "B",
+  "working": "Para 2: judgement retreats into choices like whose file to open first; caseworkers differing in interview scheduling is exactly that hidden discretion.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ }
+]

@@ -6,6 +6,7 @@ export type PresetSubject =
   | "maths"
   | "biology"
   | "cat-qa"
+  | "cat-varc"
   | "jee-physics"
   | "jee-chemistry"
   | "jee-maths";
@@ -32,6 +33,7 @@ export const MARKS_PER_QUESTION: Record<
   maths: 2,
   biology: 1,
   "cat-qa": 3,
+  "cat-varc": 3,
   "jee-physics": 4,
   "jee-chemistry": 4,
   "jee-maths": 4,
@@ -71,7 +73,7 @@ export const GROUP_SUBJECTS: Record<
     "biology",
   ],
 
-  CAT: ["cat-qa"],
+  CAT: ["cat-qa", "cat-varc"],
 
   JEE: [
     "jee-physics",
@@ -472,6 +474,31 @@ export const PRESETS: Preset[] = [
     name: "Full section",
     subjects: {
       "cat-qa": 22,
+    },
+    examAccurate: true,
+  },
+
+  {
+    id: "CAT-VARC-10",
+    name: "Quick drill",
+    subjects: {
+      "cat-varc": 10,
+    },
+  },
+
+  {
+    id: "CAT-VARC-15",
+    name: "Standard",
+    subjects: {
+      "cat-varc": 15,
+    },
+  },
+
+  {
+    id: "CAT-VARC-24",
+    name: "Full section",
+    subjects: {
+      "cat-varc": 24,
     },
     examAccurate: true,
   },

@@ -1,0 +1,82 @@
+[
+ {
+  "id": "V04-B-006",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "3",
+    "key": "3",
+    "working": "'Worse' escalates the costs listed after (2), and the inability to know which accidents are relied on is 'the guesswork' that the next sentence's projects try to escape.",
+    "alternative": "1: At (1) it could lead into 'Maintainers therefore end up preserving accidents', but 'Worse' and the later 'guesswork' antecedent favour (3).",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "3",
+    "key": "3",
+    "working": "'Worse' adds a further cost after the constraint on design; 'these accidents' links back, and the next sentence's 'escape the guesswork' needs the sentence about maintainers not knowing which accidents are relied on.",
+    "alternative": "2: after 'preserving accidents alongside intentions', 'these accidents' reads naturally and 'Worse' could precede 'The cost is not only...', though then 'guesswork' in the gap-3 sentence lacks a close antecedent.",
+    "issue": ""
+   }
+  }
+ },
+ {
+  "id": "V04-B-007",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "4",
+    "key": "4",
+    "working": "'in other words' summary follows 'together they keep the old arrangement in place'.",
+    "alternative": "",
+    "issue": "Gap 2 (after 'Yet almost no one switches') is a weak alternative but 'in other words' needs the costs explained first."
+   },
+   "S2": {
+    "answer": "4",
+    "key": "4",
+    "working": "Generalising 'in other words' conclusion after 'keep the old arrangement in place'.",
+    "alternative": "",
+    "issue": ""
+   }
+  }
+ },
+ {
+  "id": "V04-B-009",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "3",
+    "key": "3",
+    "working": "Couplet 'trap' illustrates losing timing; fits after 'Strip it away... timing that gave them their force does not'.",
+    "alternative": "2: could precede 'Strip it away' as an example, but 'it' in 'Strip it away' then refers awkwardly to the trap; 3 is cleaner.",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "3",
+    "key": "3",
+    "working": "The couplet example illustrates 'the words may survive while the timing... does not', before 'None of this tells a translator what to do'.",
+    "alternative": "2: the couplet could follow the description of suspense and resolution, but then 'Strip it away' would have 'the trap' rather than the rhyme as its referent.",
+    "issue": ""
+   }
+  }
+ },
+ {
+  "id": "V04-B-023",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "1",
+    "key": "1",
+    "working": "'Far more often, it is the ward itself' follows 'rarely a matter of ignorance or indifference' and precedes the crowded-shift description.",
+    "alternative": "",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "1",
+    "key": "1",
+    "working": "Follows 'rarely ignorance or indifference'; next sentence describes the ward working against it.",
+    "alternative": "",
+    "issue": "Content overlaps with V03-G-017 (hand hygiene) in the same pack."
+   }
+  }
+ }
+]

@@ -1,0 +1,90 @@
+[
+ {
+  "id": "R07-D-07-5",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Blind solver S1 flagged that all five questions of passage 07 were keyed at the same option letter in the build it saw.",
+  "fix": "none: option letters are assigned by the build (balanced per chapter), not in the draft; S2 saw a different letter, so there is no fixed cluster in the source.",
+  "changed": false
+ },
+ {
+  "id": "R07-D-02-2",
+  "category": "E1",
+  "severity": "major",
+  "finding": "Distractor 'reproduce the steps less accurately than a studio revival' is defensible: the passage says a film includes the dancer's 'mistakes', and copying mistakes is reproducing steps less accurately.",
+  "fix": "Replaced it with 'convey the weight and timing of each movement more faithfully than a studio revival, since film records every detail', refuted by paragraph 3 ('captures poorly or not at all'); updated the misconception line.",
+  "changed": true
+ },
+ {
+  "id": "R07-D-01-2",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation says 'The key paraphrases this'.",
+  "fix": "Changed to 'The correct answer'.",
+  "changed": true
+ },
+ {
+  "id": "R07-D-01-3",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation says 'The key restates this relation'.",
+  "fix": "Changed to 'The correct answer'.",
+  "changed": true
+ },
+ {
+  "id": "R07-D-05-4",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation says 'The key states this'.",
+  "fix": "Changed to 'The correct answer'.",
+  "changed": true
+ },
+ {
+  "id": "R07-D-04-2",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Defence uses 'the key factor' and misconception quotes 'captures something', which does not match the passage ('Both responses capture something').",
+  "fix": "'key factor' to 'decisive factor'; quotation corrected to 'capture something'.",
+  "changed": true
+ },
+ {
+  "id": "R07-D-01-1",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Misconception puts 'mere recombination' in single quotes, but the phrase is not in the passage.",
+  "fix": "Rephrased without quotation marks.",
+  "changed": true
+ },
+ {
+  "id": "R07-D-07-3",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Correct option (56 chars) much shorter than every distractor (84 to 113), a length cue; misconception quoted 'new work', which is not passage text.",
+  "fix": "Lengthened the correct option to 'been accurate to the marks on the page without being faithful to the work they belong to'; misconception rephrased.",
+  "changed": true
+ },
+ {
+  "id": "R07-D-04-4",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "One supported option (68 chars) markedly shorter than the others (102 to 109).",
+  "fix": "Lengthened to 'A lament may return to a phrase heard earlier in the piece before it finally comes to rest'.",
+  "changed": true
+ },
+ {
+  "id": "R07-D-08-5",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "One option (73 chars) markedly shorter than the others.",
+  "fix": "Added 'such as the close-up', still supported by paragraph 4.",
+  "changed": true
+ },
+ {
+  "id": "R07-D-06-4",
+  "category": "E4",
+  "severity": "minor",
+  "finding": "Labelled Difficult although the criterion (preserving variety, singers' names) is stated almost directly in paragraph 4; borderline Medium.",
+  "fix": "none: the technically superior sound-recording option is a genuine pull and the Difficult quota is exact; label is defensible.",
+  "changed": false
+ }
+]

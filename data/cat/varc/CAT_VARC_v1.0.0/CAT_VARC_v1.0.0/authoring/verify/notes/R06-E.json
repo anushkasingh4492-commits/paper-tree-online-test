@@ -1,0 +1,42 @@
+[
+ {
+  "id": "R06-E-04-4",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "A",
+    "key": "A",
+    "working": "The step from low volume to commercial disaster needs that price per course cannot compensate for few sales.",
+    "alternative": "D: the step from 'urged not to use' to 'cannot be sold in quantity' also presupposes doctors comply; arguably defensible, though responsible use is stipulated by the hypothetical.",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "D",
+    "key": "D",
+    "working": "Low volume implies disaster only if price per course cannot be raised enough to recover costs from few patients.",
+    "alternative": "B is also a needed assumption (doctors actually comply and hold the drug back), though responsible use is stipulated in the scenario, so D is the hidden gap.",
+    "issue": ""
+   }
+  }
+ },
+ {
+  "id": "R06-E-07-4",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "D",
+    "key": "D",
+    "working": "P4: right test is fewer deaths in the population, from carefully conducted trials comparing screened and unscreened populations; randomised comparison.",
+    "alternative": "A is also a mortality comparison but self-selected attenders; passage does not explicitly discuss selection bias, so A is weaker but not explicitly excluded.",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "C",
+    "key": "C",
+    "working": "P4: ask whether fewer people in the population die; randomised comparable populations avoid self-selection (A) and survival biases (B, D).",
+    "alternative": "",
+    "issue": ""
+   }
+  }
+ }
+]

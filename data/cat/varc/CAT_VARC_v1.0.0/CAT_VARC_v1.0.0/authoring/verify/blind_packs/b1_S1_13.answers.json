@@ -1,0 +1,698 @@
+[
+ {
+  "id": "R03-D-08-1",
+  "answer": "B",
+  "working": "P2: everyone rides up, order stays same.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-D-08-2",
+  "answer": "A",
+  "working": "P3: sense of closure real; diagnosis frequently mistaken.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": "P3 contains a redundant clause (\"though their chances ... may be exactly what their parents' chances were. But on the measures...\") that reads like an editing leftover; not answer-affecting."
+ },
+ {
+  "id": "R03-D-08-3",
+  "answer": "B",
+  "working": "Relative up = poor overtake rich; absolute down = few outearn parents.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-D-08-4",
+  "answer": "B",
+  "working": "P1 run together; P3 misread slowdown; P4 cost of relative mobility.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-D-08-5",
+  "answer": "D",
+  "working": "P4: positions ranked, for one to climb another must fall; growth only helps absolute.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-A-06-1",
+  "answer": "A",
+  "working": "P1: narrow diets, small ranges, slow breeding.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-A-06-2",
+  "answer": "D",
+  "working": "P2: not selected for value in a catastrophe of this kind.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-A-06-3",
+  "answer": "B",
+  "working": "Survival tracked catastrophe traits not mammal superiority.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-A-06-4",
+  "answer": "D",
+  "working": "P4: survival is selective, just for different things.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-F-02-1",
+  "answer": "C",
+  "working": "Questions spoiler theory; P4 grants a narrow real loss.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-F-02-2",
+  "answer": "B",
+  "working": "P2: people seek known-outcome stories.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-F-02-3",
+  "answer": "A",
+  "working": "Theory: once outcome known the thing is used up.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-F-02-4",
+  "answer": "A",
+  "working": "P3 manner of telling unspoiled; P4 shock of first encounter cannot be had twice.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-B-05-1",
+  "answer": "A",
+  "working": "P2: straight lines cluster in deserts, divided few people.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-B-05-2",
+  "answer": "B",
+  "working": "P3: charge proves too much; Europe would be at war too.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-B-05-3",
+  "answer": "B",
+  "working": "P3: judged redrawing more dangerous than living with them.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-B-05-4",
+  "answer": "C",
+  "working": "P4: legacy lay inside the lines (extractive states).",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-C-05-1",
+  "answer": "D",
+  "working": "Context: story turns out unsupportable after checking.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-C-05-2",
+  "answer": "C",
+  "working": "\"may be\" evidence of deterrence; A says proves (too strong).",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-C-05-3",
+  "answer": "A",
+  "working": "P2: spillovers mean undersupply relative to social want.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-C-05-4",
+  "answer": "C",
+  "working": "P4: continuous presence over occasional big exposures.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-B-05-1",
+  "answer": "D",
+  "working": "P4: burden of proof, case by case, not default.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-B-05-2",
+  "answer": "B",
+  "working": "P2: new unplanned experiment; valued qualities declined.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-B-05-3",
+  "answer": "B",
+  "working": "P3 qualifies against romantic oversimplification before P4 conclusion.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-B-05-4",
+  "answer": "C",
+  "working": "Demonstrable incompatibility and no record of use (P4).",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-F-08-1",
+  "answer": "A",
+  "working": "P1: urgent member accepts smaller pot, difference shared.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-F-08-2",
+  "answer": "B",
+  "working": "P4: same social pressure keeps early recipient paying.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-F-08-3",
+  "answer": "B",
+  "working": "P3: \"surely part of the answer. But...\" misplaces problem.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-F-08-4",
+  "answer": "C",
+  "working": "Money made socially unavailable with an excuse kin accept as legitimate.",
+  "confidence": "high",
+  "alternative": "A (hidden account) is a weaker analogue: it shelters money by secrecy, not by a socially recognised obligation; C is clearly better.",
+  "issue": ""
+ },
+ {
+  "id": "R03-F-08-5",
+  "answer": "C",
+  "working": "Claims of kin irrelevant to joining/paying undermines sheltering account.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-E-01-1",
+  "answer": "D",
+  "working": "P2-P4: informational influence, normative pressure only part.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-E-01-2",
+  "answer": "C",
+  "working": "P4: private answers less agreement; avoiding embarrassment.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-E-01-3",
+  "answer": "A",
+  "working": "P3: treating others as evidence.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-E-01-4",
+  "answer": "A",
+  "working": "P5: make dissent visible, reasons inspectable.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-E-05-1",
+  "answer": "B",
+  "working": "Reader follows every step yet produces rejected work; manuals accurate.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-E-05-2",
+  "answer": "A",
+  "working": "Description presupposes the perception it describes.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-E-05-3",
+  "answer": "C",
+  "working": "P3: words as pointers to experiences at that very moment.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-E-05-4",
+  "answer": "B",
+  "working": "Manual-only novices matching apprentices undercuts claim craft cannot be stored in text.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-B-08-1",
+  "answer": "A",
+  "working": "P3: sovereignty ending not trivial; govt could nationalise or err.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-B-08-2",
+  "answer": "A",
+  "working": "P2/P4: strands came apart at different speeds by strand and place.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-B-08-3",
+  "answer": "C",
+  "working": "P2: critique captured something; P3 sovereignty changed substance.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-B-08-4",
+  "answer": "B",
+  "working": "If retained continuities were coerced, governments did not choose them.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-B-08-5",
+  "answer": "A",
+  "working": "P2-P4: both treat empire as single thing; better question which relations changed when.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-F-08-1",
+  "answer": "B",
+  "working": "P1: tied to countable; explains frequencies as evidence.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-F-08-2",
+  "answer": "D",
+  "working": "P3: propensity depends on description, does not escape the problem.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-F-08-3",
+  "answer": "D",
+  "working": "Relative to specification, objective once fixed; like velocity/frame.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-F-08-4",
+  "answer": "C",
+  "working": "P4-5: chance relative to specification; different specs can both be right.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-F-08-5",
+  "answer": "A",
+  "working": "P4: settled by our purposes rather than by the world.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-F-08-1",
+  "answer": "A",
+  "working": "Knowledge of what region can produce, learned only by trying.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-F-08-2",
+  "answer": "C",
+  "working": "Challenges known-menu picture; real danger is inability to let losers go.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-F-08-3",
+  "answer": "A",
+  "working": "P2: objection rests on known-menu picture; new activities no one knows.",
+  "confidence": "medium",
+  "alternative": "B is too strong; A relies on inferring that the advantage holds where the menu is known, which the passage implies rather than states.",
+  "issue": ""
+ },
+ {
+  "id": "R05-F-08-4",
+  "answer": "C",
+  "working": "P5: weaker guarantee than advocates like but stronger than critics assume.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-F-08-5",
+  "answer": "D",
+  "working": "P3 rests on cheap copying of pioneer discovery.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-C-03-1",
+  "answer": "C",
+  "working": "P2: keep demanding attention, never settle into background.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-C-03-2",
+  "answer": "C",
+  "working": "Group with ups and downs shows flat average.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-C-03-3",
+  "answer": "B",
+  "working": "P2/P4: noise resists adaptation; changing such conditions worthwhile.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-C-03-4",
+  "answer": "C",
+  "working": "Individual paths returning to baseline undercuts the concealment claim.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-F-07-1",
+  "answer": "C",
+  "working": "P3: tailor claims sphere of decision.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-F-07-2",
+  "answer": "A",
+  "working": "Strips histories, comparable on one scale.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-F-07-3",
+  "answer": "D",
+  "working": "Pooled earners have less influence supports sphere-of-decision claim.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-F-07-4",
+  "answer": "B",
+  "working": "Correct about shopkeeper; fungibility holds where histories ignored.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-F-07-5",
+  "answer": "B",
+  "working": "P4-5: fungibility a local social arrangement.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-F-02-1",
+  "answer": "B",
+  "working": "Observer counting shipments calls it triumph though outside unchanged.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-F-02-2",
+  "answer": "C",
+  "working": "Laboratory whose findings never leave has failed.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-F-02-3",
+  "answer": "A",
+  "working": "Author: not tax holidays but leakage; A reverses this.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-F-02-4",
+  "answer": "D",
+  "working": "P4: isolation a starting condition, often politically necessary.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-A-02-1",
+  "answer": "B",
+  "working": "Whether it marks a useful distinction vs merely excludes.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-A-02-2",
+  "answer": "C",
+  "working": "P2: description ignoring judgements describes imaginary community.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-A-02-3",
+  "answer": "A",
+  "working": "P3: authority conventional; binds because readers expect it.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-A-02-4",
+  "answer": "B",
+  "working": "If readers do not actually judge by it, the social fact disappears.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-A-02-1",
+  "answer": "A",
+  "working": "P1: density ratio; crowding too many in too little room.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-A-02-2",
+  "answer": "C",
+  "working": "Same density, very different lived conditions.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-A-02-3",
+  "answer": "A",
+  "working": "P3: right something wrong, imprecise about what.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-A-02-4",
+  "answer": "A",
+  "working": "P4: crowding relieved by floor space and services; P3 water and drains.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-F-01-1",
+  "answer": "B",
+  "working": "P2 claim about relevance; P4 test by relaxing.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-F-01-2",
+  "answer": "A",
+  "working": "Bet about relevance fails outside its range.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-F-01-3",
+  "answer": "B",
+  "working": "Result vanishes when assumption loosened.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-F-01-4",
+  "answer": "D",
+  "working": "P4 test: conclusions survive relaxing the idealisation.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-F-05-1",
+  "answer": "A",
+  "working": "P1: something in bundle wrong, not which.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-F-05-2",
+  "answer": "A",
+  "working": "P3: same strategy does not always succeed.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-F-05-3",
+  "answer": "B",
+  "working": "Decision to treat both the same was reasonable.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-F-05-4",
+  "answer": "C",
+  "working": "P4: tenacity virtue, shades into dogma with ad hoc assumptions.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-A-08-1",
+  "answer": "D",
+  "working": "P2 usable grasp of dependencies; P4 looser relation to truth.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-A-08-2",
+  "answer": "D",
+  "working": "Counterexample to knowledge-in-higher-concentration view.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-A-08-3",
+  "answer": "D",
+  "working": "P4: part of understanding the model is knowing where it stops working.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-A-08-4",
+  "answer": "C",
+  "working": "P3: understanding via literally false models.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-A-08-5",
+  "answer": "A",
+  "working": "P5: may never detect what she is missing.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ }
+]

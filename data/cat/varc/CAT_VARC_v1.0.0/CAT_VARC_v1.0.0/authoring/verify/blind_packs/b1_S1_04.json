@@ -1,0 +1,1140 @@
+{
+ "kind": "RC",
+ "passages": [
+  {
+   "passage_id": "R02-C-08",
+   "passage": [
+    "For a time it seemed that psychology had found the mechanism of willpower. Self-control, the theory held, draws on a limited resource that is used up by effort and replenished by rest. Resisting a tempting food, suppressing an emotion or forcing oneself through a tedious task would each deplete the same store, leaving a person less able to exercise control on whatever came next. The idea had the great advantage of matching experience. Most of us know the evening collapse that follows a day of holding ourselves together, and the theory seemed to explain it with all the economy of a fuel gauge. It also seemed to account for a scattering of everyday puzzles: why a dieter might lapse late in the day rather than at breakfast, why hard decisions get put off until morning, why a quarrel flares more easily after a draining afternoon.",
+    "The theory has fared badly under closer scrutiny. Large coordinated attempts to reproduce the basic effect, in which many laboratories ran the same procedure, found it to be far smaller than early reports had suggested and in some cases close to nothing. A particularly vivid version of the theory, which identified the resource with blood sugar and held that a sweet drink could restore flagging self-control, met an additional difficulty: effortful thinking appears to change the brain's overall energy consumption only slightly, far too little for the proposed mechanism to work as described. Some studies also reported that people who believed willpower to be plentiful showed little or no depletion, a result awkward for any theory in which the resource is a physical quantity.",
+    "Yet it does not follow that the experience the theory set out to explain is an illusion. People do grow less willing to persist after sustained effort, and that change deserves an account. A more promising one treats the feeling of mental fatigue not as a reading on an emptying tank but as a signal about priorities. On this view, continued effort on one task carries an opportunity cost, the value of everything else one might be doing instead, and the sense of weariness rises as that cost accumulates, nudging attention away from obligation and towards rest, pleasure or novelty. What looks like running out is better described as a shift in what the mind is willing to pay for.",
+    "The difference between the two pictures is not merely academic. If willpower is a fuel, the sensible strategy is rationing: avoid unnecessary decisions, save strength for what matters, and accept failure when the tank is low. If fatigue is a signal about value, the strategy changes. Tasks that feel meaningful or rewarding should be less draining than equally demanding tasks that do not, and changing how a task is framed, or what it leads to, may restore persistence where rest alone would not. The second picture does not make self-control easy, but it relocates the problem from the size of a store to the weighing of competing goods. It also suggests why the same evening can feel exhausting at a desk and effortless at a hobby, though the demands on attention may be much the same.",
+    "The episode also carries a lesson about how attractive ideas spread. The resource model was simple, intuitive and flattering to common experience, and these virtues helped it travel far beyond the evidence that supported it. None of this required anyone to be careless or dishonest; it is simply how persuasive ideas tend to behave. Its decline is not a refutation of everyday wisdom about tiredness; it is a reminder that a vivid metaphor can capture a real phenomenon while getting its mechanism entirely wrong."
+   ],
+   "questions": [
+    {
+     "id": "R02-C-08-1",
+     "type": "RC",
+     "options": {
+      "A": "sweet drinks were found to weaken rather than restore people's self-control.",
+      "B": "the coordinated replications could not include any measures of blood sugar.",
+      "C": "people who thought willpower was plentiful consumed fewer sweet drinks.",
+      "D": "effortful thinking seems to alter the brain's total energy use only slightly."
+     },
+     "question": "According to the passage, the blood sugar version of the resource theory faced the particular difficulty that"
+    },
+    {
+     "id": "R02-C-08-2",
+     "type": "RC",
+     "options": {
+      "A": "they came from the same laboratories that had earlier failed to reproduce the basic depletion effect.",
+      "B": "they prove that the experience of mental fatigue after effort is an illusion created by people's expectations.",
+      "C": "they show that people who hold strong beliefs about willpower have larger stores of the resource to draw on.",
+      "D": "a physical store ought to run down with use whatever a person happens to believe about it."
+     },
+     "question": "The passage suggests that the findings about people's beliefs regarding willpower are 'awkward' for the resource theory because"
+    },
+    {
+     "id": "R02-C-08-3",
+     "type": "RC",
+     "options": {
+      "A": "Someone who has worked hard on a report all afternoon feels a growing pull towards a film she has been looking forward to.",
+      "B": "A person's persistence at a dull task recovers only after rest, however the task is framed or rewarded.",
+      "C": "A volunteer stays absorbed in demanding work for longer when he can see clearly how it helps the people he serves.",
+      "D": "Two equally demanding tasks leave people differently tired, depending on how rewarding each of the tasks feels to them."
+     },
+     "question": "Each of the following is consistent with the account of mental fatigue set out in paragraphs 3 and 4 EXCEPT:"
+    },
+    {
+     "id": "R02-C-08-4",
+     "type": "RC",
+     "options": {
+      "A": "A student stops revising for an examination because she has now covered everything that the syllabus requires.",
+      "B": "A car slows to a halt on the motorway because the petrol in its tank has finally run out after a long journey.",
+      "C": "A runner's leg muscles weaken over the course of a long race and need several days of rest before regaining strength.",
+      "D": "A shopper who has spent an hour in one store grows restless as the attractions of the other stores nearby seem more and more worth the time."
+     },
+     "question": "Which of the following is most closely analogous to what happens, on the account the author favours, when mental fatigue sets in?"
+    },
+    {
+     "id": "R02-C-08-5",
+     "type": "RC",
+     "options": {
+      "A": "something best prevented by rationing effort through the day, as the failure of the resource model now shows.",
+      "B": "evidence that everyday wisdom about tiredness has been refuted by the replication studies described in paragraph 2.",
+      "C": "an illusion that came to seem real largely because the resource model became so widely accepted.",
+      "D": "a real experience that the resource model described vividly but explained wrongly."
+     },
+     "question": "It can be inferred that the author regards the 'evening collapse' mentioned in paragraph 1 as"
+    }
+   ]
+  },
+  {
+   "passage_id": "R08-C-08",
+   "passage": [
+    "A familiar lament holds that the public has broken into pieces. Where citizens once read the same few newspapers and watched the same evening bulletin, they now inhabit separate streams of information, each tuned to its audience's prior beliefs, and the common ground on which democratic argument depends is said to have eroded. The complaint is heard from commentators of every persuasion, each of whom tends to blame the media favoured by the other side. The lament contains a real worry, but it rests on a picture of the past that deserves scrutiny, and the remedies it suggests follow from the picture rather than from the worry.",
+    "The ideal of a single forum in which a whole society reasons together has an attractive genealogy. Its admirers point to the coffeehouses, reading societies and pamphlet wars of early modern Europe, where private individuals gathered to discuss public affairs as equals. Yet the gatherings so admired were open in principle and narrow in practice, confined largely to those with the leisure, literacy and standing to take part. The mass audiences of the broadcast era were broader, but their breadth was purchased by a different narrowing: millions listened, while very few were permitted to speak, and the range of views considered respectable was set by a small number of editors and producers. What looks in retrospect like common ground was in part a common silence about matters that the gatekeepers did not think worth raising.",
+    "None of this means the old arrangement had no merit. A shared stock of reported facts, however selectively assembled, gave opponents something definite to disagree about. Two people who had heard the same bulletin could argue over what to do about a strike or a drought without first arguing over whether it had happened. That is the genuine loss the lament points to, and it should not be dismissed. But it is worth being precise about what was lost. It was not chiefly that everyone attended to the same things, which was never a requirement of self-government and was always enforced partly by exclusion. It was that disputes about fact could be settled, or at least narrowed, by appeal to procedures and sources that people on both sides accepted.",
+    "Seen this way, the fragmentation of audiences matters less than the fragmentation of standards. Many publics can coexist in a healthy democracy, each attending to its own concerns, provided that when they collide they can appeal to shared ways of establishing what is true. A society in which different groups read different things but accept the same rules of evidence is plural, not broken. A society whose groups no longer recognise any common method for testing claims is in difficulty even if they all watch the same programme. The second condition is the more dangerous because it is harder to see: a shared screen can conceal the fact that its viewers no longer agree on what would count as showing that something is so.",
+    "The distinction has practical consequences. Nostalgia for the mass audience tends to recommend the impossible, the restoration of a few dominant outlets with the authority to define reality for everyone, and it risks restoring the exclusions along with the authority. The more plausible task is to build connections between publics rather than to merge them: institutions trusted across divides to verify claims, and habits of reporting that show their evidence so that readers who distrust the reporter can still examine the work. Such arrangements are less comforting than the image of a nation gathered around one screen, but they ask for something a plural society can actually provide. Nor need the connections be grand. A local paper that publishes the documents behind its reporting on a disputed planning decision, so that both sides can read them, does a small part of the work that the lament imagines only a national institution could do."
+   ],
+   "questions": [
+    {
+     "id": "R08-C-08-1",
+     "type": "RC",
+     "options": {
+      "A": "the shared absence from public discussion of matters that the gatekeepers chose not to raise.",
+      "B": "an agreement freely reached among citizens to avoid raising the topics that most divided them from one another.",
+      "C": "the quiet that settled over public life once the coffeehouses and reading societies had finally closed.",
+      "D": "the reluctance of mass audiences to criticise the broadcasters whose bulletins they listened to every evening."
+     },
+     "question": "As used in paragraph 2, 'a common silence' refers to"
+    },
+    {
+     "id": "R08-C-08-2",
+     "type": "RC",
+     "options": {
+      "A": "detached, describing the lament and its critics without committing to a view of its own on the question.",
+      "B": "wholly supportive, endorsing both its account of the shared past and its proposal to restore that past.",
+      "C": "dismissive, treating its concern about lost common ground as a misunderstanding that has no real basis at all.",
+      "D": "sympathetic to the worry it expresses but critical of the history it assumes and of the remedies it suggests."
+     },
+     "question": "The author's attitude towards the lament described in paragraph 1 is best described as"
+    },
+    {
+     "id": "R08-C-08-3",
+     "type": "RC",
+     "options": {
+      "A": "was achieved by excluding from the audience those who lacked the leisure and literacy to take part.",
+      "B": "came at the cost of narrowing who could take part in public discussion as speakers rather than listeners.",
+      "C": "resulted from the efforts of editors and producers to widen the range of views considered respectable.",
+      "D": "made public discussion more inclusive than the coffeehouse gatherings in every respect that mattered for democracy."
+     },
+     "question": "The passage implies that the breadth of broadcast-era audiences"
+    },
+    {
+     "id": "R08-C-08-4",
+     "type": "RC",
+     "options": {
+      "A": "An attempt to restore a few dominant news outlets could also bring back the exclusions that once accompanied their authority.",
+      "B": "Groups that read quite different publications may still resolve their factual disputes with one another if they accept the same rules of evidence.",
+      "C": "The decline of the mass audience is to be regretted mainly because it ended the experience of a nation attending to the same events.",
+      "D": "A shared body of reported facts, even one assembled selectively, made it easier for political opponents to argue usefully about policy."
+     },
+     "question": "Each of the following is consistent with the author's argument EXCEPT:"
+    },
+    {
+     "id": "R08-C-08-5",
+     "type": "RC",
+     "options": {
+      "A": "Several plural democracies contain many small publics that settle their disputes through courts and statistical offices trusted by all.",
+      "B": "The coffeehouse debates of early modern Europe were in fact far less exclusive than their modern critics have usually supposed.",
+      "C": "In the broadcast era many citizens distrusted the bulletins they watched yet still accepted the facts those bulletins reported.",
+      "D": "Groups that rarely encounter one another's news gradually stop accepting the same rules of evidence, so separate audiences breed separate standards."
+     },
+     "question": "Which of the following, if true, would most weaken the author's claim that the fragmentation of audiences matters less than the fragmentation of standards?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R04-B-04",
+   "passage": [
+    "When a colony becomes independent, one of the first questions its new government must answer is which language it will govern in. The question is often posed as a choice between authenticity and convenience. On one side stands the language of the former rulers, already established in the courts, the universities and the upper ranks of the civil service, and useful for dealing with the wider world. On the other stand the languages the people actually speak, whose adoption would seem to complete the work of liberation. Put this way, retaining the colonial language looks like a practical compromise with a humiliating past, and abandoning it looks like a costly act of pride.",
+    "This framing, however, hides the most important feature of the decision, which is that every option distributes advantage and disadvantage among citizens. In a country where many languages are spoken and none is spoken by a clear majority, choosing one of them as the sole language of administration hands a lasting head start to those who grew up speaking it. Their children will sit examinations in their mother tongue while everyone else's children sit them in a second language. Groups that expect to lose from such an arrangement can be relied upon to resist it, sometimes fiercely, and their resistance is not mere sentiment but a reasonable reading of their interests.",
+    "The colonial language has a curious property in this situation: it is equally foreign to almost everyone. Retaining it therefore spares the state from having to declare one community's speech superior to another's, which is one reason several multilingual states have kept it long after they expected to discard it. But equal foreignness is not equal access. The colonial language is already the property of a small educated class, often urban and often wealthy, and keeping it as the language of power entrenches that class's position against the rural majority of every linguistic group. The choice, then, is not between authenticity and convenience but between two kinds of inequality: one that runs between language communities, and one that runs between classes within each of them.",
+    "Recognising this does not settle what any particular country should do, and it is not an argument for pretending the dilemma away. It does suggest that the sharpest debates about language after empire have rarely been about nostalgia or national pride, whatever their rhetoric. They have been about who will be able to read the forms, pass the examinations and understand the judge. Policies that use several languages at different levels of government, though cumbersome, are best understood as attempts to spread these costs rather than to escape them."
+   ],
+   "questions": [
+    {
+     "id": "R04-B-04-1",
+     "type": "RC",
+     "options": {
+      "A": "doing so spares the state from declaring one community's speech superior to another's.",
+      "B": "its native speakers formed a clear majority in most of the newly independent states.",
+      "C": "it is the language most widely spoken among the rural majority of the population.",
+      "D": "international bodies required its use as a condition of recognising the new state."
+     },
+     "question": "According to the passage, one reason several multilingual states have kept the colonial language is that"
+    },
+    {
+     "id": "R04-B-04-2",
+     "type": "RC",
+     "options": {
+      "A": "access to schooling in the colonial language was restricted by law to a small and wealthy class.",
+      "B": "languages from outside a region are generally harder to learn than the languages spoken within it.",
+      "C": "although the colonial language is native to almost no group, some citizens are far better placed to use it than others.",
+      "D": "because the colonial language is foreign to everyone, every citizen finds it equally difficult to learn, to speak and to use well."
+     },
+     "question": "The statement 'equal foreignness is not equal access' (paragraph 3) means that"
+    },
+    {
+     "id": "R04-B-04-3",
+     "type": "RC",
+     "options": {
+      "A": "Retaining the colonial language is the fairest option open to a multilingual state, since it disadvantages every group equally.",
+      "B": "Policies that use several languages at different levels of government remove the inequalities that one official language creates.",
+      "C": "A rural citizen who natively speaks the chosen indigenous official language may gain more from that policy than from keeping the colonial language.",
+      "D": "Debates about official languages after independence have been driven mainly by nostalgia for the colonial past or by national pride."
+     },
+     "question": "The author would most likely agree with which of the following?"
+    },
+    {
+     "id": "R04-B-04-4",
+     "type": "RC",
+     "options": {
+      "A": "The colonial language should be kept in multilingual states because it is the only option that treats all language communities alike.",
+      "B": "Newly independent states ought to replace the colonial language with indigenous languages as quickly as is practical, whatever the cost.",
+      "C": "Choosing an official language after independence is chiefly about how advantage is shared among citizens, not authenticity against convenience.",
+      "D": "Language policy after empire has been shaped chiefly by the need to communicate with the wider world rather than with citizens."
+     },
+     "question": "Which of the following best expresses the central claim of the passage?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R04-D-05",
+   "passage": [
+    "Political parties have few admirers. It is a commonplace of political commentary that they are distrusted, and reformers of every persuasion have proposed ways of loosening their grip: independent candidates, direct votes on policy, primaries open to any voter who cares to take part. The suspicion is understandable. Parties reward loyalty over judgement, they paper over disagreements in order to win, and their leaders sometimes seem more interested in the survival of the organisation than in the purposes it was founded to serve.",
+    "Yet much of what makes democratic government workable is done by parties, and done so routinely that it goes unnoticed. A modern electorate contains millions of people with conflicting interests. Someone has to assemble those interests into a programme coherent enough to be offered, defended and, if elected, attempted; someone has to recruit and test the people who will hold office; and someone has to give voters a simple way of knowing what a candidate broadly stands for without studying the record of each individual. Parties do all three. Most importantly, they make accountability possible. A government formed by a party can be judged as a team at the next election, whereas a legislature of independents, each with a private bargain to defend, offers voters no one in particular to reward or punish.",
+    "This is why some reforms intended to democratise parties have had awkward consequences. When candidates are chosen in primaries open to anyone, the party organisation loses much of its ability to screen out those who would damage it, and the candidates who win are often those with the most intense supporters rather than those with the broadest appeal. When membership dwindles, the organisation does not disappear; it becomes a smaller circle of professionals and funders, less rooted in local life and more remote from the voters it claims to represent. Weakening the party, in other words, does not necessarily hand power to citizens. It may hand it instead to whoever is able to organise without one: wealthy individuals, single-issue lobbies, the personal following of a celebrity.",
+    "None of this makes parties virtuous. A party that faces no serious competition will serve itself, and the defenders of party government have sometimes mistaken the indispensability of parties for their innocence. The argument here is a narrower one. It is that the familiar complaints about parties are complaints about particular parties behaving badly, and that the cure for bad parties is better ones, more open to their members and more seriously contested, rather than a politics that tries to do without them altogether."
+   ],
+   "questions": [
+    {
+     "id": "R04-D-05-1",
+     "type": "RC",
+     "options": {
+      "A": "Parties have become so self-serving that reformers are right to replace them with independent candidates and direct votes on policy.",
+      "B": "Parties deserve far more admiration than they receive, since the functions they perform show that they are fundamentally virtuous.",
+      "C": "For all their faults, parties do work democracy needs, so their failings call for improving them rather than bypassing them.",
+      "D": "Open primaries, though meant to democratise parties, usually produce candidates with intense followings rather than broad appeal."
+     },
+     "question": "Which of the following best expresses the central claim of the passage?"
+    },
+    {
+     "id": "R04-D-05-2",
+     "type": "RC",
+     "options": {
+      "A": "would be unable to assemble the conflicting interests of millions of people into any kind of legislation.",
+      "B": "would contain members who had been screened too strictly by organisations remote from local life.",
+      "C": "would leave them without any collective body that they could reward or punish at the next election.",
+      "D": "would be dominated by wealthy individuals who had paid for the campaigns of most of its members."
+     },
+     "question": "According to the passage, a legislature made up entirely of independents would be a problem for voters because it"
+    },
+    {
+     "id": "R04-D-05-3",
+     "type": "RC",
+     "options": {
+      "A": "have assumed that because parties are necessary to democracy, they must also be free of blame.",
+      "B": "have confused the innocent intentions of party founders with the conduct of the parties they built.",
+      "C": "have wrongly believed that democracy could function perfectly well without any parties at all.",
+      "D": "have argued that parties are guilty of misconduct only when they face no serious competition."
+     },
+     "question": "When the author says that defenders of party government have 'mistaken the indispensability of parties for their innocence', the point is that these defenders"
+    },
+    {
+     "id": "R04-D-05-4",
+     "type": "RC",
+     "options": {
+      "A": "Candidates chosen in open primaries tend to spend more money on their campaigns than candidates chosen by party committees.",
+      "B": "Where parties adopted open primaries, turnout in those contests was high among committed party activists and very low among everyone else.",
+      "C": "Where parties adopted open primaries, the candidates who won were generally those whom uncommitted voters rated most highly in polls.",
+      "D": "Party membership has fallen as steeply in countries that never adopted open primaries as in countries that adopted them early."
+     },
+     "question": "Which of the following, if true, would most weaken the claim in paragraph 3 about candidates chosen in open primaries?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R01-B-05",
+   "passage": [
+    "A long tradition in philosophy, going back at least to Locke, holds that what makes me the same person as some earlier individual is neither the persistence of my body nor that of some hidden soul but memory. I am the person who sat that examination twenty years ago because I can remember sitting it, from the inside, as something I did. The view has an attractive modesty. It ties personal identity to something we actually experience rather than to an unobservable substance, and it appears to match our intuitions about imaginary cases: if all of my memories were somehow transferred into another body, many people feel that it is I who would wake up in it.",
+    "The theory faces two well-known difficulties. The first concerns chains of memory. Imagine a woman of eighty who vividly remembers her first day as a teacher at thirty, and suppose that the teacher of thirty could still recall a childhood accident at six of which the woman of eighty remembers nothing. On a strict memory criterion the old woman is the teacher and the teacher is the child, yet the old woman is not the child, since she remembers nothing of her. Identity cannot behave this way: if A is the same as B and B is the same as C, then A is the same as C. The second difficulty is subtler. To distinguish a genuine memory of sitting an examination from a vivid but false impression of having sat it, we seem to need to know already that the rememberer is the person who sat it. Memory, apparently, presupposes the identity it was supposed to explain.",
+    "The first objection can be met by allowing overlapping chains of memory, rather than direct memory, to carry identity; the second is much harder to escape. Yet it is worth asking what the defenders of the memory view were really after. Their deepest conviction was not a thesis about the logic of identity but a claim about what makes the past matter to a person. A past that I can recall, whose intentions I have carried out and whose anxieties still shape me, is mine in a way that a past I share only bodily is not.",
+    "Seen in this light, the theory fails as an account of identity and succeeds as an account of something else: the degree to which a person is connected to her own history. That connection comes in degrees and can weaken, which identity, being all or nothing, cannot do. The old woman is the child she once was, but she is far less connected to that child than to the teacher. Many of our practical concerns, from the keeping of old promises to the sense of responsibility for what we did long ago, may track this connection more closely than they track identity itself."
+   ],
+   "questions": [
+    {
+     "id": "R01-B-05-1",
+     "type": "RC",
+     "options": {
+      "A": "memories might be transferred into another body, which would make two quite different people one and the same person.",
+      "B": "telling a genuine memory from a convincing false one seems to require knowing already who the rememberer is.",
+      "C": "identity must hold from one end of a chain to the other, whereas direct memory need not.",
+      "D": "most people forget their early childhood, so memory cannot reach the first years of anyone's life."
+     },
+     "question": "According to the passage, the second difficulty for the memory theory is that"
+    },
+    {
+     "id": "R01-B-05-2",
+     "type": "RC",
+     "options": {
+      "A": "a vivid but false impression of an examination can now be told apart from a genuine memory of it.",
+      "B": "the teacher and the child are two different people, since the old woman remembers only the teacher.",
+      "C": "the old woman is the child, because the teacher links the two even though the old woman recalls nothing of the child.",
+      "D": "the old woman is not the child, since only a direct memory of an earlier stage of life can establish identity with it."
+     },
+     "question": "It can be inferred that allowing 'overlapping chains of memory' (paragraph 3) to carry identity would let the memory theorist say that"
+    },
+    {
+     "id": "R01-B-05-3",
+     "type": "RC",
+     "options": {
+      "A": "Personal identity consists in memory, provided memory is understood as overlapping chains rather than direct recall.",
+      "B": "Personal identity is ultimately a matter of the body, since memory presupposes the very identity it was originally meant to explain.",
+      "C": "Because memories fade over time, a person gradually ceases to be the same person she once was.",
+      "D": "Memory cannot settle who a person is, but it does measure how closely she is tied to her own past."
+     },
+     "question": "Which of the following best expresses the central claim of the passage?"
+    },
+    {
+     "id": "R01-B-05-4",
+     "type": "RC",
+     "options": {
+      "A": "A man who has forgotten his early years is identified by fingerprints, showing that bodily continuity is what personal identity consists in.",
+      "B": "A woman who has lost all memory of her past is told by her doctors that she is now a different person from the one who was admitted.",
+      "C": "A man accepts that he made a promise decades ago but feels it binds him only weakly, having lost almost every link to the life in which he made it.",
+      "D": "Two people both claim to remember winning the same prize as children, and the dispute is settled by checking records of which of them was actually present."
+     },
+     "question": "Which of the following situations best illustrates the distinction the author draws in paragraph 4?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R06-F-02",
+   "passage": [
+    "The most familiar complaint about recommendation algorithms is that they trap each of us in a private enclosure. Because a system learns what a user has clicked, watched or bought, the argument runs, it will keep offering more of the same, until every listener hears only the music that confirms their existing taste and every reader meets only the opinions they already hold. On this picture the danger is fragmentation: a public that once shared a common stock of songs, books and news splinters into millions of sealed niches, each tuned to one person.",
+    "The complaint is not baseless, but it may have the main tendency of these systems the wrong way round. Most recommendation engines do not learn from one user in isolation; they learn from the aggregate behaviour of very large numbers of users, and they rank items partly by how much engagement those items have already attracted. That design creates a feedback loop. An item that gets a slight early lead is shown to more people, which earns it more engagement, which earns it still more prominence. Imagine two songs of equal appeal released on the same day, one of which happens to be picked up by a few enthusiastic listeners in its first hours. Under such a loop the small, accidental difference can harden into an enormous gap, and the second song may effectively disappear, not because anyone judged it worse but because no one was shown it.",
+    "If this is right, the characteristic risk is less fragmentation than concentration: attention pooling ever more heavily on a few items, while the vast catalogue that digital distribution made available sits largely unvisited. The early hope that online platforms would let obscure work find its small audiences depended on people actually encountering that work, and a ranking system that rewards prior popularity makes such encounters rarer than the size of the catalogue suggests.",
+    "It would be wrong to present this as something algorithms invented. Bestseller lists, radio playlists and the front tables of bookshops have always amplified what was already selling, and cultural markets have long been marked by a few large successes and many neglected works. What is new is the speed of the loop and its invisibility. A bookseller choosing what to display is a person whose choices can be questioned; a ranking produced by continuous automated feedback appears simply to report what people want, when it is partly manufacturing it. The remedy, if there is one, lies less in protecting users from their own tastes than in asking how much of what looks like popular demand is an echo of earlier exposure."
+   ],
+   "questions": [
+    {
+     "id": "R06-F-02-1",
+     "type": "RC",
+     "options": {
+      "A": "suggest that the second song was neglected because early listeners judged it to be the weaker work.",
+      "B": "show how an accidental early advantage can grow into a large gap when ranking rewards prior engagement.",
+      "C": "illustrate the fragmentation of a shared public into sealed niches tuned to individual listeners.",
+      "D": "prove that listeners cannot tell apart songs of equal appeal without guidance from an algorithm."
+     },
+     "question": "The example of the two songs in paragraph 2 is used to"
+    },
+    {
+     "id": "R06-F-02-2",
+     "type": "RC",
+     "options": {
+      "A": "personalised systems confine each user to a narrow niche that obscure work is unable to reach.",
+      "B": "digital platforms have, in practice, offered far fewer obscure works than their early promoters had claimed.",
+      "C": "making a vast catalogue available does little for obscure work if ranking keeps people from encountering it.",
+      "D": "users, left to themselves, prefer familiar and popular works to obscure ones that might suit them better."
+     },
+     "question": "The passage suggests that the 'early hope' mentioned in paragraph 3 has been undermined chiefly because"
+    },
+    {
+     "id": "R06-F-02-3",
+     "type": "RC",
+     "options": {
+      "A": "Listeners who rely on recommendation engines report that they enjoy the suggested songs more than songs that were picked for them at random.",
+      "B": "Bestseller lists in the decades before online platforms also showed a few large successes and a great many neglected works.",
+      "C": "When the same new songs were ranked separately for several groups of listeners, different songs became hits in each group, depending on early chance.",
+      "D": "Most users of streaming services now listen to a narrower range of genres than they did before such services became common."
+     },
+     "question": "Which of the following findings, if true, would most strengthen the author's claim that an automated ranking is 'partly manufacturing' what people want?"
+    },
+    {
+     "id": "R06-F-02-4",
+     "type": "RC",
+     "options": {
+      "A": "It would ask how far apparent demand is an echo of earlier exposure rather than an independent preference.",
+      "B": "It would remove popularity from rankings entirely, since amplifying success is a harm peculiar to algorithms.",
+      "C": "It would aim chiefly at showing users fewer of the items that match the tastes they have already displayed.",
+      "D": "It would be achieved once automated rankings were made as slow to respond as the choices of booksellers."
+     },
+     "question": "Which of the following best captures the author's view of the 'remedy' mentioned in the final paragraph?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R06-B-06",
+   "passage": [
+    "The idea of a keystone species borrows its name from architecture. In an arch, the keystone is the wedge at the top that holds the other stones in place; remove it, and the structure falls. Applied to ecosystems, the term picks out species whose effect on their community is far larger than their abundance would suggest, so that their loss sets off changes that ripple through many other species. A predator that keeps a grazer in check, allowing plants to flourish, is the classic case, and the concept has proved enormously useful in persuading the public and governments that the fate of a single species can matter to a whole landscape.",
+    "The vividness of the metaphor, however, carries assumptions that ecology does not always support. An arch has one keystone, and its role is fixed by the geometry of the structure. Ecological communities are not like this. The same species may have a dominant influence in one place and a minor one in another, depending on what else lives there, on the climate and on the history of the site. A predator that controls its prey on a rocky shore where that prey has few other enemies may matter much less where the prey is also eaten by several other animals. Keystone status, in other words, is a property of a relationship in a particular setting, not a fixed attribute of a species.",
+    "The metaphor also invites a search for the one species that holds everything together, when in many communities influence is spread across several species, each of moderate importance, whose combined effects are what keep the system stable. A conservation strategy built around identifying and protecting keystones may then direct attention to a few dramatic interactions and neglect the diffuse ones, which are harder to demonstrate but not necessarily less important. The absence of a striking keystone in a community does not show that its members are interchangeable.",
+    "None of this means the concept should be discarded. Some species really do have outsized and well-documented effects, and naming them helps in arguing for their protection. The danger lies in treating the label as a discovery about a species' nature rather than a finding about a particular system, and in assuming that where no keystone has been identified, no species is indispensable. The architectural image is best used as what it is, a way of making one kind of ecological fact memorable, and not as a model of how communities are generally built."
+   ],
+   "questions": [
+    {
+     "id": "R06-B-06-1",
+     "type": "RC",
+     "options": {
+      "A": "a species keeps its keystone role wherever it lives, once that role has been demonstrated in one setting.",
+      "B": "whether a species has outsized influence depends on the community and conditions in which it lives.",
+      "C": "keystone species are found only in particular kinds of habitat, such as rocky shores, and not elsewhere.",
+      "D": "a keystone species is one that forms close partnerships with a small number of other species."
+     },
+     "question": "In paragraph 2, the description of keystone status as 'a property of a relationship in a particular setting' means that"
+    },
+    {
+     "id": "R06-B-06-2",
+     "type": "RC",
+     "options": {
+      "A": "false, because the passage shows that no species really has an influence larger than its abundance suggests.",
+      "B": "adequate, provided that the predator's effect has been carefully measured in at least one community.",
+      "C": "incomplete, since it leaves out the particular system in which the predator's influence was found.",
+      "D": "harmful, because naming keystone species always draws money away from the diffuse interactions in a community."
+     },
+     "question": "The author would most likely regard the unqualified statement that 'a certain predator is a keystone species' as"
+    },
+    {
+     "id": "R06-B-06-3",
+     "type": "RC",
+     "options": {
+      "A": "Conservation funding in one region rose sharply after a campaign that described a single bird as the keystone of its forests.",
+      "B": "In a lake, removing a single fish species that was rare but fed on grazing animals caused a large growth of algae within a few seasons.",
+      "C": "On one coast, removing a single predator led to the collapse of a mussel bed, but on another coast removing the same predator had little effect.",
+      "D": "In a meadow, removing any single species of grazing insect changed little, but removing several of them together altered the plant community sharply."
+     },
+     "question": "Which of the following findings, if true, would most strengthen the argument of paragraph 3?"
+    },
+    {
+     "id": "R06-B-06-4",
+     "type": "RC",
+     "options": {
+      "A": "admiring, regarding it as an accurate account of how most ecological communities are actually held together.",
+      "B": "appreciative of its value as a memorable idea but wary of its being taken as a general model of communities.",
+      "C": "dismissive, regarding it as a misleading metaphor that ecology would be better off discarding entirely.",
+      "D": "indifferent, regarding the question of whether it is accurate as less important than whether it raises funds."
+     },
+     "question": "The author's attitude towards the keystone concept is best described as"
+    }
+   ]
+  },
+  {
+   "passage_id": "R02-C-06",
+   "passage": [
+    "It has become a commonplace that rewarding people for doing what they already enjoy can make them enjoy it less. Picture a child who draws for the pleasure of it and is then promised a prize for each picture. While the prizes continue, the drawing may increase. When they stop, the child may draw less than before the prizes began, as though the activity had been converted from play into work and then left unpaid. The phenomenon is real, and it has been reproduced often enough to deserve to be taken seriously. What is less often noticed is how many conditions it depends upon, and how quickly it fades when they are absent.",
+    "The effect appears most reliably when the reward is tangible, expected in advance and given for doing the task rather than for doing it well. A prize announced beforehand and handed over for every picture invites the child to understand the drawing as a means to the prize. An unexpected treat, by contrast, cannot have been the reason for drawing, and praise that tells the child something about the quality of the work may even strengthen interest, since it feeds the sense of competence that made the activity enjoyable in the first place. The same physical reward can therefore have opposite effects depending on what it communicates to the person who receives it.",
+    "Equally important, the effect presupposes that there was interest to undermine. Many tasks that people are paid or rewarded for, from sorting files to practising scales, hold little intrinsic appeal at the outset, and for these, rewards cannot crowd out an enjoyment that was never there. Indeed, a reward may keep someone at a dull task long enough for skill to grow and for the task itself to become absorbing, so that interest arrives because of the incentive rather than in spite of it.",
+    "The sensible conclusion lies between two slogans. Those who say that rewards destroy motivation generalise from a narrow set of conditions; those who say that people simply do whatever they are paid to do ignore the conditions entirely. The better question in any particular case is how the reward is likely to be read: as an attempt to control behaviour that would otherwise not occur, or as information about how well something is being done. The first reading tends to erode interest in activities that people already value; the second tends to support it."
+   ],
+   "questions": [
+    {
+     "id": "R02-C-06-1",
+     "type": "RC",
+     "options": {
+      "A": "comes unexpectedly and so cannot have been the child's reason for drawing.",
+      "B": "removes the child's expectation that drawing will be rewarded again in the future.",
+      "C": "feeds the child's sense of being competent at the activity.",
+      "D": "is less tangible than a prize and so is harder for the child to treat as a payment."
+     },
+     "question": "According to the passage, praise that tells a child about the quality of the work may strengthen interest because it"
+    },
+    {
+     "id": "R02-C-06-2",
+     "type": "RC",
+     "options": {
+      "A": "Announcing that the pupil will receive a small gift for every hour of practice completed.",
+      "B": "Giving the pupil an unannounced treat in a week when the practice had been especially long.",
+      "C": "Telling the pupil after a recital which passages were played with particular skill and feeling.",
+      "D": "Offering a reward only for practising scales, which the pupil finds tedious, and not for playing pieces."
+     },
+     "question": "A pupil already loves playing the piano. Based on the passage, which of the following is most likely to reduce the pupil's interest in playing?"
+    },
+    {
+     "id": "R02-C-06-3",
+     "type": "RC",
+     "options": {
+      "A": "will reduce interest in the task as soon as the rewards are withdrawn, just as they do for enjoyed tasks.",
+      "B": "work better when they are given for doing the task well than when they are given merely for doing it.",
+      "C": "will always produce a lasting interest in the task once the necessary skill has been developed.",
+      "D": "can sometimes lead, through growing skill, to real enjoyment of the task."
+     },
+     "question": "It can be inferred from paragraph 3 that rewards for a task that is dull at the outset"
+    },
+    {
+     "id": "R02-C-06-4",
+     "type": "RC",
+     "options": {
+      "A": "has been made to draw harder and longer than before, so that the activity itself has become tiring.",
+      "B": "resents the adults for withdrawing a payment that the child had been led to believe would continue.",
+      "C": "comes to enjoy drawing only when other children are drawing too and there is a prize to compete for.",
+      "D": "now sees drawing as a job done for the prize, so that without the prize it no longer seems worth doing."
+     },
+     "question": "In paragraph 1, the phrase 'converted from play into work and then left unpaid' suggests that the child"
+    }
+   ]
+  },
+  {
+   "passage_id": "R07-D-04",
+   "passage": [
+    "Few facts about music are more familiar, or more puzzling on reflection, than the willingness of listeners to seek out music that makes them sad. People do not, on the whole, go looking for grief or disappointment in the rest of life, and they would think it odd to be offered a sorrowful afternoon as a treat. Yet slow laments, songs of loss and the darker movements of symphonies are among the most loved music in many traditions, and listeners return to them deliberately.",
+    "One response dissolves the puzzle by denying its premise. On this view the listener does not really feel sad at all; she recognises sadness in the music, much as she might recognise a sorrowful expression on a carved mask, and what she enjoys is the beauty and skill with which the sadness is expressed. The view has the merit of explaining why sad music does not ruin anyone's day. But it fits poorly with what many listeners report, which is that they are moved, sometimes to tears, and not merely informed. A second response accepts that the feeling is real and explains the pleasure by the frame around it: the sadness arrives without a loss to cause it and without consequences to follow, so it can be savoured in a way that the sadness of life cannot.",
+    "Both responses capture something, but both treat the emotion as a single state, present or absent, mild or intense. What music does with an emotion is closer to giving it a shape over time. A lament does not simply announce sorrow; it gathers, rises, breaks, returns to a phrase heard earlier and comes to rest. The listener who follows it is led through a version of sorrow that has a beginning, an end and a recognisable order, which is precisely what the sorrows of ordinary life usually lack. The pleasure, on this account, lies less in the feeling than in the form the feeling is given.",
+    "This does not mean that sad music always pleases, or pleases everyone. Many people who are grieving find that they cannot listen to the music they loved before, at least for a time, and their experience is a useful check on any theory. A frame that keeps sadness at a safe distance should make such music easier to bear in grief, not harder. The account offered here does better: a shaped and completed sorrow may be unbearable to someone whose own sorrow has no shape yet, because the contrast is too sharp."
+   ],
+   "questions": [
+    {
+     "id": "R07-D-04-1",
+     "type": "RC",
+     "options": {
+      "A": "support the second view that sadness is enjoyable when it arrives without a real loss behind it.",
+      "B": "express the author's own position that the pleasure of sad music lies in skill rather than feeling.",
+      "C": "illustrate the first view's claim that listeners recognise sadness in music without themselves feeling it.",
+      "D": "show that visual art expresses sadness less powerfully than music, which can move listeners to tears."
+     },
+     "question": "The reference to a carved mask in paragraph 2 serves to"
+    },
+    {
+     "id": "R07-D-04-2",
+     "type": "RC",
+     "options": {
+      "A": "the listener's confidence that the sorrow has no real cause and will have no consequences afterwards.",
+      "B": "the intensity of the sorrow the music arouses, so that the most moving laments are the most enjoyed.",
+      "C": "the listener's recognition of the composer's skill in depicting sorrow without being affected by it.",
+      "D": "the way the music leads a real sorrow through an ordered course from beginning to resolution."
+     },
+     "question": "The author would most likely agree that the pleasure a listener takes in a lament depends chiefly on"
+    },
+    {
+     "id": "R07-D-04-3",
+     "type": "RC",
+     "options": {
+      "A": "Grieving listeners find sad music that wanders without clear form or resolution just as unbearable as laments that move to a settled close.",
+      "B": "Some listeners enjoy sad music most when they hear it in a concert hall among strangers rather than alone at home.",
+      "C": "Listeners who are not grieving often report being moved to tears by laments, and not merely noticing that the music is sad.",
+      "D": "Grieving listeners who avoid sad music for a time usually return to it once their own grief has become less raw."
+     },
+     "question": "Which of the following, if true, would most weaken the author's explanation of why some grieving people cannot bear sad music?"
+    },
+    {
+     "id": "R07-D-04-4",
+     "type": "RC",
+     "options": {
+      "A": "A lament may return to a phrase heard earlier before coming to rest.",
+      "B": "The frame view correctly predicts that people in grief will find sad music harder to bear than before.",
+      "C": "The view that listeners only recognise sadness can explain why sad music does not spoil a listener's day.",
+      "D": "On the frame view, the sadness of music can be savoured because no loss causes it and no consequences follow."
+     },
+     "question": "Each of the following is supported by the passage EXCEPT:"
+    }
+   ]
+  },
+  {
+   "passage_id": "R01-G-05",
+   "passage": [
+    "On the eve of a battle, the Bhagavad Gita relates, the warrior Arjuna loses heart at the prospect of fighting his own kinsmen, and his charioteer Krishna answers him in a long discourse. One of its central teachings is that a person has a claim on his action but not on its fruits: he should act, and act well, without making the outcome the motive of what he does, and he should meet success and failure with the same evenness of mind. The teaching has been admired across many centuries and many traditions, and it has also been accused of something close to moral recklessness. An agent who does not care about outcomes, the objection runs, is an agent who will not count the cost of what he does.",
+    "The objection rests on running together two different things: attending to consequences and depending on them. Nothing in the idea of acting without attachment forbids a person from considering what his action is likely to bring about; a physician who acts in this spirit still chooses the treatment most likely to help. What the teaching asks is that the physician's steadiness, and his sense of having done what he should, not be held hostage to whether the patient recovers. Consequences enter into deciding what to do. They do not enter into the agent's claim to a reward, or into the anxious craving that so often bends judgement toward whatever promises to be noticed and praised.",
+    "Seen this way, detachment is less a withdrawal from the world than a condition for acting well in it. Anxiety about results is notoriously bad for performance; the craftsman watching the clock and the speaker imagining the applause both tend to do worse work than the one absorbed in the task. More seriously, an agent fixed on fruits is tempted to choose the action whose success will be visible over the one that is right, and to abandon a just course the moment it begins to fail. The teaching guards against both distortions.",
+    "It would be too quick, however, to declare the tension dissolved. Consequences cannot be considered in choosing and then set aside entirely in acting, because most actions unfold over time and must be adjusted as their effects appear. The physician has to watch whether the treatment is working. What the teaching can sensibly ask is not blindness to results but a particular relation to them, in which they are information to be used rather than verdicts on one's worth. Whether that relation can be sustained by ordinary people under real pressure is a question the teaching poses rather than settles."
+   ],
+   "questions": [
+    {
+     "id": "R01-G-05-1",
+     "type": "RC",
+     "options": {
+      "A": "refusing to act at all whenever the outcome of an action is uncertain.",
+      "B": "choosing whatever action will be most visibly successful and most widely praised.",
+      "C": "meeting success with pride and failure with an equally strong sense of shame.",
+      "D": "acting without weighing what one's actions are likely to bring about."
+     },
+     "question": "It can be inferred that those who accuse the teaching of 'moral recklessness' understand it to recommend"
+    },
+    {
+     "id": "R01-G-05-2",
+     "type": "RC",
+     "options": {
+      "A": "One who sees that a new method is not helping her class, changes it, and does not take the failure as proof she is a poor teacher.",
+      "B": "One who gives up teaching a difficult class altogether once her first method fails, concluding from the failure that she simply lacks the talent for the work.",
+      "C": "One who chooses whichever methods will produce the most impressive results for visiting inspectors, whether or not her pupils actually benefit from them.",
+      "D": "One who keeps using a method she believes is right without checking whether her pupils are learning anything from it."
+     },
+     "question": "Which of the following teachers best shows the relation to results that paragraph 4 says the teaching can sensibly ask for?"
+    },
+    {
+     "id": "R01-G-05-3",
+     "type": "RC",
+     "options": {
+      "A": "going beyond showing that detachment is compatible with good action to claim that it actually helps action go well.",
+      "B": "introducing the difficulty that most actions unfold over time and so must be adjusted as their effects gradually appear.",
+      "C": "conceding that anxiety about results is sometimes useful because it keeps agents attentive to what they do.",
+      "D": "restating the objection of paragraph 1 in a stronger form before the author's final reply in paragraph 4."
+     },
+     "question": "Paragraph 3 contributes to the argument chiefly by"
+    },
+    {
+     "id": "R01-G-05-4",
+     "type": "RC",
+     "options": {
+      "A": "Sympathetic, having rejected the charge of recklessness, yet unwilling to claim that the teaching removes every difficulty.",
+      "B": "Sceptical, since the author ends by doubting that anyone could actually live by the teaching under real pressure.",
+      "C": "Neutral, since the author declines to say whether the objection that the teaching is reckless succeeds or fails.",
+      "D": "Dismissive, since the physician example shows that the teaching cannot be followed by anyone whose work has consequences."
+     },
+     "question": "Which of the following best describes the author's stance toward the teaching by the end of the passage?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R01-A-03",
+   "passage": [
+    "When two experts disagree about a question the rest of us cannot assess, it can seem that the layperson has only two options: to become an expert herself, or to pick a side at random. Neither is attractive. The first is usually impossible within the time available, and the second makes a mockery of the idea that belief should answer to evidence. But the dilemma is false. Although the layperson cannot judge the dispute directly, she can often judge the disputants, and judgements of that kind can be reasonable even when the subject matter remains opaque to her.",
+    "Several kinds of evidence are available. She can ask whether either expert has a record of predictions that can be checked, and how those predictions fared. She can ask whether one of them stands to gain from being believed, through money, reputation or loyalty to an institution. She can ask how the rest of the field divides, bearing in mind that a majority counts for more when its members reached their views independently than when they all learned them from the same teacher. None of these questions requires understanding the dispute itself. Each concerns the circumstances in which a claim is advanced rather than its technical content, and each can be answered, at least roughly, by an attentive citizen with no specialised training whatever.",
+    "One tempting source of evidence is less useful than it looks. Laypeople often favour the expert who argues more fluently, answers objections more quickly and seems more at ease. Yet these are skills of performance, and they are only loosely connected with being right. A careful scientist may hedge, pause and admit uncertainties that a confident charlatan would brush aside, and an audience that rewards confidence is, in effect, rewarding the very habit that should make it suspicious. The difficulty is compounded by the fact that public debate, with its brief exchanges and its appetite for memorable phrases, is arranged almost entirely so as to display performance, and so to favour the disputant who has mastered it.",
+    "It would be a mistake to conclude that the layperson's position is comfortable. Track records are often unavailable for the questions that matter most, interests can be hidden, and a field can be captured by a fashion that makes its consensus less independent than it appears. The indirect methods narrow the range of reasonable belief; they rarely close it. Still, a choice made on such grounds is not a coin toss, and treating it as one hands an advantage to whoever is most willing to exploit the public's sense of helplessness."
+   ],
+   "questions": [
+    {
+     "id": "R01-A-03-1",
+     "type": "RC",
+     "options": {
+      "A": "it outnumbers the dissenting minority by a wide margin and has done so for a long time.",
+      "B": "its members arrived at their views independently of one another rather than from one common source.",
+      "C": "its members were all trained by the most eminent teacher working in that particular field.",
+      "D": "its members defend their position more fluently and confidently than the dissenters can."
+     },
+     "question": "According to the passage, a majority of experts counts for more when"
+    },
+    {
+     "id": "R01-A-03-2",
+     "type": "RC",
+     "options": {
+      "A": "whether either expert has made checkable predictions, and how those predictions turned out.",
+      "B": "the number of years each expert has spent working in the field concerned.",
+      "C": "how the other members of the field divide on the question in dispute between them.",
+      "D": "whether either expert stands to gain money or reputation from being believed by the public."
+     },
+     "question": "The passage mentions each of the following as evidence a layperson can use in judging between disagreeing experts EXCEPT"
+    },
+    {
+     "id": "R01-A-03-3",
+     "type": "RC",
+     "options": {
+      "A": "argue that experts ought to hedge their claims and admit uncertainty more often than they now do.",
+      "B": "explain why an expert's fluency and ease are poor guides to whether that expert is right.",
+      "C": "suggest that scientists are, on the whole, less trustworthy than other kinds of experts on most questions.",
+      "D": "illustrate how an expert's financial or institutional interests can be hidden from the public."
+     },
+     "question": "The contrast between the careful scientist and the confident charlatan in paragraph 3 serves to"
+    },
+    {
+     "id": "R01-A-03-4",
+     "type": "RC",
+     "options": {
+      "A": "allow a layperson to become as certain about the dispute as the experts themselves are about it.",
+      "B": "are reliable only in the hands of people who also understand the subject matter of the dispute.",
+      "C": "can make some lay beliefs about an expert dispute more reasonable than others without guaranteeing a correct choice.",
+      "D": "are of no use when the question in dispute is among the questions that matter most to the public."
+     },
+     "question": "The author would most likely agree that the indirect methods described in paragraph 2"
+    }
+   ]
+  },
+  {
+   "passage_id": "R07-A-05",
+   "passage": [
+    "The commonest objection to free verse is that it is merely prose with the margins moved. Take away the rhyme and the regular metre, the objection runs, and nothing distinguishes a poem from a paragraph except the typographer's decision to stop each line short of the edge of the page. If that decision is arbitrary, the poem is a pretence; if it is not, the objector would like to know what principle governs it, and a vague appeal to the poet's ear or instinct will not satisfy him.",
+    "The question deserves a better answer than poets usually give it, and the principle, where there is one, is that the line is a unit of attention. A reader pauses, however slightly, at the end of a line, and in that pause whatever the line has said is briefly complete. A sentence broken across two lines is therefore read twice: once as the line presents it and once as the sentence finally does. Consider a line that ends 'she said she would not leave', followed by one that begins 'the house until the rain had stopped'. For the length of the pause the woman refuses to leave at all; the next line shrinks the refusal to a matter of weather. Neither reading cancels the other; the poem holds the larger refusal and the smaller one together, and prose, which delivers its sentences whole, cannot easily do this.",
+    "Line breaks also govern pace, since a poem made of short lines slows the reader, weighting each word with a pause, while long lines carry her forward faster than the sense alone would. Where metre once supplied a regular beat against which a poet could set the natural stresses of speech, the free verse poet works with the silence at the ends of lines, which is a cruder instrument than metre but not a negligible one, and which has the compensating advantage that it can be varied from line to line without breaking any rule.",
+    "None of this shows that the objection is always wrong. A good deal of what is published as free verse is broken into lines for no reason a reader could recover, and in such cases the objection is simply correct: the lines could be run together without loss. A fair test is exactly that: set the poem out as prose, read it again, and ask what has gone. If nothing is lost, if no meaning that the breaks created has vanished and no pace has been flattened, then the breaks were decoration. What the test cannot do is condemn the form as such, since in the poems that pass it the breaks turn out to have been doing work that the prose version cannot preserve."
+   ],
+   "questions": [
+    {
+     "id": "R07-A-05-1",
+     "type": "RC",
+     "options": {
+      "A": "forbidden by someone else in the house from leaving until it is safe to go out.",
+      "B": "agreeing to leave the house as soon as the rain outside has finally stopped falling.",
+      "C": "speaking insincerely, so that the reader begins to doubt whether she means what she says.",
+      "D": "refusing to leave at all, until the next line narrows her refusal to the weather."
+     },
+     "question": "According to the passage, during the pause after the line 'she said she would not leave', the reader takes the woman to be"
+    },
+    {
+     "id": "R07-A-05-2",
+     "type": "RC",
+     "options": {
+      "A": "restore some of the rhyme and regular metre that free verse otherwise abandons.",
+      "B": "give a text the look of verse while adding nothing to its meaning or its pace.",
+      "C": "enrich a poem's language with ornamental words that make its images more vivid.",
+      "D": "make a poem visually attractive on the page, which the author treats as a legitimate secondary aim."
+     },
+     "question": "As used in paragraph 4, line breaks that were 'decoration' are breaks that"
+    },
+    {
+     "id": "R07-A-05-3",
+     "type": "RC",
+     "options": {
+      "A": "Readers who are shown the poem set out as prose still recognise it at once and find it just as effective.",
+      "B": "When the poem is printed as a continuous paragraph, a second sense that one of its lines had carried disappears.",
+      "C": "The lines of the poem are strikingly unequal in length, some a single word long and some running nearly to the margin.",
+      "D": "The poet explains in an interview that every break in the poem was chosen with great care over many drafts."
+     },
+     "question": "Which of the following would the author regard as the best evidence that the line breaks in a particular free verse poem are doing real work?"
+    },
+    {
+     "id": "R07-A-05-4",
+     "type": "RC",
+     "options": {
+      "A": "qualified acceptance: it is fair against many poems but cannot become a verdict on the form itself.",
+      "B": "partial agreement: it succeeds against free verse in general, though a few exceptional poems happen to escape it.",
+      "C": "firm rejection: it rests on a misunderstanding and in practice holds against almost none of the poems published today.",
+      "D": "reluctant sympathy: poets have generally failed to answer it, so it remains in effect unanswered by anyone."
+     },
+     "question": "The author's attitude towards the objection that free verse is 'merely prose with the margins moved' is best described as"
+    }
+   ]
+  },
+  {
+   "passage_id": "R01-G-02",
+   "passage": [
+    "The handbook of Epictetus's teachings opens with a distinction that has outlived nearly everything else in ancient ethics: some things are up to us and some are not. Our judgements, intentions and desires are up to us; our bodies, our possessions, our reputations and the offices we hold are not. In its modern popular form the distinction is offered as a technique for calm. Worry, it is said, comes from caring about what one cannot change, so the remedy is to stop caring about it, and the person who masters this will be undisturbed by traffic, criticism and bad news alike.",
+    "This reading is not exactly wrong, but it inverts the order of the original argument. For the Stoics, tranquillity was a consequence, not the goal. The goal was to place one's good where it actually lay, in the quality of one's own choosing, and the distinction between what is and is not up to us was a claim about value before it was advice about feeling. To say that a friend's illness is not up to me is not to say that I should be indifferent to it; it is to say that my goodness as a person does not depend on whether she recovers, but on whether I act well toward her. The Stoic was expected to visit the sick, serve in public life and keep his promises with full seriousness, while declining to stake his worth on how any of it turned out.",
+    "Read this way, the doctrine is more demanding than the popular version, not less. It asks for constant attention to one's own judgements, which the Stoics thought were the real source of most distress, and it offers no permission to withdraw. Someone who uses it to stop voting because elections are not up to him has learned a convenient half of the lesson and discarded the half that mattered.",
+    "There is, however, a genuine difficulty that the more careful reading does not remove. The line between what is up to us and what is not is drawn more sharply in the doctrine than in life. Whether I pass an examination is not wholly up to me, but it is hardly independent of my effort; whether my child grows up kind is partly my doing and partly not. Most of what we care about lies in this middle region, and a doctrine that sorts everything into two bins must either treat such outcomes as indifferent, which seems false to how they matter, or admit that our worth is, after all, partly hostage to fortune. The Stoics chose the first answer. One can admire the clarity of that choice and still doubt that it describes a life anyone actually leads."
+   ],
+   "questions": [
+    {
+     "id": "R01-G-02-1",
+     "type": "RC",
+     "options": {
+      "A": "show that judging an outcome to be not up to us is compatible with caring about it.",
+      "B": "suggest that the Stoics regarded the recovery of friends as a matter of no importance whatever.",
+      "C": "prove that a person's goodness depends partly on whether the people he helps actually recover.",
+      "D": "illustrate the popular claim that worry comes from caring about outcomes that one is quite unable to change."
+     },
+     "question": "The example of a friend's illness in paragraph 2 serves to"
+    },
+    {
+     "id": "R01-G-02-2",
+     "type": "RC",
+     "options": {
+      "A": "One who prepares every case thoroughly, argues it as well as she can, and judges her own conduct by the quality of that work rather than by the verdict.",
+      "B": "One who stops taking difficult cases, reasoning that since verdicts are not up to her she has no reason to expose herself to them.",
+      "C": "One who works on each case with great intensity and full seriousness because she believes her worth as a lawyer is measured by how many of her cases she wins.",
+      "D": "One who stays calm in court by deciding that her clients' fates are no concern of hers, since she cannot control how judges rule."
+     },
+     "question": "Which of the following lawyers acts most fully in the spirit of the doctrine as the author interprets it in paragraphs 2 and 3?"
+    },
+    {
+     "id": "R01-G-02-3",
+     "type": "RC",
+     "options": {
+      "A": "mistaken in claiming that the outcome of an election is not up to any single voter.",
+      "B": "more demanding than the original, because it requires a person to give up caring about results.",
+      "C": "an accurate account of how the ancient Stoics themselves behaved in public life.",
+      "D": "open to being used as a justification for disengagement that the original doctrine does not allow."
+     },
+     "question": "The remark about someone who uses the doctrine 'to stop voting because elections are not up to him' suggests that the author regards the popular version of the doctrine as"
+    },
+    {
+     "id": "R01-G-02-4",
+     "type": "RC",
+     "options": {
+      "A": "Admiring of its demands, and confident that its main difficulty disappears once the popular misreading of it is corrected.",
+      "B": "Respectful of its coherence and its demands, but doubtful that sorting outcomes into two classes fits how they actually matter to us.",
+      "C": "Approving without reservation, since the author accepts the Stoic decision to treat partly controllable outcomes as indifferent.",
+      "D": "Dismissive, since the author regards it as a recipe for withdrawing from public life and private obligations."
+     },
+     "question": "Which of the following best describes the author's attitude toward the Stoic doctrine when it is read in the careful way the passage recommends?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R05-B-04",
+   "passage": [
+    "Among the ideas that have shaped thinking about growth and fairness, few have travelled as far as the proposal, first advanced in the middle of the twentieth century, that inequality traces an inverted U as an economy develops. In the early stages, the argument ran, inequality rises as some workers move from a poor and fairly equal agricultural sector into a richer and more unequal industrial one; later, as most of the workforce has made the move and the new urban classes gain education and political voice, inequality falls again. The idea was offered tentatively, on the strength of a handful of national histories, but it hardened over the following decades into something closer to a law.",
+    "The mechanism at its core is sound as far as it goes. If a population is divided between two sectors with different average incomes, moving people from the lower to the higher will, by simple arithmetic, widen overall inequality for a time and then narrow it once the shift is largely complete. What does not follow is that this arithmetic governs the course of inequality in real economies, where it competes with many other forces. As data accumulated for more countries and longer periods, the curve proved elusive. Some economies grew rapidly while inequality stayed flat or fell; others saw inequality rise again after a long decline, a second upswing for which the original story had no room.",
+    "The damage done by treating the curve as a law was not mainly to economic theory. It was to policy. If rising inequality is a natural stage of development that growth will itself reverse, then governments in poor countries can be told to tolerate it, and governments in rich ones can be assured that any widening is a passing disturbance. Both lessons encourage waiting. Yet in the historical episodes that did show a decline, the fall rarely arrived on its own. It came alongside the spread of public schooling, the growth of organised labour, progressive taxation and, in several cases, the destruction of concentrated wealth by war and inflation.",
+    "A better reading treats the inverted U not as a path that development follows but as a record of what happened in some places when particular structural shifts met particular political choices. Read that way, the curve still teaches something, chiefly that the movement of people between sectors matters for how incomes are distributed. What it cannot do is assure a government that inequality will take care of itself."
+   ],
+   "questions": [
+    {
+     "id": "R05-B-04-1",
+     "type": "RC",
+     "options": {
+      "A": "Inequality in developing countries can be expected to fall only after episodes of war and inflation destroy concentrated wealth.",
+      "B": "The inverted U is mathematically mistaken, since moving workers between two sectors cannot change the overall level of inequality.",
+      "C": "Recent rises in inequality in rich countries are passing disturbances that further economic growth will in time reverse.",
+      "D": "The inverted U records some historical episodes rather than a law, and gives governments no reason to expect inequality to correct itself."
+     },
+     "question": "Which of the following best expresses the central claim of the passage?"
+    },
+    {
+     "id": "R05-B-04-2",
+     "type": "RC",
+     "options": {
+      "A": "having depended on developments that the shift of workers between sectors does not by itself explain.",
+      "B": "having been caused chiefly by the destruction of concentrated wealth in wars and periods of high inflation.",
+      "C": "having been produced by measures that governments adopted deliberately in order to reduce inequality.",
+      "D": "evidence that the inverted U never actually described the experience of any economy at all."
+     },
+     "question": "It can be inferred from paragraph 3 that the author regards the historical declines in inequality as"
+    },
+    {
+     "id": "R05-B-04-3",
+     "type": "RC",
+     "options": {
+      "A": "A finance ministry turns down a plan to expand rural schooling, arguing that the inequality brought by industrial growth will correct itself.",
+      "B": "An economist assembles data from many countries and shows that inequality sometimes rises again after a long decline.",
+      "C": "A government expands public schooling in the hope of narrowing a growing gap between urban and rural incomes.",
+      "D": "A statistics office revises its estimates of national inequality after discovering errors in the household survey data."
+     },
+     "question": "Which of the following would the author most clearly regard as an instance of the 'damage' described in paragraph 3?"
+    },
+    {
+     "id": "R05-B-04-4",
+     "type": "RC",
+     "options": {
+      "A": "It describes the consequences for policy of treating the hypothesis as a law of economic development.",
+      "B": "It introduces the inverted-U hypothesis and explains how the idea came to be proposed in the first place.",
+      "C": "It grants that the mechanism is arithmetically sound and then argues that real economies have not reliably followed it.",
+      "D": "It offers an alternative reading of the curve as a record of particular structural shifts and political choices."
+     },
+     "question": "Which of the following best describes the role of paragraph 2 in the passage?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R01-D-02",
+   "passage": [
+    "It is often said that a tolerant society is one in which people do not mind how others live, but this gets the idea almost exactly backwards. To tolerate something is to put up with it, and one can only put up with what one dislikes or disapproves of. A person who is untroubled by her neighbour's choice of diet, dress or companions is not tolerating that choice; she is simply indifferent to it, and indifference requires no effort and earns no praise. Toleration begins where objection begins: it is the decision not to act against something that one continues to regard as mistaken.",
+    "Put this way, toleration can look puzzling, even paradoxical. If I believe that a practice is wrong, how can it be a virtue for me to let it continue? Surely the better person would either stop objecting or start resisting. The puzzle dissolves, however, once we recognise that the tolerant person holds reasons at two distinct levels. At the first level she objects to the practice; at the second level she has reasons, which she judges to be weightier, for not interfering with it: that adults have authority over their own lives, that her own judgement might be wrong, that a society in which everyone enforced their disapproval on everyone else would be unbearable. Consider a mother who thinks her grown son's choice of career foolish and tells him so, but would never dream of threatening to cut him out of her will to force him back. She has not abandoned her objection. She has ranked it beneath something she values more.",
+    "Toleration so understood has limits, and they follow from the same structure. Where the second-level reasons give out, as when a practice inflicts harm on people who have not agreed to bear it, the case for restraint weakens and may disappear. A tolerant society is not one that permits everything.",
+    "Some critics find the whole idea condescending: to be tolerated, they point out, is to be told that one is disapproved of and merely endured, and they propose that a just society should aim higher, at the positive recognition and affirmation of different ways of life. There is something in this complaint, since nobody enjoys being put up with. Yet the modesty of toleration is also its strength. It asks citizens who disagree deeply to share a political life without first requiring them to approve of one another, which is fortunate, because in a diverse society such approval is not going to be forthcoming. A demand for universal affirmation sounds more generous, but it may ask for what people cannot sincerely give."
+   ],
+   "questions": [
+    {
+     "id": "R01-D-02-1",
+     "type": "RC",
+     "options": {
+      "A": "Toleration requires that one first come to approve of the practice that others follow.",
+      "B": "Toleration involves refraining from acting against something that one still regards as wrong.",
+      "C": "Toleration concerns matters of public law, whereas indifference concerns private habits like diet.",
+      "D": "Toleration is a feeling of mild dislike, whereas indifference is the absence of any feeling."
+     },
+     "question": "According to the passage, what distinguishes toleration from indifference?"
+    },
+    {
+     "id": "R01-D-02-2",
+     "type": "RC",
+     "options": {
+      "A": "suggest that toleration comes most easily when the person tolerated depends on the tolerator for money.",
+      "B": "illustrate how a person can keep an objection while ranking it below other reasons for not interfering.",
+      "C": "demonstrate that an objection to another person's choices usually fades once it has been spoken aloud.",
+      "D": "show that disagreements within a family are much harder to tolerate than disagreements between strangers who meet only rarely."
+     },
+     "question": "The example of the mother in paragraph 2 serves to"
+    },
+    {
+     "id": "R01-D-02-3",
+     "type": "RC",
+     "options": {
+      "A": "persuaded, since the author concedes that a just society should move beyond toleration towards affirmation.",
+      "B": "neutral, since the author sets out the critics' view without indicating whether it has any merit at all.",
+      "C": "dismissive, since the author treats their complaint as a simple misunderstanding of what toleration really means.",
+      "D": "qualified disagreement: their complaint is granted some force, but toleration is defended as fitting a deeply divided society."
+     },
+     "question": "The author's attitude towards the critics who find toleration condescending is best described as"
+    },
+    {
+     "id": "R01-D-02-4",
+     "type": "RC",
+     "options": {
+      "A": "A club secretary who thinks a member's taste in clothes absurd tells him so, but votes against a stricter dress code.",
+      "B": "A man who once disapproved of his brother's marriage comes to admire the couple and stops objecting.",
+      "C": "A shopkeeper who has no opinion either way about his customers' diets stocks whatever foods they ask for.",
+      "D": "A resident who objects to a neighbour's new fence complains to the council and has the fence removed."
+     },
+     "question": "Which of the following is the clearest case of toleration in the sense the passage defines?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R04-B-03",
+   "passage": [
+    "In the decades after the British Empire abolished slavery in the 1830s, sugar planters in colonies such as Mauritius, Trinidad and British Guiana, and later Fiji, turned to a different source of labour: indentured workers, most of them recruited in India, who signed contracts binding them to an estate for a fixed term of years. Ever since, the system has been argued over in terms set by the institution it replaced. Its critics have called it slavery under a new name; its defenders, at the time and since, have insisted that it was a form of voluntary migration, entered into by contract and ended by the contract's expiry. Each side treats the question as one of classification, as though the decisive task were to place indenture on the correct side of the line between slave and free.",
+    "There are good reasons to resist the first classification. Indentured workers were not property. They could not be sold, their children did not inherit their status, and at the end of the term many returned home, while others stayed, bought land and built communities whose descendants remain in those countries today. To call this slavery is to lose sight of what was specifically terrible about slavery, and it risks erasing the choices, however constrained, that migrants made. But the second classification fares no better. Recruits were often misled about the work and the wages that awaited them; many were illiterate and signed documents they could not read; and once on the estate they found that the contract, far from protecting them, was the instrument of their confinement.",
+    "This last point is the one that both classifications miss. Colonial labour laws typically made it a criminal offence, not merely a breach of contract, for an indentured worker to be absent from work, to leave the estate without a pass, or to refuse a task. A worker who walked away could be arrested, fined or imprisoned, and the time spent in prison might be added to the term he owed. The coercion, in other words, did not stand outside the contract and contradict it; it was written into the contract and enforced by courts. The language of free agreement and the reality of compulsion were not opposed but fused.",
+    "Seen this way, indenture is less a halfway house between slavery and freedom than a demonstration that the line between them was never as clean as abolitionists hoped. The abolition of property in persons did not by itself abolish compulsion; it moved compulsion into the law of contract, where it could be presented as the free choice of the person compelled. That is a lesson with uses beyond the nineteenth century. Wherever a worker's right to leave a job is restricted by debt, by the confiscation of documents or by a visa tied to a single employer, the question worth asking is not whether a contract exists, but what the contract permits others to do to the person who signed it."
+   ],
+   "questions": [
+    {
+     "id": "R04-B-03-1",
+     "type": "RC",
+     "options": {
+      "A": "They were protected by the colonial courts from criminal penalties for absence from work.",
+      "B": "They were free to leave the estate whenever the work was not as they had been promised.",
+      "C": "They were paid wages equal to those earned by free workers in the same colonies.",
+      "D": "They could not be sold, and their status was not passed on to their children."
+     },
+     "question": "According to the passage, which of the following distinguished indentured workers from slaves?"
+    },
+    {
+     "id": "R04-B-03-2",
+     "type": "RC",
+     "options": {
+      "A": "evidence that coercion operated through the contract itself rather than in spite of it.",
+      "B": "the main reason that most indentured workers chose to return home when their terms had ended.",
+      "C": "a safeguard that, though imperfect, limited the power that planters could exercise over their workers.",
+      "D": "a departure from the contracts, which on paper had guaranteed workers the freedom to leave when they wished."
+     },
+     "question": "It can be inferred from paragraph 3 that the author regards the enforcement of indenture contracts by the courts as"
+    },
+    {
+     "id": "R04-B-03-3",
+     "type": "RC",
+     "options": {
+      "A": "A freelance designer who loses a client after missing a deadline that was set out in the signed contract.",
+      "B": "A worker who is paid less than the contract promised but remains free to resign and look for other work at any time.",
+      "C": "A farm worker whose employer lent the recruitment fee and who may not change jobs until the loan, deducted from wages, is repaid.",
+      "D": "A volunteer who works unpaid for a charity on weekends without having signed any written agreement at all."
+     },
+     "question": "Which of the following present-day arrangements would the author regard as most clearly raising the question posed at the end of the passage?"
+    },
+    {
+     "id": "R04-B-03-4",
+     "type": "RC",
+     "options": {
+      "A": "It defends one of two opposing classifications of a system against objections and then applies it to present-day migration.",
+      "B": "It concedes that a system amounted to slavery and then argues that its contractual form made it less harsh than slavery.",
+      "C": "It narrates the history of a labour system from its origins to its abolition and then assesses its economic consequences.",
+      "D": "It sets aside two opposed ways of classifying a system, identifies a feature both overlook, and draws a wider lesson from it."
+     },
+     "question": "Which of the following best describes the structure of the argument in the passage?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R03-E-02",
+   "passage": [
+    "A curious feature of the market for retro goods is how many of their buyers are too young to remember the originals. Record players styled like those of the nineteen-sixties, cameras that imitate the look of early film models, soft drinks reissued in the bottles of half a century ago: these sell briskly to people for whom the period they evoke is something seen in old films rather than lived. Whatever such buyers are nostalgic for, it cannot be their own past, and any explanation of the trade has to begin from that awkward fact.",
+    "The usual explanation is that they are being fooled, that advertisers have invented a golden age and sold it back to a generation with no means of checking. There is something in this, but it misreads what the buyer is after. Nostalgia has always been less a memory than a mood, a way of expressing dissatisfaction with the present by furnishing it with an imagined contrast against which its deficiencies become visible. The retro object does not claim to restore the past; it offers a small, ownable piece of a world that seems slower, sturdier and easier to understand than the one its owner actually lives in. That such a world never quite existed matters less than the fact that the feeling it answers is real.",
+    "What is striking is how carefully the past is edited in the process. The reissued record player has a socket for a phone; the vintage-look camera stores its pictures on a memory card and adds the scratches digitally. The inconveniences that made the originals what they were, the waiting, the expense, the fragility, are removed, and only the surface is kept. Retro design is in this sense the opposite of preservation: it keeps the look of an earlier time while discarding the conditions that gave the look its meaning.",
+    "None of this need be a cause for scorn. Some revived products are genuinely better made than the disposable goods they replaced, and a taste for the durable, in an economy organised around rapid obsolescence, is not foolish. But it is worth being clear about what is being bought. The buyer of a retro radio is not recovering a lost way of life; he is purchasing a token of his unease with his own, and the market is happy to supply as many such tokens as that unease will bear."
+   ],
+   "questions": [
+    {
+     "id": "R03-E-02-1",
+     "type": "RC",
+     "options": {
+      "A": "They are mostly older people trying to recover the products of their own youth.",
+      "B": "They are too young to remember the original products that the goods imitate.",
+      "C": "They tend to prefer the reissued versions to the originals once they compare the two.",
+      "D": "They usually know that the advertising behind such goods presents a false golden age."
+     },
+     "question": "According to the passage, what is curious about many buyers of retro goods?"
+    },
+    {
+     "id": "R03-E-02-2",
+     "type": "RC",
+     "options": {
+      "A": "suggest that the makers of retro goods are trying hard to preserve the technology of earlier decades.",
+      "B": "illustrate that retro design keeps the look of the past while removing the inconveniences that defined it.",
+      "C": "show that modern retro products are more fragile and costly than the originals that they copy.",
+      "D": "prove that young buyers are deceived into thinking that the reissued goods are genuine antiques."
+     },
+     "question": "The examples of the record player with a phone socket and the camera that 'adds the scratches digitally' (paragraph 3) serve to"
+    },
+    {
+     "id": "R03-E-02-3",
+     "type": "RC",
+     "options": {
+      "A": "openly contemptuous, since the author regards them as gullible victims of advertisers who have invented a golden age.",
+      "B": "wholly indifferent, since the author describes the retro market without expressing any view about those who buy from it.",
+      "C": "warmly admiring, since the author presents their taste as a wise and successful rejection of disposable modern goods.",
+      "D": "clear-sighted but not contemptuous: the author declines to scorn them while insisting on naming what they actually buy."
+     },
+     "question": "The author's attitude towards the buyers of retro goods is best described as"
+    },
+    {
+     "id": "R03-E-02-4",
+     "type": "RC",
+     "options": {
+      "A": "applies to the buyers of drinks and cameras but not to buyers of record players, who know the originals well.",
+      "B": "contains some truth but wrongly assumes that buyers want an accurate past rather than an answer to a present mood.",
+      "C": "is entirely correct, since advertisers have invented a golden age that young buyers cannot check against memory.",
+      "D": "has no basis at all, since advertisers make no claims about the past when they sell retro goods to the young."
+     },
+     "question": "The author's view of the explanation that buyers of retro goods are 'being fooled' (paragraph 2) is that it"
+    }
+   ]
+  },
+  {
+   "passage_id": "R06-C-07",
+   "passage": [
+    "Geologists divide the history of the Earth into named intervals, and they are unusually strict about where one interval ends and the next begins. A boundary is not fixed by a date written in a textbook but by a physical reference point: a particular layer in a particular sequence of rock or sediment, chosen because it records a change that can be recognised in deposits across the globe, and marked, in the profession's half-joking phrase, by a golden spike. The rigour has a purpose. The time scale exists so that a geologist examining strata on one continent can say with confidence that they formed at the same time as strata on another, and a boundary that cannot be traced from place to place is of little use for that task. Precision about where a boundary lies is, in this sense, the price paid for precision about when.",
+    "The proposal that we now live in a new interval, the Anthropocene, defined by the imprint of human activity on the planet, has therefore been argued in unusual terms. Much of the debate has concerned not whether humans have transformed the Earth, a point few specialists now dispute, but where the spike should go. Candidates have ranged from the spread of farming thousands of years ago, through the industrial burning of coal, to the middle of the twentieth century, when fallout from nuclear weapons tests left a thin but nearly worldwide trace in sediments and ice. The later dates are favoured partly because they are sharp. A signal laid down within a few years everywhere is exactly what a stratigrapher wants; the slow spread of farming, which reached different regions in different millennia, is not.",
+    "Here the demands of the time scale begin to distort the story they are meant to record. Human influence on the Earth did not arrive at one moment. Forests were cleared, soils eroded and large animals hunted to extinction over thousands of years, at different times on different continents, and the acceleration of the last century was the culmination of that history rather than its beginning. Choosing the mid-twentieth century because its markers are crisp risks implying that the transformation began then, and that everything before it belongs to an untouched natural world. A boundary drawn there would be accurate about the rocks and misleading about the long human history that produced them. The criterion that makes a boundary useful for correlating rocks is not the criterion that makes it faithful to a process that was, by its nature, gradual and uneven.",
+    "None of this shows that formal definition is pointless. A ratified boundary would give researchers in many fields a common reference, and it would carry an authority that informal usage lacks. Some defenders of formalisation fear that without it the idea will remain a slogan, borrowed by commentators and never disciplined by evidence. But the concept does not need a spike to do its intellectual work. The claim that human activity has become a force comparable to the processes that build mountains and shift climates rests on measurements of carbon, sediment, species and nitrogen, and those measurements remain what they are whatever any committee decides. A concept can be rigorous without being a unit of the time scale; geologists already speak, informally, of great events that unfolded over long and varying spans. The Anthropocene may be better understood in that way, as a transformation with a long and diachronous history, rather than as an epoch that began in a particular year."
+   ],
+   "questions": [
+    {
+     "id": "R06-C-07-1",
+     "type": "RC",
+     "options": {
+      "A": "the idea of the Anthropocene is a slogan used by commentators, and it will gain scientific standing only once a boundary is formally ratified.",
+      "B": "the criteria for a formal geological boundary sit poorly with the history of human influence, which does not need such a boundary to be taken seriously.",
+      "C": "geologists insist on physical reference points for boundaries because the time scale must let strata on different continents be matched.",
+      "D": "the middle of the twentieth century is the most defensible position for the boundary, since its markers are the sharpest the record offers."
+     },
+     "question": "The passage is primarily concerned with arguing that"
+    },
+    {
+     "id": "R06-C-07-2",
+     "type": "RC",
+     "options": {
+      "A": "the evidence for them is preserved in ice, which records change more accurately than rock does.",
+      "B": "they coincide with the period in which human influence on the Earth first became noticeable.",
+      "C": "the traces that mark them were laid down within a few years across almost the whole planet.",
+      "D": "they rest on records of carbon and nitrogen that are less disputed than the evidence for early farming."
+     },
+     "question": "According to the passage, the later candidate dates for the boundary are favoured partly because"
+    },
+    {
+     "id": "R06-C-07-3",
+     "type": "RC",
+     "options": {
+      "A": "caused by two separate forces, one human and one natural, acting together on the Earth.",
+      "B": "recorded in two kinds of archive, layers of sediment on land and layers of ice at the poles.",
+      "C": "taking place at different times in different places rather than at one moment everywhere.",
+      "D": "so gradual that no change at all can be detected within the span of a single human lifetime."
+     },
+     "question": "As used in the final sentence of the passage, 'diachronous' most nearly means"
+    },
+    {
+     "id": "R06-C-07-4",
+     "type": "RC",
+     "options": {
+      "A": "Because human influence began with farming, the spread of farming is the correct place to fix the boundary.",
+      "B": "Formal ratification of a boundary would add nothing of value to the work of researchers who study human impact.",
+      "C": "The traces left by nuclear weapons tests are weaker evidence of human impact than the records of cleared forests.",
+      "D": "A boundary chosen because it serves the purpose of correlating rocks can still misrepresent the history of the change it is taken to mark."
+     },
+     "question": "Which of the following would the author most likely accept?"
+    },
+    {
+     "id": "R06-C-07-5",
+     "type": "RC",
+     "options": {
+      "A": "Commentators outside geology frequently use the term Anthropocene loosely, without reference to any particular boundary or measurement.",
+      "B": "Human effects on forests, soils and animal populations were negligible until the twentieth century and then appeared almost simultaneously across the globe.",
+      "C": "Large-scale clearing of forests began in some regions several thousand years before it reached others, and in some places it never took hold.",
+      "D": "Fallout from nuclear weapons tests has been detected in lake sediments and glacial ice on every continent, including the most remote."
+     },
+     "question": "Which of the following, if true, would most weaken the argument of paragraph 3?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R05-F-01",
+   "passage": [
+    "Few ideas in economics are cited as often, or misunderstood as thoroughly, as comparative advantage. In everyday commentary trade is described as a contest: a country wins when it is better at making things than its rivals and loses when they overtake it. On this view a nation that is less productive than its neighbours in every industry would have nothing to sell and would be wise to close its borders. The principle of comparative advantage was formulated precisely to show why this conclusion does not follow, and the fact that the conclusion is still drawn suggests that the principle is more often invoked than understood.",
+    "The core insight concerns opportunity cost rather than absolute ability. Consider a hypothetical lawyer who types faster than any secretary she could hire. It does not follow that she should do her own typing, because every hour spent at the keyboard is an hour withdrawn from legal work that earns far more. The secretary, though slower at typing, gives up much less by doing it. Both are better off when each concentrates on the task in which his or her relative sacrifice is smallest and they exchange the results. The same reasoning applies to countries. What determines the pattern of trade is not which country is best at producing a good, but which country forgoes the least of other goods in producing it, and every country, however unproductive overall, has some activity in which that sacrifice is comparatively low.",
+    "Two consequences follow that sit uneasily with the language of contest. First, gains from trade do not require one party to lose: the lawyer and the secretary both gain, and so do a rich and a poor economy that trade on the basis of their differing costs. Second, a country cannot have a comparative advantage in everything, since being relatively better at one activity means, by definition, being relatively worse at another. A government that promises to make its nation competitive in every industry is therefore promising something that is not merely difficult but incoherent.",
+    "None of this implies that the critics of open trade have nothing to say. The textbook argument compares two settled states and is silent about the passage between them; workers who lose their jobs when an industry contracts do not costlessly reappear in the industry that expands, and the losses can be concentrated in particular towns for a generation. Comparative advantage can also shift over time as skills and capital accumulate, which is why some economists defend temporary support for new industries. These are serious objections, but they are objections to the timing and distribution of the gains, not to the logic of opportunity cost. They do not restore the image of trade as a race in which one runner's progress is another's defeat."
+   ],
+   "questions": [
+    {
+     "id": "R05-F-01-1",
+     "type": "RC",
+     "options": {
+      "A": "demonstrate that open trade benefits every worker in every country, so that the objections raised by its critics can be safely set aside.",
+      "B": "advise poorer countries to specialise in the industries where their workers are least productive in absolute terms.",
+      "C": "show that the critics of open trade have misunderstood the costs of moving workers from contracting industries into expanding ones.",
+      "D": "correct a popular misreading of comparative advantage by showing that it rests on opportunity cost, while granting objections that leave that logic intact."
+     },
+     "question": "The primary purpose of the passage is to"
+    },
+    {
+     "id": "R05-F-01-2",
+     "type": "RC",
+     "options": {
+      "A": "which country's firms are most competitive against foreign rivals in a given industry.",
+      "B": "which country's government offers temporary support to its new industries at the right moment.",
+      "C": "which country forgoes the least of other goods when it produces a particular good.",
+      "D": "which country can produce a particular good using the fewest workers and machines."
+     },
+     "question": "According to the passage, the pattern of trade between countries is determined by"
+    },
+    {
+     "id": "R05-F-01-3",
+     "type": "RC",
+     "options": {
+      "A": "someone who is better at a task may still gain by leaving it to someone worse at it.",
+      "B": "secretaries generally type faster than the professionals who employ them in their offices.",
+      "C": "a professional should usually learn the routine tasks of her office in order to keep her costs down.",
+      "D": "specialisation tends to reward the more skilled of two parties at the expense of the less skilled one."
+     },
+     "question": "The example of the lawyer and the secretary implies that"
+    },
+    {
+     "id": "R05-F-01-4",
+     "type": "RC",
+     "options": {
+      "A": "Our programme will give this country a comparative advantage in every sector, from farming to software.",
+      "B": "Our programme will help workers in shrinking industries move quickly into the industries that are expanding.",
+      "C": "Our programme will support promising new industries until their skills catch up with those of foreign rivals.",
+      "D": "Our programme will raise output per worker in every sector of the economy, from farming to software."
+     },
+     "question": "Which of the following promises would the author regard as incoherent rather than merely difficult to keep?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R01-G-03",
+   "passage": [
+    "Among the stories collected in the Zhuangzi, one of the best known concerns an enormous tree. A master carpenter passes it without a second glance, and when his apprentice asks why so magnificent a specimen has been ignored, he explains that its wood is good for nothing: boats made from it would sink, coffins would rot and tools would split. That night the tree appears to the carpenter in a dream and rebukes him, pointing out that trees bearing fruit are stripped and broken and that trees with fine timber are cut down before their time; its own uselessness, it explains, is precisely the reason it has lived so long and grown so large.",
+    "The usual moral drawn from the story is a prudent one: in a dangerous world, conspicuous talent invites exploitation, and the wise keep their heads down. That reading has support in the text, which elsewhere praises figures who survive by escaping notice. But it makes the story smaller than it is. The carpenter's mistake is not merely that he underrates the tree; it is that he assumes the only question worth asking about a tree is what it is good for to a carpenter. The tree's reply amounts to the observation that usefulness is always usefulness to someone, for some purpose, and that a thing seen only through that lens is not really seen at all.",
+    "This point has lost none of its edge. We are surrounded by institutions that measure things by their contribution to some further end, and we have grown skilled at the carpenter's glance. A subject of study is asked to justify itself by the jobs it leads to, a stretch of land by the revenue it can produce, an hour of a person's time by what it yields. Each of these questions is reasonable on its own, and institutions that never asked them would be failing in their responsibilities. What the story warns against is letting one of them become the only question, so that whatever cannot answer it, a friendship, a landscape, an afternoon of unhurried conversation, is passed by as if it were not there.",
+    "It would be a mistake, though, to read the story as a rejection of usefulness as such. Boats and coffins must be made from something, and a world of nothing but magnificent useless trees would be a hard place to live. The story's target is narrower and more interesting: the habit of mind that cannot see a tree as anything other than timber not yet cut, and that mistakes the list of its own purposes for an inventory of what the world contains."
+   ],
+   "questions": [
+    {
+     "id": "R01-G-03-1",
+     "type": "RC",
+     "options": {
+      "A": "things that are of no use to anyone have no value and are rightly passed by without a second glance.",
+      "B": "every question about what a thing is good for is unreasonable and should be dropped altogether.",
+      "C": "craftsmen should learn to find uses even for timber that seems useless at first sight.",
+      "D": "people with conspicuous gifts are likely to be exploited, so wise people avoid drawing attention to themselves."
+     },
+     "question": "According to the passage, the usual moral drawn from the story of the tree is that"
+    },
+    {
+     "id": "R01-G-03-2",
+     "type": "RC",
+     "options": {
+      "A": "a refusal to attend to anything that does not bear fruit or produce food.",
+      "B": "a careful study of an object that eventually reveals its hidden and unexpected value.",
+      "C": "a habit of looking at things only for what they can contribute to some purpose beyond themselves.",
+      "D": "the skill of quickly judging the quality of timber that comes from long practice in a trade."
+     },
+     "question": "As used in paragraph 3, 'the carpenter's glance' refers to"
+    },
+    {
+     "id": "R01-G-03-3",
+     "type": "RC",
+     "options": {
+      "A": "It demonstrates that modern institutions are wrong to ask what subjects of study or land are good for.",
+      "B": "Its chief target is a way of seeing that reduces things to their usefulness to someone, not usefulness itself.",
+      "C": "It is mainly practical advice that talented people should hide their gifts in order to survive in a dangerous world.",
+      "D": "It shows that things are valuable in proportion to how little they can be used by people."
+     },
+     "question": "Which of the following best expresses the author's main claim about the story of the tree?"
+    },
+    {
+     "id": "R01-G-03-4",
+     "type": "RC",
+     "options": {
+      "A": "The tree admits it would gladly have become timber had that been safe, and values its uselessness only as a way of staying alive.",
+      "B": "The carpenter, waking from his dream, refuses to let his apprentice cut the tree down and reflects at length that he had misjudged it from the start.",
+      "C": "Travellers continue to rest in the shade of the great tree for many generations after the carpenter's death.",
+      "D": "The apprentice later becomes a carpenter himself and learns to see many uses in timber that others pass by as worthless."
+     },
+     "question": "Which of the following, if it were added to the end of the story, would most weaken the author's reading of it?"
+    }
+   ]
+  }
+ ]
+}

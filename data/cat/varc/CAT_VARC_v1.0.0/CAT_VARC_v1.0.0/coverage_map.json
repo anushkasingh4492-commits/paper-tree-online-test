@@ -1,0 +1,246 @@
+{
+ "01 Philosophy and Ethics": {
+  "questions": 238,
+  "passages": 56,
+  "difficulty": {
+   "Medium": 112,
+   "Easy": 77,
+   "Difficult": 49
+  },
+  "types": {
+   "Main idea / primary purpose": 22,
+   "Structure / function": 35,
+   "Application / analogy": 23,
+   "Inference": 56,
+   "Specific detail": 33,
+   "Meaning in context": 21,
+   "Author's tone / attitude": 14,
+   "Strengthen / weaken / assumption": 22,
+   "Except / not supported": 12
+  },
+  "formats": {
+   "MCQ": 238
+  }
+ },
+ "02 Psychology and Cognitive Science": {
+  "questions": 204,
+  "passages": 48,
+  "difficulty": {
+   "Medium": 96,
+   "Easy": 63,
+   "Difficult": 45
+  },
+  "types": {
+   "Main idea / primary purpose": 16,
+   "Specific detail": 31,
+   "Strengthen / weaken / assumption": 21,
+   "Meaning in context": 18,
+   "Inference": 50,
+   "Author's tone / attitude": 12,
+   "Application / analogy": 22,
+   "Structure / function": 23,
+   "Except / not supported": 11
+  },
+  "formats": {
+   "MCQ": 204
+  }
+ },
+ "03 Society, Anthropology and Culture": {
+  "questions": 238,
+  "passages": 56,
+  "difficulty": {
+   "Easy": 70,
+   "Medium": 107,
+   "Difficult": 61
+  },
+  "types": {
+   "Main idea / primary purpose": 19,
+   "Specific detail": 31,
+   "Meaning in context": 20,
+   "Inference": 61,
+   "Structure / function": 29,
+   "Application / analogy": 23,
+   "Except / not supported": 13,
+   "Strengthen / weaken / assumption": 28,
+   "Author's tone / attitude": 14
+  },
+  "formats": {
+   "MCQ": 238
+  }
+ },
+ "04 History and Politics": {
+  "questions": 204,
+  "passages": 48,
+  "difficulty": {
+   "Medium": 90,
+   "Easy": 60,
+   "Difficult": 54
+  },
+  "types": {
+   "Main idea / primary purpose": 21,
+   "Inference": 55,
+   "Meaning in context": 17,
+   "Application / analogy": 16,
+   "Specific detail": 25,
+   "Structure / function": 26,
+   "Except / not supported": 11,
+   "Author's tone / attitude": 12,
+   "Strengthen / weaken / assumption": 21
+  },
+  "formats": {
+   "MCQ": 204
+  }
+ },
+ "05 Economics, Business and Development": {
+  "questions": 238,
+  "passages": 56,
+  "difficulty": {
+   "Easy": 70,
+   "Medium": 105,
+   "Difficult": 63
+  },
+  "types": {
+   "Specific detail": 32,
+   "Structure / function": 28,
+   "Inference": 59,
+   "Main idea / primary purpose": 18,
+   "Meaning in context": 19,
+   "Strengthen / weaken / assumption": 28,
+   "Application / analogy": 23,
+   "Except / not supported": 16,
+   "Author's tone / attitude": 15
+  },
+  "formats": {
+   "MCQ": 238
+  }
+ },
+ "06 Science, Environment and Technology": {
+  "questions": 238,
+  "passages": 56,
+  "difficulty": {
+   "Medium": 105,
+   "Easy": 70,
+   "Difficult": 63
+  },
+  "types": {
+   "Main idea / primary purpose": 20,
+   "Specific detail": 35,
+   "Structure / function": 30,
+   "Application / analogy": 20,
+   "Meaning in context": 20,
+   "Inference": 62,
+   "Author's tone / attitude": 15,
+   "Strengthen / weaken / assumption": 22,
+   "Except / not supported": 14
+  },
+  "formats": {
+   "MCQ": 238
+  }
+ },
+ "07 Arts, Literature and Aesthetics": {
+  "questions": 204,
+  "passages": 48,
+  "difficulty": {
+   "Easy": 60,
+   "Medium": 90,
+   "Difficult": 54
+  },
+  "types": {
+   "Main idea / primary purpose": 19,
+   "Specific detail": 33,
+   "Inference": 46,
+   "Application / analogy": 19,
+   "Structure / function": 28,
+   "Strengthen / weaken / assumption": 20,
+   "Meaning in context": 18,
+   "Except / not supported": 10,
+   "Author's tone / attitude": 11
+  },
+  "formats": {
+   "MCQ": 204
+  }
+ },
+ "08 Language, Media and Communication": {
+  "questions": 136,
+  "passages": 32,
+  "difficulty": {
+   "Easy": 40,
+   "Medium": 60,
+   "Difficult": 36
+  },
+  "types": {
+   "Main idea / primary purpose": 14,
+   "Specific detail": 14,
+   "Structure / function": 16,
+   "Application / analogy": 14,
+   "Meaning in context": 12,
+   "Inference": 31,
+   "Strengthen / weaken / assumption": 17,
+   "Except / not supported": 9,
+   "Author's tone / attitude": 9
+  },
+  "formats": {
+   "MCQ": 136
+  }
+ },
+ "09 Para Jumbles": {
+  "questions": 350,
+  "passages": 0,
+  "difficulty": {
+   "Easy": 105,
+   "Medium": 158,
+   "Difficult": 87
+  },
+  "types": {
+   "Para jumble": 350
+  },
+  "formats": {
+   "TITA": 350
+  }
+ },
+ "10 Para Summary": {
+  "questions": 350,
+  "passages": 0,
+  "difficulty": {
+   "Easy": 105,
+   "Medium": 157,
+   "Difficult": 88
+  },
+  "types": {
+   "Para summary": 350
+  },
+  "formats": {
+   "MCQ": 350
+  }
+ },
+ "11 Odd Sentence Out": {
+  "questions": 250,
+  "passages": 0,
+  "difficulty": {
+   "Medium": 113,
+   "Easy": 75,
+   "Difficult": 62
+  },
+  "types": {
+   "Odd sentence out": 250
+  },
+  "formats": {
+   "TITA": 250
+  }
+ },
+ "12 Sentence Placement": {
+  "questions": 150,
+  "passages": 0,
+  "difficulty": {
+   "Easy": 45,
+   "Medium": 67,
+   "Difficult": 38
+  },
+  "types": {
+   "Sentence placement": 150
+  },
+  "formats": {
+   "MCQ": 150
+  }
+ }
+}

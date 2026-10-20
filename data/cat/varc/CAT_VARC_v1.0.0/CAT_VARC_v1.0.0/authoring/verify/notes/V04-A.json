@@ -1,0 +1,22 @@
+[
+ {
+  "id": "V04-A-004",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "4",
+    "key": "4",
+    "working": "'In other words' summarises state-only use; closing gap after private messages excluded.",
+    "alternative": "",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "4",
+    "key": "4",
+    "working": "'In other words' sums up exclusion of private messages / state-only service; ends para.",
+    "alternative": "Gap 3 possible but 'in other words' summarises the exclusion stated after gap 3.",
+    "issue": ""
+   }
+  }
+ }
+]

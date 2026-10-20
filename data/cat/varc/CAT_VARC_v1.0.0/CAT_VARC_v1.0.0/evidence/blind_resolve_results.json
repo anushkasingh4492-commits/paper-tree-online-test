@@ -1,0 +1,87 @@
+{
+ "rounds": [
+  {
+   "round": "b1",
+   "description": "Round 1: all 2,800 items, two independent blind solvers (S1, S2)",
+   "items": 2800,
+   "both_solvers_agree": 2797,
+   "disagreements": [
+    {
+     "id": "CAT-VARC-P05-012-Q2",
+     "local_id": "R05-B-04-2",
+     "S1": {
+      "answer": "A",
+      "key": "A",
+      "working": "Declines came alongside schooling, labour, taxation, war: beyond the sectoral arithmetic.",
+      "confidence": "high",
+      "issue": "",
+      "alternative": ""
+     },
+     "S2": {
+      "answer": "D",
+      "key": "A",
+      "working": "P3: declines came alongside schooling, unions, taxation, war; not sectoral shift alone; D fails since war/inflation not deliberate",
+      "confidence": "high",
+      "issue": "",
+      "alternative": ""
+     }
+    },
+    {
+     "id": "CAT-VARC-C09-006",
+     "local_id": "V01-A-006",
+     "S1": {
+      "answer": "52314",
+      "key": "53214",
+      "working": "5 like familiar things; 3 song example; 2 'One explanation' ease mistaken; 1 'exactly this confusion' advertisers; 4 'Repetition of this kind'.",
+      "confidence": "high",
+      "issue": "",
+      "alternative": ""
+     },
+     "S2": {
+      "answer": "53214",
+      "key": "53214",
+      "working": "5 claim; 3 example; 2 explanation (ease mistaken for good); 1 'this confusion'; 4 'repetition of this kind'.",
+      "confidence": "high",
+      "issue": "",
+      "alternative": ""
+     }
+    },
+    {
+     "id": "CAT-VARC-C09-148",
+     "local_id": "V01-F-023",
+     "S1": {
+      "answer": "14325",
+      "key": "14352",
+      "working": "1 bread; 4 telephone contrast; 3 value grows with users, lead feeds on itself; 2 'such markets therefore' dominance; 5 'same feature' also shields.",
+      "confidence": "medium",
+      "issue": "",
+      "alternative": "14352: 5 can follow 3 ('rewards the leader') with 2 as the 'therefore' conclusion; 2/5 order weakly fixed."
+     },
+     "S2": {
+      "answer": "14325",
+      "key": "14352",
+      "working": "1 bread; 4 telephone; 3 early lead feeds itself; 2 'such markets therefore' settle on early-large providers; 5 same feature also shields",
+      "confidence": "medium",
+      "issue": "",
+      "alternative": "14352: 5 ('rewards the leader also shields it') could follow 3 directly with 2 as the closing conclusion; 2's 'grew large first' links more tightly to 3"
+     }
+    }
+   ],
+   "solver_notes": 94
+  },
+  {
+   "round": "b2",
+   "description": "Round 2: the 257 items whose student-facing content changed in the audit, two new blind solvers",
+   "items": 257,
+   "both_solvers_agree": 257,
+   "disagreements": [],
+   "solver_notes": 20
+  }
+ ],
+ "adjudication": [
+  "R05-B-04-2 (round 1, S2 answered differently): S2's own working argued for the keyed option; the typed letter was a slip. The keyed option was reworded to match the passage's 'came alongside' more exactly; round 2 both solvers agreed.",
+  "V01-A-006 (round 1, S1 answered 52314 against key 53214): S1's working supported the key; the typed order was a slip. Key retained.",
+  "V01-F-023 (round 1, both solvers answered 14325 against key 14352): the last two sentences could swap. The conclusion was rewritten so it can only follow the 'shields it' sentence; round 2 both solvers reached the key."
+ ],
+ "method": "Each pack was solved by a solver that saw only the student-facing item (options shuffled independently per solver). An item counts as agreed only when both solvers typed the keyed answer."
+}

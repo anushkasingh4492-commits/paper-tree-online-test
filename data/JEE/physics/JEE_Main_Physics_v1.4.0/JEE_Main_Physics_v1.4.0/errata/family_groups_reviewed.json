@@ -1,0 +1,154 @@
+[
+  {
+    "family": "GLOBAL-BASIC-GATE-TRUTH-TABLE",
+    "policy": "Conservative at-most-one selection guard for related models; not a claim of exact textual duplication.",
+    "members": [
+      {
+        "id": "JEE27-PHY-2013",
+        "question": "A two-input NAND gate gives output 0 for inputs:"
+      },
+      {
+        "id": "JEE27-PHY-2014",
+        "question": "A two-input NOR gate gives output 1 for inputs:"
+      },
+      {
+        "id": "JEE27-PHY-2016",
+        "question": "A two-input gate gives outputs 1, 1, 1, 0 for inputs 00, 01, 10, 11 respectively. The gate is:"
+      }
+    ]
+  },
+  {
+    "family": "GLOBAL-BASIC-MOMENT-OF-INERTIA",
+    "policy": "Conservative at-most-one selection guard for related models; not a claim of exact textual duplication.",
+    "members": [
+      {
+        "id": "JEE27-PHY-0412",
+        "question": "A disc of mass 4 kg and radius 0.5 m rotates about its central perpendicular axis. Its moment of inertia is:"
+      },
+      {
+        "id": "JEE27-PHY-0413",
+        "question": "The moment of inertia of a solid sphere of mass M and radius R about a diameter is:"
+      },
+      {
+        "id": "JEE27-PHY-0422",
+        "question": "A body of mass 10 kg has radius of gyration 0.3 m about an axis. Its moment of inertia is:"
+      },
+      {
+        "id": "JEE27-PHY-0424",
+        "question": "The moment of inertia of a uniform disc of mass M and radius R about an axis through its centre and perpendicular to its plane is:"
+      },
+      {
+        "id": "JEE27-PHY-0427",
+        "question": "The moment of inertia of a thin hollow sphere of mass M and radius R about a diameter is:"
+      },
+      {
+        "id": "JEE27-PHY-0433",
+        "question": "A ring of mass 2 kg and radius 0.3 m rotates about its central perpendicular axis. Its moment of inertia is:"
+      },
+      {
+        "id": "JEE27-PHY-0434",
+        "question": "The moment of inertia of a thin uniform rod of mass M and length L about an axis through its centre and perpendicular to its length is:"
+      },
+      {
+        "id": "JEE27-PHY-0435",
+        "question": "The moment of inertia of a ring of mass M and radius R about an axis through its centre and perpendicular to its plane is:"
+      }
+    ]
+  },
+  {
+    "family": "GLOBAL-GAS-PRESSURE-RMS",
+    "policy": "Conservative at-most-one selection guard for related models; not a claim of exact textual duplication.",
+    "members": [
+      {
+        "id": "JEE27-PHY-0863",
+        "question": "A gas of density 1.2 kg m⁻³ has a root mean square speed of 500 m s⁻¹. The pressure exerted by the gas is:"
+      },
+      {
+        "id": "JEE27-PHY-0869",
+        "question": "The pressure of a gas of density 3 kg m⁻³ is 1.6 × 10⁵ Pa. The root mean square speed of its molecules is:"
+      }
+    ]
+  },
+  {
+    "family": "GLOBAL-ROD-MAGNETIC-DRAG",
+    "policy": "Conservative at-most-one selection guard for related models; not a claim of exact textual duplication.",
+    "members": [
+      {
+        "id": "JEE27-PHY-1461",
+        "question": "A conducting rod of length 0.4 m moves on horizontal rails in an unknown uniform perpendicular field B. The circuit resistance is 4 Ω. Mechanical kinetic friction has an unknown constant magnitude f. A horizontal force ξ N gives terminal speed 1 m/s; a second force 10 N gives terminal speed 3 m/s in the same direction. Self-inductance is negligible. A third force 7 N is used under unchanged conditions. In this arrangement, the following outcome is measured: the terminal current with the third force = 1.732050808 A. Which listed positive value of ξ is consistent with that outcome?"
+      },
+      {
+        "id": "JEE27-PHY-1477",
+        "question": "A conducting rod of length 0.5 m moves on horizontal rails in an unknown uniform perpendicular field B. The circuit resistance is 2 Ω. Mechanical kinetic friction has an unknown constant magnitude f. A horizontal force 3 N gives terminal speed 2 m/s; a second force 5 N gives terminal speed 4 m/s in the same direction. Self-inductance is negligible. A third force 6 N is used under unchanged conditions. Find the circuit’s terminal Joule-heating power with the third force. Choose the closest value."
+      },
+      {
+        "id": "JEE27-PHY-1502",
+        "question": "A conducting rod of length 0.5 m moves on horizontal rails in an unknown uniform perpendicular field B. The circuit resistance is 2 Ω. Mechanical kinetic friction has an unknown constant magnitude f. A horizontal force 3 N gives terminal speed 2 m/s; a second force 5 N gives terminal speed 4 m/s in the same direction. Self-inductance is negligible. A third force 6 N is used under unchanged conditions. Find the charge crossing a circuit section during a further 3 m displacement after terminal motion has been reached. Choose the closest value."
+      },
+      {
+        "id": "JEE27-PHY-1504",
+        "question": "A conducting rod of length 0.4 m moves on horizontal rails in an unknown uniform perpendicular field B. The circuit resistance is 4 Ω. Mechanical kinetic friction has an unknown constant magnitude f. A horizontal force 4 N gives terminal speed 1 m/s; a second force ξ N gives terminal speed 3 m/s in the same direction. Self-inductance is negligible. A third force 7 N is used under unchanged conditions. In this arrangement, the following outcome is measured: the circuit’s terminal Joule-heating power with the third force = 12 W. Which listed positive value of ξ is consistent with that outcome?"
+      },
+      {
+        "id": "JEE27-PHY-1519",
+        "question": "A conducting rod of length 0.5 m moves on horizontal rails in an unknown uniform perpendicular field B. The circuit resistance is 2 Ω. Mechanical kinetic friction has an unknown constant magnitude f. A horizontal force 3 N gives terminal speed 2 m/s; a second force 5 N gives terminal speed 4 m/s in the same direction. Self-inductance is negligible. A third force 6 N is used under unchanged conditions. Find the terminal current with the third force. Choose the closest value."
+      },
+      {
+        "id": "JEE27-PHY-1529",
+        "question": "A conducting rod of length 0.4 m moves on horizontal rails in an unknown uniform perpendicular field B. The circuit resistance is ξ Ω. Mechanical kinetic friction has an unknown constant magnitude f. A horizontal force 4 N gives terminal speed 1 m/s; a second force 10 N gives terminal speed 3 m/s in the same direction. Self-inductance is negligible. A third force 7 N is used under unchanged conditions. In this arrangement, the following outcome is measured: the charge crossing a circuit section during a further 3 m displacement after terminal motion has been reached = 2.598076211 C. Which listed positive value of ξ is consistent with that outcome?"
+      },
+      {
+        "id": "JEE27-PHY-1555",
+        "question": "A conducting rod of length 0.50 m moves to the right on horizontal rails in an unknown uniform perpendicular magnetic field B. The total circuit resistance is initially 4.0 Ω, inductance is negligible, and a constant kinetic friction force opposes the motion. A rightward external force of 3.0 N maintains a steady speed of 4.0 m/s; a force of 5.0 N maintains 8.0 m/s. In a third steady-motion trial the total resistance is changed to 8.0 Ω and the applied force is 2.0 N. The magnetic field and kinetic friction force are unchanged, with sufficient rail length for steady motion. Find the electrical power dissipated in the complete circuit during the third trial. Choose the closest value."
+      },
+      {
+        "id": "JEE27-PHY-1556",
+        "question": "A conducting rod of mass 0.50 kg and length 0.50 m slides to the right on horizontal rails as illustrated. The uniform field into the page is 2.0 T; total closed-loop resistance is 4.0 Ω and inductance is negligible. The kinetic friction force on the rod has constant magnitude 0.50 N while it moves. A constant 2.0 N force to the right first maintains steady motion. This applied force is then removed abruptly. The rails and magnetic field extend through the entire subsequent motion; the rod eventually stops. Neglect all other losses. Find the total Joule heat generated after the applied force is removed. Choose the closest value."
+      },
+      {
+        "id": "JEE27-PHY-1557",
+        "question": "A conducting rod of length 0.5 m slides at constant speed on smooth horizontal rails in a uniform perpendicular magnetic field 2 T. The closed circuit has total resistance 4 Ω and negligible inductance. A horizontal external force 2 N balances the magnetic drag. Rails and field are long enough for steady motion. Find the charge passing a circuit cross-section as the rod moves 2 m. Choose the closest value."
+      },
+      {
+        "id": "JEE27-PHY-1558",
+        "question": "A conducting rod of length 0.4 m slides at constant speed on smooth horizontal rails in a uniform perpendicular magnetic field ξ T. The closed circuit has total resistance 3 Ω and negligible inductance. A horizontal external force 1.2 N balances the magnetic drag. Rails and field are long enough for steady motion. The recorded value of the steady speed is 10 m/s. Which listed positive value of ξ is consistent with this measurement?"
+      },
+      {
+        "id": "JEE27-PHY-1559",
+        "question": "A conducting rod of length 0.4 m slides at constant speed on smooth horizontal rails in a uniform perpendicular magnetic field 1.5 T. The closed circuit has total resistance 3 Ω and negligible inductance. A horizontal external force ξ N balances the magnetic drag. Rails and field are long enough for steady motion. The recorded value of the Joule-heating power is 12 W. Which listed positive value of ξ is consistent with this measurement?"
+      },
+      {
+        "id": "JEE27-PHY-1560",
+        "question": "A conducting rod of length 0.4 m slides at constant speed on smooth horizontal rails in a uniform perpendicular magnetic field 1.5 T. The closed circuit has total resistance ξ Ω and negligible inductance. A horizontal external force 1.2 N balances the magnetic drag. Rails and field are long enough for steady motion. The recorded value of the charge passing a circuit cross-section as the rod moves 2 m is 0.4 C. Which listed positive value of ξ is consistent with this measurement?"
+      }
+    ]
+  },
+  {
+    "family": "GLOBAL-ROTATIONAL-KINETIC-ENERGY",
+    "policy": "At most one question from the union of both earlier families.",
+    "members": [
+      {
+        "id": "JEE27-PHY-0442",
+        "question": "A wheel of moment of inertia 4 kg m² rotates at 3 rad s⁻¹. Its rotational kinetic energy is:"
+      },
+      {
+        "id": "JEE27-PHY-0446",
+        "question": "The kinetic energy of a body rotating with angular velocity ω about a fixed axis is:"
+      }
+    ]
+  },
+  {
+    "family": "GLOBAL-CURIE-LAW",
+    "policy": "At most one member per paper.",
+    "members": [
+      {
+        "id": "JEE27-PHY-1318",
+        "question": "The magnetic susceptibility of a paramagnetic material is 3.6 × 10⁻⁴ at 300 K. Assuming the Curie law, its susceptibility at 450 K is:"
+      },
+      {
+        "id": "JEE27-PHY-1321",
+        "question": "According to the Curie law, the magnetic susceptibility of a paramagnetic material is:"
+      }
+    ]
+  }
+]

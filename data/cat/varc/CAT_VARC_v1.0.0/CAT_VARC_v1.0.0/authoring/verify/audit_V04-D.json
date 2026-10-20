@@ -1,0 +1,66 @@
+[
+ {
+  "id": "V04-D-004",
+  "category": "E1",
+  "severity": "major",
+  "finding": "Blind solver noted gap (3) as possible: the 'in short' summary reads acceptably before 'As a result, the same cold summer could mean hardship in one valley and mass death in the next', so two gaps were defensible.",
+  "fix": "Missing sentence now includes 'as those two valleys show', which requires the valley sentence before it; explanation, gap (3) reason and difficulty reason updated.",
+  "changed": true
+ },
+ {
+  "id": "V04-D-005",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Blind solver mentioned gap (2) as weakly possible.",
+  "fix": "none: at gap (2) the boots example would follow the turn to costs and illustrate nothing about cost; gap (3) is the only position between the extension example and the explanation of dilution.",
+  "changed": false
+ },
+ {
+  "id": "V04-D-006",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Blind solver S2 flagged gaps (1) and (2) as both plausible on a quick read.",
+  "fix": "none: at gap (2) 'this' would label the forward-looking test as the fallacy and 'On that view' would refer to the argument for finishing, which states the opposite; only gap (1) works. Both solvers reached the correct answer.",
+  "changed": false
+ },
+ {
+  "id": "V04-D-020",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Blind solver noted gap (2) as an alternative.",
+  "fix": "none on the key: 'That month's wait' must follow 'the month until the next', so gap (2) fails.",
+  "changed": false
+ },
+ {
+  "id": "V04-D-020",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Gap (1) reason claimed reader-reaction changes are 'not visible on the page', which is doubtful (altered storylines survive in the bound book).",
+  "fix": "Gap (1) reason rewritten to rest only on 'also' having nothing to add to before the first listed effect.",
+  "changed": true
+ },
+ {
+  "id": "V04-D-022",
+  "category": "E6",
+  "severity": "minor",
+  "finding": "Final sentence 'They are better understood ...' had an ambiguous pronoun; nearest antecedent was 'quick messages between friends', not emoji.",
+  "fix": "Changed to 'Emoji are better understood ...'; gap (4) reason updated.",
+  "changed": true
+ },
+ {
+  "id": "V04-D-014",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "difficulty_reason used the phrase 'key word'.",
+  "fix": "Changed to 'repeated word'.",
+  "changed": true
+ },
+ {
+  "id": "V04-D-007",
+  "category": "E4",
+  "severity": "minor",
+  "finding": "Labelled Difficult, but 'Such losses' has a single explicit antecedent in the last sentence; closer to Medium.",
+  "fix": "none: label defensible given the gap (2) pull, and changing it would break the exact difficulty quota.",
+  "changed": false
+ }
+]

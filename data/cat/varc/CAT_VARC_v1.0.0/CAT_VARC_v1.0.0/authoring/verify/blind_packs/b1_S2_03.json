@@ -1,0 +1,1189 @@
+{
+ "kind": "RC",
+ "passages": [
+  {
+   "passage_id": "R08-D-08",
+   "passage": [
+    "Two stories are told about the anger that seems to pervade online discussion, and each is convenient for someone. In the first, the ranking systems that decide what appears in a feed have manufactured outrage, turning otherwise reasonable people into combatants. In the second, told chiefly by those who build such systems, a feed merely reflects its users: it shows people what they engage with, and if what they engage with is furious, the fault lies in human nature, not in the code. The first story flatters users, who become the victims of a machine; the second flatters engineers, who become the neutral servants of a public. Neither is quite right.",
+    "Against the first story, it must be granted that outrage is old. Pamphleteers, broadsheets and street-corner orators discovered long before any computer that indignation sells, and audiences have always lingered over a scandal longer than over the correction that followed it. A ranking system that favours whatever holds attention did not invent this appetite. It found the appetite already there, and it could hardly have succeeded so quickly if it had not. Any account that treats the present climate as wholly unprecedented must therefore explain why the appetite it deplores appears so reliably in the commercial history of every earlier medium of mass communication.",
+    "But the second story trades on an ambiguity in the word 'want'. A feed ranked by engagement learns what people react to: what they click, what they pause over, what they reply to in anger. Reaction is not the same as endorsement. A person may linger over a provocative post in the way a driver slows to look at an accident, and may say, if asked afterwards, that she wishes she had seen less of such material. A system that learns only from the lingering will give her more of it, and will describe the result as giving her what she wants. It is giving her what she wanted in the moment of reaction, which may be the opposite of what she wants on reflection.",
+    "The older media of indignation differed in a further way that the mirror story overlooks. A newspaper editor chose what to print, but the feedback that reached him was slow and coarse, a matter of sales figures and letters to the editor. A feed reports, to every person who publishes in it, exactly how each post performed, often within minutes. Those who write for such an audience learn quickly which tone is rewarded, and many adjust accordingly, not because they are cynical but because they would like to be read. The ranking system therefore does not merely distribute a fixed supply of anger; it shapes the supply, by teaching producers what pays. A mirror that trains the face in front of it is not a mirror.",
+    "It does not follow that the remedy is simply to rank posts by what people say, on reflection, that they value. Reflective preferences are harder to measure, easier to misreport and, when a platform infers them, open to the charge that the platform has substituted its own judgement for the user's. These are real objections, and they counsel modesty about any redesign. But they cut both ways. A system that optimises for momentary reaction has also made a judgement about what its users really want; it has simply made that judgement silently, and in favour of the version of the user that is easiest to count. Neutrality, in this domain, is not an available option; the only choice is between an explicit conception of the user's interests and an implicit one."
+   ],
+   "questions": [
+    {
+     "id": "R08-D-08-1",
+     "type": "RC",
+     "options": {
+      "A": "proposing that platforms rank posts according to what users say, on reflection, that they value most.",
+      "B": "arguing that engagement ranking neither invents outrage nor simply mirrors it, but amplifies an old appetite and reshapes its supply.",
+      "C": "defending the builders of ranking systems against critics who blame them for a feature of human nature.",
+      "D": "demonstrating that ranking systems are the main cause of the anger that now characterises discussion online."
+     },
+     "question": "The passage as a whole is primarily concerned with"
+    },
+    {
+     "id": "R08-D-08-2",
+     "type": "RC",
+     "options": {
+      "A": "attention given to something is not evidence that a person approves of it or wants more of it.",
+      "B": "people who linger over provocative posts are usually unaware that they are doing so at the time.",
+      "C": "readers of online feeds are drawn above all to reports of accidents, disasters and other misfortunes.",
+      "D": "ranking systems ought to treat a brief pause as much weaker evidence of interest than a written reply."
+     },
+     "question": "The example of a driver who 'slows to look at an accident' (paragraph 3) is used to suggest that"
+    },
+    {
+     "id": "R08-D-08-3",
+     "type": "RC",
+     "options": {
+      "A": "the anger found in feeds is produced by ranking systems rather than by the people who write the posts.",
+      "B": "older media such as newspapers reflected their readers' tastes faithfully because their feedback was slow.",
+      "C": "those who write for online feeds are cynical in adjusting their tone to whatever the system rewards.",
+      "D": "a system that changes the behaviour it records cannot be defended on the ground that it merely records behaviour."
+     },
+     "question": "The sentence 'A mirror that trains the face in front of it is not a mirror' (paragraph 4) implies that"
+    },
+    {
+     "id": "R08-D-08-4",
+     "type": "RC",
+     "options": {
+      "A": "Some writers who had adjusted their tone to what the feed rewarded said that they disliked having to write in that way.",
+      "B": "Writers shown detailed figures on how each of their posts performed did not change their tone over time, compared with writers shown no figures.",
+      "C": "Many users, when asked, said that they would prefer feeds containing fewer provocative posts than they now see.",
+      "D": "Readers of online feeds were found to spend more time on angry posts than on calm posts of a similar length and subject."
+     },
+     "question": "Which of the following, if true, would most weaken the argument of paragraph 4?"
+    },
+    {
+     "id": "R08-D-08-5",
+     "type": "RC",
+     "options": {
+      "A": "treating them as decisive reasons for continuing to rank feeds by momentary reaction.",
+      "B": "accepting them as reasons for caution while denying that they favour the existing approach.",
+      "C": "regarding them as technical difficulties that better measurement will soon be able to overcome.",
+      "D": "dismissing them as excuses put forward by those who build ranking systems and profit from them."
+     },
+     "question": "The author's attitude towards the objections to ranking by reflective preference (paragraph 5) is best described as"
+    }
+   ]
+  },
+  {
+   "passage_id": "R07-C-08",
+   "passage": [
+    "Anyone who watches visitors in a busy gallery will notice how briefly most pictures are looked at. A few seconds for the image, a little longer for the label, and the visitor moves on. In response, many museums now promote what is sometimes called slow looking: sessions in which participants are invited to sit before a single work for a quarter of an hour or more, noting whatever comes to their attention. The premise is simple and attractive. We miss what is in paintings because we do not give them time, and if we gave them time, they would show us more.",
+    "The practice has real merits, and its critics should concede them. It interrupts the habit, encouraged by crowded rooms and handheld screens, of treating a picture as something to be recognised and ticked off. It gives permission to stay, which many visitors seem to need. And it does sometimes yield discoveries: a figure in the background that had gone unnoticed, a repeated colour that ties distant parts of the canvas together. But the premise behind it, that duration by itself turns into perception, is weaker than it looks. Fifteen minutes in front of a canvas can be fifteen minutes of reverie, of thinking about lunch, or of staring with growing unease at a surface that refuses to become interesting. Time is a condition of seeing, not a cause of it.",
+    "What turns time into seeing is a question. The art historian who notices in a moment that the light in a landscape falls from two directions does not see faster because her eyes are better; she sees because she has learned to ask where the light comes from, and the painting answers. Expertise, in this sense, is a stock of questions that direct the eye, questions that are not mysterious endowments but are acquired, often laboriously, through the comparison of many works, and that can therefore in principle be taught. This explains why experts often see in seconds what a patient beginner misses in an hour. The beginner is not looking less; he is looking without a question, and an unguided gaze tends to settle on whatever is largest, brightest or most familiar.",
+    "Yet the expert's advantage carries a risk of its own, and here the advocates of slow looking have a point that their own premise obscures. A stock of questions is also a stock of expectations. The historian who knows what to look for in a painting of a certain school may stop looking once she has found it, filing the picture under its category and failing to notice what does not fit. Questions direct the eye, but they also tell it where it need not go. Some of the most valuable observations a viewer can make come from setting expertise aside long enough to be surprised, and slow looking at its best is precisely a technique for producing that suspension.",
+    "The two halves of the matter therefore need each other. Time without questions drifts; questions without time confirm what they expected. Neither ingredient is dispensable, and neither, taken in isolation, is sufficient for the kind of perception that the advocates of slow looking rightly prize. The most useful practice is neither the patient blankness that slow looking sometimes encourages nor the quick classification that expertise permits, but an alternation between them: a period of asking, a period of letting the asking lapse, and a return to the picture to see whether it has said something the questions did not predict."
+   ],
+   "questions": [
+    {
+     "id": "R07-C-08-1",
+     "type": "RC",
+     "options": {
+      "A": "It trains beginners to ask where the light in a painting comes from.",
+      "B": "It gives visitors who seem to need it permission to remain with a single work.",
+      "C": "It guarantees that whoever stays long enough will discover something new in the picture.",
+      "D": "It replaces the reading of labels, which visitors often do in place of looking."
+     },
+     "question": "Which of the following does the author mention as a merit of slow looking?"
+    },
+    {
+     "id": "R07-C-08-2",
+     "type": "RC",
+     "options": {
+      "A": "people who spend more time in front of a picture always see less than those who spend less time.",
+      "B": "seeing requires time but time does not by itself produce seeing, since something else must turn it into perception.",
+      "C": "seeing a painting well takes no time at all once the viewer has the right questions in mind.",
+      "D": "the conditions in a gallery, such as crowding and noise, affect seeing more than the time spent there."
+     },
+     "question": "The statement 'Time is a condition of seeing, not a cause of it' (paragraph 2) most nearly means that"
+    },
+    {
+     "id": "R07-C-08-3",
+     "type": "RC",
+     "options": {
+      "A": "discover the features that experts miss, since he has no expectations that tell him where not to look.",
+      "B": "see as much as an expert does in a few seconds, provided that he keeps looking attentively.",
+      "C": "dwell on whatever is most conspicuous or familiar, since no question is directing where he looks.",
+      "D": "look less carefully than an expert, since beginners give up their attention sooner than trained viewers."
+     },
+     "question": "It can be inferred from paragraph 3 that a beginner who sits before a painting for an hour is likely to"
+    },
+    {
+     "id": "R07-C-08-4",
+     "type": "RC",
+     "options": {
+      "A": "Shown a painting with an odd detail clashing with its school, experts noticed the detail less often than untrained viewers did.",
+      "B": "Experts identified the school of an unfamiliar painting far more quickly and accurately than untrained viewers did.",
+      "C": "Experts told in advance to search for an anomaly in a painting found it much faster than untrained viewers did.",
+      "D": "Untrained viewers who looked at a painting for fifteen minutes listed more details than those who looked for two minutes."
+     },
+     "question": "Which of the following findings, if true, would most strengthen the author's claim in paragraph 4 about the risk carried by expertise?"
+    },
+    {
+     "id": "R07-C-08-5",
+     "type": "RC",
+     "options": {
+      "A": "A defence of expertise against slow looking, concluding that guided questions should replace the habit of long and unstructured contemplation.",
+      "B": "An argument that slow looking matters chiefly because it lets trained viewers set aside the expectations that their knowledge creates.",
+      "C": "A criticism of museums for allowing visitors to glance at pictures briefly and spend most of their time reading the labels instead.",
+      "D": "An assessment of a museum practice that grants its value, disputes the reasoning behind it, and recommends combining it with what expertise supplies."
+     },
+     "question": "Which of the following best describes the passage as a whole?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R07-C-01",
+   "passage": [
+    "Few things in a museum are read as often, or looked at as little, as the wall label. Visitors approaching a painting frequently read the small panel beside it first, glance at the picture to confirm what they have been told, and move on. Curators have noticed this pattern for a long time, and it has produced two opposite reactions. One camp argues that labels should be shortened or removed altogether, so that the visitor is thrown back onto the object. The other argues that labels should be expanded, written in friendlier language and supplemented with audio guides and screens, since a public that does not know what it is looking at cannot be expected to care.",
+    "Both reactions treat the label as though its only variable were quantity. The purist assumes that less text means more looking, but a visitor confronted by an unexplained altarpiece does not usually begin to look harder; more often she feels excluded and walks faster. The expansionist assumes that more text means more understanding, yet a long label that rehearses the artist's biography, the patron's family and the painting's later owners gives the visitor a great deal to know and very little to see. In each case the label is imagined as a container of facts, and the only argument is over how full the container should be.",
+    "A better question is what the label asks the visitor to do. A label can close a picture, by telling the viewer what it means, or it can open it, by directing attention to something that can be checked against the canvas itself. Compare two sentences about the same imagined portrait. The first says that the sitter was a wealthy merchant who commissioned the work to celebrate his marriage. The second says that the merchant's left hand rests on a ledger while his right holds his wife's glove, and invites the reader to decide which hand the painter has lit more brightly. The first sentence can be absorbed without raising one's eyes; the second cannot be finished without looking.",
+    "None of this means that historical information is a distraction. A viewer who does not know that a certain blue, ground from a semi-precious stone, was once among the costliest materials a painter could buy will miss part of what a patron was displaying when he asked for a sky full of it, and no amount of attentive looking will supply that fact. The point is that information earns its place on the wall when it changes what the visitor notices. Facts that merely sit beside the object, however accurate, belong in the catalogue, where they can be read at leisure by those who want them. The wall is too valuable, and the visitor's attention too brief, to be spent on anything else."
+   ],
+   "questions": [
+    {
+     "id": "R07-C-01-1",
+     "type": "RC",
+     "options": {
+      "A": "show that visitors who read labels before looking at a painting understand it less well than those who do not.",
+      "B": "propose that a label should be judged by whether it sends the visitor back to the work, not by its length.",
+      "C": "defend the purist view that a painting should be encountered without any written explanation beside it.",
+      "D": "argue that museums should replace long wall labels with audio guides and screens that visitors can consult at will."
+     },
+     "question": "The primary purpose of the passage is to"
+    },
+    {
+     "id": "R07-C-01-2",
+     "type": "RC",
+     "options": {
+      "A": "make visitors rely more heavily on catalogues, which the author regards as the proper home for all information.",
+      "B": "have little effect on visitors, who already pay more attention to paintings than to the panels beside them.",
+      "C": "encourage most visitors to spend longer with each painting, since they would have nothing else to read.",
+      "D": "leave many visitors feeling shut out, so that they pass the work more quickly instead of studying it."
+     },
+     "question": "The passage suggests that removing labels altogether would most likely"
+    },
+    {
+     "id": "R07-C-01-3",
+     "type": "RC",
+     "options": {
+      "A": "prove that painters of merchants used lighting to signal which of the sitter's possessions mattered most.",
+      "B": "contrast a statement that can be taken in without looking with one that sends the reader to the canvas.",
+      "C": "show that the merchant's marriage is more important to the meaning of the portrait than the objects he holds.",
+      "D": "suggest that labels about portraits should avoid biographical facts about the people who commissioned them."
+     },
+     "question": "The two sentences about the merchant's portrait in paragraph 3 are used to"
+    },
+    {
+     "id": "R07-C-01-4",
+     "type": "RC",
+     "options": {
+      "A": "The painting passed through the hands of four private collectors in three countries before the museum acquired it in a recent sale.",
+      "B": "Figures by the window are in quick, broken strokes, those in shadow smooth; which group does your eye reach first?",
+      "C": "Critics have long agreed that this is the most accomplished of the painter's works and a turning point in his career.",
+      "D": "The crowded kitchen expresses the painter's lifelong anxiety about poverty, which haunted him after his father's business failed."
+     },
+     "question": "Which of the following labels for a painting of a busy kitchen would the author most likely approve for the gallery wall?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R03-G-05",
+   "passage": [
+    "Discussions of social capital commonly distinguish two kinds of tie. Bonding ties link people who are alike in some respect that matters to them, such as kinship, faith, neighbourhood or trade, and they supply loyalty and mutual help. Bridging ties link people across such lines, and they supply information, opportunities and the habit of dealing with strangers. Having drawn the distinction, many writers proceed to rank the two. Bridging is cast as the civic virtue that open societies need; bonding is regarded with suspicion, as the stuff of cliques, favouritism and inward-looking communities. The ranking is attractive partly because it flatters an ideal of openness, and partly because the dangers of tight-knit groups are so easy to picture, whereas their quieter contributions rarely make news.",
+    "The ranking is too quick. Consider a family that moves to a city where it knows no one except a handful of people from its home district. Those people find it a room, lend it money, explain which offices to visit and which employers pay on time. They are bonding ties in the purest sense, and without them the family might never acquire the stability from which wider contacts become possible. The first job outside the community, or the first friendship with a neighbour of a different background, frequently comes through someone who was met by way of the close circle. In such cases bonding is not the rival of bridging but its precondition.",
+    "It does not follow that close groups are always benign. The same density of ties that allows a community to support its members allows it to watch them, and the help it offers can come with a demand for conformity: marry within, trade within, think as we do. A young woman who wishes to train for an occupation the group disapproves of may find that the network which once sustained her family now stands in her way, and that the price of leaving it is the loss of everything it provided. Here the closeness that was a resource becomes a closure.",
+    "What separates the two cases is not the strength of the bonding ties but their permeability: whether membership of the close group is compatible with forming ties outside it, or is made conditional on refusing them. A policy that tried to weaken community networks in the name of integration would therefore risk destroying the very support that allows newcomers to reach beyond those networks in the first place. A better question to ask of any close group is not how tightly it binds but whether it lets its members go."
+   ],
+   "questions": [
+    {
+     "id": "R03-G-05-1",
+     "type": "RC",
+     "options": {
+      "A": "refuse their help unless the family agrees to marry and to trade only within the group.",
+      "B": "help the family to secure a room, a loan and practical knowledge of offices and employers.",
+      "C": "discourage the family from forming any friendships with neighbours from a different background.",
+      "D": "find the family a permanent home in a neighbourhood where many different communities live."
+     },
+     "question": "In the example of the family that moves to a city, the people from its home district"
+    },
+    {
+     "id": "R03-G-05-2",
+     "type": "RC",
+     "options": {
+      "A": "They can be created reliably by public policies that weaken networks within communities.",
+      "B": "They are formed mainly by people who do not belong to any close group of their own.",
+      "C": "They are often formed through contacts that bonding ties first make available to a person.",
+      "D": "They matter less than bonding ties to families that have newly arrived in an unfamiliar city."
+     },
+     "question": "The author would most likely agree with which of the following statements about bridging ties?"
+    },
+    {
+     "id": "R03-G-05-3",
+     "type": "RC",
+     "options": {
+      "A": "the dense ties that once supported a group's members come to restrict what those members may choose to do.",
+      "B": "outsiders become unable to learn what the community believes because its members refuse to speak to them.",
+      "C": "the community stops offering help to its members and gradually dissolves as more and more of them leave.",
+      "D": "the group's material resources are used up because too many dependent newcomers have relied on them."
+     },
+     "question": "In paragraph 3, the statement that 'the closeness that was a resource becomes a closure' means that"
+    },
+    {
+     "id": "R03-G-05-4",
+     "type": "RC",
+     "options": {
+      "A": "A group of families whose members have deliberately cut back their ties to one another in order to fit in better with the wider city.",
+      "B": "A tightly knit association of traders from one region that helps newcomers open shops and encourages them to take partners from outside it.",
+      "C": "A community whose ties have loosened over the years, which leaves members free to make contacts elsewhere but gives newcomers little help.",
+      "D": "A close neighbourhood community whose members help one another generously but expect their children to marry within it."
+     },
+     "question": "Judging by the criterion in the final paragraph, which of the following close groups would the author regard most favourably?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R07-F-02",
+   "passage": [
+    "Few rules of modern etiquette are enforced as fiercely as the ban on spoilers. A friend who reveals the ending of a film that you have not yet seen is treated as though he had stolen something from you, and online discussions of new releases now arrive wrapped in warnings. Behind the etiquette lies a theory about what stories are for. On this view, the value of a narrative is concentrated in the not-knowing, and once the outcome is known the thing is used up, like a lottery ticket that has already been scratched.",
+    "The theory is difficult to square with how people actually behave. Children demand the same bedtime story night after night and object loudly if a single word is changed. Adults rewatch favourite films until they can recite the dialogue, and they reread novels whose endings they could describe in a sentence. Audiences at tragedies drawn from well-known legends have always known that the hero will die; for centuries this knowledge did not stop them from attending, and it may even have been part of the attraction. If knowing the ending destroyed the pleasure, none of this would make sense.",
+    "What these cases suggest is that suspense is not simply uncertainty about outcome. A viewer can know perfectly well that the hero survives and still grip the arm of the chair when the rope begins to fray, because attention is absorbed in the unfolding moment rather than in a calculation about the final scene. Much of what we enjoy in a story, moreover, lies in the manner of its telling: the rhythm of a scene, the turn of a phrase, the way a minor character reveals himself in a single gesture. None of this is spoiled by a summary of the plot, since a summary is precisely what leaves it out.",
+    "It would be too much to conclude that spoilers do no harm at all. Some stories are built around a single reversal, and the shock of the first encounter with it is a real pleasure that cannot be had twice; a mystery whose solution has been announced in advance loses something that rereading does not restore. The etiquette, then, protects something genuine. But what it protects is a narrow and unrepeatable pleasure, not the whole value of a story, and a culture that treats the ending as the only thing worth guarding may gradually forget how to enjoy everything that comes before it."
+   ],
+   "questions": [
+    {
+     "id": "R07-F-02-1",
+     "type": "RC",
+     "options": {
+      "A": "arguing that stories built around a single surprise are inferior to stories that reward rereading.",
+      "B": "questioning the belief that knowing a story's outcome destroys its value, while granting that something real is lost.",
+      "C": "defending the etiquette against spoilers as the necessary protection of what gives every story its value for an audience.",
+      "D": "explaining why children, unlike adults, enjoy hearing the same story told many times over."
+     },
+     "question": "The passage is primarily concerned with"
+    },
+    {
+     "id": "R07-F-02-2",
+     "type": "RC",
+     "options": {
+      "A": "examples of stories built around a single reversal that cannot be enjoyed twice.",
+      "B": "illustrations of how the customs of storytelling have changed over the centuries.",
+      "C": "evidence that people seek out and enjoy stories whose outcomes they already know.",
+      "D": "support for the view that suspense depends entirely on uncertainty about the final scene."
+     },
+     "question": "The bedtime story and the tragedies drawn from well-known legends (paragraph 2) are offered as"
+    },
+    {
+     "id": "R07-F-02-3",
+     "type": "RC",
+     "options": {
+      "A": "a story, on the theory described, is worthless once its outcome is known.",
+      "B": "the author regards watching films as a form of gambling with one's time and money.",
+      "C": "revealing a story's ending is a theft that ought to be punished like any other.",
+      "D": "stories, like lotteries, reward only a lucky few among those who take part in them."
+     },
+     "question": "In paragraph 1, the comparison with 'a lottery ticket that has already been scratched' conveys the idea that"
+    },
+    {
+     "id": "R07-F-02-4",
+     "type": "RC",
+     "options": {
+      "A": "will feel no suspense of any kind, since suspense is no more than uncertainty about outcome.",
+      "B": "will enjoy it more than on a first reading, because the plot no longer distracts her attention.",
+      "C": "can still take pleasure in its telling, though not in the shock of first discovering the solution.",
+      "D": "gains nothing from the experience, since a mystery depends entirely on the reader's ignorance."
+     },
+     "question": "The author would most likely say that a reader rereading a mystery novel whose solution she remembers"
+    }
+   ]
+  },
+  {
+   "passage_id": "R01-B-03",
+   "passage": [
+    "The traditional problem of other minds begins from an asymmetry. I am aware of my own pain directly, the argument runs, but I know of yours only through what you do: the wince, the cry, the hand withdrawn abruptly from the stove. How, then, am I entitled to believe that anything lies behind your behaviour at all? The classic reply is an argument from analogy. In my own case I observe that pain is regularly accompanied by wincing and crying; when I observe wincing and crying in you, I infer that pain is present in you as well, concealed from me but similar to my own.",
+    "Critics have long pointed out how fragile this inference is. It generalises from a single case to every other person, which is the kind of reasoning we would reject anywhere else: nobody who had examined one seed from a sack and found it fertile would conclude with any confidence that every seed in the sack would germinate. Worse, the conclusion can never be independently checked. In ordinary induction I can at least test a generalisation against further cases, but I can never step into your experience to confirm that the pain I inferred is really there.",
+    "These objections are sound, but they share the assumption they attack: that knowledge of other minds must be an inference from bodily movements to concealed inner states. That assumption does not describe how such knowledge actually arises. A child does not first register a contraction of facial muscles and then hypothesise distress; she sees that her mother is upset, and she sees it as immediately as she sees that the cup is full. Expressions are not evidence from which feelings are deduced. They are, in a great many cases, the very form in which feelings are visible to others, and to treat them as mere outward signs is to describe the face as a mask before asking what lies behind it.",
+    "None of this shows that we never reason about other minds. When a stranger's expressions are unfamiliar, when someone is deliberately concealing what she feels, or when we ask whether an octopus or a newborn experiences pain, we do weigh evidence and draw conclusions, and we can be badly wrong. But these are special cases, and they are intelligible only against a background in which most minds are simply seen. The sceptic's mistake is to take the hard case as the model for every case, and then to wonder why the model will not support the confidence we ordinarily have."
+   ],
+   "questions": [
+    {
+     "id": "R01-B-03-1",
+     "type": "RC",
+     "options": {
+      "A": "a large number of observations of many different people who were in pain.",
+      "B": "a direct perception of the person's distress in the expression on her face.",
+      "C": "what the other person reports, in words, about the feelings she is having.",
+      "D": "a link between pain and behaviour that one has observed in one's own case."
+     },
+     "question": "According to the passage, the argument from analogy concludes that another person is in pain on the basis of"
+    },
+    {
+     "id": "R01-B-03-2",
+     "type": "RC",
+     "options": {
+      "A": "suggest that the minds of other people differ from one another as much as seeds in a sack do.",
+      "B": "illustrate why a conclusion drawn from one instance would be rejected in ordinary reasoning.",
+      "C": "show that the conclusion about other minds can never be confirmed by any further observation.",
+      "D": "argue that inductive reasoning in general cannot be trusted when it is applied to living things."
+     },
+     "question": "The example of the seeds in paragraph 2 is used to"
+    },
+    {
+     "id": "R01-B-03-3",
+     "type": "RC",
+     "options": {
+      "A": "children understand other people's emotions before they understand facts about physical objects.",
+      "B": "recognising another person's feeling can be as direct as perceiving an ordinary fact about an object.",
+      "C": "children learn to read emotions by first reasoning carefully about the behaviour of physical objects.",
+      "D": "feelings, like the contents of a cup, can be measured precisely by a sufficiently careful observer."
+     },
+     "question": "The author's comparison between seeing that the mother is upset and seeing 'that the cup is full' suggests that"
+    },
+    {
+     "id": "R01-B-03-4",
+     "type": "RC",
+     "options": {
+      "A": "Some people can keep a calm and composed face while concealing intense grief or anger from those around them.",
+      "B": "Young children recognise their own mothers' feelings much more quickly than they recognise the feelings of strangers.",
+      "C": "People frequently misjudge what strangers from unfamiliar backgrounds are feeling, even when they try hard to understand them.",
+      "D": "Adults turn out to identify what others feel only by consciously working from observed movements to conclusions about hidden states."
+     },
+     "question": "Which of the following, if true, would most seriously undermine the author's reply to the sceptic?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R05-A-02",
+   "passage": [
+    "Suppose a dozen firms bid for the right to drill in a tract of seabed whose reserves nobody knows, and that each firm commissions its own survey, and the surveys, being estimates, scatter around the true figure, some too high and some too low. If each firm bids what its own survey says the tract is worth, the contract will go to the firm whose survey was most optimistic, so that winning, in other words, is itself evidence of having overestimated. The firm that celebrates its victory has been selected for its error, and it will on average pay more than the tract is worth. This phenomenon is the winner's curse, and the striking thing about it is that no bidder needs to be foolish for it to occur, since each estimate may be honest and, taken alone, unbiased.",
+    "The remedy, in principle, is simple: a bidder should ask not what the tract is worth given its survey, but what it is worth given its survey and given that it has won. The second question yields a lower number, and a bidder who answers it will shade its bid below the raw estimate, more sharply the more rivals there are, since the highest of many estimates is more likely to be inflated than the highest of a few. Shading of this kind is not timidity but the correct response to a feature of the situation that the unconditioned estimate ignores.",
+    "A natural objection is that the curse should vanish with experience, because firms that overpay will lose money, notice and adjust, while those that do not will be driven from the market. There is truth in this, and seasoned bidders in many settings do shade their bids, but the learning is slower than the objection supposes. The outcome of any single auction is noisy, since a tract that disappoints may simply have been unlucky. Worse, the firms that lose never discover what the prize was really worth, so the information that would correct everyone's estimates is gathered only by the winners, and slowly. A lesson that must be extracted from a few expensive and ambiguous victories is not quickly learned.",
+    "For this reason the design of an auction matters as much as the wisdom of its participants. Formats in which bids are revealed as they rise allow each bidder to watch rivals drop out and to infer something about their estimates, and a bidder who can see how far others are willing to go has less reason to fear that its own enthusiasm is an error. Sealed bids, by contrast, leave each participant alone with a single survey and its uncorrected optimism. The point is not that one format is always superior, since open bidding has weaknesses of its own, among them the ease with which rivals can signal to one another, but that the curse is a property of the information structure, and so can be eased by changing that structure rather than by exhorting bidders to be cleverer."
+   ],
+   "questions": [
+    {
+     "id": "R05-A-02-1",
+     "type": "RC",
+     "options": {
+      "A": "won the tract mainly because its survey happened to overstate what the tract was worth.",
+      "B": "will be excluded from future auctions once the seller discovers that it has overpaid.",
+      "C": "was chosen by the seller because its survey team had a reputation for careless work.",
+      "D": "made a deliberate error in bidding above its own estimate in order to defeat its rivals."
+     },
+     "question": "In paragraph 1, the statement that the winning firm 'has been selected for its error' means that the firm"
+    },
+    {
+     "id": "R05-A-02-2",
+     "type": "RC",
+     "options": {
+      "A": "Firms that repeatedly overpay for tracts eventually run short of money and stop taking part in auctions.",
+      "B": "The yield of a single tract often differs from its expected value because of geological chance.",
+      "C": "Experienced bidders in many auction markets are observed to bid somewhat below their own estimates.",
+      "D": "In most such auctions the losing bidders are told, soon afterwards, how much the tract actually yielded."
+     },
+     "question": "Which of the following, if true, would most weaken the author's account of why the winner's curse is learned away only slowly?"
+    },
+    {
+     "id": "R05-A-02-3",
+     "type": "RC",
+     "options": {
+      "A": "It introduces a second cause of the curse, the signalling between rivals, which the earlier paragraphs overlooked.",
+      "B": "It draws on the earlier analysis to locate a remedy in the auction's information structure, without ranking formats outright.",
+      "C": "It shows that sealed-bid auctions should be replaced by open bidding wherever the value of a prize is uncertain.",
+      "D": "It abandons the claim of paragraph 2 that bidders should shade, in favour of the claim that only design matters."
+     },
+     "question": "Which of the following best describes the function of the final paragraph in relation to the rest of the passage?"
+    },
+    {
+     "id": "R05-A-02-4",
+     "type": "RC",
+     "options": {
+      "A": "a very large number of firms compete for the same tract of seabed.",
+      "B": "every bidder relies on one shared survey instead of commissioning its own.",
+      "C": "each bidder's survey is honest and, taken on its own terms, unbiased.",
+      "D": "bids are submitted in sealed envelopes and opened only at the end."
+     },
+     "question": "It can be inferred from the passage that the winner's curse, as the author describes it, would be LEAST likely to arise when"
+    }
+   ]
+  },
+  {
+   "passage_id": "R05-A-06",
+   "passage": [
+    "In most markets the price does the work of allocation. If more people want a good than there are units of it, the price rises until the excess disappears, and whoever is willing to pay the new price obtains the good. But there is a family of markets in which this mechanism cannot operate, because each side must choose the other. A university cannot simply admit whoever is willing to pay the most, nor can an applicant simply buy a place; a hospital hiring junior doctors cares which doctors it gets, and the doctors care which hospital they join. In such markets, sometimes called matching markets, a transaction requires mutual acceptance, and no single number can bring about a match that both sides want.",
+    "Left to themselves, matching markets tend to fail in characteristic ways. One is unravelling: because the strongest candidates are in demand, employers try to secure them by making offers earlier than their rivals, and the competition for earliness can push offers so far forward that they are made before anyone knows how good the candidates are. Another is congestion: when offers must be accepted or refused quickly, a candidate holding one offer may not learn in time of a better one, and the market clears without having considered all its possibilities. A third is strategic misrepresentation, in which participants conceal their true preferences, ranking a likely option first rather than the one they actually want, because they fear that revealing their real wishes will cost them.",
+    "The remedy that has often been adopted is not deregulation but construction: a clearinghouse to which both sides submit ranked lists, and which computes an assignment by a procedure known to have certain properties. The property most often sought is stability, meaning that there is no applicant and employer, not matched to each other, who would both prefer to be. A stable assignment removes the motive to break ranks, since no such pair can do better by striking a private deal, and with a suitable procedure at least one side can be given no reason to misreport its preferences. Such clearinghouses show that a market is not always a spontaneous order arising wherever people are free to trade; it can be an artefact, built to solve problems that freedom alone creates.",
+    "None of this means that design can substitute for the willingness of participants. A clearinghouse works only if enough of both sides join it, and an elegant procedure is useless if the most sought-after employers find it more profitable to recruit privately. Nor can a procedure deliver every desirable property at once: no procedure, for instance, can give both sides complete reason to report honestly while always producing stable outcomes. The designer chooses among imperfect options, and the choice reflects judgements about whose interests deserve protection. The engineering of markets is thus a political as well as a technical art, but it is an art that can be practised well or badly, and the difference matters to the people whose lives it arranges."
+   ],
+   "questions": [
+    {
+     "id": "R05-A-06-1",
+     "type": "RC",
+     "options": {
+      "A": "candidates who receive early offers usually refuse them in the hope that better ones will follow.",
+      "B": "competition for the strongest candidates pushes up the salaries that employers have to offer.",
+      "C": "it obliges candidates to conceal their real preferences and to rank a likely employer first.",
+      "D": "very early offers must be made on scant evidence of how able the candidates are."
+     },
+     "question": "It can be inferred from paragraph 2 that unravelling harms employers chiefly because"
+    },
+    {
+     "id": "R05-A-06-2",
+     "type": "RC",
+     "options": {
+      "A": "summarise the three failures of matching markets described in the preceding paragraph and explain which one is most serious.",
+      "B": "concede that clearinghouses restrict the freedom of applicants and employers and so carry a cost the designer must weigh.",
+      "C": "generalise from the remedy to a claim about what markets can be, against the view that they only arise of their own accord.",
+      "D": "establish that markets in which people trade freely will fail unless a clearinghouse is constructed for them."
+     },
+     "question": "The final sentence of paragraph 3 ('Such clearinghouses show ... freedom alone creates') serves to"
+    },
+    {
+     "id": "R05-A-06-3",
+     "type": "RC",
+     "options": {
+      "A": "no procedure gives both sides full reason for honesty while always producing stable outcomes.",
+      "B": "the choice of procedure involves judging whose interests most deserve to be protected.",
+      "C": "they depend on enough applicants and employers choosing to take part in them.",
+      "D": "they cannot produce assignments in which no unmatched applicant and employer would both prefer each other."
+     },
+     "question": "Each of the following is presented in the passage as a limit on what clearinghouses can achieve EXCEPT that"
+    },
+    {
+     "id": "R05-A-06-4",
+     "type": "RC",
+     "options": {
+      "A": "A prestigious hospital declines to join the clearinghouse and fills its posts by recruiting the doctors it wants privately.",
+      "B": "A law firm, keen to secure the strongest graduates, makes its offers in their first year of study rather than their last.",
+      "C": "A graduate accepts the only offer she holds because it must be answered within hours, and later learns of a better one.",
+      "D": "Through a ranked-list scheme, a student puts a less popular course first, fearing that naming her favourite would lose her the safer place."
+     },
+     "question": "Which of the following is the clearest instance of the strategic misrepresentation described in paragraph 2?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R02-A-08",
+   "passage": [
+    "In most schools a test is understood as a thermometer. It is applied at the end of a period of learning to find out how much has been learned, and like a thermometer it is supposed to leave the thing it measures unchanged. The understanding is so familiar that it seldom occurs to anyone that it might be false. Yet one of the more robust findings in the psychology of memory is that the act of retrieving something from memory is not a neutral reading: it changes the memory, and generally strengthens it, so that material which has been recalled once is more likely to be recalled again than material which has merely been seen again.",
+    "The contrast is clearest when the two activities are set against each other. Suppose two groups of students study the same passage, after which one group rereads it while the other closes the book and writes down whatever it can remember. The design holds constant both the material and the time spent on it, so that the only difference between the groups is whether they looked at the passage again or tried to bring it back unaided. Tested a few minutes later, the rereaders often do as well or better; tested a week later, the group that practised recall tends to remember considerably more. The advantage of retrieval, in other words, is easily hidden by the timing of the measurement, which may be one reason why it was overlooked for so long by teachers and students alike.",
+    "What is more striking is how little the students themselves sense any of this. Asked to predict their own performance, rereaders tend to be the more confident group. Rereading produces a feeling of fluency, in which the sentences are familiar and slide past easily, and ease of processing is readily mistaken for mastery. Attempting recall produces the opposite feeling, since it is effortful, it exposes gaps and it is often unpleasant, which is presumably why students left to themselves so rarely choose it. Teachers are not immune to the same illusion, since a class that has just reread its notes looks, and feels, better prepared than one that has just struggled to recall them. The method that feels like learning and the method that produces it are, at least here, not the same, and the lesson generalises uncomfortably: a learner's own sense of how well a session went is an unreliable guide to how much it achieved.",
+    "It would be easy to draw from all this a crude conclusion, that schools should simply test more, but the finding does not support it. What strengthens memory is the effort of retrieval, not the apparatus of examination, and the apparatus can work against the effort. A high-stakes test that provokes anxiety, or that is followed by no feedback, may teach students little except to fear tests, and a wrong answer recalled confidently and never corrected may itself be strengthened. The useful practice is humbler than the word 'test' suggests: it consists of frequent, low-stakes attempts to recall, each followed by a chance to check, built into ordinary study. None of this requires abolishing examinations, which serve purposes of certification that have little to do with memory; it requires only that they not be mistaken for the whole of what testing can do. Understood in this way, the thermometer turns out to be one of the more effective means of raising the temperature it was meant only to record."
+   ],
+   "questions": [
+    {
+     "id": "R02-A-08-1",
+     "type": "RC",
+     "options": {
+      "A": "illustrate how a student's anxiety rises during an examination much as a temperature rises during a fever.",
+      "B": "show that the effects of a test can be measured accurately only when a week has passed since it was taken.",
+      "C": "capture the common assumption that testing records learning without changing it, which the passage goes on to reject.",
+      "D": "suggest that tests, like thermometers, are precise instruments that schools ought to use more often."
+     },
+     "question": "The comparison of a test to a thermometer in paragraph 1 serves mainly to"
+    },
+    {
+     "id": "R02-A-08-2",
+     "type": "RC",
+     "options": {
+      "A": "researchers regarded tests as too unpleasant to be worth studying as a method of learning.",
+      "B": "students who practised recall concealed their gains from researchers because they were anxious about being tested.",
+      "C": "rereading produces stronger memories in the short run, which later decay into confidently held errors.",
+      "D": "measurements taken soon after study could make rereading look at least as effective as recall."
+     },
+     "question": "The passage suggests that the advantage of retrieval practice was long overlooked partly because"
+    },
+    {
+     "id": "R02-A-08-3",
+     "type": "RC",
+     "options": {
+      "A": "After each chapter, a student shuts the book, writes out what she remembers and then checks her account against the text.",
+      "B": "A student reads each chapter three times over, until every sentence feels familiar and slides past without effort.",
+      "C": "A student sits one long, formally graded examination at the end of term, whose marked scripts are never returned to her.",
+      "D": "A student answers practice questions from memory every evening but never looks up whether her answers were right."
+     },
+     "question": "Which of the following study routines best matches the practice the author recommends?"
+    },
+    {
+     "id": "R02-A-08-4",
+     "type": "RC",
+     "options": {
+      "A": "Students who reread a passage felt more confident about a coming test than those who practised recall, although they went on to remember less.",
+      "B": "Students who sat a high-stakes examination reported feeling more anxious than students who practised recall at home with their books closed.",
+      "C": "Students who received feedback after attempting recall remembered more a week later than students who attempted recall without any feedback.",
+      "D": "Students who answered recall questions in an informal, ungraded session remembered no more a week later than those who reread, while students who answered the same questions under formal examination conditions remembered much more."
+     },
+     "question": "Which of the following, if true, would most weaken the author's claim that what strengthens memory is 'the effort of retrieval, not the apparatus of examination'?"
+    },
+    {
+     "id": "R02-A-08-5",
+     "type": "RC",
+     "options": {
+      "A": "The benefit of retrieval practice may fail to appear in a test given only a few minutes after study.",
+      "B": "A learner's confidence at the end of a study session can be a misleading guide to what the session achieved.",
+      "C": "Students who are left to choose their own method of study will seldom choose to practise recall.",
+      "D": "Attempting to recall material benefits memory only when the learner succeeds in producing the right answer."
+     },
+     "question": "The author would agree with each of the following statements EXCEPT:"
+    }
+   ]
+  },
+  {
+   "passage_id": "R04-A-08",
+   "passage": [
+    "Few moral injunctions are now repeated with more confidence than the injunction to remember. After a civil war, a dictatorship or a period of communal violence, it is taken almost for granted that the truth must be told, the dead named and the guilty identified, and that a society which declines to do so is building its future on a lie. The case for this view is strong, and nothing that follows is meant to deny it. Those who suffered have a claim to be believed, and a society that teaches its children a false account of its own recent past does them a lasting harm. But the view carries an assumption that deserves examination: that remembering, in public and in detail, is always what allows former enemies to go on living side by side.",
+    "The historical record is less obliging than the injunction. A number of societies, ancient and modern, have made peace by agreeing, in one form or another, not to reopen the wrongs of the conflict just ended. Such agreements are often described as attempts at forgetting, but the description is misleading. No decree can make people forget what they suffered or what they did, and none of these arrangements tried to. What they established was something narrower: a rule about the public use of the past. Past crimes would not be prosecuted, or not beyond a certain point; old grievances would not be made the basis of political campaigns; the question of who had done what to whom would, for a time, be kept out of the courts and the assemblies, even as it continued to be remembered in kitchens and graveyards.",
+    "Whether such a rule is wise seems to depend less on the principle involved than on timing. In the first years after a conflict, when the losing side still has the means to fight and the institutions of the new order are fragile, a full public reckoning may reopen the war it is meant to close, and the people most likely to pay for that are the ones a reckoning was supposed to vindicate. A generation later, the balance may look quite different. The armed men have grown old, the institutions have settled, and the children of those who suffered may reasonably ask why the silence that once protected the peace should still protect those who did the harm.",
+    "For the costs of silence do not fall evenly. The perpetrator who is spared prosecution gains something definite; the victim who is asked not to speak of what was done gives something up, and is often asked to do so by people who lost far less. A peace that rests indefinitely on such an asymmetry is unlikely to remain a peace in any full sense. It may endure as an arrangement while decaying as a settlement, leaving resentments that later politicians find all too easy to exploit.",
+    "The upshot is that agreed silence should be judged neither as a betrayal of memory nor as a model of wisdom, but as a provisional arrangement whose legitimacy depends on what happens to it later. A silence that a society chooses, and later chooses to break, may have served both peace and justice in their turn. The worst outcome is not silence as such but a silence that becomes permanent by default, that no one ever decides to keep, and that is mistaken, by those who benefit from it, for a consensus that was never actually reached."
+   ],
+   "questions": [
+    {
+     "id": "R04-A-08-1",
+     "type": "RC",
+     "options": {
+      "A": "a limit on how past wrongs could be used in courts and in political life.",
+      "B": "a ban on private remembrance of the dead in homes, kitchens and graveyards.",
+      "C": "a requirement that citizens put the events of the conflict out of their minds.",
+      "D": "a public record naming those responsible for the worst crimes of the conflict."
+     },
+     "question": "According to the passage, what the peace agreements described in paragraph 2 actually established was"
+    },
+    {
+     "id": "R04-A-08-2",
+     "type": "RC",
+     "options": {
+      "A": "would accept a temporary silence if they were shown that it had preserved the peace.",
+      "B": "take for granted that detailed public remembering always helps former enemies to live together.",
+      "C": "generally belong to the side that lost the conflict and wish to see the victors punished.",
+      "D": "are mistaken in thinking that the truth about past crimes has any moral importance."
+     },
+     "question": "The passage implies that those who treat remembrance as an unqualified duty after a conflict"
+    },
+    {
+     "id": "R04-A-08-3",
+     "type": "RC",
+     "options": {
+      "A": "It offers historical examples of societies that made peace by agreeing not to prosecute those responsible for the conflict.",
+      "B": "It argues that the case for agreed silence turns on timing, being strongest soon after a conflict and weaker a generation on.",
+      "C": "It explains why the victims of a conflict, rather than its perpetrators, bear most of the cost of an agreed public silence.",
+      "D": "It shows that full public reckoning after a conflict has always reopened the war that it was intended to bring to an end."
+     },
+     "question": "Which of the following best describes the role of paragraph 3 in the argument of the passage?"
+    },
+    {
+     "id": "R04-A-08-4",
+     "type": "RC",
+     "options": {
+      "A": "acceptable only if opening the records were certain to lead to the prosecution of every surviving perpetrator of the war.",
+      "B": "justified, because an agreed silence that has kept the peace for thirty years ought to be preserved for as long as possible.",
+      "C": "the predictable result of a mistake made at the start, since the records should never have been sealed in the first place.",
+      "D": "mistaken, since the amnesty was justified as a provisional arrangement and the conditions that once supported it have largely passed."
+     },
+     "question": "Thirty years after a civil war ended in an amnesty, the country's institutions are stable and the former combatants are elderly. The grandchildren of victims ask for the sealed records of the war to be opened, and the government refuses, saying that the peace was built on silence. The author would most likely regard the refusal as"
+    },
+    {
+     "id": "R04-A-08-5",
+     "type": "RC",
+     "options": {
+      "A": "any silence is acceptable, however long it lasts, provided that every party to the conflict agreed to it at the outset.",
+      "B": "whether a silence is acceptable depends partly on its remaining a deliberate and revisable choice rather than an unexamined habit.",
+      "C": "the passing of the generation that fought a conflict automatically brings to an end any justification for continued silence.",
+      "D": "a permanent silence is a worse outcome for a society than the renewed conflict that might follow a full public reckoning."
+     },
+     "question": "The author's claim that the worst outcome is 'a silence that becomes permanent by default' implies that"
+    }
+   ]
+  },
+  {
+   "passage_id": "R08-A-07",
+   "passage": [
+    "It has become a commonplace that the metaphors buried in ordinary speech reveal the structure of ordinary thought. We speak of arguments as if they were battles, defending positions, attacking weak points, winning or losing; we speak of time as if it were space, with deadlines approaching, holidays behind us and the future ahead. On the view that has made this observation famous, such expressions are not decorations added to a literal meaning but the surface of deep conceptual mappings, in which one domain of experience is understood in terms of another. We do not merely talk about argument as war; to a large extent, it is claimed, we think about it that way, and we would argue differently if our language had taught us to think of it as, say, a dance.",
+    "The opposing view is equally simple. Most of these expressions, it holds, are dead metaphors, idioms whose figurative origin is no longer felt by anyone who uses them. A speaker who says that a table has legs is not thereby thinking of the table as an animal, and a speaker who defends a position need not have soldiers anywhere in mind. On this account, inferring a mental mapping from a pattern of idioms is like inferring a belief in sorcery from the fact that people say 'bless you' after a sneeze: the history of an expression is mistaken for its present psychology.",
+    "Each view, I think, gets one thing right and one thing wrong. The sceptic is right that the evidence most often cited for the mapping view is weaker than it looks. If the existence of the mapping is inferred from the expressions, and the expressions are then explained by the mapping, the argument has gone round in a circle; the sheer number of warlike expressions for argument cannot by itself show that anything in the mind corresponds to them. But the sceptic is wrong to treat these expressions as a collection of fossils. Dead metaphors are inert: one cannot extend the legs of a table into talk of its knees or its gait and expect to be understood. The metaphors of argument and time are not inert in this way. A speaker who says that her opponent's case was all ammunition and no target, or that next week is already breathing down our necks, may be using a phrase she has never heard, and she is understood at once. Something is generating these extensions, and a list of frozen idioms cannot be it.",
+    "Productivity, then, rather than frequency, is the better test of whether a metaphor is alive, and by that test many everyday metaphors are alive, at least in the sense that speakers can use them as patterns for making and understanding new expressions. That is a real result, and it is more than the sceptic allows. It is also less than the mapping view claims. To show that a pattern is available for making expressions is not to show that it governs how people reason when they are not speaking, still less that a different language would leave them reasoning differently. Those further claims are empirical, and they can be settled only by evidence that does not itself consist of the very expressions in question: by watching how people solve problems, judge situations or remember events, and asking whether the metaphor leaves its mark there.",
+    "The debate has often been conducted as though one had to choose between seeing language as a window onto thought and seeing it as a heap of dead habits. The more modest position is less exciting but easier to defend: our metaphors are living tools of expression, and their influence on thought beyond expression is an open question that the metaphors themselves cannot answer."
+   ],
+   "questions": [
+    {
+     "id": "R08-A-07-1",
+     "type": "RC",
+     "options": {
+      "A": "A dead metaphor is used far less often in ordinary speech than a living one.",
+      "B": "A dead metaphor cannot be extended into new expressions that listeners readily understand.",
+      "C": "A dead metaphor no longer shapes the way speakers reason about the subject.",
+      "D": "A dead metaphor comes from an older stage of the language than a living one."
+     },
+     "question": "According to the passage, what marks a dead metaphor off from a living one?"
+    },
+    {
+     "id": "R08-A-07-2",
+     "type": "RC",
+     "options": {
+      "A": "Ordinary metaphors are the surface of deep conceptual mappings that determine how speakers reason about the world.",
+      "B": "Ordinary metaphors are alive as patterns of expression, but whether they shape thought beyond speech needs other evidence.",
+      "C": "Ordinary metaphors can never be shown to influence thought, because every piece of relevant evidence is linguistic.",
+      "D": "Ordinary metaphors are fossils whose origins say nothing about what their users think or mean today."
+     },
+     "question": "Which of the following best expresses the central claim of the passage?"
+    },
+    {
+     "id": "R08-A-07-3",
+     "type": "RC",
+     "options": {
+      "A": "Studies of how people solve problems are beside the point, since the debate is at bottom a question about language.",
+      "B": "Because the metaphors of time are productive, they must influence the way speakers remember past events.",
+      "C": "Finding that speakers readily coin new warlike phrases about argument would not show they argue more combatively as a result.",
+      "D": "The mapping view should be abandoned, because most of the expressions it relies on turn out to be frozen idioms."
+     },
+     "question": "The author would most likely agree with which of the following?"
+    },
+    {
+     "id": "R08-A-07-4",
+     "type": "RC",
+     "options": {
+      "A": "Asked silently to arrange pictures of events in order, people placed earlier events on the side their language calls the past.",
+      "B": "Asked to invent new expressions about time, speakers produced spatial ones far more often than any other kind.",
+      "C": "A large survey found that spatial expressions for time outnumber all other kinds in every language examined.",
+      "D": "Asked about their own speech, most speakers said they did not picture space when talking about deadlines."
+     },
+     "question": "Which of the following findings, if true, would supply the kind of evidence the author says is needed to support the mapping view's stronger claims?"
+    },
+    {
+     "id": "R08-A-07-5",
+     "type": "RC",
+     "options": {
+      "A": "can serve speakers as patterns for forming and understanding new expressions, whatever their effect on reasoning.",
+      "B": "occur in ordinary speech more often than the dead metaphors that speakers no longer notice.",
+      "C": "are still felt by speakers as figurative, so that their origin is present to mind whenever used.",
+      "D": "govern how speakers reason about argument and time even when they are not speaking at all."
+     },
+     "question": "In paragraph 4, the author's claim that many everyday metaphors are 'alive' means that they"
+    }
+   ]
+  },
+  {
+   "passage_id": "R02-E-07",
+   "passage": [
+    "In most human groups some people are listened to more than others, get their way more often and receive a larger share of whatever the group values. Students of status have long suspected that this single word conceals two different arrangements. In one, a person rises because others fear him: he can hurt them, withhold what they need or make their lives difficult, and they defer in order to avoid those costs. In the other, a person rises because others want something from him that he gives freely, usually knowledge or skill, and they defer in order to stay close enough to learn. The first route is commonly called dominance and the second prestige, and an influential line of thought in evolutionary anthropology holds that the second is a distinctively human addition to an older primate inheritance.",
+    "The argument for that view rests on the peculiar importance of cultural learning in our species. A creature that acquires most of its survival skills by copying others faces a constant problem of whom to copy, and a strong incentive to secure access to the best models. Deference, on this account, is a kind of payment: the learner offers attention, praise, small services and a willingness to yield in disputes, and in return is tolerated at the elbow of the skilled. If the account is right, it explains why prestige is freely conferred rather than extracted, why prestigious people are approached rather than avoided, and why we find ourselves imitating not only what admired people do well but much else about them besides.",
+    "That last consequence deserves more attention than it usually receives, because it shows that prestige is not simply the benign twin of dominance. Imitation guided by prestige is broad and indiscriminate. A learner cannot always tell which of a successful person's habits are responsible for the success, and so tends to copy a bundle of them: the method, but also the dress, the opinions and the manner of speech. In a small community this overspill is cheap and may even be useful, since the bundle often travels together for good reasons. In a large society with mass media, it allows people who are prestigious in one domain to exert influence far outside it, and the deference they receive bears no relation to any competence they have in the matters on which they are now heeded.",
+    "There is a further complication. The two routes are clean in theory and tangled in practice. A person who gains prestige acquires allies, resources and a following, and these are exactly the instruments with which dominance is exercised; prestige can thus be converted into the power to coerce, and the conversion is not always visible to those who continue to admire. Conversely, a dominant figure may cultivate the outward marks of prestige, surrounding himself with displays of learning or generosity that make submission feel like admiration. Observers who ask simply whether a leader is feared or respected will often find that the honest answer is both.",
+    "None of this undermines the distinction; it is precisely because the two routes can be told apart in principle that their mixture in practice becomes something to look for. What it undermines is the comfortable assumption that a society which replaces dominance with prestige has thereby solved the problem of status. Prestige allocates influence according to perceived excellence, and perception can be managed. The practical question for any institution is therefore not whether it rewards prestige rather than force, which most modern institutions at least claim to do, but whether it keeps the deference people receive tied to the domain in which they have actually earned it."
+   ],
+   "questions": [
+    {
+     "id": "R02-E-07-1",
+     "type": "RC",
+     "options": {
+      "A": "a payment that learners make in return for being allowed close to those with skill.",
+      "B": "extracted by skilled people who threaten to withhold their knowledge from anyone who refuses it.",
+      "C": "a sign that learners have already mastered the skills of the person they defer to and wish to show it.",
+      "D": "an inheritance shared with other primates that predates the human reliance on cultural learning."
+     },
+     "question": "On the cultural-learning account described in paragraph 2, deference to prestigious people is"
+    },
+    {
+     "id": "R02-E-07-2",
+     "type": "RC",
+     "options": {
+      "A": "the conversion of a prestigious person's following into allies and resources that can be used to coerce.",
+      "B": "the surplus of deference that a prestigious person receives over and above what his real skill would justify.",
+      "C": "the spread of a skilled person's methods to more learners than he could ever teach directly in person.",
+      "D": "learners copying traits of an admired person that have nothing to do with the skill for which the person is admired."
+     },
+     "question": "As used in paragraph 3, 'overspill' refers to"
+    },
+    {
+     "id": "R02-E-07-3",
+     "type": "RC",
+     "options": {
+      "A": "people in small communities defer to skilled individuals far less than people living in large societies do.",
+      "B": "prestigious people in small communities are seldom able to convert their following into the power to coerce.",
+      "C": "learners in small communities can always tell which of a successful person's habits are responsible for the success.",
+      "D": "the habits that accompany a person's skill there are more likely to be connected with it for good reasons."
+     },
+     "question": "The passage suggests that indiscriminate imitation is less costly in a small community chiefly because"
+    },
+    {
+     "id": "R02-E-07-4",
+     "type": "RC",
+     "options": {
+      "A": "A famous athlete's opinions on diet and politics are widely adopted by fans who know nothing of his views on either subject beyond his fame.",
+      "B": "A scholar admired for her research uses the loyalty of her many students to block the appointment of critics, while her admirers see only her brilliance.",
+      "C": "A factory manager who threatens to dismiss workers is obeyed promptly, although the workers neither admire him nor try to learn from him.",
+      "D": "A young musician copies her teacher's practice routine and posture and becomes noticeably better at playing her instrument as a result."
+     },
+     "question": "Which of the following situations best illustrates the complication the author describes in paragraph 4?"
+    },
+    {
+     "id": "R02-E-07-5",
+     "type": "RC",
+     "options": {
+      "A": "defend the cultural-learning explanation of prestige against the objection that prestige is merely dominance in a more respectable disguise.",
+      "B": "argue that modern institutions, by rewarding prestige rather than force, have largely solved the problem of how status is distributed.",
+      "C": "show that the distinction between dominance and prestige breaks down in practice and should therefore be abandoned by students of status.",
+      "D": "accept that status can rest on fear or on freely given deference, while showing that prestige has hazards of its own and mixes with dominance."
+     },
+     "question": "The primary purpose of the passage is to"
+    }
+   ]
+  },
+  {
+   "passage_id": "R04-B-03",
+   "passage": [
+    "In the decades after the British Empire abolished slavery in the 1830s, sugar planters in colonies such as Mauritius, Trinidad and British Guiana, and later Fiji, turned to a different source of labour: indentured workers, most of them recruited in India, who signed contracts binding them to an estate for a fixed term of years. Ever since, the system has been argued over in terms set by the institution it replaced. Its critics have called it slavery under a new name; its defenders, at the time and since, have insisted that it was a form of voluntary migration, entered into by contract and ended by the contract's expiry. Each side treats the question as one of classification, as though the decisive task were to place indenture on the correct side of the line between slave and free.",
+    "There are good reasons to resist the first classification. Indentured workers were not property. They could not be sold, their children did not inherit their status, and at the end of the term many returned home, while others stayed, bought land and built communities whose descendants remain in those countries today. To call this slavery is to lose sight of what was specifically terrible about slavery, and it risks erasing the choices, however constrained, that migrants made. But the second classification fares no better. Recruits were often misled about the work and the wages that awaited them; many were illiterate and signed documents they could not read; and once on the estate they found that the contract, far from protecting them, was the instrument of their confinement.",
+    "This last point is the one that both classifications miss. Colonial labour laws typically made it a criminal offence, not merely a breach of contract, for an indentured worker to be absent from work, to leave the estate without a pass, or to refuse a task. A worker who walked away could be arrested, fined or imprisoned, and the time spent in prison might be added to the term he owed. The coercion, in other words, did not stand outside the contract and contradict it; it was written into the contract and enforced by courts. The language of free agreement and the reality of compulsion were not opposed but fused.",
+    "Seen this way, indenture is less a halfway house between slavery and freedom than a demonstration that the line between them was never as clean as abolitionists hoped. The abolition of property in persons did not by itself abolish compulsion; it moved compulsion into the law of contract, where it could be presented as the free choice of the person compelled. That is a lesson with uses beyond the nineteenth century. Wherever a worker's right to leave a job is restricted by debt, by the confiscation of documents or by a visa tied to a single employer, the question worth asking is not whether a contract exists, but what the contract permits others to do to the person who signed it."
+   ],
+   "questions": [
+    {
+     "id": "R04-B-03-1",
+     "type": "RC",
+     "options": {
+      "A": "They could not be sold, and their status was not passed on to their children.",
+      "B": "They were paid wages equal to those earned by free workers in the same colonies.",
+      "C": "They were protected by the colonial courts from criminal penalties for absence from work.",
+      "D": "They were free to leave the estate whenever the work was not as they had been promised."
+     },
+     "question": "According to the passage, which of the following distinguished indentured workers from slaves?"
+    },
+    {
+     "id": "R04-B-03-2",
+     "type": "RC",
+     "options": {
+      "A": "a safeguard that, though imperfect, limited the power that planters could exercise over their workers.",
+      "B": "evidence that coercion operated through the contract itself rather than in spite of it.",
+      "C": "the main reason that most indentured workers chose to return home when their terms had ended.",
+      "D": "a departure from the contracts, which on paper had guaranteed workers the freedom to leave when they wished."
+     },
+     "question": "It can be inferred from paragraph 3 that the author regards the enforcement of indenture contracts by the courts as"
+    },
+    {
+     "id": "R04-B-03-3",
+     "type": "RC",
+     "options": {
+      "A": "A volunteer who works unpaid for a charity on weekends without having signed any written agreement at all.",
+      "B": "A worker who is paid less than the contract promised but remains free to resign and look for other work at any time.",
+      "C": "A freelance designer who loses a client after missing a deadline that was set out in the signed contract.",
+      "D": "A farm worker whose employer lent the recruitment fee and who may not change jobs until the loan, deducted from wages, is repaid."
+     },
+     "question": "Which of the following present-day arrangements would the author regard as most clearly raising the question posed at the end of the passage?"
+    },
+    {
+     "id": "R04-B-03-4",
+     "type": "RC",
+     "options": {
+      "A": "It sets aside two opposed ways of classifying a system, identifies a feature both overlook, and draws a wider lesson from it.",
+      "B": "It narrates the history of a labour system from its origins to its abolition and then assesses its economic consequences.",
+      "C": "It defends one of two opposing classifications of a system against objections and then applies it to present-day migration.",
+      "D": "It concedes that a system amounted to slavery and then argues that its contractual form made it less harsh than slavery."
+     },
+     "question": "Which of the following best describes the structure of the argument in the passage?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R06-D-08",
+   "passage": [
+    "Physicists have long remarked that several of the numbers fixing the behaviour of matter seem oddly well suited to the existence of anything as complicated as a living thing. Were certain forces a little stronger or a little weaker, the argument runs, stars would burn out too quickly or never ignite, atoms heavier than hydrogen would be scarce, and chemistry would offer nothing as intricate as a cell. How tightly these numbers are really constrained is debated, and some claims of extreme precision have not survived scrutiny. Enough of the pattern has held up, however, to pose a question: why should the constants of nature fall within the narrow ranges that permit observers to exist at all?",
+    "One family of answers appeals to what is usually called anthropic reasoning. Its modest form makes a point that sounds almost too obvious to state: whatever we observe must be compatible with our being there to observe it. We should not be astonished to find ourselves on a planet with liquid water and a tolerable climate, since observers could hardly have arisen anywhere else; to treat our surroundings as a fair sample of the cosmos would be like concluding that a town's residents are unusually fit because everyone one has met there was met at the swimming pool. In this form the principle is not a theory of anything. It is a warning about bias, and as a warning it is both correct and useful.",
+    "The difficulty begins when the same reasoning is asked to explain the constants themselves. Consider a lottery. A winner who learns that millions of tickets were sold need suspect nothing: someone had to win, and the winner is simply whoever did. But if only one ticket was ever printed and it won, the winner's existence explains nothing about why that ticket was drawn; it guarantees only that, had it not been, there would be no winner left to wonder. A selection effect does explanatory work only when there are many draws among which selection can operate. Applied to the cosmos, anthropic reasoning dissolves the puzzle of fine tuning only if there are many universes, or many regions of one, in which the constants take different values, and we necessarily find ourselves in one of the hospitable few.",
+    "Defenders of the approach reply that such an ensemble is not invented for the purpose. Some cosmological theories, developed to address quite different problems, appear to imply a vast number of regions with differing properties, and if those theories are right, the anthropic explanation comes, so to speak, free of charge. The reply has force, but it shifts the burden rather than lifting it. The explanation is now exactly as good as the theory that supplies the ensemble, and since the other regions are, on most versions, unobservable in principle, the evidence for that theory must come from somewhere else. Anthropic reasoning cannot certify its own premise.",
+    "None of this shows that the approach is unscientific, a charge often levelled against it with more heat than precision. Selection effects are a respectable part of reasoning in every empirical science, and ignoring them produces errors as surely as overrating them does. The narrower lesson is that the modest principle and the ambitious one are different claims and should not borrow each other's credibility. The first is nearly beyond dispute and explains almost nothing on its own; the second would explain a great deal, but only on a condition that the principle itself is powerless to establish."
+   ],
+   "questions": [
+    {
+     "id": "R06-D-08-1",
+     "type": "RC",
+     "options": {
+      "A": "how the ambitious form of anthropic reasoning accounts for the fine tuning of physical constants.",
+      "B": "how conclusions drawn from a sample selected by the conditions of observation can mislead.",
+      "C": "why living things are more likely to arise on some planets than on others in the same system.",
+      "D": "the claim that the constants of nature fall within narrow ranges that permit observers to exist."
+     },
+     "question": "The comparison with the swimming pool in paragraph 2 is used to illustrate"
+    },
+    {
+     "id": "R06-D-08-2",
+     "type": "RC",
+     "options": {
+      "A": "the constants permitted observers to exist only within some very narrow range of values.",
+      "B": "the other regions of a large ensemble turned out to be unobservable to us in principle.",
+      "C": "ours were the only universe there is, with its constants fixed once and for all.",
+      "D": "a great many universes existed whose constants differed from ours, most of them hostile to life."
+     },
+     "question": "It can be inferred from the lottery example that, in the author's view, the existence of observers would explain nothing about the constants if"
+    },
+    {
+     "id": "R06-D-08-3",
+     "type": "RC",
+     "options": {
+      "A": "Anthropic reasoning is unscientific, since the many universes it relies on can never be observed.",
+      "B": "The modest form of anthropic reasoning is a correct and useful warning about a bias in what we observe.",
+      "C": "Some claims that the constants of nature are set with extreme precision have not held up under examination.",
+      "D": "Selection effects belong to sound reasoning in the empirical sciences, and neglecting them leads to error."
+     },
+     "question": "The author would agree with each of the following statements EXCEPT"
+    },
+    {
+     "id": "R06-D-08-4",
+     "type": "RC",
+     "options": {
+      "A": "anthropic reasoning is circular and therefore can never form any part of a good scientific explanation of the constants of nature.",
+      "B": "the cosmological theories that imply many regions were devised only in order to rescue anthropic reasoning.",
+      "C": "the varied ensemble on which the ambitious explanation depends needs support from evidence other than the fact that we exist.",
+      "D": "the modest principle cannot be shown to be true, because its truth would depend on the existence of observers."
+     },
+     "question": "The statement at the end of paragraph 4 that 'Anthropic reasoning cannot certify its own premise' means that"
+    },
+    {
+     "id": "R06-D-08-5",
+     "type": "RC",
+     "options": {
+      "A": "The modest form of anthropic reasoning is an empty truism, while the ambitious form is speculation that has no place in science.",
+      "B": "Reasoning from our existence rightly corrects for bias, but it explains fine tuning only given a varied ensemble that it cannot itself establish.",
+      "C": "The apparent fine tuning of the constants is largely an illusion, produced by selection effects that physicists have so far failed to take into account.",
+      "D": "Anthropic reasoning explains fine tuning wherever many regions exist, and current cosmological theories have now shown that such regions exist."
+     },
+     "question": "Which of the following best expresses the central argument of the passage?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R05-B-02",
+   "passage": [
+    "Few proposals in development policy provoke as reliable a reaction as giving poor households money with no strings attached. The objection usually arrives before the argument has been heard: the money will be drunk, gambled or otherwise wasted. It is worth noticing how rarely this suspicion is applied to other recipients of public money: pensioners are not asked to show receipts, and a tax refund arrives without an accompanying lecture on how it ought to be spent. The worry is reserved for people whose poverty is taken, often without anyone saying so, as evidence that they cannot be trusted with choices.",
+    "The suspicion has been tested more often than its persistence would suggest. Evaluations of cash programmes in a range of poor countries have generally found little sign that recipients increase their spending on alcohol or tobacco, and many have found the money going to food, school costs, livestock, tools and the repair of homes. This should not be surprising, since a household living close to the margin knows its own most pressing constraint far better than an official in a distant ministry, and the constraint differs from one family to the next: a roof for one, a debt for another, a sewing machine for a third. A transfer in kind, or one tied to a particular use, has to guess, and it guesses the same thing for everyone.",
+    "None of this makes conditions pointless. Where the aim is a specific behaviour whose benefits fall partly on others, or arrive too late to weigh heavily with a hard-pressed parent, such as keeping a daughter in school or bringing an infant for vaccination, a condition can do work that cash alone may not. And in remote places where markets are thin, a sudden injection of money can push up the prices of the few goods available rather than raising what people can actually buy. These are genuine qualifications, and a careful designer of programmes will take them seriously; but they are reasons for attaching conditions in particular cases, argued on their merits, not grounds for a general presumption that the poor will misuse what they are given.",
+    "The practical upshot is a reversal of the burden of proof. The default should be cash, and anyone proposing to restrict its use should have to show what the restriction achieves and what it costs, including the cost of monitoring and the quieter cost of telling adults that they are not trusted. Paternalism is sometimes justified, and there will be programmes in which the case for it can be made convincingly; it should not, however, be the starting assumption."
+   ],
+   "questions": [
+    {
+     "id": "R05-B-02-1",
+     "type": "RC",
+     "options": {
+      "A": "argue that cash transfers to the poor should be paid through the same offices that administer pensions.",
+      "B": "show that the fear of misuse is applied selectively to the poor rather than to everyone who receives public money.",
+      "C": "demonstrate that almost all public spending is already unconditional, so that conditions are rare in practice.",
+      "D": "suggest that pensions and tax refunds are themselves frequently wasted, so that the poor are no worse than others."
+     },
+     "question": "The references to pensioners and tax refunds in paragraph 1 serve mainly to"
+    },
+    {
+     "id": "R05-B-02-2",
+     "type": "RC",
+     "options": {
+      "A": "are designed by officials who are, as a rule, indifferent to what poor households actually need.",
+      "B": "are usually resold by recipients at a loss, so that much of their value disappears before it is used.",
+      "C": "cost more to deliver than cash in remote places, where transport and storage of goods are expensive.",
+      "D": "apply one assumption about need to households whose most pressing needs differ from one another."
+     },
+     "question": "It can be inferred that the author considers transfers in kind inferior to cash chiefly because they"
+    },
+    {
+     "id": "R05-B-02-3",
+     "type": "RC",
+     "options": {
+      "A": "contemptuous, dismissing anyone who holds the presumption as acting in bad faith towards the poor.",
+      "B": "approving, since the presumption protects public money from being wasted on drink and gambling.",
+      "C": "neutral, presenting it as one reasonable position among several without taking a side on the question.",
+      "D": "sceptical, treating it as a suspicion that the evidence has largely failed to bear out."
+     },
+     "question": "The author's attitude towards the general presumption that poor people will misuse cash is best described as"
+    },
+    {
+     "id": "R05-B-02-4",
+     "type": "RC",
+     "options": {
+      "A": "In a few remote villages, cash transfers raised local prices because traders could not bring in more goods quickly.",
+      "B": "In several programmes, nearly all households spent their cash on the same few items that a standard bundle in kind would have supplied.",
+      "C": "Some households in cash programmes spent part of the money on livestock or tools rather than on food for the family.",
+      "D": "Pensioners in richer countries spend a larger share of their income on alcohol than recipients of cash transfers do."
+     },
+     "question": "Which of the following, if true, would most weaken the reasoning in paragraph 2 for preferring cash to transfers in kind?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R04-B-05",
+   "passage": [
+    "Few images of empire are as familiar as that of European diplomats bent over a map of Africa, ruler in hand, dividing a continent they had barely visited. The image is usually summoned to explain why so many of the continent's borders run in straight lines, and why so many of its states have struggled: the borders, it is said, were artificial, cutting across peoples and lumping together others who had nothing in common, and the conflicts of the post-colonial era are their bitter harvest. The story has the merit of placing responsibility where much of it belongs. As an explanation, however, it is weaker than its popularity suggests.",
+    "Begin with the image itself. The conference held in Berlin in 1884 and 1885 is often remembered as the moment of partition, but it chiefly agreed on rules by which European powers would recognise one another's claims. Most actual boundaries were settled afterwards, over decades, through bilateral treaties, exchanges of territory and survey commissions, and many of them followed rivers, watersheds or the limits of existing polities rather than lines of latitude. The straight lines are real, but they cluster in deserts and thinly populated regions, where they divided relatively few people.",
+    "More fundamentally, the charge of artificiality proves too much. Every border is artificial in the sense that people drew it, and many of the borders of Europe were fixed by wars, dynastic marriages and peace conferences no more attentive to local wishes than any colonial commission. If artificial borders caused instability by themselves, much of the world would be permanently at war. Nor is it obvious what a natural border would be. Peoples overlap, migrate and intermarry; a line that united one group would divide another. When African states gained independence, their leaders, aware of these difficulties, chose through the Organisation of African Unity to accept the boundaries they had inherited rather than reopen them, judging that an attempt to redraw them would be more dangerous than living with them.",
+    "None of this acquits the colonial powers. Boundaries were indeed drawn without consulting the people they affected, and some did separate communities from their pastures, markets and kin. But the more serious legacy lay inside the lines rather than in their placement: states built for extraction, with administrations designed to collect revenue and keep order rather than to represent, and with ethnic categories hardened by colonial policy into the main currency of politics. To blame the shape of the map is to look at the frame and miss the picture."
+   ],
+   "questions": [
+    {
+     "id": "R04-B-05-1",
+     "type": "RC",
+     "options": {
+      "A": "were drawn at the Berlin conference by diplomats who settled each boundary with a ruler on the map.",
+      "B": "follow rivers, watersheds or the limits of existing states wherever the terrain made this at all possible.",
+      "C": "have caused most of the wars fought between African states in the decades since independence was gained.",
+      "D": "are found mostly in deserts and thinly populated regions, where they divided relatively few people."
+     },
+     "question": "According to the passage, the straight-line borders on the map of Africa"
+    },
+    {
+     "id": "R04-B-05-2",
+     "type": "RC",
+     "options": {
+      "A": "explain why the Organisation of African Unity chose to accept the boundaries that its member states had inherited.",
+      "B": "argue that the borders of Europe were drawn with far more care for local wishes than any colonial boundary was.",
+      "C": "show that the charge of artificiality, if accepted, would equally condemn borders not usually blamed for chronic conflict.",
+      "D": "suggest that African states should redraw their inherited borders by the methods used in European peace conferences."
+     },
+     "question": "The reference to the borders of Europe in paragraph 3 serves to"
+    },
+    {
+     "id": "R04-B-05-3",
+     "type": "RC",
+     "options": {
+      "A": "a considered judgement about the risks of redrawing, not a sign that they thought the borders were well drawn.",
+      "B": "evidence that the colonial borders in fact closely matched the boundaries of the states that existed before conquest.",
+      "C": "a mistake that locked the new states into the conflicts that their artificial borders were bound to produce.",
+      "D": "a condition imposed on the new states by the former colonial powers before they agreed to grant independence."
+     },
+     "question": "It can be inferred that the author regards the decision of post-independence leaders to accept the boundaries they inherited as"
+    },
+    {
+     "id": "R04-B-05-4",
+     "type": "RC",
+     "options": {
+      "A": "Most of the straight-line borders on the continent run through desert regions that had very few permanent inhabitants at the time.",
+      "B": "Among former colonies, later instability tracks how extractive the colonial administration was far more closely than how straight or divisive the borders were.",
+      "C": "Many European borders were also settled at peace conferences that made no attempt to consult the people living near them.",
+      "D": "Several boundaries fixed by survey commissions cut pastoral communities off from the grazing grounds they had always used in the dry season."
+     },
+     "question": "Which of the following, if true, would most strengthen the author's claim about where the more serious colonial legacy lay?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R01-D-06",
+   "passage": [
+    "The case for deciding by majority is usually made on grounds of fairness rather than wisdom. Majorities are not reliably right, but a procedure that counts each vote equally treats each voter as an equal, and no rival procedure seems to do so as well. There is a second, less often stated part of the case. Majority rule is tolerable to those who lose because losing is expected to be temporary. Today's minority may be tomorrow's majority, since coalitions shift as issues change, and a citizen who is outvoted on one question can reasonably expect to be on the winning side of another. Over time, the losses are spread around.",
+    "This second condition does not always hold. When the issues that matter most to people line up with a stable division in the society, by language, region or ancestry, for instance, the same group may find itself outvoted on question after question for generations. Its members cast their votes, and their votes are counted equally, but the counting never changes the result. Formal equality at the ballot box then coexists with something very like permanent exclusion. To tell such a minority that it has been treated fairly because each of its votes weighed as much as anyone else's is to mistake the form of fairness for its substance.",
+    "Various remedies have been proposed: requirements of supermajorities for certain decisions, the devolution of some powers to regions where the minority is concentrated, electoral systems that give smaller groups a share of seats, and constitutional rights that no majority may override. Each has costs. Supermajority rules protect minorities by making change difficult, which also protects whatever injustices the status quo contains. Devolution can create new minorities within the regions it empowers. Entrenched rights shift power from elected bodies to courts, whose members the minority usually has no means of holding to account.",
+    "None of these costs settles the matter, but together they suggest that the problem should be framed differently. The persistent minority is not evidence that majority rule is unjust in itself. It is evidence that one of the conditions under which majority rule is fair has failed. The aim of a remedy, accordingly, should be to restore that condition where possible, for example by encouraging cross-cutting associations that loosen the grip of a single division on political life, rather than to replace majority rule with a different principle of decision. Where the condition cannot be restored, stronger protections may be needed, but they should be understood as repairs to a damaged procedure, not as a rival theory of legitimacy."
+   ],
+   "questions": [
+    {
+     "id": "R01-D-06-1",
+     "type": "RC",
+     "options": {
+      "A": "minorities can always appeal to independent courts to protect the interests that matter most to them.",
+      "B": "counting every vote equally is the only procedure that can treat each voter as the equal of every other.",
+      "C": "majorities are more likely than minorities to reach the correct answer on most questions of public policy.",
+      "D": "those outvoted on one question can expect to win on others, because coalitions shift as issues change."
+     },
+     "question": "According to the passage, the second, 'less often stated' part of the case for majority rule is that"
+    },
+    {
+     "id": "R01-D-06-2",
+     "type": "RC",
+     "options": {
+      "A": "guarantee smaller groups a fixed share of the seats in the national legislature and in regional bodies.",
+      "B": "move decisions about the most contested questions out of elected bodies and into independent courts.",
+      "C": "make it less likely that the same people end up on the losing side of every vote that matters to them.",
+      "D": "persuade members of the majority that decisions reached by counting votes are very often mistaken."
+     },
+     "question": "The passage suggests that encouraging 'cross-cutting associations' would help a persistent minority chiefly because such associations"
+    },
+    {
+     "id": "R01-D-06-3",
+     "type": "RC",
+     "options": {
+      "A": "electoral systems giving smaller groups a share of seats tend to make stable governments harder to form.",
+      "B": "rights that no majority may override transfer power to courts that the minority cannot hold to account.",
+      "C": "rules requiring supermajorities make it harder to change whatever injustices the existing arrangement contains.",
+      "D": "giving regions power over their own affairs can produce new minorities inside those very regions."
+     },
+     "question": "The passage mentions each of the following as a cost of a proposed remedy EXCEPT that"
+    },
+    {
+     "id": "R01-D-06-4",
+     "type": "RC",
+     "options": {
+      "A": "Replacing elections with an arrangement under which the two language communities take turns to hold office.",
+      "B": "Supporting national bodies, such as trade associations and sports leagues, whose members are drawn from both language communities.",
+      "C": "Granting the region where the linguistic minority is concentrated full control over its own internal affairs.",
+      "D": "Requiring a two-thirds majority for all legislation that affects the interests of the linguistic minority in any way."
+     },
+     "question": "In a country whose politics are dominated by a single linguistic division that could, with effort, be loosened, which policy would the author most likely favour first?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R01-F-06",
+   "passage": [
+    "A familiar picture of scientific objectivity confines values to the edges of inquiry. Values may legitimately decide which problems are worth studying and how results are used, but in the central act of science, deciding whether the evidence supports a hypothesis, they are supposed to have no place. A researcher who lets personal hopes affect whether a conclusion is accepted is, on this picture, simply doing bad science, and the remedy is a stricter separation between the laboratory and the world outside it.",
+    "The trouble is that evidence rarely settles a question outright, and so accepting a hypothesis always involves deciding that the evidence is strong enough. How strong is strong enough? Consider a laboratory testing whether an industrial solvent damages the liver. If it wrongly concludes that the solvent is safe, workers may be harmed; if it wrongly concludes that the solvent is dangerous, a useful product may be withdrawn and money wasted. Which error is worse, and therefore how much evidence to demand before declaring the solvent harmful, is not something the data can decide. It depends on how one weighs injured workers against lost revenue, which is a question of value. Two laboratories examining identical data could therefore set the threshold in different places, and neither would have misread a single measurement.",
+    "A natural reply is that scientists need not accept or reject anything. They could report the probability that the hypothesis is true, given the evidence, and leave the decision to those who must act. The reply is attractive but harder to carry out than it sounds. Before any probability can be reported, the investigators must decide how to classify ambiguous tissue samples, which measurements to discard as faulty and which statistical model to fit, and each of these decisions can err in either direction, with the same uneven consequences. The weighing of errors does not disappear; it moves to a stage where it is less visible.",
+    "It would be a mistake, however, to conclude that anything goes. The argument shows that values can properly bear on how much evidence to require, given what is at stake if one is wrong. It does not show that values can bear on what the evidence is, or license a researcher to discount an inconvenient result because it is unwelcome. The distinction is between setting the bar and moving the evidence, and the integrity of science depends on keeping the two apart, not on pretending that the bar sets itself."
+   ],
+   "questions": [
+    {
+     "id": "R01-F-06-1",
+     "type": "RC",
+     "options": {
+      "A": "refuse to reach any conclusion until the evidence about the solvent leaves no room for any doubt at all.",
+      "B": "report only the cost of withdrawing the solvent and leave every judgement about harm to the firm's managers.",
+      "C": "demand more evidence of harm than usual before declaring the solvent dangerous to the workers who use it.",
+      "D": "be prepared to declare the solvent harmful on less evidence than it would require if both errors seemed equally serious."
+     },
+     "question": "The solvent example implies that a laboratory which judged harm to workers to be far worse than lost revenue should"
+    },
+    {
+     "id": "R01-F-06-2",
+     "type": "RC",
+     "options": {
+      "A": "Teams analysing the same borderline samples classified them differently according to which error they most wanted to avoid, changing the probabilities they reported.",
+      "B": "Probabilities reported by scientists are now usually accompanied by a full statement of the statistical model that was used to obtain them.",
+      "C": "Officials who receive probability estimates from scientists often misread them and, as a result, make poorer decisions than they otherwise would.",
+      "D": "Most of the laboratories that test industrial chemicals are funded, directly or indirectly, by the firms that manufacture those chemicals."
+     },
+     "question": "Which of the following, if true, would most strengthen the author's response in paragraph 3 to the suggestion that scientists simply report probabilities?"
+    },
+    {
+     "id": "R01-F-06-3",
+     "type": "RC",
+     "options": {
+      "A": "It answers the reply in paragraph 3 by showing that probabilities can after all be reported without any judgement of value.",
+      "B": "It introduces a new example in order to show that researchers often discount results that they find unwelcome.",
+      "C": "It concedes that the argument built on the solvent example fails, and restores the picture of objectivity in paragraph 1.",
+      "D": "It limits the conclusion of the argument by separating a proper role for values from an improper one."
+     },
+     "question": "Which of the following best describes the function of the final paragraph?"
+    },
+    {
+     "id": "R01-F-06-4",
+     "type": "RC",
+     "options": {
+      "A": "letting what one wants to be true change how the results themselves are counted or interpreted.",
+      "B": "raising or lowering the amount of evidence required in the light of what is at stake if one errs.",
+      "C": "presenting the evidence to the people who must act instead of accepting or rejecting the hypothesis oneself.",
+      "D": "transferring the weighing of errors to an earlier stage of the research where it is harder to see."
+     },
+     "question": "In the final paragraph, 'moving the evidence' refers to"
+    }
+   ]
+  },
+  {
+   "passage_id": "R03-A-01",
+   "passage": [
+    "For much of the last century, the standard official response to an informal settlement was to remove it. Planners looked at a hillside of self-built houses, narrow lanes and improvised water connections and saw a problem of housing quality, to be solved by demolition and the construction of orderly blocks elsewhere, usually on cheaper land at the edge of the city. The logic seemed humane as well as tidy: people living without drains or secure walls would be given drains and secure walls. That the residents frequently resisted, and that many of the new blocks were half empty within a few years, was read as ingratitude, or as evidence that the poor did not know their own interests.",
+    "A different reading is now more common, and it is more persuasive. An informal settlement is not simply a stock of poor dwellings; it is a working arrangement of livelihoods, and its location is usually its chief asset. A family that sells cooked food near a bus depot, a tailor who takes in work from a nearby market, a mother whose children attend a school within walking distance: all of them chose the site because of what it is close to. Relocation to a distant estate improves the walls while destroying the arrangement. The household may gain a toilet and lose two hours a day to travel, or lose the income that made the new rent payable at all. Seen this way, the empty blocks were not a puzzle but a verdict.",
+    "Upgrading in place starts from this recognition. Instead of replacing the settlement, it adds what is missing: paved lanes, drainage, water and sewer lines, street lighting and, crucially, some form of secure tenure, so that residents can invest in their houses without fearing that the next official survey will mark them for demolition. Because the residents remain where they are, the networks that sustain them survive, and the public money spent goes into infrastructure rather than into reproducing, at great cost and in the wrong place, a community that already existed.",
+    "None of this makes upgrading a universal remedy. Some settlements stand on land that floods every monsoon or slides in heavy rain, and to improve them in place is to invest in a future disaster. Nor is upgrading automatically benign: lanes widened for drainage can require the demolition of some houses, and a programme that installs pipes but withholds tenure leaves residents improved and still insecure. The case for upgrading is therefore not that informal settlements are good as they are, a romantic view their residents rarely share. It is that the people who built them understood something about the city that the planners who wished to clear them did not."
+   ],
+   "questions": [
+    {
+     "id": "R03-A-01-1",
+     "type": "RC",
+     "options": {
+      "A": "show that secure tenure matters more to the residents of informal settlements than drains, water supply or paved lanes.",
+      "B": "explain why planners in the last century preferred to build replacement housing on cheap land at the edge of the city.",
+      "C": "argue that improving informal settlements where they stand generally serves residents better than relocating them, while noting where this approach falls short.",
+      "D": "argue that informal settlements, having been built by their own residents, should be left as they are rather than altered by public authorities."
+     },
+     "question": "The primary purpose of the passage is to"
+    },
+    {
+     "id": "R03-A-01-2",
+     "type": "RC",
+     "options": {
+      "A": "the residents were ungrateful and did not understand which kind of housing would serve their interests best.",
+      "B": "the new blocks lacked the drains and secure walls that the residents had been promised before they agreed to move.",
+      "C": "the land chosen for the estates was prone to flooding and landslides during the heavy rains of the monsoon.",
+      "D": "moving to them cut households off from the work, schools and markets that had made their earlier location valuable."
+     },
+     "question": "According to the passage, the relocation blocks were often half empty within a few years because"
+    },
+    {
+     "id": "R03-A-01-3",
+     "type": "RC",
+     "options": {
+      "A": "a mystery that planners could not explain, even after they had studied the residents' reasons closely.",
+      "B": "a court ruling that later stopped the authorities from clearing further settlements across the city.",
+      "C": "a judgement on relocation that residents delivered by moving out, once the costs of distance are understood.",
+      "D": "an official finding that the new housing had been badly designed and poorly built by the authorities."
+     },
+     "question": "In paragraph 2, the statement that the empty blocks were 'not a puzzle but a verdict' means that the empty blocks were"
+    },
+    {
+     "id": "R03-A-01-4",
+     "type": "RC",
+     "options": {
+      "A": "a romantic attempt to keep the settlement exactly as it was, against the wishes of most of its residents.",
+      "B": "worse than relocation, because improving such a settlement amounts to investing in a future disaster.",
+      "C": "an incomplete improvement, because residents would remain unwilling to invest in houses they might still lose.",
+      "D": "a successful upgrade, because residents stay where they are and the networks that sustain them are preserved."
+     },
+     "question": "The author would most likely describe a programme that paves the lanes and lays sewers in a settlement but gives residents no protection against eviction as"
+    }
+   ]
+  },
+  {
+   "passage_id": "R02-E-06",
+   "passage": [
+    "For a time it was widely believed, among journalists and fact-checkers as much as among researchers, that correcting a false belief could make matters worse. The idea, which came to be called the backfire effect, held that people confronted with evidence against a cherished belief would not merely resist it but cling to the belief more tightly, as though the correction were an attack to be repelled. It had an intuitive appeal: most of us have argued with someone who seemed to grow more certain with every fact we offered. And it carried a discouraging moral. If correction backfires, perhaps it is better not to correct at all.",
+    "Subsequent research has been considerably kinder to correction. Larger studies, with more varied topics and more diverse participants, have generally found that people who receive a factual correction move, on average, towards the accurate view, even when the correction cuts against their political loyalties. Reversal of the kind the early findings described appears to be rare, and some of the original results have proved difficult to reproduce. The more careful conclusion is not that people are perfectly responsive to evidence but that they are responsive to it in the ordinary, imperfect way: they update, though often less than they should.",
+    "It is worth asking why the backfire idea spread so far on so slender a basis. Part of the answer is that it flattered a certain cynicism about the public, and part is that it confused resistance with reversal. Someone who hears a correction and does not change his mind has resisted it; someone who becomes more convinced of the falsehood has reversed. The first is common and unremarkable, since people rarely abandon a belief after a single encounter with contrary evidence. Only the second would justify the conclusion that correcting is counterproductive, and it is the second that the evidence has failed to find with any regularity.",
+    "This does not mean that correction is a cure. Its effects often fade over weeks, so that people drift back towards the belief they were talked out of, and accepting that a particular claim is false does not necessarily change the attitudes the claim was used to support. A voter may concede that a politician's statistic was wrong and still admire the politician exactly as much. These are serious limits, but they are limits of a different kind. They call for corrections that are repeated, that offer an alternative explanation rather than a bare denial, and that are not expected to carry more weight than a single fact can bear. They do not call for silence.",
+    "The history of the backfire effect is thus a small lesson about the life of findings as well as about belief. A striking result, especially one that confirms what people already suspect, can travel much faster than the slower work of checking it, and the effort to correct a mistaken finding meets the same ordinary resistance, though not reversal, that greets any correction."
+   ],
+   "questions": [
+    {
+     "id": "R02-E-06-1",
+     "type": "RC",
+     "options": {
+      "A": "shows that the larger studies described in paragraph 2 were mistaken about how people respond to corrections.",
+      "B": "demonstrates that people are perfectly unresponsive to evidence whenever a belief is tied to their loyalties.",
+      "C": "offers no support for the view that correcting false beliefs is counterproductive.",
+      "D": "is an example of the backfire effect, since the correction has failed to weaken the belief at all."
+     },
+     "question": "It follows from the argument of paragraph 3 that a person who hears a correction and keeps the false belief with unchanged confidence"
+    },
+    {
+     "id": "R02-E-06-2",
+     "type": "RC",
+     "options": {
+      "A": "Avoid mentioning the rumour at all, since drawing attention to it is likely to make residents believe it more firmly.",
+      "B": "Issue one authoritative denial from the council and treat the matter as settled once the statement has been published.",
+      "C": "Repeat the correction over several weeks and explain what actually caused the reports, rather than simply denying the rumour.",
+      "D": "Address the correction only to residents who already doubt the rumour, since firm believers will simply grow more convinced."
+     },
+     "question": "A town council wants to correct a widely believed false rumour that its water supply has been contaminated. Which approach best reflects the passage's recommendations?"
+    },
+    {
+     "id": "R02-E-06-3",
+     "type": "RC",
+     "options": {
+      "A": "turning the passage's distinction on the history of the finding itself, suggesting that its correction meets resistance but not reversal.",
+      "B": "summarising the evidence of paragraph 2 that factual corrections reliably move people towards the accurate view.",
+      "C": "conceding that the backfire effect is real after all, since the mistaken finding has resisted every attempt to correct it.",
+      "D": "introducing new evidence that the original backfire studies were deliberately exaggerated by the researchers who conducted them."
+     },
+     "question": "The final paragraph contributes to the passage chiefly by"
+    },
+    {
+     "id": "R02-E-06-4",
+     "type": "RC",
+     "options": {
+      "A": "Participants who resisted a correction often described the source of the correction as hostile to their political loyalties.",
+      "B": "The effects of corrections typically faded within a few weeks, so that many people returned to the false beliefs they had abandoned.",
+      "C": "Later studies of corrections recruited a wider range of participants and covered more topics than the early studies of backfire did.",
+      "D": "Several early reports of backfire counted as a backfire any case in which participants' beliefs simply failed to move towards the correction."
+     },
+     "question": "Which of the following, if true, would most strengthen the author's claim that the backfire idea 'confused resistance with reversal'?"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,698 @@
+[
+ {
+  "id": "R02-A-03-1",
+  "answer": "C",
+  "working": "P3: confidence and vividness, not accuracy, set them apart; certainty no longer tracks truth.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-A-03-2",
+  "answer": "A",
+  "working": "P2: she concedes the earlier account yet feels her present memory is the true one.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-A-03-3",
+  "answer": "D",
+  "working": "P4 'None of this means strong feeling has no effect' grants central-detail effect, then notes proud details are peripheral.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-A-03-4",
+  "answer": "A",
+  "working": "P4 says vividness and certainty are 'weaker guides than we believe', not 'no indication at all'; B, C, D are stated.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-D-02-1",
+  "answer": "B",
+  "working": "P2: 'resist the urge to compose a reply while the speaker is still in the middle of a sentence'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-D-02-2",
+  "answer": "C",
+  "working": "P2: the meeting is what happens 'when it is done badly'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-D-02-3",
+  "answer": "C",
+  "working": "P4 suggests restating 'might take longer at each step and less time overall'; C directly confirms fewer total hours.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-D-02-4",
+  "answer": "B",
+  "working": "P3: 'There is something to this' plus 'the objection mistakes the purpose' (usefulness to listener).",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-B-08-1",
+  "answer": "C",
+  "working": "P1: record departures from correct answers and infer shortcuts from the pattern of departures.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-B-08-2",
+  "answer": "A",
+  "working": "P2 objects 'not to the findings but to the frame': judging rules against lab logic/probability norms rather than environment.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-B-08-3",
+  "answer": "C",
+  "working": "P2: complex model fits data 'including its accidents' and then predicts new cases worse.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-B-08-4",
+  "answer": "B",
+  "working": "P3: praising frugal heuristics replaces one normative standard with another, not rejecting norms.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-B-08-5",
+  "answer": "A",
+  "working": "P3 'The point is sound'; P4 'overreaches' on minds selecting tools, 'evidence uneven'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-C-07-1",
+  "answer": "D",
+  "working": "P4: psychological portrait 'not the essence of the genre ... but one of its historical forms'; P5 judge by question asked.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-C-07-2",
+  "answer": "B",
+  "working": "P3: 'recognisable enough to attach the role to the right person'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-C-07-3",
+  "answer": "B",
+  "working": "P2: portrait established a position (office, rank) rather than recording personality.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-C-07-4",
+  "answer": "C",
+  "working": "P4: photography took over cheap likenesses, leaving painters free or obliged to offer something else.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-C-07-5",
+  "answer": "A",
+  "working": "P3 'Likeness was not irrelevant'; B, C, D are stated in P5/P2.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-B-02-1",
+  "answer": "A",
+  "working": "P2: 'sometimes the effect appeared, sometimes it vanished, and sometimes larger assortments made people more likely to buy'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-B-02-2",
+  "answer": "D",
+  "working": "P3: what differs is 'whether the chooser has a way of sorting them'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-B-02-3",
+  "answer": "B",
+  "working": "P4: 'Cutting still has its place, particularly when most of the options are poor or nearly identical'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-B-02-4",
+  "answer": "B",
+  "working": "Author's account: structure (sorting, defaults) removes overload; B shows structure gave no relief.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-B-06-1",
+  "answer": "D",
+  "working": "P2: decisions 'beyond reproach'; defect lies upstream in pattern of attention.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-B-06-2",
+  "answer": "D",
+  "working": "Upstream = pattern of attention settled before any choice is considered (P1, P2).",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-B-06-3",
+  "answer": "D",
+  "working": "Objection: noticing is not done at will, so we cannot be blamed; assumes blame only for voluntary matters.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-B-06-4",
+  "answer": "D",
+  "working": "P3: no single lapse is a choice, but attention is shaped over time by things we influence, so answerable.",
+  "confidence": "medium",
+  "alternative": "A is tempting (mirrors P4) but 'consists in ... rather than' overstates 'frequently less a matter of'; not fully defensible.",
+  "issue": ""
+ },
+ {
+  "id": "R08-A-04-1",
+  "answer": "D",
+  "working": "P2-P3 origin settles nothing; P4 etymology 'not thereby made worthless'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-A-04-2",
+  "answer": "C",
+  "working": "P2: the critic does not insist on earlier senses of the other words in his own sentence: selective application.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-A-04-3",
+  "answer": "A",
+  "working": "Inconsistency claim rests on critics not applying origins everywhere; A says they do.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-A-04-4",
+  "answer": "A",
+  "working": "P3: legitimate argument is about present usefulness, e.g. losing a fine distinction; origin-based reasons gain nothing.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-C-08-1",
+  "answer": "C",
+  "working": "P2: screened-out people take benefits without burdens, i.e. members in name only.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-C-08-2",
+  "answer": "D",
+  "working": "P2: 'the value of belonging falls along with its cost' as free riders can enter.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-C-08-3",
+  "answer": "A",
+  "working": "Losing members when demands drop is something the theory explains (P2), not a limitation; B, C, D are the three gaps.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-C-08-4",
+  "answer": "B",
+  "working": "Third gap: practice manufactures commitment; volunteer's loyalty created by costly shifts.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-C-08-5",
+  "answer": "C",
+  "working": "Claim relies on performers' reports that practice changes them ('If that is so') being accurate.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-A-06-1",
+  "answer": "C",
+  "working": "P4: language needs 'a particular kind of learner and a particular kind of crowd'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-A-06-2",
+  "answer": "D",
+  "working": "P3: she lacks others sharing the system and a younger generation to learn it.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-A-06-3",
+  "answer": "D",
+  "working": "Author: children regularise beyond first cohort; D says adults were already as regular, removing the generational step.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-A-06-4",
+  "answer": "B",
+  "working": "P3: regularities amplified by repeated transmission across generations; folk tune matches.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-C-01-1",
+  "answer": "A",
+  "working": "P2 stakes plus lack of control; P4 'judged by what it crowds out'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-C-01-2",
+  "answer": "C",
+  "working": "P2 stated directly.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-C-01-3",
+  "answer": "C",
+  "working": "P3: marks boundary between deliberation and execution, protects execution from second thoughts.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-C-01-4",
+  "answer": "A",
+  "working": "P4: line crossed where ritual displaces action that would improve odds; farmer skips irrigation.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-D-08-1",
+  "answer": "A",
+  "working": "P2: pause 'differs from night to night because the laughter does'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-D-08-2",
+  "answer": "D",
+  "working": "P2: silence of particular quality vs 'restless audience': attention held.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-D-08-3",
+  "answer": "D",
+  "working": "P1: many things present without being valuable for that reason; lecture example.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-D-08-4",
+  "answer": "C",
+  "working": "P4: responsiveness is a capacity a production can use or suppress; C uses it; B suppresses it despite intimacy.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-D-08-5",
+  "answer": "C",
+  "working": "P4: a production can suppress responsiveness entirely; so not every production is responsive. A, B, D agreed.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-A-05-1",
+  "answer": "C",
+  "working": "P1: 'Every causal claim carries such a counterfactual inside it'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-A-05-2",
+  "answer": "C",
+  "working": "P2: horizon must be short; century-long genre 'closer to fiction than to history'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-A-05-3",
+  "answer": "C",
+  "working": "P4: defeating inevitability requires showing an alternative 'open, contemplated and within reach'; C says debated options often were not in reach.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-A-05-4",
+  "answer": "B",
+  "working": "P3: explicit counterfactual offers 'exposure' of assumptions the ordinary explanation leaves unstated.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-A-02-1",
+  "answer": "D",
+  "working": "P2: 'What it records very precisely is a decision ... to honour that subject in that place'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-A-02-2",
+  "answer": "A",
+  "working": "P4: plaque presented as neutral; 'It is not. A plaque is also an editorial act'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-A-02-3",
+  "answer": "A",
+  "working": "P3: removal does not alter what happened; changes an act of honour, and removes some evidence of past values.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-A-02-4",
+  "answer": "D",
+  "working": "P4: museum may keep evidence 'without continuing the honour'; D contradicts.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-F-02-1",
+  "answer": "D",
+  "working": "P3: barter is 'a response to the absence of trust'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-F-02-2",
+  "answer": "D",
+  "working": "P2: pot taken, debt repaid in grain, labour, 'or never precisely at all'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-F-02-3",
+  "answer": "A",
+  "working": "P4: 'a fair point as far as it goes. But the thought experiment is not idle'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-F-02-4",
+  "answer": "A",
+  "working": "P2: problem scarcely arises because no one needs the exchange completed on the spot; so it bites for those who do.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-E-02-1",
+  "answer": "B",
+  "working": "P2: severe settlements that held, lenient ones that failed; proposes balance of strength and enforcement.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-E-02-2",
+  "answer": "B",
+  "working": "P2: 'loser read leniency as a sign that it had not really been beaten'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-E-02-3",
+  "answer": "B",
+  "working": "Author: terms matching strength and enforced will last; B has both yet collapsed.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-E-02-4",
+  "answer": "B",
+  "working": "P2 'record does not sort so neatly'; P4 generosity 'has a real role' after defeat is unmistakable.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-B-07-1",
+  "answer": "A",
+  "working": "P2: 'not conclusions derived from a theory about causation ... constitutive of ... living among persons'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-B-07-2",
+  "answer": "B",
+  "working": "P4: revisions applied 'excusing principles the practice already contained to cases it had previously judged harshly'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-B-07-3",
+  "answer": "C",
+  "working": "P3: from the bare claim that choices have causes nothing follows about duress, ignorance, childhood.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-B-07-4",
+  "answer": "C",
+  "working": "P2-P3 reversal endorsed; P4-P5 practice corrigible, sciences of mind help hold it to its commitments.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-B-07-5",
+  "answer": "D",
+  "working": "P5: findings showing excusing conditions are more common led practice to be consistent with itself.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-D-06-1",
+  "answer": "D",
+  "working": "P1 'a slope rather than a window'; P3 'different sensitivities' by component.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-D-06-2",
+  "answer": "D",
+  "working": "P2: exposure differences travel with age, 'hard to tell how much of the outcome each explains'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-D-06-3",
+  "answer": "D",
+  "working": "P3: sensitivities 'declining at different rates for different components' (accent, grammar, vocabulary).",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-D-06-4",
+  "answer": "C",
+  "working": "With exposure controlled, a sharp drop at one age would support the window, against the slope view.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-A-07-1",
+  "answer": "A",
+  "working": "P2: cost theory struggled where effort and price come apart (chance pearl, old wine).",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-A-07-2",
+  "answer": "A",
+  "working": "P3: same bucket worth little by a river, beyond price in desert; value depends on circumstance/amount held.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-A-07-3",
+  "answer": "A",
+  "working": "P4: 'a price set while a resource was plentiful says little about what it will be worth once it is not'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-A-07-4",
+  "answer": "D",
+  "working": "P3 'genuine, and its elegance is rightly admired' but 'never a theory of importance'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-A-07-5",
+  "answer": "D",
+  "working": "P2: price tracks marginal usefulness, so exchange value does derive from usefulness, of one more unit.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-D-02-1",
+  "answer": "C",
+  "working": "P1: 'require attendance, not a vote'; can spoil or leave blank.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-D-02-2",
+  "answer": "C",
+  "working": "P2: effort goes to getting own supporters out; cheapest way is anger or fear.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-D-02-3",
+  "answer": "B",
+  "working": "P3: 'caution is needed ... does not make anyone better informed ... enlarges, does not educate'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-D-02-4",
+  "answer": "A",
+  "working": "Compulsory attendance with freedom to abstain or leave blank mirrors compulsory voting.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-A-08-1",
+  "answer": "A",
+  "working": "P2: 'a rule about the public use of the past', kept out of courts and assemblies.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-A-08-2",
+  "answer": "D",
+  "working": "P1: the view assumes remembering in public and in detail is always what lets former enemies live side by side.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-A-08-3",
+  "answer": "D",
+  "working": "P3 opens: wisdom 'depends less on the principle ... than on timing', then early vs a generation later.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-A-08-4",
+  "answer": "B",
+  "working": "P3 a generation later the balance shifts; P5 provisional arrangement, worst is silence permanent by default.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-A-08-5",
+  "answer": "C",
+  "working": "P5: worst silence is one 'no one ever decides to keep'; acceptability depends on deliberate, revisable choice.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ }
+]

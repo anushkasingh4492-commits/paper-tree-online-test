@@ -1,0 +1,38 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CAT VARC build report</title><style>:root{--ink:#1b2a3a;--muted:#5b6f80;--line:#dde5ec;--bg:#f4f6f8;--card:#fff;--brand:#2c4a6e;--key:#e6f4ec;--tita:#fff6e3}
+body{font:17px/1.6 Arial,Helvetica,sans-serif;margin:0;background:var(--bg);color:var(--ink)}
+header{padding:40px max(20px,calc((100% - 1000px)/2)) 28px;background:var(--brand);color:#fff}h1{font-size:32px;margin:0 0 8px}
+header p{max-width:900px;margin:6px 0;opacity:.95}.bar{position:sticky;top:0;z-index:5;background:#fff;padding:12px max(16px,calc((100% - 1000px)/2));display:flex;gap:10px;flex-wrap:wrap;box-shadow:0 2px 10px #0001}
+input,select,button{font:inherit;padding:8px 10px;border:1px solid #c9d5df;border-radius:6px;background:#fff}main{max-width:1000px;margin:18px auto;padding:0 16px}
+article{background:var(--card);padding:24px 28px;margin:16px 0;border-radius:10px;border:1px solid var(--line)}
+.meta{font-size:13px;color:var(--muted)}.badge{display:inline-block;font-size:12px;font-weight:bold;padding:1px 8px;border-radius:10px;margin-left:6px;vertical-align:1px}
+.b-mcq{background:#e8eef6;color:#2c4a6e}.b-tita{background:#fdebc8;color:#7a4d00}.q{margin:10px 0 6px}
+.passage{background:#fafbfc;border-left:4px solid var(--brand);padding:6px 18px;margin:10px 0 16px}.passage p{margin:10px 0}
+.qq{border-top:1px solid var(--line);padding-top:12px;margin-top:14px}
+ol{list-style:none;padding:0;margin:8px 0}li{margin:6px 0;padding:4px 8px}li b{display:inline-block;width:30px}li.key{background:var(--key);border-radius:6px}
+.sents p{margin:6px 0}.sents b{display:inline-block;width:26px}.miss{background:#eef3f9;padding:8px 12px;border-radius:6px}
+.box{display:inline-block;min-width:140px;border:1px dashed #b9c6d2;border-radius:6px;padding:8px 12px;color:var(--muted);margin-top:6px;font-size:14px}
+details{background:#eef3f9;padding:12px 16px;border-radius:8px;margin-top:10px}summary{cursor:pointer;font-weight:bold}
+.why{font-size:15px;margin:4px 0}.trap{background:var(--tita);padding:8px 12px;border-radius:6px;margin-top:8px;font-size:15px}article[hidden]{display:none}
+.count{align-self:center;color:var(--muted);font-size:14px}table{border-collapse:collapse;margin:10px 0}td,th{border:1px solid var(--line);padding:6px 10px;text-align:left}th{background:#eef3f9}
+@media print{body{background:#fff;font-size:10.5pt}.bar{display:none}header{padding:6mm 0;color:var(--brand);background:#fff}main{margin:0;padding:0}
+article{border:0;border-top:1px solid #ddd;margin:0;padding:4mm 0;border-radius:0;break-inside:auto}details{display:block}details>summary{display:none}}</style></head><body><header><h1>CAT VARC v1.0.0: build report</h1><p>Paper Tree Educational Studio &middot; 18 October 2026</p></header><main><article><h2>What was built</h2><p>400 original passages and 2800 questions across 12 chapters; 2200 MCQ and 600 TITA;
+840 / 1260 / 700 Easy / Medium / Difficult. Passages average 481 words.</p></article>
+<article><h2>How it was made</h2><ol style="list-style:decimal;padding-left:22px">
+<li>94 drafting batches written to a common spec: original prose only, no invented quotations or statistics attributed to real people, a written defence for every wrong option. Subjects claimed in a shared register so parallel batches could not collide.</li>
+<li>Para jumble, odd one out and sentence placement keys are computed by code from the author's original ordered paragraph, so a key can never be mis-transcribed.</li>
+<li>Machine harness on every file: counts, word counts, readability, option-length giveaways (the key may be the longest option in at most 40 percent of items), house style, and 8-word overlap against every other file.</li>
+<li>Blind round 1: two independent solvers per item. Both matched the key on 2797 of 2800.</li>
+<li>Hostile editorial audit of every file, informed by the solvers' notes: 5 critical, 94 major and 734 minor findings, all critical and major fixed.</li>
+<li>Blind round 2 on the 257 changed items: both new solvers matched the key on 257.</li>
+<li>Build: option letters balanced by code; subject alias groups computed across item types so related items never share a paper; 9/9 automated tests pass.</li></ol></article>
+<article><h2>Adjudicated disagreements</h2><ul><li>R05-B-04-2 (round 1, S2 answered differently): S2&#x27;s own working argued for the keyed option; the typed letter was a slip. The keyed option was reworded to match the passage&#x27;s &#x27;came alongside&#x27; more exactly; round 2 both solvers agreed.</li><li>V01-A-006 (round 1, S1 answered 52314 against key 53214): S1&#x27;s working supported the key; the typed order was a slip. Key retained.</li><li>V01-F-023 (round 1, both solvers answered 14325 against key 14352): the last two sentences could swap. The conclusion was rewritten so it can only follow the &#x27;shields it&#x27; sentence; round 2 both solvers reached the key.</li></ul></article>
+<article><h2>Limits</h2><ul><li>No human subject expert has reviewed the bank yet; <code>human_subject_expert_reviewed</code> is false on every record.</li>
+<li>Difficulty labels are editorial judgements on the CAT scale, not yet calibrated with student data.</li>
+<li>The web originality check was a 60-sentence spot check; the main protection is that every passage was written fresh.</li>
+<li>Next phase: DILR (sets with code-drawn charts), on the same pipeline.</li></ul></article></main><script>
+const qs=[...document.querySelectorAll('article')];const f=()=>{const g=id=>(document.getElementById(id)||{}).value||'';
+const s=g('search'),t=g('topic'),d=g('diff');let n=0;
+qs.forEach(a=>{const ok=(!s||a.textContent.toLowerCase().includes(s.toLowerCase()))&&(!t||(a.dataset.topic||'').split('|').includes(t))&&(!d||(a.dataset.diff||'').split('|').includes(d));a.hidden=!ok;if(ok)n++;});
+const c=document.getElementById('count');if(c)c.textContent=n+' shown';};
+document.querySelectorAll('.bar input,.bar select').forEach(e=>e.addEventListener('input',f));f();
+</script></body></html>

@@ -1,0 +1,34 @@
+[
+ {
+  "id": "V03-H-019",
+  "category": "E5",
+  "severity": "minor",
+  "finding": "difficulty_reason referred to 'sentence four' by the author's original numbering, which does not match the printed labels (that sentence prints as 2).",
+  "fix": "Reworded to 'seems to echo the sentence about moving a published line'.",
+  "changed": true
+ },
+ {
+  "id": "V03-H-025",
+  "category": "E5",
+  "severity": "minor",
+  "finding": "difficulty_reason referred to 'sentence three' by original numbering, which does not match the printed labels.",
+  "fix": "Reworded to 'seems to answer the market defence of short-lived goods'.",
+  "changed": true
+ },
+ {
+  "id": "V03-H-009",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Blind solver S1 noted that the negotiation sentence shifts from estimation to bargaining.",
+  "fix": "none: 'the same tendency' ties it explicitly to the anchoring effect; charm pricing involves no prior arbitrary number, so it remains the only odd sentence. Both solvers reached the correct answer.",
+  "changed": false
+ },
+ {
+  "id": "V03-H-020",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Blind solver S2 noted that the drafter-power sentence is more loosely linked, since the 'therefore' conclusion could follow the binary-choice sentence directly.",
+  "fix": "none: 'moreover' marks the drafter sentence as a second problem and a pre-negotiated proposal answers it, whereas the turnout sentence is answered by nothing in the conclusion. Both solvers reached the correct answer.",
+  "changed": false
+ }
+]

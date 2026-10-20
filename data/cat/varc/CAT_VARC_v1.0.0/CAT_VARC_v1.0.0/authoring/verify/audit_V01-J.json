@@ -1,0 +1,42 @@
+[
+ {
+  "id": "V01-J-002",
+  "category": "E6",
+  "severity": "major",
+  "finding": "Historical inaccuracy: the item had Snow plotting the deaths on a street map during the outbreak and then removing the pump handle, but the handle was removed in September 1854 after he had traced the deaths from records and enquiries; the famous map was drawn afterwards.",
+  "fix": "Second sentence now says Snow 'traced the homes of the dead'; last sentence now reads 'The map he later drew of those deaths is remembered less for...'. Explanation, misconception and difficulty reason updated to match; order and key unchanged.",
+  "changed": true
+ },
+ {
+  "id": "V01-J-008",
+  "category": "E1",
+  "severity": "major",
+  "finding": "A second order was defensible: general claim, transmission sentence, carpenter example, then 'That is why' (1-3-2-4) also reads well, since the example of knowledge that cannot be explained supports the point that apprenticeship survived despite printed manuals.",
+  "fix": "Locked the example before the transmission sentence: 'Knowledge of this kind, like the carpenter's ear for a blunt blade, passes...'. Explanation and both trap reasons updated ('contains' for 'begins' 'for example').",
+  "changed": true
+ },
+ {
+  "id": "V01-J-003",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Misconception quotes 'these fortifications lost their value'; the sentence says 'lost most of their military value'.",
+  "fix": "Quotation corrected.",
+  "changed": true
+ },
+ {
+  "id": "V01-J-013",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Trap reason quotes 'Yet the change has not erased the power to signal'; the sentence has 'the tattoo's power to signal'.",
+  "fix": "Quotation corrected.",
+  "changed": true
+ },
+ {
+  "id": "V01-J-014",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation uses an ellipsis inside a quotation ('Her judgement ... however') that does not match the sentence text.",
+  "fix": "Changed to 'Her judgement' and 'however'.",
+  "changed": true
+ }
+]

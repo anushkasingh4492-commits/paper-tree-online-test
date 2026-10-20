@@ -1,0 +1,698 @@
+[
+ {
+  "id": "R01-E-01-1",
+  "answer": "B",
+  "working": "Rebuts payment and consent defences, then proposes hazard-tied test (P4); A contradicted by 'None of this means employers may never watch'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-E-01-2",
+  "answer": "D",
+  "working": "Carpenter follows 'An employer buys a worker's labour, not the worker'; part of the payment argument, not consent.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-E-01-3",
+  "answer": "C",
+  "working": "P3: 'what it captures is increasingly a display staged for the watcher'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-E-01-4",
+  "answer": "A",
+  "working": "Confidential records are a named specific hazard; review is targeted and limited. B, D are general surveillance; C relies on consent.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-F-03-1",
+  "answer": "D",
+  "working": "P1: 'As tariffs have fallen over the past several decades, attention ... has shifted'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-F-03-2",
+  "answer": "B",
+  "working": "Barrel rule prescribes a method though steel is 'no less safe'; P4: such a method rule's extra cost 'buys no additional safety'. C turns on motive, which the author sets aside.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-F-03-3",
+  "answer": "C",
+  "working": "'Fit' contrasts with motives: whether the burden is necessary to the stated purpose (P4).",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-F-03-4",
+  "answer": "B",
+  "working": "The test asks whether other methods would achieve the same outcome; it is usable only if that can often be determined.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-D-07-1",
+  "answer": "C",
+  "working": "P2: 'A score fixes pitches and their order with considerable precision'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-D-07-2",
+  "answer": "C",
+  "working": "P3: the work-is-performance view 'cannot explain' such judgements, which musicians make constantly.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-D-07-3",
+  "answer": "C",
+  "working": "P4: the work is 'the marks as a practice reads them'; ignoring the practice is accurate to the marks only.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-D-07-4",
+  "answer": "C",
+  "working": "The objection rests on listeners' judgements 'with considerable agreement'; chance-level agreement removes that ground.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-D-07-5",
+  "answer": "D",
+  "working": "Rejects score-is-work (P2) and work-is-performance (P3), proposes marks-as-read-by-practice (P4), answers an objection (P5).",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-D-05-1",
+  "answer": "B",
+  "working": "P2: 'their answers are often not very different from those of adults'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-D-05-2",
+  "answer": "C",
+  "working": "P2: 'What distinguishes them is less what they know than what happens to that knowledge in particular situations'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-D-05-3",
+  "answer": "D",
+  "working": "P4 favours changing situations and making 'the safe choice the socially easy one'; A, B, C target beliefs or private resolve.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-D-05-4",
+  "answer": "B",
+  "working": "P3: reward systems, 'and especially social rewards', become more responsive; B limits it to non-social rewards.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-B-05-1",
+  "answer": "A",
+  "working": "P4: 'not a rule but a burden of proof'; exclusion 'must be defended, case by case'. B and D are rejected by P3.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-B-05-2",
+  "answer": "B",
+  "working": "P2: 'began a new and unplanned experiment, and in some cases the very qualities ... began to decline'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-B-05-3",
+  "answer": "A",
+  "working": "P3 opens 'It would be too simple, however' and rejects the romantic image before P4's conclusion.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-B-05-4",
+  "answer": "A",
+  "working": "Demonstrated incompatibility (breeding fails) and no record of use, the two conditions P4 names for defensible exclusion.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-E-07-1",
+  "answer": "A",
+  "working": "P3 'does not remove the hard question but relocates it'; P4-P5 develop who decides and how. B and C contradicted by P4 and P5; D overstated.",
+  "confidence": "medium",
+  "alternative": "",
+  "issue": "Key A covers P2-P3 but leaves out the procedure discussion and the 'choose which failure to risk' conclusion of P4-P5; it is acceptable as best, not complete."
+ },
+ {
+  "id": "R04-E-07-2",
+  "answer": "C",
+  "working": "P1: a world of 'permanent intervention, in which the strong would always find reasons to correct the weak'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-E-07-3",
+  "answer": "B",
+  "working": "Credits the old doctrine's clarity against discretionary judgements by the powerful, yet P4 says 'None of this is an argument for returning to the wall'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-E-07-4",
+  "answer": "C",
+  "working": "P3: 'The elegance is partly an illusion' and the formula 'does not remove the hard question'; A, B, D are stated in P5, P4, P3.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-E-07-5",
+  "answer": "D",
+  "working": "Refers back to the recasting of sovereignty as a forfeitable responsibility, the formula that 'seems to dissolve the conflict'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-F-08-1",
+  "answer": "D",
+  "working": "P1: 'tying chance to something that can be counted, and it explains why observed frequencies are our main evidence'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-F-08-2",
+  "answer": "B",
+  "working": "P3: the propensity view 'does not escape the problem'; propensity depends on description, the analogue of the reference class.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-F-08-3",
+  "answer": "B",
+  "working": "Relative to a specification yet objective once fixed (P5); hill height relative to a baseline matches. A is subjectivity, which the author rejects; C posits a privileged description.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-F-08-4",
+  "answer": "C",
+  "working": "Chance is relative to a specification (P4); different specifications can each give a correct chance.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-F-08-5",
+  "answer": "A",
+  "working": "P4: which specification to use 'must be settled by our purposes rather than by the world'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-C-07-1",
+  "answer": "B",
+  "working": "Defends formal legality as 'one distinct virtue' (P4) to be kept separate; A overstated per P4.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-C-07-2",
+  "answer": "A",
+  "working": "Oppressive governments 'rarely find formal legality congenial', preferring secret directives: not suited to their aims.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-C-07-3",
+  "answer": "B",
+  "working": "P4: legality of this kind 'is compatible with deep wrong'; justice questions are 'different questions'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-C-07-4",
+  "answer": "B",
+  "working": "Unpublished, case-by-case discretion breaches publicity and generality; A, C, D are failures of liberty, justice or democracy.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-C-07-5",
+  "answer": "B",
+  "working": "P4 concedes regimes pursued injustice through meticulously drafted, public laws; formality 'forbid[s] none of it outright'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-A-01-1",
+  "answer": "A",
+  "working": "Defends trust as a default 'sensitive to defeaters' against the verify-first picture. B says 'unless proved false', but suspicion needs only a reason for doubt.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-A-01-2",
+  "answer": "B",
+  "working": "Credentials can be described only in a language acquired by trusting testimony; verification presupposes acceptance.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-A-01-3",
+  "answer": "A",
+  "working": "P3: 'the hearer who ignores a glaring sign of deceit is not exercising her entitlement but neglecting it'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-A-01-4",
+  "answer": "B",
+  "working": "P4: alertness to override signals 'is unevenly distributed and easily exploited'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-A-05-1",
+  "answer": "B",
+  "working": "P3: a switch change 'can alter a single structure and leave the rest alone'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-A-05-2",
+  "answer": "A",
+  "working": "P4: 'not a common design for what is controlled'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-A-05-3",
+  "answer": "D",
+  "working": "Opposite error = 'assuming that similar genes imply similar forms'; D infers alike hearts from a shared starter gene.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-A-05-4",
+  "answer": "C",
+  "working": "Expectation overturned (P1-P2), lesson accepted 'much truth' (P3), guarded against overextension (P4).",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-E-03-1",
+  "answer": "A",
+  "working": "Answers 'not real, or at least not interesting': it is both real and interesting.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-E-03-2",
+  "answer": "B",
+  "working": "P3: suggest 'deception may be less essential to the response than was believed', answering the ethical objection.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-E-03-3",
+  "answer": "A",
+  "working": "Practical consequence: shortening consultations removes an 'active ingredient' of care.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-E-03-4",
+  "answer": "B",
+  "working": "Open-label pills add nothing beyond consultation while believed-active pills help: the belief, not the pill ritual, matters.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-E-05-1",
+  "answer": "B",
+  "working": "Local dish (flavour) served through the exported format (grammar) with its assumptions about efficiency and predictability.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-E-05-2",
+  "answer": "C",
+  "working": "Three layers: format global, meanings local, menu between; reading from menu alone misleads. A says 'imposes', which P3 rejects; D overreaches.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-E-05-3",
+  "answer": "B",
+  "working": "The format is the deep influence; local eateries adopting the format while keeping dishes shows its 'global grammar' spreading.",
+  "confidence": "medium",
+  "alternative": "C could be argued (customers adopt chain venues for occasions), but P3 frames that as local meaning, not chain influence; B fits the format thesis.",
+  "issue": ""
+ },
+ {
+  "id": "R03-E-05-4",
+  "answer": "B",
+  "working": "Lingering is a local meaning customers bring (P3), contrary to a format 'designed for speed'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-A-05-1",
+  "answer": "D",
+  "working": "P3: 'A user cannot easily tell whether one free application takes ten minutes ... still less whether a rival would take less'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-A-05-2",
+  "answer": "B",
+  "working": "P2: attention 'the provider gathers and resells to advertisers'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-A-05-3",
+  "answer": "D",
+  "working": "P3: firms 'are therefore rewarded ... for extracting more'; P4 rejects prohibition and calling users dupes.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-A-05-4",
+  "answer": "C",
+  "working": "Remedy is to make the price visible so users compare; C shows visibility produced price-sensitive switching.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-G-08-1",
+  "answer": "A",
+  "working": "P2: 'whether it is permanent, whether it is reliably satisfying and whether it is under one's control'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-G-08-2",
+  "answer": "A",
+  "working": "P3: denies 'in addition to the stream, an unchanging owner'; contrasted with the person as a functioning whole.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-G-08-3",
+  "answer": "C",
+  "working": "P5: the easy refutation fails and so does the easy defence; the claim 'deserves to be argued about on its merits'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-G-08-4",
+  "answer": "D",
+  "working": "P4: the therapy 'earns its authority only if the belief is warranted'; it succeeds 'because it reveals how things are'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-G-08-5",
+  "answer": "D",
+  "working": "'a convenient name for a functioning whole, not a hidden thing to which the whole belongs'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-D-02-1",
+  "answer": "D",
+  "working": "P1: an employee gets 'a wage and a bundle of protections'; P3 'protections must come as a package attached to a status'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-D-02-2",
+  "answer": "B",
+  "working": "P2: 'Each side is right about what the other ignores'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-D-02-3",
+  "answer": "A",
+  "working": "Shows the minimum rate, one of the cited protections, does depend on ending flexibility. D concerns paid holidays, already conceded as harder.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-D-02-4",
+  "answer": "A",
+  "working": "'Unbundling has dangers of its own' ... 'The case for unbundling is therefore not that it is free of risk, but that the binary has already failed'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-C-08-1",
+  "answer": "B",
+  "working": "P2: 'a common silence about matters that the gatekeepers did not think worth raising'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-C-08-2",
+  "answer": "B",
+  "working": "P1: 'contains a real worry, but it rests on a picture of the past that deserves scrutiny'; remedies criticised in P5.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-C-08-3",
+  "answer": "A",
+  "working": "P2: 'breadth was purchased by a different narrowing: millions listened, while very few were permitted to speak'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-C-08-4",
+  "answer": "C",
+  "working": "P3: what was lost 'was not chiefly that everyone attended to the same things'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-C-08-5",
+  "answer": "D",
+  "working": "If separate audiences cause separate standards, audience fragmentation matters at least as much, since it drives the more dangerous condition.",
+  "confidence": "medium",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-G-05-1",
+  "answer": "C",
+  "working": "P1: 'A stronger currency makes their goods dearer in foreign markets, and the higher wages set by the booming sectors raise their costs'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-G-05-2",
+  "answer": "B",
+  "working": "The author's objection is that lost sectors cannot be regained; quick rebuilding refutes that assumption.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-G-05-3",
+  "answer": "A",
+  "working": "P4 remedy: save abroad and spend at an absorbable pace; damage comes from fast domestic spending that hollows out other sectors.",
+  "confidence": "medium",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-G-05-4",
+  "answer": "B",
+  "working": "Capabilities lost while a cheap substitute dominates and not recoverable when conditions change; C is the economists' view, A is about treating windfall as income.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-G-03-1",
+  "answer": "C",
+  "working": "P2: tests measure 'along with ability, a child's maturity, her familiarity ... and the amount of help she has had at home'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-G-03-2",
+  "answer": "B",
+  "working": "Movement 'in principle' possible, but differences in material covered grow; improvement 'may never show up as a change of placement'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-G-03-3",
+  "answer": "D",
+  "working": "P2: later results 'seem to confirm the placement' but 'are partly its product'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-G-03-4",
+  "answer": "C",
+  "working": "Near-identical starting scores split only by a cut-off, then diverging: isolates the stream's own effect. B is confounded.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-D-05-1",
+  "answer": "A",
+  "working": "P2: 'those whose convictions already happen to resemble the shared vocabulary are asked to give up nothing'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-D-05-2",
+  "answer": "A",
+  "working": "Ideal read as a test that laws must pass; violated when an enacted law depends only on a contested doctrine.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-D-05-3",
+  "answer": "D",
+  "working": "'A law can be justified in shared terms even if some of its supporters were moved by other considerations'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-D-05-4",
+  "answer": "C",
+  "working": "The test applies to the law, not to citizens' reasons, so assessing support by shared reasons must be separable from the reasons actually given.",
+  "confidence": "medium",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-A-08-1",
+  "answer": "B",
+  "working": "P2: 'giving it up registers as a loss ... since the loss weighs more heavily, the owner demands more'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-A-08-2",
+  "answer": "D",
+  "working": "Listed as part of 'a wide range of other behaviour' the account connects to.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-A-08-3",
+  "answer": "C",
+  "working": "P4: holding to sell, parting 'does not register as a loss', like the dealer; so a smaller gap.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-A-08-4",
+  "answer": "D",
+  "working": "The rival view predicts the gap shrinks with practice and understanding; a persistent gap undercuts it.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-A-08-5",
+  "answer": "A",
+  "working": "Held to use and become 'part of her possessions' through daily use; C and D are exchange frames.",
+  "confidence": "medium",
+  "alternative": "B is weakly defensible: a fresh gift is also held to use, though the passage stresses the mug having 'already become' part of possessions, which favours A.",
+  "issue": ""
+ }
+]

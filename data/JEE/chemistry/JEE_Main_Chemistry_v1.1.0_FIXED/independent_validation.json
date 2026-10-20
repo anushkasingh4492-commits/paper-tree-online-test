@@ -1,0 +1,2647 @@
+{
+  "checks": [
+    {
+      "check": "record count",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "IDs stable and sequential",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "class and difficulty per record unchanged",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "key totals",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "all four options distinct",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "key text agreement",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "question and diagram uniqueness",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "no independent-case pairs remain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0003 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0003 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0005 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0007 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0007 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0009 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0010 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0014 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0014 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0018 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0020 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0023 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0029 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0031 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0032 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0032 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0033 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0034 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0035 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0036 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0040 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0041 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0044 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0044 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0045 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0046 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0048 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0051 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0053 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0054 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0054 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0055 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0055 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0057 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0057 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0060 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0061 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0062 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0063 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0066 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0067 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0070 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0070 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0074 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0080 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0081 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0083 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0084 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0088 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0090 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0094 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0096 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0102 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0105 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0111 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0114 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0118 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0132 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0136 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0138 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0140 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0142 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0144 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0157 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0172 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0176 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0177 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0193 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0197 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0199 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0204 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0207 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0207 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0210 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0211 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0214 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0215 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0217 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0224 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0226 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0227 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0227 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0230 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0231 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0235 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0239 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0242 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0242 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0246 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0256 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0259 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0261 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0262 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0263 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0272 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0276 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0277 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0282 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0293 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0297 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0298 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0298 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0302 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0303 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0305 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0306 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0306 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0311 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0312 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0316 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0317 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0318 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0323 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0323 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0324 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0325 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0326 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0327 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0330 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0336 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0337 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0341 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0341 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0342 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0343 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0346 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0346 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0347 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0348 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0353 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0354 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0355 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0357 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0359 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0361 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0363 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0363 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0366 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0366 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0367 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0374 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0375 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0376 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0378 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0380 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0380 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0384 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0385 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0386 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0387 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0388 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0390 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0392 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0395 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0398 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0398 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0401 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0402 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0404 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0405 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0407 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0407 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0410 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0411 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0414 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0414 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0417 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0417 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0419 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0422 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0422 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0426 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0429 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0437 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0440 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0442 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0443 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0444 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0447 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0457 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0462 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0463 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0464 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0467 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0470 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0473 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0474 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0477 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0482 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0485 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0486 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0490 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0492 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0494 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0504 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0507 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0516 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0527 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0530 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0532 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0533 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0541 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0548 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0552 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0556 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0562 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0565 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0566 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0567 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0570 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0577 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0585 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0586 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0594 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0595 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0598 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0598 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0606 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0607 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0611 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0616 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0616 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0618 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0621 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0626 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0628 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0628 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0634 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0635 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0639 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0648 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0654 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0660 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0662 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0666 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0668 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0670 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0671 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0679 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0688 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0691 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0692 all options integral",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0692 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0694 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0696 all options integral",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0696 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0697 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0702 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0705 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0711 all options integral",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0718 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0719 all options integral",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0729 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0731 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0736 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0744 all options integral",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0750 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0755 all options integral",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0758 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0761 all options integral",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0761 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0771 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0772 all options integral",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0775 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0781 all options integral",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0782 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0788 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0791 all options integral",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0795 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0797 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0800 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0806 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0830 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0832 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0844 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0862 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0863 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0901 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0920 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0924 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0929 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0930 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0937 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0946 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0946 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0953 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0960 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0968 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0976 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0985 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0995 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1010 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1037 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1088 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1100 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1106 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1156 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1162 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1171 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1172 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1175 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1176 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1189 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1191 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1191 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1194 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1194 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1201 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1202 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1203 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1212 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1221 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1222 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1223 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1227 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1229 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1236 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1245 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1260 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1267 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1296 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1306 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1311 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1311 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1313 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1315 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1324 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1331 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1332 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1334 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1339 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1345 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1354 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1357 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1358 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1361 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1363 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1364 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1365 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1368 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1369 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1370 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1370 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1372 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1372 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1376 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1376 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1378 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1378 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1385 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1386 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1387 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1387 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1390 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1391 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1394 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1397 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1398 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1398 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1399 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1400 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1404 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1407 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1410 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1411 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1412 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1414 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1416 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1417 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1420 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1421 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1425 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1427 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1429 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1431 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1433 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1433 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1435 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1435 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1437 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1438 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1440 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1441 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1445 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1446 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1449 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1449 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1451 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1454 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1477 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1484 all options integral",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1488 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1497 all options integral",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1497 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1505 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1506 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1507 all options integral",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1507 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1526 all options integral",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1542 all options integral",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1542 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1545 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1547 all options integral",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1551 all options integral",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1552 all options integral",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1560 all options integral",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1568 all options integral",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1586 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1587 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1587 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1591 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1594 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1619 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1632 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1634 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1640 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1653 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1665 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1673 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1676 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1680 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1683 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1692 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1696 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1706 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1718 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1719 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1719 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1723 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1725 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1734 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1749 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1750 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1750 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1751 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1758 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1759 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1761 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1769 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1769 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1776 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1777 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1778 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1787 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1792 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1795 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1797 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1810 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1820 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1821 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1824 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1844 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1861 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1866 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1874 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1883 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1884 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1890 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1892 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1892 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1901 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1906 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1906 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1908 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1913 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1915 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1920 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1920 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1938 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1948 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1950 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1952 percent option domain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1953 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1957 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1960 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1964 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1975 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1984 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1989 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1995 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-2017 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-2021 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-2033 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-2060 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-2082 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-2117 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-2118 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-2119 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-2136 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-2140 numerical variant",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0017 direct numerical alternative",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0107 direct numerical alternative",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0139 direct numerical alternative",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0203 direct numerical alternative",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0476 direct numerical alternative",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0510 direct numerical alternative",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0820 direct numerical alternative",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0824 direct numerical alternative",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0869 direct numerical alternative",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0909 direct numerical alternative",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-0918 direct numerical alternative",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JEE-CHEM-1217 direct numerical alternative",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "270 numerical alternatives at 12/108/150",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "option-independent numerical prompts",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "figures exist",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "two conformation projections supplied",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "required figures present",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "no lower-case HI token",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "no floating tails in printed rate data",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "carbonate topics accurately named",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "all 39 practical entries have surviving evidence",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "JSONL equality",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "CSV every field equality",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "student every field equality",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "teacher every field equality",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "both complete HTML banks contain 2160 articles",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "published JSON Schema subset validation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "old deterministic rank rule eliminated",
+      "pass": true,
+      "detail": {
+        "correct": 200,
+        "tested": 720,
+        "accuracy": 0.2777777777777778
+      }
+    }
+  ],
+  "numerical_checks": 1450,
+  "models": 141,
+  "failures": [],
+  "status": "PASS",
+  "old_option_rule": {
+    "correct": 200,
+    "tested": 720,
+    "accuracy": 0.2777777777777778
+  }
+}

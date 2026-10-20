@@ -1,0 +1,682 @@
+[
+ {
+  "id": "R04-C-01-1",
+  "answer": "C",
+  "working": "P1 patrol meant to prevent; P2 drift toward countable arrest; P4 erodes trust prevention depends on.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-C-01-2",
+  "answer": "C",
+  "working": "P1: \"salaried, disciplined body... visible at all hours, could prevent offences\".",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-C-01-3",
+  "answer": "A",
+  "working": "P2: quiet street after patrol looks exactly like one that would have stayed quiet anyway.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-C-01-4",
+  "answer": "D",
+  "working": "P4 \"most legible output\" contrasts with countable arrest that can be reported upward.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-D-07-1",
+  "answer": "C",
+  "working": "P2: largest on abstract classification/patterns, much smaller on vocabulary and arithmetic.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-D-07-2",
+  "answer": "D",
+  "working": "P2: second answer earns no credit \"Yet the second is not stupid\".",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-D-07-3",
+  "answer": "D",
+  "working": "P1 sets up dilemma: real gains imply absurd conclusion, artefact implausible.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-D-07-4",
+  "answer": "B",
+  "working": "P3: trained a particular style of thought; gains real but not in a single underlying power.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-D-07-5",
+  "answer": "C",
+  "working": "Explanation ties gains to schooling and symbolic work; equal gains among those without them undercuts it.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-E-07-1",
+  "answer": "D",
+  "working": "P2/P3: richer future people get less difference from same resources; \"same resources will do them less good\".",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-E-07-2",
+  "answer": "A",
+  "working": "P4: rate presented as neutral parameter is in effect a verdict.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-E-07-3",
+  "answer": "A",
+  "working": "P3: position in time as reason to count suffering less is like distance; both indefensible.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-E-07-4",
+  "answer": "C",
+  "working": "P3: flooded coastline not made good by larger economy; discounting at growth rate treats it as bought back.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-E-07-5",
+  "answer": "C",
+  "working": "P4: small discount for possibility of no future people is defensible, independent of pure time preference.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-E-06-1",
+  "answer": "A",
+  "working": "P2: uncertainty is not the same as confidence that it cannot.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-E-06-2",
+  "answer": "C",
+  "working": "P3 answers the \"proves too much\" objection by distinguishing insects from bare possibility.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-E-06-3",
+  "answer": "B",
+  "working": "P4: prefer methods minimising suffering if present, provided cost is modest.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-E-06-4",
+  "answer": "A",
+  "working": "P3 relies on shared behavioural/physiological features raising probability, even partially shared.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-E-01-1",
+  "answer": "C",
+  "working": "P4: repetition of same mistake points at the thing they share; P1-P3 build to it.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-E-01-2",
+  "answer": "C",
+  "working": "P2: people follow the hardware; shape read faster than words.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-E-01-3",
+  "answer": "A",
+  "working": "P3: change the design removes error for everyone; red arrow is a sign/warning (individual remedy).",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-E-01-4",
+  "answer": "A",
+  "working": "P3 hospital: blame nurse vs make bottles look different.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-E-08-1",
+  "answer": "C",
+  "working": "P2: \"trying several reasonable ways of analysing the data and reporting the one that worked\".",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-E-08-2",
+  "answer": "D",
+  "working": "P3: word-recognition priming is reliable; dispute concerns the ambitious social-behaviour claim.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-E-08-3",
+  "answer": "D",
+  "working": "P4: post hoc hidden moderators never specified in advance explain everything and nothing.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-E-08-4",
+  "answer": "B",
+  "working": "P2: invites question of who was dishonest when dishonesty was largely unnecessary; normal practices.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-E-08-5",
+  "answer": "C",
+  "working": "P5: costs acknowledged, \"That is the right trade\".",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-A-05-1",
+  "answer": "D",
+  "working": "P1: masters do little better than beginners on random positions.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-A-05-2",
+  "answer": "C",
+  "working": "Random result shows advantage is not a bigger memory store (P2 \"not a larger store\").",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-A-05-3",
+  "answer": "D",
+  "working": "P3: knowledge that shapes what is seen, no longer needs to be consulted.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-A-05-4",
+  "answer": "A",
+  "working": "P4: outside trained territory, speed becomes a liability; instant misrecognition.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-A-04-1",
+  "answer": "A",
+  "working": "P2: turn registers only because reader knows where turns are expected.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-A-04-2",
+  "answer": "A",
+  "working": "P4: literary fiction has its own conventions completed dutifully.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-A-04-3",
+  "answer": "B",
+  "working": "P3: active pleasure of comparison from knowing the frame.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-A-04-4",
+  "answer": "C",
+  "working": "P2: unconventional novel has no settled expectation to depart from; sharpness depends on expectation.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-B-05-1",
+  "answer": "A",
+  "working": "P1: fresh problem in their own work unlike the taught catalogue; P2 tidy vs messy.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-B-05-2",
+  "answer": "A",
+  "working": "P2: recognising pattern in tidy example is a different skill from noticing it in messy situation.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-B-05-3",
+  "answer": "C",
+  "working": "P1 can spot biases in others; P2 instruction sharpens asymmetry.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-B-05-4",
+  "answer": "D",
+  "working": "P3: procedure does not need members to have become wiser; P4 bias a standing feature.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-E-06-1",
+  "answer": "C",
+  "working": "P1/P3: align against power that threatens to dominate; cares only about rise of threatening power.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-E-06-2",
+  "answer": "C",
+  "working": "P4 norm supplies legitimacy; P2 states would not pay the price.",
+  "confidence": "medium",
+  "alternative": "",
+  "issue": "Author's attitude to collective security is mostly critical (P2, P4 'mistake of the reformers'); 'respectful' in C is supportable only via P4 legitimacy, but no other option fits."
+ },
+ {
+  "id": "R04-E-06-3",
+  "answer": "A",
+  "working": "P1 introduces both; P2 weakness of collective security; P3 price of balance; P4 combination.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-E-06-4",
+  "answer": "D",
+  "working": "Balancing motive (uneasy at growth) plus norm (rule against conquest) for legitimacy and allies.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-C-03-1",
+  "answer": "C",
+  "working": "P2 judgement cannot be removed; P4 make it visible, guide and correct.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-C-03-2",
+  "answer": "A",
+  "working": "P2: rule requires proof of address but not how hard the clerk should look.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-C-03-3",
+  "answer": "D",
+  "working": "Judgement moves into scheduling/prioritising choices, the less visible ones named in P2.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-C-03-4",
+  "answer": "B",
+  "working": "P3: not romanticised, open to uneven use; P3-P4 acknowledge and bring into view.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-G-07-1",
+  "answer": "C",
+  "working": "P1: some separation reflects production moved abroad.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-G-07-2",
+  "answer": "A",
+  "working": "P1: fall in emissions per unit of output swamped by growth of output.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-G-07-3",
+  "answer": "D",
+  "working": "P2: existence of absolute decoupling settles less; question is whether fast enough.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-G-07-4",
+  "answer": "B",
+  "working": "P3: GDP only loosely tied to the thing that matters; proxy.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-G-07-5",
+  "answer": "B",
+  "working": "P4: no further environmental case for shrinking, whatever other reasons they may have.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-C-04-1",
+  "answer": "C",
+  "working": "P2: every raising protects more property built because the wall made it seem safe.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-C-04-2",
+  "answer": "C",
+  "working": "P2: each round of investment makes the next harder to refuse.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-C-04-3",
+  "answer": "C",
+  "working": "P4: retreat cannot simply be ordered from above; P3 planned steps are voluntary/gradual.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-C-04-4",
+  "answer": "B",
+  "working": "P1: choice is rarely hold vs surrender but planned vs forced retreat; P2-P3 forced is worse.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-D-04-1",
+  "answer": "D",
+  "working": "P3: keep rewarding achievement without pretending rewards measure moral worth.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-D-04-2",
+  "answer": "A",
+  "working": "P2: entitlement depends on fairness of rules and compliance; rigged rules fail that.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-D-04-3",
+  "answer": "D",
+  "working": "Valid claim under fair rules of draw, no desert.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-D-04-4",
+  "answer": "D",
+  "working": "P3: luck undermines the story of desert, not the practice of rewarding achievement under fair rules.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-F-07-1",
+  "answer": "D",
+  "working": "P1: may never survive long enough to learn.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-F-07-2",
+  "answer": "C",
+  "working": "P3: infant remains infant, larger without competitive efficiency.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-F-07-3",
+  "answer": "A",
+  "working": "P2 \"gains force from a further point\": spillovers mean market supplies too little learning.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-F-07-4",
+  "answer": "B",
+  "working": "P4: firm cannot fake competitiveness in a market it does not control.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-F-07-5",
+  "answer": "A",
+  "working": "P3-P4: shelter weakens motive; pressure to improve comes from exit; crisis, not advance conditions, so not B.",
+  "confidence": "medium",
+  "alternative": "B tempts but conditions were not fixed in advance; the crisis forced the cut.",
+  "issue": ""
+ },
+ {
+  "id": "R05-G-01-1",
+  "answer": "D",
+  "working": "P3: less a case against regulation than a map of where it is needed.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-G-01-2",
+  "answer": "D",
+  "working": "P2 lists small share, difficulty attributing, free riding; disagreement on value not mentioned.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-G-01-3",
+  "answer": "C",
+  "working": "P2: result holds only when bargaining nearly costless; reading takes it as general.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-G-01-4",
+  "answer": "C",
+  "working": "P4: who pays whom matters; efficiency blind, downwind residents not.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-E-03-1",
+  "answer": "A",
+  "working": "P1: authenticity less a property of food than of the scene around it.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-E-03-2",
+  "answer": "A",
+  "working": "P2 migration creates food of people who moved between; P3 rejects decline view.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-E-03-3",
+  "answer": "C",
+  "working": "If second menu matches home versions with unchanged methods and imported ingredients, it has not passed through the same compromises.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-E-03-4",
+  "answer": "B",
+  "working": "P4: whether people cooking have room to cook what they think is good.",
+  "confidence": "medium",
+  "alternative": "C is close: author cares about cooks' freedom, but does not treat customer-prompted changes as illegitimate (P2), so B is better.",
+  "issue": ""
+ },
+ {
+  "id": "R05-B-03-1",
+  "answer": "A",
+  "working": "P2: reading as failure mistakes what was tested; assumption that poor are frustrated entrepreneurs.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-B-03-2",
+  "answer": "D",
+  "working": "P3 lists wedding, hospital bill, school fees, roof; travel not mentioned.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-B-03-3",
+  "answer": "A",
+  "working": "Supports smoothing lumpy expenses role (P3).",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-B-03-4",
+  "answer": "C",
+  "working": "P2: steady wage work unavailable; many would take factory job.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-F-02-1",
+  "answer": "D",
+  "working": "P2: family meant the whole working unit, not blood relatives alone.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-F-02-2",
+  "answer": "A",
+  "working": "P3: none of this should be romanticised; not universal; difference in kind kept.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-F-02-3",
+  "answer": "A",
+  "working": "P4: private refuge ideal arose after production moved out and was projected backwards.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-F-02-4",
+  "answer": "A",
+  "working": "P4: what changed was range of tasks, not strength of family feeling.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-A-03-1",
+  "answer": "A",
+  "working": "P2: \"on the main charge they are right\" but \"pressed further than it can go\".",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-A-03-2",
+  "answer": "B",
+  "working": "P3: what does not fit is left out or cast as failure; coherence purchased by narrowing cast.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-A-03-3",
+  "answer": "A",
+  "working": "If national feeling formed as readily across older zones, continuities did not shape ease of unification.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-A-03-4",
+  "answer": "D",
+  "working": "P1 describes, P2 accepts but limits criticism, P3 consequences, P4 better history.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ }
+]

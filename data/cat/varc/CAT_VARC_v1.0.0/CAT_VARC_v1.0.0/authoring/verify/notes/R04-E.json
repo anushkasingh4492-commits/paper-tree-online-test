@@ -1,0 +1,62 @@
+[
+ {
+  "id": "R04-E-05-4",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "B",
+    "key": "B",
+    "working": "P3: an asymmetric rule 'would be claimed by both sides'; this presumes no accepted arbiter of which side is just during fighting.",
+    "alternative": "",
+    "issue": "All four keys in this passage are B; a key-distribution point, not a content flaw."
+   },
+   "S2": {
+    "answer": "B",
+    "key": "B",
+    "working": "Rule would be claimed by both sides only if no accepted arbiter of just cause exists.",
+    "alternative": "D is irrelevant; A is denied by the author (he says critics are right). B is the best but the assumption is implicit rather than tightly necessary.",
+    "issue": ""
+   }
+  }
+ },
+ {
+  "id": "R04-E-06-2",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "C",
+    "key": "C",
+    "working": "P4 norm supplies legitimacy; P2 states would not pay the price.",
+    "alternative": "",
+    "issue": "Author's attitude to collective security is mostly critical (P2, P4 'mistake of the reformers'); 'respectful' in C is supportable only via P4 legitimacy, but no other option fits."
+   },
+   "S2": {
+    "answer": "C",
+    "key": "C",
+    "working": "P4 credits the norm with legitimacy/public justification; P2 says states would not pay the price.",
+    "alternative": "",
+    "issue": ""
+   }
+  }
+ },
+ {
+  "id": "R04-E-07-1",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "A",
+    "key": "A",
+    "working": "P3: formula relocates the hard question (who decides forfeiture); P4-5 develop procedure dilemma.",
+    "alternative": "",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "A",
+    "key": "A",
+    "working": "P3 'does not remove the hard question but relocates it'; P4-P5 develop who decides and how. B and C contradicted by P4 and P5; D overstated.",
+    "alternative": "",
+    "issue": "Key A covers P2-P3 but leaves out the procedure discussion and the 'choose which failure to risk' conclusion of P4-P5; it is acceptable as best, not complete."
+   }
+  }
+ }
+]

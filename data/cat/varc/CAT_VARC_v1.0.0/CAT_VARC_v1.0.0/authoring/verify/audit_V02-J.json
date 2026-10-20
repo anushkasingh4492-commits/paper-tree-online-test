@@ -1,0 +1,58 @@
+[
+ {
+  "id": "V02-J-ALL",
+  "category": "E3",
+  "severity": "major",
+  "finding": "All 25 explanations ended with 'The key keeps/states/gives/captures ...', breaking the house rule against 'the key' in student-facing text.",
+  "fix": "Replaced with 'The correct summary ...' in all 25 explanations.",
+  "changed": true
+ },
+ {
+  "id": "V02-J-ALL",
+  "category": "E2",
+  "severity": "major",
+  "finding": "Measured in characters the correct summary was the longest option in 20 of 25 items and never the shortest.",
+  "fix": "Lengthened a distractor and/or trimmed the key in 002, 003, 005, 008, 011, 012, 013, 017, 020, 021, 024; key now longest by characters in 9/25, options within about 30%.",
+  "changed": true
+ },
+ {
+  "id": "V02-J-008",
+  "category": "E6",
+  "severity": "major",
+  "finding": "Blind solver S1 flag: 'the routine figures have often turned out higher' was ambiguous; 'routine' could be read as the unobserved everyday figures, inverting the logic.",
+  "fix": "Passage now reads 'the observed rates have often turned out considerably higher'; matching defence updated; key trimmed to 'cannot reveal ordinary behaviour'.",
+  "changed": true
+ },
+ {
+  "id": "V02-J-009",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Key said the layout shifts costs 'away from those who benefit', but residents themselves bear the longer trips; the paragraph says costs move 'out of sight' of beneficiaries.",
+  "fix": "Key now ends 'costs its beneficiaries tend not to see'.",
+  "changed": true
+ },
+ {
+  "id": "V02-J-015",
+  "category": "E6",
+  "severity": "minor",
+  "finding": "Key 'The usual distinction ... barely lessens the wrong' was ungrammatical in sense (a distinction does not lessen a wrong).",
+  "fix": "Key rewritten: misleading wrongs the listener scarcely less than lying since it exploits the inference; remaining difference lies mainly in the speaker's self-imposed rule.",
+  "changed": true
+ },
+ {
+  "id": "V02-J-016",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Key said the manipulation charge 'misses the point'; the paragraph says only that the reply 'is weaker than it sounds'.",
+  "fix": "Key now says the charge 'is weak'.",
+  "changed": true
+ },
+ {
+  "id": "V02-J-023",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Key (33 words) was markedly longer and more qualified than the 24 to 25 word distractors (ratio over 1.3).",
+  "fix": "Key tightened: seeing gossip as norm enforcement corrects its idle image but does not justify it, since the norms may be unworthy and targets get no hearing.",
+  "changed": true
+ }
+]

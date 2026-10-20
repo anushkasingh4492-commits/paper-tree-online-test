@@ -1,0 +1,42 @@
+[
+ {
+  "id": "R06-F-02-4",
+  "category": "E2",
+  "severity": "major",
+  "finding": "Blind-solver flag: the correct option lifted the final sentence almost verbatim ('an echo of earlier exposure'), a giveaway on a question labelled Difficult while every wrong option paraphrased.",
+  "fix": "Rewrote the correct option as a paraphrase (apparent popularity versus real preference or earlier prominence) and updated the explanation to link the paraphrase to the quoted sentence.",
+  "changed": true
+ },
+ {
+  "id": "R06-F-07-3",
+  "category": "E2",
+  "severity": "major",
+  "finding": "Blind-solver flag: the correct option echoed 'residue of earlier unfairness' from paragraph 3, so a Difficult inference could be answered by word matching; the two reported-and-rejected views were easy to eliminate.",
+  "fix": "Rewrote the correct option to paraphrase the harm criterion ('how heavily each kind of mistaken decision falls on those who must bear it'), which now competes properly with the total-error option; rewrote the explanation to cite 'who bears the cost ... how severe that cost is' and 'questions about harm and responsibility'.",
+  "changed": true
+ },
+ {
+  "id": "R06-F-04-3",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "The correct option copied the paragraph 3 sentence ('less prepared ... more surprising their failure') nearly word for word while all wrong options paraphrased.",
+  "fix": "Paraphrased the correct option ('worse equipped for unusual crises ... lapses come as more of a shock').",
+  "changed": true
+ },
+ {
+  "id": "R06-F-01-2",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation said 'The key restates this'; similar wording ('The key ...', 'the key ...', 'distractor') in explanations of R06-F-02-4, R06-F-06-1, R06-F-06-4, R06-F-07-3, R06-F-07-5 and in difficulty reasons of R06-F-01-4, 02-2, 02-4, 03-2, 03-4, 04-1, 04-3, 06-1, 06-2, 06-3, 06-4, 07-3, 07-4, 07-5, 08-2, 08-3, 08-4, 08-5.",
+  "fix": "Replaced 'the key' with 'the correct answer' and 'distractor' with 'wrong option' throughout student-facing fields (passage text untouched).",
+  "changed": true
+ },
+ {
+  "id": "R06-F-06-1",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Correct option was conspicuously the longest (21 words against 18 to 19). File-wide the correct option was the longest in 14/34 MCQs, breaching the 40% harness limit after the paraphrase fixes; similar margins in R06-F-03-4, 04-2, 04-3, 05-2, 05-3, 05-4, 06-3, 06-4, 07-3, 08-2.",
+  "fix": "Shortened the correct options of R06-F-03-4, 04-2, 04-3, 05-2, 05-3, 05-4, 06-1, 06-3, 06-4, 07-3, 08-2 and lengthened one wrong option each in R06-F-04-2, 04-3, 05-3, 06-3, 06-4 without changing meaning; key-longest now 8/34.",
+  "changed": true
+ }
+]

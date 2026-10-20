@@ -1,0 +1,942 @@
+{
+ "U01": {
+  "unit_number": 1,
+  "unit_name": "Sets, Relations and Functions",
+  "branch": "Algebra",
+  "count": 140,
+  "totals": {
+   "Easy": 42,
+   "Medium": 63,
+   "Difficult": 35
+  },
+  "batches": [
+   {
+    "letter": "A",
+    "size": 47,
+    "classes": {
+     "XI": 47
+    },
+    "topic": "Sets: representation, subsets, power sets, operations and laws, Venn diagram and cardinality problems (two and three sets, maximum/minimum overlap).",
+    "quotas": {
+     "Easy": 14,
+     "Medium": 21,
+     "Difficult": 12
+    },
+    "file": "drafts/u01_a.py",
+    "prefix": "U01-A",
+    "min_numerical": 8
+   },
+   {
+    "letter": "B",
+    "size": 47,
+    "classes": {
+     "XI": 13,
+     "XII": 34
+    },
+    "topic": "Relations: Cartesian products, number of relations, domain/range (tag these XI); reflexive, symmetric, transitive, equivalence relations, equivalence classes, counting relations with properties on small sets (tag these XII).",
+    "quotas": {
+     "Easy": 14,
+     "Medium": 21,
+     "Difficult": 12
+    },
+    "file": "drafts/u01_b.py",
+    "prefix": "U01-B",
+    "min_numerical": 8
+   },
+   {
+    "letter": "C",
+    "size": 46,
+    "classes": {
+     "XII": 46
+    },
+    "topic": "Functions: one-one, onto, bijective, into; counting functions, injections and surjections between finite sets; composition of functions and composite domain; invertibility of bijections and finding inverses of simple functions.",
+    "quotas": {
+     "Easy": 14,
+     "Medium": 21,
+     "Difficult": 11
+    },
+    "file": "drafts/u01_c.py",
+    "prefix": "U01-C",
+    "min_numerical": 8
+   }
+  ]
+ },
+ "U03": {
+  "unit_number": 3,
+  "unit_name": "Matrices and Determinants",
+  "branch": "Algebra",
+  "count": 220,
+  "totals": {
+   "Easy": 66,
+   "Medium": 99,
+   "Difficult": 55
+  },
+  "batches": [
+   {
+    "letter": "A",
+    "size": 55,
+    "classes": {
+     "XII": 55
+    },
+    "topic": "Matrix algebra and types of matrices: products, powers (including patterns like A^n), transpose, symmetric/skew-symmetric decomposition, trace, idempotent/nilpotent/involutory/orthogonal conditions, counting matrices with given entries and properties.",
+    "quotas": {
+     "Easy": 17,
+     "Medium": 25,
+     "Difficult": 13
+    },
+    "file": "drafts/u03_a.py",
+    "prefix": "U03-A",
+    "min_numerical": 10
+   },
+   {
+    "letter": "B",
+    "size": 55,
+    "classes": {
+     "XII": 55
+    },
+    "topic": "Determinants: evaluation (order 2 and 3), properties, factorised determinants, determinant equations, |kA|, |AB|, area of triangles and collinearity using determinants.",
+    "quotas": {
+     "Easy": 17,
+     "Medium": 25,
+     "Difficult": 13
+    },
+    "file": "drafts/u03_b.py",
+    "prefix": "U03-B",
+    "min_numerical": 10
+   },
+   {
+    "letter": "C",
+    "size": 55,
+    "classes": {
+     "XII": 55
+    },
+    "topic": "Adjoint and inverse: cofactors, adj A, inverse, |adj A|, |adj(adj A)|, inverse of products, solving for matrices using inverses, matrix equations.",
+    "quotas": {
+     "Easy": 16,
+     "Medium": 25,
+     "Difficult": 14
+    },
+    "file": "drafts/u03_c.py",
+    "prefix": "U03-C",
+    "min_numerical": 10
+   },
+   {
+    "letter": "D",
+    "size": 55,
+    "classes": {
+     "XII": 55
+    },
+    "topic": "Systems of linear equations in 2 or 3 variables: consistency tests, unique/infinite/no solution, parameter values, homogeneous systems with non-trivial solutions, solving by the matrix method.",
+    "quotas": {
+     "Easy": 16,
+     "Medium": 24,
+     "Difficult": 15
+    },
+    "file": "drafts/u03_d.py",
+    "prefix": "U03-D",
+    "min_numerical": 10
+   }
+  ]
+ },
+ "U04": {
+  "unit_number": 4,
+  "unit_name": "Permutations and Combinations",
+  "branch": "Algebra",
+  "count": 160,
+  "totals": {
+   "Easy": 48,
+   "Medium": 72,
+   "Difficult": 40
+  },
+  "batches": [
+   {
+    "letter": "A",
+    "size": 54,
+    "classes": {
+     "XI": 54
+    },
+    "topic": "Fundamental principle of counting and permutations: arrangements with restrictions, identical objects, digit/number formation with divisibility conditions, word formation, rank of a word, P(n, r) identities and equations.",
+    "quotas": {
+     "Easy": 16,
+     "Medium": 24,
+     "Difficult": 14
+    },
+    "file": "drafts/u04_a.py",
+    "prefix": "U04-A",
+    "min_numerical": 10
+   },
+   {
+    "letter": "B",
+    "size": 53,
+    "classes": {
+     "XI": 53
+    },
+    "topic": "Combinations: C(n, r) properties and equations, selections with restrictions, committees, at least/at most, geometric counting (points, lines, triangles, diagonals, rectangles in a grid), divisors.",
+    "quotas": {
+     "Easy": 16,
+     "Medium": 24,
+     "Difficult": 13
+    },
+    "file": "drafts/u04_b.py",
+    "prefix": "U04-B",
+    "min_numerical": 10
+   },
+   {
+    "letter": "C",
+    "size": 53,
+    "classes": {
+     "XI": 53
+    },
+    "topic": "Mixed applications combining selection and arrangement: select-then-arrange, division into groups, distributing distinct objects, arrangements with gaps method, counting with complementary counting, integer solutions of x1 + x2 + ... = n (stars and bars as a selection argument).",
+    "quotas": {
+     "Easy": 16,
+     "Medium": 24,
+     "Difficult": 13
+    },
+    "file": "drafts/u04_c.py",
+    "prefix": "U04-C",
+    "min_numerical": 10
+   }
+  ]
+ },
+ "U05": {
+  "unit_number": 5,
+  "unit_name": "Binomial Theorem and its Simple Applications",
+  "branch": "Algebra",
+  "count": 140,
+  "totals": {
+   "Easy": 42,
+   "Medium": 63,
+   "Difficult": 35
+  },
+  "batches": [
+   {
+    "letter": "A",
+    "size": 47,
+    "classes": {
+     "XI": 47
+    },
+    "topic": "General term and specific coefficients: term independent of x, coefficient of x^k, ratio of consecutive coefficients, terms in products of two binomials, number of rational terms.",
+    "quotas": {
+     "Easy": 14,
+     "Medium": 21,
+     "Difficult": 12
+    },
+    "file": "drafts/u05_a.py",
+    "prefix": "U05-A",
+    "min_numerical": 8
+   },
+   {
+    "letter": "B",
+    "size": 47,
+    "classes": {
+     "XI": 47
+    },
+    "topic": "Middle terms, number of terms, sums of coefficients, alternating sums, simple binomial coefficient identities (sum of C(n,r), sum of C(n,r)^2 via coefficient comparison), greatest coefficient.",
+    "quotas": {
+     "Easy": 14,
+     "Medium": 21,
+     "Difficult": 12
+    },
+    "file": "drafts/u05_b.py",
+    "prefix": "U05-B",
+    "min_numerical": 8
+   },
+   {
+    "letter": "C",
+    "size": 46,
+    "classes": {
+     "XI": 46
+    },
+    "topic": "Simple applications: remainders and divisibility (e.g. 7^103 mod 25), last two digits, approximations, comparing 1.01^1000 with 2 type questions, integral and fractional parts of (a + sqrt b)^n.",
+    "quotas": {
+     "Easy": 14,
+     "Medium": 21,
+     "Difficult": 11
+    },
+    "file": "drafts/u05_c.py",
+    "prefix": "U05-C",
+    "min_numerical": 8
+   }
+  ]
+ },
+ "U06": {
+  "unit_number": 6,
+  "unit_name": "Sequence and Series",
+  "branch": "Algebra",
+  "count": 180,
+  "totals": {
+   "Easy": 54,
+   "Medium": 81,
+   "Difficult": 45
+  },
+  "batches": [
+   {
+    "letter": "A",
+    "size": 60,
+    "classes": {
+     "XI": 60
+    },
+    "topic": "Arithmetic progressions: nth term, S_n, S_n as a quadratic in n, terms in AP conditions, word problems, mixed conditions on terms and sums.",
+    "quotas": {
+     "Easy": 18,
+     "Medium": 27,
+     "Difficult": 15
+    },
+    "file": "drafts/u06_a.py",
+    "prefix": "U06-A",
+    "min_numerical": 11
+   },
+   {
+    "letter": "B",
+    "size": 60,
+    "classes": {
+     "XI": 60
+    },
+    "topic": "Geometric progressions: nth term, finite sums, infinite sums, recurring decimals, products of terms, conditions for terms in GP.",
+    "quotas": {
+     "Easy": 18,
+     "Medium": 27,
+     "Difficult": 15
+    },
+    "file": "drafts/u06_b.py",
+    "prefix": "U06-B",
+    "min_numerical": 11
+   },
+   {
+    "letter": "C",
+    "size": 60,
+    "classes": {
+     "XI": 60
+    },
+    "topic": "Inserting arithmetic and geometric means, AM-GM relation and inequality (minimum values, constraints), problems mixing AP and GP (three numbers in AP become GP after changes, etc.).",
+    "quotas": {
+     "Easy": 18,
+     "Medium": 27,
+     "Difficult": 15
+    },
+    "file": "drafts/u06_c.py",
+    "prefix": "U06-C",
+    "min_numerical": 11
+   }
+  ]
+ },
+ "U07": {
+  "unit_number": 7,
+  "unit_name": "Limit, Continuity and Differentiability",
+  "branch": "Calculus",
+  "count": 280,
+  "totals": {
+   "Easy": 84,
+   "Medium": 126,
+   "Difficult": 70
+  },
+  "batches": [
+   {
+    "letter": "A",
+    "size": 56,
+    "classes": {
+     "XI": 28,
+     "XII": 28
+    },
+    "topic": "Real-valued functions: domains and ranges of polynomial, rational, root, log, exponential and trigonometric expressions (tag XI); inverse functions, composition-based graphs, even/odd and periodic functions, graphs of modulus/greatest integer/signum (tag XII).",
+    "quotas": {
+     "Easy": 17,
+     "Medium": 25,
+     "Difficult": 14
+    },
+    "file": "drafts/u07_a.py",
+    "prefix": "U07-A",
+    "min_numerical": 10
+   },
+   {
+    "letter": "B",
+    "size": 52,
+    "classes": {
+     "XI": 52
+    },
+    "topic": "Limits: algebraic factorisation and rationalisation, standard trigonometric, exponential and logarithmic limits, 1^infinity form, limits at infinity, left/right limits with greatest integer and modulus, finding parameters from limit values.",
+    "quotas": {
+     "Easy": 16,
+     "Medium": 23,
+     "Difficult": 13
+    },
+    "file": "drafts/u07_b.py",
+    "prefix": "U07-B",
+    "min_numerical": 9
+   },
+   {
+    "letter": "C",
+    "size": 57,
+    "classes": {
+     "XII": 57
+    },
+    "topic": "Continuity and differentiability: continuity at a point, removable discontinuities, piecewise functions with parameters, greatest integer and modulus functions, number of points of discontinuity/non-differentiability on an interval, differentiability of products like |x| g(x).",
+    "quotas": {
+     "Easy": 17,
+     "Medium": 26,
+     "Difficult": 14
+    },
+    "file": "drafts/u07_c.py",
+    "prefix": "U07-C",
+    "min_numerical": 10
+   },
+   {
+    "letter": "D",
+    "size": 57,
+    "classes": {
+     "XII": 57
+    },
+    "topic": "Differentiation: product, quotient and chain rules, implicit differentiation, inverse trigonometric functions (with simplifying substitutions), logarithmic differentiation, second derivatives and relations like y'' + y = 0, derivative of one function with respect to another only via chain rule.",
+    "quotas": {
+     "Easy": 17,
+     "Medium": 26,
+     "Difficult": 14
+    },
+    "file": "drafts/u07_d.py",
+    "prefix": "U07-D",
+    "min_numerical": 10
+   },
+   {
+    "letter": "E",
+    "size": 58,
+    "classes": {
+     "XII": 58
+    },
+    "topic": "Applications of derivatives: rates of change in geometry contexts, intervals of increase/decrease, parameter for monotonicity, local maxima/minima, absolute extrema on closed intervals, optimisation problems (areas, volumes, distances).",
+    "quotas": {
+     "Easy": 17,
+     "Medium": 26,
+     "Difficult": 15
+    },
+    "file": "drafts/u07_e.py",
+    "prefix": "U07-E",
+    "min_numerical": 10
+   }
+  ]
+ },
+ "U08": {
+  "unit_number": 8,
+  "unit_name": "Integral Calculus",
+  "branch": "Calculus",
+  "count": 280,
+  "totals": {
+   "Easy": 84,
+   "Medium": 126,
+   "Difficult": 70
+  },
+  "batches": [
+   {
+    "letter": "A",
+    "size": 56,
+    "classes": {
+     "XII": 56
+    },
+    "topic": "Indefinite integrals by fundamental formulas and substitution (including trig substitutions and integrals using trigonometric identities such as sin^m cos^n with simple powers).",
+    "quotas": {
+     "Easy": 17,
+     "Medium": 26,
+     "Difficult": 13
+    },
+    "file": "drafts/u08_a.py",
+    "prefix": "U08-A",
+    "min_numerical": 10
+   },
+   {
+    "letter": "B",
+    "size": 56,
+    "classes": {
+     "XII": 56
+    },
+    "topic": "Indefinite integrals by parts (including e^x(f + f') and log/inverse-trig integrands) and by partial fractions.",
+    "quotas": {
+     "Easy": 17,
+     "Medium": 25,
+     "Difficult": 14
+    },
+    "file": "drafts/u08_b.py",
+    "prefix": "U08-B",
+    "min_numerical": 10
+   },
+   {
+    "letter": "C",
+    "size": 56,
+    "classes": {
+     "XII": 56
+    },
+    "topic": "The listed special integrals: 1/(x^2 +/- a^2), 1/sqrt(...), 1/(ax^2+bx+c), (px+q)/(ax^2+bx+c), (px+q)/sqrt(ax^2+bx+c), sqrt(a^2 +/- x^2), sqrt(x^2 - a^2); include questions where the answer is a parameter or a function value f(x) given f(0).",
+    "quotas": {
+     "Easy": 17,
+     "Medium": 25,
+     "Difficult": 14
+    },
+    "file": "drafts/u08_c.py",
+    "prefix": "U08-C",
+    "min_numerical": 10
+   },
+   {
+    "letter": "D",
+    "size": 56,
+    "classes": {
+     "XII": 56
+    },
+    "topic": "Definite integrals: fundamental theorem, King's property, even/odd and periodic properties, modulus and greatest-integer integrands, derivatives of integrals with variable limits, finding f from an integral equation, limits evaluated via known integrals only if stated.",
+    "quotas": {
+     "Easy": 17,
+     "Medium": 25,
+     "Difficult": 14
+    },
+    "file": "drafts/u08_d.py",
+    "prefix": "U08-D",
+    "min_numerical": 10
+   },
+   {
+    "letter": "E",
+    "size": 56,
+    "classes": {
+     "XII": 56
+    },
+    "topic": "Areas of regions bounded by simple curves: under curves, between a line and a parabola, between two parabolas, circle and line, ellipse, modulus curves, regions defined by inequalities; parameter values for a given area.",
+    "quotas": {
+     "Easy": 16,
+     "Medium": 25,
+     "Difficult": 15
+    },
+    "file": "drafts/u08_e.py",
+    "prefix": "U08-E",
+    "min_numerical": 10
+   }
+  ]
+ },
+ "U09": {
+  "unit_number": 9,
+  "unit_name": "Differential Equations",
+  "branch": "Calculus",
+  "count": 140,
+  "totals": {
+   "Easy": 42,
+   "Medium": 63,
+   "Difficult": 35
+  },
+  "batches": [
+   {
+    "letter": "A",
+    "size": 47,
+    "classes": {
+     "XII": 47
+    },
+    "topic": "Order and degree; variables separable equations, including those needing a substitution like y = vx is NOT used here (that is batch B) but substitutions like x + y = t are allowed; particular solutions through a point.",
+    "quotas": {
+     "Easy": 14,
+     "Medium": 21,
+     "Difficult": 12
+    },
+    "file": "drafts/u09_a.py",
+    "prefix": "U09-A",
+    "min_numerical": 8
+   },
+   {
+    "letter": "B",
+    "size": 47,
+    "classes": {
+     "XII": 47
+    },
+    "topic": "Homogeneous differential equations: identifying homogeneity, solving with y = vx, particular solutions, curves through given points.",
+    "quotas": {
+     "Easy": 14,
+     "Medium": 21,
+     "Difficult": 12
+    },
+    "file": "drafts/u09_b.py",
+    "prefix": "U09-B",
+    "min_numerical": 8
+   },
+   {
+    "letter": "C",
+    "size": 46,
+    "classes": {
+     "XII": 46
+    },
+    "topic": "Linear first-order equations: integrating factor, solutions, values y(a) from initial conditions, equations linear in x, simple applications (growth, decay, cooling given as an ODE, slope conditions on curves).",
+    "quotas": {
+     "Easy": 14,
+     "Medium": 21,
+     "Difficult": 11
+    },
+    "file": "drafts/u09_c.py",
+    "prefix": "U09-C",
+    "min_numerical": 8
+   }
+  ]
+ },
+ "U10": {
+  "unit_number": 10,
+  "unit_name": "Co-ordinate Geometry",
+  "branch": "Coordinate Geometry",
+  "count": 300,
+  "totals": {
+   "Easy": 90,
+   "Medium": 135,
+   "Difficult": 75
+  },
+  "batches": [
+   {
+    "letter": "A",
+    "size": 50,
+    "classes": {
+     "XI": 50
+    },
+    "topic": "Cartesian basics: distance and section formulas, locus equations, slopes, parallel and perpendicular conditions, intercepts, area of a triangle, centroid, circumcentre, orthocentre and incentre.",
+    "quotas": {
+     "Easy": 15,
+     "Medium": 23,
+     "Difficult": 12
+    },
+    "file": "drafts/u10_a.py",
+    "prefix": "U10-A",
+    "min_numerical": 9
+   },
+   {
+    "letter": "B",
+    "size": 50,
+    "classes": {
+     "XI": 50
+    },
+    "topic": "Straight lines: forms of equations, intersection, angle between lines, concurrency, distance from a point, distance between parallel lines, foot of the perpendicular, image of a point, lines through an intersection satisfying a condition.",
+    "quotas": {
+     "Easy": 15,
+     "Medium": 23,
+     "Difficult": 12
+    },
+    "file": "drafts/u10_b.py",
+    "prefix": "U10-B",
+    "min_numerical": 9
+   },
+   {
+    "letter": "C",
+    "size": 50,
+    "classes": {
+     "XI": 50
+    },
+    "topic": "Circles: standard and general forms, centre and radius, diameter form, circle through given points, intersection with lines through a circle centred at the origin, length of chord, conditions for touching, position of a point.",
+    "quotas": {
+     "Easy": 15,
+     "Medium": 23,
+     "Difficult": 12
+    },
+    "file": "drafts/u10_c.py",
+    "prefix": "U10-C",
+    "min_numerical": 9
+   },
+   {
+    "letter": "D",
+    "size": 50,
+    "classes": {
+     "XI": 50
+    },
+    "topic": "Parabola in standard forms y^2 = +/-4ax, x^2 = +/-4ay, and shifted forms: focus, directrix, vertex, latus rectum, focal distance, equation from data, intersection with lines.",
+    "quotas": {
+     "Easy": 15,
+     "Medium": 22,
+     "Difficult": 13
+    },
+    "file": "drafts/u10_d.py",
+    "prefix": "U10-D",
+    "min_numerical": 9
+   },
+   {
+    "letter": "E",
+    "size": 50,
+    "classes": {
+     "XI": 50
+    },
+    "topic": "Ellipse in standard form: foci, eccentricity, directrices, latus rectum, focal distances (sum = 2a), equation from data, intersection with lines, points on the ellipse.",
+    "quotas": {
+     "Easy": 15,
+     "Medium": 22,
+     "Difficult": 13
+    },
+    "file": "drafts/u10_e.py",
+    "prefix": "U10-E",
+    "min_numerical": 9
+   },
+   {
+    "letter": "F",
+    "size": 50,
+    "classes": {
+     "XI": 50
+    },
+    "topic": "Hyperbola in standard forms: foci, eccentricity, directrices, latus rectum, asymptotes as a property of the standard form, rectangular hyperbola, conjugate hyperbola, focal distance difference, equation from data, identifying conics from second-degree equations in standard position.",
+    "quotas": {
+     "Easy": 15,
+     "Medium": 22,
+     "Difficult": 13
+    },
+    "file": "drafts/u10_f.py",
+    "prefix": "U10-F",
+    "min_numerical": 9
+   }
+  ]
+ },
+ "U11": {
+  "unit_number": 11,
+  "unit_name": "Three Dimensional Geometry",
+  "branch": "Vectors and 3D Geometry",
+  "count": 140,
+  "totals": {
+   "Easy": 42,
+   "Medium": 63,
+   "Difficult": 35
+  },
+  "batches": [
+   {
+    "letter": "A",
+    "size": 47,
+    "classes": {
+     "XII": 47
+    },
+    "topic": "Points in space: distance, section formula, centroid, direction ratios and direction cosines, angle between lines given by direction ratios, angles made with axes.",
+    "quotas": {
+     "Easy": 14,
+     "Medium": 21,
+     "Difficult": 12
+    },
+    "file": "drafts/u11_a.py",
+    "prefix": "U11-A",
+    "min_numerical": 8
+   },
+   {
+    "letter": "B",
+    "size": 47,
+    "classes": {
+     "XII": 47
+    },
+    "topic": "Equation of a line in vector and Cartesian forms, points on lines, foot of perpendicular and image of a point in a line, intersection point of two lines, parameter for intersection, angle between two lines.",
+    "quotas": {
+     "Easy": 14,
+     "Medium": 21,
+     "Difficult": 12
+    },
+    "file": "drafts/u11_b.py",
+    "prefix": "U11-B",
+    "min_numerical": 8
+   },
+   {
+    "letter": "C",
+    "size": 46,
+    "classes": {
+     "XII": 46
+    },
+    "topic": "Skew lines: shortest distance between skew lines and between parallel lines, deciding skew/intersecting/parallel, parameter values for intersecting lines, line of shortest distance in simple cases.",
+    "quotas": {
+     "Easy": 14,
+     "Medium": 21,
+     "Difficult": 11
+    },
+    "file": "drafts/u11_c.py",
+    "prefix": "U11-C",
+    "min_numerical": 8
+   }
+  ]
+ },
+ "U12": {
+  "unit_number": 12,
+  "unit_name": "Vector Algebra",
+  "branch": "Vectors and 3D Geometry",
+  "count": 160,
+  "totals": {
+   "Easy": 48,
+   "Medium": 72,
+   "Difficult": 40
+  },
+  "batches": [
+   {
+    "letter": "A",
+    "size": 54,
+    "classes": {
+     "XII": 54
+    },
+    "topic": "Vector basics: addition, components, position vectors, section formula, unit vectors, collinearity of points, linear combinations, magnitudes.",
+    "quotas": {
+     "Easy": 16,
+     "Medium": 24,
+     "Difficult": 14
+    },
+    "file": "drafts/u12_a.py",
+    "prefix": "U12-A",
+    "min_numerical": 10
+   },
+   {
+    "letter": "B",
+    "size": 53,
+    "classes": {
+     "XII": 53
+    },
+    "topic": "Scalar (dot) product: angle between vectors, projections, perpendicularity conditions, magnitudes of sums and differences, vectors at given angles, parameter questions.",
+    "quotas": {
+     "Easy": 16,
+     "Medium": 24,
+     "Difficult": 13
+    },
+    "file": "drafts/u12_b.py",
+    "prefix": "U12-B",
+    "min_numerical": 10
+   },
+   {
+    "letter": "C",
+    "size": 53,
+    "classes": {
+     "XII": 53
+    },
+    "topic": "Vector (cross) product: areas of triangles and parallelograms, perpendicular unit vectors, Lagrange identity, simple vector equations like a x r = b, combined dot and cross product questions.",
+    "quotas": {
+     "Easy": 16,
+     "Medium": 24,
+     "Difficult": 13
+    },
+    "file": "drafts/u12_c.py",
+    "prefix": "U12-C",
+    "min_numerical": 10
+   }
+  ]
+ },
+ "U13": {
+  "unit_number": 13,
+  "unit_name": "Statistics and Probability",
+  "branch": "Statistics and Probability",
+  "count": 180,
+  "totals": {
+   "Easy": 54,
+   "Medium": 81,
+   "Difficult": 45
+  },
+  "batches": [
+   {
+    "letter": "A",
+    "size": 45,
+    "classes": {
+     "XI": 45
+    },
+    "topic": "Measures of central tendency for grouped and ungrouped data: mean, median, mode, combined mean, effect of changes in data, missing frequencies.",
+    "quotas": {
+     "Easy": 14,
+     "Medium": 21,
+     "Difficult": 10
+    },
+    "file": "drafts/u13_a.py",
+    "prefix": "U13-A",
+    "min_numerical": 8
+   },
+   {
+    "letter": "B",
+    "size": 45,
+    "classes": {
+     "XI": 45
+    },
+    "topic": "Dispersion: mean deviation, variance and standard deviation for grouped and ungrouped data, change of origin and scale, combined variance, corrected variance after replacing an observation.",
+    "quotas": {
+     "Easy": 14,
+     "Medium": 20,
+     "Difficult": 11
+    },
+    "file": "drafts/u13_b.py",
+    "prefix": "U13-B",
+    "min_numerical": 8
+   },
+   {
+    "letter": "C",
+    "size": 45,
+    "classes": {
+     "XI": 10,
+     "XII": 35
+    },
+    "topic": "Probability: classical probability with counting and addition theorem (tag these XI); multiplication theorem, conditional probability, independent events (tag these XII).",
+    "quotas": {
+     "Easy": 13,
+     "Medium": 20,
+     "Difficult": 12
+    },
+    "file": "drafts/u13_c.py",
+    "prefix": "U13-C",
+    "min_numerical": 8
+   },
+   {
+    "letter": "D",
+    "size": 45,
+    "classes": {
+     "XII": 45
+    },
+    "topic": "Total probability, Bayes' theorem, probability distribution of a discrete random variable (validity, mean, variance, finding unknown probabilities).",
+    "quotas": {
+     "Easy": 13,
+     "Medium": 20,
+     "Difficult": 12
+    },
+    "file": "drafts/u13_d.py",
+    "prefix": "U13-D",
+    "min_numerical": 8
+   }
+  ]
+ },
+ "U14": {
+  "unit_number": 14,
+  "unit_name": "Trigonometry",
+  "branch": "Trigonometry",
+  "count": 160,
+  "totals": {
+   "Easy": 48,
+   "Medium": 72,
+   "Difficult": 40
+  },
+  "batches": [
+   {
+    "letter": "A",
+    "size": 55,
+    "classes": {
+     "XI": 55
+    },
+    "topic": "Trigonometric identities: allied and compound angles, multiple and half angles, sum-to-product, values of special angles, conditional identities with A + B + C = pi, telescoping products like cos A cos 2A cos 4A.",
+    "quotas": {
+     "Easy": 17,
+     "Medium": 25,
+     "Difficult": 13
+    },
+    "file": "drafts/u14_a.py",
+    "prefix": "U14-A",
+    "min_numerical": 10
+   },
+   {
+    "letter": "B",
+    "size": 55,
+    "classes": {
+     "XI": 55
+    },
+    "topic": "Trigonometric functions: domains, ranges, periods, max/min of a sin x + b cos x + c and quadratic-in-sin expressions, signs in quadrants, number of solutions only via graphs within an interval (no general solution formulas), comparisons of values.",
+    "quotas": {
+     "Easy": 16,
+     "Medium": 25,
+     "Difficult": 14
+    },
+    "file": "drafts/u14_b.py",
+    "prefix": "U14-B",
+    "min_numerical": 10
+   },
+   {
+    "letter": "C",
+    "size": 50,
+    "classes": {
+     "XII": 50
+    },
+    "topic": "Inverse trigonometric functions: principal values, domain and range, properties like sin^-1 x + cos^-1 x = pi/2, tan^-1 sums with the xy < 1 condition, simplification, sums of series of tan^-1 terms by telescoping, equations in inverse trigonometric functions.",
+    "quotas": {
+     "Easy": 15,
+     "Medium": 22,
+     "Difficult": 13
+    },
+    "file": "drafts/u14_c.py",
+    "prefix": "U14-C",
+    "min_numerical": 9
+   }
+  ]
+ }
+}

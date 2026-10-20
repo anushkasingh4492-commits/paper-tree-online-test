@@ -1,0 +1,18 @@
+[
+ {
+  "id": "V02-D-001..025 (all)",
+  "category": "E3",
+  "severity": "major",
+  "finding": "Explanations (and several difficulty_reason/misconception texts) referred to 'the key', 'distractor(s)' and 'the main trap', against house style.",
+  "fix": "Replaced with 'the correct answer', 'wrong option(s)' and 'the main wrong option' throughout the file.",
+  "changed": true
+ },
+ {
+  "id": "V02-D-010",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Defence quoted 'shade and ... water evaporating through leaves' with an ellipsis that does not match the passage text exactly.",
+  "fix": "Changed to quote 'shade' and 'water evaporating through leaves' separately.",
+  "changed": true
+ }
+]

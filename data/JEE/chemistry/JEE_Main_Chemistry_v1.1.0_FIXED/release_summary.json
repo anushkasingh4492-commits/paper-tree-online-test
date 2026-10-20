@@ -1,0 +1,31 @@
+{
+  "version": "1.1.0",
+  "date": "2026-09-07",
+  "questions": 2160,
+  "difficulty": {
+    "Difficult": 540,
+    "Easy": 648,
+    "Medium": 972
+  },
+  "classes": {
+    "XI": 1080,
+    "XII": 1080
+  },
+  "answer_letters": {
+    "C": 540,
+    "D": 540,
+    "B": 540,
+    "A": 540
+  },
+  "numerical_alternatives": 270,
+  "numerically_checked_mcqs": 1450,
+  "calculation_models": 141,
+  "medium_replacements": 912,
+  "figures": 61,
+  "practical_requirements": 39,
+  "generator_seeds": 1005,
+  "errata_families_closed": 10,
+  "finding_question_rows_closed": 1195,
+  "status": "All listed errata closed; documented final checks pass",
+  "scope_note": "Editorial difficulty and content review; no independent human panel or empirical item calibration claimed. Numerical families are variants, not independent conceptual coverage."
+}

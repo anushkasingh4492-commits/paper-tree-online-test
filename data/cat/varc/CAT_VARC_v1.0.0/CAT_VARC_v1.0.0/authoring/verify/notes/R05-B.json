@@ -1,0 +1,22 @@
+[
+ {
+  "id": "R05-B-04-2",
+  "kind": "DISAGREEMENT",
+  "solvers": {
+   "S1": {
+    "answer": "A",
+    "key": "A",
+    "working": "Declines came alongside schooling, labour, taxation, war: beyond the sectoral arithmetic.",
+    "alternative": "",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "D",
+    "key": "A",
+    "working": "P3: declines came alongside schooling, unions, taxation, war; not sectoral shift alone; D fails since war/inflation not deliberate",
+    "alternative": "",
+    "issue": ""
+   }
+  }
+ }
+]

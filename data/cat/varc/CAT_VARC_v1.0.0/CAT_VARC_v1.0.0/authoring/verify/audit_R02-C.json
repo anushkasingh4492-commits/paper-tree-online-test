@@ -1,0 +1,74 @@
+[
+ {
+  "id": "R02-C-03-2",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Blind solver S2 noted that the key's 'for most of the group' sits uneasily with paragraph 3's later 'a substantial minority do not return'; the key is right because the remark concerns the hypothetical mixed group, but the wording invited the tension.",
+  "fix": "Key reworded to '... for nearly everyone in a group of that kind', anchoring it to the hypothetical group described.",
+  "changed": true
+ },
+ {
+  "id": "R02-C-08-3",
+  "category": "E4",
+  "severity": "minor",
+  "finding": "Difficult item carried all six exam tags.",
+  "fix": "exams set to CAT, XAT.",
+  "changed": true
+ },
+ {
+  "id": "R02-C-08-4",
+  "category": "E4",
+  "severity": "minor",
+  "finding": "Difficult item carried all six exam tags; key also noticeably the longest option (140 vs 110 to 117 chars).",
+  "fix": "exams set to CAT, XAT; key trimmed to 'A shopper ... grows restless as the other stores nearby seem ever more worth the time.'",
+  "changed": true
+ },
+ {
+  "id": "R02-C-08-5",
+  "category": "E4",
+  "severity": "minor",
+  "finding": "Difficult item carried all six exam tags.",
+  "fix": "exams set to CAT, XAT.",
+  "changed": true
+ },
+ {
+  "id": "R02-C-07-1",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Key (47 chars) far shorter than every distractor (71 to 76), a length cue.",
+  "fix": "Key lengthened to 'the deformation that a load produces in the body that is subjected to it.'",
+  "changed": true
+ },
+ {
+  "id": "R02-C-06-1",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Key (59 chars) clearly shorter than distractors (74 to 83).",
+  "fix": "Key reworded to 'feeds the child's sense of competence, which is what made the activity enjoyable.'",
+  "changed": true
+ },
+ {
+  "id": "R02-C-06-3",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Key (73 chars) clearly shorter than distractors (95 to 105).",
+  "fix": "Key reworded to 'can sometimes keep a person at it until growing skill makes the task itself enjoyable.'",
+  "changed": true
+ },
+ {
+  "id": "R02-C-02-1",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Key (101 chars) clearly longer than distractors (76 to 87).",
+  "fix": "Key trimmed to 'the familiar features of the journey set off the action without any present decision by her.'",
+  "changed": true
+ },
+ {
+  "id": "R02-C-05-1",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Key spoke of the 'purpose' the sequence now serves; paragraph 1 describes a changed use (a timetable for the grieving), not a purpose.",
+  "fix": "Key reworded to '... differs from the use now made of it.'",
+  "changed": true
+ }
+]

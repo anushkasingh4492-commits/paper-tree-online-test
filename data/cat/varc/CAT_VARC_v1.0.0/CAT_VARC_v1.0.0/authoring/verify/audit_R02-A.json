@@ -1,0 +1,50 @@
+[
+ {
+  "id": "R02-A-01-3",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Blind-solver flags (both solvers reached the key): the key's scenario reads slightly oddly and relies on 'from the start'. On re-solving, the key is the only option that tests the paragraph 4 explanation; the other three restate or bear on different claims.",
+  "fix": "none: key is uniquely correct and both solvers reached it; wording tightened under the E2 fix below",
+  "changed": false
+ },
+ {
+  "id": "R02-A-01-3",
+  "category": "E2",
+  "severity": "major",
+  "finding": "Key (169 chars) was much the longest option (others 114 to 134), carrying an extra 'lighting and layout' qualification that singles it out.",
+  "fix": "Dropped 'whose lighting and layout' from the key; lengthened the shared-assumptions distractor so the key is no longer the longest.",
+  "changed": true
+ },
+ {
+  "id": "R02-A-08-4",
+  "category": "E2",
+  "severity": "major",
+  "finding": "Key was 231 characters against about 140 for each distractor, a length giveaway on a Difficult weaken item.",
+  "fix": "Rewrote the key as a single compact contrast (formal conditions versus ungraded session), lengthened all three distractors to similar length, and adjusted the explanation wording; meaning unchanged.",
+  "changed": true
+ },
+ {
+  "id": "R02-A-06-4",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Key (153 chars) noticeably longer than all distractors (119 to 124).",
+  "fix": "Trimmed the key wording and lengthened the rival-factor distractor; key no longer longest.",
+  "changed": true
+ },
+ {
+  "id": "R02-A-07-1",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Key (153 chars) noticeably longer than all distractors (114 to 131); together with the other Difficult keys this formed a 'longest option on hard items' pattern.",
+  "fix": "Tightened the key and lengthened two distractors; key now only marginally longest (150 vs 145). Distractor defences still hold ('unfinished business' is in paragraph 2's second interpretation).",
+  "changed": true
+ },
+ {
+  "id": "R02-A-03-4",
+  "category": "E4",
+  "severity": "minor",
+  "finding": "Labelled Difficult, but the unsupported option is the only one with an absolute ('no indication at all'), which makes it findable at Medium level.",
+  "fix": "none: relabelling would break the exact difficulty quota and the item is otherwise sound; the hedged emotion option remains a genuine trap",
+  "changed": false
+ }
+]

@@ -1,0 +1,42 @@
+[
+ {
+  "id": "R02-F-03-3",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "A",
+    "key": "A",
+    "working": "A shows dogs have self-related recognition via scent, so mirror failure reveals little.",
+    "alternative": "C (monkeys good at other tests) could be read as showing failure does not indicate general cognitive lack, but it is about different capacities, not self-awareness.",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "C",
+    "key": "C",
+    "working": "Dogs showing self-related discrimination via scent supports that mirror failure reflects modality, not missing capacity.",
+    "alternative": "",
+    "issue": ""
+   }
+  }
+ },
+ {
+  "id": "R02-F-05-3",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "A",
+    "key": "A",
+    "working": "P2: judging difficulty by the conscious part of a skill and missing the hidden computation, like judging an iceberg by its tip.",
+    "alternative": "",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "D",
+    "key": "D",
+    "working": "P2: sense of difficulty tracks only what reaches consciousness, like visible tip of iceberg.",
+    "alternative": "A (familiar walk seems shorter) is a perception-bias analogy, but it lacks the hidden-mass element; D fits better.",
+    "issue": ""
+   }
+  }
+ }
+]

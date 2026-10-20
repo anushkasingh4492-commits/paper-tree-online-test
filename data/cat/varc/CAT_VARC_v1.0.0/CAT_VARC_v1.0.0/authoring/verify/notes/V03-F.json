@@ -1,0 +1,42 @@
+[
+ {
+  "id": "V03-F-006",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "5",
+    "key": "5",
+    "working": "3-2-4-1: label looks modest, selection decides what object is, bowl example, removing labels no cure; 5 shifts to who writes labels.",
+    "alternative": "1 is weakly arguable since 5 could follow 4 as a response, but 1 continues the selectivity argument more directly.",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "5",
+    "key": "5",
+    "working": "Label chain 3, 2 'yet', 4 example, 1 removing labels would not help; 5 on community-written labels shifts to a curatorial practice.",
+    "alternative": "1 could also seem a slight tangent, but it completes the argument that selection is unavoidable, so 5 is the better odd one.",
+    "issue": ""
+   }
+  }
+ },
+ {
+  "id": "V03-F-011",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "2",
+    "key": "2",
+    "working": "Chain 1-4-3-5 on jury legitimacy beyond accuracy; 2 on scepticism of police testimony returns to accuracy and breaks the flow.",
+    "alternative": "",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "2",
+    "key": "2",
+    "working": "1-4-3-5: accuracy question, assumes accuracy only, 'also' acceptance/authority, 'that authority'. 2 on scepticism toward police returns to accuracy-style comparison and has no link.",
+    "alternative": "2 could follow 1 as an accuracy point, but 4's 'The question is fair' needs to follow 1 directly.",
+    "issue": ""
+   }
+  }
+ }
+]

@@ -1,0 +1,1218 @@
+{
+ "kind": "VA",
+ "items": [
+  {
+   "id": "V03-E-003",
+   "type": "Odd sentence out",
+   "sentences": {
+    "1": "Body mass index, calculated from a person's weight and height, is popular because it is cheap, quick and needs no special equipment.",
+    "2": "Regular physical activity, even brisk walking for half an hour a day, is widely recommended for adults of every weight.",
+    "3": "Nor does it reveal where fat is stored, although fat around the abdomen is generally thought to carry greater risk than fat elsewhere.",
+    "4": "Its simplicity, however, means that it cannot tell muscle from fat, so a heavily muscled athlete may be classed as overweight.",
+    "5": "The index is therefore best treated as a rough screening tool for populations rather than as a verdict on any one person's health."
+   },
+   "question": "Four of these five sentences form a coherent paragraph. Type the number of the sentence that does not belong."
+  },
+  {
+   "id": "V03-D-018",
+   "type": "Odd sentence out",
+   "sentences": {
+    "1": "The hushed audience of the modern concert hall, which suppresses even a cough until the end of a movement, is a more recent custom than most listeners suppose.",
+    "2": "Silence, on this view, is not a mere rule of etiquette but a way of honouring the work's claim to be heard whole, which is why breaking it now feels like an offence against the music rather than against the neighbours.",
+    "3": "The change followed a new idea of what a piece of music was: no longer an entertainment accompanying a social occasion but a unified work whose meaning lay in its entire course.",
+    "4": "Audiences in earlier centuries often talked, ate and applauded a favourite passage while the music was still playing, and nobody thought the performance spoiled.",
+    "5": "Some orchestras now hold relaxed performances at which talking and moving about are welcomed, hoping to attract listeners who find the formal hall intimidating."
+   },
+   "question": "Four of these five sentences form a coherent paragraph. Type the number of the sentence that does not belong."
+  },
+  {
+   "id": "V02-K-015",
+   "type": "Para summary",
+   "options": {
+    "A": "Shrinking glaciers pose no real threat to water supplies, since the ice that melts each summer adds to the flow of the rivers on which communities rely.",
+    "B": "River flows fall as soon as mountain glaciers begin to shrink, leaving the farms and towns downstream without the water they had once relied upon.",
+    "C": "Shrinking glaciers swell rivers only for a time before a long decline, and this passing surplus risks luring people into relying on water that will not last.",
+    "D": "Communities downstream of glaciers should stop expanding their farms and towns at once, because every river fed by melting ice will soon run completely dry."
+   },
+   "paragraph": "When mountain glaciers shrink, the rivers they feed do not at first run dry; they often swell. Melting ice releases water that has been stored for centuries, so communities downstream may enjoy unusually generous summer flows just as the glaciers are disappearing. The abundance is borrowed. Once a glacier has shrunk past a certain point, there is less ice left to melt each summer, and flows begin a long decline, eventually falling below the levels people had relied on before the melting began. The danger is that years of plenty encourage new farms and towns to plan around a supply that is about to fall away.",
+   "question": "Choose the option that best captures the essence of the paragraph."
+  },
+  {
+   "id": "V04-C-014",
+   "type": "Sentence placement",
+   "paragraph": "Laws that protect people from themselves, such as rules requiring helmets or restricting certain drugs, are often attacked as paternalism. (1) Yet adults are not always the best judges of their own interests, as anyone who has broken a firm resolution knows. (2) A smoker who wishes to quit, or a gambler who asks to be barred from a casino, is not having autonomy overridden when the law helps keep a commitment already made. (3) Such cases do not settle the matter, because many people covered by protective laws have made no such commitment and would resent the help. For them the law does override a considered choice, and its justification must rest on the size of the harm prevented rather than on any claim to serve their own deeper wishes. (4) The fairest verdict on paternalism is therefore mixed: sometimes it serves autonomy, and sometimes it simply outweighs it.",
+   "missing_sentence": "The charge assumes that adults are the best judges of their own interests, and that the state insults them whenever it overrides their choices.",
+   "question": "Which gap, (1), (2), (3) or (4), is the best place for the missing sentence? Answer 1, 2, 3 or 4."
+  },
+  {
+   "id": "V02-G-008",
+   "type": "Para summary",
+   "options": {
+    "A": "In a choir the weaknesses of any individual singer are absorbed into the sound of the whole group, so that no single voice has to be remarkable.",
+    "B": "Choral singing is a more valuable musical activity than solo performance, because it requires every singer to listen carefully and adjust to the voices nearby.",
+    "C": "People join amateur choirs mainly to improve their singing voices, since regular rehearsal with others gradually turns weak singers into capable soloists.",
+    "D": "People unsure of their voices keep joining choirs because group singing asks for mutual listening rather than individual brilliance, and that coordination gives them belonging."
+   },
+   "paragraph": "Why do people who insist they cannot sing keep turning up, week after week, to rehearse with amateur choirs? Part of the answer lies in what choral singing asks of them. Unlike a solo performance, it does not demand that any one voice be remarkable; it demands that each voice listen to the others and adjust, breathing and entering together. The individual's weaknesses are absorbed into the sound of the group, while the group's sound depends on everyone's attention. Members describe the result less as a musical achievement than as a feeling of belonging that few other activities supply so directly. The music matters, but for many singers it is the occasion for the coordination, and the coordination is what they come back for.",
+   "question": "Choose the option that best captures the essence of the paragraph."
+  },
+  {
+   "id": "V01-M-013",
+   "type": "Para jumble",
+   "sentences": {
+    "1": "The neighbourhood tea stall sells a cheap drink, but what keeps its customers coming back is the conversation around it.",
+    "2": "It is this absence of obligation, more than the tea, that makes the stall a meeting place open to almost anyone.",
+    "3": "They can mix so freely because the space belongs to nobody in particular, so no one has to play host and no one owes an invitation in return.",
+    "4": "Strangers who would never visit one another's homes stand shoulder to shoulder there, exchanging news about jobs, prices and local disputes."
+   },
+   "question": "The 4 sentences above, properly sequenced, form a coherent paragraph. Type the sequence of 4 numbers."
+  },
+  {
+   "id": "V03-B-016",
+   "type": "Odd sentence out",
+   "sentences": {
+    "1": "In filling those gaps to answer the classmate's questions, the student who explains ends up learning as much as the one who listens, and sometimes more.",
+    "2": "Students who are asked to explain a topic to a classmate often find that they understood it less well than they had thought.",
+    "3": "Putting an idea into one's own words exposes the gaps that rereading a textbook allows one to skip over.",
+    "4": "Many students also like to revise in pairs simply because studying with a friend makes long sessions feel less tedious.",
+    "5": "This suggests that pairing students to teach one another is not merely a way of saving the teacher's time but a powerful method of learning in its own right."
+   },
+   "question": "Four of these five sentences form a coherent paragraph. Type the number of the sentence that does not belong."
+  },
+  {
+   "id": "V01-F-012",
+   "type": "Para jumble",
+   "sentences": {
+    "1": "Reformers in late eighteenth-century France proposed a remedy: units derived from nature rather than custom, linked to one another by powers of ten.",
+    "2": "For merchants and tax officials, however, that same variety was a constant source of disputes, because the same word could name different quantities in different markets.",
+    "3": "The appeal of the scheme lay in that very detachment, for a measure that belonged to no locality could be accepted by all of them.",
+    "4": "The variety was not mere muddle, since local measures were often tied to local customs, such as the area a team could plough in a day.",
+    "5": "Before the metric system, a unit such as the foot or the pound might differ from one town to the next, and sometimes from one trade to another."
+   },
+   "question": "The 5 sentences above, properly sequenced, form a coherent paragraph. Type the sequence of 5 numbers."
+  },
+  {
+   "id": "V02-K-014",
+   "type": "Para summary",
+   "options": {
+    "A": "Tree rings record the weather of each year so precisely that they have replaced every other method scientists once used to date ancient objects of any kind.",
+    "B": "Old beams can be dated only when they come from trees that were still alive at the time researchers first began to build their records of ring patterns.",
+    "C": "Since yearly rings in a region record a shared pattern of good and bad seasons, overlapping sequences can be joined into a long record against which old wood is dated.",
+    "D": "The age of a single living tree can be found by counting its rings, since each tree adds exactly one ring in every year of its life in any climate."
+   },
+   "paragraph": "Tree rings can date a piece of timber to the exact year because of a simple fact about growth: in many climates a tree adds one ring each year, wide in favourable seasons and narrow in harsh ones. Trees of the same species growing in the same region therefore share a pattern of wide and narrow rings, much like a barcode written by the weather. By matching the pattern in an old beam with overlapping sequences from living trees and from progressively older timbers, researchers can build a continuous record reaching back long before any tree alive today, and place the beam within it.",
+   "question": "Choose the option that best captures the essence of the paragraph."
+  },
+  {
+   "id": "V01-H-004",
+   "type": "Para jumble",
+   "sentences": {
+    "1": "As cheaper copies spread downward, the style loses its power to mark distinction, and the wealthy abandon it for something new.",
+    "2": "The theory thus accounts neatly for why fashion never stands still: every act of imitation from below sets off a fresh flight from above.",
+    "3": "Even these reversals may confirm the underlying logic, however, since what the affluent borrow from below is often prized because it signals a knowingness that money alone cannot buy.",
+    "4": "An old explanation of fashion holds that styles begin among the wealthy, who adopt them precisely because others cannot afford to.",
+    "5": "Yet the theory's neatness is also its weakness, for in recent decades many styles have plainly travelled the other way, from street clothing and working dress into expensive boutiques."
+   },
+   "question": "The 5 sentences above, properly sequenced, form a coherent paragraph. Type the sequence of 5 numbers."
+  },
+  {
+   "id": "V04-F-011",
+   "type": "Sentence placement",
+   "paragraph": "For much of its history, a letter's postage was charged according to the distance it travelled and the number of sheets it contained, and it was often paid by the recipient rather than the sender. The arrangement seemed fair, since carrying a letter across a country plainly cost more than carrying it across a town. Reformers in the nineteenth century argued that this intuition was mistaken. (1) Most of the expense of the post, they claimed, lay not in the journey but in the handling: calculating charges, collecting money at the door and keeping accounts of every item. (2) One cheap charge for every letter, settled beforehand by whoever posted it, would sweep away most of that work at a stroke. (3) Critics of the proposal predicted that the post would be ruined, since each letter would now earn so much less. (4) The lesson reaches beyond the post: a price that tracks one visible cost may conceal a larger cost that the pricing itself creates, and may suppress demand that nobody knew existed.",
+   "missing_sentence": "Once the change was made, the number of letters sent rose steeply, and most of the clerical labour of working out and collecting charges at the door disappeared.",
+   "question": "Which gap, (1), (2), (3) or (4), is the best place for the missing sentence? Answer 1, 2, 3 or 4."
+  },
+  {
+   "id": "V02-J-007",
+   "type": "Para summary",
+   "options": {
+    "A": "Loneliness directly causes illness and early death, and it should therefore be treated by governments as a threat to public health quite as serious as smoking.",
+    "B": "People who are already unwell tend to withdraw from friends and family, which explains why the sick are more often lonely than the healthy.",
+    "C": "Loneliness is consistently linked with earlier death, but since illness or poverty may produce both, the link does not show that loneliness itself causes ill health.",
+    "D": "The link between loneliness and early death is unreliable, since studies that follow people over many years cannot take account of poverty or disability."
+   },
+   "paragraph": "Studies that follow people over many years have found that those who report feeling lonely or socially isolated tend to die earlier than those who do not, and the association has led some to describe loneliness as a threat to public health. The finding is consistent and worth taking seriously. It is not, however, a simple demonstration that loneliness causes illness. People who are already unwell may withdraw from others, and poverty or disability can produce both isolation and poor health. Researchers try to adjust for such factors, but the most that can be said with confidence is that loneliness and early death travel together, and that loneliness may contribute to it.",
+   "question": "Choose the option that best captures the essence of the paragraph."
+  },
+  {
+   "id": "V03-C-005",
+   "type": "Odd sentence out",
+   "sentences": {
+    "1": "The faster journeys, however, change people's choices: some who used to travel at other hours, by other routes or by other means begin to drive on the new road.",
+    "2": "Congestion has costs beyond lost time as well, since engines that keep stopping and starting can release more pollution per kilometre than vehicles moving steadily.",
+    "3": "This does not mean widening is always pointless, but it does mean that its benefits cannot be judged by the first year's journey times.",
+    "4": "When a congested road is widened, journeys along it usually become quicker for a while, and the expansion is hailed as a success.",
+    "5": "Within a few years the extra lanes may fill up, and the road can end up nearly as congested as before, though now carrying more vehicles."
+   },
+   "question": "Four of these five sentences form a coherent paragraph. Type the number of the sentence that does not belong."
+  },
+  {
+   "id": "V02-M-008",
+   "type": "Para summary",
+   "options": {
+    "A": "Because each decision drains a limited store of willpower, people should make their most important choices early in the day, before that reserve runs low.",
+    "B": "Several of the best-known experiments on willpower have since been repeated by other researchers, and the repetitions have generally found smaller effects or none.",
+    "C": "Tiredness after a long working day is largely imaginary, and people who simply stop believing in it will find that effort no longer affects their self-control.",
+    "D": "The notion that each decision drains a fixed store of willpower is weaker than its fame suggests; our depletion may depend partly on beliefs about effort."
+   },
+   "paragraph": "A popular idea holds that willpower is like a fuel tank: every decision drains it, so that by evening we are too depleted to resist temptation. The image is vivid, but the evidence for a simple reservoir has proved weaker than its fame suggests, and attempts to repeat some of the best-known experiments have produced smaller effects or none. Some studies suggest instead that expectations matter. People who believe that effort exhausts them tend to flag after demanding tasks, while those who see effort as energising flag less. Tiredness after a long day is real, but how much it governs our choices may depend partly on the story we tell ourselves about it.",
+   "question": "Choose the option that best captures the essence of the paragraph."
+  },
+  {
+   "id": "V02-F-017",
+   "type": "Para summary",
+   "options": {
+    "A": "Shared resources need not end in ruin or be handed to markets or states, since rule-bound communities have managed some well, though such arrangements can break down.",
+    "B": "Because each user gains fully from taking more while the cost is shared, resources open to all will be overused unless they are privatised or placed under state control.",
+    "C": "Villages that shared grazing land or water often set detailed rules about its use and had ways of detecting and punishing the people who broke those rules.",
+    "D": "Local communities always manage shared resources better than markets or governments do, so pastures, fisheries and forests should be returned to village control."
+   },
+   "paragraph": "A familiar argument holds that any resource open to all, such as a pasture, a fishery or a forest, will be overused until it is ruined, because each user gains the full benefit of taking more while the cost is shared by everyone. The only remedies, on this view, are private ownership or control by the state. The argument is sound for resources that truly are open to anyone, but many traditional commons were nothing of the kind. Villages that shared grazing land or irrigation water often had detailed rules about who could use the resource, how much and when, together with ways of watching for cheaters and punishing them. Such arrangements have kept some resources in good condition for centuries. They do not always work, and they tend to fail when outsiders arrive or when the community loses its authority, but they show that the choice is not limited to the market or the state.",
+   "question": "Choose the option that best captures the essence of the paragraph."
+  },
+  {
+   "id": "V04-A-007",
+   "type": "Sentence placement",
+   "paragraph": "Two drivers take the same corner too fast on the same wet evening, and both are equally careless. One reaches home without incident; a child steps into the road in front of the other. We blame the second driver far more severely, and so, in all likelihood, does he. (1) One response is to call our reaction an error: the two are equally guilty, and the second is merely unluckier. (2) This keeps the principle of control intact, but at a cost, for it asks us to treat the grief and remorse of the second driver as a kind of confusion. (3) Another response accepts that luck shapes what we are answerable for, and concludes that the principle was never as firm as it seemed. Neither response is comfortable, and the discomfort is itself the discovery: our practice of blame rests on two commitments that do not fit together. (4)",
+   "missing_sentence": "Yet if blame should track only what lies within a person's control, this difference is hard to justify, since the child's step was no doing of his.",
+   "question": "Which gap, (1), (2), (3) or (4), is the best place for the missing sentence? Answer 1, 2, 3 or 4."
+  },
+  {
+   "id": "V02-M-016",
+   "type": "Para summary",
+   "options": {
+    "A": "Colonial administrations deliberately designed their land surveys to strip villagers of grazing rights and to hand farmland over to a few favoured owners.",
+    "B": "Because surveyors measured each field precisely, colonial land records gave an accurate and complete picture of who held rights to each plot at the time the records were made.",
+    "C": "Colonial land surveys, made for taxation, recorded single owners where rights had been layered, and by becoming the legal record they reshaped the very claims they appeared to describe.",
+    "D": "Before colonial surveys, a single field might be subject to several rights at once, held by a cultivator, a family and the surrounding village."
+   },
+   "paragraph": "Surveys of land are often presented as neutral exercises in measurement, but when colonial administrations mapped farmland, they were rarely just recording what was there. To tax land, a state needs to know who is responsible for each plot, and so surveyors assigned single owners to fields that had been held under layered arrangements: a cultivator, a family with rights to part of the harvest, a village with rights to graze after the crop was taken in. Once written down, the simplified version became the legal one, and the rights left off the record weakened over time. The map did not merely describe the land; it helped remake the claims to it.",
+   "question": "Choose the option that best captures the essence of the paragraph."
+  },
+  {
+   "id": "V02-N-012",
+   "type": "Para summary",
+   "options": {
+    "A": "Ruins appeal because viewers must imagine what is missing and because decay displays the passing of time, which also explains why faithful restorations can disappoint those who visit them.",
+    "B": "Ruined buildings should be left as they stand rather than restored, since restoration falsifies history and makes old castles less accurate than their broken neighbours.",
+    "C": "Visitors prefer ruins to intact buildings mainly because ruins are older, and age has always been the chief source of a building's appeal to those who travel to see it.",
+    "D": "A building that a viewer must complete in the imagination feels more vivid than one presented whole, because people value images they have helped to create."
+   },
+   "paragraph": "Why do ruins draw visitors who would walk past the same building, intact, without a glance? Part of the answer is that a ruin asks the viewer to do some work. The missing roof and broken arches invite the mind to complete them, and an image a person has helped to build feels more vivid than one simply handed over. A ruin also makes time visible: weathered stone and the roots pushing through it show at a glance the centuries that a whole building conceals. This suggests why restorations sometimes disappoint. A restored castle may be more accurate than its broken neighbour, yet it leaves nothing to imagine and hides the very history it was meant to display.",
+   "question": "Choose the option that best captures the essence of the paragraph."
+  },
+  {
+   "id": "V04-E-004",
+   "type": "Sentence placement",
+   "paragraph": "Words coined to soften an unpleasant subject tend to have short careers. (1) A term is introduced precisely because the older word has picked up a sting, and for a while the new one sounds neutral, even kind. But the attitudes that gave the old word its sting have not gone anywhere, and they soon attach themselves to the replacement. (2) Within a generation the polite term is being used as a taunt in school playgrounds, and reformers begin searching for another. The cycle can be traced through the vocabulary of illness, disability and poverty, and even through the names for the lavatory, which have turned over again and again. (3) Some observers conclude from this that the effort to find kinder words is pointless, but that does not quite follow, since a new word can at least signal that the speaker means no harm, even if the signal fades. (4)",
+   "missing_sentence": "The fair conclusion, then, is neither that renaming is futile nor that it works on its own, but that words can only announce a change in feeling that has to happen somewhere else.",
+   "question": "Which gap, (1), (2), (3) or (4), is the best place for the missing sentence? Answer 1, 2, 3 or 4."
+  },
+  {
+   "id": "V04-D-023",
+   "type": "Sentence placement",
+   "paragraph": "Collections of proverbs are easily mocked, because so many of them contradict one another. (1) 'Look before you leap' sits beside 'He who hesitates is lost', and 'Many hands make light work' beside 'Too many cooks spoil the broth'. (2) If proverbs were meant as general laws, such pairs would show that popular wisdom cannot make up its mind. (3) But they are better understood as tools than as laws. (4) In the same way, each proverb names a pattern that really does occur and offers it to someone who must decide whether the present case is an instance of it. Wisdom, on this view, lies less in knowing the proverbs than in knowing which of them the moment in front of us calls for.",
+   "missing_sentence": "A carpenter who owns both a saw and a glue pot is not confused about whether wood should be cut or joined; he uses each when the job requires it.",
+   "question": "Which gap, (1), (2), (3) or (4), is the best place for the missing sentence? Answer 1, 2, 3 or 4."
+  },
+  {
+   "id": "V03-I-010",
+   "type": "Odd sentence out",
+   "sentences": {
+    "1": "With no rain at that height to wash it out, the mist may spread around the globe and keep the surface measurably cooler for a year or more.",
+    "2": "The rotten-egg smell near volcanic vents comes from hydrogen sulphide, a gas that is dangerous to people who breathe it in high concentrations.",
+    "3": "The most spectacular part of a great eruption, the towering column of ash, is also the part that matters least for the climate.",
+    "4": "The invisible sulphur gas lofted with them is another matter, for in the dry, still air of the stratosphere it becomes a fine mist of droplets that turns sunlight away.",
+    "5": "Ash particles are heavy, and within days or weeks they rain back onto the land around the volcano."
+   },
+   "question": "Four of these five sentences form a coherent paragraph. Type the number of the sentence that does not belong."
+  },
+  {
+   "id": "V02-G-009",
+   "type": "Para summary",
+   "options": {
+    "A": "Purists wrongly treat borrowing as erosion, since loanwords usually add distinctions beside native words and languages have always borrowed; preferring native words is legitimate, but only as taste.",
+    "B": "Borrowed words enrich every language they enter, so efforts by speakers to prefer native coinages over foreign terms are misguided and ought to be abandoned.",
+    "C": "When a foreign word enters a language it usually replaces a native word, but the loss is made good because the newcomer tends to carry a more formal shade of meaning.",
+    "D": "The languages that purists protect were themselves formed through earlier contacts, which shows that campaigns for purity misunderstand the history of the languages they defend."
+   },
+   "paragraph": "Campaigns to purify a language usually begin from the fear that borrowed words are a kind of erosion, each foreign term a small loss of the native stock. The fear misdescribes how languages grow. A borrowed word rarely displaces an existing one outright; more often it settles beside it and the two divide the territory, one taking a formal shade and the other an everyday one, so that the language ends up able to say more rather than less. Borrowing is also old: most languages that purists wish to protect were themselves assembled from earlier contacts. None of this means that every borrowing is welcome or that speakers cannot reasonably prefer a native coinage. It means that the decision is one of taste, not a defence against decay.",
+   "question": "Choose the option that best captures the essence of the paragraph."
+  },
+  {
+   "id": "V01-N-022",
+   "type": "Para jumble",
+   "sentences": {
+    "1": "Students who fear mathematics tend to perform worse in it, and the obvious explanation is that weak skills breed anxiety.",
+    "2": "A student who is busy worrying about failure has less mental room to hold numbers and steps in mind, and so makes errors that seem to confirm the fear.",
+    "3": "That explanation is not wrong, but it is incomplete, for anxiety also consumes the working memory that a calculation needs.",
+    "4": "The relationship thus runs in both directions, which suggests that easing the fear may improve performance even before any new skill is taught."
+   },
+   "question": "The 4 sentences above, properly sequenced, form a coherent paragraph. Type the sequence of 4 numbers."
+  },
+  {
+   "id": "V02-B-006",
+   "type": "Para summary",
+   "options": {
+    "A": "Manufacturers restrict repair mainly because they want to protect their customers from badly made spare parts that could damage expensive modern devices.",
+    "B": "Although defended on safety grounds, repair restrictions chiefly secure makers' control and shorten product lives; real hazards could be handled by standards for repairers instead.",
+    "C": "Independent repair of devices is dangerous, as the risk of battery fires shows, so manufacturers are right to restrict who may obtain spare parts and open devices.",
+    "D": "The history of car repair proves that independent repairers are always as safe and as skilled as manufacturers, whatever kind of product happens to be repaired."
+   },
+   "paragraph": "Manufacturers who make devices hard to open, refuse to sell spare parts or tie components to software locks usually justify these choices on grounds of safety and quality. Some of the concern is genuine: a badly fitted battery can catch fire. Yet the same arguments were once made about cars, and an independent repair trade grew up around them without the roads becoming notably more dangerous. What restrictions on repair reliably achieve is not safety but control over the after-sales market, together with shorter lives for the products themselves. Where real hazards exist, they can be handled by setting standards for repairers rather than by excluding everyone but the original maker.",
+   "question": "Choose the option that best captures the essence of the paragraph."
+  },
+  {
+   "id": "V01-A-009",
+   "type": "Para jumble",
+   "sentences": {
+    "1": "When people from these two traditions talk, each may misjudge the other, one as evasive and the other as rash, without either intending any offence.",
+    "2": "How long a pause in conversation can last before it feels awkward varies a great deal from one culture to another.",
+    "3": "Elsewhere the same silence is read as disagreement or discomfort, and speakers hurry to fill it with words.",
+    "4": "In some places a silence of several seconds is a sign of respect, showing that the listener is giving thought to what was said."
+   },
+   "question": "The 4 sentences above, properly sequenced, form a coherent paragraph. Type the sequence of 4 numbers."
+  },
+  {
+   "id": "V02-G-020",
+   "type": "Para summary",
+   "options": {
+    "A": "Warning labels should be removed from products altogether, since readers have learned that such labels carry little information and no longer pay any attention to them.",
+    "B": "People ignore health warnings because familiarity breeds carelessness, so warnings must be redesigned regularly with fresh images and wording to keep catching attention.",
+    "C": "Warnings lose force not through carelessness but because, placed on harmless and dangerous things alike, they carry little information; issuers who overuse them squander their credibility.",
+    "D": "Each false alarm lowers the value of the next warning, so a sensible reader slowly learns to discount the warnings that appear on many different products."
+   },
+   "paragraph": "Why do warnings that once alarmed people come to be ignored? The usual answer is that people grow careless, but the process is more reasonable than that. A warning that appears everywhere, on products that are mostly harmless as well as on ones that are genuinely dangerous, teaches its readers that it carries little information. Each false alarm lowers the value of the next, and a sensible person learns to discount the signal. The fault then lies less with the reader than with the issuers, who, wishing to cover every conceivable risk, spend the credibility that a warning needs in order to work. A label that warned about fewer things would protect people better, because they would have reason to believe it.",
+   "question": "Choose the option that best captures the essence of the paragraph."
+  },
+  {
+   "id": "V02-B-004",
+   "type": "Para summary",
+   "options": {
+    "A": "Biology relies on a few species chosen for convenience rather than typicality, so its knowledge is deep but its generality is often assumed, not tested.",
+    "B": "Model organisms were selected because they represent living things in general, which is why discoveries made in them so often extend to human beings.",
+    "C": "Researchers keep studying the same few species because tools and breeding stocks already exist, which makes each further study cheaper than starting with a new organism.",
+    "D": "Because model organisms were selected for convenience rather than typicality, findings from them rarely apply to people, and medical research should turn to other species."
+   },
+   "paragraph": "Much of what biologists know about how genes, cells and nervous systems work comes from a small number of species: a fruit fly, a roundworm, a small weed of the mustard family, the laboratory mouse. These organisms were not chosen because they are typical of life. They were chosen because they breed quickly, survive in captivity and can be manipulated easily, and once a community of researchers had built tools and stocks around them, each new study was cheaper to do in the same species than in a new one. The result is a body of knowledge that is deep but narrow, and whose generality is often assumed rather than tested. Findings that hold in a mouse may hold in people, and frequently do; but the reasons the mouse was studied had little to do with its resemblance to us.",
+   "question": "Choose the option that best captures the essence of the paragraph."
+  },
+  {
+   "id": "V01-E-022",
+   "type": "Para jumble",
+   "sentences": {
+    "1": "It is often said that we owe obligations to people who will live centuries from now, though they cannot thank us or hold us to account.",
+    "2": "A person who owes her very existence to such a choice can hardly complain that it harmed her, since without it she would never have lived.",
+    "3": "A puzzle arises because many of our larger choices, about where to build or how to use resources, will affect which particular people come to be born at all.",
+    "4": "If the obligation survives this puzzle, it must be owed not to particular future individuals but to whoever comes to live, as a duty to leave them a world worth inheriting."
+   },
+   "question": "The 4 sentences above, properly sequenced, form a coherent paragraph. Type the sequence of 4 numbers."
+  },
+  {
+   "id": "V04-A-015",
+   "type": "Sentence placement",
+   "paragraph": "Styles of dress seem to return at fairly regular intervals: wide trousers, bold patterns and certain colours disappear for a couple of decades and then come back as if they were new. (1) Part of the answer lies with the young, for whom a style their parents wore looks dated while a style their grandparents wore can look charmingly unfamiliar. (2) Each generation of young buyers therefore rejects what it grew up seeing and reaches back past it to something its members never saw worn in earnest. (3) Designers and shops, who need a reason to sell new clothes every season, are happy to encourage the revival. The returning style is rarely an exact copy, however; it comes back altered to suit new fabrics, new bodies and new ideas of comfort. (4)",
+   "missing_sentence": "Why should fashions move in such cycles rather than wandering at random?",
+   "question": "Which gap, (1), (2), (3) or (4), is the best place for the missing sentence? Answer 1, 2, 3 or 4."
+  },
+  {
+   "id": "V04-A-024",
+   "type": "Sentence placement",
+   "paragraph": "Why is the sky dark at night? The question sounds childish, but it troubled astronomers for centuries, because a simple argument seemed to show that the night sky should blaze. If the universe were infinite, unchanging and evenly filled with stars, then every line of sight, extended far enough, would end on the surface of some star. (1) Distant stars appear fainter, but there would be more of them in proportion, and the two effects would cancel exactly. (2) The whole sky would then shine about as brightly as the surface of a typical star. The darkness we see therefore tells us that at least one of the assumptions is false. (3) The modern answer rejects the assumption that the universe is unchanging: it has a finite age, so light from stars beyond a certain distance has not yet had time to reach us. (4)",
+   "missing_sentence": "The expansion of space adds a further effect, stretching the light of distant sources until much of it falls outside the range our eyes can see.",
+   "question": "Which gap, (1), (2), (3) or (4), is the best place for the missing sentence? Answer 1, 2, 3 or 4."
+  },
+  {
+   "id": "V04-D-003",
+   "type": "Sentence placement",
+   "paragraph": "Historians of medieval pilgrimage once wrote almost entirely about devotion: the vows, the relics, the hope of healing or forgiveness. (1) More recent work has stressed that the great shrines also sat at the centre of busy networks of buying and selling. (2) Pilgrims needed food, beds, guides, ferries and safe passage, and towns along the main routes grew prosperous by supplying them. (3) Much of it traded on devotion itself: badges, small flasks and other tokens were made and sold near the shrines in large numbers, and churches competed to acquire relics that would draw visitors. (4) It is tempting to conclude from all this that faith was merely the occasion for trade, a pretext that the real business of the roads required. That conclusion reverses the dependence. The innkeepers and badge makers prospered only because travellers believed the journey was worth making, and when belief in a shrine's power faded, its trade usually faded with it. The economy of pilgrimage is better read as a measure of how seriously people took their devotions than as evidence that they did not.",
+   "missing_sentence": "This trade, moreover, went well beyond what travellers strictly needed in order to complete the journey.",
+   "question": "Which gap, (1), (2), (3) or (4), is the best place for the missing sentence? Answer 1, 2, 3 or 4."
+  },
+  {
+   "id": "V03-J-020",
+   "type": "Odd sentence out",
+   "sentences": {
+    "1": "Turning to something easier brings immediate relief, and that relief is what makes the habit so hard to break.",
+    "2": "The habit of putting tasks off is commonly blamed on disorganisation, as though a sharper timetable would be enough to cure it.",
+    "3": "Deadlines set by someone else are often met more reliably than the ones people set for themselves.",
+    "4": "On this view, procrastination is a way of handling feelings rather than a lapse in planning, so remedies that ignore emotion are likely to fail.",
+    "5": "Yet those who delay a piece of work can usually say exactly how long it will take; what they shrink from is the discomfort it stirs up."
+   },
+   "question": "Four of these five sentences form a coherent paragraph. Type the number of the sentence that does not belong."
+  },
+  {
+   "id": "V01-C-006",
+   "type": "Para jumble",
+   "sentences": {
+    "1": "Walk through almost any public park and you will find bare strips of earth cutting across the lawns where no path was ever laid.",
+    "2": "Some designers now take the opposite view, reading such tracks as a free survey of where people actually want to go.",
+    "3": "On this view, a new campus might open with no paved walks at all and be paved only after a season, along the lines its walkers have worn.",
+    "4": "Planners call these desire paths, and for a long time they treated them as damage to be fenced off or replanted."
+   },
+   "question": "The 4 sentences above, properly sequenced, form a coherent paragraph. Type the sequence of 4 numbers."
+  },
+  {
+   "id": "V04-A-003",
+   "type": "Sentence placement",
+   "paragraph": "When a city renames a street, the new name appears overnight on signs and maps, but it often takes a generation to appear in everyday speech. (1) That knowledge is spread across thousands of small habits: residents give directions by the old name, shopkeepers print it on their cards, and older people use it to locate their memories. (2) An official order can change the label, but it cannot reach what people already know, and so the old name lingers in conversation long after it has vanished from the signs. (3) Newcomers, who never knew the old name, adopt the new one almost at once. For a while the city speaks in two vocabularies, and the change is complete only when those who learned the old name are no longer there to use it. (4)",
+   "missing_sentence": "The reason is that a street name is not only an official label but also a piece of shared local knowledge.",
+   "question": "Which gap, (1), (2), (3) or (4), is the best place for the missing sentence? Answer 1, 2, 3 or 4."
+  },
+  {
+   "id": "V04-B-005",
+   "type": "Sentence placement",
+   "paragraph": "Predictive text is usually discussed as a convenience, a way of saving a few keystrokes on a small screen. Its subtler effect is on what gets written at all. A suggestion appears, it is roughly what the writer meant, and accepting it costs less effort than typing the word that was actually in mind. Since the system proposes whatever is most common in the text it learned from, each accepted suggestion pulls the sentence slightly towards the average. (1) No single choice of this kind matters much, but a habit repeated across millions of messages could make written language noticeably more uniform. (2) None of this means the tools should be abandoned; for people who find typing slow or painful, they can make writing possible rather than merely quicker. (3) The point is rather that a convenience which shapes expression deserves to be noticed, and perhaps occasionally refused. (4)",
+   "missing_sentence": "A writer about to call a sunset 'bruised' is offered 'beautiful', the commoner word, and accepts it because it is close enough.",
+   "question": "Which gap, (1), (2), (3) or (4), is the best place for the missing sentence? Answer 1, 2, 3 or 4."
+  },
+  {
+   "id": "V02-K-023",
+   "type": "Para summary",
+   "options": {
+    "A": "Showing every clue makes detective fiction a fair contest but tempts writers to flatten characters, a danger the best writers avoid by hiding clues in character.",
+    "B": "Detective stories give pleasure mainly because readers usually solve the crime before the detective does, using the clues the writer has laid out on the page.",
+    "C": "Detective writers should abandon the rule that clues must appear before the solution, so that they are free to develop their characters more fully and freely.",
+    "D": "The fair-play convention has ruined detective fiction, since every book written under it is remembered for its solution rather than for its characters."
+   },
+   "paragraph": "The classic detective story asks the reader to accept an unusual bargain: every clue the detective uses must be shown on the page before the solution, so that a sufficiently attentive reader could, in principle, reach it first. The convention turns the novel into a contest between writer and reader, and much of the genre's pleasure comes from losing that contest fairly. But fairness has a price. A writer who must lay out every clue while still surprising the reader is tempted to reduce people to suspects and conversations to evidence, and many such books are remembered for their solutions rather than their characters. The finest examples avoid this by hiding clues inside character itself, so that understanding a person and solving the crime become the same act.",
+   "question": "Choose the option that best captures the essence of the paragraph."
+  },
+  {
+   "id": "V03-D-006",
+   "type": "Odd sentence out",
+   "sentences": {
+    "1": "When several firms bid for the right to drill an oilfield, each forms its own estimate of how much oil lies underground, and these estimates scatter around the true amount.",
+    "2": "A bidder who understands this will deliberately bid below its own estimate, and the more rivals it faces, the further below it should go.",
+    "3": "Winning therefore carries bad news: it tells the winner that it was probably the most optimistic bidder in the room, not the most perceptive.",
+    "4": "The firm that wins is the one whose estimate was highest, and the highest of many scattered estimates is likely to be too high.",
+    "5": "Oil companies also face the danger that prices will fall between the auction and the first barrel, a risk that no estimate of the reserves can remove."
+   },
+   "question": "Four of these five sentences form a coherent paragraph. Type the number of the sentence that does not belong."
+  },
+  {
+   "id": "V01-E-024",
+   "type": "Para jumble",
+   "sentences": {
+    "1": "One explanation is that giving something up registers as a loss, and losses weigh more heavily with us than gains of the same size.",
+    "2": "People who have just been given a mug typically ask more to part with it than people without one will offer for an identical mug.",
+    "3": "On this account, owner and buyer are not really pricing the same thing, since the owner is weighing the loss of a mug and the buyer the gain of one.",
+    "4": "The gap is puzzling on a simple view of value, since a few minutes of ownership cannot have made the mug any more useful.",
+    "5": "Their figures differ, then, because they are answering different questions, and neither need be mistaken about the mug itself."
+   },
+   "question": "The 5 sentences above, properly sequenced, form a coherent paragraph. Type the sequence of 5 numbers."
+  },
+  {
+   "id": "V02-B-024",
+   "type": "Para summary",
+   "options": {
+    "A": "Since every use of an antibiotic, even a needless one, helps resistance spread, prescribing carries a shared cost, and the drugs should be treated as a common resource.",
+    "B": "Antibiotics have no effect on viral infections, so patients with colds and similar illnesses gain nothing at all from taking a course of them.",
+    "C": "Antibiotics should be withheld from patients except in life-threatening cases, since every single use of them helps resistant bacteria spread further through the population.",
+    "D": "Unnecessary painkillers are as harmful to society as unnecessary antibiotics, since both kinds of medicine lose their usefulness when they are used too freely."
+   },
+   "paragraph": "Every time an antibiotic is used, bacteria that happen to resist it gain an advantage over those that do not, so resistance spreads in proportion to use, including use that does the patient no good, as when antibiotics are taken for viral infections they cannot touch. This makes antibiotics unlike most medicines. A painkiller taken unnecessarily affects only the person who takes it; an antibiotic taken unnecessarily slightly reduces the usefulness of the drug for everyone. Decisions that look private, between one doctor and one patient, therefore have a shared cost. Treating antibiotics as a common resource, to be used when needed but not casually, is not excessive caution but a recognition of how they work.",
+   "question": "Choose the option that best captures the essence of the paragraph."
+  },
+  {
+   "id": "V02-I-002",
+   "type": "Para summary",
+   "options": {
+    "A": "Extended warranties are a dishonest sales trick, and no buyer of a household appliance, whatever their circumstances, should ever agree to buy one.",
+    "B": "Shops push extended warranties chiefly because customers who buy them are more likely to return to the same shop for later appliance purchases.",
+    "C": "Because extended warranties cost more than expected repairs, most buyers should decline them, though they may suit someone unable to bear a sudden large expense.",
+    "D": "Appliances rarely fail after their first few months, which is why their makers are willing to offer a guarantee covering only the early period of use."
+   },
+   "paragraph": "Shops selling televisions and washing machines press customers hard to buy an extended warranty at the till, and the reason is simple: these contracts are among the most profitable things the shop sells. The price is set well above the expected cost of repairs, because most appliances that survive their first months go on working for years, and those that fail early are already covered by the maker's own guarantee. A buyer who can afford an occasional repair bill is therefore better off keeping the money and paying for repairs if they come. The case changes only for someone who could not absorb a sudden large expense; for that buyer, paying a premium to avoid the risk may be sensible.",
+   "question": "Choose the option that best captures the essence of the paragraph."
+  },
+  {
+   "id": "V01-F-025",
+   "type": "Para jumble",
+   "sentences": {
+    "1": "Early filters for junk email worked by blocking messages that contained words commonly found in advertising, such as offers of free money.",
+    "2": "The contest has no final victory for either side, because a filter that learns and an adversary who adapts each supply the other with the lessons it needs.",
+    "3": "Each improvement, however, taught senders what the filter was now looking for, and the advantage passed back to them until the next adjustment.",
+    "4": "Filters then began to learn from examples, weighing hundreds of features of each message instead of a few forbidden words.",
+    "5": "Senders quickly learned to misspell those words or hide them in images, so that their messages slipped past the lists."
+   },
+   "question": "The 5 sentences above, properly sequenced, form a coherent paragraph. Type the sequence of 5 numbers."
+  },
+  {
+   "id": "V02-L-016",
+   "type": "Para summary",
+   "options": {
+    "A": "Rare-disease drug incentives have yielded real treatments, but since they turn on patient numbers they can shield high prices in large markets, so they need closer targeting.",
+    "B": "Without government incentives no company would ever develop a drug for a rare disease, since the small number of patients makes such drugs unprofitable to produce and sell.",
+    "C": "Drug companies divide common diseases into rare subtypes to qualify for incentives, which shows that the industry cannot be trusted to develop any medicines responsibly.",
+    "D": "Incentives for rare-disease drugs mainly let companies charge high prices for medicines with large markets, so they have done more harm than good and ought to be withdrawn."
+   },
+   "paragraph": "Because a rare disease affects few people, a drug that treats it promises a small market, and companies left to market incentives alone have little reason to develop one. Governments in many countries have therefore offered inducements, such as extended periods of exclusive sale, to make such drugs worth developing. The policy has produced treatments for conditions that once had none, and that achievement is real. But an incentive defined by the number of patients can be met in ways its designers did not intend. A common disease can sometimes be divided into narrowly defined subtypes, each rare enough to qualify, and a drug that later proves useful for many conditions may keep the protections it earned for one. The result can be high prices on drugs whose markets are not small at all. The remedy is not to abandon the incentives but to tie them more closely to the problem they were meant to solve.",
+   "question": "Choose the option that best captures the essence of the paragraph."
+  },
+  {
+   "id": "V01-N-009",
+   "type": "Para jumble",
+   "sentences": {
+    "1": "Software companies release security updates frequently, and each one asks users to stop what they are doing and restart their devices.",
+    "2": "Since delay is so costly, some designers argue that the safest update is the one the user never notices, installed quietly while the device is idle.",
+    "3": "Faced with constant interruptions, many people learn to postpone updates by reflex, without reading what they fix.",
+    "4": "The habit is dangerous precisely because attackers study published fixes to learn which weaknesses remain open on machines that have not been patched."
+   },
+   "question": "The 4 sentences above, properly sequenced, form a coherent paragraph. Type the sequence of 4 numbers."
+  },
+  {
+   "id": "V03-A-007",
+   "type": "Odd sentence out",
+   "sentences": {
+    "1": "Most people judge it worse to push someone into a river than to fail to rescue a stranger who has fallen in, even when the outcome is the same.",
+    "2": "Defenders of the distinction answer that a duty not to harm can be owed to everyone at once, whereas a duty to rescue everyone in danger would consume a whole life.",
+    "3": "Philosophers also disagree about whether an omission can be a cause at all, since if failing to rescue causes a death, so do the failures of everyone else who might have helped.",
+    "4": "Some philosophers dismiss this intuition as a bias, arguing that if the consequences are identical, the moral verdicts should be too.",
+    "5": "On their account the asymmetry is no bias but a recognition that negative duties, unlike positive ones, can be fully honoured by every person simultaneously."
+   },
+   "question": "Four of these five sentences form a coherent paragraph. Type the number of the sentence that does not belong."
+  },
+  {
+   "id": "V01-G-009",
+   "type": "Para jumble",
+   "sentences": {
+    "1": "Acts of completion as small as this one are the medium's real material, and much of a cartoonist's craft lies in judging how many of them to ask for.",
+    "2": "Show a raised fist in one panel and a man rubbing his jaw in the next, and the reader imagines the punch without any sense of having done work.",
+    "3": "Yet it is there that much of the story happens, since whatever occurs between one frozen moment and the next must be supplied by the reader.",
+    "4": "Nothing is drawn in the narrow blank between two comic panels, and most readers never consciously look at it."
+   },
+   "question": "The 4 sentences above, properly sequenced, form a coherent paragraph. Type the sequence of 4 numbers."
+  },
+  {
+   "id": "V01-D-014",
+   "type": "Para jumble",
+   "sentences": {
+    "1": "The decisive invention was therefore not a stronger rope but a brake that gripped the guide rails automatically if the rope failed.",
+    "2": "Buildings of more than five or six storeys were rare before the passenger lift, since few people would climb that far every day.",
+    "3": "Only then did it make commercial sense to build upward, and the tall office block followed.",
+    "4": "Once passengers could trust that a broken rope meant a jolt rather than a fall, they accepted the lift as an ordinary part of daily life.",
+    "5": "Early lifts, however, hung from a single rope, and the fear that it might snap kept many people firmly on the stairs."
+   },
+   "question": "The 5 sentences above, properly sequenced, form a coherent paragraph. Type the sequence of 5 numbers."
+  },
+  {
+   "id": "V01-M-007",
+   "type": "Para jumble",
+   "sentences": {
+    "1": "People tend to credit their successes to their own ability and effort while blaming their failures on bad luck, unfair tests or difficult circumstances.",
+    "2": "Yet the habit may serve a purpose, because someone who reads every failure as proof of personal inadequacy may stop trying altogether.",
+    "3": "The bias, on this view, is less a defect of reasoning than a buffer that keeps people persisting long enough to improve.",
+    "4": "At first sight this looks like simple vanity, a refusal to face unwelcome truths about oneself."
+   },
+   "question": "The 4 sentences above, properly sequenced, form a coherent paragraph. Type the sequence of 4 numbers."
+  },
+  {
+   "id": "V02-H-023",
+   "type": "Para summary",
+   "options": {
+    "A": "A figure who held views now seen as abhorrent deserves no admiration, since wrong is wrong whatever the standards of the age in which that person lived.",
+    "B": "Because dissenters in every age saw past its accepted wrongs, the standards of a figure's own time can lessen blame for abhorrent views but cannot remove it.",
+    "C": "Since some people in every age saw past its prevailing views, those who failed to join these dissenters deserve the same blame as anyone holding such views today.",
+    "D": "Past figures should be judged only by the moral standards of their own age, since nobody can reasonably be expected to see beyond the outlook of their time."
+   },
+   "paragraph": "Two responses are common when a celebrated figure from the past is found to have held views now regarded as abhorrent. One insists that such people be judged by the standards of their own time, since no one can be expected to see beyond the moral horizon of their age. The other holds that wrong is wrong, and that admiration should be withdrawn. Both overlook something. Any age contains dissenters, people who did see past the prevailing view, often at some cost, and their existence shows that the horizon was not closed. It does not follow that every figure who failed to join them was a villain; it does follow that 'they were of their time' is a partial excuse, which lessens blame without removing it.",
+   "question": "Choose the option that best captures the essence of the paragraph."
+  },
+  {
+   "id": "V02-M-022",
+   "type": "Para summary",
+   "options": {
+    "A": "Since a failed prediction indicts a bundle of assumptions, saving a theory by blaming another of them can be legitimate, if that assumption is independently checkable.",
+    "B": "Since logic cannot say which assumption a failed prediction refutes, no experiment can ever count against a theory, and every rescue of a theory is equally reasonable.",
+    "C": "When a prediction fails, scientists should suspect their instruments first, since faulty equipment rather than the theory itself is usually to blame for the failure.",
+    "D": "A theory is refuted as soon as one of its predictions fails, so scientists who keep it after a failed test are refusing to accept the evidence before them."
+   },
+   "paragraph": "A common picture of science holds that a single failed prediction refutes a theory. In practice, no theory yields a prediction by itself; every test also relies on assumptions about the instruments, the experimental conditions and other theories taken for granted. When the prediction fails, logic tells us only that something in this bundle is wrong, not which part. Scientists who keep a theory after a failed test and blame an auxiliary assumption are therefore not necessarily being dogmatic; sometimes the faulty instrument really is the culprit. What separates a reasonable rescue from an evasive one is whether the blamed assumption can be checked independently, rather than being invoked only to save the theory.",
+   "question": "Choose the option that best captures the essence of the paragraph."
+  },
+  {
+   "id": "V04-B-002",
+   "type": "Sentence placement",
+   "paragraph": "Seed banks are often described as an insurance policy for agriculture, and the description is a fair one as far as it goes. Samples of thousands of crop varieties sit in cold storage, protected from war, drought and commercial neglect, ready to be drawn upon if a disease wipes out the varieties now in the fields. What a frozen seed cannot do, however, is change. (1) A variety kept in a farmer's field is exposed every season to new pests, shifting rainfall and the farmer's own choices about which plants to save, and it slowly adapts to all of them. The same variety in a vault is a photograph of a moment, accurate but fixed. (2) There is also knowledge that no vault stores: how a variety should be sown, when it ripens best, what dish it was grown for. (3) That knowledge lives with the people who grow the crop, and it disappears when they stop growing it, whatever happens to the seed. Vaults and fields are therefore not rivals; the first keeps a copy, and only the second keeps the original alive and changing. (4)",
+   "missing_sentence": "Thawed and planted decades later, such a photograph may show a crop suited to a climate and to pests that have since moved on.",
+   "question": "Which gap, (1), (2), (3) or (4), is the best place for the missing sentence? Answer 1, 2, 3 or 4."
+  },
+  {
+   "id": "V03-I-015",
+   "type": "Odd sentence out",
+   "sentences": {
+    "1": "The caption settles which of these it is, and readers rarely question it, because the photograph appears to confirm what the words assert.",
+    "2": "For this reason, careful editors treat captions as claims that need checking, not as neutral labels attached to a self-evident image.",
+    "3": "An image of a crowd running down a street may show people fleeing danger, rushing towards a celebration or simply chasing a bus.",
+    "4": "Photographers often take hundreds of pictures of a single event, and editors then choose the one that will look most striking on the page.",
+    "5": "A news photograph seems to speak for itself, but the same picture can tell very different stories depending on the words placed beneath it."
+   },
+   "question": "Four of these five sentences form a coherent paragraph. Type the number of the sentence that does not belong."
+  },
+  {
+   "id": "V02-C-007",
+   "type": "Para summary",
+   "options": {
+    "A": "Before railways, carrying goods by water cost much less than carrying them overland, which is why hills rather than rivers were the main barriers to trade.",
+    "B": "States drew borders along rivers because, long before railways, river valleys already separated distinct communities that differed in their trade, kinship and speech.",
+    "C": "The habit of seeing rivers as natural dividers mostly reflects later choices by states, since rivers usually joined the communities along them, though some have genuinely kept peoples apart.",
+    "D": "Rivers have never truly divided human communities, and borders drawn along them are wholly artificial lines imposed by states that ignored how settlement actually took shape."
+   },
+   "paragraph": "Atlases encourage us to see rivers as natural boundaries: a blue line on the map separates one province or country from the next, and it is tempting to assume the line was drawn there because the water divided people. For most of history the reverse was closer to the truth. Before railways, moving goods by water was far cheaper than moving them by land, so a river bound the communities along its banks into a single zone of trade, kinship and shared speech, while the hills on either side were the real obstacles. Rivers became frontiers largely when states, wanting lines that were easy to describe in treaties and to defend, chose them for that purpose. The division we read into the landscape is therefore often an administrative choice laid over a geography that once worked the other way. This is not to deny that some rivers, wide or violent, have always separated peoples.",
+   "question": "Choose the option that best captures the essence of the paragraph."
+  },
+  {
+   "id": "V01-J-016",
+   "type": "Para jumble",
+   "sentences": {
+    "1": "A wiser policy would regulate where and when vending takes place rather than pretend that the demand it meets can be abolished.",
+    "2": "Yet the same vendors supply cheap food and goods to commuters and workers whom formal shops, with their higher rents, do not serve.",
+    "3": "They also keep streets occupied after offices close, and an occupied street is, by most accounts, a safer one.",
+    "4": "City authorities often treat street vendors as an obstruction to be cleared from pavements in the name of order and hygiene.",
+    "5": "Clearing them therefore removes services that someone must then replace, often at greater public cost."
+   },
+   "question": "The 5 sentences above, properly sequenced, form a coherent paragraph. Type the sequence of 5 numbers."
+  },
+  {
+   "id": "V01-K-014",
+   "type": "Para jumble",
+   "sentences": {
+    "1": "For much of the twentieth century, forest managers in several countries treated every wildfire as an enemy to be put out as quickly as possible.",
+    "2": "Many managers now set controlled burns on purpose, accepting small fires in order to prevent catastrophic ones.",
+    "3": "When a fire eventually escaped control, it found so much fuel that it burned far hotter than the small fires it replaced, killing trees that would once have survived.",
+    "4": "In forests adapted to frequent low fires, this policy allowed dead wood and undergrowth to build up year after year."
+   },
+   "question": "The 4 sentences above, properly sequenced, form a coherent paragraph. Type the sequence of 4 numbers."
+  },
+  {
+   "id": "V04-D-025",
+   "type": "Sentence placement",
+   "paragraph": "Many of the marks we now call punctuation began as aids to reading aloud. (1) As silent reading became normal and printed books multiplied, the marks gradually took on a different job. (2) They came to show the structure of sentences, separating clauses and setting off phrases, whether or not a speaker would pause there. (3) The two purposes have never been fully separated, and modern usage carries traces of both. This is why writers still argue about commas, since a comma that marks a breath and a comma that marks a grammatical boundary do not always fall in the same place. (4) Much of the confusion about punctuation comes from treating a mixed inheritance as if it were a single, consistent design.",
+   "missing_sentence": "They told a reader where to pause and for how long, so that a text could be delivered clearly to listeners.",
+   "question": "Which gap, (1), (2), (3) or (4), is the best place for the missing sentence? Answer 1, 2, 3 or 4."
+  },
+  {
+   "id": "V01-L-013",
+   "type": "Para jumble",
+   "sentences": {
+    "1": "The score is therefore most useful for tracking change in one patient over time, not for comparing one patient with another.",
+    "2": "The number is easy to record and compare, which is why it has become a routine part of clinical charts.",
+    "3": "Hospitals commonly ask patients to rate their pain on a scale from zero to ten.",
+    "4": "But two patients who both say 'seven' may mean very different things, since each anchors the scale to the worst pain they have personally known."
+   },
+   "question": "The 4 sentences above, properly sequenced, form a coherent paragraph. Type the sequence of 4 numbers."
+  },
+  {
+   "id": "V03-I-009",
+   "type": "Odd sentence out",
+   "sentences": {
+    "1": "Firms whose staff are treated well also tend to keep their customers longer, since contented employees serve buyers with more care.",
+    "2": "A customer held in this way may stay even when a competitor offers a better product at a lower price.",
+    "3": "Such rewards look like generosity, but they also raise the cost of leaving, since a customer who switches to a rival forfeits everything saved up.",
+    "4": "Loyalty, in such markets, can therefore reflect the cost of exit rather than satisfaction with what is being bought.",
+    "5": "Firms often reward loyal customers with points, discounts or free upgrades that accumulate the longer they stay."
+   },
+   "question": "Four of these five sentences form a coherent paragraph. Type the number of the sentence that does not belong."
+  },
+  {
+   "id": "V01-I-012",
+   "type": "Para jumble",
+   "sentences": {
+    "1": "During adolescence the body's internal clock shifts later, so that teenagers naturally feel sleepy and wake later than younger children.",
+    "2": "School timetables, however, are usually set for the convenience of transport and of working parents, and often begin early in the morning.",
+    "3": "Some districts that have moved the start of the day later report pupils who are more alert in morning classes, though the effect on results is still debated.",
+    "4": "The two schedules collide, leaving many teenagers chronically short of sleep on school days."
+   },
+   "question": "The 4 sentences above, properly sequenced, form a coherent paragraph. Type the sequence of 4 numbers."
+  },
+  {
+   "id": "V02-H-017",
+   "type": "Para summary",
+   "options": {
+    "A": "Revolutions often follow improvement rather than settled misery because rising conditions raise expectations, and unrest grows from the gap between those hopes and what people actually have.",
+    "B": "Revolutions break out where misery is deepest and most prolonged, since the people who have suffered longest and worst have the strongest reasons to overthrow their rulers.",
+    "C": "Rulers who wish to avoid revolution should never begin to reform, since any improvement in their subjects' conditions will inevitably provoke a rebellion against them.",
+    "D": "People who have lived through long and settled hardship usually become resigned to it, because such hardship is all that they have ever learned to expect."
+   },
+   "paragraph": "It seems natural to expect revolutions where misery is deepest, yet they have often broken out in societies that were growing richer and whose rulers had begun to reform. The puzzle dissolves once one considers what people compare their situation with. Long and settled hardship tends to produce resignation, because it is all that people expect. When conditions start to improve, expectations rise faster than conditions can, and when a reforming regime then stalls or reverses course, the gap between what people now think possible and what they actually have becomes intolerable. Discontent, on this view, tracks the distance between hopes and reality, not the absolute level of hardship.",
+   "question": "Choose the option that best captures the essence of the paragraph."
+  },
+  {
+   "id": "V04-B-019",
+   "type": "Sentence placement",
+   "paragraph": "Teachers often say that they never really understood a subject until they had to teach it. The remark sounds like modesty, but it describes something real about how understanding is built. To explain an idea to someone else, a person must put its parts in order, decide what depends on what and anticipate where a listener might go wrong. (1) Gaps that could be ignored while reading become impossible to ignore when a student asks a simple question and no answer comes. (2) Schools have tried to harness this by asking pupils to teach one another, with mixed results. (3) The benefit seems to go mostly to the pupil doing the explaining, and only when the explaining is genuine rather than a recitation of notes. A pupil who reads out a summary to a partner has rehearsed the material without ever being forced to organise it. (4)",
+   "missing_sentence": "Each of these demands is a test that silent study rarely sets.",
+   "question": "Which gap, (1), (2), (3) or (4), is the best place for the missing sentence? Answer 1, 2, 3 or 4."
+  },
+  {
+   "id": "V01-L-019",
+   "type": "Para jumble",
+   "sentences": {
+    "1": "Their studios, galleries and cafes slowly give the area a reputation for being interesting rather than merely cheap.",
+    "2": "The pattern is common enough to suggest that cultural revival, left to the market alone, tends to consume its own makers.",
+    "3": "That reputation attracts better-off residents and developers, and rents begin to climb.",
+    "4": "In many cities, artists are the first newcomers to move into a run-down district, drawn by cheap rents and large empty buildings.",
+    "5": "Before long, the artists themselves can no longer afford the neighbourhood they helped to make fashionable."
+   },
+   "question": "The 5 sentences above, properly sequenced, form a coherent paragraph. Type the sequence of 5 numbers."
+  },
+  {
+   "id": "V01-K-023",
+   "type": "Para jumble",
+   "sentences": {
+    "1": "An actor who turns to address those people directly is therefore described as breaking the wall, and the device is usually called modern and disruptive.",
+    "2": "What is modern, then, is not the broken wall but the wall itself, a convention that became dominant only when realism made the stage resemble a room with one side removed.",
+    "3": "Yet direct address is far older than the convention it supposedly breaks, since actors in many earlier theatres delivered asides and soliloquies straight to the crowd.",
+    "4": "Theatre audiences are often said to watch a play through a 'fourth wall', an imaginary barrier that keeps the characters from seeing the people who look at them."
+   },
+   "question": "The 4 sentences above, properly sequenced, form a coherent paragraph. Type the sequence of 4 numbers."
+  },
+  {
+   "id": "V03-I-021",
+   "type": "Odd sentence out",
+   "sentences": {
+    "1": "Many specialised terms eventually leak into everyday speech, where they are used loosely and lose the exact sense they had among specialists.",
+    "2": "The charge overlooks what specialised terms do among those who share them, for a single word can stand for an idea that would otherwise take a paragraph to state.",
+    "3": "Jargon is usually condemned as a device for keeping outsiders out, a private code that lets professionals sound learned while saying little.",
+    "4": "The fault lies not in the vocabulary but in carrying it unchanged into a conversation with a patient or a client, where the economy that served colleagues becomes an obstacle.",
+    "5": "When two surgeons or two lawyers use such a term with each other, they lose nothing in precision and save a great deal of time."
+   },
+   "question": "Four of these five sentences form a coherent paragraph. Type the number of the sentence that does not belong."
+  },
+  {
+   "id": "V01-D-006",
+   "type": "Para jumble",
+   "sentences": {
+    "1": "There is a good case, however, that it does the opposite, because readers who see mistakes openly admitted have more reason to believe the rest of what is printed.",
+    "2": "At first sight, such a column seems to advertise carelessness and might be expected to weaken readers' trust.",
+    "3": "A paper that never admits an error, by contrast, gives readers no way to tell whether it makes few mistakes or simply hides them, and so earns less of that belief.",
+    "4": "Some newspapers print a daily column listing the errors they made in earlier editions, from misspelt names to wrong figures."
+   },
+   "question": "The 4 sentences above, properly sequenced, form a coherent paragraph. Type the sequence of 4 numbers."
+  },
+  {
+   "id": "V02-E-007",
+   "type": "Para summary",
+   "options": {
+    "A": "Because children always find other markers of status, school uniforms serve no useful purpose, and schools would do better to abolish them entirely.",
+    "B": "Uniforms build a sense of belonging and simplify mornings for families, which makes them valuable even though some children dislike having to wear them.",
+    "C": "Uniforms cannot hide differences of wealth, because children turn to other markers of status, so uniforms should be defended on other grounds such as belonging or convenience.",
+    "D": "Uniforms that must be bought from a single supplier can be expensive, which places a heavy burden on poorer families and defeats the purpose of introducing them."
+   },
+   "paragraph": "Supporters of school uniforms often claim that they erase differences of wealth among pupils, since everyone wears the same clothes. The claim is weaker than it sounds. Children are expert readers of status, and when clothing is fixed they turn to whatever is left: shoes, bags, phones, haircuts, the holidays they describe on Monday morning. Uniforms can also be costly in their own right when they must be bought from a single supplier. None of this means uniforms are without value; they may build a sense of belonging or simplify mornings for families. But if they are defended, it should be on such grounds, not on the promise that they make inequality invisible.",
+   "question": "Choose the option that best captures the essence of the paragraph."
+  },
+  {
+   "id": "V01-K-016",
+   "type": "Para jumble",
+   "sentences": {
+    "1": "As the climate warms these glaciers melt faster, and for a time the rivers they feed may actually carry more water than before.",
+    "2": "Rivers fed by mountain glaciers are especially valuable in late summer, when rain is scarce and the ice releases water stored over many winters.",
+    "3": "The extra flow comes from drawing down the store itself, much as a household might live comfortably for a while by spending its savings.",
+    "4": "Once the glaciers have shrunk past a certain point, summer flows must fall, and communities that planned around the temporary surplus will face a shortage they did not see coming."
+   },
+   "question": "The 4 sentences above, properly sequenced, form a coherent paragraph. Type the sequence of 4 numbers."
+  },
+  {
+   "id": "V01-C-021",
+   "type": "Para jumble",
+   "sentences": {
+    "1": "A familiar objection to free lending libraries is that nobody will buy a book that can be borrowed for nothing.",
+    "2": "The objection treats readers as a fixed population, each of whom will obtain a given book in one way or another.",
+    "3": "This reply does not settle every case, since a popular novel borrowed fifty times may indeed have cost its author several sales.",
+    "4": "But readers are made, not found, and a child who grows up near a library is likely to become an adult who buys books as well as borrowing them.",
+    "5": "Even so, a trade that depends on a reading public has reason to welcome the institution that does most to create one."
+   },
+   "question": "The 5 sentences above, properly sequenced, form a coherent paragraph. Type the sequence of 5 numbers."
+  },
+  {
+   "id": "V01-L-003",
+   "type": "Para jumble",
+   "sentences": {
+    "1": "Their tables are crowded with polished silver, imported fruit and glasses of wine catching the light.",
+    "2": "These objects turn the display into a warning, reminding the viewer that such abundance cannot outlast the person who enjoys it.",
+    "3": "Many Dutch still-life paintings of the seventeenth century look, at first glance, like simple celebrations of wealth and plenty.",
+    "4": "Look closer, however, and the same tables hold a skull, a guttering candle or a watch lying open beside the fruit."
+   },
+   "question": "The 4 sentences above, properly sequenced, form a coherent paragraph. Type the sequence of 4 numbers."
+  },
+  {
+   "id": "V03-G-013",
+   "type": "Odd sentence out",
+   "sentences": {
+    "1": "Facts reviewed at intervals over several weeks are retained far better than the same facts crammed into a single evening before a test.",
+    "2": "A student who must stop to recall each multiplication fact has little attention left for the problem that the facts are meant to solve.",
+    "3": "The contrast is overdrawn, because understanding a subject depends on having its basic facts available in memory, ready to be connected without being looked up.",
+    "4": "What deserves criticism is not memorising as such but memorising that is never put to use, so that the facts sit in isolation and are soon forgotten.",
+    "5": "Rote memorisation has become a term of abuse in discussions of schooling, set against the understanding that education is supposed to produce."
+   },
+   "question": "Four of these five sentences form a coherent paragraph. Type the number of the sentence that does not belong."
+  },
+  {
+   "id": "V02-J-021",
+   "type": "Para summary",
+   "options": {
+    "A": "Large planned tests that failed to confirm the limited-resource view of self-control show how selectively published small studies can inflate an effect, though self-control fatigue may still exist.",
+    "B": "The early experiments on self-control were biased by researchers who wanted to confirm a theory that matched their own experience of tiring after effort.",
+    "C": "Everyday experience of tiring after effort confirms the limited-resource view of self-control, even though large studies across laboratories found only small effects.",
+    "D": "Large replications have shown that self-control draws on no limited resource at all and that feeling worn out after a demanding day is merely an illusion."
+   },
+   "paragraph": "For years it was widely accepted that self-control draws on a limited resource, so that resisting one temptation leaves a person less able to resist the next. The idea was supported by many small experiments and fitted the everyday experience of feeling worn out after a demanding day. When the effect was retested in large studies run to a common plan across many laboratories, it proved much smaller than the earlier work had suggested, and in some cases indistinguishable from zero. It would be too quick to conclude that people never tire of exercising self-control. What the episode shows is that a stack of small studies, each published because it found an effect, can make a weak or absent phenomenon look established, and that agreement with everyday experience is no substitute for a test designed in advance.",
+   "question": "Choose the option that best captures the essence of the paragraph."
+  },
+  {
+   "id": "V01-C-009",
+   "type": "Para jumble",
+   "sentences": {
+    "1": "When a congested road is widened, traffic usually flows faster for the first few months.",
+    "2": "Within a few years the new lanes are often as crowded as the old ones were, carrying more cars at much the same speed.",
+    "3": "Widening a road, then, may do less to relieve congestion than to enlarge the amount of driving the road must carry.",
+    "4": "The quicker journey, though, tempts people who had been travelling at other hours, by other routes or not at all."
+   },
+   "question": "The 4 sentences above, properly sequenced, form a coherent paragraph. Type the sequence of 4 numbers."
+  },
+  {
+   "id": "V03-E-023",
+   "type": "Odd sentence out",
+   "sentences": {
+    "1": "Some moral theories have trouble with this distinction, because if one should always do the best act available, no act can go beyond what is required.",
+    "2": "Heroic acts are often performed on impulse, and those who perform them commonly insist afterwards that anyone would have done the same.",
+    "3": "A passer-by who pulls a drowning child from shallow water does only what is required, whereas one who dives into a freezing river at great risk does more than duty demands.",
+    "4": "Defenders of the ordinary view reply that a morality leaving no room for heroism beyond duty would ask too much of people and leave too little to their own choice.",
+    "5": "Ordinary morality distinguishes between what we are required to do and what it would be admirable, but not obligatory, to do."
+   },
+   "question": "Four of these five sentences form a coherent paragraph. Type the number of the sentence that does not belong."
+  },
+  {
+   "id": "V01-B-018",
+   "type": "Para jumble",
+   "sentences": {
+    "1": "Students preparing for an exam often reread their notes, since the material feels more familiar each time.",
+    "2": "Testing oneself without the notes is harder and less pleasant, but it practises exactly that act of recall, the one the exam will demand.",
+    "3": "That feeling of familiarity, however, is a poor guide to whether they will be able to recall the material without the notes in front of them.",
+    "4": "The more effective method is thus the one that feels less productive while it is being used."
+   },
+   "question": "The 4 sentences above, properly sequenced, form a coherent paragraph. Type the sequence of 4 numbers."
+  },
+  {
+   "id": "V04-F-024",
+   "type": "Sentence placement",
+   "paragraph": "(1) Few computer users today give a thought to the undo command, yet it altered the experience of working at a screen in ways that deserve more notice. (2) Before it became common, a single wrong keystroke could destroy an hour of work, and cautious users learned to save copies of everything. (3) With a reliable way back, people began to treat the screen as a place for trying things out. (4) Experiment of this kind, once risky, became cheap, and work that would once have been planned carefully on paper could now be discovered by trial and error. In this way a small technical feature, rarely noticed by the people who rely on it, quietly encouraged a bolder and more exploratory style of thinking.",
+   "missing_sentence": "A writer could delete a whole paragraph to see whether an argument read better without it, knowing that a single command would bring it back.",
+   "question": "Which gap, (1), (2), (3) or (4), is the best place for the missing sentence? Answer 1, 2, 3 or 4."
+  },
+  {
+   "id": "V02-B-019",
+   "type": "Para summary",
+   "options": {
+    "A": "Pupils have no real preferences about how they learn, so teachers who ask about learning styles are wasting their own time and the time of their pupils.",
+    "B": "Matching lessons to supposed learning styles has generally not helped when tested; people have preferences, but the material, not the learner, usually decides the best presentation.",
+    "C": "The learning styles approach appeals to teachers because it seems to respect individual differences, which explains why so many of them have been trained in it.",
+    "D": "Teachers should present every lesson in visual, auditory and kinaesthetic forms at once, so that the learning style of every pupil is properly served."
+   },
+   "paragraph": "Many teachers have been trained to identify each pupil's learning style, whether visual, auditory or kinaesthetic, and to match lessons to it. The idea is attractive because it seems to respect individual differences. Yet when it has been tested by teaching pupils in a style that matches their supposed preference and comparing them with pupils taught in a mismatched style, the expected advantage has generally failed to appear. People certainly have preferences about how they like to learn; what is doubtful is that those preferences determine how well they learn. More often, the best form of presentation depends on the material: maps are best shown and pronunciation is best heard, whoever the learner is.",
+   "question": "Choose the option that best captures the essence of the paragraph."
+  },
+  {
+   "id": "V01-F-008",
+   "type": "Para jumble",
+   "sentences": {
+    "1": "That ideal of a space shared across classes was as much a part of the design as the lawns and trees themselves.",
+    "2": "The parks they campaigned for were meant to be open to everyone, so that a factory hand and a merchant might walk the same paths.",
+    "3": "Many of the large public parks in industrial cities were laid out in the nineteenth century, when rapid growth had packed workers into crowded and smoky streets.",
+    "4": "Reformers of the time argued that such conditions harmed both health and morals, and that open green space would act as the lungs of the city."
+   },
+   "question": "The 4 sentences above, properly sequenced, form a coherent paragraph. Type the sequence of 4 numbers."
+  },
+  {
+   "id": "V01-I-015",
+   "type": "Para jumble",
+   "sentences": {
+    "1": "The conductor's beat gives them a shared visual signal that reaches everyone at the same instant.",
+    "2": "Much of the real work, moreover, is done before the concert, in rehearsals where the conductor decides how the piece should sound.",
+    "3": "Yet a large orchestra cannot keep together by listening alone, since players at opposite ends of the stage hear one another a fraction of a second late.",
+    "4": "To a concert audience the conductor can seem the least necessary person on stage, the only one who makes no sound."
+   },
+   "question": "The 4 sentences above, properly sequenced, form a coherent paragraph. Type the sequence of 4 numbers."
+  },
+  {
+   "id": "V01-M-021",
+   "type": "Para jumble",
+   "sentences": {
+    "1": "The stretch saves money, because a familiar name needs far less advertising than an unknown one.",
+    "2": "A brand stretched too far may end up meaning nothing in particular, and so lose the very trust that made the stretch attractive.",
+    "3": "It also carries a risk that is easy to overlook while sales of the new product are going well.",
+    "4": "A company with a trusted brand is often tempted to stretch the name across new products, since customers already know and like it.",
+    "5": "Every product that bears the name teaches customers something about what the name means, and a cheap or unrelated product can teach them the wrong thing."
+   },
+   "question": "The 5 sentences above, properly sequenced, form a coherent paragraph. Type the sequence of 5 numbers."
+  },
+  {
+   "id": "V01-A-010",
+   "type": "Para jumble",
+   "sentences": {
+    "1": "Their fear was that publishers chasing mass sales would print mainly sensational fiction and crowd out serious work.",
+    "2": "When cheap paperback editions first became widely available, some critics warned that they would lower the standard of literature along with the price of books.",
+    "3": "What actually happened was more mixed: sensational fiction did multiply, but classics and serious essays also reached readers who had never been able to afford hardbound copies.",
+    "4": "The episode suggests that lowering the cost of access tends to enlarge every kind of reading at once, rather than simply replacing the better kind with the worse."
+   },
+   "question": "The 4 sentences above, properly sequenced, form a coherent paragraph. Type the sequence of 4 numbers."
+  },
+  {
+   "id": "V01-F-016",
+   "type": "Para jumble",
+   "sentences": {
+    "1": "Large batteries help to close this gap by storing surplus power when the sun shines or the wind blows and releasing it later.",
+    "2": "Power stations that burn fuel can meet this requirement by raising or lowering output as demand changes through the day.",
+    "3": "Electricity is unusual among goods in that, on a conventional grid, it must be produced at the very moment it is consumed.",
+    "4": "Solar panels and wind turbines cannot be steered in the same way, since their output follows the weather rather than the needs of consumers."
+   },
+   "question": "The 4 sentences above, properly sequenced, form a coherent paragraph. Type the sequence of 4 numbers."
+  },
+  {
+   "id": "V01-C-023",
+   "type": "Para jumble",
+   "sentences": {
+    "1": "Even so, a limit removes the competent along with the complacent, and it hands the last years of every final term to a leader who no longer needs anyone's approval.",
+    "2": "The assumption is not as insulting as it sounds: voters may be sensible and still face an incumbent with advantages in money, publicity and patronage that no challenger can match.",
+    "3": "Whether the trade is worth making depends less on any principle than on how unequal elections in a given country actually are.",
+    "4": "Term limits are usually defended as a check on entrenched power, a way of ensuring that no officeholder grows too comfortable to be removed.",
+    "5": "The argument assumes that voters, left to themselves, will not reliably remove a leader who has outstayed his usefulness."
+   },
+   "question": "The 5 sentences above, properly sequenced, form a coherent paragraph. Type the sequence of 5 numbers."
+  },
+  {
+   "id": "V01-E-015",
+   "type": "Para jumble",
+   "sentences": {
+    "1": "Yet traders often overestimate how many of their customers arrive by car, and underestimate how much those on foot spend over repeated visits.",
+    "2": "When a city proposes closing a shopping street to cars, the loudest objections usually come from the shopkeepers who trade on it.",
+    "3": "Their fear is understandable: customers who cannot park outside, they reason, will simply take their custom elsewhere.",
+    "4": "A street that is pleasant to linger in can therefore gain trade, although the gain is likeliest where enough people already live or work within walking distance."
+   },
+   "question": "The 4 sentences above, properly sequenced, form a coherent paragraph. Type the sequence of 4 numbers."
+  },
+  {
+   "id": "V03-C-023",
+   "type": "Odd sentence out",
+   "sentences": {
+    "1": "An archive is not a neutral sample of the past but a deposit of what particular institutions thought worth writing down and keeping.",
+    "2": "Many archives have also suffered losses through fire, flood and neglect, so that some records once carefully kept now survive only in fragments.",
+    "3": "Historians have learned to read such records against their purpose, finding in a list of debts or a trial transcript glimpses of lives the clerks never meant to describe.",
+    "4": "Even so, there are limits to what this method can recover, and where the documents fall silent the honest course is to mark the gap rather than fill it with conjecture.",
+    "5": "The resulting silences are not random: a tax office records who owed what, a court records who was accused of what, and people who neither paid much nor offended anyone may leave hardly a trace."
+   },
+   "question": "Four of these five sentences form a coherent paragraph. Type the number of the sentence that does not belong."
+  },
+  {
+   "id": "V01-K-015",
+   "type": "Para jumble",
+   "sentences": {
+    "1": "In remote areas with unreliable electricity, keeping the cold chain intact can be harder than obtaining the vaccine itself, which is why heat-stable vaccines are so valued.",
+    "2": "This unbroken sequence of refrigerators, insulated boxes and cooled vehicles is known as the cold chain.",
+    "3": "They must therefore be kept within a narrow range of temperatures all the way from the factory to the moment of injection.",
+    "4": "Many vaccines lose their potency if they become too warm, and some are also damaged by freezing."
+   },
+   "question": "The 4 sentences above, properly sequenced, form a coherent paragraph. Type the sequence of 4 numbers."
+  },
+  {
+   "id": "V01-F-010",
+   "type": "Para jumble",
+   "sentences": {
+    "1": "A long line of psychological research has suggested the opposite: the more witnesses there are, the less likely any single one of them is to step forward.",
+    "2": "It seems natural to assume that a person in distress is more likely to receive help when many people are nearby to see it.",
+    "3": "Both pressures weaken when one witness is singled out, which is why first-aid trainers advise pointing at a specific person and asking that person to call for help.",
+    "4": "Part of the explanation is that responsibility feels divided, so that each witness assumes someone else is better placed to act.",
+    "5": "Another part is that people look to one another for cues, and a crowd of hesitant faces makes the situation appear less serious than it is."
+   },
+   "question": "The 5 sentences above, properly sequenced, form a coherent paragraph. Type the sequence of 5 numbers."
+  },
+  {
+   "id": "V01-H-025",
+   "type": "Para jumble",
+   "sentences": {
+    "1": "The remedy created a grievance of its own, however, for local people making short journeys now found themselves paying tolls on roads they had once mended with their own hands.",
+    "2": "The turnpike trusts that spread in the eighteenth century addressed this mismatch by charging tolls, so that the cost of upkeep fell on those who caused the wear.",
+    "3": "Parishioners had little reason to labour hard on a road whose damage was done by strangers, and the great highways were often in a deplorable state.",
+    "4": "The arrangement worked tolerably for lanes used mainly by villagers, but it broke down on the main routes, where most of the wear came from carriers and coaches merely passing through.",
+    "5": "Under the older system in England, each parish was responsible for the roads that ran through it, and local inhabitants were required to give a few days of unpaid labour every year to repair them."
+   },
+   "question": "The 5 sentences above, properly sequenced, form a coherent paragraph. Type the sequence of 5 numbers."
+  },
+  {
+   "id": "V03-F-002",
+   "type": "Odd sentence out",
+   "sentences": {
+    "1": "A popular idea holds that the capacity to make careful choices is gradually used up over the course of a day, so that later decisions are made more carelessly.",
+    "2": "Whether such economies actually help depends on whether the underlying idea is sound, and laboratory attempts to confirm it have produced mixed results.",
+    "3": "Some people respond by stripping trivial choices out of their routines, wearing similar clothes or eating the same breakfast, to save their judgement for what matters.",
+    "4": "On this view, a person who has spent the morning weighing many small options will, by evening, drift towards whatever is easiest or most familiar.",
+    "5": "Choosing among a large number of options can also leave people less satisfied with what they finally pick, because the rejected alternatives linger in the mind."
+   },
+   "question": "Four of these five sentences form a coherent paragraph. Type the number of the sentence that does not belong."
+  },
+  {
+   "id": "V01-C-017",
+   "type": "Para jumble",
+   "sentences": {
+    "1": "Psychologists who have studied such states find that they arise most readily when a task is hard enough to demand full attention but not so hard as to provoke anxiety.",
+    "2": "The absorption people prize is thus less a gift of temperament than a product of the match between their skill and the challenge before them.",
+    "3": "Too easy a task leaves room for the mind to wander, while too difficult a one fills it with worry about failure.",
+    "4": "People often describe their best hours of work as times when they lost track of the clock and forgot themselves in the task."
+   },
+   "question": "The 4 sentences above, properly sequenced, form a coherent paragraph. Type the sequence of 4 numbers."
+  },
+  {
+   "id": "V01-D-018",
+   "type": "Para jumble",
+   "sentences": {
+    "1": "A message was handed from rider to rider, or carried by one rider changing mounts, so that it never had to stop while an animal recovered.",
+    "2": "Several large empires overcame this limit by building stations at intervals along their main roads, each stocked with fresh horses.",
+    "3": "News could thus cross a vast territory in a fraction of the time any single traveller would need, which gave distant rulers a firmer hold over their provinces.",
+    "4": "A single rider, however strong his horse, can cover only so much ground in a day before both of them need rest."
+   },
+   "question": "The 4 sentences above, properly sequenced, form a coherent paragraph. Type the sequence of 4 numbers."
+  },
+  {
+   "id": "V03-A-019",
+   "type": "Odd sentence out",
+   "sentences": {
+    "1": "For this reason some argue that copying cannot be theft in the ordinary sense, since nothing has been taken away.",
+    "2": "Taking someone's bicycle deprives them of it, but copying someone's idea leaves them with the idea intact.",
+    "3": "The dispute over copying is thus a dispute about whether that lost opportunity is something a person can rightly own.",
+    "4": "Bicycles are often stolen in cities, because they are easy to ride away and hard to trace once they are repainted.",
+    "5": "Others reply that what the creator loses is not the idea but the chance to profit from being its only source."
+   },
+   "question": "Four of these five sentences form a coherent paragraph. Type the number of the sentence that does not belong."
+  },
+  {
+   "id": "V03-C-014",
+   "type": "Odd sentence out",
+   "sentences": {
+    "1": "Buying tickets well in advance is often sensible, since the price of seats for a popular event tends to rise as the date approaches.",
+    "2": "Having paid for a concert ticket, many people will travel through a storm to attend, even when they would by then much rather stay at home.",
+    "3": "Yet the thought of 'wasting' the ticket pulls them out of the door, as though attending could somehow recover what was spent.",
+    "4": "The money is gone whether they go or not, so the only question that ought to matter is which evening they would now prefer.",
+    "5": "Economists call this honouring of sunk costs an error, though some psychologists suggest it may reflect a reasonable wish to appear consistent to oneself and to others."
+   },
+   "question": "Four of these five sentences form a coherent paragraph. Type the number of the sentence that does not belong."
+  },
+  {
+   "id": "V03-G-014",
+   "type": "Odd sentence out",
+   "sentences": {
+    "1": "But wealth finds other ways to show itself, in shoes, bags, phones and the holidays children describe when they return to school.",
+    "2": "School uniforms are often defended on the ground that they hide differences of wealth among pupils, so that no child is judged by the price of their clothes.",
+    "3": "Some schools allow pupils to wear their own clothes on one day each term, usually in return for a small donation to charity.",
+    "4": "Uniforms may soften one form of comparison, then, but they cannot by themselves prevent children from noticing who has more.",
+    "5": "The argument has some force, since clothing is one of the most visible markers of a family's income."
+   },
+   "question": "Four of these five sentences form a coherent paragraph. Type the number of the sentence that does not belong."
+  },
+  {
+   "id": "V03-J-004",
+   "type": "Odd sentence out",
+   "sentences": {
+    "1": "In practice, teachers writing dozens of them at the end of term fall back on stock phrases such as 'works hard' or 'could participate more'.",
+    "2": "Written comments on report cards are meant to tell parents what a grade cannot: how a child works, where she struggles and what might help.",
+    "3": "Some schools have dropped letter grades altogether in favour of descriptive reports, arguing that a single letter conceals more than it reveals.",
+    "4": "Parents soon learn to read such phrases as filler, and the comment ends up carrying even less information than the grade printed beside it.",
+    "5": "A few lines jotted down during the term, while a particular episode is still fresh, would often say more than a polished paragraph composed in a hurry at its end."
+   },
+   "question": "Four of these five sentences form a coherent paragraph. Type the number of the sentence that does not belong."
+  },
+  {
+   "id": "V02-E-022",
+   "type": "Para summary",
+   "options": {
+    "A": "Forecasts based on past projects are unreliable because every task has its special circumstances, so planners should picture each step of the task in front of them.",
+    "B": "People underestimate how long tasks will take because they are naturally optimistic and wish to impress others, so all forecasts should simply be doubled.",
+    "C": "Illness, interruptions and suppliers' mistakes are the main causes of delay in projects, and so planners should take steps to prevent them from happening.",
+    "D": "Plans run late because forecasters picture a task's steps and overlook the many individually unlikely delays, so estimates should start from how long similar projects actually took."
+   },
+   "paragraph": "People asked how long a task will take routinely underestimate, even when they have overrun on similar tasks many times before. The error persists because of how forecasts are made. Planners imagine the particular task in front of them, step by step, and each step looks manageable; the delays that actually ruin schedules, such as illness, interruptions or a supplier's mistake, are individually unlikely and so do not appear in the imagined sequence, even though some such delay almost always occurs. Past overruns are explained away as caused by special circumstances that will not recur. A more reliable forecast begins from the outside, by asking how long similar projects have actually taken, and only then adjusts for what is special about this one.",
+   "question": "Choose the option that best captures the essence of the paragraph."
+  },
+  {
+   "id": "V02-C-020",
+   "type": "Para summary",
+   "options": {
+    "A": "Urban anonymity, usually counted only as a cause of loneliness, also gives people who depart from local norms a freedom that close-knit towns seldom allow.",
+    "B": "Large cities are lonely places where nobody notices anyone else, whereas small towns provide the closeness and ready help that people need in order to thrive.",
+    "C": "Young people whose ambitions or beliefs differ from those of their home town often experience its closeness as a cage from which they long to escape.",
+    "D": "Anonymity makes city life better than small town life in every respect, since the loneliness that people complain of in large cities is largely imagined."
+   },
+   "paragraph": "Small towns are often praised for their closeness: everyone knows your name, and help is never far away. Large cities are faulted for the opposite, a crowd in which no one notices whether you thrive or fail. The contrast is fair as far as it goes, but it leaves out what anonymity gives. To be known by everyone is also to be watched by everyone, and for a young person whose ambitions, beliefs or way of life depart from the local norm, the town's closeness can feel like a cage. The indifference of the city is what allows such people to try out a new self without asking permission. Loneliness is a real cost of urban life, but it is the price of a freedom that intimate communities rarely offer.",
+   "question": "Choose the option that best captures the essence of the paragraph."
+  },
+  {
+   "id": "V03-C-020",
+   "type": "Odd sentence out",
+   "sentences": {
+    "1": "Some teachers regret this, arguing that forming letters by hand helps young children learn to recognise them and to remember what they write.",
+    "2": "Others reply that what matters is fluency with whatever tool a child will actually use, and that hours spent on joined-up script could go to other skills.",
+    "3": "Handwriting analysis is sometimes offered as a way of judging a person's character, though there is little good evidence that it works.",
+    "4": "The disagreement is less about nostalgia than about a real question: whether the hand teaches the mind something that the keyboard does not.",
+    "5": "As more writing is done on keyboards, many schools have reduced the time they spend teaching children to write by hand."
+   },
+   "question": "Four of these five sentences form a coherent paragraph. Type the number of the sentence that does not belong."
+  },
+  {
+   "id": "V02-B-017",
+   "type": "Para summary",
+   "options": {
+    "A": "Since homework does nothing for young children and its benefits for teenagers are an illusion, schools should abolish homework at every stage of education.",
+    "B": "Because older pupils who do more homework achieve better results, schools ought to keep increasing the amount of homework they set for their teenage pupils.",
+    "C": "Homework's link with older pupils' achievement may partly reflect motivation and family support and fades beyond a point, so evidence favours moderate homework.",
+    "D": "Pupils from supportive families do better at school whether or not they do homework, which shows that homework has no effect on achievement."
+   },
+   "paragraph": "Studies of homework have tended to find that the amount of homework older pupils do is associated with higher achievement, while for young children the link is weak or absent. It is tempting to conclude that more homework simply works for teenagers. But an association of this kind can arise in several ways: pupils who are already motivated, or whose families support study, both do more homework and do better at school, so the homework may be partly a sign of advantage rather than its cause. And beyond a certain amount, the association often fades. The evidence supports homework that is moderate, purposeful and suited to the pupil's age, not the belief that more is always better.",
+   "question": "Choose the option that best captures the essence of the paragraph."
+  },
+  {
+   "id": "V03-C-022",
+   "type": "Odd sentence out",
+   "sentences": {
+    "1": "Early railway carriages were often open to the weather, and passengers in the cheapest seats travelled with little protection from wind and rain.",
+    "2": "Railway companies accordingly adopted a single standard time along their lines, and in time whole countries followed their example.",
+    "3": "Noon in one town might therefore fall several minutes earlier or later than noon in a town a short distance to the east or west.",
+    "4": "Such differences hardly mattered while travel was slow, but they caused real confusion once trains began to run to published timetables over long distances.",
+    "5": "Before the railways, most towns kept their own local time, setting their clocks by the position of the sun overhead."
+   },
+   "question": "Four of these five sentences form a coherent paragraph. Type the number of the sentence that does not belong."
+  },
+  {
+   "id": "V02-H-006",
+   "type": "Para summary",
+   "options": {
+    "A": "Since employers buy less of whatever becomes more expensive, a higher minimum wage does reduce employment, although in some neighbouring areas the losses have been smaller than expected.",
+    "B": "Evidence that modest minimum wage rises cost few jobs undercuts the simple prediction of job losses, but cannot be extended to large rises or to regions where the floor nears typical wages.",
+    "C": "Studies of neighbouring areas have shown that raising the minimum wage does not reduce employment at all, because employers facing little competition have always paid workers less than they are worth.",
+    "D": "Where only a few employers compete for workers, wages tend to be held below competitive levels, which allows a modest minimum wage to raise pay without cutting any jobs."
+   },
+   "paragraph": "A standard textbook argument holds that raising the minimum wage must reduce employment, since employers buy less of anything that becomes more expensive. Comparisons of neighbouring areas where the wage floor rose in one and not the other have often found smaller job losses than that argument predicts, and sometimes none at all. One explanation is that where few employers compete for workers, wages were held below what a competitive market would pay, so a modest floor can raise pay without cutting jobs. But this evidence concerns modest increases in places where the floor was low relative to local wages. It says little about large rises, or about poorer regions where a single national floor sits close to the typical wage, and treating it as proof that minimum wages never cost jobs stretches it beyond what it shows.",
+   "question": "Choose the option that best captures the essence of the paragraph."
+  },
+  {
+   "id": "V01-B-006",
+   "type": "Para jumble",
+   "sentences": {
+    "1": "Unless the team eventually sets aside time to rewrite that code, the interest can grow until most of its effort goes into servicing old shortcuts.",
+    "2": "Like a loan, the shortcut brings an immediate benefit, because the feature reaches users weeks earlier than it otherwise would.",
+    "3": "Programmers speak of 'technical debt' when a team ships a quick fix instead of the careful solution it knows it should build.",
+    "4": "Also like a loan, it charges interest: every later change has to work around the hasty code and so takes longer than it should."
+   },
+   "question": "The 4 sentences above, properly sequenced, form a coherent paragraph. Type the sequence of 4 numbers."
+  },
+  {
+   "id": "V03-E-017",
+   "type": "Odd sentence out",
+   "sentences": {
+    "1": "A person in distress in a crowded place is not necessarily more likely to receive help than one who collapses on a quiet street.",
+    "2": "People are generally more willing to help someone who resembles them, whether in age, dress or manner of speaking.",
+    "3": "Onlookers also watch one another for cues, and when everyone appears calm, each concludes that the situation must not be an emergency.",
+    "4": "Each onlooker may assume that someone else has already acted, or is better placed to act, and the responsibility spreads so thin that no one takes it up.",
+    "5": "Singling out one person and asking them directly for help can therefore break the deadlock, because it hands the responsibility back to an individual."
+   },
+   "question": "Four of these five sentences form a coherent paragraph. Type the number of the sentence that does not belong."
+  },
+  {
+   "id": "V01-J-018",
+   "type": "Para jumble",
+   "sentences": {
+    "1": "The variety suggests that surnames answer social needs, such as tracing inheritance or registering citizens, rather than any fact about families themselves.",
+    "2": "Elsewhere, children receive both parents' names, or a name derived from a parent's given name, or no fixed family name at all.",
+    "3": "Seen in that light, disputes over which name a child should carry are less about tradition than about which of those needs a society now considers most important.",
+    "4": "In many societies a child takes the father's surname, a custom so familiar that it is easily mistaken for a natural arrangement."
+   },
+   "question": "The 4 sentences above, properly sequenced, form a coherent paragraph. Type the sequence of 4 numbers."
+  },
+  {
+   "id": "V02-M-007",
+   "type": "Para summary",
+   "options": {
+    "A": "A child's readiness to wait for a larger reward may partly reflect a sensible judgement about whether promises are kept, not only self-control, which still matters.",
+    "B": "Patience in the waiting test is better explained by a child's rational trust than by self-control, so the test's links with later success are probably illusory.",
+    "C": "Children who learn to trust adults become more patient, so parents who reliably keep their promises will raise children who go on to succeed in later life.",
+    "D": "Children who can wait for a larger treat rather than accept a smaller one at once tend to be more successful in later life than those who cannot."
+   },
+   "paragraph": "Children who can wait for a larger treat rather than take a smaller one at once have long been held up as models of self-control, and their patience has been linked to later success. Yet waiting is rational only if the promised reward is likely to arrive. A child whose adults have reliably kept their word has good reason to wait; a child whose promises have often been broken has equally good reason to take what is on the table. In versions of the test where an adult first breaks a small promise to the child, waiting times tend to fall. None of this shows that self-control is unimportant. It does suggest that a measure taken to reveal a trait of character may also be recording what the child has learned about the world.",
+   "question": "Choose the option that best captures the essence of the paragraph."
+  },
+  {
+   "id": "V01-I-009",
+   "type": "Para jumble",
+   "sentences": {
+    "1": "Poetry allows no such freedom, because in a poem the sound and the sense are bound together.",
+    "2": "Yet the opposite course is no safer, for a translator who chases the rhyme and metre must often bend the meaning to fit them.",
+    "3": "Every translation of a poem is thus a choice about which loss to accept, and no choice avoids loss entirely.",
+    "4": "A line that keeps the meaning of the original but loses its music has kept only half of what the poet made.",
+    "5": "A translator of prose can usually carry a sentence's meaning into another language and let its rhythm fall where it may."
+   },
+   "question": "The 5 sentences above, properly sequenced, form a coherent paragraph. Type the sequence of 5 numbers."
+  },
+  {
+   "id": "V04-D-009",
+   "type": "Sentence placement",
+   "paragraph": "Histories of farming are full of implements that were plainly better than the methods they replaced and yet spread with puzzling slowness. A drill that places seed in neat rows at an even depth, for instance, wastes less seed than scattering it by hand and makes weeding far easier. (1) Yet a closer look at the conditions under which such tools were offered makes that suspicion look more like judgment. (2) A drill earned its price on large, level fields well cleared of stones, and many farmers worked scattered strips of uneven ground. It also needed draught animals, repairs and some skill in setting it up, none of which came free. (3) For a family whose margin between a fair year and a hungry one was narrow, an untested machine was a gamble whose losses would fall on them alone. (4) What looks in hindsight like stubbornness was often a sound reading of risks that the promoters of the new tool did not have to bear.",
+   "missing_sentence": "The customary explanation is that farmers were bound by habit and suspicious of anything their fathers had not used.",
+   "question": "Which gap, (1), (2), (3) or (4), is the best place for the missing sentence? Answer 1, 2, 3 or 4."
+  },
+  {
+   "id": "V03-H-014",
+   "type": "Odd sentence out",
+   "sentences": {
+    "1": "Wedding photography has grown into an industry of its own, with couples commissioning elaborate shoots in scenic places months before the ceremony.",
+    "2": "The difficulty is that such obligations are hard to scale down, so households with modest incomes may borrow heavily to meet them.",
+    "3": "That account captures something real, but it misses how much of the spending goes to feeding and honouring relatives and neighbours who will one day host the family in turn.",
+    "4": "Lavish weddings are often explained as status competition, each family trying to outdo the last celebration its guests attended.",
+    "5": "Seen this way, a wedding is partly a repayment of past hospitality and partly a deposit against help in some future crisis."
+   },
+   "question": "Four of these five sentences form a coherent paragraph. Type the number of the sentence that does not belong."
+  },
+  {
+   "id": "V02-L-017",
+   "type": "Para summary",
+   "options": {
+    "A": "Rules requiring parking in new buildings have failed, because drivers still overwhelm the surrounding streets, which shows that such rules can never achieve their purpose.",
+    "B": "Residents who do not own cars pay more for their flats, because developers are forced to build parking spaces that only car-owning residents will ever actually use.",
+    "C": "Cities should ban new parking spaces altogether, because parking uses up land and money and tempts people to drive when they could walk or take public transport instead.",
+    "D": "Required parking raises building costs for drivers and non-drivers alike and encourages driving, so though some parking is needed, its amount should not be set by rule."
+   },
+   "paragraph": "Many cities require every new building to provide a minimum number of parking spaces, a rule meant to stop drivers from overwhelming the surrounding streets. The intention is sensible, but the rule carries costs that are easy to overlook because they are hidden in other prices. Parking takes land and money, so the requirement raises the cost of every flat and shop that is built, whether or not its occupants own a car; residents who do not drive in effect subsidise those who do. And by guaranteeing that driving will always be convenient, the rule encourages more of it, partly creating the demand it was meant to accommodate. None of this means a city should have no parking. It means that the amount should be decided by those who build and use it, rather than fixed by a rule that assumes everyone will drive.",
+   "question": "Choose the option that best captures the essence of the paragraph."
+  },
+  {
+   "id": "V02-B-003",
+   "type": "Para summary",
+   "options": {
+    "A": "Because forest storage is reversible while fossil carbon persists, an offset is a delay whose value depends on secure storage, not a cancellation of the emission.",
+    "B": "Because trees can burn or be felled, forest offsets do nothing to address emissions, and they should be abandoned in favour of directly cutting the use of fossil fuel.",
+    "C": "The weakness of forest offsets lies in measurement, since the carbon held in trees cannot be counted as accurately as the carbon released when fuel is burned.",
+    "D": "Forest offsets are valuable chiefly because they buy time, so a tonne of carbon stored in trees should be counted as equal to a tonne released by burning fuel."
+   },
+   "paragraph": "An offset that pays to plant a forest is often treated as cancelling an equivalent quantity of emissions from a flight or a factory. The equivalence is only arithmetical. Carbon released from burning fossil fuel stays in the atmosphere for centuries, while carbon stored in trees is held only as long as the trees survive fire, disease, drought and the decisions of future landowners. The two quantities are measured in the same tonnes, yet one is a near-permanent addition and the other a reversible loan. None of this means that planting forests is worthless; a stored tonne buys time, and time has value. It means that an offset should be counted as a delay whose worth depends on how securely the storage can be guaranteed, rather than as an erasure that lets the original emission be forgotten.",
+   "question": "Choose the option that best captures the essence of the paragraph."
+  },
+  {
+   "id": "V04-D-014",
+   "type": "Sentence placement",
+   "paragraph": "Satellite navigation has made it hard to get lost in an unfamiliar city. (1) A voice announces each turn shortly before it arrives, and the driver need only follow. (2) People who navigate by spoken instructions tend to form a poorer picture of the area they have passed through than people who have worked out the route for themselves. They may reach the destination without being able to say in which direction it lay or how it related to places they already knew. (3) For most journeys this hardly matters. It matters a good deal when the signal fails, the battery dies or the device sends the driver down a road that has been closed. (4) A traveller who glances at the whole map before setting out, and checks it against the streets now and then, can keep most of the convenience while holding on to some of the old skill.",
+   "missing_sentence": "Following, however, is not the same as learning the way.",
+   "question": "Which gap, (1), (2), (3) or (4), is the best place for the missing sentence? Answer 1, 2, 3 or 4."
+  },
+  {
+   "id": "V02-B-015",
+   "type": "Para summary",
+   "options": {
+    "A": "Speakers who move easily between dialect and standard show that regional dialects face no real threat from schools or from any other source.",
+    "B": "Children who are told that their way of speaking is wrong tend to believe it and may then give up the dialect they first learned at home.",
+    "C": "Teaching a standard variety need not erase dialects, since people can use both; what endangers dialects is treating them as errors rather than as varieties.",
+    "D": "Schools should stop teaching the standard form of the language, because doing so inevitably destroys the regional dialects that pupils bring with them from home."
+   },
+   "paragraph": "Schools that teach a standard form of a language are sometimes accused of destroying the regional dialects their pupils bring from home. The charge contains a truth: children who are told that their way of speaking is wrong often come to feel that it is, and may abandon it. But the fault lies in the telling, not in the teaching of the standard itself. Learning a second variety of one's language, useful in examinations, offices and correspondence with strangers, need not displace the first, any more than learning a second language erases one's mother tongue. Many speakers move between dialect and standard with ease, choosing according to company. What threatens a dialect is the attitude that treats it as a mistake, not the addition of another way of speaking.",
+   "question": "Choose the option that best captures the essence of the paragraph."
+  }
+ ]
+}

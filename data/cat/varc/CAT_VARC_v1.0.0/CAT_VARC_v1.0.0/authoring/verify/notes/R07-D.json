@@ -1,0 +1,22 @@
+[
+ {
+  "id": "R07-D-07-5",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "C",
+    "key": "C",
+    "working": "Rejects score-is-work and performance-is-work, proposes marks as read by a practice.",
+    "alternative": "",
+    "issue": "All five questions in this passage are keyed C (by my solve), an answer-position cluster worth rebalancing."
+   },
+   "S2": {
+    "answer": "D",
+    "key": "D",
+    "working": "Rejects score-is-work (P2) and work-is-performance (P3), proposes marks-as-read-by-practice (P4), answers an objection (P5).",
+    "alternative": "",
+    "issue": ""
+   }
+  }
+ }
+]

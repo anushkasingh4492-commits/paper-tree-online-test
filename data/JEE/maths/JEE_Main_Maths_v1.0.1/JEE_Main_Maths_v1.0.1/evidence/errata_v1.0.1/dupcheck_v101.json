@@ -1,0 +1,350 @@
+[
+ {
+  "a": "U01-C-004",
+  "b": "U07-A-034",
+  "verdict": "independent",
+  "reason": "Linear inverse formula versus solving a cubic for one preimage value; different functions and tasks."
+ },
+ {
+  "a": "U01-C-010",
+  "b": "U07-A-034",
+  "verdict": "independent",
+  "reason": "Cube-root inverse formula of x^3+2 versus a single preimage of x^3+2x-1; different data and answers, no step transfers."
+ },
+ {
+  "a": "U01-C-042",
+  "b": "U07-A-034",
+  "verdict": "independent",
+  "reason": "Inverse of sinh-type function versus a single preimage of a cubic; unrelated computations."
+ },
+ {
+  "a": "U02-C-031",
+  "b": "U02-C-042",
+  "verdict": "independent",
+  "reason": "Both-roots-positive condition on one quadratic versus both-roots-less-than-5 on a different quadratic; different conditions, data and answers."
+ },
+ {
+  "a": "U02-C-031",
+  "b": "U02-C-050",
+  "verdict": "independent",
+  "reason": "Both-roots-positive versus both-roots-in-(1,5) on different quadratics; different conditions and answers."
+ },
+ {
+  "a": "U02-C-042",
+  "b": "U02-C-050",
+  "verdict": "independent",
+  "reason": "Both-roots-less-than-5 versus both-roots-in-(1,5) on different quadratics; different data and answers."
+ },
+ {
+  "a": "U02-C-044",
+  "b": "U14-B-042",
+  "verdict": "independent",
+  "reason": "Same stem wording and coincident count 7, but a rational-function discriminant range versus a trigonometric sixth-power range; nothing transfers."
+ },
+ {
+  "a": "U02-D-008",
+  "b": "U02-D-051",
+  "verdict": "independent",
+  "reason": "Complex-coefficient Vieta sum versus Newton-sum recurrence ratio; answer 5 coincides only by accident."
+ },
+ {
+  "a": "U02-D-025",
+  "b": "U02-D-051",
+  "verdict": "alias",
+  "reason": "Near-template: same S_n recurrence from x^2-5x+c with the decisive identity S_{n+1}=5S_n-cS_{n-1} giving the same answer 5 (sympy-confirmed), so seeing one hands over the other's route and key."
+ },
+ {
+  "a": "U02-D-041",
+  "b": "U02-D-051",
+  "verdict": "independent",
+  "reason": "Same recurrence technique but different equation (2x^2-6x-1) and different answer (6 vs 5), so the result does not transfer."
+ },
+ {
+  "a": "U03-A-019",
+  "b": "U03-B-033",
+  "verdict": "independent",
+  "reason": "Binomial power of scalar-plus-nilpotent matrix versus determinant of a sum; answer 12 is coincidental."
+ },
+ {
+  "a": "U03-B-015",
+  "b": "U07-C-040",
+  "verdict": "independent",
+  "reason": "Determinant properties versus continuity of GIF/modulus compositions; only the statement-type boilerplate is shared."
+ },
+ {
+  "a": "U04-A-015",
+  "b": "U04-A-028",
+  "verdict": "independent",
+  "reason": "LEADER with E's together versus BALLOON with L's apart; different words, conditions and answers."
+ },
+ {
+  "a": "U04-A-027",
+  "b": "U04-A-028",
+  "verdict": "independent",
+  "reason": "ASSASSIN S's together versus BALLOON L's apart; different words and answers."
+ },
+ {
+  "a": "U04-A-028",
+  "b": "U04-A-034",
+  "verdict": "independent",
+  "reason": "BALLOON L's apart versus PERMUTATION vowels together; different words, conditions and answers."
+ },
+ {
+  "a": "U04-A-028",
+  "b": "U04-A-051",
+  "verdict": "independent",
+  "reason": "Gap method on BALLOON versus double inclusion-exclusion on ARRANGE; different words and answers (900 vs 660)."
+ },
+ {
+  "a": "U04-A-028",
+  "b": "U04-A-054",
+  "verdict": "independent",
+  "reason": "BALLOON L's apart versus MISSISSIPPI with S-block and P's apart; different words and answers."
+ },
+ {
+  "a": "U05-A-010",
+  "b": "U05-B-011",
+  "verdict": "independent",
+  "reason": "Both use (x^2+1/x)^12 but one asks the x^3 coefficient and the other the middle-term position; neither statement decides the other."
+ },
+ {
+  "a": "U07-A-018",
+  "b": "U14-B-042",
+  "verdict": "independent",
+  "reason": "Range of 8/(quadratic) giving 4 integers versus trigonometric sixth-power range giving 7; different functions and answers."
+ },
+ {
+  "a": "U07-C-002",
+  "b": "U07-C-003",
+  "verdict": "independent",
+  "reason": "Squeeze-plus-standard-limit removable discontinuity versus piecewise matching at x=3; k=2 coincides by accident."
+ },
+ {
+  "a": "U07-C-002",
+  "b": "U07-C-012",
+  "verdict": "independent",
+  "reason": "Sin/squeeze limit versus exponential standard limit; different functions, answer 2 is coincidental."
+ },
+ {
+  "a": "U07-C-002",
+  "b": "U07-C-020",
+  "verdict": "independent",
+  "reason": "Removable-discontinuity limit versus two-parameter piecewise linear system; different tasks."
+ },
+ {
+  "a": "U07-C-008",
+  "b": "U07-C-011",
+  "verdict": "independent",
+  "reason": "One-sided limits of x+[-x] at 3 versus jump of x[x] at 3; different functions and answers."
+ },
+ {
+  "a": "U07-C-014",
+  "b": "U07-C-040",
+  "verdict": "independent",
+  "reason": "Differentiability of modulus products versus continuity of GIF/modulus compositions; only statement format shared."
+ },
+ {
+  "a": "U08-A-006",
+  "b": "U08-C-012",
+  "verdict": "independent",
+  "reason": "Power substitution after t=log x versus log-sqrt standard form; different integrands and answers."
+ },
+ {
+  "a": "U08-A-008",
+  "b": "U08-B-035",
+  "verdict": "independent",
+  "reason": "Direct f'/f integral versus substitution plus partial fractions in x^2; different integrands and answers."
+ },
+ {
+  "a": "U08-A-008",
+  "b": "U08-C-056",
+  "verdict": "independent",
+  "reason": "Direct f'/f integral versus x^2 substitution then log plus arctan split; numerator is not the derivative in the second, no transfer."
+ },
+ {
+  "a": "U08-A-043",
+  "b": "U08-C-012",
+  "verdict": "independent",
+  "reason": "Trig substitution x=sin(theta) versus log substitution to a sqrt standard form; unrelated."
+ },
+ {
+  "a": "U08-B-008",
+  "b": "U08-B-035",
+  "verdict": "independent",
+  "reason": "Basic two-factor partial fractions versus substitution t=x^2 then partial fractions; different integrands and answers."
+ },
+ {
+  "a": "U08-B-011",
+  "b": "U08-C-056",
+  "verdict": "independent",
+  "reason": "Repeated linear factor decomposition versus x^2 substitution to linear-over-quadratic; unrelated."
+ },
+ {
+  "a": "U08-B-030",
+  "b": "U08-B-035",
+  "verdict": "independent",
+  "reason": "Improper rational division then cover-up versus x^2 substitution with partial fractions; different integrands and answers."
+ },
+ {
+  "a": "U08-B-035",
+  "b": "U08-C-018",
+  "verdict": "independent",
+  "reason": "Substitution plus partial fractions in x^2 versus linear-over-irreducible-quadratic split; different data and answers."
+ },
+ {
+  "a": "U08-B-035",
+  "b": "U08-C-031",
+  "verdict": "independent",
+  "reason": "Partial fractions after t=x^2 versus u=x^3 to an arctan standard form; different answers."
+ },
+ {
+  "a": "U08-B-035",
+  "b": "U08-C-051",
+  "verdict": "independent",
+  "reason": "Partial fractions after t=x^2 versus long division then log plus arctan; different integrands and answers."
+ },
+ {
+  "a": "U08-B-035",
+  "b": "U08-C-056",
+  "verdict": "independent",
+  "reason": "Both start with u=x^2 on x^3 over a quartic, but one denominator factors (partial fractions, pure logs) and the other is irreducible (log plus arctan); answers differ (sympy-confirmed), no transferable result."
+ },
+ {
+  "a": "U08-C-012",
+  "b": "U08-C-026",
+  "verdict": "independent",
+  "reason": "Log substitution to sqrt(u^2+4) versus completing the square under a root; different integrands and answers."
+ },
+ {
+  "a": "U08-C-012",
+  "b": "U08-C-030",
+  "verdict": "independent",
+  "reason": "Log-sqrt standard form versus sqrt(x) substitution to arctan; unrelated."
+ },
+ {
+  "a": "U08-C-012",
+  "b": "U08-C-054",
+  "verdict": "independent",
+  "reason": "Log-sqrt standard form versus root-exponential substitution; unrelated."
+ },
+ {
+  "a": "U08-C-018",
+  "b": "U08-C-056",
+  "verdict": "independent",
+  "reason": "Linear-over-quadratic in x versus the same technique only after u=x^2 on different data; answers differ and no key is shared."
+ },
+ {
+  "a": "U08-C-031",
+  "b": "U08-C-056",
+  "verdict": "independent",
+  "reason": "u=x^3 arctan standard form versus u=x^2 log plus arctan split; different answers."
+ },
+ {
+  "a": "U08-C-051",
+  "b": "U08-C-056",
+  "verdict": "independent",
+  "reason": "Long division then log plus arctan versus u=x^2 then log plus arctan; different integrands and answers."
+ },
+ {
+  "a": "U08-D-018",
+  "b": "U08-D-043",
+  "verdict": "independent",
+  "reason": "Exponential-denominator pairing on cos x versus odd-even split plus King's property on a quartic ratio; different integrands and answers."
+ },
+ {
+  "a": "U08-D-019",
+  "b": "U08-D-043",
+  "verdict": "independent",
+  "reason": "King's property with x sin x/(1+cos^2 x) versus odd-even split plus quartic ratio; different integrals and answers."
+ },
+ {
+  "a": "U08-D-027",
+  "b": "U08-D-043",
+  "verdict": "independent",
+  "reason": "Base-2 exponential pairing on sin^2 x versus odd-even plus King's ratio; different answers."
+ },
+ {
+  "a": "U08-D-032",
+  "b": "U08-D-043",
+  "verdict": "independent",
+  "reason": "x/(1+sin x) via King's property versus odd-even plus quartic ratio; answer pi coincides but the computations differ."
+ },
+ {
+  "a": "U08-D-043",
+  "b": "U08-D-049",
+  "verdict": "independent",
+  "reason": "Odd-even plus quartic ratio versus King's reduction to 1/(sin x+cos x); different integrals and answers."
+ },
+ {
+  "a": "U08-D-043",
+  "b": "U08-D-056",
+  "verdict": "independent",
+  "reason": "Odd-even plus quartic ratio versus x/(1+cos^2 x) with tan substitution; different answers."
+ },
+ {
+  "a": "U09-A-001",
+  "b": "U09-A-018",
+  "verdict": "independent",
+  "reason": "Polynomial DE degree versus a radical that must be squared first; different equations and answers."
+ },
+ {
+  "a": "U10-E-001",
+  "b": "U10-E-004",
+  "verdict": "independent",
+  "reason": "Eccentricity of a vertical ellipse versus directrices of a horizontal ellipse; different data and answers."
+ },
+ {
+  "a": "U10-E-001",
+  "b": "U10-F-001",
+  "verdict": "independent",
+  "reason": "Ellipse eccentricity versus hyperbola eccentricity on different data; different formula and answer."
+ },
+ {
+  "a": "U10-E-007",
+  "b": "U10-F-010",
+  "verdict": "independent",
+  "reason": "Ellipse from vertices and foci versus hyperbola from vertices and foci; different conic, data and answer."
+ },
+ {
+  "a": "U10-E-033",
+  "b": "U10-F-047",
+  "verdict": "independent",
+  "reason": "Lattice points on an ellipse by case check versus on x^2-y^2=45 by divisor pairs; count 12 coincides but methods and data differ."
+ },
+ {
+  "a": "U10-E-037",
+  "b": "U10-F-050",
+  "verdict": "independent",
+  "reason": "Focal-sum ellipse locus versus focal-difference hyperbola locus with different foci; different conic and answer."
+ },
+ {
+  "a": "U11-B-014",
+  "b": "U11-C-016",
+  "verdict": "independent",
+  "reason": "Perpendicularity parameter k versus perpendicularity followed by shortest distance on different lines; value 2 is coincidental (SD=2 sympy-confirmed)."
+ },
+ {
+  "a": "U11-B-028",
+  "b": "U11-C-016",
+  "verdict": "independent",
+  "reason": "Intersection parameter versus shortest distance of skew lines; different lines and tasks."
+ },
+ {
+  "a": "U12-B-008",
+  "b": "U12-C-016",
+  "verdict": "independent",
+  "reason": "(a+b).(a-b) from magnitudes versus |a x b| via projection and Lagrange identity; 16 is coincidental."
+ },
+ {
+  "a": "U12-B-038",
+  "b": "U12-C-016",
+  "verdict": "independent",
+  "reason": "Both convert a scalar projection to a dot product, but with different magnitudes and different targets (|a-b| vs |a x b|), so no result transfers."
+ },
+ {
+  "a": "U14-A-036",
+  "b": "U14-C-023",
+  "verdict": "independent",
+  "reason": "Trig product/tan identities versus inverse-tan sums; only statement format shared."
+ }
+]

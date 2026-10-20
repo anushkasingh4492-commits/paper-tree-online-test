@@ -1,0 +1,1128 @@
+{
+ "kind": "RC",
+ "passages": [
+  {
+   "passage_id": "R03-A-08",
+   "passage": [
+    "In the language of property, home and ownership have become almost interchangeable. To own the place one lives in is to 'have a home'; to rent is to be on the way to one, or to have failed to arrive. The equation is so familiar that it seems less a claim than a definition, and policies built on it, from subsidised mortgages to the sale of public housing to its tenants, present themselves not as choices among ways of housing people but as the extension of home itself to those who lack it.",
+    "Yet if one asks what people mean when they say that a place feels like home, the answers rarely mention title. They mention routines that have settled into the rooms, objects arranged by one's own hand, the confidence that one will be there next year, the freedom to decide who comes in, the ability to paint a wall or plant a window box or keep a dog. Home, in this sense, is less a thing one possesses than something one does, a practice of shaping a space and being shaped by it over time. And a practice of this kind needs two conditions: enough control over the space to shape it, and enough security of tenure to make the shaping worthwhile.",
+    "Neither condition is the same as ownership, though ownership has usually supplied both. A tenant on a twelve-month lease who may be asked to leave at short notice, who must seek permission to hang a picture, and whose rent can rise without limit, has good reason not to invest himself in his rooms; he is camping, however long he stays. But the cause of his condition is not that he rents. It is that his tenancy is short, revocable and hedged with prohibitions. Where tenancies are long, rents predictable and tenants free to alter their surroundings within reason, renters make homes much as owners do, while an owner whose mortgage payments consume most of his income, and who fears that a lost job means a lost house, may know the very precariousness that the equation reserves for tenants.",
+    "None of this means that ownership confers nothing distinctive. The owner can knock down a wall, not merely paint it; he can leave the house to his children; he answers to no landlord. A tenant, however secure, lives in a space whose final shape is decided by someone else. These are real goods, and it would be odd to deny that many people want them for good reasons. The objection is not to ownership but to the assumption that it is the only door into home, an assumption that directs public effort towards turning tenants into owners while leaving the conditions of tenancy, under which a large and often growing share of urban households live, largely untouched.",
+    "The cost of that assumption is not only sentimental. A household that expects to move at a landlord's word does not join the school committee, does not plant a tree it will not see grow, does not learn the names of neighbours it may lose within the year. Schools, associations and local shops all depend on residents who expect to stay long enough for their efforts to bear fruit. The practices through which people make a home are continuous with those through which they make a neighbourhood, so that insecurity inside the door becomes thinness of attachment outside it. To treat home as a matter of title is therefore to misunderstand not only what renters lack but what cities lose when they lack it."
+   ],
+   "questions": [
+    {
+     "id": "R03-A-08-1",
+     "type": "RC",
+     "options": {
+      "A": "show that a short, revocable and restrictive tenancy, not renting as such, keeps a person from making a home.",
+      "B": "argue that strict limits on rent increases are the most effective single measure for improving the lives of tenants.",
+      "C": "suggest that tenants ought to be allowed to knock down walls and alter the structure of the houses they rent.",
+      "D": "show that renters, whatever the terms of their tenancy, invest less of themselves in their rooms than owners do."
+     },
+     "question": "The example of the tenant on a twelve-month lease in paragraph 3 serves mainly to"
+    },
+    {
+     "id": "R03-A-08-2",
+     "type": "RC",
+     "options": {
+      "A": "a person who has 'failed to arrive' at home because of the debts he took on in order to buy his house.",
+      "B": "an exception that confirms the rule that ownership always supplies both of the conditions a home requires.",
+      "C": "proof that owning a house is generally a worse arrangement than renting one on secure and long-term terms.",
+      "D": "someone who holds title yet may lack the security on which making a home depends."
+     },
+     "question": "The author would most likely regard the owner described at the end of paragraph 3, whose mortgage consumes most of his income, as"
+    },
+    {
+     "id": "R03-A-08-3",
+     "type": "RC",
+     "options": {
+      "A": "most households that rent would prefer to own their homes if the price of buying one were to fall far enough.",
+      "B": "people are less willing to invest effort in places and relationships they expect soon to be separated from.",
+      "C": "the attachment residents feel to a neighbourhood depends mainly on the physical design of its streets and public spaces.",
+      "D": "renters as a group take less interest in local schools than owners do, whatever the length and security of their tenancies."
+     },
+     "question": "The argument of paragraph 5 depends on the assumption that"
+    },
+    {
+     "id": "R03-A-08-4",
+     "type": "RC",
+     "options": {
+      "A": "Home is made through practices that need control and security, which ownership usually but not necessarily supplies, so policy should not treat ownership as the only route to home.",
+      "B": "Renting has become the usual tenure in cities, and tenancy law has failed to keep pace with the growing number of households that rent.",
+      "C": "What people value in a home is above all security rather than control, so tenancy reform should give every tenant a lease without any end date.",
+      "D": "Ownership confers no real advantage over a secure tenancy, so public support for buyers should be ended and redirected entirely to tenants."
+     },
+     "question": "Which of the following best expresses the central argument of the passage?"
+    },
+    {
+     "id": "R03-A-08-5",
+     "type": "RC",
+     "options": {
+      "A": "once home is defined as ownership, promoting ownership seems to need no defence against alternatives.",
+      "B": "their designers knew that renters could never make real homes and therefore saw no alternative to promoting ownership.",
+      "C": "subsidised mortgages and the sale of public housing have in fact extended home to nearly all of those who lacked it.",
+      "D": "tenants who bought the public housing they had rented reported feeling far more at home there after the purchase."
+     },
+     "question": "The passage suggests that the policies mentioned in paragraph 1 can 'present themselves' as the extension of home rather than as choices among ways of housing people because"
+    }
+   ]
+  },
+  {
+   "passage_id": "R05-F-06",
+   "passage": [
+    "Trade statistics were designed for a world in which goods were made in one place and sold in another. A customs officer records the full value of a shipment as it crosses the border and attributes it to the country from which it was sent. When a product is made from start to finish in a single country, this convention is harmless. When it is assembled from parts made in a dozen, the convention produces a curious distortion: the country where the last screw is turned is credited with the entire value of the product, including the much larger share that was created elsewhere and merely passed through.",
+    "Consider a hypothetical tablet computer assembled in one country from a display made in a second, chips designed in a third and fabricated in a fourth, and software written in a fifth. When the finished tablet is shipped to a sixth country, the statistics record an export of its full factory price from the assembling country, though the work done there may account for only a small fraction of that price. The bilateral balance between the assembler and the buyer swells accordingly, while the suppliers of the costlier components, whose contribution travels unseen inside the assembler's shipment, appear in the bilateral figures as having sold nothing to the final market at all.",
+    "Statisticians have responded by trying to trace value added: to ask, for each product, how much of its value was created in each country, and to tally trade on that basis. The striking feature of the results is not that a country's overall position changes, for it largely does not. Its balance with the world as a whole is much the same however one counts, since the value of each imported component is recorded once as an import and again inside the export, and the two entries cancel. What changes is the map: the bilateral balances that attract political attention are redistributed, often substantially, from assemblers towards the countries that supply the most valuable parts.",
+    "This matters because bilateral balances are routinely read as a scorecard of who is gaining at whose expense, and policy is sometimes made on that reading. A tariff aimed at the country with which a large deficit is recorded may, on the value-added view, fall chiefly on workers who contributed a modest share of what was bought, while leaving untouched the countries that contributed the most. The value-added figures are not beyond dispute. They depend on tables of who buys inputs from whom that are compiled infrequently and filled out with estimates, and they cannot replace the gross figures that customs administrations need for their own purposes. But one need not regard them as precise to see that they expose a habit of reading the gross bilateral figures as though they measured something they were never built to measure."
+   ],
+   "questions": [
+    {
+     "id": "R05-F-06-1",
+     "type": "RC",
+     "options": {
+      "A": "was lost in the course of transport between the various countries that took part in the chain.",
+      "B": "was produced in other countries and only embodied in the product during its final assembly.",
+      "C": "was added to the shipment by customs officers when they recorded its value at the border.",
+      "D": "was shipped across the assembling country's territory without being used in any of its products."
+     },
+     "question": "In paragraph 1, the value that 'merely passed through' the assembling country is value that"
+    },
+    {
+     "id": "R05-F-06-2",
+     "type": "RC",
+     "options": {
+      "A": "raise the recorded exports of assembling countries to their final markets, since hidden components would be counted.",
+      "B": "confirm that the bilateral balances that attract political attention had been reported accurately all along.",
+      "C": "leave an assembling country's balance with the world roughly unchanged while altering its balances with particular partners.",
+      "D": "sharply worsen an assembling country's balance with the rest of the world, since its exports would be revalued."
+     },
+     "question": "According to the reasoning in paragraph 3, recounting trade on a value-added basis would most likely"
+    },
+    {
+     "id": "R05-F-06-3",
+     "type": "RC",
+     "options": {
+      "A": "A company's accountant mistakenly records the same sale twice, so that the firm's annual revenue appears larger than it really was.",
+      "B": "In a group project, the student who hands in the final report is credited with all of the work, though most was done by others.",
+      "C": "In a group project, every student receives the same mark regardless of how much each contributed to the final report.",
+      "D": "A shop sells imported goods at a price below what it paid for them, so its sales figures overstate how profitable it is."
+     },
+     "question": "Which of the following situations is most closely analogous to the distortion that the passage attributes to gross trade statistics?"
+    },
+    {
+     "id": "R05-F-06-4",
+     "type": "RC",
+     "options": {
+      "A": "Value-added figures ought to replace gross figures for all official uses once the tables behind them are compiled more often.",
+      "B": "A tariff aimed at the partner with the largest recorded deficit may fall mostly on workers who contributed a modest share of the value.",
+      "C": "Countries that supply the costliest components may appear in bilateral figures as having sold nothing to the final market.",
+      "D": "The tables used to calculate value added are compiled only now and then and are partly filled in with estimates."
+     },
+     "question": "Each of the following is supported by the passage EXCEPT:"
+    }
+   ]
+  },
+  {
+   "passage_id": "R01-G-01",
+   "passage": [
+    "Governments that once judged their success almost entirely by output have lately begun to ask citizens a different question: all things considered, how satisfied are you with your life these days? The answers, usually given on a scale from zero to ten, are collected, averaged and compared across regions and years, and a rising average is increasingly cited as evidence that policy is working. The appeal of this approach is easy to understand. Income is at best a means to living well, and a measure that asks people directly about their lives seems to cut out the middleman.",
+    "Yet the question is less direct than it looks. To answer it, a respondent must do something quite unlike reporting a sensation. She must call to mind her life as a whole, choose the standards by which it is to be judged, and compare the one with the other. The number she gives is therefore an evaluation, and evaluations depend on the standards brought to them. Two people whose days contain the same mixture of pleasure, worry and boredom may give very different scores because one expects more from life than the other. A person who has learned to expect little can report contentment with circumstances that would dismay a neighbour, and a population whose expectations rise quickly can report falling satisfaction even as its conditions improve.",
+    "None of this makes the surveys worthless. Evaluations matter in their own right: how people judge their lives shapes what they choose, whom they blame and whether they think change is possible. The scores also move in ways we would expect, dropping when people lose their jobs or fall seriously ill. The error lies not in collecting the numbers but in treating them as a complete reading of how well people are living. A measure of judgement is not a measure of experience, and neither is it a measure of whether a life contains the goods, such as health, friendship and freedom, that most traditions of thought have held to be worth having whatever one happens to feel about them.",
+    "A sensible policy, then, would treat satisfaction scores as one instrument among several, read alongside measures of how people actually spend and feel their days and of what they are really able to do. Used alone, the scores reward whatever lowers expectations as readily as whatever improves lives, and a government that steered by them alone could succeed by teaching its citizens to want less."
+   ],
+   "questions": [
+    {
+     "id": "R01-G-01-1",
+     "type": "RC",
+     "options": {
+      "A": "urge governments to abandon measures of wellbeing and return to judging their success by economic output and income.",
+      "B": "establish that whenever a population's expectations rise, the satisfaction it reports will fall regardless of its conditions.",
+      "C": "show that life-satisfaction surveys are unreliable because respondents cannot accurately report how they feel from moment to moment.",
+      "D": "argue that life-satisfaction scores record expectation-dependent judgements and so should supplement, not replace, other measures of wellbeing."
+     },
+     "question": "The primary purpose of the passage is to"
+    },
+    {
+     "id": "R01-G-01-2",
+     "type": "RC",
+     "options": {
+      "A": "one of them remembers the worrying parts of recent days more vividly than the other does.",
+      "B": "one of them earns more and therefore has more of the means to living well.",
+      "C": "one of them misunderstands the scale on which the answer is meant to be given.",
+      "D": "they bring different expectations to the judgement of their lives."
+     },
+     "question": "According to the passage, two people whose days contain the same mixture of pleasure, worry and boredom may report different scores because"
+    },
+    {
+     "id": "R01-G-01-3",
+     "type": "RC",
+     "options": {
+      "A": "lowering expectations is the only reliable way for any government to raise the scores it reports.",
+      "B": "governments that adopt satisfaction scores usually set out to lower their citizens' expectations on purpose.",
+      "C": "people who have learned to want less are genuinely better off than those whose expectations remain high.",
+      "D": "average reported satisfaction could rise without any improvement in how people actually live."
+     },
+     "question": "The warning that a government 'could succeed by teaching its citizens to want less' (paragraph 4) implies that"
+    },
+    {
+     "id": "R01-G-01-4",
+     "type": "RC",
+     "options": {
+      "A": "asking people about their lives directly instead of judging how well they live through income, which is only a means.",
+      "B": "allowing citizens to report their satisfaction to researchers without any government official being involved in the process.",
+      "C": "ignoring the standards that respondents use and recording only the sensations they feel during the day.",
+      "D": "removing the cost of commissioning economic statistics by replacing them with cheaper surveys of opinion."
+     },
+     "question": "In paragraph 1, the phrase 'cut out the middleman' refers to"
+    }
+   ]
+  },
+  {
+   "passage_id": "R08-A-02",
+   "passage": [
+    "The quarrel between those who lay down rules for English and those who merely record how it is spoken is usually staged as a contest between snobbery and science. On one side stand the guardians of usage, who object to split infinitives and sentence-final prepositions and who regard each new sense of an old word as a small act of vandalism. On the other stand the linguists, who point out that many of the rules are of recent and dubious origin, that admired writers have broken them for centuries, and that a grammar describing what speakers actually do is the only kind that deserves the name. Put this way, the linguists win easily, and in the universities, at least, they have been winning for a long time.",
+    "Yet the victory is less complete than it appears, because it rests on a confusion about what a rule of usage is. The linguist is right that no rule of this kind is a law of the language in the way that, say, the order of article and noun is: speakers who break it are still perfectly understood, and they are still speaking English. But it does not follow that such rules are mere prejudice. Beliefs about correctness are themselves part of the linguistic behaviour of a community. A speaker who avoids a construction in a job application while using it freely at home is not confused; she is responding accurately to a social fact, namely that certain readers will judge her by it. A descriptive grammar that ignored such judgements would be describing an imaginary community.",
+    "What the prescriptivist gets wrong is not the existence of the rules but their source. The traditional defence appeals to logic, or to the example of Latin, or to a clarity the condemned construction supposedly lacks. These appeals rarely survive inspection. The objection to splitting an infinitive, for instance, makes some sense in a language where the infinitive is a single word and cannot be split, and very little in one where it is two. The real authority of such a rule is conventional: it binds because enough educated readers expect it to be observed, and for no deeper reason.",
+    "Seeing the rules as conventions of a register, rather than as laws or as prejudices, changes the question we should ask about them. It is no longer whether a usage is correct in some absolute sense, but whether a given convention earns its keep: whether it marks a distinction readers find useful, or merely sets a test that excludes those who were never taught it. Some conventions pass that test; many fail it. The point is that they can be judged, and that judging them is neither the snob's work nor the scientist's alone."
+   ],
+   "questions": [
+    {
+     "id": "R08-A-02-1",
+     "type": "RC",
+     "options": {
+      "A": "can be traced back to a principle of logic or to the grammar of Latin.",
+      "B": "offers readers enough real benefit to justify the effort of observing it.",
+      "C": "has been observed by educated writers for long enough to count as traditional.",
+      "D": "is followed by enough speakers that breaking it causes genuine confusion."
+     },
+     "question": "As used in paragraph 4, the phrase 'earns its keep' most nearly means"
+    },
+    {
+     "id": "R08-A-02-2",
+     "type": "RC",
+     "options": {
+      "A": "suggest that the way people speak at home is a more authentic guide to the language than formal writing.",
+      "B": "demonstrate that the rule against the avoided construction is grounded in logic rather than in convention.",
+      "C": "show that judgements of correctness are real features of a community's linguistic life that a description must include.",
+      "D": "show that speakers are inconsistent in their usage and therefore need clear prescriptive rules to guide them."
+     },
+     "question": "The example of the speaker who avoids a construction in a job application is used to"
+    },
+    {
+     "id": "R08-A-02-3",
+     "type": "RC",
+     "options": {
+      "A": "A usage rule that cannot be justified by logic or by Latin ought to be abandoned by careful writers.",
+      "B": "Linguists have been mistaken in pointing out the recent and dubious origins of many usage rules.",
+      "C": "A convention that tests whether a writer was taught it is, for that reason, a convention that earns its keep.",
+      "D": "A usage rule with no basis in logic may still bind writers wherever readers expect it to be followed."
+     },
+     "question": "The author would most likely agree with which of the following statements?"
+    },
+    {
+     "id": "R08-A-02-4",
+     "type": "RC",
+     "options": {
+      "A": "The rule against ending a sentence with a preposition was first proposed by a grammar writer modelling English on Latin.",
+      "B": "Speakers who carefully observe usage rules in formal letters often ignore the same rules in conversation with friends.",
+      "C": "Readers who claim to judge writers by a rule, when tested blind, neither notice breaches of it nor rate the writers lower.",
+      "D": "Many of the most admired writers in English have broken the rule against splitting an infinitive, and have done so for several centuries."
+     },
+     "question": "Which of the following, if true, would most weaken the author's claim that rules of usage are not 'mere prejudice' but social facts a description must include?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R06-B-06",
+   "passage": [
+    "The idea of a keystone species borrows its name from architecture. In an arch, the keystone is the wedge at the top that holds the other stones in place; remove it, and the structure falls. Applied to ecosystems, the term picks out species whose effect on their community is far larger than their abundance would suggest, so that their loss sets off changes that ripple through many other species. A predator that keeps a grazer in check, allowing plants to flourish, is the classic case, and the concept has proved enormously useful in persuading the public and governments that the fate of a single species can matter to a whole landscape.",
+    "The vividness of the metaphor, however, carries assumptions that ecology does not always support. An arch has one keystone, and its role is fixed by the geometry of the structure. Ecological communities are not like this. The same species may have a dominant influence in one place and a minor one in another, depending on what else lives there, on the climate and on the history of the site. A predator that controls its prey on a rocky shore where that prey has few other enemies may matter much less where the prey is also eaten by several other animals. Keystone status, in other words, is a property of a relationship in a particular setting, not a fixed attribute of a species.",
+    "The metaphor also invites a search for the one species that holds everything together, when in many communities influence is spread across several species, each of moderate importance, whose combined effects are what keep the system stable. A conservation strategy built around identifying and protecting keystones may then direct attention to a few dramatic interactions and neglect the diffuse ones, which are harder to demonstrate but not necessarily less important. The absence of a striking keystone in a community does not show that its members are interchangeable.",
+    "None of this means the concept should be discarded. Some species really do have outsized and well-documented effects, and naming them helps in arguing for their protection. The danger lies in treating the label as a discovery about a species' nature rather than a finding about a particular system, and in assuming that where no keystone has been identified, no species is indispensable. The architectural image is best used as what it is, a way of making one kind of ecological fact memorable, and not as a model of how communities are generally built."
+   ],
+   "questions": [
+    {
+     "id": "R06-B-06-1",
+     "type": "RC",
+     "options": {
+      "A": "a keystone species is one that forms close partnerships with a small number of other species.",
+      "B": "whether a species has outsized influence depends on the community and conditions in which it lives.",
+      "C": "keystone species are found only in particular kinds of habitat, such as rocky shores, and not elsewhere.",
+      "D": "a species keeps its keystone role wherever it lives, once that role has been demonstrated in one setting."
+     },
+     "question": "In paragraph 2, the description of keystone status as 'a property of a relationship in a particular setting' means that"
+    },
+    {
+     "id": "R06-B-06-2",
+     "type": "RC",
+     "options": {
+      "A": "false, because the passage shows that no species really has an influence larger than its abundance suggests.",
+      "B": "incomplete, since it leaves out the particular system in which the predator's influence was found.",
+      "C": "adequate, provided that the predator's effect has been carefully measured in at least one community.",
+      "D": "harmful, because naming keystone species always draws money away from the diffuse interactions in a community."
+     },
+     "question": "The author would most likely regard the unqualified statement that 'a certain predator is a keystone species' as"
+    },
+    {
+     "id": "R06-B-06-3",
+     "type": "RC",
+     "options": {
+      "A": "On one coast, removing a single predator led to the collapse of a mussel bed, but on another coast removing the same predator had little effect.",
+      "B": "Conservation funding in one region rose sharply after a campaign that described a single bird as the keystone of its forests.",
+      "C": "In a meadow, removing any single species of grazing insect changed little, but removing several of them together altered the plant community sharply.",
+      "D": "In a lake, removing a single fish species that was rare but fed on grazing animals caused a large growth of algae within a few seasons."
+     },
+     "question": "Which of the following findings, if true, would most strengthen the argument of paragraph 3?"
+    },
+    {
+     "id": "R06-B-06-4",
+     "type": "RC",
+     "options": {
+      "A": "admiring, regarding it as an accurate account of how most ecological communities are actually held together.",
+      "B": "appreciative of its value as a memorable idea but wary of its being taken as a general model of communities.",
+      "C": "dismissive, regarding it as a misleading metaphor that ecology would be better off discarding entirely.",
+      "D": "indifferent, regarding the question of whether it is accurate as less important than whether it raises funds."
+     },
+     "question": "The author's attitude towards the keystone concept is best described as"
+    }
+   ]
+  },
+  {
+   "passage_id": "R04-C-08",
+   "passage": [
+    "Every entrenched constitution invites an awkward question. If a majority of citizens today wishes to change some arrangement, why should it be prevented from doing so by rules that were drafted generations ago by people who are now dead, and who could not have imagined the conditions under which their successors live? A requirement that amendments win two-thirds of the legislature, or the approval of most regions, looks from this angle like a device for letting the past outvote the present. The objection has a democratic edge that is hard to dismiss: it asks by what right one generation sets the terms on which another must govern itself. Nor is it answered by praising the wisdom of the framers, since wisdom about one century is no warrant for authority over the next.",
+    "The most familiar answer appeals to self-binding. Just as a sailor who knows he will be tempted by a dangerous song may order his crew to tie him to the mast and ignore his later pleas, a people may bind itself in a calm moment against the passions it expects to feel in an agitated one. Entrenchment, on this account, is not the past overruling the present but the present protecting itself from its own worst impulses. The image is attractive, but it does not fit the case. The sailor binds himself, and the man who later strains at the ropes is the same man who gave the order. A constitution binds people who were not present when it was adopted and who gave no order at all. To call this self-binding is to assume precisely the continuity of the collective self that the objection calls into question.",
+    "A better defence starts from a different picture of what entrenchment does. Amendment rules do not, in practice, pit the living against the dead, because the dead cast no votes. What such rules do is set the terms on which living citizens must settle disagreements among themselves. When an amendment fails for want of a supermajority, it is defeated not by its framers but by a present minority large enough to block it. The requirement thus protects groups that might otherwise be outvoted on matters basic to their standing, and it encourages proposals that can attract support beyond a single faction. The protection is not merely theoretical: a group that knows it can block changes to its basic standing has less reason to fear the ordinary swings of electoral fortune, and more reason to accept defeat on everything else. Seen this way, the hand that restrains the majority is a living hand, and the real question is whether present minorities deserve such a veto, not whether the past deserves obedience.",
+    "This reframing does not make the original worry vanish. It succeeds only where amendment is demanding but genuinely possible. A constitution whose amendment procedure is so onerous that no change has been achieved in living memory, or which declares certain provisions unamendable altogether, really does impose the judgement of its authors on everyone who comes after; there, no present coalition, however broad, can alter the text. The objection from the dead hand is therefore best understood not as a refutation of entrenchment as such but as a warning about its extremes. Between a constitution that any passing majority may rewrite and one that no one can, the useful argument concerns how much agreement change should require, and that is a question each generation is entitled to keep asking."
+   ],
+   "questions": [
+    {
+     "id": "R04-C-08-1",
+     "type": "RC",
+     "options": {
+      "A": "show that a people, like a single person, can protect itself from its own passions by entrenching its rules.",
+      "B": "suggest that constitutions should be easier to amend in calm periods than in times of political agitation.",
+      "C": "explain why amendment rules often require the approval of most regions as well as of the legislature.",
+      "D": "illustrate the self-binding defence of entrenchment, which the author then argues is a poor fit for constitutions."
+     },
+     "question": "Within the author's argument, the example of the sailor in paragraph 2 serves to"
+    },
+    {
+     "id": "R04-C-08-2",
+     "type": "RC",
+     "options": {
+      "A": "a sailor tied to the mast can usually persuade his crew to release him once the dangerous song begins.",
+      "B": "peoples, unlike individuals, are seldom calm enough to foresee the passions they will feel at a later time.",
+      "C": "those whom a constitution binds are not, in any straightforward sense, the people who chose to be bound.",
+      "D": "entrenchment protects a society against its own impulses less effectively than ordinary legislation does."
+     },
+     "question": "The author's objection to the self-binding defence rests chiefly on the point that"
+    },
+    {
+     "id": "R04-C-08-3",
+     "type": "RC",
+     "options": {
+      "A": "That the present minorities who block amendments are usually right about the matters basic to their standing.",
+      "B": "That a supermajority requirement will lead most proposals for amendment to win support from more than one faction.",
+      "C": "That the framers of most constitutions intended amendment to be easy enough for any broad coalition to achieve.",
+      "D": "That amendment remains achievable in practice, so that whether a change passes is decided by the present balance of support."
+     },
+     "question": "The defence of entrenchment offered in paragraph 3 depends on which of the following assumptions?"
+    },
+    {
+     "id": "R04-C-08-4",
+     "type": "RC",
+     "options": {
+      "A": "A constitution drafted two centuries ago has been amended several times, each time with broad support across factions.",
+      "B": "An amendment backed by a narrow majority of citizens fails because a large regional minority votes against it.",
+      "C": "A constitution's amendment rules were drafted by framers who could not have foreseen the conditions under which citizens now live.",
+      "D": "A provision declared permanently unamendable continues to bind citizens even though nearly all of them now wish to change it."
+     },
+     "question": "In which of the following cases would the author most likely say that the objection from the 'dead hand' applies with full force?"
+    },
+    {
+     "id": "R04-C-08-5",
+     "type": "RC",
+     "options": {
+      "A": "It fails as a case against entrenchment in general, though it has real force against constitutions that are effectively impossible to change.",
+      "B": "It is best answered by the self-binding defence, provided that defence is stated with more care than usual.",
+      "C": "It is decisive, and shows that no generation may legitimately place any limits on the political choices of the next.",
+      "D": "It is confused, because amendment rules never impose the judgement of a constitution's framers on anyone now living."
+     },
+     "question": "Which of the following best describes the author's stance towards the objection from the dead hand?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R03-A-03",
+   "passage": [
+    "In the last two decades the walkable neighbourhood has become one of the few planning ideals on which almost everyone claims to agree, and with agreement has come measurement. Composite indices now rate districts by the number of shops, schools and stops within a short radius, the density of street intersections and the share of homes near public transport. Estate agents quote such figures; municipal plans set targets for raising them. It would be churlish to deny the good these indices have done. They gave walking, long treated as what people did when they could not drive, a place in the arithmetic of planning, and they made visible how many districts had been designed as if nobody would ever arrive on foot.",
+    "Yet what the indices measure is proximity, and proximity is not the same as walkability. A street can lie within five minutes of a pharmacy, a school and a bus stop and still be miserable to walk along: a narrow pavement beside four lanes of fast traffic, no shade under a summer sun, the blank walls of parking structures on either side, crossings that demand a long detour. Two districts with identical scores can therefore offer entirely different experiences, and the index has no way of registering the difference, because it counts what lies at the end of the walk and ignores the walk itself.",
+    "This blindness is not accidental; it reflects an assumption that walking is chiefly a means of reaching places. For many people it is that, but it is also something more: the way a child learns a neighbourhood, the way an elderly resident keeps in contact with the world, the occasion for the chance encounters on which local life depends. These goods are produced en route, by the quality of the street, its pace, its frontages, its benches and its shade, not by the count of destinations. A measure built around destinations will systematically undervalue them.",
+    "The danger is sharpest when the index ceases to be a description and becomes a target. A city told to raise its score can do so cheaply by permitting a few more shops near existing homes, while the hostile road that separates residents from those shops remains untouched. The number improves; the walk does not. None of this argues for abandoning measurement. It argues for remembering what the measurement leaves out, and for treating a high score as the beginning of an inquiry into a street rather than its conclusion."
+   ],
+   "questions": [
+    {
+     "id": "R03-A-03-1",
+     "type": "RC",
+     "options": {
+      "A": "the most important consideration in the design of new residential districts.",
+      "B": "a leisure pursuit with little bearing on how people reached shops and schools.",
+      "C": "a form of exercise that estate agents promoted in order to sell homes in the suburbs.",
+      "D": "a fallback way of getting about for people who had no option of driving."
+     },
+     "question": "The passage implies that, before walkability indices became common, walking was widely regarded in planning as"
+    },
+    {
+     "id": "R03-A-03-2",
+     "type": "RC",
+     "options": {
+      "A": "tend to overstate the number of shops, schools and stops that lie within a short walk of a typical home.",
+      "B": "can be raised by a city without making the experience of walking in it any better than before.",
+      "C": "have helped to bring walking into the calculations that planners use when they lay out districts.",
+      "D": "rest on an assumption that the main purpose of walking is to reach some destination or other."
+     },
+     "question": "Each of the following is a claim the author makes about walkability indices EXCEPT that they"
+    },
+    {
+     "id": "R03-A-03-3",
+     "type": "RC",
+     "options": {
+      "A": "Across a large sample of districts, residents' ratings of how pleasant their streets are to walk along closely match the districts' index scores.",
+      "B": "Narrow pavements beside fast traffic are found in about as many high-scoring districts as low-scoring ones.",
+      "C": "Many residents of districts with high index scores continue to own cars and drive for most of their journeys.",
+      "D": "Homes in districts with high index scores tend to sell for more than similar homes in districts with low scores."
+     },
+     "question": "Which of the following, if true, would most weaken the author's claim that two districts with identical scores can offer entirely different experiences of walking?"
+    },
+    {
+     "id": "R03-A-03-4",
+     "type": "RC",
+     "options": {
+      "A": "abandoning composite indices and relying instead on residents' own descriptions of what their streets are like.",
+      "B": "raising the share of homes that lie near public transport, since reaching transport is what walking is chiefly for.",
+      "C": "permitting more shops, clinics and services to open within a short radius of the homes already in the district.",
+      "D": "studying the routes residents actually use between their homes and nearby destinations, and the conditions they meet along them."
+     },
+     "question": "On the author's view, a city that wished to improve walking in a district, and not merely its walkability score, should begin by"
+    }
+   ]
+  },
+  {
+   "passage_id": "R05-E-04",
+   "passage": [
+    "Long before there were central banks, people understood that a ruler who clipped the edges of coins, or mixed base metal into silver, was taking a share of his subjects' wealth without asking them. The modern version of the idea holds that a government which finances its spending by creating money imposes an inflation tax on everyone who holds that money. No law is passed and no collector calls; the price of bread simply rises, and the real value of the cash in people's pockets falls in proportion. In one respect the analogy with taxation is exact: resources move from the public to the issuer of money, who has spent the new money before its effect on prices is felt.",
+    "Critics of this practice argue that it is worse than ordinary taxation precisely because it is hidden: a tax on incomes must be proposed, debated and voted upon; an inflation tax requires only that the issuing authority do nothing to stop it. It also tends to fall heavily on those least able to protect themselves, such as households that keep their savings in cash or depend on incomes fixed in money terms, while it benefits anyone whose debts shrink in real value as prices rise. Among the largest such debtors, of course, is often the state itself.",
+    "The analogy misleads, however, when it is pressed too far. A tax is a deliberate choice, whereas much inflation arises from events that no government chose, such as a failed harvest, a war in a distant region or a sudden jump in the price of fuel. Moreover, where most money takes the form of bank deposits that pay interest, and where that interest rises when inflation rises, the revenue a state gains from mild inflation is modest. To describe every increase in prices as a tax is to attribute intention and gain in cases where there may be neither.",
+    "What the old idea gets right is the question it trains us to ask: who gains? When inflation is high and persistent and the state is a heavy debtor, the answer frequently points to the treasury, and the language of taxation is then not rhetoric but accurate description. When inflation is mild, or arrives from abroad through the price of imports, the same language obscures more than it reveals. The concept of an inflation tax is best treated as a tool of diagnosis rather than as a verdict reached in advance."
+   ],
+   "questions": [
+    {
+     "id": "R05-E-04-1",
+     "type": "RC",
+     "options": {
+      "A": "in both cases the burden falls most heavily on the poorest households, who hold their wealth in cash.",
+      "B": "in both cases resources pass from the public to the authority that collects or issues the money.",
+      "C": "in both cases a collector must visit the people who are being taxed and record what each of them owes.",
+      "D": "in both cases the measure must be approved by a law before any money can be taken from the public."
+     },
+     "question": "According to paragraph 1, the analogy between inflation and taxation is exact in that"
+    },
+    {
+     "id": "R05-E-04-2",
+     "type": "RC",
+     "options": {
+      "A": "It sets limits on the inflation-tax idea by noting cases in which inflation involves neither intention nor much gain.",
+      "B": "It strengthens the critics' case in paragraph 2 by showing that the burden of inflation falls on savers who hold interest-bearing deposits.",
+      "C": "It rejects the inflation-tax idea altogether by showing that inflation is caused by harvests and fuel prices rather than by governments.",
+      "D": "It explains the historical shift from coin clipping to money creation that made the inflation tax possible in modern economies."
+     },
+     "question": "Which of the following best describes the role of paragraph 3 in the passage?"
+    },
+    {
+     "id": "R05-E-04-3",
+     "type": "RC",
+     "options": {
+      "A": "falls heavily on households that keep their savings in cash or live on incomes fixed in money terms.",
+      "B": "does not have to be proposed, debated and voted upon in the way a tax on incomes does.",
+      "C": "benefits debtors, including the state, whose obligations lose real value as prices rise.",
+      "D": "is collected mainly from people with large incomes, who are able to move their wealth abroad."
+     },
+     "question": "The passage presents each of the following as a reason critics consider the inflation tax worse than ordinary taxation EXCEPT that it"
+    },
+    {
+     "id": "R05-E-04-4",
+     "type": "RC",
+     "options": {
+      "A": "Any inflation that reduces the real value of government debt should be described as a tax, whatever its original cause may have been.",
+      "B": "Whether a period of inflation deserves to be called a tax depends on examining who gained from it, not only on how much prices rose.",
+      "C": "Mild inflation that arrives through the price of imports is a hidden tax imposed by foreign governments on domestic savers.",
+      "D": "Since modern deposits pay interest, the idea of an inflation tax is a historical relic best confined to the age of coin clipping."
+     },
+     "question": "Which of the following would the author most likely accept?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R04-D-03",
+   "passage": [
+    "The secret ballot is now so taken for granted that it is easy to forget how recent it is and how fiercely it was once opposed. For much of the nineteenth century, in many countries, voters declared their choices aloud or on papers that others could see, and the reform that replaced this practice was resisted not only by those who profited from intimidation. A respectable strand of liberal opinion held that the vote was a public trust, exercised on behalf of the whole community, and that a trust ought to be discharged in public. A man who knew that his neighbours would see his vote, the argument ran, would be ashamed to cast it for a selfish reason.",
+    "The argument has a certain nobility, and it rests on a real insight: people do behave differently when they are observed. Its error lies in assuming that the observer will be the voter's conscience. In practice the people most interested in how a tenant, a labourer or a clerk had voted were the landlord, the employer and the local party agent, and the pressure they applied had little to do with the public good. Publicity did not make votes more responsible; it made them more obedient.",
+    "The less obvious virtue of secrecy is that it disarms bribery as well as intimidation. Buying a vote is a kind of contract, and a contract is worthless if one party cannot check whether the other has kept it. Once no one can verify how a ballot was marked, the buyer who pays in advance cannot know whether he has bought anything, and the seller can take the money and vote as he pleases. Secrecy, in other words, works less by appealing to the voter's virtue than by making a certain kind of corruption unenforceable. This also explains why secrecy has to be a duty and not merely a right. If voters could choose to reveal their ballots, those under pressure could be required to prove their compliance, and the protection would collapse for exactly the people who need it most.",
+    "That point matters more now than it once did. A ballot marked at home, at a kitchen table, can be watched by a domineering relative; a ballot photographed in a booth with a telephone can be shown to whoever demands proof. Neither practice is sinister in itself, and both make voting easier for many people. But they reopen the gap that secrecy was designed to close, and they suggest that the privacy of the vote is not a natural condition of democratic life but an arrangement that has to be maintained, and occasionally rebuilt, as the means of voting change."
+   ],
+   "questions": [
+    {
+     "id": "R04-D-03-1",
+     "type": "RC",
+     "options": {
+      "A": "argue that voting at home and voting with a telephone in the booth should both be prohibited in order to protect the ballot.",
+      "B": "support the old liberal view that a vote seen by others is more likely to be cast for the good of the community.",
+      "C": "suggest that the secret ballot was never as effective in protecting voters as its nineteenth-century supporters had claimed.",
+      "D": "show that newer ways of voting can recreate the exposure to pressure that secrecy was meant to remove."
+     },
+     "question": "The examples of the kitchen table and the telephone in paragraph 4 serve mainly to"
+    },
+    {
+     "id": "R04-D-03-2",
+     "type": "RC",
+     "options": {
+      "A": "officials can no longer enforce the laws against intimidation, because voters will not report it.",
+      "B": "a corrupt bargain over a vote cannot be checked, so neither side can rely on it.",
+      "C": "corruption of every kind becomes impossible to prosecute once voters can no longer be observed.",
+      "D": "voters who accept bribes are legally obliged to vote as they promised, though in practice few do."
+     },
+     "question": "In paragraph 3, the statement that secrecy makes a certain kind of corruption 'unenforceable' means that"
+    },
+    {
+     "id": "R04-D-03-3",
+     "type": "RC",
+     "options": {
+      "A": "rightly predicted that a secret vote would lead citizens to cast their ballots for more selfish reasons.",
+      "B": "opposed it chiefly because they themselves gained from the ability to pressure the people who voted.",
+      "C": "were insincere when they described the vote as a trust to be exercised on behalf of the community.",
+      "D": "correctly saw that being watched alters conduct but misjudged whose standards the watching would enforce."
+     },
+     "question": "The author would most likely agree that the nineteenth-century liberals who opposed the secret ballot"
+    },
+    {
+     "id": "R04-D-03-4",
+     "type": "RC",
+     "options": {
+      "A": "Voters may decide whether to keep their ballots secret, and those who choose to disclose their vote receive an official receipt recording the choice.",
+      "B": "Ballots are marked in private, but each voter is handed a numbered slip, and the marked papers are published with their numbers after the count.",
+      "C": "Ballots are cast openly, but any voter who reports an attempt to buy a vote is given full legal protection against the person who made it.",
+      "D": "Voters may photograph their ballots, but any voter may later cast a fresh ballot that silently replaces the earlier one, so no photograph proves the final vote."
+     },
+     "question": "By the reasoning of paragraph 3, which of the following arrangements would best preserve the protection that secrecy gives against vote buying?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R02-F-05",
+   "passage": [
+    "Among the people who first tried to build thinking machines, a surprise emerged that has never quite been absorbed. The tasks that seemed to demand the most intelligence, such as proving theorems, playing chess or solving problems in algebra, turned out to be comparatively tractable for computers, while tasks that any small child performs without effort, such as recognising a face across a room, picking up an unfamiliar object or walking over uneven ground, proved stubbornly hard. The observation is often associated with the roboticist Hans Moravec, and it is usually called a paradox. Whether it deserves the name depends on what we took difficulty to be in the first place.",
+    "The most common explanation is evolutionary. Seeing, grasping and moving have been refined over hundreds of millions of years of animal life, and the machinery that performs them is vast, ancient and almost entirely hidden from awareness. Abstract reasoning, by contrast, is a recent arrival, practised deliberately and with effort. We notice the effort and conclude that reasoning is hard; we notice nothing when we recognise a friend's face, and conclude that perception is easy. On this account the paradox is an artefact of introspection: our sense of difficulty tracks how much of a skill reaches consciousness, not how much computation it requires.",
+    "This explanation is persuasive, but it should not be stretched into the claim that every skill we find effortless is computationally deep, or that every skill we find laborious is shallow. Some effortless skills may be easy for machines too, and some laborious ones, like long division, are trivial for any pocket calculator while others remain hard. The evolutionary story explains a general tendency; it does not supply a rule. Nor has the gap stood still. Machines have become far better at recognising images and speech than early researchers expected, though a robot that can fold an unfamiliar garment or clear an untidy table remains much harder to build than a program that plays chess at a master's level.",
+    "The deeper lesson concerns our idea of intelligence itself. For a long time intelligence was identified with the activities that educated adults found hardest and prized most: calculation, logic, formal games. The paradox suggests that this identification was parochial. What humans find hard is a measure of human limitations, not a measure of how much intelligence a task needs, and the competences we share with other animals may contain more of what is difficult about minds than the competences that distinguish us. A cat crossing a cluttered shelf without disturbing anything is solving problems that our best machines still find formidable, and it would be odd to call that achievement unintelligent merely because no cat could sit an examination."
+   ],
+   "questions": [
+    {
+     "id": "R02-F-05-1",
+     "type": "RC",
+     "options": {
+      "A": "the processes that carry it out operate almost entirely outside conscious awareness.",
+      "B": "children practise it constantly in their earliest years, long before they begin any formal schooling.",
+      "C": "it requires very little computation compared with abstract tasks such as algebra and chess.",
+      "D": "it is performed by a small and specialised part of the brain that works without needing effort."
+     },
+     "question": "According to the evolutionary explanation described in the passage, perception seems easy to us because"
+    },
+    {
+     "id": "R02-F-05-2",
+     "type": "RC",
+     "options": {
+      "A": "Doubting that skill at chess and formal logic is the best measure of how intelligent a creature is.",
+      "B": "Concluding that a skill must demand a great deal of computation simply because people perform it without any effort.",
+      "C": "Holding that the skills of seeing, grasping and moving were refined over a very long period of animal evolution.",
+      "D": "Recognising that machines now identify images and speech far better than early researchers expected."
+     },
+     "question": "Which of the following would the author most likely regard as a mistake?"
+    },
+    {
+     "id": "R02-F-05-3",
+     "type": "RC",
+     "options": {
+      "A": "Believing that a familiar walk is shorter than an unfamiliar one of equal length, simply because it is familiar.",
+      "B": "Finding a subject hard at school because it was taught badly, and later finding it easy under a better teacher.",
+      "C": "Upgrading the parts of a machine so that it completes in seconds a calculation that once took hours.",
+      "D": "Judging the size of an iceberg from the part above the water, and so overlooking the far larger mass beneath it."
+     },
+     "question": "Which of the following situations is most closely analogous to the account of the paradox given in paragraph 2?"
+    },
+    {
+     "id": "R02-F-05-4",
+     "type": "RC",
+     "options": {
+      "A": "It is a genuine contradiction in the science of machines, and recent progress in machine perception has now largely resolved it.",
+      "B": "It is misnamed, because machines have in fact always found perceiving and moving easier than reasoning.",
+      "C": "The finding is surprising only on the assumption that the effort a task costs humans measures how much intelligence it requires.",
+      "D": "It deserves the name, since the evolutionary account cannot explain why some effortless skills are also easy for machines."
+     },
+     "question": "Given the passage as a whole, the author's answer to whether the 'paradox' 'deserves the name' is best captured by which of the following?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R04-D-05",
+   "passage": [
+    "Political parties have few admirers. It is a commonplace of political commentary that they are distrusted, and reformers of every persuasion have proposed ways of loosening their grip: independent candidates, direct votes on policy, primaries open to any voter who cares to take part. The suspicion is understandable. Parties reward loyalty over judgement, they paper over disagreements in order to win, and their leaders sometimes seem more interested in the survival of the organisation than in the purposes it was founded to serve.",
+    "Yet much of what makes democratic government workable is done by parties, and done so routinely that it goes unnoticed. A modern electorate contains millions of people with conflicting interests. Someone has to assemble those interests into a programme coherent enough to be offered, defended and, if elected, attempted; someone has to recruit and test the people who will hold office; and someone has to give voters a simple way of knowing what a candidate broadly stands for without studying the record of each individual. Parties do all three. Most importantly, they make accountability possible. A government formed by a party can be judged as a team at the next election, whereas a legislature of independents, each with a private bargain to defend, offers voters no one in particular to reward or punish.",
+    "This is why some reforms intended to democratise parties have had awkward consequences. When candidates are chosen in primaries open to anyone, the party organisation loses much of its ability to screen out those who would damage it, and the candidates who win are often those with the most intense supporters rather than those with the broadest appeal. When membership dwindles, the organisation does not disappear; it becomes a smaller circle of professionals and funders, less rooted in local life and more remote from the voters it claims to represent. Weakening the party, in other words, does not necessarily hand power to citizens. It may hand it instead to whoever is able to organise without one: wealthy individuals, single-issue lobbies, the personal following of a celebrity.",
+    "None of this makes parties virtuous. A party that faces no serious competition will serve itself, and the defenders of party government have sometimes mistaken the indispensability of parties for their innocence. The argument here is a narrower one. It is that the familiar complaints about parties are complaints about particular parties behaving badly, and that the cure for bad parties is better ones, more open to their members and more seriously contested, rather than a politics that tries to do without them altogether."
+   ],
+   "questions": [
+    {
+     "id": "R04-D-05-1",
+     "type": "RC",
+     "options": {
+      "A": "Open primaries, though meant to democratise parties, usually produce candidates with intense followings rather than broad appeal.",
+      "B": "Parties deserve far more admiration than they receive, since the functions they perform show that they are fundamentally virtuous.",
+      "C": "Parties have become so self-serving that reformers are right to replace them with independent candidates and direct votes on policy.",
+      "D": "For all their faults, parties do work democracy needs, so their failings call for improving them rather than bypassing them."
+     },
+     "question": "Which of the following best expresses the central claim of the passage?"
+    },
+    {
+     "id": "R04-D-05-2",
+     "type": "RC",
+     "options": {
+      "A": "would contain members who had been screened too strictly by organisations remote from local life.",
+      "B": "would be dominated by wealthy individuals who had paid for the campaigns of most of its members.",
+      "C": "would be unable to assemble the conflicting interests of millions of people into any kind of legislation.",
+      "D": "would leave them without any collective body that they could reward or punish at the next election."
+     },
+     "question": "According to the passage, a legislature made up entirely of independents would be a problem for voters because it"
+    },
+    {
+     "id": "R04-D-05-3",
+     "type": "RC",
+     "options": {
+      "A": "have confused the innocent intentions of party founders with the conduct of the parties they built.",
+      "B": "have argued that parties are guilty of misconduct only when they face no serious competition.",
+      "C": "have assumed that because parties are necessary to democracy, they must also be free of blame.",
+      "D": "have wrongly believed that democracy could function perfectly well without any parties at all."
+     },
+     "question": "When the author says that defenders of party government have 'mistaken the indispensability of parties for their innocence', the point is that these defenders"
+    },
+    {
+     "id": "R04-D-05-4",
+     "type": "RC",
+     "options": {
+      "A": "Where parties adopted open primaries, the candidates who won were generally those whom uncommitted voters rated most highly in polls.",
+      "B": "Where parties adopted open primaries, turnout in those contests was high among committed party activists and very low among everyone else.",
+      "C": "Party membership has fallen as steeply in countries that never adopted open primaries as in countries that adopted them early.",
+      "D": "Candidates chosen in open primaries tend to spend more money on their campaigns than candidates chosen by party committees."
+     },
+     "question": "Which of the following, if true, would most weaken the claim in paragraph 3 about candidates chosen in open primaries?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R08-D-05",
+   "passage": [
+    "Two attitudes to the character of the speaker run through the study of persuasion, and they are hard to reconcile. The first, familiar from introductory logic, holds that an argument stands or falls on its own terms. Who makes it is irrelevant; to reject a claim because of the person advancing it is to commit a fallacy, and to accept a claim because of the person is the same error in a friendlier mood. The second attitude is older. Aristotle counted the character of the speaker among the means of persuasion, alongside appeals to the emotions of the audience and to the argument itself, and he did not present it as a regrettable weakness of listeners. A speaker who seems sensible, honest and well disposed towards the audience is, on this view, more worthy of belief, and an audience is right to take that into account.",
+    "The logician's attitude is correct for a particular situation: one in which the listener can examine the argument fully. A proof in geometry is no better for coming from a famous mathematician. But most of the claims on which people must act are not like proofs. A patient cannot check a diagnosis, a juror cannot repeat the forensic analysis, and a citizen cannot audit the statistics behind a policy. In such cases the listener is not choosing between evaluating the argument and evaluating the speaker; the argument is largely out of reach, and the speaker's record, competence and incentives are the best evidence available. To attend to them is not a lapse in reasoning but reasoning under a division of intellectual labour that no one can escape.",
+    "If this rehabilitates the appeal to character, it also shows where that appeal goes wrong. Credibility is earned in a domain. The physician's record is evidence about diagnoses, not about tax policy, and the honesty of a popular broadcaster is evidence that he reports what he believes, not that what he believes is true. Much modern persuasion works by carrying trust from the place where it was earned to a place where it has no bearing: the athlete who recommends an investment, the scientist who pronounces on matters far from her field. The listener who accepts such claims is not wrong to rely on character in general; she is wrong about which character she is relying on.",
+    "The two attitudes, then, are less opposed than they first appear. The logician is right that character cannot make a bad argument good, and the rhetorician is right that, where arguments cannot be inspected, character is often all a listener has to go on. What a careful audience needs is neither a rule against attending to the speaker nor a habit of trusting the likeable, but the narrower discipline of asking what, exactly, the speaker's credibility is credibility about."
+   ],
+   "questions": [
+    {
+     "id": "R08-D-05-1",
+     "type": "RC",
+     "options": {
+      "A": "the audience has been warned in advance against appeals to emotion and to character.",
+      "B": "the speaker has already built up a long record of honesty in the field concerned.",
+      "C": "the claim being made concerns a practical matter on which the listener must act.",
+      "D": "the listener is in a position to examine the whole argument for himself or herself."
+     },
+     "question": "According to the passage, the logician's attitude to the speaker's character is appropriate when"
+    },
+    {
+     "id": "R08-D-05-2",
+     "type": "RC",
+     "options": {
+      "A": "committing the logician's fallacy, since legal advice should be assessed only on its own merits.",
+      "B": "reasoning soundly, since the judge's credibility was earned in the very domain the advice concerns.",
+      "C": "relying on character improperly, since a long career shows sincerity rather than the truth of a belief.",
+      "D": "justified only if the listener has first worked through all the legal reasoning behind the advice."
+     },
+     "question": "A listener follows a retired judge's advice about how a legal dispute is likely to be decided, relying on the judge's long record. The author would most likely regard this listener as"
+    },
+    {
+     "id": "R08-D-05-3",
+     "type": "RC",
+     "options": {
+      "A": "audiences should give no weight at all to the sincerity of the people who speak to them in public.",
+      "B": "honest broadcasters are less likely than dishonest ones to report claims that turn out to be correct.",
+      "C": "a speaker's sincerity and the accuracy of what the speaker says are separate matters needing separate evidence.",
+      "D": "broadcasters on the whole lack the specialist knowledge needed to judge the claims that they report."
+     },
+     "question": "The remark that a broadcaster's honesty 'is evidence that he reports what he believes, not that what he believes is true' implies that"
+    },
+    {
+     "id": "R08-D-05-4",
+     "type": "RC",
+     "options": {
+      "A": "Classical rhetoric was right and introductory logic was wrong about the place of the speaker's character in persuasion.",
+      "B": "Because most arguments cannot be inspected, listeners should rely on a speaker's character instead of on reasoning.",
+      "C": "Appeals to a speaker's character are fallacious except when they are made by experts addressing fellow experts.",
+      "D": "Relying on a speaker's character is often reasonable, but only as evidence on matters where that credibility was actually earned."
+     },
+     "question": "Which of the following best expresses the central claim of the passage?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R08-B-01",
+   "passage": [
+    "Few school subjects have lost their defenders as quickly as handwriting. When most adult writing passes through a keyboard or a touchscreen, the hours once devoted to forming letters on lined paper can look like a ritual preserved out of institutional habit rather than educational necessity. Why, the argument runs, should a child labour over the loops of a joined script that she will rarely use after leaving school, when the same time could be given to typing, programming or simply reading more widely? The objection has the considerable appeal of common sense, and part of it is right. But it rests on a narrow idea of what handwriting lessons were ever for.",
+    "The narrow idea treats handwriting as a delivery system, a way of getting words from a head onto a surface, and judged by that standard alone it has plainly been outpaced. Yet for a young child, forming a letter by hand is also a way of learning the letter. To write a b rather than a d, the child must attend to direction, proportion and the small differences that distinguish one shape from its neighbours, and that sustained attention seems to help fix the shapes in memory in a way that pressing a key does not. A keyboard presents every letter ready-made; the hand has to build each one. Several researchers have suggested that this building is part of how early readers come to recognise letters at all, though the evidence is still being argued over and is far from settled.",
+    "There is a second, quieter benefit, which concerns older students rather than beginners. Students who take notes by hand cannot transcribe a lecture word for word, because the hand is too slow. They are forced to choose, compress and rephrase, and that compression is itself a kind of thinking, an early and private interpretation of what the lecturer actually argued. The student with a laptop can capture far more, and may understand far less, since verbatim copying can proceed without the words ever being weighed. The slowness that makes handwriting look obsolete is, in this setting, precisely its use.",
+    "None of this is an argument for preserving every feature of the old curriculum. The insistence on one elegant joined style, and the marks lost for an untidy loop, had more to do with the manners of an earlier age than with learning, and they can be abandoned without much loss. Nor should typing be neglected in the name of tradition; children need both. The case for handwriting, properly made, is modest: not that it is beautiful or traditional, but that the hand teaches the eye and slows the mind in ways that are useful precisely because they are inefficient. A curriculum that drops it to save time may find that it has saved the wrong thing."
+   ],
+   "questions": [
+    {
+     "id": "R08-B-01-1",
+     "type": "RC",
+     "options": {
+      "A": "Handwriting deserves a place in schooling because writing by hand supports learning in ways that an argument from speed and efficiency overlooks.",
+      "B": "Typing should replace handwriting in early schooling, since writing is mainly a way of getting words from the mind onto a surface.",
+      "C": "Joined handwriting should again be made compulsory in schools because it preserves an elegant tradition that a keyboard culture is losing.",
+      "D": "Students who take notes by hand always understand lectures better than students with laptops, so laptops should be kept out of classrooms."
+     },
+     "question": "Which of the following best states the main argument of the passage?"
+    },
+    {
+     "id": "R08-B-01-2",
+     "type": "RC",
+     "options": {
+      "A": "they cannot write quickly enough to record a lecture word for word, so they must select and rephrase.",
+      "B": "lectures are usually designed with summaries that students are expected to rewrite in their own words.",
+      "C": "forming each letter by hand fixes its shape in memory and leaves little attention for the lecture itself.",
+      "D": "their teachers deduct marks for notes that are untidy or that do not follow a single joined style."
+     },
+     "question": "According to the passage, students who take notes by hand are forced to compress what they hear because"
+    },
+    {
+     "id": "R08-B-01-3",
+     "type": "RC",
+     "options": {
+      "A": "a way of sending written messages to people who live far away from the writer.",
+      "B": "a set of rules for joined script that schools impose on their pupils.",
+      "C": "a method of teaching young children the shapes and directions of letters.",
+      "D": "nothing more than a means of moving words from the mind onto a page."
+     },
+     "question": "In paragraph 2, the phrase 'a delivery system' describes handwriting understood as"
+    },
+    {
+     "id": "R08-B-01-4",
+     "type": "RC",
+     "options": {
+      "A": "A practice can be valuable partly because of the very slowness that makes it look outdated.",
+      "B": "Typing lessons should be postponed until children have fully mastered a neat and consistent joined hand.",
+      "C": "The old emphasis on elegant script did real harm to children's learning and explains why many of them read poorly.",
+      "D": "Research has firmly established that writing letters by hand is how children first learn to recognise them."
+     },
+     "question": "The author would most likely agree with which of the following statements?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R06-C-01",
+   "passage": [
+    "Few scientific failures are held against a discipline as often as seismology's inability to say when the next large earthquake will strike. The public imagines that a sufficiently clever instrument, placed in the right fault zone, ought eventually to detect a warning sign, much as a barometer falls before a storm. Over the past century researchers have pursued many such signs, from changes in groundwater levels and gas emissions to swarms of small tremors and odd animal behaviour. Each has, at one time or another, appeared to precede a particular earthquake, and each has failed when tested against the many earthquakes that came without it and the many apparent warnings that were followed by nothing.",
+    "It is worth separating two activities that ordinary speech runs together. A prediction, in the sense the public wants, names a place, a magnitude and a narrow window of time: a strong earthquake near this town within the next week. A forecast states a probability over a longer period: a given chance of shaking above some level in this region within the next thirty years. The first remains beyond reach, and many seismologists suspect it may stay there, because whether a small rupture grows into a large one seems to depend on conditions deep in the crust that no instrument can survey in detail. The second is routine, and it is far from useless.",
+    "Forecasts are what building codes are written from. When engineers decide how strongly a hospital must be braced, or which soils are too loose to build on, they are acting on probabilities of exactly this kind. A city that has absorbed its long-term hazard into the way it builds has, in effect, already received the most valuable warning seismology can give, though nobody experiences it as a warning, since it arrives years before the event and asks for money rather than flight.",
+    "The objection that a probability is too vague to act on mistakes the kind of decision at stake. Few people would evacuate a city on the strength of a one-in-twenty chance spread over three decades, and nobody should. But a decision about whether to reinforce a school is not a decision about this week; it is a decision about the lifetime of a building, and over that lifetime a one-in-twenty chance is large. This does not mean that the search for warning signs should be abandoned, since a reliable one would save lives that codes cannot. It means that the discipline should not be judged by its failure at a task it may never accomplish while its success at a quieter task goes unremarked."
+   ],
+   "questions": [
+    {
+     "id": "R06-C-01-1",
+     "type": "RC",
+     "options": {
+      "A": "show that the search for warning signs before earthquakes has been a waste of effort and ought now to be given up.",
+      "B": "explain why the conditions deep in the crust that decide the size of an earthquake can never be measured by any instrument.",
+      "C": "argue that seismology deserves credit for long-term probabilities that guide construction, rather than blame for failing to predict individual earthquakes.",
+      "D": "criticise engineers for designing hospitals and schools without making use of the probabilities that seismologists already publish."
+     },
+     "question": "The primary purpose of the passage is to"
+    },
+    {
+     "id": "R06-C-01-2",
+     "type": "RC",
+     "options": {
+      "A": "names a place, a magnitude and a short time window, while a forecast gives a probability over a longer period.",
+      "B": "concerns large and destructive earthquakes only, whereas a forecast also covers the small tremors that people barely feel.",
+      "C": "is issued by seismologists to the public, whereas a forecast is prepared by engineers for use in drafting building codes.",
+      "D": "relies on instruments placed in fault zones, whereas a forecast is built only from historical records of earlier earthquakes."
+     },
+     "question": "According to the passage, a prediction differs from a forecast in that a prediction"
+    },
+    {
+     "id": "R06-C-01-3",
+     "type": "RC",
+     "options": {
+      "A": "officials keep the probabilities from residents for fear that publishing them would cause needless panic.",
+      "B": "the probabilities on which building codes rest usually turn out to be wrong about which buildings will fail.",
+      "C": "it arrives years before any earthquake and asks for spending rather than a decision to leave.",
+      "D": "it is written in technical language that only the engineers who design hospitals are able to understand."
+     },
+     "question": "The passage suggests that nobody experiences a city's absorbed long-term hazard 'as a warning' because"
+    },
+    {
+     "id": "R06-C-01-4",
+     "type": "RC",
+     "options": {
+      "A": "Engineers in several countries already decide how much to reinforce schools by consulting thirty-year probabilities of strong shaking.",
+      "B": "In most earthquake-prone regions, buildings are demolished or replaced within a few years of construction, long before a thirty-year hazard is likely to occur.",
+      "C": "Many residents of earthquake-prone cities ignore official orders to leave their homes, even when a strong earthquake later follows.",
+      "D": "A newly proposed warning sign appears to have preceded several recent earthquakes in widely separated parts of the world."
+     },
+     "question": "Which of the following, if true, would most weaken the author's reply to the objection that a probability is too vague to act on?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R08-B-05",
+   "passage": [
+    "The picture of the author that most readers carry is a picture of solitude: one person, one desk, one manuscript that emerges complete and is then merely printed. Publishing reinforces the picture at every step. The author's name alone goes on the cover, the author gives the interviews and accepts the prizes, and the acknowledgements page, where the other contributors are thanked, is the page readers most reliably skip. Yet anyone who has watched a book being made knows that the finished text is rarely the text the author first submitted.",
+    "Between those two texts stands, among others, the editor. At the broadest level, an editor may tell an author that the book begins in the wrong place, that a character is doing no work, or that the argument of a long middle section has already been made in its first ten pages. At the finest level, an editor queries a word, a comma, the order of two clauses. Much of this advice is accepted, some of it is fought over and some is refused; but the book that reaches the reader has been shaped by all three outcomes, since even a rejected suggestion can force an author to articulate why a passage must stay. The work is deliberately invisible. A good edit, like good stage lighting, is meant to pass unnoticed, and editors who want their contribution celebrated are generally thought to have misunderstood the job.",
+    "One tempting response is to declare that editors are secret co-authors and that the solitary author is a fraud. This overcorrects. In most cases the author supplies the material, the voice and the governing intention, and the editor works on what the author has made rather than making it; the relation resembles that between a performer and an exacting coach more than that between two composers. There are exceptions, cases in which an editor's cuts and rewritings have been so extensive that the question of whose book it is becomes genuinely difficult to answer, but they are exceptions precisely because they unsettle us.",
+    "The real lesson concerns how we assign credit rather than who deserves the most of it. Our habits treat authorship as an all-or-nothing property, possessed entirely by one person, when the making of most books is a graded collaboration in which contributions differ in kind as well as in size. Recognising this would not diminish authors. It would make it easier to see what they actually do, which is not to produce text from nothing but to direct a process that others help to carry out, and to bear responsibility for the result."
+   ],
+   "questions": [
+    {
+     "id": "R08-B-05-1",
+     "type": "RC",
+     "options": {
+      "A": "editing is a theatrical skill that most authors lack and must therefore hire from others.",
+      "B": "editorial work is successful when readers of the finished book are not aware of it.",
+      "C": "editors make weak passages look more impressive than they really are to the reader.",
+      "D": "editors are chiefly responsible for the visual design and layout of the printed page."
+     },
+     "question": "The comparison of a good edit to 'good stage lighting' in paragraph 2 is used to suggest that"
+    },
+    {
+     "id": "R08-B-05-2",
+     "type": "RC",
+     "options": {
+      "A": "They arise when editors who want their contribution celebrated insist on rewriting large parts of an author's manuscript.",
+      "B": "Their unsettling effect reveals an ordinary expectation that the author, not the editor, is a book's main maker.",
+      "C": "They show that the solitary author is usually a fraud whose books are largely written by others.",
+      "D": "They have become more frequent as publishing has grown more commercial and more dependent on editors."
+     },
+     "question": "Which of the following can be inferred about the exceptions mentioned in paragraph 3?"
+    },
+    {
+     "id": "R08-B-05-3",
+     "type": "RC",
+     "options": {
+      "A": "wholehearted agreement, since the finished text is rarely the text that the author first submitted.",
+      "B": "understanding why it appeals but rejecting it as an overstatement of a real point.",
+      "C": "contemptuous dismissal, on the ground that editors' contributions to a book are in fact trivial.",
+      "D": "strict neutrality, since the author reports the view without passing any judgment on it."
+     },
+     "question": "The author's attitude toward the view that editors are 'secret co-authors' is best described as"
+    },
+    {
+     "id": "R08-B-05-4",
+     "type": "RC",
+     "options": {
+      "A": "Editors deserve the same credit as authors, because the finished book is seldom the manuscript that was first submitted.",
+      "B": "Publishers should print editors' names on covers so that readers stop skipping the acknowledgements page.",
+      "C": "Authors are best understood as directors of an editorial process rather than as the source of their books' material and voice.",
+      "D": "Treating authorship as one person's undivided possession hides the graded collaboration through which most books are made."
+     },
+     "question": "Which of the following best expresses the central claim of the passage?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R08-A-06",
+   "passage": [
+    "Few natural experiments in linguistics are cited as often as the birth of a new sign language. Where deaf people who have had no shared language are brought together, at a newly founded school, say, or in a village where hereditary deafness is common, they do not remain without one for long. A system of signs takes shape among them, and within a few decades it has acquired the apparatus of a full language: consistent word order, ways of marking who did what to whom, devices for referring back to something already mentioned. The case is regularly offered as decisive evidence that the capacity for grammar is built into the human mind and needs only an occasion to express itself.",
+    "The evidence is real, but it supports a more interesting conclusion than the one usually drawn from it. A deaf child raised among hearing people who do not sign will typically invent gestures to communicate with her family, and these home signs show some structure of their own: distinct gestures for actions and for things, and a tendency to place them in a regular order. What they do not become, however long the child uses them, is a full language. The leap appears only where there are many signers, and it appears in stages. The first cohort, who created the system as adolescents or adults, typically use it with more variation and less regularity than the children who learn it from them; and it is those children, receiving a still untidy system and reproducing it more consistently than they found it, who drive it towards full grammatical form.",
+    "If grammar were simply waiting inside each mind for an occasion, the solitary home signer would have occasion enough. She has a lifetime of need, a willing family and an intact brain. What she lacks is other people who share her system and, above all, a younger generation to learn it from her. The emergence of a sign language thus looks less like the unveiling of a finished structure than like a process distributed across minds and generations, in which individual predispositions are amplified by repeated transmission until regularities that were faint in any single user become fixed in the community.",
+    "This is not to deny that the mind brings a great deal to the task. The speed of the process, a matter of decades rather than centuries, and the resemblance between the regularities that emerge and those found in long-established languages both point to strong biases in how children learn. But the case tells against the picture of language as an organ that grows in isolation, as surely as it tells against the picture of language as a mere convention on which people agree. A language turns out to need both a particular kind of learner and a particular kind of crowd."
+   ],
+   "questions": [
+    {
+     "id": "R08-A-06-1",
+     "type": "RC",
+     "options": {
+      "A": "explain why the first signers in a new community never fully master the language that they themselves created.",
+      "B": "argue that new sign languages show grammar to depend on both learners' biases and transmission within a community.",
+      "C": "contend that sign languages are conventions agreed among their users rather than products of the mind.",
+      "D": "show that the rapid birth of new sign languages proves the capacity for grammar is built into each human mind."
+     },
+     "question": "The primary purpose of the passage is to"
+    },
+    {
+     "id": "R08-A-06-2",
+     "type": "RC",
+     "options": {
+      "A": "demonstrates that a family's unwillingness to learn signs is what keeps home signs from becoming languages.",
+      "B": "reveals that the brains of deaf children differ in ways that make full grammar harder to acquire.",
+      "C": "lacks just the condition, a community of users across generations, that the new sign languages had.",
+      "D": "shows that a deaf child cannot develop any structured system of communication without being taught."
+     },
+     "question": "The author treats the solitary home signer as significant chiefly because she"
+    },
+    {
+     "id": "R08-A-06-3",
+     "type": "RC",
+     "options": {
+      "A": "In villages where hereditary deafness is common, many hearing residents also learn to sign with their deaf neighbours.",
+      "B": "Children in a new signing community regularised the system more when they had more older signers to learn from.",
+      "C": "Home signers who later join an established signing community quickly adopt the grammar used by the other signers there.",
+      "D": "In a new signing community, the adults who created the system used it as regularly as the children who later learned it from them."
+     },
+     "question": "Which of the following findings, if true, would most weaken the author's account of how a new sign language reaches full grammatical form?"
+    },
+    {
+     "id": "R08-A-06-4",
+     "type": "RC",
+     "options": {
+      "A": "A composer writing out a complete symphony in a single sitting, working from a structure she had carried in her head for years.",
+      "B": "A solitary musician refining a melody over the course of a long life until, in old age, she judges it finally complete.",
+      "C": "A committee of musicians agreeing on a standard pitch for tuning, which every orchestra in the country then adopts by rule.",
+      "D": "A folk tune, sung a little differently by each singer, settling into a fixed form as each generation of learners sings it more uniformly than they heard it."
+     },
+     "question": "Which of the following is most analogous to the process described in paragraph 3?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R06-C-04",
+   "passage": [
+    "When the sea threatens a coastal town, the first response is almost always to defend it. Walls are raised, beaches are replenished with sand pumped from offshore, and the line between land and water is held where it has always been. To propose instead that some places should be gradually abandoned sounds like defeatism, a confession that the town has been given up for lost. Yet the choice is rarely between holding the line and surrendering it. More often it is between retreat that is planned and retreat that is forced.",
+    "Defences are not permanent solutions but commitments that grow. A wall built to withstand the storms of today must be raised as the sea rises, and every raising protects more property that was built because the previous wall made it seem safe. Each round of investment makes the next one harder to refuse, since abandoning the wall would now mean abandoning more. Engineers can usually design a higher barrier; the deeper difficulty is that the community sheltering behind it has, by then, organised its entire economic life around the expectation that the barrier will hold. In low-lying places the expense eventually outruns what the community can pay, and the decision to leave is then made not by a council in calm weather but by the storm that finally breaks through.",
+    "Retreat imposed in that way is the worst version of a policy that might have been tolerable. Households leave in a rush, with property that has lost its value overnight, and they scatter wherever they can find housing, so that the neighbourhood that made the place worth defending dissolves. Planned retreat, by contrast, can be slow. A town can stop permitting new building in the most exposed areas, offer to buy homes when owners choose to sell, and move a school or a clinic inland when it would have needed rebuilding anyway. Spread over decades, such steps let a community move as a community.",
+    "None of this means that every shore should be abandoned. Some coasts carry so much population and infrastructure that defending them is plainly worth the cost, and in poor places the money for orderly relocation is often lacking. Nor can retreat simply be ordered from above; people who have lived beside the water for generations have reasons for staying that no compensation formula captures, and a plan that ignores them will fail. The argument is narrower: retreat belongs among the options from the start, weighed openly alongside walls, rather than held back as an admission of failure until it can no longer be chosen at all."
+   ],
+   "questions": [
+    {
+     "id": "R06-C-04-1",
+     "type": "RC",
+     "options": {
+      "A": "residents grow attached to the wall itself as a landmark, and so resist any plan that would remove it from view.",
+      "B": "each raising of a wall encourages more building behind it, so abandoning the wall would mean abandoning more property.",
+      "C": "each raising of a wall makes it stronger, so engineers become more confident that it will hold against future storms.",
+      "D": "the cost of each new round of wall-building falls as the town's builders gain experience with the same structure."
+     },
+     "question": "According to the passage, coastal defences become harder to give up over time because"
+    },
+    {
+     "id": "R06-C-04-2",
+     "type": "RC",
+     "options": {
+      "A": "obligations that enlarge themselves, because each defence draws investment that later demands still more defence.",
+      "B": "structures whose physical size must keep increasing because the materials they are built from weaken with age.",
+      "C": "formal promises by governments to keep building walls whatever the cost to the towns that live behind them.",
+      "D": "agreements among neighbouring towns to share the rising expense of protecting one stretch of shared coastline."
+     },
+     "question": "As used in paragraph 2, the phrase 'commitments that grow' most nearly means"
+    },
+    {
+     "id": "R06-C-04-3",
+     "type": "RC",
+     "options": {
+      "A": "refusing permits for new houses in the most exposed areas while allowing existing homes to remain occupied for now.",
+      "B": "requiring every household in the most exposed areas to move inland by a fixed date set by the national government.",
+      "C": "rebuilding an ageing clinic on higher ground inland at the time when it would have had to be replaced anyway.",
+      "D": "offering to purchase homes in threatened areas at the point when their owners decide of their own accord to sell."
+     },
+     "question": "The author would regard each of the following as consistent with planned retreat as the passage describes it EXCEPT"
+    },
+    {
+     "id": "R06-C-04-4",
+     "type": "RC",
+     "options": {
+      "A": "misleading, because defending a coastline is never worth its cost once the sea has begun to rise noticeably.",
+      "B": "accurate for poor coastal places, which cannot afford walls and therefore have no option except abandonment.",
+      "C": "misleading, because it hides the likelihood that retreat will come anyway, only on far worse terms.",
+      "D": "accurate, because retreat from the shore is in every case an admission that the town has been given up for lost."
+     },
+     "question": "It can be inferred that the author regards the usual framing of the choice, as one between defending a town and giving it up, as"
+    }
+   ]
+  },
+  {
+   "passage_id": "R04-C-04",
+   "passage": [
+    "Discussions of nationality law often begin from a tidy contrast. Under the principle of soil, a child born within the territory of a state becomes its citizen; under the principle of descent, citizenship passes from parent to child wherever the child is born. The first is commonly described as civic and open, since it admits anyone born on the land regardless of ancestry; the second as ethnic and closed, since it ties membership to bloodline. The contrast is useful as a first approximation, but as a guide to which societies are more welcoming it is close to misleading.",
+    "Consider why states adopted the soil rule in the first place. Where governments needed to populate large territories and to secure soldiers and taxpayers, it was convenient to claim the children of newcomers automatically, whatever their parents' wishes or origins. The rule expressed less a generous conception of belonging than an interest in numbers. Conversely, the descent rule has served countries with large populations abroad, allowing the children of emigrants to retain a connection to a homeland they may visit only occasionally. Neither motive is obviously more liberal than the other, and the same rule can serve quite different ends depending on who adopts it and why.",
+    "More importantly, the rule that governs birth is only one part of a citizenship regime, and often not the part that matters most. A state that follows the descent principle but allows long-term residents to naturalise after a few years, and extends citizenship to children who have grown up and been schooled in the country, may be far easier to join than a state that follows the soil principle but makes naturalisation slow, costly and uncertain for adults. The second state includes every child born on its territory and keeps their parents waiting at the door indefinitely. A single household may then contain citizens and foreigners under one roof, divided by nothing more than the place where each member happened to be born.",
+    "None of this means the choice of birth rule is unimportant. The soil principle does guarantee something valuable: no one born in the territory can be left, by the mere fact of birth, a permanent outsider in the only country he has known, and states without it have sometimes produced generations of residents with no secure status. But that guarantee is better understood as one protection among several than as the defining mark of an open society. The question worth asking of any nationality law is not which principle it starts from, but how readily it turns people who have made their lives in a country into its members."
+   ],
+   "questions": [
+    {
+     "id": "R04-C-04-1",
+     "type": "RC",
+     "options": {
+      "A": "was imposed on immigrant parents against their wishes and was widely resented by the families it affected.",
+      "B": "was abandoned by most states once their need for soldiers and taxpayers had declined over time.",
+      "C": "is in practice more exclusive than the descent principle, despite its reputation for being open.",
+      "D": "was adopted in some places for reasons of state interest that had little to do with openness to newcomers."
+     },
+     "question": "The analysis in paragraph 2 suggests that the soil principle"
+    },
+    {
+     "id": "R04-C-04-2",
+     "type": "RC",
+     "options": {
+      "A": "Some children who acquire citizenship under the soil principle later renounce it in favour of the nationality held by their parents.",
+      "B": "States following the soil principle almost always offer quick, cheap naturalisation, while states following the descent principle almost always make it slow and costly.",
+      "C": "Some states that follow the descent principle require applicants for naturalisation to pass a test of the national language before they are admitted.",
+      "D": "In several states that follow the soil principle, long-term residents must wait many years and pay high fees before they can naturalise."
+     },
+     "question": "Which of the following, if true, would most weaken the author's claim that the soil and descent contrast is a misleading guide to how welcoming a society is?"
+    },
+    {
+     "id": "R04-C-04-3",
+     "type": "RC",
+     "options": {
+      "A": "It summarises the historical motives for each principle that were set out earlier in paragraph 2 of the passage.",
+      "B": "It reverses the earlier argument by admitting that the soil principle is after all the defining mark of an open society.",
+      "C": "It shifts the discussion away from nationality law towards the practical hardships of residents without secure status.",
+      "D": "It grants a genuine merit of the soil principle while denying that this merit settles how open a society is."
+     },
+     "question": "Which of the following best describes the role of paragraph 4 in the passage?"
+    },
+    {
+     "id": "R04-C-04-4",
+     "type": "RC",
+     "options": {
+      "A": "sought to make naturalisation for adult residents quick, cheap and predictable.",
+      "B": "needed to populate large and empty territories and to secure enough soldiers and taxpayers for the state.",
+      "C": "have many citizens living abroad and want their children to keep a tie to the homeland.",
+      "D": "wished to claim the children of newcomers automatically on the ground of their birth."
+     },
+     "question": "According to the passage, the descent principle has been useful to countries that"
+    }
+   ]
+  },
+  {
+   "passage_id": "R05-D-01",
+   "passage": [
+    "Every wave of labour-saving machinery revives an old piece of arithmetic. If a factory needs a fixed quantity of work done, and a new machine does a third of it, then a third of the workers must go. Extend the sum across a whole economy and the conclusion seems inescapable: the more productive we become, the fewer of us will be needed. Economists have a name for the premise hidden in this calculation. They call it the lump of labour fallacy, the assumption that there is a set amount of work to be shared out, so that any work done by a machine, a newcomer or a pensioner who stays on is necessarily work taken from someone else.",
+    "The premise fails because the quantity of work is not fixed; it depends on what people want and can afford. When a machine makes cloth cheaper, households that once owned two shirts buy five, and the money they no longer spend on clothing goes on furniture, travel or schooling, each of which employs someone. The jobs created in this way are rarely the jobs that were lost, and they often appear in places and trades that nobody at the time thought to connect with the original invention. That is precisely why the destruction is so visible and the creation so easy to overlook. A closed mill is a single event with an address; the thousand small expansions that follow are scattered across an economy and are reported, if at all, as ordinary growth.",
+    "The same error appears in proposals that look generous. Schemes to push older workers into early retirement so that the young can find work, or to cap weekly hours so that employment is spread more thinly, assume that the jobs given up by one group pass intact to another. There is little reason to expect this. A worker who retires early also stops earning and spending at the old rate, and a firm that loses an experienced employee may simply produce less rather than hire a novice to take her place.",
+    "None of this means that the anxiety is foolish. The fallacy concerns the total amount of work, not its distribution, and a correct argument about totals is cold comfort to a fifty-year-old weaver whose skills no longer have a buyer. Transitions can take a generation, and the people who bear their cost are seldom the people who collect the gains. The proper conclusion is narrower than either side usually admits: technology does not abolish work in aggregate, but it can ruin particular lives and places, and policy ought to be judged by what it does for them rather than by whether it rescues a fixed stock of jobs that never existed."
+   ],
+   "questions": [
+    {
+     "id": "R05-D-01-1",
+     "type": "RC",
+     "options": {
+      "A": "reject the idea that work is a fixed quantity while granting that technological change still harms particular workers.",
+      "B": "show that labour-saving machines create more jobs than they destroy within the very trades into which they are introduced.",
+      "C": "argue that schemes such as early retirement and caps on weekly hours fail because firms refuse to hire young workers.",
+      "D": "defend the fears of displaced workers as a sound reason for slowing the spread of new technology across an economy."
+     },
+     "question": "The primary purpose of the passage is to"
+    },
+    {
+     "id": "R05-D-01-2",
+     "type": "RC",
+     "options": {
+      "A": "the new jobs appear only a generation later, by which time the closures they replaced have been forgotten.",
+      "B": "the new jobs usually pay less than the old ones, so workers who take them rarely describe them as gains.",
+      "C": "losses tend to arrive as single identifiable events, while gains are spread thinly over many trades and places.",
+      "D": "newspapers prefer stories about closures and deliberately ignore the slower growth of new industries elsewhere."
+     },
+     "question": "According to the passage, job losses are more visible than job gains because"
+    },
+    {
+     "id": "R05-D-01-3",
+     "type": "RC",
+     "options": {
+      "A": "A town should refuse a permit for a second cinema, since its filmgoers would merely be split between two halls and no new jobs could result.",
+      "B": "A town should plan for retraining to take years, because laid-off workers rarely have the skills that new employers want.",
+      "C": "A town should expect a cheaper bus service to draw extra riders, some of whom will spend their savings in local shops.",
+      "D": "A town should not assume that the jobs created by a new factory will go to the people whose old jobs it replaced."
+     },
+     "question": "Which of the following arguments rests on the same mistaken premise that the passage criticises?"
+    },
+    {
+     "id": "R05-D-01-4",
+     "type": "RC",
+     "options": {
+      "A": "caps on weekly hours would protect older workers better than schemes that push them into early retirement.",
+      "B": "the lump of labour premise turns out to be correct whenever older workers are the ones who are displaced.",
+      "C": "technological change reduces the total amount of work available in an economy once a transition is complete.",
+      "D": "an argument about the total amount of work can be correct and still say nothing to the people who lose out."
+     },
+     "question": "The author refers to 'a fifty-year-old weaver whose skills no longer have a buyer' most likely in order to suggest that"
+    }
+   ]
+  },
+  {
+   "passage_id": "R06-F-05",
+   "passage": [
+    "Few technical metaphors have succeeded as completely as the cloud. To store files 'in the cloud' is to imagine them floating somewhere overhead, available from anywhere, belonging to no place in particular and weighing nothing at all. The image is not simply wrong; from the point of view of a user, it describes the experience rather well. A photograph taken on a phone appears on a laptop moments later, and the user neither knows nor needs to know where it has been in between. Yet the metaphor has migrated from describing an experience to shaping how whole societies think about a vast industrial system, and in that second role it misleads.",
+    "What sits behind the cloud is emphatically material. It consists of large buildings filled with servers, which consume great quantities of electricity and must be kept cool, often with water drawn from local supplies; of cables laid across sea floors and along railway lines; of particular sites chosen for cheap power, favourable taxes or stable ground. Each of these is somewhere, and being somewhere means being subject to the laws of a particular state, to the weather and geology of a particular region, and to the politics of the towns asked to host the buildings and supply their power. A data centre can strain a local grid or compete with farms for water, and a damaged cable can slow communication across a region.",
+    "The metaphor makes all of this hard to see. A cloud has no address, so questions about which country's courts can demand access to stored data come to seem technical rather than political. A cloud uses nothing, so the energy cost of keeping old files indefinitely available is easy to forget. And a cloud is diffuse, which suggests resilience, whereas in practice a large share of the services people rely on may depend on a small number of companies and sites, so that a single failure can ripple outward with surprising speed.",
+    "Defenders of the metaphor might point out that hiding complexity is precisely what good computing does. Nobody wants to think about the location of a server before sending a message, and abstractions of this kind are why ordinary people can use powerful systems at all. That is true, but it confuses two audiences. Abstraction is a gift to the user at the moment of use; it becomes a liability when it is carried over into the deliberations of citizens, regulators and planners, whose task is precisely to decide where the buildings go, who supplies their power and whose laws govern what they hold. For them, the useful question is not where the cloud is but how it came to seem to be nowhere."
+   ],
+   "questions": [
+    {
+     "id": "R06-F-05-1",
+     "type": "RC",
+     "options": {
+      "A": "cables laid along railway lines as well as across sea floors.",
+      "B": "water drawn from local supplies to keep buildings full of servers cool.",
+      "C": "sites chosen because they offer cheap power or favourable taxes.",
+      "D": "satellites that relay stored data between continents when undersea links fail."
+     },
+     "question": "The passage mentions each of the following as part of the material reality behind the cloud EXCEPT"
+    },
+    {
+     "id": "R06-F-05-2",
+     "type": "RC",
+     "options": {
+      "A": "It takes up a defence of the metaphor and answers it by separating the needs of users from those of people who govern the infrastructure.",
+      "B": "It concedes that hiding complexity is what good computing does and therefore withdraws the earlier criticism of the metaphor.",
+      "C": "It brings forward fresh evidence about the environmental costs of data centres to reinforce the claims of paragraph 2.",
+      "D": "It argues that ordinary users ought to learn where their data is physically stored before they make use of online services."
+     },
+     "question": "Which of the following best describes the role of the final paragraph in the argument?"
+    },
+    {
+     "id": "R06-F-05-3",
+     "type": "RC",
+     "options": {
+      "A": "the image encourages a belief that services are spread widely, when they may in fact hinge on a few points of failure.",
+      "B": "storing old files indefinitely uses up so much energy that the system will eventually be unable to cope.",
+      "C": "data centres are often built on unstable ground, which makes them liable to sudden and widespread failure.",
+      "D": "users are unable to tell where their files travel between one of their devices and another."
+     },
+     "question": "The author's remark that a cloud 'is diffuse, which suggests resilience' implies that"
+    },
+    {
+     "id": "R06-F-05-4",
+     "type": "RC",
+     "options": {
+      "A": "A city that buries its power lines for the sake of appearance pays more to repair them, since faults become harder to find.",
+      "B": "A driver who knows nothing about engines is a worse driver than one who understands how the car works under the bonnet.",
+      "C": "A map that leaves out minor roads misleads every traveller, since it gives a false picture of the ground to anyone who uses it.",
+      "D": "Turning on a tap without a thought for reservoirs is a convenience, but a water board that planned as though water simply came from taps would plan badly."
+     },
+     "question": "Which of the following situations most closely parallels the author's reply to the defenders of the metaphor?"
+    }
+   ]
+  }
+ ]
+}

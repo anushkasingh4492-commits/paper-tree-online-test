@@ -1,0 +1,22 @@
+[
+ {
+  "id": "V02-N-004",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "C",
+    "key": "C",
+    "working": "Caution rests not on reputations but on names as retrieval keys; reform should look forward to new names.",
+    "alternative": "B overstates: the passage says the chain is 'not cut' but lengthened.",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "D",
+    "key": "D",
+    "working": "Caution rests on names as retrieval keys, not reputations; reform should look forward to new names.",
+    "alternative": "",
+    "issue": ""
+   }
+  }
+ }
+]

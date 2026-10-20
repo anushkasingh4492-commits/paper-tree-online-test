@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "pages": 6,
+  "pdf_sha256": "4edb3dac3fe4af4b25bb405a3aaf51a509f3512aa0af62189b44c61119775c30",
+  "review": "All six rendered pages inspected: readable text and tables, correct formulas and final answer register, no clipping or missing glyphs. The source diagram for 2129 was separately inspected.",
+  "source_figure": "figures/experiment-04.png"
+}

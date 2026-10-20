@@ -1,0 +1,1152 @@
+{
+ "kind": "RC",
+ "passages": [
+  {
+   "passage_id": "R01-F-06",
+   "passage": [
+    "A familiar picture of scientific objectivity confines values to the edges of inquiry. Values may legitimately decide which problems are worth studying and how results are used, but in the central act of science, deciding whether the evidence supports a hypothesis, they are supposed to have no place. A researcher who lets personal hopes affect whether a conclusion is accepted is, on this picture, simply doing bad science, and the remedy is a stricter separation between the laboratory and the world outside it.",
+    "The trouble is that evidence rarely settles a question outright, and so accepting a hypothesis always involves deciding that the evidence is strong enough. How strong is strong enough? Consider a laboratory testing whether an industrial solvent damages the liver. If it wrongly concludes that the solvent is safe, workers may be harmed; if it wrongly concludes that the solvent is dangerous, a useful product may be withdrawn and money wasted. Which error is worse, and therefore how much evidence to demand before declaring the solvent harmful, is not something the data can decide. It depends on how one weighs injured workers against lost revenue, which is a question of value. Two laboratories examining identical data could therefore set the threshold in different places, and neither would have misread a single measurement.",
+    "A natural reply is that scientists need not accept or reject anything. They could report the probability that the hypothesis is true, given the evidence, and leave the decision to those who must act. The reply is attractive but harder to carry out than it sounds. Before any probability can be reported, the investigators must decide how to classify ambiguous tissue samples, which measurements to discard as faulty and which statistical model to fit, and each of these decisions can err in either direction, with the same uneven consequences. The weighing of errors does not disappear; it moves to a stage where it is less visible.",
+    "It would be a mistake, however, to conclude that anything goes. The argument shows that values can properly bear on how much evidence to require, given what is at stake if one is wrong. It does not show that values can bear on what the evidence is, or license a researcher to discount an inconvenient result because it is unwelcome. The distinction is between setting the bar and moving the evidence, and the integrity of science depends on keeping the two apart, not on pretending that the bar sets itself."
+   ],
+   "questions": [
+    {
+     "id": "R01-F-06-1",
+     "type": "RC",
+     "options": {
+      "A": "refuse to reach any conclusion until the evidence about the solvent leaves no room for any doubt at all.",
+      "B": "report only the cost of withdrawing the solvent and leave every judgement about harm to the firm's managers.",
+      "C": "demand more evidence of harm than usual before declaring the solvent dangerous to the workers who use it.",
+      "D": "be prepared to declare the solvent harmful on less evidence than it would require if both errors seemed equally serious."
+     },
+     "question": "The solvent example implies that a laboratory which judged harm to workers to be far worse than lost revenue should"
+    },
+    {
+     "id": "R01-F-06-2",
+     "type": "RC",
+     "options": {
+      "A": "Probabilities reported by scientists are now usually accompanied by a full statement of the statistical model that was used to obtain them.",
+      "B": "Most of the laboratories that test industrial chemicals are funded, directly or indirectly, by the firms that manufacture those chemicals.",
+      "C": "Teams analysing the same borderline samples classified them differently according to which error they most wanted to avoid, changing the probabilities they reported.",
+      "D": "Officials who receive probability estimates from scientists often misread them and, as a result, make poorer decisions than they otherwise would."
+     },
+     "question": "Which of the following, if true, would most strengthen the author's response in paragraph 3 to the suggestion that scientists simply report probabilities?"
+    },
+    {
+     "id": "R01-F-06-3",
+     "type": "RC",
+     "options": {
+      "A": "It answers the reply in paragraph 3 by showing that probabilities can after all be reported without any judgement of value.",
+      "B": "It introduces a new example in order to show that researchers often discount results that they find unwelcome.",
+      "C": "It concedes that the argument built on the solvent example fails, and restores the picture of objectivity in paragraph 1.",
+      "D": "It limits the conclusion of the argument by separating a proper role for values from an improper one."
+     },
+     "question": "Which of the following best describes the function of the final paragraph?"
+    },
+    {
+     "id": "R01-F-06-4",
+     "type": "RC",
+     "options": {
+      "A": "transferring the weighing of errors to an earlier stage of the research where it is harder to see.",
+      "B": "letting what one wants to be true change how the results themselves are counted or interpreted.",
+      "C": "presenting the evidence to the people who must act instead of accepting or rejecting the hypothesis oneself.",
+      "D": "raising or lowering the amount of evidence required in the light of what is at stake if one errs."
+     },
+     "question": "In the final paragraph, 'moving the evidence' refers to"
+    }
+   ]
+  },
+  {
+   "passage_id": "R01-C-03",
+   "passage": [
+    "A promise is an odd moral instrument. By uttering a few words, I create an obligation that did not exist a moment before, and I hand you a kind of authority over my future conduct. Because the obligation is self-made, it can seem absolute: having bound myself freely, I have no one to blame but myself if keeping my word turns out to be inconvenient. Much of the value of promising depends on this firmness. A promise that dissolved whenever the promiser found something better to do would offer the person relying on it nothing that a statement of intention does not already provide.",
+    "Yet no one seriously believes that every promise binds whatever happens. If I promise to meet you for lunch and, on the way, come upon an injured cyclist who needs to be taken to hospital, I should miss the lunch, and you would think less of me if I did not. The usual explanation is that the promise was outweighed: the duty to help the cyclist was simply stronger. But this explanation, though natural, misses something. It implies that I had two competing obligations and chose the heavier, leaving me in your debt for the one I failed to honour. In fact, most people would say that I owe you an explanation, perhaps an apology for your wasted time, but not compensation, and certainly not a confession of wrongdoing.",
+    "A better account starts from what was actually exchanged. When you accepted my promise, you did not acquire a right to my presence at lunch under every conceivable circumstance; you acquired a right against my changing my mind for reasons of my own convenience. Promises carry an implicit understanding of the conditions under which they were made, and both parties know, without saying so, that some emergencies fall outside it. On this view the cyclist does not outweigh the promise; he reveals that the promise never extended so far.",
+    "This account has a cost, and it should be admitted. If the scope of a promise is set by unspoken understandings, then a promiser who wants to escape can always claim that his circumstances fell outside what was understood. The firmness that made promising valuable seems to leak away. The answer is that the implicit conditions are not whatever the promiser privately had in mind; they are what a reasonable person in the promisee's position would have taken them to be. That standard will not settle every case, but it keeps the exceptions public, and a promise whose limits are public remains a promise worth having."
+   ],
+   "questions": [
+    {
+     "id": "R01-C-03-1",
+     "type": "RC",
+     "options": {
+      "A": "The firmness of promises is an illusion, since a promiser can always claim that his situation was not foreseen.",
+      "B": "A promise must always be kept, because the person who made it freely chose to create the obligation.",
+      "C": "When a promise conflicts with a stronger duty, the stronger duty prevails and the promiser owes compensation for the breach.",
+      "D": "Promises bind only within limits set by a shared, reasonable understanding of the circumstances in which they were made."
+     },
+     "question": "Which of the following best expresses the main point of the passage?"
+    },
+    {
+     "id": "R01-C-03-2",
+     "type": "RC",
+     "options": {
+      "A": "owes the friend compensation for the lunch, though the friend should not think less of him for missing it.",
+      "B": "has committed a minor wrong against the friend, which is excused by the greater urgency of the cyclist's need.",
+      "C": "has not violated any right that the friend acquired when the promise was accepted.",
+      "D": "need offer the friend no explanation, since both parties already understand that emergencies fall outside promises."
+     },
+     "question": "It can be inferred that, on the author's account, a person who misses a promised lunch in order to take an injured cyclist to hospital"
+    },
+    {
+     "id": "R01-C-03-3",
+     "type": "RC",
+     "options": {
+      "A": "Many people readily forgive a broken promise when the reason they are given for it is a genuine emergency.",
+      "B": "In a few unusual cases, even careful observers cannot agree whether a promise was meant to cover a particular emergency.",
+      "C": "For most promises, reasonable people in the promisee's position disagree sharply about which emergencies would excuse the promiser.",
+      "D": "Some promisers privately intend, at the very moment of promising, to break their promise if it becomes inconvenient."
+     },
+     "question": "Which of the following, if true, would most weaken the author's reply in paragraph 4 to the worry that promises lose their firmness?"
+    },
+    {
+     "id": "R01-C-03-4",
+     "type": "RC",
+     "options": {
+      "A": "Missing a promised lunch may call for an apology for the friend's wasted time even when missing it was right.",
+      "B": "The duty to help the cyclist overrides a right to the promiser's presence at lunch that the friend had acquired.",
+      "C": "Letting the promisee's reasonable understanding fix the limits of a promise keeps those limits open to public view.",
+      "D": "A promise gives the person to whom it is made a kind of authority over part of the promiser's future conduct."
+     },
+     "question": "The passage supports each of the following statements EXCEPT:"
+    }
+   ]
+  },
+  {
+   "passage_id": "R05-A-02",
+   "passage": [
+    "Suppose a dozen firms bid for the right to drill in a tract of seabed whose reserves nobody knows, and that each firm commissions its own survey, and the surveys, being estimates, scatter around the true figure, some too high and some too low. If each firm bids what its own survey says the tract is worth, the contract will go to the firm whose survey was most optimistic, so that winning, in other words, is itself evidence of having overestimated. The firm that celebrates its victory has been selected for its error, and it will on average pay more than the tract is worth. This phenomenon is the winner's curse, and the striking thing about it is that no bidder needs to be foolish for it to occur, since each estimate may be honest and, taken alone, unbiased.",
+    "The remedy, in principle, is simple: a bidder should ask not what the tract is worth given its survey, but what it is worth given its survey and given that it has won. The second question yields a lower number, and a bidder who answers it will shade its bid below the raw estimate, more sharply the more rivals there are, since the highest of many estimates is more likely to be inflated than the highest of a few. Shading of this kind is not timidity but the correct response to a feature of the situation that the unconditioned estimate ignores.",
+    "A natural objection is that the curse should vanish with experience, because firms that overpay will lose money, notice and adjust, while those that do not will be driven from the market. There is truth in this, and seasoned bidders in many settings do shade their bids, but the learning is slower than the objection supposes. The outcome of any single auction is noisy, since a tract that disappoints may simply have been unlucky. Worse, the firms that lose never discover what the prize was really worth, so the information that would correct everyone's estimates is gathered only by the winners, and slowly. A lesson that must be extracted from a few expensive and ambiguous victories is not quickly learned.",
+    "For this reason the design of an auction matters as much as the wisdom of its participants. Formats in which bids are revealed as they rise allow each bidder to watch rivals drop out and to infer something about their estimates, and a bidder who can see how far others are willing to go has less reason to fear that its own enthusiasm is an error. Sealed bids, by contrast, leave each participant alone with a single survey and its uncorrected optimism. The point is not that one format is always superior, since open bidding has weaknesses of its own, among them the ease with which rivals can signal to one another, but that the curse is a property of the information structure, and so can be eased by changing that structure rather than by exhorting bidders to be cleverer."
+   ],
+   "questions": [
+    {
+     "id": "R05-A-02-1",
+     "type": "RC",
+     "options": {
+      "A": "was chosen by the seller because its survey team had a reputation for careless work.",
+      "B": "will be excluded from future auctions once the seller discovers that it has overpaid.",
+      "C": "won the tract mainly because its survey happened to overstate what the tract was worth.",
+      "D": "made a deliberate error in bidding above its own estimate in order to defeat its rivals."
+     },
+     "question": "In paragraph 1, the statement that the winning firm 'has been selected for its error' means that the firm"
+    },
+    {
+     "id": "R05-A-02-2",
+     "type": "RC",
+     "options": {
+      "A": "Firms that repeatedly overpay for tracts eventually run short of money and stop taking part in auctions.",
+      "B": "In most such auctions the losing bidders are told, soon afterwards, how much the tract actually yielded.",
+      "C": "The yield of a single tract often differs from its expected value because of geological chance.",
+      "D": "Experienced bidders in many auction markets are observed to bid somewhat below their own estimates."
+     },
+     "question": "Which of the following, if true, would most weaken the author's account of why the winner's curse is learned away only slowly?"
+    },
+    {
+     "id": "R05-A-02-3",
+     "type": "RC",
+     "options": {
+      "A": "It shows that sealed-bid auctions should be replaced by open bidding wherever the value of a prize is uncertain.",
+      "B": "It introduces a second cause of the curse, the signalling between rivals, which the earlier paragraphs overlooked.",
+      "C": "It draws on the earlier analysis to locate a remedy in the auction's information structure, without ranking formats outright.",
+      "D": "It abandons the claim of paragraph 2 that bidders should shade, in favour of the claim that only design matters."
+     },
+     "question": "Which of the following best describes the function of the final paragraph in relation to the rest of the passage?"
+    },
+    {
+     "id": "R05-A-02-4",
+     "type": "RC",
+     "options": {
+      "A": "a very large number of firms compete for the same tract of seabed.",
+      "B": "bids are submitted in sealed envelopes and opened only at the end.",
+      "C": "every bidder relies on one shared survey instead of commissioning its own.",
+      "D": "each bidder's survey is honest and, taken on its own terms, unbiased."
+     },
+     "question": "It can be inferred from the passage that the winner's curse, as the author describes it, would be LEAST likely to arise when"
+    }
+   ]
+  },
+  {
+   "passage_id": "R03-B-06",
+   "passage": [
+    "For much of the twentieth century, anthropologists sorted the ties they recorded into two kinds. Some were 'real', resting on birth and descent; others were 'fictive', a convenient label for godparents, sworn brothers, adopted children and the many other relations that people treated as kinship but that did not, so the observer thought, rest on blood. The distinction seemed merely descriptive, and it took some time to see that it carried a theory with it: that the true foundation of kinship is biological, and that everything else is imitation.",
+    "The difficulty is that many of the people being described did not share the theory. In a number of societies, people become kin by eating food grown on the same land, by living in the same house, or by being nursed at the same breast. Under Islamic law, for instance, children nursed by the same woman are barred from marrying one another, much as siblings by birth would be; the tie created by milk is not a metaphor for kinship but a form of it. In such places, ties made in these ways may carry the same obligations of help, hospitality and mourning as ties of birth. Where relatedness is understood to accumulate through feeding and sharing over years, to call such ties fictive is not to describe them but to overrule the people who live them.",
+    "This is not an argument that biology is irrelevant. Birth is, almost everywhere, one of the most powerful ways of reckoning who belongs to whom, and an attempt to dissolve it entirely into choice would be its own kind of distortion. The point is narrower: biology is one idiom of relatedness among several, and which idioms count, and how much, varies from place to place. Nor is the West an exception that proves the biological rule. Adoption, the blended families formed by remarriage, and the arrangements made possible by donated eggs and sperm all require people to decide, often painfully, whether a tie of birth or a tie of care should prevail when the two come apart.",
+    "Seen this way, kinship is something people do as well as something they are born into. The older vocabulary was not useless, since it pointed to real differences in the ways ties are formed and maintained. Its error lay in treating one culture's answer to the question of what makes people kin as the standard against which every other answer was to be measured, and in mistaking that answer for a fact of nature rather than a choice that other peoples had made differently."
+   ],
+   "questions": [
+    {
+     "id": "R03-B-06-1",
+     "type": "RC",
+     "options": {
+      "A": "biological, because nursing involves the sharing of a bodily substance.",
+      "B": "metaphorical, because it is modelled on the bond between brothers and sisters.",
+      "C": "fictive, because it does not rest on birth or descent.",
+      "D": "real, because it carries the same bar on marriage that a tie of birth carries."
+     },
+     "question": "The passage suggests that, under the older vocabulary, a tie between two children nursed by the same woman would have been classed as"
+    },
+    {
+     "id": "R03-B-06-2",
+     "type": "RC",
+     "options": {
+      "A": "limit the scope of the argument and show that its point applies within Western kinship too.",
+      "B": "withdraw the earlier claim that the label 'fictive' misdescribes many non-Western forms of kinship.",
+      "C": "introduce evidence that biology is the single most important idiom of relatedness in every society.",
+      "D": "argue that new reproductive technologies have now made biological kinship an obsolete idea in the West."
+     },
+     "question": "The third paragraph functions chiefly to"
+    },
+    {
+     "id": "R03-B-06-3",
+     "type": "RC",
+     "options": {
+      "A": "eating food that has been grown on the same land.",
+      "B": "inheriting a share of the same land from a common ancestor.",
+      "C": "living together in the same house over a period of years.",
+      "D": "being nursed as infants by the same woman."
+     },
+     "question": "The passage mentions each of the following as a way in which, in some societies, people may become kin EXCEPT"
+    },
+    {
+     "id": "R03-B-06-4",
+     "type": "RC",
+     "options": {
+      "A": "A family insists that a long-serving household servant, though deeply loved by all of them, can never be counted as kin because she shares no blood.",
+      "B": "A woman tracing her ancestry learns from a genetic test that she has a number of cousins living on another continent whom she has never met.",
+      "C": "A girl orphaned in childhood is placed by a court with an uncle she has never met, chosen because he is her nearest living relative by birth.",
+      "D": "A man raised from infancy by his stepfather comes to regard him, and not the father he never met, as the parent whose funeral rites he must perform."
+     },
+     "question": "Which of the following situations best illustrates the author's claim that kinship is 'something people do as well as something they are born into'?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R02-D-01",
+   "passage": [
+    "Adults watching a three-year-old serve imaginary tea to a row of stuffed animals tend to see one of two things. Some see a charming waste of time, a pause in the serious business of growing up that will be outgrown once the child can read and count; others see a rehearsal of adult roles, a small person practising to be a host. Both readings miss what is most remarkable about the scene, which is that to pour tea that is not there, the child must hold two descriptions of the world in mind at once: the cup is empty, and in the game the cup is full. She must keep the game's version from leaking into the real one, so that she does not actually try to drink, and yet follow its consequences faithfully, so that a toppled cup leaves the bear 'wet'.",
+    "This double bookkeeping is the same machinery that underlies counterfactual thought, the ability to ask what would happen if things were otherwise. A child who reasons that the bear is wet because the tea spilled is tracking a causal chain inside a supposition. Planning, explanation and much of science rest on exactly this skill, since to decide whether a plan will work, or why a bridge failed, one must build a world that differs from the actual one in a single respect and then trace what follows. Seen in this light, pretend play looks less like a holiday from thinking than like one of its earliest training grounds.",
+    "Some caution is nevertheless in order. That play and counterfactual reasoning draw on a shared capacity does not show that more play produces better reasoners; it may be that children who are already good at holding alternatives in mind simply enjoy pretending more. Nor does every game of make-believe involve careful causal tracking; much of it is repetitive and loose. The claim worth defending is narrower: pretence gives young children a space in which suppositions can be entertained without cost, and in which the rules that govern them can be tried and broken without anything real being at stake.",
+    "That narrower claim has a practical edge. Well-meaning efforts to make early childhood more productive often convert free play into guided activities with stated learning outcomes. Some guidance helps, and an adult who joins a game and asks what happens next can enrich it. But a game that exists to deliver a lesson changes character, because the child who knows that a right answer is wanted stops supposing freely and starts guessing what the adult has in mind. What made pretence valuable, its freedom from consequence, is the very thing that the attempt to harness it is most likely to destroy."
+   ],
+   "questions": [
+    {
+     "id": "R02-D-01-1",
+     "type": "RC",
+     "options": {
+      "A": "Believe for the length of the game that the cup really holds tea, so that the pretence feels convincing to her.",
+      "B": "Treat the cup as full inside the game while knowing it is empty, and let events in the game have their fitting effects.",
+      "C": "Copy the way she has seen adults receive guests, so that she gradually learns the social role of a host.",
+      "D": "Keep the cup from toppling over at any point, since a spill would break the rules that the game has set up for everyone taking part."
+     },
+     "question": "According to the passage, what must the child serving imaginary tea do?"
+    },
+    {
+     "id": "R02-D-01-2",
+     "type": "RC",
+     "options": {
+      "A": "a child's habit of counting imaginary objects alongside real ones, such as the cups, the tea and the animals.",
+      "B": "recording a child's play twice over, once in the child's own memory and once in the notes of a watching adult.",
+      "C": "moving back and forth between pretending and ordinary activity several times during a single afternoon.",
+      "D": "keeping track of how things actually are and how they are within the pretence, both at the same time."
+     },
+     "question": "As used in paragraph 2, 'double bookkeeping' refers to"
+    },
+    {
+     "id": "R02-D-01-3",
+     "type": "RC",
+     "options": {
+      "A": "reject the suggestion, made in paragraph 2, that pretend play and counterfactual thought share a capacity.",
+      "B": "present evidence that children who spend more time pretending go on to become better at reasoning about causes.",
+      "C": "narrow the author's claim by conceding what the link between pretence and reasoning does not establish.",
+      "D": "argue that most make-believe is too repetitive and loose to be of any real value to a child's development."
+     },
+     "question": "The third paragraph primarily serves to"
+    },
+    {
+     "id": "R02-D-01-4",
+     "type": "RC",
+     "options": {
+      "A": "stated learning outcomes cannot be measured reliably in children as young as the ones who play such games.",
+      "B": "any adult involvement in a child's game interferes with the reasoning about suppositions that pretence exercises.",
+      "C": "guided activities take time away from the reading and counting that young children need to master well before their schooling begins.",
+      "D": "a child who senses that a particular answer is expected will stop exploring suppositions and try to read the adult instead."
+     },
+     "question": "The author's reservation about turning free play into guided activities with stated learning outcomes rests chiefly on the concern that"
+    }
+   ]
+  },
+  {
+   "passage_id": "R04-F-03",
+   "passage": [
+    "Before the railways, every town kept its own time. Noon was the moment the sun stood highest over the local meridian, and because the sun appears to move westward, a town some distance to the west of another reached its noon a few minutes later. Nobody minded, because nothing travelled fast enough for the difference to matter; a coach journey of several days absorbed a quarter of an hour's discrepancy without anyone noticing it. The railway changed this, and the standard account of what followed is a story of practical necessity. Timetables drawn up in dozens of local times produced confusion and, on single-track lines, danger, so the companies adopted a single reference time and governments eventually followed.",
+    "The account is true as far as it goes, but it treats the change as a technical adjustment, like agreeing on a common gauge for the rails. It was more than that. Local time had been public in a literal sense: anyone could see the sun, and the clock on the church or the town hall was set by an observation that a curious citizen could, in principle, check. Standard time was set somewhere else, by astronomers in a distant observatory, and reached the town along a telegraph wire. The hour on the station clock was no longer a fact about the place where one stood but a decision taken elsewhere and transmitted to it.",
+    "This helps to explain a resistance that is usually remembered only as quaint. Some towns kept two clocks running side by side, or fitted a public dial with an extra hand so that the sun's reckoning and the railway's could be read together, and some local worthies denounced the new hour as an imposition. It is easy to read them as people clinging to habit in the face of progress. But they had grasped something that the language of convenience obscures: a shared standard is also a centre of authority, and agreeing to it means accepting that the definition of an everyday reality will henceforth be made by people one will never meet.",
+    "None of this is a case against standard time, whose benefits were real and soon taken for granted. Few people today would wish to return to a world in which the hour changed as one rode across a county. The argument is rather that the history of timekeeping is also a history of who is entitled to say what time it is, and that this question did not disappear when it was settled. Each later standard, from time signals broadcast by radio to the clocks that now synchronise themselves silently over networks, has extended the same arrangement, and each has made it a little harder to notice."
+   ],
+   "questions": [
+    {
+     "id": "R04-F-03-1",
+     "type": "RC",
+     "options": {
+      "A": "church authorities in each town insisted that the local hour be kept and discouraged comparison with other places.",
+      "B": "few people owned clocks, so the hour of noon was a matter of rough guesswork in every town alike.",
+      "C": "travel between towns was too slow for a discrepancy of a few minutes to have any practical effect.",
+      "D": "most towns took their time from the same distant observatory, so that their clocks seldom disagreed by much."
+     },
+     "question": "It can be inferred from the passage that, before the railways, differences between the local times of neighbouring towns went largely unnoticed because"
+    },
+    {
+     "id": "R04-F-03-2",
+     "type": "RC",
+     "options": {
+      "A": "characterise the standard account as treating the new time as a neutral technical fix, a view the author goes on to call incomplete.",
+      "B": "suggest that standard time, like a common rail gauge, was imposed on towns by distant astronomers who never consulted local opinion.",
+      "C": "illustrate the author's own view that the change to standard time was, at bottom, a technical matter with technical consequences.",
+      "D": "show that the railway companies regarded standard time and a common gauge as equally urgent problems requiring government action."
+     },
+     "question": "The comparison with 'agreeing on a common gauge for the rails' in paragraph 2 serves to"
+    },
+    {
+     "id": "R04-F-03-3",
+     "type": "RC",
+     "options": {
+      "A": "affectionate condescension: their resistance is presented as a charming but finally foolish attachment to old habits.",
+      "B": "sympathetic reappraisal: they are credited with a real insight, though their preference for local time is not endorsed.",
+      "C": "detached neutrality: their objections are recorded without any judgement about whether they understood the change.",
+      "D": "wholehearted endorsement: they are presented as having been right that standard time did more harm than good."
+     },
+     "question": "The author's attitude towards the townspeople who resisted railway time is best described as"
+    },
+    {
+     "id": "R04-F-03-4",
+     "type": "RC",
+     "options": {
+      "A": "A group of market towns, confused by each using its own weights, agrees on a common weight so that traders moving between them stop being cheated.",
+      "B": "A village replaces its old sundial with a more accurate mechanical clock that is still set each day by observing the sun overhead.",
+      "C": "A town that has kept its own weights for centuries decides to keep them alongside the new national weights, using each for different purposes.",
+      "D": "A village whose fields were measured in paces that anyone could walk out adopts a unit defined by a distant bureau and checked only against that bureau's instruments."
+     },
+     "question": "Which of the following situations most closely parallels the change that paragraph 2 describes?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R07-A-07",
+   "passage": [
+    "The word from which the essay takes its name once meant an attempt or a trial, the act of testing something by weighing it, and the form has never quite outgrown that sense. An essay, in its original spirit, is not the report of a conclusion already reached but the record of a mind trying a thought to see whether it will bear weight. It may change direction halfway through, concede more than it intended, or end with a question sharper than the one it started with. These are not lapses. They are the form doing what it was invented to do, and the reader of such an essay is permitted to overhear a mind in conversation with itself rather than merely to receive the outcome of that conversation.",
+    "It is worth noticing how far the essay most people now encounter has moved from this. The essay that is taught in schools and demanded in universities opens with a thesis, marshals evidence in its favour, dispatches objections and restates the thesis at the close. It is, in effect, a miniature treatise, and its virtues are those of the treatise: clarity of claim, economy of proof, a structure the reader can grasp in advance. These are real virtues, and there are good reasons to teach them, not least that a writer who cannot state a claim plainly is in no position to test it. But the result is that a generation of writers has learned to regard any movement of thought within a piece of writing as a defect of planning, something to be removed in revision so that the finished text looks as though its conclusion had been visible from the first sentence.",
+    "What is lost is not merely a style. The provisional essay offers something the treatise structurally cannot: a view of how a conclusion is reached, including the paths that were tried and abandoned. A reader who watches a writer test an idea against an example, find that it fails, and adjust it, learns not only where the writer arrived but how much the arrival cost and what it excluded. She is reminded, too, that the conclusion was reached by someone who could have been wrong and who knows it. The treatise presents its conclusion as if it were the only place the evidence could lead; the essay, by showing the alternatives it passed through, leaves the reader better placed to disagree. In this sense its apparent modesty is a form of candour about the limits of its own claims.",
+    "The same candour explains the essayist's much criticised first person. The 'I' of the essay is often taken for self-display, and sometimes it is exactly that. More often it marks the scope of a claim: this is how the matter looks from here, to someone with this experience, and the reader is invited to test it against her own. The impersonal voice of the treatise, by contrast, claims a standpoint from nowhere in particular, and so makes its claims harder to locate and therefore harder to contest. Its objectivity is sometimes real, but it is always also a manner, and a manner can be adopted by writers whose claims have not earned it.",
+    "None of this licenses formlessness. Provisionality is easily counterfeited, and the meandering essay that circles its subject without ever risking a claim is as familiar as the rigid one, and less useful. A thought cannot be tested unless it is first stated with enough definiteness to fail. A genuine attempt is one that might not succeed, and an essay that cannot fail because it never claims anything has not attempted anything at all. The essay at its best is therefore not the opposite of argument but argument conducted in the open, where the reader can see each step taken and judge for herself whether it holds."
+   ],
+   "questions": [
+    {
+     "id": "R07-A-07-1",
+     "type": "RC",
+     "options": {
+      "A": "encourages students to record the abandoned lines of thought by which they reached their conclusions.",
+      "B": "was first designed in order to replace the treatise as the standard form of academic writing.",
+      "C": "opens with a thesis and restates it at the close, after setting out evidence and dealing with objections.",
+      "D": "has no real virtues that could justify the place it now holds in teaching and examination."
+     },
+     "question": "According to the passage, the essay taught in schools and universities"
+    },
+    {
+     "id": "R07-A-07-2",
+     "type": "RC",
+     "options": {
+      "A": "a writer who declines to commit to any definite conclusion about the matter under discussion.",
+      "B": "a voice that remains vague about which subject or question it is actually addressing.",
+      "C": "a writer who conceals his own name and publishes his work anonymously or under another name.",
+      "D": "a voice that presents its claims as if they did not depend on anyone's particular position or experience."
+     },
+     "question": "In paragraph 4, the phrase 'a standpoint from nowhere in particular' refers to"
+    },
+    {
+     "id": "R07-A-07-3",
+     "type": "RC",
+     "options": {
+      "A": "It is an inferior kind of writing that schools ought to stop teaching in favour of the provisional essay.",
+      "B": "Its manner of presentation can make a conclusion seem more inevitable than the evidence by itself warrants.",
+      "C": "Its impersonal voice is always a form of self-display disguised as a neutral and objective manner.",
+      "D": "Its conclusions are, as a rule, less reliable than those reached by writers of the provisional essay."
+     },
+     "question": "Which of the following can be inferred about the author's view of the treatise?"
+    },
+    {
+     "id": "R07-A-07-4",
+     "type": "RC",
+     "options": {
+      "A": "Readers shown an argument that included an alternative the writer had rejected could state reasoned objections to its conclusion more readily than readers shown the conclusion alone.",
+      "B": "Readers shown an argument that included the writer's abandoned paths were more likely than other readers to accept its final conclusion.",
+      "C": "Readers generally report finding essays written in the first person more enjoyable and more personal than essays written in an impersonal voice.",
+      "D": "Students who are trained to write thesis-first essays score higher than other students on tests of clarity and economy in writing."
+     },
+     "question": "Which of the following findings, if true, would most strengthen the claim that the provisional essay leaves the reader 'better placed to disagree'?"
+    },
+    {
+     "id": "R07-A-07-5",
+     "type": "RC",
+     "options": {
+      "A": "introduce a fresh objection to the provisional essay which the author admits cannot be satisfactorily answered.",
+      "B": "concede that the thesis-first essay is, after all, more useful than the provisional essay the author has praised.",
+      "C": "guard the argument against being taken as a defence of writing that never commits itself to a claim.",
+      "D": "summarise the historical change in how essays are taught that was first described in the second paragraph."
+     },
+     "question": "The final paragraph functions chiefly to"
+    }
+   ]
+  },
+  {
+   "passage_id": "R02-F-07",
+   "passage": [
+    "In the 1890s the British psychologist Conwy Lloyd Morgan proposed a rule for interpreting animal behaviour that has shaped the study of animal minds ever since. In paraphrase, it says that we should not explain an animal's action as the product of a higher mental faculty if it can be explained as the product of a lower one. The rule was a response to a real problem. Much of what then passed for evidence about animal intelligence consisted of anecdotes sent in by pet owners and naturalists, in which dogs reasoned, cats planned and birds grieved, and in which the observer's own feelings were read into whatever the animal happened to do. Against this habit, Morgan's canon was a discipline: before crediting a creature with insight, ask whether trial and error, habit or simple association would account for what you saw.",
+    "As a corrective, the canon did its work well. It pushed the field towards controlled observation and towards explanations that could be tested, and it is partly responsible for the expectation that claims about animal cognition must now survive experiments designed to rule out simpler accounts. But a rule that is useful against one error can become an error of its own when it is applied without thought. Over the following century the canon hardened, in many hands, into a presumption that the lowest available explanation is always to be preferred, whatever the animal and whatever the evidence.",
+    "The trouble with that presumption is that it is not as neutral as it looks. It treats 'lower' as if it meant 'simpler' and 'simpler' as if it meant 'more probably true', and neither equation holds in general. An explanation in terms of association may require positing a long and improbable history of exactly the right rewards, while an explanation in terms of a modest capacity to represent what another animal can see may be the more economical of the two. Evolution complicates the picture further. If a chimpanzee and a human behave alike in similar circumstances, the assumption that the behaviour rests on similar mechanisms is, given their close kinship, arguably the simpler hypothesis; to insist on a different and lower mechanism for the chimpanzee alone is to multiply explanations, not to reduce them.",
+    "There is also a question of cost. The canon guards against one kind of mistake, crediting animals with capacities they lack, and is silent about the opposite mistake, denying them capacities they have. Both mistakes are real, and the second is not obviously the less harmful, especially where the capacities in question include the ability to suffer. An investigator who refuses on principle to credit a dog with fear until every leaner account has been excluded will seldom be caught overstating anything, but she may spend a career understating what is in front of her. A principle that treats one error as serious and the other as negligible is not a principle of caution; it is a bias that happens to look like one.",
+    "None of this is a case for returning to the anecdote. Morgan himself appears to have intended his rule as a guard against careless inference rather than as a ban on crediting animals with higher faculties when there is independent evidence for them. The better successor to the canon is not its opposite but a symmetrical standard: state the rival hypotheses, rich and lean alike, and design observations that would tell them apart. Simplicity then becomes something to be argued for in each case, rather than a verdict delivered in advance."
+   ],
+   "questions": [
+    {
+     "id": "R02-F-07-1",
+     "type": "RC",
+     "options": {
+      "A": "a growing belief among scientists that animals were mere machines that lacked any mental faculties at all.",
+      "B": "reports of animal intelligence in which observers read their own feelings into what animals did.",
+      "C": "disputes over whether chimpanzees and humans rely on similar mechanisms when they behave in similar ways.",
+      "D": "experiments on animals that had been designed so poorly that they could not rule out simpler explanations."
+     },
+     "question": "According to the passage, Morgan's canon was first proposed as a response to"
+    },
+    {
+     "id": "R02-F-07-2",
+     "type": "RC",
+     "options": {
+      "A": "impossible to test, since the mechanisms behind behaviour can never be observed directly in either species.",
+      "B": "certainly correct, since close kinship guarantees that similar behaviour arises from similar mechanisms.",
+      "C": "a kind of anthropomorphism that the canon was rightly designed to prevent scientists from adopting.",
+      "D": "possibly the more parsimonious account, contrary to what the rigid reading of the canon implies."
+     },
+     "question": "It can be inferred from paragraph 3 that, when two closely related species behave alike in similar circumstances, the author regards an explanation in terms of shared mechanisms as"
+    },
+    {
+     "id": "R02-F-07-3",
+     "type": "RC",
+     "options": {
+      "A": "Hostile, since the author holds that it set the study of animal minds back by encouraging excessive caution.",
+      "B": "Critical of Morgan for having meant his rule as a ban on crediting any animal with a higher faculty.",
+      "C": "Appreciative of what it achieved as a corrective, but critical of the fixed presumption it later hardened into.",
+      "D": "Approving of the presumption it later became, while regretting that it began as a reaction against anecdote."
+     },
+     "question": "Which of the following best describes the author's attitude towards Morgan's canon?"
+    },
+    {
+     "id": "R02-F-07-4",
+     "type": "RC",
+     "options": {
+      "A": "guards against crediting animals with capacities they lack while ignoring the error of denying capacities they have.",
+      "B": "equates a lower explanation with a simpler one, and a simpler explanation with a more probable one.",
+      "C": "can require separate explanations for similar behaviour in closely related species, rather than fewer.",
+      "D": "relies on experiments that are unable, in principle, to tell lean explanations apart from rich ones."
+     },
+     "question": "The author criticises the presumption in favour of the lowest explanation on each of the following grounds EXCEPT that it"
+    },
+    {
+     "id": "R02-F-07-5",
+     "type": "RC",
+     "options": {
+      "A": "Design an experiment to test the association account first, and accept the richer account only if the association account clearly fails.",
+      "B": "Accept the account in which crows track what others have seen, since crows are widely regarded as unusually intelligent birds.",
+      "C": "Collect many careful reports from experienced bird-watchers, and accept whichever account the largest number of reports supports.",
+      "D": "State both an association account and an account in which crows track what others have seen, and design trials in which the two predict different behaviour."
+     },
+     "question": "A researcher wants to know whether crows that hide food take account of which other birds have watched them. Which approach best reflects the 'symmetrical standard' the author recommends?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R01-D-07",
+   "passage": [
+    "For much of modern political thought, to be free has meant to be left alone. On this view a person's liberty is diminished whenever someone interferes with her choices, by force, by threat or by the closing off of options, and it is enlarged whenever such interference is removed. The view has the merit of simplicity, and it gives a clear direction to political argument: other things being equal, less interference means more freedom. An older tradition, recently revived, holds that this account misses something essential. What makes a person unfree, it says, is not interference as such but dependence on the will of another who could interfere at pleasure, whether or not he ever does.",
+    "The point is easiest to see in a case where the two accounts come apart. Imagine a tenant whose lease allows the landlord to evict her at any time and for any reason, and whose landlord happens to be a mild man who has never troubled anyone. On the non-interference view the tenant is perfectly free, since nobody is stopping her from doing anything. Yet she knows her position. She will think twice before complaining about a broken boiler, she will keep her opinion of the landlord to herself, and she may find herself anticipating his preferences in matters he has never raised. The absence of interference in her life is not evidence that she is free; it may be, in part, an effect of her unfreedom, since a person who must stay in another's good graces learns to make interference unnecessary. The rival tradition calls her condition domination, and it defines freedom as the absence of domination.",
+    "The shift has striking consequences. Interference, on this view, does not always reduce freedom. A law that restrains me, but that I and others like me can contest through courts, elections and other channels that force those who make it to take our interests into account, does not subject me to anyone's arbitrary will, and so does not make me less free, even though it limits what I may do. Conversely, a benevolent ruler who chooses to interfere very little may still leave his subjects unfree, because what they are permitted to do depends on his continued goodwill.",
+    "Critics reply that the notion of arbitrary power is too elastic to do the work asked of it. Almost every relationship, from employment to marriage to the ordinary dealings of neighbours, contains some capacity of one party to make the other's life worse. If all such capacities count as domination, then domination is everywhere and the concept loses its edge; if only some do, we need a criterion, and the obvious candidates seem to smuggle back the very judgements about interference that the theory hoped to avoid. Defenders answer that power is arbitrary when it is not forced to track the interests of those subject to it, and that whether it is so forced is a question about institutions: about rights of exit, of appeal and of collective voice.",
+    "This answer is better than the critics allow, but it is not quite enough to turn non-domination into a measure. It tells us where to look rather than how much freedom we will find there. That may be its real value. The non-interference view, by counting acts, trains attention on what happens; the rival view, by asking about standing, trains it on what could happen, and on the structures that make some things unthinkable to attempt. Even if it cannot yield a neat scale, the second view identifies a kind of unfreedom that a tally of interferences would never register."
+   ],
+   "questions": [
+    {
+     "id": "R01-D-07-1",
+     "type": "RC",
+     "options": {
+      "A": "The law prevents landlords from evicting tenants who have complained to them about necessary repairs.",
+      "B": "She shapes her own conduct to stay in the landlord's good graces, so he rarely has any reason to intervene.",
+      "C": "She is able to contest the landlord's decisions in court whenever he acts against her interests.",
+      "D": "Her lease forbids the landlord from interfering with the choices she makes about how to live in the flat."
+     },
+     "question": "According to the passage, why might the tenant's life contain little interference even though she is not free?"
+    },
+    {
+     "id": "R01-D-07-2",
+     "type": "RC",
+     "options": {
+      "A": "social customs that make certain choices look irrational to every member of a society, whatever their position.",
+      "B": "arrangements of power under which people do not even try certain things because of how others could respond.",
+      "C": "laws that explicitly forbid certain actions and punish those who are caught attempting them.",
+      "D": "institutions that guarantee rights of exit, of appeal and of collective voice to those subject to power."
+     },
+     "question": "As used in paragraph 5, 'the structures that make some things unthinkable to attempt' refers to"
+    },
+    {
+     "id": "R01-D-07-3",
+     "type": "RC",
+     "options": {
+      "A": "His subjects would become free in the rival tradition's sense if he publicly promised never to interfere with them.",
+      "B": "He dominates his subjects only on those occasions when he actually chooses to interfere with their choices.",
+      "C": "On the non-interference view, his subjects could count as freer than citizens restrained by laws they are able to contest.",
+      "D": "His rule is legitimate in the rival tradition's sense provided his subjects remain free to leave his territory."
+     },
+     "question": "Which of the following can be inferred about the benevolent ruler described in paragraph 3?"
+    },
+    {
+     "id": "R01-D-07-4",
+     "type": "RC",
+     "options": {
+      "A": "Some relationships, such as long friendships, contain no capacity at all for either party to make the other's life worse.",
+      "B": "Tenants whose leases permit eviction at will report far more anxiety than tenants whose leases are secure.",
+      "C": "Granting workers rights of appeal and collective voice has, in several firms, reduced how often they defer to managers.",
+      "D": "Efforts to decide which forms of power over others are arbitrary have repeatedly turned on how much each form lets its holder interfere."
+     },
+     "question": "Which of the following, if true, would most strengthen the critics' objection in paragraph 4?"
+    },
+    {
+     "id": "R01-D-07-5",
+     "type": "RC",
+     "options": {
+      "A": "convinced that it should replace the non-interference view as the single correct account of political freedom.",
+      "B": "sceptical, regarding it as an elastic notion that in the end collapses back into the non-interference view.",
+      "C": "appreciative of its diagnostic insight, while doubting that it can serve as a precise measure of freedom.",
+      "D": "neutral, presenting the two traditions side by side without venturing any judgement on their relative merits."
+     },
+     "question": "The author's overall attitude towards the view of freedom as non-domination is best described as"
+    }
+   ]
+  },
+  {
+   "passage_id": "R06-G-01",
+   "passage": [
+    "Few practices in science are defended as warmly, or examined as rarely, as anonymous peer review. A manuscript arrives at a journal, an editor sends it to two or three specialists, and their verdicts, delivered without signatures, decide whether the work enters the published record. The usual defence of the anonymity is straightforward and has real force. A young researcher asked to assess a paper by the most powerful figure in her field may hesitate to point out its flaws if her name is attached to the report, since that figure may one day sit on the committee that decides her promotion. Anonymity, on this view, is what allows candour to flow upward.",
+    "The trouble is that the same protection shelters other things as well. A referee who is quietly working on a rival theory, or whose own earlier results are contradicted by the manuscript, can recommend rejection without ever having to explain himself in public. Most referees, of course, do nothing of the kind; the difficulty is that nobody outside the editorial office can tell which ones do. Authors receive a verdict but not a reason they can contest, and readers never learn that a paper was turned away at all. A system designed to free the weak from the strong can thus end up freeing the established from scrutiny, because it is usually the established who are asked to referee, and a manuscript that challenges a reigning view is, by the nature of the case, most likely to be sent to the very people who hold that view.",
+    "It would nevertheless be wrong to infer from all this that anonymity is, in itself, the problem. What makes it dangerous is its combination with gatekeeping power. When a referee's report merely advises, when it is published alongside the paper as one reader's criticism that the authors can answer, the identity of the critic matters far less, because the criticism must persuade on its merits. When the report decides, in secret, whether anyone will read the paper at all, the absence of a name becomes the absence of accountability.",
+    "Some journals have begun to experiment along these lines, publishing papers first and attaching the referees' reports afterwards, sometimes signed and sometimes not. Such arrangements are not free of costs: they may let weak work into circulation, and they ask readers to do more of the sorting. But they reveal what the familiar arrangement conceals, namely that the case for anonymous review has always rested on an assumption about what review is for. If review exists to improve papers, a mask does little harm. If it exists to decide which papers exist, the mask deserves far more suspicion than it usually receives."
+   ],
+   "questions": [
+    {
+     "id": "R06-G-01-1",
+     "type": "RC",
+     "options": {
+      "A": "publishing papers before they are reviewed is better than any arrangement that relies on the private judgement of specialists.",
+      "B": "junior researchers need the protection of anonymity, since senior figures in their fields often control decisions about their promotion.",
+      "C": "anonymous review should be abolished outright, because referees routinely use their concealment to suppress the work of their rivals.",
+      "D": "anonymous review becomes hard to defend chiefly when secret reports also decide whether a paper is published at all."
+     },
+     "question": "The central claim of the passage is that"
+    },
+    {
+     "id": "R06-G-01-2",
+     "type": "RC",
+     "options": {
+      "A": "prevents editors from choosing referees who have close personal ties to the authors of a manuscript.",
+      "B": "ensures that a manuscript is judged by its arguments rather than by the reputation of whoever wrote it.",
+      "C": "spares referees the labour of explaining their recommendations to authors and readers in public.",
+      "D": "lets less powerful researchers criticise the work of influential authors without having to fear for their own careers."
+     },
+     "question": "According to the passage, the usual defence of anonymity in peer review is that it"
+    },
+    {
+     "id": "R06-G-01-3",
+     "type": "RC",
+     "options": {
+      "A": "junior researchers gaining promotion more quickly once they have refereed for prominent journals.",
+      "B": "frank opinions passing from journal editors to the specialists whom they invite to assess papers.",
+      "C": "honest criticism travelling from junior researchers toward the people who hold power over them.",
+      "D": "the quality of published research rising steadily as referees become more experienced over time."
+     },
+     "question": "As used in paragraph 1, 'candour to flow upward' refers to"
+    },
+    {
+     "id": "R06-G-01-4",
+     "type": "RC",
+     "options": {
+      "A": "editors keep the names of referees secret even from one another, so that no outside pressure can be applied to them.",
+      "B": "referees remain unnamed but are chosen only from researchers who are in the early years of their careers.",
+      "C": "every paper is published, with the unsigned referee reports printed beside it and the authors free to reply.",
+      "D": "referees remain unnamed and their reports, seen only by the editor, settle whether a paper appears in print."
+     },
+     "question": "It can be inferred that the author would regard the anonymity of referees as largely harmless in a system where"
+    }
+   ]
+  },
+  {
+   "passage_id": "R08-C-03",
+   "passage": [
+    "Among the habits that journalists learn early is the instinct to give both sides. When a council proposes a new road, the reporter calls the residents who want it and the residents who do not; when a minister defends a policy, the opposition is asked to respond. The habit is a good one wherever the disagreement is about values or interests, because there the reporter has no standing to declare a winner, and readers are entitled to hear the competing cases at comparable length. To do otherwise would be to editorialise under the cover of reporting, settling a political question by the simple device of quoting only one side.",
+    "Difficulties arise when the same habit is carried over to questions of fact on which the evidence is heavily one-sided. Suppose that nearly all the researchers who study a question have reached one conclusion, and a handful dissent. A report that sets one scientist from each camp side by side, allotting them equal time, is scrupulously fair to the two individuals and seriously misleading about the state of knowledge. The reader, reasonably assuming that a newspaper does not stage contests between unequal parties, infers that the field is evenly split. Repeated over many reports, the impression hardens into a belief that the experts are hopelessly divided, and a reader may then feel free to choose whichever answer is more congenial. The format has communicated a falsehood that neither speaker uttered.",
+    "The obvious objection is that journalists are poorly placed to judge which scientific views are sound, and that the history of science contains majorities that turned out to be wrong. Both points are true, and neither rescues the practice. The reporter is not being asked to decide who is right, only to describe accurately how opinion within a field is distributed, which is itself a matter of fact that can be checked. And the occasional vindication of a lone dissenter is not a reason to present every dissenter as half the story; most minority positions in science are minority positions because the evidence has gone against them. If a dissent later prevails, it will be because the evidence changed, and the reporting can change with it.",
+    "What the critique of false balance requires, then, is not the exclusion of minority views but their placement. A dissenting researcher can be quoted, and quoted fairly, as a dissenter, with the reader told plainly how far that view departs from the field. What the reader should not be given is the impression, created by symmetry alone, that the dissenter speaks for half of those who know the subject. Nor does the critique apply where science is genuinely unsettled; there, presenting rival hypotheses side by side is exactly right. The skill it demands is harder than either reflexive balance or reflexive deference: it is the skill of knowing which kind of question one is reporting on."
+   ],
+   "questions": [
+    {
+     "id": "R08-C-03-1",
+     "type": "RC",
+     "options": {
+      "A": "suggest that disputes in local politics turn on questions of fact rather than of values.",
+      "B": "show that local reporters tend to favour the views of residents over those of officials.",
+      "C": "illustrate a kind of dispute in which giving the competing cases equal space is appropriate.",
+      "D": "demonstrate how the habit of balance misleads readers about the true weight of opinion."
+     },
+     "question": "The example of the council's road proposal in paragraph 1 serves mainly to"
+    },
+    {
+     "id": "R08-C-03-2",
+     "type": "RC",
+     "options": {
+      "A": "the reporter's decision to quote any dissenting scientist at all on a question that is largely settled.",
+      "B": "the statements of the dissenting scientist, who misrepresents the evidence in order to seem credible.",
+      "C": "the arrangement of the report, which implies a parity between the two camps that does not exist.",
+      "D": "the reader's unreasonable belief that a newspaper would never stage a contest between unequal parties."
+     },
+     "question": "The passage suggests that in a report giving equal time to one scientist from each camp, the misleading element lies chiefly in"
+    },
+    {
+     "id": "R08-C-03-3",
+     "type": "RC",
+     "options": {
+      "A": "Readers say that they trust reports quoting two scientists more than reports quoting only a single scientist.",
+      "B": "Several majorities in the history of science later abandoned their views after new and unexpected evidence came to light.",
+      "C": "In many fields there is no reliable way to tell how researchers' views are distributed, since such opinion is seldom surveyed.",
+      "D": "Many journalists who report on science have no formal training in any of the fields that they cover."
+     },
+     "question": "Which of the following, if true, would most weaken the author's reply to the first point of the objection in paragraph 3?"
+    },
+    {
+     "id": "R08-C-03-4",
+     "type": "RC",
+     "options": {
+      "A": "Giving rival positions comparable space is appropriate when the dispute concerns values or interests.",
+      "B": "A report can be entirely fair to each person it quotes and yet leave its readers with a false picture.",
+      "C": "Where researchers disagree, reporters should present the majority view in a field as the settled answer.",
+      "D": "If a minority scientific view later prevails, the way the question is reported ought to change."
+     },
+     "question": "The author would agree with each of the following statements EXCEPT:"
+    }
+   ]
+  },
+  {
+   "passage_id": "R05-D-06",
+   "passage": [
+    "The economist's textbook treats a trade union as a cartel of sellers. By bargaining collectively, workers withhold their labour unless paid more than a competitive market would offer, and the familiar consequences follow: fewer people employed in the unionised firm, more crowding into the sectors that remain open, and an output somewhat smaller than it might have been. On this view the only interesting question about a union is how large a premium it extracts and how much inefficiency that premium causes. Whatever else unions do, their grievance committees, their disputes over safety rules, their elected stewards on the shop floor, is incidental to the price they set.",
+    "That picture leaves out a choice every dissatisfied worker faces. She can leave, taking her skills to another employer, or she can stay and try to change what troubles her. Without a union, leaving is often the only safe course, because an individual who complains about a dangerous machine or an arbitrary supervisor marks herself as troublesome, and whatever she might have told the firm is lost when she walks out. A union changes the calculation. It allows complaints to be made collectively, through procedures, by people who cannot easily be singled out, and so it converts a stream of quiet departures into a stream of information that management would otherwise have had to buy, if it could buy it at all. Firms that hear this information may lose fewer trained workers and correct faults they did not know they had.",
+    "Seen this way, a union has two faces, and the question is not which of them is real but which predominates in a given setting. Where management treats the grievance procedure as an adversary to be outmanoeuvred, voice tends to harden into obstruction, and the cartel face is what remains. Where management treats the same procedure as an early warning, voice can make the firm more productive than a non-union rival, enough in some cases to offset the higher wage bill. The evidence on unions and productivity is accordingly mixed, and it ought to be; a single average effect conceals the very variation that matters.",
+    "This is why measuring unions only by their wage premium is a category error rather than a harmless simplification. It judges an institution that partly exists to carry information by the one effect, the price it sets, that carries no information about what is going wrong on the shop floor. It also hides the fact that the value of voice depends on whether anyone is listening, so that the same union under a different management can be a burden or an asset. None of this establishes that unions are good for firms, still less that they always raise productivity. It establishes only that the question cannot be answered by looking at the price of labour alone."
+   ],
+   "questions": [
+    {
+     "id": "R05-D-06-1",
+     "type": "RC",
+     "options": {
+      "A": "acceptance of it as an account of one real effect, joined to rejection of it as a full account.",
+      "B": "outright dismissal of it as an ideological error with no basis in the way labour markets work.",
+      "C": "studied neutrality, setting it beside the voice view without preferring one account to the other.",
+      "D": "broad agreement with it, together with a complaint that it understates the inefficiency unions cause."
+     },
+     "question": "The author's attitude towards the textbook view of unions described in paragraph 1 is best described as"
+    },
+    {
+     "id": "R05-D-06-2",
+     "type": "RC",
+     "options": {
+      "A": "stop bargaining over wages, since its energy is absorbed by disputes conducted through the grievance procedure.",
+      "B": "lead more workers to quit than would quit a comparable firm in which no union had been organised.",
+      "C": "make the firm more productive than its non-union rivals, though by less than under cooperative managers.",
+      "D": "impose a higher wage bill while yielding little of the information that might have offset it."
+     },
+     "question": "It can be inferred that, in a firm whose management treats the grievance procedure as an adversary to be outmanoeuvred, the union is likely to"
+    },
+    {
+     "id": "R05-D-06-3",
+     "type": "RC",
+     "options": {
+      "A": "Workers who leave a firm often take with them skills that their employer finds slow and costly to replace.",
+      "B": "Some managers in unionised firms regard the grievance procedure as a nuisance to be kept to a minimum.",
+      "C": "In firms without unions, workers who complain about safety or supervision are no more likely than silent colleagues to be dismissed or passed over.",
+      "D": "Unionised firms pay noticeably higher wages than otherwise similar firms in which there is no union."
+     },
+     "question": "Which of the following findings, if true, would most undermine the reasoning of paragraph 2?"
+    },
+    {
+     "id": "R05-D-06-4",
+     "type": "RC",
+     "options": {
+      "A": "introduce new evidence that unions, on balance, reduce the productivity of the firms in which they organise.",
+      "B": "confine the conclusion to a claim about how unions should be judged rather than a verdict on their worth.",
+      "C": "concede that the textbook view of unions as cartels is, after all, a complete and accurate account of them.",
+      "D": "withdraw the earlier argument that collective voice can make a unionised firm more productive than its rivals."
+     },
+     "question": "The sentence beginning 'None of this establishes that unions are good for firms' in the final paragraph serves to"
+    }
+   ]
+  },
+  {
+   "passage_id": "R07-F-01",
+   "passage": [
+    "It is tempting to define kitsch as art that is badly made, but this will not do. Many objects that everyone recognises as kitsch are made with considerable skill: the porcelain shepherdess has been painted with a steady hand, the sunset over the lake is rendered with careful attention to the gradations of orange and violet, and the greeting-card verse scans perfectly. Conversely, a great deal of clumsy work, the amateur's lopsided watercolour or the child's drawing of a house, is not kitsch at all. Whatever makes an object kitsch, then, it is not a lack of craft.",
+    "A more promising account looks not at the object alone but at the transaction between the object and its viewer. Kitsch offers a feeling that has been decided in advance. The weeping clown, the kitten in a basket, the soldier embracing his mother on a railway platform: each announces the emotion it expects, and the viewer supplies that emotion without needing to look closely at anything. The image functions less as something to be seen than as a switch to be pressed. What is missing is not emotion, of which there is plenty, but resistance: nothing in the work pushes back against the viewer, complicates the feeling, or asks to be noticed for its own sake. A serious painting of grief may also move us to tears, but it usually makes us work for them, by showing grief in a particular face that does not quite match our expectation of what grief looks like.",
+    "This account explains why kitsch is so often associated with sentimentality, and also why the association is not quite exact. Sentiment as such is not the problem; a good deal of great art is openly sentimental. The problem is sentiment that has been detached from attention, so that the feeling comes first and the object is merely its occasion. The account also explains why kitsch tends to flatter. Because the emotion it calls up is one we already possess and approve of, tenderness towards the innocent or pride in sacrifice, we come away feeling good not about the work but about ourselves.",
+    "None of this requires us to despise those who enjoy kitsch, or to pretend that we never do. A cheap figurine on a grandmother's shelf may carry real memories, and those memories are not made false by the object's lack of ambition. Comfort is a legitimate thing to want from an object. The danger arises only when the habit of ready-made feeling spreads from the mantelpiece to places where attention matters more: to the way we respond to news of distant suffering, say, or to the way public ceremonies ask us to feel about history. There, the switch that kitsch trains us to press can stand in for the harder work of finding out what actually happened."
+   ],
+   "questions": [
+    {
+     "id": "R07-F-01-1",
+     "type": "RC",
+     "options": {
+      "A": "clumsy work usually provokes stronger feelings in its viewers than skilful work does.",
+      "B": "judgements of craft vary so widely between viewers that they cannot ground any definition.",
+      "C": "most kitsch objects are produced by trained artists rather than by amateurs or children.",
+      "D": "skilfully made objects can be kitsch, while much clumsy work is not."
+     },
+     "question": "According to the passage, a lack of craft cannot be what makes an object kitsch because"
+    },
+    {
+     "id": "R07-F-01-2",
+     "type": "RC",
+     "options": {
+      "A": "show that a work can move us deeply while still demanding close attention.",
+      "B": "illustrate the technical skill that the makers of kitsch characteristically lack.",
+      "C": "demonstrate that serious art, unlike kitsch, almost never moves its viewers to tears.",
+      "D": "suggest that portraits are a more truthful form of art than scenes of soldiers and kittens."
+     },
+     "question": "The reference to a serious painting that shows grief 'in a particular face' (paragraph 2) serves mainly to"
+    },
+    {
+     "id": "R07-F-01-3",
+     "type": "RC",
+     "options": {
+      "A": "calls up feelings viewers already hold and approve of, making their pleasure a kind of self-approval.",
+      "B": "is made by people who copy the tastes of wealthy buyers in order to sell their work.",
+      "C": "deals with sentimental subjects, which are by their nature more pleasing than serious ones.",
+      "D": "portrays its viewers as more refined and better educated than they really are."
+     },
+     "question": "The passage suggests that kitsch 'tends to flatter' its viewers because it"
+    },
+    {
+     "id": "R07-F-01-4",
+     "type": "RC",
+     "options": {
+      "A": "An elderly widow who treasures a cheap mass-produced figurine on her shelf because it reminds her of her late husband.",
+      "B": "A national memorial service that leaves its audience proud and tearful but tells them nothing about the events it commemorates.",
+      "C": "A news report on a distant famine that sets out detailed causes and interviews several aid workers.",
+      "D": "A gifted painter who sells many technically polished sunsets to tourists visiting a lakeside town."
+     },
+     "question": "Which of the following would the author most likely regard as an instance of the danger described in the final paragraph?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R03-D-05",
+   "passage": [
+    "For a long time the sociology of taste worked with a simple map. At the top of the social order sat a refined culture of opera, poetry and the old masters, at the bottom sat popular entertainments, and a person's place in society could be read, with fair accuracy, from the position of their preferences on this ladder. Elites, on this picture, distinguished themselves by what they refused. Liking the wrong music was not merely a private failing but a mark of origin.",
+    "Surveys of cultural consumption in a number of wealthy countries have since complicated the map. The most educated and affluent groups, it turns out, are no longer best described as snobs who like only high culture. They are more often omnivores: they go to the opera and to the cinema, read literary fiction and crime novels, and are happy to discuss both a string quartet and a pop album. Some observers have greeted this as the end of cultural hierarchy, a sign that the old boundaries between high and low have dissolved and that taste has become a matter of individual preference rather than of class.",
+    "That conclusion is premature. Breadth of taste is itself unevenly distributed, because it requires money, time, travel and, above all, the confidence to move between worlds without feeling out of place. The person who can talk knowledgeably about both a symphony and a street-food stall has accumulated a cultural range that is far harder to acquire than a liking for either alone. Moreover, omnivores rarely consume popular forms in the same way as their usual audiences. They tend to approach them with a knowing, curatorial attitude, prizing a song for its place in the history of a genre or enjoying a film with a touch of irony, and this manner of liking can mark distance as effectively as refusal once did.",
+    "Nor is the omnivore's appetite unlimited. Research on what people say they dislike has suggested that the forms most often rejected by the highly educated tend to be those most associated with the least educated, so that the boundary has moved rather than vanished. None of this means that the loosening of old hierarchies is an illusion; it is a genuine change that the opera house must now compete for prestige with a well-chosen food truck. But distinction has not disappeared with the decline of snobbery. It has learned to express itself through openness, and openness is harder to criticise than exclusion because it looks so much like a virtue."
+   ],
+   "questions": [
+    {
+     "id": "R03-D-05-1",
+     "type": "RC",
+     "options": {
+      "A": "taste was largely a matter of individual preference, with only a loose and unreliable connection to social class.",
+      "B": "educated people enjoyed both high and popular culture, though they tended to enjoy the two in quite different settings.",
+      "C": "a person's social standing could be read from where their preferences fell on a ladder from refined to popular culture.",
+      "D": "elites marked themselves out mainly by how much they spent on concerts, exhibitions and other cultural events."
+     },
+     "question": "According to the passage, the older 'simple map' of taste held that"
+    },
+    {
+     "id": "R03-D-05-2",
+     "type": "RC",
+     "options": {
+      "A": "popular culture is transformed into high culture once educated audiences begin to adopt it and write about it.",
+      "B": "the manner in which something is liked matters more than breadth of taste in every form of social distinction.",
+      "C": "two people may enjoy the same popular film while their way of enjoying it marks quite different social positions.",
+      "D": "omnivores secretly dislike the popular forms they claim to enjoy and consume them only in order to appear open-minded."
+     },
+     "question": "The author's discussion of the 'knowing, curatorial attitude' (paragraph 3) suggests that"
+    },
+    {
+     "id": "R03-D-05-3",
+     "type": "RC",
+     "options": {
+      "A": "A music critic who dismisses all popular music as worthless and attends only concerts of classical and early music.",
+      "B": "A graduate who boasts of enjoying every kind of music but finds one genre, loved chiefly by her town's least schooled residents, beneath notice.",
+      "C": "A student who listens to a very wide range of music, from folk to jazz, because her friends keep introducing her to new things.",
+      "D": "A retired factory worker who listens only to the songs he grew up with and has never felt any wish to attend an opera."
+     },
+     "question": "Which of the following would the author most likely treat as an instance of the shifted boundary described in paragraph 4?"
+    },
+    {
+     "id": "R03-D-05-4",
+     "type": "RC",
+     "options": {
+      "A": "It shows that the old snobbery of paragraph 1 has returned among the highly educated in exactly its earlier form.",
+      "B": "It introduces evidence showing that the omnivore pattern found in surveys is limited to a small number of wealthy countries.",
+      "C": "It withdraws the doubts raised in paragraph 3 by conceding that the loosening of cultural hierarchy is genuine after all.",
+      "D": "It adds a further reason to doubt that hierarchy has ended, grants that real change has occurred, and then restates that distinction persists in a new form."
+     },
+     "question": "Which of the following best describes the role of the final paragraph in the passage?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R05-G-04",
+   "passage": [
+    "Few proposals in environmental policy provoke as much unease as the suggestion that nature should be given a price. To put a figure in money on a wetland, a forest or a population of pollinating insects seems to many people a category mistake, as though one were to ask what a friendship is worth in rupees. Critics worry that once a forest has a price it can be sold, and that the language of valuation quietly concedes the very thing it was meant to resist: that everything can be exchanged for money.",
+    "Defenders of valuation reply that the choice is not between pricing nature and refusing to. Every decision to drain a marsh for housing, or to leave it alone, already implies a valuation; it merely leaves the valuation unstated. When a planning authority approves a road through a forest because the time saved by drivers is worth a stated sum, and counts the forest as worth nothing because no one has put a figure on it, the forest has in effect been priced at zero. Making the value explicit, on this view, does not turn nature into a commodity but protects it from being treated as free. A wetland that absorbs floodwater does work that would otherwise require embankments and pumps, and the cost of those replacements is a reasonable, if rough, guide to what the wetland does for the town beside it.",
+    "This reply seems to me largely right, but only within limits that its enthusiasts tend to forget. Valuation in money is a tool for comparing small changes: whether to drain this marsh or that one, whether to widen a road by a lane or route it elsewhere. It answers the question of what a little more or a little less of something is worth, given that most of it remains. It is far less suited to valuing whole systems on which economic life itself depends. To ask what all the pollinators in the world are worth is not like asking what one orchard's bees are worth and multiplying by the number of orchards. If the pollinators were gone, the prices used in the calculation, of fruit, of land, of labour, would themselves be different, and the figure would describe a world that no longer exists. Very large totals for the value of nature's services, however striking, should therefore be read as rhetoric rather than as accounts.",
+    "The practical lesson is to use valuation where it is strong and to set limits where it is weak. For decisions at the margin, an explicit figure is better than an implicit zero. For losses that would be large, irreversible or system-wide, a rule that simply forbids them, such as a minimum area of forest or a floor on water quality, may serve better than any price, because the price would become meaningless at exactly the point where it mattered most."
+   ],
+   "questions": [
+    {
+     "id": "R05-G-04-1",
+     "type": "RC",
+     "options": {
+      "A": "roads should not be built through forests unless the time saved by drivers is very large.",
+      "B": "declining to put a figure on nature can amount to valuing it at nothing.",
+      "C": "planning authorities generally overstate the value of time saved by drivers in order to justify new roads.",
+      "D": "the cost of replacing a forest with embankments and pumps is a reasonable guide to its value."
+     },
+     "question": "In paragraph 2, the example of the road approved through a forest is used to show that"
+    },
+    {
+     "id": "R05-G-04-2",
+     "type": "RC",
+     "options": {
+      "A": "should be replaced by totals built up from many small valuations, such as one orchard's bees multiplied out.",
+      "B": "are usually calculated dishonestly by people who wish to exaggerate the importance of conservation.",
+      "C": "may draw attention to nature's importance but cannot be treated as meaningful measurements of value.",
+      "D": "are accurate in principle but too large for governments to use when drawing up their budgets."
+     },
+     "question": "In saying that very large totals for the value of nature's services 'should therefore be read as rhetoric rather than as accounts' (paragraph 3), the author means that such totals"
+    },
+    {
+     "id": "R05-G-04-3",
+     "type": "RC",
+     "options": {
+      "A": "Values in money calculated for the pollinators of the whole world turn out to be impossible to interpret in any useful way.",
+      "B": "Surveys find that many people regard it as distasteful to attach money values to forests, rivers and wild animals.",
+      "C": "Estimates of what it would cost to replace a wetland with embankments and pumps differ considerably from one town to another, even within a single region.",
+      "D": "Where explicit valuations are used, low estimates of a habitat's worth have often been cited to approve projects that would otherwise be refused."
+     },
+     "question": "Which of the following, if true, would most weaken the defenders' claim in paragraph 2 that making the value of nature explicit 'protects it from being treated as free'?"
+    },
+    {
+     "id": "R05-G-04-4",
+     "type": "RC",
+     "options": {
+      "A": "how much all the forests of a large country contribute to the economy that depends on them.",
+      "B": "whether to allow a loss of forest so large that it could not be reversed for generations.",
+      "C": "whether to clear a small part of a forest that will otherwise remain largely intact.",
+      "D": "whether forests ought to be treated as things that can be bought and sold like other property."
+     },
+     "question": "It can be inferred that the author would regard an explicit money value for a forest as most useful when the decision concerns"
+    }
+   ]
+  },
+  {
+   "passage_id": "R02-C-02",
+   "passage": [
+    "Popular advice about habits tends to treat them as a contest of will. Bad habits persist, on this account, because people lack the resolve to stop, and good ones fail to form because people give up too soon. The remedy is accordingly motivational: set firmer goals, remind yourself why they matter, and try harder. This view has the appeal of moral simplicity, since it locates every failure in a lack of character and every success in effort, and it is repeated in a great deal of well-meant advice. The trouble with this picture is that it misdescribes what a habit is. A habit is not a desire that has grown strong but a response that has become attached to a context, so that the context itself, rather than any present intention, sets the behaviour going.",
+    "Consider someone who checks her phone each time she sits down on the morning train. At first the action may have been chosen, perhaps as a way of passing an otherwise idle part of the trip, but after hundreds of repetitions it no longer needs choosing. The seat, the motion of the carriage and the familiar stretch of the journey are enough to bring the hand to the pocket, and she may find the phone in her hand before she has formed any wish to look at it. Asking her to resolve more firmly misses the point, since resolve is not what produces the act. The cue is.",
+    "If this is right, the most effective way to change a habit is often to change the circumstances that trigger it, not to strengthen the will that opposes it. Putting the phone in a bag rather than a pocket, sitting in a different carriage, or giving the first minutes of the journey to some specific task all interrupt the link between cue and response. Each of these requires a single decision rather than a renewed act of resistance every morning, which is precisely why such changes tend to outlast good intentions. It is often observed that people find it easier to alter their routines after moving house or changing jobs, and the account explains why: the old cues have simply disappeared, and with them much of the pressure to repeat old behaviour.",
+    "Two cautions are in order, however, if the argument is not to be pushed further than it can go. First, not every repeated behaviour is a habit in this sense; some acts are repeated because the person goes on wanting the result each time, and for these, motivation does matter. Second, the power of context cuts both ways. The same disruption that frees someone from an unwanted routine can dissolve a welcome one, which is why a regular exercise habit so often lapses after a move. Willpower is not irrelevant, then, but it is a poor tool for a job that the environment, suitably arranged, performs more cheaply and more reliably."
+   ],
+   "questions": [
+    {
+     "id": "R02-C-02-1",
+     "type": "RC",
+     "options": {
+      "A": "she decided long ago that the journey was the right time for checking her messages.",
+      "B": "the familiar features of the journey now set off the action without any present decision on her part.",
+      "C": "she lacks the firmness of resolve that would allow her to keep the phone in her pocket.",
+      "D": "she has a strong wish to look at it each time she sits down in the carriage."
+     },
+     "question": "The passage implies that the commuter in paragraph 2 now takes out her phone mainly because"
+    },
+    {
+     "id": "R02-C-02-2",
+     "type": "RC",
+     "options": {
+      "A": "moving house tends to strengthen a person's resolve to make a fresh start in life.",
+      "B": "people who choose to move are generally less attached to their old habits than others are.",
+      "C": "a new home usually brings with it a fresh set of goals and daily reminders of them.",
+      "D": "the cues that used to set off their old behaviour are no longer present in the new setting."
+     },
+     "question": "According to the passage, people often find it easier to change their routines after moving house because"
+    },
+    {
+     "id": "R02-C-02-3",
+     "type": "RC",
+     "options": {
+      "A": "Allowing snacks on the weekend only after a full week of successfully resisting them on weekdays.",
+      "B": "Writing down each evening the health reasons for cutting back on snacks before switching on the set.",
+      "C": "Watching in a different room, where no food is kept and the usual armchair is absent.",
+      "D": "Promising a friend to resist the snacks and reporting every lapse to that friend the next day."
+     },
+     "question": "Someone habitually eats snacks while watching television each evening and wants to stop. Which approach would the author regard as most promising?"
+    },
+    {
+     "id": "R02-C-02-4",
+     "type": "RC",
+     "options": {
+      "A": "Many people who move to a new city report feeling more anxious during their first year in the new place.",
+      "B": "Strong intentions to stop a routine barely reduce it while its usual setting persists, but a changed setting reduces it sharply.",
+      "C": "Habits that people form during childhood are much harder to break than the habits they form as adults.",
+      "D": "People who write down specific goals are more likely than others to begin and keep up a programme of exercise."
+     },
+     "question": "Which of the following findings, if true, would most strengthen the author's account of what a habit is?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R08-C-01",
+   "passage": [
+    "Complaints that the news is too gloomy are as old as newspapers themselves, and they usually take the form of an accusation: editors, it is said, prefer misery because misery sells, and they feed their readers a steady diet of disaster in the knowledge that calm and contentment do not move copies. The accusation is not exactly false, but it misplaces the problem. Most of the skew in what reaches the public does not come from a taste for bad tidings. It comes from a definition of news itself, which privileges what is sudden, unusual and attributable to a single moment. A factory that closes on a Tuesday is news; a thousand small firms that open over a decade are not, because no single day contains their story.",
+    "This definition has consequences that no individual editor intends. Events that are rare are reported precisely because they are rare, and the reporting makes them feel common. A reader who encounters three stories about aircraft accidents in a month may come away more afraid of flying than of driving, although for most travellers the ordinary hazards of the road, which seldom make headlines because they occur every day, are far greater. The same mechanism works on trends. Improvements tend to be gradual and diffuse, deteriorations are often abrupt, and so a society that is slowly getting better at something can easily believe, from its news, that it is getting worse.",
+    "It would be a mistake to answer this by demanding more good news. Stories chosen because they are cheerful would be as unrepresentative as stories chosen because they are alarming, and readers sensibly distrust outlets that seem to be managing their mood. Nor can journalism simply abandon the unusual. A fire in a crowded building matters, and the fact that most buildings do not burn is no reason to stay silent about the one that did. A press that reported only what is typical would be not more accurate but merely less useful, since the typical is, almost by definition, what its readers already expect. Novelty is a legitimate test of what deserves attention; the error lies in letting it serve as the only test.",
+    "The more promising remedy is to report the denominator alongside the numerator. A story about a crime can say whether such crimes are rising or falling; a story about a drug's side effect can say how many people take the drug without harm. A newsroom could also give slow developments a regular place, treating a ten-year change in literacy or infant survival as worthy of the front page even though nothing happened on the day it was printed. None of this asks reporters to cover less; it asks them to say more about the scale of what they cover. Such measures will not make the news a faithful miniature of the world, and they should not try to. Their aim is more modest: to ensure that what is exceptional is presented as exceptional, so that readers can tell the difference between what is striking and what is typical."
+   ],
+   "questions": [
+    {
+     "id": "R08-C-01-1",
+     "type": "RC",
+     "options": {
+      "A": "Readers misjudge risks mainly because they follow too little news, and wider and more regular reading would correct their sense of how often events occur.",
+      "B": "The news misleads chiefly because of how news is defined, and the fault is better corrected by adding context than by seeking cheerful stories.",
+      "C": "Journalism should stop treating novelty as a test of newsworthiness and should report events in proportion to how often they occur.",
+      "D": "Editors favour bad news because it attracts paying readers, and this commercial taste is the main reason that audiences overrate rare and dramatic dangers."
+     },
+     "question": "Which of the following best captures the central argument of the passage?"
+    },
+    {
+     "id": "R08-C-01-2",
+     "type": "RC",
+     "options": {
+      "A": "they are usually too technical to explain clearly in the limited space that an ordinary news story can allow them.",
+      "B": "editors deliberately hold them back, believing that cheerful stories sell far fewer copies than alarming stories about decline.",
+      "C": "they are spread thinly over time, so that no single day offers an event the definition of news can register.",
+      "D": "readers distrust any outlet that reports good news, so publications avoid such stories in order to protect their credibility."
+     },
+     "question": "According to the passage, gradual improvements tend to go unreported because"
+    },
+    {
+     "id": "R08-C-01-3",
+     "type": "RC",
+     "options": {
+      "A": "societies are in fact improving in most respects, whatever impression their news happens to give them.",
+      "B": "abrupt deteriorations matter less than gradual improvements and should therefore receive less space in the news.",
+      "C": "a society's news can mislead it about the direction of change even when each individual report is accurate.",
+      "D": "most news reports about social trends contain errors of fact that systematically exaggerate how far things have declined."
+     },
+     "question": "The author's observation that improvements are 'gradual and diffuse' while deteriorations are 'often abrupt' implies that"
+    },
+    {
+     "id": "R08-C-01-4",
+     "type": "RC",
+     "options": {
+      "A": "divide the space available evenly between rare events and the common events that seldom make headlines",
+      "B": "balance each day's alarming stories with an equal number of cheerful stories about the same subjects",
+      "C": "present an event together with the wider count of cases against which its frequency can be judged",
+      "D": "publish the statistics behind a story in place of the narrative account of what actually happened on the day"
+     },
+     "question": "As used in paragraph 4, 'report the denominator alongside the numerator' most nearly means"
+    }
+   ]
+  },
+  {
+   "passage_id": "R05-G-08",
+   "passage": [
+    "A country that puts a serious price on carbon faces an awkward possibility. If its steelmakers, cement works and chemical firms must pay for their emissions while their competitors abroad do not, production may move to places where emitting is free. The country's own emissions fall, but the world's do not, and some of its industry has been lost for nothing. Economists call this leakage, and fear of it has been among the most effective arguments against acting alone. The obvious answer is a border adjustment: a charge on imports equal to the carbon price that would have been paid had the goods been made at home, perhaps paired with a rebate for exporters. Domestic and foreign producers would then compete on equal terms, and the incentive to relocate would disappear.",
+    "The proposal is simpler to state than to carry out. To charge an import for its carbon, one must know how much carbon went into making it, and that depends on the plant, the fuel it burned and the electricity grid it drew from, none of which an importing government can observe directly. Default values can be assigned by product and by country, but these penalise clean producers in dirty countries and reward dirty producers in clean ones. Letting producers prove their actual emissions instead requires inspectors or trusted certifiers inside the exporting country, which raises questions of sovereignty as well as of cost. Trading partners, moreover, are apt to see the charge as protection dressed in green, and some have a further complaint: that countries which grew rich by burning carbon for two centuries are now taxing the goods of countries trying to do the same, and calling it fairness.",
+    "There is also reason to think the problem itself has been overstated. For most industries the cost of carbon is a small share of total costs beside labour, transport, access to markets and the quality of local institutions, and firms do not move plants lightly. A steelworks embodies decades of investment in a site, a workforce and a web of local suppliers, and escaping a modest carbon price would seldom justify abandoning all of that. The evidence from carbon prices so far suggests less relocation than the warnings predicted, though the prices in question have mostly been modest and some heavy industries have been shielded from them by free allowances, so the past may be a poor guide to the effect of prices high enough to matter.",
+    "If leakage is less of a threat than feared, why does the border adjustment matter? Its most important effect may lie not in the trade it reshapes but in the decisions it prompts elsewhere. An exporting country whose firms face a charge at the border has a reason to prefer that its own government levy an equivalent price at home, so that the revenue stays at home instead of flowing to a foreign treasury. A border adjustment can thus act less as a wall than as a lever, drawing other countries towards carbon pricing of their own. Whether it does so, or instead provokes retaliation, depends heavily on how it is designed and presented. A charge that credits carbon prices already paid abroad, that measures actual emissions where producers can show them, and that directs some of its revenue to helping poorer exporters cut their emissions has a chance of being accepted as what it claims to be. One that does none of these things will be read, not unreasonably, as the protectionism its critics allege."
+   ],
+   "questions": [
+    {
+     "id": "R05-G-08-1",
+     "type": "RC",
+     "options": {
+      "A": "penalise clean producers located in dirty countries while rewarding dirty producers located in clean ones.",
+      "B": "can be observed directly only by the government of the country where the goods were made.",
+      "C": "allow exporters to claim rebates that are larger than the carbon price they actually paid at home.",
+      "D": "are set so high that most imports from poorer countries are excluded from the importing country's market altogether."
+     },
+     "question": "According to the passage, the drawback of assigning default carbon values to imports by product and by country is that such values"
+    },
+    {
+     "id": "R05-G-08-2",
+     "type": "RC",
+     "options": {
+      "A": "A border charge on carbon is the obvious answer to leakage, since it puts domestic and foreign producers on equal terms and removes any reason to relocate.",
+      "B": "A border charge on carbon is hard to administer and may meet a smaller threat than feared, yet if well designed it could draw other countries into pricing carbon.",
+      "C": "Border charges on carbon are protection dressed in green and will provoke retaliation, so countries should avoid introducing them.",
+      "D": "Leakage has been greatly overstated, so a country can price carbon alone without any measures at its border to protect its industry."
+     },
+     "question": "Which of the following best expresses the main point of the passage?"
+    },
+    {
+     "id": "R05-G-08-3",
+     "type": "RC",
+     "options": {
+      "A": "Across most industries, differences in wages between countries turn out to be far larger than differences in the cost of carbon.",
+      "B": "Several heavy industries in countries with carbon prices have received free allowances that shield them from most of the cost.",
+      "C": "Managers of industrial firms report that access to markets is the main consideration when they decide where to build a plant.",
+      "D": "When one region's carbon price rose to a high level, its heavy industries moved a large share of their output to regions with no such price."
+     },
+     "question": "Which of the following, if true, would most weaken the claim in paragraph 3 that the problem of leakage has been overstated?"
+    },
+    {
+     "id": "R05-G-08-4",
+     "type": "RC",
+     "options": {
+      "A": "lets the importing country keep all of its revenue, so that it can be spent on reducing emissions at home.",
+      "B": "is set high enough to stop most imports from countries that have not yet introduced a price on carbon.",
+      "C": "applies only to trading partners whose own carbon prices are already as high as the importing country's price.",
+      "D": "is reduced or waived for goods whose makers have already paid a carbon price in their own country."
+     },
+     "question": "The reasoning in paragraph 4 implies that a border charge can work as 'a lever' only if it"
+    },
+    {
+     "id": "R05-G-08-5",
+     "type": "RC",
+     "options": {
+      "A": "would think the charge of protectionism justified against a border charge lacking the design features just listed.",
+      "B": "believes that poorer exporting countries would be right to retaliate against every carbon charge at the border.",
+      "C": "considers the critics unreasonable in their accusation but understands why they feel aggrieved by it.",
+      "D": "regards the charge of protectionism as valid against any border adjustment, however carefully it is designed and presented."
+     },
+     "question": "The phrase 'not unreasonably' in the final sentence indicates that the author"
+    }
+   ]
+  },
+  {
+   "passage_id": "R04-E-03",
+   "passage": [
+    "Economic sanctions are usually defended with a simple theory of pressure: cut a country off from markets, credit and imported goods, and its people will suffer; suffering people will blame their rulers; and rulers who fear their own people will eventually change course. Each link in this chain sounds plausible, and the whole has the further appeal of offering governments something to do that is stronger than protest and safer than war, a way of being seen to act without asking anyone to fight. Yet the chain breaks more often than its defenders admit, and it tends to break in the same place.",
+    "The weak link is the assumption that hardship flows upward as political pressure. In a country whose government controls the press and the police, scarcity is easier to explain than to resist. The regime can present the shortages as the work of hostile foreigners, and the explanation is the more convincing for being partly true. Scarcity also hands the state new powers, which it is seldom slow to use. When imported medicine, fuel or spare parts become rare, whoever controls their distribution acquires a means of rewarding loyalty and punishing dissent. Meanwhile the groups best placed to demand change, the educated and the commercially minded, are often the first to emigrate or to be impoverished into silence. Far from loosening the regime's grip, sanctions can tighten it.",
+    "The usual response is to make sanctions smarter: to target the assets and travel of named officials rather than the economy as a whole. This is a genuine improvement, since it spares ordinary people some of the cost and aims the pain at those who actually decide. But targeted measures have limits of their own, and those limits are not trivial. Powerful individuals rarely hold their wealth in their own names, and a regime under pressure learns quickly to route its money through intermediaries. Targeting reduces the moral cost of sanctions more reliably than it increases their effect.",
+    "What the record suggests is that sanctions are often judged by the wrong measure. Their defenders point to the damage done, the fall in output and the collapse of the currency, as if these were evidence of pressure. They are evidence only of pain, and pain is not the same as leverage. Sanctions change policy when they alter the calculations of the people who make it, which usually requires that they be paired with a clear and credible offer of what will be lifted in return for what. A measure that hurts but promises nothing gives a government little reason to move, and some reason to dig in."
+   ],
+   "questions": [
+    {
+     "id": "R04-E-03-1",
+     "type": "RC",
+     "options": {
+      "A": "the educated groups who might dispute the claim have already taken control of the country's press.",
+      "B": "its citizens generally trust their own rulers far more than they trust the governments of foreign powers.",
+      "C": "the shortages really are caused in part by measures that foreign governments have chosen to impose.",
+      "D": "the foreign governments imposing sanctions seldom explain in public why they have chosen to impose them."
+     },
+     "question": "The passage suggests that a sanctioned government can blame foreigners for shortages with some success partly because"
+    },
+    {
+     "id": "R04-E-03-2",
+     "type": "RC",
+     "options": {
+      "A": "the targeting of named officials' assets, which provokes ordinary citizens to rally in sympathy behind those officials.",
+      "B": "its control over who receives imported medicine, fuel and spare parts once these goods have become scarce.",
+      "C": "its ability to present shortages as the deliberate work of hostile foreign governments rather than its own doing.",
+      "D": "the departure or impoverishment of the educated and commercially minded groups best placed to demand change."
+     },
+     "question": "According to the passage, each of the following can help a sanctioned regime keep or tighten its hold on power EXCEPT"
+    },
+    {
+     "id": "R04-E-03-3",
+     "type": "RC",
+     "options": {
+      "A": "A landlord raises the rent for every tenant until one noisy tenant moves out, announcing that rents will fall again as soon as that tenant has left.",
+      "B": "A club bars one member who broke its rules from its premises but still admits that member's family, sparing them while punishing the offender.",
+      "C": "A lender freezes a borrower's accounts and states exactly what sum must be repaid to release them, and the borrower soon pays it.",
+      "D": "A lender freezes a borrower's accounts without ever saying what payment would release them, and the struggling borrower stops negotiating altogether."
+     },
+     "question": "Which of the following most closely parallels the kind of measure the author criticises at the end of paragraph 4?"
+    },
+    {
+     "id": "R04-E-03-4",
+     "type": "RC",
+     "options": {
+      "A": "the surer benefit of targeted sanctions is that they spare ordinary people, not that they bring a dependable gain in pressure on policy.",
+      "B": "governments have largely abandoned broad sanctions because their moral cost became too high to defend in public.",
+      "C": "targeted sanctions usually fail because officials cannot be identified precisely enough to be named in them.",
+      "D": "targeted sanctions are, on the whole, less effective than broad sanctions at persuading a regime under pressure to change the policies it pursues."
+     },
+     "question": "The author's remark that targeting 'reduces the moral cost of sanctions more reliably than it increases their effect' implies that"
+    }
+   ]
+  },
+  {
+   "passage_id": "R05-B-06",
+   "passage": [
+    "A donor that pays for a new clinic likes to believe that it has paid for a clinic. Often it has not, or not in the sense it imagines. Suppose a government had already planned to build the clinic from its own revenue. When a donor offers to fund it, the government can accept, release the money it had set aside and spend it on something else entirely: a road, a pay rise for civil servants, an extra battalion. The clinic gets built either way. What the aid has really financed is whatever the government would otherwise have gone without, and the donor, which may never learn what that was, has had no say in choosing it.",
+    "Economists call this fungibility, and once it has been seen it is hard to unsee. It implies that the earmark on a grant, the label saying that the money is for health or for schools, may tell us little about what the grant actually changes. Studies comparing donors' allocations with recipients' overall spending have often found that aid labelled for a sector raises spending in that sector by less than the amount given, though rarely by nothing. The lesson many have drawn is that donors are funding governments, not projects, whether or not they admit it.",
+    "The lesson is right, but it is easy to overstate. Fungibility depends on the government having planned to do the thing anyway. Where a donor funds something the government would not have undertaken, a programme against a neglected disease, say, or a school in a district whose population carries no political weight, the money cannot be redirected in the same way, because there was no planned expenditure to release. Fungibility is also weaker when a government's budget is so stretched or so rigid that there is little slack to shift. And aid often brings more than money: technical staff, systems for buying supplies, and a degree of scrutiny that can change how a sector is run, effects that no accounting of shifted budget lines will capture.",
+    "Nor is fungibility in itself a scandal. If a recipient government has sound priorities, the freedom to move money to where it is most needed is an advantage, and donors who insist on rigid earmarks may simply be paying for the comfort of a plaque. The difficulty arises where priorities are poor, because there the earmark offers protection only on paper. What follows is not that earmarking is useless but that donors cannot rely on it to do their thinking for them. The question that matters is less what a grant is labelled for than what kind of government receives it."
+   ],
+   "questions": [
+    {
+     "id": "R05-B-06-1",
+     "type": "RC",
+     "options": {
+      "A": "most of the recipient's spending is locked into commitments that cannot easily be cut or moved.",
+      "B": "the recipient government has sound priorities and is free to move money to where it is most needed.",
+      "C": "the recipient government had already set aside its own revenue to pay for the same project.",
+      "D": "the donor attaches a plaque and a public ceremony to the project so that its role is widely seen."
+     },
+     "question": "The author would most likely agree that an earmarked grant is least likely to be diverted to other uses when"
+    },
+    {
+     "id": "R05-B-06-2",
+     "type": "RC",
+     "options": {
+      "A": "had no measurable effect at all on spending in the sector for which it was labelled.",
+      "B": "was mostly lost to corruption before it could be spent in any sector of the recipient's budget.",
+      "C": "raised spending in that sector by more than the amount given, because it attracted matching funds from governments.",
+      "D": "raised spending in that sector, though usually by less than the full amount of the aid."
+     },
+     "question": "According to paragraph 2, studies comparing donors' allocations with recipients' overall spending have often found that aid labelled for a sector"
+    },
+    {
+     "id": "R05-B-06-3",
+     "type": "RC",
+     "options": {
+      "A": "Donors that earmark their grants report greater satisfaction with the results than donors who give general budget support.",
+      "B": "A government that received a grant for roads reduced its own road budget by almost exactly the amount of the grant.",
+      "C": "Recipient governments seldom publish detailed accounts showing how their own revenue is divided among sectors.",
+      "D": "Donor-funded vaccination teams reached regions left out of the health ministry's own plans, while the ministry's spending elsewhere was unchanged."
+     },
+     "question": "Which of the following, if true, would most weaken the claim that donors 'are funding governments, not projects'?"
+    },
+    {
+     "id": "R05-B-06-4",
+     "type": "RC",
+     "options": {
+      "A": "argue that recipient governments tend to divert aid money into military spending rather than social services.",
+      "B": "demonstrate that fungibility is harmful whatever the priorities of the government that receives the aid.",
+      "C": "illustrate how money given for one purpose can end up financing something quite different.",
+      "D": "show that clinics paid for by donors are seldom actually built by the governments that receive the money."
+     },
+     "question": "The hypothetical clinic in paragraph 1 functions chiefly to"
+    }
+   ]
+  }
+ ]
+}

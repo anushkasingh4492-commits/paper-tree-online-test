@@ -1,0 +1,534 @@
+{
+  "seed": 9072026,
+  "max_marks": 100,
+  "marking": {
+    "correct": 4,
+    "incorrect": -1,
+    "unattempted": 0
+  },
+  "basis": "JEE Main 2026 Paper 1 Chemistry format",
+  "questions": [
+    {
+      "id": "JEE-CHEM-1662",
+      "difficulty": "Easy",
+      "unit_number": 15,
+      "source_class": "XI",
+      "figures": [],
+      "figure_required": false,
+      "family_dependencies": [
+        "CHEM-semantic-Wurtz"
+      ],
+      "concept_family": "CHEM-semantic-Wurtz",
+      "assumptions": [],
+      "number": 1,
+      "section": "A",
+      "question": "Which description best identifies Wurtz reaction?",
+      "options": {
+        "A": "an acyclic hydrocarbon containing a carbon-carbon double bond",
+        "B": "coupling of alkyl halides with sodium in dry ether",
+        "C": "in addition of HX to an unsymmetrical alkene, H usually adds to the carbon already bearing more hydrogens",
+        "D": "HBr adds anti-Markovnikov to an unsymmetrical alkene in the presence of peroxide"
+      }
+    },
+    {
+      "id": "JEE-CHEM-1461",
+      "difficulty": "Medium",
+      "unit_number": 14,
+      "source_class": "XI",
+      "figures": [],
+      "figure_required": false,
+      "family_dependencies": [
+        "CHEM-amine-formula-Dumas"
+      ],
+      "concept_family": "CHEM-amine-formula-Dumas",
+      "assumptions": [],
+      "number": 2,
+      "section": "A",
+      "question": "A neutral acyclic primary monoamine contains 3 carbons and exactly one C=C bond, with no other unsaturation or heteroatom. Complete Dumas analysis of 0.6 g converts all its nitrogen into N₂. Find the N₂ mass. C=12, H=1, N=14. Choose the closest listed value.",
+      "options": {
+        "A": "0.073684211 g",
+        "B": "0.44210526 g",
+        "C": "0.6 g",
+        "D": "0.14736842 g"
+      }
+    },
+    {
+      "id": "JEE-CHEM-0424",
+      "difficulty": "Easy",
+      "unit_number": 5,
+      "source_class": "XII",
+      "figures": [],
+      "figure_required": false,
+      "family_dependencies": [
+        "CHEM-core-a342a2b265bb"
+      ],
+      "concept_family": "CHEM-core-a342a2b265bb",
+      "assumptions": [],
+      "number": 3,
+      "section": "A",
+      "question": "Which description best identifies Henry law?",
+      "options": {
+        "A": "gas solubility in a liquid is proportional to gas partial pressure at constant temperature",
+        "B": "a solution with zero enthalpy and zero volume change on mixing",
+        "C": "partial vapour pressure of a volatile component equals its mole fraction times pure-component vapour pressure",
+        "D": "vapour pressure exceeds the ideal value"
+      }
+    },
+    {
+      "id": "JEE-CHEM-0574",
+      "difficulty": "Easy",
+      "unit_number": 7,
+      "source_class": "XII",
+      "figures": [],
+      "figure_required": false,
+      "family_dependencies": [
+        "CHEM-core-318123cebd0c"
+      ],
+      "concept_family": "CHEM-core-318123cebd0c",
+      "assumptions": [],
+      "number": 4,
+      "section": "A",
+      "question": "The statement ‘anode is written on the left and cathode on the right by convention’ refers to",
+      "options": {
+        "A": "cell notation",
+        "B": "Nernst equation",
+        "C": "cell potential",
+        "D": "standard hydrogen electrode"
+      }
+    },
+    {
+      "id": "JEE-CHEM-0306",
+      "difficulty": "Difficult",
+      "unit_number": 5,
+      "source_class": "XII",
+      "figures": [],
+      "figure_required": false,
+      "family_dependencies": [
+        "CHEM-molality-density-dilution"
+      ],
+      "concept_family": "CHEM-molality-density-dilution",
+      "assumptions": [],
+      "number": 5,
+      "section": "A",
+      "question": "A 100.0 mL aqueous solution has density 1.06 g mL⁻¹ and contains 4.296 g total nonvolatile nonelectrolytes A and B. Their molar masses are 60 and 180 g mol⁻¹ respectively. The total analytical molality (moles A plus moles B per kilogram water) is 0.40509714 mol kg⁻¹. What percentage of combined solute mass is A? Choose the closest listed value.",
+      "options": {
+        "A": "39.958723 %",
+        "B": "31.220846 %",
+        "C": "36.312849 %",
+        "D": "18.156425 %"
+      }
+    },
+    {
+      "id": "JEE-CHEM-1803",
+      "difficulty": "Medium",
+      "unit_number": 17,
+      "source_class": "XII",
+      "figures": [],
+      "figure_required": false,
+      "family_dependencies": [
+        "CHEM-ester-alcohol-oxidation"
+      ],
+      "concept_family": "CHEM-ester-alcohol-oxidation",
+      "assumptions": [],
+      "number": 6,
+      "section": "A",
+      "question": "Starting with 0.01 mol substrate, ethyl ethanoate is completely hydrolysed; the alcohol fraction is isolated and oxidised completely with excess acidified dichromate. The stated target product is recovered in 75% overall molar yield relative to its stoichiometric maximum. Find the mass of ethanoic acid. Use C=12, H=1, N=14, O=16, Cl=35.5 as needed. Choose the closest listed value.",
+      "options": {
+        "A": "0.15 g",
+        "B": "0.45 g",
+        "C": "0.345 g",
+        "D": "0.33 g"
+      }
+    },
+    {
+      "id": "JEE-CHEM-1746",
+      "difficulty": "Medium",
+      "unit_number": 16,
+      "source_class": "XII",
+      "figures": [],
+      "figure_required": false,
+      "family_dependencies": [
+        "CHEM-primary-alcohol-oxidation"
+      ],
+      "concept_family": "CHEM-primary-alcohol-oxidation",
+      "assumptions": [],
+      "number": 7,
+      "section": "A",
+      "question": "Starting with 0.016 mol substrate, 1-bromopropane is hydrolysed with aqueous alkali; the isolated alcohol is completely oxidised with excess acidified dichromate. The stated target product is recovered in 79% overall molar yield relative to its stoichiometric maximum. Find the mass of propanoic acid. Use C=12, H=1, N=14, O=16, Cl=35.5 as needed. Choose the closest listed value.",
+      "options": {
+        "A": "0.73312 g",
+        "B": "1.184 g",
+        "C": "0.93536 g",
+        "D": "0.46768 g"
+      }
+    },
+    {
+      "id": "JEE-CHEM-1720",
+      "difficulty": "Easy",
+      "unit_number": 16,
+      "source_class": "XII",
+      "figures": [],
+      "figure_required": false,
+      "family_dependencies": [
+        "CHEM-core-df5b93eae0e1"
+      ],
+      "concept_family": "CHEM-core-df5b93eae0e1",
+      "assumptions": [],
+      "number": 8,
+      "section": "A",
+      "question": "Which description best identifies haloarene?",
+      "options": {
+        "A": "a dihalide with halogens on adjacent carbons",
+        "B": "a compound with halogen directly bonded to an aromatic ring",
+        "C": "a halide with X on a carbon adjacent to a carbon-carbon double bond",
+        "D": "a dihalide with both halogens on the same carbon"
+      }
+    },
+    {
+      "id": "JEE-CHEM-1280",
+      "difficulty": "Medium",
+      "unit_number": 12,
+      "source_class": "XII",
+      "figures": [],
+      "figure_required": false,
+      "family_dependencies": [
+        "CHEM-coordination-donor-accounting"
+      ],
+      "concept_family": "CHEM-coordination-donor-accounting",
+      "assumptions": [],
+      "number": 9,
+      "section": "A",
+      "question": "0.0082 mol of an octahedral cobalt(III) complex has 3 coordinated Cl⁻ ligands per Co; its other ligands are NH₃ only. Destructive analysis releases all coordinated NH₃ quantitatively. Find released NH₃ mass. N=14, H=1. Choose the closest listed value.",
+      "options": {
+        "A": "0.2091 g",
+        "B": "1.2546 g",
+        "C": "0.4182 g",
+        "D": "0.8364 g"
+      }
+    },
+    {
+      "id": "JEE-CHEM-0060",
+      "difficulty": "Difficult",
+      "unit_number": 1,
+      "source_class": "XI",
+      "figures": [],
+      "figure_required": false,
+      "family_dependencies": [
+        "CHEM-calcination-residue"
+      ],
+      "concept_family": "CHEM-calcination-residue",
+      "assumptions": [],
+      "number": 10,
+      "section": "A",
+      "question": "A pure CaCO₃ sample is partially calcined by CaCO₃(s) → CaO(s)+CO₂(g). The solid loses 1.98 g. The entire residue then consumes 0.2 mol HCl. Take molar masses CaCO₃=100, CaO=56 and CO₂=44 g mol⁻¹. What percentage of the initial carbonate decomposed? Choose the closest listed value.",
+      "options": {
+        "A": "45 %",
+        "B": "90 %",
+        "C": "55 %",
+        "D": "62.068966 %"
+      }
+    },
+    {
+      "id": "JEE-CHEM-0724",
+      "difficulty": "Easy",
+      "unit_number": 8,
+      "source_class": "XII",
+      "figures": [],
+      "figure_required": false,
+      "family_dependencies": [
+        "CHEM-core-2f8a90179602"
+      ],
+      "concept_family": "CHEM-core-2f8a90179602",
+      "assumptions": [],
+      "number": 11,
+      "section": "A",
+      "question": "Which description best identifies zero-order reaction?",
+      "options": {
+        "A": "a reaction whose rate is independent of reactant concentration",
+        "B": "half-life equals ln 2 divided by k",
+        "C": "half-life equals initial concentration divided by 2k",
+        "D": "a reaction whose rate is proportional to one reactant concentration"
+      }
+    },
+    {
+      "id": "JEE-CHEM-1058",
+      "difficulty": "Easy",
+      "unit_number": 11,
+      "source_class": "XII",
+      "figures": [],
+      "figure_required": false,
+      "family_dependencies": [
+        "CHEM-core-9e2ad306f278"
+      ],
+      "concept_family": "CHEM-core-9e2ad306f278",
+      "assumptions": [],
+      "number": 12,
+      "section": "A",
+      "question": "The statement ‘the 5f inner-transition series following actinium’ refers to",
+      "options": {
+        "A": "KMnO₄ in acid",
+        "B": "actinoids",
+        "C": "KMnO₄ in neutral medium",
+        "D": "K₂Cr₂O₇ in acid"
+      }
+    },
+    {
+      "id": "JEE-CHEM-1882",
+      "difficulty": "Medium",
+      "unit_number": 17,
+      "source_class": "XII",
+      "figures": [],
+      "figure_required": false,
+      "family_dependencies": [
+        "CHEM-coverage-Selective ether cleavage"
+      ],
+      "concept_family": "CHEM-coverage-Selective ether cleavage",
+      "assumptions": [],
+      "number": 13,
+      "section": "A",
+      "question": "Anisole is heated with excess concentrated HI. Which bond cleavage and aromatic product are expected in the usual reaction?",
+      "options": {
+        "A": "Cleavage at the methyl–O bond; phenol",
+        "B": "Both bonds remain intact; benzoic acid",
+        "C": "Direct ring iodination alone; nitrobenzene",
+        "D": "Cleavage of the aryl–O bond by ordinary SN2; benzene"
+      }
+    },
+    {
+      "id": "JEE-CHEM-1582",
+      "difficulty": "Easy",
+      "unit_number": 14,
+      "source_class": "XI",
+      "figures": [],
+      "figure_required": false,
+      "family_dependencies": [
+        "CHEM-core-1942279976bb"
+      ],
+      "concept_family": "CHEM-core-1942279976bb",
+      "assumptions": [],
+      "number": 14,
+      "section": "A",
+      "question": "The process alcohol → alkene + H₂O is classified as:",
+      "options": {
+        "A": "polymerisation",
+        "B": "addition",
+        "C": "substitution without bond loss",
+        "D": "elimination"
+      }
+    },
+    {
+      "id": "JEE-CHEM-0471",
+      "difficulty": "Medium",
+      "unit_number": 6,
+      "source_class": "XI",
+      "figures": [],
+      "figure_required": false,
+      "family_dependencies": [
+        "CHEM-buffer-neutralisation"
+      ],
+      "concept_family": "CHEM-buffer-neutralisation",
+      "assumptions": [],
+      "number": 15,
+      "section": "A",
+      "question": "A solution initially contains 0.036 mol weak monoprotic acid HA. Add 0.0112 mol NaOH; both HA and A⁻ remain. With pKa=4.76, find pH using Henderson–Hasselbalch, neglecting activities and further dissociation relative to the buffer amounts. Choose the closest listed value.",
+      "options": {
+        "A": "4.2529155",
+        "B": "4.4147663",
+        "C": "2.2073832",
+        "D": "1.4715888"
+      }
+    },
+    {
+      "id": "JEE-CHEM-0435",
+      "difficulty": "Medium",
+      "unit_number": 6,
+      "source_class": "XI",
+      "figures": [],
+      "figure_required": false,
+      "family_dependencies": [
+        "CHEM-precipitation-equilibrium",
+        "CHEM-precipitation-mixing"
+      ],
+      "concept_family": "CHEM-precipitation-mixing",
+      "assumptions": [],
+      "number": 16,
+      "section": "A",
+      "question": "20 mL of 0.01 M AgNO₃ is mixed with 10 mL of 0.0200 M NaCl. Volumes add. Before any precipitation is allowed to occur, calculate 10⁶Q, where Q=[Ag⁺][Cl⁻] with concentrations in mol L⁻¹. Choose the closest listed value.",
+      "options": {
+        "A": "14.814815",
+        "B": "22.222222",
+        "C": "133.33333",
+        "D": "44.444444"
+      }
+    },
+    {
+      "id": "JEE-CHEM-0067",
+      "difficulty": "Difficult",
+      "unit_number": 1,
+      "source_class": "XI",
+      "figures": [],
+      "figure_required": false,
+      "family_dependencies": [
+        "CHEM-carbonate-mixture"
+      ],
+      "concept_family": "CHEM-carbonate-mixture",
+      "assumptions": [],
+      "number": 17,
+      "section": "A",
+      "question": "A 10.34 g dry mixture contains only Na₂CO₃ and NaHCO₃. It consumes 0.16 mol HCl on complete conversion to NaCl, water and CO₂. Molar masses are 106 and 84 g mol⁻¹ respectively. What mass of NaHCO₃ was present? Choose the closest listed value.",
+      "options": {
+        "A": "2.52 g",
+        "B": "10.08 g",
+        "C": "1.68 g",
+        "D": "5.04 g"
+      }
+    },
+    {
+      "id": "JEE-CHEM-2101",
+      "difficulty": "Medium",
+      "unit_number": 20,
+      "source_class": "XII",
+      "figures": [],
+      "figure_required": false,
+      "family_dependencies": [
+        "CHEM-aniline-yellow-preparation"
+      ],
+      "concept_family": "CHEM-aniline-yellow-preparation",
+      "assumptions": [],
+      "number": 18,
+      "section": "A",
+      "question": "In the NCERT aniline-yellow preparation, diazoaminobenzene is rearranged in aniline solvent with a small amount of aniline hydrochloride under weakly acidic conditions. Starting from 0.012 mol diazoaminobenzene, a 72% molar yield of p-aminoazobenzene is isolated. Find its mass. Both isomers have formula C₁₂H₁₁N₃; C=12, H=1, N=14. Choose the closest listed value.",
+      "options": {
+        "A": "2.364 g",
+        "B": "3.40416 g",
+        "C": "0.85104 g",
+        "D": "1.70208 g"
+      }
+    },
+    {
+      "id": "JEE-CHEM-0280",
+      "difficulty": "Medium",
+      "unit_number": 4,
+      "source_class": "XI",
+      "figures": [],
+      "figure_required": false,
+      "family_dependencies": [
+        "CHEM-Gibbs-equilibrium"
+      ],
+      "concept_family": "CHEM-Gibbs-equilibrium",
+      "assumptions": [],
+      "number": 19,
+      "section": "A",
+      "question": "At 365 K, a reaction has ΔH°=45 kJ mol⁻¹ and ΔS°=95 J mol⁻¹ K⁻¹. Find ln K at this temperature. R=8.314 J mol⁻¹ K⁻¹. Choose the closest listed value.",
+      "options": {
+        "A": "-1.134138",
+        "B": "11.42651",
+        "C": "-3.4024141",
+        "D": "3.4024141"
+      }
+    },
+    {
+      "id": "JEE-CHEM-1683",
+      "difficulty": "Difficult",
+      "unit_number": 15,
+      "source_class": "XI",
+      "figures": [],
+      "figure_required": false,
+      "family_dependencies": [
+        "CHEM-unsaturated-mixture-assay"
+      ],
+      "concept_family": "CHEM-unsaturated-mixture-assay",
+      "assumptions": [],
+      "number": 20,
+      "section": "A",
+      "question": "A 0.5216 g mixture contains an acyclic monoalkene C4H8 and an acyclic monoalkyne C4H6, with no other unsaturation. Complete hydrogenation consumes 0.0147 mol H₂. Find the mole percentage of alkyne. C=12, H=1. Choose the closest listed value.",
+      "options": {
+        "A": "36.491228 %",
+        "B": "37.681159 %",
+        "C": "54.736842 %",
+        "D": "45.263158 %"
+      }
+    },
+    {
+      "id": "JEE-CHEM-0510",
+      "difficulty": "Easy",
+      "unit_number": 6,
+      "source_class": "XI",
+      "figures": [],
+      "figure_required": false,
+      "family_dependencies": [
+        "CHEM-core-557ab2af6b26"
+      ],
+      "concept_family": "CHEM-core-557ab2af6b26",
+      "assumptions": [],
+      "number": 21,
+      "section": "B",
+      "question": "For 2SO₂(g)+O₂(g) ⇌ 2SO₃(g), use Kp=Kc(RT)^Δn with pressures in atm, concentrations in mol L⁻¹ and R=0.0821 L atm mol⁻¹ K⁻¹. At 300 K, the numerical ratio Kp/Kc is what value? Multiply the numerical value in the requested units by 10^3, then enter the nearest integer."
+    },
+    {
+      "id": "JEE-CHEM-1315",
+      "difficulty": "Difficult",
+      "unit_number": 12,
+      "source_class": "XII",
+      "figures": [],
+      "figure_required": false,
+      "family_dependencies": [
+        "CHEM-Werner-mass-ions",
+        "CHEM-Werner-sphere-assay"
+      ],
+      "concept_family": "CHEM-Werner-mass-ions",
+      "assumptions": [],
+      "number": 22,
+      "section": "B",
+      "question": "A 1.1003 g mixture contains only [Cr(NH₃)₆]Cl₃ and [Cr(NH₃)₅Cl]Cl₂. In a sufficiently dilute ideal solution, an independent particle-count measurement gives 0.0149 mol total solute ions. Outer-sphere ions dissociate completely and no ligand exchange occurs. Use Cr=52, NH₃=17, Cl=35.5 g mol⁻¹. Find the amount of [Cr(NH₃)₆]Cl₃. Enter the numerical value in the requested units, rounded to the nearest integer."
+    },
+    {
+      "id": "JEE-CHEM-0419",
+      "difficulty": "Medium",
+      "unit_number": 5,
+      "source_class": "XII",
+      "figures": [],
+      "figure_required": false,
+      "family_dependencies": [
+        "CHEM-molality-density"
+      ],
+      "concept_family": "CHEM-molality-density",
+      "assumptions": [],
+      "number": 23,
+      "section": "B",
+      "question": "100.0 mL solution has density 1.09 g mL⁻¹ and contains 4.6 g urea (60 g mol⁻¹). Find its molality. Multiply the numerical value in the requested units by 10^2, then enter the nearest integer."
+    },
+    {
+      "id": "JEE-CHEM-1653",
+      "difficulty": "Medium",
+      "unit_number": 15,
+      "source_class": "XI",
+      "figures": [],
+      "figure_required": false,
+      "family_dependencies": [
+        "CHEM-ozonolysis-Tollens"
+      ],
+      "concept_family": "CHEM-ozonolysis-Tollens",
+      "assumptions": [],
+      "number": 24,
+      "section": "B",
+      "question": "0.038 mol but-2-ene undergoes complete reductive ozonolysis. All carbonyl products are then treated with excess Tollens reagent. Find the mass of silver formed, assuming quantitative reactions. Ag=108 g mol⁻¹. Enter the numerical value in the requested units, rounded to the nearest integer."
+    },
+    {
+      "id": "JEE-CHEM-0032",
+      "difficulty": "Difficult",
+      "unit_number": 1,
+      "source_class": "XI",
+      "figures": [],
+      "figure_required": false,
+      "family_dependencies": [
+        "CHEM-metal-mixture"
+      ],
+      "concept_family": "CHEM-metal-mixture",
+      "assumptions": [],
+      "number": 25,
+      "section": "B",
+      "question": "A 2.52 g mixture of Mg and Al dissolves completely in excess dilute HCl, releasing 0.12 mol H₂. Assume no oxide coating or impurities. Use Mg=24 and Al=27 g mol⁻¹. What percentage of the original mass was Al? Enter the numerical value in the requested units, rounded to the nearest integer."
+    }
+  ]
+}

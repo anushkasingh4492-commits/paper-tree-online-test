@@ -1,0 +1,22 @@
+[
+ {
+  "id": "R05-D-03-4",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "C",
+    "key": "C",
+    "working": "Manufacturing productivity stopping is never mentioned; A, B, D are P4 limits.",
+    "alternative": "",
+    "issue": "Option D paraphrases \"long before the arithmetic says they must\" as \"before rising productivity requires them to\", which is a loose and slightly garbled rendering; still clearly a stated limit, so key C unaffected."
+   },
+   "S2": {
+    "answer": "A",
+    "key": "A",
+    "working": "Passage never mentions manufacturing productivity stopping.",
+    "alternative": "",
+    "issue": ""
+   }
+  }
+ }
+]

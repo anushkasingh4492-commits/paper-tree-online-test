@@ -1,0 +1,102 @@
+[
+ {
+  "id": "V01-A-006",
+  "kind": "DISAGREEMENT",
+  "solvers": {
+   "S1": {
+    "answer": "52314",
+    "key": "53214",
+    "working": "5 like familiar things; 3 song example; 2 'One explanation' ease mistaken; 1 'exactly this confusion' advertisers; 4 'Repetition of this kind'.",
+    "alternative": "",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "53214",
+    "key": "53214",
+    "working": "5 claim; 3 example; 2 explanation (ease mistaken for good); 1 'this confusion'; 4 'repetition of this kind'.",
+    "alternative": "",
+    "issue": ""
+   }
+  }
+ },
+ {
+  "id": "V01-A-016",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "24351",
+    "key": "24351",
+    "working": "2 state must know population; 4 early censuses for these purposes, fear; 3 'Their fear' well founded; 5 'then' people avoided counting; 1 'in this light' conclusion.",
+    "alternative": "24315: 1 can follow 3 (visibility as state reach) and 5 close as consequence; 5's 'then' fits either.",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "24351",
+    "key": "24351",
+    "working": "Govt must know -> early censuses feared -> fear well founded -> so people avoided counting -> census in this light.",
+    "alternative": "24315 is also defensible: 1 ('in this light') could follow 3, with 5 ('then') as a closing consequence.",
+    "issue": ""
+   }
+  }
+ },
+ {
+  "id": "V01-A-017",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "1432",
+    "key": "1432",
+    "working": "1 complaints in every age; 4 if accurate, endless decline; 3 'that conclusion is absurd' read as evidence about complainers; 2 'such evidence' shows habit.",
+    "alternative": "1243 is weaker: 3 restates 2's point; 1432 gives clean 'that conclusion'/'such evidence' links.",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "1432",
+    "key": "1432",
+    "working": "1 complaints; 4 if accurate, absurd continuous decline; 3 'that conclusion is absurd'; 2 'such evidence'.",
+    "alternative": "",
+    "issue": ""
+   }
+  }
+ },
+ {
+  "id": "V01-A-019",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "1243",
+    "key": "1243",
+    "working": "Sunk cost unrecoverable(1) -> logically ignore(2) -> in practice managers continue(4) -> abandoning feels like admitting waste(3).",
+    "alternative": "",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "1243",
+    "key": "1243",
+    "working": "1 sunk cost unrecoverable; 2 'then' should not count; 4 'in practice' managers persist; 3 feels like admitting waste.",
+    "alternative": "1-2-3-4 is weaker: 3 explains the behaviour in 4, so must follow it.",
+    "issue": ""
+   }
+  }
+ },
+ {
+  "id": "V01-A-022",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "3214",
+    "key": "3214",
+    "working": "3 few survive by mutation; 2 'These survivors' multiply; 1 'therefore' every unnecessary course aids spread; 4 'This is why' unnecessary prescribing is a real cost.",
+    "alternative": "3241: 4 can follow 2 and 1 restate; weaker because 1 then repeats 4.",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "3214",
+    "key": "3214",
+    "working": "3 survivors; 2 multiply; 1 therefore unnecessary courses spread resistance; 4 'this is why' viral prescribing a cost.",
+    "alternative": "3241 weakly possible but 1 bridges mechanism to cost, so 3214 preferred.",
+    "issue": ""
+   }
+  }
+ }
+]

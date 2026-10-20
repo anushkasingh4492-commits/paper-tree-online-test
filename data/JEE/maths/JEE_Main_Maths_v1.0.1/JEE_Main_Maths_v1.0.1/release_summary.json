@@ -1,0 +1,103 @@
+{
+ "version": "1.0.1",
+ "date": "2026-10-08",
+ "questions": 2700,
+ "units": 14,
+ "difficulty": {
+  "Easy": 810,
+  "Medium": 1215,
+  "Difficult": 675
+ },
+ "classes": {
+  "XI": 1386,
+  "XII": 1314
+ },
+ "keys": {
+  "C": 675,
+  "D": 675,
+  "A": 675,
+  "B": 675
+ },
+ "numerical_variants": 342,
+ "machine_recomputed": 2681,
+ "blind_resolved": 2700,
+ "concept_families": 2285,
+ "selection_dependencies": 2401,
+ "figures": 0,
+ "generator_full_bank_seeds_passed": 1005,
+ "supersedes": "1.0.0 (same IDs, same key letters; option order of every unchanged item is identical; see Errata_Closure_Register.csv)",
+ "errata": {
+  "recompute": {
+   "items": 2700,
+   "by_code": 2679,
+   "key_agree": 2699,
+   "numerical_items": 342,
+   "numerical_agree": 342
+  },
+  "audit": {
+   "findings": 299,
+   "by_category": {
+    "E2": 3,
+    "E3": 7,
+    "E5": 37,
+    "E6": 171,
+    "E7": 34,
+    "E8": 9,
+    "E9": 38
+   },
+   "by_severity_final": {
+    "major": 65,
+    "minor": 232,
+    "critical": 2
+   },
+   "by_action": {
+    "rewritten": 73,
+    "aliased": 93,
+    "fixed": 125,
+    "retained": 8
+   }
+  },
+  "post_fix": {
+   "findings": 5,
+   "by_action": {
+    "fixed": 3,
+    "aliased": 1,
+    "retained": 1
+   }
+  },
+  "all_closures": {
+   "total": 304,
+   "by_action": {
+    "rewritten": 73,
+    "aliased": 94,
+    "fixed": 128,
+    "retained": 9
+   }
+  },
+  "changes": {
+   "stem_or_options_changed": 122,
+   "numerical_alternates_changed": 28,
+   "notation_only_log": 87,
+   "source_class_changed": 36,
+   "key_letters_changed": 0,
+   "alias_groups_added": 110,
+   "numerical_selection_swaps": [
+    {
+     "local_id": "U03-A-021",
+     "difficulty": "Medium",
+     "replaces": "U03-C-031"
+    },
+    {
+     "local_id": "U11-A-006",
+     "difficulty": "Easy",
+     "replaces": "U11-C-004"
+    }
+   ]
+  },
+  "reverification": {
+   "items": 132,
+   "agree": 132
+  }
+ },
+ "review_note": "Machine recomputation, independent blind re-solving, an editorial audit and a full errata round (independent code recomputation of every item, hostile unit audit, fixes, re-verification) by separate AI model agents. No external human subject-expert review is claimed. Difficulty is editorial."
+}

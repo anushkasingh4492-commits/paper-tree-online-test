@@ -1,0 +1,80 @@
+{
+ "unit_number": 7,
+ "unit_name": "Limit, Continuity and Differentiability",
+ "branch": "Calculus",
+ "count": 280,
+ "draft_files": [
+  "drafts/u07_a.py",
+  "drafts/u07_b.py",
+  "drafts/u07_c.py",
+  "drafts/u07_d.py",
+  "drafts/u07_e.py"
+ ],
+ "alias_groups": {
+  "ALIAS-U07-inverse-of-cubic": [
+   "U07-D-030",
+   "U07-D-047"
+  ],
+  "ALIAS-ERR-U07-A-01": [
+   "U07-A-031",
+   "U07-A-040"
+  ],
+  "ALIAS-ERR-U07-C-01": [
+   "U07-B-009",
+   "U07-C-016"
+  ],
+  "ALIAS-ERR-U07-D-01": [
+   "U07-D-042",
+   "U07-D-052"
+  ],
+  "ALIAS-ERR-U07-E-01": [
+   "U07-E-002",
+   "U07-E-013"
+  ],
+  "ALIAS-ERR-U07-E-02": [
+   "U07-E-039",
+   "U07-E-052"
+  ],
+  "ALIAS-ERR-U07-E-03": [
+   "U07-E-022",
+   "U07-E-037"
+  ]
+ },
+ "numerical_selection": [
+  "U07-A-026",
+  "U07-B-040",
+  "U07-C-044",
+  "U07-D-051",
+  "U07-E-047",
+  "U07-A-050",
+  "U07-C-045",
+  "U07-D-054",
+  "U07-E-050",
+  "U07-A-051",
+  "U07-C-047",
+  "U07-E-054",
+  "U07-A-052",
+  "U07-C-049",
+  "U07-E-056",
+  "U07-C-050",
+  "U07-C-053",
+  "U07-C-056",
+  "U07-A-015",
+  "U07-B-017",
+  "U07-C-019",
+  "U07-D-022",
+  "U07-E-024",
+  "U07-A-018",
+  "U07-B-025",
+  "U07-C-020",
+  "U07-D-025",
+  "U07-E-025",
+  "U07-A-040",
+  "U07-B-032",
+  "U07-A-033",
+  "U07-B-001",
+  "U07-C-001",
+  "U07-D-001",
+  "U07-E-003"
+ ]
+}

@@ -1,0 +1,42 @@
+[
+ {
+  "id": "R02-B-04",
+  "category": "E6",
+  "severity": "minor",
+  "finding": "Blind solver S1 flag on R02-B-04-1: paragraph 3 said people on hard tasks 'correctly sense that they did poorly', which sits awkwardly with paragraph 2's claim that they still overestimate their own scores.",
+  "fix": "Paragraph 3 now reads 'they sense that they did poorly, if not quite how poorly, but assume that others did less badly'; no question quoted the old wording; key of R02-B-04-1 unchanged and both solvers reached it.",
+  "changed": true
+ },
+ {
+  "id": "R02-B-07",
+  "category": "E6",
+  "severity": "minor",
+  "finding": "Paragraph 1 garbled the classic demonstration: 'a treatment that leaves ninety ... or one that sees ten ... die' reads as a choice between two treatments, contradicting 'the same choice, described in two ways'.",
+  "fix": "Rewritten as one treatment described to one group as leaving ninety in a hundred alive and to the other as seeing ten in a hundred die; 'Since the options do not differ' changed to 'Since the treatment does not differ'. No question quotes the sentence.",
+  "changed": true
+ },
+ {
+  "id": "R02-B-03-4",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Defence for the 'ask the seller to explain the figure' distractor applied paragraph 3's phrase about one's own search ('only gathers more of the same evidence') to reasons supplied by the seller, a loose fit.",
+  "fix": "Defence now says asking the seller to justify the figure invites reasons in its favour from the party who chose it, the opposite of paragraph 4's 'asking what would make it wrong'.",
+  "changed": true
+ },
+ {
+  "id": "R02-B-06-1",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Defence said paragraph 1 'praises' the nurse; the author only reports that case as one camp's evidence.",
+  "fix": "Defence now cites paragraph 2's two conditions and notes that the nurse of paragraph 1 'cannot say how they knew' yet was right.",
+  "changed": true
+ },
+ {
+  "id": "R02-B-06-3",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Same overstatement in the defence of the 'cannot be trusted unless he can explain' distractor.",
+  "fix": "Defence now grounds the rejection in paragraph 2's test (regularity and feedback) plus the paragraph 1 nurse case.",
+  "changed": true
+ }
+]

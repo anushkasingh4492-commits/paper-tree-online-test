@@ -1,0 +1,62 @@
+[
+ {
+  "id": "R03-F-03-4",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "B",
+    "key": "B",
+    "working": "P4 final sentences.",
+    "alternative": "",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "C",
+    "key": "C",
+    "working": "P4 final lines: authority is the condition that allows a stranger to be received at all.",
+    "alternative": "A captures part (neutralising strangers) but sets it against generosity, which P1 says is 'not false'; C is the closing claim.",
+    "issue": ""
+   }
+  }
+ },
+ {
+  "id": "R03-F-07-2",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "A",
+    "key": "A",
+    "working": "Strips histories, comparable on one scale.",
+    "alternative": "",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "D",
+    "key": "D",
+    "working": "Money strips goods of their histories and lets them be compared on one measure; D captures 'comparable'.",
+    "alternative": "B is tempting since it echoes the 'strips goods of their particular histories' clause, but that is a separate clause from 'renders them comparable'.",
+    "issue": ""
+   }
+  }
+ },
+ {
+  "id": "R03-F-08-4",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "C",
+    "key": "C",
+    "working": "Money made socially unavailable with an excuse kin accept as legitimate.",
+    "alternative": "A (hidden account) is a weaker analogue: it shelters money by secrecy, not by a socially recognised obligation; C is clearly better.",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "A",
+    "key": "A",
+    "working": "Legitimate, recognised excuse sheltering money from kin, via a commitment",
+    "alternative": "B (secret bank account) also shelters money from claims, but lacks the socially recognised excuse; A is closer",
+    "issue": ""
+   }
+  }
+ }
+]

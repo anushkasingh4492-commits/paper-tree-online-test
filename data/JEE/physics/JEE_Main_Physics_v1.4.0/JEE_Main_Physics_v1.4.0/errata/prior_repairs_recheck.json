@@ -1,0 +1,47 @@
+[
+  {
+    "code": "F01",
+    "status": "PASS",
+    "verification": "Dipole release from rest remains explicit."
+  },
+  {
+    "code": "F02",
+    "status": "PASS",
+    "verification": "Both springs explicitly unstretched; original model results re-run."
+  },
+  {
+    "code": "F03",
+    "status": "PASS",
+    "verification": "General coupling-magnitude definition retained."
+  },
+  {
+    "code": "F04",
+    "status": "PASS",
+    "verification": "Contradictory beat-branch wording remains absent; model answers re-run."
+  },
+  {
+    "code": "F05",
+    "status": "PASS",
+    "verification": "Kepler selection guard retained and seed 830 re-run."
+  },
+  {
+    "code": "F06",
+    "status": "PASS",
+    "verification": "All 24 earlier routine examples remain regraded. The 14 newly identified short paths are replaced and separately calculated. Difficulty remains editorial."
+  },
+  {
+    "code": "F07",
+    "status": "PASS",
+    "verification": "Thermal radiation explanation includes visible wavelengths."
+  },
+  {
+    "code": "F08",
+    "status": "PASS",
+    "verification": "Ohm law naming remains corrected; legitimate Ω resistance-unit symbols are retained."
+  },
+  {
+    "code": "F09",
+    "status": "PASS",
+    "verification": "Corrected rough-table figure and its accessible description retained."
+  }
+]

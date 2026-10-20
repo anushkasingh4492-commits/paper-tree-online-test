@@ -1,0 +1,658 @@
+[
+ {
+  "id": "R06-A-03-1",
+  "answer": "B",
+  "working": "Glass may survive on a shelf, moth may die by accident; neither refutes the disposition: fitness is real even when not displayed.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-A-03-2",
+  "answer": "A",
+  "working": "P3: drift is intelligible only because there is a gap between expected (fitness) and actual reproduction.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-A-03-3",
+  "answer": "C",
+  "working": "Reply rests on fitness being establishable independently of offspring counts (P2); if offspring count is the only way, the circularity returns.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-A-03-4",
+  "answer": "A",
+  "working": "P3 says 'some fail', contradicting A; B, C, D are stated in P3, P4, P2.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-A-01-1",
+  "answer": "A",
+  "working": "P3 thesis: best uses change how the reader regards narration as such.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-A-01-2",
+  "answer": "A",
+  "working": "P4: 'because the only question they posed has been answered'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-A-01-3",
+  "answer": "B",
+  "working": "P2: the true story is built from the materials of the account we have decided to distrust.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-A-01-4",
+  "answer": "A",
+  "working": "Catching one voice out leads to questioning voices that give no sign of strain (P3).",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-A-06-1",
+  "answer": "C",
+  "working": "Author accepts the count is answerable but says it misses the resident who stays (P2: 'no count of departures will register her').",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-A-06-2",
+  "answer": "C",
+  "working": "P4 glosses the loss as 'practical standing she once had in her own street'; P2 examples of use and terms.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-A-06-3",
+  "answer": "A",
+  "working": "If exclusionary homeowners also defend relations (ties, local voice), the relations-vs-fabric distinction no longer separates them from the staying resident.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-A-06-4",
+  "answer": "C",
+  "working": "P3: streetscape functions as barrier 'whatever its owners intend'; no claim they know it. A, B, D are supported.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-E-04-1",
+  "answer": "D",
+  "working": "P2-P3: infidelity wrongs a particular person; an insult to a colleague cannot be offset by kindness to a stranger.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-E-04-2",
+  "answer": "C",
+  "working": "P3: additionality failure makes it 'simply a fraud', and the right response is 'an audit, not moral disdain'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-E-04-3",
+  "answer": "B",
+  "working": "P4: 'These are real worries. But they concern the character of the offsetter...not whether the harm itself has been undone'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-E-04-4",
+  "answer": "A",
+  "working": "Claim rests on tonnes being interchangeable; if timing matters, a later removal cannot cancel the harm, undermining the in-principle claim. B is a practical failure the author already concedes.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-B-02-1",
+  "answer": "D",
+  "working": "P1: 'how rarely this suspicion is applied to other recipients'; 'the worry is reserved for' the poor.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-B-02-2",
+  "answer": "B",
+  "working": "P2: constraint differs between families; a transfer in kind 'guesses the same thing for everyone'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-B-02-3",
+  "answer": "D",
+  "working": "P2: 'tested more often than its persistence would suggest'; evaluations found little sign of misuse.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-B-02-4",
+  "answer": "A",
+  "working": "P2 argues needs differ across households; if all households spend on the same standard bundle, the in-kind guess would be right.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-E-05-1",
+  "answer": "C",
+  "working": "P2: 'by clearing out the resident species, the drug removes the competitors that had kept a harmful one in check'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-E-05-2",
+  "answer": "D",
+  "working": "P1: the programme 'saved an enormous number of lives'; P2: most microbes are not enemies, metaphor looks crude.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-E-05-3",
+  "answer": "C",
+  "working": "P3: specifying nothing measurable; 'vagueness of the promise protects it from ever being shown false'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-E-05-4",
+  "answer": "B",
+  "working": "P4: value lies in working concepts (succession, disturbance) that generate testable predictions.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-E-06-1",
+  "answer": "A",
+  "working": "P2: 'because they cannot count on being able to buy them again'; accumulation is insurance.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-E-06-2",
+  "answer": "A",
+  "working": "P2: confident discarding depends on assurance of replacement; the light traveller relies on buying on arrival. C is the opposite (scarcity households).",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-E-06-3",
+  "answer": "A",
+  "working": "P3: a practice can be sincerely chosen and still operate as a signal its practitioners neither chose nor want.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-E-06-4",
+  "answer": "C",
+  "working": "P3 'many...doing exactly what they say'; P4 suspicion that a change in private taste can amount to a social critique.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-E-04-1",
+  "answer": "B",
+  "working": "P1: once the style has spread far enough to lose its power to distinguish, the top abandons it.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-E-04-2",
+  "answer": "C",
+  "working": "P2 'obvious objection' about direction; P3 'But direction was never the heart of the theory'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-E-04-3",
+  "answer": "B",
+  "working": "P3: the double-motive claim 'survives the reversal untouched'; luxury borrowing is a new source of distinction.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-E-04-4",
+  "answer": "B",
+  "working": "P4 says fast copying makes visible novelty a weak status marker so status-seekers turn to having it first; B reports the reverse.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-B-07-1",
+  "answer": "C",
+  "working": "P2-P3 attack calendar labels; P4 grants event-anchored effects; P5 on the cost of misattribution.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-B-07-2",
+  "answer": "C",
+  "working": "In one year period is fixed, so age and birth cohort move together; P2: no set of observations can by itself pull them apart.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-B-07-3",
+  "answer": "C",
+  "working": "P3 says boundaries are conventional and group people on the axis of least difference; a sharp shift at the dividing line with stability within spans would make the boundary real.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-B-07-4",
+  "answer": "C",
+  "working": "P4: 'Such effects have been found, and they are not trivial' but anchored to events, uneven, rarely a single shared character.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-B-07-5",
+  "answer": "C",
+  "working": "Same age in different decades confounds cohort with period; P2 says some outside assumption is always required.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-C-06-1",
+  "answer": "D",
+  "working": "P2: readers reach for the discarded explanation 'not because they disbelieve the correction but because the correction left them with no story'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-C-06-2",
+  "answer": "C",
+  "working": "P2 explanation is a missing causal link; if supplying a replacement cause cuts reliance on the false one, the explanation is confirmed.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-C-06-3",
+  "answer": "D",
+  "working": "P3: the familiarity worry 'should not lead editors to issue vague notices'; 'a denial that does not name its target cannot replace anything'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-C-06-4",
+  "answer": "D",
+  "working": "P3: where no alternative is known, explain why the original claim was made and seemed plausible; D does this and names the target.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-E-05-1",
+  "answer": "B",
+  "working": "P2: gossip is the channel through which conduct becomes known to people who never saw it.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-E-05-2",
+  "answer": "D",
+  "working": "P3: anyone who withholds help from cheats will be punished for it, and cheating becomes safer.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-E-05-3",
+  "answer": "A",
+  "working": "P4: 'That reply is plausible, but it shifts the explanation from calculation to disposition'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-E-05-4",
+  "answer": "B",
+  "working": "P4 final sentence: narrower claim that expectation of being talked about is a main force, working only as well as the talk is accurate.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-C-05-1",
+  "answer": "D",
+  "working": "P2: the name explains why a new attribution multiplies price 'without a single brushstroke changing'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-C-05-2",
+  "answer": "D",
+  "working": "P2: a minor work by a celebrated painter can outsell a masterpiece by an obscure one; price runs through name.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-C-05-3",
+  "answer": "D",
+  "working": "P3: the market registers critical judgement at second hand, as a rating registers prospects without being the same thing as earnings.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-C-05-4",
+  "answer": "A",
+  "working": "P4 lists crowds at the record canvas (C), institutions hesitating to show or lend (B), young artists learning what sells (D); galleries raising prices is not mentioned.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-C-07-1",
+  "answer": "B",
+  "working": "P2: lab results trusted 'not because its scientists lack ambitions but because their work is arranged so that others can repeat it'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-C-07-2",
+  "answer": "B",
+  "working": "P3: such a story can 'check neither, and still look objective'; appearance detached from practice.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-C-07-3",
+  "answer": "B",
+  "working": "P1-P2 objectivity as procedure; P4 criticism justified against degraded form; P5 defence as answerability.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-C-07-4",
+  "answer": "B",
+  "working": "P5: case is not that method makes journalism impartial but that it makes it answerable.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-C-07-5",
+  "answer": "C",
+  "working": "P2: method existed for reporters with strong opinions; say where each piece of information came from, prefer documents.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-G-05-1",
+  "answer": "A",
+  "working": "P2: they find it a room, lend it money, explain which offices to visit and which employers pay on time.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-G-05-2",
+  "answer": "D",
+  "working": "P2: first job or friendship outside frequently comes through someone met by way of the close circle; bonding is precondition of bridging.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-G-05-3",
+  "answer": "B",
+  "working": "P3: density that supports also watches; help comes with demand for conformity; the network stands in her way.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-G-05-4",
+  "answer": "D",
+  "working": "P4 criterion is permeability, not tightness: D is tight, helpful and lets members form outside ties. B lets go but gives little help; C is closure.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-C-05-1",
+  "answer": "B",
+  "working": "P1: managers rate almost everyone above average out of kindness and to avoid difficult conversations; the scale conveys no information.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-C-05-2",
+  "answer": "D",
+  "working": "P2: forcing a distribution on an all-good team manufactures distinctions; P3: able people learn to avoid strong teams.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-C-05-3",
+  "answer": "C",
+  "working": "P3 argument: helping a colleague is a cost when rated against them; if rank depends on helping colleagues, helping is rewarded.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-C-05-4",
+  "answer": "C",
+  "working": "P1 'Its defenders make a reasonable case'; P2 'the system assumes far more than it appears to'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-B-05-1",
+  "answer": "C",
+  "working": "P2: a translation is written in the idiom of its moment, which changes; the original is read as a historical text whose strangeness is forgiven.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-B-05-2",
+  "answer": "C",
+  "working": "P3: translation forces choices that settle what the original leaves open, so it records one generation's reading.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-B-05-3",
+  "answer": "B",
+  "working": "P2 says intelligibility is not the whole story; P3: choices shaped by an age's concerns look like interpretation when those concerns fade.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-B-05-4",
+  "answer": "C",
+  "working": "Each production must settle ambiguous lines, recording its era's reading, while the script, like the original, stays open.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-B-02-1",
+  "answer": "C",
+  "working": "P1 presents the ordinary episode and asks what moved him; P2-P4 offer competing explanations.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-B-02-2",
+  "answer": "D",
+  "working": "P2: 'merit of matching how lapses feel, and it explains why they cluster at the end of tiring days'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-B-02-3",
+  "answer": "A",
+  "working": "P3: 'He does not abandon his judgement so much as stop looking at it'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-B-02-4",
+  "answer": "B",
+  "working": "The claimed advantage is that arrangement strategies (out of sight, deciding in advance) work; B shows they do not.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-B-03-1",
+  "answer": "A",
+  "working": "P1: the effect survives when participants have watched the number being produced at random.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-B-03-2",
+  "answer": "A",
+  "working": "P2: older account, anchoring as failure of effort, adjustment stops too soon.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-B-03-3",
+  "answer": "A",
+  "working": "P3: effort is no cure; a more diligent search in the same direction gathers more of the same evidence.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-B-03-4",
+  "answer": "C",
+  "working": "P4: for anchors supplied by others, think deliberately against the number by asking what would make it wrong. D is the effort remedy the author rejects for such anchors.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-A-05-1",
+  "answer": "D",
+  "working": "P3: a toolkit gene acts in many tissues; a change to one of its switches can alter a single structure and leave the rest alone.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-A-05-2",
+  "answer": "A",
+  "working": "P4: common ancestry of the control system, 'not a common design for what is controlled'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-A-05-3",
+  "answer": "C",
+  "working": "P4: opposite error is assuming similar genes imply similar forms; B is the older error.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-A-05-4",
+  "answer": "D",
+  "working": "P1 expectation overturned by shared toolkit; P3 lesson accepted ('much truth'); P4 warns against overextension.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-C-04-1",
+  "answer": "A",
+  "working": "P2: 'It measures the pull of a headline at the instant of choice'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-C-04-2",
+  "answer": "C",
+  "working": "P3: 'not because readers have rejected it but because the measure in use was never designed to register its value'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-C-04-3",
+  "answer": "B",
+  "working": "P2 'the numbers are not lies' but misread as verdict; P4 screens should not be switched off.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-C-04-4",
+  "answer": "B",
+  "working": "If the same decline occurred where no metrics were used, the metrics-driven explanation of thinning is undercut.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ }
+]

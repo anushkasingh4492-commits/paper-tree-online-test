@@ -1,0 +1,92 @@
+[
+  {
+    "id": "JEE27-PHY-1015",
+    "candidate_id": "REV14-PHY-1015",
+    "stem": "A uniform sonometer string has vibrating length 0.50 m. At its initial tension its fundamental makes 4 beats/s with an unknown tuning fork; a very small increase in tension decreases the beat frequency. Multiplying the initial tension by 1.5625 gives 20 beats/s with the same fork, without specifying the sign of that frequency difference. Restore the initial tension and length. A uniform coating increases the string linear mass density by 44%, without changing its tension. A bridge is then moved inward until the coated string second harmonic makes 5 beats/s with a 250 Hz fork; a further very small inward movement decreases this beat frequency. Neglect stiffness and stretching.",
+    "request": "How far inward has the bridge moved from the 0.50 m setting, in cm?",
+    "value": 17.346938775510207,
+    "unit": "cm",
+    "wrong": [
+      18.627450980392158,
+      10.816326530612248,
+      18.0
+    ],
+    "explanation": "Let the initial string frequency be f and the unknown fork frequency F. The initial trend gives F=f+4. The changed tension gives |1.25f−F|=20, hence |0.25f−4|=20; only f=96 Hz is positive, and F=100 Hz. Initial wave speed is 2×0.50×96=96 m/s. The coating reduces it to 96/√1.44=80 m/s. Shortening raises the second harmonic frequency; decreasing beats therefore places it below 250 Hz, at 245 Hz. For the second harmonic, frequency=v/L, so L=80/245 m. The bridge moves 0.50−80/245=0.173469388 m, or 17.3469388 cm.",
+    "reason": "Resolve the first beat branch using two observations, propagate the density change at fixed tension, resolve a second beat branch from its trend, and invert the second-harmonic length relation."
+  },
+  {
+    "id": "JEE27-PHY-1427",
+    "candidate_id": "REV14-PHY-1427",
+    "stem": "A source prepares identical ideal positive nonrelativistic particles with the same unknown speed. In a calibration region they describe circles of radius 0.040 m in a perpendicular magnetic field of 0.30 T. In a separate trial, fresh particles from this source cross a retarding potential of 600 V and then describe circles of radius 0.030 m in a perpendicular field of 0.20 T. In a third trial, fresh particles from this source cross a total retarding potential of (600+ΔV) V, with ΔV positive, and enter normally at the near straight boundary of a magnetic strip of field 0.50 T perpendicular to their motion plane; its parallel boundaries are 0.010 m apart. Neglect all other forces and fields; the strip is unbounded along its boundaries.",
+    "request": "Find ΔV for which the circular trajectory in the strip just touches the far boundary tangentially.",
+    "value": 61.111111111111114,
+    "unit": "V",
+    "wrong": [
+      600,
+      661.1111111111111,
+      122.22222222222223
+    ],
+    "explanation": "Write k=q/m and v₀ for the initial speed supplied by the source. The first circle gives v₀=0.30×0.040 k=0.012k; after 600 V retardation, v₁=0.20×0.030 k=0.006k. Energy gives v₀²−v₁²=1200k, so k=1200/(0.012²−0.006²)=1.11111111×10⁷ C/kg. In the strip the maximum normal penetration is its radius. Tangency to the far boundary requires radius 0.010 m, hence v₂=0.50×0.010k=0.005k. The additional retardation obeys 2kΔV=v₁²−v₂², giving ΔV=k(0.006²−0.005²)/2=550/9 V. The result is positive and leaves nonzero kinetic energy. Equivalently, eliminating k directly gives ΔV/600=(0.006²−0.005²)/(0.012²−0.006²); both routes use the two measured curvatures, the calibration potential and the tangency condition.",
+    "reason": "Link two measured curvatures by retarding work, infer or eliminate the charge-to-mass ratio, and impose the strip tangency condition to obtain the additional energy loss. A ratio solution still requires all three magnetic geometries and the calibration potential."
+  },
+  {
+    "id": "JEE27-PHY-1548",
+    "candidate_id": "REV14-PHY-1548",
+    "stem": "A coil of unknown constant inductance L and positive resistance r is connected to an ideal 18 V DC source. Its steady current is 3 A; during the initial growth from zero current, its current is increasing at 4 A/s when it equals 1 A. Once the steady state has been reached, the source is removed and an extra 6 Ω resistor completes the closed coil loop. During this decay, a switch acts when the heat generated in the extra resistor reaches 3 J. It reconnects the 18 V source with polarity opposite to the original current direction, while retaining the extra 6 Ω resistor in series. Switching is ideal, current is continuous, and no other losses occur.",
+    "request": "Find the time after this reconnection at which the current first reaches 0.50 A in the direction opposite to its original direction.",
+    "value": 0.3295084288658302,
+    "unit": "s",
+    "wrong": [
+      0.37601934919406854,
+      0.313190742123842,
+      0.6590168577316604
+    ],
+    "explanation": "Steady current gives r=18/3=6 Ω. During growth, L(dI/dt)=18−rI gives L=(18−6)/4=3 H. At the start of decay, magnetic energy is (1/2)×3×3²=13.5 J. The coil resistance and extra resistor are equal, so each receives half the dissipated energy; 3 J in the extra resistor means 6 J total loss. Remaining energy is 7.5 J and switching current is √5 A in the original direction. After reconnection, total resistance is 12 Ω, the signed final current is −1.5 A, and L/R=0.25 s. Thus I=−1.5+(√5+1.5)exp(−4t). Setting I=−0.50 gives t=ln(√5+1.5)/4 s. The decay heat must not be treated as the total magnetic-energy loss.",
+    "reason": "Infer both coil parameters, determine a heat-triggered switching current using dissipation sharing, and solve the reversed-source transient with current continuity and a signed target."
+  },
+  {
+    "id": "JEE27-PHY-1745",
+    "candidate_id": "REV14-PHY-1745",
+    "stem": "A double slit has equal individual slit widths and is illuminated simultaneously by wavelengths 500 nm and 600 nm. The two colours are mutually incoherent, while each colour is coherent across the slits. For 500 nm light, the interference fringe spacing is 2.0 mm and the central single-slit diffraction envelope has width 48 mm between its first minima. A thin uniform plate of refractive index 1.50 and thickness 1.50 μm, replacing the same thickness of air, is inserted in one slit path. For this idealisation the refractive index is the same for both wavelengths and the plate changes only the relative phase, leaving both diffraction envelopes unchanged and centred at y=0. Use small angles. Define positive y so that the total optical path difference after insertion is dy/D+(n−1)t, where d is slit separation and D is screen distance.",
+    "request": "How many distinct screen positions lie strictly inside both central diffraction envelopes and give constructive interference for each colour simultaneously? Count phase differences that are integer multiples of 2π; do not count an envelope boundary.",
+    "value": 4,
+    "unit": "",
+    "wrong": [
+      2,
+      3,
+      5
+    ],
+    "explanation": "For 500 nm, D/d=2.0 mm/(500 nm)=4000. The added path is (1.50−1)×1.50 μm=750 nm. Simultaneous constructive interference requires the total path difference to be m×500 nm=p×600 nm, hence 3000k nm for integer k. Screen positions are therefore y=4000(3000k−750) nm=(12k−3) mm. The 500 nm central envelope has half-width 24 mm; the 600 nm half-width is 28.8 mm. Their strict overlap is −24<y<24 mm. The allowed integers are k=−1,0,1,2, giving y=−15,−3,9,21 mm. There are four positions. The wavelengths are not to be interfered with one another; the phase condition is imposed separately for each colour.",
+    "reason": "Combine two integer-order interference conditions, include the plate phase shift, determine the overlap of wavelength-dependent diffraction envelopes, and count only strictly interior positions."
+  },
+  {
+    "id": "JEE27-PHY-2046",
+    "candidate_id": "REV14-PHY-2046",
+    "stem": "Node X connects to a variable ideal source through an unknown positive resistance R and to ground through 800 Ω. An ideal diode has its anode at X and cathode at an unknown fixed positive reference voltage V₀; the reference can absorb current. In a DC calibration with source voltage 4 V, the diode is nonconducting and X is at 2 V. In a second calibration with source voltage 12 V, the diode conducts 5.0 mA into the reference. The same circuit is then driven periodically: source voltage rises linearly from 0 to 16 V in 1.0 s and falls linearly to 0 in the next 1.0 s. The diode has zero forward voltage and zero reverse current. There is no capacitance or inductance, and both resistances and the reference remain unchanged.",
+    "request": "Find the total charge delivered through the diode into the reference during one complete 2.0 s cycle, in mC.",
+    "value": 5,
+    "unit": "mC",
+    "wrong": [
+      2.5,
+      10,
+      20
+    ],
+    "explanation": "The off-state divider gives 2=4×800/(R+800), so R=800 Ω. In the conducting calibration, (12−V₀)/800−V₀/800=0.005 A, giving V₀=4 V. The diode conducts only when the open-diode divider would exceed 4 V, namely when V_s>8 V. Then I_D=(V_s−8)/800 A; otherwise I_D=0. The two ramps together spend dt=dV_s/8 per voltage interval. Thus Q=∫₈¹⁶(V_s−8)dV_s/6400=32/6400 C=0.005 C=5 mC. Current is zero at the threshold and remains nonnegative on the conducting interval.",
+    "reason": "Infer resistance and clamp voltage from distinct diode states, establish the switching threshold, and integrate only the conducting portion of both source ramps."
+  },
+  {
+    "id": "JEE27-PHY-2159",
+    "candidate_id": "REV14-PHY-2159",
+    "stem": "In an ideal metre bridge, a uniform test wire X in the left gap balances a 6 Ω standard in the right gap at 40 cm from the left end. Connecting an unknown resistor S in parallel with X changes the balance point to 25 cm from the left. Disconnect S, stretch the test wire uniformly without loss of volume, and measure again at the original temperature; assume its resistivity is unchanged. Connect the stretched wire in series with the same S in the left gap and replace the right-gap standard with 13 Ω: the bridge now balances at 50 cm from the left. Before stretching, a screw gauge of pitch 0.50 mm and 50 circular divisions gave sleeve reading 0.50 mm and circular reading 32 for the wire diameter; its positive zero error was 2 circular divisions. The wire is cylindrical before and after stretching. Neglect contact and bridge end resistances.",
+    "request": "Find the wire diameter after stretching, in mm.",
+    "value": 0.6531972647421809,
+    "unit": "mm",
+    "wrong": [
+      0.5333333333333333,
+      0.8,
+      0.9797958971132712
+    ],
+    "explanation": "Initially X=6×40/60=4 Ω. The parallel combination is 6×25/75=2 Ω, hence S=4 Ω. In the last balance the left-gap series combination equals 13 Ω, so the stretched wire has resistance 13−4=9 Ω. For fixed volume and resistivity, A is inversely proportional to length and R is proportional to length squared. Therefore L_new/L_old=√(9/4)=1.5. The gauge least count is 0.50/50=0.01 mm, and the corrected original diameter is 0.50+(32−2)×0.01=0.80 mm. Since diameter squared is inversely proportional to length, d_new=0.80/√1.5=0.653197265 mm.",
+    "reason": "Use three bridge configurations to isolate the stretched-wire resistance, connect resistance change to constant-volume deformation, and apply the gauge zero correction before converting the length ratio into diameter."
+  }
+]

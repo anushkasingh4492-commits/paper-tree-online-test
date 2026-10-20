@@ -1,0 +1,74 @@
+[
+ {
+  "id": "R04-A-08-4",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Blind solver S2 flagged that 'mistaken' in the correct answer is stronger than the author's hedged language ('may look quite different', 'may reasonably ask'); the defence of the 'preserve as long as possible' option also leaned on 'permanent by default', which fits a government that actively decides to keep the silence only loosely.",
+  "fix": "Correct answer softened to 'hard to justify, since the amnesty was defensible as a provisional arrangement...'; that option's defence now cites paragraph 4 ('rests indefinitely') and paragraph 3 ('the balance may look quite different'); explanation rewritten to match.",
+  "changed": true
+ },
+ {
+  "id": "R04-A-08-4",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Misconception referred to 'the second distractor' (house-style word and a positional reference that the letter shuffle makes meaningless).",
+  "fix": "Rewritten to name the option by content (the option that condemns the original sealing).",
+  "changed": true
+ },
+ {
+  "id": "R04-A-05-2",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Misconception referred to 'the first distractor'.",
+  "fix": "Rewritten to name the option by content.",
+  "changed": true
+ },
+ {
+  "id": "R04-A-01-4",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation says 'The key applies exactly this advice'.",
+  "fix": "Changed to 'The correct answer'.",
+  "changed": true
+ },
+ {
+  "id": "R04-A-02-1",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation says 'The key paraphrases this sentence'.",
+  "fix": "Changed to 'The correct answer'.",
+  "changed": true
+ },
+ {
+  "id": "R04-A-04-4",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation says 'The key holds both the claim and the condition'.",
+  "fix": "Changed to 'The correct answer'.",
+  "changed": true
+ },
+ {
+  "id": "R04-A-06-3",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation says 'The key describes exactly that procedure'.",
+  "fix": "Changed to 'The correct answer'.",
+  "changed": true
+ },
+ {
+  "id": "R04-A-07-3",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation quotations closed with full stops that are not in the passage ('...flatter.' and '...attempting to be history.' where the passage sentences continue).",
+  "fix": "Punctuation moved outside the quotations so both match the passage exactly.",
+  "changed": true
+ },
+ {
+  "id": "R04-A-08-5",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "The option ranking permanent silence above renewed conflict could be argued from the literal phrase 'The worst outcome'; checked: context (paragraph 5, 'not silence as such but') makes the comparison one among kinds of silence, and the defence states this.",
+  "fix": "none: the correct answer is clearly better and the defence is sound",
+  "changed": false
+ }
+]

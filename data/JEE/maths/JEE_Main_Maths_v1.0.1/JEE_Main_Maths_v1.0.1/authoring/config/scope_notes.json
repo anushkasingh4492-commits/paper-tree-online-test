@@ -1,0 +1,24 @@
+{
+ "basis": "NTA JEE Main 2026 Paper 1 Mathematics syllabus, strict reading (user decision 2026-10-07: strict syllabus only).",
+ "unit_2_included": [
+  "ordered pairs, a + ib, powers of i, conjugate, algebra, square roots",
+  "Argand plane, modulus, principal argument in (-pi, pi], polar form, simple loci and regions, extremal modulus",
+  "quadratics with real and complex coefficients, discriminant and nature of roots, sign, range and extrema of quadratic expressions, location of roots, equations reducible to quadratics",
+  "relations between roots and coefficients, symmetric functions, transformed-root equations, common roots, S_n recurrences from the quadratic itself",
+  "omega only as a root of x^2 + x + 1 = 0 (5 items, including two with roots 2 omega type)"
+ ],
+ "unit_2_excluded": [
+  "De Moivre's theorem",
+  "nth roots of unity beyond the quadratic case",
+  "rotation theorem and argument of (z3 - z1)/(z2 - z1)",
+  "cubic and higher polynomial theory except equations reducible to quadratics",
+  "mathematical induction"
+ ],
+ "whole_bank_exclusions_planned": [
+  "planes in 3D geometry (2026 syllabus lists lines only)",
+  "special series beyond AP, GP and AM-GM",
+  "trigonometric equations and heights and distances",
+  "binomial distribution by name",
+  "mathematical reasoning and induction"
+ ]
+}

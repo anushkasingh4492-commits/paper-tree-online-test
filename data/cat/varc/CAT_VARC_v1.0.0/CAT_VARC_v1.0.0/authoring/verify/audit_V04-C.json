@@ -1,0 +1,50 @@
+[
+ {
+  "id": "V04-C-017",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Both blind solvers noted gap (3) as weakly possible: the concluding 'then' sentence could follow the claim of unfairness before the examples.",
+  "fix": "Missing sentence now gathers up the three examples ('a clinic, an office or the moments before an accident'), which locks it after the final investigator sentence; explanation, gap (3) reason, misconception and difficulty reason updated.",
+  "changed": true
+ },
+ {
+  "id": "V04-C-025",
+  "category": "E1",
+  "severity": "major",
+  "finding": "The 'then' conclusion could be defended at gap (2) as a topic sentence after 'Retirement removes all of these at once', since 'not only a matter of money' links forward to 'not simply the ones with the largest savings'; the gap (2) reason was weak.",
+  "fix": "Missing sentence rewritten to refer to 'that slow rebuilding', whose only antecedent is the final sentence; final sentence also cleaned up (garbled 'without being asked' removed). Explanation and gap (1)/(2) reasons updated.",
+  "changed": true
+ },
+ {
+  "id": "V04-C-025",
+  "category": "E6",
+  "severity": "minor",
+  "finding": "Last sentence ended with the garbled phrase 'build the structure that work once provided without being asked'.",
+  "fix": "Rewritten as 'build for themselves the structure that work once provided'.",
+  "changed": true
+ },
+ {
+  "id": "V04-C-023",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "The night shift example could be argued at gap (2) as a direct objection to the prescription; the gap (2) reason relied only on 'The prescription assumes' needing to follow the prescription, which a definite noun phrase does not require.",
+  "fix": "Missing sentence now says the household 'lacks the first of those conditions', tying it to the list of conditions in the fourth sentence; explanation, gap (1)/(2) reasons and misconception updated.",
+  "changed": true
+ },
+ {
+  "id": "V04-C-004",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "difficulty_reason used the word 'trap'.",
+  "fix": "Reworded to 'strongly tempting'; same fix in V04-C-012, -018, -020, -022 ('distractor', 'trap').",
+  "changed": true
+ },
+ {
+  "id": "V04-C-007",
+  "category": "E4",
+  "severity": "minor",
+  "finding": "Labelled Difficult, but the contrast marker 'however' plus claim-before-evidence makes gap (1) fairly quick to find; closer to Medium.",
+  "fix": "none: label defensible at the upper edge and changing it would break the exact difficulty quota.",
+  "changed": false
+ }
+]

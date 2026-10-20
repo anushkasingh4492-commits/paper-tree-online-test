@@ -1,0 +1,42 @@
+[
+ {
+  "id": "V03-B-022",
+  "category": "E5",
+  "severity": "minor",
+  "finding": "Explanation asserts that if every first-person narrator were unreliable 'the special craft described would lose its point', an overclaim the text does not support.",
+  "fix": "Clause replaced with: it shifts attention from the novelist's craft to a general thesis about all self-report.",
+  "changed": true
+ },
+ {
+  "id": "V03-B-019",
+  "category": "E4",
+  "severity": "minor",
+  "finding": "Odd sentence (penicillin's early history) is a change of period, close to Easy for a Medium label.",
+  "fix": "none: shares the drug vocabulary; Medium defensible and exact quota kept. Stronger same-function rewrites (e.g. on resistance-gene transfer) would risk a second removable sentence.",
+  "changed": false
+ },
+ {
+  "id": "V03-B-025",
+  "category": "E4",
+  "severity": "minor",
+  "finding": "The odd sentence directly contradicts sentence 2 ('rarely ignorance'), which makes it easier to spot than a typical Difficult item.",
+  "fix": "none: removing sentence 2 instead still leaves a clash with the 'reasonable response' conclusion, so the item needs whole-argument tracking; Difficult kept for quota.",
+  "changed": false
+ },
+ {
+  "id": "V03-B-009",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Odd sentence about firefighting aircraft could be read as an elaboration after sentence 1; checked whether that makes another sentence removable.",
+  "fix": "none: no other sentence can be dropped ('the policy' and 'these regular burns' need sentences 1 and 2), and the odd sentence serves no step of the argument; key unique.",
+  "changed": false
+ },
+ {
+  "id": "(file)",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Blind-solver notes file verify/notes/V03-B.json is empty (no disagreements or flags). All 25 items solved cold; contradiction-type items (021, 023, 025) checked by removing the contradicted sentence instead, each leaving a broken reference or clash; key unique throughout.",
+  "fix": "none: no solver notes to dismiss.",
+  "changed": false
+ }
+]

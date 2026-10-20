@@ -1,0 +1,46 @@
+{
+ "unit_number": 6,
+ "unit_name": "Sequence and Series",
+ "branch": "Algebra",
+ "count": 180,
+ "draft_files": [
+  "drafts/u06_a.py",
+  "drafts/u06_b.py",
+  "drafts/u06_c.py"
+ ],
+ "alias_groups": {
+  "ALIAS-ERR-U06-A-01": [
+   "U06-A-022",
+   "U06-A-046"
+  ],
+  "ALIAS-ERR-U06-B-01": [
+   "U06-B-020",
+   "U06-B-047"
+  ]
+ },
+ "numerical_selection": [
+  "U06-A-046",
+  "U06-B-047",
+  "U06-C-046",
+  "U06-A-047",
+  "U06-B-048",
+  "U06-C-049",
+  "U06-A-048",
+  "U06-B-049",
+  "U06-C-052",
+  "U06-A-050",
+  "U06-B-053",
+  "U06-C-054",
+  "U06-A-022",
+  "U06-B-021",
+  "U06-C-019",
+  "U06-A-023",
+  "U06-B-025",
+  "U06-C-022",
+  "U06-A-024",
+  "U06-B-029",
+  "U06-A-001",
+  "U06-B-003",
+  "U06-C-002"
+ ]
+}

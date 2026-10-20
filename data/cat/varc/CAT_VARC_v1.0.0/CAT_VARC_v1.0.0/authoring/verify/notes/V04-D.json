@@ -1,0 +1,82 @@
+[
+ {
+  "id": "V04-D-004",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "4",
+    "key": "4",
+    "working": "'In short' summary of shortage vs famine arrangements closes the paragraph after the valley contrast.",
+    "alternative": "",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "4",
+    "key": "4",
+    "working": "'In short' summary; gap 3 would break 'As a result' which follows the differing arrangements.",
+    "alternative": "3 is weakly possible as a mid-paragraph summary, but it would disrupt 'As a result'.",
+    "issue": ""
+   }
+  }
+ },
+ {
+  "id": "V04-D-005",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "3",
+    "key": "3",
+    "working": "'Such extensions, however, carry a cost' pivots from the boot/jacket example (2) to the explanation of brand dilution starting 'A brand is valuable because'.",
+    "alternative": "",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "3",
+    "key": "3",
+    "working": "After the boots-jackets example, 'however' turns to cost, which (3) then explains: blurred meaning and spillover damage.",
+    "alternative": "2 weakly possible, but it would separate the temptation from its example.",
+    "issue": ""
+   }
+  }
+ },
+ {
+  "id": "V04-D-006",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "1",
+    "key": "1",
+    "working": "'Call this' refers to the 'too much spent to stop' argument in sentence 1; 'On that view' then sets out the economists' alternative.",
+    "alternative": "",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "1",
+    "key": "1",
+    "working": "Placed at 1, 'Economists call this' names the 'too much spent to stop' argument and 'On that view' then refers to the economists' forward-looking view.",
+    "alternative": "2: after 'earlier ones were wasted too' also reads, and 'Yet the charge of sunk cost reasoning' follows it; but then 'On that view' lacks a proper antecedent.",
+    "issue": "Gaps 1 and 2 are both plausible on a quick read; the key depends on resolving 'On that view'."
+   }
+  }
+ },
+ {
+  "id": "V04-D-020",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "3",
+    "key": "3",
+    "working": "Reader-reaction adjustments are a further serial trait ('also') that leads into 'Some critics have regarded these traits as compromises with the market' and anticipates 'loose, accommodating plots'.",
+    "alternative": "2: At (2) it would also continue the list of serial effects, but it would split 'until the next' from 'That month's wait', so (3) is better.",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "3",
+    "key": "3",
+    "working": "'also' adds reader-reaction trait after cliffhangers and crowded casts; supports 'loose, accommodating plots' before critics' verdict",
+    "alternative": "",
+    "issue": ""
+   }
+  }
+ }
+]

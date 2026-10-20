@@ -1,0 +1,22 @@
+[
+ {
+  "id": "R05-E-03-1",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "C",
+    "key": "C",
+    "working": "P1: rational to run; once enough run, the rumour becomes true.",
+    "alternative": "",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "D",
+    "key": "D",
+    "working": "P1: running is 'rational... once enough people run, the rumour becomes true'; bank sound, fails because believed unsound.",
+    "alternative": "Option D says the rumour 'falsely claimed' losses 'already existed'; the rumour only said the bank was 'in trouble'. Close enough, D still clearly best.",
+    "issue": ""
+   }
+  }
+ }
+]

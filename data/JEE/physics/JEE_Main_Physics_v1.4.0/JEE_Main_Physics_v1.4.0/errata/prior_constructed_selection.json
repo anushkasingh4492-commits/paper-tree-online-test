@@ -1,0 +1,502 @@
+{
+  "seed": null,
+  "max_marks": 100,
+  "marking": {
+    "correct": 4,
+    "incorrect": -1,
+    "unattempted": 0
+  },
+  "basis": "Official JEE Main 2026 Paper 1 Physics format",
+  "questions": [
+    {
+      "id": "JEE27-PHY-1928",
+      "source_class": "XII",
+      "unit_number": 18,
+      "difficulty": "Easy",
+      "assumptions": "Use the stated Bohr/nuclear approximations. Nuclear targets are fixed in closest-approach calculations; quoted mass defects correspond to energy Δmc². Line counts refer to all allowed cascades across a sample, ignoring fine structure.",
+      "figures": [],
+      "concept_family": "SRC-c07544d26bd8",
+      "number": 1,
+      "section": "A",
+      "question": "A nuclide has atomic number 92 and mass number 238. The number of neutrons in its nucleus is:",
+      "options": {
+        "A": "92",
+        "B": "238",
+        "C": "330",
+        "D": "146"
+      }
+    },
+    {
+      "id": "JEE27-PHY-1005",
+      "source_class": "XI",
+      "unit_number": 10,
+      "difficulty": "Difficult",
+      "assumptions": "Use linear, lossless sinusoidal waves and small-amplitude pendulum motion unless stated otherwise. Organ-pipe lengths are effective lengths if no end correction is supplied. Path-difference interference assumes initially in-phase coherent sources.",
+      "figures": [],
+      "concept_family": "JM-shm_inverse",
+      "number": 2,
+      "section": "A",
+      "question": "A particle performs ideal SHM along a line. At displacement 0.1 m its speed is 4 m/s; at displacement 0.2 m its speed is 2 m/s. Its mass is 0.5 kg and displacement is measured from equilibrium. Find the maximum restoring-force magnitude. Choose the closest value.",
+      "options": {
+        "A": "40 N",
+        "B": "44.72 N",
+        "C": "20 N",
+        "D": "22.36 N"
+      }
+    },
+    {
+      "id": "JEE27-PHY-1229",
+      "source_class": "XII",
+      "unit_number": 12,
+      "difficulty": "Medium",
+      "assumptions": "Use steady currents, ideal connecting wires and uniform ohmic conductors at fixed temperature unless specified otherwise. Resistivity is unchanged by stretching in the stated elementary model. Wheatstone arms P,Q,R,S mean AB,BC,AD,DC; source AC and detector BD.",
+      "figures": [],
+      "concept_family": "SRC-ed40965898ea",
+      "number": 3,
+      "section": "A",
+      "question": "In a single loop, a cell of emf E and negligible internal resistance drives a current of 2 A through resistors of 3 Ω and 5 Ω in series, while a second cell of emf 4 V in the same loop opposes it. The value of E is:",
+      "options": {
+        "A": "20 V",
+        "B": "16 V",
+        "C": "14 V",
+        "D": "12 V"
+      }
+    },
+    {
+      "id": "JEE27-PHY-0666",
+      "source_class": "XI",
+      "unit_number": 7,
+      "difficulty": "Easy",
+      "assumptions": "Use the specified ideal-fluid or Stokes-flow model. Neglect losses and end/wall effects where the ideal model is invoked; thermal-expansion formulae are first order.",
+      "figures": [],
+      "concept_family": "SRC-751265d19728",
+      "number": 4,
+      "section": "A",
+      "question": "A rise in temperature of 1 kelvin is the same as a rise of:",
+      "options": {
+        "A": "1° Celsius, and of 0.56° Fahrenheit",
+        "B": "274.15° Celsius, and of 33.8° Fahrenheit",
+        "C": "1° Celsius, and of 1.8° Fahrenheit",
+        "D": "1.8° Celsius, and of 1° Fahrenheit"
+      }
+    },
+    {
+      "id": "JEE27-PHY-1321",
+      "source_class": "XII",
+      "unit_number": 13,
+      "difficulty": "Easy",
+      "assumptions": "Use steady source currents and vacuum unless specified otherwise. Particle motion is nonrelativistic, with other forces neglected in magnetic-orbit questions. Listed charge magnitudes are positive. Neglect end and demagnetising effects in ideal long-solenoid models.",
+      "figures": [],
+      "concept_family": "SRC-e2d8de240c2b",
+      "number": 5,
+      "section": "A",
+      "question": "According to the Curie law, the magnetic susceptibility of a paramagnetic material is:",
+      "options": {
+        "A": "independent of its temperature",
+        "B": "inversely proportional to its absolute temperature",
+        "C": "inversely proportional to the square of its absolute temperature",
+        "D": "directly proportional to its absolute temperature"
+      }
+    },
+    {
+      "id": "JEE27-PHY-0621",
+      "source_class": "XI",
+      "unit_number": 7,
+      "difficulty": "Easy",
+      "assumptions": "Use the specified ideal-fluid or Stokes-flow model. Neglect losses and end/wall effects where the ideal model is invoked; thermal-expansion formulae are first order.",
+      "figures": [],
+      "concept_family": "SRC-e1a8f7e3404c",
+      "number": 6,
+      "section": "A",
+      "question": "The compressibility of a material is:",
+      "options": {
+        "A": "equal to its Young's modulus",
+        "B": "the reciprocal of its density",
+        "C": "equal to pressure times volume",
+        "D": "the reciprocal of its bulk modulus"
+      }
+    },
+    {
+      "id": "JEE27-PHY-0953",
+      "source_class": "XI",
+      "unit_number": 10,
+      "difficulty": "Difficult",
+      "assumptions": "Use linear, lossless sinusoidal waves and small-amplitude pendulum motion unless stated otherwise. Organ-pipe lengths are effective lengths if no end correction is supplied. Path-difference interference assumes initially in-phase coherent sources.",
+      "figures": [],
+      "concept_family": "REV-accelerating_pendulum_inverse",
+      "number": 7,
+      "section": "A",
+      "question": "A small-angle pendulum of length 1 m is in a vehicle with constant unknown horizontal acceleration a and unknown upward acceleration b. Its equilibrium string makes angle θ with the downward vertical, where sinθ=0.6, cosθ=0.8. Its measured small-oscillation period is 1.404962946 s. Take g=10 m/s². The vehicle’s upward acceleration is then set to zero while its horizontal acceleration remains a. Find the new equilibrium angle from the downward vertical. Choose the closest value.",
+      "options": {
+        "A": "25.1 °",
+        "B": "-50.19 °",
+        "C": "50.19 °",
+        "D": "100.4 °"
+      }
+    },
+    {
+      "id": "JEE27-PHY-2097",
+      "source_class": "XI",
+      "unit_number": 20,
+      "difficulty": "Medium",
+      "assumptions": "Treat drawings as schematic. Apply zero-error and parallax corrections; instrument idealisations and experimental limits stated in the question take precedence.",
+      "figures": [
+        {
+          "file": "figures/experiment-09-readings.png",
+          "alt_text": "Water mass: 0.20 kg; initial temperature 20°C; Calorimeter heat capacity: 80 J/K; Solid mass: 0.10 kg; initial temperature 100°C; Final equilibrium temperature: 30°C; Water specific heat: 4200 J/(kg K); negligible heat loss",
+          "source": "ORIGINAL",
+          "width": 1600,
+          "height": 900
+        }
+      ],
+      "concept_family": "SRC-EXPERIMENT-9",
+      "number": 8,
+      "section": "A",
+      "question": "In an otherwise identical trial with twice the solid mass, find the new final temperature. Use the readings in experimental panel 09. Choose the closest value.",
+      "options": {
+        "A": "75.56 °C",
+        "B": "37.78 °C",
+        "C": "-37.78 °C",
+        "D": "18.89 °C"
+      }
+    },
+    {
+      "id": "JEE27-PHY-0810",
+      "source_class": "XI",
+      "unit_number": 8,
+      "difficulty": "Easy",
+      "assumptions": "Work done BY the gas is positive. Unless a process is explicitly irreversible, gas-law path calculations are quasistatic and reversible with constant stated heat capacities; the only mechanical work is p–V work.",
+      "figures": [],
+      "concept_family": "JM-adiabatic_then_isochoric",
+      "number": 9,
+      "section": "A",
+      "question": "One mole of a monatomic ideal gas initially at 800 K and volume V expands reversibly and adiabatically to ξV, then is heated at fixed volume back to 800 K. Use γ = 5/3 and R = 8 J/(mol K). The recorded value of the final-to-initial pressure ratio after both stages is 0.125. Which listed positive value of ξ is consistent with this measurement?",
+      "options": {
+        "A": "8",
+        "B": "12",
+        "C": "16",
+        "D": "4"
+      }
+    },
+    {
+      "id": "JEE27-PHY-1323",
+      "source_class": "XII",
+      "unit_number": 13,
+      "difficulty": "Easy",
+      "assumptions": "Use steady source currents and vacuum unless specified otherwise. Particle motion is nonrelativistic, with other forces neglected in magnetic-orbit questions. Listed charge magnitudes are positive. Neglect end and demagnetising effects in ideal long-solenoid models.",
+      "figures": [],
+      "concept_family": "SRC-d784bf3d4f86",
+      "number": 10,
+      "section": "A",
+      "question": "When a diamagnetic specimen is heated, its magnetic susceptibility:",
+      "options": {
+        "A": "decreases in inverse proportion to the absolute temperature",
+        "B": "increases in direct proportion to the absolute temperature",
+        "C": "remains practically unchanged",
+        "D": "falls abruptly to zero once a certain temperature is crossed"
+      }
+    },
+    {
+      "id": "JEE27-PHY-1149",
+      "source_class": "XII",
+      "unit_number": 11,
+      "difficulty": "Medium",
+      "assumptions": "Use vacuum/air and ideal linear isotropic dielectrics unless specified otherwise. Neglect capacitor fringing, leakage and test-charge disturbance. Set potential zero at infinity for isolated finite charges; for a dipole set U=0 at 90°. Slow external work is quasistatic.",
+      "figures": [],
+      "concept_family": "JM-dipole_energy",
+      "number": 11,
+      "section": "A",
+      "question": "A rigid electric dipole of moment 2 μC m is in a uniform 5000 N/C electric field. Initially its axis makes 60° with the field. A slow external rotation brings it to 120°. The dipole’s moment of inertia about the rotation axis is 0.0001 kg m². In a separate trial the dipole is released from rest at its initial angle. With no damping, find its angular speed when it first aligns with the field. Choose the closest value.",
+      "options": {
+        "A": "5 rad/s",
+        "B": "20 rad/s",
+        "C": "10 rad/s",
+        "D": "14.14 rad/s"
+      }
+    },
+    {
+      "id": "JEE27-PHY-1318",
+      "source_class": "XII",
+      "unit_number": 13,
+      "difficulty": "Medium",
+      "assumptions": "Use steady source currents and vacuum unless specified otherwise. Particle motion is nonrelativistic, with other forces neglected in magnetic-orbit questions. Listed charge magnitudes are positive. Neglect end and demagnetising effects in ideal long-solenoid models.",
+      "figures": [],
+      "concept_family": "SRC-db1acdfe47b3",
+      "number": 12,
+      "section": "A",
+      "question": "The magnetic susceptibility of a paramagnetic material is 3.6 × 10⁻⁴ at 300 K. Assuming the Curie law, its susceptibility at 450 K is:",
+      "options": {
+        "A": "2.4 × 10⁻⁴",
+        "B": "1.6 × 10⁻⁴",
+        "C": "3.6 × 10⁻⁴",
+        "D": "5.4 × 10⁻⁴"
+      }
+    },
+    {
+      "id": "JEE27-PHY-0444",
+      "source_class": "XI",
+      "unit_number": 5,
+      "difficulty": "Medium",
+      "assumptions": "Rigid bodies and fixed axes are ideal unless specified otherwise; moments of inertia refer to the named axis.",
+      "figures": [],
+      "concept_family": "SRC-c6f4c6d2ab90",
+      "number": 13,
+      "section": "A",
+      "question": "A rigid body rotates about a principal axis through its centre of mass with angular-momentum magnitude L and moment of inertia I. Its rotational kinetic energy is:",
+      "options": {
+        "A": "L² / (2 I)",
+        "B": "L / (2 I)",
+        "C": "2 I / L²",
+        "D": "L² / (2 I²)"
+      }
+    },
+    {
+      "id": "JEE27-PHY-1826",
+      "source_class": "XII",
+      "unit_number": 17,
+      "difficulty": "Difficult",
+      "assumptions": "Use ordinary single-photon emission, fixed work function and nonrelativistic matter waves. Neglect contact potentials and space charge; emission comparisons use frequencies above threshold unless stated otherwise.",
+      "figures": [],
+      "concept_family": "REV-photoelectric_unknown_offset",
+      "number": 14,
+      "section": "A",
+      "question": "A photoelectric apparatus displays stopping reading S=Kmax/e+δ, where δ is an unknown constant instrumental offset. For photon energies 3 and 5 eV the displayed readings are 0.6 and 2.6 V. An independent calibration shows display δ=0.1 V when true voltage is zero. Under illumination with photon energy ξ eV, emitted electrons are accelerated through a further 2 V. Use λ(nm)=√[0.0150/K(eV)] for a nonrelativistic electron and hc=1240 eV nm. In this arrangement, the following outcome is measured: their final-to-initial speed ratio across the extra accelerating stage = 1.527525232 . Which listed positive value of ξ is consistent with that outcome?",
+      "options": {
+        "A": "8",
+        "B": "4",
+        "C": "6",
+        "D": "3"
+      }
+    },
+    {
+      "id": "JEE27-PHY-1862",
+      "source_class": "XII",
+      "unit_number": 18,
+      "difficulty": "Medium",
+      "assumptions": "Use the stated Bohr/nuclear approximations. Nuclear targets are fixed in closest-approach calculations; quoted mass defects correspond to energy Δmc². Line counts refer to all allowed cascades across a sample, ignoring fine structure.",
+      "figures": [],
+      "concept_family": "SRC-ab1a9ce430b1",
+      "number": 15,
+      "section": "A",
+      "question": "Suppose the angular momentum of the electron in a hydrogen atom were quantised as n h/(4 π) instead of n h/(2 π), all other physics being unchanged. The ground state energy of hydrogen would then become:",
+      "options": {
+        "A": "-3.4 eV",
+        "B": "-6.8 eV",
+        "C": "-54.4 eV",
+        "D": "-27.2 eV"
+      }
+    },
+    {
+      "id": "JEE27-PHY-1011",
+      "source_class": "XI",
+      "unit_number": 10,
+      "difficulty": "Medium",
+      "assumptions": "Use linear, lossless sinusoidal waves and small-amplitude pendulum motion unless stated otherwise. Organ-pipe lengths are effective lengths if no end correction is supplied. Path-difference interference assumes initially in-phase coherent sources.",
+      "figures": [],
+      "concept_family": "JM-spring_cut",
+      "number": 16,
+      "section": "A",
+      "question": "A uniform spring of force constant 60 N/m is cut into lengths in the ratio 1:2. The two pieces are connected in parallel to a 1 kg block on a smooth horizontal surface. The block is pulled 0.1 m from the common equilibrium position and released. Suitably offset fixed supports make BOTH spring pieces unstretched at the common equilibrium. Their axes are parallel to the motion, and they remain Hookean throughout. Find the maximum elastic energy in the shorter piece. Choose the closest value.",
+      "options": {
+        "A": "1.35 J",
+        "B": "0.45 J",
+        "C": "0.3 J",
+        "D": "0.9 J"
+      }
+    },
+    {
+      "id": "JEE27-PHY-1609",
+      "source_class": "XII",
+      "unit_number": 15,
+      "difficulty": "Difficult",
+      "assumptions": "Use a plane wave in vacuum unless stated otherwise. Spectrum boundaries are approximate conventional bands, not sharp universal cutoffs; diagrams are schematic.",
+      "figures": [
+        {
+          "file": "figures/wave-fields.png",
+          "alt_text": "At a selected point, E and B lie along mutually perpendicular transverse directions. No phase or magnitude relation is supplied.",
+          "source": "ORIGINAL",
+          "width": 1600,
+          "height": 900
+        }
+      ],
+      "concept_family": "REV-wave_photo_current",
+      "number": 17,
+      "section": "A",
+      "question": "A monochromatic plane wave has peak electric field 10 V/m and frequency 6 × 10¹⁴ Hz. It is normally incident on a detector of area 2 cm². A fraction 0.2 is reflected; of the absorbed photons, 0.1 produce one collected electron each. The photocurrent charges an initially uncharged capacitor 10 μF for 2 s; an ideal collection arrangement maintains that constant current. Take ε0=8.85×10⁻¹² F/m, c=3×10⁸ m/s, h=6.63×10⁻³⁴ J s and e=1.6×10⁻¹⁹ C. Find the stored capacitor energy then. Choose the closest value.",
+      "options": {
+        "A": "7.298 × 10⁻⁸ J",
+        "B": "2.919 × 10⁻⁷ J",
+        "C": "-1.46 × 10⁻⁷ J",
+        "D": "1.46 × 10⁻⁷ J"
+      }
+    },
+    {
+      "id": "JEE27-PHY-1488",
+      "source_class": "XII",
+      "unit_number": 14,
+      "difficulty": "Medium",
+      "assumptions": "AC voltages/currents are sinusoidal RMS values unless a waveform or peak value is given. Components are ideal and linear; magnetic-field/rod/rail geometry is mutually perpendicular where the motional-emf formula is invoked. Neglect self-inductance in purely resistive induction loops.",
+      "figures": [],
+      "concept_family": "SRC-c82c4252522e",
+      "number": 18,
+      "section": "A",
+      "question": "A vertical conducting rod PQ, with P at the top, moves to the right with velocity v in a uniform magnetic field directed into the plane of the page. The end at higher potential is:",
+      "options": {
+        "A": "P, because electrons are heavier than protons and settle at the bottom",
+        "B": "Q, because the magnetic force on the free positive charges is directed downward",
+        "C": "neither, because the rod is not part of a closed circuit",
+        "D": "P, because the magnetic force on the free positive charges is directed upward"
+      }
+    },
+    {
+      "id": "JEE27-PHY-2138",
+      "source_class": "XII",
+      "unit_number": 20,
+      "difficulty": "Easy",
+      "assumptions": "Treat drawings as schematic. Apply zero-error and parallax corrections; instrument idealisations and experimental limits stated in the question take precedence.",
+      "figures": [
+        {
+          "file": "figures/experiment-17.png",
+          "alt_text": "Zener label and cathode at right; positive battery terminal on right. Schematic, not to scale.",
+          "source": "ORIGINAL",
+          "width": 1600,
+          "height": 900
+        }
+      ],
+      "concept_family": "SRC-EXPERIMENT-17",
+      "number": 19,
+      "section": "A",
+      "question": "Which current–voltage region is being investigated with the diode type and supply polarity actually drawn? Refer to experimental arrangement 17.",
+      "options": {
+        "A": "Reverse breakdown of a Zener diode",
+        "B": "The forward-bias knee of a silicon junction diode",
+        "C": "The approximately linear bidirectional response of an ohmic resistor",
+        "D": "The charging transient of a capacitor under DC"
+      }
+    },
+    {
+      "id": "JEE27-PHY-0669",
+      "source_class": "XI",
+      "unit_number": 7,
+      "difficulty": "Medium",
+      "assumptions": "Use the specified ideal-fluid or Stokes-flow model. Neglect losses and end/wall effects where the ideal model is invoked; thermal-expansion formulae are first order.",
+      "figures": [],
+      "concept_family": "SRC-940bd7593f4f",
+      "number": 20,
+      "section": "A",
+      "question": "To first order in temperature change, the empty volume above mercury in a 1000 cm³ glass vessel is to remain constant. Mercury has volume expansion coefficient 1.8 × 10⁻⁴ K⁻¹ and isotropic glass has linear expansion coefficient 9 × 10⁻⁶ K⁻¹. What initial mercury volume is required?",
+      "options": {
+        "A": "850 cm³",
+        "B": "150 cm³",
+        "C": "50 cm³",
+        "D": "500 cm³"
+      }
+    },
+    {
+      "id": "JEE27-PHY-0818",
+      "source_class": "XI",
+      "unit_number": 8,
+      "difficulty": "Easy",
+      "assumptions": "Work done BY the gas is positive. Unless a process is explicitly irreversible, gas-law path calculations are quasistatic and reversible with constant stated heat capacities; the only mechanical work is p–V work.",
+      "figures": [
+        {
+          "file": "figures/model-linear_pv.png",
+          "alt_text": "Physical arrangement for linear pv; supplied quantities are in the question, and no requested result is labelled.",
+          "source": "ORIGINAL",
+          "width": 1600,
+          "height": 900
+        }
+      ],
+      "concept_family": "JM-linear_pv",
+      "number": 21,
+      "section": "B",
+      "question": "A monatomic ideal gas is taken quasistatically from (V,p) = (0.01 m³, 200000 Pa) to (0.02 m³, 300000 Pa) along the straight line joining these states in the p-V plane. Neglect non-pV work. Find the final-to-initial absolute-temperature ratio. Give the nearest integer."
+    },
+    {
+      "id": "JEE27-PHY-0476",
+      "source_class": "XI",
+      "unit_number": 5,
+      "difficulty": "Difficult",
+      "assumptions": "Rigid bodies and fixed axes are ideal unless specified otherwise; moments of inertia refer to the named axis.",
+      "figures": [
+        {
+          "file": "figures/model-massive_pulley.png",
+          "alt_text": "Physical arrangement for massive pulley; supplied quantities are in the question, and no requested result is labelled.",
+          "source": "ORIGINAL",
+          "width": 1600,
+          "height": 900
+        }
+      ],
+      "concept_family": "JM-massive_pulley",
+      "number": 22,
+      "section": "B",
+      "question": "Two masses 2 kg and 4 kg hang on opposite sides of a light string over a uniform solid-disc pulley of mass 4 kg and radius 0.2 m. The axle is frictionless and the string does not slip. The heavier mass starts from rest and descends 3 m. Use g = 10 m/s². Find the tension on the heavier-mass side. Give the numerical value in N, rounded to the nearest integer."
+    },
+    {
+      "id": "JEE27-PHY-1131",
+      "source_class": "XII",
+      "unit_number": 11,
+      "difficulty": "Difficult",
+      "assumptions": "Use vacuum/air and ideal linear isotropic dielectrics unless specified otherwise. Neglect capacitor fringing, leakage and test-charge disturbance. Set potential zero at infinity for isolated finite charges; for a dipole set U=0 at 90°. Slow external work is quasistatic.",
+      "figures": [
+        {
+          "file": "figures/model-charge_sharing.png",
+          "alt_text": "Physical arrangement for charge sharing; supplied quantities are in the question, and no requested result is labelled.",
+          "source": "ORIGINAL",
+          "width": 1600,
+          "height": 900
+        }
+      ],
+      "concept_family": "JM-charge_sharing",
+      "number": 23,
+      "section": "B",
+      "question": "Isolated capacitors of capacitances 2 μF and 3 μF are charged to 100 V and 20 V, respectively. Their positive plates are joined together and their negative plates joined together through a wire with a small resistance. Wait until a common voltage is reached. No battery is connected. Find the energy dissipated while charge redistributes. Express the result in units of 10^(-5) J, and give the nearest integer."
+    },
+    {
+      "id": "JEE27-PHY-0393",
+      "source_class": "XI",
+      "unit_number": 4,
+      "difficulty": "Medium",
+      "assumptions": "Use nonrelativistic mechanics. Springs are ideal and uniform; quoted external work for a slow change assumes negligible kinetic-energy change.",
+      "figures": [
+        {
+          "file": "figures/model-variable_force.png",
+          "alt_text": "Physical arrangement for variable force; supplied quantities are in the question, and no requested result is labelled.",
+          "source": "ORIGINAL",
+          "width": 1600,
+          "height": 900
+        }
+      ],
+      "concept_family": "JM-variable_force",
+      "number": 24,
+      "section": "B",
+      "question": "A 2 kg particle starts from rest at x = 0 on a smooth horizontal line. Its only horizontal force is F(x) = 12−3x N, where x is in metres. The force remains described by this relation throughout the motion. Find the time from release to the first positive turning point. Express the result in units of 10^(-2) s, and give the nearest integer."
+    },
+    {
+      "id": "JEE27-PHY-1837",
+      "source_class": "XII",
+      "unit_number": 17,
+      "difficulty": "Medium",
+      "assumptions": "Use ordinary single-photon emission, fixed work function and nonrelativistic matter waves. Neglect contact potentials and space charge; emission comparisons use frequencies above threshold unless stated otherwise.",
+      "figures": [],
+      "concept_family": "JM-debroglie_accelerate",
+      "number": 25,
+      "section": "B",
+      "question": "An electron initially has de Broglie wavelength 0.2 nm. It is then accelerated through an additional 0.625 V in vacuum. Use the nonrelativistic approximation K(eV)=0.0150/[λ(nm)]² and take e=1.60 × 10⁻¹⁹ C. No energy is lost. Find its final de Broglie wavelength. Express the result in units of 10^(-3) nm, and give the nearest integer."
+    }
+  ],
+  "construction_note": "Constraint counterexample constructed from seed 40000 by the documented two substitutions. This is NOT the unmodified output of generate(bank,40000).",
+  "base_seed": 40000,
+  "substitutions": [
+    {
+      "position": 12,
+      "old_id": "JEE27-PHY-1379",
+      "new_id": "JEE27-PHY-1318"
+    },
+    {
+      "position": 5,
+      "old_id": "JEE27-PHY-1353",
+      "new_id": "JEE27-PHY-1321"
+    }
+  ]
+}

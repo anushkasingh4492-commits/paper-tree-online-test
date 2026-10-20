@@ -1,0 +1,130 @@
+[
+ {
+  "id": "R02-E-01-1",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Student-facing explanation refers to 'the key'.",
+  "fix": "Replaced with 'the correct answer'.",
+  "changed": true
+ },
+ {
+  "id": "R02-E-01-2",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Student-facing explanation refers to 'the key'.",
+  "fix": "Replaced with 'the correct answer'.",
+  "changed": true
+ },
+ {
+  "id": "R02-E-01-3",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Student-facing explanation refers to 'the key'.",
+  "fix": "Replaced with 'the correct answer'.",
+  "changed": true
+ },
+ {
+  "id": "R02-E-02-3",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Student-facing explanation refers to 'the key'.",
+  "fix": "Replaced with 'the correct answer'.",
+  "changed": true
+ },
+ {
+  "id": "R02-E-05-2",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Student-facing explanation refers to 'the key'.",
+  "fix": "Replaced with 'the correct answer'.",
+  "changed": true
+ },
+ {
+  "id": "R02-E-05-4",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Student-facing explanation refers to 'the key'.",
+  "fix": "Replaced with 'the correct answer'.",
+  "changed": true
+ },
+ {
+  "id": "R02-E-04-3",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Misconception text refers to 'the key'.",
+  "fix": "Replaced with 'the correct answer'.",
+  "changed": true
+ },
+ {
+  "id": "R02-E-05-1",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Key (70 chars) clearly shorter than every distractor (90 to 102), a length cue.",
+  "fix": "Key reworded to 'carries news of a person's conduct to people who were not present and never witnessed it.'",
+  "changed": true
+ },
+ {
+  "id": "R02-E-05-2",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Key (85 chars) clearly shorter than every distractor (101 to 107).",
+  "fix": "Key reworded to 'cheats would gain from the rule, since anyone who refused to help them would be marked down for doing so.'",
+  "changed": true
+ },
+ {
+  "id": "R02-E-06-1",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Key (82 chars) clearly shorter than every distractor (98 to 109).",
+  "fix": "Key reworded to '... the view that correcting a false belief is likely to do more harm than good.'",
+  "changed": true
+ },
+ {
+  "id": "R02-E-05-4",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Key (157 chars) noticeably the longest option (others 125 to 138).",
+  "fix": "Key trimmed to '... though it cannot explain all generosity and needs accurate talk.'",
+  "changed": true
+ },
+ {
+  "id": "R02-E-08-4",
+  "category": "E4",
+  "severity": "minor",
+  "finding": "Labelled Difficult, but the answer is a near-direct paraphrase of the second sentence of paragraph 2; Medium on the CAT scale.",
+  "fix": "Relabelled Medium, exams reset to all six, difficulty_reason updated.",
+  "changed": true
+ },
+ {
+  "id": "R02-E-07-2",
+  "category": "E4",
+  "severity": "minor",
+  "finding": "To keep the 10/16/8 quota after relabelling 08-4: this item, with two strong same-passage distractors (excess deference, conversion into coercion) and a back-reference to trace, sits fairly at Difficult.",
+  "fix": "Relabelled Difficult, exams CAT and XAT, cognitive Analysis, difficulty_reason updated.",
+  "changed": true
+ },
+ {
+  "id": "R02-E-06",
+  "category": "E7",
+  "severity": "minor",
+  "finding": "Thematic overlap: passage 06's last paragraph (striking findings travel faster than checking) touches the replication theme of passage 08.",
+  "fix": "none: the subjects are distinct (correction of misinformation versus replication of priming studies) and no question in one passage is answerable from the other.",
+  "changed": false
+ },
+ {
+  "id": "R02-E-04",
+  "category": "E6",
+  "severity": "minor",
+  "finding": "The 'narrow beam' image and the empathy versus compassion argument follow a well-known published line of argument.",
+  "fix": "none: the idea is argued in original prose with no attribution, quotation or close paraphrase; the empathy and compassion distinction is standard in the literature.",
+  "changed": false
+ },
+ {
+  "id": "R02-E (notes)",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Blind-solver notes file for this batch is empty: neither solver disagreed with any key or raised a flag.",
+  "fix": "none: nothing to dismiss; every item was also solved cold in this audit and every key held.",
+  "changed": false
+ }
+]

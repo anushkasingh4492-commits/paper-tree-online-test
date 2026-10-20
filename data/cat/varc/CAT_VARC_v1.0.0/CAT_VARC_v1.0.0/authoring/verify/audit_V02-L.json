@@ -1,0 +1,58 @@
+[
+ {
+  "id": "V02-L-001,V02-L-002,V02-L-003,V02-L-004,V02-L-005,V02-L-006,V02-L-007,V02-L-008,V02-L-009,V02-L-010,V02-L-011,V02-L-012,V02-L-013,V02-L-014,V02-L-015,V02-L-016,V02-L-017,V02-L-018,V02-L-019,V02-L-020,V02-L-021,V02-L-022,V02-L-023,V02-L-024,V02-L-025",
+  "category": "E3",
+  "severity": "major",
+  "finding": "Every explanation ended with a sentence referring to 'the key' (e.g. 'The key holds the central claim, both costs and the conclusion'), banned in student-facing text.",
+  "fix": "Replaced 'the key' with 'the correct answer' throughout the file (also in difficulty_reason, harmless).",
+  "changed": true
+ },
+ {
+  "id": "V02-L-007",
+  "category": "E1",
+  "severity": "major",
+  "finding": "Correct answer was garbled: 'its adequacy depends on the text: slight for stories, possibly large for dense argument' literally says listening's adequacy is slight for stories, the opposite of the paragraph (the difference 'hardly matters' for a thriller).",
+  "fix": "Rewritten: 'Listening is not generally shallower than reading, but it gives less control over pace and going back, a difference that matters little for stories and possibly much for dense argument.'",
+  "changed": true
+ },
+ {
+  "id": "V02-L-023",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Correct answer concluded that rules 'remain indispensable', stronger than the paragraph, which says only that exceptions 'do not show that rules are dispensable'.",
+  "fix": "Rewritten: 'Exceptions show only that moral rules are not absolute, not that they are dispensable, since as strong presumptions they guard against slow, self-serving case-by-case judgement and make people reliable.'",
+  "changed": true
+ },
+ {
+  "id": "V02-L-025",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Correct answer said confidentiality yields to 'serious harm'; the paragraph's limit is 'serious and imminent harm'.",
+  "fix": "Changed to 'serious, imminent harm'.",
+  "changed": true
+ },
+ {
+  "id": "V02-L-014,V02-L-016,V02-L-017,V02-L-022,V02-L-021",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Quotations in an explanation (014), defences (016, 017, 022) and a misconception (021) began lower-case where the paragraph's sentence begins with a capital ('Both are right...', 'The remedy...', 'None of this...', 'There may be cases', 'The critics are right...'), so they did not match the passage exactly.",
+  "fix": "Capitalised the first word of each quotation to match the paragraph.",
+  "changed": true
+ },
+ {
+  "id": "V02-L-001,V02-L-002,V02-L-003,V02-L-004,V02-L-005,V02-L-006,V02-L-007,V02-L-008,V02-L-009,V02-L-010,V02-L-011,V02-L-012,V02-L-013,V02-L-014,V02-L-015,V02-L-016,V02-L-017,V02-L-018,V02-L-019,V02-L-020,V02-L-021,V02-L-022,V02-L-023,V02-L-024,V02-L-025",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "difficulty_reason fields use 'distractor'.",
+  "fix": "none: difficulty_reason is internal metadata, not student-facing; left as written.",
+  "changed": false
+ },
+ {
+  "id": "V02-L",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Blind-solver notes file verify/notes/V02-L.json is an empty list (no disagreements or flags). Cold solve of all 25 found each correct answer uniquely defensible after the fixes above; closest calls (004 quality-and-payment distractor, 011 pro-cursive distractor, 018 'contributed nothing', 021 critics' inference) are each excluded by a quoted line. Real-world claims (back-pain guidance, orphan-drug incentives, seductive-details research, laughter as social) are hedged and unattributed; difficulty labels and exam tags fair.",
+  "fix": "none: no further defect found.",
+  "changed": false
+ }
+]

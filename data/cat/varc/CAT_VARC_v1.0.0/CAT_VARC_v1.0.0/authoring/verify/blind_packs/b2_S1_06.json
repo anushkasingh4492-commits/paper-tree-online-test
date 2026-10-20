@@ -1,0 +1,562 @@
+{
+ "kind": "RC",
+ "passages": [
+  {
+   "passage_id": "R02-B-07",
+   "passage": [
+    "The demonstration is by now familiar. Two groups are offered the same treatment, described in two ways: to one group as leaving ninety in a hundred patients alive after a year, to the other as seeing ten in a hundred die. The numbers are identical, yet the first description reliably attracts more support than the second. Since the treatment does not differ, the argument runs, a rational agent should not respond to the difference in wording, and the fact that people do respond is evidence that their preferences are shaped by presentation rather than substance. The principle appealed to, that logically equivalent descriptions should produce the same choice, has seemed so obvious that few have thought it needed defending.",
+    "Yet the principle is less obvious than it looks once we remember that descriptions do not fall from the sky. Somebody chooses them, and the choice is rarely arbitrary. A doctor who believes a treatment is worth trying tends, without any intent to manipulate, to speak of the patients it saves; a doctor with doubts more naturally mentions those it fails. Speakers also tend to describe a quantity in terms of the reference point from which it has moved: a glass that was full and has been partly drunk is more often called half empty than half full. If such regularities hold, then the frame carries information that the bare numbers do not, and a listener who draws an inference from it is not being swayed by mere wording. She is reading what the speaker's choice of words reveals, much as she would read an emphasis or a pause.",
+    "On this view, many framing effects are better described as sensitivity to implicit information than as failures of logic, and the experimenter who insists on equivalence has mistaken the logic of sentences for the logic of conversation. The equivalence holds between the propositions; it does not hold between the acts of uttering them, because those acts tell the hearer different things about the speaker. Participants who bring their ordinary conversational competence into the laboratory are, in a sense, being too reasonable for the experiment's purposes.",
+    "This rehabilitation should not be pushed too far. When experiments go to some lengths to make the frame visibly arbitrary, for example by assigning descriptions by an evident coin toss or by presenting both descriptions together, the inference from frame to speaker has nothing to work on, and a rational participant should set it aside. Effects in such conditions are often smaller, which is what the information account predicts, but they do not always vanish. Some residue seems to reflect the plain pull of words such as 'die' and 'lose', a reaction that would survive any amount of reflection about speakers. The information account explains a good deal of the phenomenon; it does not explain all of it.",
+    "What follows is a more discriminating verdict than either side usually offers. Whether responsiveness to a frame is a lapse depends on whether, in the situation at hand, the frame was a signal. Outside the laboratory it usually is, which is why habits formed in conversation are worth having. The danger lies precisely in that usefulness. A listener who reasonably treats frames as informative can be exploited by a speaker who knows the convention and chooses a frame to suggest a recommendation he would not dare to state outright. The fault in such cases lies less with the listener's inference than with the speaker's abuse of a norm that ordinarily makes the inference sound."
+   ],
+   "questions": [
+    {
+     "id": "R02-B-07-1",
+     "type": "RC",
+     "options": {
+      "A": "descriptions are imposed by people in authority, so that listeners seldom feel able to question the way they are put.",
+      "B": "descriptions used in experiments are carefully designed by researchers so that each pair is exactly equivalent.",
+      "C": "descriptions take on their meaning only once the listener already knows the numbers that they are describing.",
+      "D": "descriptions are chosen by speakers, and the choice often reveals something about what the speaker knows or believes."
+     },
+     "question": "The remark that 'descriptions do not fall from the sky' (paragraph 2) means that"
+    },
+    {
+     "id": "R02-B-07-2",
+     "type": "RC",
+     "options": {
+      "A": "the speaker is gloomy by temperament and tends to see the worst side of most situations.",
+      "B": "the speaker would like the listener to refill the glass before anyone else drinks from it.",
+      "C": "the glass probably held more at some earlier point and has since been partly emptied.",
+      "D": "the glass now holds noticeably less than half of what it could hold when full."
+     },
+     "question": "On the account given in paragraph 2, a listener told that a glass is 'half empty' could reasonably infer that"
+    },
+    {
+     "id": "R02-B-07-3",
+     "type": "RC",
+     "options": {
+      "A": "show that the classic demonstration was badly designed and that its findings should not be relied upon.",
+      "B": "refute the information account by showing that framing effects persist even when the frame is plainly arbitrary.",
+      "C": "defend the principle that logically equivalent descriptions must produce the same choice in every situation.",
+      "D": "limit the information account by showing that it explains framing effects only in part."
+     },
+     "question": "Paragraph 4 functions in the argument chiefly to"
+    },
+    {
+     "id": "R02-B-07-4",
+     "type": "RC",
+     "options": {
+      "A": "Speakers describing a quantity rarely chose their words according to whether the quantity had recently risen or fallen.",
+      "B": "Speakers who favoured a treatment mostly cited survival figures, and listeners hearing survival figures more often guessed the speaker favoured it.",
+      "C": "Participants who read the word 'die' reported stronger unease than those who read the word 'live', even when told the figures matched.",
+      "D": "Framing effects were just as large when the descriptions were assigned by a visible coin toss as when a speaker chose them."
+     },
+     "question": "Which of the following findings, if true, would most strengthen the account of framing given in paragraph 2?"
+    },
+    {
+     "id": "R02-B-07-5",
+     "type": "RC",
+     "options": {
+      "A": "It is irrelevant to real choices, because framing effects in the end reflect only the emotional pull of particular words.",
+      "B": "It is a sound requirement of rationality that ordinary people violate whenever they respond differently to equivalent descriptions.",
+      "C": "It is a fair standard only where the choice of description carries no information about the speaker or the situation.",
+      "D": "It is mistaken, because two descriptions that seem equivalent never really express the same proposition at all."
+     },
+     "question": "Which of the following best expresses the author's position on the principle that logically equivalent descriptions should produce the same choice?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R03-E-01",
+   "passage": [
+    "Ask a collector why she keeps buying stamps, coins or toy cars long after there is any room left to display them, and the answer is rarely about the objects themselves. More often it concerns a gap: the one issue missing from a run, the single variant that would finish a set. Collecting, on this view, is less a love of things than a love of completion. The individual stamp matters because of the place it occupies in a series, and its value to the collector rises sharply as the series nears its end, often far beyond anything a buyer outside the hobby would think of paying.",
+    "Manufacturers learned long ago to exploit this. A cereal box that contains one of twelve plastic figures, a sticker album with a few deliberately scarce pages, a line of trading cards issued in waves: each turns an ordinary purchase into a step towards a whole that the buyer did not know he wanted until he was shown its outline. The empty album is the real product. Once its spaces are printed, every blank becomes a small reproach, and the purchase that fills it brings a satisfaction out of all proportion to what was bought.",
+    "It would be easy to conclude that collecting is simply a manufactured compulsion, a weakness that the market has learned to farm. That conclusion goes too far. Many of the most devoted collectors pursue series that no company ever designed: the railway timetables of a vanished line, the matchboxes of hotels that have since closed, the scattered editions of a minor poet. Here it is the collector who defines the set, deciding what counts as belonging to it and therefore what counts as missing. Such collecting is a way of ordering the world, of drawing a boundary around a scattered field and making it intelligible. Many museums began, in part, as exactly this kind of private project.",
+    "The difference between the two kinds of collecting is not the passion involved, which can be equally intense, but who holds the map. When the series is invented by a seller, completion is a target set by someone else, and the finish line is often moved just as it comes into view, with a new wave or a special edition. When the collector draws the map, completion is a judgement she makes for herself, and the pleasure lies as much in the defining as in the finding. The danger of the commercial version is not that it creates desire, since all collecting does that, but that it quietly takes the act of definition away from the person doing the collecting."
+   ],
+   "questions": [
+    {
+     "id": "R03-E-01-1",
+     "type": "RC",
+     "options": {
+      "A": "argue that collectors value the objects they gather for their beauty and rarity rather than for the places they fill in a set, whoever happens to have designed that set.",
+      "B": "trace how private collections of timetables, matchboxes and editions gradually developed into the public museums of today, and to praise the collectors who began them.",
+      "C": "show that collecting is a compulsion created by manufacturers, who profit by persuading buyers to complete sets that they never wanted until the empty spaces were shown to them.",
+      "D": "distinguish collecting in which the collector defines the series from collecting in which a seller does, and to show that the latter's harm lies in removing that power."
+     },
+     "question": "The primary purpose of the passage is to"
+    }
+   ]
+  },
+  {
+   "passage_id": "R05-E-03",
+   "passage": [
+    "Imagine a small-town bank that is entirely sound: its loans are prudent and its borrowers will repay, although those loans run for years while its deposits can be withdrawn on any day. Suppose a rumour spreads that this institution is in trouble. Each depositor now faces a simple calculation: if others withdraw and I do not, my bank may have to sell its loans in a hurry and at a loss, leaving me with little, whereas if I withdraw first, I lose nothing. It is therefore rational to run whether or not the rumour is true, and once enough people run, the rumour becomes true. Such a bank fails not because it was unsound but because it was believed to be.",
+    "Deposit insurance is the classic answer, because a guarantee from the state, up to some limit, alters the calculation entirely. A depositor who stays put loses nothing even if her bank collapses, so she has no reason to join a run, and because no one runs, the guarantee is seldom called upon. Seen in this light, insurance looks almost like a free lunch: a promise that, by being believed, makes its own fulfilment unnecessary.",
+    "The objection is familiar. Insured depositors have no reason to ask what their bank does with their money, and a bank whose depositors do not ask can take risks that it would otherwise have to justify to them. The guarantee that ends panics may thus encourage the very recklessness that makes failures likely. Critics conclude that deposit insurance trades a visible problem for a hidden one, and some would scale it back so that depositors once again have a reason to pay attention.",
+    "The objection is sound as far as it goes, but it rests on a curious picture of who disciplined banks before guarantees existed. Ordinary depositors were never skilled readers of loan books; what they were skilled at was panic. The discipline they supplied was indiscriminate, striking prudent and imprudent banks without distinction once fear took hold, as the town bank illustrates. If insured depositors stop watching, little genuine scrutiny is lost, and the task passes to those equipped for it: supervisors with the power to inspect, and the large uninsured creditors whose money remains at stake. The lesson of the objection is not that guarantees are a mistake but that they must be paired with oversight, and that the limit on cover matters a great deal, since it decides who still has a reason to care."
+   ],
+   "questions": [
+    {
+     "id": "R05-E-03-1",
+     "type": "RC",
+     "options": {
+      "A": "the state has not guaranteed its deposits, and so its managers are free to take excessive risks with them.",
+      "B": "its depositors behave irrationally, withdrawing money out of fear when they have no reason to do so.",
+      "C": "depositors acting sensibly on a rumour bring about the very trouble that the rumour had wrongly alleged.",
+      "D": "its loans turn out to be less prudent than its managers had believed when they first approved them."
+     },
+     "question": "It can be inferred from paragraph 1 that the sound bank fails because"
+    },
+    {
+     "id": "R05-E-03-2",
+     "type": "RC",
+     "options": {
+      "A": "the guarantee costs nothing in the short run, though it encourages reckless lending that is paid for later.",
+      "B": "insured depositors receive the protection of their savings without paying any premium for it at all.",
+      "C": "a guarantee that is believed removes the motive to run, so the promised payment rarely has to be made.",
+      "D": "the cost of insuring deposits is borne by the banks themselves rather than by depositors or by taxpayers."
+     },
+     "question": "In paragraph 2, deposit insurance is said to look 'almost like a free lunch' because"
+    },
+    {
+     "id": "R05-E-03-3",
+     "type": "RC",
+     "options": {
+      "A": "Runs on banks without deposit insurance have often begun from rumours that later proved false, and sound banks closed as a result of them.",
+      "B": "Before guarantees existed, depositors steadily moved money away from banks with weaker loan books, well before any panic, and these banks then lent more cautiously.",
+      "C": "Surveys of insured depositors find that very few of them have ever read their bank's accounts or asked how it lends the money they deposit.",
+      "D": "In several countries the limit on deposit cover has been raised more than once, usually after a crisis had already begun rather than before it."
+     },
+     "question": "Which of the following, if true, would most seriously weaken the author's reply to the objection in paragraph 4?"
+    },
+    {
+     "id": "R05-E-03-4",
+     "type": "RC",
+     "options": {
+      "A": "sensible, because if partial cover stops runs, full cover would stop them even more completely at no extra cost.",
+      "B": "pointless, because depositors had already stopped paying attention to their banks once partial insurance was introduced.",
+      "C": "acceptable, provided depositors were also required to study the loan books of their banks before opening accounts.",
+      "D": "unwise, because it would remove the incentive of large creditors who are among the few equipped to scrutinise banks."
+     },
+     "question": "The author would most likely regard a proposal to guarantee every deposit in full, with no upper limit, as"
+    }
+   ]
+  },
+  {
+   "passage_id": "R02-E-06",
+   "passage": [
+    "For a time it was widely believed, among journalists and fact-checkers as much as among researchers, that correcting a false belief could make matters worse. The idea, which came to be called the backfire effect, held that people confronted with evidence against a cherished belief would not merely resist it but cling to the belief more tightly, as though the correction were an attack to be repelled. It had an intuitive appeal: most of us have argued with someone who seemed to grow more certain with every fact we offered. And it carried a discouraging moral. If correction backfires, perhaps it is better not to correct at all.",
+    "Subsequent research has been considerably kinder to correction. Larger studies, with more varied topics and more diverse participants, have generally found that people who receive a factual correction move, on average, towards the accurate view, even when the correction cuts against their political loyalties. Reversal of the kind the early findings described appears to be rare, and some of the original results have proved difficult to reproduce. The more careful conclusion is not that people are perfectly responsive to evidence but that they are responsive to it in the ordinary, imperfect way: they update, though often less than they should.",
+    "It is worth asking why the backfire idea spread so far on so slender a basis. Part of the answer is that it flattered a certain cynicism about the public, and part is that it confused resistance with reversal. Someone who hears a correction and does not change his mind has resisted it; someone who becomes more convinced of the falsehood has reversed. The first is common and unremarkable, since people rarely abandon a belief after a single encounter with contrary evidence. Only the second would justify the conclusion that correcting is counterproductive, and it is the second that the evidence has failed to find with any regularity.",
+    "This does not mean that correction is a cure. Its effects often fade over weeks, so that people drift back towards the belief they were talked out of, and accepting that a particular claim is false does not necessarily change the attitudes the claim was used to support. A voter may concede that a politician's statistic was wrong and still admire the politician exactly as much. These are serious limits, but they are limits of a different kind. They call for corrections that are repeated, that offer an alternative explanation rather than a bare denial, and that are not expected to carry more weight than a single fact can bear. They do not call for silence.",
+    "The history of the backfire effect is thus a small lesson about the life of findings as well as about belief. A striking result, especially one that confirms what people already suspect, can travel much faster than the slower work of checking it, and the effort to correct a mistaken finding meets the same ordinary resistance, though not reversal, that greets any correction."
+   ],
+   "questions": [
+    {
+     "id": "R02-E-06-1",
+     "type": "RC",
+     "options": {
+      "A": "demonstrates that people are perfectly unresponsive to evidence whenever a belief is tied to their loyalties.",
+      "B": "is an example of the backfire effect, since the correction has failed to weaken the belief at all.",
+      "C": "offers no support for the view that correcting a false belief is likely to do more harm than good.",
+      "D": "shows that the larger studies described in paragraph 2 were mistaken about how people respond to corrections."
+     },
+     "question": "It follows from the argument of paragraph 3 that a person who hears a correction and keeps the false belief with unchanged confidence"
+    }
+   ]
+  },
+  {
+   "passage_id": "R05-A-08",
+   "passage": [
+    "Give a group of people an ordinary object, a coffee mug, say, or a pen, and then ask them how much they would accept to sell it; ask another group, who were not given the object, how much they would pay to acquire one. In experiments of this kind the sellers' prices have repeatedly been found to exceed the buyers' by a wide margin, even though the two groups were formed at random and there is no reason to think that the owners care more for mugs. Merely owning a thing, it seems, makes it more valuable to its owner. The finding has come to be known as the endowment effect, and it has become one of the best-known results in behavioural economics.",
+    "The standard interpretation explains it by loss aversion. People, on this view, evaluate outcomes not in absolute terms but as gains and losses relative to a reference point, and losses loom larger than equivalent gains. Once the mug is mine, giving it up registers as a loss, whereas acquiring it, for someone who does not own it, registers only as a gain, and since the loss weighs more heavily, the owner demands more in compensation than the non-owner will pay. The account is economical, and it connects the mug experiments with a wide range of other behaviour, from the reluctance of investors to sell shares that have fallen in value to the stubbornness with which people defend entitlements they have only recently acquired.",
+    "A rival interpretation treats the gap as, at least in part, an artefact of the way such experiments are conducted. Participants who have never sold anything in a laboratory may be unsure what is being asked, may suspect that the experimenter knows the object's true value, or may simply apply a rule from everyday life, never to sell for less than it would cost to replace the thing. When procedures are altered so that participants practise the bidding mechanism and understand that misstating their values cannot help them, some studies have found the gap to shrink considerably. Supporters of this view also point out that professional traders, who buy and sell as a matter of routine, appear to show much less of the effect in the goods they deal in.",
+    "Each interpretation captures something real, and the dispute is less sharp than it is sometimes made to appear. The traders' case is telling not because it refutes loss aversion but because it suggests where loss aversion applies. A dealer who holds a stock of mugs holds them in order to sell them; parting with one is the purpose of having it, and so it does not register as a loss. A person who has been given a mug to use is in a different position, because the mug has already become, in a small way, part of her possessions, and parting with it means giving something up rather than completing a transaction. On this reading, what matters is not ownership as such but the frame in which a thing is held, as something to use or as something to exchange.",
+    "That reading has consequences beyond the laboratory. It implies that the gap between buying and selling prices is not a fixed constant of human nature, to be entered into economic models as a permanent correction, but a variable that depends on how people come to think of what they have. Markets that encourage people to regard their possessions as stock, as resale platforms arguably do, may weaken the effect; arrangements that encourage people to regard what they hold as their own, as long trial periods for products arguably do, may strengthen it. Whether either tendency is desirable is a separate question. The point is that the endowment effect, properly understood, is less a fact about objects or owners than a fact about the relation between them."
+   ],
+   "questions": [
+    {
+     "id": "R05-A-08-5",
+     "type": "RC",
+     "options": {
+      "A": "A family asked to sell a bicycle given to them an hour ago, still unpacked, which they have not yet decided whether to keep.",
+      "B": "A student who bought a bicycle on a resale platform last week, planning to sell it on again for a profit.",
+      "C": "A bicycle shop owner asked to sell one of the identical bicycles displayed in the showroom.",
+      "D": "A family asked to sell a bicycle given to them months ago, which their child has ridden every day since."
+     },
+     "question": "On the author's reading in paragraphs 4 and 5, which of the following would be expected to show the LARGEST gap between the price asked to sell an item and the price offered to buy an identical one?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R07-A-08",
+   "passage": [
+    "Many of the long novels of the nineteenth century first reached their readers not as books but in instalments, issued monthly or weekly over a year or more, in magazines or in separate parts. Modern criticism has tended to treat this fact as an extenuating circumstance. When such a novel sprawls, introduces a character it later forgets, or closes a chapter on a contrived moment of suspense, the serial is invoked as an excuse: the author was writing to deadline, paid by length, obliged to bring readers back next month. The implication is that the real novel, the one the author would have written in better conditions, lies somewhere beneath the one we have, and that serial publication is a kind of noise to be filtered out.",
+    "The trouble with this view is that it treats the serial only as a set of pressures, when it was also a set of possibilities, and many of the qualities we now admire in these books grew from it. A novel read over eighteen months is lived with in a way that a novel read over a week is not. Its characters age alongside their readers; its crises arrive amid the readers' own. The large casts and interwoven plots that later critics found unwieldy were in part a response to this rhythm, since a reader returning after a month's absence needed several lines of interest to pick up, and recurring figures with distinctive habits of speech helped her find her place. What looks in a single volume like digression could, at the pace of first reading, serve as the texture of a world one returned to.",
+    "Serial publication also made the novel unusually public while it was still unfinished. An instalment could be discussed before the next was written, and authors could, and sometimes did, adjust their plans in light of how readers responded. A purist may regard this as a surrender of artistic control. It can as easily be seen as a kind of conversation, in which a book took shape partly through its encounter with an audience rather than being delivered complete to readers whose only role was to receive it. For a time the novel became a shared event, followed by readers who knew that a great many others were reading the same pages in the same weeks.",
+    "None of this is to deny the costs. Writing to fixed lengths did produce padding, and the demand for suspense at the end of each part did produce cliffhangers that the story did not need and that read awkwardly once the parts were bound together. A reader of the collected volume is entitled to notice these. What deserves suspicion is the standard against which they are judged as failures: the ideal of the novel as a single, unified design, conceived whole and executed according to plan. That ideal has a history of its own, and it gained much of its authority later, among writers and critics who worked for a different market and under different conditions. Applied backward, it does not so much reveal the faults of serial fiction as convert its differences into faults.",
+    "There is, finally, an irony in the critical embarrassment. Long television dramas, released in episodes and discussed between them, are now often praised by critics for the very qualities, the slow accumulation, the large cast, the sense of a world lived alongside, that the instalment novel was once thought to need excusing for. Nothing about the newer form proves the older one right, and a slack episode is no better for belonging to a celebrated series. But the shift in judgement suggests that what critics of the instalment novel took for timeless standards of form were, at least in part, the habits of one particular way of reading."
+   ],
+   "questions": [
+    {
+     "id": "R07-A-08-3",
+     "type": "RC",
+     "options": {
+      "A": "even-handed, since the author grants it as one possible reading while offering an alternative that is equally reasonable.",
+      "B": "contemptuous, since the author treats it as a confusion that no serious critic could still hold.",
+      "C": "indifferent, since the author regards the question of control as irrelevant to a novel's merits.",
+      "D": "approving, since the author agrees that serial novelists gave up too much to their audiences."
+     },
+     "question": "The author's attitude towards the view that adjusting a novel in response to readers is 'a surrender of artistic control' is best described as"
+    }
+   ]
+  },
+  {
+   "passage_id": "R02-A-07",
+   "passage": [
+    "For much of its short history as a subject of research, the wandering mind was treated as noise. Participants in experiments were supposed to attend to the task in front of them, and the moments when their thoughts drifted to lunch or to an argument with a sibling were lapses to be minimised or averaged away. When researchers began to study these lapses directly, by interrupting people at random moments in their day and asking what they had been thinking about, the first surprise was how common the lapses were. The method had the merit of catching thought in the act, before the thinker had time to tidy it into a more respectable account of where her attention had been. A considerable part of waking thought, it turned out, is about something other than what the thinker is doing.",
+    "Two quite different interpretations of this finding have since competed. On the first, mind wandering is a failure of control: it is associated with errors in reading and driving, with poorer performance on tests of sustained attention and, in some studies, with lower reported mood at the moment of wandering. The mind that drifts is the mind that has lost its grip, and the remedy is training in attention. On the second interpretation, these costs are real but partial, and they ignore what the drifting mind is actually doing. Much wandering thought is directed at the future, at plans, rehearsals of conversations and the weighing of unfinished business, and some of the solutions that arrive unbidden in the shower or on a walk may owe something to the same process. On this view the mind that drifts is not idle but working on a different problem, one it has judged, so to speak, more pressing than the task at hand.",
+    "Each interpretation, I think, makes the same mistake, which is to speak of mind wandering as though it were one thing with one value. The evidence for costs comes largely from tasks that demand continuous attention, where any lapse is damaging by design, while the evidence for benefits comes largely from situations in which the external task is undemanding, so that little is lost by leaving it. Tasks of the first kind are chosen precisely because they make lapses easy to count, and situations of the second kind because they leave room for thought. It is hardly surprising that the two literatures reach different verdicts, since they are, for the most part, looking at different occasions. Nor does the link with low mood settle the matter. A person who is worried is likely both to feel worse and to find his thoughts pulled towards his worries, so that wandering may be as much a symptom of unhappiness as its cause.",
+    "A more useful question is not whether the mind should wander but when, and with what awareness. Drifting during a lecture one has chosen to attend is a cost; drifting while washing dishes may be a free opportunity to think. There also seems to be a real difference between thought that slips away unnoticed and thought that is allowed to roam, as when a person deliberately sets a problem aside and lets her attention go where it will. The second kind is under a loose but genuine control, since the person can notice it and call it back. If this is right, the goal of training attention should not be to abolish wandering, an aim that is probably unachievable and possibly harmful, but to make wandering more visible to the wanderer, so that she can tell which kind of occasion she is in."
+   ],
+   "questions": [
+    {
+     "id": "R02-A-07-1",
+     "type": "RC",
+     "options": {
+      "A": "Mind wandering is better understood as a symptom of unhappiness than as its cause, contrary to what researchers at first believed.",
+      "B": "Training in attention should be abandoned, since every attempt to suppress the wandering mind is futile and does real harm.",
+      "C": "Mind wandering is chiefly productive work on plans and unfinished problems, and its costs have been exaggerated by narrowly designed experiments.",
+      "D": "The opposed verdicts on mind wandering largely reflect the different occasions studied; its worth depends on when it occurs and whether it is noticed."
+     },
+     "question": "Which of the following best expresses the main point of the passage?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R08-C-07",
+   "passage": [
+    "Few words in journalism are now used with as much suspicion as objectivity. To its critics it names a pose: the pretence that reporters, alone among human beings, can step outside their own experience and describe the world from nowhere in particular. Put that way, the ideal is plainly impossible, and the critics are right to reject it. But it is worth asking whether that is the ideal anyone ever seriously defended. In at least one influential strand of its history, objectivity was proposed not as a description of the journalist but as a remedy for the journalist's limitations. Precisely because reporters could not be trusted to be neutral, the argument ran, they needed a method that would restrain what their partiality could do to the record.",
+    "The method in question resembled, in a modest way, the procedures of empirical inquiry. A claim was to be checked against more than one source; documents were to be preferred to recollection; and the reporter was to say where each piece of information came from, so that a reader or a rival could test it. On this understanding the objectivity belonged to the procedure, not to the person, much as a laboratory's results are trusted not because its scientists lack ambitions but because their work is arranged so that others can repeat it. A reporter with strong opinions could practise the method; indeed, the method existed for such reporters, since a reporter without opinions, if one could be found, would hardly need it.",
+    "What happened over the following decades was a quiet substitution. The discipline of verification, which is laborious and often invisible to the reader, was gradually overshadowed by a set of outward signs that were easier to display: a flat tone, a reluctance to draw conclusions, the habit of pairing every assertion with a counter-assertion. These signs were meant to signal fairness, but they could be produced without any verification at all. A story could quote two officials making incompatible claims, check neither, and still look objective. The appearance had detached itself from the practice it was supposed to indicate, and in some cases it obstructed that practice, since a reporter who had established that one of the officials was wrong was discouraged from saying so.",
+    "Much of the current attack on objectivity is in fact an attack on this degraded form, and to that extent it is justified. Where it goes wrong is in the alternative it sometimes proposes. If the remedy for false neutrality is for journalists to report openly from their convictions, readers are left to choose among the convictions of different reporters with no common procedure by which to test any of them. The proposal also concedes too much to the degraded form, accepting that objectivity simply is the flat tone and the paired quotation, and then discarding the whole inheritance on that basis. Candour about one's commitments is a virtue, but it is not a substitute for evidence; a frank partisan who has not checked the facts is no more reliable than a disguised one.",
+    "It should be conceded that method does not solve everything. Verification governs how a story is reported, not which stories are chosen, and the choice of what to investigate remains shaped by the interests and blind spots of those who make it. No procedure can remove that influence, and a newsroom that believes its method has made it neutral will be blind to it. Yet the concession limits the claim rather than defeating it. The case for objectivity understood as method is not that it makes journalism impartial but that it makes journalism answerable: it allows a reader who suspects a report to find out where it came from and whether it holds."
+   ],
+   "questions": [
+    {
+     "id": "R08-C-07-3",
+     "type": "RC",
+     "options": {
+      "A": "Objectivity is valuable because a disciplined method of verification allows newsrooms to become impartial in choosing their stories.",
+      "B": "Objectivity was always an impossible pose, and journalists should replace it by stating their own commitments openly to readers.",
+      "C": "Objectivity as a checkable method rather than personal neutrality remains worth defending, though much criticism fairly targets a debased form of it.",
+      "D": "Objectivity declined because reporters abandoned the flat tone and balanced quotation that had once made their fairness visible to readers."
+     },
+     "question": "Which of the following best states the central argument of the passage?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R01-G-03",
+   "passage": [
+    "Among the stories collected in the Zhuangzi, one of the best known concerns an enormous tree. A master carpenter passes it without a second glance, and when his apprentice asks why so magnificent a specimen has been ignored, he explains that its wood is good for nothing: boats made from it would sink, coffins would rot and tools would split. That night the tree appears to the carpenter in a dream and rebukes him, pointing out that trees bearing fruit are stripped and broken and never live out their natural years; its own uselessness, it explains, is precisely the reason it has lived so long and grown so large.",
+    "The usual moral drawn from the story is a prudent one: in a dangerous world, conspicuous talent invites exploitation, and the wise keep their heads down. That reading has support in the text, which elsewhere praises figures who survive by escaping notice. But it makes the story smaller than it is. The carpenter's mistake is not merely that he underrates the tree; it is that he assumes the only question worth asking about a tree is what it is good for to a carpenter. The tree's reply amounts to the observation that usefulness is always usefulness to someone, for some purpose, and that a thing seen only through that lens is not really seen at all.",
+    "This point has lost none of its edge. We are surrounded by institutions that measure things by their contribution to some further end, and we have grown skilled at the carpenter's glance. A subject of study is asked to justify itself by the jobs it leads to, a stretch of land by the revenue it can produce, an hour of a person's time by what it yields. Each of these questions is reasonable on its own, and institutions that never asked them would be failing in their responsibilities. What the story warns against is letting one of them become the only question, so that whatever cannot answer it, a friendship, a landscape, an afternoon of unhurried conversation, is passed by as if it were not there.",
+    "It would be a mistake, though, to read the story as a rejection of usefulness as such. Boats and coffins must be made from something, and a world of nothing but magnificent useless trees would be a hard place to live. The story's target is narrower and more interesting: the habit of mind that cannot see a tree as anything other than timber not yet cut, and that mistakes the list of its own purposes for an inventory of what the world contains."
+   ],
+   "questions": [
+    {
+     "id": "R01-G-03-1",
+     "type": "RC",
+     "options": {
+      "A": "every question about what a thing is good for is unreasonable and should be dropped altogether.",
+      "B": "craftsmen should learn to find uses even for timber that seems useless at first sight.",
+      "C": "people with conspicuous gifts are likely to be exploited, so wise people avoid drawing attention to themselves.",
+      "D": "things that are of no use to anyone have no value and are rightly passed by without a second glance."
+     },
+     "question": "According to the passage, the usual moral drawn from the story of the tree is that"
+    },
+    {
+     "id": "R01-G-03-2",
+     "type": "RC",
+     "options": {
+      "A": "a careful study of an object that eventually reveals its hidden and unexpected value.",
+      "B": "a refusal to attend to anything that does not bear fruit or produce food.",
+      "C": "the skill of quickly judging the quality of timber that comes from long practice in a trade.",
+      "D": "a habit of looking at things only for what they can contribute to some purpose beyond themselves."
+     },
+     "question": "As used in paragraph 3, 'the carpenter's glance' refers to"
+    },
+    {
+     "id": "R01-G-03-3",
+     "type": "RC",
+     "options": {
+      "A": "Its chief target is a way of seeing that reduces things to their usefulness to someone, not usefulness itself.",
+      "B": "It shows that things are valuable in proportion to how little they can be used by people.",
+      "C": "It demonstrates that modern institutions are wrong to ask what subjects of study or land are good for.",
+      "D": "It is mainly practical advice that talented people should hide their gifts in order to survive in a dangerous world."
+     },
+     "question": "Which of the following best expresses the author's main claim about the story of the tree?"
+    },
+    {
+     "id": "R01-G-03-4",
+     "type": "RC",
+     "options": {
+      "A": "Travellers continue to rest in the shade of the great tree for many generations after the carpenter's death.",
+      "B": "The tree admits it would gladly have become timber had that been safe, and values its uselessness only as a way of staying alive.",
+      "C": "The carpenter, waking from his dream, refuses to let his apprentice cut the tree down and reflects at length that he had misjudged it from the start.",
+      "D": "On waking, the carpenter tells his dream to the apprentice, who doubts whether a tree could ever really speak to anyone."
+     },
+     "question": "Which of the following, if it were added to the end of the story, would most weaken the author's reading of it?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R02-D-05",
+   "passage": [
+    "The familiar explanation of teenage recklessness is ignorance: adolescents take risks because they do not understand the dangers, or because they believe, in some half-formed way, that harm happens only to other people. If that were the whole story, the remedy would be straightforward. Teach young people the facts about speeding, drugs and unprotected sex, and their behaviour should improve. Schools and governments have spent heavily on precisely this remedy, and its results have often been modest.",
+    "One reason is that the premise is weaker than it looks. When adolescents are asked, in a calm setting, to estimate the dangers of various activities, their answers are often not very different from those of adults, and by the middle teens many reason about risk in hypothetical cases about as well as their parents do. What distinguishes them is less what they know than what happens to that knowledge in particular situations. Decisions taken alone and at leisure look quite mature; decisions taken in the company of friends, under excitement, look very different. In laboratory games that reward bold choices, adolescents have been found to take noticeably more chances when they know their friends are watching, while the presence of an audience makes much less difference to adults.",
+    "A plausible account of this pattern appeals to the uneven timing of development. The systems that make rewards, and especially social rewards, feel intense appear to become more responsive around puberty, while the capacities for restraint and planning continue to mature into the early twenties. For several years, then, the accelerator is more sensitive than the brake, and the gap shows most clearly when peers raise the value of a daring act. It should be said that accounts of this kind are easily overstated. Brains do not determine behaviour on their own, adolescents differ widely, and plenty of teenagers who are surrounded by friends behave with conspicuous care.",
+    "If the account is broadly right, it has an uncomfortable implication for policy: the most effective interventions may be those that change the situations adolescents find themselves in rather than the beliefs they carry into them. Rules that limit the number of young passengers a new driver may carry, or arrangements that make the safe choice the socially easy one, work with the grain of adolescent decision-making rather than against it. The account also suggests a more generous reading of adolescence itself. A heightened sensitivity to peers is not simply a defect awaiting repair; it is part of what drives young people to leave the family, form their own alliances and try what their elders would not. The same disposition that makes a reckless dare attractive makes new friendships and new ideas attractive too."
+   ],
+   "questions": [
+    {
+     "id": "R02-D-05-2",
+     "type": "RC",
+     "options": {
+      "A": "come from schools and governments, sources whose advice adolescents are inclined to distrust and ignore.",
+      "B": "try to supply missing knowledge, when the difficulty lies largely in how knowledge is used in certain situations.",
+      "C": "assume a capacity to apply general facts to one's own conduct that most adolescents do not yet possess.",
+      "D": "have usually given adolescents information about risks that is inaccurate or deliberately exaggerated."
+     },
+     "question": "The passage suggests that an important reason information campaigns about risk have had limited success is that they"
+    }
+   ]
+  },
+  {
+   "passage_id": "R01-A-04",
+   "passage": [
+    "Suppose you and a colleague whom you regard as your equal in competence and care examine the same evidence and reach opposite conclusions. Neither of you has information the other lacks; neither has reason to think the other was tired or distracted. What should you do? An influential answer holds that you should move towards your colleague's view, giving her opinion the same weight as your own. The thought behind it is simple. From a neutral standpoint, the disagreement is evidence that one of you has erred, and you have no reason, independent of the dispute itself, to think the error is hers rather than yours. To stand firm would be to treat the mere fact that a conclusion is yours as a reason to favour it.",
+    "This principle seems to me correct over a wide range of cases, and it is more demanding than most people find comfortable. It condemns the familiar move of discounting a dissenter precisely because she dissents: 'she is usually so sensible, but on this question she has plainly lost her way'. If the only evidence that she has lost her way is that she disagrees with you, the reasoning simply assumes what is in question.",
+    "Yet the principle cannot be applied without qualification. Imagine two equally able auditors reviewing the same short ledger, one of whom concludes that the accounts balance while the other reports that the firm's assets exceed the number of grains of sand on the earth. The first auditor need not split the difference. Her confidence that her colleague has blundered does not rest on her own conclusion about the ledger; it rests on the absurdity of his, which she can recognise without relying on the reasoning they disagree about. What licenses holding firm, then, is not that a view is one's own but that one has grounds, independent of the dispute, for locating the error on the other side. The equal-weight principle survives, but it turns out to be a claim about what to do when such independent grounds are absent, not a rule that applies whatever one knows.",
+    "Critics sometimes press a further objection: since thoughtful people disagree about the equal-weight principle itself, the principle seems to require its own defenders to lose confidence in it. This is less damaging than it first appears. A principle about how to respond to disagreement may well recommend reduced confidence in itself without thereby becoming false; it would show only that the matter is genuinely hard, which no one denied. What the objection does reveal is that conciliation cannot be the whole story about rational belief. A thinker who revised every view the moment a peer dissented would soon have no settled views left to revise, and some account is still owed of what entitles anyone to a starting point."
+   ],
+   "questions": [
+    {
+     "id": "R01-A-04-4",
+     "type": "RC",
+     "options": {
+      "A": "Two equally able judges disagree about a verdict, and one of them maintains that the accused was in two different cities at the same moment.",
+      "B": "Two students disagree about a proof, one of whom has studied the topic for years while the other first met it in yesterday's lecture.",
+      "C": "Two equally careful chemists disagree about a reaction, but one of them knows that the other's sample was contaminated in a way the other has not noticed.",
+      "D": "Two equally careful historians, working from the same documents, date the same undated letter to different decades, and neither can fault the other's reasoning except by its conclusion."
+     },
+     "question": "In which of the following situations would the author most clearly hold that a person ought to move towards a disagreeing colleague's view?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R04-D-02",
+   "passage": [
+    "In a handful of democracies, adults who fail to vote without a good excuse are fined a small sum. To many people elsewhere this looks like a contradiction in terms: surely a free citizen is entitled to stay at home. The objection deserves a hearing, but it is less forceful than it first appears. What such laws typically require is attendance, not a vote for anyone in particular. Ballots remain secret, and a citizen who wishes to register indifference or protest can spoil the ballot paper or leave it blank. The duty imposed is closer to that of serving on a jury or completing a census form than to an order about what to believe. A subtler version of the objection holds that deliberate abstention is itself a political statement, a refusal to lend legitimacy to a contest one regards as empty. Yet a citizen who feels this way loses very little under compulsion, since the blank ballot preserves the statement and arguably sharpens it: a deliberately empty ballot can be counted, whereas a deliberate absence is indistinguishable from the absences of those who merely forgot.",
+    "The more interesting question is what compulsion actually changes. Where voting is voluntary, turnout is usually lowest among the young, the poor and the recently arrived, so the electorate that politicians court is older and wealthier than the population as a whole. Campaigns respond rationally to this. A large share of their effort goes into persuading their own likely supporters to turn up, and one of the cheapest ways to do that is to make those supporters angry or afraid about the other side. When almost everyone votes, that strategy loses much of its point. There is little to be gained by stirring up people who will vote anyway, and the votes worth competing for belong to citizens who have not yet made up their minds.",
+    "Supporters of compulsion sometimes go further and claim that it produces wiser decisions. Here caution is needed. Being required to attend a polling station does not make anyone better informed, and a citizen who resents the obligation may simply mark the first name on the list. Compulsion enlarges the electorate; it does not educate it. Its real contribution is quieter. It shifts the incentives of those who seek votes, away from rousing the faithful and towards addressing the undecided, and it allows the result to claim to speak for nearly everyone rather than for those who happened to feel strongly enough to come out. That is a modest achievement, but in an age of angry campaigning it is not a small one."
+   ],
+   "questions": [
+    {
+     "id": "R04-D-02-2",
+     "type": "RC",
+     "options": {
+      "A": "angry voters pay closer attention to policy, and so are more likely to reward a party that offers a well-argued programme.",
+      "B": "getting likely supporters to the polls matters more than winning over the uncommitted, and anger is a cheap way to do it.",
+      "C": "undecided citizens can be won over only by campaigns that frighten them about what the other side would do in office.",
+      "D": "voters who are older and wealthier are, by temperament, more easily made angry or afraid than other citizens."
+     },
+     "question": "The passage suggests that, where voting is voluntary, campaigns tend to stir up anger against opponents mainly because"
+    }
+   ]
+  },
+  {
+   "passage_id": "R05-F-01",
+   "passage": [
+    "Few ideas in economics are cited as often, or misunderstood as thoroughly, as comparative advantage. In everyday commentary trade is described as a contest: a country wins when it is better at making things than its rivals and loses when they overtake it. On this view a nation that is less productive than its neighbours in every industry would have nothing to sell and would be wise to close its borders. The principle of comparative advantage was formulated precisely to show why this conclusion does not follow, and the fact that the conclusion is still drawn suggests that the principle is more often invoked than understood.",
+    "The core insight concerns opportunity cost rather than absolute ability. Consider a hypothetical lawyer who types faster than any secretary she could hire. It does not follow that she should do her own typing, because every hour spent at the keyboard is an hour withdrawn from legal work that earns far more. The secretary, though slower at typing, gives up much less by doing it. Both are better off when each concentrates on the task in which his or her relative sacrifice is smallest and they exchange the results. The same reasoning applies to countries. What determines the pattern of trade is not which country is best at producing a good, but which country forgoes the least of other goods in producing it, and every country, however unproductive overall, has some activity in which that sacrifice is comparatively low.",
+    "Two consequences follow that sit uneasily with the language of contest. First, gains from trade do not require one party to lose: the lawyer and the secretary both gain, and so do a rich and a poor economy that trade on the basis of their differing costs. Second, a country cannot have a comparative advantage in everything, since being relatively better at one activity means, by definition, being relatively worse at another. A government that promises to make its nation competitive in every industry is therefore promising something that is not merely difficult but incoherent.",
+    "None of this implies that the critics of open trade have nothing to say. The textbook argument compares two settled states and is silent about the passage between them; workers who lose their jobs when an industry contracts do not costlessly reappear in the industry that expands, and the losses can be concentrated in particular towns for a generation. Comparative advantage can also shift over time as skills and capital accumulate, which is why some economists defend temporary support for new industries. These are serious objections, but they are objections to the timing and distribution of the gains, not to the logic of opportunity cost. They do not restore the image of trade as a race in which one runner's progress is another's defeat."
+   ],
+   "questions": [
+    {
+     "id": "R05-F-01-1",
+     "type": "RC",
+     "options": {
+      "A": "show that the critics of open trade have misunderstood the costs of moving workers from contracting industries into expanding ones.",
+      "B": "advise poorer countries to specialise in the industries where their workers are least productive in absolute terms.",
+      "C": "demonstrate that open trade benefits every worker in every country, so that the objections raised by its critics can be safely set aside.",
+      "D": "correct a popular misreading of comparative advantage, while granting objections that leave its logic of opportunity cost intact."
+     },
+     "question": "The primary purpose of the passage is to"
+    }
+   ]
+  },
+  {
+   "passage_id": "R01-B-06",
+   "passage": [
+    "Philosophical discussions of ethics characteristically concentrate on the moment of decision. A situation is described, the available options are set out, and the question is which of them a good person would choose. This framing is natural for the purposes of argument, but it quietly assumes that the morally significant work begins only once the situation has been described. In ordinary life, nobody hands us the description. What we take the situation to be, which features stand out and which recede into the background, is settled largely by what we attend to, and that settling is accomplished before any choice is considered.",
+    "Consider a manager who prides herself on her fairness. When a request for leave arrives, she weighs it conscientiously against the requirements of the team, and she applies identical rules to everyone. Yet for months she has failed to notice that one reserved employee has grown withdrawn and anxious, while she registered immediately when a more assertive colleague appeared dissatisfied. Her decisions, examined individually, may be beyond reproach. The defect lies upstream, in a pattern of attention that has made some people's difficulties vivid to her and rendered others' invisible.",
+    "It may be objected that this demands too much of ordinary moral agents. Noticing is not something we do at will; we cannot be blamed for failing to perceive what never came to our notice, any more than for failing to hear a sound pitched too high for human ears. There is something genuinely correct in the objection. No single lapse of attention is a choice, and it would be unjust to treat it as though it were. But attention is not fixed in the way the range of hearing is. It is formed by what we have habitually looked for, by whom we have taken seriously, and by the stories we tell ourselves about the people around us, and these are things over which, across time, we have considerable influence.",
+    "The upshot is that moral improvement is frequently less a matter of resolving to choose better than of learning to see better. A person who wishes to be fair must ask not only whether her decisions follow sound principles but also whose circumstances reach her as calls for decision at all. This is slower and less dramatic work than heroic choice, and it rarely earns admiration, since what it changes is largely invisible from outside. It is nonetheless where a great deal of moral life actually takes place."
+   ],
+   "questions": [
+    {
+     "id": "R01-B-06-4",
+     "type": "RC",
+     "options": {
+      "A": "Since changes in attention are invisible from outside, they cannot be judged morally by other people.",
+      "B": "Moral improvement consists solely in learning to see better and never in learning to choose better.",
+      "C": "Because attention is shaped by habit, each single lapse of attention deserves the same blame as a deliberately bad decision.",
+      "D": "Someone may be answerable for a failure to notice even if that particular failure was not something she chose."
+     },
+     "question": "The author would most likely agree with which of the following?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R07-D-08",
+   "passage": [
+    "Defenders of live theatre, when pressed to explain why anyone should purchase an expensive ticket to see what could be watched more cheaply and comfortably on a screen, usually appeal to presence. The actors are there, in the same room, breathing the same air; on screen they are only images. The answer is sincere, but considered as an argument it is considerably weaker than it sounds. A great many things are physically present to us without being valuable for that reason, and a lecture delivered in person is not obviously better than the same lecture recorded. If presence were all that distinguished the stage, the case for theatre would rest on something close to a superstition about physical proximity.",
+    "A more promising answer begins from what presence makes possible. A filmed performance is complete before any viewer encounters it; nothing the viewer does, however attentive or distracted, can reach back and alter it. A stage performance is still being made while the audience watches, and the audience is among the conditions under which it is made. Actors in a comedy learn to hold a line until the laughter at the previous one has crested and begun to fall, and the length of that pause differs from night to night because the laughter does. In a tense scene, a silence of a particular quality in the house tells the performers that they have the room, and they may let a moment stretch further than they would before a restless audience. These adjustments are individually small, but cumulatively they mean that a stage performance can be, in part, a response to the particular people assembled to witness it.",
+    "The audience, moreover, is conscious of this reciprocity. Spectators in a theatre are aware that they can be heard and, in an intimate space, seen; they are also aware of one another, and a laugh that spreads along a row, or fails to, shapes what each person feels. The experience is less that of watching an object than of taking part, in a minor and mostly silent way, in an event whose outcome is not wholly settled. That is why a performance can fail in the theatre in a way that a film cannot: not through a flaw in its making, which a film may also have, but through a breakdown between stage and house.",
+    "It may be objected that this account flatters most actual theatre, which is rarely so delicately attuned to its spectators. Many productions are drilled to such precision that they vary little from night to night, and in a large commercial house the performers can barely see past the first rows. That is true, and it calls for a qualification rather than a retraction. The responsiveness described here is a capacity of the live form, not a guarantee; a production can choose to use it or to suppress it, and one that suppresses it entirely has given up the main thing that the stage offers and the screen does not. Film, meanwhile, has resources of its own, the close-up and the edit among them, and nothing here implies that it is a lesser art.",
+    "The case for live theatre, then, is not that the actors are physically near but that the performance and its audience remain capable of affecting one another. It follows, perhaps uncomfortably for some institutions, that the strongest argument for theatre is simultaneously a demand upon it. A theatre that wishes to justify its prices by appealing to liveness owes its audience a performance in which liveness actually does some work."
+   ],
+   "questions": [
+    {
+     "id": "R07-D-08-5",
+     "type": "RC",
+     "options": {
+      "A": "The quality of an audience's silence can affect how long performers sustain a moment.",
+      "B": "Every live production is responsive to its audience to some degree, even when spectators do not notice it.",
+      "C": "The familiar appeal to presence, though weak as usually stated, points the way towards a stronger defence of theatre.",
+      "D": "Film possesses expressive means of its own, such as the close-up, that the stage does not share."
+     },
+     "question": "The author would be LEAST likely to agree with which of the following?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R03-G-08",
+   "passage": [
+    "A familiar story about civic life holds that ordinary people have withdrawn from it. Where their grandparents joined lodges, unions, parents' associations and choral societies, attended meetings and stood for office in them, people today are said to stay at home, absorbed in private amusements and too busy or too distrustful to join anything. The story is usually told as a matter of individual choice and individual failing, and the remedies proposed follow naturally from it: people should be encouraged, shamed or gently nudged back into joining.",
+    "There is another way to read much of the same evidence. What has declined is not association as such but a particular form of it: the federation of local branches, each with its own officers, meetings and dues, linked through elected delegates to regional and national bodies. In its place, many of the organisations that now claim to speak for citizens are run by professional staff from a central office. They recruit supporters through mailing lists and advertisements, ask them for money rather than time, and consult them, if at all, through surveys. Their membership lists may be long, but a member is someone who has made a payment, not someone who has attended a meeting, and nothing in the organisation's routine requires that members ever meet one another.",
+    "Read this way, the decline is less a withdrawal from below than a transformation from above. Organisations discovered that it was cheaper and more effective, at least for the purposes of lobbying and publicity, to raise money from many distant supporters than to sustain an expensive structure of local branches with their own halls, officers and opinions. Funders, too, preferred bodies with a clear national voice and a small, accountable staff, and the habits of professional management spread from one organisation to the next. The people who drifted away from the older associations may not have rejected participation at all; they may simply have been offered fewer occasions for it.",
+    "The distinction matters because the federated association did something its successors do not. It taught people with no political ambitions how to run a meeting, keep minutes, manage a budget, argue for a motion and accept defeat when it was voted down. These were not trivial accomplishments; they were the ordinary apprenticeship of democratic citizenship for many who would never hold public office. It also tied the local to the national: a member in a small town could, through a chain of elected representatives, influence what the national body did. A donor to a professionally managed organisation may support its aims with real conviction, but she learns none of these skills and holds no comparable thread of influence over what is done in her name.",
+    "It would be easy to turn this into nostalgia, and nostalgia would mislead. Many of the old associations excluded women or people of the wrong background, and their local meetings could be stifling and petty. The new organisations, for their part, have often been more effective at changing laws. Nor have people stopped gathering; they form online groups and informal networks with remarkable ease. But these are seldom built to govern themselves through elected officers and binding votes. If the loss is real, it is the loss of a school of self-government, and it will not be repaired by urging individuals to join more. It would require organisations to find reasons, and funders to give them reasons, to want members who turn up."
+   ],
+   "questions": [
+    {
+     "id": "R03-G-08-4",
+     "type": "RC",
+     "options": {
+      "A": "Professionally managed organisations are less legitimate than federations because they change laws without consulting their members.",
+      "B": "The fall in civic membership owes more to how organisations were rebuilt than to individual withdrawal, and it has cost citizens practice in governing themselves.",
+      "C": "The decline of membership associations reflects organisations' choices about cheaper ways of raising money rather than any change in what ordinary people want.",
+      "D": "Civic life has collapsed because people now prefer private amusements to the meetings and offices that earlier generations valued."
+     },
+     "question": "Which of the following best expresses the central claim of the passage?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R05-A-01",
+   "passage": [
+    "Imagine a cinema that sells popcorn in two sizes: a small tub at a modest price and a large tub at nearly twice that. Most customers buy the small one, until the cinema adds a third option, a medium tub priced only slightly below the large. Hardly anyone buys the medium, yet sales of the large tub rise sharply, so that the new option has done its work without ever being chosen. It exists to make the large tub look like a bargain, and in many such cases it succeeds; marketers call such an option a decoy, and the pattern it produces turns up often enough, with magazine subscriptions, holiday packages and software plans as well as snacks, to deserve a more careful explanation than the claim that customers are easily fooled.",
+    "The standard account of choice in economics assumes that a person arrives at a shop with a ranking of the available goods already settled, and that the shop merely reveals it. On that account the decoy should be inert: if I prefer the small tub to the large one, the arrival of a medium tub that I do not want should leave my ranking of the other two untouched. What the decoy suggests instead is that many preferences are not retrieved but assembled on the spot, from the comparisons the menu makes easy. The medium tub is easy to compare with the large, being the same product at almost the same price with visibly less popcorn, whereas the comparison between the small and the large, which requires trading money against quantity, is considerably harder. Consequently, people lean on the easy comparison and let it settle the hard one.",
+    "It would be a mistake to conclude that preferences are endlessly pliable, for the effect is strongest when buyers are unsure what they want and have little experience of the product; a regular who knows exactly how much popcorn she can eat is rarely moved. It also weakens when the decoy is so plainly inferior that customers notice the trick, and resentment at being steered can push them the other way. These limits matter, because they show that the decoy exploits a gap in knowledge rather than a defect of reason: constructing a preference out of whatever comparisons are available is a perfectly sensible strategy for someone who lacks better information.",
+    "The more interesting lesson concerns the menu itself. We usually treat the set of options as neutral background and the decision as the thing to be explained, but the decoy shows that the background is part of the decision. Whoever arranges the options, whether a cinema, a software firm setting its subscription tiers or a restaurant pricing its wine list, is not merely displaying choices but helping to form them. This does not make every arrangement sinister, since some arrangement is unavoidable, but it does mean that the question of what people chose cannot be separated from the question of what they were shown."
+   ],
+   "questions": [
+    {
+     "id": "R05-A-01-1",
+     "type": "RC",
+     "options": {
+      "A": "the menu contains more than three options, so that no single comparison stands out.",
+      "B": "the products on the menu are expensive, so that customers take more care over every comparison they make.",
+      "C": "buyers already know from experience what they want, or when the decoy is obviously inferior.",
+      "D": "the product on sale is cheap and bought on impulse, like the popcorn sold in a cinema."
+     },
+     "question": "According to the passage, the decoy effect is weakest when"
+    }
+   ]
+  },
+  {
+   "passage_id": "R03-E-08",
+   "passage": [
+    "Tourists, it is often observed, are rarely content with what is shown to them. The monument, the parade, the dance performed on a stage in the hotel courtyard: all of these are understood to be presentations, arranged for visitors, and for that reason they seem to many travellers less real than whatever lies behind them. What the discerning visitor wants is the back region, the kitchen rather than the dining room, the village household rather than the folk show, the place where people are simply living rather than performing. Tourism, on this view, is a search for the unperformed, conducted by people whose very presence makes performance likely.",
+    "The difficulty is that the search creates its object, for once visitors will pay to see behind the scenes, behind the scenes becomes a scene. Homestays are furnished to look lived in; working kitchens are tidied and lit for the guided tour; a weaving cooperative arranges its looms so that visitors can watch the ordinary work of the day at a convenient hour. Each of these presents itself as a glimpse of the back, and each is in fact another front, built in the shape of a back. Critics of tourism have made much of this, arguing that the visitor who congratulates himself on having escaped the tourist trail has merely been led down a more expensive branch of it.",
+    "The criticism is accurate about the arrangements and, I think, mistaken about the tourists. It assumes that they are dupes who believe they have found the real thing and would be dismayed to learn otherwise. Many are nothing of the kind: asked directly, a good number will say that of course the homestay was prepared for them, that of course the cooperative works differently when no one is watching. What they value is not the illusion of having seen the unstaged but the experience of being admitted, of being received as a guest rather than seated as a spectator, and that experience is not falsified by the knowledge that it was arranged. A theatre audience is not deceived merely because it knows the actors are acting.",
+    "If there is a cost in all this, it falls elsewhere. Every back region that is opened to visitors must be replaced by another, further back, where the hosts can live without being watched, and in places where tourism is the main source of income, that retreat can go a long way. The family that rents out its courtyard confines its own life to a back room; the village that stages its festival for visitors holds the version that matters to it in the off season, or not at all. The more successfully a community sells access to its private life, the less private life it has left to sell, and the less it has left to keep for itself.",
+    "The usual question about staged authenticity is whether the tourist is being cheated. That question flatters the tourist by placing his experience at the centre of the moral picture, and it is in any case usually answered in his favour, since he generally receives what he knowingly pays for. The harder question concerns the hosts, and it is not whether they are deceiving anyone but how much of their lives they can afford to keep out of view. A tourism that respected its hosts would measure itself not by how much it manages to reveal but by how much it is content to leave alone."
+   ],
+   "questions": [
+    {
+     "id": "R03-E-08-3",
+     "type": "RC",
+     "options": {
+      "A": "Most guests at homestays, on learning that the household had been prepared for their visit, say they feel cheated and would not have paid had they known.",
+      "B": "Some tourists say that they prefer an openly staged performance in a hotel courtyard to a visit to a village household, since the performance asks less of them.",
+      "C": "Many families who run homestays say privately that they resent having to keep their own lives confined to a few back rooms during the months when guests arrive.",
+      "D": "Homestays usually cost visitors considerably more than hotel rooms of a similar standard in the same town or village, even though they offer fewer comforts."
+     },
+     "question": "Which of the following, if true, would most weaken the author's claim about tourists in paragraph 3?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R05-F-05",
+   "passage": [
+    "When a country lowers its barriers to imports, the gains and the losses arrive in very different forms. The gains are spread thinly across millions of households, each of which pays a little less for clothing, appliances or food, usually without noticing why. The losses fall heavily on a few: the workers of a particular mill, the shops that depended on their wages, the town whose tax base was the mill. A small saving that nobody notices is politically weightless; a closed factory is a photograph on the front page. Those who lose know exactly what they have lost and whom to blame, while those who gain rarely connect their small savings to a decision taken in a distant ministry. It is not surprising that the politics of trade so often seems out of proportion to its economics.",
+    "Economists have a standard reply. Because the total gains exceed the total losses, the winners could in principle compensate the losers and still come out ahead, so that everyone ends up better off. The argument is correct as arithmetic, and it is the foundation of the case that open trade raises national welfare. But the word that carries the weight is 'could'. A compensation that is possible but never paid is no comfort to the people who bore the losses, and to present it as though it settled the matter is to confuse a hypothetical with a policy.",
+    "Where governments have tried to pay, the record is unimpressive, though the reasons are instructive. Programmes reserved for workers who could prove that their jobs were lost to imports required them to establish a cause that is often impossible to isolate, since a plant may close because of foreign competition, new machinery and poor management all at once. Many eligible workers never applied; many who applied were retrained for occupations that were themselves shrinking. The failure lay less in the idea of compensation than in tying it to a cause that could not be reliably identified.",
+    "This suggests that the better course is not a trade-specific remedy at all but support that follows the worker regardless of why the job disappeared: insurance against lost earnings, help with moving to where work exists, and training linked to employers who are actually hiring. Such measures cannot be justified as payment for trade alone, and they will cost more than narrow programmes did. Yet the case for open trade has always rested on the claim that its benefits are broadly shared. If that claim is to be more than an assertion, the sharing has to be done by someone, and it will not happen by itself."
+   ],
+   "questions": [
+    {
+     "id": "R05-F-05-1",
+     "type": "RC",
+     "options": {
+      "A": "Since compensation programmes have repeatedly failed, governments should shield the industries that face the strongest competition from imports.",
+      "B": "Open trade's claim to benefit everyone requires compensation actually paid, through support for displaced workers whatever caused their job loss.",
+      "C": "Economists are mistaken in believing that the total gains from open trade exceed the total losses that it imposes on particular towns.",
+      "D": "Open trade reduces a country's welfare, because the losses suffered by displaced workers are larger than the gains spread across households."
+     },
+     "question": "Which of the following best expresses the central argument of the passage?"
+    },
+    {
+     "id": "R05-F-05-3",
+     "type": "RC",
+     "options": {
+      "A": "acceptance of its arithmetic, joined to criticism of its use as though it settled the question.",
+      "B": "warm endorsement of it as a complete answer to those who complain about the effects of imports.",
+      "C": "outright rejection of its reasoning as a mistake that has misled policy about the effects of trade.",
+      "D": "amused indifference to it as an academic exercise with no bearing on what governments actually do."
+     },
+     "question": "The author's attitude towards the economists' 'standard reply' in paragraph 2 is best described as"
+    },
+    {
+     "id": "R05-F-05-4",
+     "type": "RC",
+     "options": {
+      "A": "Residents of towns where a large plant closed tend to express much stronger hostility to imports than residents of towns where none closed.",
+      "B": "Most economists continue to agree that the total gains from lowering barriers to imports are larger than the total losses those barriers prevent.",
+      "C": "Training courses tied to employers who were hiring cost noticeably more per worker than the classroom courses offered under earlier programmes.",
+      "D": "Where help was open to all displaced workers whatever the cause, more applied and found work than where it was limited to job losses blamed on imports."
+     },
+     "question": "Which of the following, if true, would most strengthen the author's recommendation in paragraph 4?"
+    }
+   ]
+  }
+ ]
+}

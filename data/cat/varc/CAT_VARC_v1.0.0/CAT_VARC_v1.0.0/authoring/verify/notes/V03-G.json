@@ -1,0 +1,42 @@
+[
+ {
+  "id": "V03-G-017",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "1",
+    "key": "1",
+    "working": "Visitors carrying infection is off-topic from hand-hygiene compliance design (5,2,4,3).",
+    "alternative": "",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "1",
+    "key": "1",
+    "working": "5-2-4-3 (or 5-2-3-4) on hand hygiene compliance via design; 1 on visitors is off-track.",
+    "alternative": "Internal order of 3 and 4 is flexible; odd sentence unaffected.",
+    "issue": ""
+   }
+  }
+ },
+ {
+  "id": "V03-G-019",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "2",
+    "key": "2",
+    "working": "4-3-1-5 on opt-out defaults and their limits; 2 (ethical objection that silence is consent) does not link to 5's 'therefore'.",
+    "alternative": "",
+    "issue": "2 is on-topic (opt-out), so it is a somewhat close odd-one; but the 4-3-1-5 chain is tight without it."
+   },
+   "S2": {
+    "answer": "2",
+    "key": "2",
+    "working": "4-3-1-5 form the default/opt-out/families chain; 2 (ethics of presumed consent) is off the effectiveness thread.",
+    "alternative": "",
+    "issue": ""
+   }
+  }
+ }
+]

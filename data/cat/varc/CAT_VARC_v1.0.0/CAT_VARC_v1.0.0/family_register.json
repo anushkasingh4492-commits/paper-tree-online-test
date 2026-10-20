@@ -1,0 +1,5383 @@
+{
+ "note": "Units (RC passages and VA items) that share any family_dependencies entry never appear in the same generated paper. SUBJ groups join units on related subjects across item types.",
+ "concept_families": {
+  "V01A-fair-lottery": [
+   "CAT-VARC-C09-001"
+  ],
+  "V01A-degrees-of-consent": [
+   "CAT-VARC-C09-002"
+  ],
+  "V01A-white-lies": [
+   "CAT-VARC-C09-003"
+  ],
+  "V01A-heap-paradox": [
+   "CAT-VARC-C09-004"
+  ],
+  "V01A-choice-overload": [
+   "CAT-VARC-C09-005"
+  ],
+  "V01A-mere-exposure": [
+   "CAT-VARC-C09-006"
+  ],
+  "V01A-price-anchoring": [
+   "CAT-VARC-C09-007"
+  ],
+  "V01A-emotions-as-judgements": [
+   "CAT-VARC-C09-008"
+  ],
+  "V01A-conversational-silence": [
+   "CAT-VARC-C09-009"
+  ],
+  "V01A-paperback-readership": [
+   "CAT-VARC-C09-010"
+  ],
+  "V01A-language-shift": [
+   "CAT-VARC-C09-011"
+  ],
+  "V01A-first-name-address": [
+   "CAT-VARC-C09-012"
+  ],
+  "V01A-gift-obligation": [
+   "CAT-VARC-C09-013"
+  ],
+  "V01A-canal-decline": [
+   "CAT-VARC-C09-014"
+  ],
+  "V01A-print-spelling": [
+   "CAT-VARC-C09-015"
+  ],
+  "V01A-census-and-state": [
+   "CAT-VARC-C09-016"
+  ],
+  "V01A-golden-age-complaints": [
+   "CAT-VARC-C09-017"
+  ],
+  "V01A-charm-pricing": [
+   "CAT-VARC-C09-018"
+  ],
+  "V01A-sunk-cost": [
+   "CAT-VARC-C09-019"
+  ],
+  "V01A-comparative-advantage": [
+   "CAT-VARC-C09-020"
+  ],
+  "V01A-anchor-store-rents": [
+   "CAT-VARC-C09-021"
+  ],
+  "V01A-antibiotic-resistance": [
+   "CAT-VARC-C09-022"
+  ],
+  "V01A-herd-immunity": [
+   "CAT-VARC-C09-023"
+  ],
+  "V01A-continental-drift": [
+   "CAT-VARC-C09-024"
+  ],
+  "V01A-base-rates": [
+   "CAT-VARC-C09-025"
+  ],
+  "V01B-shifting-baselines": [
+   "CAT-VARC-C09-026"
+  ],
+  "V01B-carbon-offset-permanence": [
+   "CAT-VARC-C09-027"
+  ],
+  "V01B-groundwater-depletion": [
+   "CAT-VARC-C09-028"
+  ],
+  "V01B-light-pollution-stargazing": [
+   "CAT-VARC-C09-029"
+  ],
+  "V01B-password-complexity-rules": [
+   "CAT-VARC-C09-030"
+  ],
+  "V01B-software-technical-debt": [
+   "CAT-VARC-C09-031"
+  ],
+  "V01B-keyboard-layout-lock-in": [
+   "CAT-VARC-C09-032"
+  ],
+  "V01B-electric-car-range-anxiety": [
+   "CAT-VARC-C09-033"
+  ],
+  "V01B-unreliable-narrator": [
+   "CAT-VARC-C09-034"
+  ],
+  "V01B-art-forgery-value": [
+   "CAT-VARC-C09-035"
+  ],
+  "V01B-film-adaptation-novels": [
+   "CAT-VARC-C09-036"
+  ],
+  "V01B-cleaning-old-paintings": [
+   "CAT-VARC-C09-037"
+  ],
+  "V01B-loanwords-purity": [
+   "CAT-VARC-C09-038"
+  ],
+  "V01B-headline-questions": [
+   "CAT-VARC-C09-039"
+  ],
+  "V01B-euphemism-treadmill": [
+   "CAT-VARC-C09-040"
+  ],
+  "V01B-dictionaries-describe-usage": [
+   "CAT-VARC-C09-041"
+  ],
+  "V01B-grade-inflation": [
+   "CAT-VARC-C09-042"
+  ],
+  "V01B-retrieval-practice": [
+   "CAT-VARC-C09-043"
+  ],
+  "V01B-class-size": [
+   "CAT-VARC-C09-044"
+  ],
+  "V01B-comments-instead-of-marks": [
+   "CAT-VARC-C09-045"
+  ],
+  "V01B-rote-memorisation": [
+   "CAT-VARC-C09-046"
+  ],
+  "V01B-cancer-screening-overdiagnosis": [
+   "CAT-VARC-C09-047"
+  ],
+  "V01B-hospital-hand-hygiene": [
+   "CAT-VARC-C09-048"
+  ],
+  "V01B-fever-as-defence": [
+   "CAT-VARC-C09-049"
+  ],
+  "V01B-sleep-debt": [
+   "CAT-VARC-C09-050"
+  ],
+  "V01C-open-label-placebos": [
+   "CAT-VARC-C09-051"
+  ],
+  "V01C-disaster-triage": [
+   "CAT-VARC-C09-052"
+  ],
+  "V01C-hospital-handwashing": [
+   "CAT-VARC-C09-053"
+  ],
+  "V01C-donor-organ-allocation": [
+   "CAT-VARC-C09-054"
+  ],
+  "V01C-quarantine-origins": [
+   "CAT-VARC-C09-055"
+  ],
+  "V01C-desire-paths": [
+   "CAT-VARC-C09-056"
+  ],
+  "V01C-street-grid-planning": [
+   "CAT-VARC-C09-057"
+  ],
+  "V01C-delta-subsidence": [
+   "CAT-VARC-C09-058"
+  ],
+  "V01C-induced-traffic-demand": [
+   "CAT-VARC-C09-059"
+  ],
+  "V01C-promises-changed-circumstances": [
+   "CAT-VARC-C09-060"
+  ],
+  "V01C-ship-of-theseus": [
+   "CAT-VARC-C09-061"
+  ],
+  "V01C-duty-to-rescue": [
+   "CAT-VARC-C09-062"
+  ],
+  "V01C-thought-experiment-intuitions": [
+   "CAT-VARC-C09-063"
+  ],
+  "V01C-eyewitness-confidence": [
+   "CAT-VARC-C09-064"
+  ],
+  "V01C-learned-helplessness-students": [
+   "CAT-VARC-C09-065"
+  ],
+  "V01C-uses-of-boredom": [
+   "CAT-VARC-C09-066"
+  ],
+  "V01C-flow-state": [
+   "CAT-VARC-C09-067"
+  ],
+  "V01C-museum-labels": [
+   "CAT-VARC-C09-068"
+  ],
+  "V01C-cookbook-measurement": [
+   "CAT-VARC-C09-069"
+  ],
+  "V01C-letter-writing-decline": [
+   "CAT-VARC-C09-070"
+  ],
+  "V01C-public-library-lending": [
+   "CAT-VARC-C09-071"
+  ],
+  "V01C-salt-taxation": [
+   "CAT-VARC-C09-072"
+  ],
+  "V01C-term-limits": [
+   "CAT-VARC-C09-073"
+  ],
+  "V01C-roman-road-networks": [
+   "CAT-VARC-C09-074"
+  ],
+  "V01C-mercenary-armies": [
+   "CAT-VARC-C09-075"
+  ],
+  "V01D-telegram-brevity": [
+   "CAT-VARC-C09-076"
+  ],
+  "V01D-fog-harvesting-nets": [
+   "CAT-VARC-C09-077"
+  ],
+  "V01D-airline-overbooking": [
+   "CAT-VARC-C09-078"
+  ],
+  "V01D-offsite-backups": [
+   "CAT-VARC-C09-079"
+  ],
+  "V01D-detective-fair-play": [
+   "CAT-VARC-C09-080"
+  ],
+  "V01D-newspaper-corrections": [
+   "CAT-VARC-C09-081"
+  ],
+  "V01D-fruit-seed-dispersal": [
+   "CAT-VARC-C09-082"
+  ],
+  "V01D-monsoon-trade-winds": [
+   "CAT-VARC-C09-083"
+  ],
+  "V01D-bank-runs-deposit-insurance": [
+   "CAT-VARC-C09-084"
+  ],
+  "V01D-street-trees-cooling": [
+   "CAT-VARC-C09-085"
+  ],
+  "V01D-beaver-dams-wetlands": [
+   "CAT-VARC-C09-086"
+  ],
+  "V01D-loss-leader-pricing": [
+   "CAT-VARC-C09-087"
+  ],
+  "V01D-barter-coincidence-of-wants": [
+   "CAT-VARC-C09-088"
+  ],
+  "V01D-elevator-safety-brakes": [
+   "CAT-VARC-C09-089"
+  ],
+  "V01D-refrigeration-diet-change": [
+   "CAT-VARC-C09-090"
+  ],
+  "V01D-jazz-improvisation": [
+   "CAT-VARC-C09-091"
+  ],
+  "V01D-radio-drama-imagination": [
+   "CAT-VARC-C09-092"
+  ],
+  "V01D-postal-relay-riders": [
+   "CAT-VARC-C09-093"
+  ],
+  "V01D-monastery-bells-timekeeping": [
+   "CAT-VARC-C09-094"
+  ],
+  "V01D-serialised-novels": [
+   "CAT-VARC-C09-095"
+  ],
+  "V01D-warranties-signal-quality": [
+   "CAT-VARC-C09-096"
+  ],
+  "V01D-photography-painting-realism": [
+   "CAT-VARC-C09-097"
+  ],
+  "V01D-contradictory-proverbs": [
+   "CAT-VARC-C09-098"
+  ],
+  "V01D-lighthouse-automation": [
+   "CAT-VARC-C09-099"
+  ],
+  "V01D-hillside-terracing-erosion": [
+   "CAT-VARC-C09-100"
+  ],
+  "V01E-untranslatable-words": [
+   "CAT-VARC-C09-101"
+  ],
+  "V01E-silent-reading-history": [
+   "CAT-VARC-C09-102"
+  ],
+  "V01E-emoji-tone-markers": [
+   "CAT-VARC-C09-103"
+  ],
+  "V01E-accent-prestige": [
+   "CAT-VARC-C09-104"
+  ],
+  "V01E-street-naming": [
+   "CAT-VARC-C09-105"
+  ],
+  "V01E-learning-by-teaching": [
+   "CAT-VARC-C09-106"
+  ],
+  "V01E-open-book-exams": [
+   "CAT-VARC-C09-107"
+  ],
+  "V01E-mother-tongue-instruction": [
+   "CAT-VARC-C09-108"
+  ],
+  "V01E-handwritten-lecture-notes": [
+   "CAT-VARC-C09-109"
+  ],
+  "V01E-worked-examples": [
+   "CAT-VARC-C09-110"
+  ],
+  "V01E-nocebo-effect": [
+   "CAT-VARC-C09-111"
+  ],
+  "V01E-surgical-checklists": [
+   "CAT-VARC-C09-112"
+  ],
+  "V01E-medication-adherence": [
+   "CAT-VARC-C09-113"
+  ],
+  "V01E-loneliness-health-risk": [
+   "CAT-VARC-C09-114"
+  ],
+  "V01E-pedestrianised-shopping-streets": [
+   "CAT-VARC-C09-115"
+  ],
+  "V01E-hostile-bench-design": [
+   "CAT-VARC-C09-116"
+  ],
+  "V01E-mountain-pass-trade-routes": [
+   "CAT-VARC-C09-117"
+  ],
+  "V01E-map-projections": [
+   "CAT-VARC-C09-118"
+  ],
+  "V01E-lying-versus-misleading": [
+   "CAT-VARC-C09-119"
+  ],
+  "V01E-paternalism": [
+   "CAT-VARC-C09-120"
+  ],
+  "V01E-moral-luck": [
+   "CAT-VARC-C09-121"
+  ],
+  "V01E-obligations-to-future-generations": [
+   "CAT-VARC-C09-122"
+  ],
+  "V01E-curse-of-knowledge": [
+   "CAT-VARC-C09-123"
+  ],
+  "V01E-endowment-effect": [
+   "CAT-VARC-C09-124"
+  ],
+  "V01E-procrastination-and-mood": [
+   "CAT-VARC-C09-125"
+  ],
+  "V01F-queueing-norms": [
+   "CAT-VARC-C09-126"
+  ],
+  "V01F-longitude-at-sea": [
+   "CAT-VARC-C09-127"
+  ],
+  "V01F-coral-bleaching": [
+   "CAT-VARC-C09-128"
+  ],
+  "V01F-barcode-checkout": [
+   "CAT-VARC-C09-129"
+  ],
+  "V01F-school-uniforms": [
+   "CAT-VARC-C09-130"
+  ],
+  "V01F-habit-cues": [
+   "CAT-VARC-C09-131"
+  ],
+  "V01F-ozone-recovery": [
+   "CAT-VARC-C09-132"
+  ],
+  "V01F-public-parks": [
+   "CAT-VARC-C09-133"
+  ],
+  "V01F-hindsight-bias": [
+   "CAT-VARC-C09-134"
+  ],
+  "V01F-bystander-effect": [
+   "CAT-VARC-C09-135"
+  ],
+  "V01F-medieval-guilds": [
+   "CAT-VARC-C09-136"
+  ],
+  "V01F-metric-system": [
+   "CAT-VARC-C09-137"
+  ],
+  "V01F-tragedy-of-commons": [
+   "CAT-VARC-C09-138"
+  ],
+  "V01F-rent-control": [
+   "CAT-VARC-C09-139"
+  ],
+  "V01F-earthworms-soil": [
+   "CAT-VARC-C09-140"
+  ],
+  "V01F-grid-battery-storage": [
+   "CAT-VARC-C09-141"
+  ],
+  "V01F-shipping-containers": [
+   "CAT-VARC-C09-142"
+  ],
+  "V01F-dark-patterns": [
+   "CAT-VARC-C09-143"
+  ],
+  "V01F-gossip-function": [
+   "CAT-VARC-C09-144"
+  ],
+  "V01F-confirmation-bias": [
+   "CAT-VARC-C09-145"
+  ],
+  "V01F-minimum-wage": [
+   "CAT-VARC-C09-146"
+  ],
+  "V01F-division-of-labour": [
+   "CAT-VARC-C09-147"
+  ],
+  "V01F-network-effects": [
+   "CAT-VARC-C09-148"
+  ],
+  "V01F-extinction-impact": [
+   "CAT-VARC-C09-149"
+  ],
+  "V01F-spam-filters": [
+   "CAT-VARC-C09-150"
+  ],
+  "V01G-submarine-cable-repair": [
+   "CAT-VARC-C09-151"
+  ],
+  "V01G-predictive-text-autocomplete": [
+   "CAT-VARC-C09-152"
+  ],
+  "V01G-digital-file-format-obsolescence": [
+   "CAT-VARC-C09-153"
+  ],
+  "V01G-spreadsheets-accounting-clerks": [
+   "CAT-VARC-C09-154"
+  ],
+  "V01G-pneumatic-tube-mail": [
+   "CAT-VARC-C09-155"
+  ],
+  "V01G-sonnet-volta": [
+   "CAT-VARC-C09-156"
+  ],
+  "V01G-audiobook-narration": [
+   "CAT-VARC-C09-157"
+  ],
+  "V01G-theatre-stage-lighting": [
+   "CAT-VARC-C09-158"
+  ],
+  "V01G-comic-strip-panel-gutters": [
+   "CAT-VARC-C09-159"
+  ],
+  "V01G-obituary-writing": [
+   "CAT-VARC-C09-160"
+  ],
+  "V01G-semicolon-usage": [
+   "CAT-VARC-C09-161"
+  ],
+  "V01G-crossword-clue-conventions": [
+   "CAT-VARC-C09-162"
+  ],
+  "V01G-weather-forecast-wording": [
+   "CAT-VARC-C09-163"
+  ],
+  "V01G-mixed-ability-grouping": [
+   "CAT-VARC-C09-164"
+  ],
+  "V01G-cursive-handwriting-instruction": [
+   "CAT-VARC-C09-165"
+  ],
+  "V01G-school-field-trips": [
+   "CAT-VARC-C09-166"
+  ],
+  "V01G-chess-in-schools": [
+   "CAT-VARC-C09-167"
+  ],
+  "V01G-generic-drug-trust": [
+   "CAT-VARC-C09-168"
+  ],
+  "V01G-standing-desks": [
+   "CAT-VARC-C09-169"
+  ],
+  "V01G-hearing-aid-stigma": [
+   "CAT-VARC-C09-170"
+  ],
+  "V01G-hospital-visiting-hours": [
+   "CAT-VARC-C09-171"
+  ],
+  "V01G-cul-de-sac-suburbs": [
+   "CAT-VARC-C09-172"
+  ],
+  "V01G-high-rise-housing-estates": [
+   "CAT-VARC-C09-173"
+  ],
+  "V01G-twin-border-towns": [
+   "CAT-VARC-C09-174"
+  ],
+  "V01G-allotment-gardens": [
+   "CAT-VARC-C09-175"
+  ],
+  "V01H-bridging-points-town-siting": [
+   "CAT-VARC-C09-176"
+  ],
+  "V01H-trusting-testimony": [
+   "CAT-VARC-C09-177"
+  ],
+  "V01H-planning-fallacy": [
+   "CAT-VARC-C09-178"
+  ],
+  "V01H-fashion-trickle-down": [
+   "CAT-VARC-C09-179"
+  ],
+  "V01H-secret-ballot": [
+   "CAT-VARC-C09-180"
+  ],
+  "V01H-cobweb-cycle-farm-prices": [
+   "CAT-VARC-C09-181"
+  ],
+  "V01H-harbour-silting-port-decline": [
+   "CAT-VARC-C09-182"
+  ],
+  "V01H-doctrine-of-double-effect": [
+   "CAT-VARC-C09-183"
+  ],
+  "V01H-change-blindness": [
+   "CAT-VARC-C09-184"
+  ],
+  "V01H-table-manners-history": [
+   "CAT-VARC-C09-185"
+  ],
+  "V01H-plague-labour-shortage-wages": [
+   "CAT-VARC-C09-186"
+  ],
+  "V01H-used-car-lemons": [
+   "CAT-VARC-C09-187"
+  ],
+  "V01H-bypass-roads-town-centres": [
+   "CAT-VARC-C09-188"
+  ],
+  "V01H-supererogation-beyond-duty": [
+   "CAT-VARC-C09-189"
+  ],
+  "V01H-illusion-of-explanatory-depth": [
+   "CAT-VARC-C09-190"
+  ],
+  "V01H-tipping-customs": [
+   "CAT-VARC-C09-191"
+  ],
+  "V01H-coin-debasement": [
+   "CAT-VARC-C09-192"
+  ],
+  "V01H-free-shipping-thresholds": [
+   "CAT-VARC-C09-193"
+  ],
+  "V01H-railway-standard-time-zones": [
+   "CAT-VARC-C09-194"
+  ],
+  "V01H-other-minds-analogy-argument": [
+   "CAT-VARC-C09-195"
+  ],
+  "V01H-post-choice-dissonance": [
+   "CAT-VARC-C09-196"
+  ],
+  "V01H-oral-epic-formulas": [
+   "CAT-VARC-C09-197"
+  ],
+  "V01H-optical-semaphore-telegraph": [
+   "CAT-VARC-C09-198"
+  ],
+  "V01H-subscription-auto-renewal-pricing": [
+   "CAT-VARC-C09-199"
+  ],
+  "V01H-turnpike-toll-roads": [
+   "CAT-VARC-C09-200"
+  ],
+  "V01I-restaurant-tipping-norms": [
+   "CAT-VARC-C09-201"
+  ],
+  "V01I-tree-ring-dating": [
+   "CAT-VARC-C09-202"
+  ],
+  "V01I-plug-socket-standards": [
+   "CAT-VARC-C09-203"
+  ],
+  "V01I-podcast-intimacy": [
+   "CAT-VARC-C09-204"
+  ],
+  "V01I-primary-school-homework": [
+   "CAT-VARC-C09-205"
+  ],
+  "V01I-sitcom-laugh-tracks": [
+   "CAT-VARC-C09-206"
+  ],
+  "V01I-ice-core-climate-records": [
+   "CAT-VARC-C09-207"
+  ],
+  "V01I-insurance-moral-hazard": [
+   "CAT-VARC-C09-208"
+  ],
+  "V01I-poetry-translation": [
+   "CAT-VARC-C09-209"
+  ],
+  "V01I-gps-spatial-memory": [
+   "CAT-VARC-C09-210"
+  ],
+  "V01I-sign-language-grammar": [
+   "CAT-VARC-C09-211"
+  ],
+  "V01I-school-start-times-sleep": [
+   "CAT-VARC-C09-212"
+  ],
+  "V01I-winners-curse-auctions": [
+   "CAT-VARC-C09-213"
+  ],
+  "V01I-invasive-species-islands": [
+   "CAT-VARC-C09-214"
+  ],
+  "V01I-orchestra-conductor-role": [
+   "CAT-VARC-C09-215"
+  ],
+  "V01I-autocorrect-errors": [
+   "CAT-VARC-C09-216"
+  ],
+  "V01I-news-paywalls": [
+   "CAT-VARC-C09-217"
+  ],
+  "V01I-negative-marking-guessing": [
+   "CAT-VARC-C09-218"
+  ],
+  "V01I-gift-card-breakage": [
+   "CAT-VARC-C09-219"
+  ],
+  "V01I-bird-navigation-magnetic-sense": [
+   "CAT-VARC-C09-220"
+  ],
+  "V01I-sonnet-form-constraint": [
+   "CAT-VARC-C09-221"
+  ],
+  "V01I-open-source-maintainer-burnout": [
+   "CAT-VARC-C09-222"
+  ],
+  "V01I-ability-streaming": [
+   "CAT-VARC-C09-223"
+  ],
+  "V01I-franchise-business-model": [
+   "CAT-VARC-C09-224"
+  ],
+  "V01I-dialect-spelling-fiction": [
+   "CAT-VARC-C09-225"
+  ],
+  "V01J-teaching-to-the-test": [
+   "CAT-VARC-C09-226"
+  ],
+  "V01J-broad-street-cholera-pump": [
+   "CAT-VARC-C09-227"
+  ],
+  "V01J-demolished-city-walls": [
+   "CAT-VARC-C09-228"
+  ],
+  "V01J-spotlight-effect": [
+   "CAT-VARC-C09-229"
+  ],
+  "V01J-wedding-spending-escalation": [
+   "CAT-VARC-C09-230"
+  ],
+  "V01J-summer-learning-loss": [
+   "CAT-VARC-C09-231"
+  ],
+  "V01J-calorie-labels-on-menus": [
+   "CAT-VARC-C09-232"
+  ],
+  "V01J-apprenticeship-tacit-knowledge": [
+   "CAT-VARC-C09-233"
+  ],
+  "V01J-orphan-drugs-rare-diseases": [
+   "CAT-VARC-C09-234"
+  ],
+  "V01J-in-situ-slum-upgrading": [
+   "CAT-VARC-C09-235"
+  ],
+  "V01J-experience-machine": [
+   "CAT-VARC-C09-236"
+  ],
+  "V01J-peak-end-rule": [
+   "CAT-VARC-C09-237"
+  ],
+  "V01J-tattoo-respectability": [
+   "CAT-VARC-C09-238"
+  ],
+  "V01J-peer-marking-classrooms": [
+   "CAT-VARC-C09-239"
+  ],
+  "V01J-diagnostic-second-opinions": [
+   "CAT-VARC-C09-240"
+  ],
+  "V01J-street-vendors-public-space": [
+   "CAT-VARC-C09-241"
+  ],
+  "V01J-forgiveness-and-resentment": [
+   "CAT-VARC-C09-242"
+  ],
+  "V01J-surname-inheritance-customs": [
+   "CAT-VARC-C09-243"
+  ],
+  "V01J-veil-of-ignorance": [
+   "CAT-VARC-C09-244"
+  ],
+  "V01J-dirty-hands-in-politics": [
+   "CAT-VARC-C09-245"
+  ],
+  "V01J-risk-framing-gains-losses": [
+   "CAT-VARC-C09-246"
+  ],
+  "V01J-false-consensus-effect": [
+   "CAT-VARC-C09-247"
+  ],
+  "V01J-rivers-as-shifting-borders": [
+   "CAT-VARC-C09-248"
+  ],
+  "V01J-retirement-age-social-invention": [
+   "CAT-VARC-C09-249"
+  ],
+  "V01J-mental-accounting-windfalls": [
+   "CAT-VARC-C09-250"
+  ],
+  "V01K-household-appliances-housework": [
+   "CAT-VARC-C09-251"
+  ],
+  "V01K-sports-fan-loyalty": [
+   "CAT-VARC-C09-252"
+  ],
+  "V01K-baby-name-fashions": [
+   "CAT-VARC-C09-253"
+  ],
+  "V01K-open-plan-offices": [
+   "CAT-VARC-C09-254"
+  ],
+  "V01K-natural-ice-trade": [
+   "CAT-VARC-C09-255"
+  ],
+  "V01K-coffeehouse-political-debate": [
+   "CAT-VARC-C09-256"
+  ],
+  "V01K-writing-from-accounting-tokens": [
+   "CAT-VARC-C09-257"
+  ],
+  "V01K-prepaid-postage-reform": [
+   "CAT-VARC-C09-258"
+  ],
+  "V01K-conscription-and-citizenship": [
+   "CAT-VARC-C09-259"
+  ],
+  "V01K-piece-rate-wages": [
+   "CAT-VARC-C09-260"
+  ],
+  "V01K-group-lending-microfinance": [
+   "CAT-VARC-C09-261"
+  ],
+  "V01K-planned-obsolescence": [
+   "CAT-VARC-C09-262"
+  ],
+  "V01K-loyalty-card-data": [
+   "CAT-VARC-C09-263"
+  ],
+  "V01K-wildfire-suppression-paradox": [
+   "CAT-VARC-C09-264"
+  ],
+  "V01K-vaccine-cold-chain": [
+   "CAT-VARC-C09-265"
+  ],
+  "V01K-glacier-meltwater-supply": [
+   "CAT-VARC-C09-266"
+  ],
+  "V01K-mangrove-coastal-protection": [
+   "CAT-VARC-C09-267"
+  ],
+  "V01K-irrigation-soil-salinisation": [
+   "CAT-VARC-C09-268"
+  ],
+  "V01K-captcha-tests": [
+   "CAT-VARC-C09-269"
+  ],
+  "V01K-orbital-debris-cascade": [
+   "CAT-VARC-C09-270"
+  ],
+  "V01K-touchscreen-car-controls": [
+   "CAT-VARC-C09-271"
+  ],
+  "V01K-film-sequels": [
+   "CAT-VARC-C09-272"
+  ],
+  "V01K-theatre-fourth-wall": [
+   "CAT-VARC-C09-273"
+  ],
+  "V01K-music-sampling": [
+   "CAT-VARC-C09-274"
+  ],
+  "V01K-book-jacket-blurbs": [
+   "CAT-VARC-C09-275"
+  ],
+  "V01L-epistolary-novel": [
+   "CAT-VARC-C09-276"
+  ],
+  "V01L-ruins-in-landscape-painting": [
+   "CAT-VARC-C09-277"
+  ],
+  "V01L-still-life-vanitas": [
+   "CAT-VARC-C09-278"
+  ],
+  "V01L-tragic-chorus": [
+   "CAT-VARC-C09-279"
+  ],
+  "V01L-pidgin-to-creole": [
+   "CAT-VARC-C09-280"
+  ],
+  "V01L-scholarly-footnotes": [
+   "CAT-VARC-C09-281"
+  ],
+  "V01L-indirect-requests": [
+   "CAT-VARC-C09-282"
+  ],
+  "V01L-passive-voice-science": [
+   "CAT-VARC-C09-283"
+  ],
+  "V01L-spacing-effect": [
+   "CAT-VARC-C09-284"
+  ],
+  "V01L-rubric-marking": [
+   "CAT-VARC-C09-285"
+  ],
+  "V01L-school-science-practicals": [
+   "CAT-VARC-C09-286"
+  ],
+  "V01L-teacher-wait-time": [
+   "CAT-VARC-C09-287"
+  ],
+  "V01L-pain-rating-scales": [
+   "CAT-VARC-C09-288"
+  ],
+  "V01L-early-walking-after-surgery": [
+   "CAT-VARC-C09-289"
+  ],
+  "V01L-variolation-history": [
+   "CAT-VARC-C09-290"
+  ],
+  "V01L-polypharmacy-elderly": [
+   "CAT-VARC-C09-291"
+  ],
+  "V01L-colonial-hill-stations": [
+   "CAT-VARC-C09-292"
+  ],
+  "V01L-planned-capital-cities": [
+   "CAT-VARC-C09-293"
+  ],
+  "V01L-artists-and-gentrification": [
+   "CAT-VARC-C09-294"
+  ],
+  "V01L-building-on-floodplains": [
+   "CAT-VARC-C09-295"
+  ],
+  "V01L-oasis-caravan-towns": [
+   "CAT-VARC-C09-296"
+  ],
+  "V01L-whistleblowing-and-loyalty": [
+   "CAT-VARC-C09-297"
+  ],
+  "V01L-memory-theory-identity": [
+   "CAT-VARC-C09-298"
+  ],
+  "V01L-deferring-to-experts": [
+   "CAT-VARC-C09-299"
+  ],
+  "V01L-duties-of-gratitude": [
+   "CAT-VARC-C09-300"
+  ],
+  "V01M-problem-of-induction": [
+   "CAT-VARC-C09-301"
+  ],
+  "V01M-slippery-slope-arguments": [
+   "CAT-VARC-C09-302"
+  ],
+  "V01M-buridans-ass-indecision": [
+   "CAT-VARC-C09-303"
+  ],
+  "V01M-universalisability-of-maxims": [
+   "CAT-VARC-C09-304"
+  ],
+  "V01M-decoy-effect": [
+   "CAT-VARC-C09-305"
+  ],
+  "V01M-zeigarnik-unfinished-tasks": [
+   "CAT-VARC-C09-306"
+  ],
+  "V01M-self-serving-attribution": [
+   "CAT-VARC-C09-307"
+  ],
+  "V01M-tip-of-the-tongue-states": [
+   "CAT-VARC-C09-308"
+  ],
+  "V01M-chunking-working-memory": [
+   "CAT-VARC-C09-309"
+  ],
+  "V01M-gully-cricket-local-rules": [
+   "CAT-VARC-C09-310"
+  ],
+  "V01M-library-silence-norm": [
+   "CAT-VARC-C09-311"
+  ],
+  "V01M-family-group-chats": [
+   "CAT-VARC-C09-312"
+  ],
+  "V01M-neighbourhood-tea-stalls": [
+   "CAT-VARC-C09-313"
+  ],
+  "V01M-athenian-ostracism": [
+   "CAT-VARC-C09-314"
+  ],
+  "V01M-fire-insurance-brigades": [
+   "CAT-VARC-C09-315"
+  ],
+  "V01M-medieval-trade-fairs-credit": [
+   "CAT-VARC-C09-316"
+  ],
+  "V01M-civil-service-examinations": [
+   "CAT-VARC-C09-317"
+  ],
+  "V01M-veblen-goods": [
+   "CAT-VARC-C09-318"
+  ],
+  "V01M-just-in-time-inventory-fragility": [
+   "CAT-VARC-C09-319"
+  ],
+  "V01M-pay-transparency": [
+   "CAT-VARC-C09-320"
+  ],
+  "V01M-brand-extension-dilution": [
+   "CAT-VARC-C09-321"
+  ],
+  "V01M-river-straightening-floods": [
+   "CAT-VARC-C09-322"
+  ],
+  "V01M-monoculture-crop-disease": [
+   "CAT-VARC-C09-323"
+  ],
+  "V01M-volcanic-winter": [
+   "CAT-VARC-C09-324"
+  ],
+  "V01M-replication-crisis": [
+   "CAT-VARC-C09-325"
+  ],
+  "V01N-crop-seed-vaults": [
+   "CAT-VARC-C09-326"
+  ],
+  "V01N-flight-data-recorders": [
+   "CAT-VARC-C09-327"
+  ],
+  "V01N-concert-hall-acoustics": [
+   "CAT-VARC-C09-328"
+  ],
+  "V01N-subtitles-versus-dubbing": [
+   "CAT-VARC-C09-329"
+  ],
+  "V01N-school-debating-societies": [
+   "CAT-VARC-C09-330"
+  ],
+  "V01N-daily-step-count-targets": [
+   "CAT-VARC-C09-331"
+  ],
+  "V01N-legume-nitrogen-fixation": [
+   "CAT-VARC-C09-332"
+  ],
+  "V01N-whale-fall-ecosystems": [
+   "CAT-VARC-C09-333"
+  ],
+  "V01N-software-update-fatigue": [
+   "CAT-VARC-C09-334"
+  ],
+  "V01N-posthumous-unfinished-novels": [
+   "CAT-VARC-C09-335"
+  ],
+  "V01N-generic-trademark-brand-names": [
+   "CAT-VARC-C09-336"
+  ],
+  "V01N-learning-styles-myth": [
+   "CAT-VARC-C09-337"
+  ],
+  "V01N-sham-surgery-trials": [
+   "CAT-VARC-C09-338"
+  ],
+  "V01N-urban-birdsong-noise": [
+   "CAT-VARC-C09-339"
+  ],
+  "V01N-photo-metadata-provenance": [
+   "CAT-VARC-C09-340"
+  ],
+  "V01N-literary-prize-shortlists": [
+   "CAT-VARC-C09-341"
+  ],
+  "V01N-noise-cancelling-headphones": [
+   "CAT-VARC-C09-342"
+  ],
+  "V01N-monitor-alarm-fatigue": [
+   "CAT-VARC-C09-343"
+  ],
+  "V01N-wolf-reintroduction-trophic-cascade": [
+   "CAT-VARC-C09-344"
+  ],
+  "V01N-folk-tale-variants": [
+   "CAT-VARC-C09-345"
+  ],
+  "V01N-polio-eradication-last-cases": [
+   "CAT-VARC-C09-346"
+  ],
+  "V01N-maths-anxiety": [
+   "CAT-VARC-C09-347"
+  ],
+  "V01N-student-evaluations-of-teaching": [
+   "CAT-VARC-C09-348"
+  ],
+  "V01N-live-sports-commentary": [
+   "CAT-VARC-C09-349"
+  ],
+  "V01N-full-stop-in-text-messages": [
+   "CAT-VARC-C09-350"
+  ],
+  "V02A-promise-limits": [
+   "CAT-VARC-C10-001"
+  ],
+  "V02A-effortless-virtue": [
+   "CAT-VARC-C10-002"
+  ],
+  "V02A-thought-experiments": [
+   "CAT-VARC-C10-003"
+  ],
+  "V02A-institutional-apology": [
+   "CAT-VARC-C10-004"
+  ],
+  "V02A-nostalgia": [
+   "CAT-VARC-C10-005"
+  ],
+  "V02A-outcome-bias": [
+   "CAT-VARC-C10-006"
+  ],
+  "V02A-introspection-limits": [
+   "CAT-VARC-C10-007"
+  ],
+  "V02A-procrastination-mood": [
+   "CAT-VARC-C10-008"
+  ],
+  "V02A-public-libraries": [
+   "CAT-VARC-C10-009"
+  ],
+  "V02A-translating-humour": [
+   "CAT-VARC-C10-010"
+  ],
+  "V02A-building-restoration": [
+   "CAT-VARC-C10-011"
+  ],
+  "V02A-folk-song-collecting": [
+   "CAT-VARC-C10-012"
+  ],
+  "V02A-memoir-evidence": [
+   "CAT-VARC-C10-013"
+  ],
+  "V02A-counterfactual-history": [
+   "CAT-VARC-C10-014"
+  ],
+  "V02A-maps-make-borders": [
+   "CAT-VARC-C10-015"
+  ],
+  "V02A-archive-silences": [
+   "CAT-VARC-C10-016"
+  ],
+  "V02A-loyalty-programmes": [
+   "CAT-VARC-C10-017"
+  ],
+  "V02A-zero-price": [
+   "CAT-VARC-C10-018"
+  ],
+  "V02A-open-plan-offices": [
+   "CAT-VARC-C10-019"
+  ],
+  "V02A-reputation-credit": [
+   "CAT-VARC-C10-020"
+  ],
+  "V02A-unpaid-work-accounts": [
+   "CAT-VARC-C10-021"
+  ],
+  "V02A-introduced-species": [
+   "CAT-VARC-C10-022"
+  ],
+  "V02A-publication-bias": [
+   "CAT-VARC-C10-023"
+  ],
+  "V02A-seed-banks": [
+   "CAT-VARC-C10-024"
+  ],
+  "V02A-lumpers-splitters": [
+   "CAT-VARC-C10-025"
+  ],
+  "V02B-citizen-science-data": [
+   "CAT-VARC-C10-026"
+  ],
+  "V02B-rewilding-expectations": [
+   "CAT-VARC-C10-027"
+  ],
+  "V02B-carbon-offset-permanence": [
+   "CAT-VARC-C10-028"
+  ],
+  "V02B-model-organisms-bias": [
+   "CAT-VARC-C10-029"
+  ],
+  "V02B-autocomplete-uniform-prose": [
+   "CAT-VARC-C10-030"
+  ],
+  "V02B-right-to-repair": [
+   "CAT-VARC-C10-031"
+  ],
+  "V02B-digital-format-obsolescence": [
+   "CAT-VARC-C10-032"
+  ],
+  "V02B-recommendation-engines-taste": [
+   "CAT-VARC-C10-033"
+  ],
+  "V02B-posthumous-unfinished-manuscripts": [
+   "CAT-VARC-C10-034"
+  ],
+  "V02B-forgery-artistic-value": [
+   "CAT-VARC-C10-035"
+  ],
+  "V02B-white-cube-gallery": [
+   "CAT-VARC-C10-036"
+  ],
+  "V02B-literary-prize-shortlists": [
+   "CAT-VARC-C10-037"
+  ],
+  "V02B-dictionary-descriptivism": [
+   "CAT-VARC-C10-038"
+  ],
+  "V02B-headline-compression": [
+   "CAT-VARC-C10-039"
+  ],
+  "V02B-dialect-loss-schooling": [
+   "CAT-VARC-C10-040"
+  ],
+  "V02B-podcast-intimacy": [
+   "CAT-VARC-C10-041"
+  ],
+  "V02B-homework-load": [
+   "CAT-VARC-C10-042"
+  ],
+  "V02B-grade-inflation": [
+   "CAT-VARC-C10-043"
+  ],
+  "V02B-learning-styles-myth": [
+   "CAT-VARC-C10-044"
+  ],
+  "V02B-rote-memorisation": [
+   "CAT-VARC-C10-045"
+  ],
+  "V02B-test-preparation-coaching": [
+   "CAT-VARC-C10-046"
+  ],
+  "V02B-open-label-placebo": [
+   "CAT-VARC-C10-047"
+  ],
+  "V02B-overdiagnosis-screening": [
+   "CAT-VARC-C10-048"
+  ],
+  "V02B-antibiotic-stewardship": [
+   "CAT-VARC-C10-049"
+  ],
+  "V02B-medication-adherence": [
+   "CAT-VARC-C10-050"
+  ],
+  "V02C-icu-visiting-hours": [
+   "CAT-VARC-C10-051"
+  ],
+  "V02C-defensive-medicine": [
+   "CAT-VARC-C10-052"
+  ],
+  "V02C-medicalising-grief": [
+   "CAT-VARC-C10-053"
+  ],
+  "V02C-medical-jargon-consent": [
+   "CAT-VARC-C10-054"
+  ],
+  "V02C-public-toilets": [
+   "CAT-VARC-C10-055"
+  ],
+  "V02C-street-vendors": [
+   "CAT-VARC-C10-056"
+  ],
+  "V02C-rivers-connect": [
+   "CAT-VARC-C10-057"
+  ],
+  "V02C-shrinking-cities": [
+   "CAT-VARC-C10-058"
+  ],
+  "V02C-ought-implies-can": [
+   "CAT-VARC-C10-059"
+  ],
+  "V02C-hypocrisy-standing-to-blame": [
+   "CAT-VARC-C10-060"
+  ],
+  "V02C-posthumous-harm": [
+   "CAT-VARC-C10-061"
+  ],
+  "V02C-pity-versus-compassion": [
+   "CAT-VARC-C10-062"
+  ],
+  "V02C-impostor-feelings": [
+   "CAT-VARC-C10-063"
+  ],
+  "V02C-regret-action-inaction": [
+   "CAT-VARC-C10-064"
+  ],
+  "V02C-upward-social-comparison": [
+   "CAT-VARC-C10-065"
+  ],
+  "V02C-hot-hand-belief": [
+   "CAT-VARC-C10-066"
+  ],
+  "V02C-haggling-in-bazaars": [
+   "CAT-VARC-C10-067"
+  ],
+  "V02C-monetising-hobbies": [
+   "CAT-VARC-C10-068"
+  ],
+  "V02C-casual-dress-codes": [
+   "CAT-VARC-C10-069"
+  ],
+  "V02C-urban-anonymity": [
+   "CAT-VARC-C10-070"
+  ],
+  "V02C-historical-periodisation": [
+   "CAT-VARC-C10-071"
+  ],
+  "V02C-famine-access": [
+   "CAT-VARC-C10-072"
+  ],
+  "V02C-factory-clock-discipline": [
+   "CAT-VARC-C10-073"
+  ],
+  "V02C-invented-traditions": [
+   "CAT-VARC-C10-074"
+  ],
+  "V02C-silk-road-network": [
+   "CAT-VARC-C10-075"
+  ],
+  "V02D-sortition-and-competence": [
+   "CAT-VARC-C10-076"
+  ],
+  "V02D-military-logistics": [
+   "CAT-VARC-C10-077"
+  ],
+  "V02D-imperial-courier-relays": [
+   "CAT-VARC-C10-078"
+  ],
+  "V02D-medieval-craft-guilds": [
+   "CAT-VARC-C10-079"
+  ],
+  "V02D-first-mover-advantage": [
+   "CAT-VARC-C10-080"
+  ],
+  "V02D-counterfeit-luxury-signal": [
+   "CAT-VARC-C10-081"
+  ],
+  "V02D-surge-pricing-fairness": [
+   "CAT-VARC-C10-082"
+  ],
+  "V02D-wildfire-suppression-paradox": [
+   "CAT-VARC-C10-083"
+  ],
+  "V02D-precision-versus-accuracy": [
+   "CAT-VARC-C10-084"
+  ],
+  "V02D-urban-tree-canopy": [
+   "CAT-VARC-C10-085"
+  ],
+  "V02D-fossil-record-gaps": [
+   "CAT-VARC-C10-086"
+  ],
+  "V02D-software-feature-creep": [
+   "CAT-VARC-C10-087"
+  ],
+  "V02D-spreadsheet-errors": [
+   "CAT-VARC-C10-088"
+  ],
+  "V02D-grid-battery-intermittency": [
+   "CAT-VARC-C10-089"
+  ],
+  "V02D-spam-filter-arms-race": [
+   "CAT-VARC-C10-090"
+  ],
+  "V02D-unreliable-narrator": [
+   "CAT-VARC-C10-091"
+  ],
+  "V02D-film-adaptation-fidelity": [
+   "CAT-VARC-C10-092"
+  ],
+  "V02D-jazz-improvisation-preparation": [
+   "CAT-VARC-C10-093"
+  ],
+  "V02D-varnish-removal-paintings": [
+   "CAT-VARC-C10-094"
+  ],
+  "V02D-literary-canon-formation": [
+   "CAT-VARC-C10-095"
+  ],
+  "V02D-loanwords-linguistic-purity": [
+   "CAT-VARC-C10-096"
+  ],
+  "V02D-emoji-tone": [
+   "CAT-VARC-C10-097"
+  ],
+  "V02D-sign-languages-natural": [
+   "CAT-VARC-C10-098"
+  ],
+  "V02D-radio-drama-imagination": [
+   "CAT-VARC-C10-099"
+  ],
+  "V02D-conglomerate-diversification-discount": [
+   "CAT-VARC-C10-100"
+  ],
+  "V02E-euphemism-treadmill": [
+   "CAT-VARC-C10-101"
+  ],
+  "V02E-newspaper-corrections": [
+   "CAT-VARC-C10-102"
+  ],
+  "V02E-subtitling-versus-dubbing": [
+   "CAT-VARC-C10-103"
+  ],
+  "V02E-untranslatable-words": [
+   "CAT-VARC-C10-104"
+  ],
+  "V02E-class-size-reduction": [
+   "CAT-VARC-C10-105"
+  ],
+  "V02E-mother-tongue-instruction": [
+   "CAT-VARC-C10-106"
+  ],
+  "V02E-school-uniforms": [
+   "CAT-VARC-C10-107"
+  ],
+  "V02E-lecture-defence": [
+   "CAT-VARC-C10-108"
+  ],
+  "V02E-surgical-checklists": [
+   "CAT-VARC-C10-109"
+  ],
+  "V02E-nocebo-effect": [
+   "CAT-VARC-C10-110"
+  ],
+  "V02E-body-mass-index": [
+   "CAT-VARC-C10-111"
+  ],
+  "V02E-second-opinions": [
+   "CAT-VARC-C10-112"
+  ],
+  "V02E-desire-paths": [
+   "CAT-VARC-C10-113"
+  ],
+  "V02E-induced-traffic": [
+   "CAT-VARC-C10-114"
+  ],
+  "V02E-street-renaming": [
+   "CAT-VARC-C10-115"
+  ],
+  "V02E-hostile-street-furniture": [
+   "CAT-VARC-C10-116"
+  ],
+  "V02E-supererogation": [
+   "CAT-VARC-C10-117"
+  ],
+  "V02E-white-lies": [
+   "CAT-VARC-C10-118"
+  ],
+  "V02E-mutually-beneficial-exploitation": [
+   "CAT-VARC-C10-119"
+  ],
+  "V02E-forgiveness-without-apology": [
+   "CAT-VARC-C10-120"
+  ],
+  "V02E-peak-end-rule": [
+   "CAT-VARC-C10-121"
+  ],
+  "V02E-planning-fallacy": [
+   "CAT-VARC-C10-122"
+  ],
+  "V02E-mere-exposure": [
+   "CAT-VARC-C10-123"
+  ],
+  "V02E-spotlight-effect": [
+   "CAT-VARC-C10-124"
+  ],
+  "V02E-self-handicapping": [
+   "CAT-VARC-C10-125"
+  ],
+  "V02F-choice-overload": [
+   "CAT-VARC-C10-126"
+  ],
+  "V02F-sunk-cost-fallacy": [
+   "CAT-VARC-C10-127"
+  ],
+  "V02F-eyewitness-confidence": [
+   "CAT-VARC-C10-128"
+  ],
+  "V02F-boredom-as-signal": [
+   "CAT-VARC-C10-129"
+  ],
+  "V02F-queue-fairness-norms": [
+   "CAT-VARC-C10-130"
+  ],
+  "V02F-gift-obligation-reciprocity": [
+   "CAT-VARC-C10-131"
+  ],
+  "V02F-tipping-custom": [
+   "CAT-VARC-C10-132"
+  ],
+  "V02F-museum-repatriation-artefacts": [
+   "CAT-VARC-C10-133"
+  ],
+  "V02F-legislative-term-limits": [
+   "CAT-VARC-C10-134"
+  ],
+  "V02F-census-categories-identity": [
+   "CAT-VARC-C10-135"
+  ],
+  "V02F-vernacular-printing-standardisation": [
+   "CAT-VARC-C10-136"
+  ],
+  "V02F-referendum-question-design": [
+   "CAT-VARC-C10-137"
+  ],
+  "V02F-price-anchoring-discounts": [
+   "CAT-VARC-C10-138"
+  ],
+  "V02F-generic-drug-brand-premium": [
+   "CAT-VARC-C10-139"
+  ],
+  "V02F-four-day-work-week": [
+   "CAT-VARC-C10-140"
+  ],
+  "V02F-microfinance-limits": [
+   "CAT-VARC-C10-141"
+  ],
+  "V02F-commons-community-management": [
+   "CAT-VARC-C10-142"
+  ],
+  "V02F-mangrove-coastal-protection": [
+   "CAT-VARC-C10-143"
+  ],
+  "V02F-communicating-scientific-uncertainty": [
+   "CAT-VARC-C10-144"
+  ],
+  "V02F-monoculture-crop-vulnerability": [
+   "CAT-VARC-C10-145"
+  ],
+  "V02F-light-pollution-ecology": [
+   "CAT-VARC-C10-146"
+  ],
+  "V02F-password-complexity-rules": [
+   "CAT-VARC-C10-147"
+  ],
+  "V02F-automation-deskilling-pilots": [
+   "CAT-VARC-C10-148"
+  ],
+  "V02F-satnav-spatial-memory": [
+   "CAT-VARC-C10-149"
+  ],
+  "V02F-software-technical-debt": [
+   "CAT-VARC-C10-150"
+  ],
+  "V02G-backward-compatibility": [
+   "CAT-VARC-C10-151"
+  ],
+  "V02G-cookie-consent-banners": [
+   "CAT-VARC-C10-152"
+  ],
+  "V02G-efficiency-rebound": [
+   "CAT-VARC-C10-153"
+  ],
+  "V02G-open-source-maintainers": [
+   "CAT-VARC-C10-154"
+  ],
+  "V02G-open-endings-novels": [
+   "CAT-VARC-C10-155"
+  ],
+  "V02G-poetic-form-constraints": [
+   "CAT-VARC-C10-156"
+  ],
+  "V02G-authorial-intention": [
+   "CAT-VARC-C10-157"
+  ],
+  "V02G-amateur-choirs": [
+   "CAT-VARC-C10-158"
+  ],
+  "V02G-loanwords-purism": [
+   "CAT-VARC-C10-159"
+  ],
+  "V02G-anonymous-comment-sections": [
+   "CAT-VARC-C10-160"
+  ],
+  "V02G-false-balance-reporting": [
+   "CAT-VARC-C10-161"
+  ],
+  "V02G-spelling-reform": [
+   "CAT-VARC-C10-162"
+  ],
+  "V02G-retrieval-practice": [
+   "CAT-VARC-C10-163"
+  ],
+  "V02G-ability-grouping": [
+   "CAT-VARC-C10-164"
+  ],
+  "V02G-school-start-times": [
+   "CAT-VARC-C10-165"
+  ],
+  "V02G-grading-rubrics": [
+   "CAT-VARC-C10-166"
+  ],
+  "V02G-handwritten-notes": [
+   "CAT-VARC-C10-167"
+  ],
+  "V02G-symptom-checkers": [
+   "CAT-VARC-C10-168"
+  ],
+  "V02G-daily-step-targets": [
+   "CAT-VARC-C10-169"
+  ],
+  "V02G-warning-fatigue": [
+   "CAT-VARC-C10-170"
+  ],
+  "V02G-herd-immunity-free-riding": [
+   "CAT-VARC-C10-171"
+  ],
+  "V02G-bypass-roads-towns": [
+   "CAT-VARC-C10-172"
+  ],
+  "V02G-gated-housing-enclaves": [
+   "CAT-VARC-C10-173"
+  ],
+  "V02G-informal-settlements-plans": [
+   "CAT-VARC-C10-174"
+  ],
+  "V02G-night-time-economy": [
+   "CAT-VARC-C10-175"
+  ],
+  "V02H-pedestrianised-streets-retail": [
+   "CAT-VARC-C10-176"
+  ],
+  "V02H-moral-luck": [
+   "CAT-VARC-C10-177"
+  ],
+  "V02H-hindsight-bias": [
+   "CAT-VARC-C10-178"
+  ],
+  "V02H-wedding-spending-status": [
+   "CAT-VARC-C10-179"
+  ],
+  "V02H-great-man-history": [
+   "CAT-VARC-C10-180"
+  ],
+  "V02H-minimum-wage-employment-effects": [
+   "CAT-VARC-C10-181"
+  ],
+  "V02H-port-cities-cosmopolitanism": [
+   "CAT-VARC-C10-182"
+  ],
+  "V02H-dirty-hands-political-ethics": [
+   "CAT-VARC-C10-183"
+  ],
+  "V02H-learned-helplessness": [
+   "CAT-VARC-C10-184"
+  ],
+  "V02H-food-authenticity": [
+   "CAT-VARC-C10-185"
+  ],
+  "V02H-imperial-overextension-decline": [
+   "CAT-VARC-C10-186"
+  ],
+  "V02H-corporate-mission-statements": [
+   "CAT-VARC-C10-187"
+  ],
+  "V02H-planned-capital-cities": [
+   "CAT-VARC-C10-188"
+  ],
+  "V02H-deference-to-moral-experts": [
+   "CAT-VARC-C10-189"
+  ],
+  "V02H-groupthink-cohesion": [
+   "CAT-VARC-C10-190"
+  ],
+  "V02H-fashion-cycles-imitation": [
+   "CAT-VARC-C10-191"
+  ],
+  "V02H-revolutions-rising-expectations": [
+   "CAT-VARC-C10-192"
+  ],
+  "V02H-remittances-development": [
+   "CAT-VARC-C10-193"
+  ],
+  "V02H-gentrification-displacement": [
+   "CAT-VARC-C10-194"
+  ],
+  "V02H-duties-to-future-generations": [
+   "CAT-VARC-C10-195"
+  ],
+  "V02H-habit-formation-context-cues": [
+   "CAT-VARC-C10-196"
+  ],
+  "V02H-retirement-identity-loss": [
+   "CAT-VARC-C10-197"
+  ],
+  "V02H-judging-past-figures-present-morals": [
+   "CAT-VARC-C10-198"
+  ],
+  "V02H-artillery-fortresses-state-centralisation": [
+   "CAT-VARC-C10-199"
+  ],
+  "V02H-network-effects-platform-lock-in": [
+   "CAT-VARC-C10-200"
+  ],
+  "V02I-winners-curse-auctions": [
+   "CAT-VARC-C10-201"
+  ],
+  "V02I-extended-warranties": [
+   "CAT-VARC-C10-202"
+  ],
+  "V02I-just-in-time-inventory": [
+   "CAT-VARC-C10-203"
+  ],
+  "V02I-franchise-standardisation": [
+   "CAT-VARC-C10-204"
+  ],
+  "V02I-coral-reef-gardening": [
+   "CAT-VARC-C10-205"
+  ],
+  "V02I-honeybee-pollinator-focus": [
+   "CAT-VARC-C10-206"
+  ],
+  "V02I-instruments-shape-theory": [
+   "CAT-VARC-C10-207"
+  ],
+  "V02I-urban-wildlife-boldness": [
+   "CAT-VARC-C10-208"
+  ],
+  "V02I-dark-patterns-cancellation": [
+   "CAT-VARC-C10-209"
+  ],
+  "V02I-software-default-settings": [
+   "CAT-VARC-C10-210"
+  ],
+  "V02I-algorithmic-hiring-screening": [
+   "CAT-VARC-C10-211"
+  ],
+  "V02I-version-control-history": [
+   "CAT-VARC-C10-212"
+  ],
+  "V02I-cover-songs-interpretation": [
+   "CAT-VARC-C10-213"
+  ],
+  "V02I-ghostwriting-deception": [
+   "CAT-VARC-C10-214"
+  ],
+  "V02I-orchestra-conductor-role": [
+   "CAT-VARC-C10-215"
+  ],
+  "V02I-abstract-art-titles": [
+   "CAT-VARC-C10-216"
+  ],
+  "V02I-museum-audio-guides": [
+   "CAT-VARC-C10-217"
+  ],
+  "V02I-weather-forecast-probability": [
+   "CAT-VARC-C10-218"
+  ],
+  "V02I-live-sports-commentary": [
+   "CAT-VARC-C10-219"
+  ],
+  "V02I-corporate-jargon-evasion": [
+   "CAT-VARC-C10-220"
+  ],
+  "V02I-obituary-discretion": [
+   "CAT-VARC-C10-221"
+  ],
+  "V02I-praising-effort": [
+   "CAT-VARC-C10-222"
+  ],
+  "V02I-peer-tutoring-tutors": [
+   "CAT-VARC-C10-223"
+  ],
+  "V02I-multiple-choice-tests": [
+   "CAT-VARC-C10-224"
+  ],
+  "V02I-school-field-trips": [
+   "CAT-VARC-C10-225"
+  ],
+  "V02J-mixed-age-classrooms": [
+   "CAT-VARC-C10-226"
+  ],
+  "V02J-summer-learning-loss": [
+   "CAT-VARC-C10-227"
+  ],
+  "V02J-simplified-textbook-readability": [
+   "CAT-VARC-C10-228"
+  ],
+  "V02J-teacher-expectation-effects": [
+   "CAT-VARC-C10-229"
+  ],
+  "V02J-sham-surgery-controls": [
+   "CAT-VARC-C10-230"
+  ],
+  "V02J-self-reported-diet-surveys": [
+   "CAT-VARC-C10-231"
+  ],
+  "V02J-loneliness-mortality-risk": [
+   "CAT-VARC-C10-232"
+  ],
+  "V02J-observed-hand-washing": [
+   "CAT-VARC-C10-233"
+  ],
+  "V02J-cul-de-sac-street-layouts": [
+   "CAT-VARC-C10-234"
+  ],
+  "V02J-paved-surfaces-urban-flooding": [
+   "CAT-VARC-C10-235"
+  ],
+  "V02J-cycling-safety-in-numbers": [
+   "CAT-VARC-C10-236"
+  ],
+  "V02J-commuting-time-budget": [
+   "CAT-VARC-C10-237"
+  ],
+  "V02J-moral-distance-duty": [
+   "CAT-VARC-C10-238"
+  ],
+  "V02J-punishing-old-crimes": [
+   "CAT-VARC-C10-239"
+  ],
+  "V02J-lying-versus-misleading": [
+   "CAT-VARC-C10-240"
+  ],
+  "V02J-nudges-paternalism": [
+   "CAT-VARC-C10-241"
+  ],
+  "V02J-curse-of-knowledge": [
+   "CAT-VARC-C10-242"
+  ],
+  "V02J-endowment-effect": [
+   "CAT-VARC-C10-243"
+  ],
+  "V02J-false-consensus-effect": [
+   "CAT-VARC-C10-244"
+  ],
+  "V02J-illusion-of-explanatory-depth": [
+   "CAT-VARC-C10-245"
+  ],
+  "V02J-ego-depletion-replication": [
+   "CAT-VARC-C10-246"
+  ],
+  "V02J-forms-of-address": [
+   "CAT-VARC-C10-247"
+  ],
+  "V02J-gossip-social-control": [
+   "CAT-VARC-C10-248"
+  ],
+  "V02J-shared-family-meals": [
+   "CAT-VARC-C10-249"
+  ],
+  "V02J-mourning-period-customs": [
+   "CAT-VARC-C10-250"
+  ],
+  "V02K-politeness-formulas-sincerity": [
+   "CAT-VARC-C10-251"
+  ],
+  "V02K-game-rules-fair-play": [
+   "CAT-VARC-C10-252"
+  ],
+  "V02K-modesty-norms-humblebrag": [
+   "CAT-VARC-C10-253"
+  ],
+  "V02K-punctuality-norms": [
+   "CAT-VARC-C10-254"
+  ],
+  "V02K-metric-system-adoption": [
+   "CAT-VARC-C10-255"
+  ],
+  "V02K-civil-service-examinations-meritocracy": [
+   "CAT-VARC-C10-256"
+  ],
+  "V02K-telegraph-diplomats-discretion": [
+   "CAT-VARC-C10-257"
+  ],
+  "V02K-manuscript-copying-survival-of-texts": [
+   "CAT-VARC-C10-258"
+  ],
+  "V02K-subscription-inertia": [
+   "CAT-VARC-C10-259"
+  ],
+  "V02K-airline-overbooking": [
+   "CAT-VARC-C10-260"
+  ],
+  "V02K-family-firm-succession": [
+   "CAT-VARC-C10-261"
+  ],
+  "V02K-lighthouse-public-goods": [
+   "CAT-VARC-C10-262"
+  ],
+  "V02K-keystone-species-metaphor": [
+   "CAT-VARC-C10-263"
+  ],
+  "V02K-tree-ring-dating": [
+   "CAT-VARC-C10-264"
+  ],
+  "V02K-peak-water-glacier-melt": [
+   "CAT-VARC-C10-265"
+  ],
+  "V02K-rainfall-variability-drylands": [
+   "CAT-VARC-C10-266"
+  ],
+  "V02K-technology-standards-path-dependence": [
+   "CAT-VARC-C10-267"
+  ],
+  "V02K-machine-translation-fluency-errors": [
+   "CAT-VARC-C10-268"
+  ],
+  "V02K-digital-photo-abundance": [
+   "CAT-VARC-C10-269"
+  ],
+  "V02K-electrification-productivity-lag": [
+   "CAT-VARC-C10-270"
+  ],
+  "V02K-retranslation-of-classics": [
+   "CAT-VARC-C10-271"
+  ],
+  "V02K-film-sequels-franchises": [
+   "CAT-VARC-C10-272"
+  ],
+  "V02K-detective-fiction-clue-fairness": [
+   "CAT-VARC-C10-273"
+  ],
+  "V02K-abstract-art-skill-accusation": [
+   "CAT-VARC-C10-274"
+  ],
+  "V02K-period-instruments-authenticity": [
+   "CAT-VARC-C10-275"
+  ],
+  "V02L-translator-credit-covers": [
+   "CAT-VARC-C10-276"
+  ],
+  "V02L-abridged-classics": [
+   "CAT-VARC-C10-277"
+  ],
+  "V02L-sitcom-laugh-tracks": [
+   "CAT-VARC-C10-278"
+  ],
+  "V02L-sampling-music-originality": [
+   "CAT-VARC-C10-279"
+  ],
+  "V02L-passive-voice-advice": [
+   "CAT-VARC-C10-280"
+  ],
+  "V02L-cropping-news-photographs": [
+   "CAT-VARC-C10-281"
+  ],
+  "V02L-audiobooks-as-reading": [
+   "CAT-VARC-C10-282"
+  ],
+  "V02L-text-abbreviations-literacy": [
+   "CAT-VARC-C10-283"
+  ],
+  "V02L-seductive-details-textbooks": [
+   "CAT-VARC-C10-284"
+  ],
+  "V02L-open-book-examinations": [
+   "CAT-VARC-C10-285"
+  ],
+  "V02L-cursive-handwriting-instruction": [
+   "CAT-VARC-C10-286"
+  ],
+  "V02L-university-league-tables": [
+   "CAT-VARC-C10-287"
+  ],
+  "V02L-bed-rest-back-pain": [
+   "CAT-VARC-C10-288"
+  ],
+  "V02L-patients-reading-test-results": [
+   "CAT-VARC-C10-289"
+  ],
+  "V02L-alarm-fatigue-monitors": [
+   "CAT-VARC-C10-290"
+  ],
+  "V02L-orphan-drugs-rare-diseases": [
+   "CAT-VARC-C10-291"
+  ],
+  "V02L-parking-minimum-requirements": [
+   "CAT-VARC-C10-292"
+  ],
+  "V02L-flagship-museum-regeneration": [
+   "CAT-VARC-C10-293"
+  ],
+  "V02L-heritage-zoning-old-quarters": [
+   "CAT-VARC-C10-294"
+  ],
+  "V02L-pedestrian-footbridges": [
+   "CAT-VARC-C10-295"
+  ],
+  "V02L-partiality-toward-friends": [
+   "CAT-VARC-C10-296"
+  ],
+  "V02L-anonymous-giving-motives": [
+   "CAT-VARC-C10-297"
+  ],
+  "V02L-moral-rules-exceptions": [
+   "CAT-VARC-C10-298"
+  ],
+  "V02L-consent-unequal-bargaining": [
+   "CAT-VARC-C10-299"
+  ],
+  "V02L-duty-of-confidentiality": [
+   "CAT-VARC-C10-300"
+  ],
+  "V02M-memory-and-personal-identity": [
+   "CAT-VARC-C10-301"
+  ],
+  "V02M-disputes-about-taste": [
+   "CAT-VARC-C10-302"
+  ],
+  "V02M-paternalism-and-autonomy": [
+   "CAT-VARC-C10-303"
+  ],
+  "V02M-relativism-and-tolerance": [
+   "CAT-VARC-C10-304"
+  ],
+  "V02M-expert-intuition-reliability": [
+   "CAT-VARC-C10-305"
+  ],
+  "V02M-bystander-diffusion-of-responsibility": [
+   "CAT-VARC-C10-306"
+  ],
+  "V02M-delayed-gratification-and-trust": [
+   "CAT-VARC-C10-307"
+  ],
+  "V02M-decision-fatigue-willpower": [
+   "CAT-VARC-C10-308"
+  ],
+  "V02M-small-talk-social-function": [
+   "CAT-VARC-C10-309"
+  ],
+  "V02M-parasocial-attachment": [
+   "CAT-VARC-C10-310"
+  ],
+  "V02M-shared-public-holidays": [
+   "CAT-VARC-C10-311"
+  ],
+  "V02M-heirloom-objects-family-memory": [
+   "CAT-VARC-C10-312"
+  ],
+  "V02M-railway-time-standardisation": [
+   "CAT-VARC-C10-313"
+  ],
+  "V02M-federalism-policy-laboratories": [
+   "CAT-VARC-C10-314"
+  ],
+  "V02M-coinage-and-state-authority": [
+   "CAT-VARC-C10-315"
+  ],
+  "V02M-colonial-land-surveys": [
+   "CAT-VARC-C10-316"
+  ],
+  "V02M-insurance-moral-hazard": [
+   "CAT-VARC-C10-317"
+  ],
+  "V02M-used-car-information-asymmetry": [
+   "CAT-VARC-C10-318"
+  ],
+  "V02M-comparative-advantage": [
+   "CAT-VARC-C10-319"
+  ],
+  "V02M-inflation-debtors-creditors": [
+   "CAT-VARC-C10-320"
+  ],
+  "V02M-skilled-emigration": [
+   "CAT-VARC-C10-321"
+  ],
+  "V02M-auxiliary-hypotheses-falsification": [
+   "CAT-VARC-C10-322"
+  ],
+  "V02M-groundwater-depletion": [
+   "CAT-VARC-C10-323"
+  ],
+  "V02M-animal-cognition-anthropomorphism": [
+   "CAT-VARC-C10-324"
+  ],
+  "V02M-soil-carbon-sequestration": [
+   "CAT-VARC-C10-325"
+  ],
+  "V02N-dam-removal-recovery": [
+   "CAT-VARC-C10-326"
+  ],
+  "V02N-earthquake-forecasting": [
+   "CAT-VARC-C10-327"
+  ],
+  "V02N-captive-breeding-conditions": [
+   "CAT-VARC-C10-328"
+  ],
+  "V02N-eponymous-species-names": [
+   "CAT-VARC-C10-329"
+  ],
+  "V02N-undo-forgiving-design": [
+   "CAT-VARC-C10-330"
+  ],
+  "V02N-infinite-scroll-stopping-points": [
+   "CAT-VARC-C10-331"
+  ],
+  "V02N-chatbot-satisfaction-scores": [
+   "CAT-VARC-C10-332"
+  ],
+  "V02N-ev-range-anxiety": [
+   "CAT-VARC-C10-333"
+  ],
+  "V02N-serial-novel-instalments": [
+   "CAT-VARC-C10-334"
+  ],
+  "V02N-sympathetic-villains": [
+   "CAT-VARC-C10-335"
+  ],
+  "V02N-applause-between-movements": [
+   "CAT-VARC-C10-336"
+  ],
+  "V02N-ruins-aesthetic": [
+   "CAT-VARC-C10-337"
+  ],
+  "V02N-slang-lifecycle": [
+   "CAT-VARC-C10-338"
+  ],
+  "V02N-accent-competence-judgements": [
+   "CAT-VARC-C10-339"
+  ],
+  "V02N-reality-tv-editing": [
+   "CAT-VARC-C10-340"
+  ],
+  "V02N-voice-notes-effort": [
+   "CAT-VARC-C10-341"
+  ],
+  "V02N-calculators-estimation": [
+   "CAT-VARC-C10-342"
+  ],
+  "V02N-student-teaching-evaluations": [
+   "CAT-VARC-C10-343"
+  ],
+  "V02N-recorded-lectures-attendance": [
+   "CAT-VARC-C10-344"
+  ],
+  "V02N-reading-aloud-adolescents": [
+   "CAT-VARC-C10-345"
+  ],
+  "V02N-fever-suppression": [
+   "CAT-VARC-C10-346"
+  ],
+  "V02N-pain-rating-scales": [
+   "CAT-VARC-C10-347"
+  ],
+  "V02N-surrogate-endpoints": [
+   "CAT-VARC-C10-348"
+  ],
+  "V02N-telemedicine-consultations": [
+   "CAT-VARC-C10-349"
+  ],
+  "V02N-clinical-practice-guidelines": [
+   "CAT-VARC-C10-350"
+  ],
+  "V03A-effortless-virtue": [
+   "CAT-VARC-C11-001"
+  ],
+  "V03A-spacing-effect": [
+   "CAT-VARC-C11-002"
+  ],
+  "V03A-recipes-and-tacit-skill": [
+   "CAT-VARC-C11-003"
+  ],
+  "V03A-secret-ballot": [
+   "CAT-VARC-C11-004"
+  ],
+  "V03A-tipping-incentives": [
+   "CAT-VARC-C11-005"
+  ],
+  "V03A-street-lights-and-insects": [
+   "CAT-VARC-C11-006"
+  ],
+  "V03A-doing-and-allowing": [
+   "CAT-VARC-C11-007"
+  ],
+  "V03A-curiosity-and-gaps": [
+   "CAT-VARC-C11-008"
+  ],
+  "V03A-library-as-public-space": [
+   "CAT-VARC-C11-009"
+  ],
+  "V03A-coinage-and-authority": [
+   "CAT-VARC-C11-010"
+  ],
+  "V03A-airline-overbooking": [
+   "CAT-VARC-C11-011"
+  ],
+  "V03A-tillage-and-soil-carbon": [
+   "CAT-VARC-C11-012"
+  ],
+  "V03A-knowledge-from-testimony": [
+   "CAT-VARC-C11-013"
+  ],
+  "V03A-felt-length-of-waiting": [
+   "CAT-VARC-C11-014"
+  ],
+  "V03A-oral-epic-sameness": [
+   "CAT-VARC-C11-015"
+  ],
+  "V03A-term-limits": [
+   "CAT-VARC-C11-016"
+  ],
+  "V03A-rotating-savings-groups": [
+   "CAT-VARC-C11-017"
+  ],
+  "V03A-coastline-measurement": [
+   "CAT-VARC-C11-018"
+  ],
+  "V03A-copying-and-theft": [
+   "CAT-VARC-C11-019"
+  ],
+  "V03A-effort-in-groups": [
+   "CAT-VARC-C11-020"
+  ],
+  "V03A-sources-of-fashion-change": [
+   "CAT-VARC-C11-021"
+  ],
+  "V03A-changing-meaning-of-monuments": [
+   "CAT-VARC-C11-022"
+  ],
+  "V03A-insurance-and-care": [
+   "CAT-VARC-C11-023"
+  ],
+  "V03A-mangroves-as-sea-defence": [
+   "CAT-VARC-C11-024"
+  ],
+  "V03A-seed-banks-and-farms": [
+   "CAT-VARC-C11-025"
+  ],
+  "V03B-urban-tree-canopy": [
+   "CAT-VARC-C11-026"
+  ],
+  "V03B-password-rules": [
+   "CAT-VARC-C11-027"
+  ],
+  "V03B-loanwords": [
+   "CAT-VARC-C11-028"
+  ],
+  "V03B-homework-young-children": [
+   "CAT-VARC-C11-029"
+  ],
+  "V03B-surgical-checklists": [
+   "CAT-VARC-C11-030"
+  ],
+  "V03B-citizen-science-birds": [
+   "CAT-VARC-C11-031"
+  ],
+  "V03B-serialised-novels": [
+   "CAT-VARC-C11-032"
+  ],
+  "V03B-newspaper-corrections": [
+   "CAT-VARC-C11-033"
+  ],
+  "V03B-fire-suppression": [
+   "CAT-VARC-C11-034"
+  ],
+  "V03B-predictive-text": [
+   "CAT-VARC-C11-035"
+  ],
+  "V03B-right-to-repair": [
+   "CAT-VARC-C11-036"
+  ],
+  "V03B-translating-poetry": [
+   "CAT-VARC-C11-037"
+  ],
+  "V03B-restoring-paintings": [
+   "CAT-VARC-C11-038"
+  ],
+  "V03B-headline-writing": [
+   "CAT-VARC-C11-039"
+  ],
+  "V03B-grade-inflation": [
+   "CAT-VARC-C11-040"
+  ],
+  "V03B-learning-by-teaching": [
+   "CAT-VARC-C11-041"
+  ],
+  "V03B-mcq-design": [
+   "CAT-VARC-C11-042"
+  ],
+  "V03B-placebo-trials": [
+   "CAT-VARC-C11-043"
+  ],
+  "V03B-antibiotic-overprescription": [
+   "CAT-VARC-C11-044"
+  ],
+  "V03B-school-start-times": [
+   "CAT-VARC-C11-045"
+  ],
+  "V03B-replication-crisis": [
+   "CAT-VARC-C11-046"
+  ],
+  "V03B-unreliable-narrator": [
+   "CAT-VARC-C11-047"
+  ],
+  "V03B-dialect-prestige": [
+   "CAT-VARC-C11-048"
+  ],
+  "V03B-screening-overdiagnosis": [
+   "CAT-VARC-C11-049"
+  ],
+  "V03B-format-lock-in": [
+   "CAT-VARC-C11-050"
+  ],
+  "V03C-shift-work-and-sleep": [
+   "CAT-VARC-C11-051"
+  ],
+  "V03C-loneliness-as-health-risk": [
+   "CAT-VARC-C11-052"
+  ],
+  "V03C-second-opinions-in-diagnosis": [
+   "CAT-VARC-C11-053"
+  ],
+  "V03C-pain-rating-scales": [
+   "CAT-VARC-C11-054"
+  ],
+  "V03C-induced-traffic-demand": [
+   "CAT-VARC-C11-055"
+  ],
+  "V03C-street-vendors": [
+   "CAT-VARC-C11-056"
+  ],
+  "V03C-rent-control": [
+   "CAT-VARC-C11-057"
+  ],
+  "V03C-riverfronts-of-cities": [
+   "CAT-VARC-C11-058"
+  ],
+  "V03C-moral-luck": [
+   "CAT-VARC-C11-059"
+  ],
+  "V03C-promises-under-changed-circumstances": [
+   "CAT-VARC-C11-060"
+  ],
+  "V03C-medical-paternalism": [
+   "CAT-VARC-C11-061"
+  ],
+  "V03C-lying-versus-misleading": [
+   "CAT-VARC-C11-062"
+  ],
+  "V03C-spotlight-effect-self-consciousness": [
+   "CAT-VARC-C11-063"
+  ],
+  "V03C-sunk-cost-reasoning": [
+   "CAT-VARC-C11-064"
+  ],
+  "V03C-choice-overload": [
+   "CAT-VARC-C11-065"
+  ],
+  "V03C-habits-and-context-cues": [
+   "CAT-VARC-C11-066"
+  ],
+  "V03C-uses-of-boredom": [
+   "CAT-VARC-C11-067"
+  ],
+  "V03C-gifts-and-reciprocity": [
+   "CAT-VARC-C11-068"
+  ],
+  "V03C-naming-fashions": [
+   "CAT-VARC-C11-069"
+  ],
+  "V03C-decline-of-handwriting": [
+   "CAT-VARC-C11-070"
+  ],
+  "V03C-minority-language-shift": [
+   "CAT-VARC-C11-071"
+  ],
+  "V03C-railways-and-standard-time": [
+   "CAT-VARC-C11-072"
+  ],
+  "V03C-silences-of-archives": [
+   "CAT-VARC-C11-073"
+  ],
+  "V03C-counterfactual-history": [
+   "CAT-VARC-C11-074"
+  ],
+  "V03C-print-and-vernaculars": [
+   "CAT-VARC-C11-075"
+  ],
+  "V03D-wartime-ration-books": [
+   "CAT-VARC-C11-076"
+  ],
+  "V03D-guild-apprenticeship": [
+   "CAT-VARC-C11-077"
+  ],
+  "V03D-census-and-state-power": [
+   "CAT-VARC-C11-078"
+  ],
+  "V03D-cheap-uniform-postage": [
+   "CAT-VARC-C11-079"
+  ],
+  "V03D-loss-leader-pricing": [
+   "CAT-VARC-C11-080"
+  ],
+  "V03D-winners-curse-in-auctions": [
+   "CAT-VARC-C11-081"
+  ],
+  "V03D-free-delivery-thresholds": [
+   "CAT-VARC-C11-082"
+  ],
+  "V03D-franchising": [
+   "CAT-VARC-C11-083"
+  ],
+  "V03D-lichens-as-pollution-indicators": [
+   "CAT-VARC-C11-084"
+  ],
+  "V03D-seed-dispersal-by-animals": [
+   "CAT-VARC-C11-085"
+  ],
+  "V03D-beaver-dams-and-wetlands": [
+   "CAT-VARC-C11-086"
+  ],
+  "V03D-eradicating-island-predators": [
+   "CAT-VARC-C11-087"
+  ],
+  "V03D-dark-patterns-in-interfaces": [
+   "CAT-VARC-C11-088"
+  ],
+  "V03D-satellite-navigation-and-spatial-memory": [
+   "CAT-VARC-C11-089"
+  ],
+  "V03D-legacy-software-maintenance": [
+   "CAT-VARC-C11-090"
+  ],
+  "V03D-backup-redundancy": [
+   "CAT-VARC-C11-091"
+  ],
+  "V03D-art-forgeries-and-value": [
+   "CAT-VARC-C11-092"
+  ],
+  "V03D-silence-of-concert-audiences": [
+   "CAT-VARC-C11-093"
+  ],
+  "V03D-film-adaptation-of-novels": [
+   "CAT-VARC-C11-094"
+  ],
+  "V03D-fixed-verse-forms": [
+   "CAT-VARC-C11-095"
+  ],
+  "V03D-euphemism-treadmill": [
+   "CAT-VARC-C11-096"
+  ],
+  "V03D-emoji-and-tone-in-messages": [
+   "CAT-VARC-C11-097"
+  ],
+  "V03D-spelling-reform": [
+   "CAT-VARC-C11-098"
+  ],
+  "V03D-indirect-requests-and-politeness": [
+   "CAT-VARC-C11-099"
+  ],
+  "V03D-podcast-intimacy": [
+   "CAT-VARC-C11-100"
+  ],
+  "V03E-desire-paths-in-parks": [
+   "CAT-VARC-C11-101"
+  ],
+  "V03E-subtitles-versus-dubbing": [
+   "CAT-VARC-C11-102"
+  ],
+  "V03E-body-mass-index-limits": [
+   "CAT-VARC-C11-103"
+  ],
+  "V03E-herd-immunity": [
+   "CAT-VARC-C11-104"
+  ],
+  "V03E-mere-exposure-effect": [
+   "CAT-VARC-C11-105"
+  ],
+  "V03E-worked-examples-in-maths": [
+   "CAT-VARC-C11-106"
+  ],
+  "V03E-emergency-triage": [
+   "CAT-VARC-C11-107"
+  ],
+  "V03E-punctuation-and-speech-rhythm": [
+   "CAT-VARC-C11-108"
+  ],
+  "V03E-sign-languages-as-full-languages": [
+   "CAT-VARC-C11-109"
+  ],
+  "V03E-dictionaries-describing-usage": [
+   "CAT-VARC-C11-110"
+  ],
+  "V03E-mother-tongue-early-schooling": [
+   "CAT-VARC-C11-111"
+  ],
+  "V03E-ability-grouping-in-classrooms": [
+   "CAT-VARC-C11-112"
+  ],
+  "V03E-open-book-examinations": [
+   "CAT-VARC-C11-113"
+  ],
+  "V03E-fever-as-defence": [
+   "CAT-VARC-C11-114"
+  ],
+  "V03E-sinking-river-deltas": [
+   "CAT-VARC-C11-115"
+  ],
+  "V03E-congestion-pricing": [
+   "CAT-VARC-C11-116"
+  ],
+  "V03E-bystander-effect": [
+   "CAT-VARC-C11-117"
+  ],
+  "V03E-hindsight-bias": [
+   "CAT-VARC-C11-118"
+  ],
+  "V03E-planning-fallacy": [
+   "CAT-VARC-C11-119"
+  ],
+  "V03E-ship-of-theseus-identity": [
+   "CAT-VARC-C11-120"
+  ],
+  "V03E-animal-pain-moral-status": [
+   "CAT-VARC-C11-121"
+  ],
+  "V03E-duties-to-future-generations": [
+   "CAT-VARC-C11-122"
+  ],
+  "V03E-supererogation-beyond-duty": [
+   "CAT-VARC-C11-123"
+  ],
+  "V03E-flashbulb-memories": [
+   "CAT-VARC-C11-124"
+  ],
+  "V03E-street-grid-plans": [
+   "CAT-VARC-C11-125"
+  ],
+  "V03F-anchoring-in-negotiation": [
+   "CAT-VARC-C11-126"
+  ],
+  "V03F-decision-fatigue": [
+   "CAT-VARC-C11-127"
+  ],
+  "V03F-nostalgia-and-comfort": [
+   "CAT-VARC-C11-128"
+  ],
+  "V03F-attention-residue": [
+   "CAT-VARC-C11-129"
+  ],
+  "V03F-queues-and-fairness": [
+   "CAT-VARC-C11-130"
+  ],
+  "V03F-museum-object-labels": [
+   "CAT-VARC-C11-131"
+  ],
+  "V03F-handshake-greetings": [
+   "CAT-VARC-C11-132"
+  ],
+  "V03F-tea-stalls-as-meeting-places": [
+   "CAT-VARC-C11-133"
+  ],
+  "V03F-lighthouse-provision": [
+   "CAT-VARC-C11-134"
+  ],
+  "V03F-coffeehouses-and-public-debate": [
+   "CAT-VARC-C11-135"
+  ],
+  "V03F-jury-trials-by-peers": [
+   "CAT-VARC-C11-136"
+  ],
+  "V03F-canal-building-age": [
+   "CAT-VARC-C11-137"
+  ],
+  "V03F-employee-stock-options": [
+   "CAT-VARC-C11-138"
+  ],
+  "V03F-subscription-pricing": [
+   "CAT-VARC-C11-139"
+  ],
+  "V03F-network-effects-in-platforms": [
+   "CAT-VARC-C11-140"
+  ],
+  "V03F-just-in-time-inventory": [
+   "CAT-VARC-C11-141"
+  ],
+  "V03F-volcanic-soils-and-farming": [
+   "CAT-VARC-C11-142"
+  ],
+  "V03F-coral-bleaching": [
+   "CAT-VARC-C11-143"
+  ],
+  "V03F-earthworms-and-soil": [
+   "CAT-VARC-C11-144"
+  ],
+  "V03F-light-pollution-and-astronomy": [
+   "CAT-VARC-C11-145"
+  ],
+  "V03F-bird-migration-navigation": [
+   "CAT-VARC-C11-146"
+  ],
+  "V03F-electric-vehicle-batteries": [
+   "CAT-VARC-C11-147"
+  ],
+  "V03F-spam-filtering": [
+   "CAT-VARC-C11-148"
+  ],
+  "V03F-open-source-funding": [
+   "CAT-VARC-C11-149"
+  ],
+  "V03F-two-factor-authentication": [
+   "CAT-VARC-C11-150"
+  ],
+  "V03G-keyboard-layout-persistence": [
+   "CAT-VARC-C11-151"
+  ],
+  "V03G-spreadsheet-errors": [
+   "CAT-VARC-C11-152"
+  ],
+  "V03G-software-update-fatigue": [
+   "CAT-VARC-C11-153"
+  ],
+  "V03G-digital-photo-hoarding": [
+   "CAT-VARC-C11-154"
+  ],
+  "V03G-jazz-improvisation": [
+   "CAT-VARC-C11-155"
+  ],
+  "V03G-literary-prizes": [
+   "CAT-VARC-C11-156"
+  ],
+  "V03G-film-sequels": [
+   "CAT-VARC-C11-157"
+  ],
+  "V03G-dance-notation": [
+   "CAT-VARC-C11-158"
+  ],
+  "V03G-slang-group-identity": [
+   "CAT-VARC-C11-159"
+  ],
+  "V03G-audiobooks-as-reading": [
+   "CAT-VARC-C11-160"
+  ],
+  "V03G-dead-metaphors": [
+   "CAT-VARC-C11-161"
+  ],
+  "V03G-comment-section-moderation": [
+   "CAT-VARC-C11-162"
+  ],
+  "V03G-rote-memorisation": [
+   "CAT-VARC-C11-163"
+  ],
+  "V03G-school-uniforms": [
+   "CAT-VARC-C11-164"
+  ],
+  "V03G-entrance-test-coaching": [
+   "CAT-VARC-C11-165"
+  ],
+  "V03G-recess-and-play": [
+   "CAT-VARC-C11-166"
+  ],
+  "V03G-hand-hygiene-in-hospitals": [
+   "CAT-VARC-C11-167"
+  ],
+  "V03G-generic-medicines": [
+   "CAT-VARC-C11-168"
+  ],
+  "V03G-organ-donation-defaults": [
+   "CAT-VARC-C11-169"
+  ],
+  "V03G-walking-as-exercise": [
+   "CAT-VARC-C11-170"
+  ],
+  "V03G-patient-satisfaction-ratings": [
+   "CAT-VARC-C11-171"
+  ],
+  "V03G-pedestrian-skywalks": [
+   "CAT-VARC-C11-172"
+  ],
+  "V03G-monsoon-urban-flooding": [
+   "CAT-VARC-C11-173"
+  ],
+  "V03G-heritage-precincts": [
+   "CAT-VARC-C11-174"
+  ],
+  "V03G-public-toilets": [
+   "CAT-VARC-C11-175"
+  ],
+  "V03H-night-markets": [
+   "CAT-VARC-C11-176"
+  ],
+  "V03H-gated-communities": [
+   "CAT-VARC-C11-177"
+  ],
+  "V03H-urban-groundwater-depletion": [
+   "CAT-VARC-C11-178"
+  ],
+  "V03H-floodplain-zoning": [
+   "CAT-VARC-C11-179"
+  ],
+  "V03H-paradox-of-tolerance": [
+   "CAT-VARC-C11-180"
+  ],
+  "V03H-veil-of-ignorance": [
+   "CAT-VARC-C11-181"
+  ],
+  "V03H-whistleblowing-and-loyalty": [
+   "CAT-VARC-C11-182"
+  ],
+  "V03H-moral-relativism": [
+   "CAT-VARC-C11-183"
+  ],
+  "V03H-anchoring-effect": [
+   "CAT-VARC-C11-184"
+  ],
+  "V03H-learned-helplessness": [
+   "CAT-VARC-C11-185"
+  ],
+  "V03H-confirmation-bias-news": [
+   "CAT-VARC-C11-186"
+  ],
+  "V03H-framing-of-choices": [
+   "CAT-VARC-C11-187"
+  ],
+  "V03H-queueing-norms": [
+   "CAT-VARC-C11-188"
+  ],
+  "V03H-wedding-expenditure": [
+   "CAT-VARC-C11-189"
+  ],
+  "V03H-museum-repatriation": [
+   "CAT-VARC-C11-190"
+  ],
+  "V03H-board-games-revival": [
+   "CAT-VARC-C11-191"
+  ],
+  "V03H-tax-farming": [
+   "CAT-VARC-C11-192"
+  ],
+  "V03H-coalition-governments": [
+   "CAT-VARC-C11-193"
+  ],
+  "V03H-maps-and-empire": [
+   "CAT-VARC-C11-194"
+  ],
+  "V03H-referendums": [
+   "CAT-VARC-C11-195"
+  ],
+  "V03H-minimum-wage": [
+   "CAT-VARC-C11-196"
+  ],
+  "V03H-store-brands": [
+   "CAT-VARC-C11-197"
+  ],
+  "V03H-microfinance-group-lending": [
+   "CAT-VARC-C11-198"
+  ],
+  "V03H-menu-costs-of-inflation": [
+   "CAT-VARC-C11-199"
+  ],
+  "V03H-planned-obsolescence": [
+   "CAT-VARC-C11-200"
+  ],
+  "V03I-bank-runs-deposit-insurance": [
+   "CAT-VARC-C11-201"
+  ],
+  "V03I-glacier-retreat-meltwater": [
+   "CAT-VARC-C11-202"
+  ],
+  "V03I-captcha-tests": [
+   "CAT-VARC-C11-203"
+  ],
+  "V03I-detective-fiction-fair-play": [
+   "CAT-VARC-C11-204"
+  ],
+  "V03I-place-names-as-history": [
+   "CAT-VARC-C11-205"
+  ],
+  "V03I-school-field-trips": [
+   "CAT-VARC-C11-206"
+  ],
+  "V03I-shrinkflation-package-sizes": [
+   "CAT-VARC-C11-207"
+  ],
+  "V03I-comparative-advantage-trade": [
+   "CAT-VARC-C11-208"
+  ],
+  "V03I-brand-switching-costs": [
+   "CAT-VARC-C11-209"
+  ],
+  "V03I-volcanic-aerosols-cooling": [
+   "CAT-VARC-C11-210"
+  ],
+  "V03I-rewilding-large-herbivores": [
+   "CAT-VARC-C11-211"
+  ],
+  "V03I-shipping-container-standards": [
+   "CAT-VARC-C11-212"
+  ],
+  "V03I-elevator-safety-tall-buildings": [
+   "CAT-VARC-C11-213"
+  ],
+  "V03I-photography-and-painting": [
+   "CAT-VARC-C11-214"
+  ],
+  "V03I-news-photo-captions": [
+   "CAT-VARC-C11-215"
+  ],
+  "V03I-untranslatable-words": [
+   "CAT-VARC-C11-216"
+  ],
+  "V03I-grading-rubrics": [
+   "CAT-VARC-C11-217"
+  ],
+  "V03I-class-size-reduction": [
+   "CAT-VARC-C11-218"
+  ],
+  "V03I-ocean-acidification-shellfish": [
+   "CAT-VARC-C11-219"
+  ],
+  "V03I-tragic-catharsis": [
+   "CAT-VARC-C11-220"
+  ],
+  "V03I-professional-jargon": [
+   "CAT-VARC-C11-221"
+  ],
+  "V03I-student-ratings-of-teachers": [
+   "CAT-VARC-C11-222"
+  ],
+  "V03I-cloud-service-concentration": [
+   "CAT-VARC-C11-223"
+  ],
+  "V03I-minimalist-stage-sets": [
+   "CAT-VARC-C11-224"
+  ],
+  "V03I-summer-learning-loss": [
+   "CAT-VARC-C11-225"
+  ],
+  "V03J-teacher-wait-time": [
+   "CAT-VARC-C11-226"
+  ],
+  "V03J-mixed-age-classrooms": [
+   "CAT-VARC-C11-227"
+  ],
+  "V03J-reading-aloud-to-children": [
+   "CAT-VARC-C11-228"
+  ],
+  "V03J-report-card-comments": [
+   "CAT-VARC-C11-229"
+  ],
+  "V03J-salt-iodisation": [
+   "CAT-VARC-C11-230"
+  ],
+  "V03J-hospital-visiting-hours": [
+   "CAT-VARC-C11-231"
+  ],
+  "V03J-online-symptom-searching": [
+   "CAT-VARC-C11-232"
+  ],
+  "V03J-vaccine-vial-heat-labels": [
+   "CAT-VARC-C11-233"
+  ],
+  "V03J-pedestrianised-town-centres": [
+   "CAT-VARC-C11-234"
+  ],
+  "V03J-white-roofs-cooling": [
+   "CAT-VARC-C11-235"
+  ],
+  "V03J-port-city-waterfronts": [
+   "CAT-VARC-C11-236"
+  ],
+  "V03J-dormitory-suburbs": [
+   "CAT-VARC-C11-237"
+  ],
+  "V03J-forgiveness-and-forgetting": [
+   "CAT-VARC-C11-238"
+  ],
+  "V03J-coercive-offers-and-consent": [
+   "CAT-VARC-C11-239"
+  ],
+  "V03J-thought-experiments-ethics": [
+   "CAT-VARC-C11-240"
+  ],
+  "V03J-obligations-of-gratitude": [
+   "CAT-VARC-C11-241"
+  ],
+  "V03J-impostor-feelings": [
+   "CAT-VARC-C11-242"
+  ],
+  "V03J-endowment-effect": [
+   "CAT-VARC-C11-243"
+  ],
+  "V03J-peak-end-memory": [
+   "CAT-VARC-C11-244"
+  ],
+  "V03J-procrastination-mood-repair": [
+   "CAT-VARC-C11-245"
+  ],
+  "V03J-illusion-of-explanatory-depth": [
+   "CAT-VARC-C11-246"
+  ],
+  "V03J-workplace-dress-codes": [
+   "CAT-VARC-C11-247"
+  ],
+  "V03J-shared-family-meals": [
+   "CAT-VARC-C11-248"
+  ],
+  "V03J-intervals-in-indian-cinema": [
+   "CAT-VARC-C11-249"
+  ],
+  "V03J-potluck-dinners": [
+   "CAT-VARC-C11-250"
+  ],
+  "V04A-forgiving-and-excusing": [
+   "CAT-VARC-C12-001"
+  ],
+  "V04A-planning-and-delay": [
+   "CAT-VARC-C12-002"
+  ],
+  "V04A-street-renaming": [
+   "CAT-VARC-C12-003"
+  ],
+  "V04A-optical-telegraph": [
+   "CAT-VARC-C12-004"
+  ],
+  "V04A-menu-costs": [
+   "CAT-VARC-C12-005"
+  ],
+  "V04A-lichens-air": [
+   "CAT-VARC-C12-006"
+  ],
+  "V04A-moral-luck": [
+   "CAT-VARC-C12-007"
+  ],
+  "V04A-curse-of-knowledge": [
+   "CAT-VARC-C12-008"
+  ],
+  "V04A-letters-and-archives": [
+   "CAT-VARC-C12-009"
+  ],
+  "V04A-quarantine-before-germs": [
+   "CAT-VARC-C12-010"
+  ],
+  "V04A-efficiency-wages": [
+   "CAT-VARC-C12-011"
+  ],
+  "V04A-delta-sediment": [
+   "CAT-VARC-C12-012"
+  ],
+  "V04A-blame-for-belief": [
+   "CAT-VARC-C12-013"
+  ],
+  "V04A-valuing-what-we-make": [
+   "CAT-VARC-C12-014"
+  ],
+  "V04A-fashion-cycles": [
+   "CAT-VARC-C12-015"
+  ],
+  "V04A-railway-time": [
+   "CAT-VARC-C12-016"
+  ],
+  "V04A-open-source-motives": [
+   "CAT-VARC-C12-017"
+  ],
+  "V04A-fungal-networks": [
+   "CAT-VARC-C12-018"
+  ],
+  "V04A-arguing-about-taste": [
+   "CAT-VARC-C12-019"
+  ],
+  "V04A-placebo-outcomes": [
+   "CAT-VARC-C12-020"
+  ],
+  "V04A-concert-applause": [
+   "CAT-VARC-C12-021"
+  ],
+  "V04A-surname-origins": [
+   "CAT-VARC-C12-022"
+  ],
+  "V04A-insurance-incentives": [
+   "CAT-VARC-C12-023"
+  ],
+  "V04A-dark-night-sky": [
+   "CAT-VARC-C12-024"
+  ],
+  "V04A-museum-labels": [
+   "CAT-VARC-C12-025"
+  ],
+  "V04B-biocontrol-backfire": [
+   "CAT-VARC-C12-026"
+  ],
+  "V04B-seed-vaults-adaptation": [
+   "CAT-VARC-C12-027"
+  ],
+  "V04B-rewilding-herbivores": [
+   "CAT-VARC-C12-028"
+  ],
+  "V04B-glacier-peak-water": [
+   "CAT-VARC-C12-029"
+  ],
+  "V04B-autocomplete-style": [
+   "CAT-VARC-C12-030"
+  ],
+  "V04B-software-backward-compatibility": [
+   "CAT-VARC-C12-031"
+  ],
+  "V04B-keyboard-layout-lockin": [
+   "CAT-VARC-C12-032"
+  ],
+  "V04B-password-rules": [
+   "CAT-VARC-C12-033"
+  ],
+  "V04B-translating-rhymed-poetry": [
+   "CAT-VARC-C12-034"
+  ],
+  "V04B-unreliable-narrator": [
+   "CAT-VARC-C12-035"
+  ],
+  "V04B-stage-magic": [
+   "CAT-VARC-C12-036"
+  ],
+  "V04B-painting-restoration": [
+   "CAT-VARC-C12-037"
+  ],
+  "V04B-loanwords-purism": [
+   "CAT-VARC-C12-038"
+  ],
+  "V04B-headline-writing": [
+   "CAT-VARC-C12-039"
+  ],
+  "V04B-sign-language-grammar": [
+   "CAT-VARC-C12-040"
+  ],
+  "V04B-dictionary-usage-notes": [
+   "CAT-VARC-C12-041"
+  ],
+  "V04B-spaced-practice": [
+   "CAT-VARC-C12-042"
+  ],
+  "V04B-grade-inflation": [
+   "CAT-VARC-C12-043"
+  ],
+  "V04B-learning-by-teaching": [
+   "CAT-VARC-C12-044"
+  ],
+  "V04B-primary-homework": [
+   "CAT-VARC-C12-045"
+  ],
+  "V04B-antibiotic-stewardship": [
+   "CAT-VARC-C12-046"
+  ],
+  "V04B-screening-overdiagnosis": [
+   "CAT-VARC-C12-047"
+  ],
+  "V04B-hand-hygiene": [
+   "CAT-VARC-C12-048"
+  ],
+  "V04B-night-shift-sleep": [
+   "CAT-VARC-C12-049"
+  ],
+  "V04B-rare-disease-drugs": [
+   "CAT-VARC-C12-050"
+  ],
+  "V04C-herd-immunity-free-riders": [
+   "CAT-VARC-C12-051"
+  ],
+  "V04C-doctors-listening-to-patients": [
+   "CAT-VARC-C12-052"
+  ],
+  "V04C-fever-as-defence": [
+   "CAT-VARC-C12-053"
+  ],
+  "V04C-opt-out-organ-donation": [
+   "CAT-VARC-C12-054"
+  ],
+  "V04C-printing-vernacular-languages": [
+   "CAT-VARC-C12-055"
+  ],
+  "V04C-term-limits-rulers": [
+   "CAT-VARC-C12-056"
+  ],
+  "V04C-sumptuary-laws": [
+   "CAT-VARC-C12-057"
+  ],
+  "V04C-secret-ballot": [
+   "CAT-VARC-C12-058"
+  ],
+  "V04C-street-vendors-pavements": [
+   "CAT-VARC-C12-059"
+  ],
+  "V04C-rivers-as-borders": [
+   "CAT-VARC-C12-060"
+  ],
+  "V04C-city-walls-demolition": [
+   "CAT-VARC-C12-061"
+  ],
+  "V04C-port-cities-cosmopolitanism": [
+   "CAT-VARC-C12-062"
+  ],
+  "V04C-duties-future-generations": [
+   "CAT-VARC-C12-063"
+  ],
+  "V04C-paternalism-autonomy": [
+   "CAT-VARC-C12-064"
+  ],
+  "V04C-moral-desert-talent": [
+   "CAT-VARC-C12-065"
+  ],
+  "V04C-misleading-without-lying": [
+   "CAT-VARC-C12-066"
+  ],
+  "V04C-hindsight-bias": [
+   "CAT-VARC-C12-067"
+  ],
+  "V04C-eyewitness-memory": [
+   "CAT-VARC-C12-068"
+  ],
+  "V04C-social-loafing": [
+   "CAT-VARC-C12-069"
+  ],
+  "V04C-mere-exposure-familiarity": [
+   "CAT-VARC-C12-070"
+  ],
+  "V04C-decline-of-handwriting": [
+   "CAT-VARC-C12-071"
+  ],
+  "V04C-school-uniforms": [
+   "CAT-VARC-C12-072"
+  ],
+  "V04C-shared-family-meals": [
+   "CAT-VARC-C12-073"
+  ],
+  "V04C-baby-name-fashions": [
+   "CAT-VARC-C12-074"
+  ],
+  "V04C-retirement-and-identity": [
+   "CAT-VARC-C12-075"
+  ],
+  "V04D-medieval-craft-guilds": [
+   "CAT-VARC-C12-076"
+  ],
+  "V04D-athenian-ostracism": [
+   "CAT-VARC-C12-077"
+  ],
+  "V04D-medieval-pilgrimage-economy": [
+   "CAT-VARC-C12-078"
+  ],
+  "V04D-volcanic-winters-harvests": [
+   "CAT-VARC-C12-079"
+  ],
+  "V04D-brand-line-extensions": [
+   "CAT-VARC-C12-080"
+  ],
+  "V04D-sunk-costs-public-projects": [
+   "CAT-VARC-C12-081"
+  ],
+  "V04D-auction-winners-curse": [
+   "CAT-VARC-C12-082"
+  ],
+  "V04D-minimum-order-quantities": [
+   "CAT-VARC-C12-083"
+  ],
+  "V04D-seed-drill-adoption": [
+   "CAT-VARC-C12-084"
+  ],
+  "V04D-coral-bleaching-symbiosis": [
+   "CAT-VARC-C12-085"
+  ],
+  "V04D-soil-tillage-carbon": [
+   "CAT-VARC-C12-086"
+  ],
+  "V04D-wolves-trophic-cascade": [
+   "CAT-VARC-C12-087"
+  ],
+  "V04D-earthworm-invasions-forests": [
+   "CAT-VARC-C12-088"
+  ],
+  "V04D-satellite-navigation-wayfinding": [
+   "CAT-VARC-C12-089"
+  ],
+  "V04D-technical-debt-software": [
+   "CAT-VARC-C12-090"
+  ],
+  "V04D-domestic-refrigeration-diet": [
+   "CAT-VARC-C12-091"
+  ],
+  "V04D-battery-energy-density": [
+   "CAT-VARC-C12-092"
+  ],
+  "V04D-jazz-improvisation-rules": [
+   "CAT-VARC-C12-093"
+  ],
+  "V04D-silent-film-acting": [
+   "CAT-VARC-C12-094"
+  ],
+  "V04D-serialised-novels-cliffhangers": [
+   "CAT-VARC-C12-095"
+  ],
+  "V04D-architectural-ornament-modernism": [
+   "CAT-VARC-C12-096"
+  ],
+  "V04D-emoji-tone-texting": [
+   "CAT-VARC-C12-097"
+  ],
+  "V04D-contradictory-proverbs": [
+   "CAT-VARC-C12-098"
+  ],
+  "V04D-translating-jokes-humour": [
+   "CAT-VARC-C12-099"
+  ],
+  "V04D-punctuation-history-reading-aloud": [
+   "CAT-VARC-C12-100"
+  ],
+  "V04E-pidgins-becoming-creoles": [
+   "CAT-VARC-C12-101"
+  ],
+  "V04E-footnotes-scholarly-trust": [
+   "CAT-VARC-C12-102"
+  ],
+  "V04E-radio-drama-imagination": [
+   "CAT-VARC-C12-103"
+  ],
+  "V04E-euphemism-treadmill": [
+   "CAT-VARC-C12-104"
+  ],
+  "V04E-memorising-multiplication-facts": [
+   "CAT-VARC-C12-105"
+  ],
+  "V04E-worked-examples-novices": [
+   "CAT-VARC-C12-106"
+  ],
+  "V04E-mother-tongue-early-schooling": [
+   "CAT-VARC-C12-107"
+  ],
+  "V04E-class-size-reduction": [
+   "CAT-VARC-C12-108"
+  ],
+  "V04E-hygiene-hypothesis-allergies": [
+   "CAT-VARC-C12-109"
+  ],
+  "V04E-emergency-triage": [
+   "CAT-VARC-C12-110"
+  ],
+  "V04E-surgical-checklists": [
+   "CAT-VARC-C12-111"
+  ],
+  "V04E-iodised-salt": [
+   "CAT-VARC-C12-112"
+  ],
+  "V04E-desire-paths-parks": [
+   "CAT-VARC-C12-113"
+  ],
+  "V04E-induced-traffic-demand": [
+   "CAT-VARC-C12-114"
+  ],
+  "V04E-rain-shadow-deserts": [
+   "CAT-VARC-C12-115"
+  ],
+  "V04E-street-grid-layouts": [
+   "CAT-VARC-C12-116"
+  ],
+  "V04E-container-ports-waterfronts": [
+   "CAT-VARC-C12-117"
+  ],
+  "V04E-ship-of-theseus-identity": [
+   "CAT-VARC-C12-118"
+  ],
+  "V04E-promises-obligation": [
+   "CAT-VARC-C12-119"
+  ],
+  "V04E-white-lies-trust": [
+   "CAT-VARC-C12-120"
+  ],
+  "V04E-trolley-problem-intuitions": [
+   "CAT-VARC-C12-121"
+  ],
+  "V04E-choice-overload": [
+   "CAT-VARC-C12-122"
+  ],
+  "V04E-sunk-cost-fallacy": [
+   "CAT-VARC-C12-123"
+  ],
+  "V04E-flow-absorption": [
+   "CAT-VARC-C12-124"
+  ],
+  "V04E-boredom-function": [
+   "CAT-VARC-C12-125"
+  ],
+  "V04F-nostalgia-function": [
+   "CAT-VARC-C12-126"
+  ],
+  "V04F-habit-cues-context": [
+   "CAT-VARC-C12-127"
+  ],
+  "V04F-procrastination-self-image": [
+   "CAT-VARC-C12-128"
+  ],
+  "V04F-anchoring-first-offers": [
+   "CAT-VARC-C12-129"
+  ],
+  "V04F-gift-reciprocity": [
+   "CAT-VARC-C12-130"
+  ],
+  "V04F-accent-prestige": [
+   "CAT-VARC-C12-131"
+  ],
+  "V04F-gossip-social-control": [
+   "CAT-VARC-C12-132"
+  ],
+  "V04F-office-dress-codes": [
+   "CAT-VARC-C12-133"
+  ],
+  "V04F-canal-age-decline": [
+   "CAT-VARC-C12-134"
+  ],
+  "V04F-coinage-standardisation": [
+   "CAT-VARC-C12-135"
+  ],
+  "V04F-uniform-postage-rates": [
+   "CAT-VARC-C12-136"
+  ],
+  "V04F-blank-spaces-on-maps": [
+   "CAT-VARC-C12-137"
+  ],
+  "V04F-loss-leader-pricing": [
+   "CAT-VARC-C12-138"
+  ],
+  "V04F-franchise-model": [
+   "CAT-VARC-C12-139"
+  ],
+  "V04F-village-irrigation-commons": [
+   "CAT-VARC-C12-140"
+  ],
+  "V04F-warranty-signalling": [
+   "CAT-VARC-C12-141"
+  ],
+  "V04F-mangrove-coastal-buffer": [
+   "CAT-VARC-C12-142"
+  ],
+  "V04F-pollinator-monoculture": [
+   "CAT-VARC-C12-143"
+  ],
+  "V04F-soil-salinity-irrigation": [
+   "CAT-VARC-C12-144"
+  ],
+  "V04F-bird-migration-navigation": [
+   "CAT-VARC-C12-145"
+  ],
+  "V04F-monsoon-forecasting": [
+   "CAT-VARC-C12-146"
+  ],
+  "V04F-spreadsheet-errors": [
+   "CAT-VARC-C12-147"
+  ],
+  "V04F-automation-complacency": [
+   "CAT-VARC-C12-148"
+  ],
+  "V04F-undo-command-software": [
+   "CAT-VARC-C12-149"
+  ],
+  "V04F-road-sign-lettering": [
+   "CAT-VARC-C12-150"
+  ],
+  "R01A-testimony-default-trust": [
+   "CAT-VARC-P01-001"
+  ],
+  "R01A-sceptic-shifting-standards": [
+   "CAT-VARC-P01-002"
+  ],
+  "R01A-lay-judgement-of-experts": [
+   "CAT-VARC-P01-003"
+  ],
+  "R01A-peer-disagreement-equal-weight": [
+   "CAT-VARC-P01-004"
+  ],
+  "R01A-self-knowledge-of-reasons": [
+   "CAT-VARC-P01-005"
+  ],
+  "R01A-cultivated-ignorance": [
+   "CAT-VARC-P01-006"
+  ],
+  "R01A-intellectual-humility": [
+   "CAT-VARC-P01-007"
+  ],
+  "R01A-understanding-versus-knowing": [
+   "CAT-VARC-P01-008"
+  ],
+  "R01B-extended-mind-into-tools": [
+   "CAT-VARC-P01-009"
+  ],
+  "R01B-akrasia-weakness-of-will": [
+   "CAT-VARC-P01-010"
+  ],
+  "R01B-other-minds-analogy": [
+   "CAT-VARC-P01-011"
+  ],
+  "R01B-emotions-evaluative-judgements": [
+   "CAT-VARC-P01-012"
+  ],
+  "R01B-memory-criterion-identity": [
+   "CAT-VARC-P01-013"
+  ],
+  "R01B-attention-moral-perception": [
+   "CAT-VARC-P01-014"
+  ],
+  "R01B-reactive-attitudes-blame": [
+   "CAT-VARC-P01-015"
+  ],
+  "R01B-narrative-self-critique": [
+   "CAT-VARC-P01-016"
+  ],
+  "R01C-resultant-moral-luck": [
+   "CAT-VARC-P01-017"
+  ],
+  "R01C-supererogation": [
+   "CAT-VARC-P01-018"
+  ],
+  "R01C-promises-changed-circumstances": [
+   "CAT-VARC-P01-019"
+  ],
+  "R01C-moral-intuitions-evidence": [
+   "CAT-VARC-P01-020"
+  ],
+  "R01C-forgiveness-without-apology": [
+   "CAT-VARC-P01-021"
+  ],
+  "R01C-relativism-and-tolerance": [
+   "CAT-VARC-P01-022"
+  ],
+  "R01C-moral-progress-circle": [
+   "CAT-VARC-P01-023"
+  ],
+  "R01C-situationism-character": [
+   "CAT-VARC-P01-024"
+  ],
+  "R01D-tacit-consent-by-residence": [
+   "CAT-VARC-P01-025"
+  ],
+  "R01D-paradox-of-toleration": [
+   "CAT-VARC-P01-026"
+  ],
+  "R01D-expressive-theory-of-punishment": [
+   "CAT-VARC-P01-027"
+  ],
+  "R01D-meritocracy-and-luck": [
+   "CAT-VARC-P01-028"
+  ],
+  "R01D-public-reason-restraint": [
+   "CAT-VARC-P01-029"
+  ],
+  "R01D-persistent-minorities-majority-rule": [
+   "CAT-VARC-P01-030"
+  ],
+  "R01D-liberty-as-non-domination": [
+   "CAT-VARC-P01-031"
+  ],
+  "R01D-levelling-down-objection": [
+   "CAT-VARC-P01-032"
+  ],
+  "R01E-workplace-monitoring": [
+   "CAT-VARC-P01-033"
+  ],
+  "R01E-lying-versus-misleading": [
+   "CAT-VARC-P01-034"
+  ],
+  "R01E-surrogate-substituted-judgement": [
+   "CAT-VARC-P01-035"
+  ],
+  "R01E-moral-offsetting": [
+   "CAT-VARC-P01-036"
+  ],
+  "R01E-charity-near-versus-distant": [
+   "CAT-VARC-P01-037"
+  ],
+  "R01E-insect-sentience": [
+   "CAT-VARC-P01-038"
+  ],
+  "R01E-discounting-future-generations": [
+   "CAT-VARC-P01-039"
+  ],
+  "R01E-identified-versus-statistical-lives": [
+   "CAT-VARC-P01-040"
+  ],
+  "R01F-idealised-models-and-falsehood": [
+   "CAT-VARC-P01-041"
+  ],
+  "R01F-explanation-versus-prediction": [
+   "CAT-VARC-P01-042"
+  ],
+  "R01F-problem-of-induction-justification": [
+   "CAT-VARC-P01-043"
+  ],
+  "R01F-simplicity-as-guide-to-truth": [
+   "CAT-VARC-P01-044"
+  ],
+  "R01F-anomalies-and-theory-retention": [
+   "CAT-VARC-P01-045"
+  ],
+  "R01F-inductive-risk-and-values": [
+   "CAT-VARC-P01-046"
+  ],
+  "R01F-thought-experiments-as-evidence": [
+   "CAT-VARC-P01-047"
+  ],
+  "R01F-single-case-chance-probability": [
+   "CAT-VARC-P01-048"
+  ],
+  "R01G-life-satisfaction-surveys": [
+   "CAT-VARC-P01-049"
+  ],
+  "R01G-stoic-dichotomy-of-control": [
+   "CAT-VARC-P01-050"
+  ],
+  "R01G-zhuangzi-useless-tree": [
+   "CAT-VARC-P01-051"
+  ],
+  "R01G-lucretian-symmetry-death": [
+   "CAT-VARC-P01-052"
+  ],
+  "R01G-gita-action-without-fruits": [
+   "CAT-VARC-P01-053"
+  ],
+  "R01G-solitude-versus-loneliness": [
+   "CAT-VARC-P01-054"
+  ],
+  "R01G-aristotle-leisure": [
+   "CAT-VARC-P01-055"
+  ],
+  "R01G-buddhist-no-self": [
+   "CAT-VARC-P01-056"
+  ],
+  "R02A-perception-as-unconscious-inference": [
+   "CAT-VARC-P02-001"
+  ],
+  "R02A-inattentional-blindness": [
+   "CAT-VARC-P02-002"
+  ],
+  "R02A-flashbulb-memory-confidence": [
+   "CAT-VARC-P02-003"
+  ],
+  "R02A-adaptive-forgetting": [
+   "CAT-VARC-P02-004"
+  ],
+  "R02A-expert-perceptual-chunking": [
+   "CAT-VARC-P02-005"
+  ],
+  "R02A-subjective-duration-of-time": [
+   "CAT-VARC-P02-006"
+  ],
+  "R02A-mind-wandering-costs-and-uses": [
+   "CAT-VARC-P02-007"
+  ],
+  "R02A-retrieval-practice-testing-effect": [
+   "CAT-VARC-P02-008"
+  ],
+  "R02B-dread-risk-perception": [
+   "CAT-VARC-P02-009"
+  ],
+  "R02B-choice-overload-conditions": [
+   "CAT-VARC-P02-010"
+  ],
+  "R02B-anchoring-arbitrary-numbers": [
+   "CAT-VARC-P02-011"
+  ],
+  "R02B-overconfidence-three-forms": [
+   "CAT-VARC-P02-012"
+  ],
+  "R02B-debiasing-training-transfer": [
+   "CAT-VARC-P02-013"
+  ],
+  "R02B-expert-intuition-environments": [
+   "CAT-VARC-P02-014"
+  ],
+  "R02B-framing-implicit-information": [
+   "CAT-VARC-P02-015"
+  ],
+  "R02B-ecological-rationality-heuristics": [
+   "CAT-VARC-P02-016"
+  ],
+  "R02C-boredom-as-signal": [
+   "CAT-VARC-P02-017"
+  ],
+  "R02C-habits-context-cues": [
+   "CAT-VARC-P02-018"
+  ],
+  "R02C-hedonic-adaptation-limits": [
+   "CAT-VARC-P02-019"
+  ],
+  "R02C-curiosity-information-gap": [
+   "CAT-VARC-P02-020"
+  ],
+  "R02C-grief-stage-model": [
+   "CAT-VARC-P02-021"
+  ],
+  "R02C-rewards-crowding-out": [
+   "CAT-VARC-P02-022"
+  ],
+  "R02C-stress-concept-senses": [
+   "CAT-VARC-P02-023"
+  ],
+  "R02C-ego-depletion-resource-model": [
+   "CAT-VARC-P02-024"
+  ],
+  "R02D-pretend-play-counterfactual-reasoning": [
+   "CAT-VARC-P02-025"
+  ],
+  "R02D-learning-styles-matching-hypothesis": [
+   "CAT-VARC-P02-026"
+  ],
+  "R02D-desirable-difficulties-learning": [
+   "CAT-VARC-P02-027"
+  ],
+  "R02D-deliberate-practice-expertise": [
+   "CAT-VARC-P02-028"
+  ],
+  "R02D-adolescent-risk-taking-peers": [
+   "CAT-VARC-P02-029"
+  ],
+  "R02D-critical-period-second-language": [
+   "CAT-VARC-P02-030"
+  ],
+  "R02D-flynn-effect-rising-scores": [
+   "CAT-VARC-P02-031"
+  ],
+  "R02D-cognitive-ageing-decline-narrative": [
+   "CAT-VARC-P02-032"
+  ],
+  "R02E-conformity-informational-influence": [
+   "CAT-VARC-P02-033"
+  ],
+  "R02E-bystander-diffusion-of-responsibility": [
+   "CAT-VARC-P02-034"
+  ],
+  "R02E-minimal-group-ingroup-favouritism": [
+   "CAT-VARC-P02-035"
+  ],
+  "R02E-empathy-spotlight-limits": [
+   "CAT-VARC-P02-036"
+  ],
+  "R02E-reputation-indirect-reciprocity": [
+   "CAT-VARC-P02-037"
+  ],
+  "R02E-misinformation-correction-backfire": [
+   "CAT-VARC-P02-038"
+  ],
+  "R02E-prestige-versus-dominance-status": [
+   "CAT-VARC-P02-039"
+  ],
+  "R02E-social-priming-replication-debate": [
+   "CAT-VARC-P02-040"
+  ],
+  "R02F-gesture-and-thinking": [
+   "CAT-VARC-P02-041"
+  ],
+  "R02F-octopus-distributed-mind": [
+   "CAT-VARC-P02-042"
+  ],
+  "R02F-mirror-test-limits": [
+   "CAT-VARC-P02-043"
+  ],
+  "R02F-brain-metaphors-history": [
+   "CAT-VARC-P02-044"
+  ],
+  "R02F-moravec-paradox": [
+   "CAT-VARC-P02-045"
+  ],
+  "R02F-linguistic-relativity-colour": [
+   "CAT-VARC-P02-046"
+  ],
+  "R02F-morgan-canon-parsimony": [
+   "CAT-VARC-P02-047"
+  ],
+  "R02F-reports-consciousness-science": [
+   "CAT-VARC-P02-048"
+  ],
+  "R03A-informal-settlement-upgrading": [
+   "CAT-VARC-P03-001"
+  ],
+  "R03A-density-versus-crowding": [
+   "CAT-VARC-P03-002"
+  ],
+  "R03A-walkability-indices": [
+   "CAT-VARC-P03-003"
+  ],
+  "R03A-privately-owned-public-plazas": [
+   "CAT-VARC-P03-004"
+  ],
+  "R03A-suburb-critique": [
+   "CAT-VARC-P03-005"
+  ],
+  "R03A-gentrification-and-neighbourhood-character": [
+   "CAT-VARC-P03-006"
+  ],
+  "R03A-circular-migration-urban-belonging": [
+   "CAT-VARC-P03-007"
+  ],
+  "R03A-home-as-practice-renters": [
+   "CAT-VARC-P03-008"
+  ],
+  "R03B-teknonymy": [
+   "CAT-VARC-P03-009"
+  ],
+  "R03B-unpaid-care-valuation": [
+   "CAT-VARC-P03-010"
+  ],
+  "R03B-bridewealth-alliance": [
+   "CAT-VARC-P03-011"
+  ],
+  "R03B-invention-of-childhood": [
+   "CAT-VARC-P03-012"
+  ],
+  "R03B-old-age-dependency-ratio": [
+   "CAT-VARC-P03-013"
+  ],
+  "R03B-kinship-as-relatedness": [
+   "CAT-VARC-P03-014"
+  ],
+  "R03B-generational-cohort-labels": [
+   "CAT-VARC-P03-015"
+  ],
+  "R03B-joint-family-decline": [
+   "CAT-VARC-P03-016"
+  ],
+  "R03C-superstition-and-uncertainty": [
+   "CAT-VARC-P03-017"
+  ],
+  "R03C-fixed-mourning-periods": [
+   "CAT-VARC-P03-018"
+  ],
+  "R03C-liminality-rites-of-passage": [
+   "CAT-VARC-P03-019"
+  ],
+  "R03C-pilgrimage-journey-and-destination": [
+   "CAT-VARC-P03-020"
+  ],
+  "R03C-shared-shrines-across-faiths": [
+   "CAT-VARC-P03-021"
+  ],
+  "R03C-secularisation-thesis-strands": [
+   "CAT-VARC-P03-022"
+  ],
+  "R03C-festivals-of-inversion": [
+   "CAT-VARC-P03-023"
+  ],
+  "R03C-costly-signalling-ritual": [
+   "CAT-VARC-P03-024"
+  ],
+  "R03D-credential-inflation": [
+   "CAT-VARC-P03-025"
+  ],
+  "R03D-history-of-the-weekend": [
+   "CAT-VARC-P03-026"
+  ],
+  "R03D-invisible-domestic-servants": [
+   "CAT-VARC-P03-027"
+  ],
+  "R03D-emotional-labour-service-work": [
+   "CAT-VARC-P03-028"
+  ],
+  "R03D-cultural-omnivore-taste": [
+   "CAT-VARC-P03-029"
+  ],
+  "R03D-professional-jurisdiction-contests": [
+   "CAT-VARC-P03-030"
+  ],
+  "R03D-inconspicuous-consumption-status": [
+   "CAT-VARC-P03-031"
+  ],
+  "R03D-absolute-relative-social-mobility": [
+   "CAT-VARC-P03-032"
+  ],
+  "R03E-collecting-and-completing-series": [
+   "CAT-VARC-P03-033"
+  ],
+  "R03E-retro-product-nostalgia-marketing": [
+   "CAT-VARC-P03-034"
+  ],
+  "R03E-immigrant-restaurant-menus-authenticity": [
+   "CAT-VARC-P03-035"
+  ],
+  "R03E-fashion-cycle-trickle-down-imitation": [
+   "CAT-VARC-P03-036"
+  ],
+  "R03E-global-chains-local-menu-adaptation": [
+   "CAT-VARC-P03-037"
+  ],
+  "R03E-minimalism-as-status-display": [
+   "CAT-VARC-P03-038"
+  ],
+  "R03E-brand-communities-as-tribes": [
+   "CAT-VARC-P03-039"
+  ],
+  "R03E-staged-authenticity-heritage-tourism": [
+   "CAT-VARC-P03-040"
+  ],
+  "R03F-obligation-to-return-gifts": [
+   "CAT-VARC-P03-041"
+  ],
+  "R03F-barter-origin-myth-of-money": [
+   "CAT-VARC-P03-042"
+  ],
+  "R03F-hospitality-and-host-authority": [
+   "CAT-VARC-P03-043"
+  ],
+  "R03F-village-pasture-commons": [
+   "CAT-VARC-P03-044"
+  ],
+  "R03F-oral-tradition-as-history": [
+   "CAT-VARC-P03-045"
+  ],
+  "R03F-validating-local-ecological-knowledge": [
+   "CAT-VARC-P03-046"
+  ],
+  "R03F-earmarking-money": [
+   "CAT-VARC-P03-047"
+  ],
+  "R03F-rotating-savings-associations": [
+   "CAT-VARC-P03-048"
+  ],
+  "R03G-queueing-informal-norm": [
+   "CAT-VARC-P03-049"
+  ],
+  "R03G-professionalisation-of-volunteering": [
+   "CAT-VARC-P03-050"
+  ],
+  "R03G-ability-streaming-in-schools": [
+   "CAT-VARC-P03-051"
+  ],
+  "R03G-administrative-burden-welfare": [
+   "CAT-VARC-P03-052"
+  ],
+  "R03G-bonding-versus-bridging-ties": [
+   "CAT-VARC-P03-053"
+  ],
+  "R03G-video-review-referee-authority": [
+   "CAT-VARC-P03-054"
+  ],
+  "R03G-institutional-trust-surveys": [
+   "CAT-VARC-P03-055"
+  ],
+  "R03G-decline-of-membership-associations": [
+   "CAT-VARC-P03-056"
+  ],
+  "R04A-colonial-archives-against-grain": [
+   "CAT-VARC-P04-001"
+  ],
+  "R04A-statue-removal-contextualisation": [
+   "CAT-VARC-P04-002"
+  ],
+  "R04A-nation-projected-backward": [
+   "CAT-VARC-P04-003"
+  ],
+  "R04A-oral-testimony-errors": [
+   "CAT-VARC-P04-004"
+  ],
+  "R04A-counterfactual-history-explanation": [
+   "CAT-VARC-P04-005"
+  ],
+  "R04A-naming-the-middle-ages": [
+   "CAT-VARC-P04-006"
+  ],
+  "R04A-heritage-versus-history": [
+   "CAT-VARC-P04-007"
+  ],
+  "R04A-amnesty-and-public-silence": [
+   "CAT-VARC-P04-008"
+  ],
+  "R04B-railways-and-imperial-ledger": [
+   "CAT-VARC-P04-009"
+  ],
+  "R04B-colonial-census-categories": [
+   "CAT-VARC-P04-010"
+  ],
+  "R04B-indenture-after-abolition": [
+   "CAT-VARC-P04-011"
+  ],
+  "R04B-official-language-after-independence": [
+   "CAT-VARC-P04-012"
+  ],
+  "R04B-artificial-borders-thesis": [
+   "CAT-VARC-P04-013"
+  ],
+  "R04B-indirect-rule-customary-authority": [
+   "CAT-VARC-P04-014"
+  ],
+  "R04B-terra-nullius-and-native-title": [
+   "CAT-VARC-P04-015"
+  ],
+  "R04B-decolonisation-as-unbundling": [
+   "CAT-VARC-P04-016"
+  ],
+  "R04C-preventive-patrol-policing": [
+   "CAT-VARC-P04-017"
+  ],
+  "R04C-passports-documentary-control": [
+   "CAT-VARC-P04-018"
+  ],
+  "R04C-street-level-discretion": [
+   "CAT-VARC-P04-019"
+  ],
+  "R04C-birthright-soil-versus-descent": [
+   "CAT-VARC-P04-020"
+  ],
+  "R04C-resource-rents-fiscal-bargaining": [
+   "CAT-VARC-P04-021"
+  ],
+  "R04C-emergency-powers-normalisation": [
+   "CAT-VARC-P04-022"
+  ],
+  "R04C-formal-versus-substantive-rule-of-law": [
+   "CAT-VARC-P04-023"
+  ],
+  "R04C-constitutional-entrenchment-dead-hand": [
+   "CAT-VARC-P04-024"
+  ],
+  "R04D-sortition-selection-by-lot": [
+   "CAT-VARC-P04-025"
+  ],
+  "R04D-compulsory-voting": [
+   "CAT-VARC-P04-026"
+  ],
+  "R04D-secret-ballot": [
+   "CAT-VARC-P04-027"
+  ],
+  "R04D-populism-exclusive-representation": [
+   "CAT-VARC-P04-028"
+  ],
+  "R04D-political-parties-as-intermediaries": [
+   "CAT-VARC-P04-029"
+  ],
+  "R04D-disruptive-protest-legitimacy": [
+   "CAT-VARC-P04-030"
+  ],
+  "R04D-local-news-decline-accountability": [
+   "CAT-VARC-P04-031"
+  ],
+  "R04D-voter-shortcuts-rational-ignorance": [
+   "CAT-VARC-P04-032"
+  ],
+  "R04E-small-state-neutrality": [
+   "CAT-VARC-P04-033"
+  ],
+  "R04E-punitive-versus-lenient-peace": [
+   "CAT-VARC-P04-034"
+  ],
+  "R04E-sanctions-rally-effect": [
+   "CAT-VARC-P04-035"
+  ],
+  "R04E-stability-instability-paradox": [
+   "CAT-VARC-P04-036"
+  ],
+  "R04E-moral-equality-of-combatants": [
+   "CAT-VARC-P04-037"
+  ],
+  "R04E-balance-of-power-versus-collective-security": [
+   "CAT-VARC-P04-038"
+  ],
+  "R04E-humanitarian-intervention-and-sovereignty": [
+   "CAT-VARC-P04-039"
+  ],
+  "R04E-alliance-entrapment-and-abandonment": [
+   "CAT-VARC-P04-040"
+  ],
+  "R04F-periodic-fairs-credit-and-news": [
+   "CAT-VARC-P04-041"
+  ],
+  "R04F-household-as-workplace": [
+   "CAT-VARC-P04-042"
+  ],
+  "R04F-railway-standard-time": [
+   "CAT-VARC-P04-043"
+  ],
+  "R04F-silent-reading-history": [
+   "CAT-VARC-P04-044"
+  ],
+  "R04F-urban-smell-and-sanitary-reform": [
+   "CAT-VARC-P04-045"
+  ],
+  "R04F-relay-caravan-trade": [
+   "CAT-VARC-P04-046"
+  ],
+  "R04F-plague-quarantine-and-disclosure": [
+   "CAT-VARC-P04-047"
+  ],
+  "R04F-street-lighting-and-the-night": [
+   "CAT-VARC-P04-048"
+  ],
+  "R05A-decoy-pricing": [
+   "CAT-VARC-P05-001"
+  ],
+  "R05A-winners-curse": [
+   "CAT-VARC-P05-002"
+  ],
+  "R05A-advertising-as-signal": [
+   "CAT-VARC-P05-003"
+  ],
+  "R05A-nudges-and-disclosure": [
+   "CAT-VARC-P05-004"
+  ],
+  "R05A-attention-as-price": [
+   "CAT-VARC-P05-005"
+  ],
+  "R05A-matching-markets": [
+   "CAT-VARC-P05-006"
+  ],
+  "R05A-paradox-of-value": [
+   "CAT-VARC-P05-007"
+  ],
+  "R05A-endowment-effect": [
+   "CAT-VARC-P05-008"
+  ],
+  "R05B-relative-poverty-lines": [
+   "CAT-VARC-P05-009"
+  ],
+  "R05B-unconditional-cash-transfers": [
+   "CAT-VARC-P05-010"
+  ],
+  "R05B-microcredit-limits": [
+   "CAT-VARC-P05-011"
+  ],
+  "R05B-kuznets-inverted-u": [
+   "CAT-VARC-P05-012"
+  ],
+  "R05B-informal-economy-choice-exclusion": [
+   "CAT-VARC-P05-013"
+  ],
+  "R05B-aid-fungibility": [
+   "CAT-VARC-P05-014"
+  ],
+  "R05B-geography-versus-institutions": [
+   "CAT-VARC-P05-015"
+  ],
+  "R05B-capability-approach": [
+   "CAT-VARC-P05-016"
+  ],
+  "R05C-why-firms-exist": [
+   "CAT-VARC-P05-017"
+  ],
+  "R05C-family-firm-succession": [
+   "CAT-VARC-P05-018"
+  ],
+  "R05C-incumbents-disruption": [
+   "CAT-VARC-P05-019"
+  ],
+  "R05C-celebrity-ceo-attribution": [
+   "CAT-VARC-P05-020"
+  ],
+  "R05C-forced-ranking": [
+   "CAT-VARC-P05-021"
+  ],
+  "R05C-normalisation-of-deviance": [
+   "CAT-VARC-P05-022"
+  ],
+  "R05C-organisational-slack": [
+   "CAT-VARC-P05-023"
+  ],
+  "R05C-survivorship-bias-business-books": [
+   "CAT-VARC-P05-024"
+  ],
+  "R05D-lump-of-labour-fallacy": [
+   "CAT-VARC-P05-025"
+  ],
+  "R05D-gig-worker-classification": [
+   "CAT-VARC-P05-026"
+  ],
+  "R05D-baumol-cost-disease": [
+   "CAT-VARC-P05-027"
+  ],
+  "R05D-remote-work-junior-learning": [
+   "CAT-VARC-P05-028"
+  ],
+  "R05D-moravec-paradox-automation": [
+   "CAT-VARC-P05-029"
+  ],
+  "R05D-unions-as-voice-institutions": [
+   "CAT-VARC-P05-030"
+  ],
+  "R05D-working-hours-stopped-falling": [
+   "CAT-VARC-P05-031"
+  ],
+  "R05D-job-polarisation-routine-tasks": [
+   "CAT-VARC-P05-032"
+  ],
+  "R05E-gold-standard-nostalgia": [
+   "CAT-VARC-P05-033"
+  ],
+  "R05E-insurance-adverse-selection": [
+   "CAT-VARC-P05-034"
+  ],
+  "R05E-deposit-insurance-bank-runs": [
+   "CAT-VARC-P05-035"
+  ],
+  "R05E-inflation-as-hidden-tax": [
+   "CAT-VARC-P05-036"
+  ],
+  "R05E-central-bank-independence": [
+   "CAT-VARC-P05-037"
+  ],
+  "R05E-moral-language-of-debt": [
+   "CAT-VARC-P05-038"
+  ],
+  "R05E-speculative-bubbles-hindsight": [
+   "CAT-VARC-P05-039"
+  ],
+  "R05E-bank-lending-creates-deposits": [
+   "CAT-VARC-P05-040"
+  ],
+  "R05F-comparative-advantage-opportunity-cost": [
+   "CAT-VARC-P05-041"
+  ],
+  "R05F-special-economic-zones-linkages": [
+   "CAT-VARC-P05-042"
+  ],
+  "R05F-product-standards-hidden-barriers": [
+   "CAT-VARC-P05-043"
+  ],
+  "R05F-supply-chain-efficiency-resilience": [
+   "CAT-VARC-P05-044"
+  ],
+  "R05F-trade-adjustment-concentrated-losses": [
+   "CAT-VARC-P05-045"
+  ],
+  "R05F-gross-exports-versus-value-added": [
+   "CAT-VARC-P05-046"
+  ],
+  "R05F-infant-industry-exit-problem": [
+   "CAT-VARC-P05-047"
+  ],
+  "R05F-industrial-policy-self-discovery": [
+   "CAT-VARC-P05-048"
+  ],
+  "R05G-coase-bargaining-transaction-costs": [
+   "CAT-VARC-P05-049"
+  ],
+  "R05G-jevons-rebound-efficiency": [
+   "CAT-VARC-P05-050"
+  ],
+  "R05G-carbon-tax-vs-emissions-trading": [
+   "CAT-VARC-P05-051"
+  ],
+  "R05G-monetary-valuation-ecosystem-services": [
+   "CAT-VARC-P05-052"
+  ],
+  "R05G-dutch-disease-commodity-boom": [
+   "CAT-VARC-P05-053"
+  ],
+  "R05G-green-accounts-natural-capital-depletion": [
+   "CAT-VARC-P05-054"
+  ],
+  "R05G-degrowth-vs-green-growth-decoupling": [
+   "CAT-VARC-P05-055"
+  ],
+  "R05G-carbon-leakage-border-adjustment": [
+   "CAT-VARC-P05-056"
+  ],
+  "R06A-heritability-misreading": [
+   "CAT-VARC-P06-001"
+  ],
+  "R06A-costly-ornaments-honest-signals": [
+   "CAT-VARC-P06-002"
+  ],
+  "R06A-fitness-tautology-objection": [
+   "CAT-VARC-P06-003"
+  ],
+  "R06A-kin-selection-worker-sterility": [
+   "CAT-VARC-P06-004"
+  ],
+  "R06A-developmental-toolkit-body-form": [
+   "CAT-VARC-P06-005"
+  ],
+  "R06A-mass-extinction-selectivity-luck": [
+   "CAT-VARC-P06-006"
+  ],
+  "R06A-metabolism-vs-replicator-origin": [
+   "CAT-VARC-P06-007"
+  ],
+  "R06A-convergence-vs-contingency-replay": [
+   "CAT-VARC-P06-008"
+  ],
+  "R06B-tree-planting-vs-natural-regeneration": [
+   "CAT-VARC-P06-009"
+  ],
+  "R06B-flagship-species-funding-bias": [
+   "CAT-VARC-P06-010"
+  ],
+  "R06B-elephant-crop-raiding-costs": [
+   "CAT-VARC-P06-011"
+  ],
+  "R06B-wildfire-suppression-fuel": [
+   "CAT-VARC-P06-012"
+  ],
+  "R06B-fortress-conservation-displacement": [
+   "CAT-VARC-P06-013"
+  ],
+  "R06B-keystone-species-concept": [
+   "CAT-VARC-P06-014"
+  ],
+  "R06B-native-alien-species-judgement": [
+   "CAT-VARC-P06-015"
+  ],
+  "R06B-rewilding-open-ended-target": [
+   "CAT-VARC-P06-016"
+  ],
+  "R06C-earthquake-prediction-vs-forecasting": [
+   "CAT-VARC-P06-017"
+  ],
+  "R06C-ensemble-forecasting-chaos": [
+   "CAT-VARC-P06-018"
+  ],
+  "R06C-ice-cores-climate-archives": [
+   "CAT-VARC-P06-019"
+  ],
+  "R06C-managed-retreat-coastlines": [
+   "CAT-VARC-P06-020"
+  ],
+  "R06C-monsoon-onset-convention": [
+   "CAT-VARC-P06-021"
+  ],
+  "R06C-no-natural-disasters-vulnerability": [
+   "CAT-VARC-P06-022"
+  ],
+  "R06C-anthropocene-golden-spike": [
+   "CAT-VARC-P06-023"
+  ],
+  "R06C-uniformitarianism-catastrophism": [
+   "CAT-VARC-P06-024"
+  ],
+  "R06D-olbers-dark-night-sky": [
+   "CAT-VARC-P06-025"
+  ],
+  "R06D-railway-standard-time": [
+   "CAT-VARC-P06-026"
+  ],
+  "R06D-kilogram-artefact-to-constant": [
+   "CAT-VARC-P06-027"
+  ],
+  "R06D-caloric-theory-productive-error": [
+   "CAT-VARC-P06-028"
+  ],
+  "R06D-cosmic-distance-ladder": [
+   "CAT-VARC-P06-029"
+  ],
+  "R06D-noether-symmetry-conservation": [
+   "CAT-VARC-P06-030"
+  ],
+  "R06D-quantum-measurement-problem": [
+   "CAT-VARC-P06-031"
+  ],
+  "R06D-anthropic-principle-fine-tuning": [
+   "CAT-VARC-P06-032"
+  ],
+  "R06E-prevention-paradox": [
+   "CAT-VARC-P06-033"
+  ],
+  "R06E-segmented-sleep-norm": [
+   "CAT-VARC-P06-034"
+  ],
+  "R06E-open-label-placebo": [
+   "CAT-VARC-P06-035"
+  ],
+  "R06E-antibiotic-market-failure": [
+   "CAT-VARC-P06-036"
+  ],
+  "R06E-microbiome-metaphors": [
+   "CAT-VARC-P06-037"
+  ],
+  "R06E-pain-as-verdict": [
+   "CAT-VARC-P06-038"
+  ],
+  "R06E-screening-overdiagnosis": [
+   "CAT-VARC-P06-039"
+  ],
+  "R06E-trial-averages-individual": [
+   "CAT-VARC-P06-040"
+  ],
+  "R06F-human-computing-offices": [
+   "CAT-VARC-P06-041"
+  ],
+  "R06F-recommendation-feedback-loops": [
+   "CAT-VARC-P06-042"
+  ],
+  "R06F-relational-privacy-and-consent": [
+   "CAT-VARC-P06-043"
+  ],
+  "R06F-automation-and-operator-skill": [
+   "CAT-VARC-P06-044"
+  ],
+  "R06F-cloud-metaphor-and-infrastructure": [
+   "CAT-VARC-P06-045"
+  ],
+  "R06F-machine-understanding-as-cluster": [
+   "CAT-VARC-P06-046"
+  ],
+  "R06F-fairness-criteria-tradeoff": [
+   "CAT-VARC-P06-047"
+  ],
+  "R06F-digital-persistence-and-copying": [
+   "CAT-VARC-P06-048"
+  ],
+  "R06G-anonymous-peer-review-gatekeeping": [
+   "CAT-VARC-P06-049"
+  ],
+  "R06G-file-drawer-null-results": [
+   "CAT-VARC-P06-050"
+  ],
+  "R06G-citizen-science-data-quality": [
+   "CAT-VARC-P06-051"
+  ],
+  "R06G-deficit-model-communication": [
+   "CAT-VARC-P06-052"
+  ],
+  "R06G-no-single-scientific-method": [
+   "CAT-VARC-P06-053"
+  ],
+  "R06G-matthew-effect-credit": [
+   "CAT-VARC-P06-054"
+  ],
+  "R06G-grant-lottery-allocation": [
+   "CAT-VARC-P06-055"
+  ],
+  "R06G-tacit-knowledge-replication": [
+   "CAT-VARC-P06-056"
+  ],
+  "R07A-unreliable-narrator-trust": [
+   "CAT-VARC-P07-001"
+  ],
+  "R07A-short-story-omission": [
+   "CAT-VARC-P07-002"
+  ],
+  "R07A-happy-endings-closure": [
+   "CAT-VARC-P07-003"
+  ],
+  "R07A-genre-conventions-constraint": [
+   "CAT-VARC-P07-004"
+  ],
+  "R07A-free-verse-line-break": [
+   "CAT-VARC-P07-005"
+  ],
+  "R07A-flat-characters-defended": [
+   "CAT-VARC-P07-006"
+  ],
+  "R07A-essay-provisional-attempt": [
+   "CAT-VARC-P07-007"
+  ],
+  "R07A-serial-publication-novel": [
+   "CAT-VARC-P07-008"
+  ],
+  "R07B-untranslatable-words-myth": [
+   "CAT-VARC-P07-009"
+  ],
+  "R07B-adaptation-fidelity": [
+   "CAT-VARC-P07-010"
+  ],
+  "R07B-negative-criticism": [
+   "CAT-VARC-P07-011"
+  ],
+  "R07B-canon-as-conversation": [
+   "CAT-VARC-P07-012"
+  ],
+  "R07B-retranslating-classics": [
+   "CAT-VARC-P07-013"
+  ],
+  "R07B-authorial-intention": [
+   "CAT-VARC-P07-014"
+  ],
+  "R07B-rereading": [
+   "CAT-VARC-P07-015"
+  ],
+  "R07B-distant-reading": [
+   "CAT-VARC-P07-016"
+  ],
+  "R07C-museum-wall-labels": [
+   "CAT-VARC-P07-017"
+  ],
+  "R07C-temporary-public-art": [
+   "CAT-VARC-P07-018"
+  ],
+  "R07C-cleaning-old-paintings": [
+   "CAT-VARC-P07-019"
+  ],
+  "R07C-photograph-as-evidence": [
+   "CAT-VARC-P07-020"
+  ],
+  "R07C-auction-prices-and-value": [
+   "CAT-VARC-P07-021"
+  ],
+  "R07C-forgery-and-value": [
+   "CAT-VARC-P07-022"
+  ],
+  "R07C-portraiture-likeness-and-rank": [
+   "CAT-VARC-P07-023"
+  ],
+  "R07C-slow-looking-and-perception": [
+   "CAT-VARC-P07-024"
+  ],
+  "R07D-improvisation-as-fluency": [
+   "CAT-VARC-P07-025"
+  ],
+  "R07D-dance-transmission-in-bodies": [
+   "CAT-VARC-P07-026"
+  ],
+  "R07D-recording-transforms-listening": [
+   "CAT-VARC-P07-027"
+  ],
+  "R07D-pleasure-of-sad-music": [
+   "CAT-VARC-P07-028"
+  ],
+  "R07D-period-performance-authenticity": [
+   "CAT-VARC-P07-029"
+  ],
+  "R07D-folk-song-variation": [
+   "CAT-VARC-P07-030"
+  ],
+  "R07D-score-practice-and-work": [
+   "CAT-VARC-P07-031"
+  ],
+  "R07D-live-theatre-responsiveness": [
+   "CAT-VARC-P07-032"
+  ],
+  "R07E-design-blames-users": [
+   "CAT-VARC-P07-033"
+  ],
+  "R07E-vernacular-climate-wisdom": [
+   "CAT-VARC-P07-034"
+  ],
+  "R07E-ornament-as-legibility": [
+   "CAT-VARC-P07-035"
+  ],
+  "R07E-handmade-irregularity-machine": [
+   "CAT-VARC-P07-036"
+  ],
+  "R07E-tacit-craft-apprenticeship": [
+   "CAT-VARC-P07-037"
+  ],
+  "R07E-restoration-vs-conservation-layers": [
+   "CAT-VARC-P07-038"
+  ],
+  "R07E-architectural-photography-empty": [
+   "CAT-VARC-P07-039"
+  ],
+  "R07E-loose-fit-adaptable-buildings": [
+   "CAT-VARC-P07-040"
+  ],
+  "R07F-kitsch-ready-made-sentiment": [
+   "CAT-VARC-P07-041"
+  ],
+  "R07F-spoilers-and-suspense": [
+   "CAT-VARC-P07-042"
+  ],
+  "R07F-guilty-pleasure-label": [
+   "CAT-VARC-P07-043"
+  ],
+  "R07F-explaining-jokes": [
+   "CAT-VARC-P07-044"
+  ],
+  "R07F-scenic-viewpoints-framing-nature": [
+   "CAT-VARC-P07-045"
+  ],
+  "R07F-cuteness-aesthetic": [
+   "CAT-VARC-P07-046"
+  ],
+  "R07F-disputing-taste-relativism": [
+   "CAT-VARC-P07-047"
+  ],
+  "R07F-fan-fiction-story-ownership": [
+   "CAT-VARC-P07-048"
+  ],
+  "R08A-state-regulation-of-given-names": [
+   "CAT-VARC-P08-001"
+  ],
+  "R08A-prescriptive-grammar-authority": [
+   "CAT-VARC-P08-002"
+  ],
+  "R08A-code-switching-bilingual-competence": [
+   "CAT-VARC-P08-003"
+  ],
+  "R08A-etymological-fallacy-word-meaning": [
+   "CAT-VARC-P08-004"
+  ],
+  "R08A-endangered-language-documentation-archives": [
+   "CAT-VARC-P08-005"
+  ],
+  "R08A-emergent-village-sign-languages": [
+   "CAT-VARC-P08-006"
+  ],
+  "R08A-conceptual-metaphor-and-thought": [
+   "CAT-VARC-P08-007"
+  ],
+  "R08A-dialect-versus-language-boundary": [
+   "CAT-VARC-P08-008"
+  ],
+  "R08B-handwriting-instruction": [
+   "CAT-VARC-P08-009"
+  ],
+  "R08B-codex-replacing-scroll": [
+   "CAT-VARC-P08-010"
+  ],
+  "R08B-dictionary-citation-evidence": [
+   "CAT-VARC-P08-011"
+  ],
+  "R08B-screens-versus-paper": [
+   "CAT-VARC-P08-012"
+  ],
+  "R08B-editor-and-solitary-authorship": [
+   "CAT-VARC-P08-013"
+  ],
+  "R08B-print-fixity-myth": [
+   "CAT-VARC-P08-014"
+  ],
+  "R08B-library-classification": [
+   "CAT-VARC-P08-015"
+  ],
+  "R08B-ranking-writing-systems": [
+   "CAT-VARC-P08-016"
+  ],
+  "R08C-negativity-and-news-selection": [
+   "CAT-VARC-P08-017"
+  ],
+  "R08C-paywalls-and-information-inequality": [
+   "CAT-VARC-P08-018"
+  ],
+  "R08C-false-balance-in-science-reporting": [
+   "CAT-VARC-P08-019"
+  ],
+  "R08C-audience-metrics-and-headline-testing": [
+   "CAT-VARC-P08-020"
+  ],
+  "R08C-investigative-reporting-public-good": [
+   "CAT-VARC-P08-021"
+  ],
+  "R08C-misinformation-persistence-after-corrections": [
+   "CAT-VARC-P08-022"
+  ],
+  "R08C-objectivity-as-method-of-verification": [
+   "CAT-VARC-P08-023"
+  ],
+  "R08C-public-sphere-fragmentation": [
+   "CAT-VARC-P08-024"
+  ],
+  "R08D-euphemism-treadmill": [
+   "CAT-VARC-P08-025"
+  ],
+  "R08D-listening-civic-skill": [
+   "CAT-VARC-P08-026"
+  ],
+  "R08D-online-anonymity-durable-identity": [
+   "CAT-VARC-P08-027"
+  ],
+  "R08D-meme-templates-virality": [
+   "CAT-VARC-P08-028"
+  ],
+  "R08D-ethos-speaker-credibility": [
+   "CAT-VARC-P08-029"
+  ],
+  "R08D-tone-in-typed-messages": [
+   "CAT-VARC-P08-030"
+  ],
+  "R08D-slogans-strategic-vagueness": [
+   "CAT-VARC-P08-031"
+  ],
+  "R08D-engagement-ranking-outrage": [
+   "CAT-VARC-P08-032"
+  ]
+ },
+ "subject_groups": {
+  "SUBJ-0001": [
+   "CAT-VARC-P06-039",
+   "CAT-VARC-C09-047",
+   "CAT-VARC-C11-049",
+   "CAT-VARC-C12-047"
+  ],
+  "SUBJ-0002": [
+   "CAT-VARC-P05-035",
+   "CAT-VARC-C09-084"
+  ],
+  "SUBJ-0003": [
+   "CAT-VARC-P01-011",
+   "CAT-VARC-C09-195"
+  ],
+  "SUBJ-0004": [
+   "CAT-VARC-P03-001",
+   "CAT-VARC-C09-235"
+  ],
+  "SUBJ-0005": [
+   "CAT-VARC-C09-254",
+   "CAT-VARC-C10-019"
+  ],
+  "SUBJ-0006": [
+   "CAT-VARC-P06-015",
+   "CAT-VARC-C10-022"
+  ],
+  "SUBJ-0007": [
+   "CAT-VARC-C09-027",
+   "CAT-VARC-C10-028"
+  ],
+  "SUBJ-0008": [
+   "CAT-VARC-C09-153",
+   "CAT-VARC-C10-032"
+  ],
+  "SUBJ-0009": [
+   "CAT-VARC-C09-335",
+   "CAT-VARC-C10-034"
+  ],
+  "SUBJ-0010": [
+   "CAT-VARC-C09-035",
+   "CAT-VARC-C10-035",
+   "CAT-VARC-C11-092"
+  ],
+  "SUBJ-0011": [
+   "CAT-VARC-C09-341",
+   "CAT-VARC-C10-037"
+  ],
+  "SUBJ-0012": [
+   "CAT-VARC-P02-026",
+   "CAT-VARC-C09-337",
+   "CAT-VARC-C10-044"
+  ],
+  "SUBJ-0013": [
+   "CAT-VARC-C09-046",
+   "CAT-VARC-C10-045"
+  ],
+  "SUBJ-0014": [
+   "CAT-VARC-P06-035",
+   "CAT-VARC-C09-051",
+   "CAT-VARC-C10-047"
+  ],
+  "SUBJ-0015": [
+   "CAT-VARC-C09-113",
+   "CAT-VARC-C10-050"
+  ],
+  "SUBJ-0016": [
+   "CAT-VARC-P04-006",
+   "CAT-VARC-C10-071"
+  ],
+  "SUBJ-0017": [
+   "CAT-VARC-C09-136",
+   "CAT-VARC-C10-079",
+   "CAT-VARC-C12-076"
+  ],
+  "SUBJ-0018": [
+   "CAT-VARC-C09-141",
+   "CAT-VARC-C10-089"
+  ],
+  "SUBJ-0019": [
+   "CAT-VARC-C09-150",
+   "CAT-VARC-C10-090",
+   "CAT-VARC-C11-148"
+  ],
+  "SUBJ-0020": [
+   "CAT-VARC-C09-329",
+   "CAT-VARC-C10-103",
+   "CAT-VARC-C11-102"
+  ],
+  "SUBJ-0021": [
+   "CAT-VARC-P07-009",
+   "CAT-VARC-C09-101",
+   "CAT-VARC-C10-104",
+   "CAT-VARC-C11-216"
+  ],
+  "SUBJ-0022": [
+   "CAT-VARC-C09-111",
+   "CAT-VARC-C10-110"
+  ],
+  "SUBJ-0023": [
+   "CAT-VARC-C09-105",
+   "CAT-VARC-C10-115"
+  ],
+  "SUBJ-0024": [
+   "CAT-VARC-P02-010",
+   "CAT-VARC-C10-126"
+  ],
+  "SUBJ-0025": [
+   "CAT-VARC-C09-064",
+   "CAT-VARC-C10-128"
+  ],
+  "SUBJ-0026": [
+   "CAT-VARC-P02-017",
+   "CAT-VARC-C10-129"
+  ],
+  "SUBJ-0027": [
+   "CAT-VARC-P05-011",
+   "CAT-VARC-C10-141"
+  ],
+  "SUBJ-0028": [
+   "CAT-VARC-P03-044",
+   "CAT-VARC-C10-142"
+  ],
+  "SUBJ-0029": [
+   "CAT-VARC-P05-050",
+   "CAT-VARC-C10-153"
+  ],
+  "SUBJ-0030": [
+   "CAT-VARC-C09-222",
+   "CAT-VARC-C10-154"
+  ],
+  "SUBJ-0031": [
+   "CAT-VARC-C09-221",
+   "CAT-VARC-C10-156",
+   "CAT-VARC-C11-095"
+  ],
+  "SUBJ-0032": [
+   "CAT-VARC-C09-043",
+   "CAT-VARC-C10-163"
+  ],
+  "SUBJ-0033": [
+   "CAT-VARC-C09-109",
+   "CAT-VARC-C10-167"
+  ],
+  "SUBJ-0034": [
+   "CAT-VARC-C09-188",
+   "CAT-VARC-C10-172"
+  ],
+  "SUBJ-0035": [
+   "CAT-VARC-C09-293",
+   "CAT-VARC-C10-188"
+  ],
+  "SUBJ-0036": [
+   "CAT-VARC-C09-215",
+   "CAT-VARC-C10-215"
+  ],
+  "SUBJ-0037": [
+   "CAT-VARC-C09-163",
+   "CAT-VARC-C10-218"
+  ],
+  "SUBJ-0038": [
+   "CAT-VARC-C09-349",
+   "CAT-VARC-C10-219"
+  ],
+  "SUBJ-0039": [
+   "CAT-VARC-C09-338",
+   "CAT-VARC-C10-230"
+  ],
+  "SUBJ-0040": [
+   "CAT-VARC-C09-114",
+   "CAT-VARC-C10-232"
+  ],
+  "SUBJ-0041": [
+   "CAT-VARC-C09-172",
+   "CAT-VARC-C10-234"
+  ],
+  "SUBJ-0042": [
+   "CAT-VARC-P03-018",
+   "CAT-VARC-C10-250"
+  ],
+  "SUBJ-0043": [
+   "CAT-VARC-C09-078",
+   "CAT-VARC-C10-260",
+   "CAT-VARC-C11-011"
+  ],
+  "SUBJ-0044": [
+   "CAT-VARC-P06-014",
+   "CAT-VARC-C10-263"
+  ],
+  "SUBJ-0045": [
+   "CAT-VARC-C09-202",
+   "CAT-VARC-C10-264"
+  ],
+  "SUBJ-0046": [
+   "CAT-VARC-P07-013",
+   "CAT-VARC-C10-271"
+  ],
+  "SUBJ-0047": [
+   "CAT-VARC-C09-080",
+   "CAT-VARC-C10-273"
+  ],
+  "SUBJ-0048": [
+   "CAT-VARC-P07-029",
+   "CAT-VARC-C10-275"
+  ],
+  "SUBJ-0049": [
+   "CAT-VARC-C09-206",
+   "CAT-VARC-C10-278"
+  ],
+  "SUBJ-0050": [
+   "CAT-VARC-C09-343",
+   "CAT-VARC-C10-290"
+  ],
+  "SUBJ-0051": [
+   "CAT-VARC-P01-022",
+   "CAT-VARC-C10-304"
+  ],
+  "SUBJ-0052": [
+   "CAT-VARC-C09-208",
+   "CAT-VARC-C10-317",
+   "CAT-VARC-C11-023",
+   "CAT-VARC-C12-023"
+  ],
+  "SUBJ-0053": [
+   "CAT-VARC-C09-187",
+   "CAT-VARC-C10-318"
+  ],
+  "SUBJ-0054": [
+   "CAT-VARC-C09-020",
+   "CAT-VARC-C10-319"
+  ],
+  "SUBJ-0055": [
+   "CAT-VARC-C09-028",
+   "CAT-VARC-C10-323"
+  ],
+  "SUBJ-0056": [
+   "CAT-VARC-P06-017",
+   "CAT-VARC-C10-327"
+  ],
+  "SUBJ-0057": [
+   "CAT-VARC-C09-033",
+   "CAT-VARC-C10-333"
+  ],
+  "SUBJ-0058": [
+   "CAT-VARC-C09-049",
+   "CAT-VARC-C10-346",
+   "CAT-VARC-C11-114",
+   "CAT-VARC-C12-053"
+  ],
+  "SUBJ-0059": [
+   "CAT-VARC-P04-027",
+   "CAT-VARC-C09-180",
+   "CAT-VARC-C11-004",
+   "CAT-VARC-C12-058"
+  ],
+  "SUBJ-0060": [
+   "CAT-VARC-C10-009",
+   "CAT-VARC-C11-009"
+  ],
+  "SUBJ-0061": [
+   "CAT-VARC-C09-177",
+   "CAT-VARC-C11-013"
+  ],
+  "SUBJ-0062": [
+   "CAT-VARC-C09-112",
+   "CAT-VARC-C10-109",
+   "CAT-VARC-C11-030",
+   "CAT-VARC-C12-111"
+  ],
+  "SUBJ-0063": [
+   "CAT-VARC-P07-008",
+   "CAT-VARC-C09-095",
+   "CAT-VARC-C10-334",
+   "CAT-VARC-C11-032"
+  ],
+  "SUBJ-0064": [
+   "CAT-VARC-C09-081",
+   "CAT-VARC-C11-033"
+  ],
+  "SUBJ-0065": [
+   "CAT-VARC-P06-012",
+   "CAT-VARC-C09-264",
+   "CAT-VARC-C10-083",
+   "CAT-VARC-C11-034"
+  ],
+  "SUBJ-0066": [
+   "CAT-VARC-P07-019",
+   "CAT-VARC-C09-037",
+   "CAT-VARC-C10-094",
+   "CAT-VARC-C11-038",
+   "CAT-VARC-C12-037"
+  ],
+  "SUBJ-0067": [
+   "CAT-VARC-C10-224",
+   "CAT-VARC-C11-042"
+  ],
+  "SUBJ-0068": [
+   "CAT-VARC-C09-022",
+   "CAT-VARC-C10-049",
+   "CAT-VARC-C11-044"
+  ],
+  "SUBJ-0069": [
+   "CAT-VARC-C09-212",
+   "CAT-VARC-C10-165",
+   "CAT-VARC-C11-045"
+  ],
+  "SUBJ-0070": [
+   "CAT-VARC-P07-001",
+   "CAT-VARC-C09-034",
+   "CAT-VARC-C10-091",
+   "CAT-VARC-C11-047"
+  ],
+  "SUBJ-0071": [
+   "CAT-VARC-C09-288",
+   "CAT-VARC-C11-054"
+  ],
+  "SUBJ-0072": [
+   "CAT-VARC-C09-139",
+   "CAT-VARC-C11-057"
+  ],
+  "SUBJ-0073": [
+   "CAT-VARC-C10-001",
+   "CAT-VARC-C11-060"
+  ],
+  "SUBJ-0074": [
+   "CAT-VARC-P01-034",
+   "CAT-VARC-C10-240",
+   "CAT-VARC-C11-062"
+  ],
+  "SUBJ-0075": [
+   "CAT-VARC-C10-196",
+   "CAT-VARC-C11-066"
+  ],
+  "SUBJ-0076": [
+   "CAT-VARC-C09-013",
+   "CAT-VARC-C11-068"
+  ],
+  "SUBJ-0077": [
+   "CAT-VARC-C09-165",
+   "CAT-VARC-C10-286",
+   "CAT-VARC-C11-070"
+  ],
+  "SUBJ-0078": [
+   "CAT-VARC-P04-005",
+   "CAT-VARC-C10-014",
+   "CAT-VARC-C11-074"
+  ],
+  "SUBJ-0079": [
+   "CAT-VARC-C09-258",
+   "CAT-VARC-C11-079"
+  ],
+  "SUBJ-0080": [
+   "CAT-VARC-C09-193",
+   "CAT-VARC-C11-082"
+  ],
+  "SUBJ-0081": [
+   "CAT-VARC-C09-082",
+   "CAT-VARC-C11-085"
+  ],
+  "SUBJ-0082": [
+   "CAT-VARC-C10-149",
+   "CAT-VARC-C11-089"
+  ],
+  "SUBJ-0083": [
+   "CAT-VARC-P07-010",
+   "CAT-VARC-C10-092",
+   "CAT-VARC-C11-094"
+  ],
+  "SUBJ-0084": [
+   "CAT-VARC-C09-204",
+   "CAT-VARC-C11-100"
+  ],
+  "SUBJ-0085": [
+   "CAT-VARC-C10-111",
+   "CAT-VARC-C11-103"
+  ],
+  "SUBJ-0086": [
+   "CAT-VARC-C09-211",
+   "CAT-VARC-C10-098",
+   "CAT-VARC-C11-109",
+   "CAT-VARC-C12-040"
+  ],
+  "SUBJ-0087": [
+   "CAT-VARC-C09-041",
+   "CAT-VARC-C11-110"
+  ],
+  "SUBJ-0088": [
+   "CAT-VARC-P03-051",
+   "CAT-VARC-C09-164",
+   "CAT-VARC-C09-223",
+   "CAT-VARC-C10-164",
+   "CAT-VARC-C11-112"
+  ],
+  "SUBJ-0089": [
+   "CAT-VARC-C09-107",
+   "CAT-VARC-C10-285",
+   "CAT-VARC-C11-113"
+  ],
+  "SUBJ-0090": [
+   "CAT-VARC-C10-306",
+   "CAT-VARC-C11-117"
+  ],
+  "SUBJ-0091": [
+   "CAT-VARC-C09-134",
+   "CAT-VARC-C11-118"
+  ],
+  "SUBJ-0092": [
+   "CAT-VARC-P01-018",
+   "CAT-VARC-C09-189",
+   "CAT-VARC-C10-117",
+   "CAT-VARC-C11-123"
+  ],
+  "SUBJ-0093": [
+   "CAT-VARC-P02-003",
+   "CAT-VARC-C11-124"
+  ],
+  "SUBJ-0094": [
+   "CAT-VARC-C10-005",
+   "CAT-VARC-C11-128"
+  ],
+  "SUBJ-0095": [
+   "CAT-VARC-C09-256",
+   "CAT-VARC-C11-135"
+  ],
+  "SUBJ-0096": [
+   "CAT-VARC-C09-140",
+   "CAT-VARC-C11-144"
+  ],
+  "SUBJ-0097": [
+   "CAT-VARC-C09-334",
+   "CAT-VARC-C11-153"
+  ],
+  "SUBJ-0098": [
+   "CAT-VARC-C09-091",
+   "CAT-VARC-C11-155"
+  ],
+  "SUBJ-0099": [
+   "CAT-VARC-C09-272",
+   "CAT-VARC-C10-272",
+   "CAT-VARC-C11-157"
+  ],
+  "SUBJ-0100": [
+   "CAT-VARC-C10-338",
+   "CAT-VARC-C11-159"
+  ],
+  "SUBJ-0101": [
+   "CAT-VARC-C10-282",
+   "CAT-VARC-C11-160"
+  ],
+  "SUBJ-0102": [
+   "CAT-VARC-C09-130",
+   "CAT-VARC-C10-107",
+   "CAT-VARC-C11-164",
+   "CAT-VARC-C12-072"
+  ],
+  "SUBJ-0103": [
+   "CAT-VARC-C09-168",
+   "CAT-VARC-C11-168"
+  ],
+  "SUBJ-0104": [
+   "CAT-VARC-C10-295",
+   "CAT-VARC-C11-172"
+  ],
+  "SUBJ-0105": [
+   "CAT-VARC-C10-055",
+   "CAT-VARC-C11-175"
+  ],
+  "SUBJ-0106": [
+   "CAT-VARC-C09-295",
+   "CAT-VARC-C11-179"
+  ],
+  "SUBJ-0107": [
+   "CAT-VARC-C10-137",
+   "CAT-VARC-C11-195"
+  ],
+  "SUBJ-0108": [
+   "CAT-VARC-C09-146",
+   "CAT-VARC-C10-181",
+   "CAT-VARC-C11-196"
+  ],
+  "SUBJ-0109": [
+   "CAT-VARC-C09-261",
+   "CAT-VARC-C11-198"
+  ],
+  "SUBJ-0110": [
+   "CAT-VARC-C09-269",
+   "CAT-VARC-C11-203"
+  ],
+  "SUBJ-0111": [
+   "CAT-VARC-C09-324",
+   "CAT-VARC-C11-210"
+  ],
+  "SUBJ-0112": [
+   "CAT-VARC-C09-142",
+   "CAT-VARC-C11-212"
+  ],
+  "SUBJ-0113": [
+   "CAT-VARC-C09-089",
+   "CAT-VARC-C11-213"
+  ],
+  "SUBJ-0114": [
+   "CAT-VARC-C09-097",
+   "CAT-VARC-C11-214"
+  ],
+  "SUBJ-0115": [
+   "CAT-VARC-C09-285",
+   "CAT-VARC-C11-217"
+  ],
+  "SUBJ-0116": [
+   "CAT-VARC-C09-348",
+   "CAT-VARC-C10-343",
+   "CAT-VARC-C11-222"
+  ],
+  "SUBJ-0117": [
+   "CAT-VARC-C09-287",
+   "CAT-VARC-C11-226"
+  ],
+  "SUBJ-0118": [
+   "CAT-VARC-C10-226",
+   "CAT-VARC-C11-227"
+  ],
+  "SUBJ-0119": [
+   "CAT-VARC-C09-171",
+   "CAT-VARC-C11-231"
+  ],
+  "SUBJ-0120": [
+   "CAT-VARC-C09-115",
+   "CAT-VARC-C10-176",
+   "CAT-VARC-C11-234"
+  ],
+  "SUBJ-0121": [
+   "CAT-VARC-C09-300",
+   "CAT-VARC-C11-241"
+  ],
+  "SUBJ-0122": [
+   "CAT-VARC-C09-237",
+   "CAT-VARC-C10-121",
+   "CAT-VARC-C11-244"
+  ],
+  "SUBJ-0123": [
+   "CAT-VARC-C09-125",
+   "CAT-VARC-C10-008",
+   "CAT-VARC-C11-245"
+  ],
+  "SUBJ-0124": [
+   "CAT-VARC-C10-245",
+   "CAT-VARC-C11-246"
+  ],
+  "SUBJ-0125": [
+   "CAT-VARC-C10-069",
+   "CAT-VARC-C11-247"
+  ],
+  "SUBJ-0126": [
+   "CAT-VARC-P01-021",
+   "CAT-VARC-C09-242",
+   "CAT-VARC-C10-120",
+   "CAT-VARC-C11-238",
+   "CAT-VARC-C12-001"
+  ],
+  "SUBJ-0127": [
+   "CAT-VARC-C09-178",
+   "CAT-VARC-C10-122",
+   "CAT-VARC-C11-119",
+   "CAT-VARC-C12-002"
+  ],
+  "SUBJ-0128": [
+   "CAT-VARC-C09-198",
+   "CAT-VARC-C12-004"
+  ],
+  "SUBJ-0129": [
+   "CAT-VARC-C11-084",
+   "CAT-VARC-C12-006"
+  ],
+  "SUBJ-0130": [
+   "CAT-VARC-P01-017",
+   "CAT-VARC-C12-007"
+  ],
+  "SUBJ-0131": [
+   "CAT-VARC-C09-123",
+   "CAT-VARC-C12-008"
+  ],
+  "SUBJ-0132": [
+   "CAT-VARC-C11-115",
+   "CAT-VARC-C12-012"
+  ],
+  "SUBJ-0133": [
+   "CAT-VARC-P04-043",
+   "CAT-VARC-P06-026",
+   "CAT-VARC-C09-194",
+   "CAT-VARC-C10-313",
+   "CAT-VARC-C11-072",
+   "CAT-VARC-C12-016"
+  ],
+  "SUBJ-0134": [
+   "CAT-VARC-P06-025",
+   "CAT-VARC-C12-024"
+  ],
+  "SUBJ-0135": [
+   "CAT-VARC-C09-326",
+   "CAT-VARC-C10-024",
+   "CAT-VARC-C11-025",
+   "CAT-VARC-C12-027"
+  ],
+  "SUBJ-0136": [
+   "CAT-VARC-P06-016",
+   "CAT-VARC-C12-028"
+  ],
+  "SUBJ-0137": [
+   "CAT-VARC-C09-266",
+   "CAT-VARC-C10-265",
+   "CAT-VARC-C11-202",
+   "CAT-VARC-C12-029"
+  ],
+  "SUBJ-0138": [
+   "CAT-VARC-C09-152",
+   "CAT-VARC-C10-030",
+   "CAT-VARC-C11-035",
+   "CAT-VARC-C12-030"
+  ],
+  "SUBJ-0139": [
+   "CAT-VARC-C11-151",
+   "CAT-VARC-C12-032"
+  ],
+  "SUBJ-0140": [
+   "CAT-VARC-C09-030",
+   "CAT-VARC-C10-147",
+   "CAT-VARC-C11-027",
+   "CAT-VARC-C12-033"
+  ],
+  "SUBJ-0141": [
+   "CAT-VARC-C09-209",
+   "CAT-VARC-C11-037",
+   "CAT-VARC-C12-034"
+  ],
+  "SUBJ-0142": [
+   "CAT-VARC-C09-038",
+   "CAT-VARC-C10-096",
+   "CAT-VARC-C10-159",
+   "CAT-VARC-C11-028",
+   "CAT-VARC-C12-038"
+  ],
+  "SUBJ-0143": [
+   "CAT-VARC-C09-284",
+   "CAT-VARC-C12-042"
+  ],
+  "SUBJ-0144": [
+   "CAT-VARC-C09-042",
+   "CAT-VARC-C10-043",
+   "CAT-VARC-C11-040",
+   "CAT-VARC-C12-043"
+  ],
+  "SUBJ-0145": [
+   "CAT-VARC-C09-106",
+   "CAT-VARC-C12-044"
+  ],
+  "SUBJ-0146": [
+   "CAT-VARC-C09-205",
+   "CAT-VARC-C11-029",
+   "CAT-VARC-C12-045"
+  ],
+  "SUBJ-0147": [
+   "CAT-VARC-C09-048",
+   "CAT-VARC-C11-167",
+   "CAT-VARC-C12-048"
+  ],
+  "SUBJ-0148": [
+   "CAT-VARC-C11-051",
+   "CAT-VARC-C12-049"
+  ],
+  "SUBJ-0149": [
+   "CAT-VARC-C09-234",
+   "CAT-VARC-C10-291",
+   "CAT-VARC-C12-050"
+  ],
+  "SUBJ-0150": [
+   "CAT-VARC-C09-023",
+   "CAT-VARC-C12-051"
+  ],
+  "SUBJ-0151": [
+   "CAT-VARC-C10-136",
+   "CAT-VARC-C11-075",
+   "CAT-VARC-C12-055"
+  ],
+  "SUBJ-0152": [
+   "CAT-VARC-C09-241",
+   "CAT-VARC-C11-056",
+   "CAT-VARC-C12-059"
+  ],
+  "SUBJ-0153": [
+   "CAT-VARC-C09-248",
+   "CAT-VARC-C12-060"
+  ],
+  "SUBJ-0154": [
+   "CAT-VARC-C10-182",
+   "CAT-VARC-C12-062"
+  ],
+  "SUBJ-0155": [
+   "CAT-VARC-C09-122",
+   "CAT-VARC-C12-063"
+  ],
+  "SUBJ-0156": [
+   "CAT-VARC-C10-178",
+   "CAT-VARC-C12-067"
+  ],
+  "SUBJ-0157": [
+   "CAT-VARC-C11-020",
+   "CAT-VARC-C12-069"
+  ],
+  "SUBJ-0158": [
+   "CAT-VARC-C10-249",
+   "CAT-VARC-C12-073"
+  ],
+  "SUBJ-0159": [
+   "CAT-VARC-C09-314",
+   "CAT-VARC-C12-077"
+  ],
+  "SUBJ-0160": [
+   "CAT-VARC-C09-321",
+   "CAT-VARC-C12-080"
+  ],
+  "SUBJ-0161": [
+   "CAT-VARC-P05-002",
+   "CAT-VARC-C09-213",
+   "CAT-VARC-C10-201",
+   "CAT-VARC-C11-081",
+   "CAT-VARC-C12-082"
+  ],
+  "SUBJ-0162": [
+   "CAT-VARC-C09-128",
+   "CAT-VARC-C11-143",
+   "CAT-VARC-C12-085"
+  ],
+  "SUBJ-0163": [
+   "CAT-VARC-C11-012",
+   "CAT-VARC-C12-086"
+  ],
+  "SUBJ-0164": [
+   "CAT-VARC-C09-031",
+   "CAT-VARC-C10-150",
+   "CAT-VARC-C12-090"
+  ],
+  "SUBJ-0165": [
+   "CAT-VARC-P07-035",
+   "CAT-VARC-C12-096"
+  ],
+  "SUBJ-0166": [
+   "CAT-VARC-C09-103",
+   "CAT-VARC-C10-097",
+   "CAT-VARC-C11-097",
+   "CAT-VARC-C12-097"
+  ],
+  "SUBJ-0167": [
+   "CAT-VARC-C09-098",
+   "CAT-VARC-C12-098"
+  ],
+  "SUBJ-0168": [
+   "CAT-VARC-C10-010",
+   "CAT-VARC-C12-099"
+  ],
+  "SUBJ-0169": [
+   "CAT-VARC-C11-108",
+   "CAT-VARC-C12-100"
+  ],
+  "SUBJ-0170": [
+   "CAT-VARC-C09-280",
+   "CAT-VARC-C12-101"
+  ],
+  "SUBJ-0171": [
+   "CAT-VARC-C09-092",
+   "CAT-VARC-C12-103"
+  ],
+  "SUBJ-0172": [
+   "CAT-VARC-P08-025",
+   "CAT-VARC-C09-040",
+   "CAT-VARC-C10-101",
+   "CAT-VARC-C11-096",
+   "CAT-VARC-C12-104"
+  ],
+  "SUBJ-0173": [
+   "CAT-VARC-C09-110",
+   "CAT-VARC-C11-106",
+   "CAT-VARC-C12-106"
+  ],
+  "SUBJ-0174": [
+   "CAT-VARC-C09-044",
+   "CAT-VARC-C10-105",
+   "CAT-VARC-C11-218",
+   "CAT-VARC-C12-108"
+  ],
+  "SUBJ-0175": [
+   "CAT-VARC-C11-107",
+   "CAT-VARC-C12-110"
+  ],
+  "SUBJ-0176": [
+   "CAT-VARC-C11-230",
+   "CAT-VARC-C12-112"
+  ],
+  "SUBJ-0177": [
+   "CAT-VARC-C09-056",
+   "CAT-VARC-C10-113",
+   "CAT-VARC-C11-101",
+   "CAT-VARC-C12-113"
+  ],
+  "SUBJ-0178": [
+   "CAT-VARC-C09-059",
+   "CAT-VARC-C11-055",
+   "CAT-VARC-C12-114"
+  ],
+  "SUBJ-0179": [
+   "CAT-VARC-C11-236",
+   "CAT-VARC-C12-117"
+  ],
+  "SUBJ-0180": [
+   "CAT-VARC-C09-061",
+   "CAT-VARC-C11-120",
+   "CAT-VARC-C12-118"
+  ],
+  "SUBJ-0181": [
+   "CAT-VARC-C09-003",
+   "CAT-VARC-C10-118",
+   "CAT-VARC-C12-120"
+  ],
+  "SUBJ-0182": [
+   "CAT-VARC-C10-003",
+   "CAT-VARC-C11-240",
+   "CAT-VARC-C12-121"
+  ],
+  "SUBJ-0183": [
+   "CAT-VARC-C09-067",
+   "CAT-VARC-C12-124"
+  ],
+  "SUBJ-0184": [
+   "CAT-VARC-C09-131",
+   "CAT-VARC-C12-127"
+  ],
+  "SUBJ-0185": [
+   "CAT-VARC-C09-144",
+   "CAT-VARC-C10-248",
+   "CAT-VARC-C12-132"
+  ],
+  "SUBJ-0186": [
+   "CAT-VARC-C09-014",
+   "CAT-VARC-C11-137",
+   "CAT-VARC-C12-134"
+  ],
+  "SUBJ-0187": [
+   "CAT-VARC-C09-087",
+   "CAT-VARC-C11-080",
+   "CAT-VARC-C12-138"
+  ],
+  "SUBJ-0188": [
+   "CAT-VARC-C09-096",
+   "CAT-VARC-C12-141"
+  ],
+  "SUBJ-0189": [
+   "CAT-VARC-C09-267",
+   "CAT-VARC-C10-143",
+   "CAT-VARC-C11-024",
+   "CAT-VARC-C12-142"
+  ],
+  "SUBJ-0190": [
+   "CAT-VARC-C10-206",
+   "CAT-VARC-C12-143"
+  ],
+  "SUBJ-0191": [
+   "CAT-VARC-C09-268",
+   "CAT-VARC-C12-144"
+  ],
+  "SUBJ-0192": [
+   "CAT-VARC-C11-146",
+   "CAT-VARC-C12-145"
+  ],
+  "SUBJ-0193": [
+   "CAT-VARC-P06-044",
+   "CAT-VARC-C10-148",
+   "CAT-VARC-C12-148"
+  ]
+ }
+}

@@ -1,0 +1,42 @@
+[
+ {
+  "id": "R01-F-02-4",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "B",
+    "key": "B",
+    "working": "Symmetry view requires explanation to serve as prediction 'in principle'; B shows hillside was predictable in principle, defusing that counterexample.",
+    "alternative": "",
+    "issue": "B weakens only one half of the two-direction case (barometer counterexample untouched); acceptable as 'most weaken' but not decisive."
+   },
+   "S2": {
+    "answer": "D",
+    "key": "D",
+    "working": "D shows the hillside could in principle have been predicted, rescuing the symmetry in the explain-without-predict direction.",
+    "alternative": "B is weak: it attacks barometer reliability, but even a perfect predictor would not explain; D is clearly stronger.",
+    "issue": ""
+   }
+  }
+ },
+ {
+  "id": "R01-F-06-4",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "B",
+    "key": "B",
+    "working": "'moving the evidence' contrasted with setting the bar; = letting values bear on what the evidence is, discounting unwelcome results.",
+    "alternative": "",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "A",
+    "key": "A",
+    "working": "Values bearing on what the evidence is; discounting an unwelcome result.",
+    "alternative": "",
+    "issue": "Minor: P3 treats value-laden classification of ambiguous samples as a legitimate part of weighing errors, so \"how the results are counted\" in A sits slightly close to bar-setting; A still clearly best because of \"what one wants to be true\"."
+   }
+  }
+ }
+]

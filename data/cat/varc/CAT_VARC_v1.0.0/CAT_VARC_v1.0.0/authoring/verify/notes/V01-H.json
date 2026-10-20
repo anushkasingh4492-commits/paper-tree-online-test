@@ -1,0 +1,62 @@
+[
+ {
+  "id": "V01-H-006",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "12543",
+    "key": "12543",
+    "working": "1 puzzle of sticky prices; 2 menu costs; 5 seem too small; 4 'But' slightly wrong price loses little; 3 'And' aggregate slump.",
+    "alternative": "",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "12543",
+    "key": "12543",
+    "working": "1 puzzle; 2 menu costs; 5 seem too small; 4 but small loss so trivial cost tips; 3 summed slump.",
+    "alternative": "",
+    "issue": "Near-duplicate of V01-I-019 (same menu-cost content) in the same pack."
+   }
+  }
+ },
+ {
+  "id": "V01-H-010",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "15324",
+    "key": "15324",
+    "working": "1 hygiene defence; 5 'Yet' predates germ theory; 3 'real function' social; 2 'also explain'; 4 'None of this means'.",
+    "alternative": "",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "15324",
+    "key": "15324",
+    "working": "Hygiene defence -> yet rules predate germ theory -> real function social -> 'This would also explain' -> concession that hygiene reading not false.",
+    "alternative": "13542 is conceivable ('This would also explain' after the concession), but 2 links far more tightly to the social-function claim in 3.",
+    "issue": ""
+   }
+  }
+ },
+ {
+  "id": "V01-H-014",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "3421",
+    "key": "3421",
+    "working": "Supererogatory acts 3, theories struggle 4, 'on that view' 2, 'this conclusion' 1.",
+    "alternative": "",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "3421",
+    "key": "3421",
+    "working": "3 supererogatory acts; 4 theories struggle; 2 'on that view'; 1 'this conclusion'.",
+    "alternative": "",
+    "issue": "Content overlaps heavily with V03-E-023 (supererogation) in the same pack."
+   }
+  }
+ }
+]

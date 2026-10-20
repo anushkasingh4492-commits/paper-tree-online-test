@@ -1,0 +1,218 @@
+[
+ {
+  "id": "R01-F-07-2",
+  "answer": "C",
+  "working": "P3: light body holds heavy back so pair slower, yet pair heavier so faster.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-D-05-1",
+  "answer": "C",
+  "working": "P1: they took easy to mean what people find easy, assuming chess-level machines would soon fold laundry.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-D-05-2",
+  "answer": "D",
+  "working": "Higher faculties are cheap to mechanise, i.e. need little effort or computation to reproduce; P2 links difficulty to computation.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-D-05-3",
+  "answer": "D",
+  "working": "P3: non-rule-bound handling of objects of every shape resists automation; A, B, C are written-rule tasks.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-D-05-4",
+  "answer": "D",
+  "working": "P4: hard to automate is not the same as well rewarded; abundance keeps wages low.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-A-07-4",
+  "answer": "B",
+  "working": "P4: stronger claims need evidence not consisting of the expressions themselves, e.g. how people solve problems or remember; B is a wordless task. A is still expressions (productivity only).",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-F-04-2",
+  "answer": "B",
+  "working": "P2: attention drifts when nothing happens for hours; the more reliable the machine, the longer such stretches.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-F-04-3",
+  "answer": "C",
+  "working": "P3: better automation in ordinary conditions leaves supervisors less prepared and failure more surprising.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-D-08-5",
+  "answer": "B",
+  "working": "P4: responsiveness is a capacity not a guarantee; a production can suppress it entirely, so not every production is responsive. A, C, D are stated.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-G-03-3",
+  "answer": "C",
+  "working": "P1 'such worries were not idle'; P2 'reasonable, but aimed at the lesser target'; sampling bias is more stubborn.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-D-04-4",
+  "answer": "A",
+  "working": "P4: expertise is built; denies anyone who puts in the hours arrives at the same place; does not restore talent as fixed endowment.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-A-01-3",
+  "answer": "A",
+  "working": "If people in environments violating their assumptions are no more often misled, the fit between assumption and environment does not explain the rarity of error.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-F-06-1",
+  "answer": "C",
+  "working": "P2: the features we find cute, large head, big low-set eyes, are the features of the very young.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-C-08-4",
+  "answer": "A",
+  "working": "P3: fatigue as rising opportunity cost of alternatives pulling attention away; shopper drawn to other stores. B, C are resource/fuel models.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-B-07-2",
+  "answer": "B",
+  "working": "Single-year survey fixes period; age and cohort are tied by arithmetic, so the data alone cannot separate them.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-A-04-4",
+  "answer": "A",
+  "working": "Peers, same evidence, no independent ground to locate the error; B lacks parity, C and D supply independent grounds.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-E-07-1",
+  "answer": "D",
+  "working": "P3 the formula relocates the hard question; P5 we are choosing which failures to risk. A, B, C each contradicted (P4 no return to the wall; P3 not cynical; P5 procedure can fail).",
+  "confidence": "high",
+  "alternative": "",
+  "issue": "Key option is noticeably longer and more specific than the distractors, a mild giveaway."
+ },
+ {
+  "id": "R05-C-07-1",
+  "answer": "C",
+  "working": "P2-P3 slack serves shocks and experiments; P4 some slack is waste; P5 hold it deliberately, neither maximise nor abolish.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-C-07-5",
+  "answer": "B",
+  "working": "Umbrella's worth shows only on rainy days; reserve's worth appears only in the period audits treat as exceptions.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-D-02-4",
+  "answer": "B",
+  "working": "P4: calling solar time confusion judges it by the needs of a world not yet arrived; standardisation was not discovery of a correct time.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-F-05-1",
+  "answer": "A",
+  "working": "P4: claim of broadly shared benefits needs sharing actually done; support should follow the worker regardless of cause.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-F-05-3",
+  "answer": "D",
+  "working": "P2: 'correct as arithmetic' but presenting a hypothetical as settling the matter confuses it with a policy.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-F-05-4",
+  "answer": "C",
+  "working": "P4 recommends cause-independent support since P3 failures came from tying help to a cause; C shows cause-independent help worked better.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-A-06-4",
+  "answer": "C",
+  "working": "P3 explanation: routine adult life with fewer firsts leaves fewer memories; if novelty-rich adults report the same speeding up, novelty is not the cause. B only adds a rival factor already conceded in P4.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-E-08-3",
+  "answer": "B",
+  "working": "P3 claims tourists know the homestay is prepared and are not dismayed; B shows they feel cheated on learning it.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-C-03-2",
+  "answer": "C",
+  "working": "P3: a group where some end up much happier and others much less happy shows no average change, so the flat line fits almost nobody.",
+  "confidence": "medium",
+  "alternative": "",
+  "issue": "'Nearly everyone' in C slightly overstates the passage's hypothetical (and the passage's later claim that only a substantial minority fail to return in real studies), but A, B, D are clearly wrong, so C stands."
+ },
+ {
+  "id": "R01-F-03-4",
+  "answer": "A",
+  "working": "P4: 'the regress it describes is real'; the account defuses the objection, it does not make the regress disappear. B, C, D are stated.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ }
+]

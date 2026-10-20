@@ -1,0 +1,706 @@
+[
+ {
+  "id": "R01-A-02-1",
+  "answer": "C",
+  "working": "P2: if a park ranger announced decoys, 'the question changes'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-A-02-2",
+  "answer": "A",
+  "working": "P3: imports a standard no ordinary claim was meant to satisfy.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-A-02-3",
+  "answer": "D",
+  "working": "P2: concession 'too generous', treats sceptic's standard as simply correct.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-A-02-4",
+  "answer": "C",
+  "working": "Author: alternatives fixed by what is live; people withdrawing on mere mention contradicts that.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-A-07-1",
+  "answer": "D",
+  "working": "Credit/recognition indifference is never mentioned; A,B,C are the three confusions in P1.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-A-07-2",
+  "answer": "A",
+  "working": "Cheap = costless; can coexist with private conviction of never being wrong.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-A-07-3",
+  "answer": "D",
+  "working": "P3: compatible with great confidence where grounds are good.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-A-07-4",
+  "answer": "B",
+  "working": "Reply: humility and good reasoning come apart; B says self-blindness always distorts world-reasoning equally, so they cannot come apart.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-A-07-5",
+  "answer": "C",
+  "working": "P5: owning limitations includes keeping them in proportion; paralysed thinker misjudges them.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-B-02-1",
+  "answer": "C",
+  "working": "P2: opportunity cost = what the person could have earned in paid work.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-B-02-2",
+  "answer": "C",
+  "working": "P2: methods 'can rank the same work differently'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-B-02-3",
+  "answer": "D",
+  "working": "P3: zero convention is not neutral; it is also a valuation.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-B-02-4",
+  "answer": "C",
+  "working": "P4: part of family care is who provides it; C shows value unrelated to tasks.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-C-08-1",
+  "answer": "C",
+  "working": "P2: failed companies leave few records, attract no researchers, give no interviews.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-C-08-2",
+  "answer": "C",
+  "working": "P4: 'a real improvement' but second difficulty remains, third not settled.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-C-08-3",
+  "answer": "D",
+  "working": "Theory 'has arranged never to be wrong': abandonment inferred from failure.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-C-08-4",
+  "answer": "C",
+  "working": "Sample size/statistical significance is never raised.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-C-08-5",
+  "answer": "A",
+  "working": "A includes failures (avoids selection) but rates after fate known (second difficulty).",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-C-06-1",
+  "answer": "B",
+  "working": "Deadness 'perceived only after the verdict is known' undercuts second explanation.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-C-06-2",
+  "answer": "B",
+  "working": "Proves too much: makes scrupulous historian with no money at stake a snob.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-C-06-3",
+  "answer": "D",
+  "working": "Achievement account: brilliance in unforeseen position lost when the move was copied.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-C-06-4",
+  "answer": "B",
+  "working": "Rejects looking-only view as whole of appreciation; P4 admits cost of unseen facts.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-D-07-1",
+  "answer": "A",
+  "working": "P2: nothing hangs on the boundary in practice, which makes the problem easy to ignore.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-D-07-2",
+  "answer": "A",
+  "working": "P3: explains why large superpositions unseen, not why one outcome occurs.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-D-07-3",
+  "answer": "C",
+  "working": "P4: 'understandable but confused'; treats textbook rule as neutral baseline.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-D-07-4",
+  "answer": "A",
+  "working": "Non-equivalence rests on testable departures; if always adjustable below detection, effectively equivalent.",
+  "confidence": "medium",
+  "alternative": "C (no departures found) is a weaker distractor: absence so far does not show equivalence in principle.",
+  "issue": ""
+ },
+ {
+  "id": "R06-D-07-5",
+  "answer": "A",
+  "working": "Main objection to textbook rule: relies on a word it cannot define.",
+  "confidence": "medium",
+  "alternative": "",
+  "issue": "A is phrased 'escape the objection the author presses most directly', an inference; correct but slightly indirect."
+ },
+ {
+  "id": "R03-G-04-1",
+  "answer": "C",
+  "working": "P1: explanation rarely asks what claiming actually involves.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-G-04-2",
+  "answer": "D",
+  "working": "P3: recipients fall while rules of entitlement stay the same.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-G-04-3",
+  "answer": "D",
+  "working": "P4: weigh claimant burden; D removes document-gathering burden while keeping checks.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-G-04-4",
+  "answer": "A",
+  "working": "P3: 'whether or not anyone intends this'; A overstates intent.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-A-07-1",
+  "answer": "A",
+  "working": "P3-P4: different occasions explain verdicts; question is when and with what awareness.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-A-07-2",
+  "answer": "C",
+  "working": "P1: interrupting people at random moments.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-A-07-3",
+  "answer": "D",
+  "working": "P3: wandering may be symptom as much as cause; correlation not causation.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-A-07-4",
+  "answer": "B",
+  "working": "P4: goal is to make wandering visible so she can tell which occasion she is in.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-A-07-5",
+  "answer": "B",
+  "working": "Claim is costs from demanding tasks, benefits from undemanding; similar difficulty undercuts it.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-C-02-1",
+  "answer": "D",
+  "working": "P2: salaried want reinvestment, absent want dividends, sellers find no agreed price.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-C-02-2",
+  "answer": "D",
+  "working": "P1 'only partly true'; P4 character not irrelevant.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-C-02-3",
+  "answer": "B",
+  "working": "P3: founder postpones; succession then arrives suddenly via illness or quarrel.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-C-02-4",
+  "answer": "C",
+  "working": "Author blames dispersion of ownership; single-heir firms declining equally undercuts it.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-B-03-1",
+  "answer": "A",
+  "working": "P2: definition written only after slips sorted into piles by sense.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-B-03-2",
+  "answer": "C",
+  "working": "Definition is a summary of quotations; claims checked against citations.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-B-03-3",
+  "answer": "C",
+  "working": "P3: labels are verdicts even when offered as descriptions.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-B-03-4",
+  "answer": "A",
+  "working": "P4: careful witness; claims checkable and revised with new evidence.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-B-06-1",
+  "answer": "C",
+  "working": "P2: two copies of the same edition may differ on any page.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-B-06-2",
+  "answer": "A",
+  "working": "Same technology-determines-fixity belief now predicts instability for digital.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-B-06-3",
+  "answer": "B",
+  "working": "Presses without institutions still yielded variation: technology insufficient alone.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-B-06-4",
+  "answer": "B",
+  "working": "Qualifies the print-fixed-text thesis and extends lesson to digital texts in P4.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-B-07-1",
+  "answer": "C",
+  "working": "P2: somebody chooses descriptions, and the choice carries information.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-B-07-2",
+  "answer": "C",
+  "working": "P2: speakers describe from reference point moved from; full glass partly drunk called half empty.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-B-07-3",
+  "answer": "C",
+  "working": "P4: 'explains a good deal... not all of it'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-B-07-4",
+  "answer": "D",
+  "working": "D confirms both speaker regularity and listener inference.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-B-07-5",
+  "answer": "A",
+  "working": "P5: responsiveness is a lapse only where frame was not a signal.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-D-08-1",
+  "answer": "D",
+  "working": "P1 'neither is quite right'; P2 old appetite; P4 shapes supply.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-D-08-2",
+  "answer": "C",
+  "working": "P3: reaction is not endorsement.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-D-08-3",
+  "answer": "D",
+  "working": "System shapes the supply it reports, so cannot claim to mirror.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-D-08-4",
+  "answer": "A",
+  "working": "P4 claims performance feedback changes producers' tone; A denies that.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-D-08-5",
+  "answer": "D",
+  "working": "P5: 'real objections... counsel modesty... But they cut both ways'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-D-04-1",
+  "answer": "B",
+  "working": "P2-P3: who specifies, monitors and sells the display.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-D-04-2",
+  "answer": "D",
+  "working": "P2: distinction is unscripted self-managed feeling vs specified by someone else.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-D-04-3",
+  "answer": "D",
+  "working": "P3: cost lies in production on demand under monitoring; D isolates scripting with same customers.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-D-04-4",
+  "answer": "A",
+  "working": "P2: objection fair against loose use but misses what the idea pointed at.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-F-03-1",
+  "answer": "A",
+  "working": "P1: as tariffs fell, attention shifted.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-F-03-2",
+  "answer": "C",
+  "working": "P4 test: method rule where steel also safe imposes cost buying no safety.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-F-03-3",
+  "answer": "C",
+  "working": "Fit = whether burden is necessary to stated purpose.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-F-03-4",
+  "answer": "B",
+  "working": "Test requires judging whether other methods would achieve same outcome.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-D-05-1",
+  "answer": "D",
+  "working": "P1: easy for people assumed easy for machines.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-D-05-2",
+  "answer": "A",
+  "working": "Cheap vs expensive in computational terms.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-D-05-3",
+  "answer": "A",
+  "working": "Varied objects/unstructured handling resists automation; B,C,D are rule-based.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-D-05-4",
+  "answer": "A",
+  "working": "P4: hard to automate is not well rewarded; abundance keeps wages low.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-A-08-1",
+  "answer": "B",
+  "working": "P3: cause is not that he rents but short, revocable, restrictive tenancy.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-A-08-2",
+  "answer": "C",
+  "working": "P3: owner may know precariousness the equation reserves for tenants.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-A-08-3",
+  "answer": "B",
+  "working": "P5: households expecting to move do not invest in neighbourhood.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-A-08-4",
+  "answer": "B",
+  "working": "Home as practice needing control and security; objection is to ownership as only door.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-A-08-5",
+  "answer": "D",
+  "working": "P1: equation seems a definition, so policies present as extension of home not choices.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-F-03-1",
+  "answer": "B",
+  "working": "P2: grasp figure is not another individual and corresponds to own body.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-F-03-2",
+  "answer": "A",
+  "working": "Failing test built around another's priorities is weak evidence.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-F-03-3",
+  "answer": "A",
+  "working": "A shows dogs have self-related recognition via scent, so mirror failure reveals little.",
+  "confidence": "medium",
+  "alternative": "C (monkeys good at other tests) could be read as showing failure does not indicate general cognitive lack, but it is about different capacities, not self-awareness.",
+  "issue": ""
+ },
+ {
+  "id": "R02-F-03-4",
+  "answer": "D",
+  "working": "P4: leap from mirror to past/future is interpretation, not evidence.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-E-08-1",
+  "answer": "D",
+  "working": "P3: small sample, no comparison group, memory favouring vivid cases.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-E-08-2",
+  "answer": "A",
+  "working": "Two errors in applying group results to individuals, and the right middle.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-E-08-3",
+  "answer": "A",
+  "working": "P2: same average consistent with minority benefiting a lot, others not at all.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-E-08-4",
+  "answer": "D",
+  "working": "P4-P5: departure justified by mechanism plus replication in fresh trial.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-E-08-5",
+  "answer": "C",
+  "working": "P5: shows what an answer to the individual question would require.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-D-01-1",
+  "answer": "B",
+  "working": "P2-P4: residence is not consent; exit is a condition, not source, of legitimacy.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-D-01-2",
+  "answer": "B",
+  "working": "P2: almost every habitable stretch is claimed by some state.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-D-01-3",
+  "answer": "B",
+  "working": "Exchange one authority for another; not freedom from rule.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-D-01-4",
+  "answer": "C",
+  "working": "P3-P4: exit is one test passed; legitimacy depends on what state does to those who stay.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ }
+]

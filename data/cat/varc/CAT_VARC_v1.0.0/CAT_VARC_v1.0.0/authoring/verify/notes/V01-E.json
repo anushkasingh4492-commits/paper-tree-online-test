@@ -1,0 +1,42 @@
+[
+ {
+  "id": "V01-E-003",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "41352",
+    "key": "41352",
+    "working": "Face-to-face cues -> text strips them -> emoji fill gap -> seen as written gestures -> but like all gestures, shared reading needed.",
+    "alternative": "41325 possible if 2 is read as a caveat before the summarising 5, though 2 presupposes the gesture framing that 5 introduces.",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "41352",
+    "key": "41352",
+    "working": "4 face-to-face cues; 1 text strips them; 3 emoji fill gap; 5 written gestures; 2 like all gestures, shared reading.",
+    "alternative": "41325 possible (2 before 5), but 'like all gestures' in 2 presupposes the gesture framing that 5 introduces.",
+    "issue": ""
+   }
+  }
+ },
+ {
+  "id": "V01-E-020",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "4231",
+    "key": "4231",
+    "working": "4 define paternalism; 2 defenders; 3 critics reply; 1 'Much of the debate' line-drawing.",
+    "alternative": "",
+    "issue": "Minor: 4123 conceivable if 1 read as framing, but 'the debate' needs the two sides stated first."
+   },
+   "S2": {
+    "answer": "4231",
+    "key": "4231",
+    "working": "Definition -> defenders -> critics -> where to draw the line.",
+    "alternative": "",
+    "issue": ""
+   }
+  }
+ }
+]

@@ -1,0 +1,22 @@
+[
+ {
+  "id": "R02-B-04-1",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "D",
+    "key": "D",
+    "working": "P2: on very hard tasks people rate themselves below average while still overestimating their own scores.",
+    "alternative": "",
+    "issue": "Minor internal tension: P3 says on hard tasks people \"correctly sense that they did poorly\", which sits awkwardly with P2's \"still overestimating their own scores\". Key D is still directly stated in P2."
+   },
+   "S2": {
+    "answer": "A",
+    "key": "A",
+    "working": "P2: on very hard tasks rate themselves below average while still overestimating scores",
+    "alternative": "",
+    "issue": ""
+   }
+  }
+ }
+]

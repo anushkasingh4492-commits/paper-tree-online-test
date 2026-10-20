@@ -1,0 +1,69 @@
+{
+ "unit_number": 3,
+ "unit_name": "Matrices and Determinants",
+ "branch": "Algebra",
+ "count": 220,
+ "draft_files": [
+  "drafts/u03_a.py",
+  "drafts/u03_b.py",
+  "drafts/u03_c.py",
+  "drafts/u03_d.py"
+ ],
+ "alias_groups": {
+  "ALIAS-U03-adj-of-inverse-det3": [
+   "U03-C-018",
+   "U03-C-035"
+  ],
+  "ALIAS-ERR-U03-A-01": [
+   "U03-A-039",
+   "U03-A-051"
+  ],
+  "ALIAS-ERR-U03-B-01": [
+   "U03-B-015",
+   "U03-B-034"
+  ],
+  "ALIAS-ERR-U03-C-01": [
+   "U03-C-042",
+   "U03-C-045"
+  ],
+  "ALIAS-ERR-U03-D-01": [
+   "U03-C-039",
+   "U03-D-021",
+   "U03-D-051"
+  ],
+  "ALIAS-ERR-U03-D-02": [
+   "U03-D-002",
+   "U03-D-015"
+  ]
+ },
+ "numerical_selection": [
+  "U03-A-043",
+  "U03-B-043",
+  "U03-C-043",
+  "U03-D-042",
+  "U03-A-044",
+  "U03-B-044",
+  "U03-C-045",
+  "U03-D-043",
+  "U03-A-045",
+  "U03-B-045",
+  "U03-C-046",
+  "U03-D-044",
+  "U03-A-046",
+  "U03-B-048",
+  "U03-A-018",
+  "U03-B-019",
+  "U03-C-019",
+  "U03-D-020",
+  "U03-A-019",
+  "U03-B-022",
+  "U03-D-026",
+  "U03-A-020",
+  "U03-B-024",
+  "U03-A-002",
+  "U03-B-003",
+  "U03-C-003",
+  "U03-D-002",
+  "U03-A-021"
+ ]
+}

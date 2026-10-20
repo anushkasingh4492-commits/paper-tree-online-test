@@ -1,0 +1,1175 @@
+{
+ "kind": "RC",
+ "passages": [
+  {
+   "passage_id": "R06-A-08",
+   "passage": [
+    "Suppose the history of life could be rewound to some early point and allowed to run again. Would anything like the present living world appear a second time? One school answers no. Evolution, on this view, is a chain of contingencies, each step dependent on the particular steps before it and on unrepeatable accidents of climate, geology and mutation. Alter any early link, and the chain would run off in another direction entirely; the existence of vertebrates, of flowering plants or of our own species would be no more to be expected than a particular sequence of cards in a shuffled deck. The rival school points to the remarkable frequency with which evolution arrives at the same solution independently. Camera-like eyes have arisen separately in vertebrates and in octopuses; streamlined bodies have evolved in fish, in extinct marine reptiles and in dolphins; flight has been achieved by insects, pterosaurs, birds and bats. If the same designs keep recurring, the argument runs, the outcome of a second run would be broadly familiar.",
+    "Each school has a strong case, and each tends to treat the other's evidence as anecdote. Convergence enthusiasts can list hundreds of cases, but the list is assembled after the fact from the solutions that did recur, and it says nothing about the far larger number of forms that appeared once and never again. Contingency enthusiasts can point to those unrepeated forms, but they often treat the mere fact that a lineage had a particular history as proof that its outcome depended on that history, which does not follow: a ball may take a unique path down a hillside and still come to rest in the only hollow at the bottom.",
+    "Much of the disagreement, I want to suggest, dissolves once we notice that the two schools are describing life at different levels of detail. At the level of broad functional solutions, a second run would very probably produce organisms that see, swim, fly and filter food, because the physical problems of moving through water or air, or of forming an image from light, admit only a few good solutions. At the level of particular lineages, the replay would almost certainly differ: there is no reason to expect that the flying creatures would be birds, or that the swimmers would have backbones. Convergence is a claim about the space of workable designs; contingency is a claim about which occupants of that space history happens to supply. The two are compatible, and both are probably true.",
+    "This reconciliation has a cost, and it is worth stating plainly. If the question that matters is whether a replay would produce something like us, a self-aware animal that makes tools and uses language, then neither school's best evidence is decisive. Intelligence of our kind has arisen, so far as we know, only once, and a single case cannot reveal whether it was a likely destination or a fluke. The recurrence of eyes and wings tells us that some problems have few solutions; it does not tell us that every capacity we value is among those solutions. On the questions that most excite the public, the honest answer is that the evidence does not yet discriminate between the two views."
+   ],
+   "questions": [
+    {
+     "id": "R06-A-08-1",
+     "type": "RC",
+     "options": {
+      "A": "an end point reached by a route no one could repeat may still have been very likely to be reached.",
+      "B": "the outcomes of evolution are fixed in advance by the physical shape of the environment.",
+      "C": "contingency enthusiasts are wrong to claim that many forms appeared only once.",
+      "D": "the history of a lineage is of no use in understanding what that lineage became."
+     },
+     "question": "The image of the ball in paragraph 2 implies that"
+    },
+    {
+     "id": "R06-A-08-2",
+     "type": "RC",
+     "options": {
+      "A": "dismissive, regarding the entire debate between them as confused and not worth pursuing.",
+      "B": "partisan, favouring the convergence school and treating the contingency school's case as anecdote.",
+      "C": "deferential, accepting the claims of each school and declining to judge between them.",
+      "D": "even-handed, crediting each with a real insight while faulting how it treats evidence."
+     },
+     "question": "The author's attitude towards the two schools is best described as"
+    },
+    {
+     "id": "R06-A-08-3",
+     "type": "RC",
+     "options": {
+      "A": "Most supposed independent origins of eyes, wings and streamlined bodies turn out to descend from one shared ancestral form.",
+      "B": "Far more forms of life have appeared once in the history of life and never recurred than have appeared repeatedly.",
+      "C": "A replay of evolution would probably not produce birds as the main flying animals, nor backboned animals as the main swimmers.",
+      "D": "Intelligence that is capable of language and the making of tools has arisen in only one lineage of animals so far."
+     },
+     "question": "Which of the following, if true, would most weaken the reconciliation proposed in paragraph 3?"
+    },
+    {
+     "id": "R06-A-08-4",
+     "type": "RC",
+     "options": {
+      "A": "good evidence that intelligence like ours is a likely outcome of any rerun of evolution.",
+      "B": "good evidence that intelligence like ours was most probably a fluke of one lineage's history.",
+      "C": "insufficient grounds for expecting a replay of evolution to produce a creature like us.",
+      "D": "irrelevant to any question about what a replay of evolution would be likely to produce."
+     },
+     "question": "It can be inferred from paragraph 4 that the author regards the repeated evolution of eyes and wings as"
+    },
+    {
+     "id": "R06-A-08-5",
+     "type": "RC",
+     "options": {
+      "A": "A town rebuilt after a flood would almost surely again have bakeries and schools, though chance would decide who ran them.",
+      "B": "Two engineers working apart design nearly identical bridges because both have copied the same famous earlier bridge.",
+      "C": "A chess game replayed from the same opening position follows a different course every time and ends in a different result.",
+      "D": "A river floods on a different day each year but, because of the shape of its valley, always rises to the same height."
+     },
+     "question": "Which of the following situations is most analogous to the reconciliation of the two schools in paragraph 3?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R06-C-03",
+   "passage": [
+    "Among the records of past climate, ice cores enjoy a special prestige. Drilled from the great ice sheets of Greenland and Antarctica, they contain small bubbles of air sealed off as snow was buried and compressed, so that a scientist can, in a sense, hold in a laboratory a sample of the atmosphere as it was long before any human being farmed. Tree rings, lake sediments and the shells of tiny marine organisms all have to be translated into climate through some chain of reasoning. The bubbles in ice seem to need no translation at all: the gas is simply there, waiting to be measured.",
+    "The appearance of directness is partly an illusion, and an instructive one. Snow does not seal itself the moment it falls. For decades or even centuries, depending on how quickly snow accumulates, the upper layer remains porous, and air from the surface continues to mix downward through it. By the time the bubbles finally close, the gas they hold is considerably younger than the ice that surrounds it. To date the air, then, researchers must model how compaction proceeds at a given site, which in turn depends on temperature and snowfall, the very quantities the core is being used to reconstruct. Temperature itself is not read off the ice but inferred from the proportions of heavier and lighter forms of water, a relationship calibrated against modern observations and assumed to have held in the past.",
+    "None of this makes the records untrustworthy. It does, however, change where their authority comes from. A core is persuasive not because it bypasses interpretation but because its interpretations can be checked against one another and against independent archives. Traces of very large volcanic eruptions, which can appear in cores drilled at opposite ends of the planet, allow records to be aligned; the timing of changes in ice can be compared with changes recorded in ocean sediments, whose dating rests on quite different assumptions. When such independent lines agree, the agreement is far harder to explain away than any single measurement, however direct it seems.",
+    "The point matters beyond the laboratory. Public arguments about climate often treat evidence as either raw and therefore reliable or interpreted and therefore suspect. Ice cores show why this division is unhelpful. Almost all scientific evidence is interpreted; what distinguishes strong evidence from weak is whether its interpretations are exposed to independent tests that could have failed. A measurement trusted because it seemed to speak for itself would deserve less confidence than one whose inferences had been stated openly and checked."
+   ],
+   "questions": [
+    {
+     "id": "R06-C-03-1",
+     "type": "RC",
+     "options": {
+      "A": "fresh air seeps into the ice through cracks that open when a core is drilled and lifted to the surface.",
+      "B": "the top layer of snow stays porous for a long time, letting surface air mix downward until the bubbles seal.",
+      "C": "summer melting each year reworks the ice and traps air from later seasons in layers of older snow.",
+      "D": "the weight of later snowfall forces newer air downward into deeper ice that had already been sealed."
+     },
+     "question": "According to the passage, the air in an ice core's bubbles is younger than the surrounding ice because"
+    },
+    {
+     "id": "R06-C-03-2",
+     "type": "RC",
+     "options": {
+      "A": "the air and the ice at any one site are usually exactly the same age, leaving no gap that could be measured.",
+      "B": "the model used to date the air needs values of temperature and snowfall that the core itself is meant to supply.",
+      "C": "the proportions of heavier and lighter water in the ice change after drilling, so the record has to be corrected.",
+      "D": "the volcanic traces used to align records are absent from cores drilled in Greenland and found only in Antarctica."
+     },
+     "question": "The passage implies that dating the air in an ice core involves a particular difficulty, namely that"
+    },
+    {
+     "id": "R06-C-03-3",
+     "type": "RC",
+     "options": {
+      "A": "It introduces a different kind of climate record that, unlike ice cores, avoids the need for interpretation altogether.",
+      "B": "It summarises the technical steps by which researchers align the records drawn from ice cores at opposite ends of the planet.",
+      "C": "It extends what ice cores show into a general claim about how evidence should be judged, including in public debate.",
+      "D": "It concedes that critics of climate science are right to treat interpreted evidence as less reliable than raw data."
+     },
+     "question": "Which of the following best describes the function of the final paragraph?"
+    },
+    {
+     "id": "R06-C-03-4",
+     "type": "RC",
+     "options": {
+      "A": "A historian accepts the date of a flood because five chronicles record the same date, each copied from one older chronicle.",
+      "B": "A historian accepts the date of a flood because a farmer's diary, a tax ledger and a church register, kept for unrelated reasons, all agree on it.",
+      "C": "A historian accepts the date of a flood because the manuscript recording it has survived for centuries without being altered.",
+      "D": "A historian accepts the date of a flood because the only account of it was written by a witness who watched the water rise."
+     },
+     "question": "Which of the following is most closely analogous to the way, according to the passage, ice cores earn their authority?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R05-G-02",
+   "passage": [
+    "In 1865 the economist William Stanley Jevons argued that Britain's growing skill at burning coal efficiently would not conserve its coal but hasten its exhaustion. Cheaper steam power, he reasoned, would make steam worth using in trades that had never used it, and the extra demand would more than swallow the saving. The idea has enjoyed a curious afterlife in contemporary environmental argument. It is invoked today, often with a note of triumph, by those who doubt that better lamps, engines and insulation can do much for the climate. It is dismissed, often with equal confidence, by those who regard efficiency as the cheapest source of clean energy there is. Both camps tend to treat the question as if it had a single answer, when the size of the effect plainly depends on circumstances.",
+    "The mechanism itself is not in dispute. When a service becomes cheaper to provide, people generally consume more of it, and the additional consumption offsets part of the anticipated reduction. A household that insulates its walls may heat more rooms, or keep them warmer; a driver whose car burns less fuel per kilometre may drive further, or buy a heavier car next time. Economists call the part of the expected saving that is eaten up in this way the rebound. What is disputed is its size. Where demand for a service is already close to saturation, as with lighting in a well-lit home, the rebound tends to be modest: few people want their rooms twice as bright merely because brightness has become cheap. Where energy is a basic input to production, and cheaper energy lets whole industries expand, the rebound can be large, and in the case Jevons studied it may well have exceeded the saving.",
+    "There is also a subtler and less visible channel of transmission. Money saved on fuel does not vanish; it is spent on something else, and that something else uses energy too. A family that spends less on petrol may take a holiday flight it could not previously afford. These indirect effects are considerably harder to trace than the direct ones, which is one reason why published estimates of the total rebound vary so widely across studies and sectors.",
+    "The sensible conclusion is neither that efficiency is futile nor that it is sufficient. Efficiency genuinely improves people's material circumstances: they obtain more warmth, light and travel for their money, and that is a gain in its own right. But if the aim is to reduce total energy use or emissions, efficiency works best when it is paired with something that keeps energy costly enough that the saving is not simply spent on using more of it, such as a tax on carbon or a cap on emissions. Efficiency then supplies the comfort, and the price makes sure that the comfort is not bought with the very fuel that was meant to be saved."
+   ],
+   "questions": [
+    {
+     "id": "R05-G-02-1",
+     "type": "RC",
+     "options": {
+      "A": "people already consume nearly as much of the service as they want, whatever its price.",
+      "B": "households are able to measure their savings precisely and can plan their spending around them.",
+      "C": "the efficiency gain applies to an input that whole industries use in production.",
+      "D": "the money saved is spent on other goods and services instead of on more energy."
+     },
+     "question": "According to the passage, the rebound from an efficiency gain tends to be small when"
+    },
+    {
+     "id": "R05-G-02-2",
+     "type": "RC",
+     "options": {
+      "A": "show that the rebound from efficiency gains in transport is usually larger than the original saving.",
+      "B": "explain why the mechanism behind the rebound is now disputed by economists who study energy.",
+      "C": "suggest that families who save money on fuel ought to spend it on goods that need less energy.",
+      "D": "illustrate how money saved on energy can lead to more energy use through spending on something else."
+     },
+     "question": "The example of the family that takes a holiday flight (paragraph 3) serves to"
+    },
+    {
+     "id": "R05-G-02-3",
+     "type": "RC",
+     "options": {
+      "A": "critical of both, for treating as settled a question whose answer varies with the case.",
+      "B": "dismissive of both, because the author regards the rebound as too uncertain to be worth discussing.",
+      "C": "sympathetic to those who doubt efficiency, since the author concludes that it achieves little on its own.",
+      "D": "supportive of those who favour efficiency, while regretting that the rebound has been overstated."
+     },
+     "question": "The author's attitude towards the two camps described in paragraph 1 is best described as"
+    },
+    {
+     "id": "R05-G-02-4",
+     "type": "RC",
+     "options": {
+      "A": "A city raises the tax on heating fuel steeply and ends all of its support for insulation and efficient boilers.",
+      "B": "A city pays for insulating older homes and cuts the tax on heating fuel so that poorer households can afford to keep warm.",
+      "C": "A city bans the sale of inefficient boilers and leaves the price of heating fuel to be set entirely by the market.",
+      "D": "A city pays for insulating older homes and, over the same years, raises the tax on the fuels used to heat them."
+     },
+     "question": "Which of the following policies would best match the recommendation in the final paragraph?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R07-B-01",
+   "passage": [
+    "Few kinds of article travel as easily as the list of untranslatable words. A language is said to possess a single word for the particular light that falls through leaves, another for the guilty pleasure of buying books one will never read, a third for the melancholy of a Sunday evening, and the reader is invited to marvel that English, or whatever language the list happens to be written in, has nothing to match them. The lists are charming, and most of the words in them are real. What is doubtful is the conclusion they are usually taken to support: that the speakers of a language without such a word cannot quite have the experience it names, or that a vocabulary is a window onto a national soul.",
+    "Look at what the lists actually demonstrate. Each entry pairs a foreign word with a sentence or two of English explaining it, and the explanation is usually clear enough that the reader recognises the experience at once, often with a small shock of familiarity. The list, in other words, translates every word it calls untranslatable. What it shows is not that a meaning cannot cross from one language to another but that one language packages in a single word what another expresses in a phrase. That is a fact about how vocabularies happen to be divided up, and it tells us very little about what their speakers are able to think or feel. Every language lacks single words for countless things its speakers understand perfectly well.",
+    "This is not to say that nothing is lost when such a word is carried across. A single word is easy to reach for; a phrase is not. A word that ordinary speakers use daily carries the weight of all those uses, along with a register, a sound and a set of associations that no paraphrase reproduces. The very existence of the word suggests that a community has found the experience worth naming, and that fact is itself a small piece of cultural information. For a translator working on a poem, where sound and compression matter as much as sense, these losses are real and constant, and no amount of explanation in a footnote restores them.",
+    "But the losses are of degree, not of kind, and they are not peculiar to exotic words. They occur whenever any word is rendered by another, and even within a single language, where no two synonyms carry quite the same associations. Seen this way, the romance of the untranslatable flatters everyone involved: the reader, who feels worldly for knowing the rare word, and a picture of cultures as sealed rooms whose inhabitants can only be gazed at, never understood. The more modest and more accurate lesson is that translation is always possible and never complete, and that its difficulties lie less in the dictionary than in everything a word drags along with it."
+   ],
+   "questions": [
+    {
+     "id": "R07-B-01-1",
+     "type": "RC",
+     "options": {
+      "A": "present foreign words without examples, so that readers never learn how the words are used in daily speech.",
+      "B": "include many words that are invented or exaggerated and that ordinary speakers of the original language never use.",
+      "C": "show that speakers of every language share exactly the same experiences, which makes the special words unnecessary.",
+      "D": "explain each supposedly untranslatable word clearly in the very language said to have no equivalent for it."
+     },
+     "question": "According to the passage, lists of untranslatable words tend to undermine their own claim because they"
+    },
+    {
+     "id": "R07-B-01-2",
+     "type": "RC",
+     "options": {
+      "A": "the cultural information that a word conveys about the community that first found an experience worth naming.",
+      "B": "the way one language bundles into a single word a meaning that another language spreads across several words.",
+      "C": "the process by which a translator compresses a long explanation of a word into a brief footnote.",
+      "D": "the attractive manner in which popular articles present foreign words so that they seem more exotic than they are."
+     },
+     "question": "As used in paragraph 2, the word 'packages' refers to"
+    },
+    {
+     "id": "R07-B-01-3",
+     "type": "RC",
+     "options": {
+      "A": "It abandons the argument of paragraph 2 by admitting that some experiences cannot be grasped outside their own language.",
+      "B": "It concedes that something is lost in translation, while locating that loss in qualities other than a word's basic sense.",
+      "C": "It gives the example of a particular poem whose translation failed because it contained a single untranslatable word.",
+      "D": "It argues that explanatory footnotes are the most effective means a translator has of restoring what is lost."
+     },
+     "question": "Which of the following best describes the function of paragraph 3 in the passage?"
+    },
+    {
+     "id": "R07-B-01-4",
+     "type": "RC",
+     "options": {
+      "A": "Since every language lacks words for many things, the presence or absence of a word reveals nothing about a community.",
+      "B": "A translation may render a word's sense accurately and yet fail to carry over much of what that word does in the original.",
+      "C": "The real difficulties of translation are confined mostly to rare words that name experiences peculiar to one culture.",
+      "D": "Languages with larger vocabularies allow their speakers to perceive a wider range of experiences than other languages do."
+     },
+     "question": "The author would most likely agree with which of the following statements?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R04-F-07",
+   "passage": [
+    "Two stories are commonly told about the measures that late medieval and early modern cities took against plague. In the first, the health boards of the Italian city-states, with their isolation hospitals, their passes for travellers and their periods of enforced seclusion for ships and households, are the ancestors of modern public health: rational officials confronting an epidemic with the tools of an emerging state. In the second, the same measures are a chapter in the history of coercion, in which the sick and the poor were locked away, their goods burned and their livelihoods destroyed by authorities who feared contagion more than they valued the people who might carry it. Each story can be furnished with abundant evidence. What both tend to overlook is that the measures could work only with a degree of cooperation that neither officials nor force could guarantee.",
+    "Quarantine depends, at its most basic, on information. A household must be shut up before the disease spreads from it, which means that someone must report the first case, and the people best placed to report it are the members of the household themselves, together with their neighbours. Every one of them had reasons to stay silent. A shut household lost its income; its members might be removed to an isolation hospital from which many did not return; its bedding and clothing might be burned. Families that concealed a death, bribed an inspector or slipped out of the city before the doors were sealed were not simply defying authority. They were responding sensibly to the costs that reporting imposed on them, and neighbours who might have informed on them faced, in their turn, the prospect of being shut up beside them.",
+    "Where the measures had any success, it seems to have been because authorities, sometimes reluctantly, took on obligations in return. Some cities fed shut-up households at public expense, paid compensation for goods that had been destroyed, or relied on clergy and charitable brotherhoods to bring food, relief and reassurance to the confined. Such provisions were expensive and often inadequate, and the surviving records do not allow us to say with any confidence how much difference they made to mortality. But they changed the calculation facing a family that suspected illness, and the complaints of officials who lacked the means to provide them suggest that concealment rose when relief failed.",
+    "It might be objected that this underrates force. Cities did post guards, punish concealment severely and, on occasion, execute those who broke quarantine. Yet harshness had a cost that its advocates rarely counted: the more frightening the consequences of discovery, the stronger the incentive not to be discovered, and an epidemic that goes underground is harder, not easier, to contain. A household that expected to be sealed in with its sick, guarded and fined had every reason to wait, to hide the first symptoms and to hope, and each day of waiting was a day in which the disease could travel. Severity could secure compliance from those already known to the authorities; it could not make the unknown come forward.",
+    "The lesson is not that plague regulations were humane, for many plainly were not, nor that they were futile. It is that measures which depend on people revealing something about themselves are bargains, whether or not those who impose them think of them in that way, and the point is not confined to plague. Their success is limited by what disclosure costs the person who discloses, and an authority that wishes to know must first make knowing bearable."
+   ],
+   "questions": [
+    {
+     "id": "R04-F-07-1",
+     "type": "RC",
+     "options": {
+      "A": "Excusing households that reported a case from having their bedding and clothing burned.",
+      "B": "Rewarding neighbours who informed on a household that had concealed a death from the inspectors.",
+      "C": "Feeding shut-up households at public expense and compensating them for goods that had been destroyed.",
+      "D": "Allowing households that reported a case promptly to leave the city before the doors were sealed."
+     },
+     "question": "Which of the following does the passage mention as a way in which some cities reduced the burden that quarantine placed on households?"
+    },
+    {
+     "id": "R04-F-07-2",
+     "type": "RC",
+     "options": {
+      "A": "Plague measures in early modern cities were essentially coercive, and their apparent humanity has been exaggerated by historians of public health.",
+      "B": "Plague measures relied on people reporting illness, so their success depended on how far authorities reduced what reporting cost.",
+      "C": "Modern health authorities should provide generous relief to quarantined households, since history shows that coercion fails to contain disease.",
+      "D": "Harsh punishment of concealment drove plague underground, and this is why the measures taken by early modern cities usually failed."
+     },
+     "question": "Which of the following best states the central claim of the passage?"
+    },
+    {
+     "id": "R04-F-07-3",
+     "type": "RC",
+     "options": {
+      "A": "limiting what authorities try to find out about households, so that people are not burdened by intrusive questioning.",
+      "B": "helping officials to cope with the distress of learning how widely an epidemic had already spread through the city.",
+      "C": "lowering the price that people who reveal illness must pay, so that the information the authority needs reaches it.",
+      "D": "teaching the public enough about how disease spreads that the facts of an epidemic no longer seem frightening to them."
+     },
+     "question": "In the final sentence, the phrase 'make knowing bearable' most nearly refers to"
+    },
+    {
+     "id": "R04-F-07-4",
+     "type": "RC",
+     "options": {
+      "A": "Cities that punished concealment most severely also recorded some of the highest plague mortality of any cities in their region during the same period.",
+      "B": "Guards posted outside shut-up households were frequently bribed to let members of the household leave at night.",
+      "C": "Where penalties for concealment were sharply raised, early reports of cases increased, and no later rise in hidden deaths came to light.",
+      "D": "Cities that imposed severe penalties for concealment usually provided relief to shut-up households at the same time."
+     },
+     "question": "Which of the following, if true, would most seriously weaken the argument of paragraph 4?"
+    },
+    {
+     "id": "R04-F-07-5",
+     "type": "RC",
+     "options": {
+      "A": "evidence that relief was generous enough to remove the costs of reporting for most of the households affected.",
+      "B": "conclusive proof that public relief lowered plague mortality in the cities that were able to afford it.",
+      "C": "too unreliable to support any conclusion at all, since it comes mainly from the complaints of officials.",
+      "D": "suggestive about relief's effect on whether families concealed illness, but insufficient to show its effect on the death toll."
+     },
+     "question": "It can be inferred that the author regards the evidence about relief discussed in paragraph 3 as"
+    }
+   ]
+  },
+  {
+   "passage_id": "R01-G-02",
+   "passage": [
+    "The handbook of Epictetus's teachings opens with a distinction that has outlived nearly everything else in ancient ethics: some things are up to us and some are not. Our judgements, intentions and desires are up to us; our bodies, our possessions, our reputations and the offices we hold are not. In its modern popular form the distinction is offered as a technique for calm. Worry, it is said, comes from caring about what one cannot change, so the remedy is to stop caring about it, and the person who masters this will be undisturbed by traffic, criticism and bad news alike.",
+    "This reading is not exactly wrong, but it inverts the order of the original argument. For the Stoics, tranquillity was a consequence, not the goal. The goal was to place one's good where it actually lay, in the quality of one's own choosing, and the distinction between what is and is not up to us was a claim about value before it was advice about feeling. To say that a friend's illness is not up to me is not to say that I should be indifferent to it; it is to say that my goodness as a person does not depend on whether she recovers, but on whether I act well toward her. The Stoic was expected to visit the sick, serve in public life and keep his promises with full seriousness, while declining to stake his worth on how any of it turned out.",
+    "Read this way, the doctrine is more demanding than the popular version, not less. It asks for constant attention to one's own judgements, which the Stoics thought were the real source of most distress, and it offers no permission to withdraw. Someone who uses it to stop voting because elections are not up to him has learned a convenient half of the lesson and discarded the half that mattered.",
+    "There is, however, a genuine difficulty that the more careful reading does not remove. The line between what is up to us and what is not is drawn more sharply in the doctrine than in life. Whether I pass an examination is not wholly up to me, but it is hardly independent of my effort; whether my child grows up kind is partly my doing and partly not. Most of what we care about lies in this middle region, and a doctrine that sorts everything into two bins must either treat such outcomes as indifferent, which seems false to how they matter, or admit that our worth is, after all, partly hostage to fortune. The Stoics chose the first answer. One can admire the clarity of that choice and still doubt that it describes a life anyone actually leads."
+   ],
+   "questions": [
+    {
+     "id": "R01-G-02-1",
+     "type": "RC",
+     "options": {
+      "A": "suggest that the Stoics regarded the recovery of friends as a matter of no importance whatever.",
+      "B": "illustrate the popular claim that worry comes from caring about outcomes that one is quite unable to change.",
+      "C": "prove that a person's goodness depends partly on whether the people he helps actually recover.",
+      "D": "show that judging an outcome to be not up to us is compatible with caring about it."
+     },
+     "question": "The example of a friend's illness in paragraph 2 serves to"
+    },
+    {
+     "id": "R01-G-02-2",
+     "type": "RC",
+     "options": {
+      "A": "One who stops taking difficult cases, reasoning that since verdicts are not up to her she has no reason to expose herself to them.",
+      "B": "One who stays calm in court by deciding that her clients' fates are no concern of hers, since she cannot control how judges rule.",
+      "C": "One who prepares every case thoroughly, argues it as well as she can, and judges her own conduct by the quality of that work rather than by the verdict.",
+      "D": "One who works on each case with great intensity and full seriousness because she believes her worth as a lawyer is measured by how many of her cases she wins."
+     },
+     "question": "Which of the following lawyers acts most fully in the spirit of the doctrine as the author interprets it in paragraphs 2 and 3?"
+    },
+    {
+     "id": "R01-G-02-3",
+     "type": "RC",
+     "options": {
+      "A": "open to being used as a justification for disengagement that the original doctrine does not allow.",
+      "B": "an accurate account of how the ancient Stoics themselves behaved in public life.",
+      "C": "more demanding than the original, because it requires a person to give up caring about results.",
+      "D": "mistaken in claiming that the outcome of an election is not up to any single voter."
+     },
+     "question": "The remark about someone who uses the doctrine 'to stop voting because elections are not up to him' suggests that the author regards the popular version of the doctrine as"
+    },
+    {
+     "id": "R01-G-02-4",
+     "type": "RC",
+     "options": {
+      "A": "Dismissive, since the author regards it as a recipe for withdrawing from public life and private obligations.",
+      "B": "Approving without reservation, since the author accepts the Stoic decision to treat partly controllable outcomes as indifferent.",
+      "C": "Admiring of its demands, and confident that its main difficulty disappears once the popular misreading of it is corrected.",
+      "D": "Respectful of its coherence and its demands, but doubtful that sorting outcomes into two classes fits how they actually matter to us."
+     },
+     "question": "Which of the following best describes the author's attitude toward the Stoic doctrine when it is read in the careful way the passage recommends?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R03-D-08",
+   "passage": [
+    "Few political promises are as widely shared as the promise of social mobility. Parties that agree on little else agree that a child's prospects should not be fixed by the circumstances of her birth, and the claim that mobility has stalled is one of the most damaging charges that can be laid against a government. Yet the word covers two quite different things, and much public argument about it goes astray because the two are run together.",
+    "The first is absolute mobility: the share of people who end up better off than their parents, whether by income or by the kind of work they do. The second is relative mobility: the extent to which a person's position in the distribution, as opposed to their standard of living, differs from their parents' position. The two can move independently. In a period of rapid growth and expanding professional employment, most children may outearn their parents and many may enter occupations their parents never held, even if the chance of a child born near the bottom reaching the top, compared with that of a child born near the top, has not changed at all. Everyone rides the escalator up, but the order of people on it stays the same.",
+    "This distinction explains a puzzle. When growth slows and the expansion of professional jobs levels off, absolute mobility falls, and people who do no better than their parents feel, reasonably enough, that something has closed. They often conclude that society has become less fair. Imagine a town where a mill employed one generation and new offices employed the next. The children did better than their parents without anyone being pushed aside, and the town experienced this as openness. When the offices stop hiring, the grandchildren find that the climb has ended, though their chances against the children of the office managers may be exactly what their parents' chances were. But on the measures that track relative position, the chances may be much as they were: what has disappeared is not openness but the rising tide that once let a whole generation move up without anyone having to move down. The sense of closure is real; its diagnosis is frequently mistaken.",
+    "The distinction also exposes an awkwardness that politicians prefer to leave unspoken. Absolute mobility can, in principle, be enjoyed by everyone at once. Relative mobility cannot. If positions are ranked, then for one family to climb another must fall, and a serious commitment to relative mobility is therefore a commitment to downward mobility for some children of the comfortable. It is not surprising that the comfortable resist it, often without any sense of doing so, through the ordinary devices of private tuition, a well-placed word, or the purchase of a house near the right school. Each of these looks like ordinary care for one's own children; together they amount to a defence of position.",
+    "None of this makes one kind of mobility the real one. Absolute mobility answers a question about material progress: are people living better than their parents did? Relative mobility answers a question about fairness: does birth still decide where one ends up? Both questions matter, and neither is easy to answer with confidence, since incomes fluctuate and occupations change their meaning across generations. But a society that wants more of the second kind should be honest that it cannot be had at no one's expense, and a society that mourns the loss of the first should not mistake a slower economy for a more rigid one."
+   ],
+   "questions": [
+    {
+     "id": "R03-D-08-1",
+     "type": "RC",
+     "options": {
+      "A": "people born near the bottom rise faster than those born near the top whenever the economy is growing quickly.",
+      "B": "living standards can rise for everyone together while people's ranking relative to one another stays fixed.",
+      "C": "moving up in society is automatic and calls for no effort or ability on the part of the individuals concerned.",
+      "D": "a society can carry people downwards just as easily as it carries them upwards, depending on economic conditions."
+     },
+     "question": "The image of the escalator in paragraph 2 conveys that"
+    },
+    {
+     "id": "R03-D-08-2",
+     "type": "RC",
+     "options": {
+      "A": "have generally lived through a genuine fall in relative mobility that the usual measures have failed to detect.",
+      "B": "are reacting chiefly to a rise in downward mobility among the children of comfortable and well-placed families.",
+      "C": "are mistaken in believing that they are doing no better than their parents did at the same stage of life.",
+      "D": "may be rightly sensing a real loss but wrongly attributing it to a decline in openness."
+     },
+     "question": "It can be inferred from paragraph 3 that people who conclude, when growth slows, that society has become less fair"
+    },
+    {
+     "id": "R03-D-08-3",
+     "type": "RC",
+     "options": {
+      "A": "In a stagnant economy where few children outearn their parents, children remain in much the same place in the income ranking as their parents held.",
+      "B": "In a booming economy where nearly all children outearn their parents, the income ranking is substantially reshuffled from one generation to the next.",
+      "C": "In a stagnant economy where few children outearn their parents, children of poor families increasingly overtake children of rich families in the income ranking.",
+      "D": "In a booming economy where most children outearn their parents, the order of families in the income ranking remains exactly what it was before."
+     },
+     "question": "Which of the following would be a case of relative mobility rising while absolute mobility falls, in the passage's sense?"
+    },
+    {
+     "id": "R03-D-08-4",
+     "type": "RC",
+     "options": {
+      "A": "Relative mobility is the only true measure of whether a society is open, while absolute mobility merely reflects how fast its economy is growing.",
+      "B": "Social mobility has not stalled as its critics claim; it has simply become much harder to measure than it was in earlier generations.",
+      "C": "Comfortable families use private tuition and housing choices to block relative mobility, and governments should act to prevent them from doing so.",
+      "D": "Since absolute and relative mobility answer different questions and can diverge, running them together leads people to misread slowdowns and to ignore what fairness costs."
+     },
+     "question": "Which of the following best captures the main argument of the passage?"
+    },
+    {
+     "id": "R03-D-08-5",
+     "type": "RC",
+     "options": {
+      "A": "could keep its promise provided that the economy grew fast enough to raise the incomes of every family at once.",
+      "B": "is promising something that cannot be delivered when positions are ranked, whatever the rate of economic growth.",
+      "C": "could keep its promise by abolishing private tuition and other devices that comfortable families use to defend their position.",
+      "D": "is making essentially the same promise as a government that pledges to raise the living standards of each new generation."
+     },
+     "question": "The author would most likely say that a government promising to raise relative mobility while ensuring that no family moves down the ranking"
+    }
+   ]
+  },
+  {
+   "passage_id": "R05-E-08",
+   "passage": [
+    "The textbook account of banking runs roughly as follows. Savers deposit money; a bank keeps a fraction of each deposit as reserves and lends out the rest; the borrower spends the loan, the recipient deposits it at another bank, which in turn lends out most of it, and so on, until the original deposit has been multiplied by a factor that depends on the fraction held back. On this account banks are intermediaries, passing the savings of some people on to the projects of others, and the quantity of money in an economy is ultimately governed by the central bank's control over the quantity of reserves.",
+    "As a description of what actually happens when a loan is made, this has the sequence backwards. A bank that approves a loan does not hand over notes taken from a vault of accumulated deposits; it credits the borrower's account with a new deposit, and the money the borrower then spends did not exist a moment earlier. Lending creates deposits rather than the reverse. What limits a lender is therefore not a pool of prior savings but its judgement of whether a loan will be repaid at a profit, the capital it must hold against possible losses, the demand from creditworthy borrowers, and the price at which it can obtain the reserves needed to settle payments with other banks, a price that the central bank sets through the rate of interest rather than through the quantity of reserves.",
+    "The textbook is not simply wrong. A single bank that lends freely will soon find its new deposits draining away as borrowers pay people who bank elsewhere, and it must then attract deposits or borrow reserves to cover the outflow; from the standpoint of one institution, lending does seem to require funding. The error lies in generalising from the single bank to the system. What is a drain for one bank is an inflow for another, and the system as a whole is constrained less by the deposits it has gathered than by the willingness of banks to lend and of borrowers to borrow.",
+    "The difference matters for policy. If the multiplier story were right, a central bank that supplied banks with abundant reserves would set off a roughly proportionate expansion of lending. On the alternative account, when borrowers are cautious and banks are worried about losses, additional reserves may simply sit unused, because nothing in the decision to lend was waiting for them. Arguments about why lending has stalled are then better directed at the demand for credit and the condition of banks' balance sheets than at the quantity of reserves.",
+    "A further implication is drawn less often. If banks merely passed on existing savings, the direction of their lending would be a secondary matter, a question of how efficiently funds that already exist are placed. If instead banks create money when they lend, then their decisions about whom to lend to determine what new purchasing power enters the economy, and where. A boom in lending against existing houses and a boom in lending to firms that build new things both enlarge the supply of money, yet they do very different things with it: the first mainly raises the price of what is already there, while the second adds to what there is. Banking, on this view, is not a neutral pipe between savers and borrowers but one of the principal means by which a society decides what its new money will be used for."
+   ],
+   "questions": [
+    {
+     "id": "R05-E-08-1",
+     "type": "RC",
+     "options": {
+      "A": "transfers the amount of the loan from the account of a saver who has agreed to lend to that borrower.",
+      "B": "hands the borrower notes drawn from the deposits that savers have accumulated in its vaults over time.",
+      "C": "first obtains from the central bank enough extra reserves to match the full amount of the loan.",
+      "D": "credits the borrower's account with a new deposit that did not exist before the loan was made."
+     },
+     "question": "According to the passage, when a bank approves a loan it"
+    },
+    {
+     "id": "R05-E-08-2",
+     "type": "RC",
+     "options": {
+      "A": "show that lending against houses expands the supply of money less than lending to firms, which creates more deposits.",
+      "B": "illustrate that lending booms which enlarge the money supply alike may differ greatly in what the new money does.",
+      "C": "argue that banks should be prohibited from lending against existing houses so that more new money flows to productive firms.",
+      "D": "support the textbook claim that banks are intermediaries that place existing savings with the most efficient borrowers."
+     },
+     "question": "The comparison between lending against existing houses and lending to firms that build new things (paragraph 5) is used to"
+    },
+    {
+     "id": "R05-E-08-3",
+     "type": "RC",
+     "options": {
+      "A": "the central bank can determine the total amount of bank lending by deciding how many reserves to supply to banks.",
+      "B": "a single bank can lend without limit, since any deposits it loses to other banks are bound to return to it.",
+      "C": "the total of deposits across all banks can rise even though no saver has brought any new money to any bank.",
+      "D": "banks are not constrained by anything at all, since they can create whatever deposits their borrowers happen to request."
+     },
+     "question": "It can be inferred from the passage that, on the author's account,"
+    },
+    {
+     "id": "R05-E-08-4",
+     "type": "RC",
+     "options": {
+      "A": "dismissive of it as a mistake with no basis, since even individual banks never need deposits or reserves to fund their lending.",
+      "B": "approving of it as a simplification that is accurate for the system, though misleading about how a single bank operates.",
+      "C": "critical of its picture of the system as a whole, while granting that it describes the funding problem of one bank fairly.",
+      "D": "neutral towards it, presenting it alongside the alternative without saying which is the better account of modern banking."
+     },
+     "question": "The author's attitude towards the textbook account of banking is best described as"
+    },
+    {
+     "id": "R05-E-08-5",
+     "type": "RC",
+     "options": {
+      "A": "A bank that expanded its lending faster than its rivals found that many of the new deposits it created moved to other banks.",
+      "B": "Banks that held more capital relative to their loans tended to lend more freely than banks with thin capital during a slowdown.",
+      "C": "In several periods when reserves were made abundant, lending stayed flat because borrowers were reluctant to take on new debts.",
+      "D": "In several periods when reserves were made abundant while borrowers were cautious and banks feared losses, lending still rose in near proportion to reserves."
+     },
+     "question": "Which of the following, if true, would most weaken the author's argument in paragraph 4?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R03-C-05",
+   "passage": [
+    "Visitors to shrines that are frequented by people of more than one religion tend to come away with one of two stories. In the first, the shrine is evidence of a deep harmony beneath official differences: here, at the tomb of a holy figure or a spring credited with healing powers, ordinary believers ignore the boundaries their clergy insist on and share a common devotion. In the second, the arrangement is a fragile truce, a curiosity that survives only until politics catches up with it. Both stories are told about sites around the Mediterranean, in the Balkans and across South Asia, and both, I think, misdescribe what sharing usually involves.",
+    "Close observation of such places rarely finds a single, blended faith. More often it finds parallel use. One community lights lamps in the evening, another comes on a particular weekday; one group knows the saint by one name and story, another by a different name and a different story, and neither is much troubled by the discrepancy. Custodians, frequently from one community, accept offerings from all and refrain from asking visitors what they believe. The sharing is real, but it consists in a set of practical accommodations rather than in agreement, and it works partly because certain questions are never posed: above all, the question of whose shrine it really is.",
+    "This is why the harmony story, attractive as it is, puts the emphasis in the wrong place. The arrangement does not depend on people believing the same thing; it depends on their not being required to settle what they believe about this particular place. Nor does the truce story fare better. Many such sites have been shared for generations, through periods of considerable tension elsewhere, which is hard to square with the idea that their peace is merely a pause. What usually threatens them is not the slow pressure of difference but a sudden demand for definition, when some authority, a government department, a heritage body or a movement seeking to purify practice, insists that the site be registered, restored or claimed as belonging to one tradition alone.",
+    "It would be romantic to pretend that these places were free of friction. Custodians could favour their own community, quarrels over offerings were common, and the vagueness that allowed sharing also allowed one side to quietly enlarge its claim. Still, the lesson they offer is more interesting than either of the usual stories. Coexistence, they suggest, need not wait for agreement about ultimate questions. It can rest on a carefully maintained ambiguity, which is a social achievement in its own right and, like most achievements, easier to destroy than to build."
+   ],
+   "questions": [
+    {
+     "id": "R03-C-05-1",
+     "type": "RC",
+     "options": {
+      "A": "a gradual build-up of disagreement between the different communities who visit the site.",
+      "B": "an insistence by some outside authority that the site be formally assigned to one tradition.",
+      "C": "a request by visitors that the custodians explain the meaning of the rites performed at the site.",
+      "D": "the wish of each community to agree with the others on a single name and story for the saint."
+     },
+     "question": "As used in paragraph 3, 'a sudden demand for definition' refers to"
+    },
+    {
+     "id": "R03-C-05-2",
+     "type": "RC",
+     "options": {
+      "A": "It supplies the observations of how sharing actually works on which the author's rejection of both stories rests.",
+      "B": "It gives evidence for the harmony story, which the author then accepts subject to the qualifications in paragraph 4.",
+      "C": "It explains how custodians from one community gradually come to take control of sites that were once shared.",
+      "D": "It describes how shared shrines decline once the communities start to disagree about the identity of the saint."
+     },
+     "question": "Which of the following best describes the role of paragraph 2 in the passage?"
+    },
+    {
+     "id": "R03-C-05-3",
+     "type": "RC",
+     "options": {
+      "A": "Two clubs take turns in a hall after a court has ruled on which of them is its legal owner and on what terms.",
+      "B": "Two clubs merge into a single society with a common constitution so that they can make joint use of one hall.",
+      "C": "Two clubs meet in the same hall on different evenings, each calling it by its own name, and the caretaker never asks which club owns it.",
+      "D": "Two clubs share a hall only after long meetings in which they agree on a common purpose for their activities."
+     },
+     "question": "Which of the following arrangements most closely resembles the kind of sharing the author describes?"
+    },
+    {
+     "id": "R03-C-05-4",
+     "type": "RC",
+     "options": {
+      "A": "shared shrines have survived only where outside authorities protected their ambiguity through law and regulation.",
+      "B": "the communities using shared shrines have, over many generations, quietly agreed among themselves to adopt one common interpretation of the saint and his story.",
+      "C": "the vagueness at shared shrines is actively sustained, for instance by custodians not asking about belief, and is not simply a lack of clarity.",
+      "D": "leaving ultimate questions unsettled is more valuable than agreement about them in every area of social life."
+     },
+     "question": "The author's description of ambiguity as 'a social achievement in its own right' (paragraph 4) suggests that"
+    }
+   ]
+  },
+  {
+   "passage_id": "R03-B-03",
+   "passage": [
+    "When European travellers and administrators first described marriages in which the groom's family transferred cattle, cloth or other goods to the bride's family, many of them reached for the language of the market. The bride, they concluded, was being bought. The description had the appeal of simplicity, and it fitted a ready-made story in which other peoples' customs were cruder versions of the observers' own commercial habits. Words such as 'price' and 'purchase' entered official reports, and they shaped how the custom was seen long after closer study had cast doubt on them. The description also misread, in nearly every important respect, what the transfer did.",
+    "Consider first where the goods go. In many systems they are not kept by the bride's father as profit but are distributed among a wide circle of her kin, each of whom thereby acquires an interest in the marriage succeeding. Consider next where they go afterwards. Often the cattle received when a daughter marries are the very cattle used to secure a wife for her brother, so that a herd travels from family to family and the transfers form a chain linking households that may never meet. A purchase ends a relationship between buyer and seller; this transfer begins several. Consider, finally, what the transfer secures. In a number of societies what passes with the goods is not the woman herself but the affiliation of her future children to the husband's lineage, which is why, in some of them, the goods must be returned if the marriage ends before any children are born.",
+    "On this reading, bridewealth is less a price than a contract between groups, and one that gives the bride's family a continuing stake in how she is treated. A family that has shared the goods out among its members, and may have to gather them again in order to return them, has reason both to support the marriage and to intervene when it goes badly. The goods, in other words, work less like a payment than like a pledge, and a pledge held by many hands is harder to ignore than one held by a single man.",
+    "It would be naive, however, to treat this as the whole story. Where cash has replaced cattle and the sums demanded have risen with the incomes of urban grooms, the transfer can begin to behave much more like a price: it is negotiated against the bride's education or earning power, it is kept by a narrower set of relatives, and young men may delay marriage for years in order to raise it. Critics who see a market in such arrangements are not simply repeating the old error. The lesson is not that the travellers were wrong and the custom is innocent, but that the meaning of a transfer depends on the web of obligations around it, and that when the web thins, the meaning changes."
+   ],
+   "questions": [
+    {
+     "id": "R03-B-03-1",
+     "type": "RC",
+     "options": {
+      "A": "the groom's family is entitled to be repaid for the expenses it incurred in arranging the wedding.",
+      "B": "colonial administrators insisted on such refunds as a way of discouraging couples from divorcing.",
+      "C": "what the goods secure is the attachment of the couple's future children to the husband's lineage.",
+      "D": "the bride's father is obliged to give back whatever profit he gained when his daughter married."
+     },
+     "question": "According to the passage, in some societies the bridewealth goods must be returned if a marriage ends before any children are born because"
+    },
+    {
+     "id": "R03-B-03-2",
+     "type": "RC",
+     "options": {
+      "A": "the goods given as bridewealth had little or no economic value for the families who received them.",
+      "B": "households joined by such chains usually knew one another well and met often to settle obligations.",
+      "C": "families in such societies cared more about their sons' marriages than about their daughters' marriages.",
+      "D": "bridewealth sets up lasting connections among groups, which is the reverse of what a sale does."
+     },
+     "question": "It can be inferred that the author treats the chain in which the same cattle pass from family to family (paragraph 2) as evidence that"
+    },
+    {
+     "id": "R03-B-03-3",
+     "type": "RC",
+     "options": {
+      "A": "dismissive, because they are seen as repeating the early travellers' error in a modern form.",
+      "B": "studied neutrality, because the author declines to say whether their judgement has any merit.",
+      "C": "qualified acceptance: their judgement is granted for such cases without the older verdict being revived.",
+      "D": "wholehearted agreement, since their judgement is extended to bridewealth in every setting."
+     },
+     "question": "The author's attitude towards critics who see a market in cash-based bridewealth (paragraph 4) is best described as"
+    },
+    {
+     "id": "R03-B-03-4",
+     "type": "RC",
+     "options": {
+      "A": "the bride's kin kept an interest in how the marriage went and some reason to step in when it went badly.",
+      "B": "the bride herself could take back the goods for her own use if her husband's family mistreated her.",
+      "C": "the goods were shared out among many of the bride's relatives instead of being kept by one recipient.",
+      "D": "the transfer opened several continuing relationships instead of closing a single one."
+     },
+     "question": "Each of the following is presented in the passage as a way in which bridewealth in its older form differs from a market purchase EXCEPT that"
+    }
+   ]
+  },
+  {
+   "passage_id": "R01-F-04",
+   "passage": [
+    "Faced with two theories that fit the evidence equally well, scientists usually prefer the simpler, and they rarely feel the need to say why. When pressed, they tend to offer one of two answers. The first is that simplicity is a convenience: simpler theories are easier to state, to teach and to calculate with, and so they deserve priority in the way that a tidy desk deserves priority over a cluttered one, without any suggestion that tidiness is truer. The second is that nature itself is simple, so that a simple theory is more likely to have captured how things are. Neither answer is satisfactory. The first explains why we might enjoy simple theories but not why we should believe them, and the second asserts, with no evidence that could be independent of the very preference in question, exactly what needed to be shown.",
+    "A more promising answer comes from an unglamorous source, the practice of fitting curves to data. Any finite set of measurements, each carrying some error, can be fitted perfectly by a sufficiently complicated curve, one that bends to pass through every point. Such a curve is usually a worse guide to the next measurement than a smoother one that passes near the points without touching them all, because much of what it has faithfully reproduced is noise. Additional adjustable parameters let a model accommodate the accidents of a particular sample, and the price of that accommodation is paid when the model meets new data. Seen in this light, a preference for simplicity is a policy for estimating well from limited and imperfect evidence, not a belief about the architecture of the world.",
+    "This answer has a cost that its admirers do not always acknowledge. If simplicity earns its keep by protecting against noise, then its value should shrink as data become more abundant and more precise, and statistical practice broadly bears this out: with enough clean data, more complex models often predict better, because they can capture real structure that a simple model would smooth away. Simplicity, on this account, is not a standing virtue but a discount applied in proportion to our ignorance. Nor is it clear that simplicity can even be measured independently of how a theory is written. Counting parameters seems objective until one notices that a relation expressed compactly in one set of variables may require several parameters when it is rewritten in another.",
+    "None of this returns us to the view that simplicity is mere taste. The statistical argument shows that, in the situations scientists usually face, favouring the simpler of two well-fitting hypotheses is a reliable way to be less wrong. What it does not show is that the simpler hypothesis is, for that reason, more likely to be true; and the habit of speaking as though it did has lent the principle an authority it borrowed rather than earned."
+   ],
+   "questions": [
+    {
+     "id": "R01-F-04-1",
+     "type": "RC",
+     "options": {
+      "A": "in fitting every point it has also reproduced the errors that the measurements happen to contain.",
+      "B": "complicated curves are harder to calculate with, so that mistakes creep in when they are used to predict.",
+      "C": "such a curve can be drawn only when the measurements are entirely free of error.",
+      "D": "nature is simple, so a complicated curve cannot correspond to the way things really are."
+     },
+     "question": "According to the passage, a curve that passes exactly through every measured point is usually a poor guide to the next measurement because"
+    },
+    {
+     "id": "R01-F-04-2",
+     "type": "RC",
+     "options": {
+      "A": "the data are abundant and precise enough to reveal fine structure in whatever is being measured.",
+      "B": "the simpler model is the one that scientists find easier to state, to teach and to calculate with.",
+      "C": "the data available are few in number and each measurement carries a substantial margin of error.",
+      "D": "the more complex model has already been tested against new data and has predicted them better."
+     },
+     "question": "The passage suggests that a preference for the simpler of two well-fitting models is most clearly justified when"
+    },
+    {
+     "id": "R01-F-04-3",
+     "type": "RC",
+     "options": {
+      "A": "polite scepticism, because in the end it leaves simplicity a matter of taste, like a preference for a tidy desk.",
+      "B": "enthusiastic acceptance, because it finally demonstrates that the simpler hypotheses are the ones more likely to be true.",
+      "C": "studied neutrality, laying out its strengths and its costs without ever indicating which way the balance falls.",
+      "D": "qualified endorsement: it is more promising than the alternatives, but it supports less than is often claimed for it."
+     },
+     "question": "The author's attitude towards the statistical justification of simplicity is best described as one of"
+    },
+    {
+     "id": "R01-F-04-4",
+     "type": "RC",
+     "options": {
+      "A": "Even where data are vast and highly precise, simpler well-fitting models keep predicting new measurements better than complex ones.",
+      "B": "With small and noisy samples, models with fewer adjustable parameters predict new data better than models that have many.",
+      "C": "Whether one model has more parameters than another sometimes depends on the variables in which both of them happen to be written.",
+      "D": "Scientists in many fields report that they choose simpler models chiefly because these are easier to teach to students."
+     },
+     "question": "Which of the following, if true, would most weaken the author's claim that simplicity is 'a discount applied in proportion to our ignorance'?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R02-D-01",
+   "passage": [
+    "Adults watching a three-year-old serve imaginary tea to a row of stuffed animals tend to see one of two things. Some see a charming waste of time, a pause in the serious business of growing up that will be outgrown once the child can read and count; others see a rehearsal of adult roles, a small person practising to be a host. Both readings miss what is most remarkable about the scene, which is that to pour tea that is not there, the child must hold two descriptions of the world in mind at once: the cup is empty, and in the game the cup is full. She must keep the game's version from leaking into the real one, so that she does not actually try to drink, and yet follow its consequences faithfully, so that a toppled cup leaves the bear 'wet'.",
+    "This double bookkeeping is the same machinery that underlies counterfactual thought, the ability to ask what would happen if things were otherwise. A child who reasons that the bear is wet because the tea spilled is tracking a causal chain inside a supposition. Planning, explanation and much of science rest on exactly this skill, since to decide whether a plan will work, or why a bridge failed, one must build a world that differs from the actual one in a single respect and then trace what follows. Seen in this light, pretend play looks less like a holiday from thinking than like one of its earliest training grounds.",
+    "Some caution is nevertheless in order. That play and counterfactual reasoning draw on a shared capacity does not show that more play produces better reasoners; it may be that children who are already good at holding alternatives in mind simply enjoy pretending more. Nor does every game of make-believe involve careful causal tracking; much of it is repetitive and loose. The claim worth defending is narrower: pretence gives young children a space in which suppositions can be entertained without cost, and in which the rules that govern them can be tried and broken without anything real being at stake.",
+    "That narrower claim has a practical edge. Well-meaning efforts to make early childhood more productive often convert free play into guided activities with stated learning outcomes. Some guidance helps, and an adult who joins a game and asks what happens next can enrich it. But a game that exists to deliver a lesson changes character, because the child who knows that a right answer is wanted stops supposing freely and starts guessing what the adult has in mind. What made pretence valuable, its freedom from consequence, is the very thing that the attempt to harness it is most likely to destroy."
+   ],
+   "questions": [
+    {
+     "id": "R02-D-01-1",
+     "type": "RC",
+     "options": {
+      "A": "Keep the cup from toppling over at any point, since a spill would break the rules that the game has set up for everyone taking part.",
+      "B": "Believe for the length of the game that the cup really holds tea, so that the pretence feels convincing to her.",
+      "C": "Treat the cup as full inside the game while knowing it is empty, and let events in the game have their fitting effects.",
+      "D": "Copy the way she has seen adults receive guests, so that she gradually learns the social role of a host."
+     },
+     "question": "According to the passage, what must the child serving imaginary tea do?"
+    },
+    {
+     "id": "R02-D-01-2",
+     "type": "RC",
+     "options": {
+      "A": "a child's habit of counting imaginary objects alongside real ones, such as the cups, the tea and the animals.",
+      "B": "moving back and forth between pretending and ordinary activity several times during a single afternoon.",
+      "C": "keeping track of how things actually are and how they are within the pretence, both at the same time.",
+      "D": "recording a child's play twice over, once in the child's own memory and once in the notes of a watching adult."
+     },
+     "question": "As used in paragraph 2, 'double bookkeeping' refers to"
+    },
+    {
+     "id": "R02-D-01-3",
+     "type": "RC",
+     "options": {
+      "A": "reject the suggestion, made in paragraph 2, that pretend play and counterfactual thought share a capacity.",
+      "B": "argue that most make-believe is too repetitive and loose to be of any real value to a child's development.",
+      "C": "narrow the author's claim by conceding what the link between pretence and reasoning does not establish.",
+      "D": "present evidence that children who spend more time pretending go on to become better at reasoning about causes."
+     },
+     "question": "The third paragraph primarily serves to"
+    },
+    {
+     "id": "R02-D-01-4",
+     "type": "RC",
+     "options": {
+      "A": "a child who senses that a particular answer is expected will stop exploring suppositions and try to read the adult instead.",
+      "B": "any adult involvement in a child's game interferes with the reasoning about suppositions that pretence exercises.",
+      "C": "guided activities take time away from the reading and counting that young children need to master well before their schooling begins.",
+      "D": "stated learning outcomes cannot be measured reliably in children as young as the ones who play such games."
+     },
+     "question": "The author's reservation about turning free play into guided activities with stated learning outcomes rests chiefly on the concern that"
+    }
+   ]
+  },
+  {
+   "passage_id": "R05-C-04",
+   "passage": [
+    "Business journalism has a favourite kind of hero: the chief executive who arrives at a struggling company, takes bold decisions and turns it around. Magazine profiles, admiring biographies and conference speeches all tell the story in the same way, with the leader at the centre and everything else as scenery. The habit is understandable, since a firm is an abstraction and it is far easier to praise or blame a person than a set of market conditions. But the habit also produces a systematic error about how much any one leader actually controls.",
+    "Consider what else moves a company's results. Demand for its products rises and falls with the economy and with the fortunes of its industry; the price of its raw materials is set in markets it cannot influence; many of the products it sells were conceived years earlier, under managers who have since left. A new chief executive who takes over at the bottom of a downturn will, in the ordinary course of things, preside over a recovery, and the recovery will be credited to him. His successor, arriving at the peak, will be blamed for the decline that follows. Neither may have done much to cause what happened while he was in charge.",
+    "Imagine two firms in the same industry, with similar products and similar costs. One appoints a celebrated leader just as the market begins to recover; the other keeps an unremarkable manager who has run it for years. Both firms prosper over the next three years, but only one of them is written about, and the story of its revival will attribute to leadership what was largely a rising market carrying both firms upward. Such comparisons are rarely made, because the second firm has no story to tell.",
+    "None of this means that leaders are irrelevant. In moments of genuine crisis, or when a firm must choose between strategies that will shape it for decades, the judgement of the person at the top can matter a great deal. The error lies in degree, not in kind. Yet the error has consequences, for boards that believe in saviours go looking for them outside the firm, pay them accordingly, and dismiss them when results return to the ordinary, only to begin the search again. An organisation that understood how much of its fate lay beyond any individual might spend less on heroes and more on the people and systems that carry it through every leader's tenure."
+   ],
+   "questions": [
+    {
+     "id": "R05-C-04-1",
+     "type": "RC",
+     "options": {
+      "A": "showing that the effect of chief executives on results is commonly overstated, and that the overstatement is costly.",
+      "B": "recommending that company boards stop appointing outsiders as chief executives and promote only from within.",
+      "C": "proving that chief executives have no measurable effect on the performance of the companies they are appointed to run.",
+      "D": "explaining why business journalists prefer stories about individual leaders to accounts of markets and industries."
+     },
+     "question": "The passage is primarily concerned with"
+    },
+    {
+     "id": "R05-C-04-2",
+     "type": "RC",
+     "options": {
+      "A": "blaming leaders for small declines in results while crediting them for large recoveries.",
+      "B": "attributing a firm's results to the wrong kind of leader, rather than to the right one.",
+      "C": "misjudging the kinds of decision that leaders make, rather than how often they make them.",
+      "D": "exaggerating how much leaders matter, rather than in believing that they matter at all."
+     },
+     "question": "In paragraph 4, the statement 'The error lies in degree, not in kind' means that the mistake consists in"
+    },
+    {
+     "id": "R05-C-04-3",
+     "type": "RC",
+     "options": {
+      "A": "unremarkable managers who have run a firm for many years usually achieve better results than celebrated leaders brought in from outside.",
+      "B": "journalists deliberately ignore firms with ordinary managers in order to protect the reputations of the celebrated leaders they admire.",
+      "C": "the second firm actually performed worse than the first, which is why its results were not reported in the business press.",
+      "D": "the comparisons that would reveal how much success owes to circumstances are seldom made, because unremarkable success draws little attention."
+     },
+     "question": "The remark that 'the second firm has no story to tell' (paragraph 3) suggests that"
+    },
+    {
+     "id": "R05-C-04-4",
+     "type": "RC",
+     "options": {
+      "A": "A company promotes an employee who has outperformed colleagues doing the same work in the same conditions over many years.",
+      "B": "A town council blames unusually heavy rainfall for floods that were in fact caused by its own failure to clear the drains.",
+      "C": "A new head teacher is praised for rising examination results that stem from teaching reforms her predecessor introduced years earlier.",
+      "D": "A scientist who makes an important discovery insists on sharing the credit with the laboratory team that performed the experiments."
+     },
+     "question": "Which of the following situations is most similar to the error the passage describes?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R01-G-07",
+   "passage": [
+    "In ordinary speech leisure is what is left over when work is done. It is time off, and its value is usually explained by reference to the work it interrupts: we rest so that we can return refreshed, and an employer who grants generous holidays is said to be investing in productivity. Even our defences of free time tend to be framed in these terms. Leisure, on this picture, is the pause that makes the next effort possible, and a person who takes too much of it is quietly suspected of having failed at something.",
+    "Aristotle saw the relation the other way round. In the Nicomachean Ethics he argues that we are busy in order to have leisure, much as we make war in order to have peace, and the Greek word for leisure, schole, is the ancestor of our word 'school'. Leisure in his sense was not rest or idleness. It was the condition of being free to engage in activities chosen for their own sake, of which he held contemplation to be the highest, though he also counted the cultivated enjoyment of music among its proper occupations. Amusement, by contrast, belonged with work. We need relaxation because we cannot labour continuously, and amusement provides it, so amusement exists for the sake of further activity rather than as an end in itself; to toil for the sake of amusement struck him as childish.",
+    "The modern inversion has a consequence that is easy to miss. Once leisure is understood as recovery for the sake of work, it inherits the standards of work. Free time becomes something to be used well, which increasingly means used productively: hobbies are pursued for the skills they build, exercise for the stamina it sustains, even sleep for its effect on the next day's performance. The result is not merely that people have too little time off, though many do, but that the time they have is colonised by the logic it was supposed to interrupt. Aristotle would have recognised the pattern. A life organised entirely around work and the recovery it requires has, in his terms, no leisure at all, however many holidays it contains.",
+    "The obvious objection is that Aristotle's leisure was a privilege resting on the labour of others. The citizens free for philosophy and politics were supported by slaves, by women whose sphere he confined to the household, and by labourers and artisans whom he considered unsuited to full citizenship in the best city. A conception of the good life that excludes most people from it can hardly serve as a model for a society in which nearly everyone must work. This objection is just, and it should not be softened. But it tells against the distribution of leisure in Aristotle's city, not against his account of what leisure is. One can reject the arrangement that gave a few men freedom from necessity while still holding that freedom from necessity is valuable for what it makes possible, and that what it makes possible is not simply more work.",
+    "What follows for us is less a programme than a question. If the value of leisure lies in activities worth doing for their own sake, then the measure of a society's free time is not only how much of it there is but whether people have the means, the education and the settled habits to fill it with such activities, rather than with recovery alone. That is a demand on schools and cities as much as on employers, and it is one that the language of rest and productivity has no words to state."
+   ],
+   "questions": [
+    {
+     "id": "R01-G-07-1",
+     "type": "RC",
+     "options": {
+      "A": "was available only to citizens who were supported by the labour of slaves and artisans.",
+      "B": "provides the relaxation that we need because we cannot labour without a break, and so serves further activity.",
+      "C": "is an activity chosen for its own sake and is therefore the highest use of a person's free time.",
+      "D": "is pursued in modern societies mainly for the skills and stamina that it helps people to build."
+     },
+     "question": "According to the passage, Aristotle placed amusement with work rather than with leisure because amusement"
+    },
+    {
+     "id": "R01-G-07-2",
+     "type": "RC",
+     "options": {
+      "A": "employers increasingly demand that their staff remain available for work during evenings and holidays.",
+      "B": "people have so little time off that work fills almost every hour of the day.",
+      "C": "standards drawn from work come to govern how free time is judged and spent.",
+      "D": "activities once done for their own sake have been abandoned in favour of rest and sleep."
+     },
+     "question": "In paragraph 3, the statement that free time is 'colonised by the logic it was supposed to interrupt' means that"
+    },
+    {
+     "id": "R01-G-07-3",
+     "type": "RC",
+     "options": {
+      "A": "It argues that the objection to Aristotle is unjust, since modern societies have extended to nearly everyone the leisure he reserved for a few.",
+      "B": "It accepts a serious objection to Aristotle in full while arguing that it applies to who had leisure, not to what leisure is.",
+      "C": "It shows that Aristotle's exclusion of most people from leisure discredits his account of what leisure is, along with his picture of the good life.",
+      "D": "It accepts the objection that Aristotle's leisure depended on others' labour and concludes that his account of leisure must be revised for modern use."
+     },
+     "question": "Which of the following best describes the function of paragraph 4 in the passage?"
+    },
+    {
+     "id": "R01-G-07-4",
+     "type": "RC",
+     "options": {
+      "A": "A factory hand who spends his weekends watching comedies to unwind before the start of the next working week.",
+      "B": "A musician practising scales for several hours each evening to prepare for a paid audition with an orchestra.",
+      "C": "An office worker who reads philosophy before bed because it helps her sleep and work more sharply the next day.",
+      "D": "A retired engineer who spends his evenings studying the music of a tradition he loves, though he will never perform or write about it."
+     },
+     "question": "Which of the following would the author most likely regard as leisure in Aristotle's sense?"
+    },
+    {
+     "id": "R01-G-07-5",
+     "type": "RC",
+     "options": {
+      "A": "is too imprecise to measure how much free time the people of a society actually have each week.",
+      "B": "values free time only by its relation to work, so it cannot express the worth of activities done for their own sake.",
+      "C": "is used mostly by schools and cities, which ought instead to leave free time to the choices of individuals.",
+      "D": "was invented by employers to persuade workers that long hours are good for them and their families."
+     },
+     "question": "The author's claim that 'the language of rest and productivity has no words to state' the demand in paragraph 5 suggests that this language"
+    }
+   ]
+  },
+  {
+   "passage_id": "R06-E-07",
+   "passage": [
+    "Few medical ideas seem as self-evidently right as early detection. A disease found sooner is a disease treated sooner, and a disease treated sooner, surely, is more often cured. Screening programmes, which look for disease in people who feel perfectly well, are built on this reasoning, and the figures they produce appear to confirm it. People whose cancers are found by screening typically survive far longer after diagnosis than people whose cancers are found because they caused symptoms. Patients who have been through screening often say as much, and public campaigns repeat the message with understandable conviction. It is hard to imagine clearer evidence that looking early pays.",
+    "The trouble is that the comparison is rigged, though by the arithmetic of detection rather than by anyone's intent. Suppose a tumour will kill a woman at seventy whatever is done. If it causes symptoms at sixty-eight, she survives two years after diagnosis; if a scan finds it at sixty-three, she survives seven. Nothing about her death has changed, but the survival figure has more than tripled, simply because the clock was started earlier. A second distortion arises from the different speeds at which tumours grow. A test repeated every few years is far more likely to catch a slow tumour, which lingers in a detectable but harmless state for a long time, than a fast one, which may appear and cause symptoms between two tests. Screened groups are therefore loaded with the gentler cases, and their better survival partly reflects what was found rather than what was done.",
+    "The most uncomfortable distortion takes this tendency to its limit. Some of the abnormalities found by screening, though they look like cancer under the microscope, would never have grown enough to cause harm in the person's lifetime. Detecting them is called overdiagnosis, and it is not an error in the usual sense, since the cells are what the pathologist says they are. The error lies in the prediction that they would have mattered, and since such a lesion is removed or destroyed once it is found, the prediction is never put to the test. People with such findings are treated, sometimes with surgery or radiation, and they then appear in the statistics as survivors, which of course they are, though they were never in danger. Because no individual can know that his or her own tumour was of this harmless kind, every overdiagnosed patient experiences the treatment as a rescue. Screening thus produces its own most sincere advocates, and the more it overdiagnoses, the more grateful survivors it creates.",
+    "None of this shows that screening is useless. For some cancers, carefully conducted trials comparing large screened and unscreened populations have found fewer deaths among those screened, and those programmes deserve their place. The point concerns the evidence, not the verdict. The question to ask of a screening programme is not how long its patients live after diagnosis but whether fewer people in the population it serves die of the disease, and whether that benefit outweighs the harm of treating people who were never going to be ill. Survival after diagnosis cannot answer that question, because it improves under the influence of lead time, slow tumours and overdiagnosis even when not a single death has been prevented. Doctors are not immune to the appeal of the survival figure, since it describes the patients they actually see; the deaths a programme fails to prevent, and the needless treatments it imposes, are visible only in comparisons between whole populations that no single clinic can make."
+   ],
+   "questions": [
+    {
+     "id": "R06-E-07-1",
+     "type": "RC",
+     "options": {
+      "A": "fails her because the tumour is found too late in its course to be treated successfully.",
+      "B": "shows that her tumour must have belonged to the slow-growing kind that repeated tests tend to catch.",
+      "C": "adds five years to her life by allowing treatment to begin before symptoms appear.",
+      "D": "lengthens the survival recorded after her diagnosis without postponing her death."
+     },
+     "question": "In the hypothetical case of the woman described in paragraph 2, detection by scan at sixty-three"
+    },
+    {
+     "id": "R06-E-07-2",
+     "type": "RC",
+     "options": {
+      "A": "comparisons of survival are worthless for judging any medical treatment, whether or not it involves screening.",
+      "B": "the way it is made favours screening whether or not screening saves lives, though nobody intends this.",
+      "C": "researchers have deliberately arranged survival figures so as to make screening programmes look successful.",
+      "D": "patients whose cancers are found by screening receive better treatment than patients who come with symptoms."
+     },
+     "question": "When the author says that the comparison in paragraph 1 is 'rigged' (paragraph 2), the point is that"
+    },
+    {
+     "id": "R06-E-07-3",
+     "type": "RC",
+     "options": {
+      "A": "showing that overdiagnosed patients are simply wrong to believe that they were ever found to have cancer.",
+      "B": "suggesting that patients ought to be told at diagnosis whenever their tumour is of the harmless kind.",
+      "C": "explaining why the harm of overdiagnosis tends to build support for screening rather than doubts about it.",
+      "D": "revealing that screening programmes recruit their former patients as advocates in order to protect their funding."
+     },
+     "question": "The observation that 'every overdiagnosed patient experiences the treatment as a rescue' (paragraph 3) contributes to the argument chiefly by"
+    },
+    {
+     "id": "R06-E-07-4",
+     "type": "RC",
+     "options": {
+      "A": "People who chose to attend the programme were less likely to die of the disease than people in the same area who chose not to attend.",
+      "B": "Patients whose cancers were found by the programme survived, on average, twice as long after diagnosis as patients found through symptoms.",
+      "C": "When comparable populations were assigned at random to be screened or not, fewer people in the screened population died of the disease.",
+      "D": "After the programme began, far more cancers were diagnosed each year than before, and a much larger share of them were at an early stage."
+     },
+     "question": "Which of the following findings would the author regard as the strongest evidence that a particular screening programme is beneficial?"
+    },
+    {
+     "id": "R06-E-07-5",
+     "type": "RC",
+     "options": {
+      "A": "It cannot be recognised in any individual patient at the time the patient is treated.",
+      "B": "It occurs when a pathologist mistakes harmless cells for cancerous ones under the microscope.",
+      "C": "It improves a screening programme's survival figures without preventing any deaths.",
+      "D": "It can lead people to undergo surgery or radiation that they did not in fact need."
+     },
+     "question": "Each of the following is consistent with the passage's account of overdiagnosis EXCEPT:"
+    }
+   ]
+  },
+  {
+   "passage_id": "R06-B-01",
+   "passage": [
+    "Few environmental gestures are as photogenic as planting a tree. A minister kneels with a spade, a schoolchild pats soil around a sapling, and a campaign announces that so many million trees have gone into the ground this season. The appeal is easy to understand. A tree is a visible, countable object, and counting is what campaigns need: a target can be set, met and reported. Yet the habit of measuring forest recovery by the number of saplings planted has quietly confused an input with an outcome, and the confusion has consequences for the land it is meant to help.",
+    "The first problem is survival. A sapling planted in the wrong season, in compacted soil or without anyone to water it through its first dry months often dies within a year or two, and a campaign that counts plantings rather than living trees will never record the loss. The second problem is choice. Large drives tend to favour a few fast-growing species that nurseries can raise cheaply and in bulk, and the result, where the saplings do survive, may be closer to a plantation than a forest: rows of a single kind of tree, offering little to the insects, birds and fungi that a mixed woodland supports. In some places such planting has even been carried out on grasslands that were never forested at all, replacing one valuable habitat with a poor imitation of another.",
+    "An alternative, less dramatic and much harder to photograph, is to let forests come back on their own. On land where old roots, nearby seed-bearing trees and a living soil remain, simply protecting an area from grazing, fire and clearing can allow a varied forest to regenerate, often more cheaply than planting and with species suited to the site because they arrived there by themselves. Regeneration of this kind is slow at first, and for some years the land looks like scrub, which is one reason it is undervalued: it does not look like progress.",
+    "None of this means that planting is always a mistake. Where soils are badly degraded, where no seed sources survive nearby, or where a particular species must be reintroduced, careful planting may be the only way to begin. The objection is not to the spade but to the scoreboard. A campaign that measured success by the area of land that becomes, and remains, a functioning forest after ten or twenty years would sometimes plant and sometimes refrain, and it would be judged by what grew rather than by what was put into the ground."
+   ],
+   "questions": [
+    {
+     "id": "R06-B-01-1",
+     "type": "RC",
+     "options": {
+      "A": "argue that forest recovery should be judged by the lasting forest it produces rather than by the number of saplings that are planted.",
+      "B": "explain the practical techniques by which nurseries and planters can raise the survival rate of the saplings they put into the ground.",
+      "C": "criticise public figures who take part in planting ceremonies mainly in order to be photographed doing something popular.",
+      "D": "argue that tree planting campaigns should be replaced everywhere by the protection of land, so that forests can regenerate naturally without any planting."
+     },
+     "question": "The primary purpose of the passage is to"
+    },
+    {
+     "id": "R06-B-01-2",
+     "type": "RC",
+     "options": {
+      "A": "the species that arrive by themselves are often poorly suited to the soil and climate of the site where they settle.",
+      "B": "it usually costs more than planting because the protected land has to be guarded against grazing, fire and clearing.",
+      "C": "for several years after protection begins, the land looks like scrub and does not resemble visible progress.",
+      "D": "it succeeds only on grasslands, which many people wrongly assume were once covered by forest."
+     },
+     "question": "According to the passage, one reason natural regeneration is undervalued is that"
+    },
+    {
+     "id": "R06-B-01-3",
+     "type": "RC",
+     "options": {
+      "A": "accepts the counting of saplings planted, provided that the trees are put in during the correct season.",
+      "B": "objects to competition between rival campaigns that try to outdo each other in the number of trees they plant.",
+      "C": "objects to the way the success of forest campaigns is measured, not to the act of planting trees itself.",
+      "D": "objects to manual planting by volunteers and prefers that saplings be put in by trained professionals."
+     },
+     "question": "In paragraph 4, the statement 'The objection is not to the spade but to the scoreboard' means that the author"
+    },
+    {
+     "id": "R06-B-01-4",
+     "type": "RC",
+     "options": {
+      "A": "One that plants a wide mix of native species instead of a single fast-growing tree, and reports the total number of saplings put into the ground each season.",
+      "B": "One that fences off land near surviving seed trees, plants only on degraded plots with no seed source, and reports how much forest still stands after fifteen years.",
+      "C": "One that refuses to plant anywhere, including on badly degraded soils, and instead fences every site and waits for a forest to return on its own.",
+      "D": "One that waters and tends every sapling through its first dry months, so that the number of trees reported as planted is accurate rather than inflated."
+     },
+     "question": "Which of the following programmes would the author of the passage most likely regard as best designed?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R03-G-02",
+   "passage": [
+    "Over the past few decades many voluntary organisations have come to manage their volunteers much as firms manage staff. There are role descriptions and application forms, induction sessions, supervisors and annual counts of hours given. The change is usually presented as simple progress. Volunteers who know what is expected of them are said to stay longer, and organisations that can report their hours to funders are better placed to win support. Funders, understandably, prefer measurable outputs, and organisations competing for limited grants have every incentive to supply them. Both claims are plausible, and neither is the whole story.",
+    "What the managerial model tends to forget is that volunteering was never only a cheaper form of labour. People who give their time without pay are also choosing what to do, with whom and on what terms, and that choice is part of what they value. A retired teacher who helped run a reading club because she liked the children and the other helpers may find, once the club has become a programme with targets and a coordinator, that she has been turned into an unpaid employee of something she no longer recognises. She has lost not her wages, which she never had, but her say. Many such volunteers do not complain; they simply drift away, and their departure is recorded, if at all, as a problem of retention.",
+    "There is also a quieter loss. Informal associations of volunteers have long been places where people who would never meet at work learn to cooperate, argue and decide things together. A committee that argues for an entire evening over the date of a jumble sale is, among other things, rehearsing the arts of compromise and accountability on which larger institutions depend. When decisions are taken by paid staff and volunteers are slotted into predefined roles, that practice of self-government shrinks. The organisation may deliver its service more reliably while doing less to cultivate the habits that made voluntary life worth defending.",
+    "None of this is an argument against training or rules as such. A rescue team on a mountain cannot depend on whoever turns up with good intentions, and anyone who works with children ought to be checked. The difficulty arises when standards suited to such demanding tasks are applied across the board, to the allotment society and the neighbourhood library as much as to the lifeboat crew. The sensible question is not whether to professionalise but where, and the answer should depend on what the task requires rather than on what funders find easy to count."
+   ],
+   "questions": [
+    {
+     "id": "R03-G-02-1",
+     "type": "RC",
+     "options": {
+      "A": "part of what volunteers value is control over how and with whom they contribute, which managerial roles can take away.",
+      "B": "volunteers who leave reorganised clubs are mainly those who had hoped that the new arrangements would bring them some form of payment.",
+      "C": "retired teachers are especially ill suited to working under coordinators because they are used to running their own classrooms.",
+      "D": "the reading club ceased to be of any benefit to the children once it was turned into a programme with targets."
+     },
+     "question": "The remark that the retired teacher 'has lost not her wages, which she never had, but her say' implies that"
+    },
+    {
+     "id": "R03-G-02-2",
+     "type": "RC",
+     "options": {
+      "A": "outright hostility: treating any form of training or rules for volunteers as a betrayal of what voluntary life stands for.",
+      "B": "qualified scepticism: accepting it for demanding tasks but doubting it as a general model for voluntary bodies.",
+      "C": "detached neutrality: reporting what supporters and critics claim without offering any judgement of the author's own.",
+      "D": "warm approval: welcoming it as clear evidence that voluntary bodies have at last matured into reliable organisations."
+     },
+     "question": "The author's attitude towards the professionalisation of volunteering is best described as"
+    },
+    {
+     "id": "R03-G-02-3",
+     "type": "RC",
+     "options": {
+      "A": "It answers the objection that rules are needed for demanding tasks such as rescue work on a mountain or work with children.",
+      "B": "It identifies a second cost, beyond individual volunteers' loss of say, that falls on the practice of collective self-government.",
+      "C": "It offers evidence that professionalised organisations deliver their services less reliably than informal groups of volunteers do.",
+      "D": "It explains why funders prefer to support organisations that can report the hours their volunteers have given."
+     },
+     "question": "Which of the following best describes the role of the third paragraph in the passage?"
+    },
+    {
+     "id": "R03-G-02-4",
+     "type": "RC",
+     "options": {
+      "A": "Among comparable groups, long-serving volunteers left at the same rate whether or not their group had adopted role descriptions and supervisors.",
+      "B": "Many newly recruited volunteers say that clear role descriptions made them more willing to join an organisation in the first place.",
+      "C": "Organisations that adopted role descriptions and supervisors reported more volunteer hours to their funders than they had before.",
+      "D": "Some volunteers who left professionalised organisations later joined informal groups such as allotment societies and reading clubs."
+     },
+     "question": "Which of the following, if true, would most weaken the author's suggestion that managerial practices lead some long-standing volunteers to drift away?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R02-D-04",
+   "passage": [
+    "A long tradition explains exceptional performance by talent: the chess master and the concert violinist are thought to have been born with something the rest of us lack. A body of research on practice has done much to unsettle this view. Those who reach the top of skilled fields, it turns out, have typically spent very large amounts of time not merely doing the activity but practising it in a particular way: working on specific weaknesses, at the edge of their current ability, with prompt feedback, usually under the eye of a teacher. Experience alone, on this account, is not enough. A person who has driven a car for twenty years has had a great deal of experience but has probably not improved since the first few, because ordinary driving involves no deliberate effort to get better.",
+    "The strongest version of this view holds that practice of the right kind is not just necessary for expertise but very nearly sufficient, so that differences in accumulated practice explain most of the differences between the great and the merely good. Popularised as a rule that a fixed number of hours will make anyone an expert, it has an obvious democratic appeal. It is also, in that form, hard to sustain. Among people who practise a great deal, the amount of practice leaves much of the variation in performance unexplained, and the size of that unexplained remainder seems to differ across domains. Where the rules are stable and feedback is immediate, as in many games and sports, practice accounts for more; where outcomes are delayed and noisy, as in forecasting markets or judging which patient will recover, it accounts for less.",
+    "This last pattern is revealing, because it suggests that what practice builds depends on what the environment can teach. Deliberate practice requires knowing, quickly and reliably, whether an attempt succeeded. A violinist hears a wrong note at once; a chess player can check a line against a stronger opponent. A financial analyst may wait years to learn whether a judgement was sound, and even then the outcome will reflect luck as much as skill. In such fields long careers can produce confidence without accuracy, and the hours a person has logged may say more about seniority than about expertise.",
+    "None of this restores the old picture of talent as a fixed endowment that settles everything. The research on practice was right that expertise is built rather than found, and right that the manner of practice matters more than its sheer quantity. What it cannot do is deliver the promise sometimes made in its name, that anyone who puts in the hours will arrive at the same place. Starting points differ, the rate at which practice pays off differs, and some fields offer so little reliable feedback that practice in the demanding sense is barely possible within them."
+   ],
+   "questions": [
+    {
+     "id": "R02-D-04-1",
+     "type": "RC",
+     "options": {
+      "A": "beginners who feel sure of themselves before they have done enough practice to justify that feeling.",
+      "B": "practitioners whom long experience has made sure of their judgements, although those judgements are not reliably right.",
+      "C": "a violinist who keeps playing wrong notes boldly because no teacher is present to correct the mistakes.",
+      "D": "the excessive faith that researchers have placed in counting hours of practice as a measure of skill."
+     },
+     "question": "In paragraph 3, the phrase 'confidence without accuracy' describes"
+    },
+    {
+     "id": "R02-D-04-2",
+     "type": "RC",
+     "options": {
+      "A": "accurate for fields where feedback is slow and noisy, though misleading for games and sports.",
+      "B": "a fair summary of what the research on practice has shown about how experts are made.",
+      "C": "an overstatement that stretches sound findings about practice into a promise they cannot keep.",
+      "D": "evidence that talent, rather than practice, is what finally separates the great from the good."
+     },
+     "question": "It can be inferred that the author regards the popular rule that a fixed number of hours will make anyone an expert as"
+    },
+    {
+     "id": "R02-D-04-3",
+     "type": "RC",
+     "options": {
+      "A": "In sports with stable rules and quick feedback, some athletes who practise a great deal still fail to reach the elite level.",
+      "B": "Financial analysts with long careers earn considerably more, on average, than analysts with shorter careers.",
+      "C": "Top chess players began playing at an earlier age, on average, than the many chess players who never managed to reach the top level of the game.",
+      "D": "In one profession, members who learn quickly whether they erred improve more with experience than colleagues who learn the results only years later."
+     },
+     "question": "Which of the following, if true, would most strengthen the author's explanation in paragraph 3 of why practice accounts for less in some fields?"
+    },
+    {
+     "id": "R02-D-04-4",
+     "type": "RC",
+     "options": {
+      "A": "It recommends that people who want to become experts should choose fields in which feedback on their efforts is quick and reliable.",
+      "B": "It introduces new evidence that talent is a fixed endowment that settles in advance who can become an expert.",
+      "C": "It reverses the argument of paragraph 3 by conceding that hours of practice do in the end determine expertise.",
+      "D": "It weighs what the practice research got right against the promise it cannot keep, without returning to the talent view."
+     },
+     "question": "Which of the following best describes the function of the final paragraph?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R06-C-06",
+   "passage": [
+    "Among researchers who study catastrophes, a slogan has become something close to a creed: there is no such thing as a natural disaster. The claim is not that earthquakes, floods and cyclones are human inventions. It is that a hazard, a physical event of a certain size, becomes a disaster only when it meets people and structures unable to withstand it. A cyclone that crosses an empty coastline is a fact about the atmosphere; the same cyclone striking a crowded delta of unreinforced houses with no warning system is a social event, and the scale of its damage is decided as much by the delta's history as by the storm.",
+    "The slogan earns its popularity because it redirects attention to what can be changed. Two cities shaken by earthquakes of similar strength may suffer wholly different losses, one counting broken windows and the other thousands of dead, and the difference lies in building standards, in whether they were enforced, in where the poor were permitted or forced to live. Calling the outcome natural lets those decisions disappear from view. It encourages the belief that loss is fate, and fate calls for sympathy after the event rather than investment before it.",
+    "Taken literally, however, the slogan claims too much. Some events are large enough that no plausible arrangement of society would have prevented great loss: a sufficiently large eruption, or a wave of extraordinary height arriving within minutes, can overwhelm even well-prepared places. To insist that every such loss was socially produced is to imply that someone could have prevented it, which may be false, and in its cruder versions comes close to suggesting that the people harmed were responsible for their own exposure. The slogan can also tempt its users to neglect the physical science of hazards, as though knowing how often floods of a given size recur mattered less than studying the societies they strike, when the two kinds of knowledge are needed together.",
+    "The insight is worth keeping and the absolutism worth dropping. A more defensible claim is that the size of a disaster is never simply natural: the hazard sets the challenge, but how much of the challenge becomes catastrophe depends on choices made long before. This version keeps the slogan's critical edge, its refusal to let preventable deaths be filed under bad luck, while admitting that nature sometimes sets challenges that no society could fully meet."
+   ],
+   "questions": [
+    {
+     "id": "R06-C-06-1",
+     "type": "RC",
+     "options": {
+      "A": "affects only empty coastlines and open country, whereas a disaster is confined to cities with many unreinforced houses.",
+      "B": "is an event that scientists can forecast in advance, whereas a disaster is one that arrives without any warning at all.",
+      "C": "is caused by human activity such as building on deltas, whereas a disaster has wholly natural causes such as storms.",
+      "D": "is a physical event of some size, which becomes a disaster only on meeting people and structures unable to withstand it."
+     },
+     "question": "According to the passage, a hazard differs from a disaster in that a hazard"
+    },
+    {
+     "id": "R06-C-06-2",
+     "type": "RC",
+     "options": {
+      "A": "move public effort away from prevention beforehand and toward sympathy once the damage is done.",
+      "B": "lead the people harmed to blame themselves for having chosen to live in places exposed to known hazards.",
+      "C": "push governments to enforce building standards more strictly in cities that have already suffered heavy losses.",
+      "D": "encourage scientists to study how often hazards of a given size recur instead of examining the societies they strike."
+     },
+     "question": "The author suggests that describing a disaster's outcome as natural tends to"
+    },
+    {
+     "id": "R06-C-06-3",
+     "type": "RC",
+     "options": {
+      "A": "qualify a position the author largely accepts, by identifying the ways in which it claims too much.",
+      "B": "provide further support for the slogan by showing that even very large eruptions cause losses shaped by society.",
+      "C": "shift attention from earthquakes and cyclones to eruptions and great waves as the most dangerous hazards for coastal cities.",
+      "D": "reject the slogan outright as a false and harmful belief that researchers would do better to abandon entirely."
+     },
+     "question": "Paragraph 3 functions in the passage chiefly to"
+    },
+    {
+     "id": "R06-C-06-4",
+     "type": "RC",
+     "options": {
+      "A": "When a hazard is large enough to overwhelm well-prepared places, the losses it causes are purely the work of nature.",
+      "B": "Studying how societies come to be exposed matters more than knowing how often hazards of a given size tend to recur.",
+      "C": "Every death in a disaster could in principle have been prevented by better decisions taken before the hazard struck.",
+      "D": "Even when a hazard is too large for any society to withstand fully, the extent of the loss still owes something to earlier choices."
+     },
+     "question": "Which of the following would the author most likely accept?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R04-E-03",
+   "passage": [
+    "Economic sanctions are usually defended with a simple theory of pressure: cut a country off from markets, credit and imported goods, and its people will suffer; suffering people will blame their rulers; and rulers who fear their own people will eventually change course. Each link in this chain sounds plausible, and the whole has the further appeal of offering governments something to do that is stronger than protest and safer than war, a way of being seen to act without asking anyone to fight. Yet the chain breaks more often than its defenders admit, and it tends to break in the same place.",
+    "The weak link is the assumption that hardship flows upward as political pressure. In a country whose government controls the press and the police, scarcity is easier to explain than to resist. The regime can present the shortages as the work of hostile foreigners, and the explanation is the more convincing for being partly true. Scarcity also hands the state new powers, which it is seldom slow to use. When imported medicine, fuel or spare parts become rare, whoever controls their distribution acquires a means of rewarding loyalty and punishing dissent. Meanwhile the groups best placed to demand change, the educated and the commercially minded, are often the first to emigrate or to be impoverished into silence. Far from loosening the regime's grip, sanctions can tighten it.",
+    "The usual response is to make sanctions smarter: to target the assets and travel of named officials rather than the economy as a whole. This is a genuine improvement, since it spares ordinary people some of the cost and aims the pain at those who actually decide. But targeted measures have limits of their own, and those limits are not trivial. Powerful individuals rarely hold their wealth in their own names, and a regime under pressure learns quickly to route its money through intermediaries. Targeting reduces the moral cost of sanctions more reliably than it increases their effect.",
+    "What the record suggests is that sanctions are often judged by the wrong measure. Their defenders point to the damage done, the fall in output and the collapse of the currency, as if these were evidence of pressure. They are evidence only of pain, and pain is not the same as leverage. Sanctions change policy when they alter the calculations of the people who make it, which usually requires that they be paired with a clear and credible offer of what will be lifted in return for what. A measure that hurts but promises nothing gives a government little reason to move, and some reason to dig in."
+   ],
+   "questions": [
+    {
+     "id": "R04-E-03-1",
+     "type": "RC",
+     "options": {
+      "A": "the shortages really are caused in part by measures that foreign governments have chosen to impose.",
+      "B": "the educated groups who might dispute the claim have already taken control of the country's press.",
+      "C": "the foreign governments imposing sanctions seldom explain in public why they have chosen to impose them.",
+      "D": "its citizens generally trust their own rulers far more than they trust the governments of foreign powers."
+     },
+     "question": "The passage suggests that a sanctioned government can blame foreigners for shortages with some success partly because"
+    },
+    {
+     "id": "R04-E-03-2",
+     "type": "RC",
+     "options": {
+      "A": "its control over who receives imported medicine, fuel and spare parts once these goods have become scarce.",
+      "B": "the departure or impoverishment of the educated and commercially minded groups best placed to demand change.",
+      "C": "the targeting of named officials' assets, which provokes ordinary citizens to rally in sympathy behind those officials.",
+      "D": "its ability to present shortages as the deliberate work of hostile foreign governments rather than its own doing."
+     },
+     "question": "According to the passage, each of the following can help a sanctioned regime keep or tighten its hold on power EXCEPT"
+    },
+    {
+     "id": "R04-E-03-3",
+     "type": "RC",
+     "options": {
+      "A": "A landlord raises the rent for every tenant until one noisy tenant moves out, announcing that rents will fall again as soon as that tenant has left.",
+      "B": "A lender freezes a borrower's accounts and states exactly what sum must be repaid to release them, and the borrower soon pays it.",
+      "C": "A lender freezes a borrower's accounts without ever saying what payment would release them, and the struggling borrower stops negotiating altogether.",
+      "D": "A club bars one member who broke its rules from its premises but still admits that member's family, sparing them while punishing the offender."
+     },
+     "question": "Which of the following most closely parallels the kind of measure the author criticises at the end of paragraph 4?"
+    },
+    {
+     "id": "R04-E-03-4",
+     "type": "RC",
+     "options": {
+      "A": "targeted sanctions usually fail because officials cannot be identified precisely enough to be named in them.",
+      "B": "the surer benefit of targeted sanctions is that they spare ordinary people, not that they bring a dependable gain in pressure on policy.",
+      "C": "governments have largely abandoned broad sanctions because their moral cost became too high to defend in public.",
+      "D": "targeted sanctions are, on the whole, less effective than broad sanctions at persuading a regime under pressure to change the policies it pursues."
+     },
+     "question": "The author's remark that targeting 'reduces the moral cost of sanctions more reliably than it increases their effect' implies that"
+    }
+   ]
+  }
+ ]
+}

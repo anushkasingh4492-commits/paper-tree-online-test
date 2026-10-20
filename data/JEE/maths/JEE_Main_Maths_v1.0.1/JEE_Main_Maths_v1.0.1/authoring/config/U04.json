@@ -1,0 +1,69 @@
+{
+ "unit_number": 4,
+ "unit_name": "Permutations and Combinations",
+ "branch": "Algebra",
+ "count": 160,
+ "draft_files": [
+  "drafts/u04_a.py",
+  "drafts/u04_b.py",
+  "drafts/u04_c.py"
+ ],
+ "alias_groups": {
+  "ALIAS-ERR-U04-A-01": [
+   "U04-A-002",
+   "U04-A-040"
+  ],
+  "ALIAS-ERR-U04-A-02": [
+   "U04-A-020",
+   "U04-A-044",
+   "U04-A-049"
+  ],
+  "ALIAS-ERR-U04-B-01": [
+   "U04-B-001",
+   "U04-B-002",
+   "U04-B-015"
+  ],
+  "ALIAS-ERR-U04-C-01": [
+   "U04-C-004",
+   "U04-C-011",
+   "U04-C-032",
+   "U04-C-037"
+  ],
+  "ALIAS-ERR-U04-C-02": [
+   "U04-C-009",
+   "U04-C-028",
+   "U04-C-050"
+  ],
+  "ALIAS-ERR-U04-C-03": [
+   "U04-C-008",
+   "U04-C-029",
+   "U04-C-032"
+  ],
+  "ALIAS-ERR-U04-C-04": [
+   "U04-A-026",
+   "U04-C-007"
+  ]
+ },
+ "numerical_selection": [
+  "U04-A-041",
+  "U04-B-041",
+  "U04-C-042",
+  "U04-A-044",
+  "U04-B-042",
+  "U04-C-043",
+  "U04-A-046",
+  "U04-B-043",
+  "U04-C-045",
+  "U04-A-047",
+  "U04-A-018",
+  "U04-B-017",
+  "U04-C-020",
+  "U04-A-019",
+  "U04-B-019",
+  "U04-B-021",
+  "U04-A-024",
+  "U04-A-002",
+  "U04-B-001",
+  "U04-C-003"
+ ]
+}

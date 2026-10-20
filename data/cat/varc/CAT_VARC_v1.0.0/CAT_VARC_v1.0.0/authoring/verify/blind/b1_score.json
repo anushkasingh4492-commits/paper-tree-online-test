@@ -1,0 +1,1853 @@
+{
+ "round": "b1",
+ "items": 2800,
+ "both_agree": 2797,
+ "disagreements": [
+  {
+   "id": "R05-B-04-2",
+   "S1": {
+    "answer": "A",
+    "key": "A",
+    "working": "Declines came alongside schooling, labour, taxation, war: beyond the sectoral arithmetic.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "D",
+    "key": "A",
+    "working": "P3: declines came alongside schooling, unions, taxation, war; not sectoral shift alone; D fails since war/inflation not deliberate",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "V01-A-006",
+   "S1": {
+    "answer": "52314",
+    "key": "53214",
+    "working": "5 like familiar things; 3 song example; 2 'One explanation' ease mistaken; 1 'exactly this confusion' advertisers; 4 'Repetition of this kind'.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "53214",
+    "key": "53214",
+    "working": "5 claim; 3 example; 2 explanation (ease mistaken for good); 1 'this confusion'; 4 'repetition of this kind'.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "V01-F-023",
+   "S1": {
+    "answer": "14325",
+    "key": "14352",
+    "working": "1 bread; 4 telephone contrast; 3 value grows with users, lead feeds on itself; 2 'such markets therefore' dominance; 5 'same feature' also shields.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "14352: 5 can follow 3 ('rewards the leader') with 2 as the 'therefore' conclusion; 2/5 order weakly fixed."
+   },
+   "S2": {
+    "answer": "14325",
+    "key": "14352",
+    "working": "1 bread; 4 telephone; 3 early lead feeds itself; 2 'such markets therefore' settle on early-large providers; 5 same feature also shields",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "14352: 5 ('rewards the leader also shields it') could follow 3 directly with 2 as the closing conclusion; 2's 'grew large first' links more tightly to 3"
+   }
+  }
+ ],
+ "issues": [
+  {
+   "id": "R01-B-06-4",
+   "S1": {
+    "answer": "D",
+    "key": "D",
+    "working": "P3: no single lapse is a choice, but attention is shaped over time by things we influence, so answerable.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "A is tempting (mirrors P4) but 'consists in ... rather than' overstates 'frequently less a matter of'; not fully defensible."
+   },
+   "S2": {
+    "answer": "B",
+    "key": "B",
+    "working": "P3: no single lapse is a choice, but attention is shaped over time by things we influence, so we can be answerable.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "R01-B-08-1",
+   "S1": {
+    "answer": "C",
+    "key": "C",
+    "working": "P1: normative form says a life not gathered into a coherent narrative is 'impoverished or broken'.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "C",
+    "key": "C",
+    "working": "P1: normative form adds 'a life which cannot be gathered into a coherent narrative is in some way impoverished or broken'.",
+    "confidence": "high",
+    "issue": "Option C paraphrases P1 closely; D is the descriptive form verbatim, which is the intended trap. Fine but very easy.",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "R01-C-08-3",
+   "S1": {
+    "answer": "A",
+    "key": "A",
+    "working": "P5: theory can keep account of the ideal or realism about ordinary people, not both - map as expert ideal vs record of actual paths.",
+    "confidence": "medium",
+    "issue": "Option A's wording ('cannot pass off the first as the second') captures the trade-off only loosely, but B-D are clearly off.",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "B",
+    "key": "B",
+    "working": "P5: keep ideal (ought) or realism (actual), not both; map analogy fits best",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "R01-D-06-3",
+   "S1": {
+    "answer": "C",
+    "key": "C",
+    "working": "P3 lists costs for supermajority, devolution, rights; the seat-share system gets no stated cost.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "A",
+    "key": "A",
+    "working": "P3 costs listed for supermajority, devolution, entrenched rights; none for proportional seats.",
+    "confidence": "high",
+    "issue": "A is an EXCEPT answer that is a plausible real-world cost; fine since passage lists no cost for share-of-seats systems.",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "R01-F-02-4",
+   "S1": {
+    "answer": "B",
+    "key": "B",
+    "working": "Symmetry view requires explanation to serve as prediction 'in principle'; B shows hillside was predictable in principle, defusing that counterexample.",
+    "confidence": "medium",
+    "issue": "B weakens only one half of the two-direction case (barometer counterexample untouched); acceptable as 'most weaken' but not decisive.",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "D",
+    "key": "D",
+    "working": "D shows the hillside could in principle have been predicted, rescuing the symmetry in the explain-without-predict direction.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "B is weak: it attacks barometer reliability, but even a perfect predictor would not explain; D is clearly stronger."
+   }
+  },
+  {
+   "id": "R01-F-06-4",
+   "S1": {
+    "answer": "B",
+    "key": "B",
+    "working": "'moving the evidence' contrasted with setting the bar; = letting values bear on what the evidence is, discounting unwelcome results.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "A",
+    "key": "A",
+    "working": "Values bearing on what the evidence is; discounting an unwelcome result.",
+    "confidence": "medium",
+    "issue": "Minor: P3 treats value-laden classification of ambiguous samples as a legitimate part of weighing errors, so \"how the results are counted\" in A sits slightly close to bar-setting; A still clearly best because of \"what one wants to be true\".",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "R01-G-04-3",
+   "S1": {
+    "answer": "C",
+    "key": "C",
+    "working": "Objection rests on asymmetry of attitudes; equal regret for pre-birth goods restores symmetry.",
+    "confidence": "medium",
+    "issue": "C is a counterfactual about people's attitudes; author's deeper point (goods never ours to lose) is metaphysical and might survive C, but C is still the best option.",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "D",
+    "key": "D",
+    "working": "Objection rests on asymmetry of attitudes and goods; D restores symmetry of regret.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "R02-A-01-3",
+   "S1": {
+    "answer": "A",
+    "key": "A",
+    "working": "If assumptions formed in one environment misled no more in a violating environment, their truth-to-environment is not what keeps them reliable.",
+    "confidence": "medium",
+    "issue": "Option A's scenario is somewhat odd (newcomers misled no more than natives) but it is the only option that tests the explanation.",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "B",
+    "key": "B",
+    "working": "If people in environments violating their assumptions are misled no more than natives, the 'true of the environment' explanation loses force.",
+    "confidence": "medium",
+    "issue": "Weakener works only via 'from the start'; slightly convoluted stem-option fit but B is clearly best.",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "R02-B-04-1",
+   "S1": {
+    "answer": "D",
+    "key": "D",
+    "working": "P2: on very hard tasks people rate themselves below average while still overestimating their own scores.",
+    "confidence": "high",
+    "issue": "Minor internal tension: P3 says on hard tasks people \"correctly sense that they did poorly\", which sits awkwardly with P2's \"still overestimating their own scores\". Key D is still directly stated in P2.",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "A",
+    "key": "A",
+    "working": "P2: on very hard tasks rate themselves below average while still overestimating scores",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "R02-C-03-2",
+   "S1": {
+    "answer": "C",
+    "key": "C",
+    "working": "Group with ups and downs shows flat average.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "D",
+    "key": "D",
+    "working": "a group with some much happier and others much less happy can show no overall change",
+    "confidence": "medium",
+    "issue": "D says large changes for 'most of the group', while P3 later says only 'a substantial minority' do not return; the line 'describes almost nobody' does support D, but the two statements sit slightly uneasily.",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "R02-F-03-3",
+   "S1": {
+    "answer": "A",
+    "key": "A",
+    "working": "A shows dogs have self-related recognition via scent, so mirror failure reveals little.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "C (monkeys good at other tests) could be read as showing failure does not indicate general cognitive lack, but it is about different capacities, not self-awareness."
+   },
+   "S2": {
+    "answer": "C",
+    "key": "C",
+    "working": "Dogs showing self-related discrimination via scent supports that mirror failure reflects modality, not missing capacity.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "R02-F-05-3",
+   "S1": {
+    "answer": "A",
+    "key": "A",
+    "working": "P2: judging difficulty by the conscious part of a skill and missing the hidden computation, like judging an iceberg by its tip.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "D",
+    "key": "D",
+    "working": "P2: sense of difficulty tracks only what reaches consciousness, like visible tip of iceberg.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "A (familiar walk seems shorter) is a perception-bias analogy, but it lacks the hidden-mass element; D fits better."
+   }
+  },
+  {
+   "id": "R03-A-07-5",
+   "S1": {
+    "answer": "B",
+    "key": "B",
+    "working": "P4: groups look identical from outside; P5 policies would serve both groups at once.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "C",
+    "key": "C",
+    "working": "P4: groups 'look identical' from outside; P5 measures 'would serve both groups at once'.",
+    "confidence": "high",
+    "issue": "Options A, B, D begin 'would ...' while C begins 'help ...'; the parallelism break singles out C (minor format giveaway). Probably intended 'would help'.",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "R03-B-06-3",
+   "S1": {
+    "answer": "B",
+    "key": "B",
+    "working": "P2 lists food grown on same land, same house, nursed at same breast; inheritance of land not mentioned.",
+    "confidence": "high",
+    "issue": "Option C adds 'over a period of years', which the passage attaches to accumulation through feeding and sharing rather than to house-sharing; minor, still clearly supported.",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "D",
+    "key": "D",
+    "working": "P2 lists food from same land, same house, same breast; inheritance not mentioned.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "R03-D-08-2",
+   "S1": {
+    "answer": "A",
+    "key": "A",
+    "working": "P3: sense of closure real; diagnosis frequently mistaken.",
+    "confidence": "high",
+    "issue": "P3 contains a redundant clause (\"though their chances ... may be exactly what their parents' chances were. But on the measures...\") that reads like an editing leftover; not answer-affecting.",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "D",
+    "key": "D",
+    "working": "P3: 'The sense of closure is real; its diagnosis is frequently mistaken.'",
+    "confidence": "high",
+    "issue": "Passage P3 has a redundant, awkwardly sequenced pair of sentences: 'though their chances against the children of the office managers may be exactly what their parents' chances were' is immediately followed by 'But on the measures that track relative position, the chances may be much as they were', where 'But' contrasts with nothing. Looks like an inserted sentence; the answer is unaffected.",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "R03-E-03-4",
+   "S1": {
+    "answer": "B",
+    "key": "B",
+    "working": "P4: whether people cooking have room to cook what they think is good.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "C is close: author cares about cooks' freedom, but does not treat customer-prompted changes as illegitimate (P2), so B is better."
+   },
+   "S2": {
+    "answer": "A",
+    "key": "A",
+    "working": "P4 final sentence: whether cooks have room to cook what they think is good.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "R03-E-05-2",
+   "S1": {
+    "answer": "B",
+    "key": "B",
+    "working": "Three layers: global format, local meanings, menu in between; menu-centred debate misreads influence.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": "D captures P2 but ignores P3, where customers bring their own meanings, so it is one-sided."
+   },
+   "S2": {
+    "answer": "C",
+    "key": "C",
+    "working": "Three layers: format global, meanings local, menu between; reading from menu alone misleads. A says 'imposes', which P3 rejects; D overreaches.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "R03-E-05-3",
+   "S1": {
+    "answer": "C",
+    "key": "C",
+    "working": "Format is the real export; local eateries adopting counter, fixed prices, standardised kitchens shows format influence.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "B",
+    "key": "B",
+    "working": "The format is the deep influence; local eateries adopting the format while keeping dishes shows its 'global grammar' spreading.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "C could be argued (customers adopt chain venues for occasions), but P3 frames that as local meaning, not chain influence; B fits the format thesis."
+   }
+  },
+  {
+   "id": "R03-E-07-2",
+   "S1": {
+    "answer": "D",
+    "key": "D",
+    "working": "P2: respond as betrayed members, as though something belonging to them was taken.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "B",
+    "key": "B",
+    "working": "'respond not as disappointed consumers but as betrayed members, as though something that belonged to them had been taken without their consent'.",
+    "confidence": "high",
+    "issue": "Key is a near-verbatim lift of para 2 wording ('betrayed members... without their consent'), making it a pure retrieval item; acceptable for a detail question but very easy.",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "R03-F-03-4",
+   "S1": {
+    "answer": "B",
+    "key": "B",
+    "working": "P4 final sentences.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "C",
+    "key": "C",
+    "working": "P4 final lines: authority is the condition that allows a stranger to be received at all.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": "A captures part (neutralising strangers) but sets it against generosity, which P1 says is 'not false'; C is the closing claim."
+   }
+  },
+  {
+   "id": "R03-F-07-2",
+   "S1": {
+    "answer": "A",
+    "key": "A",
+    "working": "Strips histories, comparable on one scale.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "D",
+    "key": "D",
+    "working": "Money strips goods of their histories and lets them be compared on one measure; D captures 'comparable'.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "B is tempting since it echoes the 'strips goods of their particular histories' clause, but that is a separate clause from 'renders them comparable'."
+   }
+  },
+  {
+   "id": "R03-F-08-4",
+   "S1": {
+    "answer": "C",
+    "key": "C",
+    "working": "Money made socially unavailable with an excuse kin accept as legitimate.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": "A (hidden account) is a weaker analogue: it shelters money by secrecy, not by a socially recognised obligation; C is clearly better."
+   },
+   "S2": {
+    "answer": "A",
+    "key": "A",
+    "working": "Legitimate, recognised excuse sheltering money from kin, via a commitment",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "B (secret bank account) also shelters money from claims, but lacks the socially recognised excuse; A is closer"
+   }
+  },
+  {
+   "id": "R04-A-08-4",
+   "S1": {
+    "answer": "B",
+    "key": "B",
+    "working": "P3 a generation later the balance shifts; P5 provisional arrangement, worst is silence permanent by default.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "D",
+    "key": "D",
+    "working": "Thirty years on, institutions settled, combatants old: the case P3 says may look different; silence provisional.",
+    "confidence": "medium",
+    "issue": "Author is hedged (\"may look quite different\", \"may reasonably ask\"); \"mistaken\" in D is somewhat strong, but no other option is close.",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "R04-B-08-4",
+   "S1": {
+    "answer": "B",
+    "key": "B",
+    "working": "If retained continuities were coerced, governments did not choose them.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "B",
+    "key": "B",
+    "working": "If 'chosen' continuities were actually forced by loan conditions, governments did not choose them.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": "D also mentions agreements at transfer, but those are imperial-pressure strands, so B is far stronger."
+   }
+  },
+  {
+   "id": "R04-C-05-3",
+   "S1": {
+    "answer": "C",
+    "key": "C",
+    "working": "Customs duties are a tax yet without dependence produce the same unresponsiveness, isolating dependence.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "B",
+    "key": "B",
+    "working": "Non-resource tax form without dependence yields same unresponsiveness: dependence, not form, matters. D would weaken.",
+    "confidence": "high",
+    "issue": "Option A supports the sequence point of para 3 rather than the dependence claim; not a real competitor, but some solvers may hesitate.",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "R04-E-05-4",
+   "S1": {
+    "answer": "B",
+    "key": "B",
+    "working": "P3: an asymmetric rule 'would be claimed by both sides'; this presumes no accepted arbiter of which side is just during fighting.",
+    "confidence": "medium",
+    "issue": "All four keys in this passage are B; a key-distribution point, not a content flaw.",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "B",
+    "key": "B",
+    "working": "Rule would be claimed by both sides only if no accepted arbiter of just cause exists.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "D is irrelevant; A is denied by the author (he says critics are right). B is the best but the assumption is implicit rather than tightly necessary."
+   }
+  },
+  {
+   "id": "R04-E-06-2",
+   "S1": {
+    "answer": "C",
+    "key": "C",
+    "working": "P4 norm supplies legitimacy; P2 states would not pay the price.",
+    "confidence": "medium",
+    "issue": "Author's attitude to collective security is mostly critical (P2, P4 'mistake of the reformers'); 'respectful' in C is supportable only via P4 legitimacy, but no other option fits.",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "C",
+    "key": "C",
+    "working": "P4 credits the norm with legitimacy/public justification; P2 says states would not pay the price.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "R04-E-07-1",
+   "S1": {
+    "answer": "A",
+    "key": "A",
+    "working": "P3: formula relocates the hard question (who decides forfeiture); P4-5 develop procedure dilemma.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "A",
+    "key": "A",
+    "working": "P3 'does not remove the hard question but relocates it'; P4-P5 develop who decides and how. B and C contradicted by P4 and P5; D overstated.",
+    "confidence": "medium",
+    "issue": "Key A covers P2-P3 but leaves out the procedure discussion and the 'choose which failure to risk' conclusion of P4-P5; it is acceptable as best, not complete.",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "R05-A-08-5",
+   "S1": {
+    "answer": "C",
+    "key": "C",
+    "working": "Gap depends on frame: held for use and integrated into possessions over months is the strongest 'own' frame.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "A",
+    "key": "A",
+    "working": "Held to use and become 'part of her possessions' through daily use; C and D are exchange frames.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "B is weakly defensible: a fresh gift is also held to use, though the passage stresses the mug having 'already become' part of possessions, which favours A."
+   }
+  },
+  {
+   "id": "R05-D-03-4",
+   "S1": {
+    "answer": "C",
+    "key": "C",
+    "working": "Manufacturing productivity stopping is never mentioned; A, B, D are P4 limits.",
+    "confidence": "high",
+    "issue": "Option D paraphrases \"long before the arithmetic says they must\" as \"before rising productivity requires them to\", which is a loose and slightly garbled rendering; still clearly a stated limit, so key C unaffected.",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "A",
+    "key": "A",
+    "working": "Passage never mentions manufacturing productivity stopping.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "R05-E-03-1",
+   "S1": {
+    "answer": "C",
+    "key": "C",
+    "working": "P1: rational to run; once enough run, the rumour becomes true.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "D",
+    "key": "D",
+    "working": "P1: running is 'rational... once enough people run, the rumour becomes true'; bank sound, fails because believed unsound.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": "Option D says the rumour 'falsely claimed' losses 'already existed'; the rumour only said the bank was 'in trouble'. Close enough, D still clearly best."
+   }
+  },
+  {
+   "id": "R05-F-04-3",
+   "S1": {
+    "answer": "C",
+    "key": "C",
+    "working": "P4: firms do weigh expected losses from disruption; they just ignore costs falling on others. A, B, D are stated.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "D",
+    "key": "D",
+    "working": "P4 says firms weigh expense against expected losses; they did consider disruption, just undervalued external costs.",
+    "confidence": "high",
+    "issue": "D is a partial inference (managers weighed only own losses), still clearly unsupported by 'took no account whatever'.",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "R05-F-07-5",
+   "S1": {
+    "answer": "A",
+    "key": "A",
+    "working": "P3-P4: shelter weakens motive; pressure to improve comes from exit; crisis, not advance conditions, so not B.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "B tempts but conditions were not fixed in advance; the crisis forced the cut."
+   },
+   "S2": {
+    "answer": "C",
+    "key": "C",
+    "working": "Fits P3-4: shelter weakens motive to learn; removal forced improvement. D wrong as not fixed in advance.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "R05-F-08-3",
+   "S1": {
+    "answer": "A",
+    "key": "A",
+    "working": "P2: objection rests on known-menu picture; new activities no one knows.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "B is too strong; A relies on inferring that the advantage holds where the menu is known, which the passage implies rather than states."
+   },
+   "S2": {
+    "answer": "C",
+    "key": "C",
+    "working": "P2: investors' advantage presupposes a known menu; for new activities 'both would be guessing'.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "R05-G-08-4",
+   "S1": {
+    "answer": "D",
+    "key": "D",
+    "working": "Lever logic: exporting country prices carbon at home so revenue stays at home; only works if carbon prices paid abroad are credited at the border.",
+    "confidence": "medium",
+    "issue": "'only if' is a strong necessity claim; the passage implies it via the revenue-stays-home mechanism rather than stating it, but no other option fits.",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "C",
+    "key": "C",
+    "working": "Exporter prices carbon at home only to keep revenue; requires charge to credit prices paid abroad",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "R06-A-07-5",
+   "S1": {
+    "answer": "D",
+    "key": "D",
+    "working": "Easy points are against each side's weakest claim, which the P5 sequential view drops.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "D",
+    "key": "D",
+    "working": "Easy points scored against each side's weakest claim, which the staged view of P5 drops.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "A arguably: each side attacks the other; but 'central thesis' contradicts P4 'weakest claim', so A rejected."
+   }
+  },
+  {
+   "id": "R06-A-08-5",
+   "S1": {
+    "answer": "B",
+    "key": "B",
+    "working": "Functional roles (bakeries, schools) recur; particular occupants decided by chance, mirrors design-space vs occupants.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": "C has a fixed-outcome/variable-detail shape but lacks the role vs occupant split; weaker."
+   },
+   "S2": {
+    "answer": "A",
+    "key": "A",
+    "working": "Functional roles recur (bakeries, schools), occupants decided by chance: mirrors design space vs occupants.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "R06-B-04-2",
+   "S1": {
+    "answer": "B",
+    "key": "B",
+    "working": "Drought, heat, housing and fuel build-up are mentioned; thin-barked planting is not.",
+    "confidence": "high",
+    "issue": "Options A and C cite paragraph locations and 'lists alongside' wording, flagging them as mentioned.",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "A",
+    "key": "A",
+    "working": "Planting thin-barked trees is never mentioned; B, C, D all are.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "R06-D-01-1",
+   "S1": {
+    "answer": "B",
+    "key": "B",
+    "working": "P4: a fact available to anyone after sunset is incompatible with the long-natural picture (infinite, uniform, unchanging).",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "D",
+    "key": "D",
+    "working": "P4: everyday fact incompatible with infinite, uniform, unchanging cosmos.",
+    "confidence": "high",
+    "issue": "Key D says 'counts decisively against'; acceptable since P4 says it rules out that combination, but 'decisively' slightly strong.",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "R06-D-07-4",
+   "S1": {
+    "answer": "A",
+    "key": "A",
+    "working": "Non-equivalence rests on testable departures; if always adjustable below detection, effectively equivalent.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "C (no departures found) is a weaker distractor: absence so far does not show equivalence in principle."
+   },
+   "S2": {
+    "answer": "B",
+    "key": "B",
+    "working": "non-equivalence rests on collapse theories predicting detectable departures; if always tunable below detection, they are empirically equivalent",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "C also weakens a little (no departures found yet), but absence of evidence so far is weaker than B's in-principle undetectability."
+   }
+  },
+  {
+   "id": "R06-D-07-5",
+   "S1": {
+    "answer": "A",
+    "key": "A",
+    "working": "Main objection to textbook rule: relies on a word it cannot define.",
+    "confidence": "medium",
+    "issue": "A is phrased 'escape the objection the author presses most directly', an inference; correct but slightly indirect.",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "C",
+    "key": "C",
+    "working": "the objection pressed against the textbook rule is that 'it relies on a word it cannot define'",
+    "confidence": "medium",
+    "issue": "C is phrased as a counterfactual the author never states; it is supported by P4 ('relies on a word it cannot define') but requires an inferential step.",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "R06-E-04-4",
+   "S1": {
+    "answer": "A",
+    "key": "A",
+    "working": "The step from low volume to commercial disaster needs that price per course cannot compensate for few sales.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "D: the step from 'urged not to use' to 'cannot be sold in quantity' also presupposes doctors comply; arguably defensible, though responsible use is stipulated by the hypothetical."
+   },
+   "S2": {
+    "answer": "D",
+    "key": "D",
+    "working": "Low volume implies disaster only if price per course cannot be raised enough to recover costs from few patients.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "B is also a needed assumption (doctors actually comply and hold the drug back), though responsible use is stipulated in the scenario, so D is the hidden gap."
+   }
+  },
+  {
+   "id": "R06-E-07-4",
+   "S1": {
+    "answer": "D",
+    "key": "D",
+    "working": "P4: right test is fewer deaths in the population, from carefully conducted trials comparing screened and unscreened populations; randomised comparison.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": "A is also a mortality comparison but self-selected attenders; passage does not explicitly discuss selection bias, so A is weaker but not explicitly excluded."
+   },
+   "S2": {
+    "answer": "C",
+    "key": "C",
+    "working": "P4: ask whether fewer people in the population die; randomised comparable populations avoid self-selection (A) and survival biases (B, D).",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "R06-F-02-4",
+   "S1": {
+    "answer": "A",
+    "key": "A",
+    "working": "Final sentence: asking how much apparent demand is echo of earlier exposure.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "A",
+    "key": "A",
+    "working": "P4 last sentence: remedy lies 'in asking how much of what looks like popular demand is an echo of earlier exposure'.",
+    "confidence": "high",
+    "issue": "Option A lifts the passage's final sentence almost verbatim ('an echo of earlier exposure'); easy giveaway for a remedy question.",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "R06-F-07-3",
+   "S1": {
+    "answer": "C",
+    "key": "C",
+    "working": "P3: which criterion gives way depends partly on whether base rates are residue of earlier unfairness.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "D",
+    "key": "D",
+    "working": "Choice depends on 'whether the different base rates are themselves the residue of earlier unfairness'.",
+    "confidence": "high",
+    "issue": "Key D echoes para 3 wording closely ('residue of earlier unfairness'); easy giveaway but correct.",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "R06-G-03-3",
+   "S1": {
+    "answer": "A",
+    "key": "A",
+    "working": "'The worry was reasonable, but ... aimed at the lesser target.'",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "D",
+    "key": "D",
+    "working": "P2: 'The worry was reasonable, but... aimed at the lesser target'.",
+    "confidence": "high",
+    "issue": "Key D echoes the passage's 'lesser target' wording almost verbatim, a mild giveaway.",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "R07-B-03-1",
+   "S1": {
+    "answer": "D",
+    "key": "D",
+    "working": "P1: space is precious; spending it on bad books denies it to deserving ones.",
+    "confidence": "high",
+    "issue": "Pack has a key-position cluster: all four R07-B-03 answers are D.",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "D",
+    "key": "D",
+    "working": "P1: space 'precious', spending it on a bad book denies it to a book that deserves attention.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "R07-D-07-5",
+   "S1": {
+    "answer": "C",
+    "key": "C",
+    "working": "Rejects score-is-work and performance-is-work, proposes marks as read by a practice.",
+    "confidence": "high",
+    "issue": "All five questions in this passage are keyed C (by my solve), an answer-position cluster worth rebalancing.",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "D",
+    "key": "D",
+    "working": "Rejects score-is-work (P2) and work-is-performance (P3), proposes marks-as-read-by-practice (P4), answers an objection (P5).",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "R07-F-08-2",
+   "S1": {
+    "answer": "B",
+    "key": "B",
+    "working": "P3: author can object to her own work altered and passed off as hers.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "D",
+    "key": "D",
+    "working": "P3: an author can object to 'having her own work altered and passed off as hers'; D is exactly that.",
+    "confidence": "high",
+    "issue": "Minor: 'under her name' is slightly ambiguous between author and reader, though either reading still points to D.",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "R08-A-03-3",
+   "S1": {
+    "answer": "C",
+    "key": "C",
+    "working": "Judging two-tradition competence by one alone and treating blending as lack: parallels P4 error.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "B",
+    "key": "B",
+    "working": "Error: judging by separation only and treating combining as deficiency; B mirrors both.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": "A partly fits (judging on one mode only) but lacks the 'combining treated as deficiency' element; B is better."
+   }
+  },
+  {
+   "id": "V01-A-016",
+   "S1": {
+    "answer": "24351",
+    "key": "24351",
+    "working": "2 state must know population; 4 early censuses for these purposes, fear; 3 'Their fear' well founded; 5 'then' people avoided counting; 1 'in this light' conclusion.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "24315: 1 can follow 3 (visibility as state reach) and 5 close as consequence; 5's 'then' fits either."
+   },
+   "S2": {
+    "answer": "24351",
+    "key": "24351",
+    "working": "Govt must know -> early censuses feared -> fear well founded -> so people avoided counting -> census in this light.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "24315 is also defensible: 1 ('in this light') could follow 3, with 5 ('then') as a closing consequence."
+   }
+  },
+  {
+   "id": "V01-A-017",
+   "S1": {
+    "answer": "1432",
+    "key": "1432",
+    "working": "1 complaints in every age; 4 if accurate, endless decline; 3 'that conclusion is absurd' read as evidence about complainers; 2 'such evidence' shows habit.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "1243 is weaker: 3 restates 2's point; 1432 gives clean 'that conclusion'/'such evidence' links."
+   },
+   "S2": {
+    "answer": "1432",
+    "key": "1432",
+    "working": "1 complaints; 4 if accurate, absurd continuous decline; 3 'that conclusion is absurd'; 2 'such evidence'.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "V01-A-019",
+   "S1": {
+    "answer": "1243",
+    "key": "1243",
+    "working": "Sunk cost unrecoverable(1) -> logically ignore(2) -> in practice managers continue(4) -> abandoning feels like admitting waste(3).",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "1243",
+    "key": "1243",
+    "working": "1 sunk cost unrecoverable; 2 'then' should not count; 4 'in practice' managers persist; 3 feels like admitting waste.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": "1-2-3-4 is weaker: 3 explains the behaviour in 4, so must follow it."
+   }
+  },
+  {
+   "id": "V01-A-022",
+   "S1": {
+    "answer": "3214",
+    "key": "3214",
+    "working": "3 few survive by mutation; 2 'These survivors' multiply; 1 'therefore' every unnecessary course aids spread; 4 'This is why' unnecessary prescribing is a real cost.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "3241: 4 can follow 2 and 1 restate; weaker because 1 then repeats 4."
+   },
+   "S2": {
+    "answer": "3214",
+    "key": "3214",
+    "working": "3 survivors; 2 multiply; 1 therefore unnecessary courses spread resistance; 4 'this is why' viral prescribing a cost.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "3241 weakly possible but 1 bridges mechanism to cost, so 3214 preferred."
+   }
+  },
+  {
+   "id": "V01-B-014",
+   "S1": {
+    "answer": "1243",
+    "key": "1243",
+    "working": "Question headline (1), publication protected (2), 'Readers are not protected in the same way' (4), 'thus' summary (3).",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "1234 is arguable: 3 can follow 2 with 4 as a closing extension, though 3 already states the reader's impression, making 4 redundant there."
+   },
+   "S2": {
+    "answer": "1243",
+    "key": "1243",
+    "working": "1 question headline; 2 publication can say it asked; 4 readers not protected same way; 3 thus shields writer.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "V01-B-021",
+   "S1": {
+    "answer": "25314",
+    "key": "25314",
+    "working": "Contrast 2, 'however' principle 5, example 3, qualification 1, 'thus' conclusion 4 citing reciting pupil.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "23514 (example before the general principle) is weaker but readable."
+   },
+   "S2": {
+    "answer": "25314",
+    "key": "25314",
+    "working": "2 rote vs understanding; 5 understanding needs remembered facts; 3 example; 1 none of this means; 4 partners, reciting pupil.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "V01-E-003",
+   "S1": {
+    "answer": "41352",
+    "key": "41352",
+    "working": "Face-to-face cues -> text strips them -> emoji fill gap -> seen as written gestures -> but like all gestures, shared reading needed.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "41325 possible if 2 is read as a caveat before the summarising 5, though 2 presupposes the gesture framing that 5 introduces."
+   },
+   "S2": {
+    "answer": "41352",
+    "key": "41352",
+    "working": "4 face-to-face cues; 1 text strips them; 3 emoji fill gap; 5 written gestures; 2 like all gestures, shared reading.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "41325 possible (2 before 5), but 'like all gestures' in 2 presupposes the gesture framing that 5 introduces."
+   }
+  },
+  {
+   "id": "V01-E-020",
+   "S1": {
+    "answer": "4231",
+    "key": "4231",
+    "working": "4 define paternalism; 2 defenders; 3 critics reply; 1 'Much of the debate' line-drawing.",
+    "confidence": "high",
+    "issue": "Minor: 4123 conceivable if 1 read as framing, but 'the debate' needs the two sides stated first.",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "4231",
+    "key": "4231",
+    "working": "Definition -> defenders -> critics -> where to draw the line.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "V01-F-018",
+   "S1": {
+    "answer": "1324",
+    "key": "1324",
+    "working": "1 layout steers; 3 examples 'work this way'; 2 'Such designs' dark patterns do not forbid; 4 'this' (not forbidding, unnoticed) is what troubles.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "1234: 2 could directly follow 1 and 3 give examples, though 'Such designs' needs concrete designs and 4's 'this' links best to 2."
+   },
+   "S2": {
+    "answer": "1324",
+    "key": "1324",
+    "working": "3 'works this way' = steering unnoticed; 2 'Such designs' names them; 4 'this...them' = not forbidding, dark patterns.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "1234 is arguable (2 after 1 defining the designs, 3 as example), though 'Such designs' reads better after the concrete examples in 3."
+   }
+  },
+  {
+   "id": "V01-G-004",
+   "S1": {
+    "answer": "3241",
+    "key": "3241",
+    "working": "Prediction (3), why: seconds vs days (2), 'Yet' work changed shape (4), 'The new shape' (1).",
+    "confidence": "high",
+    "issue": "",
+    "alternative": "3421 is weakly possible but breaks the 'change its shape' / 'The new shape' link."
+   },
+   "S2": {
+    "answer": "3241",
+    "key": "3241",
+    "working": "3 spreadsheets predicted redundancy; 2 speed; 4 yet work changed shape; 1 new shape.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "V01-G-019",
+   "S1": {
+    "answer": "53421",
+    "key": "53421",
+    "working": "5 standing desk idea; 3 'The idea mistakes the problem' (duration not posture); 4 motionless stander illustrates; 2 'such a worker'; 1 'therefore' advice.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "54231: 4 and 2 can directly follow 5 as illustration, then 3 diagnoses, then 1; weaker because 3's 'however' sits oddly after the illustration and 'The idea' is far from 5."
+   },
+   "S2": {
+    "answer": "53421",
+    "key": "53421",
+    "working": "5 standing desks idea, 3 mistakes the problem, 4 motionless stander, 2 'such a worker' swaps pains, 1 'therefore' move often.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "V01-H-006",
+   "S1": {
+    "answer": "12543",
+    "key": "12543",
+    "working": "1 puzzle of sticky prices; 2 menu costs; 5 seem too small; 4 'But' slightly wrong price loses little; 3 'And' aggregate slump.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "12543",
+    "key": "12543",
+    "working": "1 puzzle; 2 menu costs; 5 seem too small; 4 but small loss so trivial cost tips; 3 summed slump.",
+    "confidence": "high",
+    "issue": "Near-duplicate of V01-I-019 (same menu-cost content) in the same pack.",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "V01-H-010",
+   "S1": {
+    "answer": "15324",
+    "key": "15324",
+    "working": "1 hygiene defence; 5 'Yet' predates germ theory; 3 'real function' social; 2 'also explain'; 4 'None of this means'.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "15324",
+    "key": "15324",
+    "working": "Hygiene defence -> yet rules predate germ theory -> real function social -> 'This would also explain' -> concession that hygiene reading not false.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "13542 is conceivable ('This would also explain' after the concession), but 2 links far more tightly to the social-function claim in 3."
+   }
+  },
+  {
+   "id": "V01-H-014",
+   "S1": {
+    "answer": "3421",
+    "key": "3421",
+    "working": "Supererogatory acts 3, theories struggle 4, 'on that view' 2, 'this conclusion' 1.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "3421",
+    "key": "3421",
+    "working": "3 supererogatory acts; 4 theories struggle; 2 'on that view'; 1 'this conclusion'.",
+    "confidence": "high",
+    "issue": "Content overlaps heavily with V03-E-023 (supererogation) in the same pack.",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "V01-I-019",
+   "S1": {
+    "answer": "32514",
+    "key": "32514",
+    "working": "Puzzle (3), menu-cost explanation (2), seem too small (5), 'force lies elsewhere' (1), aggregated delays (4).",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "32514",
+    "key": "32514",
+    "working": "3 puzzle; 2 menu cost; 5 seems small; 1 force lies elsewhere; 4 summed across firms.",
+    "confidence": "high",
+    "issue": "Near-duplicate of V01-H-006 in the same pack.",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "V01-K-009",
+   "S1": {
+    "answer": "12435",
+    "key": "12435",
+    "working": "Professionals(1) -> mass service demanded(2) -> men ask for a voice(4) -> such demands shaped debate, vote as fair return(3) -> conclusion(5).",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "12345: 'Such demands' in 3 could refer to the states' service demands in 2, giving 2-3-4; but 4 (men ask for a voice) reads better as the mechanism that 3's political debate follows."
+   },
+   "S2": {
+    "answer": "12435",
+    "key": "12435",
+    "working": "Professional armies, universal service demands more, men ask for voice, debate over vote, so vote and service grew together.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "12345: \"Such demands\" in 3 could refer back to the state demands of 2, with 4 then giving the soldiers' reasoning; 4-3 reads more naturally (men ask for voice, such demands shaped debate) but the link is ambiguous."
+   }
+  },
+  {
+   "id": "V01-L-001",
+   "S1": {
+    "answer": "1432",
+    "key": "1432",
+    "working": "1 direct access; 4 written in heat of moment (immediacy); 3 'that very immediacy' constraint; 2 'therefore' performance.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "1432",
+    "key": "1432",
+    "working": "1 direct access; 4 heat of moment (immediacy); 3 yet that very immediacy constrained; 2 therefore performance.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "1342 weakly possible if 'that very immediacy' points back to 1, but 4 then dangles before 'therefore' in 2."
+   }
+  },
+  {
+   "id": "V01-L-017",
+   "S1": {
+    "answer": "3124",
+    "key": "3124",
+    "working": "3 hill towns built; 1 'These hill stations, as they came to be called' names them at once and notes growth; 2 builders imitated home; 4 'Such deliberate imitation' conclusion.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "3241: 2 can follow 3 directly ('Their builders laid them out'), 4 comments, 1 ends on growth; weaker because the naming clause 'as they came to be called' belongs at first reference and 4 reads as the closing interpretation."
+   },
+   "S2": {
+    "answer": "3124",
+    "key": "3124",
+    "working": "3 British build hill towns, 1 'these hill stations, as they came to be called' names them at first mention, 2 builders imitated home, 4 'such deliberate imitation' concludes.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "3241 is possible (2 'them' = towns, 4, then 1), but naming 'as they came to be called' belongs right after the introduction and 1 makes a weak ending."
+   }
+  },
+  {
+   "id": "V02-C-008",
+   "S1": {
+    "answer": "A",
+    "key": "A",
+    "working": "Both approaches have costs, but only accepting a smaller city is honest about the likely future.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": "B is the neutral trap that omits the author's preference."
+   },
+   "S2": {
+    "answer": "B",
+    "key": "B",
+    "working": "Both costly but only the smaller-city approach is honest about the future; A misses the verdict, C 'always'.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "V02-G-001",
+   "S1": {
+    "answer": "D",
+    "key": "D",
+    "working": "Difficulty is the number of dependants; awkwardness of a long-lived standard records success.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": "A captures only the middle sentence, not the conclusion."
+   },
+   "S2": {
+    "answer": "B",
+    "key": "B",
+    "working": "Clumsy standards survive because change costs fall on dependants; awkwardness records success. D omits the main point; A, C distort.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "V02-J-008",
+   "S1": {
+    "answer": "A",
+    "key": "A",
+    "working": "Observation changes behaviour so audits overstate routine compliance; watching does help for a time.",
+    "confidence": "high",
+    "issue": "'the routine figures have often turned out higher' is ambiguous: should mean observed audit figures exceeded dispenser counts; 'routine' could be misread as the unobserved figures, which would invert the logic.",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "A",
+    "key": "A",
+    "working": "Observed audits measure watched behaviour; observation helps briefly but cannot show unwatched behaviour.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "V02-N-004",
+   "S1": {
+    "answer": "C",
+    "key": "C",
+    "working": "Caution rests not on reputations but on names as retrieval keys; reform should look forward to new names.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": "B overstates: the passage says the chain is 'not cut' but lengthened."
+   },
+   "S2": {
+    "answer": "D",
+    "key": "D",
+    "working": "Caution rests on names as retrieval keys, not reputations; reform should look forward to new names.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "V03-C-007",
+   "S1": {
+    "answer": "1",
+    "key": "1",
+    "working": "2-5-3-4 on visible benefits to sitting tenants vs dispersed costs on seekers; 1 landlords' repair argument breaks the voter-politics thread.",
+    "confidence": "medium",
+    "issue": "1 is a related cost of rent control, but 3 ('The costs, if any') and 4 ('Such people') form a chain it cannot join.",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "1",
+    "key": "1",
+    "working": "Rent-control politics chain 2, 5, 3, 4 ('such people' = home-seekers); 1 on landlords and repairs is a separate argument.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "V03-C-023",
+   "S1": {
+    "answer": "2",
+    "key": "2",
+    "working": "1-5-3-4 archives' institutional bias and reading against grain; 2 on physical losses",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "2",
+    "key": "2",
+    "working": "1-5-3-4: archive deposit, non-random silences, read against purpose, limits. 2 on accidental losses breaks the 'not random' thread.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "2 could loosely fit as another source of silence, but 'resulting silences are not random' must follow 1."
+   }
+  },
+  {
+   "id": "V03-E-013",
+   "S1": {
+    "answer": "1",
+    "key": "1",
+    "working": "3-4-2-5 about open-book papers not being soft; 1 on unsupervised home exams/cheating is a different issue.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "1",
+    "key": "1",
+    "working": "unsupervised home exam integrity is a different issue from open-book design",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "Sentence 1 is topically close (exam integrity) so a reader might try to fit it as the opener's foil, but 3 is the clear opener."
+   }
+  },
+  {
+   "id": "V03-E-017",
+   "S1": {
+    "answer": "2",
+    "key": "2",
+    "working": "1-4-3-5 bystander effect; 2 on helping similar people",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "2",
+    "key": "2",
+    "working": "similarity effect off the bystander/diffusion-of-responsibility argument",
+    "confidence": "high",
+    "issue": "Order of 3 and 4 among the kept sentences is flexible ('also' in 3 reads better after 4), but this does not affect the odd answer.",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "V03-F-006",
+   "S1": {
+    "answer": "5",
+    "key": "5",
+    "working": "3-2-4-1: label looks modest, selection decides what object is, bowl example, removing labels no cure; 5 shifts to who writes labels.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "1 is weakly arguable since 5 could follow 4 as a response, but 1 continues the selectivity argument more directly."
+   },
+   "S2": {
+    "answer": "5",
+    "key": "5",
+    "working": "Label chain 3, 2 'yet', 4 example, 1 removing labels would not help; 5 on community-written labels shifts to a curatorial practice.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "1 could also seem a slight tangent, but it completes the argument that selection is unavoidable, so 5 is the better odd one."
+   }
+  },
+  {
+   "id": "V03-F-011",
+   "S1": {
+    "answer": "2",
+    "key": "2",
+    "working": "Chain 1-4-3-5 on jury legitimacy beyond accuracy; 2 on scepticism of police testimony returns to accuracy and breaks the flow.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "2",
+    "key": "2",
+    "working": "1-4-3-5: accuracy question, assumes accuracy only, 'also' acceptance/authority, 'that authority'. 2 on scepticism toward police returns to accuracy-style comparison and has no link.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "2 could follow 1 as an accuracy point, but 4's 'The question is fair' needs to follow 1 directly."
+   }
+  },
+  {
+   "id": "V03-G-017",
+   "S1": {
+    "answer": "1",
+    "key": "1",
+    "working": "Visitors carrying infection is off-topic from hand-hygiene compliance design (5,2,4,3).",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "1",
+    "key": "1",
+    "working": "5-2-4-3 (or 5-2-3-4) on hand hygiene compliance via design; 1 on visitors is off-track.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": "Internal order of 3 and 4 is flexible; odd sentence unaffected."
+   }
+  },
+  {
+   "id": "V03-G-019",
+   "S1": {
+    "answer": "2",
+    "key": "2",
+    "working": "4-3-1-5 on opt-out defaults and their limits; 2 (ethical objection that silence is consent) does not link to 5's 'therefore'.",
+    "confidence": "medium",
+    "issue": "2 is on-topic (opt-out), so it is a somewhat close odd-one; but the 4-3-1-5 chain is tight without it.",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "2",
+    "key": "2",
+    "working": "4-3-1-5 form the default/opt-out/families chain; 2 (ethics of presumed consent) is off the effectiveness thread.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "V03-H-009",
+   "S1": {
+    "answer": "5",
+    "key": "5",
+    "working": "Charm pricing (prices ending in nine) is a different bias from anchoring to an arbitrary number (1,3,4,2).",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "2 (negotiators) shifts from estimation to bargaining, but it is explicitly the same tendency, so 5 remains the odd one."
+   },
+   "S2": {
+    "answer": "5",
+    "key": "5",
+    "working": "Anchoring chain 1, 3, 2, 4; 5 on charm pricing ending in nine is a different effect.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "V03-H-020",
+   "S1": {
+    "answer": "1",
+    "key": "1",
+    "working": "Referendum paragraph 4,2,5,3; 1 is about turnout, not the binary-question/drafting critique that 3 concludes from.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "1",
+    "key": "1",
+    "working": "4-2-5-3 run: purity, binary limit, drafting power, ratify detailed proposal; 1 on turnout has no link.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "5 is weaker-linked: 3 follows 2 directly (ratifying a detailed proposal answers the binary-choice problem), but 5's 'moreover' fits the critique chain, so 1 remains the better odd one."
+   }
+  },
+  {
+   "id": "V04-A-004",
+   "S1": {
+    "answer": "4",
+    "key": "4",
+    "working": "'In other words' summarises state-only use; closing gap after private messages excluded.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "4",
+    "key": "4",
+    "working": "'In other words' sums up exclusion of private messages / state-only service; ends para.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "Gap 3 possible but 'in other words' summarises the exclusion stated after gap 3."
+   }
+  },
+  {
+   "id": "V04-B-006",
+   "S1": {
+    "answer": "3",
+    "key": "3",
+    "working": "'Worse' escalates the costs listed after (2), and the inability to know which accidents are relied on is 'the guesswork' that the next sentence's projects try to escape.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "1: At (1) it could lead into 'Maintainers therefore end up preserving accidents', but 'Worse' and the later 'guesswork' antecedent favour (3)."
+   },
+   "S2": {
+    "answer": "3",
+    "key": "3",
+    "working": "'Worse' adds a further cost after the constraint on design; 'these accidents' links back, and the next sentence's 'escape the guesswork' needs the sentence about maintainers not knowing which accidents are relied on.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "2: after 'preserving accidents alongside intentions', 'these accidents' reads naturally and 'Worse' could precede 'The cost is not only...', though then 'guesswork' in the gap-3 sentence lacks a close antecedent."
+   }
+  },
+  {
+   "id": "V04-B-007",
+   "S1": {
+    "answer": "4",
+    "key": "4",
+    "working": "'in other words' summary follows 'together they keep the old arrangement in place'.",
+    "confidence": "medium",
+    "issue": "Gap 2 (after 'Yet almost no one switches') is a weak alternative but 'in other words' needs the costs explained first.",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "4",
+    "key": "4",
+    "working": "Generalising 'in other words' conclusion after 'keep the old arrangement in place'.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "V04-B-009",
+   "S1": {
+    "answer": "3",
+    "key": "3",
+    "working": "Couplet 'trap' illustrates losing timing; fits after 'Strip it away... timing that gave them their force does not'.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "2: could precede 'Strip it away' as an example, but 'it' in 'Strip it away' then refers awkwardly to the trap; 3 is cleaner."
+   },
+   "S2": {
+    "answer": "3",
+    "key": "3",
+    "working": "The couplet example illustrates 'the words may survive while the timing... does not', before 'None of this tells a translator what to do'.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "2: the couplet could follow the description of suspense and resolution, but then 'Strip it away' would have 'the trap' rather than the rhyme as its referent."
+   }
+  },
+  {
+   "id": "V04-B-023",
+   "S1": {
+    "answer": "1",
+    "key": "1",
+    "working": "'Far more often, it is the ward itself' follows 'rarely a matter of ignorance or indifference' and precedes the crowded-shift description.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "1",
+    "key": "1",
+    "working": "Follows 'rarely ignorance or indifference'; next sentence describes the ward working against it.",
+    "confidence": "high",
+    "issue": "Content overlaps with V03-G-017 (hand hygiene) in the same pack.",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "V04-C-017",
+   "S1": {
+    "answer": "4",
+    "key": "4",
+    "working": "Concluding 'then' prescription fits after the full set of examples, ending the paragraph.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "3: could follow 'becomes unfair when we use it to judge people', but then interrupts the move to the doctor/manager examples that elaborate the unfairness."
+   },
+   "S2": {
+    "answer": "4",
+    "key": "4",
+    "working": "'then' conclusion after the doctor/manager and investigator examples.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "3 (after 'becomes unfair...') is weakly possible, but the examples then follow a 'then' conclusion awkwardly."
+   }
+  },
+  {
+   "id": "V04-D-004",
+   "S1": {
+    "answer": "4",
+    "key": "4",
+    "working": "'In short' summary of shortage vs famine arrangements closes the paragraph after the valley contrast.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "4",
+    "key": "4",
+    "working": "'In short' summary; gap 3 would break 'As a result' which follows the differing arrangements.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "3 is weakly possible as a mid-paragraph summary, but it would disrupt 'As a result'."
+   }
+  },
+  {
+   "id": "V04-D-005",
+   "S1": {
+    "answer": "3",
+    "key": "3",
+    "working": "'Such extensions, however, carry a cost' pivots from the boot/jacket example (2) to the explanation of brand dilution starting 'A brand is valuable because'.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "3",
+    "key": "3",
+    "working": "After the boots-jackets example, 'however' turns to cost, which (3) then explains: blurred meaning and spillover damage.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": "2 weakly possible, but it would separate the temptation from its example."
+   }
+  },
+  {
+   "id": "V04-D-006",
+   "S1": {
+    "answer": "1",
+    "key": "1",
+    "working": "'Call this' refers to the 'too much spent to stop' argument in sentence 1; 'On that view' then sets out the economists' alternative.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "1",
+    "key": "1",
+    "working": "Placed at 1, 'Economists call this' names the 'too much spent to stop' argument and 'On that view' then refers to the economists' forward-looking view.",
+    "confidence": "medium",
+    "issue": "Gaps 1 and 2 are both plausible on a quick read; the key depends on resolving 'On that view'.",
+    "alternative": "2: after 'earlier ones were wasted too' also reads, and 'Yet the charge of sunk cost reasoning' follows it; but then 'On that view' lacks a proper antecedent."
+   }
+  },
+  {
+   "id": "V04-D-020",
+   "S1": {
+    "answer": "3",
+    "key": "3",
+    "working": "Reader-reaction adjustments are a further serial trait ('also') that leads into 'Some critics have regarded these traits as compromises with the market' and anticipates 'loose, accommodating plots'.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "2: At (2) it would also continue the list of serial effects, but it would split 'until the next' from 'That month's wait', so (3) is better."
+   },
+   "S2": {
+    "answer": "3",
+    "key": "3",
+    "working": "'also' adds reader-reaction trait after cliffhangers and crowded casts; supports 'loose, accommodating plots' before critics' verdict",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "V04-E-008",
+   "S1": {
+    "answer": "4",
+    "key": "4",
+    "working": "'In short' summary and 'expensive' opportunity follow the closing point about the same money spent better on teaching.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "4",
+    "key": "4",
+    "working": "'in short' summary fits the end, after both modest-cut and cost points; 'expensive opportunity' ties to the money sentence",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "3: after modest cuts change little because teachers teach the same way, 'opportunity that goes unused' also fits, though 'in short' is premature there"
+   }
+  },
+  {
+   "id": "V04-E-012",
+   "S1": {
+    "answer": "4",
+    "key": "4",
+    "working": "'Thus stands as a model' is a closing verdict after cost, taste, and programme-failure points.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "4",
+    "key": "4",
+    "working": "'Thus stands as a model' is a concluding summary after the cost, taste and lapses points.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": "3 is conceivable but would interrupt remedy and its explanation."
+   }
+  }
+ ],
+ "missing": []
+}

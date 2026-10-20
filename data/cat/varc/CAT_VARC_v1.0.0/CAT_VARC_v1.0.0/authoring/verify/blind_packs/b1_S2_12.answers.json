@@ -1,0 +1,674 @@
+[
+ {
+  "id": "R01-F-01-1",
+  "answer": "D",
+  "working": "P2 recasts idealisation as a claim about relevance; P4 says it is checked by relaxing it.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-F-01-2",
+  "answer": "A",
+  "working": "P3: assumption holds within one range of conditions, fails outside it.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-F-01-3",
+  "answer": "A",
+  "working": "P4: result vanishes when assumption loosened, so artefact of simplification, not discovery about world.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-F-01-4",
+  "answer": "A",
+  "working": "P4 test: conclusion survives when idealisation relaxed.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-D-03-1",
+  "answer": "D",
+  "working": "P1: forward-looking theories seem to license too much; conclusion is monstrous.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-D-03-2",
+  "answer": "D",
+  "working": "P2: tax carries no message of blame, fine carries little else.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-D-03-3",
+  "answer": "C",
+  "working": "Reply says words alone too cheap to register seriousness; C shows verdict without penalty registers full seriousness.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-D-03-4",
+  "answer": "B",
+  "working": "P4 says 'perhaps of proportion or of humanity'; 'only constraint' unsupported. A, C, D stated.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-A-07-1",
+  "answer": "C",
+  "working": "P2: RNA can carry information and also catalyse reactions.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-A-07-2",
+  "answer": "C",
+  "working": "Replies to P2 argument that without heredity a network cannot accumulate improvements.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-A-07-3",
+  "answer": "B",
+  "working": "P4 contrasts it with metabolism answer about where materials and energy came from.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-A-07-4",
+  "answer": "D",
+  "working": "P5: problem is one of sequence; question is how one stage gave rise to the other.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-A-07-5",
+  "answer": "D",
+  "working": "Easy points scored against each side's weakest claim, which the staged view of P5 drops.",
+  "confidence": "medium",
+  "alternative": "A arguably: each side attacks the other; but 'central thesis' contradicts P4 'weakest claim', so A rejected.",
+  "issue": ""
+ },
+ {
+  "id": "R01-C-07-1",
+  "answer": "B",
+  "working": "P5: progress as series of corrections; circle picture incomplete (P3) and dangerous (P4).",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-C-07-2",
+  "answer": "B",
+  "working": "P3: wives were inside the circle yet the practice was degrading.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-C-07-3",
+  "answer": "A",
+  "working": "P5: corrections recognised without finished theory of the good.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-C-07-4",
+  "answer": "D",
+  "working": "P4: missionary empire's wide circle justified interfering; D gives inclusion with presumption of authority.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-C-07-5",
+  "answer": "B",
+  "working": "Echoes P1 'self-congratulation of every age' judging predecessors.",
+  "confidence": "medium",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-D-06-1",
+  "answer": "D",
+  "working": "P2 'leaves out'; P4 'category error' yet P1 effects not denied.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-D-06-2",
+  "answer": "A",
+  "working": "P3: voice hardens into obstruction, cartel face is what remains.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-D-06-3",
+  "answer": "C",
+  "working": "P2 rests on complainers marking themselves as troublesome; C removes that premise.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-D-06-4",
+  "answer": "C",
+  "working": "'It establishes only that the question cannot be answered by looking at the price of labour alone.'",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-A-06-1",
+  "answer": "C",
+  "working": "P2: no count of departures will register the staying resident.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-A-06-2",
+  "answer": "D",
+  "working": "P4: practical standing she once had in her own street.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-A-06-3",
+  "answer": "D",
+  "working": "Distinction relies on exclusionary homeowners defending no relations; D says they defend relations/voice.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-A-06-4",
+  "answer": "C",
+  "working": "P3 'whatever its owners intend' contradicts claim that they usually know. A, B, D supported.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-B-08-1",
+  "answer": "B",
+  "working": "P1: record departures from correct answer, infer shortcuts from pattern.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-B-08-2",
+  "answer": "B",
+  "working": "Objects to judging rules against laboratory norms rather than environments.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-B-08-3",
+  "answer": "B",
+  "working": "P2: fits data at hand closely, including its accidents.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-B-08-4",
+  "answer": "B",
+  "working": "P3: replaces one standard with another, does not reject normative standards.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-B-08-5",
+  "answer": "C",
+  "working": "P3 'point is sound'; P4 overreaches in claim minds select tools to suit task, evidence uneven.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-D-04-1",
+  "answer": "B",
+  "working": "P2: 'That result survived the theory's collapse.'",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-D-04-2",
+  "answer": "B",
+  "working": "P3: more accurate than stubbornness; productive theory, no rival.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-D-04-3",
+  "answer": "C",
+  "working": "P3: conserved fluid supply should eventually have run out.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-D-04-4",
+  "answer": "D",
+  "working": "Wrong about what heat is, right about behaviour, truths passed to successor.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-B-01-1",
+  "answer": "B",
+  "working": "P2: announces not that individual changed but position in web of kin changed.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-B-01-2",
+  "answer": "A",
+  "working": "P3: mildly rude; outranked by title carrying more social information.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-B-01-3",
+  "answer": "D",
+  "working": "Not forbidden, simply outranked by a title carrying more social information.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-B-01-4",
+  "answer": "C",
+  "working": "P2 view of person through relationships; P4 contrast is one of emphasis not kind.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-A-05-1",
+  "answer": "B",
+  "working": "P2: since the scarves really are identical, explanation cannot be true.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-A-05-2",
+  "answer": "C",
+  "working": "P2: onlooker no more and no less likely to be right.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-A-05-3",
+  "answer": "D",
+  "working": "P4: privilege misplaced; well placed to settle what we will stand by.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-A-05-4",
+  "answer": "B",
+  "working": "P3: authority where the answer is up to her (deciding).",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-B-04-1",
+  "answer": "C",
+  "working": "P2-3 habit explanation; P4 grants paper's sense of place.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-B-04-2",
+  "answer": "B",
+  "working": "P4: thickness of pages, position on page, help remember where an idea appeared.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-B-04-3",
+  "answer": "C",
+  "working": "P3: gaps narrow when asked to slow down and summarise; 'nearly as well'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-B-04-4",
+  "answer": "B",
+  "working": "If non-habitual readers show same gap, trained habit cannot explain it.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-E-03-1",
+  "answer": "B",
+  "working": "P1: authenticity a property of the scene, cramped room, halting cook, low price.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-E-03-2",
+  "answer": "D",
+  "working": "P2 shows food of people who moved between; P3 rejects purists' decline.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-E-03-3",
+  "answer": "C",
+  "working": "If second menu matches home region with imported ingredients, it was not adapted.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-E-03-4",
+  "answer": "A",
+  "working": "P4 final sentence: whether cooks have room to cook what they think is good.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-B-06-1",
+  "answer": "A",
+  "working": "P3: fungibility weaker when budget so stretched or rigid there is little slack.",
+  "confidence": "medium",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-B-06-2",
+  "answer": "C",
+  "working": "P2: raises spending by less than amount given, though rarely by nothing.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-B-06-3",
+  "answer": "B",
+  "working": "Aid funding unplanned activity with other spending unchanged: money not redirected.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-B-06-4",
+  "answer": "B",
+  "working": "P1: clinic built either way; aid financed whatever government would have gone without.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-G-04-1",
+  "answer": "D",
+  "working": "P2: decisive against fear of death pictured as a condition one finds oneself in.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-G-04-2",
+  "answer": "A",
+  "working": "Supports preceding sentence: goods of this very life vs goods never ours.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-G-04-3",
+  "answer": "D",
+  "working": "Objection rests on asymmetry of attitudes and goods; D restores symmetry of regret.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-G-04-4",
+  "answer": "B",
+  "working": "Consolation working perfectly would teach us to care less about our future, which is legitimate.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-A-02-1",
+  "answer": "A",
+  "working": "P2: if a park ranger announced decoys, the question changes.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-A-02-2",
+  "answer": "D",
+  "working": "P3: importing a standard no ordinary claim was meant to satisfy.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-A-02-3",
+  "answer": "B",
+  "working": "P2: concession too generous; treats sceptic's standard as simply correct.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-A-02-4",
+  "answer": "B",
+  "working": "Author says alternatives fixed by what is live; B shows ordinary practice yields to mere mention.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-A-04-1",
+  "answer": "C",
+  "working": "P3: becomes a social fact that calls for explanation rather than mere correction.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-A-04-2",
+  "answer": "B",
+  "working": "Shared patterned error vs scattered individual slips.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-A-04-3",
+  "answer": "D",
+  "working": "P4: error interpreted only once established, usually requires documents.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-A-04-4",
+  "answer": "A",
+  "working": "P3 patterned error reveals meaning; P4 needs documents to establish error; use both.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-D-04-1",
+  "answer": "B",
+  "working": "Tacit = unstated shared rule about what fits the slot.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-D-04-2",
+  "answer": "A",
+  "working": "P2: sharers demonstrate they know the form, not endorsing a claim; P3 likewise.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-D-04-3",
+  "answer": "D",
+  "working": "Template with slot, contents differ and contradict.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-D-04-4",
+  "answer": "C",
+  "working": "P4: too quick to conclude memes persuade nobody; power in frame's familiarity, hard to measure.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-A-03-1",
+  "answer": "A",
+  "working": "P2: right on main charge, but further claim of invention does not follow.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-A-03-2",
+  "answer": "D",
+  "working": "P3: things not fitting are left out or cast as failure of loyalty; narrowing its cast.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-A-03-3",
+  "answer": "B",
+  "working": "If national feeling formed equally across older zones, continuities did not shape ease of imagining unity.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-A-03-4",
+  "answer": "A",
+  "working": "P1 describes, P2 accepts and limits criticism, P3 harm, P4 alternative.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-G-05-1",
+  "answer": "A",
+  "working": "Objection: agent not caring about outcomes will not count the cost.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-G-05-2",
+  "answer": "B",
+  "working": "P4: results as information to be used, not verdicts on one's worth.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-G-05-3",
+  "answer": "D",
+  "working": "P3: detachment a condition for acting well, beyond mere compatibility shown in P2.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-G-05-4",
+  "answer": "A",
+  "working": "Rejects objection in P2; P4 'too quick to declare tension dissolved'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-B-08-1",
+  "answer": "C",
+  "working": "P5: relocation of choice from end to beginning; advocates should own decisions.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-B-08-2",
+  "answer": "B",
+  "working": "'often these consequences can be foreseen... those who set the density know this.'",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-B-08-3",
+  "answer": "B",
+  "working": "P4: checkable process commitments, e.g. whether river allowed to flood.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-B-08-4",
+  "answer": "D",
+  "working": "P2 gives A, B, C; funder preference never mentioned.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-B-08-5",
+  "answer": "B",
+  "working": "'a claim that nothing could count against is not much of a claim.'",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ }
+]

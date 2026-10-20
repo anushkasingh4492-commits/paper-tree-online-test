@@ -1,0 +1,58 @@
+[
+ {
+  "id": "R04-C-05-3",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Blind solver S2 flagged that the option on resource-rich states with strong prior institutions might make some solvers hesitate; it supports the sequence point of paragraph 3, not the dependence claim. Both solvers reached the correct answer.",
+  "fix": "none: the option does not separate dependence from tax form, and its defence already says it supports paragraph 3's sequence point; not a real competitor.",
+  "changed": false
+ },
+ {
+  "id": "R04-C-03-2",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation (student-facing) says 'the gap the key describes'.",
+  "fix": "Changed to 'the gap the correct answer describes'.",
+  "changed": true
+ },
+ {
+  "id": "R04-C-08-5",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation (student-facing) says 'the key's two-part stance'.",
+  "fix": "Changed to 'the two-part stance of the correct answer'.",
+  "changed": true
+ },
+ {
+  "id": "R04-C-03-3",
+  "category": "E2",
+  "severity": "major",
+  "finding": "The correct option was the only one worded 'replaces caseworkers' assessments with a fixed scoring sheet' while all three other options began 'introduces a fixed scoring sheet'; the unique form (and greatest length) singled it out.",
+  "fix": "Reworded the correct option to begin 'After an agency introduces a fixed scoring sheet, its caseworkers ...' in parallel with the others, and adjusted the explanation sentence accordingly.",
+  "changed": true
+ },
+ {
+  "id": "R04-C-08-4",
+  "category": "E2",
+  "severity": "major",
+  "finding": "The correct answer of 08-5 ('real force against constitutions that are effectively impossible to change') points straight to the answer of 08-4, and 08-4 had no option that tested the demanding-but-possible versus impossible distinction, so the leak made 08-4 trivial.",
+  "fix": "Replaced the 'amended several times with broad support' option with a constitution requiring two-thirds of the legislature plus most regions under which amendments pass only rarely, with a defence citing 'demanding but genuinely possible'; a reader primed by 'hard to change' must now distinguish demanding from impossible.",
+  "changed": true
+ },
+ {
+  "id": "R04-C-03-3",
+  "category": "E4",
+  "severity": "minor",
+  "finding": "Labelled Difficult, but the three wrong options are each eliminated by a single clear point; closer to upper Medium.",
+  "fix": "none: label kept to preserve the exact 10/15/9 quota; the matching of mechanism across paragraphs 2 and 4 still justifies the upper band.",
+  "changed": false
+ },
+ {
+  "id": "R04-C-07-4",
+  "category": "E4",
+  "severity": "minor",
+  "finding": "Labelled Difficult, but the three wrong options all explicitly state that formal properties are met, so the correct answer can be spotted as the only one without them.",
+  "fix": "none: label kept for quota; the item still requires the formal versus substantive distinction of the whole passage.",
+  "changed": false
+ }
+]

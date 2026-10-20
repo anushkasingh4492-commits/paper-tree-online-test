@@ -1,0 +1,22 @@
+[
+ {
+  "id": "V01-K-009",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "12435",
+    "key": "12435",
+    "working": "Professionals(1) -> mass service demanded(2) -> men ask for a voice(4) -> such demands shaped debate, vote as fair return(3) -> conclusion(5).",
+    "alternative": "12345: 'Such demands' in 3 could refer to the states' service demands in 2, giving 2-3-4; but 4 (men ask for a voice) reads better as the mechanism that 3's political debate follows.",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "12435",
+    "key": "12435",
+    "working": "Professional armies, universal service demands more, men ask for voice, debate over vote, so vote and service grew together.",
+    "alternative": "12345: \"Such demands\" in 3 could refer back to the state demands of 2, with 4 then giving the soldiers' reasoning; 4-3 reads more naturally (men ask for voice, such demands shaped debate) but the link is ambiguous.",
+    "issue": ""
+   }
+  }
+ }
+]

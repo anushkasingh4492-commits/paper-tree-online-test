@@ -1,0 +1,22 @@
+[
+ {
+  "id": "R08-A-03-3",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "C",
+    "key": "C",
+    "working": "Judging two-tradition competence by one alone and treating blending as lack: parallels P4 error.",
+    "alternative": "",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "B",
+    "key": "B",
+    "working": "Error: judging by separation only and treating combining as deficiency; B mirrors both.",
+    "alternative": "A partly fits (judging on one mode only) but lacks the 'combining treated as deficiency' element; B is better.",
+    "issue": ""
+   }
+  }
+ }
+]

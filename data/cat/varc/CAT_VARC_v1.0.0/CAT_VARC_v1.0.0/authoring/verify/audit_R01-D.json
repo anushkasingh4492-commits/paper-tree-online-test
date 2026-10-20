@@ -1,0 +1,66 @@
+[
+ {
+  "id": "R01-D-04-3",
+  "category": "E1",
+  "severity": "major",
+  "finding": "Heir distractor was arguably a genuine case of entitlement without desert: an heir is entitled under inheritance rules and did not earn the fortune; only his own insistence on desert separated it from the key.",
+  "fix": "Replaced with a second-place runner who claims to deserve the prize for training harder (desert without entitlement, the reverse); updated misconception.",
+  "changed": true
+ },
+ {
+  "id": "R01-D-08-3",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Distractor 'concern for abstract principles rather than the needs of the badly off' was partly defensible as a reading of an impersonal value that helps no one.",
+  "fix": "Replaced with the everyday sense trap (held in a detached, unemotional way) with a defence tied to 'better for no one at all'.",
+  "changed": true
+ },
+ {
+  "id": "R01-D-03-4",
+  "category": "E4",
+  "severity": "minor",
+  "finding": "Labelled Difficult, but the key is exposed by a single 'only' against the hedged 'perhaps ... or of humanity'; upper Medium on the CAT scale, in a Medium passage.",
+  "fix": "Relabelled Medium, exams set to all six, difficulty_reason updated; quota kept by relabelling R01-D-07-3.",
+  "changed": true
+ },
+ {
+  "id": "R01-D-07-3",
+  "category": "E4",
+  "severity": "minor",
+  "finding": "Requires applying the non-interference criterion of paragraph 1 to a case built for the rival view and comparing it with the contestable law, in a Difficult passage; fair as Difficult.",
+  "fix": "Relabelled Difficult with exams CAT and XAT, difficulty_reason updated (balances the 03-4 change; quotas 11/16/7 unchanged).",
+  "changed": true
+ },
+ {
+  "id": "R01-D-03-3",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Key (155 chars) was clearly longer than all distractors (121 to 127).",
+  "fix": "Tightened wording of the key to 138 chars without changing meaning.",
+  "changed": true
+ },
+ {
+  "id": "R01-D-01-1",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Key noticeably longest option.",
+  "fix": "Trimmed key wording (139 to 132 chars).",
+  "changed": true
+ },
+ {
+  "id": "R01-D-07-1",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Defence of the court-contest distractor asserted the tenant is 'described as having no such protection', which the passage does not literally say.",
+  "fix": "Defence now grounds the point in the lease that lets the landlord evict her 'at any time and for any reason'.",
+  "changed": true
+ },
+ {
+  "id": "R01-D-06-3",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Blind solver flag: the key is a plausible real-world cost of proportional systems.",
+  "fix": "none: both solvers reached the key; paragraph 3 attaches costs only to supermajorities, devolution and entrenched rights, and government stability is never mentioned, so the EXCEPT key is unique.",
+  "changed": false
+ }
+]

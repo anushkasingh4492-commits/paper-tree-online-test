@@ -1,0 +1,22 @@
+[
+ {
+  "id": "R02-C-03-2",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "C",
+    "key": "C",
+    "working": "Group with ups and downs shows flat average.",
+    "alternative": "",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "D",
+    "key": "D",
+    "working": "a group with some much happier and others much less happy can show no overall change",
+    "alternative": "",
+    "issue": "D says large changes for 'most of the group', while P3 later says only 'a substantial minority' do not return; the line 'describes almost nobody' does support D, but the two statements sit slightly uneasily."
+   }
+  }
+ }
+]

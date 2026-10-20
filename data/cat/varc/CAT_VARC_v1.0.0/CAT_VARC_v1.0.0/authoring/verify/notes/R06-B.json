@@ -1,0 +1,22 @@
+[
+ {
+  "id": "R06-B-04-2",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "B",
+    "key": "B",
+    "working": "Drought, heat, housing and fuel build-up are mentioned; thin-barked planting is not.",
+    "alternative": "",
+    "issue": "Options A and C cite paragraph locations and 'lists alongside' wording, flagging them as mentioned."
+   },
+   "S2": {
+    "answer": "A",
+    "key": "A",
+    "working": "Planting thin-barked trees is never mentioned; B, C, D all are.",
+    "alternative": "",
+    "issue": ""
+   }
+  }
+ }
+]

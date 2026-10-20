@@ -1,0 +1,122 @@
+[
+ {
+  "id": "R03-E-03-4",
+  "category": "E4",
+  "severity": "major",
+  "finding": "Labelled Difficult, but the correct answer restates the last sentence of paragraph 4 almost word for word; both blind solvers reached it at once. Medium at most.",
+  "fix": "Relabelled Medium, exams reset to all six, difficulty_reason rewritten; R03-E-07-4 promoted to Difficult to keep the 10/15/9 quota.",
+  "changed": true
+ },
+ {
+  "id": "R03-E-03-4",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Solver S1 flagged the option about adaptations chosen by the cooks rather than prompted by customers as close.",
+  "fix": "none: paragraph 2 counts dishes 'sweetened or softened because the first customers sent them back' as part of the legitimate history, so that option is wrong, and its defence says so.",
+  "changed": false
+ },
+ {
+  "id": "R03-E-03-4",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation said 'The key restates this test'.",
+  "fix": "Changed to 'The correct answer restates this test'.",
+  "changed": true
+ },
+ {
+  "id": "R03-E-05-2",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Solver S1 flagged the option saying chains erase local cultures through a format that imposes foreign assumptions.",
+  "fix": "none: paragraph 3 says it would be 'wrong to infer that the format simply imposes its meanings', which the defence cites.",
+  "changed": false
+ },
+ {
+  "id": "R03-E-05-2",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation said 'The key holds both...'.",
+  "fix": "Changed to 'The correct answer holds both...'.",
+  "changed": true
+ },
+ {
+  "id": "R03-E-05-3",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Solver S2 thought the option about families lingering for birthdays could be argued.",
+  "fix": "none: paragraph 3 presents lingering as customers bringing 'meanings of their own', a limit on the chain's influence, as the defence states.",
+  "changed": false
+ },
+ {
+  "id": "R03-E-05-3",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Correct answer (149 characters) was noticeably the longest option (others 120 to 128).",
+  "fix": "Shortened the correct answer slightly and lengthened two wrong options (now 148/145/130/123).",
+  "changed": true
+ },
+ {
+  "id": "R03-E-05-4",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Correct answer (lingering at birthdays is not part of the format) cued the answer to R03-E-05-3, where a wrong option is that same lingering behaviour.",
+  "fix": "Correct answer changed to 'a set of new dishes devised specially to suit the tastes of the local market' (the menu layer, not the format); explanation and difficulty_reason updated with quotes checked against paragraphs 2 and 4.",
+  "changed": true
+ },
+ {
+  "id": "R03-E-07-2",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Solver S2 noted the correct answer was a near-verbatim lift of paragraph 2 ('betrayed members ... without their consent'), making it pure copy-matching.",
+  "fix": "Paraphrased the correct answer: 'As members who feel that something of theirs has been taken from them without their agreement.' Still Easy, now needs paraphrase recognition.",
+  "changed": true
+ },
+ {
+  "id": "R03-E-07-4",
+  "category": "E4",
+  "severity": "minor",
+  "finding": "Promoted to Difficult to balance the 03-4 relabel; the item requires the criterion of solidarity independent of the firm, and the firm-organised attendance option is tempting. Correct answer was also the longest option by a margin.",
+  "fix": "Difficulty Difficult, exams CAT and XAT, difficulty_reason rewritten; correct answer shortened and one wrong option lengthened (154/157/137/134).",
+  "changed": true
+ },
+ {
+  "id": "R03-E-01-1",
+  "category": "E2",
+  "severity": "major",
+  "finding": "Correct answer (168 characters) much longer and more qualified than the wrong options (122 to 130), giving it away by length.",
+  "fix": "Lengthened all three wrong options with plausible clauses; defences still hold (now 168/177/167/169).",
+  "changed": true
+ },
+ {
+  "id": "R03-E-03-3",
+  "category": "E2",
+  "severity": "major",
+  "finding": "Correct answer (154 characters) much longer than the wrong options (115 to 120).",
+  "fix": "Lengthened the three wrong options without changing their logic (now 154/136/165/159).",
+  "changed": true
+ },
+ {
+  "id": "R03-E-08-3",
+  "category": "E2",
+  "severity": "major",
+  "finding": "Correct answer (153 characters) much longer than the wrong options (117 to 123).",
+  "fix": "Lengthened the three wrong options; each defence still applies (now 153/160/156/160).",
+  "changed": true
+ },
+ {
+  "id": "FILE",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "difficulty_reason fields in many items used 'the key' and 'distractor(s)'.",
+  "fix": "Replaced with 'the correct answer' and 'wrong option(s)' throughout.",
+  "changed": true
+ },
+ {
+  "id": "FILE",
+  "category": "E6",
+  "severity": "minor",
+  "finding": "Checked facts: Veblen and conspicuous consumption at the end of the nineteenth century (1899) is accurate; jeans as work clothes and hoodies as athletic gear are well established; everything else is unattributed or hypothetical.",
+  "fix": "none: no false or invented attributed facts found.",
+  "changed": false
+ }
+]

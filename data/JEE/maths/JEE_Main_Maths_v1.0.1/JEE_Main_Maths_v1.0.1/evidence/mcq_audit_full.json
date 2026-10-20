@@ -1,0 +1,136 @@
+{
+ "bank": "build/all_records.json",
+ "records": 2700,
+ "results": [
+  {
+   "check": "Duplicate stems (bank-wide)",
+   "blocking": true,
+   "failures": 2,
+   "detail": [
+    "['JEE-MATH-U03-128', 'JEE-MATH-U03-145'] share a stem: 'if p is a non-singular matrix of order 3 with p = 3 then operatornamea'",
+    "['JEE-MATH-U07-195', 'JEE-MATH-U07-212'] share a stem: 'let fx = x^3 + x + 1 and let g be the inverse of f then g3 equals'"
+   ]
+  },
+  {
+   "check": "Answer leakage in option text",
+   "blocking": true,
+   "failures": 0,
+   "detail": []
+  },
+  {
+   "check": "Repeated key sequence across sections",
+   "blocking": true,
+   "failures": 0,
+   "detail": []
+  },
+  {
+   "check": "Key text matches keyed option",
+   "blocking": true,
+   "failures": 0,
+   "detail": []
+  },
+  {
+   "check": "Rationale map covers exactly the distractors",
+   "blocking": true,
+   "failures": 0,
+   "detail": []
+  },
+  {
+   "check": "Options well formed and exactly one valid key",
+   "blocking": true,
+   "failures": 0,
+   "detail": []
+  },
+  {
+   "check": "Boundary-condition contradiction",
+   "blocking": true,
+   "failures": 0,
+   "detail": []
+  },
+  {
+   "check": "Required fields present",
+   "blocking": true,
+   "failures": 0,
+   "detail": []
+  },
+  {
+   "check": "A/B/C/D balance per section",
+   "blocking": false,
+   "failures": 0,
+   "detail": []
+  },
+  {
+   "check": "Longest same-letter run <= 3",
+   "blocking": false,
+   "failures": 0,
+   "detail": []
+  },
+  {
+   "check": "Correct option not systematically longest",
+   "blocking": false,
+   "failures": 1,
+   "detail": [
+    "correct option is the longest in 49% of items (chance ~25%)"
+   ]
+  },
+  {
+   "check": "Near-duplicate stems (Jaccard >= 0.75)",
+   "blocking": false,
+   "failures": 60,
+   "detail": [
+    "JEE-MATH-U03-018 / JEE-MATH-U03-037 similarity 1.00",
+    "JEE-MATH-U07-123 / JEE-MATH-U07-147 similarity 1.00",
+    "JEE-MATH-U07-233 / JEE-MATH-U07-244 similarity 1.00",
+    "JEE-MATH-U08-196 / JEE-MATH-U08-202 similarity 1.00",
+    "JEE-MATH-U03-189 / JEE-MATH-U03-214 similarity 1.00",
+    "JEE-MATH-U07-113 / JEE-MATH-U07-139 similarity 1.00",
+    "JEE-MATH-U07-113 / JEE-MATH-U07-143 similarity 1.00",
+    "JEE-MATH-U07-126 / JEE-MATH-U07-144 similarity 1.00",
+    "JEE-MATH-U07-139 / JEE-MATH-U07-143 similarity 1.00",
+    "JEE-MATH-U07-112 / JEE-MATH-U07-127 similarity 1.00",
+    "JEE-MATH-U07-112 / JEE-MATH-U07-145 similarity 1.00",
+    "JEE-MATH-U07-112 / JEE-MATH-U07-152 similarity 1.00",
+    "JEE-MATH-U07-112 / JEE-MATH-U07-161 similarity 1.00",
+    "JEE-MATH-U07-127 / JEE-MATH-U07-145 similarity 1.00",
+    "JEE-MATH-U07-127 / JEE-MATH-U07-152 similarity 1.00",
+    "JEE-MATH-U07-127 / JEE-MATH-U07-161 similarity 1.00",
+    "JEE-MATH-U07-145 / JEE-MATH-U07-152 similarity 1.00",
+    "JEE-MATH-U07-145 / JEE-MATH-U07-161 similarity 1.00",
+    "JEE-MATH-U07-152 / JEE-MATH-U07-161 similarity 1.00",
+    "JEE-MATH-U08-174 / JEE-MATH-U08-205 similarity 1.00",
+    "JEE-MATH-U01-082 / JEE-MATH-U01-086 similarity 1.00",
+    "JEE-MATH-U01-027 / JEE-MATH-U01-047 similarity 1.00",
+    "JEE-MATH-U03-128 / JEE-MATH-U03-145 similarity 1.00",
+    "JEE-MATH-U03-128 / JEE-MATH-U03-147 similarity 1.00",
+    "JEE-MATH-U03-145 / JEE-MATH-U03-147 similarity 1.00",
+    "JEE-MATH-U02-119 / JEE-MATH-U02-134 similarity 1.00",
+    "JEE-MATH-U03-170 / JEE-MATH-U03-175 similarity 1.00",
+    "JEE-MATH-U03-170 / JEE-MATH-U03-203 similarity 1.00",
+    "JEE-MATH-U03-175 / JEE-MATH-U03-203 similarity 1.00",
+    "JEE-MATH-U03-199 / JEE-MATH-U03-205 similarity 1.00",
+    "JEE-MATH-U07-237 / JEE-MATH-U07-276 similarity 1.00",
+    "JEE-MATH-U06-020 / JEE-MATH-U06-056 similarity 1.00",
+    "JEE-MATH-U01-025 / JEE-MATH-U01-032 similarity 1.00",
+    "JEE-MATH-U03-041 / JEE-MATH-U03-044 similarity 1.00",
+    "JEE-MATH-U03-041 / JEE-MATH-U03-049 similarity 1.00",
+    "JEE-MATH-U03-041 / JEE-MATH-U03-050 similarity 1.00",
+    "JEE-MATH-U03-044 / JEE-MATH-U03-049 similarity 1.00",
+    "JEE-MATH-U03-044 / JEE-MATH-U03-050 similarity 1.00",
+    "JEE-MATH-U03-049 / JEE-MATH-U03-050 similarity 1.00",
+    "JEE-MATH-U03-126 / JEE-MATH-U03-131 similarity 1.00"
+   ]
+  },
+  {
+   "check": "Banned option phrasings",
+   "blocking": false,
+   "failures": 0,
+   "detail": []
+  },
+  {
+   "check": "Style scan",
+   "blocking": false,
+   "failures": 0,
+   "detail": []
+  }
+ ]
+}

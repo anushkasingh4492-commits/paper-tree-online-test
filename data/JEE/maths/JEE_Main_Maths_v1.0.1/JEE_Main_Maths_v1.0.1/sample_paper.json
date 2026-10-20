@@ -1,0 +1,41 @@
+{
+ "seed": 42,
+ "mode": "Mathematics subject section",
+ "restarts_used": 0,
+ "description": "Mathematics subject section: Section A 20 MCQs, Section B 5 integer-answer questions.",
+ "section_a": [
+  "JEE-MATH-U11-103",
+  "JEE-MATH-U11-089",
+  "JEE-MATH-U06-100",
+  "JEE-MATH-U04-024",
+  "JEE-MATH-U11-114",
+  "JEE-MATH-U01-018",
+  "JEE-MATH-U01-058",
+  "JEE-MATH-U08-120",
+  "JEE-MATH-U12-001",
+  "JEE-MATH-U13-033",
+  "JEE-MATH-U06-098",
+  "JEE-MATH-U08-014",
+  "JEE-MATH-U03-126",
+  "JEE-MATH-U02-166",
+  "JEE-MATH-U06-023",
+  "JEE-MATH-U14-131",
+  "JEE-MATH-U10-090",
+  "JEE-MATH-U04-104",
+  "JEE-MATH-U04-138",
+  "JEE-MATH-U08-228"
+ ],
+ "section_b": [
+  "JEE-MATH-U03-167",
+  "JEE-MATH-U03-077",
+  "JEE-MATH-U13-155",
+  "JEE-MATH-U13-172",
+  "JEE-MATH-U10-095"
+ ],
+ "marking": {
+  "correct": 4,
+  "incorrect": -1,
+  "unattempted": 0
+ },
+ "max_marks": 100
+}

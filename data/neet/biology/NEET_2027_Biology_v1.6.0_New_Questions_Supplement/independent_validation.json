@@ -1,0 +1,33 @@
+{
+ "status": "PASS",
+ "version": "1.6.0-supplement",
+ "metrics": {
+  "questions": 4629,
+  "unique_ids": 4629,
+  "difficulty": {
+   "Easy": 1346,
+   "Medium": 1959,
+   "Difficult": 1324
+  },
+  "answer_positions": {
+   "D": 1144,
+   "A": 1168,
+   "C": 1154,
+   "B": 1163
+  },
+  "longest_same_answer_run": 3,
+  "exact_duplicate_questions": 0,
+  "figure_based_questions": 0,
+  "missing_figures": 0,
+  "key_text_mismatches": 0,
+  "non_ascii_or_dash_in_new_items": 0
+ },
+ "new_items_in_this_file": 4629,
+ "check_scope": {
+  "automated_exhaustive": "schema fields, unique IDs, exactly four distinct options, key text agreement, banned phrasings, dash and ASCII style, exact and near-duplicate stems bank-wide, cross-chapter key sequence, option-length leakage, answer position balance",
+  "model_review": "Every new question was solved blind (without the key) by an independent model examiner; all disagreements and flags (47) plus 68 option-length leaks were resolved, and the 106 revised items were solved blind a second time with zero disagreements.",
+  "human_subject_expert_review": "Not performed. Recommend a teacher spot-check, especially Assertion-Reason items, where whether the Reason explains the Assertion is a judgement call.",
+  "ncert_page_check": "Not performed for new items: NCERT PDFs were not accessible during the build, so new items cite the NCERT section title, not a page number. Content was written to the rationalised NCERT text from model knowledge.",
+  "difficulty_labels": "Editorial estimates, not calibrated from student data."
+ }
+}

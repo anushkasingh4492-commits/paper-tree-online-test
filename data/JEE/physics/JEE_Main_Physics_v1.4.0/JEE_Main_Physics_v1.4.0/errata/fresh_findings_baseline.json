@@ -1,0 +1,102 @@
+[
+  {
+    "code": "E01",
+    "severity": "P2",
+    "title": "Near-repeat pair remains in separate selection families",
+    "ids": [
+      "JEE27-PHY-1318",
+      "JEE27-PHY-1321"
+    ],
+    "category": "Semantic selection guard",
+    "status": "OPEN",
+    "evidence": "1318 asks for a direct Curie-law numerical scaling; 1321 asks for the same inverse-temperature law. Families are different. The constructed paper passes selection quotas and contains both; none of the 10000 fresh random runs happened to select both.",
+    "recommendation": "Use a shared Curie-law selection family or an explicit mutual-exclusion rule. Retain both questions in the bank if useful; prevent their co-selection. This is an editorial near-repeat judgement, not exact textual duplication."
+  },
+  {
+    "code": "E02",
+    "severity": "P2",
+    "title": "Difficulty rationales overstate the work actually needed",
+    "ids": [
+      "JEE27-PHY-1015",
+      "JEE27-PHY-1427",
+      "JEE27-PHY-1548",
+      "JEE27-PHY-1745",
+      "JEE27-PHY-2046",
+      "JEE27-PHY-2159"
+    ],
+    "category": "Difficulty metadata",
+    "status": "OPEN",
+    "evidence": "Six current Difficult records have validated shorter solutions that omit parts of the claimed reasoning. All six keys agree with those shorter solutions.",
+    "recommendation": "Rewrite each rationale around the shortest valid solution and reassess the level. Medium is a review recommendation, not an empirical classification. If Difficult quotas are retained, strengthen the tasks or rebalance with substantive replacements."
+  },
+  {
+    "code": "E03",
+    "severity": "P2",
+    "title": "Rewritten balance question still does not require its figure",
+    "ids": [
+      "JEE27-PHY-2129"
+    ],
+    "category": "Figure dependency",
+    "status": "OPEN - SUBSTANTIVE RECHECK OF A REVISED ID",
+    "evidence": "For a fixed pivot, m1 dx1+m2 dx2=0. Given m1=2m2 and dx1=+1 cm, dx2=-2 cm regardless of the pictured sides. The key C is correct; figure_required=true and the explanation of dependency are not justified.",
+    "recommendation": "Either mark the figure optional and align the explanation, or make an essential mass ratio, displacement or orientation available only through the figure. Recount meaningful required-figure items after the chosen repair."
+  },
+  {
+    "code": "E04",
+    "severity": "P3",
+    "title": "Five malformed inverse-solution clauses",
+    "ids": [
+      "JEE27-PHY-0255",
+      "JEE27-PHY-0708",
+      "JEE27-PHY-1427",
+      "JEE27-PHY-1840",
+      "JEE27-PHY-2153"
+    ],
+    "category": "Language",
+    "status": "OPEN",
+    "evidence": "JEE27-PHY-0255: Matching the measured this maximum speed gives; JEE27-PHY-0708: Matching the measured its kinetic energy at terminal speed in the same liquid gives; JEE27-PHY-1427: Matching the measured their revolution period in the second region gives; JEE27-PHY-1840: Matching the measured its final de Broglie wavelength gives; JEE27-PHY-2153: Matching the measured its figure of merit, defined as coil current per scale division gives",
+    "recommendation": "Replace with a complete grammatical phrase, e.g. \"Matching the recorded value of ... gives\". Synchronize applicable numerical alternates and all published exports."
+  },
+  {
+    "code": "E05",
+    "severity": "P3",
+    "title": "Incorrect ordinal in three diffraction stems",
+    "ids": [
+      "JEE27-PHY-1741",
+      "JEE27-PHY-1742",
+      "JEE27-PHY-1743"
+    ],
+    "category": "Language",
+    "status": "OPEN",
+    "evidence": "JEE27-PHY-1741: Every 3th interference maximum; JEE27-PHY-1742: Every 3th interference maximum; JEE27-PHY-1743: Every 3th interference maximum",
+    "recommendation": "Every third interference maximum Synchronize applicable numerical alternates and all published exports."
+  },
+  {
+    "code": "E06",
+    "severity": "P3",
+    "title": "Incorrect article in five coil stems",
+    "ids": [
+      "JEE27-PHY-1537",
+      "JEE27-PHY-1538",
+      "JEE27-PHY-1539",
+      "JEE27-PHY-1541",
+      "JEE27-PHY-1542"
+    ],
+    "category": "Language",
+    "status": "OPEN",
+    "evidence": "JEE27-PHY-1537: an 100-turn coil; JEE27-PHY-1538: an 100-turn coil; JEE27-PHY-1539: an 100-turn coil; JEE27-PHY-1541: an 50-turn coil; JEE27-PHY-1542: an 50-turn coil",
+    "recommendation": "Use \"a 100-turn coil\" or \"a 50-turn coil\", as appropriate. Synchronize applicable numerical alternates and all published exports."
+  },
+  {
+    "code": "E07",
+    "severity": "P3",
+    "title": "Tension stem does not join grammatically to its options",
+    "ids": [
+      "JEE27-PHY-0192"
+    ],
+    "category": "Language",
+    "status": "OPEN",
+    "evidence": "JEE27-PHY-0192: The tension has: ... has the same magnitude ...",
+    "recommendation": "Use the stem \"Which statement about the tension is correct?\" and complete, grammatical option sentences. Synchronize applicable numerical alternates and all published exports."
+  }
+]

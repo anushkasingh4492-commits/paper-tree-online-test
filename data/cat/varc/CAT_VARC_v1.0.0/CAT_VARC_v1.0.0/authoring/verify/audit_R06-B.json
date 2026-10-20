@@ -1,0 +1,42 @@
+[
+ {
+  "id": "R06-B-04-2",
+  "category": "E2",
+  "severity": "major",
+  "finding": "Blind solver S1 flag: two of the three 'mentioned' options carried locators ('which the passage lists alongside suppression', 'named in paragraph 3'), announcing that they appear in the passage and handing over the EXCEPT answer by elimination.",
+  "fix": "Rewrote both options as plain content paraphrases with no paragraph references or 'the passage lists' wording; defences unchanged and still accurate.",
+  "changed": true
+ },
+ {
+  "id": "R06-B-04-2",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Solver S2 reported key letter A while S1 reported B; both chose the same option text (thin-barked planting), the letter difference reflects per-solver shuffling, not a disagreement.",
+  "fix": "none: key confirmed as the only option not mentioned in the passage",
+  "changed": false
+ },
+ {
+  "id": "R06-B-01-4",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation said 'Only the key combines all three', using banned student-facing term.",
+  "fix": "Changed to 'Only the correct answer combines all three.'",
+  "changed": true
+ },
+ {
+  "id": "R06-B-08-3",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation said 'The key commits to a process', banned student-facing term.",
+  "fix": "Changed to 'The correct answer commits to a process'.",
+  "changed": true
+ },
+ {
+  "id": "R06-B-03-4",
+  "category": "E4",
+  "severity": "minor",
+  "finding": "Labelled Difficult, but each distractor falls to a single explicit sentence (deterrents 'reduce losses' where they work; costs 'concentrated'; no coordination proposed); closer to upper Medium.",
+  "fix": "none: label kept to preserve the exact 10/15/9 quota; the item still needs linking the remark to the distributive thesis in paragraph 4",
+  "changed": false
+ }
+]

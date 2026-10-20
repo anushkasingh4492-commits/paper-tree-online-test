@@ -1,0 +1,63 @@
+{
+ "unit_number": 5,
+ "unit_name": "Binomial Theorem and its Simple Applications",
+ "branch": "Algebra",
+ "count": 140,
+ "draft_files": [
+  "drafts/u05_a.py",
+  "drafts/u05_b.py",
+  "drafts/u05_c.py"
+ ],
+ "alias_groups": {
+  "ALIAS-ERR-U05-A-01": [
+   "U05-A-009",
+   "U05-A-019",
+   "U05-A-040"
+  ],
+  "ALIAS-ERR-U05-A-02": [
+   "U05-A-010",
+   "U05-A-013",
+   "U05-A-046"
+  ],
+  "ALIAS-ERR-U05-B-01": [
+   "U05-B-008",
+   "U05-B-035"
+  ],
+  "ALIAS-ERR-U05-B-02": [
+   "U05-B-005",
+   "U05-B-035"
+  ],
+  "ALIAS-ERR-U05-B-03": [
+   "U05-B-011",
+   "U05-B-035"
+  ],
+  "ALIAS-ERR-U05-B-04": [
+   "U05-B-005",
+   "U05-B-011"
+  ],
+  "ALIAS-ERR-U05-B-05": [
+   "U05-B-009",
+   "U05-B-011"
+  ]
+ },
+ "numerical_selection": [
+  "U05-A-036",
+  "U05-B-036",
+  "U05-C-036",
+  "U05-A-039",
+  "U05-B-037",
+  "U05-C-037",
+  "U05-A-041",
+  "U05-B-042",
+  "U05-C-038",
+  "U05-A-016",
+  "U05-C-015",
+  "U05-A-019",
+  "U05-B-018",
+  "U05-C-016",
+  "U05-A-020",
+  "U05-A-001",
+  "U05-B-004",
+  "U05-A-006"
+ ]
+}

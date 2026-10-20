@@ -1,0 +1,78 @@
+{
+ "unit_number": 9,
+ "unit_name": "Differential Equations",
+ "branch": "Calculus",
+ "count": 140,
+ "draft_files": [
+  "drafts/u09_a.py",
+  "drafts/u09_b.py",
+  "drafts/u09_c.py"
+ ],
+ "alias_groups": {
+  "ALIAS-ERR-U09-A-01": [
+   "U09-A-021",
+   "U09-A-035"
+  ],
+  "ALIAS-ERR-U09-B-01": [
+   "U09-B-005",
+   "U09-B-019"
+  ],
+  "ALIAS-ERR-U09-B-02": [
+   "U09-B-004",
+   "U09-B-017",
+   "U09-B-041"
+  ],
+  "ALIAS-ERR-U09-B-03": [
+   "U09-B-035",
+   "U09-B-036"
+  ],
+  "ALIAS-ERR-U09-B-04": [
+   "U09-B-030",
+   "U09-B-035"
+  ],
+  "ALIAS-ERR-U09-B-05": [
+   "U09-B-007",
+   "U09-B-026"
+  ],
+  "ALIAS-ERR-U09-B-06": [
+   "U09-B-023",
+   "U09-B-045"
+  ],
+  "ALIAS-ERR-U09-C-01": [
+   "U09-C-015",
+   "U09-C-032"
+  ],
+  "ALIAS-ERR-U09-C-02": [
+   "U09-C-018",
+   "U09-C-019"
+  ],
+  "ALIAS-ERR-U09-C-03": [
+   "U09-C-003",
+   "U09-C-011"
+  ],
+  "ALIAS-ERR-U09-C-04": [
+   "U09-C-009",
+   "U09-C-016"
+  ]
+ },
+ "numerical_selection": [
+  "U09-A-041",
+  "U09-B-044",
+  "U09-C-044",
+  "U09-A-042",
+  "U09-A-044",
+  "U09-A-045",
+  "U09-A-015",
+  "U09-B-017",
+  "U09-C-018",
+  "U09-A-023",
+  "U09-B-019",
+  "U09-C-027",
+  "U09-A-010",
+  "U09-B-002",
+  "U09-C-007",
+  "U09-A-011",
+  "U09-A-025",
+  "U09-A-027"
+ ]
+}

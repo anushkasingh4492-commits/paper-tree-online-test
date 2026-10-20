@@ -1,0 +1,389 @@
+{
+ "round": "b2",
+ "items": 257,
+ "both_agree": 257,
+ "disagreements": [],
+ "issues": [
+  {
+   "id": "R02-B-07-3",
+   "S1": {
+    "answer": "D",
+    "key": "D",
+    "working": "Para 4 opens 'This rehabilitation should not be pushed too far' and ends 'explains a good deal... not all of it'.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "B",
+    "key": "B",
+    "working": "P4 'This rehabilitation should not be pushed too far... explains a good deal... not all of it.'",
+    "confidence": "high",
+    "issue": "D overstates: P4 limits rather than refutes.",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "R02-C-03-2",
+   "S1": {
+    "answer": "A",
+    "key": "A",
+    "working": "P3: group where some end much happier and others much less can show no change overall, so flat line fits almost nobody.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "C",
+    "key": "C",
+    "working": "P3: a group where some end up much happier and others much less happy shows no average change, so the flat line fits almost nobody.",
+    "confidence": "medium",
+    "issue": "'Nearly everyone' in C slightly overstates the passage's hypothetical (and the passage's later claim that only a substantial minority fail to return in real studies), but A, B, D are clearly wrong, so C stands.",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "R02-F-03-3",
+   "S1": {
+    "answer": "A",
+    "key": "A",
+    "working": "P3: failure is weak evidence because the test is built around vision; dogs that ignore mirrors yet react to an altered own-scent show self-recognition in another modality.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "A",
+    "key": "A",
+    "working": "The author argues failure reflects the test's visual bias (dogs navigate by smell); dogs responding to an altered self-scent shows the capacity in another modality.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": "B weakly relevant, but memory or problem solving is not self-recognition."
+   }
+  },
+  {
+   "id": "R03-G-08-4",
+   "S1": {
+    "answer": "B",
+    "key": "B",
+    "working": "Paras 2-4: decline is 'a transformation from above', and it lost 'a school of self-government' (meeting, minutes, motions).",
+    "confidence": "high",
+    "issue": "",
+    "alternative": "C is the nearest rival but omits the cost and overstates ('rather than any change in what ordinary people want') where the author only says 'may not have rejected'."
+   },
+   "S2": {
+    "answer": "C",
+    "key": "C",
+    "working": "P3 'transformation from above' plus P4-P5 loss of a 'school of self-government'.",
+    "confidence": "high",
+    "issue": "A overstates ('rather than any change in what people want'; passage says 'may not have rejected') and omits the cost.",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "R04-E-04-4",
+   "S1": {
+    "answer": "D",
+    "key": "D",
+    "working": "Para 3: where leaders doubt a skirmish can be kept small, the old fear and caution return, so the paradox weakens restraint less.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "D",
+    "key": "D",
+    "working": "P3: 'Where leaders doubt that a skirmish can be kept small, the old fear returns, and with it some of the old caution.'",
+    "confidence": "high",
+    "issue": "B contradicts P3 ('does not say that nuclear weapons cause small wars').",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "R04-E-07-1",
+   "S1": {
+    "answer": "D",
+    "key": "D",
+    "working": "P3: formula 'does not remove the hard question but relocates it'; P5: we are 'choosing which of these failures to risk'. A overstates, B contradicted by P4, C contradicted by P5.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "D",
+    "key": "D",
+    "working": "P3 the formula relocates the hard question; P5 we are choosing which failures to risk. A, B, C each contradicted (P4 no return to the wall; P3 not cynical; P5 procedure can fail).",
+    "confidence": "high",
+    "issue": "Key option is noticeably longer and more specific than the distractors, a mild giveaway.",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "R05-A-08-5",
+   "S1": {
+    "answer": "D",
+    "key": "D",
+    "working": "Para 4: gap depends on holding a thing to use as one's own possession; months of daily use is the strongest 'use' frame, vs A (unpacked, undecided), B and C (held for exchange).",
+    "confidence": "high",
+    "issue": "",
+    "alternative": "A is a weak rival (gift, owned), but it is unused and undecided, so D is stronger."
+   },
+   "S2": {
+    "answer": "B",
+    "key": "B",
+    "working": "P4: gap arises when the item is held as part of one's possessions for use; daily-ridden gift for months is most 'own'; A and C hold as stock, D not yet framed.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "R05-B-04-2",
+   "S1": {
+    "answer": "B",
+    "key": "B",
+    "working": "P3: declines 'rarely arrived on its own' but came 'alongside' schooling, labour, taxation, war. A overstates war (only 'several cases'); D wrong since war/inflation were not deliberate measures.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "C",
+    "key": "C",
+    "working": "P3: the fall 'rarely arrived on its own' but came alongside schooling, labour, taxation, war and inflation.",
+    "confidence": "high",
+    "issue": "A fails because war and inflation were not deliberate measures; B's 'chiefly' overstates.",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "R05-G-03-2",
+   "S1": {
+    "answer": "C",
+    "key": "C",
+    "working": "Para 2: 'If harm accelerates sharply past some threshold, a fixed quantity matters more than a stable price'; here the threshold applies per season, so overshoots matter.",
+    "confidence": "high",
+    "issue": "D's price ceiling would let quantity exceed the cap, defeating the point, so it is correctly wrong.",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "B",
+    "key": "B",
+    "working": "Para 2: 'If harm accelerates sharply past some threshold, a fixed quantity matters more than a stable price'; the threshold is per season, so the stock argument (C) does not apply; A's ceiling would permit overshoot.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "R06-C-03-2",
+   "S1": {
+    "answer": "B",
+    "key": "B",
+    "working": "P2: compaction model depends on temperature and snowfall, 'the very quantities the core is being used to reconstruct'.",
+    "confidence": "high",
+    "issue": "Keys for all four R06-C-03 questions fall on B (pack-level answer distribution note, not an item flaw).",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "C",
+    "key": "C",
+    "working": "P2: compaction model depends on temperature and snowfall, 'the very quantities the core is being used to reconstruct'.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "R06-D-07-5",
+   "S1": {
+    "answer": "A",
+    "key": "A",
+    "working": "Para 4: the textbook rule is incomplete since it relies on a word (measurement) it cannot define; para 2 says theory does not say what counts as a measurement.",
+    "confidence": "medium",
+    "issue": "A slightly overstates: para 2 also faults the rule for not saying where or why collapse happens, so defining measurement may not remove the whole defect; still clearly best option (C and D contradict para 5, B unsupported).",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "B",
+    "key": "B",
+    "working": "Para 4: the textbook rule is incomplete 'since it relies on a word it cannot define'; para 2: the theory does not say what counts as a measurement. A, C, D contradict paras 4-5.",
+    "confidence": "medium",
+    "issue": "Slight stretch: para 2 also faults the rule for not saying where or why collapse happens, so a definition alone might not remove every defect. Still clearly the best option.",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "R07-A-08-3",
+   "S1": {
+    "answer": "A",
+    "key": "A",
+    "working": "'A purist may regard this... It can as easily be seen as a kind of conversation': grants the reading, offers an equally reasonable alternative.",
+    "confidence": "medium",
+    "issue": "The author's overall thrust plainly favours the conversation reading, so 'even-handed' is only defensible on the literal 'as easily'; other options are clearly wrong, so key is still best.",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "B",
+    "key": "B",
+    "working": "P3: 'A purist may regard this as... It can as easily be seen as a kind of conversation' - grants the reading, offers an equally reasonable alternative.",
+    "confidence": "medium",
+    "issue": "Author's broader argument leans against purist standards, so 'even-handed' is a touch generous, but no other option fits.",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "R07-B-05-4",
+   "S1": {
+    "answer": "C",
+    "key": "C",
+    "working": "P3: original leaves sense open, each rendering must decide and so records its era's reading; staging ambiguous lines while the script stays open matches.",
+    "confidence": "high",
+    "issue": "Option C's wording ('shows its own era's reading while the script stays open') closely echoes the passage, which makes it easy to spot by verbal matching.",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "A",
+    "key": "A",
+    "working": "Actors must settle ambiguous lines (like forced choices), each production reflecting its era while the script stays open.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "R07-C-07-4",
+   "S1": {
+    "answer": "C",
+    "key": "C",
+    "working": "P4: photography took over the trade in cheap likenesses, leaving painters to offer what a camera seemed unable to supply.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "B",
+    "key": "B",
+    "working": "P4: photography took over cheap likenesses, leaving painters to offer what a camera seemed unable to supply.",
+    "confidence": "high",
+    "issue": "A describes a separate cause (new ideas about the self), not photography.",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "R07-E-03-2",
+   "S1": {
+    "answer": "D",
+    "key": "D",
+    "working": "P1 'rested on a narrow idea of what counts as use'; P2 'uses, though not of the kind that appear in a structural calculation'.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "A",
+    "key": "A",
+    "working": "P1 'rested on a narrow idea of what counts as use'; P2 'uses, though not of the kind that appear in a structural calculation'.",
+    "confidence": "high",
+    "issue": "Option A's 'only' is slightly stronger than the text, but it is the clear implication.",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "R07-F-03-4",
+   "S1": {
+    "answer": "B",
+    "key": "B",
+    "working": "P3 claim is that the confession leaves the ranking intact; evidence that confessing raises the work to the approved level would show the phrase erodes the hierarchy. D targets P2's display-of-taste point, not hierarchy preservation; C strengthens.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "A",
+    "key": "A",
+    "working": "If confessing raises rating of the 'guilty' work to that of approved works, the phrase erodes rather than preserves the ranking.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "C weakens the display-of-taste claim in P2 that P3 builds on, but not the hierarchy claim directly; B strengthens; D is P4 concession."
+   }
+  },
+  {
+   "id": "R08-A-03-3",
+   "S1": {
+    "answer": "D",
+    "key": "D",
+    "working": "Final para: error is treating keeping languages apart as the measure of competence and combining them as its absence; D maps both halves.",
+    "confidence": "high",
+    "issue": "D closely paraphrases the passage's wording, making it easy to spot.",
+    "alternative": "B is a weaker partial fit (judging on one mode only), but lacks the 'blending as poor training' half."
+   },
+   "S2": {
+    "answer": "B",
+    "key": "B",
+    "working": "The error is treating the ability to keep languages apart as the measure of competence and blending as its absence; B maps both parts.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": "A partly fits the one-hand analogy (a partial measure), but it lacks the step of treating the other skill as a deficiency."
+   }
+  },
+  {
+   "id": "R08-D-06-2",
+   "S1": {
+    "answer": "A",
+    "key": "A",
+    "working": "Para 3: 'That complaint misses what they are for. They are not a lazy substitute... but a written prosody'.",
+    "confidence": "high",
+    "issue": "C is internally contradictory (approving yet calling the signals improper), so it is a weak distractor.",
+    "alternative": ""
+   },
+   "S2": {
+    "answer": "A",
+    "key": "A",
+    "working": "P3: 'That complaint misses what they are for. They are not a lazy substitute... but a written prosody'.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "V01-B-014",
+   "S1": {
+    "answer": "1243",
+    "key": "1243",
+    "working": "Question headline; publication can say it merely asked; readers not protected 'in the same way'; 'That grammatical doubt thus' sums both.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": "1234 is weaker: 4 after 3 would restate 3's 'without reaching the reader'."
+   },
+   "S2": {
+    "answer": "1243",
+    "key": "1243",
+    "working": "1 question headline; 2 publication can say it merely asked; 4 readers not protected; 3 'thus' summary.",
+    "confidence": "high",
+    "issue": "",
+    "alternative": ""
+   }
+  },
+  {
+   "id": "V04-E-008",
+   "S1": {
+    "answer": "4",
+    "key": "4",
+    "working": "'in short' and 'that money' fit the close, after money and improving teaching are discussed.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "3: 'if the opportunity goes unused' also echoes teachers teaching as before, though 'that money' lacks an antecedent there and 'in short' mid-paragraph is odd."
+   },
+   "S2": {
+    "answer": "4",
+    "key": "4",
+    "working": "'in short' summary placed after the final point about spending on teaching; 'that money' = money spent on smaller classes.",
+    "confidence": "medium",
+    "issue": "",
+    "alternative": "3: At (3) it also explains why modest cuts change little (teachers teach as before) and leads into 'Larger cuts can help'; 'in short' and 'that money' fit 4 slightly better."
+   }
+  }
+ ],
+ "missing": []
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "id": "JEE27-PHY-1015",
+    "status": "REPLACED AND REVIEWED",
+    "required_path": "Resolve the first beat branch using two observations, propagate the density change at fixed tension, resolve a second beat branch from its trend, and invert the second-harmonic length relation.",
+    "key": "C",
+    "answer": "17.3469 cm",
+    "separate_method": "Exact-rational beat-branch enumeration and harmonic geometry.",
+    "qualification": "Editorial reasoning-depth judgement; not empirical difficulty calibration."
+  },
+  {
+    "id": "JEE27-PHY-1427",
+    "status": "REPLACED AND REVIEWED",
+    "required_path": "Link two measured curvatures by retarding work, infer or eliminate the charge-to-mass ratio, and impose the strip tangency condition to obtain the additional energy loss. A ratio solution still requires all three magnetic geometries and the calibration potential.",
+    "key": "A",
+    "answer": "61.1111 V",
+    "separate_method": "Ratio of work-energy equations eliminates unknown speed and charge-to-mass ratio; then check absolute energies.",
+    "qualification": "Editorial reasoning-depth judgement; not empirical difficulty calibration."
+  },
+  {
+    "id": "JEE27-PHY-1548",
+    "status": "REPLACED AND REVIEWED",
+    "required_path": "Infer both coil parameters, determine a heat-triggered switching current using dissipation sharing, and solve the reversed-source transient with current continuity and a signed target.",
+    "key": "A",
+    "answer": "0.329508 s",
+    "separate_method": "Numerical integration to the heat-trigger time, then root of the signed transient.",
+    "qualification": "Editorial reasoning-depth judgement; not empirical difficulty calibration."
+  },
+  {
+    "id": "JEE27-PHY-1745",
+    "status": "REPLACED AND REVIEWED",
+    "required_path": "Combine two integer-order interference conditions, include the plate phase shift, determine the overlap of wavelength-dependent diffraction envelopes, and count only strictly interior positions.",
+    "key": "A",
+    "answer": "4",
+    "separate_method": "Enumerate both integer-order equations and check each point against both open envelopes.",
+    "qualification": "Editorial reasoning-depth judgement; not empirical difficulty calibration."
+  },
+  {
+    "id": "JEE27-PHY-2046",
+    "status": "REPLACED AND REVIEWED",
+    "required_path": "Infer resistance and clamp voltage from distinct diode states, establish the switching threshold, and integrate only the conducting portion of both source ramps.",
+    "key": "D",
+    "answer": "5 mC",
+    "separate_method": "Infer parameters from DC tests and integrate the positive diode current in time.",
+    "qualification": "Editorial reasoning-depth judgement; not empirical difficulty calibration."
+  },
+  {
+    "id": "JEE27-PHY-2159",
+    "status": "REPLACED AND REVIEWED",
+    "required_path": "Use three bridge configurations to isolate the stretched-wire resistance, connect resistance change to constant-volume deformation, and apply the gauge zero correction before converting the length ratio into diameter.",
+    "key": "C",
+    "answer": "0.653197 mm",
+    "separate_method": "Three balance equations and direct resistance-diameter relation at fixed volume.",
+    "qualification": "Editorial reasoning-depth judgement; not empirical difficulty calibration."
+  }
+]

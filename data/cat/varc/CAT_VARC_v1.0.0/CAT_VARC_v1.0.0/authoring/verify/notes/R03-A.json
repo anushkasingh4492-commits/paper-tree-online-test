@@ -1,0 +1,22 @@
+[
+ {
+  "id": "R03-A-07-5",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "B",
+    "key": "B",
+    "working": "P4: groups look identical from outside; P5 policies would serve both groups at once.",
+    "alternative": "",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "C",
+    "key": "C",
+    "working": "P4: groups 'look identical' from outside; P5 measures 'would serve both groups at once'.",
+    "alternative": "",
+    "issue": "Options A, B, D begin 'would ...' while C begins 'help ...'; the parallelism break singles out C (minor format giveaway). Probably intended 'would help'."
+   }
+  }
+ }
+]

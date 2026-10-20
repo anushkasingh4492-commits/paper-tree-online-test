@@ -1,0 +1,90 @@
+[
+ {
+  "id": "R07-C-01-4",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation says 'The key points to a visible contrast', using the banned word 'key' in student-facing text.",
+  "fix": "Changed to 'The correct label points to ...'.",
+  "changed": true
+ },
+ {
+  "id": "R07-C-01-4",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "The correct label is the only option phrased as a question to the viewer, a small form cue.",
+  "fix": "none: the interrogative form is what paragraph 3's test describes (a label that 'cannot be finished without looking'); making a wrong label interrogative would risk making it defensible, and the three wrong labels each fail on content.",
+  "changed": false
+ },
+ {
+  "id": "R07-C-03-1",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Defence of the 'never removed the final glazes' option cited reds that 'lose their glazes' to light in paragraph 3, which concerns light, not cleaners, and muddied the reasoning.",
+  "fix": "Rewrote the defence to rest on paragraph 1: the mourners' suspicion is reported and never dismissed.",
+  "changed": true
+ },
+ {
+  "id": "R07-C-05-3",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Correct option said 'one measure can follow another faithfully enough'; critical judgement and a company's prospects are not measures, and 'faithfully enough' adds a degree the passage does not state. It was also the longest option.",
+  "fix": "Reworded to 'how one thing can track another at second hand while remaining a different kind of thing'.",
+  "changed": true
+ },
+ {
+  "id": "R07-C-07-4",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Correct option was clearly the longest (132 characters against 104 to 114).",
+  "fix": "Tightened to 'taking over the trade in cheap likenesses, so that painters turned to offering what a camera seemed unable to give.'",
+  "changed": true
+ },
+ {
+  "id": "R07-C-02-3",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Misconception put a gloss ('special celebration') in single quotes as if quoting the passage.",
+  "fix": "Removed the quotation marks around the gloss.",
+  "changed": true
+ },
+ {
+  "id": "R07-C-04-3",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Misconception put a gloss ('not worth doing') in single quotes as if quoting the passage.",
+  "fix": "Rephrased as unquoted text.",
+  "changed": true
+ },
+ {
+  "id": "R07-C-07-2",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Misconception put a gloss ('likeness was the main aim') in single quotes as if quoting the passage.",
+  "fix": "Rephrased as unquoted text.",
+  "changed": true
+ },
+ {
+  "id": "R07-C-08-2",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Misconception put a gloss ('circumstances') in single quotes as if quoting the passage.",
+  "fix": "Rephrased as unquoted text.",
+  "changed": true
+ },
+ {
+  "id": "R07-C-07-1",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Correct option is the longest (130 characters), though one wrong option is 126.",
+  "fix": "none: the gap to the nearest option is small and the file-level longest-key rate (9/34) is within the limit.",
+  "changed": false
+ },
+ {
+  "id": "R07-C-08",
+  "category": "E7",
+  "severity": "minor",
+  "finding": "Passage 08 opens with the same observation as passage 01 (visitors glance at the picture, read the label, move on).",
+  "fix": "none: the two passages argue different subjects (label design and slow looking), and editing the passage 08 opening would break the label option in R07-C-08-1.",
+  "changed": false
+ }
+]

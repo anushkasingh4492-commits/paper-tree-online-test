@@ -1,0 +1,569 @@
+{
+ "kind": "RC",
+ "passages": [
+  {
+   "passage_id": "R06-F-03",
+   "passage": [
+    "Debates about privacy in the age of large data sets usually begin from an image of ownership. Each person, on this view, holds a store of information about themselves, and the moral question is whether that information is taken with or without their permission. Hence the enormous weight placed on consent: the checkbox, the privacy notice, the setting that lets a user decline to share. If people are told what will happen to their data and agree to it, the transaction is treated as legitimate, and if they refuse, they are thought to have protected themselves.",
+    "The difficulty is that much personal information is not individual in the way the image assumes. A person who uploads their contact list discloses the names and numbers of people who agreed to nothing. Someone who submits a sample to a genetic testing service reveals facts about parents, siblings and cousins, some of whom may not know the test was taken. More subtly, when enough people share information about their habits, a system can learn the patterns that link one trait to another, and then infer those traits in people who shared nothing at all. A person who declines to disclose, say, a health condition may find that it has been estimated, with fair accuracy, from purchases and movements that resemble those of people who did disclose it.",
+    "One might reply that the refuser has still kept their own data, and that what others choose to reveal is their own affair. But this misses what the refuser was trying to protect. Nobody declines to share a fact for the sake of a particular row in a database; they decline because they do not want the fact known. If it can be known anyway, through the choices of others, then the refusal has secured very little, and the consent framework, which places the whole burden of protection on individual decisions, has quietly ceased to describe what is actually happening.",
+    "This does not make individual consent worthless. Being asked still matters, and a person who is deceived about how their information will be used has been wronged in a way that the collective character of data does not erase. The point is that consent cannot carry the load it has been given. Privacy behaves in part like clean air or quiet streets: a condition that each person's conduct affects for others, and that no one can secure for themselves by private choice alone. Protecting it therefore requires rules about what may be inferred and done, not merely about who has clicked agree."
+   ],
+   "questions": [
+    {
+     "id": "R06-F-03-4",
+     "type": "RC",
+     "options": {
+      "A": "Many people who upload their contact lists do not realise that they are disclosing information about other people.",
+      "B": "Deceiving people about how their information will be used remains a serious wrong even when the data involved is collective.",
+      "C": "Systems that infer traits from shared data become steadily more accurate as more people choose to disclose those traits.",
+      "D": "Traits inferred about non-sharers from others' data prove so unreliable that they seldom reveal what a refuser meant to hide."
+     },
+     "question": "Which of the following, if true, would most weaken the author's argument in paragraph 3?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R05-A-06",
+   "passage": [
+    "In most markets the price does the work of allocation. If more people want a good than there are units of it, the price rises until the excess disappears, and whoever is willing to pay the new price obtains the good. But there is a family of markets in which this mechanism cannot operate, because each side must choose the other. A university cannot simply admit whoever is willing to pay the most, nor can an applicant simply buy a place; a hospital hiring junior doctors cares which doctors it gets, and the doctors care which hospital they join. In such markets, sometimes called matching markets, a transaction requires mutual acceptance, and no single number can bring about a match that both sides want.",
+    "Left to themselves, matching markets tend to fail in characteristic ways. One is unravelling: because the strongest candidates are in demand, employers try to secure them by making offers earlier than their rivals, and the competition for earliness can push offers so far forward that they are made before anyone knows how good the candidates are. Another is congestion: when offers must be accepted or refused quickly, a candidate holding one offer may not learn in time of a better one, and the market clears without having considered all its possibilities. A third is strategic misrepresentation, in which participants conceal their true preferences, ranking a likely option first rather than the one they actually want, because they fear that revealing their real wishes will cost them.",
+    "The remedy that has often been adopted is not deregulation but construction: a clearinghouse to which both sides submit ranked lists, and which computes an assignment by a procedure known to have certain properties. The property most often sought is stability, meaning that there is no applicant and employer, not matched to each other, who would both prefer to be. A stable assignment removes the motive to break ranks, since no such pair can do better by striking a private deal, and with a suitable procedure at least one side can be given no reason to misreport its preferences. Such clearinghouses show that a market is not always a spontaneous order arising wherever people are free to trade; it can be an artefact, built to solve problems that freedom alone creates.",
+    "None of this means that design can substitute for the willingness of participants. A clearinghouse works only if enough of both sides join it, and an elegant procedure is useless if the most sought-after employers find it more profitable to recruit privately. Nor can a procedure deliver every desirable property at once: no procedure, for instance, can give both sides complete reason to report honestly while always producing stable outcomes. The designer chooses among imperfect options, and the choice reflects judgements about whose interests deserve protection. The engineering of markets is thus a political as well as a technical art, but it is an art that can be practised well or badly, and the difference matters to the people whose lives it arranges."
+   ],
+   "questions": [
+    {
+     "id": "R05-A-06-4",
+     "type": "RC",
+     "options": {
+      "A": "A prestigious hospital declines to join the clearinghouse and fills its posts by recruiting the doctors it wants privately.",
+      "B": "In a ranked-list scheme for course places, a student puts a less popular course first, fearing that naming her favourite would lose her the safer place.",
+      "C": "A graduate accepts the only offer she holds because it must be answered within hours, and later learns of a better one.",
+      "D": "A law firm, keen to secure the strongest graduates, makes its offers in their first year of study rather than their last."
+     },
+     "question": "Which of the following is the clearest instance of the strategic misrepresentation described in paragraph 2?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R06-F-02",
+   "passage": [
+    "The most familiar complaint about recommendation algorithms is that they trap each of us in a private enclosure. Because a system learns what a user has clicked, watched or bought, the argument runs, it will keep offering more of the same, until every listener hears only the music that confirms their existing taste and every reader meets only the opinions they already hold. On this picture the danger is fragmentation: a public that once shared a common stock of songs, books and news splinters into millions of sealed niches, each tuned to one person.",
+    "The complaint is not baseless, but it may have the main tendency of these systems the wrong way round. Most recommendation engines do not learn from one user in isolation; they learn from the aggregate behaviour of very large numbers of users, and they rank items partly by how much engagement those items have already attracted. That design creates a feedback loop. An item that gets a slight early lead is shown to more people, which earns it more engagement, which earns it still more prominence. Imagine two songs of equal appeal released on the same day, one of which happens to be picked up by a few enthusiastic listeners in its first hours. Under such a loop the small, accidental difference can harden into an enormous gap, and the second song may effectively disappear, not because anyone judged it worse but because no one was shown it.",
+    "If this is right, the characteristic risk is less fragmentation than concentration: attention pooling ever more heavily on a few items, while the vast catalogue that digital distribution made available sits largely unvisited. The early hope that online platforms would let obscure work find its small audiences depended on people actually encountering that work, and a ranking system that rewards prior popularity makes such encounters rarer than the size of the catalogue suggests.",
+    "It would be wrong to present this as something algorithms invented. Bestseller lists, radio playlists and the front tables of bookshops have always amplified what was already selling, and cultural markets have long been marked by a few large successes and many neglected works. What is new is the speed of the loop and its invisibility. A bookseller choosing what to display is a person whose choices can be questioned; a ranking produced by continuous automated feedback appears simply to report what people want, when it is partly manufacturing it. The remedy, if there is one, lies less in protecting users from their own tastes than in asking how much of what looks like popular demand is an echo of earlier exposure."
+   ],
+   "questions": [
+    {
+     "id": "R06-F-02-4",
+     "type": "RC",
+     "options": {
+      "A": "It would ask whether apparent popularity shows real preference or just the prominence an item had earlier.",
+      "B": "It would aim chiefly at showing users fewer of the items that match the tastes they have already displayed.",
+      "C": "It would be achieved once automated rankings were made as slow to respond as the choices of booksellers.",
+      "D": "It would remove popularity from rankings entirely, since amplifying success is a harm peculiar to algorithms."
+     },
+     "question": "Which of the following best captures the author's view of the 'remedy' mentioned in the final paragraph?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R02-E-05",
+   "passage": [
+    "Why should anyone help a stranger they will never meet again? Kindness between relatives can be explained by shared interests, and kindness between neighbours by the expectation that favours will be returned. But much of human cooperation takes place between people who are neither kin nor repeat partners: the traveller who returns a lost wallet, the customer who corrects an undercharge. One influential answer is that such acts are paid for not by the person helped but by everyone who comes to hear of them. If people prefer to help those who have a record of helping others, then a good reputation is an asset, and an act of generosity towards a stranger is an investment in it. Biologists call this arrangement indirect reciprocity.",
+    "The idea has an obvious weakness, and its defenders have had to work hard to answer it. Reputation is only as useful as the information that carries it. In a small band where everyone watches everyone, deeds are seen and remembered; in a large society most of them go unwitnessed. Here language does decisive work. Gossip, often dismissed as idle, is the channel through which a person's conduct becomes known to people who never saw it, and a great deal of everyday conversation consists of exactly this exchange of judgements about absent third parties. Without such talk, indirect reciprocity could hardly operate beyond the scale of a village.",
+    "A subtler problem concerns the judgements themselves. Suppose I refuse to help someone who is known to cheat. Should observers count my refusal against me? If they do, anyone who withholds help from cheats will be punished for it, and cheating becomes safer. If they do not, observers must keep track not only of what people did but of whom they did it to and why. Models of indirect reciprocity suggest that cooperation is far more stable under the second, more demanding standard, which may help explain why people care so much about motives and context when they assess one another's behaviour.",
+    "It would be too much to say that reputation explains all cooperation among strangers. People sometimes behave generously in conditions of genuine anonymity, and laboratory attempts to show that subtle cues of being watched, such as pictures of eyes, make people more generous have produced mixed results. A defender of the reputational account can reply that habits formed in a world where anonymity was rare are not switched off merely because a particular situation happens to be unobserved. That reply is plausible, but it shifts the explanation from calculation to disposition, and it should be acknowledged as a shift. What survives is a narrower and more defensible claim: that the expectation of being talked about is one of the main forces that make large-scale cooperation possible, and that it works only as well as the talk is accurate."
+   ],
+   "questions": [
+    {
+     "id": "R02-E-05-1",
+     "type": "RC",
+     "options": {
+      "A": "allows relatives and neighbours to coordinate the return of favours that they owe to one another.",
+      "B": "replaces the need to judge other people's motives with a simple record of who helped whom.",
+      "C": "discourages people from cheating by making them fear immediate punishment from those who watched them.",
+      "D": "carries news of a person's conduct to people who were not present and never witnessed it."
+     },
+     "question": "According to the passage, gossip is important to indirect reciprocity because it"
+    },
+    {
+     "id": "R02-E-05-2",
+     "type": "RC",
+     "options": {
+      "A": "cooperation would become more stable, because people would have stronger reasons to help everyone they met.",
+      "B": "cheats would gain from the rule, since anyone who refused to help them would be marked down for doing so.",
+      "C": "observers would need to keep track of people's motives and of whom they had refused to help, and why.",
+      "D": "people would stop gossiping about one another, since there would be nothing distinctive left to report."
+     },
+     "question": "Paragraph 3 implies that if observers counted every refusal to help as bad conduct, then"
+    },
+    {
+     "id": "R02-E-05-4",
+     "type": "RC",
+     "options": {
+      "A": "Indirect reciprocity cannot work in large societies, because observers cannot judge whether refusing to help a cheat is wrong.",
+      "B": "Concern about being talked about is a major support of cooperation among strangers, though it cannot explain all generosity and needs accurate talk.",
+      "C": "Reputation fully explains cooperation among strangers once the spread of gossip and the careful judging of motives are taken into account.",
+      "D": "Cooperation among strangers is better explained by dispositions formed in small societies than by any concern for reputation."
+     },
+     "question": "Which of the following best expresses the conclusion the passage reaches?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R05-D-05",
+   "passage": [
+    "Early researchers in artificial intelligence made a natural assumption about which problems would yield first. They took easy to mean what people find easy and hard to mean what people find hard, and so they assumed that a machine which could play respectable chess or prove theorems in logic would soon be able to fold laundry or cross a cluttered room. Matters turned out almost the other way round. Programs that could beat strong players at board games arrived long before machines that could reliably pick up an unfamiliar object without crushing or dropping it. The observation that the faculties we think of as higher are the cheap ones to mechanise, while those we take for granted are expensive, has come to be described by roboticists as a paradox.",
+    "It is a paradox only if our sense of difficulty is a good guide to the difficulty of a task, and a plausible explanation is that it is not. Perception and movement have been refined over an immense evolutionary history, and they run beneath awareness, so they feel like nothing at all. Explicit reasoning is recent and effortful, and its effortfulness is precisely what we notice. The feeling of difficulty, on this account, measures how new a skill is to our species rather than how much computation it requires.",
+    "The implication for work is uncomfortable for a familiar way of ranking jobs. We tend to treat the skills of the hospital cleaner, the gardener and the care worker as basic and those of the clerk who reconciles accounts as advanced. Yet the cleaner moves through rooms that are never arranged twice in the same way and handles objects of every shape and texture, while the reconciliation follows rules that can be written down. A machine finds the second job far easier to take over than the first. Forecasts that expect automation to climb steadily upward from the bottom of the wage scale may therefore have the direction partly backwards.",
+    "Two cautions are in order. First, the paradox describes a stage of technology, not a law of nature; methods that learn from vast numbers of examples have already eroded some of the advantage that perception once enjoyed, and it would be rash to assume the boundary will stay where it is. Second, being hard to automate is not the same as being well rewarded. The skills that resist machines are often widely shared among people, and abundance keeps wages low whatever a robot can or cannot do. The paradox tells us which tasks machines will struggle with; it does not tell us that the people who perform them will prosper."
+   ],
+   "questions": [
+    {
+     "id": "R05-D-05-1",
+     "type": "RC",
+     "options": {
+      "A": "perception and movement would be the hardest faculties to build, having taken longest to evolve.",
+      "B": "a machine able to play respectable chess would still be far from being able to fold laundry.",
+      "C": "the difficulty of any task could be measured by the amount of computation it requires.",
+      "D": "the tasks people find easy would also be the easy ones for a machine to master."
+     },
+     "question": "According to the passage, early researchers in artificial intelligence assumed that"
+    },
+    {
+     "id": "R05-D-05-2",
+     "type": "RC",
+     "options": {
+      "A": "quickly and easily acquired by human beings during childhood.",
+      "B": "poorly paid when people perform them in the labour market.",
+      "C": "requiring relatively little effort or computation to reproduce in a machine.",
+      "D": "of little real value to the people who happen to possess them."
+     },
+     "question": "In paragraph 1, the word 'cheap' in 'the cheap ones to mechanise' most nearly means"
+    },
+    {
+     "id": "R05-D-05-3",
+     "type": "RC",
+     "options": {
+      "A": "Allocating hospital shifts to nurses according to a fixed set of rules about rest and seniority.",
+      "B": "Restoring antique chairs, each built differently and damaged in its own way, for private collectors.",
+      "C": "Checking insurance claims against a written list of the conditions under which payment is due.",
+      "D": "Computing the interest owed on thousands of loans using a formula set by the lending bank."
+     },
+     "question": "On the reasoning of paragraph 3, which of the following jobs would be hardest for a machine to take over?"
+    },
+    {
+     "id": "R05-D-05-4",
+     "type": "RC",
+     "options": {
+      "A": "Since care work resists automation, care workers can expect higher pay as machines take over clerical tasks.",
+      "B": "Some clerical jobs may well be automated before cleaning jobs are, contrary to many familiar forecasts.",
+      "C": "Ranking jobs as basic or advanced by how hard they seem to people may mislead forecasts of automation.",
+      "D": "The present line between what machines can and cannot do may move as learning methods improve."
+     },
+     "question": "Which of the following conclusions would the author most likely regard as NOT warranted by the argument of the passage?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R07-F-07",
+   "passage": [
+    "The maxim that there is no disputing about taste is usually offered as a courtesy. When two people disagree about a film or a piece of music, one of them, sensing that the conversation is about to turn sour, observes that it is all a matter of taste, and the other, relieved, agrees. The maxim seems to express a modern and admirable humility, for who is anyone to tell another person what to enjoy? But the courtesy rests on a confusion, and the confusion has consequences for the way we talk about art and, in the end, for the way we treat one another.",
+    "The confusion is between preference and judgement. If you dislike the taste of coriander and I like it, there is nothing for us to argue about. Neither of us thinks the other has missed something; we simply report different reactions, and the reports do not compete, any more than your being cold and my being warm in the same room amounts to a disagreement about the room. Disagreements about novels or buildings are rarely like this. When I say that a novel is sentimental and you say that it is moving, each of us means to be saying something about the book, and each of us expects the other to be able, at least in principle, to recognise it. We point to passages, compare the novel with others, and draw attention to what the other may have overlooked. These are the moves of people who believe there is something to be right about, even if neither of them can prove it.",
+    "The relativist replies that this behaviour, however common, rests on an illusion. There is no fact about the book's sentimentality independent of readers' reactions, the argument runs, and so our disputes, unlike disputes about the boiling point of water, can never be settled; at most one party tires and gives up. This reply assumes that a dispute is worth having only if it can end in proof. Aesthetic argument, however, does not aim at proof. It aims at a change in perception, and its success is the moment when you look again at the passage I have pointed to and hear the false note I heard, or when I, rereading it at your insistence, find that what I took for manipulation is in fact restraint. Such moments are not rare. Most people can remember a friend, a teacher or a critic who showed them something they had not been able to see, and they do not remember the experience as having been talked into a preference; they remember it as having learned something.",
+    "It must be granted that some disagreements reach a floor. Two careful readers may agree about every feature of a poem, its rhythm, its imagery, its debts and its departures, and still differ about whether it is good, because one prizes austerity and the other abundance. At this point argument may genuinely run out, and it is sensible to say so. But the floor lies far lower than the maxim implies. Most disputes about taste break off long before they reach it, not because the parties have exhausted their reasons, but because one of them has invoked the maxim in order to end the conversation.",
+    "There is, finally, something less humble in the maxim than it appears. To tell someone that their view of a novel is merely a matter of taste is to decline to treat it as a view at all, that is, as a claim that might be true and from which one might learn. The maxim protects both parties from the risk of being wrong, but it does so at the price of the possibility of being changed. Real respect for another person's judgement would consist in disputing it."
+   ],
+   "questions": [
+    {
+     "id": "R07-F-07-2",
+     "type": "RC",
+     "options": {
+      "A": "most disputes about taste end only after the parties have exhausted every reason they have.",
+      "B": "aesthetic argument can in the end yield proof of the kind that the relativist demands of it.",
+      "C": "some disputes about a work become so heated that the parties refuse to continue them, though both still have reasons to give.",
+      "D": "some disputes persist even when both parties agree about every feature of a work, because they value different qualities."
+     },
+     "question": "In paragraph 4, the statement that 'some disagreements reach a floor' means that"
+    },
+    {
+     "id": "R07-F-07-4",
+     "type": "RC",
+     "options": {
+      "A": "When people report having been shown a quality in a work, their new view usually matches that of whoever argued most confidently.",
+      "B": "Two careful readers who agree on every feature of a poem may still disagree about whether it is good.",
+      "C": "Many people invoke the maxim about taste mainly in order to avoid an argument that might otherwise become unpleasant for both of them.",
+      "D": "Disputes about the boiling point of water have sometimes been prolonged for years by errors in measurement."
+     },
+     "question": "Which of the following, if true, would most weaken the author's reply to the relativist in paragraph 3?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R05-C-07",
+   "passage": [
+    "Few words in the vocabulary of management carry as much reproach as slack. Idle machines, unfilled hours, inventory sitting in warehouses and staff whose days are not fully booked all appear, to the analyst armed with a spreadsheet, as resources that are paid for and not used. The programmes that set out to remove them, under whatever name is fashionable at the time, can usually point to impressive savings in their first year, and the savings are real. What such programmes measure less well is what the slack had been doing before it was removed, because its work was done in circumstances that the measurements were not designed to capture.",
+    "The first of those circumstances is the shock. A supply chain that holds no spare stock is cheaper to run on every ordinary day, and on the day a single supplier fails it halts entirely, because there is nothing between the failure and the factory floor. A hospital ward staffed exactly to its average occupancy works smoothly in most weeks and is overwhelmed in the week that an infection spreads. In each case the margin that looked like waste was a store of capacity held against an event whose timing could not be known, and its value appears only in the period that the efficiency audit treats as an exception. To judge slack by ordinary days is to judge an umbrella by the weather on days when it did not rain.",
+    "The second circumstance is less dramatic and perhaps more important. Organisations do not only respond to events; they also change themselves, and change requires time that is not already claimed. An engineer who has an afternoon free may try out an idea that no plan had scheduled; a manager with some unallocated budget can fund a small experiment without first writing a case for it that no one yet knows how to write. Most of these experiments come to nothing, which is exactly why a system that requires every hour and every rupee to be justified in advance will not permit them. The new products and methods that later look inevitable often began in precisely the margins that a thorough efficiency drive would have closed.",
+    "It would be naive to conclude that slack is always benign. Spare resources can shelter inefficiency as easily as invention, and a department with more staff than it needs may use the surplus not to experiment but to protect its own comfort or to fight for its standing within the firm. Some slack is indeed waste, and some of the people who defend it are defending their privileges. The critics of slack are therefore not simply wrong; they are answering a question that is badly posed. Asking how much slack an organisation has, and how quickly it can be reduced, treats a heterogeneous quantity as if it were uniform.",
+    "The more useful question is what the slack is for and who can see it. A reserve whose purpose is understood, whose size is reviewed and whose use is reported can be defended on the days when it seems idle, and trimmed when it has outlived its purpose. A reserve that exists only because no one has looked at it will be either preserved for the wrong reasons or eliminated by the first auditor who does. The aim is neither to maximise slack nor to abolish it, but to hold it deliberately, as an organisation holds any other asset whose returns arrive irregularly."
+   ],
+   "questions": [
+    {
+     "id": "R05-C-07-1",
+     "type": "RC",
+     "options": {
+      "A": "The savings claimed by efficiency programmes are largely illusory, because the costs they remove reappear later in other parts of the organisation.",
+      "B": "Organisations should always keep as much spare capacity as they can afford, because neither shocks nor useful experiments can be predicted in advance.",
+      "C": "Most of the slack found in large organisations shelters inefficiency and protects the privileges of the departments that hold it.",
+      "D": "Much spare capacity serves real if irregular purposes, so slack should be held deliberately and judged by its use rather than cut wholesale as waste."
+     },
+     "question": "Which of the following best expresses the central claim of the passage?"
+    },
+    {
+     "id": "R05-C-07-5",
+     "type": "RC",
+     "options": {
+      "A": "efficiency audits should not consider the cost of reserves at all, since a reserve's cost has no bearing on whether it is kept.",
+      "B": "the worth of a reserve held against rare events cannot be seen by looking only at periods in which no such event occurs.",
+      "C": "reserves are worth holding only by organisations whose operations face disruptions that are frequent and can be predicted in advance.",
+      "D": "the main value of slack lies in protecting against shocks rather than in leaving room for the experiments that produce change."
+     },
+     "question": "In paragraph 2, the author says that 'To judge slack by ordinary days is to judge an umbrella by the weather on days when it did not rain.' The comparison suggests that"
+    }
+   ]
+  },
+  {
+   "passage_id": "R03-B-06",
+   "passage": [
+    "For much of the twentieth century, anthropologists sorted the ties they recorded into two kinds. Some were 'real', resting on birth and descent; others were 'fictive', a convenient label for godparents, sworn brothers, adopted children and the many other relations that people treated as kinship but that did not, so the observer thought, rest on blood. The distinction seemed merely descriptive, and it took some time to see that it carried a theory with it: that the true foundation of kinship is biological, and that everything else is imitation.",
+    "The difficulty is that many of the people being described did not share the theory. In a number of societies, people become kin by eating food grown on the same land, by living in the same house, or by being nursed at the same breast. Under Islamic law, for instance, children nursed by the same woman are barred from marrying one another, much as siblings by birth would be; the tie created by milk is not a metaphor for kinship but a form of it. In such places, ties made in these ways may carry the same obligations of help, hospitality and mourning as ties of birth. Where relatedness is understood to accumulate through feeding and sharing over years, to call such ties fictive is not to describe them but to overrule the people who live them.",
+    "This is not an argument that biology is irrelevant. Birth is, almost everywhere, one of the most powerful ways of reckoning who belongs to whom, and an attempt to dissolve it entirely into choice would be its own kind of distortion. The point is narrower: biology is one idiom of relatedness among several, and which idioms count, and how much, varies from place to place. Nor is the West an exception that proves the biological rule. Adoption, the blended families formed by remarriage, and the arrangements made possible by donated eggs and sperm all require people to decide, often painfully, whether a tie of birth or a tie of care should prevail when the two come apart.",
+    "Seen this way, kinship is something people do as well as something they are born into. The older vocabulary was not useless, since it pointed to real differences in the ways ties are formed and maintained. Its error lay in treating one culture's answer to the question of what makes people kin as the standard against which every other answer was to be measured, and in mistaking that answer for a fact of nature rather than a choice that other peoples had made differently."
+   ],
+   "questions": [
+    {
+     "id": "R03-B-06-3",
+     "type": "RC",
+     "options": {
+      "A": "eating food that has been grown on the same land.",
+      "B": "making their home together in the same house.",
+      "C": "inheriting a share of the same land from a common ancestor.",
+      "D": "being nursed as infants by the same woman."
+     },
+     "question": "The passage mentions each of the following as a way in which, in some societies, people may become kin EXCEPT"
+    }
+   ]
+  },
+  {
+   "passage_id": "R06-E-04",
+   "passage": [
+    "Discussions of antibiotic resistance usually begin with misuse: drugs prescribed for viral infections that they cannot touch, courses abandoned halfway, animals dosed to make them grow faster. Each of these practices gives bacteria more opportunities to evolve defences, and each deserves the attention it receives. Less often discussed is a quieter problem that has nothing to do with carelessness. Even if every prescription were perfectly judged, the way new antibiotics are paid for would discourage anyone from making them.",
+    "Consider what responsible use of a genuinely new antibiotic would look like. Because every use exerts selective pressure, the new drug should be held back for patients whose infections resist older and cheaper treatments, and it should be prescribed as rarely as possible for as long as possible. This is sound medicine. It is also a commercial disaster. A company recovers the cost of developing a drug by selling it in quantity during the years its patent protects it, and a drug that doctors are urged not to use cannot be sold in quantity. The contrast with a medicine for a chronic condition, taken every day for decades by millions of people, could hardly be sharper. It is not surprising that large firms have drifted out of the field, or that small firms that have brought new antibiotics through approval have sometimes failed commercially soon afterwards.",
+    "The proposed remedy is to separate a company's income from the number of doses it sells. Under such schemes, a health system would pay a fixed annual sum for access to a new antibiotic, whether it is used on a thousand patients or on ten, much as a town pays for a fire brigade whether or not anything burns that year. The payment rewards the existence of the drug rather than its consumption, which is exactly the property a reserve antibiotic is supposed to have.",
+    "The objections are real. Such payments are large, they must be justified to budget holders who see little use for their money, and nobody knows quite how to price a drug whose value lies mainly in emergencies it may never have to meet. Nor would better payment by itself guarantee discovery, since finding compounds that kill resistant bacteria without harming patients is scientifically hard. But these difficulties argue for designing the schemes carefully, not for abandoning them. The alternative is to go on rewarding a pattern of sales that good medicine forbids, and to discover the cost only when the older drugs have stopped working."
+   ],
+   "questions": [
+    {
+     "id": "R06-E-04-4",
+     "type": "RC",
+     "options": {
+      "A": "Older and cheaper antibiotics will soon stop working against most common infections, leaving doctors with no alternative to the new drug.",
+      "B": "A genuinely new antibiotic will usually prove less effective against common infections than the older and cheaper drugs it backs up.",
+      "C": "The price per course of a reserve antibiotic cannot be set high enough to recover its costs from a few patients.",
+      "D": "Medicines for chronic conditions cost more to develop than new antibiotics do, which gives their makers stronger incentives."
+     },
+     "question": "The argument in paragraph 2 that responsible use makes a new antibiotic 'a commercial disaster' depends most on which of the following assumptions?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R04-E-04",
+   "passage": [
+    "Among the arguments made for nuclear deterrence, the strongest is also the simplest: when two states can each destroy the other, neither can hope to gain from a general war, and so neither starts one. Whatever its moral costs, a balance of terror of this kind has a claim to have kept the largest powers from fighting each other directly for a long time. But the logic that makes the largest war unthinkable may make smaller ones more thinkable, and this possibility, sometimes called the stability-instability paradox, deserves more attention than the reassuring half of the argument usually receives.",
+    "The reasoning runs as follows. If both sides are confident that neither will ever risk a nuclear exchange, then each can assume that a limited clash, whether a border skirmish, a proxy war or a raid by irregular forces, will stay limited. The fear that once restrained such ventures, the fear that they might spiral into catastrophe, is weakened precisely by the confidence that catastrophe will be avoided. Stability at the top of the ladder of escalation thus loosens the rungs near the bottom. A state that would never dare a full invasion may feel free to probe, provoke and nibble, reasoning that its opponent will not answer with anything that could lead to the unthinkable.",
+    "It is important to be precise about what this claims. It does not say that nuclear weapons cause small wars, which have many causes and were common long before such weapons existed. It says only that mutual deterrence can lower the perceived risk of low-level aggression and so remove one brake on it. Nor does the paradox operate automatically. Its force depends on how confident each side is that escalation can be controlled. Where leaders doubt that a skirmish can be kept small, the old fear returns, and with it some of the old caution.",
+    "The implication is uncomfortable for those who credit deterrence with keeping the peace. What deterrence may secure is not peace in general but the absence of one particular kind of war, while the violence that remains is pushed downward and outward, into contested borderlands and into the hands of proxies. That is no small achievement, given what the alternative might be, and nothing in the paradox implies that the world would be safer if the largest powers could once again contemplate fighting each other directly. But the achievement should be described accurately. A system that prevents catastrophe partly by making lesser conflicts safer to start is not a system of peace; it is a way of choosing which wars will be fought."
+   ],
+   "questions": [
+    {
+     "id": "R04-E-04-4",
+     "type": "RC",
+     "options": {
+      "A": "The author regards nuclear deterrence as a failure, since it has not succeeded in removing organised violence between rival states.",
+      "B": "Small wars in the nuclear age are caused mainly by the confidence that mutual deterrence gives to the leaders of rival nuclear-armed states.",
+      "C": "The paradox shows that the largest powers have in fact become more willing to fight each other directly once both are armed.",
+      "D": "Where leaders doubt that clashes can be contained, deterrence is likely to weaken restraint on low-level aggression less than where they are confident of control."
+     },
+     "question": "Which of the following can most reasonably be inferred from the passage?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R02-B-04",
+   "passage": [
+    "It is often said that overconfidence is the most pervasive of the biases, the one from which many of the others draw their strength. The claim is repeated so often that it is easy to miss how much it conceals. 'Overconfidence' names at least three different things, and they do not always travel together. Treating them as one has made the phenomenon seem both more universal and more mysterious than it is.",
+    "The first is overestimation: believing that one has performed, or will perform, better than one actually does. The second is overplacement: believing that one is better than other people. The third, which receives less public attention, is overprecision: excessive certainty that one's beliefs are accurate, shown when people asked for a range they are ninety per cent sure contains some true value give ranges that contain it far less often than that. These sound like variations on a single vanity, but they come apart in revealing ways. On tasks that are easy, people tend to underestimate how well they have done, even as they place themselves above others; on tasks that are very hard, the pattern reverses, and many people will rate themselves below average at, say, juggling or composing verse while still overestimating their own scores.",
+    "What explains such reversals is less a desire to think well of oneself than the way information is distributed. People usually know more about their own performance than about other people's, so their judgements of others are pulled toward a vague middle. When a task is hard, they sense that they did poorly, if not quite how poorly, but assume that others did less badly; when it is easy, the opposite. A good deal of what looks like ego, in other words, is a predictable consequence of reasoning from imperfect information about the people with whom one is being compared.",
+    "Overprecision is different. It shows no comparable tendency to reverse, appearing on easy and hard questions, among novices and among specialists, and it is the form that does most harm in planning, where projects are budgeted against ranges too narrow to include what actually happens. It is also the form that most resists exhortation: telling forecasters to be humble rarely widens their intervals much. More promising are procedures that change the question, such as asking people to assign probabilities to several ranges in turn, so that the possibility of an outcome far from their best guess must be considered explicitly rather than waved away. The lesson is not that confidence is good or bad but that a single word has been doing the work of three, and that each of the three needs its own diagnosis."
+   ],
+   "questions": [
+    {
+     "id": "R02-B-04-1",
+     "type": "RC",
+     "options": {
+      "A": "rate themselves below average compared with others while still overestimating their own scores.",
+      "B": "rate themselves above average compared with others while underestimating how well they have actually done.",
+      "C": "give much wider ranges for their estimates than they do on easy tasks, so that their overprecision disappears.",
+      "D": "judge both their own scores and their standing relative to others accurately, because poor results are obvious."
+     },
+     "question": "According to the passage, on tasks that are very hard, many people"
+    },
+    {
+     "id": "R02-B-04-2",
+     "type": "RC",
+     "options": {
+      "A": "people would place themselves above others on every kind of task, whatever its level of difficulty.",
+      "B": "the tendency to give ranges that are too narrow when forecasting uncertain quantities would largely disappear.",
+      "C": "the reversals between easy and hard tasks in how people rank themselves against others should become smaller.",
+      "D": "people would stop overestimating their own scores on very hard tasks such as juggling or composing verse."
+     },
+     "question": "It can be inferred from paragraph 3 that if people knew as much about others' performance as about their own, then"
+    },
+    {
+     "id": "R02-B-04-3",
+     "type": "RC",
+     "options": {
+      "A": "dismissive, because the author holds that people are not in fact overconfident in any systematic way.",
+      "B": "neutral, because the author only reports competing definitions of the term without judging any of them.",
+      "C": "approving, because the author goes on to show how overconfidence underlies most of the other biases.",
+      "D": "sceptical, because the claim treats as a single tendency several that behave quite differently."
+     },
+     "question": "The author's attitude toward the claim that overconfidence is 'the most pervasive of the biases' is best described as"
+    },
+    {
+     "id": "R02-B-04-4",
+     "type": "RC",
+     "options": {
+      "A": "appears among specialists in a field as well as among novices who know little about it.",
+      "B": "does particular harm when projects are budgeted against ranges too narrow to include the outcome.",
+      "C": "reverses on very hard tasks in much the same way as the tendency to rank oneself above others.",
+      "D": "is reduced only a little when forecasters are simply urged to be more humble about their estimates."
+     },
+     "question": "The passage makes each of the following claims about overprecision EXCEPT that it"
+    }
+   ]
+  },
+  {
+   "passage_id": "R03-F-01",
+   "passage": [
+    "Modern moral intuition tends to reserve its highest praise for the gift that expects nothing in return. A present given with an eye to what will come back seems to us slightly tarnished, closer to a trade dressed up in ribbon than to generosity. Anthropologists who have studied exchange in a wide range of societies have long found this intuition puzzling, not because people elsewhere are more calculating, but because in most places the obligation to return is understood as part of what a gift is. To receive is to accept a tie; to fail to reciprocate is not merely rude but a refusal of the relationship the gift proposed.",
+    "Consider how carefully the timing and size of a return are managed in many communities. A neighbour who sends back a dish of sweets on the very evening she received one has not discharged a debt so much as declined a friendship; the speed of her reply announces that she wants the account closed. A return that matches the original exactly carries a similar message. What sustains the bond is a return that comes later and differs slightly in value, so that one party is always, for the moment, a little in the other's debt. On this view the imbalance is not a flaw to be corrected but the mechanism by which the relationship is kept running: an account that is never quite settled is an account that remains open.",
+    "Seen in this light, the free gift is less an ideal than an anomaly. A gift that truly demanded nothing would create no tie, and a society composed only of such gifts would be a collection of strangers who happened to hand each other things. It is telling that the gifts we most often describe as free, such as anonymous donations, are precisely those designed to prevent any relationship between giver and receiver from forming.",
+    "None of this means that the obligation to return is always benign. Where one party can give far more than the other could ever repay, the gift becomes an instrument of domination: the receiver is bound by a debt that cannot be cleared, and gratitude hardens into dependence. Patrons have long understood this, and so have recipients of charity, who sometimes refuse help precisely because they cannot answer it. The lesson, however, is not that we should aspire to gifts without strings. It is that the strings must be ones the receiver is able to hold. A generous act, properly understood, is calibrated to the other person's capacity to reply."
+   ],
+   "questions": [
+    {
+     "id": "R03-F-01-4",
+     "type": "RC",
+     "options": {
+      "A": "the gifts close the account between the two households before a friendship can develop.",
+      "B": "it keeps the poorer neighbour always somewhat in the household's debt, an imbalance that harms the bond in itself.",
+      "C": "it leaves the neighbour under an obligation he has no way of discharging, so that his thanks become reliance.",
+      "D": "any gift given in the expectation of a return is tainted and falls short of real generosity."
+     },
+     "question": "Suppose a wealthy household regularly sends a much poorer neighbour gifts far larger than the neighbour could ever return. On the author's argument, the main problem with this practice is that"
+    }
+   ]
+  },
+  {
+   "passage_id": "R03-E-05",
+   "passage": [
+    "When a global fast-food chain enters a new country, the first thing commentators examine is its menu. If the chain serves the same burger it serves at home, critics see cultural flattening, the erosion of local tastes by a single corporate palate. If it introduces a spiced vegetable patty or a rice dish for the local market, its defenders announce that globalisation, far from erasing difference, accommodates it. Both sides agree, without ever saying so, that the menu is where the question of cultural influence will be settled.",
+    "That assumption deserves more scrutiny than it usually receives. A menu is the part of a chain that is easiest to change and, for that very reason, the part that tells us least. What the chain actually exports is a format: a way of organising food, labour and time. The counter at which one orders without a waiter, the fixed price displayed in advance, the promise that the meal will taste the same today as it did last month, the kitchen run like an assembly line by staff who can be trained in days: these travel intact, and they carry assumptions about efficiency and predictability that are far more foreign to many food cultures than any particular ingredient. A spiced patty served through such a system is a local flavour in a global grammar.",
+    "Yet it would be wrong to infer that the format simply imposes its meanings wherever it goes, for customers bring meanings of their own. In some places a visit to a chain restaurant has been, at least for a time, a special occasion rather than a convenience: a clean, cool and respectable room in which a family can celebrate a birthday, or two young people can meet without attracting comment. The format was designed for speed, but the customers linger. They take a system built to minimise the time spent at the table and turn it into a place for spending time.",
+    "The interesting story, then, has three layers rather than one. The format is global and changes slowly; the meanings attached to it are local and can diverge sharply from what its designers intended; the menu sits between them, adjusted constantly in response to both. To read cultural influence from the menu alone is like judging the spread of a language by the loanwords it has picked up, while ignoring both its grammar and the uses to which its new speakers put it."
+   ],
+   "questions": [
+    {
+     "id": "R03-E-05-3",
+     "type": "RC",
+     "options": {
+      "A": "Local family eateries begin taking orders at a counter, posting fixed prices and standardising their kitchens, while still serving their old dishes.",
+      "B": "Families in the country choose the chain's restaurants for birthdays and linger there long after they have finished eating.",
+      "C": "The chain's outlets in the country sell more of its standard home burger than of the dishes it has created for the local market, year after year.",
+      "D": "The chain adds several new regional dishes to its menu each year in response to suggestions made by its local customers and staff."
+     },
+     "question": "Which of the following would the author most likely regard as the strongest sign of a global chain's cultural influence on a country?"
+    },
+    {
+     "id": "R03-E-05-4",
+     "type": "RC",
+     "options": {
+      "A": "a counter at which customers place their orders without being served by a waiter.",
+      "B": "a fixed price for each item that is displayed to customers before they order.",
+      "C": "a set of new dishes devised specially to suit the tastes of the local market.",
+      "D": "a promise that a given meal will taste the same from one month to the next."
+     },
+     "question": "The passage presents each of the following as part of the format that a global chain exports EXCEPT"
+    }
+   ]
+  },
+  {
+   "passage_id": "R06-D-07",
+   "passage": [
+    "Quantum theory is among the most precisely confirmed bodies of physics ever constructed, and it is also, by the admission of many who use it, a theory that does not quite say what it is about. The difficulty is usually called the measurement problem. The theory's central equation describes a system by a mathematical object, the wave function, which evolves smoothly and predictably for as long as nobody looks. Under that evolution a particle can come to be in a combination, or superposition, of possibilities: here and there, spinning one way and the other. Yet whenever an experimenter checks, the apparatus records exactly one result. The textbook rule bridges the gap by decree: at the moment of measurement the wave function 'collapses' to one of the possibilities, with probabilities that the theory supplies.",
+    "The trouble is that the rule invokes a notion the theory never defines. A measuring device is made of atoms, and atoms obey the smooth equation; treated as part of the physical system, the device should itself enter a superposition of having recorded each result, rather than recording one. Somewhere between the particle and the experimenter's notebook the smooth evolution is supposed to give way to the abrupt one, but the theory does not say where, or why, or what counts as a measurement in the first place. In practice nothing hangs on the answer, because the boundary can be drawn anywhere convenient without altering the predicted statistics. That is precisely what makes the problem so easy to ignore.",
+    "The proposed solutions divide, roughly, by what they are prepared to give up. Some modify the smooth equation, adding a tiny spontaneous tendency to collapse that is negligible for single particles but overwhelming for anything as large as a pointer. Others leave the equation untouched and deny that collapse ever happens: every possible outcome is realised, each in a branch of reality that cannot interact with the others, and the appearance of a single result is simply what being in one branch is like. Still others add a further ingredient to the wave function, definite positions for particles at all times, guided by the wave, so that the outcome was settled all along. A widely discussed physical process, in which a system's entanglement with its surroundings rapidly suppresses the signs of superposition, is often offered as a solution in its own right; it explains why superpositions of large objects are never seen, but on most accounts it does not explain why one outcome occurs rather than another.",
+    "Because these rival pictures agree, in nearly every experiment so far performed, with each other and with the textbook rule, a common response is to call the dispute metaphysics, a matter of taste for people who have finished their calculations. The response is understandable but confused. It treats the textbook rule as a neutral baseline from which the interpretations depart, when the rule is itself an interpretation, and an incomplete one, since it relies on a word it cannot define. Nor are the rivals strictly equivalent: the theories that modify the equation predict small departures from standard behaviour in sufficiently large systems, and experiments of increasing delicacy are now searching for them.",
+    "None of this obliges the working physicist to choose a side before computing a reaction rate; the theory's practical success is real, and it does not wait on the outcome of the debate. But a theory that works without our knowing what it describes has not thereby been shown to need no description. The measurement problem is not a puzzle from philosophy grafted onto physics. It is a gap in the statement of the physics itself, one that the theory's very success has made easy to step around."
+   ],
+   "questions": [
+    {
+     "id": "R06-D-07-5",
+     "type": "RC",
+     "options": {
+      "A": "The chief defect the author finds in the textbook rule would be removed if the theory stated precisely what counts as a measurement.",
+      "B": "The interpretations that leave the equation untouched are to be preferred, because they alone avoid an undefined notion of measurement.",
+      "C": "Physicists ought to settle which interpretation is correct before they rely on the predictions that the theory makes.",
+      "D": "The measurement problem would vanish if experiments confirmed that all the rival pictures make identical predictions."
+     },
+     "question": "The author would most likely agree with which of the following?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R07-D-02",
+   "passage": [
+    "Of all the performing arts, dance has the most fragile relation to its own past. A play survives in its script and a symphony in its score, so that later generations, whatever they make of these documents, at least have something to argue over. A dance, by contrast, has for most of its history existed only while it was being danced and in the memories of those who danced it. It is tempting to conclude that dance is therefore an art without a history, or one whose history is a long series of losses, and that the remedy is simply better documentation.",
+    "There have been serious attempts at such documentation. Systems of dance notation have been devised that record the position of each part of the body over time, and film and video now capture performances that would once have vanished. These tools are valuable, but they have not displaced the older method of transmission, in which a dancer who has performed a role teaches it directly to a younger dancer, in a studio, by demonstration and correction. Many companies that hold detailed records of their repertoire still rely on such teaching when a work is revived, and they tend to treat the written record as an aid to memory rather than as the work itself.",
+    "The reason is not mere conservatism. What passes from one body to another in the studio includes things that a notation or a recording captures poorly or not at all: the weight of a movement, the quality of attention behind it, the reasons a gesture is timed as it is. A film shows what a particular dancer did on a particular night, including her idiosyncrasies and her mistakes; it cannot say which of those features belong to the choreography and which belong to her. A teacher who has danced the role can make that distinction, or at least has a considered view about it, and passes the view on along with the steps.",
+    "This method has an obvious cost. Each transmission is also an interpretation, and over several generations a dance may drift a long way from what its maker first set. Yet the drift is not simply a corruption. A dance kept alive in bodies is continually tested against the dancers who perform it, and the features that survive are usually those that dancers have found to matter. The archive of dance, on this view, is not mainly a shelf of documents but a lineage of people, and its gaps are the price of its being alive."
+   ],
+   "questions": [
+    {
+     "id": "R07-D-02-2",
+     "type": "RC",
+     "options": {
+      "A": "convey the weight and timing of each movement more faithfully than a revival taught in the studio, since film records every detail.",
+      "B": "be closer to the choreographer's original intentions, since the film is free of the drift that teaching introduces.",
+      "C": "fail chiefly because film cannot show the position of each part of the body over time.",
+      "D": "risk copying one performer's personal habits and errors as though they were part of the choreography."
+     },
+     "question": "The author would most likely expect a revival staged by dancers who learned a role only from a film of one performance to"
+    }
+   ]
+  },
+  {
+   "passage_id": "R02-A-01",
+   "passage": [
+    "It is natural to think of seeing as a kind of recording. Light enters the eye, an image forms on the retina, and the brain, like a careful clerk, reads off what is there. The picture is attractive because it matches how perception feels: effortless, immediate, and apparently free of any contribution from the perceiver. Yet the retinal image is a poor document: it is upside down, flat, constantly jittering with the movements of the eye, and interrupted by a blind spot where the optic nerve leaves the retina. Above all, it is ambiguous, in the sense that a small image on the retina could be a small object nearby or a large one far away; a patch of dim grey could be a dark surface in bright light or a pale surface in shadow. The eye, in short, delivers considerably less information than we ordinarily experience ourselves as seeing.",
+    "For this reason many students of vision have preferred to describe perception as a form of inference. The brain, on this account, treats the incoming signal as evidence and settles on the interpretation that best explains it, given what it has learned about how the world usually is. Light tends to come from above, so a disc shaded darker at the bottom is seen as a bump and the same disc turned over as a dent. Objects tend to keep their size, so a person walking away is seen as receding rather than shrinking. These are not conclusions we reach; they are conclusions reached on our behalf, before anything is presented to awareness.",
+    "The word 'inference' invites an obvious objection: if perception is a guess shaped by expectation, why do we not simply see whatever we expect? The answer is that the guess is tightly disciplined by the evidence, and that the expectations doing the work are of a peculiar kind. They are not the beliefs we hold and can revise in conversation, but assumptions built up over a lifetime of looking, and perhaps over the history of the species. This is why many visual illusions survive full knowledge of the trick. A viewer who has measured two lines and found them equal will still see one as longer; what she knows and what she sees have been settled by different processes.",
+    "It would be a mistake, then, to conclude that perception is unreliable because it is inferential. The assumptions it relies on are mostly true of the environments in which they were formed, which is why they so rarely mislead us outside the laboratory, where illusions are carefully built to exploit them. What the inferential view really overturns is not our trust in the senses but the idea that seeing is passive. Every glance is a small act of interpretation, and its seeming effortlessness is the mark of how well the work is done, not evidence that no work is being done."
+   ],
+   "questions": [
+    {
+     "id": "R02-A-01-3",
+     "type": "RC",
+     "options": {
+      "A": "Laboratory illusions are deliberately constructed by researchers so as to exploit the assumptions that ordinary vision relies on.",
+      "B": "Viewers who are told exactly how an illusion works go on seeing it just as strongly as they did before being told.",
+      "C": "People who move into surroundings that violate their perceptual assumptions are, from the start, misled no more often than people who grew up there.",
+      "D": "Some perceptual assumptions, such as the assumption that light comes from above, turn out to be shared by people raised in very different places and cultures."
+     },
+     "question": "The author explains that perceptual assumptions rarely mislead us outside the laboratory because they are mostly true of the environments in which they were formed. Which of the following, if true, would most weaken this explanation?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R06-G-03",
+   "passage": [
+    "When professional scientists first began to rely on volunteers to record birds, butterflies or the timing of spring flowers, the objection most often raised was that amateurs would make mistakes. A trained ornithologist can tell two similar warblers apart by a fragment of song; a weekend walker may not know that there are two species to distinguish. Such worries were not idle, for a single confident error repeated across many records can manufacture a trend that does not exist. Data gathered by such walkers, the argument went, would be riddled with misidentifications, and conclusions drawn from it would be built on sand.",
+    "The worry was reasonable, but experience has shown it to be aimed at the lesser target. Well-run projects have learned to ask volunteers for the kinds of observation they can make reliably, such as whether any frog was heard calling at a pond on a given evening, rather than the kinds that demand years of training. Where identification is genuinely hard, volunteers can photograph what they see and leave the naming to specialists, and records that look improbable can be flagged and checked. Errors do not vanish, but when thousands of independent observations are pooled, isolated mistakes tend to be swamped by the many correct reports around them.",
+    "The more stubborn problem lies not in what volunteers see but in where and when they look. People record wildlife near their homes, along popular footpaths and on fine weekends, so that their records cluster wherever leisure, access and good weather happen to coincide. They visit nature reserves more often than industrial estates, and gardens more often than farmland. A map of volunteer sightings is therefore partly a map of the species and partly a map of the observers, and no amount of skill in identification will separate the two. A bird that seems to be thriving in the suburbs may simply be living where the watchers live.",
+    "This bias is harder to correct than misidentification precisely because it is invisible in any single record. Each observation may be impeccable; the distortion appears only in the pattern. Projects that take it seriously ask some volunteers to survey assigned locations at fixed times, accepting fewer and less convenient records in exchange for a sample whose shape is known. Such schemes demand more of participants, and they rarely attract the crowds that open recording does. But they show that the reliability of citizen science was never really a question about the competence of amateurs. It is a question about whether the people designing a project have thought as carefully about sampling as about skill."
+   ],
+   "questions": [
+    {
+     "id": "R06-G-03-3",
+     "type": "RC",
+     "options": {
+      "A": "sympathetic to why it was raised, while holding that another weakness of volunteer data matters more.",
+      "B": "dismissive, since the author holds that volunteers make no more errors than trained specialists do.",
+      "C": "fully supportive, since the author believes misidentification remains the chief threat to such projects.",
+      "D": "puzzled, since the author cannot understand why scientists ever doubted the abilities of volunteers."
+     },
+     "question": "The author's attitude toward the early objection that amateurs would make mistakes is best described as"
+    }
+   ]
+  },
+  {
+   "passage_id": "R03-F-04",
+   "passage": [
+    "A parable that became famous in the second half of the twentieth century asks us to imagine a pasture open to all. Each herder, reasoning that the benefit of an extra animal is his alone while the cost of overgrazing is shared by everyone, adds another, and then another, until the grass is gone and all are ruined. The moral usually drawn is stark: resources held in common will be destroyed unless they are divided into private plots or placed under the control of the state.",
+    "The parable is persuasive, but it describes something that most actual commons are not. In many villages, pastures, woodlots, fishing ponds and irrigation channels have been shared for generations without being exhausted, and not because the villagers were unusually selfless. They were governed by rules. A household might be allowed to graze only as many animals as it could feed through the winter from its own fields; grazing might move between sections of the hill in a fixed rotation; a watchman, paid in grain, might patrol the boundary, and offenders might face fines that rose with each repeated offence. The herders of the parable have no such rules, no means of watching one another and no way of punishing those who cheat. What the parable describes is not a commons but open access, a resource that belongs to no community at all.",
+    "This does not mean that village commons always survive. They tend to fail in recognisable circumstances: when outsiders who are not bound by local rules can enter freely, when a distant authority overrides local arrangements with regulations that villagers neither understand nor respect, when migration thins the community so much that no one is left to keep watch, or when a sudden rise in the value of the resource makes cheating more tempting than it has ever been. These are real dangers. But they are dangers to particular institutions, not proof that shared ownership is doomed by human nature.",
+    "The practical lesson is that the familiar choice between private property and state control is too narrow. To say so is not to romanticise village life; such arrangements can be strict, and some are unequal, giving larger shares to households that hold more land. Even so, a third possibility, communities managing their own resources by rules they have made and can enforce, has a long record of success, and policy that ignores it may destroy working arrangements in the name of preventing a tragedy that was never going to happen."
+   ],
+   "questions": [
+    {
+     "id": "R03-F-04-4",
+     "type": "RC",
+     "options": {
+      "A": "a fair remedy for the inequality of village arrangements that give larger shares to households holding more land.",
+      "B": "a safeguard the commons needs, since local rules cannot restrain households once the resource rises in value.",
+      "C": "an unwelcome change, but one that cannot affect whether the commons survives, since that depends on human nature.",
+      "D": "a risk to the commons if the villagers neither understand the new rules nor accept them as legitimate."
+     },
+     "question": "It can be inferred that the author would regard a government scheme that replaces a village's grazing rules with uniform national regulations as"
+    }
+   ]
+  },
+  {
+   "passage_id": "R04-C-08",
+   "passage": [
+    "Every entrenched constitution invites an awkward question. If a majority of citizens today wishes to change some arrangement, why should it be prevented from doing so by rules that were drafted generations ago by people who are now dead, and who could not have imagined the conditions under which their successors live? A requirement that amendments win two-thirds of the legislature, or the approval of most regions, looks from this angle like a device for letting the past outvote the present. The objection has a democratic edge that is hard to dismiss: it asks by what right one generation sets the terms on which another must govern itself. Nor is it answered by praising the wisdom of the framers, since wisdom about one century is no warrant for authority over the next.",
+    "The most familiar answer appeals to self-binding. Just as a sailor who knows he will be tempted by a dangerous song may order his crew to tie him to the mast and ignore his later pleas, a people may bind itself in a calm moment against the passions it expects to feel in an agitated one. Entrenchment, on this account, is not the past overruling the present but the present protecting itself from its own worst impulses. The image is attractive, but it does not fit the case. The sailor binds himself, and the man who later strains at the ropes is the same man who gave the order. A constitution binds people who were not present when it was adopted and who gave no order at all. To call this self-binding is to assume precisely the continuity of the collective self that the objection calls into question.",
+    "A better defence starts from a different picture of what entrenchment does. Amendment rules do not, in practice, pit the living against the dead, because the dead cast no votes. What such rules do is set the terms on which living citizens must settle disagreements among themselves. When an amendment fails for want of a supermajority, it is defeated not by its framers but by a present minority large enough to block it. The requirement thus protects groups that might otherwise be outvoted on matters basic to their standing, and it encourages proposals that can attract support beyond a single faction. The protection is not merely theoretical: a group that knows it can block changes to its basic standing has less reason to fear the ordinary swings of electoral fortune, and more reason to accept defeat on everything else. Seen this way, the hand that restrains the majority is a living hand, and the real question is whether present minorities deserve such a veto, not whether the past deserves obedience.",
+    "This reframing does not make the original worry vanish. It succeeds only where amendment is demanding but genuinely possible. A constitution whose amendment procedure is so onerous that no change has been achieved in living memory, or which declares certain provisions unamendable altogether, really does impose the judgement of its authors on everyone who comes after; there, no present coalition, however broad, can alter the text. The objection from the dead hand is therefore best understood not as a refutation of entrenchment as such but as a warning about its extremes. Between a constitution that any passing majority may rewrite and one that no one can, the useful argument concerns how much agreement change should require, and that is a question each generation is entitled to keep asking."
+   ],
+   "questions": [
+    {
+     "id": "R04-C-08-4",
+     "type": "RC",
+     "options": {
+      "A": "A provision declared permanently unamendable continues to bind citizens even though nearly all of them now wish to change it.",
+      "B": "A constitution's amendment rules were drafted by framers who could not have foreseen the conditions under which citizens now live.",
+      "C": "A constitution requires two-thirds of the legislature and the approval of most regions for any amendment, and amendments have passed only rarely.",
+      "D": "An amendment backed by a narrow majority of citizens fails because a large regional minority votes against it."
+     },
+     "question": "In which of the following cases would the author most likely say that the objection from the 'dead hand' applies with full force?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R02-D-04",
+   "passage": [
+    "A long tradition explains exceptional performance by talent: the chess master and the concert violinist are thought to have been born with something the rest of us lack. A body of research on practice has done much to unsettle this view. Those who reach the top of skilled fields, it turns out, have typically spent very large amounts of time not merely doing the activity but practising it in a particular way: working on specific weaknesses, at the edge of their current ability, with prompt feedback, usually under the eye of a teacher. Experience alone, on this account, is not enough. A person who has driven a car for twenty years has had a great deal of experience but has probably not improved since the first few, because ordinary driving involves no deliberate effort to get better.",
+    "The strongest version of this view holds that practice of the right kind is not just necessary for expertise but very nearly sufficient, so that differences in accumulated practice explain most of the differences between the great and the merely good. Popularised as a rule that a fixed number of hours will make anyone an expert, it has an obvious democratic appeal. It is also, in that form, hard to sustain. Among people who practise a great deal, the amount of practice leaves much of the variation in performance unexplained, and the size of that unexplained remainder seems to differ across domains. Where the rules are stable and feedback is immediate, as in many games and sports, practice accounts for more; where outcomes are delayed and noisy, as in forecasting markets or judging which patient will recover, it accounts for less.",
+    "This last pattern is revealing, because it suggests that what practice builds depends on what the environment can teach. Deliberate practice requires knowing, quickly and reliably, whether an attempt succeeded. A violinist hears a wrong note at once; a chess player can check a line against a stronger opponent. A financial analyst may wait years to learn whether a judgement was sound, and even then the outcome will reflect luck as much as skill. In such fields long careers can produce confidence without accuracy, and the hours a person has logged may say more about seniority than about expertise.",
+    "None of this restores the old picture of talent as a fixed endowment that settles everything. The research on practice was right that expertise is built rather than found, and right that the manner of practice matters more than its sheer quantity. What it cannot do is deliver the promise sometimes made in its name, that anyone who puts in the hours will arrive at the same place. Starting points differ, the rate at which practice pays off differs, and some fields offer so little reliable feedback that practice in the demanding sense is barely possible within them."
+   ],
+   "questions": [
+    {
+     "id": "R02-D-04-4",
+     "type": "RC",
+     "options": {
+      "A": "It grants that practice builds expertise but denies that equal hours bring equal results, without making talent decisive.",
+      "B": "It introduces new evidence that talent is a fixed endowment that settles in advance who can become an expert.",
+      "C": "It reverses the argument of paragraph 3 by conceding that hours of practice do in the end determine expertise.",
+      "D": "It recommends that people who want to become experts should choose fields in which feedback on their efforts is quick and reliable."
+     },
+     "question": "Which of the following best describes the function of the final paragraph?"
+    }
+   ]
+  }
+ ]
+}

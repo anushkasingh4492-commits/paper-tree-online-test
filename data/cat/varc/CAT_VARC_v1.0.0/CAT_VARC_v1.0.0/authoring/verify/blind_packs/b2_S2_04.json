@@ -1,0 +1,530 @@
+{
+ "kind": "RC",
+ "passages": [
+  {
+   "passage_id": "R01-F-07",
+   "passage": [
+    "Thought experiments occupy an awkward place in the theory of knowledge. Scientists and philosophers have long used them to settle questions, and some of the most admired episodes in the history of physics turn on an imagined scenario rather than an actual measurement. Yet a thought experiment, by definition, collects no new data. The experimenter sits still and imagines. If we learn something about the world this way, it is not obvious where the information comes from, and two answers have dominated discussion.",
+    "According to the first, a thought experiment is an argument in disguise. Its vivid scenario can always be rewritten as a set of premises and a conclusion, and whatever it teaches, it teaches because the premises were already believed and the conclusion follows from them. The imagery is persuasive packaging, useful perhaps for teaching, but adding nothing to the logical content. According to the second, the best thought experiments give us something no argument could: a kind of direct intellectual insight into the necessary structure of nature, as if the mind could see a law of physics in the way the eye sees a colour.",
+    "Neither answer fits the most celebrated example well. Galileo asked his readers to imagine a heavy body and a light one tied together and dropped. If heavier bodies fall faster, as the received physics of his day held, the light body should hold back the heavy one, so that the pair falls more slowly than the heavy body alone; but the pair is heavier than the heavy body, so it should fall faster. The supposition contradicts itself, and the natural way out is that all bodies fall at the same rate, at least in the absence of a resisting medium. The argument reading can reconstruct this, but only by writing in premises that no one had formulated before the scenario was imagined: for instance, that the speed of a composite body must lie somewhere between the speeds of its parts. The insight reading, for its part, makes the result mysterious, as though Galileo had glimpsed a law rather than noticed a contradiction in what he and his readers already believed.",
+    "A better account is that thought experiments work by drawing on knowledge we have but have never made explicit. Everyone who has carried a load or watched things fall has a large stock of tacit expectations about how bodies behave. A well-constructed scenario brings these expectations to bear on a case where they collide with an explicit theory, and so exposes a tension that was there all along. What is new is not the information but its arrangement. This explains why thought experiments can be genuinely informative without new data, and also why they cannot be reduced to an argument that someone might have written down beforehand: the premises are found by running the scenario, not before it.",
+    "It also explains when they should not be trusted. Our tacit expectations were formed in a narrow band of experience, among objects of moderate size moving at moderate speeds. A thought experiment that asks us to imagine the very small, the very fast or the very distant invites us to apply those expectations where they were never tested, and the resulting conviction, however vivid, carries only the authority of the experience behind it. The method is neither a trick of rhetoric nor a window onto necessity. It is a way of interrogating what we already know, and it is exactly as reliable as that knowledge."
+   ],
+   "questions": [
+    {
+     "id": "R01-F-07-2",
+     "type": "RC",
+     "options": {
+      "A": "at exactly the speed of the heavy body alone, since the light body, being so much lighter, adds nothing to the pair.",
+      "B": "faster than either body alone in the imagined case, while in actual trials the pair is observed to fall more slowly.",
+      "C": "more slowly than the heavy body alone, since the light one holds it back, and yet faster, since the pair is heavier.",
+      "D": "more slowly than the light body alone, since the air around them drags the heavier of the two bodies back."
+     },
+     "question": "According to paragraph 3, the supposition that heavier bodies fall faster contradicts itself because the two bodies tied together should fall"
+    }
+   ]
+  },
+  {
+   "passage_id": "R05-D-05",
+   "passage": [
+    "Early researchers in artificial intelligence made a natural assumption about which problems would yield first. They took easy to mean what people find easy and hard to mean what people find hard, and so they assumed that a machine which could play respectable chess or prove theorems in logic would soon be able to fold laundry or cross a cluttered room. Matters turned out almost the other way round. Programs that could beat strong players at board games arrived long before machines that could reliably pick up an unfamiliar object without crushing or dropping it. The observation that the faculties we think of as higher are the cheap ones to mechanise, while those we take for granted are expensive, has come to be described by roboticists as a paradox.",
+    "It is a paradox only if our sense of difficulty is a good guide to the difficulty of a task, and a plausible explanation is that it is not. Perception and movement have been refined over an immense evolutionary history, and they run beneath awareness, so they feel like nothing at all. Explicit reasoning is recent and effortful, and its effortfulness is precisely what we notice. The feeling of difficulty, on this account, measures how new a skill is to our species rather than how much computation it requires.",
+    "The implication for work is uncomfortable for a familiar way of ranking jobs. We tend to treat the skills of the hospital cleaner, the gardener and the care worker as basic and those of the clerk who reconciles accounts as advanced. Yet the cleaner moves through rooms that are never arranged twice in the same way and handles objects of every shape and texture, while the reconciliation follows rules that can be written down. A machine finds the second job far easier to take over than the first. Forecasts that expect automation to climb steadily upward from the bottom of the wage scale may therefore have the direction partly backwards.",
+    "Two cautions are in order. First, the paradox describes a stage of technology, not a law of nature; methods that learn from vast numbers of examples have already eroded some of the advantage that perception once enjoyed, and it would be rash to assume the boundary will stay where it is. Second, being hard to automate is not the same as being well rewarded. The skills that resist machines are often widely shared among people, and abundance keeps wages low whatever a robot can or cannot do. The paradox tells us which tasks machines will struggle with; it does not tell us that the people who perform them will prosper."
+   ],
+   "questions": [
+    {
+     "id": "R05-D-05-1",
+     "type": "RC",
+     "options": {
+      "A": "perception and movement would be the hardest faculties to build, having taken longest to evolve.",
+      "B": "the difficulty of any task could be measured by the amount of computation it requires.",
+      "C": "the tasks people find easy would also be the easy ones for a machine to master.",
+      "D": "a machine able to play respectable chess would still be far from being able to fold laundry."
+     },
+     "question": "According to the passage, early researchers in artificial intelligence assumed that"
+    },
+    {
+     "id": "R05-D-05-2",
+     "type": "RC",
+     "options": {
+      "A": "of little real value to the people who happen to possess them.",
+      "B": "quickly and easily acquired by human beings during childhood.",
+      "C": "poorly paid when people perform them in the labour market.",
+      "D": "requiring relatively little effort or computation to reproduce in a machine."
+     },
+     "question": "In paragraph 1, the word 'cheap' in 'the cheap ones to mechanise' most nearly means"
+    },
+    {
+     "id": "R05-D-05-3",
+     "type": "RC",
+     "options": {
+      "A": "Checking insurance claims against a written list of the conditions under which payment is due.",
+      "B": "Allocating hospital shifts to nurses according to a fixed set of rules about rest and seniority.",
+      "C": "Computing the interest owed on thousands of loans using a formula set by the lending bank.",
+      "D": "Restoring antique chairs, each built differently and damaged in its own way, for private collectors."
+     },
+     "question": "On the reasoning of paragraph 3, which of the following jobs would be hardest for a machine to take over?"
+    },
+    {
+     "id": "R05-D-05-4",
+     "type": "RC",
+     "options": {
+      "A": "Ranking jobs as basic or advanced by how hard they seem to people may mislead forecasts of automation.",
+      "B": "The present line between what machines can and cannot do may move as learning methods improve.",
+      "C": "Some clerical jobs may well be automated before cleaning jobs are, contrary to many familiar forecasts.",
+      "D": "Since care work resists automation, care workers can expect higher pay as machines take over clerical tasks."
+     },
+     "question": "Which of the following conclusions would the author most likely regard as NOT warranted by the argument of the passage?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R08-A-07",
+   "passage": [
+    "It has become a commonplace that the metaphors buried in ordinary speech reveal the structure of ordinary thought. We speak of arguments as if they were battles, defending positions, attacking weak points, winning or losing; we speak of time as if it were space, with deadlines approaching, holidays behind us and the future ahead. On the view that has made this observation famous, such expressions are not decorations added to a literal meaning but the surface of deep conceptual mappings, in which one domain of experience is understood in terms of another. We do not merely talk about argument as war; to a large extent, it is claimed, we think about it that way, and we would argue differently if our language had taught us to think of it as, say, a dance.",
+    "The opposing view is equally simple. Most of these expressions, it holds, are dead metaphors, idioms whose figurative origin is no longer felt by anyone who uses them. A speaker who says that a table has legs is not thereby thinking of the table as an animal, and a speaker who defends a position need not have soldiers anywhere in mind. On this account, inferring a mental mapping from a pattern of idioms is like inferring a belief in sorcery from the fact that people say 'bless you' after a sneeze: the history of an expression is mistaken for its present psychology.",
+    "Each view, I think, gets one thing right and one thing wrong. The sceptic is right that the evidence most often cited for the mapping view is weaker than it looks. If the existence of the mapping is inferred from the expressions, and the expressions are then explained by the mapping, the argument has gone round in a circle; the sheer number of warlike expressions for argument cannot by itself show that anything in the mind corresponds to them. But the sceptic is wrong to treat these expressions as a collection of fossils. Dead metaphors are inert: one cannot extend the legs of a table into talk of its knees or its gait and expect to be understood. The metaphors of argument and time are not inert in this way. A speaker who says that her opponent's case was all ammunition and no target, or that next week is already breathing down our necks, may be using a phrase she has never heard, and she is understood at once. Something is generating these extensions, and a list of frozen idioms cannot be it.",
+    "Productivity, then, rather than frequency, is the better test of whether a metaphor is alive, and by that test many everyday metaphors are alive, at least in the sense that speakers can use them as patterns for making and understanding new expressions. That is a real result, and it is more than the sceptic allows. It is also less than the mapping view claims. To show that a pattern is available for making expressions is not to show that it governs how people reason when they are not speaking, still less that a different language would leave them reasoning differently. Those further claims are empirical, and they can be settled only by evidence that does not itself consist of the very expressions in question: by watching how people solve problems, judge situations or remember events, and asking whether the metaphor leaves its mark there.",
+    "The debate has often been conducted as though one had to choose between seeing language as a window onto thought and seeing it as a heap of dead habits. The more modest position is less exciting but easier to defend: our metaphors are living tools of expression, and their influence on thought beyond expression is an open question that the metaphors themselves cannot answer."
+   ],
+   "questions": [
+    {
+     "id": "R08-A-07-4",
+     "type": "RC",
+     "options": {
+      "A": "Asked to invent new expressions about time, speakers produced spatial ones far more often than any other kind.",
+      "B": "In a wordless task, people set pictures of earlier events in the direction that their language's time expressions assign to the past.",
+      "C": "A large survey found that spatial expressions for time outnumber all other kinds in every language examined.",
+      "D": "Asked about their own speech, most speakers said they did not picture space when talking about deadlines."
+     },
+     "question": "Which of the following findings, if true, would supply the kind of evidence the author says is needed to support the mapping view's stronger claims?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R06-F-04",
+   "passage": [
+    "When an automated system fails and a human operator fails to rescue it, the official account usually ends with the words 'human error'. The phrase is accurate in a narrow sense, since a person did do the wrong thing, but it hides the way the situation was produced. Automation is typically introduced to take over the parts of a task that are routine and well understood. What remains for the human is whatever the designers could not automate: the rare, ambiguous, fast-moving situations in which the machine gives up or behaves strangely. The person is thus left with the hardest part of the job, and is expected to perform it suddenly, after long periods of doing almost nothing.",
+    "Those long periods matter. Skill at controlling a process is kept alive by exercising it, and an operator who has spent months watching a screen rather than flying, steering or adjusting will have less of it than one who did the work by hand. Worse, the automation removes the everyday experience through which people build an intuitive model of how the system behaves, so that when something goes wrong they must reason about it from first principles, under pressure, with alarms sounding. Monitoring is also something human beings do badly. Attention drifts when nothing happens for hours, and the more reliable the machine, the longer the stretches in which nothing happens.",
+    "The result is a curious inversion. The better the automation works in ordinary conditions, the less prepared its human supervisors may be for the extraordinary ones, and the more surprising their failure will look when it comes. Calling that failure human error locates the fault in the individual at the very moment when the design of the whole arrangement deserves scrutiny.",
+    "None of this is a case against automation, which has removed a great deal of tedium and many kinds of mistake. It is a case for designing automated systems around the people who must step in when they fail. That might mean having operators run the process manually at regular intervals so that their skill does not decay, building displays that show what the machine is doing and why rather than only whether it is working, or deciding deliberately that some tasks should remain shared even when they could be fully automated. Such measures cost efficiency in the short run. Their justification is that the moments they prepare for, although rare, are the ones in which the most is at stake."
+   ],
+   "questions": [
+    {
+     "id": "R06-F-04-2",
+     "type": "RC",
+     "options": {
+      "A": "The displays they watch are usually too complicated to be read quickly when an emergency arises.",
+      "B": "Attention drifts when nothing happens for long stretches, and a reliable machine makes such stretches longer.",
+      "C": "They trust the machine so completely that they decide there is no longer any need to watch it closely.",
+      "D": "They have been given less training than the operators who used to do the work by hand."
+     },
+     "question": "According to paragraph 2, why do people supervising a highly reliable machine tend to monitor it poorly?"
+    },
+    {
+     "id": "R06-F-04-3",
+     "type": "RC",
+     "options": {
+      "A": "remove the need for human supervisors, since rare emergencies would then be handled entirely by the machine itself.",
+      "B": "make emergencies so infrequent that the skill of the people supervising the system would hardly matter.",
+      "C": "leave its overseers worse equipped for unusual crises, so that their lapses come as more of a shock.",
+      "D": "make supervisors more attentive, since a dependable machine frees them to concentrate on what remains."
+     },
+     "question": "The passage suggests that an improvement in how well an automated system works under ordinary conditions could"
+    }
+   ]
+  },
+  {
+   "passage_id": "R07-D-08",
+   "passage": [
+    "Defenders of live theatre, when pressed to explain why anyone should purchase an expensive ticket to see what could be watched more cheaply and comfortably on a screen, usually appeal to presence. The actors are there, in the same room, breathing the same air; on screen they are only images. The answer is sincere, but considered as an argument it is considerably weaker than it sounds. A great many things are physically present to us without being valuable for that reason, and a lecture delivered in person is not obviously better than the same lecture recorded. If presence were all that distinguished the stage, the case for theatre would rest on something close to a superstition about physical proximity.",
+    "A more promising answer begins from what presence makes possible. A filmed performance is complete before any viewer encounters it; nothing the viewer does, however attentive or distracted, can reach back and alter it. A stage performance is still being made while the audience watches, and the audience is among the conditions under which it is made. Actors in a comedy learn to hold a line until the laughter at the previous one has crested and begun to fall, and the length of that pause differs from night to night because the laughter does. In a tense scene, a silence of a particular quality in the house tells the performers that they have the room, and they may let a moment stretch further than they would before a restless audience. These adjustments are individually small, but cumulatively they mean that a stage performance can be, in part, a response to the particular people assembled to witness it.",
+    "The audience, moreover, is conscious of this reciprocity. Spectators in a theatre are aware that they can be heard and, in an intimate space, seen; they are also aware of one another, and a laugh that spreads along a row, or fails to, shapes what each person feels. The experience is less that of watching an object than of taking part, in a minor and mostly silent way, in an event whose outcome is not wholly settled. That is why a performance can fail in the theatre in a way that a film cannot: not through a flaw in its making, which a film may also have, but through a breakdown between stage and house.",
+    "It may be objected that this account flatters most actual theatre, which is rarely so delicately attuned to its spectators. Many productions are drilled to such precision that they vary little from night to night, and in a large commercial house the performers can barely see past the first rows. That is true, and it calls for a qualification rather than a retraction. The responsiveness described here is a capacity of the live form, not a guarantee; a production can choose to use it or to suppress it, and one that suppresses it entirely has given up the main thing that the stage offers and the screen does not. Film, meanwhile, has resources of its own, the close-up and the edit among them, and nothing here implies that it is a lesser art.",
+    "The case for live theatre, then, is not that the actors are physically near but that the performance and its audience remain capable of affecting one another. It follows, perhaps uncomfortably for some institutions, that the strongest argument for theatre is simultaneously a demand upon it. A theatre that wishes to justify its prices by appealing to liveness owes its audience a performance in which liveness actually does some work."
+   ],
+   "questions": [
+    {
+     "id": "R07-D-08-5",
+     "type": "RC",
+     "options": {
+      "A": "Film possesses expressive means of its own, such as the close-up, that the stage does not share.",
+      "B": "Every live production is responsive to its audience to some degree, even when spectators do not notice it.",
+      "C": "The familiar appeal to presence, though weak as usually stated, points the way towards a stronger defence of theatre.",
+      "D": "The quality of an audience's silence can affect how long performers sustain a moment."
+     },
+     "question": "The author would be LEAST likely to agree with which of the following?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R06-G-03",
+   "passage": [
+    "When professional scientists first began to rely on volunteers to record birds, butterflies or the timing of spring flowers, the objection most often raised was that amateurs would make mistakes. A trained ornithologist can tell two similar warblers apart by a fragment of song; a weekend walker may not know that there are two species to distinguish. Such worries were not idle, for a single confident error repeated across many records can manufacture a trend that does not exist. Data gathered by such walkers, the argument went, would be riddled with misidentifications, and conclusions drawn from it would be built on sand.",
+    "The worry was reasonable, but experience has shown it to be aimed at the lesser target. Well-run projects have learned to ask volunteers for the kinds of observation they can make reliably, such as whether any frog was heard calling at a pond on a given evening, rather than the kinds that demand years of training. Where identification is genuinely hard, volunteers can photograph what they see and leave the naming to specialists, and records that look improbable can be flagged and checked. Errors do not vanish, but when thousands of independent observations are pooled, isolated mistakes tend to be swamped by the many correct reports around them.",
+    "The more stubborn problem lies not in what volunteers see but in where and when they look. People record wildlife near their homes, along popular footpaths and on fine weekends, so that their records cluster wherever leisure, access and good weather happen to coincide. They visit nature reserves more often than industrial estates, and gardens more often than farmland. A map of volunteer sightings is therefore partly a map of the species and partly a map of the observers, and no amount of skill in identification will separate the two. A bird that seems to be thriving in the suburbs may simply be living where the watchers live.",
+    "This bias is harder to correct than misidentification precisely because it is invisible in any single record. Each observation may be impeccable; the distortion appears only in the pattern. Projects that take it seriously ask some volunteers to survey assigned locations at fixed times, accepting fewer and less convenient records in exchange for a sample whose shape is known. Such schemes demand more of participants, and they rarely attract the crowds that open recording does. But they show that the reliability of citizen science was never really a question about the competence of amateurs. It is a question about whether the people designing a project have thought as carefully about sampling as about skill."
+   ],
+   "questions": [
+    {
+     "id": "R06-G-03-3",
+     "type": "RC",
+     "options": {
+      "A": "puzzled, since the author cannot understand why scientists ever doubted the abilities of volunteers.",
+      "B": "dismissive, since the author holds that volunteers make no more errors than trained specialists do.",
+      "C": "sympathetic to why it was raised, while holding that another weakness of volunteer data matters more.",
+      "D": "fully supportive, since the author believes misidentification remains the chief threat to such projects."
+     },
+     "question": "The author's attitude toward the early objection that amateurs would make mistakes is best described as"
+    }
+   ]
+  },
+  {
+   "passage_id": "R02-D-04",
+   "passage": [
+    "A long tradition explains exceptional performance by talent: the chess master and the concert violinist are thought to have been born with something the rest of us lack. A body of research on practice has done much to unsettle this view. Those who reach the top of skilled fields, it turns out, have typically spent very large amounts of time not merely doing the activity but practising it in a particular way: working on specific weaknesses, at the edge of their current ability, with prompt feedback, usually under the eye of a teacher. Experience alone, on this account, is not enough. A person who has driven a car for twenty years has had a great deal of experience but has probably not improved since the first few, because ordinary driving involves no deliberate effort to get better.",
+    "The strongest version of this view holds that practice of the right kind is not just necessary for expertise but very nearly sufficient, so that differences in accumulated practice explain most of the differences between the great and the merely good. Popularised as a rule that a fixed number of hours will make anyone an expert, it has an obvious democratic appeal. It is also, in that form, hard to sustain. Among people who practise a great deal, the amount of practice leaves much of the variation in performance unexplained, and the size of that unexplained remainder seems to differ across domains. Where the rules are stable and feedback is immediate, as in many games and sports, practice accounts for more; where outcomes are delayed and noisy, as in forecasting markets or judging which patient will recover, it accounts for less.",
+    "This last pattern is revealing, because it suggests that what practice builds depends on what the environment can teach. Deliberate practice requires knowing, quickly and reliably, whether an attempt succeeded. A violinist hears a wrong note at once; a chess player can check a line against a stronger opponent. A financial analyst may wait years to learn whether a judgement was sound, and even then the outcome will reflect luck as much as skill. In such fields long careers can produce confidence without accuracy, and the hours a person has logged may say more about seniority than about expertise.",
+    "None of this restores the old picture of talent as a fixed endowment that settles everything. The research on practice was right that expertise is built rather than found, and right that the manner of practice matters more than its sheer quantity. What it cannot do is deliver the promise sometimes made in its name, that anyone who puts in the hours will arrive at the same place. Starting points differ, the rate at which practice pays off differs, and some fields offer so little reliable feedback that practice in the demanding sense is barely possible within them."
+   ],
+   "questions": [
+    {
+     "id": "R02-D-04-4",
+     "type": "RC",
+     "options": {
+      "A": "It grants that practice builds expertise but denies that equal hours bring equal results, without making talent decisive.",
+      "B": "It reverses the argument of paragraph 3 by conceding that hours of practice do in the end determine expertise.",
+      "C": "It recommends that people who want to become experts should choose fields in which feedback on their efforts is quick and reliable.",
+      "D": "It introduces new evidence that talent is a fixed endowment that settles in advance who can become an expert."
+     },
+     "question": "Which of the following best describes the function of the final paragraph?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R02-A-01",
+   "passage": [
+    "It is natural to think of seeing as a kind of recording. Light enters the eye, an image forms on the retina, and the brain, like a careful clerk, reads off what is there. The picture is attractive because it matches how perception feels: effortless, immediate, and apparently free of any contribution from the perceiver. Yet the retinal image is a poor document: it is upside down, flat, constantly jittering with the movements of the eye, and interrupted by a blind spot where the optic nerve leaves the retina. Above all, it is ambiguous, in the sense that a small image on the retina could be a small object nearby or a large one far away; a patch of dim grey could be a dark surface in bright light or a pale surface in shadow. The eye, in short, delivers considerably less information than we ordinarily experience ourselves as seeing.",
+    "For this reason many students of vision have preferred to describe perception as a form of inference. The brain, on this account, treats the incoming signal as evidence and settles on the interpretation that best explains it, given what it has learned about how the world usually is. Light tends to come from above, so a disc shaded darker at the bottom is seen as a bump and the same disc turned over as a dent. Objects tend to keep their size, so a person walking away is seen as receding rather than shrinking. These are not conclusions we reach; they are conclusions reached on our behalf, before anything is presented to awareness.",
+    "The word 'inference' invites an obvious objection: if perception is a guess shaped by expectation, why do we not simply see whatever we expect? The answer is that the guess is tightly disciplined by the evidence, and that the expectations doing the work are of a peculiar kind. They are not the beliefs we hold and can revise in conversation, but assumptions built up over a lifetime of looking, and perhaps over the history of the species. This is why many visual illusions survive full knowledge of the trick. A viewer who has measured two lines and found them equal will still see one as longer; what she knows and what she sees have been settled by different processes.",
+    "It would be a mistake, then, to conclude that perception is unreliable because it is inferential. The assumptions it relies on are mostly true of the environments in which they were formed, which is why they so rarely mislead us outside the laboratory, where illusions are carefully built to exploit them. What the inferential view really overturns is not our trust in the senses but the idea that seeing is passive. Every glance is a small act of interpretation, and its seeming effortlessness is the mark of how well the work is done, not evidence that no work is being done."
+   ],
+   "questions": [
+    {
+     "id": "R02-A-01-3",
+     "type": "RC",
+     "options": {
+      "A": "People who move into surroundings that violate their perceptual assumptions are, from the start, misled no more often than people who grew up there.",
+      "B": "Laboratory illusions are deliberately constructed by researchers so as to exploit the assumptions that ordinary vision relies on.",
+      "C": "Some perceptual assumptions, such as the assumption that light comes from above, turn out to be shared by people raised in very different places and cultures.",
+      "D": "Viewers who are told exactly how an illusion works go on seeing it just as strongly as they did before being told."
+     },
+     "question": "The author explains that perceptual assumptions rarely mislead us outside the laboratory because they are mostly true of the environments in which they were formed. Which of the following, if true, would most weaken this explanation?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R07-F-06",
+   "passage": [
+    "Cuteness is usually treated as the least serious of aesthetic qualities, if it is admitted to be an aesthetic quality at all. It belongs, we suppose, to stickers, toys and advertisements, and a taste for it is regarded as something to grow out of. Yet this dismissal sits oddly with the sheer power of the response. Few experiences in the visual world are as immediate or as hard to resist as the one produced by a large-eyed, round-faced, short-limbed creature stumbling towards us; we feel it before we have decided anything, and it is remarkably similar across cultures that agree on little else in matters of taste.",
+    "Students of animal behaviour noticed long ago that the features we find cute, a large head relative to the body, big low-set eyes, softness and clumsiness, are the features of the very young, and they proposed that the response is a mechanism for securing care. The explanation is plausible, but it accounts for less than it seems to. It tells us why infants elicit tenderness; it does not tell us why we find the same tenderness stirred by a cartoon kettle with eyes, or why the response is so readily extended to objects that need no care whatever. Once detached from the infant, the cute becomes a style, and a style can be applied to anything.",
+    "What makes the style interesting is its ambivalence. The cute object presents itself as small, soft and unable to resist, and our response to it is mixed in a way that tenderness towards a real child usually is not. Alongside the wish to protect, there is often a wish to possess and to handle, the half-joking urge to squeeze or pinch what one finds adorable, which people frequently admit to with some embarrassment. The cute flatters our power as much as it summons our care: it is an image of something that will never answer back.",
+    "This is why cuteness should be taken seriously rather than either indulged or sneered at. A quality that disarms judgement so quickly is a useful instrument for anyone who wishes to make something appear harmless, whether a product, an institution or a mascot standing in for an organisation whose activities are anything but soft. None of this means that delight in a kitten is a moral failing, and the pleasure is, in most of its forms, innocent enough. But an aesthetic that works by making us feel strong and kindly at once, and that does so before thought has begun, is not trivial; its very lightness is what gives it weight."
+   ],
+   "questions": [
+    {
+     "id": "R07-F-06-1",
+     "type": "RC",
+     "options": {
+      "A": "differ widely from one culture to another, as most other matters of taste do.",
+      "B": "were first devised by advertisers in order to sell stickers, toys and other goods.",
+      "C": "are those of the very young, such as a large head and big eyes.",
+      "D": "appeal to us only when they belong to creatures that genuinely need care."
+     },
+     "question": "According to the passage, the features that people find cute"
+    }
+   ]
+  },
+  {
+   "passage_id": "R02-C-08",
+   "passage": [
+    "For a time it seemed that psychology had found the mechanism of willpower. Self-control, the theory held, draws on a limited resource that is used up by effort and replenished by rest. Resisting a tempting food, suppressing an emotion or forcing oneself through a tedious task would each deplete the same store, leaving a person less able to exercise control on whatever came next. The idea had the great advantage of matching experience. Most of us know the evening collapse that follows a day of holding ourselves together, and the theory seemed to explain it with all the economy of a fuel gauge. It also seemed to account for a scattering of everyday puzzles: why a dieter might lapse late in the day rather than at breakfast, why hard decisions get put off until morning, why a quarrel flares more easily after a draining afternoon.",
+    "The theory has fared badly under closer scrutiny. Large coordinated attempts to reproduce the basic effect, in which many laboratories ran the same procedure, found it to be far smaller than early reports had suggested and in some cases close to nothing. A particularly vivid version of the theory, which identified the resource with blood sugar and held that a sweet drink could restore flagging self-control, met an additional difficulty: effortful thinking appears to change the brain's overall energy consumption only slightly, far too little for the proposed mechanism to work as described. Some studies also reported that people who believed willpower to be plentiful showed little or no depletion, a result awkward for any theory in which the resource is a physical quantity.",
+    "Yet it does not follow that the experience the theory set out to explain is an illusion. People do grow less willing to persist after sustained effort, and that change deserves an account. A more promising one treats the feeling of mental fatigue not as a reading on an emptying tank but as a signal about priorities. On this view, continued effort on one task carries an opportunity cost, the value of everything else one might be doing instead, and the sense of weariness rises as that cost accumulates, nudging attention away from obligation and towards rest, pleasure or novelty. What looks like running out is better described as a shift in what the mind is willing to pay for.",
+    "The difference between the two pictures is not merely academic. If willpower is a fuel, the sensible strategy is rationing: avoid unnecessary decisions, save strength for what matters, and accept failure when the tank is low. If fatigue is a signal about value, the strategy changes. Tasks that feel meaningful or rewarding should be less draining than equally demanding tasks that do not, and changing how a task is framed, or what it leads to, may restore persistence where rest alone would not. The second picture does not make self-control easy, but it relocates the problem from the size of a store to the weighing of competing goods. It also suggests why the same evening can feel exhausting at a desk and effortless at a hobby, though the demands on attention may be much the same.",
+    "The episode also carries a lesson about how attractive ideas spread. The resource model was simple, intuitive and flattering to common experience, and these virtues helped it travel far beyond the evidence that supported it. None of this required anyone to be careless or dishonest; it is simply how persuasive ideas tend to behave. Its decline is not a refutation of everyday wisdom about tiredness; it is a reminder that a vivid metaphor can capture a real phenomenon while getting its mechanism entirely wrong."
+   ],
+   "questions": [
+    {
+     "id": "R02-C-08-4",
+     "type": "RC",
+     "options": {
+      "A": "A shopper who has spent an hour in one store grows restless as the other stores nearby seem ever more worth the time.",
+      "B": "A runner's leg muscles weaken over the course of a long race and need several days of rest before regaining strength.",
+      "C": "A car slows to a halt on the motorway because the petrol in its tank has finally run out after a long journey.",
+      "D": "A student stops revising for an examination because she has now covered everything that the syllabus requires."
+     },
+     "question": "Which of the following is most closely analogous to what happens, on the account the author favours, when mental fatigue sets in?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R03-B-07",
+   "passage": [
+    "Every few years a new generation is given a name, and with the name comes a character. One cohort is said to be idealistic and later complacent, another cynical, another anxious, entitled or unusually attached to its telephones. The labels are used by marketers, journalists and employers with a confidence that would be remarkable in any other classification of human beings. We would hesitate to say that everyone born under a given star sign shares a temperament; we say something not very different, and with far less hesitation, about everyone born within a given span of fifteen years. The labels are also remarkably durable: once a cohort has been named and described, the description tends to follow it into middle age, revised only when a newer cohort arrives to take its place as the subject of worry.",
+    "The trouble begins with a problem of method that social scientists have long recognised. When one group of people differs from another, the difference may reflect their age (the young almost everywhere change jobs more often than the middle-aged), the period in which they are observed (everyone, of whatever age, was affected by a recession or a new technology), or the cohort into which they were born, meaning a lasting imprint left by the conditions of their early years. Only the last is a generational effect in the strict sense. But the three are bound together by arithmetic: a person's age is simply the current year minus the year of birth, so that once any two are known the third is fixed. No set of observations can by itself pull them apart; some assumption from outside the data is always required. Much of what is confidently attributed to a generation turns out, on inspection, to be what people of that age have always done, or what people of every age were doing at the time.",
+    "A second difficulty concerns boundaries. The years at which one generation is said to end and the next to begin are chosen by convention, and different sources disagree about them by several years. A person born on the last day of one span and a person born on the first day of the next are assigned different characters, while two people born fourteen years apart within one span are assigned the same. Differences within a labelled cohort, by class, region, education and much else, are typically far larger than the differences between cohorts, which is to say that the label groups people along the axis on which they least differ.",
+    "None of this shows that generations are a fiction. There is a serious idea buried under the marketing: that people who come of age during a war, a depression or a political upheaval may carry its mark for life, and may differ in lasting ways from those who met the same events earlier or later in their lives. Such effects have been found, and they are not trivial. But they are anchored to events rather than to calendars; they mark some members of a cohort far more deeply than others, depending on where and how the event touched them; and they rarely produce a single character that an entire cohort shares.",
+    "Why, then, do the calendar labels persist? Part of the answer is that they are convenient, turning a tangle of causes into a story with protagonists. Part of it is that they flatter, inviting each cohort to see itself as distinctive and its elders or juniors as the problem. The cost of the story is easy to miss. When young adults find housing unaffordable or work insecure, attributing their situation to a generational temperament converts a question about economic arrangements into a question about character, and a question about character has no obvious policy answer."
+   ],
+   "questions": [
+    {
+     "id": "R03-B-07-2",
+     "type": "RC",
+     "options": {
+      "A": "has established that the difference is an age effect, because paragraph 2 says that young people change jobs more often.",
+      "B": "cannot by itself show whether the difference reflects age or a lasting imprint left on each group by its birth cohort.",
+      "C": "has shown that the difference is a period effect, since every person surveyed was observed in the same year.",
+      "D": "would separate age from cohort effects if it were simply repeated with a much larger and more representative sample."
+     },
+     "question": "A survey carried out in a single year finds that people then in their twenties change jobs more often than people then in their fifties. On the reasoning of paragraph 2, the survey"
+    }
+   ]
+  },
+  {
+   "passage_id": "R01-A-04",
+   "passage": [
+    "Suppose you and a colleague whom you regard as your equal in competence and care examine the same evidence and reach opposite conclusions. Neither of you has information the other lacks; neither has reason to think the other was tired or distracted. What should you do? An influential answer holds that you should move towards your colleague's view, giving her opinion the same weight as your own. The thought behind it is simple. From a neutral standpoint, the disagreement is evidence that one of you has erred, and you have no reason, independent of the dispute itself, to think the error is hers rather than yours. To stand firm would be to treat the mere fact that a conclusion is yours as a reason to favour it.",
+    "This principle seems to me correct over a wide range of cases, and it is more demanding than most people find comfortable. It condemns the familiar move of discounting a dissenter precisely because she dissents: 'she is usually so sensible, but on this question she has plainly lost her way'. If the only evidence that she has lost her way is that she disagrees with you, the reasoning simply assumes what is in question.",
+    "Yet the principle cannot be applied without qualification. Imagine two equally able auditors reviewing the same short ledger, one of whom concludes that the accounts balance while the other reports that the firm's assets exceed the number of grains of sand on the earth. The first auditor need not split the difference. Her confidence that her colleague has blundered does not rest on her own conclusion about the ledger; it rests on the absurdity of his, which she can recognise without relying on the reasoning they disagree about. What licenses holding firm, then, is not that a view is one's own but that one has grounds, independent of the dispute, for locating the error on the other side. The equal-weight principle survives, but it turns out to be a claim about what to do when such independent grounds are absent, not a rule that applies whatever one knows.",
+    "Critics sometimes press a further objection: since thoughtful people disagree about the equal-weight principle itself, the principle seems to require its own defenders to lose confidence in it. This is less damaging than it first appears. A principle about how to respond to disagreement may well recommend reduced confidence in itself without thereby becoming false; it would show only that the matter is genuinely hard, which no one denied. What the objection does reveal is that conciliation cannot be the whole story about rational belief. A thinker who revised every view the moment a peer dissented would soon have no settled views left to revise, and some account is still owed of what entitles anyone to a starting point."
+   ],
+   "questions": [
+    {
+     "id": "R01-A-04-4",
+     "type": "RC",
+     "options": {
+      "A": "Two equally careful historians, working from the same documents, date the same undated letter to different decades, and neither can fault the other's reasoning except by its conclusion.",
+      "B": "Two students disagree about a proof, one of whom has studied the topic for years while the other first met it in yesterday's lecture.",
+      "C": "Two equally able judges disagree about a verdict, and one of them maintains that the accused was in two different cities at the same moment.",
+      "D": "Two equally careful chemists disagree about a reaction, but one of them knows that the other's sample was contaminated in a way the other has not noticed."
+     },
+     "question": "In which of the following situations would the author most clearly hold that a person ought to move towards a disagreeing colleague's view?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R04-E-07",
+   "passage": [
+    "For much of the modern period the doctrine of sovereignty was understood as a wall. Within its borders a state was answerable to no outside authority, and what it did to its own population, however terrible, was a matter of domestic jurisdiction. The rule had a defensible rationale. A world in which any power could enter another's territory whenever it disapproved of how that territory was governed would be a world of permanent intervention, in which the strong would always find reasons to correct the weak. Non-interference was less a tribute to the virtue of governments than a device for keeping their quarrels within bounds.",
+    "The atrocities of the late twentieth century made the wall look like a shield for murderers, and a new formula emerged to reconcile the old principle with the demand to act. Sovereignty, it was argued, is not a privilege but a responsibility: a state holds it on condition that it protects its people, and a state that massacres them, or cannot stop others from doing so, forfeits its claim to be left alone. The formula is elegant, because it seems to dissolve the conflict rather than adjudicate it. Intervention to stop mass killing no longer violates sovereignty, since the sovereignty in question has already been forfeited.",
+    "The elegance is partly an illusion. The formula does not remove the hard question but relocates it. Someone must still decide when a government has failed badly enough to forfeit its rights, and in practice that someone is usually the state or coalition proposing to intervene, which is to say a party with interests of its own in the outcome. The old doctrine at least gave a clear answer to the question of who may enter: nobody. The new one replaces that answer with a judgement, and judgements made by the powerful about the weak have a history that should make anyone cautious. It is not a cynical point that intervention has tended to occur where the interveners had strategic reasons to be and not elsewhere; it is an observation about how a discretionary rule will be used.",
+    "None of this is an argument for returning to the wall. A principle that obliged the world to watch a massacre it could stop would purchase order at a price few would accept once they had seen what it meant. The question is not whether sovereignty may ever yield, but how the decision that it should yield is to be made credible. Here the procedure matters as much as the facts. An intervention authorised by a broad body of states, through rules that apply to friends as well as to enemies, carries a legitimacy that one undertaken by a single power on its own assessment cannot, even when the atrocities alleged are equally real.",
+    "The difficulty is that procedure can fail in the other direction. The bodies most able to confer legitimacy are also those in which a single interested member can block action, and the insistence on proper authorisation can become a reason for doing nothing while the killing continues. There is no formula that escapes this. A world that refuses all unauthorised intervention will sometimes stand by when it should act, and a world that permits it will sometimes see intervention used as a pretext. The honest position is to admit that we are choosing which of these failures to risk, and to stop pretending that a change of vocabulary has spared us the choice."
+   ],
+   "questions": [
+    {
+     "id": "R04-E-07-1",
+     "type": "RC",
+     "options": {
+      "A": "defending the traditional doctrine of non-interference against those who would permit outside powers to intervene to stop atrocities.",
+      "B": "showing that interventions to stop mass killing have generally been pretexts used by powerful states to pursue their strategic interests.",
+      "C": "proposing that no use of force across a border be permitted until a broad body of states has authorised it under common rules.",
+      "D": "arguing that recasting sovereignty as a responsibility shifts, rather than settles, the question of who decides on intervention, leaving a choice between risks."
+     },
+     "question": "The passage is primarily concerned with"
+    }
+   ]
+  },
+  {
+   "passage_id": "R05-C-07",
+   "passage": [
+    "Few words in the vocabulary of management carry as much reproach as slack. Idle machines, unfilled hours, inventory sitting in warehouses and staff whose days are not fully booked all appear, to the analyst armed with a spreadsheet, as resources that are paid for and not used. The programmes that set out to remove them, under whatever name is fashionable at the time, can usually point to impressive savings in their first year, and the savings are real. What such programmes measure less well is what the slack had been doing before it was removed, because its work was done in circumstances that the measurements were not designed to capture.",
+    "The first of those circumstances is the shock. A supply chain that holds no spare stock is cheaper to run on every ordinary day, and on the day a single supplier fails it halts entirely, because there is nothing between the failure and the factory floor. A hospital ward staffed exactly to its average occupancy works smoothly in most weeks and is overwhelmed in the week that an infection spreads. In each case the margin that looked like waste was a store of capacity held against an event whose timing could not be known, and its value appears only in the period that the efficiency audit treats as an exception. To judge slack by ordinary days is to judge an umbrella by the weather on days when it did not rain.",
+    "The second circumstance is less dramatic and perhaps more important. Organisations do not only respond to events; they also change themselves, and change requires time that is not already claimed. An engineer who has an afternoon free may try out an idea that no plan had scheduled; a manager with some unallocated budget can fund a small experiment without first writing a case for it that no one yet knows how to write. Most of these experiments come to nothing, which is exactly why a system that requires every hour and every rupee to be justified in advance will not permit them. The new products and methods that later look inevitable often began in precisely the margins that a thorough efficiency drive would have closed.",
+    "It would be naive to conclude that slack is always benign. Spare resources can shelter inefficiency as easily as invention, and a department with more staff than it needs may use the surplus not to experiment but to protect its own comfort or to fight for its standing within the firm. Some slack is indeed waste, and some of the people who defend it are defending their privileges. The critics of slack are therefore not simply wrong; they are answering a question that is badly posed. Asking how much slack an organisation has, and how quickly it can be reduced, treats a heterogeneous quantity as if it were uniform.",
+    "The more useful question is what the slack is for and who can see it. A reserve whose purpose is understood, whose size is reviewed and whose use is reported can be defended on the days when it seems idle, and trimmed when it has outlived its purpose. A reserve that exists only because no one has looked at it will be either preserved for the wrong reasons or eliminated by the first auditor who does. The aim is neither to maximise slack nor to abolish it, but to hold it deliberately, as an organisation holds any other asset whose returns arrive irregularly."
+   ],
+   "questions": [
+    {
+     "id": "R05-C-07-1",
+     "type": "RC",
+     "options": {
+      "A": "Most of the slack found in large organisations shelters inefficiency and protects the privileges of the departments that hold it.",
+      "B": "The savings claimed by efficiency programmes are largely illusory, because the costs they remove reappear later in other parts of the organisation.",
+      "C": "Much spare capacity serves real if irregular purposes, so slack should be held deliberately and judged by its use rather than cut wholesale as waste.",
+      "D": "Organisations should always keep as much spare capacity as they can afford, because neither shocks nor useful experiments can be predicted in advance."
+     },
+     "question": "Which of the following best expresses the central claim of the passage?"
+    },
+    {
+     "id": "R05-C-07-5",
+     "type": "RC",
+     "options": {
+      "A": "reserves are worth holding only by organisations whose operations face disruptions that are frequent and can be predicted in advance.",
+      "B": "the worth of a reserve held against rare events cannot be seen by looking only at periods in which no such event occurs.",
+      "C": "the main value of slack lies in protecting against shocks rather than in leaving room for the experiments that produce change.",
+      "D": "efficiency audits should not consider the cost of reserves at all, since a reserve's cost has no bearing on whether it is kept."
+     },
+     "question": "In paragraph 2, the author says that 'To judge slack by ordinary days is to judge an umbrella by the weather on days when it did not rain.' The comparison suggests that"
+    }
+   ]
+  },
+  {
+   "passage_id": "R06-D-02",
+   "passage": [
+    "The usual story of standard time is a story of order arriving to rescue confusion. Before the railways, we are told, every town kept its own time, set by the sun at its highest point, so that a clock in one town might differ by several minutes from a clock in another only a short distance to the west. Travellers were bewildered, timetables were impossible, and the adoption of uniform zones was simply common sense finally asserting itself. The story is not false, but it misdescribes what was replaced.",
+    "Local solar time was not a muddle for the people who used it. It was tied to something everyone could see: the sun reached its highest point at noon, and noon meant the same thing in the market, the place of worship and the field. For a community whose dealings were mostly with itself, there was little need to coordinate with anyone else, and a time that matched the daylight was the most sensible time to keep. The differences between towns became a problem only when goods and people began to move between them quickly enough for a few minutes to matter.",
+    "That is what the railways did. A train leaving one town and arriving at another an hour later could not be scheduled sensibly if each station kept its own noon, and on single tracks a mismatch of a few minutes could put two trains on the same stretch of line. Railway companies therefore began keeping a single time along their routes, and governments eventually followed them, dividing territories into broad bands within which every clock agreed. The change was not everywhere welcomed, and some towns resented being told that noon now arrived when a distant company declared that it had. Within each band, clock noon and solar noon could now differ noticeably, and in places at the edges of a zone they still do.",
+    "Nothing here suggests that standard time was a mistake. Coordinated schedules saved lives on the railways and made later systems, from telegraph networks to air traffic, workable. The point is that standardisation was not the discovery of a correct time hidden beneath local error. It was a choice to make clocks answer to a network rather than to the sky, made because the network had become more important to daily life than the position of the sun. To call the older arrangement confusion is to judge it by the needs of a world that had not yet arrived."
+   ],
+   "questions": [
+    {
+     "id": "R06-D-02-4",
+     "type": "RC",
+     "options": {
+      "A": "Standard time corrected errors in local timekeeping that small towns had failed to notice because they traded mainly with themselves.",
+      "B": "A way of setting clocks should be judged by how well it suits the needs of those who keep it, not by its closeness to a true time.",
+      "C": "Solar time is the true time, and standard time is merely a convenient approximation that the railways adopted for their own purposes.",
+      "D": "Once the railways had spread, the position of the sun ceased to have any importance for daily life."
+     },
+     "question": "It can be inferred that the author would most likely agree with which of the following?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R05-F-05",
+   "passage": [
+    "When a country lowers its barriers to imports, the gains and the losses arrive in very different forms. The gains are spread thinly across millions of households, each of which pays a little less for clothing, appliances or food, usually without noticing why. The losses fall heavily on a few: the workers of a particular mill, the shops that depended on their wages, the town whose tax base was the mill. A small saving that nobody notices is politically weightless; a closed factory is a photograph on the front page. Those who lose know exactly what they have lost and whom to blame, while those who gain rarely connect their small savings to a decision taken in a distant ministry. It is not surprising that the politics of trade so often seems out of proportion to its economics.",
+    "Economists have a standard reply. Because the total gains exceed the total losses, the winners could in principle compensate the losers and still come out ahead, so that everyone ends up better off. The argument is correct as arithmetic, and it is the foundation of the case that open trade raises national welfare. But the word that carries the weight is 'could'. A compensation that is possible but never paid is no comfort to the people who bore the losses, and to present it as though it settled the matter is to confuse a hypothetical with a policy.",
+    "Where governments have tried to pay, the record is unimpressive, though the reasons are instructive. Programmes reserved for workers who could prove that their jobs were lost to imports required them to establish a cause that is often impossible to isolate, since a plant may close because of foreign competition, new machinery and poor management all at once. Many eligible workers never applied; many who applied were retrained for occupations that were themselves shrinking. The failure lay less in the idea of compensation than in tying it to a cause that could not be reliably identified.",
+    "This suggests that the better course is not a trade-specific remedy at all but support that follows the worker regardless of why the job disappeared: insurance against lost earnings, help with moving to where work exists, and training linked to employers who are actually hiring. Such measures cannot be justified as payment for trade alone, and they will cost more than narrow programmes did. Yet the case for open trade has always rested on the claim that its benefits are broadly shared. If that claim is to be more than an assertion, the sharing has to be done by someone, and it will not happen by itself."
+   ],
+   "questions": [
+    {
+     "id": "R05-F-05-1",
+     "type": "RC",
+     "options": {
+      "A": "Open trade's claim to benefit everyone requires compensation actually paid, through support for displaced workers whatever caused their job loss.",
+      "B": "Open trade reduces a country's welfare, because the losses suffered by displaced workers are larger than the gains spread across households.",
+      "C": "Since compensation programmes have repeatedly failed, governments should shield the industries that face the strongest competition from imports.",
+      "D": "Economists are mistaken in believing that the total gains from open trade exceed the total losses that it imposes on particular towns."
+     },
+     "question": "Which of the following best expresses the central argument of the passage?"
+    },
+    {
+     "id": "R05-F-05-3",
+     "type": "RC",
+     "options": {
+      "A": "warm endorsement of it as a complete answer to those who complain about the effects of imports.",
+      "B": "amused indifference to it as an academic exercise with no bearing on what governments actually do.",
+      "C": "outright rejection of its reasoning as a mistake that has misled policy about the effects of trade.",
+      "D": "acceptance of its arithmetic, joined to criticism of its use as though it settled the question."
+     },
+     "question": "The author's attitude towards the economists' 'standard reply' in paragraph 2 is best described as"
+    },
+    {
+     "id": "R05-F-05-4",
+     "type": "RC",
+     "options": {
+      "A": "Residents of towns where a large plant closed tend to express much stronger hostility to imports than residents of towns where none closed.",
+      "B": "Most economists continue to agree that the total gains from lowering barriers to imports are larger than the total losses those barriers prevent.",
+      "C": "Where help was open to all displaced workers whatever the cause, more applied and found work than where it was limited to job losses blamed on imports.",
+      "D": "Training courses tied to employers who were hiring cost noticeably more per worker than the classroom courses offered under earlier programmes."
+     },
+     "question": "Which of the following, if true, would most strengthen the author's recommendation in paragraph 4?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R02-A-06",
+   "passage": [
+    "There is a small puzzle about time that most people have noticed without ever stating it. A week spent travelling somewhere new seems to vanish while it is happening, so that there is never enough of it; yet once the traveller is home, the same week looks enormous, crowded with places and faces, as if it had lasted a month. A week at a familiar desk behaves in the opposite way. It drags while it is lived, each afternoon longer than the last, and then collapses in memory into a single grey item that seems to have taken no time at all.",
+    "The puzzle dissolves once we accept that we judge duration in two quite different ways. While an interval is passing, our sense of its length depends largely on how much attention we pay to time itself: boredom draws attention to the clock and stretches the hour, while absorption draws it away and the hour shrinks. Looking back, however, we have no clock to consult. We estimate how long a period lasted from what it left behind, and a period that left many distinct memories is judged to have been long. Novelty therefore works in opposite directions on the two judgements, shortening the interval as experienced and lengthening it as remembered.",
+    "This distinction sheds light on a complaint that becomes common in middle age, that the years go faster than they used to. The complaint is almost always retrospective. Few people find that a particular afternoon passes faster at fifty than at fifteen; what they find is that last year, viewed as a whole, seems to have been brief. If remembered duration tracks the number of distinct memories, the explanation is not far to seek, since adult life is more routine than youth, with fewer firsts, and a year of repeated weeks leaves less behind to measure it by.",
+    "The account is persuasive, but it should be held loosely. It is unlikely that a single factor explains how time seems at every age, and other changes, in health, in responsibility, in how far ahead people habitually plan, probably play a part. Still less does it follow, as some cheerful advice suggests, that one can lengthen a life simply by filling it with novelty. A crowded year may indeed look longer in retrospect, but it will feel shorter while it is lived, and there is no obvious reason to prefer one of these measures over the other. What the distinction teaches is not a technique for buying time but a caution against speaking of how long something 'really' felt, as though there were only one answer."
+   ],
+   "questions": [
+    {
+     "id": "R02-A-06-4",
+     "type": "RC",
+     "options": {
+      "A": "Middle-aged adults report that individual afternoons pass at much the same rate as they did when they were adolescents.",
+      "B": "Middle-aged adults habitually plan further ahead than adolescents do, and many of them say that they spend more of their time thinking about the future.",
+      "C": "Adults whose lives remain as full of first experiences as in youth report the same speeding up of the years as adults with routine lives.",
+      "D": "Travellers returning from a varied holiday judge it to have lasted longer than a routine week at work of the same length."
+     },
+     "question": "Which of the following, if true, would most weaken the explanation offered in paragraph 3 for why the years seem to pass faster in middle age?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R03-E-08",
+   "passage": [
+    "Tourists, it is often observed, are rarely content with what is shown to them. The monument, the parade, the dance performed on a stage in the hotel courtyard: all of these are understood to be presentations, arranged for visitors, and for that reason they seem to many travellers less real than whatever lies behind them. What the discerning visitor wants is the back region, the kitchen rather than the dining room, the village household rather than the folk show, the place where people are simply living rather than performing. Tourism, on this view, is a search for the unperformed, conducted by people whose very presence makes performance likely.",
+    "The difficulty is that the search creates its object, for once visitors will pay to see behind the scenes, behind the scenes becomes a scene. Homestays are furnished to look lived in; working kitchens are tidied and lit for the guided tour; a weaving cooperative arranges its looms so that visitors can watch the ordinary work of the day at a convenient hour. Each of these presents itself as a glimpse of the back, and each is in fact another front, built in the shape of a back. Critics of tourism have made much of this, arguing that the visitor who congratulates himself on having escaped the tourist trail has merely been led down a more expensive branch of it.",
+    "The criticism is accurate about the arrangements and, I think, mistaken about the tourists. It assumes that they are dupes who believe they have found the real thing and would be dismayed to learn otherwise. Many are nothing of the kind: asked directly, a good number will say that of course the homestay was prepared for them, that of course the cooperative works differently when no one is watching. What they value is not the illusion of having seen the unstaged but the experience of being admitted, of being received as a guest rather than seated as a spectator, and that experience is not falsified by the knowledge that it was arranged. A theatre audience is not deceived merely because it knows the actors are acting.",
+    "If there is a cost in all this, it falls elsewhere. Every back region that is opened to visitors must be replaced by another, further back, where the hosts can live without being watched, and in places where tourism is the main source of income, that retreat can go a long way. The family that rents out its courtyard confines its own life to a back room; the village that stages its festival for visitors holds the version that matters to it in the off season, or not at all. The more successfully a community sells access to its private life, the less private life it has left to sell, and the less it has left to keep for itself.",
+    "The usual question about staged authenticity is whether the tourist is being cheated. That question flatters the tourist by placing his experience at the centre of the moral picture, and it is in any case usually answered in his favour, since he generally receives what he knowingly pays for. The harder question concerns the hosts, and it is not whether they are deceiving anyone but how much of their lives they can afford to keep out of view. A tourism that respected its hosts would measure itself not by how much it manages to reveal but by how much it is content to leave alone."
+   ],
+   "questions": [
+    {
+     "id": "R03-E-08-3",
+     "type": "RC",
+     "options": {
+      "A": "Many families who run homestays say privately that they resent having to keep their own lives confined to a few back rooms during the months when guests arrive.",
+      "B": "Most guests at homestays, on learning that the household had been prepared for their visit, say they feel cheated and would not have paid had they known.",
+      "C": "Some tourists say that they prefer an openly staged performance in a hotel courtyard to a visit to a village household, since the performance asks less of them.",
+      "D": "Homestays usually cost visitors considerably more than hotel rooms of a similar standard in the same town or village, even though they offer fewer comforts."
+     },
+     "question": "Which of the following, if true, would most weaken the author's claim about tourists in paragraph 3?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R02-C-03",
+   "passage": [
+    "Few findings in happiness research have travelled further than the idea of hedonic adaptation. People who experience a good or bad change in their circumstances, the finding goes, tend over time to drift back towards their earlier level of wellbeing, as though each of us were tethered to a personal set point from which events can pull us only temporarily. In its popular form the idea has hardened into something like a philosophy: since we adapt to everything, the pursuit of better circumstances is futile, and contentment is a matter of temperament rather than of how one lives. The research, read with any care, gives considerably less support to this conclusion than its popularity would suggest.",
+    "To begin with, adaptation is uneven. People appear to adjust quite quickly to many gains, such as a higher salary or a larger house, which soon become the new normal against which further comparisons are made. But some conditions resist adaptation stubbornly. Persistent noise, a long and unpredictable commute and chronic pain seem to remain unpleasant year after year, perhaps because they keep demanding attention and never settle into the background of experience. The lesson is not that circumstances do not matter but that they matter selectively: what we stop noticing stops affecting us, and what keeps intruding does not.",
+    "A second problem lies in how the evidence is summarised. Many studies report that, on average, a group's wellbeing returns towards its earlier level some time after an event such as marriage or the loss of a job. An average, however, can conceal very different individual paths. A group in which some people end up much happier and others much less happy can show almost no change overall, and the reassuring flat line then describes almost nobody in it. When researchers have examined individuals rather than averages, they have tended to find that a substantial minority do not return to where they began, which is precisely the information that a headline about set points discards.",
+    "None of this means that the original insight was mistaken. People do adapt to a great deal, and the observation usefully corrects the belief that one more purchase or promotion will produce lasting delight. The error lies in the step from 'we adapt to much' to 'nothing we do makes a lasting difference'. That step is no more justified than its opposite, and it carries a practical cost, since it can discourage people from changing the very conditions, the noisy flat or the gruelling journey, that are most likely to keep wearing them down."
+   ],
+   "questions": [
+    {
+     "id": "R02-C-03-2",
+     "type": "RC",
+     "options": {
+      "A": "individuals who return to their earlier level after a major life event are very rare in such studies.",
+      "B": "most people in such studies are unwilling to report honestly how their wellbeing has changed.",
+      "C": "an average showing no change can coexist with large changes, in both directions, for nearly everyone in a group of that kind.",
+      "D": "the average wellbeing of such groups has usually been misreported in the studies that measure it."
+     },
+     "question": "In paragraph 3, the remark that the flat line 'describes almost nobody in it' implies that"
+    }
+   ]
+  },
+  {
+   "passage_id": "R01-F-03",
+   "passage": [
+    "The sceptical argument about induction, usually traced to David Hume, has a disarming simplicity. Every inference from observed cases to unobserved ones assumes that the future will resemble the past, or more generally that nature is uniform. That assumption cannot be proved by logic, since its denial involves no contradiction, and it cannot be supported by experience without circularity, since the support would itself be an inference from observed cases. Philosophers have spent a long time looking for a way out, usually by searching for a single principle that would license inductive inference in general.",
+    "The search may be misconceived, because there is no such thing as inductive inference in general. Consider two investigators. One measures the melting point of a newly prepared sample of a pure compound and concludes, from a single careful trial, that every sample of that compound will melt at the same temperature. Another measures the height of one adult and draws no conclusion at all about the heights of adults. Both are reasoning well, and they differ not because one has found the universal principle and the other has not, but because each knows something about the kind of thing being studied: that pure compounds are uniform in their melting points, and that people are not uniform in their heights.",
+    "On this picture, what licenses an inductive step is not a principle of uniformity but particular facts about particular domains, which tell us how far a sample can be trusted to stand in for the whole. The obvious objection is that this merely relocates the problem. Our confidence that compounds are uniform in their melting points was itself acquired by induction, and so the sceptic can ask what licenses that.",
+    "The objection is fair, but it is less damaging than it looks, because it trades on an ambiguity between justifying each belief and justifying all of them together. The regress it describes is real, yet it never requires us to justify all our inductive habits at once. At any moment we lean on some background knowledge in order to test some other part of it, and any item can in turn be questioned while the rest is held fixed. This does not answer the sceptic on the sceptic's own terms, which demand a foundation lying outside experience altogether. It does show that the demand is not one that science, as actually practised, needs to meet in order to be rational, any more than a household needs to audit every account on the same afternoon in order to keep honest books."
+   ],
+   "questions": [
+    {
+     "id": "R01-F-03-4",
+     "type": "RC",
+     "options": {
+      "A": "a domain-based account of induction makes the regress that the sceptic describes disappear altogether.",
+      "B": "any single item of background knowledge can be questioned while the rest of it is held fixed.",
+      "C": "the background knowledge that licenses an inductive step was itself acquired by inductive means.",
+      "D": "two investigators may both reason well while drawing very different conclusions from a single observation."
+     },
+     "question": "The author would accept each of the following EXCEPT the claim that"
+    }
+   ]
+  }
+ ]
+}

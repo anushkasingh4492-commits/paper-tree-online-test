@@ -1,0 +1,1190 @@
+{
+ "kind": "RC",
+ "passages": [
+  {
+   "passage_id": "R03-D-08",
+   "passage": [
+    "Few political promises are as widely shared as the promise of social mobility. Parties that agree on little else agree that a child's prospects should not be fixed by the circumstances of her birth, and the claim that mobility has stalled is one of the most damaging charges that can be laid against a government. Yet the word covers two quite different things, and much public argument about it goes astray because the two are run together.",
+    "The first is absolute mobility: the share of people who end up better off than their parents, whether by income or by the kind of work they do. The second is relative mobility: the extent to which a person's position in the distribution, as opposed to their standard of living, differs from their parents' position. The two can move independently. In a period of rapid growth and expanding professional employment, most children may outearn their parents and many may enter occupations their parents never held, even if the chance of a child born near the bottom reaching the top, compared with that of a child born near the top, has not changed at all. Everyone rides the escalator up, but the order of people on it stays the same.",
+    "This distinction explains a puzzle. When growth slows and the expansion of professional jobs levels off, absolute mobility falls, and people who do no better than their parents feel, reasonably enough, that something has closed. They often conclude that society has become less fair. Imagine a town where a mill employed one generation and new offices employed the next. The children did better than their parents without anyone being pushed aside, and the town experienced this as openness. When the offices stop hiring, the grandchildren find that the climb has ended, though their chances against the children of the office managers may be exactly what their parents' chances were. But on the measures that track relative position, the chances may be much as they were: what has disappeared is not openness but the rising tide that once let a whole generation move up without anyone having to move down. The sense of closure is real; its diagnosis is frequently mistaken.",
+    "The distinction also exposes an awkwardness that politicians prefer to leave unspoken. Absolute mobility can, in principle, be enjoyed by everyone at once. Relative mobility cannot. If positions are ranked, then for one family to climb another must fall, and a serious commitment to relative mobility is therefore a commitment to downward mobility for some children of the comfortable. It is not surprising that the comfortable resist it, often without any sense of doing so, through the ordinary devices of private tuition, a well-placed word, or the purchase of a house near the right school. Each of these looks like ordinary care for one's own children; together they amount to a defence of position.",
+    "None of this makes one kind of mobility the real one. Absolute mobility answers a question about material progress: are people living better than their parents did? Relative mobility answers a question about fairness: does birth still decide where one ends up? Both questions matter, and neither is easy to answer with confidence, since incomes fluctuate and occupations change their meaning across generations. But a society that wants more of the second kind should be honest that it cannot be had at no one's expense, and a society that mourns the loss of the first should not mistake a slower economy for a more rigid one."
+   ],
+   "questions": [
+    {
+     "id": "R03-D-08-1",
+     "type": "RC",
+     "options": {
+      "A": "moving up in society is automatic and calls for no effort or ability on the part of the individuals concerned.",
+      "B": "living standards can rise for everyone together while people's ranking relative to one another stays fixed.",
+      "C": "people born near the bottom rise faster than those born near the top whenever the economy is growing quickly.",
+      "D": "a society can carry people downwards just as easily as it carries them upwards, depending on economic conditions."
+     },
+     "question": "The image of the escalator in paragraph 2 conveys that"
+    },
+    {
+     "id": "R03-D-08-2",
+     "type": "RC",
+     "options": {
+      "A": "may be rightly sensing a real loss but wrongly attributing it to a decline in openness.",
+      "B": "are mistaken in believing that they are doing no better than their parents did at the same stage of life.",
+      "C": "have generally lived through a genuine fall in relative mobility that the usual measures have failed to detect.",
+      "D": "are reacting chiefly to a rise in downward mobility among the children of comfortable and well-placed families."
+     },
+     "question": "It can be inferred from paragraph 3 that people who conclude, when growth slows, that society has become less fair"
+    },
+    {
+     "id": "R03-D-08-3",
+     "type": "RC",
+     "options": {
+      "A": "In a booming economy where most children outearn their parents, the order of families in the income ranking remains exactly what it was before.",
+      "B": "In a stagnant economy where few children outearn their parents, children of poor families increasingly overtake children of rich families in the income ranking.",
+      "C": "In a booming economy where nearly all children outearn their parents, the income ranking is substantially reshuffled from one generation to the next.",
+      "D": "In a stagnant economy where few children outearn their parents, children remain in much the same place in the income ranking as their parents held."
+     },
+     "question": "Which of the following would be a case of relative mobility rising while absolute mobility falls, in the passage's sense?"
+    },
+    {
+     "id": "R03-D-08-4",
+     "type": "RC",
+     "options": {
+      "A": "Relative mobility is the only true measure of whether a society is open, while absolute mobility merely reflects how fast its economy is growing.",
+      "B": "Since absolute and relative mobility answer different questions and can diverge, running them together leads people to misread slowdowns and to ignore what fairness costs.",
+      "C": "Comfortable families use private tuition and housing choices to block relative mobility, and governments should act to prevent them from doing so.",
+      "D": "Social mobility has not stalled as its critics claim; it has simply become much harder to measure than it was in earlier generations."
+     },
+     "question": "Which of the following best captures the main argument of the passage?"
+    },
+    {
+     "id": "R03-D-08-5",
+     "type": "RC",
+     "options": {
+      "A": "could keep its promise by abolishing private tuition and other devices that comfortable families use to defend their position.",
+      "B": "is making essentially the same promise as a government that pledges to raise the living standards of each new generation.",
+      "C": "could keep its promise provided that the economy grew fast enough to raise the incomes of every family at once.",
+      "D": "is promising something that cannot be delivered when positions are ranked, whatever the rate of economic growth."
+     },
+     "question": "The author would most likely say that a government promising to raise relative mobility while ensuring that no family moves down the ranking"
+    }
+   ]
+  },
+  {
+   "passage_id": "R06-A-06",
+   "passage": [
+    "We tend to read the history of life as a long tournament in which the better designed win. On this view a lineage that disappeared must have had some flaw, and the dinosaurs, the textbook losers, are pictured as sluggish and outmoded long before their end. The picture is comfortable because it makes the present inhabitants of the earth look like deserving champions. For the most dramatic episodes in the record it is also misleading. During ordinary stretches of geological time, extinction does seem to track the qualities that adaptation produces: species with narrow diets, small ranges or slow breeding are more likely to vanish when conditions shift, and their places are taken by competitors that cope better. The great mass extinctions, in which a large fraction of species disappeared within a geologically brief interval, seem to follow different rules.",
+    "Consider the end of the Cretaceous period, when an asteroid struck the earth and the non-avian dinosaurs vanished along with many other groups. What determined survival in the aftermath was not, as far as can be told, excellence at the ways of life that had served well for millions of years. It was the possession of traits that happened to matter in a sudden catastrophe: small body size, a varied diet, the ability to shelter or to wait out a period of darkness and scarcity in a dormant state. Such traits had not been selected for their value in a catastrophe of this kind, which no living lineage had experienced. They were, from the point of view of the crisis, accidents.",
+    "The consequence is that mass extinctions can redirect the history of life in ways that ordinary selection would not. A group that had been flourishing, and that would probably have continued to flourish under normal conditions, can be swept away, while a group that had been marginal for tens of millions of years inherits an emptied world. The mammals, which had lived in the shadow of the dinosaurs for a very long time, are the familiar example. Their later success says little about whether they were superior to the non-avian dinosaurs in any absolute sense; it says that they passed through a narrow gate that the dinosaurs, for reasons unrelated to their earlier success, did not.",
+    "This does not mean that mass extinctions are pure lotteries. Survival in them is selective; it simply selects for different things. Nor does it mean that adaptation is unimportant, since the survivors went on to diversify through ordinary selection once the crisis had passed. What it does mean is that the long-run shape of life's history cannot be read as a straightforward measure of design quality. To understand why some groups are here and others are not, we need to know not only how well they fitted their world but also which rare disasters that world happened to contain."
+   ],
+   "questions": [
+    {
+     "id": "R06-A-06-1",
+     "type": "RC",
+     "options": {
+      "A": "depend on a narrow range of foods, occupy small areas or breed slowly.",
+      "B": "had flourished for a very long time under conditions that were stable.",
+      "C": "belong to groups that have long lived in the shadow of their competitors.",
+      "D": "are large-bodied and unable to wait out a period of scarcity in a dormant state."
+     },
+     "question": "According to the passage, during ordinary stretches of geological time the species more likely to vanish are those that"
+    },
+    {
+     "id": "R06-A-06-2",
+     "type": "RC",
+     "options": {
+      "A": "show that survival in a mass extinction was decided by pure chance rather than by traits.",
+      "B": "gave no real advantage during the crisis to the animals that happened to possess them.",
+      "C": "appeared suddenly in the surviving animals in the years just after the asteroid struck.",
+      "D": "had not arisen as adaptations to the kind of crisis in which they turned out to be decisive."
+     },
+     "question": "The author calls the traits that aided survival at the end of the Cretaceous 'accidents' (paragraph 2) because they"
+    },
+    {
+     "id": "R06-A-06-3",
+     "type": "RC",
+     "options": {
+      "A": "After the crisis, mammals diversified rapidly into many of the ways of life that the dinosaurs had once occupied.",
+      "B": "Large mammals with specialised diets also died out at the end of the Cretaceous, while small mammals with varied diets survived.",
+      "C": "Several groups of dinosaurs had already been declining in number of species for some time before the asteroid struck.",
+      "D": "Some mammals of the late Cretaceous had larger brains in proportion to their bodies than dinosaurs of a similar size."
+     },
+     "question": "Which of the following, if true, would most strengthen the author's claim about the mammals in paragraph 3?"
+    },
+    {
+     "id": "R06-A-06-4",
+     "type": "RC",
+     "options": {
+      "A": "The extinction of a lineage need not show that it was poorly suited to the conditions it normally faced.",
+      "B": "Explaining which groups exist today requires knowing both how well they were adapted and what catastrophes occurred.",
+      "C": "The diversification of groups that survive a mass extinction proceeds through ordinary natural selection.",
+      "D": "Because the traits that mattered in mass extinctions were accidents, the survivors of those events were not selected at all."
+     },
+     "question": "The author would be LEAST likely to accept which of the following?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R07-F-02",
+   "passage": [
+    "Few rules of modern etiquette are enforced as fiercely as the ban on spoilers. A friend who reveals the ending of a film that you have not yet seen is treated as though he had stolen something from you, and online discussions of new releases now arrive wrapped in warnings. Behind the etiquette lies a theory about what stories are for. On this view, the value of a narrative is concentrated in the not-knowing, and once the outcome is known the thing is used up, like a lottery ticket that has already been scratched.",
+    "The theory is difficult to square with how people actually behave. Children demand the same bedtime story night after night and object loudly if a single word is changed. Adults rewatch favourite films until they can recite the dialogue, and they reread novels whose endings they could describe in a sentence. Audiences at tragedies drawn from well-known legends have always known that the hero will die; for centuries this knowledge did not stop them from attending, and it may even have been part of the attraction. If knowing the ending destroyed the pleasure, none of this would make sense.",
+    "What these cases suggest is that suspense is not simply uncertainty about outcome. A viewer can know perfectly well that the hero survives and still grip the arm of the chair when the rope begins to fray, because attention is absorbed in the unfolding moment rather than in a calculation about the final scene. Much of what we enjoy in a story, moreover, lies in the manner of its telling: the rhythm of a scene, the turn of a phrase, the way a minor character reveals himself in a single gesture. None of this is spoiled by a summary of the plot, since a summary is precisely what leaves it out.",
+    "It would be too much to conclude that spoilers do no harm at all. Some stories are built around a single reversal, and the shock of the first encounter with it is a real pleasure that cannot be had twice; a mystery whose solution has been announced in advance loses something that rereading does not restore. The etiquette, then, protects something genuine. But what it protects is a narrow and unrepeatable pleasure, not the whole value of a story, and a culture that treats the ending as the only thing worth guarding may gradually forget how to enjoy everything that comes before it."
+   ],
+   "questions": [
+    {
+     "id": "R07-F-02-1",
+     "type": "RC",
+     "options": {
+      "A": "explaining why children, unlike adults, enjoy hearing the same story told many times over.",
+      "B": "defending the etiquette against spoilers as the necessary protection of what gives every story its value for an audience.",
+      "C": "questioning the belief that knowing a story's outcome destroys its value, while granting that something real is lost.",
+      "D": "arguing that stories built around a single surprise are inferior to stories that reward rereading."
+     },
+     "question": "The passage is primarily concerned with"
+    },
+    {
+     "id": "R07-F-02-2",
+     "type": "RC",
+     "options": {
+      "A": "illustrations of how the customs of storytelling have changed over the centuries.",
+      "B": "evidence that people seek out and enjoy stories whose outcomes they already know.",
+      "C": "examples of stories built around a single reversal that cannot be enjoyed twice.",
+      "D": "support for the view that suspense depends entirely on uncertainty about the final scene."
+     },
+     "question": "The bedtime story and the tragedies drawn from well-known legends (paragraph 2) are offered as"
+    },
+    {
+     "id": "R07-F-02-3",
+     "type": "RC",
+     "options": {
+      "A": "a story, on the theory described, is worthless once its outcome is known.",
+      "B": "the author regards watching films as a form of gambling with one's time and money.",
+      "C": "revealing a story's ending is a theft that ought to be punished like any other.",
+      "D": "stories, like lotteries, reward only a lucky few among those who take part in them."
+     },
+     "question": "In paragraph 1, the comparison with 'a lottery ticket that has already been scratched' conveys the idea that"
+    },
+    {
+     "id": "R07-F-02-4",
+     "type": "RC",
+     "options": {
+      "A": "can still take pleasure in its telling, though not in the shock of first discovering the solution.",
+      "B": "will feel no suspense of any kind, since suspense is no more than uncertainty about outcome.",
+      "C": "will enjoy it more than on a first reading, because the plot no longer distracts her attention.",
+      "D": "gains nothing from the experience, since a mystery depends entirely on the reader's ignorance."
+     },
+     "question": "The author would most likely say that a reader rereading a mystery novel whose solution she remembers"
+    }
+   ]
+  },
+  {
+   "passage_id": "R04-B-05",
+   "passage": [
+    "Few images of empire are as familiar as that of European diplomats bent over a map of Africa, ruler in hand, dividing a continent they had barely visited. The image is usually summoned to explain why so many of the continent's borders run in straight lines, and why so many of its states have struggled: the borders, it is said, were artificial, cutting across peoples and lumping together others who had nothing in common, and the conflicts of the post-colonial era are their bitter harvest. The story has the merit of placing responsibility where much of it belongs. As an explanation, however, it is weaker than its popularity suggests.",
+    "Begin with the image itself. The conference held in Berlin in 1884 and 1885 is often remembered as the moment of partition, but it chiefly agreed on rules by which European powers would recognise one another's claims. Most actual boundaries were settled afterwards, over decades, through bilateral treaties, exchanges of territory and survey commissions, and many of them followed rivers, watersheds or the limits of existing polities rather than lines of latitude. The straight lines are real, but they cluster in deserts and thinly populated regions, where they divided relatively few people.",
+    "More fundamentally, the charge of artificiality proves too much. Every border is artificial in the sense that people drew it, and many of the borders of Europe were fixed by wars, dynastic marriages and peace conferences no more attentive to local wishes than any colonial commission. If artificial borders caused instability by themselves, much of the world would be permanently at war. Nor is it obvious what a natural border would be. Peoples overlap, migrate and intermarry; a line that united one group would divide another. When African states gained independence, their leaders, aware of these difficulties, chose through the Organisation of African Unity to accept the boundaries they had inherited rather than reopen them, judging that an attempt to redraw them would be more dangerous than living with them.",
+    "None of this acquits the colonial powers. Boundaries were indeed drawn without consulting the people they affected, and some did separate communities from their pastures, markets and kin. But the more serious legacy lay inside the lines rather than in their placement: states built for extraction, with administrations designed to collect revenue and keep order rather than to represent, and with ethnic categories hardened by colonial policy into the main currency of politics. To blame the shape of the map is to look at the frame and miss the picture."
+   ],
+   "questions": [
+    {
+     "id": "R04-B-05-1",
+     "type": "RC",
+     "options": {
+      "A": "are found mostly in deserts and thinly populated regions, where they divided relatively few people.",
+      "B": "follow rivers, watersheds or the limits of existing states wherever the terrain made this at all possible.",
+      "C": "were drawn at the Berlin conference by diplomats who settled each boundary with a ruler on the map.",
+      "D": "have caused most of the wars fought between African states in the decades since independence was gained."
+     },
+     "question": "According to the passage, the straight-line borders on the map of Africa"
+    },
+    {
+     "id": "R04-B-05-2",
+     "type": "RC",
+     "options": {
+      "A": "argue that the borders of Europe were drawn with far more care for local wishes than any colonial boundary was.",
+      "B": "show that the charge of artificiality, if accepted, would equally condemn borders not usually blamed for chronic conflict.",
+      "C": "explain why the Organisation of African Unity chose to accept the boundaries that its member states had inherited.",
+      "D": "suggest that African states should redraw their inherited borders by the methods used in European peace conferences."
+     },
+     "question": "The reference to the borders of Europe in paragraph 3 serves to"
+    },
+    {
+     "id": "R04-B-05-3",
+     "type": "RC",
+     "options": {
+      "A": "a condition imposed on the new states by the former colonial powers before they agreed to grant independence.",
+      "B": "a considered judgement about the risks of redrawing, not a sign that they thought the borders were well drawn.",
+      "C": "evidence that the colonial borders in fact closely matched the boundaries of the states that existed before conquest.",
+      "D": "a mistake that locked the new states into the conflicts that their artificial borders were bound to produce."
+     },
+     "question": "It can be inferred that the author regards the decision of post-independence leaders to accept the boundaries they inherited as"
+    },
+    {
+     "id": "R04-B-05-4",
+     "type": "RC",
+     "options": {
+      "A": "Several boundaries fixed by survey commissions cut pastoral communities off from the grazing grounds they had always used in the dry season.",
+      "B": "Many European borders were also settled at peace conferences that made no attempt to consult the people living near them.",
+      "C": "Among former colonies, later instability tracks how extractive the colonial administration was far more closely than how straight or divisive the borders were.",
+      "D": "Most of the straight-line borders on the continent run through desert regions that had very few permanent inhabitants at the time."
+     },
+     "question": "Which of the following, if true, would most strengthen the author's claim about where the more serious colonial legacy lay?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R08-C-05",
+   "passage": [
+    "An investigation that changes a law or ends a career is remembered for its result, and the result makes it look like a sound investment. The reporting behind it rarely looks that way while it is under way. A team may spend months requesting documents, cultivating reluctant sources and checking figures, only to discover at the end that the story cannot be stood up, or that it is smaller and duller than it seemed. No publication can know in advance which of its inquiries will succeed, so the cost of the one that does must also cover the many that quietly fail. Editors who have watched a promising inquiry collapse after half a year learn caution, and caution, in a publication under financial pressure, usually means fewer inquiries.",
+    "This uncertainty would matter less if the rewards of success flowed back to the publication that paid for it. Mostly they do not. Once a finding is published, rivals can report it within hours, and the citizens who benefit from a cleaner tendering process or a safer bridge are seldom the readers who bought the paper that exposed the problem. In the language economists use, the work produces benefits that spill over to people who did not pay for them, and goods of that kind tend to be supplied in smaller quantities than a society, if it could choose collectively, would want.",
+    "The most important of those benefits is also the least visible. Officials who know that their accounts might one day be examined behave differently from officials who are sure that they will not be. A local administration that expects a reporter to read its contracts has a reason to keep them clean, and the corruption that never takes place leaves no story behind it. The contractor who decides not to inflate an invoice, because a reporter once asked awkward questions about a neighbouring council, will never appear in any account of what journalism has achieved. Investigative journalism therefore works partly as a deterrent, and like other deterrents it is judged unfairly by its visible output; a quiet year may be evidence of its success rather than of its irrelevance.",
+    "Admirers of the form sometimes overstate its virtues. Investigations can be mistaken, and a reporter convinced of wrongdoing may read ambiguous evidence in only one direction, with real costs for the people named. Nor is every exposure a public service; some are driven more by rivalry or an appetite for scandal than by any public interest. But the case for supporting such work does not depend on its infallibility. It depends on presence. Deterrence works only if the possibility of scrutiny is continuous; a single celebrated exposure every decade, however brilliant, does less to discipline the powerful than a modest but permanent habit of looking. Those who fund journalism, whether readers, donors or the public purse, should therefore value a steady capacity for inquiry above the occasional prize-winning scoop."
+   ],
+   "questions": [
+    {
+     "id": "R08-C-05-1",
+     "type": "RC",
+     "options": {
+      "A": "a rival publication has already reported the story before the team could finish its work.",
+      "B": "the person at the centre of the story has refused every request to be interviewed.",
+      "C": "the story has grown too long to fit into the space that the publication has available.",
+      "D": "the reporters cannot gather enough evidence to justify publishing the story they had suspected was there."
+     },
+     "question": "As used in paragraph 1, the phrase 'the story cannot be stood up' indicates that"
+    },
+    {
+     "id": "R08-C-05-2",
+     "type": "RC",
+     "options": {
+      "A": "a lack of published exposures proves that the deterrent effect of investigative reporting is working as it should.",
+      "B": "a lack of published exposures shows that officials have learned to conceal their wrongdoing more skilfully than they once did.",
+      "C": "a lack of published exposures need not mean the reporting was idle, since it may have prevented wrongdoing.",
+      "D": "a lack of published exposures indicates that the publication has failed to fund enough investigations to be effective."
+     },
+     "question": "The author's remark that 'a quiet year may be evidence of its success' suggests that"
+    },
+    {
+     "id": "R08-C-05-3",
+     "type": "RC",
+     "options": {
+      "A": "explaining why the market tends to supply less investigative work than a society would want.",
+      "B": "demonstrating that readers place little value on the results that investigative reporting produces for them.",
+      "C": "establishing that most investigations fail to produce a story that a publication is able to print.",
+      "D": "showing that rival publications act unfairly when they repeat findings that another paper paid to uncover."
+     },
+     "question": "Paragraph 2 contributes to the argument of the passage chiefly by"
+    },
+    {
+     "id": "R08-C-05-4",
+     "type": "RC",
+     "options": {
+      "A": "A city awards a public prize each year to the inspector whose findings led to the most dramatic and widely reported restaurant closure.",
+      "B": "A city trains its food inspectors so thoroughly that their findings against restaurants are almost never overturned when owners appeal against them.",
+      "C": "A city keeps a small team of inspectors visiting restaurants unannounced all year round, instead of a large campaign every few years.",
+      "D": "A city publishes every inspection report online so that diners can compare kitchens and choose the cleanest restaurants for themselves."
+     },
+     "question": "Which of the following policies most closely reflects the reasoning of the final paragraph?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R06-B-05",
+   "passage": [
+    "The model of the national park that spread across much of the world in the twentieth century rested on a simple picture: nature is most fully itself where people are absent, and the task of conservation is to keep them out. Boundaries were drawn, guards were posted, and in many places the people who had lived within the new boundaries, herding, gathering, farming small plots or hunting, were moved elsewhere. Critics have come to call this approach fortress conservation, and the name captures both its method and its mood.",
+    "The picture of untouched nature was often historically false. Many landscapes that visitors admired as wilderness had been shaped for centuries by the people who were then removed: grasslands kept open by grazing and deliberate burning, forests whose composition reflected generations of selective harvesting and planting. Removing those people did not return the land to an original state; it began a new and unplanned experiment, and in some cases the very qualities that had made the place worth protecting began to decline. The costs to the displaced were, of course, more direct: the loss of homes, of access to food and medicine, of graves and sacred places, often with little or no compensation.",
+    "It would be too simple, however, to conclude that local residents are always the best stewards and that exclusion is never justified. Communities change, markets reach into forests, and a population that once harvested lightly may, under new pressures, begin to clear or hunt at rates the land cannot sustain. Some species, particularly those that are very sensitive to disturbance, may genuinely need areas where human presence is kept to a minimum. The romantic image of the timeless forest dweller can be as misleading as the image of untouched wilderness that it seeks to replace.",
+    "What the critique of fortress conservation establishes, then, is not a rule but a burden of proof. Exclusion imposes certain and heavy costs on identifiable people, while its benefits to wildlife are often assumed rather than shown. Where those who would be displaced have a long record of use compatible with the values being protected, the presumption should lie with their remaining, and with arrangements that give them a real share in managing the land. Where that record is absent, or where a species' needs are demonstrably incompatible with human use, exclusion may be defended; but it must be defended, case by case, rather than taken as the natural form of protection."
+   ],
+   "questions": [
+    {
+     "id": "R06-B-05-1",
+     "type": "RC",
+     "options": {
+      "A": "Because national parks were founded on a false picture of untouched nature, the model should be abandoned and replaced by community management everywhere.",
+      "B": "Because romantic images of forest dwellers are as misleading as images of wilderness, conservation should rely on neither residents nor parks to protect species.",
+      "C": "Because local residents shaped many admired landscapes over centuries, they should never be removed from land that is set aside for conservation.",
+      "D": "Because exclusion carries certain costs and often only assumed benefits, removing residents from protected land should be justified in each case rather than treated as the default."
+     },
+     "question": "Which of the following best expresses the main point of the passage?"
+    },
+    {
+     "id": "R06-B-05-2",
+     "type": "RC",
+     "options": {
+      "A": "returned the land to the original state that visitors had admired before the residents first arrived.",
+      "B": "started an unplanned change in which some of the qualities that made the places worth protecting declined.",
+      "C": "was generally carried out with fair compensation for the homes, graves and sacred places that were lost.",
+      "D": "allowed grasslands to stay open because grazing animals could now move freely without being herded."
+     },
+     "question": "According to paragraph 2, removing residents from landscapes that had long been shaped by them"
+    },
+    {
+     "id": "R06-B-05-3",
+     "type": "RC",
+     "options": {
+      "A": "It abandons the critique of fortress conservation and argues that strict exclusion is usually the more effective form of protection.",
+      "B": "It guards the critique of fortress conservation against an opposite oversimplification before the author states a conclusion.",
+      "C": "It offers new evidence that most forest communities now hunt and clear land at rates that the land can no longer sustain.",
+      "D": "It explains why the founders of national parks believed that nature was most fully itself where people were absent."
+     },
+     "question": "Which of the following best describes the role of paragraph 3 in the passage?"
+    },
+    {
+     "id": "R06-B-05-4",
+     "type": "RC",
+     "options": {
+      "A": "A river valley whose fishing families have lived there for centuries, where a recent survey found fish numbers stable and a proposal to remove them cites the general belief that wildlife does better alone.",
+      "B": "A forest from which a village has gathered fruit and firewood for generations, where officials hold that the rare birds living there are probably disturbed by people.",
+      "C": "A cliff used by a seabird that deserts its nests at slight disturbance, where counts show breeding fails whenever people enter, and which no community has ever used.",
+      "D": "A grassland that herders have grazed and burned for centuries, which visitors admire as wilderness and would prefer to see without any settlements."
+     },
+     "question": "In which of the following cases would the reasoning of the passage most clearly support excluding people from an area?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R03-F-08",
+   "passage": [
+    "In many parts of the world, groups of neighbours, co-workers or traders meet at regular intervals and each contributes a fixed sum to a common pot, which is then handed in its entirety to one member. At the next meeting the process is repeated and the pot goes to someone else, until every member has received it once and the cycle ends or begins again. The order may be fixed by lot, by agreement or, in some versions, by bidding, with the member who most urgently wants the money accepting a smaller pot and the difference shared among the rest. Such rotating associations go by dozens of local names, and for a long time development economists regarded them as makeshift substitutes for banks, ingenious but destined to disappear once formal credit reached the people who used them.",
+    "That prediction has fared poorly. The associations persist among people who have bank accounts, and they have travelled with migrants into cities where banks are on every corner. Their persistence is puzzling on a narrow financial view. For those who receive the pot early, the arrangement is an interest-free loan; for those who receive it late, it is a savings scheme that pays no interest at all, and that exposes them to the risk that an early recipient will stop contributing once he has been paid. A late member could, it seems, do better by saving the same sums in a bank, and an early member would be the obvious candidate for default.",
+    "The usual solutions to the puzzle point to discipline. Saving alone requires a resolve that many people find hard to sustain; a contribution owed to a group that meets every month, whose members will notice and remember a missed payment, supplies that resolve from outside. This is surely part of the answer. But it treats the problem as one between the saver and her own weaker self, whereas members themselves often describe it differently. What makes saving hard, they say, is not temptation so much as other people: the brother who needs money for a wedding, the cousin whose shop has failed, the neighbour whose child is ill. A sum in a bank account is visible to such claims and difficult to refuse. A sum owed to the association is not available, and saying so is an excuse that kin and neighbours recognise as legitimate.",
+    "On this reading the association is not a crude version of a bank but an instrument for managing obligations, one that uses a debt to the group to shelter money from other debts that are harder to decline. The reading also explains why the associations depend so heavily on the density of the ties among their members. The same social pressure that makes a refusal to a cousin acceptable is what keeps the early recipient paying; where members can move away without consequence, or barely know one another, the associations break down, and stories of a member who vanished with the pot are common enough to show that the risk is not imaginary.",
+    "None of this implies that formal finance has nothing to offer the people who join such groups, or that the associations are always wise; members of bidding versions sometimes accept heavy discounts out of desperation, and the losses from a collapse can be severe. The point is narrower and, I think, more instructive. The rotating association survives not because its members lack access to something better but because it does something that an ordinary bank account, by design, does not: it makes a sum of money socially unavailable. The question its persistence raises is less why the poor lack banks than what banks, as they are usually designed, lack."
+   ],
+   "questions": [
+    {
+     "id": "R03-F-08-1",
+     "type": "RC",
+     "options": {
+      "A": "a member who wants the pot urgently takes a smaller sum, and the others share the difference.",
+      "B": "the pot is awarded to whichever member has contributed the most over the whole cycle.",
+      "C": "members compete to receive the pot as late as possible in order to earn the most interest.",
+      "D": "the order in which members receive the pot is fixed by drawing lots at the first meeting."
+     },
+     "question": "According to the passage, in the bidding versions of a rotating association"
+    },
+    {
+     "id": "R03-F-08-2",
+     "type": "RC",
+     "options": {
+      "A": "members who refuse loans to their cousins lose the trust of the other members of the group.",
+      "B": "the ties that make a refusal to kin acceptable are the same ties that keep early recipients paying.",
+      "C": "early recipients default most often when relatives make claims on the pot they have received.",
+      "D": "dense ties among members reduce the size of the discounts that desperate members accept in the bidding versions."
+     },
+     "question": "The argument of paragraph 4 implies that the association's two characteristic features, its protection of savings and its vulnerability to default, are linked because"
+    },
+    {
+     "id": "R03-F-08-3",
+     "type": "RC",
+     "options": {
+      "A": "regarding it as relevant only to the bidding versions of the association.",
+      "B": "accepting it as partly right while holding that it misplaces the chief difficulty.",
+      "C": "endorsing it as a complete solution to the puzzle raised in paragraph 2.",
+      "D": "rejecting it entirely as a view that members themselves dismiss as mistaken."
+     },
+     "question": "The author's attitude towards the explanation that associations supply discipline is best described as"
+    },
+    {
+     "id": "R03-F-08-4",
+     "type": "RC",
+     "options": {
+      "A": "A man often asked for loans by his friends keeps his savings in a bank account that none of his friends knows about.",
+      "B": "A student joins a study group because she knows she will not work regularly unless others expect her to attend.",
+      "C": "A shopkeeper tells relatives seeking loans that her cash is pledged to her suppliers' cooperative, a commitment they accept she cannot break.",
+      "D": "A trader borrows from a moneylender at a high rate of interest because no bank in his town will lend to him at all."
+     },
+     "question": "Which of the following is most closely analogous to the function the author attributes to rotating associations?"
+    },
+    {
+     "id": "R03-F-08-5",
+     "type": "RC",
+     "options": {
+      "A": "Some members who receive the pot early later stop contributing and leave the town without repaying the others.",
+      "B": "Members of bidding associations sometimes accept very large discounts when they need money urgently for an emergency.",
+      "C": "Members whose relatives and neighbours make no claims on their money join as often, and pay as reliably, as members facing many such claims.",
+      "D": "Associations formed among recent migrants to a city collapse more often than those in villages where members have lived side by side for several decades."
+     },
+     "question": "Which of the following, if true, would most weaken the author's account of why people join rotating associations?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R02-E-01",
+   "passage": [
+    "The line-judgement experiments of the 1950s are among the most retold stories in psychology, and the moral usually drawn from them is a gloomy one. A participant sits among strangers who, one after another, give an obviously wrong answer about which of several lines matches a standard; when the participant's turn comes, he often repeats their error. The lesson, we are told, is that ordinary people will deny the evidence of their own eyes rather than stand apart from a crowd. This reading has become so familiar that it is easy to forget how much interpretation it smuggles in.",
+    "Begin with the numbers that the gloomy version tends to leave out. On the critical trials, most of the answers participants gave were correct, and a sizeable share of people never yielded at all. A study that is remembered as a demonstration of conformity could as easily be remembered as a demonstration of independence under strange and uncomfortable conditions. Which of these stories gets told says more about the teller than about the data.",
+    "More important is the question of what yielding meant. Outside the laboratory, when several people who seem competent and sincere all report the same thing, the rational response is to give their reports considerable weight, even against one's own impression. Our senses err, and other people are among the best instruments we have for catching their errors. A participant who reasoned, 'I cannot see why they are all saying this, but it is unlikely that every one of them is mistaken,' was not abandoning reason; he was applying a rule that serves well almost everywhere except in a room deliberately arranged to defeat it. On this view much of what looks like spineless deference is better described as informational influence: treating others as evidence.",
+    "None of this means that the pressure in the room was imaginary. Variations in which participants wrote their answers privately, rather than announcing them aloud, produced far less agreement with the majority, which suggests that some yielding was about avoiding embarrassment rather than about belief. Participants interviewed afterwards also described acute discomfort, and some admitted that they had answered against what they saw. Normative pressure, the wish to fit in, was real. The point is not that it was absent but that it was only part of the picture, and that collapsing everything into it produces a caricature.",
+    "The caricature matters because it shapes the remedies we prescribe. If people conform because they are weak, the cure is to exhort them to be brave. If they conform partly because they are sensibly using others as sources of information, the cure is better information: making dissent visible, so that a single honest voice breaks the appearance of unanimity, and designing institutions in which the reasons behind a majority view can be inspected rather than merely counted."
+   ],
+   "questions": [
+    {
+     "id": "R02-E-01-1",
+     "type": "RC",
+     "options": {
+      "A": "recommend that institutions train their members to trust their own perceptions and to resist the views of a majority whenever those views conflict with their own.",
+      "B": "show that the line-judgement experiments were badly designed, since a room arranged to mislead participants cannot reveal anything about behaviour in everyday life.",
+      "C": "argue that participants in the experiments yielded almost entirely because they feared embarrassment, and that their reasoning about the majority played no real part.",
+      "D": "dispute the usual gloomy moral of the experiments, arguing that much yielding was sensible reliance on others as evidence, though pressure also played a part."
+     },
+     "question": "The primary purpose of the passage is to"
+    },
+    {
+     "id": "R02-E-01-2",
+     "type": "RC",
+     "options": {
+      "A": "show that participants answering in private no longer gave the majority's reports any weight at all as evidence.",
+      "B": "prove that participants who answered aloud had been persuaded that the majority's wrong answer was in fact correct.",
+      "C": "indicate that some agreement with the majority reflected a wish to avoid embarrassment, not a change of belief.",
+      "D": "reveal that the original experiments had exaggerated the number of participants who never yielded to the majority."
+     },
+     "question": "The passage suggests that the variations in which participants wrote down their answers privately are significant because they"
+    },
+    {
+     "id": "R02-E-01-3",
+     "type": "RC",
+     "options": {
+      "A": "allowing what other people report to count as evidence about how things actually are.",
+      "B": "the tendency of confident individuals to spread their views to a crowd that listens to them.",
+      "C": "the effect of an experimenter's instructions on how participants interpret an ambiguous task.",
+      "D": "giving way to a group's opinion publicly in order to avoid the discomfort of standing alone."
+     },
+     "question": "As used in paragraph 3, 'informational influence' refers to"
+    },
+    {
+     "id": "R02-E-01-4",
+     "type": "RC",
+     "options": {
+      "A": "A review panel publishes the reasoning behind each member's vote and records every dissenting opinion alongside the final decision.",
+      "B": "A committee announces the majority's preliminary view before discussion begins, so that members can see quickly where opinion lies.",
+      "C": "A company runs workshops urging staff to have the courage of their convictions and to trust their own judgement over that of colleagues.",
+      "D": "A board requires all its decisions to be unanimous, so that no member is ever left in the uncomfortable position of a lone dissenter."
+     },
+     "question": "Which of the following practices is most in keeping with the remedy the author proposes in the final paragraph?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R07-E-05",
+   "passage": [
+    "Every few generations someone tries to rescue a dying craft by writing it down. A retiring stonemason or bell founder is interviewed at length, his methods are photographed and measured, and the results are published as a manual that, it is hoped, will allow the craft to survive its last practitioners. The manuals are often admirable documents, careful, accurate and lovingly illustrated. They are also, as anyone who has tried to learn from one discovers, strangely inert: the reader can follow every step and still produce work that a practitioner would reject at a glance.",
+    "The reason is that much of what a skilled worker knows is not a set of steps at all but a way of perceiving. A smith judges the heat of iron by its colour, and the relevant differences of colour are ones that a novice literally does not see; a joiner hears in the note of a mallet whether a joint has seated; a plasterer feels through the trowel the moment at which the mix has begun to stiffen. Such judgements can be described, but the description presupposes the perception it describes. An instruction to work the metal when it turns the colour of straw is useful only to someone who already knows which straw, in which light, and how much variation is allowed.",
+    "Apprenticeship solved this problem not by explaining more but by arranging for the learner to perceive under guidance. The apprentice stood beside the master for years and was told 'now' and 'not yet' thousands of times, until he slowly came to see what the master saw. The words mattered, but chiefly as pointers to experiences the learner was having at that very moment. What passed from one generation to the next was less a body of information than a trained attention.",
+    "It would be sentimental to conclude that apprenticeship should simply be restored. It was slow, it was often exploitative, and the guilds that ran it guarded their knowledge as much to keep out competitors as to preserve standards. Nor are manuals useless: to a learner who has already begun to see, a good written account can organise and extend what practice has started. The lesson is narrower. A craft cannot be stored in a text in the way a recipe can, because what has to be preserved is a capacity of persons, and the only reliable way to keep it alive is to keep people practising it alongside others who already can."
+   ],
+   "questions": [
+    {
+     "id": "R07-E-05-1",
+     "type": "RC",
+     "options": {
+      "A": "are rarely read, because they sit unopened in libraries long after their publication.",
+      "B": "fail to make their readers competent even though what they record is accurate.",
+      "C": "are written in such dry and technical prose that ordinary readers lose interest in them.",
+      "D": "contain so many errors of measurement that following them leads readers astray."
+     },
+     "question": "As used in paragraph 1, 'strangely inert' describes manuals that"
+    },
+    {
+     "id": "R07-E-05-2",
+     "type": "RC",
+     "options": {
+      "A": "a spoken or written instruction can rely on the very perception that it is meant to pass on.",
+      "B": "manuals would succeed if their authors replaced comparisons with precise measurements of temperature.",
+      "C": "smiths historically chose vague comparisons on purpose, so as to keep their methods secret from outsiders.",
+      "D": "colour is a less dependable guide to the heat of iron than the sound or feel of the work."
+     },
+     "question": "The example of metal that 'turns the colour of straw' (paragraph 2) is used to show that"
+    },
+    {
+     "id": "R07-E-05-3",
+     "type": "RC",
+     "options": {
+      "A": "kept the apprentice obedient and dependent on the master during the long years of his training.",
+      "B": "supplied a fixed technical vocabulary that could later be collected and published in manuals.",
+      "C": "joined words to what the apprentice was perceiving at that instant, gradually training where he looked.",
+      "D": "reminded the apprentice of rules that he had already learned from older written sources on the craft."
+     },
+     "question": "It can be inferred that the master's repeated 'now' and 'not yet' were valuable chiefly because they"
+    },
+    {
+     "id": "R07-E-05-4",
+     "type": "RC",
+     "options": {
+      "A": "Experienced joiners who read a good manual improved their technique noticeably over the following months of ordinary work.",
+      "B": "Novices who studied only a detailed manual for a year matched, in masters' judgement, apprentices trained for that year.",
+      "C": "Some tasks, such as baking a cake from a printed recipe, can be learned almost entirely from written instructions.",
+      "D": "Many apprentices in earlier centuries left their masters before finishing their training because they were badly treated and poorly fed."
+     },
+     "question": "Which of the following, if true, would most seriously weaken the author's argument?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R04-B-08",
+   "passage": [
+    "The end of empire is usually pictured as a ceremony. A flag is lowered at midnight, another is raised, a governor boards a ship, and a new state takes its seat in the international order. Historians have long known that the picture is too tidy, and a powerful critique, voiced by some of the leaders of newly independent states themselves and given the name neo-colonialism, holds that it is not merely tidy but false. On this account, formal independence changed the personnel and the symbols of rule while leaving its substance intact: the new states still sold raw materials at prices set elsewhere, borrowed from foreign banks, bought foreign manufactures and relied on foreign advisers. The flag changed; the economy did not.",
+    "The critique captured something the ceremonial picture ignores, and it remains a useful corrective to triumphal accounts. Yet it shares more with the view it attacks than either side usually admits. Both treat empire as a single thing that either ends or persists, so that the only question is whether the moment of independence marked its end. Empire was not a single thing. It was a bundle of relations, held together by the power of the imperial state: sovereignty over territory and law, control of trade and currency, the organisation of armed force, the training of an administrative and professional class, the language in which public life was conducted, and the habits of deference and aspiration that all these produced. There is no reason to expect such strands to have come apart at the same speed, and they did not.",
+    "Sovereignty, the strand that the ceremony marked, ended at a stroke, and its ending was not trivial. A sovereign government could nationalise a foreign-owned mine, change its alliances, write a new constitution, expel a foreign base or make ruinous mistakes of its own, and many did each of these things. Other strands loosened over decades. Monetary arrangements tying several former colonies' currencies to that of the former ruler persisted long after independence; legal systems, curricula and civil-service procedures inherited from the colonial period often outlasted the governments that had installed them; the former metropolis remained, for many, the place where one went to study and to be taken seriously. Some of these continuities were imposed through unequal bargaining at the moment of transfer. Others were chosen, and defended, by new elites who had been formed by the old system and found its institutions congenial.",
+    "Seen as an unbundling, decolonisation ceases to be an event that either happened or did not, and becomes a set of processes whose timing differed by strand and by place. This has a practical as well as a historiographical consequence. The question 'When did empire end?' admits no good answer, and debates conducted in its terms tend to stall, with one side pointing to the ceremonies and the other to the trade figures. The better question is which relations were transformed, when, by whom and at what cost. It allows one to say, without contradiction, that a country became fully sovereign in a given year and that its banking system or its universities remained oriented toward its former ruler for a generation.",
+    "It also places responsibility more precisely. If the persistence of colonial patterns were simply the continuation of empire by other means, then the governments of independent states would be its passive victims. If some strands were retained by choice, those governments must answer for the choosing, just as former imperial powers must answer for the strands they kept by pressure. The unbundled view is less satisfying than either of the stories it replaces, since it yields no single date and no single villain. That is not a weakness in a historical account; it is usually a sign that the account has begun to fit its subject."
+   ],
+   "questions": [
+    {
+     "id": "R04-B-08-1",
+     "type": "RC",
+     "options": {
+      "A": "a power that formal independence genuinely conferred, whatever the wisdom of exercising it in a given case.",
+      "B": "one of the ruinous mistakes that showed many new governments were not yet ready for sovereignty.",
+      "C": "economic dependence coming to an end at exactly the same moment as the transfer of sovereignty.",
+      "D": "a concession that former imperial powers demanded of new states during the bargaining over the transfer of power."
+     },
+     "question": "It can be inferred that the author mentions the nationalisation of a foreign-owned mine (paragraph 3) as an example of"
+    },
+    {
+     "id": "R04-B-08-2",
+     "type": "RC",
+     "options": {
+      "A": "the separation, at different speeds and in different places, of relations that imperial power had held together.",
+      "B": "the division of a single former empire into a number of separate and fully independent new states.",
+      "C": "the transfer of each colonial institution to new owners in a single ceremony on the day of independence.",
+      "D": "the deliberate dismantling by new governments of every institution that they had inherited from colonial rule."
+     },
+     "question": "As used in paragraph 4, 'an unbundling' refers to"
+    },
+    {
+     "id": "R04-B-08-3",
+     "type": "RC",
+     "options": {
+      "A": "The ceremonial picture is accurate about sovereignty and so remains the most useful framework for historians of decolonisation.",
+      "B": "Because empire was a bundle of relations, the formal moment of independence had little real significance for the new states.",
+      "C": "The neo-colonial critique rightly saw that independence could coexist with dependence, but wrongly concluded that it changed nothing of substance.",
+      "D": "The continuities that survived independence were for the most part imposed on the new states by their former imperial rulers."
+     },
+     "question": "With which of the following statements would the author most likely agree?"
+    },
+    {
+     "id": "R04-B-08-4",
+     "type": "RC",
+     "options": {
+      "A": "Several former imperial powers kept military bases in their former colonies under formal agreements signed with the new governments at the time of independence.",
+      "B": "The institutions that seemed to be kept by choice were in fact kept because foreign loans had been made conditional on keeping them.",
+      "C": "Many members of the new governing elites had been educated in the former metropolis and admired its institutions.",
+      "D": "Several newly independent governments wrote entirely new constitutions within a decade of gaining their independence."
+     },
+     "question": "Which of the following, if true, would most weaken the claim in paragraph 5 that the governments of independent states must answer for some continuities?"
+    },
+    {
+     "id": "R04-B-08-5",
+     "type": "RC",
+     "options": {
+      "A": "Both standard accounts wrongly treat empire as one thing; its strands ended at different times, so the real question is which changed when.",
+      "B": "Decolonisation was largely a ceremony, since the economic substance of imperial rule survived the formal grant of independence almost entirely intact.",
+      "C": "Formal sovereignty, which ended at a stroke, was the only part of imperial rule that independence was ever able to change.",
+      "D": "The governments of newly independent states bear most of the responsibility for the persistence of colonial patterns after independence."
+     },
+     "question": "Which of the following best captures the central argument of the passage?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R01-F-08",
+   "passage": [
+    "Statements of chance are among the most familiar in science and ordinary life, and among the hardest to interpret. When we say that a fair coin has a chance of one half of landing heads, what are we saying? The most influential answer identifies chance with frequency: the chance of heads is the proportion of heads in a long run of tosses, or the limit towards which that proportion tends as the run is extended without end. The answer has the great merit of tying chance to something that can be counted, and it explains why observed frequencies are our main evidence about chances.",
+    "Its difficulties begin with the single case. A particular coin may be tossed once and then melted down; a particular patient either will or will not recover from a particular operation. Yet we speak readily of the chance that this toss lands heads or that this patient recovers, and such judgements guide real decisions. The frequency view can treat them only by placing the single case in a class of similar cases and borrowing the frequency of the class. And here a second difficulty appears, because every case belongs to many classes. The patient is a man of sixty, a non-smoker, a resident of a particular city, someone treated by a particular surgeon, and the recovery rates in these classes may differ considerably. Which frequency is the patient's chance?",
+    "Dissatisfaction with this reference class problem has led many to prefer a propensity view, on which chance is a physical tendency of a particular set-up to produce a given outcome, a property the single toss or the single operation possesses whether or not any long run ever occurs. The propensity view handles the single case gracefully, but at a price. It is unclear what a propensity is, beyond a name for whatever it is that frequencies are evidence of, and the view does not escape the problem it was meant to solve. The tendency of a set-up depends on how the set-up is described: the toss described as a toss of a fair coin has one propensity, while the toss described down to the exact force and angle of the flick may have another, close to certainty.",
+    "The persistence of the problem across both views suggests that it is not a defect peculiar to either but a feature of chance itself. A chance is not a property an event has simply, but a property it has relative to a specification of the circumstances. Asking for the chance of an event, full stop, is like asking for the speed of a train without saying relative to what: the question is not unanswerable but incomplete. What remains open, and must be settled by our purposes rather than by the world, is which specification to use. For a gambler who cannot measure the flick, the description 'fair coin' is the relevant one; for a physicist with a high-speed camera, it is not.",
+    "Some will feel that this concedes too much, making chance a matter of perspective rather than a feature of the world. But relativity to a description is not the same as subjectivity. Once the specification is fixed, the chance is fixed too, and two observers who adopt the same description and disagree about the chance cannot both be right. Velocity is no less objective for being relative to a frame. What the account gives up is only the idea that there is a single privileged description, the one nature itself would choose, and it is far from clear that anything in science requires such a description."
+   ],
+   "questions": [
+    {
+     "id": "R01-F-08-1",
+     "type": "RC",
+     "options": {
+      "A": "identifies chance with a physical tendency that each particular set-up possesses on its own.",
+      "B": "ties chance to something countable and so explains why observed frequencies serve as evidence about chances.",
+      "C": "removes the need to decide which class of similar cases a particular event belongs to.",
+      "D": "assigns a definite chance to a single toss even when no long run of tosses ever takes place."
+     },
+     "question": "According to the passage, one merit of the frequency view is that it"
+    },
+    {
+     "id": "R01-F-08-2",
+     "type": "RC",
+     "options": {
+      "A": "show that a coin toss is really deterministic, so that its chance of heads is not truly one half.",
+      "B": "illustrate how a physicist with suitable equipment can measure the propensity of any set-up directly.",
+      "C": "explain why the frequency view cannot assign any chance to a coin that is tossed only once.",
+      "D": "show that the propensity view meets its own form of the problem that the choice of class raised for frequencies."
+     },
+     "question": "The example of the toss 'described down to the exact force and angle of the flick' (paragraph 3) serves to"
+    },
+    {
+     "id": "R01-F-08-3",
+     "type": "RC",
+     "options": {
+      "A": "The beauty of a painting depends on the taste of whoever happens to be looking at it.",
+      "B": "The age of a fossil can be estimated, but never exactly, because every dating method carries some error.",
+      "C": "The colour of an object is the one it shows under the single lighting that best reveals its true nature.",
+      "D": "A hill's height is definite once one says whether it is measured from sea level or from the plain below."
+     },
+     "question": "Which of the following is most closely analogous to the account of chance given in paragraphs 4 and 5?"
+    },
+    {
+     "id": "R01-F-08-4",
+     "type": "RC",
+     "options": {
+      "A": "both merely expressing their own degrees of confidence, since chance is in the end a matter of perspective.",
+      "B": "both mistaken, since no chance can properly be assigned to the recovery of a single patient.",
+      "C": "possibly both correct, if each is relying on a different specification of the patient's circumstances.",
+      "D": "certainly in conflict, since the patient has a single chance of recovery that at most one of them has identified."
+     },
+     "question": "It can be inferred that the author would regard two doctors who state different chances of recovery for the same patient as"
+    },
+    {
+     "id": "R01-F-08-5",
+     "type": "RC",
+     "options": {
+      "A": "is settled by the purposes of whoever needs the chance rather than by facts about the world.",
+      "B": "is fixed by nature, which singles out one description of each event as the correct one.",
+      "C": "is left wholly open, so that any figure anyone proposes for the chance is as good as any other.",
+      "D": "can be settled only by gathering longer runs of observed frequencies for the event in question."
+     },
+     "question": "On the author's account, the choice of which specification of the circumstances to use, unlike the chance given a specification,"
+    }
+   ]
+  },
+  {
+   "passage_id": "R05-F-08",
+   "passage": [
+    "The most familiar objection to industrial policy is that governments cannot pick winners. Officials, the objection runs, have neither the information nor the incentives to know which industries will flourish; investors risking their own money are better placed to judge, and when the state substitutes its judgement for theirs it will usually back the wrong horses and keep feeding them long after the race is lost. The objection has history on its side, in the sense that the record of state-backed ventures includes many expensive failures. But it rests on a picture of the problem that deserves closer inspection.",
+    "The picture is one in which the menu of possible industries is known and the only question is which item to choose. Investors, in this picture, already know what a country could produce profitably, and the government's error is to overrule them. Yet for an economy trying to move into activities it has never undertaken, no one possesses this knowledge. Whether a particular region can grow cut flowers for export, assemble electronic components or write software for foreign clients depends on a mass of local particulars, from the reliability of the roads to the habits of the workforce, that can be learned only by trying. An investor asked in advance would have no better basis for a forecast than an official; both would be guessing. The relevant knowledge is not hidden in investors' heads waiting to be consulted; it does not yet exist.",
+    "Producing it is costly, and here the market's usual advantages turn against it. The first entrepreneur to discover that a product can be made profitably in a given place bears the full cost of the experiment if it fails, but if it succeeds, others can copy the discovery cheaply, entering the industry once its viability has been shown. The pioneer thus bears the losses of failure while sharing the rewards of success, and rational investors will undertake fewer such experiments than the economy as a whole would want. The case for public involvement follows not from officials knowing more than investors, but from no one knowing enough and the cost of finding out being borne unevenly.",
+    "If this is right, the objection about picking winners is aimed at the wrong target. A policy of supporting discovery will back many ventures that fail; that is what experiment means, and a programme that never failed would be one that was taking no risks. Measured by the share of its bets that pay off, a sound programme of discovery may look worse than a timid one. The genuine danger lies elsewhere: support, once given, may become impossible to withdraw, so that the losers are kept alive at public expense. What matters is less the ability to pick winners than the ability to let losers go, and the second ability, though rarely discussed, is at least as hard to acquire as the first.",
+    "The approach has a cost of its own, and it would be dishonest to minimise it. Discovering what local firms could do requires officials to work closely with them, to learn what obstacles they face and what help would remove them. The same closeness that yields information also invites capture, in which those meant to be overseen come to set the terms. Officials who meet the same managers every month will find it hard to tell them, when a review date arrives, that support is ending. There is no formula that separates collaboration from collusion, only practices, such as public criteria and fixed review dates, that make the difference easier to see. That is a weaker guarantee than the advocates of industrial policy would like, but it is a stronger one than its critics usually assume."
+   ],
+   "questions": [
+    {
+     "id": "R05-F-08-1",
+     "type": "RC",
+     "options": {
+      "A": "knowledge of what a region could produce profitably, which can be gained only by trying.",
+      "B": "the profits that investors expect to earn once a new industry has been established in the region.",
+      "C": "the roads and the workforce habits that a new export activity would need in order to succeed.",
+      "D": "the industries that the government has already chosen to support with public funds."
+     },
+     "question": "In paragraph 2, the statement that 'it does not yet exist' refers to"
+    },
+    {
+     "id": "R05-F-08-2",
+     "type": "RC",
+     "options": {
+      "A": "show that government officials are better placed than private investors to identify the industries that will flourish.",
+      "B": "argue that because so many state-backed ventures have failed, industrial policy ought to be abandoned by governments.",
+      "C": "challenge the picture behind a familiar objection to industrial policy and relocate its main risk to the difficulty of withdrawing support.",
+      "D": "describe the practices, such as public criteria and fixed review dates, that keep officials from being captured by firms."
+     },
+     "question": "The primary purpose of the passage is to"
+    },
+    {
+     "id": "R05-F-08-3",
+     "type": "RC",
+     "options": {
+      "A": "real when the possible options are already known, but of limited use when what an economy can produce has yet to be discovered.",
+      "B": "illusory in every setting, since officials and investors know equally little about all kinds of markets.",
+      "C": "greatest in activities an economy has never tried, since there investors bear their own losses most directly.",
+      "D": "decisive, so that the state should support only the industries in which investors have already shown interest."
+     },
+     "question": "It can be inferred that the author regards the advantage of private investors over officials, as asserted in paragraph 1, as"
+    },
+    {
+     "id": "R05-F-08-4",
+     "type": "RC",
+     "options": {
+      "A": "Detached neutrality that declines to side with either the advocates or the critics of such policy.",
+      "B": "Reluctant rejection on the ground that closeness between officials and firms leads to capture.",
+      "C": "Qualified support that defends its rationale while admitting a risk that cannot be wholly removed.",
+      "D": "Enthusiastic advocacy that treats the objections of its critics as resting on a simple error."
+     },
+     "question": "Which of the following best describes the author's attitude towards industrial policy as it emerges by the end of the passage?"
+    },
+    {
+     "id": "R05-F-08-5",
+     "type": "RC",
+     "options": {
+      "A": "A large share of the ventures that governments have backed in the past failed at considerable cost to public funds.",
+      "B": "Pioneers whose ventures failed had, on average, less access to bank credit than pioneers whose ventures succeeded.",
+      "C": "Officials frequently lack detailed information about local conditions that the firms operating there already possess.",
+      "D": "In new export activities, later entrants usually have to repeat nearly all of the pioneer's costly trials, since what it learned cannot be observed or copied."
+     },
+     "question": "Which of the following, if true, would most weaken the argument of paragraph 3?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R02-C-03",
+   "passage": [
+    "Few findings in happiness research have travelled further than the idea of hedonic adaptation. People who experience a good or bad change in their circumstances, the finding goes, tend over time to drift back towards their earlier level of wellbeing, as though each of us were tethered to a personal set point from which events can pull us only temporarily. In its popular form the idea has hardened into something like a philosophy: since we adapt to everything, the pursuit of better circumstances is futile, and contentment is a matter of temperament rather than of how one lives. The research, read with any care, gives considerably less support to this conclusion than its popularity would suggest.",
+    "To begin with, adaptation is uneven. People appear to adjust quite quickly to many gains, such as a higher salary or a larger house, which soon become the new normal against which further comparisons are made. But some conditions resist adaptation stubbornly. Persistent noise, a long and unpredictable commute and chronic pain seem to remain unpleasant year after year, perhaps because they keep demanding attention and never settle into the background of experience. The lesson is not that circumstances do not matter but that they matter selectively: what we stop noticing stops affecting us, and what keeps intruding does not.",
+    "A second problem lies in how the evidence is summarised. Many studies report that, on average, a group's wellbeing returns towards its earlier level some time after an event such as marriage or the loss of a job. An average, however, can conceal very different individual paths. A group in which some people end up much happier and others much less happy can show almost no change overall, and the reassuring flat line then describes almost nobody in it. When researchers have examined individuals rather than averages, they have tended to find that a substantial minority do not return to where they began, which is precisely the information that a headline about set points discards.",
+    "None of this means that the original insight was mistaken. People do adapt to a great deal, and the observation usefully corrects the belief that one more purchase or promotion will produce lasting delight. The error lies in the step from 'we adapt to much' to 'nothing we do makes a lasting difference'. That step is no more justified than its opposite, and it carries a practical cost, since it can discourage people from changing the very conditions, the noisy flat or the gruelling journey, that are most likely to keep wearing them down."
+   ],
+   "questions": [
+    {
+     "id": "R02-C-03-1",
+     "type": "RC",
+     "options": {
+      "A": "are usually more severe in their effects than the gains to which people adjust.",
+      "B": "tend to arrive suddenly in a person's life rather than building up by degrees.",
+      "C": "keep demanding attention instead of settling into the background of experience.",
+      "D": "cannot be compared with any earlier state in the life of the person affected."
+     },
+     "question": "According to the passage, conditions such as persistent noise resist adaptation probably because they"
+    },
+    {
+     "id": "R02-C-03-2",
+     "type": "RC",
+     "options": {
+      "A": "most people in such studies are unwilling to report honestly how their wellbeing has changed.",
+      "B": "individuals who return to their earlier level after a major life event are very rare in such studies.",
+      "C": "an average showing no change can coexist with large changes, in both directions, for most of the group.",
+      "D": "the average wellbeing of such groups has usually been misreported in the studies that measure it."
+     },
+     "question": "In paragraph 3, the remark that the flat line 'describes almost nobody in it' implies that"
+    },
+    {
+     "id": "R02-C-03-3",
+     "type": "RC",
+     "options": {
+      "A": "will find that the benefit of the quieter home fades about as quickly as the pleasure of a higher salary.",
+      "B": "has good reason to expect a lasting improvement, since noise is among the conditions people fail to adapt to.",
+      "C": "should expect to adapt to the noise in time, so that the trouble and cost of moving are probably not worthwhile.",
+      "D": "should base the decision mainly on temperament, since it is temperament that fixes how content a person can be."
+     },
+     "question": "The author would most likely say that a person considering a move to escape a persistently noisy flat"
+    },
+    {
+     "id": "R02-C-03-4",
+     "type": "RC",
+     "options": {
+      "A": "In most groups studied, average wellbeing returns almost exactly to its earlier level within a few years of a major event.",
+      "B": "Average wellbeing tends to rise in the year before a wedding and to fall back gradually in the years that follow it.",
+      "C": "When the individual paths in such studies are examined, nearly everyone's wellbeing turns out to return close to its earlier level.",
+      "D": "People adjust more slowly to living in a larger house than they do to receiving a substantial rise in salary."
+     },
+     "question": "Which of the following, if true, would most weaken the argument of paragraph 3?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R03-F-07",
+   "passage": [
+    "One of the first lessons of economics is that money is fungible. A rupee earned is the same as a rupee found, a rupee received as a gift or a rupee won at cards; since each can buy exactly what the others can, a rational person should be indifferent to where a sum came from and should spend it according to a single ranking of needs. This is what makes money so useful. It strips goods of their particular histories and renders them comparable, and it lets a stranger in one town trade with a stranger in another without either needing to know anything about the other's life.",
+    "Ordinary households, however, behave as though they had never heard the lesson. Coins for the temple are kept in a separate tin; a grandmother's gift to a newborn goes into a savings account that no one will touch for rent even in a hard month; the money a woman earns from tailoring is spent on her children's schooling, while her husband's wages go to food and the loan; a windfall is spent on a celebration that the same sum, arriving as salary, would never have funded. Money that arrives in one way is marked, set aside and spent in another, as though each sum carried a label that its owners were bound to respect. Nor are such habits confined to poor households; in one form or another they appear in families at every level of income.",
+    "The standard response is to call this mental accounting and to treat it as a lapse, a cognitive shortcut that serves people tolerably on the whole but leads them into avoidable errors. The errors are real. A family that keeps savings in a low-interest account reserved for a daughter's wedding while borrowing at a ruinous rate to repair the roof is paying heavily for a distinction that, in purely financial terms, does not exist. Yet to describe earmarking only as a mistake is to miss what it accomplishes. The grandmother's gift is set apart because it is a relationship as much as a sum: spending it on rent would feel like dissolving the bond it expressed. The tailor's earnings are spent on schooling because keeping them distinct allows her to claim, within the household, a sphere of decision that pooled money would not give her. Labels on money are the means by which people make it say something about who they are to one another.",
+    "It may be objected that this shows only that people attach feelings to money, not that money itself ceases to be fungible. In the market, after all, the tailor's rupee buys exactly what her husband's does, and no shopkeeper asks about its origin. The objection is correct about the shopkeeper. But it concedes the point that matters. Fungibility holds where people have agreed to ignore the histories of sums, as in impersonal trade, and fails where they have not, as in the household, the family ceremony and the circle of friends who lend to one another.",
+    "The single, featureless money of the textbook, then, is not a natural property of currency that social life afterwards distorts. It is an arrangement that holds in certain settings and that people are constantly unmaking elsewhere. To see this is not to deny that the arrangement is valuable, or that families sometimes pay dearly for their labels; it is to recognise that the indifference to origins which economics takes as its starting point is itself a social achievement, and a local one."
+   ],
+   "questions": [
+    {
+     "id": "R03-F-07-1",
+     "type": "RC",
+     "options": {
+      "A": "Coins meant for the temple being kept apart from other money in a tin.",
+      "B": "A windfall being spent on a celebration that a salary would never fund.",
+      "C": "A woman spending her earnings from tailoring on her children's schooling.",
+      "D": "A grandmother's gift to a newborn being placed in an untouched savings account."
+     },
+     "question": "Which of the following does the passage present as an instance of earmarking that gives a household member a sphere of decision of her own?"
+    },
+    {
+     "id": "R03-F-07-2",
+     "type": "RC",
+     "options": {
+      "A": "lets goods with different origins be measured on a single common scale.",
+      "B": "removes from goods any record of who made them or where they came from.",
+      "C": "makes all goods equally valuable regardless of how useful they are.",
+      "D": "requires strangers to disclose the histories of the goods they exchange."
+     },
+     "question": "In paragraph 1, the statement that money 'renders them comparable' means that money"
+    },
+    {
+     "id": "R03-F-07-3",
+     "type": "RC",
+     "options": {
+      "A": "Women who earn money from tailoring spend more on their children's schooling than women who earn no money of their own.",
+      "B": "Shopkeepers in the town accept the tailor's rupees on exactly the same terms as the rupees earned by her husband.",
+      "C": "Households that earmark their money pay more interest over a year than households that pool all of their income together.",
+      "D": "Women whose earnings are pooled with their husbands' say they have less influence over household spending than women who keep their earnings apart."
+     },
+     "question": "Which of the following, if true, would most strengthen the author's interpretation of the tailor's spending?"
+    },
+    {
+     "id": "R03-F-07-4",
+     "type": "RC",
+     "options": {
+      "A": "denies that money is fungible even in impersonal trade between people who are strangers.",
+      "B": "accepts its point about market exchange but argues that fungibility holds only in particular settings.",
+      "C": "argues that the market is itself a distortion of the money that people use at home.",
+      "D": "concedes that earmarking reflects only feelings and so leaves money's fungibility untouched."
+     },
+     "question": "In responding to the objection raised in paragraph 4, the author"
+    },
+    {
+     "id": "R03-F-07-5",
+     "type": "RC",
+     "options": {
+      "A": "Because money carries social meanings, the economic principle of fungibility is simply false and ought to be abandoned by economists.",
+      "B": "Money behaves as one interchangeable medium only where people agree to ignore where sums came from; elsewhere they mark it deliberately.",
+      "C": "Households earmark their money chiefly because cognitive shortcuts are easier than ranking all their needs together.",
+      "D": "Mental accounting is not an error at all, because keeping money in separate categories costs households nothing."
+     },
+     "question": "Which of the following best captures the main argument of the passage?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R05-F-02",
+   "passage": [
+    "Special economic zones are usually defended with a simple argument. Where a country's regulations, infrastructure or courts are too poor to attract investors, it may be impossible to repair them everywhere at once; it is easier to draw a boundary around a small area, supply it with reliable power, quick customs clearance and predictable rules, and invite firms to set up inside. The zone becomes a place where the business environment the country cannot yet afford for itself is provided in miniature. Inside the fence, so the thinking goes, investors will find conditions that would take a generation to create outside it.",
+    "The reasoning is persuasive within its limits, and it explains why so many governments have tried the experiment. But it also contains the seed of a common failure. A zone designed to protect investors from the surrounding economy can succeed too well. Firms import their components free of duty, assemble them with local labour and export the finished product, while buying almost nothing from domestic suppliers and teaching them nothing. Export figures rise, and an observer counting shipments would call the zone a triumph. Yet the economy outside the fence may be little changed, apart from the wages paid to workers who commute in, and those wages often reflect the kind of routine assembly that is easiest to move elsewhere when costs rise.",
+    "What distinguishes the zones that have mattered is not the generosity of their tax holidays but the degree to which they leak. In the more instructive cases, local firms learned to supply the foreign plants, managers trained inside the zone left to start businesses outside it, and, most important, rules first tried within the boundary were later extended across the country once they had shown that they worked. The zone, on this view, is less an enclave than a laboratory, and a laboratory whose findings never leave the building has failed at its central task, whatever it produces.",
+    "It would be naive to conclude that governments should simply abolish the boundary and expect the benefits to spread. The isolation of a zone is often what makes it politically possible in the first place, since it lets reformers try new rules without confronting at once every interest that benefits from the old ones. The point is that isolation should be treated as a starting condition to be outgrown, not as the design itself. A zone that is still, after decades, an island of efficiency in an unchanged sea is evidence less of success than of a reform that stalled."
+   ],
+   "questions": [
+    {
+     "id": "R05-F-02-1",
+     "type": "RC",
+     "options": {
+      "A": "conclude that the zone had failed because its firms import most of the components that they assemble there.",
+      "B": "mistake rising exports from a zone for evidence that it had changed the economy around it.",
+      "C": "underestimate the wages that the zone's firms pay to workers commuting in from outside.",
+      "D": "notice at once that domestic suppliers were being excluded from the zone's business."
+     },
+     "question": "The reference to 'an observer counting shipments' in paragraph 2 suggests that such an observer would"
+    },
+    {
+     "id": "R05-F-02-2",
+     "type": "RC",
+     "options": {
+      "A": "suggest that zones should favour research-intensive industries over the routine assembly work they usually attract.",
+      "B": "concede that isolating a zone from the rest of the economy is politically necessary.",
+      "C": "present a zone's purpose as testing arrangements that are meant eventually to operate beyond it.",
+      "D": "explain why generous tax holidays decide which zones succeed and which fail."
+     },
+     "question": "The description of a zone as 'less an enclave than a laboratory' in paragraph 3 serves mainly to"
+    },
+    {
+     "id": "R05-F-02-3",
+     "type": "RC",
+     "options": {
+      "A": "Across many zones, larger tax concessions predict larger gains for firms outside, while the share of inputs bought locally predicts nothing.",
+      "B": "Several zones offering generous tax holidays attracted large numbers of foreign firms during their first ten years of operation.",
+      "C": "Some zones whose rules were later extended across their countries had begun as enclaves that bought very little from local suppliers.",
+      "D": "Workers trained inside zones went on to earn higher wages than workers of similar age who had never been employed in one."
+     },
+     "question": "Which of the following findings, if true, would most weaken the author's claim about what distinguishes the zones that have mattered?"
+    },
+    {
+     "id": "R05-F-02-4",
+     "type": "RC",
+     "options": {
+      "A": "A zone can raise a country's exports markedly while leaving most of the economy outside it largely unchanged.",
+      "B": "The wages a zone pays may rest on work that firms would readily move elsewhere if costs were to rise.",
+      "C": "A zone that has remained an efficient island for decades points to a reform that has failed to advance.",
+      "D": "A zone's isolation from the surrounding economy is a design flaw that reformers should avoid from the very start."
+     },
+     "question": "The author would agree with each of the following statements EXCEPT:"
+    }
+   ]
+  },
+  {
+   "passage_id": "R08-A-02",
+   "passage": [
+    "The quarrel between those who lay down rules for English and those who merely record how it is spoken is usually staged as a contest between snobbery and science. On one side stand the guardians of usage, who object to split infinitives and sentence-final prepositions and who regard each new sense of an old word as a small act of vandalism. On the other stand the linguists, who point out that many of the rules are of recent and dubious origin, that admired writers have broken them for centuries, and that a grammar describing what speakers actually do is the only kind that deserves the name. Put this way, the linguists win easily, and in the universities, at least, they have been winning for a long time.",
+    "Yet the victory is less complete than it appears, because it rests on a confusion about what a rule of usage is. The linguist is right that no rule of this kind is a law of the language in the way that, say, the order of article and noun is: speakers who break it are still perfectly understood, and they are still speaking English. But it does not follow that such rules are mere prejudice. Beliefs about correctness are themselves part of the linguistic behaviour of a community. A speaker who avoids a construction in a job application while using it freely at home is not confused; she is responding accurately to a social fact, namely that certain readers will judge her by it. A descriptive grammar that ignored such judgements would be describing an imaginary community.",
+    "What the prescriptivist gets wrong is not the existence of the rules but their source. The traditional defence appeals to logic, or to the example of Latin, or to a clarity the condemned construction supposedly lacks. These appeals rarely survive inspection. The objection to splitting an infinitive, for instance, makes some sense in a language where the infinitive is a single word and cannot be split, and very little in one where it is two. The real authority of such a rule is conventional: it binds because enough educated readers expect it to be observed, and for no deeper reason.",
+    "Seeing the rules as conventions of a register, rather than as laws or as prejudices, changes the question we should ask about them. It is no longer whether a usage is correct in some absolute sense, but whether a given convention earns its keep: whether it marks a distinction readers find useful, or merely sets a test that excludes those who were never taught it. Some conventions pass that test; many fail it. The point is that they can be judged, and that judging them is neither the snob's work nor the scientist's alone."
+   ],
+   "questions": [
+    {
+     "id": "R08-A-02-1",
+     "type": "RC",
+     "options": {
+      "A": "has been observed by educated writers for long enough to count as traditional.",
+      "B": "offers readers enough real benefit to justify the effort of observing it.",
+      "C": "is followed by enough speakers that breaking it causes genuine confusion.",
+      "D": "can be traced back to a principle of logic or to the grammar of Latin."
+     },
+     "question": "As used in paragraph 4, the phrase 'earns its keep' most nearly means"
+    },
+    {
+     "id": "R08-A-02-2",
+     "type": "RC",
+     "options": {
+      "A": "suggest that the way people speak at home is a more authentic guide to the language than formal writing.",
+      "B": "show that speakers are inconsistent in their usage and therefore need clear prescriptive rules to guide them.",
+      "C": "show that judgements of correctness are real features of a community's linguistic life that a description must include.",
+      "D": "demonstrate that the rule against the avoided construction is grounded in logic rather than in convention."
+     },
+     "question": "The example of the speaker who avoids a construction in a job application is used to"
+    },
+    {
+     "id": "R08-A-02-3",
+     "type": "RC",
+     "options": {
+      "A": "A usage rule with no basis in logic may still bind writers wherever readers expect it to be followed.",
+      "B": "A usage rule that cannot be justified by logic or by Latin ought to be abandoned by careful writers.",
+      "C": "A convention that tests whether a writer was taught it is, for that reason, a convention that earns its keep.",
+      "D": "Linguists have been mistaken in pointing out the recent and dubious origins of many usage rules."
+     },
+     "question": "The author would most likely agree with which of the following statements?"
+    },
+    {
+     "id": "R08-A-02-4",
+     "type": "RC",
+     "options": {
+      "A": "Speakers who carefully observe usage rules in formal letters often ignore the same rules in conversation with friends.",
+      "B": "Readers who claim to judge writers by a rule, when tested blind, neither notice breaches of it nor rate the writers lower.",
+      "C": "The rule against ending a sentence with a preposition was first proposed by a grammar writer modelling English on Latin.",
+      "D": "Many of the most admired writers in English have broken the rule against splitting an infinitive, and have done so for several centuries."
+     },
+     "question": "Which of the following, if true, would most weaken the author's claim that rules of usage are not 'mere prejudice' but social facts a description must include?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R03-A-02",
+   "passage": [
+    "Few words in urban debate do as much damage as 'density', largely because it is used, often by the same speaker within a single argument, to mean two quite different things. In its technical sense density is a ratio: the number of people, or of dwellings, on a given area of land. In ordinary speech it usually means something closer to crowding, the experience of too many people in too little room: a family of six in a single room, a queue that spills into the road, a train in which nobody can turn round. The two can occur together, but they need not, and treating them as one has shaped a century of planning.",
+    "Consider two districts with the same number of residents per hectare. In the first, people live in tall apartment buildings with generous flats, set among parks and wide streets. In the second, the same population is packed into low houses, several households to a building, with lanes too narrow for a cart. On a map of density the districts are identical; to anyone who lives in them they could hardly be more different. Conversely, a scattered agricultural village, where extended families share a single dwelling, can be acutely crowded indoors while being nearly empty by the hectare. Density, in short, describes land; crowding describes the conditions of daily life.",
+    "The confusion has a history. The diseases that ravaged industrial cities in the nineteenth century were widely blamed on density, and reformers responded by trying to spread people out. Yet what made those cities so lethal was a combination of overcrowded rooms, contaminated water and absent sewers, and where water and drains were improved, death rates in dense districts fell even though the districts often remained dense. The reformers were right that something was wrong; they were imprecise about what it was, and the imprecision outlived them, surviving in zoning codes and building regulations long after the sanitary conditions that had justified it had disappeared.",
+    "This is not to say that density is costless. Many people living close together compete for parks, school places and quiet, and a district can feel oppressive even when no room in it is overcrowded. Perception counts, and planners who dismiss it will find their schemes resented. But the remedies differ. Crowding is relieved by more floor space per person and by services; the costs of density are managed by design, by open space and by the quality of the street. A policy that caps density in the name of relieving crowding may achieve neither, pushing people into fewer and more crowded rooms, or out to the edge of the city."
+   ],
+   "questions": [
+    {
+     "id": "R03-A-02-1",
+     "type": "RC",
+     "options": {
+      "A": "density is a ratio of people or dwellings to land, while crowding concerns too many people for the room they have.",
+      "B": "density refers to how many people share a room, while crowding refers to how many live on a hectare.",
+      "C": "density is found mainly in large cities, while crowding is a problem that arises chiefly in villages.",
+      "D": "density damages the health of residents, while crowding is merely uncomfortable for those who experience it."
+     },
+     "question": "According to the passage, density differs from crowding in that"
+    },
+    {
+     "id": "R03-A-02-2",
+     "type": "RC",
+     "options": {
+      "A": "prove that tall apartment buildings are always better places to live than low houses on narrow lanes.",
+      "B": "suggest that maps showing population per hectare are usually drawn from inaccurate or outdated figures.",
+      "C": "show that areas equal in density can differ sharply in how crowded daily life within them is.",
+      "D": "illustrate the method by which nineteenth-century reformers tried to spread the urban population out."
+     },
+     "question": "The comparison of two districts with the same number of residents per hectare (paragraph 2) serves mainly to"
+    },
+    {
+     "id": "R03-A-02-3",
+     "type": "RC",
+     "options": {
+      "A": "rightly sensed that the industrial cities were unhealthy but located the cause in density rather than in rooms and sanitation.",
+      "B": "deliberately exaggerated the dangers of density in order to win public support for large building programmes.",
+      "C": "were mistaken in thinking that anything about conditions in the industrial cities needed to be changed at all.",
+      "D": "succeeded in lowering death rates in industrial cities chiefly by persuading residents to move to less dense districts."
+     },
+     "question": "The passage suggests that the nineteenth-century reformers mentioned in paragraph 3"
+    },
+    {
+     "id": "R03-A-02-4",
+     "type": "RC",
+     "options": {
+      "A": "Increasing the floor space available to each household and supplying water and drains, without necessarily reducing residents per hectare.",
+      "B": "Capping the number of residents per hectare and moving those above the limit to new settlements on the edge of the city.",
+      "C": "Leaving the district as it is, since residents' sense of being crowded counts for less than the measured density of the land.",
+      "D": "Replacing every low house in the district with high towers, because building upward removes crowding wherever it is tried."
+     },
+     "question": "A city has a district in which several families typically share one room. Which approach would the author most likely recommend?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R01-F-01",
+   "passage": [
+    "Students meeting physics for the first time are often unsettled to learn that the planes in their textbooks have no friction, the pendulums swing without air, and the planets are treated as points. Economics and population biology are worse offenders: their agents calculate perfectly and their populations are infinitely large. A natural response is to say that science, at least in its models, trades truth for convenience, and that a model is a useful fiction whose only virtue is that it lets us calculate. On this view the idealisation is a debt to be repaid later, when better methods allow the missing details to be added back.",
+    "This response gets the matter backwards. An idealisation is not usually a lapse in description but a claim about relevance. To leave friction out of an account of a stone sliding down a smooth slope is to assert, implicitly, that friction makes no appreciable difference to the feature one is trying to explain, namely the way the stone's speed grows with time. If that assertion is correct, the idealised model is not a fiction about the stone; it is a true statement about what the stone's motion depends on. The model is false about the world in its details and accurate about the structure of dependence, and the second is frequently what we wanted to know. Adding every missing factor would not improve such a model; it would bury the very pattern the model was built to display.",
+    "This does not mean that every idealisation is innocent. The claim of irrelevance can be wrong, and it is often wrong in a particular way: an assumption that holds well within one range of conditions fails outside it. Treating air as absent is harmless for a stone dropped from a window and disastrous for a feather, or for a parachutist. The danger lies less in the falsehood itself than in forgetting that it was a bet about relevance, so that a model calibrated in one setting is carried into another where the bet no longer pays.",
+    "The sensible test, then, is not whether a model is literally true, since almost none are, but whether its conclusions survive when the idealisation is relaxed. If a result about a population holds whether the population is taken to be infinite or merely very large, the assumption of infinity was doing no harm. If the result vanishes as soon as the assumption is loosened, it was an artefact of the simplification rather than a discovery about the world. Read in this way, the frictionless plane is less an embarrassment than a hypothesis, and like any hypothesis it can be checked."
+   ],
+   "questions": [
+    {
+     "id": "R01-F-01-1",
+     "type": "RC",
+     "options": {
+      "A": "argue that models in economics and biology idealise more heavily, and therefore less reliably, than the models used in physics.",
+      "B": "recast the falsehoods in scientific models as claims about which factors matter, claims that can be checked by relaxing them.",
+      "C": "defend the familiar view that idealised models are convenient fictions whose missing details ought to be restored once better methods allow it.",
+      "D": "show that every idealisation is eventually exposed as harmful once a model is carried into conditions it was not built for."
+     },
+     "question": "The primary purpose of the passage is to"
+    },
+    {
+     "id": "R01-F-01-2",
+     "type": "RC",
+     "options": {
+      "A": "show that an assumption that some factor does not matter can hold in one setting yet fail in another.",
+      "B": "illustrate the earlier claim that adding missing factors to a model buries the very pattern it was built to display.",
+      "C": "demonstrate that air resistance is the most common source of error in the models that physicists actually use.",
+      "D": "suggest that the motion of falling objects can never be modelled usefully without including the effect of the air."
+     },
+     "question": "The examples of the feather and the parachutist in paragraph 3 serve to"
+    },
+    {
+     "id": "R01-F-01-3",
+     "type": "RC",
+     "options": {
+      "A": "is valuable chiefly as a historical record of the way in which an earlier model was put together.",
+      "B": "owes its existence to the model's simplifying assumption rather than to any feature of the world being modelled.",
+      "C": "survives unchanged when the population is treated as very large rather than as infinitely large.",
+      "D": "was first reached through a simplified model and was later confirmed by more detailed observation of the world itself."
+     },
+     "question": "As used in paragraph 4, the phrase 'an artefact of the simplification' refers to a result that"
+    },
+    {
+     "id": "R01-F-01-4",
+     "type": "RC",
+     "options": {
+      "A": "Treating drivers as identical lets the model's equations be solved far more quickly than any more realistic formulation would allow.",
+      "B": "The model's predictions about where queues form have been presented to city planners for many years without any complaint.",
+      "C": "Every traffic engineer consulted agrees that no real population of drivers has identical reaction times.",
+      "D": "Rerun with a realistic spread of reaction times among drivers, the model still places the queues in the same spots."
+     },
+     "question": "A traffic model treats all drivers as having identical reaction times, which is plainly false. On the passage's reasoning, which of the following would best show that this idealisation is harmless for the model's prediction of where queues form?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R01-F-05",
+   "passage": [
+    "It is often said that a scientific theory can never be proved but can always be refuted: no number of successful predictions establishes it, while a single failed one brings it down. The slogan captures something real about the asymmetry between confirmation and refutation, but as a description of how theories should be treated it is too simple. A prediction is never derived from a theory alone. It depends also on assumptions about the instruments used, the conditions of the experiment and the other bodies or forces that might be at work. When a prediction fails, logic tells us that something in this whole bundle is wrong; it does not tell us which part.",
+    "The history of astronomy offers a well-known illustration. In the first half of the nineteenth century, the observed orbit of Uranus departed from what Newtonian mechanics predicted. Astronomers did not abandon Newton. They supposed instead that an unseen planet was pulling on Uranus, calculated where it would have to be, and in 1846 Neptune was found close to the predicted position. The anomaly, far from refuting the theory, became one of its most celebrated successes.",
+    "The same strategy, however, does not always succeed. A small discrepancy in the orbit of Mercury was also attributed to an undiscovered planet, which some astronomers even named, but no such planet was ever found. The discrepancy was finally accounted for only by Einstein's general theory of relativity, which replaced Newton's account of gravitation rather than adding to it. In hindsight, the two anomalies look entirely different. At the time, they looked much the same, and the decision to treat both in the same way was reasonable.",
+    "The lesson is not that anomalies should be ignored, nor that theories should be given up at the first sign of trouble. It is that there is no rule which tells us in advance when an anomaly is a puzzle to be solved within a theory and when it is a sign that the theory is failing. Tenacity is a virtue in science, since a theory abandoned at the first difficulty would never have the chance to show what it can do; but tenacity shades into dogma when a theory is protected by one convenient assumption after another, each invented for no reason except to save it. Telling the two apart is a matter of judgement, informed by how many anomalies have accumulated and by whether the assumptions used to explain them away have earned independent support."
+   ],
+   "questions": [
+    {
+     "id": "R01-F-05-1",
+     "type": "RC",
+     "options": {
+      "A": "at least one element of the theory and its accompanying assumptions is mistaken, though not which one.",
+      "B": "the theory must be replaced by another one that also explains its earlier successes.",
+      "C": "the theory itself is false, whatever assumptions were made about the instruments and the conditions of the experiment.",
+      "D": "the instruments used in the experiment were faulty or had been wrongly calibrated."
+     },
+     "question": "According to the passage, when a prediction derived from a theory fails, logic alone establishes that"
+    },
+    {
+     "id": "R01-F-05-2",
+     "type": "RC",
+     "options": {
+      "A": "show that the strategy that worked for Uranus does not always work and so carries no guarantee.",
+      "B": "suggest that the general theory of relativity was devised chiefly in order to explain the orbit of Mercury.",
+      "C": "prove that Newtonian mechanics was mistaken whenever it postulated an unseen planet to explain an irregular orbit.",
+      "D": "demonstrate that astronomers of the period clung to Newton's theory out of a dogmatic reluctance to abandon it."
+     },
+     "question": "The case of Mercury in paragraph 3 is introduced mainly to"
+    },
+    {
+     "id": "R01-F-05-3",
+     "type": "RC",
+     "options": {
+      "A": "astronomers of the period lacked the instruments they needed to tell a real planet from an imagined one.",
+      "B": "the astronomers who looked for a planet near Mercury cannot fairly be faulted for reasoning as they did.",
+      "C": "the discovery of Neptune owed more to luck than to the soundness of the calculations that preceded it.",
+      "D": "the anomalies of Uranus and of Mercury had the same underlying cause, though this was not yet recognised."
+     },
+     "question": "The author's remark that, at the time, the two anomalies 'looked much the same' suggests that"
+    },
+    {
+     "id": "R01-F-05-4",
+     "type": "RC",
+     "options": {
+      "A": "firm disapproval, since a theory that has met a clear anomaly ought to be given up rather than protected further.",
+      "B": "detached indifference, since whether to keep or abandon a theory is a question the author leaves entirely to historians.",
+      "C": "conditional approval, since such tenacity is reasonable but becomes dogma when it rests on assumptions invented only to save the theory.",
+      "D": "unreserved admiration, since holding on to a theory in the face of anomalies is always what good science requires."
+     },
+     "question": "The author's attitude towards scientists who keep a theory despite an anomaly is best described as"
+    }
+   ]
+  },
+  {
+   "passage_id": "R01-A-08",
+   "passage": [
+    "It is natural to think of understanding as knowledge in a higher concentration. On this view, a person who understands why bridges stand or why prices rise simply knows more than one who does not: more facts, and in particular more facts about causes. Understanding would then be knowledge of a special subject matter, the reasons why, but it would be knowledge all the same, answerable to the same standards and vulnerable to the same defeats.",
+    "The view has difficulty with a familiar figure, the student who has memorised the correct explanation. Asked why the seasons change, she replies, accurately, that the earth's axis is tilted relative to the plane of its orbit, so that each hemisphere receives more direct sunlight for part of the year. She has the answer from a reliable textbook and a reliable teacher, and by most accounts of knowledge she knows why the seasons change. Yet ask her what would happen if the tilt were greater, or why the seasons are reversed between the hemispheres, and she is at a loss. She possesses the explanation as a sentence rather than as something she can use. What she lacks is not a further fact but a grasp of how the facts she already has depend on one another, the ability to follow the explanation into cases for which it was not stated.",
+    "If this is right, understanding is less a matter of what one has been told than of what one can do with it, and this has a surprising consequence. Knowledge is usually held to require truth: one cannot know what is false. Understanding seems more forgiving. Much of what we rightly call scientific understanding is achieved through models that are, taken literally, false. The simple model of a gas treats its molecules as points that occupy no space and exert no forces on one another except in collision, which no actual molecule does; yet a student who has mastered that model understands a great deal about why gases behave as they do, and understands it partly because the model leaves out complications that would obscure the pattern. It would be odd to say that her understanding is defective merely because the model is false, and odder still to say that someone who had memorised a more accurate description, but could do nothing with it, understood more.",
+    "This should not be taken to mean that understanding floats free of truth altogether. An idealisation earns its place only when its departures from reality are irrelevant to the questions it is used to answer; the point-particle model serves well for gases at ordinary densities and misleads at very high ones, and part of understanding the model is knowing where it stops working. A story that got the dependencies wrong, however fluently it could be manipulated, would yield not understanding but a skilful illusion of it. The claim, then, is not that falsehood is harmless but that the relation between understanding and truth is looser and more selective than the relation between knowledge and truth: understanding demands accuracy in the respects that bear on the dependencies grasped, and tolerates distortion elsewhere.",
+    "The distinction matters beyond philosophy. Educational systems that measure success by the reproduction of correct statements will reward the memorising student and may never detect what she is missing, since what she is missing shows itself only when the question changes. Testing for understanding requires, at least in part, asking questions the student has not been prepared for."
+   ],
+   "questions": [
+    {
+     "id": "R01-A-08-1",
+     "type": "RC",
+     "options": {
+      "A": "showing that scientific models are false, and that science therefore yields understanding of the world but never knowledge of it.",
+      "B": "defending the view that understanding is knowledge of causes against the objection that some causes cannot be known.",
+      "C": "criticising educational systems for testing how well students remember statements rather than how well they can apply them.",
+      "D": "arguing that understanding differs from knowledge both in requiring a usable grasp of dependencies and in its more selective relation to truth."
+     },
+     "question": "The passage is primarily concerned with"
+    },
+    {
+     "id": "R01-A-08-2",
+     "type": "RC",
+     "options": {
+      "A": "illustrate how idealised models allow students to reason about cases for which their explanations were never originally stated.",
+      "B": "show that the student does not really know why the seasons change, since an answer that is merely memorised is not knowledge.",
+      "C": "show that what is learned from textbooks and teachers is less reliable than what a student works out through her own reasoning.",
+      "D": "present someone who seems to know why something happens without understanding it, against the view stated in paragraph 1."
+     },
+     "question": "The student who has memorised the explanation of the seasons (paragraph 2) serves primarily to"
+    },
+    {
+     "id": "R01-A-08-3",
+     "type": "RC",
+     "options": {
+      "A": "knowing a more accurate description of gases that the simple model was introduced to replace in teaching.",
+      "B": "believing, as the model assumes, that actual gas molecules occupy no space and exert no forces on one another.",
+      "C": "being able to state the model correctly in the words used by a reliable textbook or a reliable teacher.",
+      "D": "recognising the conditions under which its simplifications stop being harmless and the model begins to mislead."
+     },
+     "question": "The passage suggests that part of understanding the simple model of a gas consists in"
+    },
+    {
+     "id": "R01-A-08-4",
+     "type": "RC",
+     "options": {
+      "A": "A person who understands a phenomenon must hold at least some false beliefs about that phenomenon.",
+      "B": "Knowledge, like understanding, can tolerate falsehood in respects that are irrelevant to the question being answered.",
+      "C": "A person can come to understand a phenomenon partly by means of a representation that she knows is not literally true.",
+      "D": "Any explanation that can be applied fluently to new cases yields understanding, whether or not it gets the dependencies right."
+     },
+     "question": "Which of the following would the author be most likely to accept?"
+    },
+    {
+     "id": "R01-A-08-5",
+     "type": "RC",
+     "options": {
+      "A": "critical, because such measures cannot detect the gap between possessing an explanation and understanding it.",
+      "B": "approving, because such measures reliably identify the students who know why the things they study happen.",
+      "C": "contemptuous, because the reproduction of correct statements has no educational value of any kind.",
+      "D": "neutral, because the passage describes how such systems operate without passing any judgement on them."
+     },
+     "question": "The author's attitude towards educational systems that measure success by the reproduction of correct statements is best described as"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,22 @@
+[
+ {
+  "id": "R03-B-06-3",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "B",
+    "key": "B",
+    "working": "P2 lists food grown on same land, same house, nursed at same breast; inheritance of land not mentioned.",
+    "alternative": "",
+    "issue": "Option C adds 'over a period of years', which the passage attaches to accumulation through feeding and sharing rather than to house-sharing; minor, still clearly supported."
+   },
+   "S2": {
+    "answer": "D",
+    "key": "D",
+    "working": "P2 lists food from same land, same house, same breast; inheritance not mentioned.",
+    "alternative": "",
+    "issue": ""
+   }
+  }
+ }
+]

@@ -1,0 +1,62 @@
+[
+ {
+  "id": "R05-F-04-3",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "C",
+    "key": "C",
+    "working": "P4: firms do weigh expected losses from disruption; they just ignore costs falling on others. A, B, D are stated.",
+    "alternative": "",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "D",
+    "key": "D",
+    "working": "P4 says firms weigh expense against expected losses; they did consider disruption, just undervalued external costs.",
+    "alternative": "",
+    "issue": "D is a partial inference (managers weighed only own losses), still clearly unsupported by 'took no account whatever'."
+   }
+  }
+ },
+ {
+  "id": "R05-F-07-5",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "A",
+    "key": "A",
+    "working": "P3-P4: shelter weakens motive; pressure to improve comes from exit; crisis, not advance conditions, so not B.",
+    "alternative": "B tempts but conditions were not fixed in advance; the crisis forced the cut.",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "C",
+    "key": "C",
+    "working": "Fits P3-4: shelter weakens motive to learn; removal forced improvement. D wrong as not fixed in advance.",
+    "alternative": "",
+    "issue": ""
+   }
+  }
+ },
+ {
+  "id": "R05-F-08-3",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "A",
+    "key": "A",
+    "working": "P2: objection rests on known-menu picture; new activities no one knows.",
+    "alternative": "B is too strong; A relies on inferring that the advantage holds where the menu is known, which the passage implies rather than states.",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "C",
+    "key": "C",
+    "working": "P2: investors' advantage presupposes a known menu; for new activities 'both would be guessing'.",
+    "alternative": "",
+    "issue": ""
+   }
+  }
+ }
+]

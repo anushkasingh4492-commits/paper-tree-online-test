@@ -1,0 +1,22 @@
+[
+ {
+  "id": "R03-D-08-2",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "A",
+    "key": "A",
+    "working": "P3: sense of closure real; diagnosis frequently mistaken.",
+    "alternative": "",
+    "issue": "P3 contains a redundant clause (\"though their chances ... may be exactly what their parents' chances were. But on the measures...\") that reads like an editing leftover; not answer-affecting."
+   },
+   "S2": {
+    "answer": "D",
+    "key": "D",
+    "working": "P3: 'The sense of closure is real; its diagnosis is frequently mistaken.'",
+    "alternative": "",
+    "issue": "Passage P3 has a redundant, awkwardly sequenced pair of sentences: 'though their chances against the children of the office managers may be exactly what their parents' chances were' is immediately followed by 'But on the measures that track relative position, the chances may be much as they were', where 'But' contrasts with nothing. Looks like an inserted sentence; the answer is unaffected."
+   }
+  }
+ }
+]

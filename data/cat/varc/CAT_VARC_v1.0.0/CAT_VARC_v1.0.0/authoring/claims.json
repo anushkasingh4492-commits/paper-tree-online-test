@@ -1,0 +1,7527 @@
+[
+{
+"group": "RC",
+"tag": "SAMPLE",
+"subject": "maintenance versus invention in technology history"
+},
+{
+"group": "PJ",
+"tag": "SAMPLE",
+"subject": "early ocean soundings seafloor maps"
+},
+{
+"group": "PS",
+"tag": "SAMPLE",
+"subject": "gaming hospital waiting time metrics"
+},
+{
+"group": "OOO",
+"tag": "SAMPLE",
+"subject": "training bees colour rewards"
+},
+{
+"group": "SP",
+"tag": "SAMPLE",
+"subject": "redefinition of the second atomic time"
+},
+{
+"group": "RC",
+"tag": "R01-A",
+"subject": "testimony default trust"
+},
+{
+"group": "RC",
+"tag": "R01-A",
+"subject": "sceptic shifting standards"
+},
+{
+"group": "RC",
+"tag": "R01-A",
+"subject": "lay judgement of experts"
+},
+{
+"group": "RC",
+"tag": "R01-A",
+"subject": "peer disagreement equal weight"
+},
+{
+"group": "RC",
+"tag": "R01-A",
+"subject": "self knowledge of reasons"
+},
+{
+"group": "RC",
+"tag": "R01-A",
+"subject": "cultivated ignorance"
+},
+{
+"group": "RC",
+"tag": "R01-A",
+"subject": "intellectual humility"
+},
+{
+"group": "RC",
+"tag": "R01-A",
+"subject": "understanding versus knowing"
+},
+{
+"group": "RC",
+"tag": "R05-A",
+"subject": "decoy pricing"
+},
+{
+"group": "RC",
+"tag": "R05-A",
+"subject": "winners curse"
+},
+{
+"group": "RC",
+"tag": "R05-A",
+"subject": "advertising as signal"
+},
+{
+"group": "RC",
+"tag": "R05-A",
+"subject": "nudges and disclosure"
+},
+{
+"group": "RC",
+"tag": "R05-A",
+"subject": "attention as price"
+},
+{
+"group": "RC",
+"tag": "R05-A",
+"subject": "matching markets"
+},
+{
+"group": "RC",
+"tag": "R05-A",
+"subject": "paradox of value"
+},
+{
+"group": "RC",
+"tag": "R05-A",
+"subject": "endowment effect"
+},
+{
+"group": "RC",
+"tag": "R06-F",
+"subject": "human computing offices"
+},
+{
+"group": "RC",
+"tag": "R06-F",
+"subject": "recommendation feedback loops"
+},
+{
+"group": "RC",
+"tag": "R06-F",
+"subject": "relational privacy and consent"
+},
+{
+"group": "RC",
+"tag": "R06-F",
+"subject": "automation and operator skill"
+},
+{
+"group": "RC",
+"tag": "R06-F",
+"subject": "cloud metaphor and infrastructure"
+},
+{
+"group": "RC",
+"tag": "R06-F",
+"subject": "machine understanding as cluster"
+},
+{
+"group": "RC",
+"tag": "R06-F",
+"subject": "fairness criteria tradeoff"
+},
+{
+"group": "RC",
+"tag": "R06-F",
+"subject": "digital persistence and copying"
+},
+{
+"group": "PJ",
+"tag": "V01-A",
+"subject": "fair lottery"
+},
+{
+"group": "PJ",
+"tag": "V01-A",
+"subject": "degrees of consent"
+},
+{
+"group": "PJ",
+"tag": "V01-A",
+"subject": "white lies"
+},
+{
+"group": "PJ",
+"tag": "V01-A",
+"subject": "heap paradox"
+},
+{
+"group": "PJ",
+"tag": "V01-A",
+"subject": "choice overload"
+},
+{
+"group": "PJ",
+"tag": "V01-A",
+"subject": "mere exposure"
+},
+{
+"group": "PJ",
+"tag": "V01-A",
+"subject": "price anchoring"
+},
+{
+"group": "PJ",
+"tag": "V01-A",
+"subject": "emotions as judgements"
+},
+{
+"group": "PJ",
+"tag": "V01-A",
+"subject": "conversational silence"
+},
+{
+"group": "PJ",
+"tag": "V01-A",
+"subject": "paperback readership"
+},
+{
+"group": "PJ",
+"tag": "V01-A",
+"subject": "language shift"
+},
+{
+"group": "PJ",
+"tag": "V01-A",
+"subject": "first name address"
+},
+{
+"group": "PJ",
+"tag": "V01-A",
+"subject": "gift obligation"
+},
+{
+"group": "PJ",
+"tag": "V01-A",
+"subject": "canal decline"
+},
+{
+"group": "PJ",
+"tag": "V01-A",
+"subject": "print spelling"
+},
+{
+"group": "PJ",
+"tag": "V01-A",
+"subject": "census and state"
+},
+{
+"group": "PJ",
+"tag": "V01-A",
+"subject": "golden age complaints"
+},
+{
+"group": "PJ",
+"tag": "V01-A",
+"subject": "charm pricing"
+},
+{
+"group": "PJ",
+"tag": "V01-A",
+"subject": "sunk cost"
+},
+{
+"group": "PJ",
+"tag": "V01-A",
+"subject": "comparative advantage"
+},
+{
+"group": "PJ",
+"tag": "V01-A",
+"subject": "anchor store rents"
+},
+{
+"group": "PJ",
+"tag": "V01-A",
+"subject": "antibiotic resistance"
+},
+{
+"group": "PJ",
+"tag": "V01-A",
+"subject": "herd immunity"
+},
+{
+"group": "PJ",
+"tag": "V01-A",
+"subject": "continental drift"
+},
+{
+"group": "PJ",
+"tag": "V01-A",
+"subject": "base rates"
+},
+{
+"group": "PS",
+"tag": "V02-A",
+"subject": "promise limits"
+},
+{
+"group": "PS",
+"tag": "V02-A",
+"subject": "effortless virtue"
+},
+{
+"group": "PS",
+"tag": "V02-A",
+"subject": "thought experiments"
+},
+{
+"group": "PS",
+"tag": "V02-A",
+"subject": "institutional apology"
+},
+{
+"group": "PS",
+"tag": "V02-A",
+"subject": "nostalgia"
+},
+{
+"group": "PS",
+"tag": "V02-A",
+"subject": "outcome bias"
+},
+{
+"group": "PS",
+"tag": "V02-A",
+"subject": "introspection limits"
+},
+{
+"group": "PS",
+"tag": "V02-A",
+"subject": "procrastination mood"
+},
+{
+"group": "PS",
+"tag": "V02-A",
+"subject": "public libraries"
+},
+{
+"group": "PS",
+"tag": "V02-A",
+"subject": "translating humour"
+},
+{
+"group": "PS",
+"tag": "V02-A",
+"subject": "building restoration"
+},
+{
+"group": "PS",
+"tag": "V02-A",
+"subject": "folk song collecting"
+},
+{
+"group": "PS",
+"tag": "V02-A",
+"subject": "memoir evidence"
+},
+{
+"group": "PS",
+"tag": "V02-A",
+"subject": "counterfactual history"
+},
+{
+"group": "PS",
+"tag": "V02-A",
+"subject": "maps make borders"
+},
+{
+"group": "PS",
+"tag": "V02-A",
+"subject": "archive silences"
+},
+{
+"group": "PS",
+"tag": "V02-A",
+"subject": "loyalty programmes"
+},
+{
+"group": "PS",
+"tag": "V02-A",
+"subject": "zero price"
+},
+{
+"group": "PS",
+"tag": "V02-A",
+"subject": "open plan offices"
+},
+{
+"group": "PS",
+"tag": "V02-A",
+"subject": "reputation credit"
+},
+{
+"group": "PS",
+"tag": "V02-A",
+"subject": "unpaid work accounts"
+},
+{
+"group": "PS",
+"tag": "V02-A",
+"subject": "introduced species"
+},
+{
+"group": "PS",
+"tag": "V02-A",
+"subject": "publication bias"
+},
+{
+"group": "PS",
+"tag": "V02-A",
+"subject": "seed banks"
+},
+{
+"group": "PS",
+"tag": "V02-A",
+"subject": "lumpers splitters"
+},
+{
+"group": "OOO",
+"tag": "V03-A",
+"subject": "effortless virtue"
+},
+{
+"group": "OOO",
+"tag": "V03-A",
+"subject": "spacing effect"
+},
+{
+"group": "OOO",
+"tag": "V03-A",
+"subject": "recipes and tacit skill"
+},
+{
+"group": "OOO",
+"tag": "V03-A",
+"subject": "secret ballot"
+},
+{
+"group": "OOO",
+"tag": "V03-A",
+"subject": "tipping incentives"
+},
+{
+"group": "OOO",
+"tag": "V03-A",
+"subject": "street lights and insects"
+},
+{
+"group": "OOO",
+"tag": "V03-A",
+"subject": "doing and allowing"
+},
+{
+"group": "OOO",
+"tag": "V03-A",
+"subject": "curiosity and gaps"
+},
+{
+"group": "OOO",
+"tag": "V03-A",
+"subject": "library as public space"
+},
+{
+"group": "OOO",
+"tag": "V03-A",
+"subject": "coinage and authority"
+},
+{
+"group": "OOO",
+"tag": "V03-A",
+"subject": "airline overbooking"
+},
+{
+"group": "OOO",
+"tag": "V03-A",
+"subject": "tillage and soil carbon"
+},
+{
+"group": "OOO",
+"tag": "V03-A",
+"subject": "knowledge from testimony"
+},
+{
+"group": "OOO",
+"tag": "V03-A",
+"subject": "felt length of waiting"
+},
+{
+"group": "OOO",
+"tag": "V03-A",
+"subject": "oral epic sameness"
+},
+{
+"group": "OOO",
+"tag": "V03-A",
+"subject": "term limits"
+},
+{
+"group": "OOO",
+"tag": "V03-A",
+"subject": "rotating savings groups"
+},
+{
+"group": "OOO",
+"tag": "V03-A",
+"subject": "coastline measurement"
+},
+{
+"group": "OOO",
+"tag": "V03-A",
+"subject": "copying and theft"
+},
+{
+"group": "OOO",
+"tag": "V03-A",
+"subject": "effort in groups"
+},
+{
+"group": "OOO",
+"tag": "V03-A",
+"subject": "sources of fashion change"
+},
+{
+"group": "OOO",
+"tag": "V03-A",
+"subject": "changing meaning of monuments"
+},
+{
+"group": "OOO",
+"tag": "V03-A",
+"subject": "insurance and care"
+},
+{
+"group": "OOO",
+"tag": "V03-A",
+"subject": "mangroves as sea defence"
+},
+{
+"group": "OOO",
+"tag": "V03-A",
+"subject": "seed banks and farms"
+},
+{
+"group": "SP",
+"tag": "V04-A",
+"subject": "forgiving and excusing"
+},
+{
+"group": "SP",
+"tag": "V04-A",
+"subject": "planning and delay"
+},
+{
+"group": "SP",
+"tag": "V04-A",
+"subject": "street renaming"
+},
+{
+"group": "SP",
+"tag": "V04-A",
+"subject": "optical telegraph"
+},
+{
+"group": "SP",
+"tag": "V04-A",
+"subject": "menu costs"
+},
+{
+"group": "SP",
+"tag": "V04-A",
+"subject": "lichens air"
+},
+{
+"group": "SP",
+"tag": "V04-A",
+"subject": "moral luck"
+},
+{
+"group": "SP",
+"tag": "V04-A",
+"subject": "curse of knowledge"
+},
+{
+"group": "SP",
+"tag": "V04-A",
+"subject": "letters and archives"
+},
+{
+"group": "SP",
+"tag": "V04-A",
+"subject": "quarantine before germs"
+},
+{
+"group": "SP",
+"tag": "V04-A",
+"subject": "efficiency wages"
+},
+{
+"group": "SP",
+"tag": "V04-A",
+"subject": "delta sediment"
+},
+{
+"group": "SP",
+"tag": "V04-A",
+"subject": "blame for belief"
+},
+{
+"group": "SP",
+"tag": "V04-A",
+"subject": "valuing what we make"
+},
+{
+"group": "SP",
+"tag": "V04-A",
+"subject": "fashion cycles"
+},
+{
+"group": "SP",
+"tag": "V04-A",
+"subject": "railway time"
+},
+{
+"group": "SP",
+"tag": "V04-A",
+"subject": "open source motives"
+},
+{
+"group": "SP",
+"tag": "V04-A",
+"subject": "fungal networks"
+},
+{
+"group": "SP",
+"tag": "V04-A",
+"subject": "arguing about taste"
+},
+{
+"group": "SP",
+"tag": "V04-A",
+"subject": "placebo outcomes"
+},
+{
+"group": "SP",
+"tag": "V04-A",
+"subject": "concert applause"
+},
+{
+"group": "SP",
+"tag": "V04-A",
+"subject": "surname origins"
+},
+{
+"group": "SP",
+"tag": "V04-A",
+"subject": "insurance incentives"
+},
+{
+"group": "SP",
+"tag": "V04-A",
+"subject": "dark night sky"
+},
+{
+"group": "SP",
+"tag": "V04-A",
+"subject": "museum labels"
+},
+{
+"group": "RC",
+"tag": "R01-F",
+"subject": "idealised models and falsehood"
+},
+{
+"group": "RC",
+"tag": "R01-F",
+"subject": "explanation versus prediction"
+},
+{
+"group": "RC",
+"tag": "R01-F",
+"subject": "problem of induction justification"
+},
+{
+"group": "RC",
+"tag": "R01-F",
+"subject": "simplicity as guide to truth"
+},
+{
+"group": "RC",
+"tag": "R01-F",
+"subject": "anomalies and theory retention"
+},
+{
+"group": "RC",
+"tag": "R01-F",
+"subject": "inductive risk and values"
+},
+{
+"group": "RC",
+"tag": "R01-F",
+"subject": "thought experiments as evidence"
+},
+{
+"group": "RC",
+"tag": "R01-F",
+"subject": "single case chance probability"
+},
+{
+"group": "RC",
+"tag": "R01-B",
+"subject": "argument from analogy for other minds"
+},
+{
+"group": "RC",
+"tag": "R01-B",
+"subject": "reactive attitudes and blame"
+},
+{
+"group": "RC",
+"tag": "R01-B",
+"subject": "memory criterion of personal identity"
+},
+{
+"group": "RC",
+"tag": "R01-B",
+"subject": "emotions as evaluative judgements"
+},
+{
+"group": "RC",
+"tag": "R01-B",
+"subject": "attention as moral perception"
+},
+{
+"group": "RC",
+"tag": "R01-B",
+"subject": "extended mind into tools"
+},
+{
+"group": "RC",
+"tag": "R01-B",
+"subject": "narrative self critique"
+},
+{
+"group": "RC",
+"tag": "R01-B",
+"subject": "akrasia weakness of will"
+},
+{
+"group": "RC",
+"tag": "R01-D",
+"subject": "expressive theory of punishment"
+},
+{
+"group": "RC",
+"tag": "R01-D",
+"subject": "paradox of toleration"
+},
+{
+"group": "RC",
+"tag": "R01-D",
+"subject": "tacit consent by residence"
+},
+{
+"group": "RC",
+"tag": "R01-D",
+"subject": "meritocracy and luck in desert"
+},
+{
+"group": "RC",
+"tag": "R01-D",
+"subject": "public reason restraint"
+},
+{
+"group": "RC",
+"tag": "R01-D",
+"subject": "persistent minorities under majority rule"
+},
+{
+"group": "RC",
+"tag": "R01-D",
+"subject": "liberty as non-domination"
+},
+{
+"group": "RC",
+"tag": "R01-D",
+"subject": "levelling down objection to equality"
+},
+{
+"group": "PJ",
+"tag": "V01-B",
+"subject": "shifting ecological baselines"
+},
+{
+"group": "PJ",
+"tag": "V01-B",
+"subject": "carbon offset permanence"
+},
+{
+"group": "PJ",
+"tag": "V01-B",
+"subject": "groundwater depletion"
+},
+{
+"group": "PJ",
+"tag": "V01-B",
+"subject": "light pollution and stargazing"
+},
+{
+"group": "PJ",
+"tag": "V01-B",
+"subject": "password complexity rules"
+},
+{
+"group": "PJ",
+"tag": "V01-B",
+"subject": "software technical debt"
+},
+{
+"group": "PJ",
+"tag": "V01-B",
+"subject": "keyboard layout lock-in"
+},
+{
+"group": "PJ",
+"tag": "V01-B",
+"subject": "electric car range anxiety"
+},
+{
+"group": "PJ",
+"tag": "V01-B",
+"subject": "unreliable narrator"
+},
+{
+"group": "PJ",
+"tag": "V01-B",
+"subject": "art forgery value"
+},
+{
+"group": "PJ",
+"tag": "V01-B",
+"subject": "film adaptation of novels"
+},
+{
+"group": "PJ",
+"tag": "V01-B",
+"subject": "cleaning old paintings"
+},
+{
+"group": "PJ",
+"tag": "V01-B",
+"subject": "loanwords and purity"
+},
+{
+"group": "PJ",
+"tag": "V01-B",
+"subject": "headline questions"
+},
+{
+"group": "PJ",
+"tag": "V01-B",
+"subject": "euphemism treadmill"
+},
+{
+"group": "PJ",
+"tag": "V01-B",
+"subject": "dictionaries describe usage"
+},
+{
+"group": "PJ",
+"tag": "V01-B",
+"subject": "grade inflation"
+},
+{
+"group": "PJ",
+"tag": "V01-B",
+"subject": "retrieval practice testing"
+},
+{
+"group": "PJ",
+"tag": "V01-B",
+"subject": "class size"
+},
+{
+"group": "PJ",
+"tag": "V01-B",
+"subject": "comments instead of marks"
+},
+{
+"group": "PJ",
+"tag": "V01-B",
+"subject": "rote memorisation"
+},
+{
+"group": "PJ",
+"tag": "V01-B",
+"subject": "cancer screening overdiagnosis"
+},
+{
+"group": "PJ",
+"tag": "V01-B",
+"subject": "hospital hand hygiene"
+},
+{
+"group": "PJ",
+"tag": "V01-B",
+"subject": "fever as defence"
+},
+{
+"group": "PJ",
+"tag": "V01-B",
+"subject": "sleep debt"
+},
+{
+"group": "PJ",
+"tag": "V01-F",
+"subject": "hindsight bias"
+},
+{
+"group": "PJ",
+"tag": "V01-F",
+"subject": "bystander effect"
+},
+{
+"group": "PJ",
+"tag": "V01-F",
+"subject": "queueing norms"
+},
+{
+"group": "PJ",
+"tag": "V01-F",
+"subject": "medieval craft guilds"
+},
+{
+"group": "PJ",
+"tag": "V01-F",
+"subject": "minimum wage debate"
+},
+{
+"group": "PJ",
+"tag": "V01-F",
+"subject": "tragedy of commons"
+},
+{
+"group": "PJ",
+"tag": "V01-F",
+"subject": "network effects platforms"
+},
+{
+"group": "PJ",
+"tag": "V01-F",
+"subject": "coral bleaching"
+},
+{
+"group": "PJ",
+"tag": "V01-F",
+"subject": "grid battery storage"
+},
+{
+"group": "PJ",
+"tag": "V01-C",
+"subject": "open-label placebos"
+},
+{
+"group": "PJ",
+"tag": "V01-C",
+"subject": "disaster triage"
+},
+{
+"group": "PJ",
+"tag": "V01-C",
+"subject": "hospital handwashing resistance"
+},
+{
+"group": "PJ",
+"tag": "V01-C",
+"subject": "desire paths"
+},
+{
+"group": "PJ",
+"tag": "V01-C",
+"subject": "street grid planning"
+},
+{
+"group": "PJ",
+"tag": "V01-C",
+"subject": "delta subsidence"
+},
+{
+"group": "PJ",
+"tag": "V01-C",
+"subject": "induced traffic demand"
+},
+{
+"group": "PJ",
+"tag": "V01-C",
+"subject": "promises under changed circumstances"
+},
+{
+"group": "PJ",
+"tag": "V01-C",
+"subject": "ship of Theseus"
+},
+{
+"group": "PJ",
+"tag": "V01-C",
+"subject": "duty to rescue strangers"
+},
+{
+"group": "PJ",
+"tag": "V01-C",
+"subject": "thought experiment intuitions"
+},
+{
+"group": "PJ",
+"tag": "V01-C",
+"subject": "flow state"
+},
+{
+"group": "PJ",
+"tag": "V01-C",
+"subject": "eyewitness memory"
+},
+{
+"group": "PJ",
+"tag": "V01-C",
+"subject": "learned helplessness"
+},
+{
+"group": "PJ",
+"tag": "V01-C",
+"subject": "museum labels"
+},
+{
+"group": "PJ",
+"tag": "V01-C",
+"subject": "cookbook measurement standards"
+},
+{
+"group": "PJ",
+"tag": "V01-C",
+"subject": "salt taxation"
+},
+{
+"group": "PJ",
+"tag": "V01-C",
+"subject": "term limits"
+},
+{
+"group": "PJ",
+"tag": "V01-C",
+"subject": "decline of letter writing"
+},
+{
+"group": "PJ",
+"tag": "V01-C",
+"subject": "roman road networks"
+},
+{
+"group": "PJ",
+"tag": "V01-E",
+"subject": "untranslatable words"
+},
+{
+"group": "PJ",
+"tag": "V01-E",
+"subject": "learning by teaching"
+},
+{
+"group": "PJ",
+"tag": "V01-E",
+"subject": "map projections"
+},
+{
+"group": "PJ",
+"tag": "V01-E",
+"subject": "moral luck"
+},
+{
+"group": "RC",
+"tag": "R01-E",
+"subject": "workplace monitoring of employees"
+},
+{
+"group": "RC",
+"tag": "R01-E",
+"subject": "lying versus merely misleading"
+},
+{
+"group": "RC",
+"tag": "R01-E",
+"subject": "surrogate decisions substituted judgement"
+},
+{
+"group": "RC",
+"tag": "R01-E",
+"subject": "moral offsetting"
+},
+{
+"group": "RC",
+"tag": "R01-E",
+"subject": "charity partiality near versus distant"
+},
+{
+"group": "RC",
+"tag": "R01-E",
+"subject": "insect sentience moral status"
+},
+{
+"group": "RC",
+"tag": "R01-E",
+"subject": "discount rate future generations"
+},
+{
+"group": "RC",
+"tag": "R01-E",
+"subject": "statistical versus identified lives"
+},
+{
+"group": "PJ",
+"tag": "V01-F",
+"subject": "dark patterns interface design"
+},
+{
+"group": "PJ",
+"tag": "V01-D",
+"subject": "monastery bells timekeeping"
+},
+{
+"group": "PJ",
+"tag": "V01-D",
+"subject": "bank runs deposit insurance"
+},
+{
+"group": "PJ",
+"tag": "V01-D",
+"subject": "urban street trees cooling"
+},
+{
+"group": "PJ",
+"tag": "V01-D",
+"subject": "hillside terracing erosion"
+},
+{
+"group": "PJ",
+"tag": "V01-D",
+"subject": "jazz improvisation"
+},
+{
+"group": "PJ",
+"tag": "V01-D",
+"subject": "newspaper corrections column"
+},
+{
+"group": "PJ",
+"tag": "V01-D",
+"subject": "offsite backups redundancy"
+},
+{
+"group": "PJ",
+"tag": "V01-C",
+"subject": "donor organ allocation"
+},
+{
+"group": "PJ",
+"tag": "V01-C",
+"subject": "uses of boredom"
+},
+{
+"group": "PJ",
+"tag": "V01-C",
+"subject": "quarantine origins"
+},
+{
+"group": "PJ",
+"tag": "V01-C",
+"subject": "public library lending"
+},
+{
+"group": "PJ",
+"tag": "V01-C",
+"subject": "mercenary armies"
+},
+{
+"group": "RC",
+"tag": "R01-C",
+"subject": "resultant moral luck and blame"
+},
+{
+"group": "RC",
+"tag": "R01-C",
+"subject": "supererogation beyond duty"
+},
+{
+"group": "RC",
+"tag": "R01-C",
+"subject": "promises under changed circumstances"
+},
+{
+"group": "RC",
+"tag": "R01-C",
+"subject": "moral intuitions as evidence"
+},
+{
+"group": "RC",
+"tag": "R01-C",
+"subject": "forgiveness without apology"
+},
+{
+"group": "RC",
+"tag": "R01-C",
+"subject": "relativism and tolerance"
+},
+{
+"group": "RC",
+"tag": "R01-C",
+"subject": "moral progress expanding circle"
+},
+{
+"group": "RC",
+"tag": "R01-C",
+"subject": "situationism and character traits"
+},
+{
+"group": "PJ",
+"tag": "V01-E",
+"subject": "silent reading history"
+},
+{
+"group": "PJ",
+"tag": "V01-E",
+"subject": "emoji tone markers"
+},
+{
+"group": "PJ",
+"tag": "V01-E",
+"subject": "accent prestige"
+},
+{
+"group": "PJ",
+"tag": "V01-E",
+"subject": "open book exams"
+},
+{
+"group": "PJ",
+"tag": "V01-E",
+"subject": "mother tongue instruction"
+},
+{
+"group": "PJ",
+"tag": "V01-E",
+"subject": "handwritten lecture notes"
+},
+{
+"group": "PJ",
+"tag": "V01-E",
+"subject": "worked examples"
+},
+{
+"group": "PJ",
+"tag": "V01-E",
+"subject": "nocebo effect"
+},
+{
+"group": "PJ",
+"tag": "V01-E",
+"subject": "surgical checklists"
+},
+{
+"group": "PJ",
+"tag": "V01-E",
+"subject": "medication adherence"
+},
+{
+"group": "PJ",
+"tag": "V01-E",
+"subject": "loneliness health risk"
+},
+{
+"group": "PJ",
+"tag": "V01-E",
+"subject": "pedestrianised shopping streets"
+},
+{
+"group": "PJ",
+"tag": "V01-E",
+"subject": "hostile bench design"
+},
+{
+"group": "PJ",
+"tag": "V01-E",
+"subject": "street naming"
+},
+{
+"group": "PJ",
+"tag": "V01-E",
+"subject": "mountain pass trade routes"
+},
+{
+"group": "PJ",
+"tag": "V01-E",
+"subject": "lying versus misleading"
+},
+{
+"group": "PJ",
+"tag": "V01-E",
+"subject": "paternalism"
+},
+{
+"group": "PJ",
+"tag": "V01-E",
+"subject": "obligations to future generations"
+},
+{
+"group": "PJ",
+"tag": "V01-E",
+"subject": "curse of knowledge"
+},
+{
+"group": "PJ",
+"tag": "V01-E",
+"subject": "endowment effect"
+},
+{
+"group": "PJ",
+"tag": "V01-E",
+"subject": "procrastination and mood"
+},
+{
+"group": "PJ",
+"tag": "V01-D",
+"subject": "monsoon trade winds"
+},
+{
+"group": "PJ",
+"tag": "V01-D",
+"subject": "postal relay riders"
+},
+{
+"group": "PJ",
+"tag": "V01-D",
+"subject": "lighthouse automation"
+},
+{
+"group": "PJ",
+"tag": "V01-D",
+"subject": "loss leader pricing"
+},
+{
+"group": "PJ",
+"tag": "V01-D",
+"subject": "barter coincidence of wants"
+},
+{
+"group": "PJ",
+"tag": "V01-D",
+"subject": "airline overbooking"
+},
+{
+"group": "PJ",
+"tag": "V01-D",
+"subject": "warranties signal quality"
+},
+{
+"group": "PJ",
+"tag": "V01-D",
+"subject": "beaver dams wetlands"
+},
+{
+"group": "PJ",
+"tag": "V01-D",
+"subject": "fog harvesting nets"
+},
+{
+"group": "PJ",
+"tag": "V01-D",
+"subject": "fruit seed dispersal"
+},
+{
+"group": "PJ",
+"tag": "V01-D",
+"subject": "elevator safety brakes"
+},
+{
+"group": "PJ",
+"tag": "V01-D",
+"subject": "refrigeration diet change"
+},
+{
+"group": "PJ",
+"tag": "V01-D",
+"subject": "serialised novels cliffhangers"
+},
+{
+"group": "PJ",
+"tag": "V01-D",
+"subject": "detective fiction fair play"
+},
+{
+"group": "PJ",
+"tag": "V01-D",
+"subject": "photography painting realism"
+},
+{
+"group": "PJ",
+"tag": "V01-D",
+"subject": "radio drama imagination"
+},
+{
+"group": "PJ",
+"tag": "V01-D",
+"subject": "telegram brevity"
+},
+{
+"group": "PJ",
+"tag": "V01-D",
+"subject": "contradictory proverbs"
+},
+{
+"group": "PJ",
+"tag": "V01-F",
+"subject": "longitude at sea chronometer"
+},
+{
+"group": "PJ",
+"tag": "V01-F",
+"subject": "barcode checkout"
+},
+{
+"group": "PJ",
+"tag": "V01-F",
+"subject": "school uniforms debate"
+},
+{
+"group": "PJ",
+"tag": "V01-F",
+"subject": "habit cues"
+},
+{
+"group": "PJ",
+"tag": "V01-F",
+"subject": "ozone layer recovery"
+},
+{
+"group": "PJ",
+"tag": "V01-F",
+"subject": "public parks origin"
+},
+{
+"group": "PJ",
+"tag": "V01-F",
+"subject": "metric system adoption"
+},
+{
+"group": "PJ",
+"tag": "V01-F",
+"subject": "rent control"
+},
+{
+"group": "PJ",
+"tag": "V01-F",
+"subject": "earthworms and soil"
+},
+{
+"group": "PJ",
+"tag": "V01-F",
+"subject": "shipping containers"
+},
+{
+"group": "PJ",
+"tag": "V01-F",
+"subject": "gossip social function"
+},
+{
+"group": "PJ",
+"tag": "V01-F",
+"subject": "confirmation bias"
+},
+{
+"group": "PJ",
+"tag": "V01-F",
+"subject": "division of labour"
+},
+{
+"group": "PJ",
+"tag": "V01-F",
+"subject": "dinosaur extinction impact evidence"
+},
+{
+"group": "PJ",
+"tag": "V01-F",
+"subject": "spam filter arms race"
+},
+{
+"group": "RC",
+"tag": "R02-C",
+"subject": "boredom as functional signal"
+},
+{
+"group": "RC",
+"tag": "R02-C",
+"subject": "hedonic adaptation set point"
+},
+{
+"group": "RC",
+"tag": "R02-C",
+"subject": "grief stage models critique"
+},
+{
+"group": "RC",
+"tag": "R02-C",
+"subject": "curiosity information gap"
+},
+{
+"group": "RC",
+"tag": "R02-C",
+"subject": "stress concept overextension"
+},
+{
+"group": "RC",
+"tag": "R02-C",
+"subject": "ego depletion willpower resource"
+},
+{
+"group": "RC",
+"tag": "R02-C",
+"subject": "habits context cues automaticity"
+},
+{
+"group": "RC",
+"tag": "R02-C",
+"subject": "rewards crowding out intrinsic motivation"
+},
+{
+"group": "PJ",
+"tag": "V01-I",
+"subject": "restaurant tipping norms"
+},
+{
+"group": "PJ",
+"tag": "V01-I",
+"subject": "insurance moral hazard"
+},
+{
+"group": "PJ",
+"tag": "V01-I",
+"subject": "winner's curse auctions"
+},
+{
+"group": "PJ",
+"tag": "V01-I",
+"subject": "franchise business model"
+},
+{
+"group": "PJ",
+"tag": "V01-I",
+"subject": "invasive species on islands"
+},
+{
+"group": "PJ",
+"tag": "V01-I",
+"subject": "ice core climate records"
+},
+{
+"group": "PJ",
+"tag": "V01-I",
+"subject": "tree ring dating"
+},
+{
+"group": "PJ",
+"tag": "V01-I",
+"subject": "bird navigation magnetic sense"
+},
+{
+"group": "PJ",
+"tag": "V01-I",
+"subject": "GPS and spatial memory"
+},
+{
+"group": "PJ",
+"tag": "V01-I",
+"subject": "autocorrect errors"
+},
+{
+"group": "PJ",
+"tag": "V01-I",
+"subject": "open source maintainer burnout"
+},
+{
+"group": "PJ",
+"tag": "V01-I",
+"subject": "plug socket standards"
+},
+{
+"group": "PJ",
+"tag": "V01-I",
+"subject": "sonnet form constraint"
+},
+{
+"group": "PJ",
+"tag": "V01-I",
+"subject": "orchestra conductor role"
+},
+{
+"group": "PJ",
+"tag": "V01-I",
+"subject": "sitcom laugh tracks"
+},
+{
+"group": "PJ",
+"tag": "V01-I",
+"subject": "poetry translation"
+},
+{
+"group": "PJ",
+"tag": "V01-I",
+"subject": "sign language grammar"
+},
+{
+"group": "PJ",
+"tag": "V01-I",
+"subject": "podcast intimacy"
+},
+{
+"group": "PJ",
+"tag": "V01-I",
+"subject": "news paywalls"
+},
+{
+"group": "PJ",
+"tag": "V01-I",
+"subject": "dialect spelling in fiction"
+},
+{
+"group": "PJ",
+"tag": "V01-I",
+"subject": "primary school homework"
+},
+{
+"group": "PJ",
+"tag": "V01-I",
+"subject": "school start times sleep"
+},
+{
+"group": "PJ",
+"tag": "V01-I",
+"subject": "ability streaming"
+},
+{
+"group": "PJ",
+"tag": "V01-I",
+"subject": "negative marking guessing"
+},
+{
+"group": "RC",
+"tag": "R02-D",
+"subject": "pretend play and counterfactual reasoning"
+},
+{
+"group": "RC",
+"tag": "R02-D",
+"subject": "desirable difficulties in learning"
+},
+{
+"group": "RC",
+"tag": "R02-D",
+"subject": "deliberate practice and expertise"
+},
+{
+"group": "RC",
+"tag": "R02-D",
+"subject": "Flynn effect rising test scores"
+},
+{
+"group": "RC",
+"tag": "R02-D",
+"subject": "adolescent risk taking with peers"
+},
+{
+"group": "RC",
+"tag": "R02-D",
+"subject": "critical period second language acquisition"
+},
+{
+"group": "RC",
+"tag": "R02-D",
+"subject": "cognitive ageing decline narrative"
+},
+{
+"group": "RC",
+"tag": "R02-D",
+"subject": "learning styles matching hypothesis"
+},
+{
+"group": "RC",
+"tag": "R02-A",
+"subject": "perception as unconscious inference"
+},
+{
+"group": "RC",
+"tag": "R02-A",
+"subject": "inattentional blindness"
+},
+{
+"group": "RC",
+"tag": "R02-A",
+"subject": "flashbulb memory confidence"
+},
+{
+"group": "RC",
+"tag": "R02-A",
+"subject": "adaptive forgetting"
+},
+{
+"group": "RC",
+"tag": "R02-A",
+"subject": "expert perceptual chunking"
+},
+{
+"group": "RC",
+"tag": "R02-A",
+"subject": "subjective duration of time"
+},
+{
+"group": "RC",
+"tag": "R02-A",
+"subject": "mind wandering costs and uses"
+},
+{
+"group": "RC",
+"tag": "R02-A",
+"subject": "retrieval practice testing effect"
+},
+{
+"group": "PJ",
+"tag": "V01-H",
+"subject": "bridging points town siting"
+},
+{
+"group": "PJ",
+"tag": "V01-H",
+"subject": "harbour silting port decline"
+},
+{
+"group": "PJ",
+"tag": "V01-H",
+"subject": "bypass roads town centres"
+},
+{
+"group": "PJ",
+"tag": "V01-H",
+"subject": "railway standard time zones"
+},
+{
+"group": "PJ",
+"tag": "V01-H",
+"subject": "trusting testimony"
+},
+{
+"group": "PJ",
+"tag": "V01-H",
+"subject": "doctrine of double effect"
+},
+{
+"group": "PJ",
+"tag": "V01-H",
+"subject": "supererogation beyond duty"
+},
+{
+"group": "PJ",
+"tag": "V01-H",
+"subject": "other minds analogy argument"
+},
+{
+"group": "PJ",
+"tag": "V01-H",
+"subject": "planning fallacy"
+},
+{
+"group": "PJ",
+"tag": "V01-H",
+"subject": "change blindness"
+},
+{
+"group": "PJ",
+"tag": "V01-H",
+"subject": "illusion of explanatory depth"
+},
+{
+"group": "PJ",
+"tag": "V01-H",
+"subject": "post-choice dissonance"
+},
+{
+"group": "PJ",
+"tag": "V01-H",
+"subject": "fashion trickle-down"
+},
+{
+"group": "PJ",
+"tag": "V01-H",
+"subject": "table manners history"
+},
+{
+"group": "PJ",
+"tag": "V01-H",
+"subject": "tipping customs"
+},
+{
+"group": "PJ",
+"tag": "V01-H",
+"subject": "oral epic formulas"
+},
+{
+"group": "PJ",
+"tag": "V01-H",
+"subject": "secret ballot"
+},
+{
+"group": "PJ",
+"tag": "V01-H",
+"subject": "plague labour shortage wages"
+},
+{
+"group": "PJ",
+"tag": "V01-H",
+"subject": "coin debasement"
+},
+{
+"group": "PJ",
+"tag": "V01-H",
+"subject": "optical semaphore telegraph"
+},
+{
+"group": "PJ",
+"tag": "V01-H",
+"subject": "turnpike toll roads"
+},
+{
+"group": "PJ",
+"tag": "V01-H",
+"subject": "used car lemons"
+},
+{
+"group": "PJ",
+"tag": "V01-H",
+"subject": "free shipping thresholds"
+},
+{
+"group": "RC",
+"tag": "R02-B",
+"subject": "anchoring on arbitrary numbers"
+},
+{
+"group": "RC",
+"tag": "R02-B",
+"subject": "choice overload too many options"
+},
+{
+"group": "RC",
+"tag": "R02-B",
+"subject": "ecological rationality of simple heuristics"
+},
+{
+"group": "RC",
+"tag": "R02-B",
+"subject": "dread and unfamiliar risk perception"
+},
+{
+"group": "RC",
+"tag": "R02-B",
+"subject": "framing effects as implicit information"
+},
+{
+"group": "RC",
+"tag": "R02-B",
+"subject": "overconfidence and forecast calibration"
+},
+{
+"group": "RC",
+"tag": "R02-B",
+"subject": "debiasing training transfer"
+},
+{
+"group": "RC",
+"tag": "R02-B",
+"subject": "expert intuition and valid environments"
+},
+{
+"group": "PJ",
+"tag": "V01-K",
+"subject": "household appliances and housework"
+},
+{
+"group": "PJ",
+"tag": "V01-K",
+"subject": "sports fan loyalty"
+},
+{
+"group": "PJ",
+"tag": "V01-K",
+"subject": "natural ice trade"
+},
+{
+"group": "PJ",
+"tag": "V01-K",
+"subject": "coffeehouse political debate"
+},
+{
+"group": "PJ",
+"tag": "V01-K",
+"subject": "wildfire suppression paradox"
+},
+{
+"group": "PJ",
+"tag": "V01-K",
+"subject": "vaccine cold chain"
+},
+{
+"group": "PJ",
+"tag": "V01-K",
+"subject": "glacier meltwater supply"
+},
+{
+"group": "PJ",
+"tag": "V01-K",
+"subject": "captcha tests"
+},
+{
+"group": "PJ",
+"tag": "V01-K",
+"subject": "orbital debris cascade"
+},
+{
+"group": "PJ",
+"tag": "V01-K",
+"subject": "film sequels"
+},
+{
+"group": "PJ",
+"tag": "V01-J",
+"subject": "teaching to the test"
+},
+{
+"group": "PJ",
+"tag": "V01-J",
+"subject": "apprenticeship tacit knowledge"
+},
+{
+"group": "PJ",
+"tag": "V01-J",
+"subject": "Broad Street cholera pump"
+},
+{
+"group": "PJ",
+"tag": "V01-J",
+"subject": "orphan drugs rare diseases"
+},
+{
+"group": "PJ",
+"tag": "V01-J",
+"subject": "diagnostic second opinions"
+},
+{
+"group": "PJ",
+"tag": "V01-J",
+"subject": "calorie labels on menus"
+},
+{
+"group": "PJ",
+"tag": "V01-J",
+"subject": "demolished city walls boulevards"
+},
+{
+"group": "PJ",
+"tag": "V01-J",
+"subject": "in situ slum upgrading"
+},
+{
+"group": "PJ",
+"tag": "V01-J",
+"subject": "rivers as shifting borders"
+},
+{
+"group": "PJ",
+"tag": "V01-J",
+"subject": "experience machine"
+},
+{
+"group": "PJ",
+"tag": "V01-J",
+"subject": "veil of ignorance"
+},
+{
+"group": "PJ",
+"tag": "V01-J",
+"subject": "dirty hands in politics"
+},
+{
+"group": "PJ",
+"tag": "V01-J",
+"subject": "spotlight effect"
+},
+{
+"group": "PJ",
+"tag": "V01-J",
+"subject": "peak end rule"
+},
+{
+"group": "PJ",
+"tag": "V01-J",
+"subject": "risk framing gains losses"
+},
+{
+"group": "PJ",
+"tag": "V01-J",
+"subject": "wedding spending escalation"
+},
+{
+"group": "PJ",
+"tag": "V01-J",
+"subject": "tattoo respectability"
+},
+{
+"group": "PJ",
+"tag": "V01-H",
+"subject": "subscription auto-renewal pricing"
+},
+{
+"group": "PJ",
+"tag": "V01-G",
+"subject": "submarine cable repair"
+},
+{
+"group": "PJ",
+"tag": "V01-G",
+"subject": "predictive text autocomplete"
+},
+{
+"group": "PJ",
+"tag": "V01-G",
+"subject": "digital file format obsolescence"
+},
+{
+"group": "PJ",
+"tag": "V01-G",
+"subject": "sonnet volta"
+},
+{
+"group": "PJ",
+"tag": "V01-G",
+"subject": "audiobook narration"
+},
+{
+"group": "PJ",
+"tag": "V01-G",
+"subject": "obituary writing"
+},
+{
+"group": "PJ",
+"tag": "V01-G",
+"subject": "semicolon usage"
+},
+{
+"group": "PJ",
+"tag": "V01-G",
+"subject": "mixed-ability grouping"
+},
+{
+"group": "PJ",
+"tag": "V01-G",
+"subject": "cursive handwriting instruction"
+},
+{
+"group": "PJ",
+"tag": "V01-G",
+"subject": "generic drug trust"
+},
+{
+"group": "PJ",
+"tag": "V01-G",
+"subject": "standing desks"
+},
+{
+"group": "PJ",
+"tag": "V01-G",
+"subject": "cul-de-sac suburbs"
+},
+{
+"group": "PJ",
+"tag": "V01-G",
+"subject": "high-rise housing estates"
+},
+{
+"group": "PJ",
+"tag": "V01-G",
+"subject": "twin border towns"
+},
+{
+"group": "RC",
+"tag": "R01-G",
+"subject": "life satisfaction surveys as wellbeing measure"
+},
+{
+"group": "RC",
+"tag": "R01-G",
+"subject": "stoic dichotomy of control"
+},
+{
+"group": "RC",
+"tag": "R01-G",
+"subject": "zhuangzi usefulness of the useless"
+},
+{
+"group": "RC",
+"tag": "R01-G",
+"subject": "lucretian symmetry argument on death"
+},
+{
+"group": "RC",
+"tag": "R01-G",
+"subject": "gita action without attachment to fruits"
+},
+{
+"group": "RC",
+"tag": "R01-G",
+"subject": "solitude distinguished from loneliness"
+},
+{
+"group": "RC",
+"tag": "R01-G",
+"subject": "aristotelian leisure as end not rest"
+},
+{
+"group": "RC",
+"tag": "R01-G",
+"subject": "buddhist no-self and craving"
+},
+{
+"group": "PJ",
+"tag": "V01-G",
+"subject": "spreadsheets and accounting clerks"
+},
+{
+"group": "PJ",
+"tag": "V01-G",
+"subject": "pneumatic tube mail"
+},
+{
+"group": "PJ",
+"tag": "V01-G",
+"subject": "theatre stage lighting"
+},
+{
+"group": "PJ",
+"tag": "V01-G",
+"subject": "comic strip panel gutters"
+},
+{
+"group": "PJ",
+"tag": "V01-G",
+"subject": "crossword clue conventions"
+},
+{
+"group": "PJ",
+"tag": "V01-G",
+"subject": "weather forecast wording"
+},
+{
+"group": "PJ",
+"tag": "V01-G",
+"subject": "school field trips"
+},
+{
+"group": "PJ",
+"tag": "V01-G",
+"subject": "chess in schools"
+},
+{
+"group": "PJ",
+"tag": "V01-G",
+"subject": "hearing aid stigma"
+},
+{
+"group": "PJ",
+"tag": "V01-G",
+"subject": "hospital visiting hours"
+},
+{
+"group": "PJ",
+"tag": "V01-G",
+"subject": "allotment gardens"
+},
+{
+"group": "PJ",
+"tag": "V01-J",
+"subject": "summer learning loss"
+},
+{
+"group": "PJ",
+"tag": "V01-J",
+"subject": "peer marking classrooms"
+},
+{
+"group": "PJ",
+"tag": "V01-J",
+"subject": "street vendors public space"
+},
+{
+"group": "PJ",
+"tag": "V01-J",
+"subject": "false consensus effect"
+},
+{
+"group": "PJ",
+"tag": "V01-J",
+"subject": "surname inheritance customs"
+},
+{
+"group": "PJ",
+"tag": "V01-J",
+"subject": "retirement age social invention"
+},
+{
+"group": "PJ",
+"tag": "V01-J",
+"subject": "forgiveness and resentment"
+},
+{
+"group": "PJ",
+"tag": "V01-K",
+"subject": "baby name fashions"
+},
+{
+"group": "PJ",
+"tag": "V01-K",
+"subject": "open-plan offices"
+},
+{
+"group": "PJ",
+"tag": "V01-K",
+"subject": "writing from accounting tokens"
+},
+{
+"group": "PJ",
+"tag": "V01-K",
+"subject": "prepaid postage reform"
+},
+{
+"group": "PJ",
+"tag": "V01-K",
+"subject": "conscription and citizenship"
+},
+{
+"group": "PJ",
+"tag": "V01-K",
+"subject": "piece rate wages"
+},
+{
+"group": "PJ",
+"tag": "V01-K",
+"subject": "group lending microfinance"
+},
+{
+"group": "PJ",
+"tag": "V01-K",
+"subject": "planned obsolescence"
+},
+{
+"group": "PJ",
+"tag": "V01-K",
+"subject": "loyalty card data"
+},
+{
+"group": "PJ",
+"tag": "V01-K",
+"subject": "mangrove coastal protection"
+},
+{
+"group": "PJ",
+"tag": "V01-K",
+"subject": "irrigation soil salinisation"
+},
+{
+"group": "PJ",
+"tag": "V01-K",
+"subject": "touchscreen car controls"
+},
+{
+"group": "PJ",
+"tag": "V01-K",
+"subject": "theatre fourth wall"
+},
+{
+"group": "PJ",
+"tag": "V01-K",
+"subject": "music sampling"
+},
+{
+"group": "PJ",
+"tag": "V01-K",
+"subject": "book jacket blurbs"
+},
+{
+"group": "PJ",
+"tag": "V01-J",
+"subject": "mental accounting windfalls"
+},
+{
+"group": "RC",
+"tag": "R02-E",
+"subject": "conformity as informational influence"
+},
+{
+"group": "RC",
+"tag": "R02-E",
+"subject": "minimal group ingroup favouritism"
+},
+{
+"group": "RC",
+"tag": "R02-E",
+"subject": "empathy spotlight limits moral guide"
+},
+{
+"group": "RC",
+"tag": "R02-E",
+"subject": "bystander effect diffusion responsibility"
+},
+{
+"group": "RC",
+"tag": "R02-E",
+"subject": "reputation indirect reciprocity cooperation"
+},
+{
+"group": "RC",
+"tag": "R02-E",
+"subject": "misinformation correction backfire effect"
+},
+{
+"group": "RC",
+"tag": "R02-E",
+"subject": "prestige versus dominance status"
+},
+{
+"group": "RC",
+"tag": "R02-E",
+"subject": "social priming replication debate"
+},
+{
+"group": "PS",
+"tag": "V02-B",
+"subject": "citizen science data"
+},
+{
+"group": "PS",
+"tag": "V02-B",
+"subject": "rewilding expectations"
+},
+{
+"group": "PS",
+"tag": "V02-B",
+"subject": "carbon offset permanence"
+},
+{
+"group": "PS",
+"tag": "V02-B",
+"subject": "model organisms bias"
+},
+{
+"group": "PS",
+"tag": "V02-B",
+"subject": "autocomplete homogenised prose"
+},
+{
+"group": "PS",
+"tag": "V02-B",
+"subject": "right to repair"
+},
+{
+"group": "PS",
+"tag": "V02-B",
+"subject": "digital format obsolescence"
+},
+{
+"group": "PS",
+"tag": "V02-B",
+"subject": "recommendation engines taste"
+},
+{
+"group": "PS",
+"tag": "V02-B",
+"subject": "posthumous publication unfinished manuscripts"
+},
+{
+"group": "PS",
+"tag": "V02-B",
+"subject": "forgery and artistic value"
+},
+{
+"group": "PS",
+"tag": "V02-B",
+"subject": "white cube gallery"
+},
+{
+"group": "PS",
+"tag": "V02-B",
+"subject": "literary prize shortlists"
+},
+{
+"group": "PS",
+"tag": "V02-B",
+"subject": "dictionary descriptivism"
+},
+{
+"group": "PS",
+"tag": "V02-B",
+"subject": "headline compression"
+},
+{
+"group": "PS",
+"tag": "V02-B",
+"subject": "dialect loss schooling"
+},
+{
+"group": "PS",
+"tag": "V02-B",
+"subject": "podcast intimacy"
+},
+{
+"group": "PS",
+"tag": "V02-B",
+"subject": "homework load"
+},
+{
+"group": "PS",
+"tag": "V02-B",
+"subject": "grade inflation"
+},
+{
+"group": "PS",
+"tag": "V02-B",
+"subject": "learning styles myth"
+},
+{
+"group": "PS",
+"tag": "V02-B",
+"subject": "rote memorisation"
+},
+{
+"group": "PS",
+"tag": "V02-B",
+"subject": "test preparation coaching"
+},
+{
+"group": "PS",
+"tag": "V02-B",
+"subject": "open label placebo"
+},
+{
+"group": "PS",
+"tag": "V02-B",
+"subject": "overdiagnosis screening"
+},
+{
+"group": "PS",
+"tag": "V02-B",
+"subject": "antibiotic stewardship"
+},
+{
+"group": "PS",
+"tag": "V02-B",
+"subject": "medication adherence"
+},
+{
+"group": "RC",
+"tag": "R03-C",
+"subject": "superstition as control under uncertainty"
+},
+{
+"group": "RC",
+"tag": "R03-C",
+"subject": "fixed mourning periods and grief"
+},
+{
+"group": "RC",
+"tag": "R03-C",
+"subject": "liminality in rites of passage"
+},
+{
+"group": "RC",
+"tag": "R03-C",
+"subject": "pilgrimage journey versus destination"
+},
+{
+"group": "RC",
+"tag": "R03-C",
+"subject": "shared shrines across faiths"
+},
+{
+"group": "RC",
+"tag": "R03-C",
+"subject": "secularisation thesis privatisation"
+},
+{
+"group": "RC",
+"tag": "R03-C",
+"subject": "carnival inversion safety valve"
+},
+{
+"group": "RC",
+"tag": "R03-C",
+"subject": "costly signalling of ritual commitment"
+},
+{
+"group": "RC",
+"tag": "R03-A",
+"subject": "informal settlement upgrading in place"
+},
+{
+"group": "RC",
+"tag": "R03-A",
+"subject": "gentrification displacement neighbourhood character"
+},
+{
+"group": "RC",
+"tag": "R03-A",
+"subject": "suburb conformity critique"
+},
+{
+"group": "RC",
+"tag": "R03-A",
+"subject": "walkability scores pedestrian experience"
+},
+{
+"group": "RC",
+"tag": "R03-A",
+"subject": "privately owned public plazas"
+},
+{
+"group": "RC",
+"tag": "R03-A",
+"subject": "density versus crowding"
+},
+{
+"group": "RC",
+"tag": "R03-A",
+"subject": "circular rural migrants urban belonging"
+},
+{
+"group": "RC",
+"tag": "R03-A",
+"subject": "home as practice renters"
+},
+{
+"group": "PJ",
+"tag": "V01-N",
+"subject": "crop seed vaults"
+},
+{
+"group": "PJ",
+"tag": "V01-N",
+"subject": "whale fall ecosystems"
+},
+{
+"group": "PJ",
+"tag": "V01-N",
+"subject": "wolf reintroduction trophic cascade"
+},
+{
+"group": "PJ",
+"tag": "V01-N",
+"subject": "urban birdsong noise"
+},
+{
+"group": "PJ",
+"tag": "V01-N",
+"subject": "flight data recorders"
+},
+{
+"group": "PJ",
+"tag": "V01-N",
+"subject": "software update fatigue"
+},
+{
+"group": "PJ",
+"tag": "V01-N",
+"subject": "photo metadata provenance"
+},
+{
+"group": "PJ",
+"tag": "V01-N",
+"subject": "noise cancelling headphones"
+},
+{
+"group": "PJ",
+"tag": "V01-N",
+"subject": "posthumous unfinished novels"
+},
+{
+"group": "PJ",
+"tag": "V01-N",
+"subject": "concert hall acoustics"
+},
+{
+"group": "PJ",
+"tag": "V01-N",
+"subject": "literary prize shortlists"
+},
+{
+"group": "PJ",
+"tag": "V01-N",
+"subject": "folk tale variants"
+},
+{
+"group": "PJ",
+"tag": "V01-N",
+"subject": "subtitles versus dubbing"
+},
+{
+"group": "PJ",
+"tag": "V01-N",
+"subject": "generic trademark brand names"
+},
+{
+"group": "PJ",
+"tag": "V01-N",
+"subject": "live sports commentary"
+},
+{
+"group": "PJ",
+"tag": "V01-N",
+"subject": "full stop in text messages"
+},
+{
+"group": "PJ",
+"tag": "V01-N",
+"subject": "learning styles myth"
+},
+{
+"group": "PJ",
+"tag": "V01-N",
+"subject": "maths anxiety"
+},
+{
+"group": "PJ",
+"tag": "V01-N",
+"subject": "student evaluations of teaching"
+},
+{
+"group": "PJ",
+"tag": "V01-N",
+"subject": "school debating societies"
+},
+{
+"group": "PJ",
+"tag": "V01-N",
+"subject": "sham surgery trials"
+},
+{
+"group": "PJ",
+"tag": "V01-N",
+"subject": "monitor alarm fatigue"
+},
+{
+"group": "PJ",
+"tag": "V01-N",
+"subject": "daily step count targets"
+},
+{
+"group": "PJ",
+"tag": "V01-N",
+"subject": "polio eradication last cases"
+},
+{
+"group": "RC",
+"tag": "R03-B",
+"subject": "teknonymy naming parents after children"
+},
+{
+"group": "RC",
+"tag": "R03-B",
+"subject": "bridewealth as alliance not purchase"
+},
+{
+"group": "RC",
+"tag": "R03-B",
+"subject": "historical invention of childhood thesis"
+},
+{
+"group": "RC",
+"tag": "R03-B",
+"subject": "old age dependency ratio measure"
+},
+{
+"group": "RC",
+"tag": "R03-B",
+"subject": "unpaid household care work valuation"
+},
+{
+"group": "RC",
+"tag": "R03-B",
+"subject": "kinship as relatedness beyond biology"
+},
+{
+"group": "RC",
+"tag": "R03-B",
+"subject": "generational cohort labels"
+},
+{
+"group": "RC",
+"tag": "R03-B",
+"subject": "joint family decline narrative"
+},
+{
+"group": "RC",
+"tag": "R02-F",
+"subject": "gesture as aid to thinking"
+},
+{
+"group": "RC",
+"tag": "R02-F",
+"subject": "octopus distributed nervous system"
+},
+{
+"group": "RC",
+"tag": "R02-F",
+"subject": "mirror test self recognition limits"
+},
+{
+"group": "RC",
+"tag": "R02-F",
+"subject": "brain metaphors from successive technologies"
+},
+{
+"group": "RC",
+"tag": "R02-F",
+"subject": "Moravec paradox sensorimotor skill"
+},
+{
+"group": "RC",
+"tag": "R02-F",
+"subject": "linguistic relativity colour and thought"
+},
+{
+"group": "RC",
+"tag": "R02-F",
+"subject": "Morgan canon parsimony animal minds"
+},
+{
+"group": "RC",
+"tag": "R02-F",
+"subject": "first person reports consciousness science"
+},
+{
+"group": "PJ",
+"tag": "V01-L",
+"subject": "epistolary novel form"
+},
+{
+"group": "PJ",
+"tag": "V01-L",
+"subject": "ruins in landscape painting"
+},
+{
+"group": "PJ",
+"tag": "V01-L",
+"subject": "still life vanitas symbols"
+},
+{
+"group": "PJ",
+"tag": "V01-L",
+"subject": "tragic chorus role"
+},
+{
+"group": "PJ",
+"tag": "V01-L",
+"subject": "pidgin to creole"
+},
+{
+"group": "PJ",
+"tag": "V01-L",
+"subject": "scholarly footnotes"
+},
+{
+"group": "PJ",
+"tag": "V01-L",
+"subject": "indirect requests politeness"
+},
+{
+"group": "PJ",
+"tag": "V01-L",
+"subject": "spacing effect study"
+},
+{
+"group": "PJ",
+"tag": "V01-L",
+"subject": "rubric marking"
+},
+{
+"group": "PJ",
+"tag": "V01-L",
+"subject": "school science practicals"
+},
+{
+"group": "PJ",
+"tag": "V01-L",
+"subject": "pain rating scales"
+},
+{
+"group": "PJ",
+"tag": "V01-L",
+"subject": "early walking after surgery"
+},
+{
+"group": "PJ",
+"tag": "V01-L",
+"subject": "variolation before vaccination"
+},
+{
+"group": "PJ",
+"tag": "V01-L",
+"subject": "polypharmacy elderly"
+},
+{
+"group": "PJ",
+"tag": "V01-L",
+"subject": "colonial hill stations"
+},
+{
+"group": "PJ",
+"tag": "V01-L",
+"subject": "planned capital cities"
+},
+{
+"group": "PJ",
+"tag": "V01-L",
+"subject": "artists and gentrification"
+},
+{
+"group": "PJ",
+"tag": "V01-L",
+"subject": "building on floodplains"
+},
+{
+"group": "PJ",
+"tag": "V01-L",
+"subject": "oasis caravan towns"
+},
+{
+"group": "PJ",
+"tag": "V01-L",
+"subject": "whistleblowing and loyalty"
+},
+{
+"group": "PJ",
+"tag": "V01-L",
+"subject": "memory theory personal identity"
+},
+{
+"group": "PJ",
+"tag": "V01-L",
+"subject": "deferring to experts"
+},
+{
+"group": "PJ",
+"tag": "V01-L",
+"subject": "duties of gratitude"
+},
+{
+"group": "PJ",
+"tag": "V01-L",
+"subject": "teacher wait time questioning"
+},
+{
+"group": "PJ",
+"tag": "V01-M",
+"subject": "problem of induction"
+},
+{
+"group": "PJ",
+"tag": "V01-M",
+"subject": "slippery slope arguments"
+},
+{
+"group": "PJ",
+"tag": "V01-M",
+"subject": "Buridan's ass indecision"
+},
+{
+"group": "PJ",
+"tag": "V01-M",
+"subject": "universalisability of maxims"
+},
+{
+"group": "PJ",
+"tag": "V01-M",
+"subject": "decoy effect"
+},
+{
+"group": "PJ",
+"tag": "V01-M",
+"subject": "Zeigarnik unfinished tasks"
+},
+{
+"group": "PJ",
+"tag": "V01-M",
+"subject": "self-serving attribution"
+},
+{
+"group": "PJ",
+"tag": "V01-M",
+"subject": "tip of the tongue states"
+},
+{
+"group": "PJ",
+"tag": "V01-M",
+"subject": "chunking working memory"
+},
+{
+"group": "PJ",
+"tag": "V01-M",
+"subject": "gully cricket local rules"
+},
+{
+"group": "PJ",
+"tag": "V01-M",
+"subject": "library silence norm"
+},
+{
+"group": "PJ",
+"tag": "V01-M",
+"subject": "family group chats"
+},
+{
+"group": "PJ",
+"tag": "V01-M",
+"subject": "neighbourhood tea stalls"
+},
+{
+"group": "PJ",
+"tag": "V01-M",
+"subject": "Athenian ostracism"
+},
+{
+"group": "PJ",
+"tag": "V01-M",
+"subject": "fire insurance brigades"
+},
+{
+"group": "PJ",
+"tag": "V01-M",
+"subject": "medieval trade fairs credit"
+},
+{
+"group": "PJ",
+"tag": "V01-M",
+"subject": "civil service examinations"
+},
+{
+"group": "PJ",
+"tag": "V01-M",
+"subject": "Veblen goods"
+},
+{
+"group": "PJ",
+"tag": "V01-M",
+"subject": "just-in-time inventory fragility"
+},
+{
+"group": "PJ",
+"tag": "V01-M",
+"subject": "pay transparency"
+},
+{
+"group": "PJ",
+"tag": "V01-M",
+"subject": "brand extension dilution"
+},
+{
+"group": "PJ",
+"tag": "V01-M",
+"subject": "river straightening floods"
+},
+{
+"group": "PJ",
+"tag": "V01-M",
+"subject": "monoculture crop disease"
+},
+{
+"group": "PJ",
+"tag": "V01-M",
+"subject": "replication crisis"
+},
+{
+"group": "PJ",
+"tag": "V01-L",
+"subject": "passive voice science writing"
+},
+{
+"group": "PJ",
+"tag": "V01-M",
+"subject": "volcanic winter"
+},
+{
+"group": "PS",
+"tag": "V02-C",
+"subject": "medicalising grief"
+},
+{
+"group": "PS",
+"tag": "V02-C",
+"subject": "street vendors informal economy"
+},
+{
+"group": "PS",
+"tag": "V02-C",
+"subject": "rivers connect rather than divide"
+},
+{
+"group": "PS",
+"tag": "V02-C",
+"subject": "shrinking cities"
+},
+{
+"group": "PS",
+"tag": "V02-C",
+"subject": "family visiting hours in intensive care"
+},
+{
+"group": "PS",
+"tag": "V02-C",
+"subject": "defensive medicine"
+},
+{
+"group": "PS",
+"tag": "V02-C",
+"subject": "medical jargon informed consent"
+},
+{
+"group": "PS",
+"tag": "V02-C",
+"subject": "public toilets city access"
+},
+{
+"group": "PS",
+"tag": "V02-C",
+"subject": "hypocrisy and standing to blame"
+},
+{
+"group": "PS",
+"tag": "V02-C",
+"subject": "posthumous harm to the dead"
+},
+{
+"group": "PS",
+"tag": "V02-C",
+"subject": "pity versus compassion"
+},
+{
+"group": "PS",
+"tag": "V02-C",
+"subject": "ought implies can"
+},
+{
+"group": "PS",
+"tag": "V02-C",
+"subject": "impostor feelings"
+},
+{
+"group": "PS",
+"tag": "V02-C",
+"subject": "regret action inaction"
+},
+{
+"group": "PS",
+"tag": "V02-C",
+"subject": "upward social comparison"
+},
+{
+"group": "PS",
+"tag": "V02-C",
+"subject": "hot hand belief"
+},
+{
+"group": "PS",
+"tag": "V02-C",
+"subject": "haggling in bazaars"
+},
+{
+"group": "PS",
+"tag": "V02-C",
+"subject": "monetising hobbies"
+},
+{
+"group": "PS",
+"tag": "V02-C",
+"subject": "casual dress codes"
+},
+{
+"group": "PS",
+"tag": "V02-C",
+"subject": "urban anonymity freedom"
+},
+{
+"group": "PS",
+"tag": "V02-C",
+"subject": "historical periodisation labels"
+},
+{
+"group": "PS",
+"tag": "V02-C",
+"subject": "famine entitlement not food shortage"
+},
+{
+"group": "PS",
+"tag": "V02-C",
+"subject": "factory clocks work discipline"
+},
+{
+"group": "PS",
+"tag": "V02-C",
+"subject": "invented traditions"
+},
+{
+"group": "PS",
+"tag": "V02-C",
+"subject": "silk road network"
+},
+{
+"group": "RC",
+"tag": "R03-G",
+"subject": "ability streaming in schools"
+},
+{
+"group": "RC",
+"tag": "R03-G",
+"subject": "administrative burden on welfare claimants"
+},
+{
+"group": "RC",
+"tag": "R03-G",
+"subject": "institutional trust survey measurement"
+},
+{
+"group": "RC",
+"tag": "R03-G",
+"subject": "queueing as informal social norm"
+},
+{
+"group": "RC",
+"tag": "R03-G",
+"subject": "bonding versus bridging social capital"
+},
+{
+"group": "RC",
+"tag": "R03-G",
+"subject": "professionalisation of volunteering"
+},
+{
+"group": "RC",
+"tag": "R03-G",
+"subject": "decline of membership associations"
+},
+{
+"group": "RC",
+"tag": "R03-G",
+"subject": "video review and referee authority"
+},
+{
+"group": "PS",
+"tag": "V02-F",
+"subject": "choice overload"
+},
+{
+"group": "PS",
+"tag": "V02-F",
+"subject": "sunk cost fallacy"
+},
+{
+"group": "PS",
+"tag": "V02-F",
+"subject": "eyewitness confidence"
+},
+{
+"group": "PS",
+"tag": "V02-F",
+"subject": "boredom as signal"
+},
+{
+"group": "PS",
+"tag": "V02-F",
+"subject": "queue fairness norms"
+},
+{
+"group": "PS",
+"tag": "V02-F",
+"subject": "gift obligation reciprocity"
+},
+{
+"group": "PS",
+"tag": "V02-F",
+"subject": "tipping custom"
+},
+{
+"group": "PS",
+"tag": "V02-F",
+"subject": "museum repatriation artefacts"
+},
+{
+"group": "PS",
+"tag": "V02-F",
+"subject": "legislative term limits"
+},
+{
+"group": "PS",
+"tag": "V02-F",
+"subject": "census categories identity"
+},
+{
+"group": "PS",
+"tag": "V02-F",
+"subject": "vernacular printing standardisation"
+},
+{
+"group": "PS",
+"tag": "V02-F",
+"subject": "referendum question design"
+},
+{
+"group": "PS",
+"tag": "V02-F",
+"subject": "price anchoring discounts"
+},
+{
+"group": "PS",
+"tag": "V02-F",
+"subject": "generic drug brand premium"
+},
+{
+"group": "PS",
+"tag": "V02-F",
+"subject": "four day work week"
+},
+{
+"group": "PS",
+"tag": "V02-F",
+"subject": "microfinance limits"
+},
+{
+"group": "PS",
+"tag": "V02-F",
+"subject": "commons community management"
+},
+{
+"group": "PS",
+"tag": "V02-F",
+"subject": "mangrove coastal protection"
+},
+{
+"group": "PS",
+"tag": "V02-F",
+"subject": "communicating scientific uncertainty"
+},
+{
+"group": "PS",
+"tag": "V02-F",
+"subject": "monoculture crop vulnerability"
+},
+{
+"group": "PS",
+"tag": "V02-F",
+"subject": "light pollution ecology"
+},
+{
+"group": "PS",
+"tag": "V02-F",
+"subject": "password complexity rules"
+},
+{
+"group": "PS",
+"tag": "V02-F",
+"subject": "automation deskilling pilots"
+},
+{
+"group": "PS",
+"tag": "V02-F",
+"subject": "satnav spatial memory"
+},
+{
+"group": "PS",
+"tag": "V02-F",
+"subject": "software technical debt"
+},
+{
+"group": "PS",
+"tag": "V02-E",
+"subject": "euphemism treadmill"
+},
+{
+"group": "PS",
+"tag": "V02-E",
+"subject": "newspaper corrections prominence"
+},
+{
+"group": "PS",
+"tag": "V02-E",
+"subject": "subtitling versus dubbing"
+},
+{
+"group": "PS",
+"tag": "V02-E",
+"subject": "untranslatable words myth"
+},
+{
+"group": "PS",
+"tag": "V02-E",
+"subject": "class size reduction"
+},
+{
+"group": "PS",
+"tag": "V02-E",
+"subject": "mother tongue early instruction"
+},
+{
+"group": "PS",
+"tag": "V02-E",
+"subject": "school uniforms"
+},
+{
+"group": "PS",
+"tag": "V02-E",
+"subject": "lecture defence"
+},
+{
+"group": "PS",
+"tag": "V02-E",
+"subject": "surgical checklists"
+},
+{
+"group": "PS",
+"tag": "V02-E",
+"subject": "nocebo effect"
+},
+{
+"group": "PS",
+"tag": "V02-E",
+"subject": "body mass index limits"
+},
+{
+"group": "PS",
+"tag": "V02-E",
+"subject": "second opinions"
+},
+{
+"group": "PS",
+"tag": "V02-E",
+"subject": "desire paths"
+},
+{
+"group": "PS",
+"tag": "V02-E",
+"subject": "induced traffic demand"
+},
+{
+"group": "PS",
+"tag": "V02-E",
+"subject": "street renaming"
+},
+{
+"group": "PS",
+"tag": "V02-E",
+"subject": "hostile benches architecture"
+},
+{
+"group": "PS",
+"tag": "V02-E",
+"subject": "supererogation"
+},
+{
+"group": "PS",
+"tag": "V02-E",
+"subject": "white lies"
+},
+{
+"group": "PS",
+"tag": "V02-E",
+"subject": "mutually beneficial exploitation"
+},
+{
+"group": "PS",
+"tag": "V02-E",
+"subject": "forgiveness without apology"
+},
+{
+"group": "PS",
+"tag": "V02-E",
+"subject": "peak end rule"
+},
+{
+"group": "PS",
+"tag": "V02-E",
+"subject": "planning fallacy"
+},
+{
+"group": "RC",
+"tag": "R03-F",
+"subject": "obligation to return gifts and the free gift"
+},
+{
+"group": "RC",
+"tag": "R03-F",
+"subject": "barter origin myth of money"
+},
+{
+"group": "RC",
+"tag": "R03-F",
+"subject": "hospitality to strangers host power"
+},
+{
+"group": "RC",
+"tag": "R03-F",
+"subject": "village pasture commons self governance"
+},
+{
+"group": "RC",
+"tag": "R03-F",
+"subject": "oral tradition reliability as history"
+},
+{
+"group": "RC",
+"tag": "R03-F",
+"subject": "local ecological knowledge scientific validation"
+},
+{
+"group": "RC",
+"tag": "R03-F",
+"subject": "earmarking money social meanings"
+},
+{
+"group": "RC",
+"tag": "R03-F",
+"subject": "rotating savings groups credit trust"
+},
+{
+"group": "RC",
+"tag": "R03-D",
+"subject": "credential inflation degree requirements"
+},
+{
+"group": "RC",
+"tag": "R03-D",
+"subject": "inconspicuous consumption elite status"
+},
+{
+"group": "RC",
+"tag": "R03-D",
+"subject": "cultural omnivore taste breadth"
+},
+{
+"group": "RC",
+"tag": "R03-D",
+"subject": "domestic servants invisibility in the household"
+},
+{
+"group": "RC",
+"tag": "R03-D",
+"subject": "history of the weekend free time"
+},
+{
+"group": "RC",
+"tag": "R03-D",
+"subject": "professional jurisdiction licensing closure"
+},
+{
+"group": "RC",
+"tag": "R03-D",
+"subject": "emotional labour of service workers"
+},
+{
+"group": "RC",
+"tag": "R03-D",
+"subject": "absolute versus relative social mobility"
+},
+{
+"group": "RC",
+"tag": "R04-A",
+"subject": "reading colonial archives against the grain"
+},
+{
+"group": "RC",
+"tag": "R04-A",
+"subject": "statue removal versus contextualisation"
+},
+{
+"group": "RC",
+"tag": "R04-A",
+"subject": "nation projected backward in national histories"
+},
+{
+"group": "RC",
+"tag": "R04-A",
+"subject": "errors in oral testimony as evidence"
+},
+{
+"group": "RC",
+"tag": "R04-A",
+"subject": "counterfactual reasoning in historical explanation"
+},
+{
+"group": "RC",
+"tag": "R04-A",
+"subject": "naming the middle ages"
+},
+{
+"group": "RC",
+"tag": "R04-A",
+"subject": "heritage industry versus critical history"
+},
+{
+"group": "RC",
+"tag": "R04-A",
+"subject": "political amnesty and deliberate forgetting"
+},
+{
+"group": "PS",
+"tag": "V02-D",
+"subject": "sortition random selection of officials"
+},
+{
+"group": "PS",
+"tag": "V02-D",
+"subject": "military logistics decide wars"
+},
+{
+"group": "PS",
+"tag": "V02-D",
+"subject": "first mover advantage myth"
+},
+{
+"group": "PS",
+"tag": "V02-D",
+"subject": "counterfeit luxury goods"
+},
+{
+"group": "PS",
+"tag": "V02-D",
+"subject": "wildfire suppression paradox"
+},
+{
+"group": "PS",
+"tag": "V02-D",
+"subject": "precision versus accuracy measurement"
+},
+{
+"group": "PS",
+"tag": "V02-D",
+"subject": "urban tree canopy cooling"
+},
+{
+"group": "PS",
+"tag": "V02-D",
+"subject": "software feature creep"
+},
+{
+"group": "PS",
+"tag": "V02-D",
+"subject": "unreliable narrator"
+},
+{
+"group": "PS",
+"tag": "V02-D",
+"subject": "film adaptation fidelity"
+},
+{
+"group": "PS",
+"tag": "V02-D",
+"subject": "jazz improvisation preparation"
+},
+{
+"group": "PS",
+"tag": "V02-D",
+"subject": "varnish removal old paintings"
+},
+{
+"group": "PS",
+"tag": "V02-D",
+"subject": "literary canon formation"
+},
+{
+"group": "PS",
+"tag": "V02-D",
+"subject": "loanwords linguistic purity"
+},
+{
+"group": "PS",
+"tag": "V02-D",
+"subject": "emoji tone in text"
+},
+{
+"group": "PS",
+"tag": "V02-D",
+"subject": "sign languages full languages"
+},
+{
+"group": "PS",
+"tag": "V02-E",
+"subject": "mere exposure effect"
+},
+{
+"group": "PS",
+"tag": "V02-E",
+"subject": "spotlight effect"
+},
+{
+"group": "RC",
+"tag": "R03-E",
+"subject": "immigrant restaurant menus authenticity"
+},
+{
+"group": "RC",
+"tag": "R03-E",
+"subject": "fashion cycle trickle down imitation"
+},
+{
+"group": "RC",
+"tag": "R03-E",
+"subject": "staged authenticity heritage tourism"
+},
+{
+"group": "RC",
+"tag": "R03-E",
+"subject": "retro product nostalgia marketing"
+},
+{
+"group": "RC",
+"tag": "R03-E",
+"subject": "brand communities as tribes"
+},
+{
+"group": "RC",
+"tag": "R03-E",
+"subject": "collecting and completing series"
+},
+{
+"group": "RC",
+"tag": "R03-E",
+"subject": "global chains local menu adaptation"
+},
+{
+"group": "RC",
+"tag": "R03-E",
+"subject": "minimalism as status display"
+},
+{
+"group": "PS",
+"tag": "V02-H",
+"subject": "pedestrianised streets retail"
+},
+{
+"group": "PS",
+"tag": "V02-H",
+"subject": "port cities cosmopolitanism"
+},
+{
+"group": "PS",
+"tag": "V02-H",
+"subject": "planned capital cities"
+},
+{
+"group": "PS",
+"tag": "V02-H",
+"subject": "moral luck"
+},
+{
+"group": "PS",
+"tag": "V02-H",
+"subject": "wedding spending status"
+},
+{
+"group": "PS",
+"tag": "V02-H",
+"subject": "food authenticity"
+},
+{
+"group": "PS",
+"tag": "V02-H",
+"subject": "great man history"
+},
+{
+"group": "PS",
+"tag": "V02-H",
+"subject": "minimum wage employment effects"
+},
+{
+"group": "PS",
+"tag": "V02-H",
+"subject": "corporate mission statements"
+},
+{
+"group": "PS",
+"tag": "V02-H",
+"subject": "remittances development"
+},
+{
+"group": "PS",
+"tag": "V02-E",
+"subject": "self handicapping"
+},
+{
+"group": "PS",
+"tag": "V02-D",
+"subject": "postal networks and imperial rule"
+},
+{
+"group": "PS",
+"tag": "V02-D",
+"subject": "surge pricing fairness"
+},
+{
+"group": "PS",
+"tag": "V02-D",
+"subject": "fossil record gaps"
+},
+{
+"group": "PS",
+"tag": "V02-D",
+"subject": "spreadsheet errors"
+},
+{
+"group": "PS",
+"tag": "V02-D",
+"subject": "radio drama imagination"
+},
+{
+"group": "PS",
+"tag": "V02-G",
+"subject": "backward compatibility legacy design"
+},
+{
+"group": "PS",
+"tag": "V02-G",
+"subject": "cookie consent banners"
+},
+{
+"group": "PS",
+"tag": "V02-G",
+"subject": "efficiency rebound energy use"
+},
+{
+"group": "PS",
+"tag": "V02-G",
+"subject": "volunteer maintainers open source"
+},
+{
+"group": "PS",
+"tag": "V02-G",
+"subject": "open endings in novels"
+},
+{
+"group": "PS",
+"tag": "V02-G",
+"subject": "formal constraints poetic creativity"
+},
+{
+"group": "PS",
+"tag": "V02-G",
+"subject": "loanwords and language purism"
+},
+{
+"group": "PS",
+"tag": "V02-G",
+"subject": "anonymous online comment sections"
+},
+{
+"group": "PS",
+"tag": "V02-G",
+"subject": "false balance in news reporting"
+},
+{
+"group": "PS",
+"tag": "V02-G",
+"subject": "spelling reform"
+},
+{
+"group": "PS",
+"tag": "V02-G",
+"subject": "retrieval practice testing effect"
+},
+{
+"group": "PS",
+"tag": "V02-G",
+"subject": "ability grouping streaming"
+},
+{
+"group": "PS",
+"tag": "V02-G",
+"subject": "school start times adolescent sleep"
+},
+{
+"group": "PS",
+"tag": "V02-G",
+"subject": "grading rubrics creativity"
+},
+{
+"group": "PS",
+"tag": "V02-G",
+"subject": "handwritten notes versus typing"
+},
+{
+"group": "PS",
+"tag": "V02-G",
+"subject": "online symptom checkers"
+},
+{
+"group": "PS",
+"tag": "V02-G",
+"subject": "daily step count targets"
+},
+{
+"group": "PS",
+"tag": "V02-G",
+"subject": "health warning fatigue"
+},
+{
+"group": "PS",
+"tag": "V02-G",
+"subject": "herd immunity free riding"
+},
+{
+"group": "PS",
+"tag": "V02-G",
+"subject": "bypass roads small towns"
+},
+{
+"group": "PS",
+"tag": "V02-G",
+"subject": "gated housing enclaves"
+},
+{
+"group": "PS",
+"tag": "V02-G",
+"subject": "master plans informal settlements"
+},
+{
+"group": "PS",
+"tag": "V02-H",
+"subject": "gentrification displacement"
+},
+{
+"group": "PS",
+"tag": "V02-H",
+"subject": "dirty hands political ethics"
+},
+{
+"group": "PS",
+"tag": "V02-H",
+"subject": "deference to moral experts"
+},
+{
+"group": "PS",
+"tag": "V02-H",
+"subject": "duties to future generations"
+},
+{
+"group": "PS",
+"tag": "V02-H",
+"subject": "hindsight bias"
+},
+{
+"group": "PS",
+"tag": "V02-H",
+"subject": "learned helplessness"
+},
+{
+"group": "PS",
+"tag": "V02-H",
+"subject": "groupthink cohesion"
+},
+{
+"group": "PS",
+"tag": "V02-H",
+"subject": "habit formation context cues"
+},
+{
+"group": "PS",
+"tag": "V02-H",
+"subject": "fashion cycles imitation"
+},
+{
+"group": "PS",
+"tag": "V02-H",
+"subject": "retirement identity loss"
+},
+{
+"group": "PS",
+"tag": "V02-H",
+"subject": "imperial overextension decline"
+},
+{
+"group": "PS",
+"tag": "V02-H",
+"subject": "revolutions rising expectations"
+},
+{
+"group": "PS",
+"tag": "V02-H",
+"subject": "judging past figures present morals"
+},
+{
+"group": "PS",
+"tag": "V02-H",
+"subject": "network effects platform lock-in"
+},
+{
+"group": "PS",
+"tag": "V02-G",
+"subject": "authorial intention in interpretation"
+},
+{
+"group": "PS",
+"tag": "V02-G",
+"subject": "night time economy cities"
+},
+{
+"group": "PS",
+"tag": "V02-D",
+"subject": "medieval craft guilds"
+},
+{
+"group": "PS",
+"tag": "V02-D",
+"subject": "conglomerate diversification discount"
+},
+{
+"group": "PS",
+"tag": "V02-D",
+"subject": "grid battery storage intermittency"
+},
+{
+"group": "PS",
+"tag": "V02-D",
+"subject": "spam filter arms race"
+},
+{
+"group": "PS",
+"tag": "V02-G",
+"subject": "amateur choirs community singing"
+},
+{
+"group": "PS",
+"tag": "V02-H",
+"subject": "artillery fortresses state centralisation"
+},
+{
+"group": "RC",
+"tag": "R04-D",
+"subject": "selecting legislators by lot sortition"
+},
+{
+"group": "RC",
+"tag": "R04-D",
+"subject": "compulsory voting obligation"
+},
+{
+"group": "RC",
+"tag": "R04-D",
+"subject": "secret ballot and voter privacy"
+},
+{
+"group": "RC",
+"tag": "R04-D",
+"subject": "populism as claim to exclusive representation"
+},
+{
+"group": "RC",
+"tag": "R04-D",
+"subject": "political parties as intermediaries"
+},
+{
+"group": "RC",
+"tag": "R04-D",
+"subject": "disruptive protest and democratic legitimacy"
+},
+{
+"group": "RC",
+"tag": "R04-D",
+"subject": "local newspaper decline and accountability"
+},
+{
+"group": "RC",
+"tag": "R04-D",
+"subject": "voter information shortcuts and rational ignorance"
+},
+{
+"group": "RC",
+"tag": "R04-B",
+"subject": "railways and the balance sheet of empire"
+},
+{
+"group": "RC",
+"tag": "R04-B",
+"subject": "colonial census fixing caste and tribe categories"
+},
+{
+"group": "RC",
+"tag": "R04-B",
+"subject": "indenture after slavery abolition"
+},
+{
+"group": "RC",
+"tag": "R04-B",
+"subject": "official language choice after independence"
+},
+{
+"group": "RC",
+"tag": "R04-B",
+"subject": "straight line borders artificial borders thesis"
+},
+{
+"group": "RC",
+"tag": "R04-B",
+"subject": "indirect rule invented customary chieftaincy"
+},
+{
+"group": "RC",
+"tag": "R04-B",
+"subject": "terra nullius empty land legal fiction"
+},
+{
+"group": "RC",
+"tag": "R04-B",
+"subject": "decolonisation as process flag independence"
+},
+{
+"group": "RC",
+"tag": "R04-C",
+"subject": "street level bureaucrat discretion"
+},
+{
+"group": "RC",
+"tag": "R04-C",
+"subject": "constitutional entrenchment dead hand"
+},
+{
+"group": "RC",
+"tag": "R04-C",
+"subject": "formal versus substantive rule of law"
+},
+{
+"group": "RC",
+"tag": "R04-C",
+"subject": "birthright citizenship soil versus descent"
+},
+{
+"group": "RC",
+"tag": "R04-C",
+"subject": "preventive patrol policing origins"
+},
+{
+"group": "RC",
+"tag": "R04-C",
+"subject": "resource rents and fiscal bargaining accountability"
+},
+{
+"group": "RC",
+"tag": "R04-C",
+"subject": "passports documentary control of movement"
+},
+{
+"group": "PS",
+"tag": "V02-I",
+"subject": "winners curse auctions"
+},
+{
+"group": "PS",
+"tag": "V02-I",
+"subject": "extended warranties"
+},
+{
+"group": "PS",
+"tag": "V02-I",
+"subject": "just in time inventory fragility"
+},
+{
+"group": "PS",
+"tag": "V02-I",
+"subject": "franchise standardisation"
+},
+{
+"group": "PS",
+"tag": "V02-I",
+"subject": "coral reef gardening"
+},
+{
+"group": "PS",
+"tag": "V02-I",
+"subject": "honeybee pollinator conservation focus"
+},
+{
+"group": "PS",
+"tag": "V02-I",
+"subject": "instruments shaping scientific theory"
+},
+{
+"group": "PS",
+"tag": "V02-I",
+"subject": "urban wildlife boldness"
+},
+{
+"group": "PS",
+"tag": "V02-I",
+"subject": "dark patterns interface design"
+},
+{
+"group": "PS",
+"tag": "V02-I",
+"subject": "default settings"
+},
+{
+"group": "PS",
+"tag": "V02-I",
+"subject": "algorithmic hiring screening"
+},
+{
+"group": "PS",
+"tag": "V02-I",
+"subject": "version control history"
+},
+{
+"group": "PS",
+"tag": "V02-I",
+"subject": "cover songs"
+},
+{
+"group": "PS",
+"tag": "V02-I",
+"subject": "ghostwriting"
+},
+{
+"group": "PS",
+"tag": "V02-I",
+"subject": "orchestra conductor role"
+},
+{
+"group": "PS",
+"tag": "V02-I",
+"subject": "abstract art titles"
+},
+{
+"group": "PS",
+"tag": "V02-I",
+"subject": "museum audio guides"
+},
+{
+"group": "PS",
+"tag": "V02-I",
+"subject": "weather forecast probability wording"
+},
+{
+"group": "PS",
+"tag": "V02-I",
+"subject": "live sports commentary"
+},
+{
+"group": "PS",
+"tag": "V02-I",
+"subject": "corporate jargon"
+},
+{
+"group": "PS",
+"tag": "V02-I",
+"subject": "obituary conventions"
+},
+{
+"group": "PS",
+"tag": "V02-I",
+"subject": "praising effort"
+},
+{
+"group": "PS",
+"tag": "V02-I",
+"subject": "peer tutoring"
+},
+{
+"group": "PS",
+"tag": "V02-I",
+"subject": "multiple choice tests"
+},
+{
+"group": "PS",
+"tag": "V02-I",
+"subject": "school field trips"
+},
+{
+"group": "RC",
+"tag": "R04-E",
+"subject": "small state neutrality as strategy"
+},
+{
+"group": "RC",
+"tag": "R04-E",
+"subject": "punitive versus lenient peace settlements"
+},
+{
+"group": "RC",
+"tag": "R04-E",
+"subject": "economic sanctions rally effect on targets"
+},
+{
+"group": "RC",
+"tag": "R04-E",
+"subject": "nuclear stability instability paradox"
+},
+{
+"group": "RC",
+"tag": "R04-E",
+"subject": "moral equality of combatants"
+},
+{
+"group": "RC",
+"tag": "R04-E",
+"subject": "balance of power versus collective security"
+},
+{
+"group": "RC",
+"tag": "R04-E",
+"subject": "humanitarian intervention and sovereignty"
+},
+{
+"group": "RC",
+"tag": "R04-E",
+"subject": "alliance entrapment and abandonment"
+},
+{
+"group": "RC",
+"tag": "R04-C",
+"subject": "emergency powers and normalisation of exception"
+},
+{
+"group": "PS",
+"tag": "V02-J",
+"subject": "mixed age classrooms"
+},
+{
+"group": "PS",
+"tag": "V02-J",
+"subject": "summer vacation learning loss"
+},
+{
+"group": "PS",
+"tag": "V02-J",
+"subject": "simplified textbook readability"
+},
+{
+"group": "PS",
+"tag": "V02-J",
+"subject": "sham surgery control trials"
+},
+{
+"group": "PS",
+"tag": "V02-J",
+"subject": "self reported diet surveys"
+},
+{
+"group": "PS",
+"tag": "V02-J",
+"subject": "loneliness mortality risk"
+},
+{
+"group": "PS",
+"tag": "V02-J",
+"subject": "observed hand washing compliance"
+},
+{
+"group": "PS",
+"tag": "V02-J",
+"subject": "cul de sac street layouts"
+},
+{
+"group": "PS",
+"tag": "V02-J",
+"subject": "paved surfaces urban flooding"
+},
+{
+"group": "PS",
+"tag": "V02-J",
+"subject": "cycling safety in numbers"
+},
+{
+"group": "PS",
+"tag": "V02-J",
+"subject": "constant daily commuting time budget"
+},
+{
+"group": "PS",
+"tag": "V02-J",
+"subject": "moral distance duty to rescue"
+},
+{
+"group": "PS",
+"tag": "V02-J",
+"subject": "punishing crimes decades later"
+},
+{
+"group": "PS",
+"tag": "V02-J",
+"subject": "lying versus misleading"
+},
+{
+"group": "PS",
+"tag": "V02-J",
+"subject": "nudges paternalism manipulation"
+},
+{
+"group": "PS",
+"tag": "V02-J",
+"subject": "curse of knowledge"
+},
+{
+"group": "PS",
+"tag": "V02-J",
+"subject": "endowment effect"
+},
+{
+"group": "PS",
+"tag": "V02-J",
+"subject": "false consensus effect"
+},
+{
+"group": "PS",
+"tag": "V02-J",
+"subject": "illusion of explanatory depth"
+},
+{
+"group": "PS",
+"tag": "V02-J",
+"subject": "ego depletion replication"
+},
+{
+"group": "PS",
+"tag": "V02-J",
+"subject": "forms of address honorifics"
+},
+{
+"group": "PS",
+"tag": "V02-J",
+"subject": "gossip social control"
+},
+{
+"group": "PS",
+"tag": "V02-J",
+"subject": "shared family meals"
+},
+{
+"group": "PS",
+"tag": "V02-J",
+"subject": "mourning period customs"
+},
+{
+"group": "PS",
+"tag": "V02-L",
+"subject": "abridged classics for young readers"
+},
+{
+"group": "PS",
+"tag": "V02-L",
+"subject": "sitcom laugh tracks"
+},
+{
+"group": "PS",
+"tag": "V02-L",
+"subject": "sampling in music originality"
+},
+{
+"group": "PS",
+"tag": "V02-L",
+"subject": "passive voice style advice"
+},
+{
+"group": "PS",
+"tag": "V02-L",
+"subject": "cropping news photographs"
+},
+{
+"group": "PS",
+"tag": "V02-L",
+"subject": "audiobooks as reading"
+},
+{
+"group": "PS",
+"tag": "V02-L",
+"subject": "text abbreviations and literacy"
+},
+{
+"group": "PS",
+"tag": "V02-L",
+"subject": "seductive details in textbooks"
+},
+{
+"group": "PS",
+"tag": "V02-L",
+"subject": "open book examinations"
+},
+{
+"group": "PS",
+"tag": "V02-L",
+"subject": "bed rest for back pain"
+},
+{
+"group": "PS",
+"tag": "V02-L",
+"subject": "patients reading own test results"
+},
+{
+"group": "PS",
+"tag": "V02-L",
+"subject": "alarm fatigue monitors"
+},
+{
+"group": "PS",
+"tag": "V02-L",
+"subject": "orphan drugs rare diseases"
+},
+{
+"group": "PS",
+"tag": "V02-L",
+"subject": "parking minimum requirements"
+},
+{
+"group": "PS",
+"tag": "V02-L",
+"subject": "flagship museum regeneration"
+},
+{
+"group": "PS",
+"tag": "V02-L",
+"subject": "heritage zoning old quarters"
+},
+{
+"group": "PS",
+"tag": "V02-L",
+"subject": "partiality toward friends"
+},
+{
+"group": "PS",
+"tag": "V02-L",
+"subject": "anonymous giving motives"
+},
+{
+"group": "PS",
+"tag": "V02-L",
+"subject": "moral rules exceptions"
+},
+{
+"group": "PS",
+"tag": "V02-L",
+"subject": "consent under unequal bargaining"
+},
+{
+"group": "PS",
+"tag": "V02-J",
+"subject": "teacher expectation effects"
+},
+{
+"group": "RC",
+"tag": "R04-F",
+"subject": "periodic fairs as information and credit exchanges"
+},
+{
+"group": "RC",
+"tag": "R04-F",
+"subject": "preindustrial household as workplace"
+},
+{
+"group": "RC",
+"tag": "R04-F",
+"subject": "railway standard time replacing local solar time"
+},
+{
+"group": "RC",
+"tag": "R04-F",
+"subject": "shift from reading aloud to silent reading"
+},
+{
+"group": "RC",
+"tag": "R04-F",
+"subject": "urban smell and sanitary reform perception"
+},
+{
+"group": "RC",
+"tag": "R04-F",
+"subject": "relay structure of overland caravan trade"
+},
+{
+"group": "RC",
+"tag": "R04-F",
+"subject": "plague quarantine and civic trust"
+},
+{
+"group": "RC",
+"tag": "R04-F",
+"subject": "street lighting and the colonisation of night"
+},
+{
+"group": "PS",
+"tag": "V02-L",
+"subject": "cursive handwriting instruction"
+},
+{
+"group": "PS",
+"tag": "V02-L",
+"subject": "duty of confidentiality secrets"
+},
+{
+"group": "PS",
+"tag": "V02-M",
+"subject": "personal identity memory continuity"
+},
+{
+"group": "PS",
+"tag": "V02-M",
+"subject": "disputes about taste"
+},
+{
+"group": "PS",
+"tag": "V02-M",
+"subject": "moral relativism and tolerance"
+},
+{
+"group": "PS",
+"tag": "V02-M",
+"subject": "expert intuition reliability"
+},
+{
+"group": "PS",
+"tag": "V02-M",
+"subject": "bystander diffusion of responsibility"
+},
+{
+"group": "PS",
+"tag": "V02-M",
+"subject": "delayed gratification and trust"
+},
+{
+"group": "PS",
+"tag": "V02-M",
+"subject": "decision fatigue willpower"
+},
+{
+"group": "PS",
+"tag": "V02-M",
+"subject": "small talk social function"
+},
+{
+"group": "PS",
+"tag": "V02-M",
+"subject": "parasocial attachment to media figures"
+},
+{
+"group": "PS",
+"tag": "V02-M",
+"subject": "shared public holidays"
+},
+{
+"group": "PS",
+"tag": "V02-M",
+"subject": "heirloom objects family memory"
+},
+{
+"group": "PS",
+"tag": "V02-M",
+"subject": "railway time standardisation"
+},
+{
+"group": "PS",
+"tag": "V02-M",
+"subject": "federalism policy laboratories"
+},
+{
+"group": "PS",
+"tag": "V02-M",
+"subject": "coinage and state authority"
+},
+{
+"group": "PS",
+"tag": "V02-M",
+"subject": "colonial land surveys taxation"
+},
+{
+"group": "PS",
+"tag": "V02-M",
+"subject": "insurance moral hazard"
+},
+{
+"group": "PS",
+"tag": "V02-M",
+"subject": "used car information asymmetry"
+},
+{
+"group": "PS",
+"tag": "V02-M",
+"subject": "comparative advantage misreading"
+},
+{
+"group": "PS",
+"tag": "V02-M",
+"subject": "inflation debtors creditors"
+},
+{
+"group": "PS",
+"tag": "V02-M",
+"subject": "skilled emigration brain drain"
+},
+{
+"group": "PS",
+"tag": "V02-M",
+"subject": "auxiliary hypotheses falsification"
+},
+{
+"group": "PS",
+"tag": "V02-M",
+"subject": "groundwater depletion"
+},
+{
+"group": "PS",
+"tag": "V02-M",
+"subject": "animal cognition anthropomorphism"
+},
+{
+"group": "PS",
+"tag": "V02-M",
+"subject": "soil carbon sequestration"
+},
+{
+"group": "PS",
+"tag": "V02-M",
+"subject": "paternalism respecting autonomy"
+},
+{
+"group": "PS",
+"tag": "V02-K",
+"subject": "politeness formulas sincerity"
+},
+{
+"group": "PS",
+"tag": "V02-K",
+"subject": "game rules fair play"
+},
+{
+"group": "PS",
+"tag": "V02-K",
+"subject": "modesty norms humblebrag"
+},
+{
+"group": "PS",
+"tag": "V02-K",
+"subject": "metric system adoption"
+},
+{
+"group": "PS",
+"tag": "V02-K",
+"subject": "civil service examinations meritocracy"
+},
+{
+"group": "PS",
+"tag": "V02-K",
+"subject": "subscription inertia"
+},
+{
+"group": "PS",
+"tag": "V02-K",
+"subject": "keystone species metaphor"
+},
+{
+"group": "PS",
+"tag": "V02-K",
+"subject": "tree ring dating"
+},
+{
+"group": "PS",
+"tag": "V02-K",
+"subject": "peak water glacier melt"
+},
+{
+"group": "PS",
+"tag": "V02-K",
+"subject": "technology standards path dependence"
+},
+{
+"group": "PS",
+"tag": "V02-K",
+"subject": "machine translation fluency errors"
+},
+{
+"group": "PS",
+"tag": "V02-K",
+"subject": "digital photo abundance"
+},
+{
+"group": "PS",
+"tag": "V02-K",
+"subject": "retranslation of classics"
+},
+{
+"group": "PS",
+"tag": "V02-K",
+"subject": "film sequels franchises"
+},
+{
+"group": "PS",
+"tag": "V02-K",
+"subject": "detective fiction clue fairness"
+},
+{
+"group": "PS",
+"tag": "V02-K",
+"subject": "abstract art skill accusation"
+},
+{
+"group": "PS",
+"tag": "V02-L",
+"subject": "translator credit on book covers"
+},
+{
+"group": "PS",
+"tag": "V02-L",
+"subject": "university league tables"
+},
+{
+"group": "PS",
+"tag": "V02-L",
+"subject": "pedestrian footbridges over roads"
+},
+{
+"group": "PS",
+"tag": "V02-K",
+"subject": "telegraph diplomats discretion"
+},
+{
+"group": "PS",
+"tag": "V02-K",
+"subject": "manuscript copying survival of texts"
+},
+{
+"group": "PS",
+"tag": "V02-K",
+"subject": "rainfall variability drylands"
+},
+{
+"group": "PS",
+"tag": "V02-K",
+"subject": "airline overbooking"
+},
+{
+"group": "PS",
+"tag": "V02-K",
+"subject": "family firm succession"
+},
+{
+"group": "PS",
+"tag": "V02-K",
+"subject": "lighthouse public goods"
+},
+{
+"group": "PS",
+"tag": "V02-K",
+"subject": "electrification productivity lag"
+},
+{
+"group": "PS",
+"tag": "V02-K",
+"subject": "period instruments authenticity"
+},
+{
+"group": "PS",
+"tag": "V02-K",
+"subject": "punctuality norms"
+},
+{
+"group": "RC",
+"tag": "R05-C",
+"subject": "why firms exist make or buy boundary"
+},
+{
+"group": "RC",
+"tag": "R05-C",
+"subject": "founder succession family business"
+},
+{
+"group": "RC",
+"tag": "R05-C",
+"subject": "incumbents ignore disruptive entrants"
+},
+{
+"group": "RC",
+"tag": "R05-C",
+"subject": "celebrity CEO attribution myth"
+},
+{
+"group": "RC",
+"tag": "R05-C",
+"subject": "forced ranking performance appraisal"
+},
+{
+"group": "RC",
+"tag": "R05-C",
+"subject": "normalisation of deviance organisational accidents"
+},
+{
+"group": "RC",
+"tag": "R05-C",
+"subject": "organisational slack redundancy"
+},
+{
+"group": "RC",
+"tag": "R05-C",
+"subject": "survivorship bias business success books"
+},
+{
+"group": "RC",
+"tag": "R05-B",
+"subject": "relative poverty lines measurement"
+},
+{
+"group": "RC",
+"tag": "R05-B",
+"subject": "unconditional cash transfers paternalism"
+},
+{
+"group": "RC",
+"tag": "R05-B",
+"subject": "microcredit limits for poor borrowers"
+},
+{
+"group": "RC",
+"tag": "R05-B",
+"subject": "Kuznets inverted U hypothesis"
+},
+{
+"group": "RC",
+"tag": "R05-B",
+"subject": "geography versus institutions development"
+},
+{
+"group": "RC",
+"tag": "R05-B",
+"subject": "informal economy choice or exclusion"
+},
+{
+"group": "RC",
+"tag": "R05-B",
+"subject": "foreign aid fungibility"
+},
+{
+"group": "RC",
+"tag": "R05-B",
+"subject": "capability approach beyond income"
+},
+{
+"group": "RC",
+"tag": "R05-E",
+"subject": "deposit insurance and bank runs"
+},
+{
+"group": "RC",
+"tag": "R05-E",
+"subject": "central bank independence credibility"
+},
+{
+"group": "RC",
+"tag": "R05-E",
+"subject": "inflation as hidden tax seigniorage"
+},
+{
+"group": "RC",
+"tag": "R05-E",
+"subject": "speculative bubbles hindsight judgement"
+},
+{
+"group": "RC",
+"tag": "R05-E",
+"subject": "insurance adverse selection risk pooling"
+},
+{
+"group": "RC",
+"tag": "R05-E",
+"subject": "moral language of debt default"
+},
+{
+"group": "RC",
+"tag": "R05-E",
+"subject": "gold standard nostalgia"
+},
+{
+"group": "RC",
+"tag": "R05-E",
+"subject": "bank lending creates deposits money creation"
+},
+{
+"group": "OOO",
+"tag": "V03-B",
+"subject": "urban tree canopy"
+},
+{
+"group": "OOO",
+"tag": "V03-B",
+"subject": "replication crisis"
+},
+{
+"group": "OOO",
+"tag": "V03-B",
+"subject": "citizen science birdwatching"
+},
+{
+"group": "OOO",
+"tag": "V03-B",
+"subject": "fire suppression in forests"
+},
+{
+"group": "OOO",
+"tag": "V03-B",
+"subject": "password rules"
+},
+{
+"group": "OOO",
+"tag": "V03-B",
+"subject": "predictive text writing"
+},
+{
+"group": "OOO",
+"tag": "V03-B",
+"subject": "right to repair"
+},
+{
+"group": "OOO",
+"tag": "V03-B",
+"subject": "format lock-in"
+},
+{
+"group": "OOO",
+"tag": "V03-B",
+"subject": "unreliable narrator"
+},
+{
+"group": "OOO",
+"tag": "V03-B",
+"subject": "translating poetry"
+},
+{
+"group": "OOO",
+"tag": "V03-B",
+"subject": "restoring old paintings"
+},
+{
+"group": "OOO",
+"tag": "V03-B",
+"subject": "serialised novels"
+},
+{
+"group": "OOO",
+"tag": "V03-B",
+"subject": "loanwords"
+},
+{
+"group": "OOO",
+"tag": "V03-B",
+"subject": "headline writing"
+},
+{
+"group": "OOO",
+"tag": "V03-B",
+"subject": "dialect prestige"
+},
+{
+"group": "OOO",
+"tag": "V03-B",
+"subject": "newspaper corrections"
+},
+{
+"group": "OOO",
+"tag": "V03-B",
+"subject": "grade inflation"
+},
+{
+"group": "OOO",
+"tag": "V03-B",
+"subject": "learning by teaching"
+},
+{
+"group": "OOO",
+"tag": "V03-B",
+"subject": "multiple choice exam design"
+},
+{
+"group": "OOO",
+"tag": "V03-B",
+"subject": "homework for young children"
+},
+{
+"group": "OOO",
+"tag": "V03-B",
+"subject": "placebo controlled trials"
+},
+{
+"group": "OOO",
+"tag": "V03-B",
+"subject": "antibiotic overprescription"
+},
+{
+"group": "OOO",
+"tag": "V03-B",
+"subject": "screening and overdiagnosis"
+},
+{
+"group": "OOO",
+"tag": "V03-B",
+"subject": "surgical checklists"
+},
+{
+"group": "OOO",
+"tag": "V03-B",
+"subject": "school start times and sleep"
+},
+{
+"group": "OOO",
+"tag": "V03-C",
+"subject": "shift work and sleep"
+},
+{
+"group": "OOO",
+"tag": "V03-C",
+"subject": "induced traffic demand"
+},
+{
+"group": "OOO",
+"tag": "V03-C",
+"subject": "street vendors"
+},
+{
+"group": "OOO",
+"tag": "V03-C",
+"subject": "rent control"
+},
+{
+"group": "OOO",
+"tag": "V03-C",
+"subject": "riverfronts of cities"
+},
+{
+"group": "OOO",
+"tag": "V03-C",
+"subject": "moral luck"
+},
+{
+"group": "OOO",
+"tag": "V03-C",
+"subject": "promises under changed circumstances"
+},
+{
+"group": "OOO",
+"tag": "V03-C",
+"subject": "medical paternalism"
+},
+{
+"group": "OOO",
+"tag": "V03-C",
+"subject": "lying versus misleading"
+},
+{
+"group": "OOO",
+"tag": "V03-C",
+"subject": "sunk cost reasoning"
+},
+{
+"group": "OOO",
+"tag": "V03-C",
+"subject": "choice overload"
+},
+{
+"group": "OOO",
+"tag": "V03-C",
+"subject": "habits and context cues"
+},
+{
+"group": "OOO",
+"tag": "V03-C",
+"subject": "uses of boredom"
+},
+{
+"group": "OOO",
+"tag": "V03-C",
+"subject": "gifts and reciprocity"
+},
+{
+"group": "OOO",
+"tag": "V03-C",
+"subject": "naming fashions"
+},
+{
+"group": "OOO",
+"tag": "V03-C",
+"subject": "decline of handwriting"
+},
+{
+"group": "OOO",
+"tag": "V03-C",
+"subject": "minority language shift"
+},
+{
+"group": "OOO",
+"tag": "V03-C",
+"subject": "railways and standard time"
+},
+{
+"group": "OOO",
+"tag": "V03-C",
+"subject": "silences of archives"
+},
+{
+"group": "OOO",
+"tag": "V03-C",
+"subject": "counterfactual history"
+},
+{
+"group": "OOO",
+"tag": "V03-C",
+"subject": "print and vernaculars"
+},
+{
+"group": "OOO",
+"tag": "V03-E",
+"subject": "sign languages as full languages"
+},
+{
+"group": "OOO",
+"tag": "V03-E",
+"subject": "dictionaries describing usage"
+},
+{
+"group": "OOO",
+"tag": "V03-E",
+"subject": "mother tongue early schooling"
+},
+{
+"group": "OOO",
+"tag": "V03-E",
+"subject": "worked examples in maths"
+},
+{
+"group": "OOO",
+"tag": "V03-E",
+"subject": "desire paths in parks"
+},
+{
+"group": "OOO",
+"tag": "V03-E",
+"subject": "sinking river deltas"
+},
+{
+"group": "OOO",
+"tag": "V03-E",
+"subject": "ship of theseus identity"
+},
+{
+"group": "OOO",
+"tag": "V03-E",
+"subject": "animal pain moral status"
+},
+{
+"group": "OOO",
+"tag": "V03-E",
+"subject": "hindsight bias"
+},
+{
+"group": "OOO",
+"tag": "V03-E",
+"subject": "flashbulb memories"
+},
+{
+"group": "OOO",
+"tag": "V03-C",
+"subject": "loneliness as health risk"
+},
+{
+"group": "RC",
+"tag": "R05-D",
+"subject": "lump of labour fallacy"
+},
+{
+"group": "RC",
+"tag": "R05-D",
+"subject": "gig worker classification employee or contractor"
+},
+{
+"group": "RC",
+"tag": "R05-D",
+"subject": "Baumol cost disease in services"
+},
+{
+"group": "RC",
+"tag": "R05-D",
+"subject": "remote work and junior apprenticeship learning"
+},
+{
+"group": "RC",
+"tag": "R05-D",
+"subject": "Moravec paradox and what machines find hard"
+},
+{
+"group": "RC",
+"tag": "R05-D",
+"subject": "trade unions as voice institutions"
+},
+{
+"group": "RC",
+"tag": "R05-D",
+"subject": "why working hours stopped falling"
+},
+{
+"group": "RC",
+"tag": "R05-D",
+"subject": "job polarisation and routine task hollowing"
+},
+{
+"group": "RC",
+"tag": "R05-F",
+"subject": "comparative advantage opportunity cost misreading"
+},
+{
+"group": "RC",
+"tag": "R05-F",
+"subject": "special economic zones enclave linkages"
+},
+{
+"group": "RC",
+"tag": "R05-F",
+"subject": "product standards as hidden trade barriers"
+},
+{
+"group": "RC",
+"tag": "R05-F",
+"subject": "supply chain efficiency versus resilience"
+},
+{
+"group": "RC",
+"tag": "R05-F",
+"subject": "concentrated losers diffuse gainers trade adjustment"
+},
+{
+"group": "RC",
+"tag": "R05-F",
+"subject": "gross export statistics versus value added"
+},
+{
+"group": "RC",
+"tag": "R05-F",
+"subject": "infant industry protection exit problem"
+},
+{
+"group": "RC",
+"tag": "R05-F",
+"subject": "industrial policy as self-discovery not picking winners"
+},
+{
+"group": "OOO",
+"tag": "V03-D",
+"subject": "guild apprenticeship"
+},
+{
+"group": "OOO",
+"tag": "V03-D",
+"subject": "census and state power"
+},
+{
+"group": "OOO",
+"tag": "V03-D",
+"subject": "cheap uniform postage"
+},
+{
+"group": "OOO",
+"tag": "V03-D",
+"subject": "loss leader pricing"
+},
+{
+"group": "OOO",
+"tag": "V03-D",
+"subject": "winner's curse in auctions"
+},
+{
+"group": "OOO",
+"tag": "V03-D",
+"subject": "free delivery thresholds"
+},
+{
+"group": "OOO",
+"tag": "V03-D",
+"subject": "franchising"
+},
+{
+"group": "OOO",
+"tag": "V03-D",
+"subject": "lichens as pollution indicators"
+},
+{
+"group": "OOO",
+"tag": "V03-D",
+"subject": "beaver dams and wetlands"
+},
+{
+"group": "OOO",
+"tag": "V03-D",
+"subject": "eradicating island predators"
+},
+{
+"group": "OOO",
+"tag": "V03-D",
+"subject": "satellite navigation and spatial memory"
+},
+{
+"group": "OOO",
+"tag": "V03-D",
+"subject": "legacy software maintenance"
+},
+{
+"group": "OOO",
+"tag": "V03-D",
+"subject": "backup redundancy"
+},
+{
+"group": "OOO",
+"tag": "V03-D",
+"subject": "fixed verse forms"
+},
+{
+"group": "OOO",
+"tag": "V03-D",
+"subject": "euphemism treadmill"
+},
+{
+"group": "OOO",
+"tag": "V03-D",
+"subject": "podcast intimacy"
+},
+{
+"group": "OOO",
+"tag": "V03-C",
+"subject": "second opinions in diagnosis"
+},
+{
+"group": "PS",
+"tag": "V02-N",
+"subject": "dam removal river restoration"
+},
+{
+"group": "PS",
+"tag": "V02-N",
+"subject": "earthquake prediction versus forecasting"
+},
+{
+"group": "PS",
+"tag": "V02-N",
+"subject": "zoo captive breeding conservation"
+},
+{
+"group": "PS",
+"tag": "V02-N",
+"subject": "eponymous species naming"
+},
+{
+"group": "PS",
+"tag": "V02-N",
+"subject": "undo command forgiving design"
+},
+{
+"group": "PS",
+"tag": "V02-N",
+"subject": "infinite scroll stopping cues"
+},
+{
+"group": "PS",
+"tag": "V02-N",
+"subject": "customer service chatbots"
+},
+{
+"group": "PS",
+"tag": "V02-N",
+"subject": "electric vehicle range anxiety"
+},
+{
+"group": "PS",
+"tag": "V02-N",
+"subject": "serialised novels instalments"
+},
+{
+"group": "PS",
+"tag": "V02-N",
+"subject": "sympathetic villains"
+},
+{
+"group": "PS",
+"tag": "V02-N",
+"subject": "applause between movements concert etiquette"
+},
+{
+"group": "PS",
+"tag": "V02-N",
+"subject": "ruins aesthetic appeal"
+},
+{
+"group": "PS",
+"tag": "V02-N",
+"subject": "slang lifecycle ageing"
+},
+{
+"group": "PS",
+"tag": "V02-N",
+"subject": "accent judgements competence"
+},
+{
+"group": "PS",
+"tag": "V02-N",
+"subject": "reality television editing"
+},
+{
+"group": "PS",
+"tag": "V02-N",
+"subject": "voice notes messaging"
+},
+{
+"group": "PS",
+"tag": "V02-N",
+"subject": "calculators in arithmetic teaching"
+},
+{
+"group": "PS",
+"tag": "V02-N",
+"subject": "student evaluations of teaching"
+},
+{
+"group": "PS",
+"tag": "V02-N",
+"subject": "reading aloud to adolescents"
+},
+{
+"group": "PS",
+"tag": "V02-N",
+"subject": "fever suppression"
+},
+{
+"group": "PS",
+"tag": "V02-N",
+"subject": "numeric pain rating scales"
+},
+{
+"group": "PS",
+"tag": "V02-N",
+"subject": "surrogate endpoints trials"
+},
+{
+"group": "PS",
+"tag": "V02-N",
+"subject": "telemedicine consultations"
+},
+{
+"group": "PS",
+"tag": "V02-N",
+"subject": "clinical practice guidelines"
+},
+{
+"group": "OOO",
+"tag": "V03-C",
+"subject": "pain rating scales"
+},
+{
+"group": "OOO",
+"tag": "V03-C",
+"subject": "spotlight effect self-consciousness"
+},
+{
+"group": "OOO",
+"tag": "V03-D",
+"subject": "wartime ration books"
+},
+{
+"group": "OOO",
+"tag": "V03-D",
+"subject": "seed dispersal by animals"
+},
+{
+"group": "OOO",
+"tag": "V03-D",
+"subject": "dark patterns in interfaces"
+},
+{
+"group": "OOO",
+"tag": "V03-D",
+"subject": "art forgeries and value"
+},
+{
+"group": "OOO",
+"tag": "V03-D",
+"subject": "film adaptation of novels"
+},
+{
+"group": "OOO",
+"tag": "V03-D",
+"subject": "silence of concert audiences"
+},
+{
+"group": "OOO",
+"tag": "V03-D",
+"subject": "emoji and tone in messages"
+},
+{
+"group": "OOO",
+"tag": "V03-D",
+"subject": "spelling reform"
+},
+{
+"group": "OOO",
+"tag": "V03-D",
+"subject": "indirect requests and politeness"
+},
+{
+"group": "OOO",
+"tag": "V03-E",
+"subject": "subtitles versus dubbing"
+},
+{
+"group": "OOO",
+"tag": "V03-E",
+"subject": "ability grouping in classrooms"
+},
+{
+"group": "OOO",
+"tag": "V03-E",
+"subject": "open book examinations"
+},
+{
+"group": "OOO",
+"tag": "V03-E",
+"subject": "fever as defence"
+},
+{
+"group": "OOO",
+"tag": "V03-E",
+"subject": "body mass index limits"
+},
+{
+"group": "OOO",
+"tag": "V03-E",
+"subject": "herd immunity"
+},
+{
+"group": "OOO",
+"tag": "V03-E",
+"subject": "emergency triage"
+},
+{
+"group": "OOO",
+"tag": "V03-E",
+"subject": "congestion pricing"
+},
+{
+"group": "OOO",
+"tag": "V03-E",
+"subject": "street grid plans"
+},
+{
+"group": "OOO",
+"tag": "V03-E",
+"subject": "duties to future generations"
+},
+{
+"group": "OOO",
+"tag": "V03-E",
+"subject": "supererogation beyond duty"
+},
+{
+"group": "OOO",
+"tag": "V03-E",
+"subject": "bystander effect"
+},
+{
+"group": "OOO",
+"tag": "V03-E",
+"subject": "mere exposure effect"
+},
+{
+"group": "OOO",
+"tag": "V03-E",
+"subject": "punctuation and speech rhythm"
+},
+{
+"group": "OOO",
+"tag": "V03-E",
+"subject": "planning fallacy"
+},
+{
+"group": "PS",
+"tag": "V02-N",
+"subject": "recorded lectures attendance"
+},
+{
+"group": "RC",
+"tag": "R06-A",
+"subject": "fitness tautology objection"
+},
+{
+"group": "RC",
+"tag": "R06-A",
+"subject": "costly ornaments handicap signalling"
+},
+{
+"group": "RC",
+"tag": "R06-A",
+"subject": "convergence versus contingency replaying tape"
+},
+{
+"group": "RC",
+"tag": "R06-A",
+"subject": "heritability misreading"
+},
+{
+"group": "RC",
+"tag": "R06-A",
+"subject": "metabolism first versus replicator first origin"
+},
+{
+"group": "RC",
+"tag": "R06-A",
+"subject": "developmental toolkit genes and body form"
+},
+{
+"group": "RC",
+"tag": "R06-A",
+"subject": "mass extinction selectivity luck"
+},
+{
+"group": "RC",
+"tag": "R06-A",
+"subject": "kin selection worker sterility"
+},
+{
+"group": "RC",
+"tag": "R05-G",
+"subject": "Jevons paradox rebound effect efficiency"
+},
+{
+"group": "RC",
+"tag": "R05-G",
+"subject": "carbon tax versus emissions trading price or quantity"
+},
+{
+"group": "RC",
+"tag": "R05-G",
+"subject": "monetary valuation ecosystem services critique"
+},
+{
+"group": "RC",
+"tag": "R05-G",
+"subject": "degrowth versus green growth decoupling"
+},
+{
+"group": "RC",
+"tag": "R05-G",
+"subject": "Dutch disease commodity boom manufacturing"
+},
+{
+"group": "RC",
+"tag": "R05-G",
+"subject": "green national accounts natural capital depreciation"
+},
+{
+"group": "RC",
+"tag": "R05-G",
+"subject": "carbon leakage border adjustment"
+},
+{
+"group": "RC",
+"tag": "R05-G",
+"subject": "Coase bargaining externalities transaction costs"
+},
+{
+"group": "OOO",
+"tag": "V03-F",
+"subject": "anchoring in negotiation"
+},
+{
+"group": "OOO",
+"tag": "V03-F",
+"subject": "decision fatigue"
+},
+{
+"group": "OOO",
+"tag": "V03-F",
+"subject": "nostalgia and comfort"
+},
+{
+"group": "OOO",
+"tag": "V03-F",
+"subject": "attention residue after task switching"
+},
+{
+"group": "OOO",
+"tag": "V03-F",
+"subject": "queues and fairness"
+},
+{
+"group": "OOO",
+"tag": "V03-F",
+"subject": "museum object labels"
+},
+{
+"group": "OOO",
+"tag": "V03-F",
+"subject": "handshake greetings"
+},
+{
+"group": "OOO",
+"tag": "V03-F",
+"subject": "tea stalls as meeting places"
+},
+{
+"group": "OOO",
+"tag": "V03-F",
+"subject": "lighthouse provision"
+},
+{
+"group": "OOO",
+"tag": "V03-F",
+"subject": "coffeehouses and public debate"
+},
+{
+"group": "OOO",
+"tag": "V03-F",
+"subject": "jury trials by peers"
+},
+{
+"group": "OOO",
+"tag": "V03-F",
+"subject": "canal building age"
+},
+{
+"group": "OOO",
+"tag": "V03-F",
+"subject": "employee stock options"
+},
+{
+"group": "OOO",
+"tag": "V03-F",
+"subject": "subscription pricing"
+},
+{
+"group": "OOO",
+"tag": "V03-F",
+"subject": "network effects in platforms"
+},
+{
+"group": "OOO",
+"tag": "V03-F",
+"subject": "just in time inventory"
+},
+{
+"group": "OOO",
+"tag": "V03-F",
+"subject": "coral bleaching"
+},
+{
+"group": "OOO",
+"tag": "V03-F",
+"subject": "earthworms and soil"
+},
+{
+"group": "OOO",
+"tag": "V03-F",
+"subject": "light pollution and astronomy"
+},
+{
+"group": "OOO",
+"tag": "V03-F",
+"subject": "bird migration navigation"
+},
+{
+"group": "OOO",
+"tag": "V03-F",
+"subject": "electric vehicle batteries"
+},
+{
+"group": "OOO",
+"tag": "V03-F",
+"subject": "spam filtering"
+},
+{
+"group": "OOO",
+"tag": "V03-F",
+"subject": "open source funding"
+},
+{
+"group": "OOO",
+"tag": "V03-F",
+"subject": "two factor authentication"
+},
+{
+"group": "RC",
+"tag": "R06-D",
+"subject": "Olbers paradox dark night sky"
+},
+{
+"group": "RC",
+"tag": "R06-D",
+"subject": "kilogram artefact replaced by physical constants"
+},
+{
+"group": "RC",
+"tag": "R06-D",
+"subject": "railway standard time zones"
+},
+{
+"group": "RC",
+"tag": "R06-D",
+"subject": "Noether theorem symmetry conservation"
+},
+{
+"group": "RC",
+"tag": "R06-D",
+"subject": "quantum measurement problem interpretations"
+},
+{
+"group": "RC",
+"tag": "R06-D",
+"subject": "cosmic distance ladder"
+},
+{
+"group": "RC",
+"tag": "R06-D",
+"subject": "caloric theory of heat productive error"
+},
+{
+"group": "RC",
+"tag": "R06-D",
+"subject": "anthropic principle fine tuning"
+},
+{
+"group": "OOO",
+"tag": "V03-H",
+"subject": "night markets"
+},
+{
+"group": "OOO",
+"tag": "V03-H",
+"subject": "gated communities"
+},
+{
+"group": "OOO",
+"tag": "V03-H",
+"subject": "urban groundwater depletion"
+},
+{
+"group": "OOO",
+"tag": "V03-H",
+"subject": "floodplain zoning"
+},
+{
+"group": "OOO",
+"tag": "V03-H",
+"subject": "paradox of tolerance"
+},
+{
+"group": "OOO",
+"tag": "V03-H",
+"subject": "veil of ignorance"
+},
+{
+"group": "OOO",
+"tag": "V03-H",
+"subject": "whistleblowing and loyalty"
+},
+{
+"group": "OOO",
+"tag": "V03-H",
+"subject": "moral relativism"
+},
+{
+"group": "OOO",
+"tag": "V03-H",
+"subject": "anchoring effect"
+},
+{
+"group": "OOO",
+"tag": "V03-H",
+"subject": "learned helplessness"
+},
+{
+"group": "OOO",
+"tag": "V03-H",
+"subject": "queueing norms"
+},
+{
+"group": "OOO",
+"tag": "V03-H",
+"subject": "wedding expenditure"
+},
+{
+"group": "OOO",
+"tag": "V03-H",
+"subject": "museum repatriation"
+},
+{
+"group": "OOO",
+"tag": "V03-H",
+"subject": "board games revival"
+},
+{
+"group": "OOO",
+"tag": "V03-H",
+"subject": "tax farming"
+},
+{
+"group": "OOO",
+"tag": "V03-H",
+"subject": "coalition governments"
+},
+{
+"group": "OOO",
+"tag": "V03-H",
+"subject": "maps and empire"
+},
+{
+"group": "OOO",
+"tag": "V03-H",
+"subject": "referendums"
+},
+{
+"group": "OOO",
+"tag": "V03-H",
+"subject": "minimum wage"
+},
+{
+"group": "OOO",
+"tag": "V03-H",
+"subject": "store brands"
+},
+{
+"group": "OOO",
+"tag": "V03-H",
+"subject": "microfinance group lending"
+},
+{
+"group": "OOO",
+"tag": "V03-H",
+"subject": "menu costs of inflation"
+},
+{
+"group": "RC",
+"tag": "R06-C",
+"subject": "earthquake prediction versus probabilistic forecasting"
+},
+{
+"group": "RC",
+"tag": "R06-C",
+"subject": "ensemble weather forecasting and chaos"
+},
+{
+"group": "RC",
+"tag": "R06-C",
+"subject": "ice cores as climate archives"
+},
+{
+"group": "RC",
+"tag": "R06-C",
+"subject": "managed retreat from coastlines"
+},
+{
+"group": "RC",
+"tag": "R06-C",
+"subject": "monsoon onset date as convention"
+},
+{
+"group": "RC",
+"tag": "R06-C",
+"subject": "no such thing as natural disaster vulnerability"
+},
+{
+"group": "RC",
+"tag": "R06-C",
+"subject": "Anthropocene golden spike epoch boundary"
+},
+{
+"group": "RC",
+"tag": "R06-C",
+"subject": "uniformitarianism versus catastrophism geology"
+},
+{
+"group": "OOO",
+"tag": "V03-G",
+"subject": "keyboard layout persistence"
+},
+{
+"group": "OOO",
+"tag": "V03-G",
+"subject": "spreadsheet errors"
+},
+{
+"group": "OOO",
+"tag": "V03-G",
+"subject": "jazz improvisation"
+},
+{
+"group": "OOO",
+"tag": "V03-G",
+"subject": "literary prizes"
+},
+{
+"group": "OOO",
+"tag": "V03-G",
+"subject": "film sequels"
+},
+{
+"group": "OOO",
+"tag": "V03-G",
+"subject": "slang and group identity"
+},
+{
+"group": "OOO",
+"tag": "V03-G",
+"subject": "audiobooks as reading"
+},
+{
+"group": "OOO",
+"tag": "V03-G",
+"subject": "dead metaphors"
+},
+{
+"group": "OOO",
+"tag": "V03-G",
+"subject": "comment section moderation"
+},
+{
+"group": "OOO",
+"tag": "V03-G",
+"subject": "rote memorisation"
+},
+{
+"group": "OOO",
+"tag": "V03-G",
+"subject": "school uniforms"
+},
+{
+"group": "OOO",
+"tag": "V03-G",
+"subject": "entrance test coaching"
+},
+{
+"group": "OOO",
+"tag": "V03-G",
+"subject": "recess and play"
+},
+{
+"group": "OOO",
+"tag": "V03-G",
+"subject": "hand hygiene in hospitals"
+},
+{
+"group": "OOO",
+"tag": "V03-G",
+"subject": "generic medicines"
+},
+{
+"group": "OOO",
+"tag": "V03-G",
+"subject": "organ donation defaults"
+},
+{
+"group": "OOO",
+"tag": "V03-G",
+"subject": "walking as exercise"
+},
+{
+"group": "OOO",
+"tag": "V03-G",
+"subject": "pedestrian skywalks"
+},
+{
+"group": "OOO",
+"tag": "V03-G",
+"subject": "monsoon urban flooding"
+},
+{
+"group": "OOO",
+"tag": "V03-G",
+"subject": "heritage precincts"
+},
+{
+"group": "OOO",
+"tag": "V03-G",
+"subject": "public toilets"
+},
+{
+"group": "OOO",
+"tag": "V03-H",
+"subject": "confirmation bias in reading news"
+},
+{
+"group": "OOO",
+"tag": "V03-H",
+"subject": "framing of choices"
+},
+{
+"group": "OOO",
+"tag": "V03-I",
+"subject": "bank runs and deposit insurance"
+},
+{
+"group": "OOO",
+"tag": "V03-I",
+"subject": "shrinkflation package sizes"
+},
+{
+"group": "OOO",
+"tag": "V03-I",
+"subject": "comparative advantage in trade"
+},
+{
+"group": "OOO",
+"tag": "V03-I",
+"subject": "brand switching costs"
+},
+{
+"group": "OOO",
+"tag": "V03-I",
+"subject": "ocean acidification and shellfish"
+},
+{
+"group": "OOO",
+"tag": "V03-I",
+"subject": "fair play in detective fiction"
+},
+{
+"group": "OOO",
+"tag": "V03-I",
+"subject": "tragic catharsis"
+},
+{
+"group": "OOO",
+"tag": "V03-I",
+"subject": "professional jargon"
+},
+{
+"group": "OOO",
+"tag": "V03-I",
+"subject": "news photo captions"
+},
+{
+"group": "OOO",
+"tag": "V03-I",
+"subject": "untranslatable words"
+},
+{
+"group": "OOO",
+"tag": "V03-I",
+"subject": "grading rubrics"
+},
+{
+"group": "OOO",
+"tag": "V03-I",
+"subject": "school field trips"
+},
+{
+"group": "OOO",
+"tag": "V03-I",
+"subject": "student ratings of teachers"
+},
+{
+"group": "RC",
+"tag": "R06-B",
+"subject": "tree planting campaigns versus natural forest regeneration"
+},
+{
+"group": "RC",
+"tag": "R06-B",
+"subject": "flagship charismatic species funding bias"
+},
+{
+"group": "RC",
+"tag": "R06-B",
+"subject": "elephant crop raiding coexistence costs"
+},
+{
+"group": "RC",
+"tag": "R06-B",
+"subject": "wildfire suppression fuel paradox"
+},
+{
+"group": "RC",
+"tag": "R06-B",
+"subject": "fortress conservation displacing forest dwellers"
+},
+{
+"group": "RC",
+"tag": "R06-B",
+"subject": "keystone species concept limits"
+},
+{
+"group": "RC",
+"tag": "R06-B",
+"subject": "native versus alien invasive species judgement"
+},
+{
+"group": "RC",
+"tag": "R06-B",
+"subject": "rewilding open ended target state"
+},
+{
+"group": "OOO",
+"tag": "V03-H",
+"subject": "planned obsolescence"
+},
+{
+"group": "OOO",
+"tag": "V03-G",
+"subject": "software update fatigue"
+},
+{
+"group": "OOO",
+"tag": "V03-G",
+"subject": "digital photo hoarding"
+},
+{
+"group": "OOO",
+"tag": "V03-G",
+"subject": "dance notation"
+},
+{
+"group": "OOO",
+"tag": "V03-J",
+"subject": "teacher wait time after questions"
+},
+{
+"group": "OOO",
+"tag": "V03-J",
+"subject": "salt iodisation"
+},
+{
+"group": "OOO",
+"tag": "V03-J",
+"subject": "pedestrianised old town centres"
+},
+{
+"group": "OOO",
+"tag": "V03-J",
+"subject": "white roofs cooling"
+},
+{
+"group": "OOO",
+"tag": "V03-J",
+"subject": "port city decline"
+},
+{
+"group": "OOO",
+"tag": "V03-J",
+"subject": "dormitory suburbs commuting"
+},
+{
+"group": "OOO",
+"tag": "V03-J",
+"subject": "forgiveness and forgetting"
+},
+{
+"group": "OOO",
+"tag": "V03-J",
+"subject": "coercive offers and consent"
+},
+{
+"group": "OOO",
+"tag": "V03-J",
+"subject": "thought experiments in ethics"
+},
+{
+"group": "OOO",
+"tag": "V03-J",
+"subject": "obligations of gratitude"
+},
+{
+"group": "OOO",
+"tag": "V03-J",
+"subject": "impostor feelings high achievers"
+},
+{
+"group": "OOO",
+"tag": "V03-J",
+"subject": "endowment effect ownership"
+},
+{
+"group": "OOO",
+"tag": "V03-J",
+"subject": "peak end rule"
+},
+{
+"group": "OOO",
+"tag": "V03-J",
+"subject": "procrastination as mood repair"
+},
+{
+"group": "OOO",
+"tag": "V03-J",
+"subject": "illusion of explanatory depth"
+},
+{
+"group": "OOO",
+"tag": "V03-J",
+"subject": "workplace dress codes"
+},
+{
+"group": "OOO",
+"tag": "V03-J",
+"subject": "shared family meals"
+},
+{
+"group": "OOO",
+"tag": "V03-J",
+"subject": "intervals in Indian cinema"
+},
+{
+"group": "OOO",
+"tag": "V03-J",
+"subject": "potluck dinners"
+},
+{
+"group": "OOO",
+"tag": "V03-I",
+"subject": "volcanic aerosols cooling climate"
+},
+{
+"group": "OOO",
+"tag": "V03-I",
+"subject": "rewilding with large herbivores"
+},
+{
+"group": "OOO",
+"tag": "V03-I",
+"subject": "glacier retreat meltwater"
+},
+{
+"group": "OOO",
+"tag": "V03-I",
+"subject": "CAPTCHA tests"
+},
+{
+"group": "OOO",
+"tag": "V03-I",
+"subject": "shipping container standardisation"
+},
+{
+"group": "OOO",
+"tag": "V03-I",
+"subject": "cloud service concentration"
+},
+{
+"group": "OOO",
+"tag": "V03-I",
+"subject": "elevator safety and tall buildings"
+},
+{
+"group": "OOO",
+"tag": "V03-I",
+"subject": "photography and painting realism"
+},
+{
+"group": "OOO",
+"tag": "V03-I",
+"subject": "minimalist stage sets"
+},
+{
+"group": "OOO",
+"tag": "V03-I",
+"subject": "place names as history"
+},
+{
+"group": "OOO",
+"tag": "V03-I",
+"subject": "class size reduction"
+},
+{
+"group": "OOO",
+"tag": "V03-I",
+"subject": "summer learning loss"
+},
+{
+"group": "OOO",
+"tag": "V03-J",
+"subject": "mixed age classrooms"
+},
+{
+"group": "OOO",
+"tag": "V03-J",
+"subject": "reading aloud to children"
+},
+{
+"group": "OOO",
+"tag": "V03-J",
+"subject": "narrative comments on report cards"
+},
+{
+"group": "OOO",
+"tag": "V03-J",
+"subject": "hospital visiting hours"
+},
+{
+"group": "OOO",
+"tag": "V03-J",
+"subject": "online symptom searching"
+},
+{
+"group": "OOO",
+"tag": "V03-J",
+"subject": "vaccine vial heat indicator labels"
+},
+{
+"group": "OOO",
+"tag": "V03-F",
+"subject": "volcanic soils and farming"
+},
+{
+"group": "OOO",
+"tag": "V03-G",
+"subject": "patient satisfaction ratings of doctors"
+},
+{
+"group": "RC",
+"tag": "R06-G",
+"subject": "anonymous peer review gatekeeping"
+},
+{
+"group": "RC",
+"tag": "R06-G",
+"subject": "file drawer unpublished null results"
+},
+{
+"group": "RC",
+"tag": "R06-G",
+"subject": "citizen science volunteer data quality"
+},
+{
+"group": "RC",
+"tag": "R06-G",
+"subject": "deficit model of science communication"
+},
+{
+"group": "RC",
+"tag": "R06-G",
+"subject": "myth of a single scientific method"
+},
+{
+"group": "RC",
+"tag": "R06-G",
+"subject": "Matthew effect cumulative credit in science"
+},
+{
+"group": "RC",
+"tag": "R06-G",
+"subject": "lottery allocation of research grants"
+},
+{
+"group": "RC",
+"tag": "R06-G",
+"subject": "tacit knowledge in replicating laboratory techniques"
+},
+{
+"group": "RC",
+"tag": "R06-E",
+"subject": "prevention paradox invisible public health success"
+},
+{
+"group": "RC",
+"tag": "R06-E",
+"subject": "segmented sleep and the eight hour norm"
+},
+{
+"group": "RC",
+"tag": "R06-E",
+"subject": "open label placebo meaning response"
+},
+{
+"group": "RC",
+"tag": "R06-E",
+"subject": "antibiotic development market failure stewardship"
+},
+{
+"group": "RC",
+"tag": "R06-E",
+"subject": "microbiome war metaphor versus ecology"
+},
+{
+"group": "RC",
+"tag": "R06-E",
+"subject": "pain as brain output not tissue damage gauge"
+},
+{
+"group": "RC",
+"tag": "R06-E",
+"subject": "screening overdiagnosis lead time bias"
+},
+{
+"group": "RC",
+"tag": "R06-E",
+"subject": "trial averages and the individual patient"
+},
+{
+"group": "SP",
+"tag": "V04-B",
+"subject": "biocontrol backfire invasive species"
+},
+{
+"group": "SP",
+"tag": "V04-B",
+"subject": "seed vaults crop diversity"
+},
+{
+"group": "SP",
+"tag": "V04-B",
+"subject": "rewilding large herbivores"
+},
+{
+"group": "SP",
+"tag": "V04-B",
+"subject": "glacier meltwater peak water"
+},
+{
+"group": "SP",
+"tag": "V04-B",
+"subject": "autocomplete writing style"
+},
+{
+"group": "SP",
+"tag": "V04-B",
+"subject": "software backward compatibility"
+},
+{
+"group": "SP",
+"tag": "V04-B",
+"subject": "keyboard layout lock-in"
+},
+{
+"group": "SP",
+"tag": "V04-B",
+"subject": "password rules usability"
+},
+{
+"group": "SP",
+"tag": "V04-B",
+"subject": "translating rhymed poetry"
+},
+{
+"group": "SP",
+"tag": "V04-B",
+"subject": "unreliable narrator"
+},
+{
+"group": "SP",
+"tag": "V04-B",
+"subject": "painting restoration cleaning"
+},
+{
+"group": "SP",
+"tag": "V04-B",
+"subject": "loanwords linguistic purism"
+},
+{
+"group": "SP",
+"tag": "V04-B",
+"subject": "headline writing"
+},
+{
+"group": "SP",
+"tag": "V04-B",
+"subject": "sign languages grammar"
+},
+{
+"group": "SP",
+"tag": "V04-B",
+"subject": "dictionary usage notes"
+},
+{
+"group": "SP",
+"tag": "V04-B",
+"subject": "spaced practice forgetting"
+},
+{
+"group": "SP",
+"tag": "V04-B",
+"subject": "grade inflation"
+},
+{
+"group": "SP",
+"tag": "V04-B",
+"subject": "learning by teaching"
+},
+{
+"group": "SP",
+"tag": "V04-B",
+"subject": "primary school homework"
+},
+{
+"group": "SP",
+"tag": "V04-B",
+"subject": "antibiotic stewardship"
+},
+{
+"group": "SP",
+"tag": "V04-B",
+"subject": "cancer screening overdiagnosis"
+},
+{
+"group": "SP",
+"tag": "V04-B",
+"subject": "hospital hand hygiene"
+},
+{
+"group": "SP",
+"tag": "V04-B",
+"subject": "night shift sleep"
+},
+{
+"group": "SP",
+"tag": "V04-B",
+"subject": "rare disease drug pricing"
+},
+{
+"group": "SP",
+"tag": "V04-B",
+"subject": "stage magic deception"
+},
+{
+"group": "RC",
+"tag": "R07-D",
+"subject": "historically informed performance period instruments authenticity"
+},
+{
+"group": "RC",
+"tag": "R07-D",
+"subject": "sound recording repeatable listening habits"
+},
+{
+"group": "RC",
+"tag": "R07-D",
+"subject": "improvisation as fluency within constraints raga jazz"
+},
+{
+"group": "RC",
+"tag": "R07-D",
+"subject": "pleasure of sad music"
+},
+{
+"group": "RC",
+"tag": "R07-D",
+"subject": "musical score versus performer interpretation"
+},
+{
+"group": "RC",
+"tag": "R07-D",
+"subject": "folk song oral transmission variants collectors"
+},
+{
+"group": "RC",
+"tag": "R07-D",
+"subject": "dance preserved in dancers bodies notation"
+},
+{
+"group": "RC",
+"tag": "R07-D",
+"subject": "live theatre audience co-presence"
+},
+{
+"group": "RC",
+"tag": "R08-A",
+"subject": "prescriptive grammar authority"
+},
+{
+"group": "RC",
+"tag": "R08-A",
+"subject": "endangered language documentation archives"
+},
+{
+"group": "RC",
+"tag": "R08-A",
+"subject": "code-switching bilingual competence"
+},
+{
+"group": "RC",
+"tag": "R08-A",
+"subject": "emergent village sign languages"
+},
+{
+"group": "RC",
+"tag": "R08-A",
+"subject": "state regulation of given names"
+},
+{
+"group": "RC",
+"tag": "R08-A",
+"subject": "conceptual metaphor and thought"
+},
+{
+"group": "RC",
+"tag": "R08-A",
+"subject": "etymological fallacy word meaning"
+},
+{
+"group": "RC",
+"tag": "R08-A",
+"subject": "dialect versus language boundary"
+},
+{
+"group": "RC",
+"tag": "R08-C",
+"subject": "journalistic objectivity as method of verification"
+},
+{
+"group": "RC",
+"tag": "R08-C",
+"subject": "false balance in science reporting"
+},
+{
+"group": "RC",
+"tag": "R08-C",
+"subject": "negativity bias in news selection and risk perception"
+},
+{
+"group": "RC",
+"tag": "R08-C",
+"subject": "audience metrics and headline testing in newsrooms"
+},
+{
+"group": "RC",
+"tag": "R08-C",
+"subject": "persistence of misinformation after corrections"
+},
+{
+"group": "RC",
+"tag": "R08-C",
+"subject": "paywalls subscription model and information inequality"
+},
+{
+"group": "RC",
+"tag": "R08-C",
+"subject": "investigative reporting as slow public good"
+},
+{
+"group": "RC",
+"tag": "R08-C",
+"subject": "public sphere fragmentation ideal of shared forum"
+},
+{
+"group": "RC",
+"tag": "R07-C",
+"subject": "museum wall labels and interpretive text"
+},
+{
+"group": "RC",
+"tag": "R07-C",
+"subject": "temporary public art versus permanent monuments"
+},
+{
+"group": "RC",
+"tag": "R07-C",
+"subject": "cleaning old paintings and varnish removal"
+},
+{
+"group": "RC",
+"tag": "R07-C",
+"subject": "photograph as documentary evidence"
+},
+{
+"group": "RC",
+"tag": "R07-C",
+"subject": "art auction prices as judgements of value"
+},
+{
+"group": "RC",
+"tag": "R07-C",
+"subject": "why a perfect forgery loses value"
+},
+{
+"group": "RC",
+"tag": "R07-C",
+"subject": "portraiture likeness versus social rank"
+},
+{
+"group": "RC",
+"tag": "R07-C",
+"subject": "slow looking and trained perception of painting"
+},
+{
+"group": "RC",
+"tag": "R08-D",
+"subject": "euphemism treadmill replacement terms"
+},
+{
+"group": "RC",
+"tag": "R08-D",
+"subject": "online anonymity disinhibition accountability"
+},
+{
+"group": "RC",
+"tag": "R08-D",
+"subject": "internet memes template remix virality"
+},
+{
+"group": "RC",
+"tag": "R08-D",
+"subject": "listening as neglected civic skill"
+},
+{
+"group": "RC",
+"tag": "R08-D",
+"subject": "ethos speaker credibility persuasion"
+},
+{
+"group": "RC",
+"tag": "R08-D",
+"subject": "political slogans strategic vagueness"
+},
+{
+"group": "RC",
+"tag": "R08-D",
+"subject": "engagement ranking outrage amplification feeds"
+},
+{
+"group": "RC",
+"tag": "R08-D",
+"subject": "irony tone loss text messaging emoji"
+},
+{
+"group": "RC",
+"tag": "R07-B",
+"subject": "myth of untranslatable words"
+},
+{
+"group": "RC",
+"tag": "R07-B",
+"subject": "film adaptation fidelity criticism"
+},
+{
+"group": "RC",
+"tag": "R07-B",
+"subject": "negative book reviews purpose of reviewing"
+},
+{
+"group": "RC",
+"tag": "R07-B",
+"subject": "literary canon as conversation among works"
+},
+{
+"group": "RC",
+"tag": "R07-B",
+"subject": "retranslation of classics each generation"
+},
+{
+"group": "RC",
+"tag": "R07-B",
+"subject": "author intention and interpretation"
+},
+{
+"group": "RC",
+"tag": "R07-B",
+"subject": "rereading versus first reading"
+},
+{
+"group": "RC",
+"tag": "R07-B",
+"subject": "distant reading computational literary analysis"
+},
+{
+"group": "RC",
+"tag": "R07-A",
+"subject": "unreliable narrator reader trust"
+},
+{
+"group": "RC",
+"tag": "R07-A",
+"subject": "short story compression and omission"
+},
+{
+"group": "RC",
+"tag": "R07-A",
+"subject": "suspicion of happy endings closure"
+},
+{
+"group": "RC",
+"tag": "R07-A",
+"subject": "genre conventions as productive constraint"
+},
+{
+"group": "RC",
+"tag": "R07-A",
+"subject": "line break in free verse"
+},
+{
+"group": "RC",
+"tag": "R07-A",
+"subject": "flat characters defended"
+},
+{
+"group": "RC",
+"tag": "R07-A",
+"subject": "essay as provisional attempt"
+},
+{
+"group": "RC",
+"tag": "R07-A",
+"subject": "serial publication shaping the novel"
+},
+{
+"group": "RC",
+"tag": "R08-B",
+"subject": "handwriting instruction in a keyboard age"
+},
+{
+"group": "RC",
+"tag": "R08-B",
+"subject": "codex replacing the scroll as navigation technology"
+},
+{
+"group": "RC",
+"tag": "R08-B",
+"subject": "dictionary definitions built from citation evidence"
+},
+{
+"group": "RC",
+"tag": "R08-B",
+"subject": "comprehension on screens versus paper"
+},
+{
+"group": "RC",
+"tag": "R08-B",
+"subject": "editor's invisible hand and the myth of solitary authorship"
+},
+{
+"group": "RC",
+"tag": "R08-B",
+"subject": "myth of print fixity in early printed books"
+},
+{
+"group": "RC",
+"tag": "R08-B",
+"subject": "library classification schemes shaping knowledge"
+},
+{
+"group": "RC",
+"tag": "R08-B",
+"subject": "ranking writing systems alphabet superiority myth"
+},
+{
+"group": "RC",
+"tag": "R07-E",
+"subject": "door handles and appliances that blame users for design errors"
+},
+{
+"group": "RC",
+"tag": "R07-E",
+"subject": "vernacular building climate wisdom romanticised"
+},
+{
+"group": "RC",
+"tag": "R07-E",
+"subject": "ornament as legibility against functionalist austerity"
+},
+{
+"group": "RC",
+"tag": "R07-E",
+"subject": "handmade irregularity versus machine precision"
+},
+{
+"group": "RC",
+"tag": "R07-E",
+"subject": "tacit craft skill transmitted by apprenticeship"
+},
+{
+"group": "RC",
+"tag": "R07-E",
+"subject": "restoration of old buildings versus conserving accumulated layers"
+},
+{
+"group": "RC",
+"tag": "R07-E",
+"subject": "architectural photography of empty buildings"
+},
+{
+"group": "RC",
+"tag": "R07-E",
+"subject": "loose fit buildings altered by occupants over time"
+},
+{
+"group": "RC",
+"tag": "R07-F",
+"subject": "kitsch as ready-made sentiment"
+},
+{
+"group": "RC",
+"tag": "R07-F",
+"subject": "explaining a joke kills humour"
+},
+{
+"group": "RC",
+"tag": "R07-F",
+"subject": "guilty pleasure label critique"
+},
+{
+"group": "RC",
+"tag": "R07-F",
+"subject": "fan fiction and fandom ownership of stories"
+},
+{
+"group": "RC",
+"tag": "R07-F",
+"subject": "scenic viewpoints framing natural beauty"
+},
+{
+"group": "RC",
+"tag": "R07-F",
+"subject": "disputing taste aesthetic relativism"
+},
+{
+"group": "RC",
+"tag": "R07-F",
+"subject": "spoilers and pleasure of suspense"
+},
+{
+"group": "RC",
+"tag": "R07-F",
+"subject": "cuteness aesthetic of small helpless things"
+},
+{
+"group": "SP",
+"tag": "V04-E",
+"subject": "pidgins becoming creoles"
+},
+{
+"group": "SP",
+"tag": "V04-E",
+"subject": "footnotes scholarly trust"
+},
+{
+"group": "SP",
+"tag": "V04-E",
+"subject": "radio drama imagination"
+},
+{
+"group": "SP",
+"tag": "V04-E",
+"subject": "euphemism treadmill"
+},
+{
+"group": "SP",
+"tag": "V04-E",
+"subject": "memorising multiplication facts"
+},
+{
+"group": "SP",
+"tag": "V04-E",
+"subject": "worked examples novices"
+},
+{
+"group": "SP",
+"tag": "V04-E",
+"subject": "mother tongue early schooling"
+},
+{
+"group": "SP",
+"tag": "V04-E",
+"subject": "class size reduction"
+},
+{
+"group": "SP",
+"tag": "V04-E",
+"subject": "hygiene hypothesis allergies"
+},
+{
+"group": "SP",
+"tag": "V04-E",
+"subject": "emergency triage"
+},
+{
+"group": "SP",
+"tag": "V04-E",
+"subject": "surgical checklists"
+},
+{
+"group": "SP",
+"tag": "V04-E",
+"subject": "iodised salt"
+},
+{
+"group": "SP",
+"tag": "V04-E",
+"subject": "desire paths parks"
+},
+{
+"group": "SP",
+"tag": "V04-E",
+"subject": "induced traffic demand"
+},
+{
+"group": "SP",
+"tag": "V04-E",
+"subject": "rain shadow deserts"
+},
+{
+"group": "SP",
+"tag": "V04-E",
+"subject": "street grid layouts"
+},
+{
+"group": "SP",
+"tag": "V04-E",
+"subject": "container ports waterfronts"
+},
+{
+"group": "SP",
+"tag": "V04-E",
+"subject": "ship of theseus identity"
+},
+{
+"group": "SP",
+"tag": "V04-E",
+"subject": "promises obligation"
+},
+{
+"group": "SP",
+"tag": "V04-E",
+"subject": "white lies trust"
+},
+{
+"group": "SP",
+"tag": "V04-E",
+"subject": "trolley problem intuitions"
+},
+{
+"group": "SP",
+"tag": "V04-E",
+"subject": "choice overload"
+},
+{
+"group": "SP",
+"tag": "V04-E",
+"subject": "sunk cost fallacy"
+},
+{
+"group": "SP",
+"tag": "V04-E",
+"subject": "flow absorption"
+},
+{
+"group": "SP",
+"tag": "V04-E",
+"subject": "boredom function"
+},
+{
+"group": "SP",
+"tag": "V04-F",
+"subject": "nostalgia function"
+},
+{
+"group": "SP",
+"tag": "V04-F",
+"subject": "habit cues context"
+},
+{
+"group": "SP",
+"tag": "V04-F",
+"subject": "gift reciprocity"
+},
+{
+"group": "SP",
+"tag": "V04-F",
+"subject": "canal age decline"
+},
+{
+"group": "SP",
+"tag": "V04-F",
+"subject": "coinage standardisation"
+},
+{
+"group": "SP",
+"tag": "V04-F",
+"subject": "loss leader pricing"
+},
+{
+"group": "SP",
+"tag": "V04-F",
+"subject": "franchise model"
+},
+{
+"group": "SP",
+"tag": "V04-F",
+"subject": "village irrigation commons"
+},
+{
+"group": "SP",
+"tag": "V04-F",
+"subject": "warranty signalling"
+},
+{
+"group": "SP",
+"tag": "V04-F",
+"subject": "mangrove coastal buffer"
+},
+{
+"group": "SP",
+"tag": "V04-F",
+"subject": "pollinator monoculture"
+},
+{
+"group": "SP",
+"tag": "V04-F",
+"subject": "soil salinity irrigation"
+},
+{
+"group": "SP",
+"tag": "V04-F",
+"subject": "bird migration navigation"
+},
+{
+"group": "SP",
+"tag": "V04-F",
+"subject": "spreadsheet errors"
+},
+{
+"group": "SP",
+"tag": "V04-F",
+"subject": "monsoon forecasting"
+},
+{
+"group": "SP",
+"tag": "V04-C",
+"subject": "herd immunity free riders"
+},
+{
+"group": "SP",
+"tag": "V04-C",
+"subject": "doctors listening to patients"
+},
+{
+"group": "SP",
+"tag": "V04-C",
+"subject": "printing and vernacular languages"
+},
+{
+"group": "SP",
+"tag": "V04-C",
+"subject": "term limits for rulers"
+},
+{
+"group": "SP",
+"tag": "V04-C",
+"subject": "sumptuary laws"
+},
+{
+"group": "SP",
+"tag": "V04-C",
+"subject": "street vendors and pavements"
+},
+{
+"group": "SP",
+"tag": "V04-C",
+"subject": "rivers as borders"
+},
+{
+"group": "SP",
+"tag": "V04-C",
+"subject": "duties to future generations"
+},
+{
+"group": "SP",
+"tag": "V04-C",
+"subject": "hindsight bias"
+},
+{
+"group": "SP",
+"tag": "V04-C",
+"subject": "decline of handwriting"
+},
+{
+"group": "SP",
+"tag": "V04-D",
+"subject": "medieval craft guilds"
+},
+{
+"group": "SP",
+"tag": "V04-D",
+"subject": "Athenian ostracism"
+},
+{
+"group": "SP",
+"tag": "V04-D",
+"subject": "brand line extensions"
+},
+{
+"group": "SP",
+"tag": "V04-D",
+"subject": "sunk costs public projects"
+},
+{
+"group": "SP",
+"tag": "V04-D",
+"subject": "coral bleaching symbiosis"
+},
+{
+"group": "SP",
+"tag": "V04-D",
+"subject": "soil tillage carbon"
+},
+{
+"group": "SP",
+"tag": "V04-D",
+"subject": "wolves trophic cascade"
+},
+{
+"group": "SP",
+"tag": "V04-D",
+"subject": "satellite navigation wayfinding skill"
+},
+{
+"group": "SP",
+"tag": "V04-D",
+"subject": "technical debt software"
+},
+{
+"group": "SP",
+"tag": "V04-D",
+"subject": "domestic refrigeration diet"
+},
+{
+"group": "SP",
+"tag": "V04-D",
+"subject": "battery energy density"
+},
+{
+"group": "SP",
+"tag": "V04-D",
+"subject": "jazz improvisation rules"
+},
+{
+"group": "SP",
+"tag": "V04-D",
+"subject": "silent film acting"
+},
+{
+"group": "SP",
+"tag": "V04-D",
+"subject": "serialised novels cliffhangers"
+},
+{
+"group": "SP",
+"tag": "V04-D",
+"subject": "architectural ornament modernism"
+},
+{
+"group": "SP",
+"tag": "V04-D",
+"subject": "emoji tone texting"
+},
+{
+"group": "SP",
+"tag": "V04-D",
+"subject": "contradictory proverbs"
+},
+{
+"group": "SP",
+"tag": "V04-F",
+"subject": "procrastination and self-image"
+},
+{
+"group": "SP",
+"tag": "V04-D",
+"subject": "medieval pilgrimage economy"
+},
+{
+"group": "SP",
+"tag": "V04-D",
+"subject": "seed drill adoption farmers"
+},
+{
+"group": "SP",
+"tag": "V04-D",
+"subject": "auction winner's curse"
+},
+{
+"group": "SP",
+"tag": "V04-D",
+"subject": "minimum order quantities small suppliers"
+},
+{
+"group": "SP",
+"tag": "V04-D",
+"subject": "earthworm invasions northern forests"
+},
+{
+"group": "SP",
+"tag": "V04-D",
+"subject": "volcanic winters harvests"
+},
+{
+"group": "SP",
+"tag": "V04-D",
+"subject": "translation of jokes humour"
+},
+{
+"group": "SP",
+"tag": "V04-D",
+"subject": "punctuation history reading aloud"
+},
+{
+"group": "SP",
+"tag": "V04-F",
+"subject": "anchoring first offers"
+},
+{
+"group": "SP",
+"tag": "V04-F",
+"subject": "accent prestige"
+},
+{
+"group": "SP",
+"tag": "V04-F",
+"subject": "gossip social control"
+},
+{
+"group": "SP",
+"tag": "V04-F",
+"subject": "office dress codes"
+},
+{
+"group": "SP",
+"tag": "V04-F",
+"subject": "uniform postage rates"
+},
+{
+"group": "SP",
+"tag": "V04-F",
+"subject": "blank spaces on maps"
+},
+{
+"group": "SP",
+"tag": "V04-F",
+"subject": "automation complacency"
+},
+{
+"group": "SP",
+"tag": "V04-F",
+"subject": "undo command software"
+},
+{
+"group": "SP",
+"tag": "V04-F",
+"subject": "road sign lettering"
+},
+{
+"group": "SP",
+"tag": "V04-C",
+"subject": "fever as defence response"
+},
+{
+"group": "SP",
+"tag": "V04-C",
+"subject": "opt-out organ donation"
+},
+{
+"group": "SP",
+"tag": "V04-C",
+"subject": "secret ballot introduction"
+},
+{
+"group": "SP",
+"tag": "V04-C",
+"subject": "city walls demolition"
+},
+{
+"group": "SP",
+"tag": "V04-C",
+"subject": "port cities cosmopolitanism"
+},
+{
+"group": "SP",
+"tag": "V04-C",
+"subject": "paternalism and autonomy"
+},
+{
+"group": "SP",
+"tag": "V04-C",
+"subject": "moral desert and talent"
+},
+{
+"group": "SP",
+"tag": "V04-C",
+"subject": "misleading without lying"
+},
+{
+"group": "SP",
+"tag": "V04-C",
+"subject": "eyewitness memory reconstruction"
+},
+{
+"group": "SP",
+"tag": "V04-C",
+"subject": "social loafing groups"
+},
+{
+"group": "SP",
+"tag": "V04-C",
+"subject": "school uniforms debate"
+},
+{
+"group": "SP",
+"tag": "V04-C",
+"subject": "shared family meals"
+},
+{
+"group": "SP",
+"tag": "V04-C",
+"subject": "baby name fashions"
+},
+{
+"group": "SP",
+"tag": "V04-C",
+"subject": "retirement and identity"
+},
+{
+"group": "SP",
+"tag": "V04-C",
+"subject": "mere exposure familiarity liking"
+},
+{
+"group": "PJ",
+"tag": "V01-H",
+"subject": "cobweb cycle farm prices"
+},
+{
+"group": "PJ",
+"tag": "V01-I",
+"subject": "gift card breakage"
+},
+{
+"group": "PJ",
+"tag": "V01-N",
+"subject": "legume nitrogen fixation"
+}
+]

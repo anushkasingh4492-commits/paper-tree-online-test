@@ -1,0 +1,42 @@
+[
+ {
+  "id": "V03-E-013",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "1",
+    "key": "1",
+    "working": "3-4-2-5 about open-book papers not being soft; 1 on unsupervised home exams/cheating is a different issue.",
+    "alternative": "",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "1",
+    "key": "1",
+    "working": "unsupervised home exam integrity is a different issue from open-book design",
+    "alternative": "Sentence 1 is topically close (exam integrity) so a reader might try to fit it as the opener's foil, but 3 is the clear opener.",
+    "issue": ""
+   }
+  }
+ },
+ {
+  "id": "V03-E-017",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "2",
+    "key": "2",
+    "working": "1-4-3-5 bystander effect; 2 on helping similar people",
+    "alternative": "",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "2",
+    "key": "2",
+    "working": "similarity effect off the bystander/diffusion-of-responsibility argument",
+    "alternative": "",
+    "issue": "Order of 3 and 4 among the kept sentences is flexible ('also' in 3 reads better after 4), but this does not affect the odd answer."
+   }
+  }
+ }
+]

@@ -1,0 +1,267 @@
+[
+  {
+    "number": 1,
+    "id": "JEE27-PHY-1967",
+    "section": "A",
+    "answer": "A",
+    "answer_text": "glass, germanium, silver",
+    "explanation": "Glass is an insulator with conductivity of order 10⁻¹² S m⁻¹ or less, germanium is a semiconductor with conductivity of the order of a few S m⁻¹, and silver is the best metallic conductor with conductivity of the order of 10⁷ S m⁻¹. So the increasing order is glass, germanium, silver.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 2,
+    "id": "JEE27-PHY-0632",
+    "section": "A",
+    "answer": "D",
+    "answer_text": "5000 N",
+    "explanation": "The same pressure acts on both pistons, so F2 = F1 × (A2 / A1) = 100 × 50 = 5000 N. The lift multiplies force by the area ratio, while the smaller piston must be pushed through a correspondingly larger distance.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 3,
+    "id": "JEE27-PHY-1219",
+    "section": "A",
+    "answer": "C",
+    "answer_text": "12 W",
+    "explanation": "Parallel combination = (3 × 6) / 9 = 2 Ω, so the total resistance is 2 + 2 = 4 Ω and the current from the battery is 12 / 4 = 3 A. The terminal potential difference is 3 × 2 = 6 V, which appears across both resistors. Hence the power in the 3 Ω resistor is 6² / 3 = 36 / 3 = 12 W.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 4,
+    "id": "JEE27-PHY-0107",
+    "section": "A",
+    "answer": "D",
+    "answer_text": "the horizontal component stays constant while the vertical component changes linearly with time",
+    "explanation": "A graph of horizontal velocity against time is a straight line parallel to the time axis, since there is no horizontal acceleration. A graph of vertical velocity against time is a straight line of slope minus g, crossing the time axis at the instant the projectile reaches its highest point.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 5,
+    "id": "JEE27-PHY-1681",
+    "section": "A",
+    "answer": "B",
+    "answer_text": "2 cm",
+    "explanation": "The shift is t(1 - 1/mu) = 6(1 - 1/1.5) = 6(1 - 2/3) = 6 × 1/3 = 2 cm. Equivalently the slab of real thickness 6 cm looks only 6/1.5 = 4 cm thick, so the mark rises by 6 - 4 = 2 cm.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 6,
+    "id": "JEE27-PHY-0442",
+    "section": "A",
+    "answer": "B",
+    "answer_text": "18 J",
+    "explanation": "KE = (1/2) × 4 × (3)² = (1/2) × 4 × 9 = 18 J.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 7,
+    "id": "JEE27-PHY-1895",
+    "section": "A",
+    "answer": "C",
+    "answer_text": "4863 Å",
+    "explanation": "The first Balmer line comes from n = 3 to n = 2, so the second comes from n = 4 to n = 2. Its photon energy is 13.6 (1/4 - 1/16) = 13.6 × 3/16 = 2.55 eV. The wavelength is 12400/2.55 = 4863 Å, which is blue green light.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 8,
+    "id": "JEE27-PHY-0178",
+    "section": "A",
+    "answer": "D",
+    "answer_text": "12",
+    "explanation": "Use the physical relations below with the missing input ξ. Matching the measured total distance travelled during the interval gives ξ=12 in the unit assigned to ξ in the question. Substitution checks the observation:\nThe velocity changes sign at t = b/a = 5 s. Integrate |v| on either side of that instant: distance = b²/(2a)+(aT−b)²/(2a) = 74 m. The signed displacement is bT−aT²/2 = -24 m, so final x = -28 m and average speed = 6.166666667 m/s.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 9,
+    "id": "JEE27-PHY-1336",
+    "section": "A",
+    "answer": "A",
+    "answer_text": "four times as large",
+    "explanation": "For one turn of radius R the field is μ₀ I / (2 R). For two turns each of radius R / 2 the field is μ₀ x 2 x I / (2 x R / 2) = 2 μ₀ I / R. Dividing, the second field is 4 times the first. In general, rewinding a fixed length into N turns multiplies the centre field by N².",
+    "numerical_scaling": null
+  },
+  {
+    "number": 10,
+    "id": "JEE27-PHY-1773",
+    "section": "A",
+    "answer": "C",
+    "answer_text": "106.2 cm",
+    "explanation": "For L₁, 1/f₁=1/u₁+1/v₁ gives v₁=15 cm to its right. This is a real object 35 cm to the left of L₂. A second lens-equation calculation gives v₂=26.25 cm. Each lens inverts the image, so their magnification product is positive with magnitude 0.375. Original-object to final-image distance is 106.25 cm.\nFor the requested outcome — Find the distance from the original object to the final image. — the result is 106.2 cm.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 11,
+    "id": "JEE27-PHY-0807",
+    "section": "A",
+    "answer": "B",
+    "answer_text": "0.125",
+    "explanation": "For the adiabatic stage TV^(γ−1) is constant, giving T₂ = 150 K. With Q=0, gas work is the loss in internal energy, 3R(T−T₂)/2 = 5400 J. The isochoric stage does no work. The final temperature equals the initial temperature, so pfinal/pinitial = Vinitial/Vfinal = 0.125.\nFor the requested outcome — Find the final-to-initial pressure ratio after both stages. — the result is 0.125.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 12,
+    "id": "JEE27-PHY-1357",
+    "section": "A",
+    "answer": "D",
+    "answer_text": "8 × 10⁻⁴ N m⁻¹ directed towards C",
+    "explanation": "Wire A attracts B with (2 × 10⁻⁷ x 10 × 20) / 0.10 = 4 × 10⁻⁴ N m⁻¹ towards A. Wire C attracts B with (2 × 10⁻⁷ x 20 × 30) / 0.10 = 1.2 × 10⁻³ N m⁻¹ towards C. These pulls are in opposite directions, so the net force per unit length is 1.2 × 10⁻³ minus 4 × 10⁻⁴ = 8 × 10⁻⁴ N m⁻¹, directed towards C.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 13,
+    "id": "JEE27-PHY-1788",
+    "section": "A",
+    "answer": "B",
+    "answer_text": "0.2 V",
+    "explanation": "The stopping potential changes by 2 V when photon energy changes by 2 eV, so a=(3.2−0.8)/2=1.2. The final wavelength gives kinetic energy 3.5 eV. Removing the added 2 eV leaves emitted K_max=1.5 eV for 4 eV photons, hence the work function is 2.5 eV. At 3 eV illumination the true stopping potential is 0.5 V. Consequently δ=0.8−1.2×0.5=0.2 V. The second reading verifies 1.2×2.5+0.2=3.2 V.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 14,
+    "id": "JEE27-PHY-1081",
+    "section": "A",
+    "answer": "C",
+    "answer_text": "5 mm",
+    "explanation": "a = 1 × 10⁻⁶ x 1000 / (1 × 10⁻³) = 1 m s⁻². The time to cover 1 m along the initial direction is t = 1 / 10 = 0.1 s. The sideways displacement is y = 0.5 × 1 × (0.1)² = 5 × 10⁻³ m = 5 mm.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 15,
+    "id": "JEE27-PHY-0323",
+    "section": "A",
+    "answer": "B",
+    "answer_text": "5.6 m/s",
+    "explanation": "During compression the energy equation is kx²/2+fx=mu²/2. Its positive solution is x=0.5803332408 m. Here kx>f, so reversal occurs; the return energy is kx²/2−fx. The exit speed is 5.599761966 m/s, the later stopping distance 7.839333518 m and contact heat 2fx=2.321332963 J.\nRequested result: 5.6 m/s.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 16,
+    "id": "JEE27-PHY-1346",
+    "section": "A",
+    "answer": "D",
+    "answer_text": "out of the plane of the paper, towards the reader",
+    "explanation": "Curl the fingers of the right hand along the anticlockwise current; the extended thumb then points out of the paper. Hence the field at the centre, and everywhere on the axis, is directed out of the plane of the loop towards the reader. That face of the loop behaves as a north pole.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 17,
+    "id": "JEE27-PHY-1127",
+    "section": "A",
+    "answer": "A",
+    "answer_text": "the total electrostatic potential energy of the final configuration",
+    "explanation": "Since the charges are moved slowly, no net kinetic energy is gained and all the external work is stored as electrostatic potential energy. The initial energy is zero because the charges begin infinitely far apart, so the external work equals the final potential energy of the assembled system.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 18,
+    "id": "JEE27-PHY-0187",
+    "section": "A",
+    "answer": "C",
+    "answer_text": "zero",
+    "explanation": "The centripetal force is always perpendicular to the velocity, so the angle is 90° and the work done is zero.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 19,
+    "id": "JEE27-PHY-0981",
+    "section": "A",
+    "answer": "A",
+    "answer_text": "0.32 m",
+    "explanation": "From n1 L1 = n2 L2, we get L2 = n1 L1/n2 = 256 × 0.4/320 = 102.4/320 = 0.32 m.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 20,
+    "id": "JEE27-PHY-0450",
+    "section": "A",
+    "answer": "A",
+    "answer_text": "The same zero net torque",
+    "explanation": "When both resultant force and torque vanish, net torque is zero about every origin.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 21,
+    "id": "JEE27-PHY-0495",
+    "section": "B",
+    "answer": 64,
+    "answer_text": "64",
+    "explanation": "The driven acceleration is 2θ/t₁² = 4 rad/s², so the cut-off speed is 16 rad/s. Coasting deceleration is ω/t₂ = 2 rad/s². Adding τdrive−τfr = Iα and τfr = Iβ gives I = 2 kg m² and τfr = 4 N m. Coasting through average speed ω/2 gives 64 rad.\nFor the requested outcome — Find the angle rotated during the coasting stage. — the result is 64 rad.",
+    "numerical_scaling": {
+      "question": "A rigid rotor starts from rest. A constant driving torque 12 N m acts for 4 s while a constant opposing friction torque also acts. It then coasts to rest in 8 s after the drive is removed. Its measured angle during the driven stage is 32 rad. Assume friction torque is independent of speed. Find the angle rotated during the coasting stage. Give the numerical value in rad, rounded to the nearest integer.",
+      "unrounded_value": 64.0,
+      "answer_integer": 64,
+      "unit": "rad",
+      "unit_scale_power10": 0,
+      "rounding": "nearest integer; exact half away from zero",
+      "parent_candidate": "NEW-U05-rotational_brake-1-3"
+    }
+  },
+  {
+    "number": 22,
+    "id": "JEE27-PHY-0151",
+    "section": "B",
+    "answer": 171,
+    "answer_text": "171",
+    "explanation": "The catch condition is aτ²/2 = v(τ+delay). Its positive root is τ = 13.06225775 s. The clock time is 17.06225775 s, the common position is 170.6225775 m, and vB−vA = aτ−v = 16.1245155 m/s.\nFor the requested outcome — How long after A passed the marker does the catch occur? — the result is 17.06 s.",
+    "numerical_scaling": {
+      "question": "Car A passes a marker at constant speed 10 m/s at t = 0. Car B starts from rest at the marker after a delay of 4 s and then accelerates uniformly at 2 m/s². Both travel along the same straight road in the same direction. Let τ be the time B has been moving when it first catches A. How long after A passed the marker does the catch occur? Express the result in units of 10^(-1) s, and give the nearest integer.",
+      "unrounded_value": 170.6225774829855,
+      "answer_integer": 171,
+      "unit": "s",
+      "unit_scale_power10": -1,
+      "rounding": "nearest integer; exact half away from zero",
+      "parent_candidate": "NEW-U02-meeting_delay-1-1"
+    }
+  },
+  {
+    "number": 23,
+    "id": "JEE27-PHY-0578",
+    "section": "B",
+    "answer": 410,
+    "answer_text": "410",
+    "explanation": "Energy per unit mass at launch is f²GM/R−GM/R = −(1−f²)GM/R. At the turning point the speed is zero, so rmax = R/(1−f²) = 9375000 m. The height is 3375000 m, acceleration g(R/rmax)² = 4.096 m/s², and potential −GM/rmax = -38400000 J/kg.\nFor the requested outcome — Find the gravitational acceleration magnitude at the highest point. — the result is 4.096 m/s².",
+    "numerical_scaling": {
+      "question": "A particle is projected radially outward from a spherical planet’s surface at a speed equal to 0.6 times its surface escape speed. The planet radius is 6000000 m and surface gravitational acceleration is 10 m/s². Ignore rotation, atmosphere and other bodies. Find the gravitational acceleration magnitude at the highest point. Express the result in units of 10^(-2) m/s², and give the nearest integer.",
+      "unrounded_value": 409.6,
+      "answer_integer": 410,
+      "unit": "m/s²",
+      "unit_scale_power10": -2,
+      "rounding": "nearest integer; exact half away from zero",
+      "parent_candidate": "NEW-U06-radial_launch-1-2"
+    }
+  },
+  {
+    "number": 24,
+    "id": "JEE27-PHY-1766",
+    "section": "B",
+    "answer": 4,
+    "answer_text": "4",
+    "explanation": "The first polariser transmits I₀/2. Successive factors are cos²θmiddle and cos²(θlast−θmiddle), so the observed final intensity implies I₀=32 W/m². After the second the intensity is 12 W/m². Removing it instead gives (I₀/2)cos²θlast=4 W/m².\nFor the requested outcome — Find the final intensity if the middle polaroid is removed and the other axes are unchanged. — the result is 4 W/m².",
+    "numerical_scaling": {
+      "question": "Unpolarised light passes through three ideal polaroids. Their transmission axes make angles 0°, 30° and 60° with a reference line. The emerging intensity is measured as 9 W/m². Ignore absorption except that described by ideal polariser transmission and Malus’s law. Find the final intensity if the middle polaroid is removed and the other axes are unchanged. Give the numerical value in W/m², rounded to the nearest integer.",
+      "unrounded_value": 4.0,
+      "answer_integer": 4,
+      "unit": "W/m²",
+      "unit_scale_power10": 0,
+      "rounding": "nearest integer; exact half away from zero",
+      "parent_candidate": "NEW-U16-three_polaroids-1-2"
+    }
+  },
+  {
+    "number": 25,
+    "id": "JEE27-PHY-0890",
+    "section": "B",
+    "answer": 2,
+    "answer_text": "2",
+    "explanation": "At fixed pressure, n = p/(kBT), so the number density ratio is 1/4. Therefore λnew/λold = tr/dr² = 1. The rms-speed ratio is √(tr/mr) = 2. Dividing these gives the collision-time ratio 0.5.\nFor the requested outcome — Find the new-to-original rms-speed ratio. — the result is 2.",
+    "numerical_scaling": {
+      "question": "For a dilute ideal gas, take the mean free path to be λ = 1/(√2πd²n), where d is collision diameter and n is number density. A comparison gas at the same pressure has absolute temperature 4 times the original, molecular mass 1 times the original and collision diameter 2 times the original. Find the new-to-original rms-speed ratio. Give the nearest integer.",
+      "unrounded_value": 2.0,
+      "answer_integer": 2,
+      "unit": "",
+      "unit_scale_power10": 0,
+      "rounding": "nearest integer; exact half away from zero",
+      "parent_candidate": "NEW-U09-mean_free_path-1-2"
+    }
+  }
+]

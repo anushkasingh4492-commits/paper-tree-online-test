@@ -1,0 +1,35 @@
+{
+  "version": "1.4.0",
+  "questions": 2160,
+  "difficulty": {
+    "Easy": 648,
+    "Difficult": 540,
+    "Medium": 972
+  },
+  "classes": {
+    "XI": 1080,
+    "XII": 1080
+  },
+  "keys": {
+    "A": 540,
+    "B": 540,
+    "C": 540,
+    "D": 540
+  },
+  "figure_linked_questions": 216,
+  "required_figure_questions": 101,
+  "assets": 68,
+  "numerical_alternates": 270,
+  "families": 1110,
+  "new_difficult_tasks": 6,
+  "figure_rewrites": 1,
+  "changed_records": 23,
+  "named_errata_records": 22,
+  "finding_id_rows": 23,
+  "additional_correction_ids": [
+    "JEE27-PHY-1540"
+  ],
+  "syllabus_basis_year": 2026,
+  "baseline_archive_sha256": "48fdb2bd071f7a955616c3eeb68e8681e2b7539ed415af4a60d1a3fc050485ac",
+  "bank_sha256": "d0a5ac908fddd1fb66112727a2cfa3a422e901a5bbab3d7d8fd2727baf5c867d"
+}

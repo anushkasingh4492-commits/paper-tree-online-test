@@ -1,0 +1,42 @@
+[
+ {
+  "id": "R08-A-03-3",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Blind solver S2 noted the chess option partly fits (judging on one mode only). The correct answer also said 'only on pieces from one' tradition, which loosely parallels the narrow-measure half of the error and blurred it with the chess option; the author's measure is the ability to keep the languages apart.",
+  "fix": "Correct option reworded to 'only on how strictly she keeps them apart, and treating her blending of the two as poor training'; explanation updated to match. Solver flag otherwise dismissed: the chess option lacks the step of reading combination as an absence of competence, and both solvers reached the correct answer.",
+  "changed": true
+ },
+ {
+  "id": "R08-A-07-4",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Correct option 'placed earlier events on the side their language calls the past' was awkward (English places the past 'behind', not on a side) and 'silently' was ambiguous about whether the task was non-linguistic.",
+  "fix": "Reworded to 'In a wordless task, people set pictures of earlier events in the direction that their language's time expressions assign to the past'; explanation wording aligned.",
+  "changed": true
+ },
+ {
+  "id": "R08-A-07-5",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "The correct answers of 07-1 (extension into new expressions) and 07-2 (alive as patterns of expression) together point towards the correct answer of 07-5, making it easier than its Difficult label within the set.",
+  "fix": "none: the overlap follows from the passage's single central distinction; each item still requires its own reading and the 07-5 distractors (frequency, felt origin, governing reasoning) remain discriminating.",
+  "changed": false
+ },
+ {
+  "id": "R08-A-06-3",
+  "category": "E4",
+  "severity": "minor",
+  "finding": "Labelled Difficult, but the weakening option targets an explicitly stated premise in paragraph 2 and the distractors are fairly easy to eliminate; closer to Medium. R08-A-06-4 is similarly at the low end of Difficult.",
+  "fix": "none: within CAT tolerance for an upper-Medium/Difficult item and the exact difficulty quota (Easy 10, Medium 15, Difficult 9) would otherwise need rebalancing elsewhere.",
+  "changed": false
+ },
+ {
+  "id": "R08-A-02-4",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "The weakening option undercuts the premise that 'certain readers will judge her by it', but a hostile reader could note that professed beliefs about correctness, which paragraph 2 also counts as linguistic behaviour, survive the blind test.",
+  "fix": "none: the option still clearly weakens the stated support (that readers really judge writers by the rule), and no distractor weakens the claim at all; it is the only defensible answer.",
+  "changed": false
+ }
+]

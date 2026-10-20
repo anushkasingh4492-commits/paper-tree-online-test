@@ -1,0 +1,98 @@
+[
+ {
+  "id": "R07-E (blind-solver notes)",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "verify/notes/R07-E.json is an empty list: no DISAGREEMENT or flag entries were recorded by the blind solvers, so the audit relied entirely on a cold solve of all 34 items.",
+  "fix": "none: no solver notes to dismiss or act on",
+  "changed": false
+ },
+ {
+  "id": "R07-E-01-1",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation says 'The key states this central claim'; difficulty_reason uses 'distractor'.",
+  "fix": "Changed to 'The correct answer' and 'wrong option'.",
+  "changed": true
+ },
+ {
+  "id": "R07-E-04-3",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation says 'which contradicts the key'; difficulty_reason says 'The key echoes'.",
+  "fix": "Changed to 'the correct answer'.",
+  "changed": true
+ },
+ {
+  "id": "R07-E-07-5",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation says 'The key covers both criticism and design'; difficulty_reason uses 'distractors'.",
+  "fix": "Changed to 'The correct answer' and 'wrong options'.",
+  "changed": true
+ },
+ {
+  "id": "R07-E (difficulty_reason fields)",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "difficulty_reason in 02-2, 02-3, 02-4, 03-2, 03-3, 03-4, 04-1, 04-4, 05-2, 05-3, 05-4, 06-4, 07-2, 07-4, 08-1, 08-2, 08-3, 08-4 used 'distractor(s)' or 'the key'.",
+  "fix": "Replaced with 'wrong option(s)', 'the correct answer', 'Counter-intuitive answer'.",
+  "changed": true
+ },
+ {
+  "id": "R07-E-08-4",
+  "category": "E2",
+  "severity": "major",
+  "finding": "Correct option (151 chars) was markedly longer and more elaborated ('just as easily and successfully') than every other option (114 to 119), giving the answer away by length.",
+  "fix": "Shortened to 'Warehouses with low ceilings and irregular columns proved as easy to convert as those with generous ceilings and regular grids.' Explanation still matches.",
+  "changed": true
+ },
+ {
+  "id": "R07-E-08-4",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Option 'Flexible-plan offices from the same decades ...' was unclear: the warehouses are old and the offices recent, so 'the same decades' had no referent.",
+  "fix": "Reworded to 'Flexible-plan offices built in recent decades have been demolished far more often than old warehouses in the same districts.'",
+  "changed": true
+ },
+ {
+  "id": "R07-E-03-2",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Correct option said 'a structural or engineering calculation'; the passage says only 'a structural calculation', so the added 'engineering' was an unneeded extension.",
+  "fix": "Trimmed to 'a structural calculation'.",
+  "changed": true
+ },
+ {
+  "id": "R07-E-07-4",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Correct option is the longest in its set (146 vs 118 to 130).",
+  "fix": "none: margin is modest, the option needs both halves (more visual drama, less attention to acoustics and weathering) to bear on the claim, and the file's key-longest rate is 5/34",
+  "changed": false
+ },
+ {
+  "id": "R07-E-01-3",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Checked whether the printed arrow on the ticket could be defended as a design change.",
+  "fix": "none: paragraph 3 groups 'more signs' and 'warnings printed in red' with the blaming remedies and paragraph 2 says form beats words; only reshaping the slot removes the error, so the answer is unique",
+  "changed": false
+ },
+ {
+  "id": "R07-E-04-4",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Checked whether a strong candidate could resist a bread machine counting as craft.",
+  "fix": "none: the stem restricts the question to 'the test proposed in the final paragraph', which explicitly says some machine work would count as craft; the three other options each fail that test by the passage's own wording",
+  "changed": false
+ },
+ {
+  "id": "R07-E-06-2",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Checked whether 'behaved exactly as a restorer would' could be defended from 'The conservator, no less than the restorer, decides'.",
+  "fix": "none: paragraph 3 says both interpret, not that they act alike; the restorer strips layers and imposes reconstructions, so 'exactly as a restorer' and 'imposing a modern idea' fail",
+  "changed": false
+ }
+]

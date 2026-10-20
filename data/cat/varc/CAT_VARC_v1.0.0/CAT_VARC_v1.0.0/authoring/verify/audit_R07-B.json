@@ -1,0 +1,74 @@
+[
+ {
+  "id": "R07-B-01",
+  "category": "E6",
+  "severity": "major",
+  "finding": "Paragraph 4 had a garbled sentence: 'the romance of the untranslatable flatters everyone involved: the reader ... and a picture of cultures as sealed rooms' (a picture cannot be flattered; editing leftover).",
+  "fix": "Rewrote as 'flatters the reader, who feels worldly for knowing the rare word, and it encourages a picture of cultures as sealed rooms ...'. No question quotes this sentence.",
+  "changed": true
+ },
+ {
+  "id": "R07-B-01-4",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation said 'support the key'.",
+  "fix": "Changed to 'support the correct answer'.",
+  "changed": true
+ },
+ {
+  "id": "R07-B-03-3",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Correct option said criticism exists 'chiefly' to guide choice, while paragraph 2 names the assumption as 'the only job of criticism'; also explanation said 'The key restates'.",
+  "fix": "Changed 'chiefly' to 'solely' and 'The key' to 'The correct answer'.",
+  "changed": true
+ },
+ {
+  "id": "R07-B-03-4",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation said 'The author would reject the key'.",
+  "fix": "Changed to 'reject this statement'.",
+  "changed": true
+ },
+ {
+  "id": "R07-B-03-4",
+  "category": "E4",
+  "severity": "minor",
+  "finding": "Labelled Difficult; the EXCEPT option maps fairly directly onto 'A notice that can only ever say yes tells the reader very little', so it is at the hard end of Medium.",
+  "fix": "none: label defensible given the plausible 'provided its praise is carefully argued' qualifier, and the file's Difficult quota is exact",
+  "changed": false
+ },
+ {
+  "id": "R07-B-05",
+  "category": "E6",
+  "severity": "minor",
+  "finding": "Paragraph 4 called old translations' choices 'a period's mistakes about another book', which sits awkwardly with paragraph 3 ('not arbitrary') and paragraph 4 ('not a sign that earlier translators failed').",
+  "fix": "Changed to 'a period's reading of another book'. No question quotes the phrase.",
+  "changed": true
+ },
+ {
+  "id": "R07-B-06-4",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation said 'The key states exactly that picture'.",
+  "fix": "Changed to 'The correct answer states'.",
+  "changed": true
+ },
+ {
+  "id": "R07-B-07-5",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation said 'Only the key reports'.",
+  "fix": "Changed to 'Only the correct answer reports'.",
+  "changed": true
+ },
+ {
+  "id": "R07-B-03-1",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Blind solver S1 flagged that all four R07-B-03 answers were letter D in the verification pack (key-position cluster). Both solvers reached the key.",
+  "fix": "none: option letters are assigned by the build (balanced per chapter), not by the drafting file; no content defect. Build should rebalance letter positions within a passage.",
+  "changed": false
+ }
+]

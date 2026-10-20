@@ -1,0 +1,22 @@
+[
+ {
+  "id": "R05-A-08-5",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "C",
+    "key": "C",
+    "working": "Gap depends on frame: held for use and integrated into possessions over months is the strongest 'own' frame.",
+    "alternative": "",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "A",
+    "key": "A",
+    "working": "Held to use and become 'part of her possessions' through daily use; C and D are exchange frames.",
+    "alternative": "B is weakly defensible: a fresh gift is also held to use, though the passage stresses the mug having 'already become' part of possessions, which favours A.",
+    "issue": ""
+   }
+  }
+ }
+]

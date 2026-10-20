@@ -1,0 +1,42 @@
+[
+ {
+  "id": "V03-H-009",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "5",
+    "key": "5",
+    "working": "Charm pricing (prices ending in nine) is a different bias from anchoring to an arbitrary number (1,3,4,2).",
+    "alternative": "2 (negotiators) shifts from estimation to bargaining, but it is explicitly the same tendency, so 5 remains the odd one.",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "5",
+    "key": "5",
+    "working": "Anchoring chain 1, 3, 2, 4; 5 on charm pricing ending in nine is a different effect.",
+    "alternative": "",
+    "issue": ""
+   }
+  }
+ },
+ {
+  "id": "V03-H-020",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "1",
+    "key": "1",
+    "working": "Referendum paragraph 4,2,5,3; 1 is about turnout, not the binary-question/drafting critique that 3 concludes from.",
+    "alternative": "",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "1",
+    "key": "1",
+    "working": "4-2-5-3 run: purity, binary limit, drafting power, ratify detailed proposal; 1 on turnout has no link.",
+    "alternative": "5 is weaker-linked: 3 follows 2 directly (ratifying a detailed proposal answers the binary-choice problem), but 5's 'moreover' fits the critique chain, so 1 remains the better odd one.",
+    "issue": ""
+   }
+  }
+ }
+]

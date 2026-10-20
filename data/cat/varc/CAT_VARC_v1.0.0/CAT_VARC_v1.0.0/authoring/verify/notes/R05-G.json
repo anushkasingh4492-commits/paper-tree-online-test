@@ -1,0 +1,22 @@
+[
+ {
+  "id": "R05-G-08-4",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "D",
+    "key": "D",
+    "working": "Lever logic: exporting country prices carbon at home so revenue stays at home; only works if carbon prices paid abroad are credited at the border.",
+    "alternative": "",
+    "issue": "'only if' is a strong necessity claim; the passage implies it via the revenue-stays-home mechanism rather than stating it, but no other option fits."
+   },
+   "S2": {
+    "answer": "C",
+    "key": "C",
+    "working": "Exporter prices carbon at home only to keep revenue; requires charge to credit prices paid abroad",
+    "alternative": "",
+    "issue": ""
+   }
+  }
+ }
+]

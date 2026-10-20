@@ -1,0 +1,503 @@
+{
+ "kind": "RC",
+ "passages": [
+  {
+   "passage_id": "R01-F-06",
+   "passage": [
+    "A familiar picture of scientific objectivity confines values to the edges of inquiry. Values may legitimately decide which problems are worth studying and how results are used, but in the central act of science, deciding whether the evidence supports a hypothesis, they are supposed to have no place. A researcher who lets personal hopes affect whether a conclusion is accepted is, on this picture, simply doing bad science, and the remedy is a stricter separation between the laboratory and the world outside it.",
+    "The trouble is that evidence rarely settles a question outright, and so accepting a hypothesis always involves deciding that the evidence is strong enough. How strong is strong enough? Consider a laboratory testing whether an industrial solvent damages the liver. If it wrongly concludes that the solvent is safe, workers may be harmed; if it wrongly concludes that the solvent is dangerous, a useful product may be withdrawn and money wasted. Which error is worse, and therefore how much evidence to demand before declaring the solvent harmful, is not something the data can decide. It depends on how one weighs injured workers against lost revenue, which is a question of value. Two laboratories examining identical data could therefore set the threshold in different places, and neither would have misread a single measurement.",
+    "A natural reply is that scientists need not accept or reject anything. They could report the probability that the hypothesis is true, given the evidence, and leave the decision to those who must act. The reply is attractive but harder to carry out than it sounds. Before any probability can be reported, the investigators must decide how to classify ambiguous tissue samples, which measurements to discard as faulty and which statistical model to fit, and each of these decisions can err in either direction, with the same uneven consequences. The weighing of errors does not disappear; it moves to a stage where it is less visible.",
+    "It would be a mistake, however, to conclude that anything goes. The argument shows that values can properly bear on how much evidence to require, given what is at stake if one is wrong. It does not show that values can bear on what the evidence is, or license a researcher to discount an inconvenient result because it is unwelcome. The distinction is between setting the bar and moving the evidence, and the integrity of science depends on keeping the two apart, not on pretending that the bar sets itself."
+   ],
+   "questions": [
+    {
+     "id": "R01-F-06-4",
+     "type": "RC",
+     "options": {
+      "A": "transferring the weighing of errors to an earlier stage of the research where it is harder to see.",
+      "B": "presenting the evidence to the people who must act instead of accepting or rejecting the hypothesis oneself.",
+      "C": "allowing a preference for one conclusion to alter what the results are taken to be, for instance by setting aside an unwelcome finding.",
+      "D": "raising or lowering the amount of evidence required in the light of what is at stake if one errs."
+     },
+     "question": "In the final paragraph, 'moving the evidence' refers to"
+    }
+   ]
+  },
+  {
+   "passage_id": "R01-F-03",
+   "passage": [
+    "The sceptical argument about induction, usually traced to David Hume, has a disarming simplicity. Every inference from observed cases to unobserved ones assumes that the future will resemble the past, or more generally that nature is uniform. That assumption cannot be proved by logic, since its denial involves no contradiction, and it cannot be supported by experience without circularity, since the support would itself be an inference from observed cases. Philosophers have spent a long time looking for a way out, usually by searching for a single principle that would license inductive inference in general.",
+    "The search may be misconceived, because there is no such thing as inductive inference in general. Consider two investigators. One measures the melting point of a newly prepared sample of a pure compound and concludes, from a single careful trial, that every sample of that compound will melt at the same temperature. Another measures the height of one adult and draws no conclusion at all about the heights of adults. Both are reasoning well, and they differ not because one has found the universal principle and the other has not, but because each knows something about the kind of thing being studied: that pure compounds are uniform in their melting points, and that people are not uniform in their heights.",
+    "On this picture, what licenses an inductive step is not a principle of uniformity but particular facts about particular domains, which tell us how far a sample can be trusted to stand in for the whole. The obvious objection is that this merely relocates the problem. Our confidence that compounds are uniform in their melting points was itself acquired by induction, and so the sceptic can ask what licenses that.",
+    "The objection is fair, but it is less damaging than it looks, because it trades on an ambiguity between justifying each belief and justifying all of them together. The regress it describes is real, yet it never requires us to justify all our inductive habits at once. At any moment we lean on some background knowledge in order to test some other part of it, and any item can in turn be questioned while the rest is held fixed. This does not answer the sceptic on the sceptic's own terms, which demand a foundation lying outside experience altogether. It does show that the demand is not one that science, as actually practised, needs to meet in order to be rational, any more than a household needs to audit every account on the same afternoon in order to keep honest books."
+   ],
+   "questions": [
+    {
+     "id": "R01-F-03-4",
+     "type": "RC",
+     "options": {
+      "A": "the background knowledge that licenses an inductive step was itself acquired by inductive means.",
+      "B": "a domain-based account of induction makes the regress that the sceptic describes disappear altogether.",
+      "C": "two investigators may both reason well while drawing very different conclusions from a single observation.",
+      "D": "any single item of background knowledge can be questioned while the rest of it is held fixed."
+     },
+     "question": "The author would accept each of the following EXCEPT the claim that"
+    }
+   ]
+  },
+  {
+   "passage_id": "R07-F-06",
+   "passage": [
+    "Cuteness is usually treated as the least serious of aesthetic qualities, if it is admitted to be an aesthetic quality at all. It belongs, we suppose, to stickers, toys and advertisements, and a taste for it is regarded as something to grow out of. Yet this dismissal sits oddly with the sheer power of the response. Few experiences in the visual world are as immediate or as hard to resist as the one produced by a large-eyed, round-faced, short-limbed creature stumbling towards us; we feel it before we have decided anything, and it is remarkably similar across cultures that agree on little else in matters of taste.",
+    "Students of animal behaviour noticed long ago that the features we find cute, a large head relative to the body, big low-set eyes, softness and clumsiness, are the features of the very young, and they proposed that the response is a mechanism for securing care. The explanation is plausible, but it accounts for less than it seems to. It tells us why infants elicit tenderness; it does not tell us why we find the same tenderness stirred by a cartoon kettle with eyes, or why the response is so readily extended to objects that need no care whatever. Once detached from the infant, the cute becomes a style, and a style can be applied to anything.",
+    "What makes the style interesting is its ambivalence. The cute object presents itself as small, soft and unable to resist, and our response to it is mixed in a way that tenderness towards a real child usually is not. Alongside the wish to protect, there is often a wish to possess and to handle, the half-joking urge to squeeze or pinch what one finds adorable, which people frequently admit to with some embarrassment. The cute flatters our power as much as it summons our care: it is an image of something that will never answer back.",
+    "This is why cuteness should be taken seriously rather than either indulged or sneered at. A quality that disarms judgement so quickly is a useful instrument for anyone who wishes to make something appear harmless, whether a product, an institution or a mascot standing in for an organisation whose activities are anything but soft. None of this means that delight in a kitten is a moral failing, and the pleasure is, in most of its forms, innocent enough. But an aesthetic that works by making us feel strong and kindly at once, and that does so before thought has begun, is not trivial; its very lightness is what gives it weight."
+   ],
+   "questions": [
+    {
+     "id": "R07-F-06-1",
+     "type": "RC",
+     "options": {
+      "A": "differ widely from one culture to another, as most other matters of taste do.",
+      "B": "appeal to us only when they belong to creatures that genuinely need care.",
+      "C": "were first devised by advertisers in order to sell stickers, toys and other goods.",
+      "D": "are those of the very young, such as a large head and big eyes."
+     },
+     "question": "According to the passage, the features that people find cute"
+    }
+   ]
+  },
+  {
+   "passage_id": "R02-C-05",
+   "passage": [
+    "Ask people what grief involves and many will describe a sequence: denial, then anger, then bargaining, then depression, and at last acceptance. The sequence has become so familiar that it can seem like a discovery about human nature, as settled as the stages of a fever. It began, however, as a description of how some terminally ill patients responded to the news of their own approaching death, drawn from clinical conversations rather than from any systematic study of the bereaved. Its migration from the dying to the grieving, and from a set of observations to something closer to a timetable, happened largely outside the kind of research that might have tested it.",
+    "When grief has been studied directly, the tidy sequence has not fared well. Bereaved people commonly report several of the named feelings at once, or in no particular order, and many report some of them hardly at all. Perhaps the most striking finding is how many people cope with a loss far better than the model would lead one to expect, experiencing intense sorrow that gradually eases over months without passing through anything resembling distinct stages. Resilience of this kind is not denial in disguise; for a good number of people it seems simply to be the ordinary course that grief takes.",
+    "The harm of the model lies less in its inaccuracy than in what people do with it. A description of what some people feel becomes a standard of what everyone ought to feel, and departures from the standard begin to look like problems requiring attention. The widow who is not angry may be told that she has not yet faced her loss; the son who feels relief after a parent's long illness may wonder what is wrong with him. Friends, and even professionals, may wait for a stage that never arrives, or press a grieving person to move on to the next one as though grief were a course with a syllabus.",
+    "It would be unfair, though, to treat the model's popularity as mere credulity. It arrived at a time when dying and grief were seldom spoken of openly, and it gave people words for feelings, anger above all, that they might otherwise have hidden or been ashamed of. That was a real service, and it should not be forgotten in the rush to correct the record. The task now is to keep what the model offered, the permission to feel a wide range of things, while dropping the suggestion that those feelings must arrive in a fixed order, or arrive at all."
+   ],
+   "questions": [
+    {
+     "id": "R02-C-05-1",
+     "type": "RC",
+     "options": {
+      "A": "trace the familiar sequence back to an origin that differs from the use now made of it.",
+      "B": "present evidence that the sequence accurately describes how terminally ill patients respond to their diagnosis.",
+      "C": "argue that the stages of grief have never been observed in any patient or in any bereaved person.",
+      "D": "explain why the experience of grief is much harder to study systematically than the experience of dying."
+     },
+     "question": "Paragraph 1 mainly serves to"
+    }
+   ]
+  },
+  {
+   "passage_id": "R06-C-03",
+   "passage": [
+    "Among the records of past climate, ice cores enjoy a special prestige. Drilled from the great ice sheets of Greenland and Antarctica, they contain small bubbles of air sealed off as snow was buried and compressed, so that a scientist can, in a sense, hold in a laboratory a sample of the atmosphere as it was long before any human being farmed. Tree rings, lake sediments and the shells of tiny marine organisms all have to be translated into climate through some chain of reasoning. The bubbles in ice seem to need no translation at all: the gas is simply there, waiting to be measured.",
+    "The appearance of directness is partly an illusion, and an instructive one. Snow does not seal itself the moment it falls. For decades, centuries or, at the driest sites, far longer, depending on how quickly snow accumulates, the upper layer remains porous, and air from the surface continues to mix downward through it. By the time the bubbles finally close, the gas they hold is considerably younger than the ice that surrounds it. To date the air, then, researchers must model how compaction proceeds at a given site, which in turn depends on temperature and snowfall, the very quantities the core is being used to reconstruct. Temperature itself is not read off the ice but inferred from the proportions of heavier and lighter forms of water, a relationship calibrated against modern observations and assumed to have held in the past.",
+    "None of this makes the records untrustworthy. It does, however, change where their authority comes from. A core is persuasive not because it bypasses interpretation but because its interpretations can be checked against one another and against independent archives. Traces of very large volcanic eruptions, which can appear in cores drilled at opposite ends of the planet, allow records to be aligned; the timing of changes in ice can be compared with changes recorded in ocean sediments, whose dating rests on quite different assumptions. When such independent lines agree, the agreement is far harder to explain away than any single measurement, however direct it seems.",
+    "The point matters beyond the laboratory. Public arguments about climate often treat evidence as either raw and therefore reliable or interpreted and therefore suspect. Ice cores show why this division is unhelpful. Almost all scientific evidence is interpreted; what distinguishes strong evidence from weak is whether its interpretations are exposed to independent tests that could have failed. A measurement trusted because it seemed to speak for itself would deserve less confidence than one whose inferences had been stated openly and checked."
+   ],
+   "questions": [
+    {
+     "id": "R06-C-03-1",
+     "type": "RC",
+     "options": {
+      "A": "summer melting each year reworks the ice and traps air from later seasons in layers of older snow.",
+      "B": "the top layer of snow stays porous for a long time, letting surface air mix downward until the bubbles seal.",
+      "C": "fresh air seeps into the ice through cracks that open when a core is drilled and lifted to the surface.",
+      "D": "the weight of later snowfall forces newer air downward into deeper ice that had already been sealed."
+     },
+     "question": "According to the passage, the air in an ice core's bubbles is younger than the surrounding ice because"
+    },
+    {
+     "id": "R06-C-03-2",
+     "type": "RC",
+     "options": {
+      "A": "the volcanic traces used to align records are absent from cores drilled in Greenland and found only in Antarctica.",
+      "B": "the model used to date the air needs values of temperature and snowfall that the core itself is meant to supply.",
+      "C": "the air and the ice at any one site are usually exactly the same age, leaving no gap that could be measured.",
+      "D": "the proportions of heavier and lighter water in the ice change after drilling, so the record has to be corrected."
+     },
+     "question": "The passage implies that dating the air in an ice core involves a particular difficulty, namely that"
+    },
+    {
+     "id": "R06-C-03-3",
+     "type": "RC",
+     "options": {
+      "A": "It summarises the technical steps by which researchers align the records drawn from ice cores at opposite ends of the planet.",
+      "B": "It extends what ice cores show into a general claim about how evidence should be judged, including in public debate.",
+      "C": "It concedes that critics of climate science are right to treat interpreted evidence as less reliable than raw data.",
+      "D": "It introduces a different kind of climate record that, unlike ice cores, avoids the need for interpretation altogether."
+     },
+     "question": "Which of the following best describes the function of the final paragraph?"
+    },
+    {
+     "id": "R06-C-03-4",
+     "type": "RC",
+     "options": {
+      "A": "A historian accepts the date of a flood because five chronicles record the same date, each copied from one older chronicle.",
+      "B": "A historian accepts the date of a flood because a farmer's diary, a tax ledger and a church register, kept for unrelated reasons, all agree on it.",
+      "C": "A historian accepts the date of a flood because the only account of it was written by a witness who watched the water rise.",
+      "D": "A historian accepts the date of a flood because the manuscript recording it has survived for centuries without being altered."
+     },
+     "question": "Which of the following is most closely analogous to the way, according to the passage, ice cores earn their authority?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R05-D-03",
+   "passage": [
+    "Why does a string quartet cost so much more to hear today, relative to a shirt or a radio, than it did a century ago? Not because the musicians have become greedy or the concert halls inefficient. Performing a quartet required four players and roughly forty minutes then, and it requires the same now; no innovation has allowed three musicians to play it in half the time without destroying the thing being bought. Meanwhile workers in manufacturing have become many times more productive, and their wages have risen accordingly. The musicians' pay must rise too, or they would drift into other work. So the price of the quartet climbs relative to goods whose production has been transformed, even though nothing about the quartet has changed.",
+    "Economists sometimes call this the cost disease, and its reach goes far beyond concert halls. Teaching, nursing, care of the elderly and much legal and administrative work share the quartet's structure: the service largely consists of a person's time and attention, and attempts to compress that time often degrade what is delivered. A class of sixty is cheaper per pupil than a class of thirty, but it is not the same product at a lower price. Where productivity in such sectors lags, their share of national spending rises, and with it a persistent suspicion that schools and hospitals are squandering money, since nearly everything else seems to be getting cheaper.",
+    "The diagnosis contains a consolation that is often missed. If the relative cost of services rises because the rest of the economy has become more productive, then society as a whole is richer, and can afford those services even at their higher relative price. A family that spends a larger share of its income on its children's schooling than its grandparents did may also own far more and work fewer hours. What feels like a crisis of affordability is, on this view, partly a change in the composition of a growing budget.",
+    "The argument should not be stretched into a blanket excuse. That some cost growth in services is unavoidable does not mean that all of it is; administrative layers can multiply in a hospital as easily as in any other organisation, and the cost disease offers them no defence. Nor is the consolation automatic. The higher relative price of care falls hardest on those whose incomes have not shared in the general gain, and public budgets that depend on taxes voters resist may cut services long before the arithmetic says they must. The cost disease explains a pattern; it does not settle who should pay for it."
+   ],
+   "questions": [
+    {
+     "id": "R05-D-03-4",
+     "type": "RC",
+     "options": {
+      "A": "public budgets that depend on unpopular taxes may cut services well before the arithmetic of affordability requires it.",
+      "B": "manufacturing productivity may one day stop growing, which would remove the cause of the cost disease.",
+      "C": "the higher relative price of care weighs most on people whose incomes have not shared in the general gain.",
+      "D": "rising relative costs in a service may partly reflect administrative growth that the cost disease does not excuse."
+     },
+     "question": "The passage presents each of the following as a limit on the argument or on its consolation EXCEPT that"
+    }
+   ]
+  },
+  {
+   "passage_id": "R08-D-05",
+   "passage": [
+    "Two attitudes to the character of the speaker run through the study of persuasion, and they are hard to reconcile. The first, familiar from introductory logic, holds that an argument stands or falls on its own terms. Who makes it is irrelevant; to reject a claim because of the person advancing it is to commit a fallacy, and to accept a claim because of the person is the same error in a friendlier mood. The second attitude is older. Aristotle counted the character of the speaker among the means of persuasion, alongside appeals to the emotions of the audience and to the argument itself, and he did not present it as a regrettable weakness of listeners. A speaker who seems sensible, honest and well disposed towards the audience is, on this view, more worthy of belief, and an audience is right to take that into account.",
+    "The logician's attitude is correct for a particular situation: one in which the listener can examine the argument fully. A proof in geometry is no better for coming from a famous mathematician. But most of the claims on which people must act are not like proofs. A patient cannot check a diagnosis, a juror cannot repeat the forensic analysis, and a citizen cannot audit the statistics behind a policy. In such cases the listener is not choosing between evaluating the argument and evaluating the speaker; the argument is largely out of reach, and the speaker's record, competence and incentives are the best evidence available. To attend to them is not a lapse in reasoning but reasoning under a division of intellectual labour that no one can escape.",
+    "If this rehabilitates the appeal to character, it also shows where that appeal goes wrong. Credibility is earned in a domain. The physician's record is evidence about diagnoses, not about tax policy, and the honesty of a popular broadcaster is evidence that he reports what he believes, not that what he believes is true. Much modern persuasion works by carrying trust from the place where it was earned to a place where it has no bearing: the athlete who recommends an investment, the scientist who pronounces on matters far from her field. The listener who accepts such claims is not wrong to rely on character in general; she is wrong about which character she is relying on.",
+    "The two attitudes, then, are less opposed than they first appear. The logician is right that character cannot make a bad argument good, and the rhetorician is right that, where arguments cannot be inspected, character is often all a listener has to go on. What a careful audience needs is neither a rule against attending to the speaker nor a habit of trusting the likeable, but the narrower discipline of asking what, exactly, the speaker's credibility is credibility about."
+   ],
+   "questions": [
+    {
+     "id": "R08-D-05-2",
+     "type": "RC",
+     "options": {
+      "A": "committing the fallacy that introductory logic warns against, since legal advice should be judged only on its merits.",
+      "B": "reasoning soundly, since the judge's credibility was earned in the very domain the advice concerns.",
+      "C": "justified only if the listener has first worked through all the legal reasoning behind the advice.",
+      "D": "relying on character improperly, since a long career shows sincerity rather than the truth of a belief."
+     },
+     "question": "A listener follows a retired judge's advice about how a legal dispute is likely to be decided, relying on the judge's long record. The author would most likely regard this listener as"
+    }
+   ]
+  },
+  {
+   "passage_id": "R07-F-03",
+   "passage": [
+    "The phrase 'guilty pleasure' has become one of the most common ways of talking about taste. A person confesses to loving a televised singing contest, a formulaic romance series or a song that dominated the charts in her teens, and the confession is offered with a smile that asks to be forgiven. On the surface the phrase is modest, even self-deprecating; looked at more closely, it does a surprising amount of work, and not all of that work is modest.",
+    "Consider what the speaker gains. By calling the pleasure guilty, she is able to enjoy the thing while signalling that she knows it is beneath her; she occupies the position of the enthusiast and the position of the critic at once. The confession is a kind of insurance: if her listener turns out to share the enthusiasm, nothing is lost; if the listener sneers, she has already sneered first. What looks like an admission of bad taste is therefore, very often, a display of good taste, since only someone who knows the rankings can confess to violating them.",
+    "This is why the phrase, for all its apparent humility, tends to preserve the hierarchy it seems to question. Every guilty pleasure implies an innocent one, a set of books, films and songs that may be enjoyed without apology because they are approved. The confession leaves that ranking intact; indeed it needs the ranking in order to mean anything. And the ranking itself is rarely examined. It is striking how often the pleasures labelled guilty are those associated with audiences who have little cultural prestige, the teenage, the provincial, the domestic, while the pleasures of the already respected are seldom described in this way, however predictable they may be.",
+    "It does not follow that no pleasure should ever make us uneasy. Some enjoyments really do deserve scrutiny: laughter at another person's humiliation, for instance, or the thrill of watching real suffering staged for entertainment. But in those cases the unease concerns what the pleasure does or endorses, not where its object sits in a ranking of prestige, and the honest response is to ask what we are enjoying and why. That question is worth asking of the singing contest as well. Perhaps the answer will be that it offers something real, the spectacle of ordinary people attempting something difficult in public. If so, the pleasure needs no apology; if not, a shrug and a smile will not settle the matter either."
+   ],
+   "questions": [
+    {
+     "id": "R07-F-03-4",
+     "type": "RC",
+     "options": {
+      "A": "Some enjoyments, such as laughing at another person's humiliation, really do deserve to make us uneasy.",
+      "B": "Habitually confessing a pleasure as guilty is found, over time, to make people rate that work as highly as the approved ones.",
+      "C": "The works that are most often called guilty pleasures turn out in fact to be associated mainly with audiences of very little cultural prestige.",
+      "D": "Many people who use the phrase do so without any conscious wish to display their own good taste to others."
+     },
+     "question": "Which of the following, if true, would most weaken the claim in paragraph 3 that the phrase 'tends to preserve the hierarchy it seems to question'?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R03-E-03",
+   "passage": [
+    "Few words are used more freely by restaurant reviewers than 'authentic', and few are applied more selectively. A dish is praised as authentic when it is served in a cramped room, by a cook who speaks the diner's language haltingly, at a price that suggests nobody is getting rich. The same dish, served with tablecloths and a wine list, is suspected of having been tamed. Authenticity, in this usage, is less a property of the food than of the scene around it, and the scene is one that the visiting diner has come to consume.",
+    "Consider a hypothetical family that opens a restaurant serving the cooking of its home region in a city several thousand kilometres away. From the start, the cooks make changes. Some ingredients cannot be found and are replaced with local ones; some dishes are too laborious for a kitchen that must turn out fifty plates a night; others are sweetened or softened because the first customers sent them back. Within a generation the menu has become something that exists nowhere else: neither the food of the home region nor the food of the new city, but the food of the people who moved between them.",
+    "Purists treat this history as a decline, and they reward the restaurants that seem to have resisted it, the ones with a second menu in the home language that outsiders must know to ask for. Yet even that second menu has passed through the same kitchen, the same suppliers and the same compromises. To call it the real food and the first menu a betrayal is to take one stage of a continuous adaptation and freeze it as the original. More troubling, the judgement is usually made by people with no stake in the tradition, who are in effect asking immigrant cooks to perform their own foreignness for an audience's satisfaction.",
+    "None of this means that every adaptation is innocent. Cooks under commercial pressure sometimes strip a cuisine of everything difficult until it is recognisable only by name, and something real is lost when that happens. But the loss is better described as a narrowing of what the cooks themselves are free to make than as a departure from a fixed original. The more useful question to ask of a restaurant is not whether its food matches some imagined source, but whether the people cooking it have the room to cook what they think is good."
+   ],
+   "questions": [
+    {
+     "id": "R03-E-03-3",
+     "type": "RC",
+     "options": {
+      "A": "Many cooks who run such restaurants say they would like to cook more ambitious dishes than their customers will accept, and would do so if the rent allowed it.",
+      "B": "Reviewers praise restaurants with second menus more highly than restaurants that offer only a single menu to all diners, whatever the cooking on either menu is like.",
+      "C": "Diners from the home community order mostly from the second menu, while other customers rarely know that it exists or how to ask for it.",
+      "D": "The dishes on such second menus are found to be prepared with imported ingredients and unchanged methods, and to match versions cooked in the home region."
+     },
+     "question": "Which of the following, if true, would most weaken the author's claim that the second menu is only 'one stage of a continuous adaptation'?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R05-C-03",
+   "passage": [
+    "When a dominant company is overtaken by a newcomer, the explanation usually offered is some version of complacency: its managers, the story goes, grew comfortable, stopped listening to the market and failed to perceive what was approaching. The story has the appeal of a fable, and it permits the rest of us to believe that an identical fate could be avoided simply by remaining vigilant. Its difficulty is that, in many of the best known cases, the incumbent's managers were neither lazy nor blind. They were doing, carefully and well, exactly what they had been trained to do.",
+    "The pattern runs roughly as follows. A new technology appears that is, at first, worse than the existing one by the measures that the incumbent's best customers care about. It is slower, or less precise, or less durable, but it is cheaper and simpler, and it finds a small market among buyers who were never well served by the established product. The incumbent asks its customers whether they want the new thing, and they say no. It examines the margins, and they are thin. It looks at the size of the market, and it is too small to move a company of its scale. Every one of these judgements is correct, and together they lead the firm to put its money where its profits are. Meanwhile the new technology improves, year by year, until it is good enough for the mainstream, and the incumbent discovers that its careful attention to its best customers has left it with nothing to offer the rest.",
+    "It may be objected that this account is written with the convenient clarity of hindsight, since for every cheap technology that grew up to displace its betters, many others remained toys and disappeared, and an incumbent that chased all of them would have squandered its resources. The objection is fair, but it strengthens rather than weakens the point. If good managers cannot tell in advance which small markets will matter, then vigilance alone cannot be the remedy, because the problem is not a failure to look but a set of rules for deciding what is worth looking at.",
+    "What seems to help is therefore structural rather than psychological: firms that have survived such transitions have often placed the new venture in a separate unit, with its own costs and its own measures of success, small enough that a small market can still excite it. This is no guarantee, since separate units can be starved or smothered by the parent organisation, but the arrangement at least removes the new business from the scrutiny of the rules that would have judged it, correctly by their own lights, not worth the trouble."
+   ],
+   "questions": [
+    {
+     "id": "R05-C-03-3",
+     "type": "RC",
+     "options": {
+      "A": "its existing customers, when asked about the new technology, say that they do not want it.",
+      "B": "the profit margins it could earn from selling the new technology look thin when examined.",
+      "C": "its engineers lack the technical skills needed to work with the newer and simpler design.",
+      "D": "the market for the new technology is too small to matter to a company of its scale."
+     },
+     "question": "Each of the following is presented in the passage as a reason the incumbent passes over the new technology EXCEPT that"
+    }
+   ]
+  },
+  {
+   "passage_id": "R03-A-07",
+   "passage": [
+    "The familiar story of urbanisation runs in one direction. People leave the countryside for the city, struggle for a generation in its least desirable quarters, and are eventually absorbed, their children speaking the city's idiom and regarding the village as a place of grandparents and holidays. Migration, on this account, is a passage with a beginning and an end, and the only question worth asking about a migrant is how far along it he has come. The story is not false; it describes what happened to many families in many countries. But it has acquired the status of a norm, against which other patterns are measured and found wanting, and this has made it difficult to see a pattern that is, in much of the world, at least as common.",
+    "A large number of those who work in cities never complete the journey the story describes. They come for a season of construction or a few years in a factory, return for the harvest, a wedding or an illness in the family, and come back again, sometimes to the same city and sometimes to another. Their earnings pay school fees and debts in the village; the village holds their land, their elders and, often, their spouses and children. A household can live this way for decades, and many do. Seen through the one-way story, such people are migrants who have not yet settled, a transitional population whose double life is a symptom of incomplete integration. Seen on its own terms, the pattern looks rather different: a way of spreading risk across two places, so that a lost job in the city or a failed crop in the village need not be ruinous, because the other place remains.",
+    "The distinction matters because city governments have tended to act on the first reading. A resident whose household is registered elsewhere, whose stay is irregular, and whose address is a worksite or a shared rented room is easily treated as a visitor: excluded from subsidised housing, from schools for the children who come along, from the electoral roll, and from the attention of politicians who answer to those who are on it. The exclusion then produces the very evidence that justifies it. Denied a secure foothold in the city, the circular migrant has every reason to keep the village in reserve, and the persistence of his village ties is then cited as proof that he never really belonged.",
+    "It would be a mistake to romanticise circulation in its turn. Some who move back and forth would settle in the city if they could, and return to the village only because the city offers them nothing to stay for; for them, circularity is less a strategy than a sentence. Others genuinely prefer a life lived in two places and would keep it even if the city were more welcoming. The difficulty is that from the outside the two groups look identical, and a policy designed for one will misjudge the other.",
+    "What follows is not a single programme but a change in the condition attached to belonging. A city that made its entitlements portable, that allowed a worker to enrol his children in school without proving permanent residence, and that encouraged cheap rental housing suited to stays of months rather than decades would serve both groups at once. It would allow those who wish to settle to do so, and those who wish to circulate to circulate without penalty. What it would cease to do is demand that a person surrender one home as the price of being recognised in another."
+   ],
+   "questions": [
+    {
+     "id": "R03-A-07-5",
+     "type": "RC",
+     "options": {
+      "A": "would end circular migration altogether by removing the hostility of cities that is its underlying cause.",
+      "B": "would help both migrants forced to circulate and those who choose to, without the city having to tell the two groups apart.",
+      "C": "would persuade migrants who prefer a life in two places to settle permanently in the city instead.",
+      "D": "would identify which migrants wish to settle, so that each group could be offered a programme designed for it."
+     },
+     "question": "The recommendations in paragraph 5 are suited to the difficulty raised in paragraph 4 chiefly because they"
+    }
+   ]
+  },
+  {
+   "passage_id": "R06-G-06",
+   "passage": [
+    "When two researchers, one celebrated and one unknown, publish a discovery together, the discovery is very likely to be remembered as the celebrated researcher's. The same pattern appears when two people arrive at a result independently: the one who is already eminent tends to receive the larger share of the attention, the citations and the invitations that follow. Sociologists of science named this the Matthew effect, after the verse in the Gospel of Matthew about those who have being given more, and it is usually discussed as a problem of fairness. The unknown co-author did much of the work, and someone else collected the credit.",
+    "That description is correct within its limits, but it understates what is at stake, and it also misses why the effect is so persistent. Scientists face a literature far larger than anyone could read in a lifetime. A familiar name on a paper is a cheap signal that the paper is probably worth the reader's time, and in a world of scarce attention, readers who rely on such signals are not being foolish. To some degree, then, the effect is the by-product of a reasonable strategy for coping with abundance. Condemning it as mere snobbery does not explain why careful and fair-minded people take part in it every day.",
+    "The trouble begins when attention is converted into resources. A researcher whose papers are widely read finds it easier to win grants, which pay for students and equipment, which produce more papers, which are read more widely still. Advantage compounds. After a few rounds, the difference between two careers may bear little relation to any difference in the quality of their first ideas, and the field as a whole has placed a heavy bet on one line of work for reasons that are partly accidental. Ideas that happened to originate with the less visible researcher may wait years for a hearing, or never receive one, not because they were tested and found wanting but because nobody with the means to test them was looking in their direction.",
+    "Seen in this light, the effect is less an injustice done to individuals than a distortion in how a field allocates its bets, and the remedy is not to forbid readers from noticing names, which would be both futile and costly. It is to loosen the link between attention and money: to judge some grant proposals without knowing who wrote them, to set aside funds for researchers early in their careers, and to treat a famous name as a reason to read a paper rather than as a reason to believe it."
+   ],
+   "questions": [
+    {
+     "id": "R06-G-06-2",
+     "type": "RC",
+     "options": {
+      "A": "accepting it as accurate as far as it goes, while holding that it misses the more serious harm.",
+      "B": "treating it with open contempt as a complaint voiced only by those who have themselves been denied credit.",
+      "C": "endorsing it fully, since the author regards the effect chiefly as an injustice done to unknown researchers.",
+      "D": "rejecting it entirely, on the ground that credit in science is in fact distributed according to merit."
+     },
+     "question": "The author's attitude toward the view that the Matthew effect is 'a problem of fairness' is best described as"
+    },
+    {
+     "id": "R06-G-06-4",
+     "type": "RC",
+     "options": {
+      "A": "a field may commit its resources to some ideas and neglect others for reasons that have little to do with their merit.",
+      "B": "unknown researchers leave science altogether because they receive too little credit for the work they have done.",
+      "C": "readers stop judging papers for themselves and simply accept whatever a famous author happens to have written.",
+      "D": "well-known researchers gradually come to believe that their own ideas are better than those of their colleagues."
+     },
+     "question": "It can be inferred that, in the author's view, the most serious consequence of the Matthew effect is that"
+    }
+   ]
+  },
+  {
+   "passage_id": "R03-G-05",
+   "passage": [
+    "Discussions of social capital commonly distinguish two kinds of tie. Bonding ties link people who are alike in some respect that matters to them, such as kinship, faith, neighbourhood or trade, and they supply loyalty and mutual help. Bridging ties link people across such lines, and they supply information, opportunities and the habit of dealing with strangers. Having drawn the distinction, many writers proceed to rank the two. Bridging is cast as the civic virtue that open societies need; bonding is regarded with suspicion, as the stuff of cliques, favouritism and inward-looking communities. The ranking is attractive partly because it flatters an ideal of openness, and partly because the dangers of tight-knit groups are so easy to picture, whereas their quieter contributions rarely make news.",
+    "The ranking is too quick. Consider a family that moves to a city where it knows no one except a handful of people from its home district. Those people find it a room, lend it money, explain which offices to visit and which employers pay on time. They are bonding ties in the purest sense, and without them the family might never acquire the stability from which wider contacts become possible. The first job outside the community, or the first friendship with a neighbour of a different background, frequently comes through someone who was met by way of the close circle. In such cases bonding is not the rival of bridging but its precondition.",
+    "It does not follow that close groups are always benign. The same density of ties that allows a community to support its members allows it to watch them, and the help it offers can come with a demand for conformity: marry within, trade within, think as we do. A young woman who wishes to train for an occupation the group disapproves of may find that the network which once sustained her family now stands in her way, and that the price of leaving it is the loss of everything it provided. Here the closeness that was a resource becomes a closure.",
+    "What separates the two cases is not the strength of the bonding ties but their permeability: whether membership of the close group is compatible with forming ties outside it, or is made conditional on refusing them. A policy that tried to weaken community networks in the name of integration would therefore risk destroying the very support that allows newcomers to reach beyond those networks in the first place. A better question to ask of any close group is not how tightly it binds but whether it lets its members go."
+   ],
+   "questions": [
+    {
+     "id": "R03-G-05-2",
+     "type": "RC",
+     "options": {
+      "A": "They are less valuable than bonding ties, which deserve the civic esteem that writers usually give to bridging.",
+      "B": "They are formed mainly by people who do not belong to any close group of their own.",
+      "C": "They can be created reliably by public policies that weaken networks within communities.",
+      "D": "They are often formed through contacts that bonding ties first make available to a person."
+     },
+     "question": "The author would most likely agree with which of the following statements about bridging ties?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R02-C-06",
+   "passage": [
+    "It has become a commonplace that rewarding people for doing what they already enjoy can make them enjoy it less. Picture a child who draws for the pleasure of it and is then promised a prize for each picture. While the prizes continue, the drawing may increase. When they stop, the child may draw less than before the prizes began, as though the activity had been converted from play into work and then left unpaid. The phenomenon is real, and it has been reproduced often enough to deserve to be taken seriously. What is less often noticed is how many conditions it depends upon, and how quickly it fades when they are absent.",
+    "The effect appears most reliably when the reward is tangible, expected in advance and given for doing the task rather than for doing it well. A prize announced beforehand and handed over for every picture invites the child to understand the drawing as a means to the prize. An unexpected treat, by contrast, cannot have been the reason for drawing, and praise that tells the child something about the quality of the work may even strengthen interest, since it feeds the sense of competence that made the activity enjoyable in the first place. The same physical reward can therefore have opposite effects depending on what it communicates to the person who receives it.",
+    "Equally important, the effect presupposes that there was interest to undermine. Many tasks that people are paid or rewarded for, from sorting files to practising scales, hold little intrinsic appeal at the outset, and for these, rewards cannot crowd out an enjoyment that was never there. Indeed, a reward may keep someone at a dull task long enough for skill to grow and for the task itself to become absorbing, so that interest arrives because of the incentive rather than in spite of it.",
+    "The sensible conclusion lies between two slogans. Those who say that rewards destroy motivation generalise from a narrow set of conditions; those who say that people simply do whatever they are paid to do ignore the conditions entirely. The better question in any particular case is how the reward is likely to be read: as an attempt to control behaviour that would otherwise not occur, or as information about how well something is being done. The first reading tends to erode interest in activities that people already value; the second tends to support it."
+   ],
+   "questions": [
+    {
+     "id": "R02-C-06-1",
+     "type": "RC",
+     "options": {
+      "A": "feeds the child's sense of competence, which is what made the activity enjoyable.",
+      "B": "removes the child's expectation that drawing will be rewarded again in the future.",
+      "C": "is less tangible than a prize and so is harder for the child to treat as a payment.",
+      "D": "comes unexpectedly and so cannot have been the child's reason for drawing."
+     },
+     "question": "According to the passage, praise that tells a child about the quality of the work may strengthen interest because it"
+    },
+    {
+     "id": "R02-C-06-3",
+     "type": "RC",
+     "options": {
+      "A": "will reduce interest in the task as soon as the rewards are withdrawn, just as they do for enjoyed tasks.",
+      "B": "can sometimes keep a person at it until growing skill makes the task itself enjoyable.",
+      "C": "will always produce a lasting interest in the task once the necessary skill has been developed.",
+      "D": "work better when they are given for doing the task well than when they are given merely for doing it."
+     },
+     "question": "It can be inferred from paragraph 3 that rewards for a task that is dull at the outset"
+    }
+   ]
+  },
+  {
+   "passage_id": "R07-D-04",
+   "passage": [
+    "Few facts about music are more familiar, or more puzzling on reflection, than the willingness of listeners to seek out music that makes them sad. People do not, on the whole, go looking for grief or disappointment in the rest of life, and they would think it odd to be offered a sorrowful afternoon as a treat. Yet slow laments, songs of loss and the darker movements of symphonies are among the most loved music in many traditions, and listeners return to them deliberately.",
+    "One response dissolves the puzzle by denying its premise. On this view the listener does not really feel sad at all; she recognises sadness in the music, much as she might recognise a sorrowful expression on a carved mask, and what she enjoys is the beauty and skill with which the sadness is expressed. The view has the merit of explaining why sad music does not ruin anyone's day. But it fits poorly with what many listeners report, which is that they are moved, sometimes to tears, and not merely informed. A second response accepts that the feeling is real and explains the pleasure by the frame around it: the sadness arrives without a loss to cause it and without consequences to follow, so it can be savoured in a way that the sadness of life cannot.",
+    "Both responses capture something, but both treat the emotion as a single state, present or absent, mild or intense. What music does with an emotion is closer to giving it a shape over time. A lament does not simply announce sorrow; it gathers, rises, breaks, returns to a phrase heard earlier and comes to rest. The listener who follows it is led through a version of sorrow that has a beginning, an end and a recognisable order, which is precisely what the sorrows of ordinary life usually lack. The pleasure, on this account, lies less in the feeling than in the form the feeling is given.",
+    "This does not mean that sad music always pleases, or pleases everyone. Many people who are grieving find that they cannot listen to the music they loved before, at least for a time, and their experience is a useful check on any theory. A frame that keeps sadness at a safe distance should make such music easier to bear in grief, not harder. The account offered here does better: a shaped and completed sorrow may be unbearable to someone whose own sorrow has no shape yet, because the contrast is too sharp."
+   ],
+   "questions": [
+    {
+     "id": "R07-D-04-4",
+     "type": "RC",
+     "options": {
+      "A": "A lament may return to a phrase heard earlier in the piece before it finally comes to rest.",
+      "B": "The frame view correctly predicts that people in grief will find sad music harder to bear than before.",
+      "C": "The view that listeners only recognise sadness can explain why sad music does not spoil a listener's day.",
+      "D": "On the frame view, the sadness of music can be savoured because no loss causes it and no consequences follow."
+     },
+     "question": "Each of the following is supported by the passage EXCEPT:"
+    }
+   ]
+  },
+  {
+   "passage_id": "R04-E-07",
+   "passage": [
+    "For much of the modern period the doctrine of sovereignty was understood as a wall. Within its borders a state was answerable to no outside authority, and what it did to its own population, however terrible, was a matter of domestic jurisdiction. The rule had a defensible rationale. A world in which any power could enter another's territory whenever it disapproved of how that territory was governed would be a world of permanent intervention, in which the strong would always find reasons to correct the weak. Non-interference was less a tribute to the virtue of governments than a device for keeping their quarrels within bounds.",
+    "The atrocities of the late twentieth century made the wall look like a shield for murderers, and a new formula emerged to reconcile the old principle with the demand to act. Sovereignty, it was argued, is not a privilege but a responsibility: a state holds it on condition that it protects its people, and a state that massacres them, or cannot stop others from doing so, forfeits its claim to be left alone. The formula is elegant, because it seems to dissolve the conflict rather than adjudicate it. Intervention to stop mass killing no longer violates sovereignty, since the sovereignty in question has already been forfeited.",
+    "The elegance is partly an illusion. The formula does not remove the hard question but relocates it. Someone must still decide when a government has failed badly enough to forfeit its rights, and in practice that someone is usually the state or coalition proposing to intervene, which is to say a party with interests of its own in the outcome. The old doctrine at least gave a clear answer to the question of who may enter: nobody. The new one replaces that answer with a judgement, and judgements made by the powerful about the weak have a history that should make anyone cautious. It is not a cynical point that intervention has tended to occur where the interveners had strategic reasons to be and not elsewhere; it is an observation about how a discretionary rule will be used.",
+    "None of this is an argument for returning to the wall. A principle that obliged the world to watch a massacre it could stop would purchase order at a price few would accept once they had seen what it meant. The question is not whether sovereignty may ever yield, but how the decision that it should yield is to be made credible. Here the procedure matters as much as the facts. An intervention authorised by a broad body of states, through rules that apply to friends as well as to enemies, carries a legitimacy that one undertaken by a single power on its own assessment cannot, even when the atrocities alleged are equally real.",
+    "The difficulty is that procedure can fail in the other direction. The bodies most able to confer legitimacy are also those in which a single interested member can block action, and the insistence on proper authorisation can become a reason for doing nothing while the killing continues. There is no formula that escapes this. A world that refuses all unauthorised intervention will sometimes stand by when it should act, and a world that permits it will sometimes see intervention used as a pretext. The honest position is to admit that we are choosing which of these failures to risk, and to stop pretending that a change of vocabulary has spared us the choice."
+   ],
+   "questions": [
+    {
+     "id": "R04-E-07-1",
+     "type": "RC",
+     "options": {
+      "A": "showing that interventions to stop mass killing have generally been pretexts used by powerful states to pursue their strategic interests.",
+      "B": "defending the traditional doctrine of non-interference against those who would permit outside powers to intervene to stop atrocities.",
+      "C": "proposing that no use of force across a border be permitted until a broad body of states has authorised it under common rules.",
+      "D": "arguing that recasting sovereignty as a responsibility shifts, rather than settles, the question of who decides on intervention, leaving a choice between risks."
+     },
+     "question": "The passage is primarily concerned with"
+    }
+   ]
+  },
+  {
+   "passage_id": "R04-F-03",
+   "passage": [
+    "Before the railways, every town kept its own time. Noon was the moment the sun stood highest over the local meridian, and because the sun appears to move westward, a town some distance to the west of another reached its noon a few minutes later. Nobody minded, because nothing travelled fast enough for the difference to matter; a coach journey of several days absorbed a quarter of an hour's discrepancy without anyone noticing it. The railway changed this, and the standard account of what followed is a story of practical necessity. Timetables drawn up in dozens of local times produced confusion and, on single-track lines, danger, so the companies adopted a single reference time and governments eventually followed.",
+    "The account is true as far as it goes, but it treats the change as a technical adjustment, like agreeing on a common gauge for the rails. It was more than that. Local time had been public in a literal sense: anyone could see the sun, and the clock on the church or the town hall was set by an observation that a curious citizen could, in principle, check. Standard time was set somewhere else, by astronomers in a distant observatory, and reached the town along a telegraph wire. The hour on the station clock was no longer a fact about the place where one stood but a decision taken elsewhere and transmitted to it.",
+    "This helps to explain a resistance that is usually remembered only as quaint. Some towns kept two clocks running side by side, or fitted a public dial with an extra hand so that the sun's reckoning and the railway's could be read together, and some local worthies denounced the new hour as an imposition. It is easy to read them as people clinging to habit in the face of progress. But they had grasped something that the language of convenience obscures: a shared standard is also a centre of authority, and agreeing to it means accepting that the definition of an everyday reality will henceforth be made by people one will never meet.",
+    "None of this is a case against standard time, whose benefits were real and soon taken for granted. Few people today would wish to return to a world in which the hour changed as one rode across a county. The argument is rather that the history of timekeeping is also a history of who is entitled to say what time it is, and that this question did not disappear when it was settled. Each later standard, from time signals broadcast by radio to the clocks that now synchronise themselves silently over networks, has extended the same arrangement, and each has made it a little harder to notice."
+   ],
+   "questions": [
+    {
+     "id": "R04-F-03-1",
+     "type": "RC",
+     "options": {
+      "A": "few people owned clocks, so the hour of noon was a matter of rough guesswork in every town alike.",
+      "B": "church authorities in each town insisted that the local hour be kept and discouraged comparison with other places.",
+      "C": "travel between towns was too slow for a discrepancy of a few minutes to have any practical effect.",
+      "D": "most towns took their time from the same distant observatory, so that their clocks seldom disagreed by much."
+     },
+     "question": "According to the passage, before the railways, differences between the local times of neighbouring towns went largely unnoticed because"
+    }
+   ]
+  },
+  {
+   "passage_id": "R02-A-08",
+   "passage": [
+    "In most schools a test is understood as a thermometer. It is applied at the end of a period of learning to find out how much has been learned, and like a thermometer it is supposed to leave the thing it measures unchanged. The understanding is so familiar that it seldom occurs to anyone that it might be false. Yet one of the more robust findings in the psychology of memory is that the act of retrieving something from memory is not a neutral reading: it changes the memory, and generally strengthens it, so that material which has been recalled once is more likely to be recalled again than material which has merely been seen again.",
+    "The contrast is clearest when the two activities are set against each other. Suppose two groups of students study the same passage, after which one group rereads it while the other closes the book and writes down whatever it can remember. The design holds constant both the material and the time spent on it, so that the only difference between the groups is whether they looked at the passage again or tried to bring it back unaided. Tested a few minutes later, the rereaders often do as well or better; tested a week later, the group that practised recall tends to remember considerably more. The advantage of retrieval, in other words, is easily hidden by the timing of the measurement, which may be one reason why it was overlooked for so long by teachers and students alike.",
+    "What is more striking is how little the students themselves sense any of this. Asked to predict their own performance, rereaders tend to be the more confident group. Rereading produces a feeling of fluency, in which the sentences are familiar and slide past easily, and ease of processing is readily mistaken for mastery. Attempting recall produces the opposite feeling, since it is effortful, it exposes gaps and it is often unpleasant, which is presumably why students left to themselves so rarely choose it. Teachers are not immune to the same illusion, since a class that has just reread its notes looks, and feels, better prepared than one that has just struggled to recall them. The method that feels like learning and the method that produces it are, at least here, not the same, and the lesson generalises uncomfortably: a learner's own sense of how well a session went is an unreliable guide to how much it achieved.",
+    "It would be easy to draw from all this a crude conclusion, that schools should simply test more, but the finding does not support it. What strengthens memory is the effort of retrieval, not the apparatus of examination, and the apparatus can work against the effort. A high-stakes test that provokes anxiety, or that is followed by no feedback, may teach students little except to fear tests, and a wrong answer recalled confidently and never corrected may itself be strengthened. The useful practice is humbler than the word 'test' suggests: it consists of frequent, low-stakes attempts to recall, each followed by a chance to check, built into ordinary study. None of this requires abolishing examinations, which serve purposes of certification that have little to do with memory; it requires only that they not be mistaken for the whole of what testing can do. Understood in this way, the thermometer turns out to be one of the more effective means of raising the temperature it was meant only to record."
+   ],
+   "questions": [
+    {
+     "id": "R02-A-08-4",
+     "type": "RC",
+     "options": {
+      "A": "Students who sat a formal, high-stakes examination reported feeling far more anxious than students who practised recall at home with their books closed.",
+      "B": "Students who reread a passage felt more confident about a coming test than those who practised recall, although a week later they remembered less of it.",
+      "C": "Students who received feedback after each attempt at recall remembered more a week later than students who attempted the same recall without any feedback.",
+      "D": "Answering recall questions improved memory a week later only when done under formal examination conditions, and not when done in an informal, ungraded session."
+     },
+     "question": "Which of the following, if true, would most weaken the author's claim that what strengthens memory is 'the effort of retrieval, not the apparatus of examination'?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R06-B-04",
+   "passage": [
+    "For much of the twentieth century, forest agencies in several countries treated fire as an enemy to be defeated wherever it appeared. The logic seemed unanswerable: fire destroys timber, threatens homes and kills animals, so every fire extinguished was a loss averted. Agencies measured their performance by how quickly they put fires out and how few hectares burned, and by those measures many of them succeeded remarkably well. Lookout towers, firebreaks and crews ready to move at short notice made it possible to reach most fires while they were still small.",
+    "The success contained its own reversal. In many dry forests, frequent fires of low intensity had once cleared the undergrowth, fallen branches and young trees that gather on the forest floor, while leaving the older, thick-barked trees largely unharmed. When such fires were suppressed year after year, that material was left to build up. The forest grew denser, and the fuel that would once have burned off in small, manageable fires accumulated until, in a hot, dry season, a fire that could not be stopped found enough of it to climb into the crowns of the trees. Such fires kill the very trees that the earlier, smaller ones had spared. By preventing many small fires, suppression had, in effect, been saving up for a few enormous ones.",
+    "The lesson is sometimes drawn too broadly. Not every ecosystem evolved with frequent fire; in some wet forests and many shrublands fire was historically rare, and a recent increase in burning there is a threat rather than a return to normal. Nor does the history of suppression explain every catastrophic fire, since drought, heat and the spread of housing into wooded land matter as well. The argument is not that fire is good, but that whether a given fire is harmful depends on the ecosystem in which it burns and on that ecosystem's history.",
+    "Recognising this has not made the remedy easy. Deliberately setting fires under controlled conditions, or allowing some natural fires to burn, can reduce accumulated fuel, but it carries risks that suppression appeared not to. Politically, a season without burning looks like competence. Smoke drifts over towns, and a planned burn that escapes is blamed on the people who lit it, while a wildfire that grows from decades of accumulated fuel is blamed on nature. A manager therefore faces an asymmetry. The harm of acting is visible and attributable; the harm of not acting is deferred and diffuse, and the easiest course is to keep doing what made the problem worse."
+   ],
+   "questions": [
+    {
+     "id": "R06-B-04-2",
+     "type": "RC",
+     "options": {
+      "A": "the build-up of undergrowth and fallen branches in dry forests after decades of fire suppression.",
+      "B": "long spells of drought and heat in the seasons when the most destructive fires break out.",
+      "C": "the planting of fast-growing, thin-barked trees in place of the older species of dry forests.",
+      "D": "the spread of houses and settlements into land that is covered by woods and forest."
+     },
+     "question": "The passage mentions each of the following as contributing to catastrophic fires EXCEPT"
+    }
+   ]
+  },
+  {
+   "passage_id": "R08-A-07",
+   "passage": [
+    "It has become a commonplace that the metaphors buried in ordinary speech reveal the structure of ordinary thought. We speak of arguments as if they were battles, defending positions, attacking weak points, winning or losing; we speak of time as if it were space, with deadlines approaching, holidays behind us and the future ahead. On the view that has made this observation famous, such expressions are not decorations added to a literal meaning but the surface of deep conceptual mappings, in which one domain of experience is understood in terms of another. We do not merely talk about argument as war; to a large extent, it is claimed, we think about it that way, and we would argue differently if our language had taught us to think of it as, say, a dance.",
+    "The opposing view is equally simple. Most of these expressions, it holds, are dead metaphors, idioms whose figurative origin is no longer felt by anyone who uses them. A speaker who says that a table has legs is not thereby thinking of the table as an animal, and a speaker who defends a position need not have soldiers anywhere in mind. On this account, inferring a mental mapping from a pattern of idioms is like inferring a belief in sorcery from the fact that people say 'bless you' after a sneeze: the history of an expression is mistaken for its present psychology.",
+    "Each view, I think, gets one thing right and one thing wrong. The sceptic is right that the evidence most often cited for the mapping view is weaker than it looks. If the existence of the mapping is inferred from the expressions, and the expressions are then explained by the mapping, the argument has gone round in a circle; the sheer number of warlike expressions for argument cannot by itself show that anything in the mind corresponds to them. But the sceptic is wrong to treat these expressions as a collection of fossils. Dead metaphors are inert: one cannot extend the legs of a table into talk of its knees or its gait and expect to be understood. The metaphors of argument and time are not inert in this way. A speaker who says that her opponent's case was all ammunition and no target, or that next week is already breathing down our necks, may be using a phrase she has never heard, and she is understood at once. Something is generating these extensions, and a list of frozen idioms cannot be it.",
+    "Productivity, then, rather than frequency, is the better test of whether a metaphor is alive, and by that test many everyday metaphors are alive, at least in the sense that speakers can use them as patterns for making and understanding new expressions. That is a real result, and it is more than the sceptic allows. It is also less than the mapping view claims. To show that a pattern is available for making expressions is not to show that it governs how people reason when they are not speaking, still less that a different language would leave them reasoning differently. Those further claims are empirical, and they can be settled only by evidence that does not itself consist of the very expressions in question: by watching how people solve problems, judge situations or remember events, and asking whether the metaphor leaves its mark there.",
+    "The debate has often been conducted as though one had to choose between seeing language as a window onto thought and seeing it as a heap of dead habits. The more modest position is less exciting but easier to defend: our metaphors are living tools of expression, and their influence on thought beyond expression is an open question that the metaphors themselves cannot answer."
+   ],
+   "questions": [
+    {
+     "id": "R08-A-07-4",
+     "type": "RC",
+     "options": {
+      "A": "Asked to invent new expressions about time, speakers produced spatial ones far more often than any other kind.",
+      "B": "Asked about their own speech, most speakers said they did not picture space when talking about deadlines.",
+      "C": "In a wordless task, people set pictures of earlier events in the direction that their language's time expressions assign to the past.",
+      "D": "A large survey found that spatial expressions for time outnumber all other kinds in every language examined."
+     },
+     "question": "Which of the following findings, if true, would supply the kind of evidence the author says is needed to support the mapping view's stronger claims?"
+    }
+   ]
+  }
+ ]
+}

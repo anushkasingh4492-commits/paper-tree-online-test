@@ -1,0 +1,1164 @@
+{
+ "kind": "RC",
+ "passages": [
+  {
+   "passage_id": "R06-G-07",
+   "passage": [
+    "Every year, research funding agencies ask panels of scientists to read hundreds of proposals and rank them, and every year the money runs out long before the list does. The proposals near the bottom are usually easy to set aside: they are poorly argued, or unoriginal, or plainly unworkable. The difficulty lies higher up. Among the proposals that every member of the panel agrees are good, the panel must still decide which will be funded and which will not, and the line it draws often separates projects that no one present could distinguish with any confidence. It is in response to this predicament that a few agencies have begun to experiment with a once unthinkable idea: setting a threshold of quality and then choosing among the proposals above it by lot.",
+    "The proposal is usually defended on grounds of efficiency. Ranking is laborious; panels spend weeks producing distinctions that a lottery would produce in minutes. This is true, but it is the weakest part of the case, and resting on it invites the reply that good decisions are worth what they cost. The stronger argument is about honesty. Experience suggests that two independent panels given the same proposals will often disagree about which of them fall just above the funding line and which just below, a sign that, near the top, the ranking reflects the composition of the panel at least as much as the merits of the work. A ranking of this kind already contains a large element of chance. What it lacks is any acknowledgement of the fact, and so its outcomes are experienced, by winners and losers alike, as verdicts on quality.",
+    "Hidden chance is not neutral chance. When the members of a panel cannot tell good proposals apart on their merits, other preferences fill the gap: a taste for methods they themselves use, a wariness of projects whose payoff is uncertain, a familiarity with applicants they have met. Each of these is a mild bias, and none need be deliberate, but together they tilt the funding line toward the safe and the recognisable. A lottery among the proposals above the threshold removes this tilt at the margin. It cannot make the panel bolder, but it can stop the panel's caution from deciding cases that its judgement cannot decide.",
+    "The most serious objection is not that lotteries abandon judgement, since judgement is exercised in full at the threshold, where panels are reasonably good at separating the sound from the unsound. It is that scientists need to believe that reward follows merit, and that a lottery, by announcing that it sometimes does not, will corrode the motivation on which research depends. This deserves to be taken seriously. Yet the belief it seeks to protect is, at the margin, already false, and a system that preserves morale by concealing how it works purchases that morale at the cost of misleading the very people it rewards. A researcher whose proposal loses a draw has at least been told the truth: that her work was judged fundable and that the money ran out.",
+    "None of this recommends lotteries everywhere. Where proposals differ in ways that can be measured, as when an agency must choose a single design for a costly instrument, ranking is the right tool and chance would be an abdication. The argument applies only where judgement has reached its limit. Its real lesson concerns not lotteries but the pretence of precision, and agencies that decline to draw lots might still learn from it, for instance by publishing how close the decisions near their funding line actually were."
+   ],
+   "questions": [
+    {
+     "id": "R06-G-07-1",
+     "type": "RC",
+     "options": {
+      "A": "recognising when their own preferences have influenced a decision about where the funding line falls.",
+      "B": "predicting which of the riskier projects before them will eventually produce the largest payoff.",
+      "C": "separating proposals that are scientifically sound from those that are not, at the threshold of quality.",
+      "D": "ranking the strongest proposals in the order of their likely scientific value to the field."
+     },
+     "question": "According to the passage, panels judging research proposals are reasonably good at"
+    },
+    {
+     "id": "R06-G-07-2",
+     "type": "RC",
+     "options": {
+      "A": "grant it but set it aside as a weak justification before presenting what the author considers the stronger one.",
+      "B": "show that funding agencies adopted lotteries mainly in order to reduce the workload of their panels.",
+      "C": "concede that lotteries are cheaper but argue that their savings in cost outweigh the loss of careful judgement.",
+      "D": "refute the common view that ranking proposals costs panels a great deal of time and careful effort."
+     },
+     "question": "The author mentions the efficiency argument for lotteries in paragraph 2 primarily in order to"
+    },
+    {
+     "id": "R06-G-07-3",
+     "type": "RC",
+     "options": {
+      "A": "when merit cannot settle a decision, the outcome is shaped by systematic leanings rather than by pure luck.",
+      "B": "panels deliberately favour applicants whom they know personally whenever the funding line is close.",
+      "C": "chance plays a smaller part in conventional ranking than defenders of lotteries usually suppose.",
+      "D": "lotteries are themselves biased, because the proposals entered into them are chosen by cautious panels."
+     },
+     "question": "The sentence 'Hidden chance is not neutral chance' (paragraph 3) implies that"
+    },
+    {
+     "id": "R06-G-07-4",
+     "type": "RC",
+     "options": {
+      "A": "Agencies that fund by lottery spend considerably less on assessing proposals than agencies that rank every proposal they receive.",
+      "B": "Some researchers say they would rather lose a draw than be told that their proposal was ranked just below the funding line.",
+      "C": "Projects ranked just above the funding line have consistently gone on to outperform those ranked just below it.",
+      "D": "Members of a panel sometimes disagree about whether a borderline proposal is sound enough to be entered into the draw."
+     },
+     "question": "Which of the following, if true, would most weaken the author's reply to the objection that lotteries will corrode scientists' motivation?"
+    },
+    {
+     "id": "R06-G-07-5",
+     "type": "RC",
+     "options": {
+      "A": "Agencies should publish how close their decisions near the funding line were instead of adopting lotteries at all.",
+      "B": "The main advantage of funding by lottery is that it saves both agencies and panels a great deal of time and money.",
+      "C": "Where panels cannot reliably separate good proposals, drawing lots is preferable to a ranking that disguises chance as judgement.",
+      "D": "Funding by lottery should replace ranking by expert panels, because the judgements of such panels are shaped by bias at every stage."
+     },
+     "question": "Which of the following best captures the central argument of the passage?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R06-D-02",
+   "passage": [
+    "The usual story of standard time is a story of order arriving to rescue confusion. Before the railways, we are told, every town kept its own time, set by the sun at its highest point, so that a clock in one town might differ by several minutes from a clock in another only a short distance to the west. Travellers were bewildered, timetables were impossible, and the adoption of uniform zones was simply common sense finally asserting itself. The story is not false, but it misdescribes what was replaced.",
+    "Local solar time was not a muddle for the people who used it. It was tied to something everyone could see: the sun reached its highest point at noon, and noon meant the same thing in the market, the place of worship and the field. For a community whose dealings were mostly with itself, there was little need to coordinate with anyone else, and a time that matched the daylight was the most sensible time to keep. The differences between towns became a problem only when goods and people began to move between them quickly enough for a few minutes to matter.",
+    "That is what the railways did. A train leaving one town and arriving at another an hour later could not be scheduled sensibly if each station kept its own noon, and on single tracks a mismatch of a few minutes could put two trains on the same stretch of line. Railway companies therefore began keeping a single time along their routes, and governments eventually followed them, dividing territories into broad bands within which every clock agreed. The change was not everywhere welcomed, and some towns resented being told that noon now arrived when a distant company declared that it had. Within each band, clock noon and solar noon could now differ noticeably, and in places at the edges of a zone they still do.",
+    "Nothing here suggests that standard time was a mistake. Coordinated schedules saved lives on the railways and made later systems, from telegraph networks to air traffic, workable. The point is that standardisation was not the discovery of a correct time hidden beneath local error. It was a choice to make clocks answer to a network rather than to the sky, made because the network had become more important to daily life than the position of the sun. To call the older arrangement confusion is to judge it by the needs of a world that had not yet arrived."
+   ],
+   "questions": [
+    {
+     "id": "R06-D-02-1",
+     "type": "RC",
+     "options": {
+      "A": "the market, the place of worship and the field in a single town began to keep different times.",
+      "B": "people and goods began moving between towns quickly enough for a difference of minutes to matter.",
+      "C": "governments began to require one uniform time for keeping official records and collecting taxes.",
+      "D": "astronomers found that solar noon falls at different moments in different seasons of the year."
+     },
+     "question": "According to the passage, differences in local time between towns became a problem when"
+    },
+    {
+     "id": "R06-D-02-2",
+     "type": "RC",
+     "options": {
+      "A": "appreciative of its benefits but critical of the claim that it corrected an earlier error.",
+      "B": "enthusiastic, celebrating it as the triumph of common sense over a long period of local confusion.",
+      "C": "indifferent, treating the choice between local and standard time as having no real practical consequence.",
+      "D": "hostile, regarding it as a needless break with the natural rhythm of daylight in each town."
+     },
+     "question": "The author's attitude toward standard time is best described as"
+    },
+    {
+     "id": "R06-D-02-3",
+     "type": "RC",
+     "options": {
+      "A": "illustrate how governments compelled reluctant railway companies to adopt a single standard time.",
+      "B": "explain why railways in regions that kept local time were built more slowly than those elsewhere.",
+      "C": "suggest that railway accidents were caused chiefly by poor engineering rather than by timekeeping.",
+      "D": "show that mismatched local times created a real danger on the railways, not merely an inconvenience."
+     },
+     "question": "The mention of 'single tracks' in paragraph 3 serves mainly to"
+    },
+    {
+     "id": "R06-D-02-4",
+     "type": "RC",
+     "options": {
+      "A": "Standard time corrected errors in local timekeeping that small towns had failed to notice because they traded mainly with themselves.",
+      "B": "A way of setting clocks should be judged by how well it serves the coordination needs of the people who keep it.",
+      "C": "Once the railways had spread, the position of the sun ceased to have any importance for daily life.",
+      "D": "Solar time is the true time, and standard time is merely a convenient approximation that the railways adopted for their own purposes."
+     },
+     "question": "It can be inferred that the author would most likely agree with which of the following?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R03-F-05",
+   "passage": [
+    "For a long time the dominant attitude of academic history towards oral tradition was one of polite suspicion. A story passed from mouth to mouth over many generations, it was argued, must accumulate errors as surely as a manuscript copied by careless scribes, and in the absence of any original against which to check it, the historian had no way of telling the accurate parts from the embellishments. Against this, a more recent and more sympathetic current has insisted that societies without writing developed techniques of memorisation of extraordinary precision, and that their traditions deserve to be treated as archives in their own right. Each side, I want to suggest, misconceives the object it is arguing about.",
+    "The error both share is to assume that an oral tradition is trying to do what a written chronicle does, namely preserve a record of past events for its own sake, and to differ only on how well it succeeds. Traditions are rarely maintained for that purpose. A genealogy recited at the installation of a chief exists to establish that he is entitled to the office; an account of the first settlers exists to explain why one lineage holds the best land and another serves as its ritual guardians. Because the tradition answers to present needs, it changes when those needs change, and its changes are not random. Lines that no longer matter drop out; ancestors who connect currently allied groups acquire importance; the long, uneventful middle of the past is compressed, so that the founders seem only a few generations removed from those who remember their grandparents.",
+    "This is precisely why the sceptic's analogy with the copied manuscript is misleading. Random copying errors cannot be corrected without an original, but distortions that follow from a known function can, at least in part, be anticipated and read through. A historian who understands that a genealogy is a charter for office will be cautious about its middle generations and its convenient links, while attending closely to details that serve no present interest and are therefore unlikely to have been invented. Nor is all content equally fluid: formulaic songs, names of places and fixed ritual phrases are often transmitted with a fidelity that ordinary narrative never achieves, even when no one any longer understands what they mean.",
+    "None of this licenses the opposite romanticism. A tradition that is reliable about the shape of an ancient migration may be quite wrong about who led it, and no technique of memorisation can protect a story from a community's interest in retelling it. Written sources, it should be added, are hardly exempt from the same pressures; charters and chronicles were also composed to justify claims, and historians learned long ago to read them against the grain. Oral tradition, approached in that spirit, is neither an archive nor a fiction. It is a record of what a community needed its past to be, and that is itself a kind of evidence about the past."
+   ],
+   "questions": [
+    {
+     "id": "R03-F-05-1",
+     "type": "RC",
+     "options": {
+      "A": "The middle generations of a genealogy, since they serve no present interest of the community.",
+      "B": "Stories that explain why one lineage holds the best land in the settlement.",
+      "C": "Accounts of who led an ancient migration, which communities have reason to remember exactly.",
+      "D": "Fixed forms such as formulaic songs and ritual phrases, even when their meaning has been lost."
+     },
+     "question": "According to the passage, which kind of content in oral tradition is often transmitted with unusual fidelity?"
+    },
+    {
+     "id": "R03-F-05-2",
+     "type": "RC",
+     "options": {
+      "A": "concede that most of the content of an oral tradition was invented to serve present interests.",
+      "B": "show how knowing what a tradition is for lets a historian judge which of its parts to trust.",
+      "C": "argue that oral traditions are more reliable as sources than the written chronicles of the same period and region.",
+      "D": "explain why formulaic songs are handed down more faithfully than ordinary narrative."
+     },
+     "question": "The author's remark in paragraph 3 about 'details that serve no present interest' serves mainly to"
+    },
+    {
+     "id": "R03-F-05-3",
+     "type": "RC",
+     "options": {
+      "A": "whether the changes oral traditions undergo are of a kind that a historian can partly correct for.",
+      "B": "whether the founders named in genealogies were real persons or later inventions.",
+      "C": "whether societies without writing developed precise techniques for memorising long texts.",
+      "D": "whether oral traditions change at all as they are handed down from one generation to the next."
+     },
+     "question": "The author's disagreement with the sceptics described in paragraph 1 is best characterised as a disagreement about"
+    },
+    {
+     "id": "R03-F-05-4",
+     "type": "RC",
+     "options": {
+      "A": "A tradition was found by excavation to be right about the route of an ancient migration but wrong about the leader it named.",
+      "B": "A tradition recorded at intervals over a century changed in ways that bore no relation to shifts in the community's alliances or landholding.",
+      "C": "Singers in one community preserved ritual phrases word for word for many generations although none of them understood the words.",
+      "D": "Chronicles kept by a monastery were found to have been altered over time to support the land claims of the monks who copied them."
+     },
+     "question": "Which of the following, if true, would most weaken the author's case against the sceptic's manuscript analogy?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R02-F-06",
+   "passage": [
+    "The claim that language shapes thought has had an unusual career. In its strong form, the view that the categories of one's language set the limits of what one can perceive or conceive, it was once fashionable, then thoroughly discredited, and it is now defended by almost nobody. The objections are familiar. Speakers of languages that lack a word for some distinction can usually learn to make it when they need to; translation, though imperfect, is possible; and people routinely think thoughts for which they struggle to find words. If a language were a prison, its inmates would not so regularly be found outside the walls.",
+    "From the ruins of the strong view a weaker one has been rebuilt, and the evidence for it is more respectable. Colour has been the favoured test case, because the spectrum is continuous while languages divide it differently: some have only a few basic colour terms, others a dozen. In one well-known kind of experiment, speakers of a language that has separate basic words for lighter and darker blue were found to be slightly quicker at telling apart two blues that fell on opposite sides of that boundary than two blues on the same side, while speakers of a language with a single basic word for blue showed no such advantage. The effect was modest, but it was there, and it seemed to show that words reach down into perception.",
+    "What the same line of work also found, however, is more revealing than the effect itself. When participants performed the colour task while silently rehearsing a string of digits, which occupies the verbal system, the advantage largely disappeared, whereas a comparable task that occupied spatial memory instead left it intact. The words, it seems, were not permanently altering how the visual system sorted colours. They were being used, there and then, as an aid to the task, recruited on the spot and set aside when the verbal system was busy elsewhere.",
+    "Defenders and critics of linguistic relativity have both tended to miss what this implies. The defenders read such results as vindication: language shapes thought after all. The critics read the smallness of the effects as deflation: language barely matters. But the finding fits neither reading well. It suggests that language does not so much reshape a mind that would otherwise be neutral as serve as one of the instruments a mind reaches for while it works. On this picture the interesting question is not whether a speaker's language has engraved its categories on her perception, but how often, and in which tasks, thinking proceeds by borrowing words as tools. That question is in one respect more modest than the relativists' and in another more radical, since it implies that much ordinary thought is partly carried out in language even where we take it to be wordless."
+   ],
+   "questions": [
+    {
+     "id": "R02-F-06-1",
+     "type": "RC",
+     "options": {
+      "A": "concede that the strong view contains a real, if limited, truth about how language confines its speakers.",
+      "B": "sum up, in a single image, the objections that count against the strong form of the view.",
+      "C": "suggest that translation between languages, however carefully attempted, is never fully possible.",
+      "D": "introduce the weaker form of the view that the passage goes on to examine in paragraph 2."
+     },
+     "question": "The sentence 'If a language were a prison, its inmates would not so regularly be found outside the walls' functions in paragraph 1 to"
+    },
+    {
+     "id": "R02-F-06-2",
+     "type": "RC",
+     "options": {
+      "A": "the colour advantage reflects words being drawn on during the task, not a lasting change in how colours are seen.",
+      "B": "the verbal and visual systems draw on one shared store of memory, so that occupying either one weakens the other.",
+      "C": "speakers with only one basic word for blue tell blues apart by relying on spatial memory rather than on words.",
+      "D": "the advantage reported in paragraph 2 was an artefact of careless experimental design and should be disregarded."
+     },
+     "question": "The finding described in paragraph 3 matters to the author's argument chiefly because it suggests that"
+    },
+    {
+     "id": "R02-F-06-3",
+     "type": "RC",
+     "options": {
+      "A": "Languages differ in how many basic words they have for shapes and textures as well as for colours.",
+      "B": "Speakers of a language with one basic word for blue quickly learn to tell lighter and darker blues apart when rewarded for doing so.",
+      "C": "The boundary advantage for speakers with two words for blue is larger when the two colours are shown side by side than when they are shown one after the other.",
+      "D": "A larger study finds that lifelong speakers with two words for blue keep the boundary advantage even while their verbal system is fully occupied by another task."
+     },
+     "question": "Which of the following findings, if true, would most weaken the interpretation the author offers in paragraph 4?"
+    },
+    {
+     "id": "R02-F-06-4",
+     "type": "RC",
+     "options": {
+      "A": "judge the importance of language by whether it leaves a lasting mark on how speakers perceive.",
+      "B": "accept that the strong form of the view, though discredited, is still defended by many researchers.",
+      "C": "agree that the effects of colour words on perception are too small to be worth studying further.",
+      "D": "recognise that ordinary thought is often partly carried out in words even where it seems wordless."
+     },
+     "question": "The passage suggests that defenders and critics of linguistic relativity alike"
+    }
+   ]
+  },
+  {
+   "passage_id": "R04-C-04",
+   "passage": [
+    "Discussions of nationality law often begin from a tidy contrast. Under the principle of soil, a child born within the territory of a state becomes its citizen; under the principle of descent, citizenship passes from parent to child wherever the child is born. The first is commonly described as civic and open, since it admits anyone born on the land regardless of ancestry; the second as ethnic and closed, since it ties membership to bloodline. The contrast is useful as a first approximation, but as a guide to which societies are more welcoming it is close to misleading.",
+    "Consider why states adopted the soil rule in the first place. Where governments needed to populate large territories and to secure soldiers and taxpayers, it was convenient to claim the children of newcomers automatically, whatever their parents' wishes or origins. The rule expressed less a generous conception of belonging than an interest in numbers. Conversely, the descent rule has served countries with large populations abroad, allowing the children of emigrants to retain a connection to a homeland they may visit only occasionally. Neither motive is obviously more liberal than the other, and the same rule can serve quite different ends depending on who adopts it and why.",
+    "More importantly, the rule that governs birth is only one part of a citizenship regime, and often not the part that matters most. A state that follows the descent principle but allows long-term residents to naturalise after a few years, and extends citizenship to children who have grown up and been schooled in the country, may be far easier to join than a state that follows the soil principle but makes naturalisation slow, costly and uncertain for adults. The second state includes every child born on its territory and keeps their parents waiting at the door indefinitely. A single household may then contain citizens and foreigners under one roof, divided by nothing more than the place where each member happened to be born.",
+    "None of this means the choice of birth rule is unimportant. The soil principle does guarantee something valuable: no one born in the territory can be left, by the mere fact of birth, a permanent outsider in the only country he has known, and states without it have sometimes produced generations of residents with no secure status. But that guarantee is better understood as one protection among several than as the defining mark of an open society. The question worth asking of any nationality law is not which principle it starts from, but how readily it turns people who have made their lives in a country into its members."
+   ],
+   "questions": [
+    {
+     "id": "R04-C-04-1",
+     "type": "RC",
+     "options": {
+      "A": "was imposed on immigrant parents against their wishes and was widely resented by the families it affected.",
+      "B": "was adopted in some places for reasons of state interest that had little to do with openness to newcomers.",
+      "C": "is in practice more exclusive than the descent principle, despite its reputation for being open.",
+      "D": "was abandoned by most states once their need for soldiers and taxpayers had declined over time."
+     },
+     "question": "The analysis in paragraph 2 suggests that the soil principle"
+    },
+    {
+     "id": "R04-C-04-2",
+     "type": "RC",
+     "options": {
+      "A": "Some states that follow the descent principle require applicants for naturalisation to pass a test of the national language before they are admitted.",
+      "B": "Some children who acquire citizenship under the soil principle later renounce it in favour of the nationality held by their parents.",
+      "C": "In several states that follow the soil principle, long-term residents must wait many years and pay high fees before they can naturalise.",
+      "D": "States following the soil principle almost always offer quick, cheap naturalisation, while states following the descent principle almost always make it slow and costly."
+     },
+     "question": "Which of the following, if true, would most weaken the author's claim that the soil and descent contrast is a misleading guide to how welcoming a society is?"
+    },
+    {
+     "id": "R04-C-04-3",
+     "type": "RC",
+     "options": {
+      "A": "It shifts the discussion away from nationality law towards the practical hardships of residents without secure status.",
+      "B": "It grants a genuine merit of the soil principle while denying that this merit settles how open a society is.",
+      "C": "It reverses the earlier argument by admitting that the soil principle is after all the defining mark of an open society.",
+      "D": "It summarises the historical motives for each principle that were set out earlier in paragraph 2 of the passage."
+     },
+     "question": "Which of the following best describes the role of paragraph 4 in the passage?"
+    },
+    {
+     "id": "R04-C-04-4",
+     "type": "RC",
+     "options": {
+      "A": "have many citizens living abroad and want their children to keep a tie to the homeland.",
+      "B": "wished to claim the children of newcomers automatically on the ground of their birth.",
+      "C": "sought to make naturalisation for adult residents quick, cheap and predictable.",
+      "D": "needed to populate large and empty territories and to secure enough soldiers and taxpayers for the state."
+     },
+     "question": "According to the passage, the descent principle has been useful to countries that"
+    }
+   ]
+  },
+  {
+   "passage_id": "R06-F-08",
+   "passage": [
+    "Two complaints about digital information circulate side by side, and at first sight they cannot both be true. The first is that the internet never forgets: an embarrassing photograph or an ill-judged remark, once posted, may resurface years later, copied onto sites its author has never heard of. The second is that digital records are alarmingly fragile: web pages vanish, links lead nowhere, and files saved in formats that no current program can read become, for practical purposes, meaningless strings of bits. One might expect a medium to be either durable or perishable, and it is puzzling to hear the same medium accused of both.",
+    "The puzzle dissolves once we stop asking about the medium and start asking about copying. A single digital copy is, if anything, more perishable than a sheet of paper. Paper survives neglect; a letter left in a drawer can usually be read a century later by anyone who knows the language. A file left on an old disk depends on the disk surviving, on a machine that can still read the disk, and on software that can still interpret the file, and each of these dependencies decays on its own schedule. What digital information has, and paper largely lacks, is the capacity to be copied perfectly, instantly and at almost no cost. Its persistence therefore depends far less on the durability of any one copy than on whether enough people, or enough systems, have reasons to keep making copies.",
+    "Seen in this light, the two complaints describe the same mechanism working on different material. The embarrassing photograph persists because it is the kind of thing people want to pass on, so it is duplicated faster than any single copy can be deleted. The municipal report, the small society's newsletter and the scholar's personal website persist only as long as someone pays for the server and remembers to renew the domain, because few people have any reason to copy them. Nothing about these documents makes them harder to store than the photograph; a newsletter occupies less space than most images. What they lack is a constituency of copiers. When the society disbands or the scholar retires, the single copy that existed sits on a server whose bills no one is paying, and one day it is simply gone, often without anyone noticing that it has happened. Digital persistence, in short, tracks attention and interest rather than value, and the material most likely to vanish is often the unglamorous record that matters most to a historian a generation later.",
+    "This suggests that preservation in a digital age is less a technical problem than an institutional one. Better storage media help, but no medium keeps information alive by itself; what keeps it alive is an organisation that has made copying it someone's duty, and that will go on paying for that duty when the material has ceased to be interesting. Libraries and archives have long performed this role for print, and some are trying to perform it for the web. It is tempting to hope that automated tools, which can gather enormous quantities of web pages without human effort, have made such institutions unnecessary. They have not: what such tools gather must still be stored, checked and kept readable as formats change, and someone must decide what deserves that continuing expense. Archives face a difficulty that print archives faced less acutely: the sheer volume of material means that they must choose, and every choice about what to copy is also, in effect, a choice about what to let disappear. The task cannot be avoided by declaring that everything is saved, because what is left to the accidents of attention is saved very unevenly."
+   ],
+   "questions": [
+    {
+     "id": "R06-F-08-1",
+     "type": "RC",
+     "options": {
+      "A": "becomes unreadable within a few years, however carefully the disk itself is stored and looked after over time.",
+      "B": "can be read later only if the disk, a machine able to read it and software able to interpret the file all survive.",
+      "C": "can be read a century later by anyone who knows the language in which the file was originally written.",
+      "D": "survives neglect better than a paper letter, because a digital copy does not decay in the way that paper does."
+     },
+     "question": "According to paragraph 2, a file left on an old disk"
+    },
+    {
+     "id": "R06-F-08-2",
+     "type": "RC",
+     "options": {
+      "A": "Whether digital material lasts depends on whether there are reasons to copy it, which explains both complaints and makes preservation an institutional duty.",
+      "B": "Digital records are far less durable than paper and should be printed out whenever they need to be kept for the long term.",
+      "C": "Libraries and archives should copy everything that appears on the web so that no record of the present is ever lost to historians.",
+      "D": "The belief that the internet never forgets is a myth, since nearly everything posted online eventually disappears without a trace."
+     },
+     "question": "Which of the following best states the central argument of the passage?"
+    },
+    {
+     "id": "R06-F-08-3",
+     "type": "RC",
+     "options": {
+      "A": "the value of a piece of material can be judged reliably by counting how often it has been copied.",
+      "B": "material that attracts a lot of attention is generally of little value to anyone who studies it later.",
+      "C": "valuable material is always lost before trivial material, whatever efforts are made to preserve it.",
+      "D": "material may matter a great deal for later understanding and still be among the first things to be lost."
+     },
+     "question": "The claim that digital persistence 'tracks attention and interest rather than value' implies that"
+    },
+    {
+     "id": "R06-F-08-4",
+     "type": "RC",
+     "options": {
+      "A": "It rejects both of the familiar complaints about digital information as exaggerations that do not survive scrutiny.",
+      "B": "It sets out two complaints that seem to contradict each other, a tension that the following paragraphs then resolve.",
+      "C": "It states the author's thesis that digital information is more durable than paper and then lists evidence for it.",
+      "D": "It describes a puzzle about digital information that the author concedes in the end cannot be fully resolved."
+     },
+     "question": "Which of the following best describes the role of the first paragraph?"
+    },
+    {
+     "id": "R06-F-08-5",
+     "type": "RC",
+     "options": {
+      "A": "an archive's decision about what to copy from the web is in effect also a decision about what to let vanish.",
+      "B": "the ease of copying is what allows some digital material to outlast the efforts made to delete it.",
+      "C": "print archives never had to choose what to keep, since the volume of print was small enough to preserve in full.",
+      "D": "an organisation that preserves material must be willing to keep paying for it after interest in it has faded."
+     },
+     "question": "Each of the following is supported by the passage EXCEPT"
+    }
+   ]
+  },
+  {
+   "passage_id": "R06-D-06",
+   "passage": [
+    "Conservation laws are usually taught as the bedrock of physics. Energy is neither created nor destroyed; momentum lost by one body is gained by another; a spinning skater who draws in her arms turns faster because her angular momentum cannot change. Presented in this way, the laws look like the deepest facts we possess, discovered by patient measurement and accepted because nature has never been caught breaking them. A theorem proved in 1918 by the mathematician Emmy Noether suggests that this presentation, though not wrong, puts the foundations in the wrong place.",
+    "What Noether showed is that, for any system whose laws can be written in a certain standard mathematical form, every continuous symmetry of those laws corresponds to a quantity that is conserved. If the laws are the same today as they were yesterday, energy is conserved. If they are the same here as in the next room, momentum is conserved. If they do not depend on which way a system happens to be facing, angular momentum is conserved. The conservation laws, in other words, are not separate facts standing side by side; they are consequences of a single kind of fact, namely that the rules of nature do not care when, where or in what orientation they are applied.",
+    "It is tempting to conclude that conservation has thereby been proved, that energy must be conserved as a matter of logic. That would be a mistake. The theorem converts one question into another; it does not settle either. Whether the laws really are the same at all times is something only observation can tell us, and the theorem ensures that the evidence for the symmetry and the evidence for the conservation law are, in effect, the same evidence. What has changed is the direction of explanation. We no longer say that energy is conserved and leave the matter there; we say that energy is conserved because time is uniform, and we are then free to ask whether time is uniform.",
+    "That question has teeth. On the scale of the whole universe, which is expanding and so does not look the same from one epoch to the next, the symmetry behind energy conservation is not obviously present, and it is far from clear that a universal law of energy conservation can even be stated there. On the older view this would look like a scandal, a crack in the bedrock. On the view the theorem encourages, it is just what one should expect: where the symmetry fails, the conservation law loses its footing, and the surprise would be if it did not. A principle that once seemed beyond question has become something more useful, a claim whose limits can be foreseen."
+   ],
+   "questions": [
+    {
+     "id": "R06-D-06-1",
+     "type": "RC",
+     "options": {
+      "A": "recounting how a mathematician's theorem persuaded physicists who had long doubted the conservation laws to accept them.",
+      "B": "arguing that conservation laws are better understood as consequences of symmetries, a shift that alters how they explain rather than proving them.",
+      "C": "explaining how the expansion of the universe has forced physicists to give up the conservation of energy altogether.",
+      "D": "demonstrating that the conservation of energy is a truth of logic, which no observation of nature could ever overturn."
+     },
+     "question": "The passage is chiefly concerned with"
+    },
+    {
+     "id": "R06-D-06-2",
+     "type": "RC",
+     "options": {
+      "A": "laws that are the same here as in the next room, with the conservation of momentum.",
+      "B": "laws that are the same today as they were yesterday, with the conservation of energy.",
+      "C": "laws that stay the same however fast a system is moving, with the conservation of energy.",
+      "D": "laws that ignore which way a system is facing, with the conservation of angular momentum."
+     },
+     "question": "The passage pairs each of the following features of the laws of nature with the quantity it implies is conserved EXCEPT"
+    },
+    {
+     "id": "R06-D-06-3",
+     "type": "RC",
+     "options": {
+      "A": "count as evidence against the strict conservation of energy, since evidence about the symmetry is in effect evidence about conservation.",
+      "B": "leave the conservation of energy untouched, since the theorem establishes conservation as a matter of logic alone.",
+      "C": "cast doubt on the conservation of momentum while leaving the conservation of energy secure.",
+      "D": "show that the theorem itself had been mathematically mistaken when it linked the symmetries of laws with quantities that are conserved."
+     },
+     "question": "It can be inferred that, in the author's view, convincing evidence that the laws of physics had changed slightly over time would"
+    },
+    {
+     "id": "R06-D-06-4",
+     "type": "RC",
+     "options": {
+      "A": "show that treating conservation as resting on symmetry pays off, by telling us where a conservation law should lose its hold.",
+      "B": "illustrate the 'scandal' that has led physicists to doubt the conservation laws they once treated as bedrock.",
+      "C": "report evidence that the conservation of energy has been observed to fail throughout the expanding universe.",
+      "D": "concede that the theorem breaks down on the largest scales and therefore holds only for systems of modest size."
+     },
+     "question": "The discussion of the expanding universe in paragraph 4 functions mainly to"
+    }
+   ]
+  },
+  {
+   "passage_id": "R02-F-01",
+   "passage": [
+    "Ask someone to describe the route from their home to the nearest railway station and watch their hands. Before they have finished the first sentence, the hands will usually be tracing turns, marking distances and pointing at landmarks that are nowhere in the room. The common explanation is that gesture is a kind of visual aid for the listener, a way of adding pictures to words. On this view the hands are an accessory to communication, useful when they help an audience and idle otherwise. The explanation is not wrong, but it is incomplete, and the part it leaves out is the more interesting one.",
+    "If gesture existed only for listeners, people would stop gesturing when nobody could see them, and yet they do not: speakers on the telephone continue to move their hands, if somewhat less than they would face to face, and people who have been blind from birth gesture when they talk, even to listeners they know to be blind. A habit that persists when it can no longer inform anyone is unlikely to be explained entirely by what it does for others. The more economical conclusion is that gesture also does something for the person who produces it.",
+    "What it seems to do is lighten the work of thinking, for when people are asked to explain a problem while keeping their hands still, many speak more haltingly and struggle to find the words they want, particularly words for shapes, directions and positions. Children explaining how they solved a sum sometimes show with their hands a strategy that their words have not yet reached, pointing to two numbers together while describing a different procedure aloud. Such children are often found to be on the verge of learning the correct method, as if the hands had arrived at an idea before speech could carry it. Gesture, on this account, is not a translation of finished thought into movement; it is one of the places where thought is still being worked out.",
+    "It would be easy to overstate the case, since not every flourish of the hands is cognitive labour; some gestures are plainly social, like a wave or a shrug, and some speakers gesture little without thinking any worse for it. Nor does the evidence show that thought depends on the body in some mysterious way that rules out abstract reasoning. The claim is more modest: that for many people, much of the time, moving the hands is part of how a difficult idea gets held in mind. Even that modest claim has practical consequences, because a teacher who attends only to what a pupil says may miss what the pupil is close to understanding, and a classroom that rewards stillness may be quietly removing a tool that some children use to think."
+   ],
+   "questions": [
+    {
+     "id": "R02-F-01-1",
+     "type": "RC",
+     "options": {
+      "A": "show that gesture contributes more to successful communication than the spoken words it accompanies.",
+      "B": "argue that gesture serves the speaker's own thinking as well as the listener's understanding.",
+      "C": "urge schools to drop rules that require pupils to keep their hands still during lessons.",
+      "D": "explain why people who have been blind from birth continue to gesture while they are speaking."
+     },
+     "question": "The primary purpose of the passage is to"
+    },
+    {
+     "id": "R02-F-01-2",
+     "type": "RC",
+     "options": {
+      "A": "show that gesturing is learnt by watching others, since people copy movements that they have seen.",
+      "B": "show that people keep gesturing in situations where their gestures cannot inform anyone.",
+      "C": "prove that gesture plays no part in helping a listener to follow what a speaker is saying.",
+      "D": "suggest that listeners understand speakers better when they are able to see the speaker's hands."
+     },
+     "question": "The examples of telephone conversations and of speakers who have been blind from birth are used in paragraph 2 to"
+    },
+    {
+     "id": "R02-F-01-3",
+     "type": "RC",
+     "options": {
+      "A": "saves the speaker effort by reducing the number of movements needed to communicate.",
+      "B": "costs researchers less time and money to test than the listener-only explanation does.",
+      "C": "accounts for the observations without needing any strained extra assumptions.",
+      "D": "can be stated in fewer words than the explanation it is replacing."
+     },
+     "question": "As used in paragraph 2, 'The more economical conclusion' refers to a conclusion that"
+    },
+    {
+     "id": "R02-F-01-4",
+     "type": "RC",
+     "options": {
+      "A": "already understands the correct method fully but lacks the vocabulary needed to put it into words.",
+      "B": "has revealed that her spoken reasoning is unreliable, so that her gestures ought to be trusted over her words.",
+      "C": "may be nearer to grasping a new method than her spoken explanation on its own would reveal.",
+      "D": "is using her hands mainly to help the teacher follow a strategy that she finds hard to describe."
+     },
+     "question": "Based on the passage, a child whose hands show one strategy for a sum while her words describe a different one is best understood as someone who"
+    }
+   ]
+  },
+  {
+   "passage_id": "R07-D-02",
+   "passage": [
+    "Of all the performing arts, dance has the most fragile relation to its own past. A play survives in its script and a symphony in its score, so that later generations, whatever they make of these documents, at least have something to argue over. A dance, by contrast, has for most of its history existed only while it was being danced and in the memories of those who danced it. It is tempting to conclude that dance is therefore an art without a history, or one whose history is a long series of losses, and that the remedy is simply better documentation.",
+    "There have been serious attempts at such documentation. Systems of dance notation have been devised that record the position of each part of the body over time, and film and video now capture performances that would once have vanished. These tools are valuable, but they have not displaced the older method of transmission, in which a dancer who has performed a role teaches it directly to a younger dancer, in a studio, by demonstration and correction. Many companies that hold detailed records of their repertoire still rely on such teaching when a work is revived, and they tend to treat the written record as an aid to memory rather than as the work itself.",
+    "The reason is not mere conservatism. What passes from one body to another in the studio includes things that a notation or a recording captures poorly or not at all: the weight of a movement, the quality of attention behind it, the reasons a gesture is timed as it is. A film shows what a particular dancer did on a particular night, including her idiosyncrasies and her mistakes; it cannot say which of those features belong to the choreography and which belong to her. A teacher who has danced the role can make that distinction, or at least has a considered view about it, and passes the view on along with the steps.",
+    "This method has an obvious cost. Each transmission is also an interpretation, and over several generations a dance may drift a long way from what its maker first set. Yet the drift is not simply a corruption. A dance kept alive in bodies is continually tested against the dancers who perform it, and the features that survive are usually those that dancers have found to matter. The archive of dance, on this view, is not mainly a shelf of documents but a lineage of people, and its gaps are the price of its being alive."
+   ],
+   "questions": [
+    {
+     "id": "R07-D-02-1",
+     "type": "RC",
+     "options": {
+      "A": "use notation to correct the drift that has crept in through generations of teaching.",
+      "B": "regard the notated record as the authoritative version of a dance when teachers disagree.",
+      "C": "still revive works through direct teaching and use the written record to support memory.",
+      "D": "have abandoned studio teaching now that film and video can capture complete performances."
+     },
+     "question": "According to the passage, many companies that hold detailed records of their repertoire"
+    },
+    {
+     "id": "R07-D-02-2",
+     "type": "RC",
+     "options": {
+      "A": "risk copying one performer's personal habits and errors as though they were part of the choreography.",
+      "B": "be closer to the choreographer's original intentions, since the film is free of the drift that teaching introduces.",
+      "C": "reproduce the steps less accurately than a revival taught in the studio by a former performer of the role.",
+      "D": "fail chiefly because film cannot show the position of each part of the body over time."
+     },
+     "question": "The author would most likely expect a revival staged by dancers who learned a role only from a film of one performance to"
+    },
+    {
+     "id": "R07-D-02-3",
+     "type": "RC",
+     "options": {
+      "A": "defensive, insisting that the method causes no real change to the dances handed down by it.",
+      "B": "nostalgic, regretting that newer tools such as film and notation are steadily replacing it in most companies.",
+      "C": "appreciative, while openly admitting that the method gradually alters the works it preserves.",
+      "D": "ambivalent, finding its losses roughly equal to its gains and declining to prefer it to documentation."
+     },
+     "question": "The author's attitude towards the transmission of dance from dancer to dancer is best described as"
+    },
+    {
+     "id": "R07-D-02-4",
+     "type": "RC",
+     "options": {
+      "A": "a historical claim about how choreographers once preserved their work.",
+      "B": "the thesis that the author defends throughout the remaining paragraphs.",
+      "C": "an objection to the view that dance has the most fragile relation to its past.",
+      "D": "a natural conclusion that the rest of the passage goes on to qualify."
+     },
+     "question": "In the first paragraph, the suggestion that the remedy for dance's fragility is 'simply better documentation' functions as"
+    }
+   ]
+  },
+  {
+   "passage_id": "R04-F-04",
+   "passage": [
+    "A familiar story about the history of reading holds that, for most of antiquity and much of the Middle Ages, people could read only aloud, and that silent reading was a late discovery which transformed the inner life of the West. The story is usually supported by a much-cited anecdote in which an ancient writer records his surprise at finding a learned man reading without voicing the words. It is a vivid story, and like many vivid stories it has been asked to carry more weight than it can bear.",
+    "Scholars who have examined the evidence more closely have found a fair number of ancient readers who read silently, and they point out that surprise at a practice is not evidence that it was unknown, only that it was unusual where it was observed. The more defensible claim is not that silent reading was impossible but that it was not the default. Texts were frequently written without spaces between words, which made voicing them a useful aid, and, more importantly, reading was often a social act. A household, a monastery or a circle of friends would gather while one person read to the others; a book was something one heard as often as something one saw.",
+    "What changed, then, was less the technique than the setting. As books became cheaper and more numerous, as spaces between words and other aids to the eye became standard, and as people of moderate means came to have rooms, or at least corners, to themselves, reading moved from the common table to the private chair. Freed from the pace of the voice, the eye could also move faster, and a reader alone could get through more books, and more kinds of book, than a listener ever could. The shift was gradual and uneven, and reading aloud never vanished. Families read novels to one another well into the age of print, and workers in some trades paid a colleague to read to them while they laboured.",
+    "Even corrected in this way, the history matters. A text that is heard together is interpreted together: listeners react, object and argue, and the meaning of a passage is settled, if it is settled at all, in company. A text read alone is answerable only to its reader, who may skip, reread or linger over a sentence that no one else will ever know about. It would be too much to say that private reading created the private self. It would be too little to say that it changed nothing about how people came to think of their thoughts as their own."
+   ],
+   "questions": [
+    {
+     "id": "R04-F-04-1",
+     "type": "RC",
+     "options": {
+      "A": "texts were often written with no spaces separating one word from the next.",
+      "B": "books were so expensive that a single copy had to be shared among many listeners at once.",
+      "C": "most readers had learned their letters by reciting them aloud to a teacher in a group.",
+      "D": "silent reading was regarded as discourteous in households and monasteries where others were present."
+     },
+     "question": "According to the passage, one reason why voicing a text was a useful aid to early readers was that"
+    },
+    {
+     "id": "R04-F-04-2",
+     "type": "RC",
+     "options": {
+      "A": "the man the writer observed had invented a technique of reading that others later learned from him.",
+      "B": "an observer's astonishment at a practice reveals what was customary around him, not what people could do.",
+      "C": "silent reading must have been the usual practice among learned readers of the time, despite the writer's reaction.",
+      "D": "the anecdote is unreliable as evidence, since the writer probably exaggerated his surprise for effect."
+     },
+     "question": "The point made in paragraph 2 about the ancient writer's surprise implies that"
+    },
+    {
+     "id": "R04-F-04-3",
+     "type": "RC",
+     "options": {
+      "A": "Silent reading was a late discovery that transformed the inner life of the West, as an ancient anecdote of surprise clearly shows.",
+      "B": "Reading aloud survived well into the age of print, which shows that the move to private reading never really took place at all.",
+      "C": "Because silent reading was always possible, the history of reading has no real bearing on how people came to think of the self.",
+      "D": "Silent reading was not a late invention; what changed was the setting of reading, from shared to private, and that shift still mattered for how readers held their thoughts."
+     },
+     "question": "Which of the following best expresses the main argument of the passage?"
+    },
+    {
+     "id": "R04-F-04-4",
+     "type": "RC",
+     "options": {
+      "A": "contributed to people's sense of owning their thoughts without being the sole or sufficient cause of it.",
+      "B": "produced a private self whose influence on later habits of thought cannot now be traced or assessed.",
+      "C": "had no real effect on how people thought of themselves, whatever historians have claimed.",
+      "D": "was the decisive development that brought the modern sense of a private self into being."
+     },
+     "question": "The last two sentences of the passage suggest that the author believes private reading"
+    }
+   ]
+  },
+  {
+   "passage_id": "R01-D-03",
+   "passage": [
+    "Theories of punishment have long been divided between those that look forward and those that look back. Forward-looking theories justify punishment by its effects: it deters, it incapacitates, perhaps it reforms. Their persistent embarrassment is that they seem to license too much. If the point of punishment were simply to discourage crime, then punishing an innocent person whom the public believed guilty might serve that point as well as punishing the guilty one, and sometimes better, since it would be quicker. Most people regard this conclusion as monstrous, which suggests that the effects of punishment, however important, cannot be the whole of its justification.",
+    "An expressive theory offers to supply what is missing. On this view punishment is, before anything else, a form of communication: the community's way of declaring that an act was wrong and that the person who did it is answerable for it. This explains at once why the innocent may not be punished. To condemn someone who did nothing is not an inefficient use of punishment but a lie told in its language. It also explains why we distinguish a fine from a tax, though both take money: the tax carries no message of blame, while the fine carries little else.",
+    "The obvious objection is that condemnation can be expressed in words. If the point of a prison sentence is to say that an act was wrong, why not simply say so, in a formal judgement solemnly delivered? The expressive theorist's reply is that words alone are too cheap to carry the message. A declaration that costs the offender nothing would be heard as a declaration that the wrong did not matter much; only something that is felt as a burden registers the seriousness of what was done.",
+    "This reply is ingenious, but it has an uncomfortable implication. If hard treatment communicates because of the meanings a society attaches to it, then how much hard treatment is needed depends on those meanings, and meanings can drift. A society accustomed to long sentences will hear a short one as a shrug; the same sentence elsewhere might sound like thunder. The expressive theory, in other words, cannot by itself tell us how severe punishment should be, because severity is fixed by convention, and conventions can escalate without limit. That is not a reason to abandon the theory, which captures something the forward-looking view plainly misses. It is a reason to think that the theory needs a partner: some independent principle, perhaps of proportion or of humanity, that sets limits the language of condemnation cannot set for itself."
+   ],
+   "questions": [
+    {
+     "id": "R01-D-03-1",
+     "type": "RC",
+     "options": {
+      "A": "establish that swift punishment deters more effectively than slow and careful punishment of offenders.",
+      "B": "show that forward-looking theories are mistaken in assuming that punishment actually deters people from committing crime.",
+      "C": "suggest that justifying punishment only by its effects would permit something most people find unacceptable.",
+      "D": "argue that public opinion is an unreliable guide to whether accused persons are guilty or innocent."
+     },
+     "question": "The case of punishing an innocent person whom the public believed guilty (paragraph 1) is used to"
+    },
+    {
+     "id": "R01-D-03-2",
+     "type": "RC",
+     "options": {
+      "A": "only the second is a declaration by the community, since the toll is fixed in advance by public authority.",
+      "B": "the first is felt as a heavier burden, since a fine is normally larger than a charge for a service.",
+      "C": "the first is meant to discourage future offences, whereas the second only raises money for the road.",
+      "D": "only the first conveys that the driver has done something wrong for which he is answerable."
+     },
+     "question": "The passage suggests that, on the expressive view, a fine for parking in a forbidden place differs from an equal charge for using a toll road in that"
+    },
+    {
+     "id": "R01-D-03-3",
+     "type": "RC",
+     "options": {
+      "A": "Judges in different countries tend to deliver their verdicts in quite different styles and in very different forms of language.",
+      "B": "Long prison sentences do less to reduce reoffending than shorter sentences combined with close supervision after release.",
+      "C": "Where courts declare offenders guilty without imposing any penalty, the public judges those offences to be as serious as offences punished by imprisonment.",
+      "D": "Fines that are very small relative to an offender's wealth tend to be treated by offenders as a routine cost of doing business."
+     },
+     "question": "Which of the following, if true, would most weaken the expressive theorist's reply in paragraph 3?"
+    },
+    {
+     "id": "R01-D-03-4",
+     "type": "RC",
+     "options": {
+      "A": "a theory that justifies punishment solely by its effects faces a serious difficulty about the innocent.",
+      "B": "the same prison sentence may be heard as lenient in one society and as harsh in another.",
+      "C": "a principle of proportion is the only constraint that could set limits on how severe punishment becomes.",
+      "D": "the expressive theory, though it needs supplementing, captures something that forward-looking theories overlook."
+     },
+     "question": "Each of the following is supported by the passage EXCEPT"
+    }
+   ]
+  },
+  {
+   "passage_id": "R08-A-07",
+   "passage": [
+    "It has become a commonplace that the metaphors buried in ordinary speech reveal the structure of ordinary thought. We speak of arguments as if they were battles, defending positions, attacking weak points, winning or losing; we speak of time as if it were space, with deadlines approaching, holidays behind us and the future ahead. On the view that has made this observation famous, such expressions are not decorations added to a literal meaning but the surface of deep conceptual mappings, in which one domain of experience is understood in terms of another. We do not merely talk about argument as war; to a large extent, it is claimed, we think about it that way, and we would argue differently if our language had taught us to think of it as, say, a dance.",
+    "The opposing view is equally simple. Most of these expressions, it holds, are dead metaphors, idioms whose figurative origin is no longer felt by anyone who uses them. A speaker who says that a table has legs is not thereby thinking of the table as an animal, and a speaker who defends a position need not have soldiers anywhere in mind. On this account, inferring a mental mapping from a pattern of idioms is like inferring a belief in sorcery from the fact that people say 'bless you' after a sneeze: the history of an expression is mistaken for its present psychology.",
+    "Each view, I think, gets one thing right and one thing wrong. The sceptic is right that the evidence most often cited for the mapping view is weaker than it looks. If the existence of the mapping is inferred from the expressions, and the expressions are then explained by the mapping, the argument has gone round in a circle; the sheer number of warlike expressions for argument cannot by itself show that anything in the mind corresponds to them. But the sceptic is wrong to treat these expressions as a collection of fossils. Dead metaphors are inert: one cannot extend the legs of a table into talk of its knees or its gait and expect to be understood. The metaphors of argument and time are not inert in this way. A speaker who says that her opponent's case was all ammunition and no target, or that next week is already breathing down our necks, may be using a phrase she has never heard, and she is understood at once. Something is generating these extensions, and a list of frozen idioms cannot be it.",
+    "Productivity, then, rather than frequency, is the better test of whether a metaphor is alive, and by that test many everyday metaphors are alive, at least in the sense that speakers can use them as patterns for making and understanding new expressions. That is a real result, and it is more than the sceptic allows. It is also less than the mapping view claims. To show that a pattern is available for making expressions is not to show that it governs how people reason when they are not speaking, still less that a different language would leave them reasoning differently. Those further claims are empirical, and they can be settled only by evidence that does not itself consist of the very expressions in question: by watching how people solve problems, judge situations or remember events, and asking whether the metaphor leaves its mark there.",
+    "The debate has often been conducted as though one had to choose between seeing language as a window onto thought and seeing it as a heap of dead habits. The more modest position is less exciting but easier to defend: our metaphors are living tools of expression, and their influence on thought beyond expression is an open question that the metaphors themselves cannot answer."
+   ],
+   "questions": [
+    {
+     "id": "R08-A-07-1",
+     "type": "RC",
+     "options": {
+      "A": "A dead metaphor cannot be extended into new expressions that listeners readily understand.",
+      "B": "A dead metaphor is used far less often in ordinary speech than a living one.",
+      "C": "A dead metaphor no longer shapes the way speakers reason about the subject.",
+      "D": "A dead metaphor comes from an older stage of the language than a living one."
+     },
+     "question": "According to the passage, what marks a dead metaphor off from a living one?"
+    },
+    {
+     "id": "R08-A-07-2",
+     "type": "RC",
+     "options": {
+      "A": "Ordinary metaphors are alive as patterns of expression, but whether they shape thought beyond speech needs other evidence.",
+      "B": "Ordinary metaphors can never be shown to influence thought, because every piece of relevant evidence is linguistic.",
+      "C": "Ordinary metaphors are the surface of deep conceptual mappings that determine how speakers reason about the world.",
+      "D": "Ordinary metaphors are fossils whose origins say nothing about what their users think or mean today."
+     },
+     "question": "Which of the following best expresses the central claim of the passage?"
+    },
+    {
+     "id": "R08-A-07-3",
+     "type": "RC",
+     "options": {
+      "A": "Because the metaphors of time are productive, they must influence the way speakers remember past events.",
+      "B": "The mapping view should be abandoned, because most of the expressions it relies on turn out to be frozen idioms.",
+      "C": "Finding that speakers readily coin new warlike phrases about argument would not show they argue more combatively as a result.",
+      "D": "Studies of how people solve problems are beside the point, since the debate is at bottom a question about language."
+     },
+     "question": "The author would most likely agree with which of the following?"
+    },
+    {
+     "id": "R08-A-07-4",
+     "type": "RC",
+     "options": {
+      "A": "Asked silently to arrange pictures of events in order, people placed earlier events on the side their language calls the past.",
+      "B": "Asked about their own speech, most speakers said they did not picture space when talking about deadlines.",
+      "C": "Asked to invent new expressions about time, speakers produced spatial ones far more often than any other kind.",
+      "D": "A large survey found that spatial expressions for time outnumber all other kinds in every language examined."
+     },
+     "question": "Which of the following findings, if true, would supply the kind of evidence the author says is needed to support the mapping view's stronger claims?"
+    },
+    {
+     "id": "R08-A-07-5",
+     "type": "RC",
+     "options": {
+      "A": "can serve speakers as patterns for forming and understanding new expressions, whatever their effect on reasoning.",
+      "B": "occur in ordinary speech more often than the dead metaphors that speakers no longer notice.",
+      "C": "govern how speakers reason about argument and time even when they are not speaking at all.",
+      "D": "are still felt by speakers as figurative, so that their origin is present to mind whenever used."
+     },
+     "question": "In paragraph 4, the author's claim that many everyday metaphors are 'alive' means that they"
+    }
+   ]
+  },
+  {
+   "passage_id": "R01-E-03",
+   "passage": [
+    "When a patient can no longer decide for herself, someone else must decide for her, and the question is on what basis. The answer favoured in much of modern medical ethics is that the surrogate, usually a close relative, should choose as the patient would have chosen had she been able to. This standard of substituted judgement has an obvious appeal. It extends the patient's autonomy beyond the point at which she can exercise it, so that even when she is unconscious, her values rather than anyone else's continue to govern what is done to her body. The older alternative, that the surrogate should simply choose whatever is in the patient's best interests, looks paternalistic by comparison, since it invites others to put their idea of a good outcome in place of hers.",
+    "The appeal is real, but it depends on there being something for the surrogate to reconstruct. Sometimes there is. A patient who said repeatedly, while healthy, that she would never want to be kept alive on a ventilator has left a clear instruction, and a daughter who honours it is doing exactly what the standard asks. Far more often, however, the situation that arises is one the patient never considered. She may have had firm views about dying at home but none about a trial of dialysis that offers a modest chance of recovery and a large chance of prolonged discomfort. To ask what she would have chosen here is to ask a counterfactual question to which there may be no fact of the matter. The surrogate who answers it confidently is not discovering the patient's will; he is extrapolating from scraps, and the extrapolation is shaped, inevitably, by his own hopes and fears.",
+    "This would matter less if the fiction were harmless, but it has two costs. The first is that it hides the surrogate's own judgement behind the patient's name, so that a decision which ought to be open to discussion, with doctors and with other relatives, is presented as beyond discussion: this is simply what she would have wanted. The second is subtler. Families often find substituted judgement consoling precisely because it seems to relieve them of responsibility, and that consolation is not to be despised. But a consolation bought by pretending is fragile, and relatives who later doubt that they read the patient correctly may suffer more than they would have if they had been told, from the start, that they were being asked to judge what was best for her.",
+    "The remedy is not to abandon substituted judgement but to confine it to cases where the patient's own wishes are actually known and actually bear on the decision, and to say plainly, in all other cases, that the surrogate is choosing on the patient's behalf what seems best for her. Honesty about which standard is in play is itself a form of respect for the patient."
+   ],
+   "questions": [
+    {
+     "id": "R01-E-03-1",
+     "type": "RC",
+     "options": {
+      "A": "gives doctors, rather than relatives, the final responsibility for decisions about an unconscious patient's treatment.",
+      "B": "tends to produce outcomes that are medically better for patients than the outcomes of the best-interests standard.",
+      "C": "spares relatives the need to discuss treatment decisions with doctors and with other members of the family.",
+      "D": "lets the patient's own values keep governing her care after she has lost the ability to decide."
+     },
+     "question": "According to the passage, the appeal of substituted judgement lies mainly in the fact that it"
+    },
+    {
+     "id": "R01-E-03-2",
+     "type": "RC",
+     "options": {
+      "A": "illustrate a decision on which a patient's known views give the surrogate no real guidance.",
+      "B": "demonstrate that the best-interests standard leads to kinder outcomes than substituted judgement does.",
+      "C": "illustrate a clear prior instruction that a surrogate who respects the patient's autonomy is bound to follow.",
+      "D": "show that patients who wish to die at home generally refuse treatments that may prolong their discomfort."
+     },
+     "question": "The example of the trial of dialysis in paragraph 2 is used to"
+    },
+    {
+     "id": "R01-E-03-3",
+     "type": "RC",
+     "options": {
+      "A": "Doctors and relatives frequently disagree about what an unconscious patient would have wanted, and such disputes are seldom openly resolved.",
+      "B": "Many relatives say that they found substituted judgement a real comfort when they were required to make difficult treatment decisions on behalf of patients who had lost the capacity to decide.",
+      "C": "Patients who left written instructions were more likely to have their wishes followed than those who expressed them only in conversation.",
+      "D": "Relatives who later doubted their reading of a patient's wishes were, on the whole, no more distressed than relatives asked from the start to decide what was best for her."
+     },
+     "question": "Which of the following, if true, would most weaken the author's claim about the second cost of substituted judgement?"
+    },
+    {
+     "id": "R01-E-03-4",
+     "type": "RC",
+     "options": {
+      "A": "reconstruct her wishes as carefully as possible from scraps of earlier conversation and follow that reconstruction.",
+      "B": "abandon substituted judgement in this case and also in cases where her wishes are clearly known, for the sake of consistency.",
+      "C": "acknowledge openly that he is choosing what seems best for the patient rather than what she would have chosen.",
+      "D": "refuse to take part in the decision, leaving it to doctors who can judge the patient's interests more objectively."
+     },
+     "question": "The author would most likely agree that a surrogate who has no reliable knowledge of a patient's wishes on the matter at hand should"
+    }
+   ]
+  },
+  {
+   "passage_id": "R06-B-04",
+   "passage": [
+    "For much of the twentieth century, forest agencies in several countries treated fire as an enemy to be defeated wherever it appeared. The logic seemed unanswerable: fire destroys timber, threatens homes and kills animals, so every fire extinguished was a loss averted. Agencies measured their performance by how quickly they put fires out and how few hectares burned, and by those measures many of them succeeded remarkably well. Lookout towers, firebreaks and crews ready to move at short notice made it possible to reach most fires while they were still small.",
+    "The success contained its own reversal. In many dry forests, frequent fires of low intensity had once cleared the undergrowth, fallen branches and young trees that gather on the forest floor, while leaving the older, thick-barked trees largely unharmed. When such fires were suppressed year after year, that material was left to build up. The forest grew denser, and the fuel that would once have burned off in small, manageable fires accumulated until, in a hot, dry season, a fire that could not be stopped found enough of it to climb into the crowns of the trees. Such fires kill the very trees that the earlier, smaller ones had spared. By preventing many small fires, suppression had, in effect, been saving up for a few enormous ones.",
+    "The lesson is sometimes drawn too broadly. Not every ecosystem evolved with frequent fire; in some wet forests and many shrublands fire was historically rare, and a recent increase in burning there is a threat rather than a return to normal. Nor does the history of suppression explain every catastrophic fire, since drought, heat and the spread of housing into wooded land matter as well. The argument is not that fire is good, but that whether a given fire is harmful depends on the ecosystem in which it burns and on that ecosystem's history.",
+    "Recognising this has not made the remedy easy. Deliberately setting fires under controlled conditions, or allowing some natural fires to burn, can reduce accumulated fuel, but it carries risks that suppression appeared not to. Politically, a season without burning looks like competence. Smoke drifts over towns, and a planned burn that escapes is blamed on the people who lit it, while a wildfire that grows from decades of accumulated fuel is blamed on nature. A manager therefore faces an asymmetry. The harm of acting is visible and attributable; the harm of not acting is deferred and diffuse, and the easiest course is to keep doing what made the problem worse."
+   ],
+   "questions": [
+    {
+     "id": "R06-B-04-1",
+     "type": "RC",
+     "options": {
+      "A": "were started deliberately by forest agencies to reduce the fuel that had built up under years of suppression.",
+      "B": "killed off the older trees so that young trees and undergrowth could grow in the light that was let in.",
+      "C": "cleared away the material on the forest floor while leaving most of the older, thick-barked trees unharmed.",
+      "D": "climbed into the crowns of the trees but burned out before they could spread to neighbouring stands."
+     },
+     "question": "According to paragraph 2, the frequent low-intensity fires of many dry forests"
+    },
+    {
+     "id": "R06-B-04-2",
+     "type": "RC",
+     "options": {
+      "A": "drought and heat, which the passage lists alongside suppression as causes of severe fires.",
+      "B": "the planting of fast-growing, thin-barked trees in place of the older species of dry forests.",
+      "C": "the spread of housing into wooded land, named in paragraph 3 as a factor besides the history of suppression.",
+      "D": "the build-up of undergrowth and fallen branches in dry forests after decades of fire suppression."
+     },
+     "question": "The passage mentions each of the following as contributing to catastrophic fires EXCEPT"
+    },
+    {
+     "id": "R06-B-04-3",
+     "type": "RC",
+     "options": {
+      "A": "evidence that the rise must have been caused by housing spreading into the wooded land around it.",
+      "B": "further proof that suppressing fires is always a mistake, since fuel must have built up there as well.",
+      "C": "a welcome correction, because fires in every forest clear the undergrowth and protect the older trees.",
+      "D": "a genuine danger to that forest, not a sign that fire is returning to its natural place there."
+     },
+     "question": "The author would most likely regard a sharp rise in burning in a wet forest where fire had historically been rare as"
+    },
+    {
+     "id": "R06-B-04-4",
+     "type": "RC",
+     "options": {
+      "A": "planned burns are in fact more dangerous to towns than wildfires that grow from decades of accumulated fuel.",
+      "B": "a manager may keep suppressing fires even when aware that doing so raises the risk of catastrophic fire later.",
+      "C": "managers continue suppressing fires mainly because they have not yet understood how fuel builds up on the floor of dry forests.",
+      "D": "the public blames managers equally for escaped planned burns and for wildfires caused by accumulated fuel."
+     },
+     "question": "The asymmetry described in the last paragraph implies that"
+    }
+   ]
+  },
+  {
+   "passage_id": "R08-D-01",
+   "passage": [
+    "Every generation of reformers discovers that words wear out. A term introduced to replace a cruder one, chosen precisely because it carried none of the old contempt, acquires that contempt within a few decades, and a new term is proposed to replace it in turn. Students of language sometimes call this cycle a treadmill, and the image is apt: a great deal of effort is expended, and the speaker seems to remain in the same place. Words for bodily functions, for old age, for poverty and for conditions of the mind have all passed through several such rotations, each new coinage arriving clean and departing stained.",
+    "The usual explanation is that the stain was never in the word. Attitudes towards the thing named are what give a word its colouring, and so long as those attitudes persist, any word that reliably points at the thing will soon absorb them. On this view the replacement of terms is a kind of displacement activity, a way of feeling that something has been done while the underlying attitude goes untouched. Critics who hold this view tend to conclude that the whole enterprise of renaming is futile, and some go further and call it dishonest, since the fresh term flatters the speaker as much as it spares the listener.",
+    "The first half of this argument seems to me largely right, and the second half too hasty. It is true that a new word cannot by itself change what people feel about the thing it names. But the treadmill is not simply a record of failure. A replacement term, for the years before it darkens, often gives people a way of speaking about a subject without signalling contempt, and in that interval conversations become possible that were not possible before. A parent can ask a teacher about a child's difficulty in terms that do not insult the child; an official form can ask about a condition without reading like an accusation. These are small goods, but they are not nothing, and they are purchased cheaply.",
+    "What the treadmill does show is that renaming cannot carry the whole burden of reform. A society that changes its vocabulary for poverty while leaving the poor exactly as they were will find that its new word sours as fast as the old one, and perhaps faster, since the gap between the gentle name and the harsh reality invites irony. The cycle slows, where it slows at all, when the thing named stops being a mark of shame. The word then has nothing to absorb. Renaming is best understood not as a substitute for that change but as a temporary courtesy that can accompany it."
+   ],
+   "questions": [
+    {
+     "id": "R08-D-01-1",
+     "type": "RC",
+     "options": {
+      "A": "reflects a dishonest habit through which speakers flatter themselves while only appearing to spare their listeners.",
+      "B": "can be halted altogether once schools and officials agree to adopt one carefully chosen set of terms.",
+      "C": "proves that renaming is futile and that reformers should give up trying to replace words that have become offensive.",
+      "D": "shows that renaming alone cannot change attitudes, though each new term briefly allows more courteous speech."
+     },
+     "question": "The author's main point about the cycle of replacement terms is that it"
+    },
+    {
+     "id": "R08-D-01-2",
+     "type": "RC",
+     "options": {
+      "A": "speakers soon grow tired of any word that is introduced through official forms and school teaching.",
+      "B": "each new term is usually borrowed from an older vocabulary that already carried traces of contempt.",
+      "C": "the reformers who choose replacement terms misjudge how ordinary speakers will actually use them.",
+      "D": "attitudes towards the thing a word names pass, while they last, to any word that reliably refers to it."
+     },
+     "question": "According to the usual explanation described in the passage, replacement terms lose their neutrality because"
+    },
+    {
+     "id": "R08-D-01-3",
+     "type": "RC",
+     "options": {
+      "A": "a process through which the meaning of one word is gradually transferred to another.",
+      "B": "an action that gives a sense of having dealt with a problem while leaving its cause untouched.",
+      "C": "a deliberate effort to push a disliked word out of polite speech and into the slang of everyday talk.",
+      "D": "an activity that shifts the work of reform from public officials onto ordinary speakers."
+     },
+     "question": "As used in paragraph 2, 'displacement activity' refers to"
+    },
+    {
+     "id": "R08-D-01-4",
+     "type": "RC",
+     "options": {
+      "A": "the new term is gentler and more delicate than any of the terms before it.",
+      "B": "officials use the term consistently on forms and in their public documents.",
+      "C": "what the term names has largely ceased to be treated as something shameful.",
+      "D": "the term has been chosen by a body of experts rather than by reformers."
+     },
+     "question": "It can be inferred that the author would expect a replacement term to keep its neutrality longest in a society where"
+    }
+   ]
+  },
+  {
+   "passage_id": "R01-F-04",
+   "passage": [
+    "Faced with two theories that fit the evidence equally well, scientists usually prefer the simpler, and they rarely feel the need to say why. When pressed, they tend to offer one of two answers. The first is that simplicity is a convenience: simpler theories are easier to state, to teach and to calculate with, and so they deserve priority in the way that a tidy desk deserves priority over a cluttered one, without any suggestion that tidiness is truer. The second is that nature itself is simple, so that a simple theory is more likely to have captured how things are. Neither answer is satisfactory. The first explains why we might enjoy simple theories but not why we should believe them, and the second asserts, with no evidence that could be independent of the very preference in question, exactly what needed to be shown.",
+    "A more promising answer comes from an unglamorous source, the practice of fitting curves to data. Any finite set of measurements, each carrying some error, can be fitted perfectly by a sufficiently complicated curve, one that bends to pass through every point. Such a curve is usually a worse guide to the next measurement than a smoother one that passes near the points without touching them all, because much of what it has faithfully reproduced is noise. Additional adjustable parameters let a model accommodate the accidents of a particular sample, and the price of that accommodation is paid when the model meets new data. Seen in this light, a preference for simplicity is a policy for estimating well from limited and imperfect evidence, not a belief about the architecture of the world.",
+    "This answer has a cost that its admirers do not always acknowledge. If simplicity earns its keep by protecting against noise, then its value should shrink as data become more abundant and more precise, and statistical practice broadly bears this out: with enough clean data, more complex models often predict better, because they can capture real structure that a simple model would smooth away. Simplicity, on this account, is not a standing virtue but a discount applied in proportion to our ignorance. Nor is it clear that simplicity can even be measured independently of how a theory is written. Counting parameters seems objective until one notices that a relation expressed compactly in one set of variables may require several parameters when it is rewritten in another.",
+    "None of this returns us to the view that simplicity is mere taste. The statistical argument shows that, in the situations scientists usually face, favouring the simpler of two well-fitting hypotheses is a reliable way to be less wrong. What it does not show is that the simpler hypothesis is, for that reason, more likely to be true; and the habit of speaking as though it did has lent the principle an authority it borrowed rather than earned."
+   ],
+   "questions": [
+    {
+     "id": "R01-F-04-1",
+     "type": "RC",
+     "options": {
+      "A": "such a curve can be drawn only when the measurements are entirely free of error.",
+      "B": "nature is simple, so a complicated curve cannot correspond to the way things really are.",
+      "C": "in fitting every point it has also reproduced the errors that the measurements happen to contain.",
+      "D": "complicated curves are harder to calculate with, so that mistakes creep in when they are used to predict."
+     },
+     "question": "According to the passage, a curve that passes exactly through every measured point is usually a poor guide to the next measurement because"
+    },
+    {
+     "id": "R01-F-04-2",
+     "type": "RC",
+     "options": {
+      "A": "the more complex model has already been tested against new data and has predicted them better.",
+      "B": "the data available are few in number and each measurement carries a substantial margin of error.",
+      "C": "the data are abundant and precise enough to reveal fine structure in whatever is being measured.",
+      "D": "the simpler model is the one that scientists find easier to state, to teach and to calculate with."
+     },
+     "question": "The passage suggests that a preference for the simpler of two well-fitting models is most clearly justified when"
+    },
+    {
+     "id": "R01-F-04-3",
+     "type": "RC",
+     "options": {
+      "A": "studied neutrality, laying out its strengths and its costs without ever indicating which way the balance falls.",
+      "B": "enthusiastic acceptance, because it finally demonstrates that the simpler hypotheses are the ones more likely to be true.",
+      "C": "qualified endorsement: it is more promising than the alternatives, but it supports less than is often claimed for it.",
+      "D": "polite scepticism, because in the end it leaves simplicity a matter of taste, like a preference for a tidy desk."
+     },
+     "question": "The author's attitude towards the statistical justification of simplicity is best described as one of"
+    },
+    {
+     "id": "R01-F-04-4",
+     "type": "RC",
+     "options": {
+      "A": "Scientists in many fields report that they choose simpler models chiefly because these are easier to teach to students.",
+      "B": "Whether one model has more parameters than another sometimes depends on the variables in which both of them happen to be written.",
+      "C": "Even where data are vast and highly precise, simpler well-fitting models keep predicting new measurements better than complex ones.",
+      "D": "With small and noisy samples, models with fewer adjustable parameters predict new data better than models that have many."
+     },
+     "question": "Which of the following, if true, would most weaken the author's claim that simplicity is 'a discount applied in proportion to our ignorance'?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R03-B-08",
+   "passage": [
+    "There is a familiar story about the family in South Asia. Once, it runs, people lived in large joint households: an elderly couple, their married sons with wives and children, perhaps unmarried daughters and a widowed aunt, all sharing one roof, one kitchen and one purse under the authority of the eldest man. Then came cities, salaried jobs and the ideal of the companionate couple, and the joint family began to break up into small units of parents and children. The story is told with pride by those who see the old household as a school of duty and with relief by those who see it as a school of obedience, but both versions agree about the direction of travel. It is repeated by planners, preachers and novelists alike, and it is so familiar that it is rarely asked for its evidence.",
+    "The evidence for the story is weaker than its popularity suggests. Much of it comes from counting households at a single moment, and a single moment is a poor guide to a process that unfolds over decades. A joint household is not a permanent structure but a phase. A young couple may live alone for some years; the household becomes joint when a son marries and brings his wife home; it may grow when a second son does the same; and it often divides when the father dies and the brothers set up separate hearths, each of which may in turn become joint a generation later. In a population in which every family followed this cycle exactly, a count taken on any given day would find a great many nuclear households, even though nearly everyone would spend part of life in a joint one. A high proportion of nuclear households, then, is not by itself evidence that the joint family is disappearing.",
+    "The wider theory behind the story fares little better. It was long assumed that industry produced the nuclear family, by moving work out of the home and rewarding people who could move to wherever the jobs were. Yet historians of north-western Europe found that small households of parents and children were already common there long before the factories arrived; if anything, the causation may have run partly the other way. A society's household form, it seems, is not simply read off its economy.",
+    "This is not to say that nothing has changed. Migration for work has scattered many families across cities and countries, so that brothers who would once have shared a courtyard now live hundreds of kilometres apart. But dispersal is not the same thing as dissolution. Money flows back to parents; decisions about marriages, property and the education of children are still taken together; a son abroad may be more bound by his family's expectations than a son next door. Some families keep a common fund into which brothers in different cities pay, and from which the costs of weddings and illnesses are met. A census that defines the joint family by shared residence will record such a family as several nuclear ones, and will miss the jointness that matters most to its members.",
+    "It would be equally mistaken to swing to the opposite view and declare the joint family unchanged. What is being renegotiated, often bitterly, is less the size of the household than the authority within it: whether a daughter-in-law must defer to her mother-in-law, whether elders decide whom the young marry, whether property passes to sons alone. The quarrels are often sharpest where the household is still shared, because shared space turns every question of precedence into a daily one. These are real changes, and they are better described as a transformation of jointness than as its end."
+   ],
+   "questions": [
+    {
+     "id": "R03-B-08-1",
+     "type": "RC",
+     "options": {
+      "A": "one of the sons migrates for work to a city hundreds of kilometres away.",
+      "B": "the father dies and his sons set up separate hearths of their own.",
+      "C": "the eldest son marries and brings his new wife into his parents' home.",
+      "D": "the parents decide to divide the household's property among their daughters."
+     },
+     "question": "According to the passage, a joint household often divides when"
+    },
+    {
+     "id": "R03-B-08-2",
+     "type": "RC",
+     "options": {
+      "A": "census officials have deliberately undercounted joint households in order to lend support to the story of decline.",
+      "B": "nuclear households are more stable over time than joint households and therefore make up the larger share of any count.",
+      "C": "most families in South Asia do in fact follow the developmental cycle exactly as the paragraph describes it.",
+      "D": "a count made on one day can find mostly nuclear households even where joint living is a near-universal stage of life."
+     },
+     "question": "The population described in paragraph 2, in which every family follows the cycle exactly, is introduced in order to show that"
+    },
+    {
+     "id": "R03-B-08-3",
+     "type": "RC",
+     "options": {
+      "A": "the shared obligations and joint decisions that bind relatives even when they live apart.",
+      "B": "the authority that the eldest man in a family exercises over all its other members.",
+      "C": "the legal co-ownership of ancestral property by a group of brothers and their sons.",
+      "D": "the condition of several married couples sharing one roof, one kitchen and one purse."
+     },
+     "question": "As used in the last sentence of paragraph 4, 'the jointness that matters most to its members' refers to"
+    },
+    {
+     "id": "R03-B-08-4",
+     "type": "RC",
+     "options": {
+      "A": "Many families living in nuclear households regularly send money to parents who remain in their home village.",
+      "B": "A count taken on a single day in one region finds that most of its households consist only of parents and their unmarried children.",
+      "C": "In some regions brothers commonly divide their parents' household before their father's death rather than after it.",
+      "D": "Studies following the same families for several decades find that most of their members never lived in a household with more than one married couple."
+     },
+     "question": "Which of the following findings, if true, would most weaken the argument of paragraph 2?"
+    },
+    {
+     "id": "R03-B-08-5",
+     "type": "RC",
+     "options": {
+      "A": "Industrialisation in South Asia has had no effect of any kind on the ways in which households are formed and divided.",
+      "B": "Whether the joint family is declining depends partly on whether it is defined by co-residence or by shared obligation.",
+      "C": "The contests over authority within joint households show that the story of decline was right after all, if for the wrong reasons.",
+      "D": "The joint family is essentially unchanged, since migrants remain bound by their families' expectations wherever they live."
+     },
+     "question": "The author would most likely agree with which of the following?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R07-D-06",
+   "passage": [
+    "When collectors began, in the nineteenth century, to travel through the countryside writing down the songs of rural singers, they often approached their task as an act of rescue. The songs, they believed, were ancient and dying, and each singer they encountered was a damaged witness to an original that had once existed in a purer and more complete form. Variation between versions was evidence of decay: a verse forgotten here, a line garbled there, a tune that had wandered from its proper shape. The collector's responsibility, accordingly, was to compare the surviving fragments and reconstruct, as far as the evidence permitted, the song as it had existed before the damage began.",
+    "This picture borrowed its method from the editing of ancient manuscripts, where it makes good sense. A classical text was written once by a particular author, and later copies really are more or less faithful to it. A folk song is a fundamentally different kind of object. It was never fixed in a single authoritative form; it existed only in individual performances, each of which was shaped by the singer's memory, temperament and taste, and by the particular audience and occasion. A singer who shortened a ballad for a restless crowd, or changed the name of a town to one her listeners knew, was not corrupting a text. She was doing what singers of such songs had always done, and what had made the songs worth keeping.",
+    "Seen this way, variation is not the symptom of a song's decline but the very mechanism of its survival. Songs that could be adapted to unfamiliar places and new purposes travelled widely; songs that resisted such adaptation were gradually forgotten. The very versions the collectors regarded as degraded were often the ones in which a song was most alive, because they showed it being fitted to the people who still sang it. There is an irony here. By printing a single standard text, often assembled from several singers, the collectors gave the songs the fixed form they had never had, and later performers sometimes learned from the printed page instead of from other singers.",
+    "It would nevertheless be unfair to dismiss the collectors' work on this account. Without their notebooks a great many songs would be irrecoverably lost, and some of them took care to record variants and the names of the singers they heard. The lesson is narrower. A record of oral music is valuable precisely to the extent that it preserves the variety which the collectors' theory taught them to regard as noise."
+   ],
+   "questions": [
+    {
+     "id": "R07-D-06-1",
+     "type": "RC",
+     "options": {
+      "A": "following an ordinary practice of fitting the song to the audience in front of her.",
+      "B": "making an error that later singers corrected when they learned the song from printed texts.",
+      "C": "departing from the custom of her tradition, which required songs to be sung as they were learned.",
+      "D": "damaging the song in the way the collectors feared, though for an understandable reason."
+     },
+     "question": "The passage suggests that a singer who replaced the name of a town in a ballad with one her listeners knew was"
+    },
+    {
+     "id": "R07-D-06-2",
+     "type": "RC",
+     "options": {
+      "A": "provide evidence that the collectors were trained as classical scholars before they turned to rural music.",
+      "B": "suggest that the editing of manuscripts is as flawed a method as the collectors' reconstruction of songs.",
+      "C": "show that folk songs, like classical texts, descend from single originals that careful editing can recover.",
+      "D": "trace the collectors' method to a field where it suited its object, and so show why it misfitted songs."
+     },
+     "question": "The reference to the editing of ancient manuscripts in paragraph 2 serves mainly to"
+    },
+    {
+     "id": "R07-D-06-3",
+     "type": "RC",
+     "options": {
+      "A": "the sound of rural performances, which the collectors found rough compared with concert singing.",
+      "B": "differences between versions, which the collectors' theory treated as interference obscuring an original song.",
+      "C": "the names of individual singers, which the collectors considered irrelevant to the songs themselves.",
+      "D": "the many songs the collectors judged too corrupt to record and therefore left out of their notebooks."
+     },
+     "question": "In the final sentence, the word 'noise' refers to"
+    },
+    {
+     "id": "R07-D-06-4",
+     "type": "RC",
+     "options": {
+      "A": "A single printed text carefully assembled from the best verses of several singers, with notes explaining each editorial choice.",
+      "B": "A sound recording, made with modern equipment, of the version that most singers in the region now agree is the standard and correct one.",
+      "C": "Handwritten transcriptions of the song from six singers in different villages, each kept separate and noted with the singer's name and the occasion.",
+      "D": "The oldest written version of the song that survives, found in a manuscript that predates every known rural performance."
+     },
+     "question": "Which of the following records of a folk song would the author most likely judge the most valuable?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R05-C-03",
+   "passage": [
+    "When a dominant company is overtaken by a newcomer, the explanation usually offered is some version of complacency: its managers, the story goes, grew comfortable, stopped listening to the market and failed to perceive what was approaching. The story has the appeal of a fable, and it permits the rest of us to believe that an identical fate could be avoided simply by remaining vigilant. Its difficulty is that, in many of the best known cases, the incumbent's managers were neither lazy nor blind. They were doing, carefully and well, exactly what they had been trained to do.",
+    "The pattern runs roughly as follows. A new technology appears that is, at first, worse than the existing one by the measures that the incumbent's best customers care about. It is slower, or less precise, or less durable, but it is cheaper and simpler, and it finds a small market among buyers who were never well served by the established product. The incumbent asks its customers whether they want the new thing, and they say no. It examines the margins, and they are thin. It looks at the size of the market, and it is too small to move a company of its scale. Every one of these judgements is correct, and together they lead the firm to put its money where its profits are. Meanwhile the new technology improves, year by year, until it is good enough for the mainstream, and the incumbent discovers that its careful attention to its best customers has left it with nothing to offer the rest.",
+    "It may be objected that this account is written with the convenient clarity of hindsight, since for every cheap technology that grew up to displace its betters, many others remained toys and disappeared, and an incumbent that chased all of them would have squandered its resources. The objection is fair, but it strengthens rather than weakens the point. If good managers cannot tell in advance which small markets will matter, then vigilance alone cannot be the remedy, because the problem is not a failure to look but a set of rules for deciding what is worth looking at.",
+    "What seems to help is therefore structural rather than psychological: firms that have survived such transitions have often placed the new venture in a separate unit, with its own costs and its own measures of success, small enough that a small market can still excite it. This is no guarantee, since separate units can be starved or smothered by the parent organisation, but the arrangement at least removes the new business from the scrutiny of the rules that would have judged it, correctly by their own lights, not worth the trouble."
+   ],
+   "questions": [
+    {
+     "id": "R05-C-03-1",
+     "type": "RC",
+     "options": {
+      "A": "those customers were secretly switching to the new technology while telling the incumbent that they had no interest in it.",
+      "B": "those customers judged the new technology by standards it did not yet meet, so their advice steered investment away from it.",
+      "C": "those customers demanded lower prices, which reduced the incumbent's margins until it could no longer compete with the newcomer.",
+      "D": "the incumbent spent so heavily on serving them that it had no money left over with which to improve its existing products."
+     },
+     "question": "The passage suggests that the incumbent's 'careful attention to its best customers' contributed to its decline because"
+    },
+    {
+     "id": "R05-C-03-2",
+     "type": "RC",
+     "options": {
+      "A": "introduce a new example of an incumbent that survived a shift in technology by setting up a separate unit.",
+      "B": "argue that incumbents should invest in every cheap technology because any one of them might eventually displace the existing product.",
+      "C": "concede that the complacency explanation offered in paragraph 1 is correct in most of the cases that matter.",
+      "D": "raise an objection to the account and turn it into further support for the author's conclusion."
+     },
+     "question": "In the argument of the passage, paragraph 3 serves mainly to"
+    },
+    {
+     "id": "R05-C-03-3",
+     "type": "RC",
+     "options": {
+      "A": "its existing customers say they do not want the new technology.",
+      "B": "the market for the new technology is too small to matter to a firm of its size.",
+      "C": "its engineers lack the technical skills needed to work with the newer and simpler design.",
+      "D": "the profit margins available from selling the new technology are thin."
+     },
+     "question": "Each of the following is presented in the passage as a reason the incumbent passes over the new technology EXCEPT that"
+    },
+    {
+     "id": "R05-C-03-4",
+     "type": "RC",
+     "options": {
+      "A": "Parent companies usually leave their separate units free of interference, supply them generously with funds and allow them to set their own prices.",
+      "B": "A large firm's criteria for funding projects reflect its size and costs, so a smaller unit with its own measures can value what the parent dismisses.",
+      "C": "A separate unit can reliably predict which of the many cheap new technologies will eventually improve enough to serve the mainstream market of the parent.",
+      "D": "Managers placed in charge of a separate unit are generally more alert to emerging technologies and to new customers than the managers of the parent company."
+     },
+     "question": "The author's recommendation in paragraph 4 depends most on which of the following assumptions?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R05-A-08",
+   "passage": [
+    "Give a group of people an ordinary object, a coffee mug, say, or a pen, and then ask them how much they would accept to sell it; ask another group, who were not given the object, how much they would pay to acquire one. In experiments of this kind the sellers' prices have repeatedly been found to exceed the buyers' by a wide margin, even though the two groups were formed at random and there is no reason to think that the owners care more for mugs. Merely owning a thing, it seems, makes it more valuable to its owner. The finding has come to be known as the endowment effect, and it has become one of the best-known results in behavioural economics.",
+    "The standard interpretation explains it by loss aversion. People, on this view, evaluate outcomes not in absolute terms but as gains and losses relative to a reference point, and losses loom larger than equivalent gains. Once the mug is mine, giving it up registers as a loss, whereas acquiring it, for someone who does not own it, registers only as a gain, and since the loss weighs more heavily, the owner demands more in compensation than the non-owner will pay. The account is economical, and it connects the mug experiments with a wide range of other behaviour, from the reluctance of investors to sell shares that have fallen in value to the stubbornness with which people defend entitlements they have only recently acquired.",
+    "A rival interpretation treats the gap as, at least in part, an artefact of the way such experiments are conducted. Participants who have never sold anything in a laboratory may be unsure what is being asked, may suspect that the experimenter knows the object's true value, or may simply apply a rule from everyday life, never to sell for less than it would cost to replace the thing. When procedures are altered so that participants practise the bidding mechanism and understand that misstating their values cannot help them, some studies have found the gap to shrink considerably. Supporters of this view also point out that professional traders, who buy and sell as a matter of routine, appear to show much less of the effect in the goods they deal in.",
+    "Each interpretation captures something real, and the dispute is less sharp than it is sometimes made to appear. The traders' case is telling not because it refutes loss aversion but because it suggests where loss aversion applies. A dealer who holds a stock of mugs holds them in order to sell them; parting with one is the purpose of having it, and so it does not register as a loss. A person who has been given a mug to use is in a different position, because the mug has already become, in a small way, part of her possessions, and parting with it means giving something up rather than completing a transaction. On this reading, what matters is not ownership as such but the frame in which a thing is held, as something to use or as something to exchange.",
+    "That reading has consequences beyond the laboratory. It implies that the gap between buying and selling prices is not a fixed constant of human nature, to be entered into economic models as a permanent correction, but a variable that depends on how people come to think of what they have. Markets that encourage people to regard their possessions as stock, as resale platforms arguably do, may weaken the effect; arrangements that encourage people to regard what they hold as their own, as long trial periods for products arguably do, may strengthen it. Whether either tendency is desirable is a separate question. The point is that the endowment effect, properly understood, is less a fact about objects or owners than a fact about the relation between them."
+   ],
+   "questions": [
+    {
+     "id": "R05-A-08-1",
+     "type": "RC",
+     "options": {
+      "A": "parting with the mug counts as a loss, which weighs more than the equal gain of acquiring it.",
+      "B": "the owners, though chosen at random, turn out to care more for mugs than the non-owners do.",
+      "C": "owners come to regard the mug as stock to be sold, and so set a price as a dealer would.",
+      "D": "owners suspect that the experimenter knows the true value of the mug and fear underpricing it."
+     },
+     "question": "According to the standard interpretation described in paragraph 2, owners ask more for the mug than non-owners will pay because"
+    },
+    {
+     "id": "R05-A-08-2",
+     "type": "RC",
+     "options": {
+      "A": "illustrate how far beyond the laboratory the loss-aversion account appears to reach.",
+      "B": "suggest that professional traders, who deal routinely in what they hold, are as prone to the effect as anyone else.",
+      "C": "show that the endowment effect is found mainly among people who invest in shares rather than in ordinary goods.",
+      "D": "support the rival interpretation that the gap in prices is an artefact of how experiments are conducted."
+     },
+     "question": "The reference to investors who are reluctant 'to sell shares that have fallen in value' (paragraph 2) serves to"
+    },
+    {
+     "id": "R05-A-08-3",
+     "type": "RC",
+     "options": {
+      "A": "ask far more for it than a buyer would pay, since owning the mug would make it seem more valuable to her.",
+      "B": "show a smaller gap between the prices at which she would sell and buy such a mug than a person given one to use.",
+      "C": "value it as highly as someone who had been given the mug to use and had kept it for some time.",
+      "D": "show a larger gap than participants in the mug experiments, because she paid money for her mug instead of receiving it free."
+     },
+     "question": "The author's reading in paragraph 4 implies that a person who bought a mug at a market stall intending to resell it the next day would most likely"
+    },
+    {
+     "id": "R05-A-08-4",
+     "type": "RC",
+     "options": {
+      "A": "Investors who hold shares that have fallen in value turn out to sell them as readily as shares that have risen in value.",
+      "B": "The gap stays as large as ever among participants who have practised the procedure and know that misstating their values cannot help them.",
+      "C": "Many first-time participants say afterwards that they found the instructions for stating a selling price hard to follow.",
+      "D": "Participants who are given mugs report liking them somewhat more after they have been given them than before."
+     },
+     "question": "Which of the following, if true, would most weaken the rival interpretation presented in paragraph 3?"
+    },
+    {
+     "id": "R05-A-08-5",
+     "type": "RC",
+     "options": {
+      "A": "A bicycle shop owner asked to sell one of the identical bicycles displayed in the showroom.",
+      "B": "A family asked to sell a bicycle that was given to them as a present an hour ago and has not yet been unpacked.",
+      "C": "A family asked to sell a bicycle given to them months ago, which their child has ridden every day since.",
+      "D": "A student who bought a bicycle on a resale platform last week, planning to sell it on again for a profit."
+     },
+     "question": "On the author's reading in paragraphs 4 and 5, which of the following would be expected to show the LARGEST gap between the price asked to sell an item and the price offered to buy an identical one?"
+    }
+   ]
+  }
+ ]
+}

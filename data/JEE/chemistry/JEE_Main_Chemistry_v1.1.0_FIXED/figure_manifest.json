@@ -1,0 +1,490 @@
+[
+  {
+    "id": "JEE-CHEM-0160",
+    "file": "figures/chemistry-001.png",
+    "alt_text": "Schematic square planar arrangement for XeF₄; central atom with 4 bonded surrounding atoms. Supplementary to the textual formula.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0161",
+    "file": "figures/chemistry-002.png",
+    "alt_text": "Schematic linear arrangement for BeCl₂; central atom with 2 bonded surrounding atoms. Supplementary to the textual formula.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0164",
+    "file": "figures/chemistry-003.png",
+    "alt_text": "Schematic tetrahedral arrangement for CH₄; central atom with 4 bonded surrounding atoms. Supplementary to the textual formula.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0166",
+    "file": "figures/chemistry-004.png",
+    "alt_text": "Schematic bent arrangement for H₂O; central atom with 2 bonded surrounding atoms. Supplementary to the textual formula.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0170",
+    "file": "figures/chemistry-005.png",
+    "alt_text": "Schematic trigonal bipyramidal arrangement for PCl₅; central atom with 5 bonded surrounding atoms. Supplementary to the textual formula.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0173",
+    "file": "figures/chemistry-006.png",
+    "alt_text": "Schematic T-shaped arrangement for ClF₃; central atom with 3 bonded surrounding atoms. Supplementary to the textual formula.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0180",
+    "file": "figures/chemistry-007.png",
+    "alt_text": "Schematic trigonal planar arrangement for BF₃; central atom with 3 bonded surrounding atoms. Supplementary to the textual formula.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0188",
+    "file": "figures/chemistry-008.png",
+    "alt_text": "Schematic trigonal pyramidal arrangement for NH₃; central atom with 3 bonded surrounding atoms. Supplementary to the textual formula.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0196",
+    "file": "figures/chemistry-009.png",
+    "alt_text": "Schematic octahedral arrangement for SF₆; central atom with 6 bonded surrounding atoms. Supplementary to the textual formula.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0318",
+    "file": "figures/chemistry-011.png",
+    "alt_text": "Ideal total pressure rises linearly from 40 kPa at x(A)=0 to 135 kPa at x(A)=1. The observed mixture total pressure is 82.75 kPa.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0341",
+    "file": "figures/chemistry-015.png",
+    "alt_text": "Ideal total pressure rises linearly from 40 kPa at x(A)=0 to 115 kPa at x(A)=1. The observed mixture total pressure is 58.75 kPa.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0342",
+    "file": "figures/chemistry-016.png",
+    "alt_text": "Ideal total pressure rises linearly from 40 kPa at x(A)=0 to 130 kPa at x(A)=1. The observed mixture total pressure is 76 kPa.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0343",
+    "file": "figures/chemistry-017.png",
+    "alt_text": "Ideal total pressure rises linearly from 40 kPa at x(A)=0 to 120 kPa at x(A)=1. The observed mixture total pressure is 64 kPa.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0353",
+    "file": "figures/chemistry-018.png",
+    "alt_text": "Ideal total pressure rises linearly from 40 kPa at x(A)=0 to 110 kPa at x(A)=1. The observed mixture total pressure is 54 kPa.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0361",
+    "file": "figures/chemistry-020.png",
+    "alt_text": "Ideal total pressure rises linearly from 40 kPa at x(A)=0 to 100 kPa at x(A)=1. The observed mixture total pressure is 46 kPa.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0390",
+    "file": "figures/chemistry-023.png",
+    "alt_text": "Ideal total pressure rises linearly from 40 kPa at x(A)=0 to 145 kPa at x(A)=1. The observed mixture total pressure is 97.75 kPa.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0395",
+    "file": "figures/chemistry-025.png",
+    "alt_text": "Ideal total pressure rises linearly from 40 kPa at x(A)=0 to 140 kPa at x(A)=1. The observed mixture total pressure is 90 kPa.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0398",
+    "file": "figures/chemistry-026.png",
+    "alt_text": "Ideal total pressure rises linearly from 40 kPa at x(A)=0 to 125 kPa at x(A)=1. The observed mixture total pressure is 69.75 kPa.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0414",
+    "file": "figures/chemistry-028.png",
+    "alt_text": "Ideal total pressure rises linearly from 40 kPa at x(A)=0 to 105 kPa at x(A)=1. The observed mixture total pressure is 49.75 kPa.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0677",
+    "file": "figures/chemistry-030.png",
+    "alt_text": "Concentration observations: at 20 min, 0.455533 M; at 50 min, 0.2735456 M. Curve is decreasing.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0679",
+    "file": "figures/chemistry-031.png",
+    "alt_text": "Total pressure at 0 min is 100 kPa and at 26 min is 210.1342 kPa.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0680",
+    "file": "figures/chemistry-032.png",
+    "alt_text": "Initial signal 22; signal after 30 min 71.28116; completion signal 124. Signal increases toward completion.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0683",
+    "file": "figures/chemistry-033.png",
+    "alt_text": "Arrhenius observations: k=0.0017 s⁻¹ at 300 K and k=0.00459 s⁻¹ at 330 K; ln k is linear in reciprocal temperature.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0685",
+    "file": "figures/chemistry-034.png",
+    "alt_text": "Initial signal 28; signal after 30 min 89.37526; completion signal 136. Signal increases toward completion.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0687",
+    "file": "figures/chemistry-035.png",
+    "alt_text": "Total pressure at 0 min is 100 kPa and at 21 min is 184.61 kPa.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0688",
+    "file": "figures/chemistry-036.png",
+    "alt_text": "Concentration observations: at 20 min, 0.4650258 M; at 50 min, 0.2629839 M. Curve is decreasing.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0691",
+    "file": "figures/chemistry-037.png",
+    "alt_text": "Concentration observations: at 20 min, 0.4093654 M; at 50 min, 0.3032653 M. Curve is decreasing.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0697",
+    "file": "figures/chemistry-038.png",
+    "alt_text": "Total pressure at 0 min is 100 kPa and at 28 min is 218.6861 kPa.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0699",
+    "file": "figures/chemistry-039.png",
+    "alt_text": "Total pressure at 0 min is 100 kPa and at 29 min is 222.6518 kPa.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0705",
+    "file": "figures/chemistry-040.png",
+    "alt_text": "Initial signal 27; signal after 30 min 86.40019; completion signal 134. Signal increases toward completion.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0708",
+    "file": "figures/chemistry-041.png",
+    "alt_text": "Concentration observations: at 20 min, 0.4383546 M; at 50 min, 0.2880195 M. Curve is decreasing.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0716",
+    "file": "figures/chemistry-042.png",
+    "alt_text": "Concentration observations: at 20 min, 0.4173098 M; at 50 min, 0.3000139 M. Curve is decreasing.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0718",
+    "file": "figures/chemistry-043.png",
+    "alt_text": "Concentration observations: at 20 min, 0.4317889 M; at 50 min, 0.2923456 M. Curve is decreasing.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0720",
+    "file": "figures/chemistry-044.png",
+    "alt_text": "Arrhenius observations: k=0.0016 s⁻¹ at 300 K and k=0.00416 s⁻¹ at 330 K; ln k is linear in reciprocal temperature.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0722",
+    "file": "figures/chemistry-045.png",
+    "alt_text": "Total pressure at 0 min is 100 kPa and at 25 min is 205.5267 kPa.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0725",
+    "file": "figures/chemistry-046.png",
+    "alt_text": "Concentration observations: at 20 min, 0.4604664 M; at 50 min, 0.268336 M. Curve is decreasing.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0729",
+    "file": "figures/chemistry-047.png",
+    "alt_text": "Arrhenius observations: k=0.0018 s⁻¹ at 300 K and k=0.00504 s⁻¹ at 330 K; ln k is linear in reciprocal temperature.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0734",
+    "file": "figures/chemistry-048.png",
+    "alt_text": "Total pressure at 0 min is 100 kPa and at 23 min is 195.5908 kPa.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0735",
+    "file": "figures/chemistry-049.png",
+    "alt_text": "Arrhenius observations: k=0.0019 s⁻¹ at 300 K and k=0.00551 s⁻¹ at 330 K; ln k is linear in reciprocal temperature.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0736",
+    "file": "figures/chemistry-050.png",
+    "alt_text": "Arrhenius observations: k=0.0014 s⁻¹ at 300 K and k=0.00336 s⁻¹ at 330 K; ln k is linear in reciprocal temperature.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0737",
+    "file": "figures/chemistry-051.png",
+    "alt_text": "Total pressure at 0 min is 100 kPa and at 24 min is 200.6829 kPa.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0741",
+    "file": "figures/chemistry-052.png",
+    "alt_text": "Initial signal 23; signal after 30 min 74.33766; completion signal 126. Signal increases toward completion.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0747",
+    "file": "figures/chemistry-053.png",
+    "alt_text": "Initial signal 24; signal after 30 min 77.37777; completion signal 128. Signal increases toward completion.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0748",
+    "file": "figures/chemistry-054.png",
+    "alt_text": "Concentration observations: at 20 min, 0.4444909 M; at 50 min, 0.2834199 M. Curve is decreasing.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0750",
+    "file": "figures/chemistry-055.png",
+    "alt_text": "Total pressure at 0 min is 100 kPa and at 27 min is 214.517 kPa.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0753",
+    "file": "figures/chemistry-056.png",
+    "alt_text": "Concentration observations: at 20 min, 0.424779 M; at 50 min, 0.2963583 M. Curve is decreasing.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0756",
+    "file": "figures/chemistry-057.png",
+    "alt_text": "Arrhenius observations: k=0.0015 s⁻¹ at 300 K and k=0.00375 s⁻¹ at 330 K; ln k is linear in reciprocal temperature.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0758",
+    "file": "figures/chemistry-058.png",
+    "alt_text": "Initial signal 29; signal after 30 min 92.33428; completion signal 138. Signal increases toward completion.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0760",
+    "file": "figures/chemistry-059.png",
+    "alt_text": "Total pressure at 0 min is 100 kPa and at 20 min is 178.6939 kPa.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0767",
+    "file": "figures/chemistry-060.png",
+    "alt_text": "Arrhenius observations: k=0.0012 s⁻¹ at 300 K and k=0.00264 s⁻¹ at 330 K; ln k is linear in reciprocal temperature.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0771",
+    "file": "figures/chemistry-061.png",
+    "alt_text": "Initial signal 26; signal after 30 min 83.40896; completion signal 132. Signal increases toward completion.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0777",
+    "file": "figures/chemistry-062.png",
+    "alt_text": "Concentration observations: at 20 min, 0.4502124 M; at 50 min, 0.278584 M. Curve is decreasing.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0784",
+    "file": "figures/chemistry-063.png",
+    "alt_text": "Initial signal 20; signal after 30 min 65.11884; completion signal 120. Signal increases toward completion.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0785",
+    "file": "figures/chemistry-064.png",
+    "alt_text": "Initial signal 25; signal after 30 min 80.40151; completion signal 130. Signal increases toward completion.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0787",
+    "file": "figures/chemistry-065.png",
+    "alt_text": "Total pressure at 0 min is 100 kPa and at 22 min is 190.2377 kPa.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0794",
+    "file": "figures/chemistry-066.png",
+    "alt_text": "Arrhenius observations: k=0.0011 s⁻¹ at 300 K and k=0.00231 s⁻¹ at 330 K; ln k is linear in reciprocal temperature.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0797",
+    "file": "figures/chemistry-067.png",
+    "alt_text": "Arrhenius observations: k=0.001 s⁻¹ at 300 K and k=0.002 s⁻¹ at 330 K; ln k is linear in reciprocal temperature.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0798",
+    "file": "figures/chemistry-068.png",
+    "alt_text": "Initial signal 21; signal after 30 min 68.20823; completion signal 122. Signal increases toward completion.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-0809",
+    "file": "figures/chemistry-069.png",
+    "alt_text": "Arrhenius observations: k=0.0013 s⁻¹ at 300 K and k=0.00299 s⁻¹ at 330 K; ln k is linear in reciprocal temperature.",
+    "source": "Original schematic or mathematical rendering",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-1457",
+    "file": "figures/conformation-newman.png",
+    "alt_text": "Newman projection of butane. Front C2 is a dot; rear C3 is a circle. Methyl and hydrogen labels identify the bonds.",
+    "source": "Original chemical projection",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "JEE-CHEM-1458",
+    "file": "figures/conformation-sawhorse.png",
+    "alt_text": "Sawhorse projection of ethane with front and rear carbon positions marked and all six hydrogen substituents drawn.",
+    "source": "Original chemical projection",
+    "width": 1600,
+    "height": 900
+  }
+]

@@ -1,0 +1,82 @@
+[
+ {
+  "id": "R06-A-08",
+  "category": "E4",
+  "severity": "major",
+  "finding": "Five-question passage was 538 words, below the 570 to 730 range required for 5-question passages.",
+  "fix": "Added one sentence to paragraph 1 elaborating the contingency school's view (tree of life as a record of accidents, intelligible after the fact). Passage now 581 words; all five questions rechecked and unaffected.",
+  "changed": true
+ },
+ {
+  "id": "R06-A-08-5",
+  "category": "E1",
+  "severity": "major",
+  "finding": "Blind solver S1 noted the river option (flood day varies, height fixed) has a fixed-outcome/variable-detail shape that a candidate could defend as a two-level analogy.",
+  "fix": "Rewrote the river option so nothing varies (same snowmelt, same day, same height every year) and updated its defence; it now shows only a fixed outcome with no contingent level.",
+  "changed": true
+ },
+ {
+  "id": "R06-A-07-5",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Blind solver S2 considered the 'central thesis' option before rejecting it on paragraph 4's 'weakest claim' wording.",
+  "fix": "none: both solvers reached the correct answer; paragraph 4 explicitly calls each camp's central answer 'hard to dispute', so the option is clearly excluded.",
+  "changed": false
+ },
+ {
+  "id": "R06-A-05-4",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Defence of the 'puzzle ... left open' option quoted 'in part', which does not appear in the passage.",
+  "fix": "Changed to: it grants that switch rewiring has 'much truth in' it.",
+  "changed": true
+ },
+ {
+  "id": "R06-A-06-3",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Defence of the diversification option quoted 'inherited an emptied world'; the passage reads 'inherits an emptied world' and refers to a marginal group, not the mammals by name.",
+  "fix": "Changed to: already says a marginal group 'inherits an emptied world'.",
+  "changed": true
+ },
+ {
+  "id": "R06-A-06-4",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation said 'so the key contradicts the author'.",
+  "fix": "Changed to 'the correct answer'.",
+  "changed": true
+ },
+ {
+  "id": "R06-A-08-2",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Defence assumed the author's gender ('a judgement of his own'); the passage gives no such information.",
+  "fix": "Changed to 'their own'.",
+  "changed": true
+ },
+ {
+  "id": "R06-A-08-4",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Defence of the 'fluke' option referred to the author as 'he'.",
+  "fix": "Changed to 'the author'.",
+  "changed": true
+ },
+ {
+  "id": "R06-A-01-1, 01-2, 02-3, 03-3, 04-3, 04-4, 05-2, 05-3, 06-2, 06-3, 07-4, 08-2, 08-3, 08-4, 08-5",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "difficulty_reason fields used 'distractor' and 'the key'; in case they surface to students this breaks house style.",
+  "fix": "Replaced with 'wrong option' and 'the correct answer'.",
+  "changed": true
+ },
+ {
+  "id": "R06-A-01",
+  "category": "E6",
+  "severity": "minor",
+  "finding": "The seed-sack and finger-number illustrations are well-known textbook examples (the seed example is associated with a published argument), though the prose is original and nothing is attributed.",
+  "fix": "none: standard teaching illustrations of an idea, not reproduced text; no attribution or invented facts.",
+  "changed": false
+ }
+]

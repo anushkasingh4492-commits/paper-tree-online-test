@@ -1,0 +1,58 @@
+[
+ {
+  "id": "V02-C-001..025 (all)",
+  "category": "E3",
+  "severity": "major",
+  "finding": "Explanations (and several difficulty_reason/misconception texts) referred to 'the key' and 'distractor(s)' in 23 of 25 items, against house style.",
+  "fix": "Replaced 'the key' with 'the correct answer' and 'distractor(s)' with 'wrong option(s)' throughout the file.",
+  "changed": true
+ },
+ {
+  "id": "V02-C-003",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Correct answer said intense grief 'should not be treated as illness', stronger than the paragraph's 'grief that is merely intense should not be hurried'.",
+  "fix": "Reworded to 'Though merely intense grief should not be hurried into treatment'.",
+  "changed": true
+ },
+ {
+  "id": "V02-C-006",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Correct answer was ungrammatical: 'regulate them aiming to accommodate rather than remove them'.",
+  "fix": "Reworded to 'regulate them with the aim of accommodating rather than removing them, while protecting pedestrians'.",
+  "changed": true
+ },
+ {
+  "id": "V02-C-008",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Blind-solver flag: S1 noted the neutral 'each strategy has advantages and costs' option as the trap; both solvers reached the correct answer (letters differ only because of shuffling).",
+  "fix": "none: dismissed; both solvers agree with the correct answer and the neutral option is rightly wrong because it omits the final verdict.",
+  "changed": false
+ },
+ {
+  "id": "V02-C-014",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Defence of the 'memory distorts the past' option was thin: 'imagination keeps improving' an unlived alternative could be read as distortion.",
+  "fix": "Defence now also cites that the short-run finding 'is not false', so early judgements are not called unreliable.",
+  "changed": true
+ },
+ {
+  "id": "V02-C-015",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Correct answer said upward comparison 'often breeds discontent'; the paragraph makes this conditional on comparison being constant and the gap fixed.",
+  "fix": "Changed to 'can motivate but, when constant, breeds discontent'.",
+  "changed": true
+ },
+ {
+  "id": "V02-C-021/V02-C-025",
+  "category": "E7",
+  "severity": "minor",
+  "finding": "Both paragraphs argue that a convenient historical label misleads (period names; 'Silk Road'); similar shape but different subjects and points.",
+  "fix": "none: distinct subjects and arguments (inherited verdicts vs misrepresented structure); acceptable.",
+  "changed": false
+ }
+]

@@ -1,0 +1,42 @@
+[
+ {
+  "id": "V01-F-023",
+  "category": "E1",
+  "severity": "critical",
+  "finding": "Both blind solvers answered 14325 against the key 14352: 'Such markets therefore tend to settle on one or two dominant providers' follows the self-reinforcing-lead sentence as naturally as the 'same feature ... also shields it' sentence does, and the shielding sentence reads well as a closing twist, so the last pair could swap.",
+  "fix": "Rewrote the conclusion to 'Because such a lead both grows and protects itself, these markets tend to settle on ...', which requires the protection sentence before it; key unchanged (14352). Updated explanation and the 14325 trap reason.",
+  "changed": true
+ },
+ {
+  "id": "V01-F-018",
+  "category": "E1",
+  "severity": "major",
+  "finding": "Both blind solvers raised 1234 as arguable: 'Such designs' could refer to the 'small choices about layout' of the opener, with the examples following, and the critics' 'this' could still reach back.",
+  "fix": "Locked the examples before the naming sentence: 'Such designs ... do not forbid anything, since the subscriber can still cancel and the box can still be unticked; ...' now refers to the subscriber and the box introduced only in the examples. Updated explanation and the 1234 trap reason.",
+  "changed": true
+ },
+ {
+  "id": "V01-F-024",
+  "category": "E4",
+  "severity": "minor",
+  "finding": "Labelled Difficult, but the chain is carried by clear markers ('This suggested', 'If the hypothesis was right, however', 'the predicted size and age'); closer to upper Medium.",
+  "fix": "none: label kept to preserve the exact 8/11/6 quota; the observation, hypothesis, prediction, confirmation logic with a 'however' that marks a test rather than an objection is a defensible Difficult discriminator.",
+  "changed": false
+ },
+ {
+  "id": "V01-F-022",
+  "category": "E4",
+  "severity": "minor",
+  "finding": "Labelled Difficult though 'But', 'therefore' and 'thus' make the order fairly quick to read.",
+  "fix": "none: quota fixed; the village-smith example's dependence on the market-size condition rather than on specialisation in general is the intended discriminator.",
+  "changed": false
+ },
+ {
+  "id": "V01-F-015",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Checked 52341 (leaf-dragging first): 'They also drag' needs a prior activity and 'their tunnels' needs the burrowing sentence, so the order is locked.",
+  "fix": "none: correct order is the only defensible one.",
+  "changed": false
+ }
+]

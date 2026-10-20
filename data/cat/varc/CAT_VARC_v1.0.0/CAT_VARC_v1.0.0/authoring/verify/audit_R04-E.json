@@ -1,0 +1,98 @@
+[
+ {
+  "id": "R04-E-07-1",
+  "category": "E1",
+  "severity": "major",
+  "finding": "Solver S2 flag: the correct answer captured only the relocation of the 'who decides' question (paragraphs 2 and 3) and omitted the passage's conclusion that we must choose which failure to risk, so it read as acceptable-best rather than complete for a primary-concern stem.",
+  "fix": "Rewrote the correct option to 'shifts, rather than settles, the question of who decides on intervention, leaving a choice between risks' and extended the explanation to cite the final paragraph.",
+  "changed": true
+ },
+ {
+  "id": "R04-E-04-4",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Correct option compared the effect under doubt with 'what the paradox alone would predict', a muddy baseline since paragraph 3 builds the condition into the paradox itself.",
+  "fix": "Rewrote the comparison as 'less than where they are confident of control' and aligned the explanation.",
+  "changed": true
+ },
+ {
+  "id": "R04-E-06-4",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation (student-facing) said 'In the key'; correct option also noticeably longest (186 vs 168 chars).",
+  "fix": "Changed to 'In the correct answer'; trimmed the correct option to 165 chars without changing its content.",
+  "changed": true
+ },
+ {
+  "id": "R04-E-07-4",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Common misconception (student-facing) began 'Accepting the key'.",
+  "fix": "Changed to 'Accepting this statement'.",
+  "changed": true
+ },
+ {
+  "id": "R04-E-01-1",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "difficulty_reason fields across the file (01-1, 01-4, 02-4, 03-2, 03-4, 04-2, 04-4, 05-1, 05-2, 05-3, 05-4, 06-1, 06-3, 06-4, 07-1, 07-3, 07-4, 07-5, 08-4, 08-5) used 'distractor' and 'the key'; 06-3 also referred to 'the last distractor', meaningless once options are shuffled.",
+  "fix": "Replaced with 'wrong option' / 'the correct answer'; 06-3 now says 'One wrong option'; 07-3 names the option instead of 'the first distractor'.",
+  "changed": true
+ },
+ {
+  "id": "R04-E-08-3",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Correct analogy was clearly the longest option (171 chars vs at most 144), a length cue.",
+  "fix": "Trimmed the correct option to about 150 chars with the same two-sided structure.",
+  "changed": true
+ },
+ {
+  "id": "R04-E-02-3",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Correct option clearly the longest (168 vs at most 136 chars).",
+  "fix": "Tightened wording to about 157 chars; content unchanged.",
+  "changed": true
+ },
+ {
+  "id": "R04-E-01-3",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Misconception put 'non-aligned' in single quotes although the word does not occur in the passage (quotations must match the passage).",
+  "fix": "Removed the quotation marks ('being non-aligned').",
+  "changed": true
+ },
+ {
+  "id": "R04-E-05-4",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Solver notes: S1 flagged that all four keys in this passage were B; S2 noted the assumption is implicit rather than tightly necessary.",
+  "fix": "none: option letters are assigned by the build, so the letter pattern is not a content defect; the assumption is necessary (if an accepted arbiter of just cause existed, the rule would not be 'claimed by both sides'), and every other option is contradicted by the text or irrelevant.",
+  "changed": false
+ },
+ {
+  "id": "R04-E-06-2",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Solver S1 flag: 'respectful' in the correct answer rests only on paragraph 4's credit for the norm's legitimacy, while the author is mostly critical.",
+  "fix": "none: the option is explicitly limited to 'the legitimacy its principle can confer' (paragraph 4, 'public justification') and pairs it with doubt about costs (paragraph 2); both solvers reached it and the other three options are clearly wrong.",
+  "changed": false
+ },
+ {
+  "id": "R04-E-04-4",
+  "category": "E4",
+  "severity": "minor",
+  "finding": "Labelled Difficult, but the answer is close to a direct restatement of paragraph 3 ('the old fear returns'); arguably upper Medium.",
+  "fix": "none: quotas fix Difficult at 9 and no other item in the passage is a better Difficult candidate; the stem is open-ended and two distractors are near-misreadings of the limited claim, so Difficult is defensible.",
+  "changed": false
+ },
+ {
+  "id": "R04-E-08-4",
+  "category": "E4",
+  "severity": "minor",
+  "finding": "Labelled Medium though the condition for success is nearly stated in the last sentence of paragraph 5.",
+  "fix": "none: two wrong options are the paragraph 5 failure modes and must be told apart from the condition, which is Medium-level work; quotas fixed.",
+  "changed": false
+ }
+]

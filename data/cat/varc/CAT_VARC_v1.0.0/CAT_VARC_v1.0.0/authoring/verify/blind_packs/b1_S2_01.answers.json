@@ -1,0 +1,674 @@
+[
+ {
+  "id": "R03-G-08-1",
+  "answer": "D",
+  "working": "P2: 'a member is someone who has made a payment, not someone who has attended a meeting'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-G-08-2",
+  "answer": "D",
+  "working": "P3 reframes decline as 'transformation from above'; P5: 'will not be repaired by urging individuals to join more'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-G-08-3",
+  "answer": "A",
+  "working": "P5 concedes exclusion/pettiness of old bodies and effectiveness of new, then restates loss of 'a school of self-government'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-G-08-4",
+  "answer": "C",
+  "working": "Decline is 'less a withdrawal from below than a transformation from above'; lost 'apprenticeship of democratic citizenship'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-G-08-5",
+  "answer": "B",
+  "working": "Loss is elected officers, budgets, binding votes and local-to-national influence; B restores exactly these. C is the individual-urging remedy rejected.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-G-01-1",
+  "answer": "D",
+  "working": "P1 rejects national-character explanation; P3/P4: rule 'survives among strangers because it can be seen'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-G-01-2",
+  "answer": "A",
+  "working": "P2: 'not because they have become selfish but because no one can say with confidence who arrived first'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-G-01-3",
+  "answer": "D",
+  "working": "P4 concession: queue 'rewards those with time... ignores urgency'; hospital 'orderly and indefensible'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-G-01-4",
+  "answer": "B",
+  "working": "P3: devices that make order legible (painted footprints, single lines) remove doubt; B is a visible single line.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-F-04-1",
+  "answer": "D",
+  "working": "P2: explanation 'hands over the result without the leap'; pleasure lies in listener's own discovery.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-F-04-2",
+  "answer": "C",
+  "working": "P3: failure 'tells us something about humour... exactly the kind of thing analysis can discover'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-F-04-3",
+  "answer": "B",
+  "working": "EXCEPT: P3 says the analyst does not expect to laugh at analysis but nothing says the joke can never amuse again; A, C, D are stated in P4, P3, P2.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-F-04-4",
+  "answer": "D",
+  "working": "P4 defends supplying missing ground (an unfamiliar word/custom/allusion) so listener makes the leap himself; guide supplies former street name, visitors see irony themselves.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-A-07-1",
+  "answer": "A",
+  "working": "P2: 'a way of spreading risk across two places, so that a lost job... or a failed crop... need not be ruinous'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-A-07-2",
+  "answer": "A",
+  "working": "P4: some 'would settle in the city if they could, and return... only because the city offers them nothing to stay for'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-A-07-3",
+  "answer": "A",
+  "working": "P3: 'The exclusion then produces the very evidence that justifies it'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-A-07-4",
+  "answer": "D",
+  "working": "P1: 'The story is not false... But it has acquired the status of a norm, against which other patterns are measured'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-A-07-5",
+  "answer": "C",
+  "working": "P4: groups 'look identical' from outside; P5 measures 'would serve both groups at once'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": "Options A, B, D begin 'would ...' while C begins 'help ...'; the parallelism break singles out C (minor format giveaway). Probably intended 'would help'."
+ },
+ {
+  "id": "R05-E-03-1",
+  "answer": "D",
+  "working": "P1: running is 'rational... once enough people run, the rumour becomes true'; bank sound, fails because believed unsound.",
+  "confidence": "high",
+  "alternative": "Option D says the rumour 'falsely claimed' losses 'already existed'; the rumour only said the bank was 'in trouble'. Close enough, D still clearly best.",
+  "issue": ""
+ },
+ {
+  "id": "R05-E-03-2",
+  "answer": "D",
+  "working": "P2: 'because no one runs, the guarantee is seldom called upon... a promise that, by being believed, makes its own fulfilment unnecessary'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-E-03-3",
+  "answer": "C",
+  "working": "Author's reply rests on depositors' discipline being indiscriminate panic, not scrutiny; C shows pre-insurance depositors discriminated by loan quality and disciplined banks.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-E-03-4",
+  "answer": "A",
+  "working": "P4: task passes to 'large uninsured creditors whose money remains at stake' and 'the limit on cover... decides who still has a reason to care'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-B-05-1",
+  "answer": "D",
+  "working": "P2: 'To distinguish a genuine memory... from a vivid but false impression... we seem to need to know already that the rememberer is the person'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-B-05-2",
+  "answer": "A",
+  "working": "P3: overlapping chains meet the first (transitivity) objection, so old woman = teacher = child holds via the chain; P4 confirms 'The old woman is the child'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-B-05-3",
+  "answer": "B",
+  "working": "P4: 'the theory fails as an account of identity and succeeds as an account of... the degree to which a person is connected to her own history'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-B-05-4",
+  "answer": "A",
+  "working": "P4: identity all-or-nothing vs connection in degrees; practical concerns like keeping old promises track connection. A: same person, weak connection.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-B-08-1",
+  "answer": "C",
+  "working": "P1: normative form adds 'a life which cannot be gathered into a coherent narrative is in some way impoverished or broken'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": "Option C paraphrases P1 closely; D is the descriptive form verbatim, which is the intended trap. Fine but very easy."
+ },
+ {
+  "id": "R01-B-08-2",
+  "answer": "D",
+  "working": "P3: 'A novelist may legitimately omit whatever does not serve the plot; a life conducted on the same principle may lose precisely the evidence it most needs'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-B-08-3",
+  "answer": "D",
+  "working": "P2: 'narrative self-understanding is one way of being a self rather than the condition of being one'; P5 'difference in temperament' not deficiency.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-B-08-4",
+  "answer": "D",
+  "working": "P5: making narrative essential treats non-narrative temperament as a deficiency rather than a difference.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-B-08-5",
+  "answer": "B",
+  "working": "P2: descriptive 'plausible for many people, but its generality is doubtful'; P3: 'The normative claim is more troubling'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-D-06-1",
+  "answer": "A",
+  "working": "P1: 'a slope rather than a window'; P3: 'a set of different sensitivities, declining at different rates for different components'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-D-06-2",
+  "answer": "B",
+  "working": "P2: exposure differences 'travel along with age, and it is hard to tell how much of the outcome each explains'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-D-06-3",
+  "answer": "C",
+  "working": "P3: accent and some grammar sensitive to age, vocabulary not; 'declining at different rates for different components'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-D-06-4",
+  "answer": "B",
+  "working": "A sharp drop at one age with exposure controlled is exactly the window the author rejects; A, C, D are consistent with the author.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-F-02-1",
+  "answer": "A",
+  "working": "P2: 'Records of such households often used the word family to mean this whole working unit' incl. apprentices, servants, labourers.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-F-02-2",
+  "answer": "D",
+  "working": "P3: 'None of this should be romanticised'... harsh hierarchy, not universal; 'not that the old arrangement was better, but that it was different in kind'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-F-02-3",
+  "answer": "C",
+  "working": "EXCEPT: the private refuge governed by affection is the post-industrial ideal (P4) projected backwards; A, B, D are in P2.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-F-02-4",
+  "answer": "C",
+  "working": "P4: 'What changed... was less the strength of family feeling than the range of tasks the household was expected to perform'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-D-08-1",
+  "answer": "B",
+  "working": "P2: 'on neither does reducing the well-being of the better off, by itself, improve anything'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-D-08-2",
+  "answer": "B",
+  "working": "P3: egalitarian claims levelled-down world better 'in one respect' not all things considered; promise kept at terrible cost 'in one respect admirable without thinking that it should have been kept'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-D-08-3",
+  "answer": "B",
+  "working": "P4: 'something that can make a state of affairs better while making it better for no one at all'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-D-08-4",
+  "answer": "C",
+  "working": "P5: relational egalitarian 'owes us an account of when such differences begin to corrode equal standing'; P4 resources matter when they turn into inequalities of standing.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-D-08-5",
+  "answer": "B",
+  "working": "P3 defence succeeds; P4 'but at a price' (impersonal); relational view escapes objection though distribution question remains open.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-E-01-1",
+  "answer": "D",
+  "working": "P4: difference is 'who holds the map'; danger of commercial version is that 'it quietly takes the act of definition away'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-E-01-2",
+  "answer": "B",
+  "working": "P1: stamp matters 'because of the place it occupies in a series, and its value... rises sharply as the series nears its end'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-E-01-3",
+  "answer": "A",
+  "working": "P2: purchase becomes 'a step towards a whole that the buyer did not know he wanted until he was shown its outline'; every blank a reproach.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-E-01-4",
+  "answer": "D",
+  "working": "Danger is loss of the act of definition; D: a self-defined collection starts being judged against a seller's checklist. A is self-defined passion, C is self-definition.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-D-05-1",
+  "answer": "C",
+  "working": "P1: 'They took easy to mean what people find easy and hard to mean what people find hard'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-D-05-2",
+  "answer": "D",
+  "working": "Contrast with 'expensive' and P2 'how much computation it requires'; cheap = little effort/computation to mechanise.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-D-05-3",
+  "answer": "B",
+  "working": "P3: hard jobs involve varied unstructured physical environments and objects; rule-based jobs (A, C, D) can be written down. B: each chair built and damaged differently.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-D-05-4",
+  "answer": "D",
+  "working": "P4: 'being hard to automate is not the same as being well rewarded... abundance keeps wages low'. A, B, C follow from P3/P4.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-F-04-1",
+  "answer": "D",
+  "working": "P2: 'The lesson is half right... none of these images was the whole truth... But to call them mere fashions is to miss what each one got right'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-F-04-2",
+  "answer": "B",
+  "working": "P2: 'The computer captured the idea that what matters... is the information they carry and the transformations performed on it, rather than the stuff'. A and D are the misleading features in P3.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-F-04-3",
+  "answer": "D",
+  "working": "Reply: each metaphor 'made some feature of the nervous system thinkable'; if those ideas predated the metaphors, the metaphors did not contribute them.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-F-04-4",
+  "answer": "A",
+  "working": "P2 each got something right; P4 'use it while keeping an account of where it fails... avoid... mistaking the tool for the thing'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-F-02-1",
+  "answer": "B",
+  "working": "P2: 'the small, accidental difference can harden into an enormous gap... not because anyone judged it worse but because no one was shown it'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-F-02-2",
+  "answer": "C",
+  "working": "P3: hope 'depended on people actually encountering that work, and a ranking system that rewards prior popularity makes such encounters rarer'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-F-02-3",
+  "answer": "A",
+  "working": "Hits differing by group according to early chance shows outcomes driven by exposure loop, not intrinsic preference. B supports fragmentation; C is non-algorithmic.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-F-02-4",
+  "answer": "A",
+  "working": "P4 last sentence: remedy lies 'in asking how much of what looks like popular demand is an echo of earlier exposure'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": "Option A lifts the passage's final sentence almost verbatim ('an echo of earlier exposure'); easy giveaway for a remedy question."
+ },
+ {
+  "id": "R06-A-06-1",
+  "answer": "C",
+  "working": "P1: 'species with narrow diets, small ranges or slow breeding are more likely to vanish when conditions shift'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-A-06-2",
+  "answer": "C",
+  "working": "P2: traits 'had not been selected for their value in a catastrophe of this kind... They were, from the point of view of the crisis, accidents'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-A-06-3",
+  "answer": "B",
+  "working": "Claim: mammals' survival owed to catastrophe traits, not superiority as mammals. B shows mammals lacking those traits died too, so survival tracked size/diet, not mammalhood.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-A-06-4",
+  "answer": "A",
+  "working": "P4: 'This does not mean that mass extinctions are pure lotteries. Survival in them is selective; it simply selects for different things'. B, C, D stated.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-B-05-1",
+  "answer": "C",
+  "working": "P1 contrast with workshop examples; P2: textbook problem labelled vs real decision with no label; unfamiliar form.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-B-05-2",
+  "answer": "C",
+  "working": "P2: 'Recognising a pattern in a tidy example is a different skill from noticing it in a messy situation, and teaching the first does not automatically produce the second'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-B-05-3",
+  "answer": "C",
+  "working": "P1: participants can 'spot them in descriptions of other people's reasoning'; P2: instruction 'supplying a vocabulary for diagnosing colleagues without unsettling one's own sense of seeing clearly'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-B-05-4",
+  "answer": "D",
+  "working": "P3: procedure 'does not need its members to have become wiser. It builds the correction into the routine'; merit only holds if procedures work despite unchanged bias.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-A-06-1",
+  "answer": "B",
+  "working": "P4: 'flat and round are not grades of achievement but different tools... a criticism that rewards only one of them will misread every novel in which both are at work'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-A-06-2",
+  "answer": "A",
+  "working": "P3: 'funny the third time precisely because he could not have done otherwise'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-A-06-3",
+  "answer": "A",
+  "working": "P2: fixity 'is how the novel registers the pressure of a world that does not bend, against which its few changing figures can be measured'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-A-06-4",
+  "answer": "B",
+  "working": "P2 claims society is felt partly through unchanging figures; B says readers learn the society's pressures almost entirely through changing characters.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-B-06-1",
+  "answer": "D",
+  "working": "P2: king with colonial army backing, 'the checks that had limited him lost much of their force'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-B-06-2",
+  "answer": "D",
+  "working": "EXCEPT: P3 custom 'became a code that could be changed only by the administration'; A, B, C stated.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-B-06-3",
+  "answer": "D",
+  "working": "Architects claimed preservation; P4: lasting effect 'not the preservation of old authority... but the creation of a new kind of authority... answering upward to the state'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-B-06-4",
+  "answer": "C",
+  "working": "P4: 'It would be wrong... to conclude that tradition was simply invented'; elders' agency; then 'That is precisely what makes indirect rule instructive' and conclusion.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-F-01-1",
+  "answer": "B",
+  "working": "P1: listener-aid explanation 'incomplete'; P2: 'gesture also does something for the person who produces it'; P3 lightens thinking.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-F-01-2",
+  "answer": "C",
+  "working": "P2: 'A habit that persists when it can no longer inform anyone is unlikely to be explained entirely by what it does for others'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-F-01-3",
+  "answer": "A",
+  "working": "Economical = parsimonious: explains persistence of gesture with no listener without contrived additional assumptions.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-F-01-4",
+  "answer": "A",
+  "working": "P3: 'Such children are often found to be on the verge of learning the correct method'; P4 teacher 'may miss what the pupil is close to understanding'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-B-01-1",
+  "answer": "C",
+  "working": "P1-P2 rebut 'confuse poverty with inequality'; P3 'This does not mean that relative measures can stand alone'; P4 read both together.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-B-01-2",
+  "answer": "D",
+  "working": "P3: 'a household whose income has not changed may be counted as having escaped poverty while its circumstances are no better'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-B-01-3",
+  "answer": "D",
+  "working": "P2: being poor 'has meant being unable to do what one's neighbours take for granted... requirements are set by the society one lives in'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-B-01-4",
+  "answer": "C",
+  "working": "P2: requirements 'rise as that society grows richer'; relative lines 'track this moving threshold of participation'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ }
+]

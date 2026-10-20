@@ -1,0 +1,22 @@
+[
+ {
+  "id": "R07-F-08-2",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "B",
+    "key": "B",
+    "working": "P3: author can object to her own work altered and passed off as hers.",
+    "alternative": "",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "D",
+    "key": "D",
+    "working": "P3: an author can object to 'having her own work altered and passed off as hers'; D is exactly that.",
+    "alternative": "",
+    "issue": "Minor: 'under her name' is slightly ambiguous between author and reader, though either reading still points to D."
+   }
+  }
+ }
+]

@@ -1,0 +1,58 @@
+[
+ {
+  "id": "R01-G-03-4",
+  "category": "E1",
+  "severity": "major",
+  "finding": "Distractor about the apprentice later learning to see many uses in timber others pass by would, if added, make the story's moral 'find more uses', which arguably also weakens the author's reading (the story critiques the usefulness lens); its defence claiming it is neutral was not secure.",
+  "fix": "Replaced with a neutral addition (the apprentice doubts a tree could really speak) and rewrote its defence.",
+  "changed": true
+ },
+ {
+  "id": "R01-G-03",
+  "category": "E6",
+  "severity": "minor",
+  "finding": "In the Zhuangzi the tree's dream speech concerns fruit trees that are stripped and do not live out their years; the line about fine-timber trees being cut down belongs to a neighbouring story, so the retelling slightly conflated sources.",
+  "fix": "Passage now says fruit trees 'are stripped and broken and never live out their natural years'; checked all four questions, quoted phrase 'stripped and broken' still matches.",
+  "changed": true
+ },
+ {
+  "id": "R01-G-04-3",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Blind-solver flag (S1): the key attacks only the first strand of the paragraph 3 objection (asymmetric attitudes); the 'More importantly' strand (goods never ours to lose) survives it. Still the only option bearing on the objection, both solvers reached the key.",
+  "fix": "Kept key; explanation now acknowledges the second strand and states why the key is still the strongest weakener.",
+  "changed": true
+ },
+ {
+  "id": "R01-G-01-3",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Misconception called the passage's 'succeed' sarcastic; the tone is ironic rather than sarcastic.",
+  "fix": "Changed 'sarcastic' to 'ironic'.",
+  "changed": true
+ },
+ {
+  "id": "R01-G-06-2",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Misconception put paraphrases ('does not need', 'spends time apart') in single quotes, which reads as quotation from the passage though neither phrase appears there.",
+  "fix": "Rewrote the misconception without pseudo-quotations.",
+  "changed": true
+ },
+ {
+  "id": "R01-G-07-3",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Misconception quoted 'revise his account', which matches neither the passage nor the option wording.",
+  "fix": "Reworded to describe the option without a pseudo-quotation.",
+  "changed": true
+ },
+ {
+  "id": "R01-G-02 / R01-G-05",
+  "category": "E7",
+  "severity": "minor",
+  "finding": "Stoic dichotomy of control (02) and Gita action without fruits (05) are separately claimed subjects but share a core idea (worth not hostage to outcomes); application items 02-2 (lawyer) and 05-2 (teacher) and attitude items 02-4 and 05-4 have parallel key shapes.",
+  "fix": "none: subjects are distinct traditions and distinct claims (05 turns on results as information to adjust action, 02 on the two-bin problem); keys hinge on different features, so not true duplicates.",
+  "changed": false
+ }
+]

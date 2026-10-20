@@ -1,0 +1,3398 @@
+[
+  {
+    "unit": 1,
+    "key": "calibrated_annulus",
+    "topic": "Calibration and correlated errors",
+    "stem": "An instrument reports radius s = a r + b, where r is the true radius in cm. Exact radius standards {r1} and {r2} cm give readings {s1} and {s2} cm. A hollow cylinder gives outer and inner readings {so} and {si} cm; its exact length is {L} cm and mass {m} g. After calibration, a single common additive reading error of magnitude at most {ds} cm affects BOTH specimen readings in the same direction. There are no other errors. Use first-order maximum uncertainty and π = 3.14.",
+    "variants": [
+      {
+        "r1": 1,
+        "r2": 3,
+        "s1": 1.12,
+        "s2": 3.16,
+        "so": 2.14,
+        "si": 1.12,
+        "L": 10,
+        "m": 942,
+        "ds": 0.01
+      },
+      {
+        "r1": 1,
+        "r2": 4,
+        "s1": 1.04,
+        "s2": 4.1,
+        "so": 3.08,
+        "si": 2.06,
+        "L": 5,
+        "m": 785,
+        "ds": 0.02
+      }
+    ],
+    "derived": [
+      [
+        "a",
+        "(s2-s1)/(r2-r1)"
+      ],
+      [
+        "b",
+        "s1-a*r1"
+      ],
+      [
+        "ro",
+        "(so-b)/a"
+      ],
+      [
+        "ri",
+        "(si-b)/a"
+      ],
+      [
+        "rho",
+        "m/(3.14*(ro**2-ri**2)*L)"
+      ],
+      [
+        "err",
+        "100*2*ds/(a*(ro+ri))"
+      ],
+      [
+        "absrho",
+        "rho*err/100"
+      ]
+    ],
+    "tasks": [
+      [
+        "rho",
+        "Find the corrected material density.",
+        "g/cm³"
+      ],
+      [
+        "err",
+        "Find the maximum percentage uncertainty of that density.",
+        "%"
+      ],
+      [
+        "absrho",
+        "Find the maximum absolute uncertainty of that density.",
+        "g/cm³"
+      ]
+    ],
+    "explanation": "Two standards give a={a} and b={b} cm. Thus R={ro}, r={ri} cm and ρ={rho} g/cm³. The common error cancels in R−r. Since R²−r²=(R−r)(R+r), its fractional error is 2δs/[a(R+r)], not the sum of two independent radius errors. Hence the density uncertainty is {err}% or {absrho} g/cm³.",
+    "reason": "Infer scale and zero calibration, reconstruct annular geometry and distinguish a common error from independent radius errors.",
+    "checks": []
+  },
+  {
+    "unit": 1,
+    "key": "resistance_loading_error",
+    "topic": "Instrument loading and uncertainty",
+    "stem": "A voltmeter of resistance {Rv} Ω is connected across an unknown wire. An ideal ammeter upstream reads the combined wire and voltmeter current. The readings are {V} V and {I} A. The wire length is {L} m; its diameter reading is {d} mm with a positive zero error {z} mm. Maximum independent errors are {dv} V in voltage and {di} A in current; all other data are exact. Use π=3.14 and first-order bounds.",
+    "variants": [
+      {
+        "Rv": 100,
+        "V": 2,
+        "I": 0.22,
+        "L": 2,
+        "d": 0.55,
+        "z": 0.05,
+        "dv": 0.01,
+        "di": 0.001
+      },
+      {
+        "Rv": 200,
+        "V": 3,
+        "I": 0.165,
+        "L": 3,
+        "d": 0.64,
+        "z": 0.04,
+        "dv": 0.015,
+        "di": 0.001
+      }
+    ],
+    "derived": [
+      [
+        "J",
+        "I-V/Rv"
+      ],
+      [
+        "R",
+        "V/J"
+      ],
+      [
+        "rho",
+        "R*3.14*((d-z)*1e-3)**2/(4*L)"
+      ],
+      [
+        "rel",
+        "100*(I*dv+V*di)/(V*J)"
+      ],
+      [
+        "drho",
+        "rho*rel/100"
+      ]
+    ],
+    "tasks": [
+      [
+        "rho",
+        "Find the corrected wire resistivity.",
+        "Ω m"
+      ],
+      [
+        "rel",
+        "Find the maximum percentage uncertainty of corrected resistivity.",
+        "%"
+      ],
+      [
+        "drho",
+        "Find the maximum absolute uncertainty of corrected resistivity.",
+        "Ω m"
+      ]
+    ],
+    "explanation": "The wire current is J=I−V/Rv={J} A, so R=V/J={R} Ω and ρ={rho} Ω m. Use R=V/(I−V/Rv) before differentiating: |∂R/∂V|=I/J² and |∂R/∂I|=V/J². Thus δR/R=(IδV+VδI)/(VJ)={rel}%, giving δρ={drho} Ω m. Treating V and J as independent overcounts their shared voltage error.",
+    "reason": "Correct current loading and diameter zero error; differentiate the corrected expression while preserving the correlation caused by voltage subtraction.",
+    "checks": []
+  },
+  {
+    "unit": 2,
+    "key": "rebounding_projectile",
+    "topic": "Projectile motion with an impact",
+    "stem": "A particle is launched from (0,0) with velocity ({ux} i + {uy} j) m/s. It strikes a smooth vertical wall at x={wall} m. The coefficient of restitution for the normal velocity is {e}; tangential velocity is unchanged. Gravity is 10 m/s² downward; the floor is y=0. The wall extends above the impact. Ignore air resistance.",
+    "variants": [
+      {
+        "ux": 10,
+        "uy": 20,
+        "wall": 10,
+        "e": 0.5
+      },
+      {
+        "ux": 12,
+        "uy": 25,
+        "wall": 18,
+        "e": 0.4
+      }
+    ],
+    "derived": [
+      [
+        "t",
+        "wall/ux"
+      ],
+      [
+        "y",
+        "uy*t-5*t*t"
+      ],
+      [
+        "vy",
+        "uy-10*t"
+      ],
+      [
+        "flight",
+        "(vy+sqrt(vy*vy+20*y))/10"
+      ],
+      [
+        "land",
+        "wall-e*ux*flight"
+      ],
+      [
+        "speed",
+        "sqrt((e*ux)**2+(vy-10*flight)**2)"
+      ],
+      [
+        "returnheight",
+        "y+vy*(wall/(e*ux))-5*(wall/(e*ux))**2"
+      ]
+    ],
+    "tasks": [
+      [
+        "land",
+        "Find the x-coordinate at which it first reaches the floor after impact.",
+        "m"
+      ],
+      [
+        "speed",
+        "Find its speed just before that floor impact.",
+        "m/s"
+      ],
+      [
+        "returnheight",
+        "Extend the same post-wall trajectory mathematically to x=0. Find its y-coordinate there (a negative value means the actual floor intercept happened earlier).",
+        "m"
+      ]
+    ],
+    "explanation": "At the wall t={t} s, y={y} m and vy={vy} m/s. The impact changes vx to −e ux only. The positive root of y+vy τ−5τ²=0 is τ={flight} s. This gives floor coordinate {land} m and speed {speed} m/s. The x=0 extrapolation uses τ=wall/(e ux), giving y={returnheight} m; it is not an extra physical flight through the floor.",
+    "reason": "Separate two ballistic stages, apply restitution only to the normal component, select the physical landing root and interpret a boundary crossing.",
+    "checks": []
+  },
+  {
+    "unit": 2,
+    "key": "meeting_braking",
+    "topic": "Delayed pursuit with a speed limit",
+    "stem": "Car A passes x=0 at t=0 with constant speed {v} m/s. Car B starts from rest at x=0 at t={delay} s, accelerates at {a} m/s² until reaching its speed limit {w} m/s, and then travels at that limit. Both move in +x. Find the first catch after B starts. The stated data do not permit a catch during acceleration.",
+    "variants": [
+      {
+        "v": 10,
+        "delay": 4,
+        "a": 2,
+        "w": 15
+      },
+      {
+        "v": 12,
+        "delay": 3,
+        "a": 3,
+        "w": 18
+      }
+    ],
+    "derived": [
+      [
+        "ta",
+        "w/a"
+      ],
+      [
+        "xb",
+        "w*w/(2*a)"
+      ],
+      [
+        "gap",
+        "v*(delay+ta)-xb"
+      ],
+      [
+        "coast",
+        "gap/(w-v)"
+      ],
+      [
+        "catch",
+        "delay+ta+coast"
+      ],
+      [
+        "position",
+        "v*catch"
+      ],
+      [
+        "separation",
+        "v*(delay+v/a)-v*v/(2*a)"
+      ]
+    ],
+    "tasks": [
+      [
+        "catch",
+        "Find the clock time of the catch.",
+        "s"
+      ],
+      [
+        "position",
+        "Find the catch position measured from x=0.",
+        "m"
+      ],
+      [
+        "separation",
+        "Find the maximum separation A minus B before the catch.",
+        "m"
+      ]
+    ],
+    "explanation": "B reaches its limit after {ta} s at x={xb} m; the gap then is {gap} m. It takes {coast} s to close at w−v. Thus tcatch={catch} s and xcatch={position} m. The gap first grows and then shrinks: its maximum occurs when B reaches speed v, at elapsed B-time v/a, and equals {separation} m.",
+    "reason": "Use separate clocks and acceleration/coasting regimes; maximise relative separation at equal speeds rather than at the regime boundary.",
+    "checks": []
+  },
+  {
+    "unit": 3,
+    "key": "stacked_threshold",
+    "topic": "Static friction and coupled blocks",
+    "stem": "A block of mass {m} kg rests on a block of mass {M} kg on a smooth horizontal floor. The upper/lower static and kinetic friction coefficients are {us} and {uk}. A horizontal force {F} N is applied to the LOWER block from rest. Take g=10 m/s². The applied force is above the threshold for slip. The blocks remain in contact horizontally for the time {t} s.",
+    "variants": [
+      {
+        "m": 2,
+        "M": 3,
+        "us": 0.4,
+        "uk": 0.3,
+        "F": 30,
+        "t": 2
+      },
+      {
+        "m": 3,
+        "M": 5,
+        "us": 0.3,
+        "uk": 0.2,
+        "F": 40,
+        "t": 1.5
+      }
+    ],
+    "derived": [
+      [
+        "limit",
+        "us*(m+M)*10"
+      ],
+      [
+        "au",
+        "uk*10"
+      ],
+      [
+        "al",
+        "(F-uk*m*10)/M"
+      ],
+      [
+        "relative",
+        "(al-au)*t*t/2"
+      ],
+      [
+        "heat",
+        "uk*m*10*relative"
+      ],
+      [
+        "ratio",
+        "M*al*al/(m*au*au)"
+      ]
+    ],
+    "tasks": [
+      [
+        "relative",
+        "Find the lower block’s displacement relative to the upper block after that time.",
+        "m"
+      ],
+      [
+        "heat",
+        "Find the thermal energy generated at the interface over that time.",
+        "J"
+      ],
+      [
+        "ratio",
+        "Find the lower-to-upper kinetic-energy ratio at that time.",
+        ""
+      ]
+    ],
+    "explanation": "Sticking would require friction mF/(m+M); its limiting force is {limit} N. Since F exceeds that, use kinetic friction. The accelerations are au={au} and al={al} m/s². Relative sliding distance is {relative} m, heat is friction times that distance, {heat} J. The kinetic-energy ratio is M al²/(m au²)={ratio}. Frictional heat is not friction times either individual ground displacement.",
+    "reason": "Test sticking, switch to kinetic friction, solve two accelerations and distinguish relative sliding work from ground-frame work.",
+    "checks": []
+  },
+  {
+    "unit": 3,
+    "key": "elevator_incline",
+    "topic": "Accelerated support and friction",
+    "stem": "A fixed incline inside an elevator has sinθ={s} and cosθ={c}. A block of mass {m} kg initially rests on it. The elevator accelerates upward at {a} m/s². A force P parallel UP the incline is increased slowly until upward motion is impending. The static and kinetic friction coefficients are {us} and {uk}. P is then held at that threshold while the block slides upward through {d} m relative to the elevator. Take g=10 m/s².",
+    "variants": [
+      {
+        "s": 0.6,
+        "c": 0.8,
+        "m": 2,
+        "a": 2,
+        "us": 0.5,
+        "uk": 0.25,
+        "d": 3
+      },
+      {
+        "s": 0.8,
+        "c": 0.6,
+        "m": 3,
+        "a": 5,
+        "us": 0.4,
+        "uk": 0.2,
+        "d": 2
+      }
+    ],
+    "derived": [
+      [
+        "N",
+        "m*(10+a)*c"
+      ],
+      [
+        "P",
+        "m*(10+a)*s+us*N"
+      ],
+      [
+        "ar",
+        "(us-uk)*N/m"
+      ],
+      [
+        "speed",
+        "sqrt(2*ar*d)"
+      ],
+      [
+        "work",
+        "P*d"
+      ],
+      [
+        "heat",
+        "uk*N*d"
+      ]
+    ],
+    "tasks": [
+      [
+        "speed",
+        "Find the final speed relative to the elevator.",
+        "m/s"
+      ],
+      [
+        "work",
+        "Find the work done by P in the elevator frame over that motion.",
+        "J"
+      ],
+      [
+        "heat",
+        "Find the heat produced by sliding friction.",
+        "J"
+      ]
+    ],
+    "explanation": "Effective downward gravity is g+a. Thus N={N} N. At impending upward slip, friction is downward and P={P} N. Once sliding begins, friction falls to μkN, leaving relative acceleration {ar} m/s². Hence speed={speed} m/s, applied-force work={work} J and frictional heat={heat} J.",
+    "reason": "Resolve effective gravity in a noninertial frame, distinguish impending and sliding friction, then use the appropriate relative-frame work and motion.",
+    "checks": []
+  },
+  {
+    "unit": 3,
+    "key": "pulley_inverse_friction",
+    "topic": "Inferring friction from reversed motion",
+    "stem": "A {m} kg block on a horizontal rough table is connected over a smooth massless pulley to a hanging mass. In one trial a hanging mass {h1} kg descends with acceleration {a1} m/s². In another, a hanging mass {h2} kg is initially pulled upward and, while still moving upward, has downward acceleration {a2} m/s². The same kinetic friction coefficient applies. An additional hanging mass {h3} kg is then used and moves downward from rest. Take g=10 m/s².",
+    "variants": [
+      {
+        "m": 4,
+        "h1": 3,
+        "a1": 3.142857142857143,
+        "h2": 2,
+        "a2": 4.666666666666667,
+        "h3": 5
+      },
+      {
+        "m": 6,
+        "h1": 4,
+        "a1": 2.2,
+        "h2": 3,
+        "a2": 5.333333333333333,
+        "h3": 6
+      }
+    ],
+    "derived": [
+      [
+        "mu",
+        "((m+h2)*a2-10*h2)/(10*m)"
+      ],
+      [
+        "acc",
+        "(10*h3-mu*m*10)/(m+h3)"
+      ],
+      [
+        "T",
+        "h3*(10-acc)"
+      ],
+      [
+        "time",
+        "sqrt(4/acc)"
+      ],
+      [
+        "work",
+        "mu*m*10*2"
+      ]
+    ],
+    "tasks": [
+      [
+        "T",
+        "Find the tension in the third trial.",
+        "N"
+      ],
+      [
+        "time",
+        "Find the time to descend 2 m in the third trial.",
+        "s"
+      ],
+      [
+        "work",
+        "Find the heat generated in the third trial over a 2 m descent.",
+        "J"
+      ]
+    ],
+    "explanation": "For downward motion, (m+h1)a1=h1g−μmg. During upward motion, friction reverses, so (m+h2)a2=h2g+μmg. Both give μ={mu}. With h3, a={acc} m/s² and T=h3(g−a)={T} N. The two-metre descent takes {time} s and generates {work} J of heat.",
+    "reason": "Infer friction with a direction reversal, distinguish acceleration from velocity, and solve the new coupled system.",
+    "checks": [
+      "(m+h1)*a1-10*h1+mu*m*10"
+    ]
+  },
+  {
+    "unit": 4,
+    "key": "vertical_embedding_spring",
+    "topic": "Inelastic impact and a vertical spring",
+    "stem": "A block of mass {M} kg hangs at rest from a vertical spring of stiffness {k} N/m. A projectile of mass {m} kg moving vertically downward embeds in the block with speed {u} m/s. The impact is brief. Thereafter the spring is lossless and gravity is 10 m/s². Measure subsequent downward displacement from the PRE-IMPACT equilibrium.",
+    "variants": [
+      {
+        "M": 2,
+        "m": 0.5,
+        "k": 100,
+        "u": 10
+      },
+      {
+        "M": 3,
+        "m": 1,
+        "k": 80,
+        "u": 8
+      }
+    ],
+    "derived": [
+      [
+        "mass",
+        "M+m"
+      ],
+      [
+        "v",
+        "m*u/mass"
+      ],
+      [
+        "delta",
+        "m*10/k"
+      ],
+      [
+        "omega",
+        "sqrt(k/mass)"
+      ],
+      [
+        "A",
+        "sqrt(delta*delta+(v/omega)**2)"
+      ],
+      [
+        "maxdown",
+        "delta+A"
+      ],
+      [
+        "maxforce",
+        "M*10+k*maxdown"
+      ],
+      [
+        "gravwork",
+        "mass*10*maxdown"
+      ]
+    ],
+    "tasks": [
+      [
+        "maxdown",
+        "Find the greatest subsequent downward displacement.",
+        "m"
+      ],
+      [
+        "maxforce",
+        "Find the greatest spring tension after impact.",
+        "N"
+      ],
+      [
+        "gravwork",
+        "Find the work done by gravity from just after impact to the lowest subsequent position.",
+        "J"
+      ]
+    ],
+    "explanation": "During impact momentum gives v={v} m/s. The added mass shifts equilibrium down by δ={delta} m. The post-impact SHM has ω={omega} rad/s and amplitude A=√[δ²+(v/ω)²]={A} m about the NEW equilibrium. Thus the maximum displacement from the old position is {maxdown} m and maximum tension {maxforce} N. The subsequent gravitational work is (M+m)g times this displacement, {gravwork} J.",
+    "reason": "Separate impulse from subsequent energy, account for the equilibrium shift, and keep the reference position and impact loss distinct.",
+    "checks": []
+  },
+  {
+    "unit": 4,
+    "key": "rough_rebound",
+    "topic": "Spring impact, friction and return motion",
+    "stem": "A block of mass {m} kg approaches an initially uncompressed spring with speed {u} m/s on a horizontal rough track. The spring constant is {k} N/m and the kinetic friction coefficient is {mu}; take g=10 m/s². The block is not attached to the spring. It compresses the spring, reverses and leaves it; assume the maximum static friction coefficient also equals {mu}.",
+    "variants": [
+      {
+        "m": 1,
+        "k": 100,
+        "u": 6,
+        "mu": 0.2
+      },
+      {
+        "m": 2,
+        "k": 80,
+        "u": 5,
+        "mu": 0.25
+      }
+    ],
+    "derived": [
+      [
+        "f",
+        "mu*m*10"
+      ],
+      [
+        "x",
+        "(-f+sqrt(f*f+k*m*u*u))/k"
+      ],
+      [
+        "exit",
+        "sqrt((k*x*x-2*f*x)/m)"
+      ],
+      [
+        "after",
+        "exit*exit/(20*mu)"
+      ],
+      [
+        "loss",
+        "2*f*x"
+      ]
+    ],
+    "tasks": [
+      [
+        "exit",
+        "Find the speed when the block returns to the spring’s natural length.",
+        "m/s"
+      ],
+      [
+        "after",
+        "Find the distance travelled after leaving the spring until it next stops.",
+        "m"
+      ],
+      [
+        "loss",
+        "Find the heat generated during the entire contact with the spring.",
+        "J"
+      ]
+    ],
+    "explanation": "During compression the energy equation is kx²/2+fx=mu²/2. Its positive solution is x={x} m. Here kx>f, so reversal occurs; the return energy is kx²/2−fx. The exit speed is {exit} m/s, the later stopping distance {after} m and contact heat 2fx={loss} J.",
+    "reason": "Solve a quadratic energy balance, verify reversal against static friction, reverse the friction work sign relative to displacement and separate contact from free sliding.",
+    "checks": []
+  },
+  {
+    "unit": 4,
+    "key": "oblique_collision",
+    "topic": "Two-dimensional elastic collision",
+    "stem": "A particle of mass {m} kg moving along +x at {u} m/s collides elastically with an identical particle initially at rest on a smooth plane. After collision the incident particle travels at angle {theta}° to +x with positive x- and y-components. The initially stationary particle then climbs a smooth incline whose direction is aligned with its outgoing horizontal velocity. Take g=10 m/s².",
+    "variants": [
+      {
+        "m": 2,
+        "u": 10,
+        "theta": 30
+      },
+      {
+        "m": 3,
+        "u": 12,
+        "theta": 60
+      }
+    ],
+    "derived": [
+      [
+        "v1",
+        "u*cos(theta*pi/180)"
+      ],
+      [
+        "v2",
+        "u*sin(theta*pi/180)"
+      ],
+      [
+        "height",
+        "v2*v2/20"
+      ],
+      [
+        "impulse",
+        "m*v2"
+      ],
+      [
+        "ratio",
+        "v2*v2/(v1*v1)"
+      ]
+    ],
+    "tasks": [
+      [
+        "height",
+        "Find the greatest height reached by the second particle.",
+        "m"
+      ],
+      [
+        "impulse",
+        "Find the magnitude of the impulse on the incident particle.",
+        "N s"
+      ],
+      [
+        "ratio",
+        "Find the second-to-first kinetic-energy ratio immediately after collision.",
+        ""
+      ]
+    ],
+    "explanation": "Momentum and kinetic energy imply v1·v2=0 for equal masses with one initially at rest. Resolve the incident velocity along the two perpendicular outgoing directions: v1={v1}, v2={v2} m/s. The second particle rises by v2²/(2g)={height} m. The impulse magnitude equals its acquired momentum, {impulse} N s, and the energy ratio is {ratio}.",
+    "reason": "Combine vector momentum with elastic energy to infer orthogonal velocities, then connect collision outcomes to a climb or impulse.",
+    "checks": []
+  },
+  {
+    "unit": 5,
+    "key": "rod_embedding",
+    "topic": "Angular impact followed by a gravitational swing",
+    "stem": "A uniform rod of mass {M} kg and length {L} m hangs vertically from a frictionless pivot at its upper end. A projectile of mass {m} kg moving horizontally at {u} m/s embeds at the lower end. The rod-projectile system then swings without loss. Take g=10 m/s². The maximum angle is less than 90° from the initial downward vertical.",
+    "variants": [
+      {
+        "M": 3,
+        "L": 2,
+        "m": 0.5,
+        "u": 8
+      },
+      {
+        "M": 4,
+        "L": 1.5,
+        "m": 1,
+        "u": 6
+      }
+    ],
+    "derived": [
+      [
+        "I",
+        "M*L*L/3+m*L*L"
+      ],
+      [
+        "w",
+        "m*u*L/I"
+      ],
+      [
+        "K",
+        "I*w*w/2"
+      ],
+      [
+        "cost",
+        "1-K/(10*L*(M/2+m))"
+      ],
+      [
+        "angle",
+        "acos(cost)*180/pi"
+      ],
+      [
+        "loss",
+        "m*u*u/2-K"
+      ],
+      [
+        "pivot",
+        "abs(m*u-(M/2+m)*L*w)"
+      ]
+    ],
+    "tasks": [
+      [
+        "angle",
+        "Find the greatest swing angle.",
+        "°"
+      ],
+      [
+        "loss",
+        "Find the energy dissipated in embedding.",
+        "J"
+      ],
+      [
+        "pivot",
+        "Find the magnitude of the horizontal impulse supplied by the pivot during impact.",
+        "N s"
+      ]
+    ],
+    "explanation": "Conserve angular momentum about the pivot, not total horizontal momentum: I={I} kg m², ω={w} rad/s. The post-impact energy is {K} J and equals gL(M/2+m)(1−cosθ), giving θ={angle}°. Embedding loss is {loss} J. The final horizontal momentum is (M/2+m)Lω; its deficit relative to mu is the pivot impulse magnitude {pivot} N s.",
+    "reason": "Use pivot angular momentum through a nonconservative impact, distributed gravitational potential during the swing, and centre-of-mass momentum for the support impulse.",
+    "checks": []
+  },
+  {
+    "unit": 5,
+    "key": "rotating_platform",
+    "topic": "Recovering inertia from redistribution",
+    "stem": "A horizontal turntable with unknown fixed moment of inertia I carries two identical point masses, each {m} kg. They are initially at radius {r1} m when its angular speed is {w1} rad/s. They move radially to {r2} m, giving angular speed {w2} rad/s. There is no external torque. They next move to radius {r3} m, with negligible radial kinetic energy at each endpoint.",
+    "variants": [
+      {
+        "m": 1,
+        "r1": 2,
+        "w1": 2,
+        "r2": 1,
+        "w2": 4,
+        "r3": 0.5
+      },
+      {
+        "m": 2,
+        "r1": 1.5,
+        "w1": 3,
+        "r2": 0.5,
+        "w2": 9,
+        "r3": 1
+      }
+    ],
+    "derived": [
+      [
+        "I",
+        "2*m*(w2*r2*r2-w1*r1*r1)/(w1-w2)"
+      ],
+      [
+        "H",
+        "(I+2*m*r1*r1)*w1"
+      ],
+      [
+        "w3",
+        "H/(I+2*m*r3*r3)"
+      ],
+      [
+        "work",
+        "H*H/2*(1/(I+2*m*r3*r3)-1/(I+2*m*r2*r2))"
+      ],
+      [
+        "force",
+        "m*w3*w3*r3"
+      ]
+    ],
+    "tasks": [
+      [
+        "w3",
+        "Find the final angular speed at the third radius.",
+        "rad/s"
+      ],
+      [
+        "work",
+        "Find the net work supplied internally in the second redistribution (negative if energy is extracted).",
+        "J"
+      ],
+      [
+        "force",
+        "Find the inward force needed to hold EACH point mass at the third radius once redistribution has ended.",
+        "N"
+      ]
+    ],
+    "explanation": "Conservation between the first two states gives I={I} kg m² and angular momentum H={H} kg m²/s. At r3, ω=H/(I+2mr3²)={w3} rad/s. Internal work is the rotational-energy change at constant H, {work} J. Once the masses are fixed radially, each needs mω²r3={force} N inward.",
+    "reason": "Infer the unmeasured apparatus inertia from two angular-momentum states, then evaluate a third state and the sign of internal work.",
+    "checks": []
+  },
+  {
+    "unit": 5,
+    "key": "impulse_rod_rebound",
+    "topic": "Free rod collision with restitution",
+    "stem": "A point particle of mass {m} kg moves perpendicular to a uniform rod of mass {M} kg and length {L} m, striking one end. The rod is initially at rest on a smooth horizontal plane. The normal coefficient of restitution is {e}; the particle arrives at {u} m/s. The impact direction is perpendicular to the rod and all impulses lie along it.",
+    "variants": [
+      {
+        "m": 1,
+        "M": 4,
+        "L": 2,
+        "e": 1,
+        "u": 10
+      },
+      {
+        "m": 2,
+        "M": 6,
+        "L": 3,
+        "e": 0.5,
+        "u": 8
+      }
+    ],
+    "derived": [
+      [
+        "J",
+        "(1+e)*u/(1/m+4/M)"
+      ],
+      [
+        "v",
+        "u-J/m"
+      ],
+      [
+        "V",
+        "J/M"
+      ],
+      [
+        "w",
+        "6*J/(M*L)"
+      ],
+      [
+        "K",
+        "M*V*V/2+(M*L*L/12)*w*w/2"
+      ],
+      [
+        "loss",
+        "m*u*u/2-m*v*v/2-K"
+      ]
+    ],
+    "tasks": [
+      [
+        "w",
+        "Find the rod’s angular speed immediately after impact.",
+        "rad/s"
+      ],
+      [
+        "v",
+        "Find the particle’s signed outgoing velocity along its initial direction.",
+        "m/s"
+      ],
+      [
+        "loss",
+        "Find the total kinetic energy lost in impact.",
+        "J"
+      ]
+    ],
+    "explanation": "An impulse J gives rod COM speed J/M and ω=6J/(ML), so the struck end moves at 4J/M. Restitution is 4J/M−(u−J/m)=eu, giving J={J} N s. Thus ω={w} rad/s and particle velocity {v} m/s. Include both rod translation and rotation: rod energy={K} J and total loss={loss} J.",
+    "reason": "Apply restitution at the moving contact point, couple linear and angular impulses and account for both kinds of rod kinetic energy.",
+    "checks": []
+  },
+  {
+    "unit": 6,
+    "key": "gravity_two_altitudes",
+    "topic": "Inverse-square field inferred from two heights",
+    "stem": "For a spherical nonrotating planet, the gravitational accelerations at heights {h1} m and {h2} m above its surface are {g1} and {g2} m/s². Use Newtonian gravity and ignore atmosphere. A small satellite has a circular orbit at height {h3} m.",
+    "variants": [
+      {
+        "h1": 1000000.0,
+        "h2": 4000000.0,
+        "g1": 6.4,
+        "g2": 2.5,
+        "h3": 2000000.0
+      },
+      {
+        "h1": 2000000.0,
+        "h2": 6000000.0,
+        "g1": 4.5,
+        "g2": 2,
+        "h3": 4000000.0
+      }
+    ],
+    "derived": [
+      [
+        "r",
+        "(sqrt(g2)*h2-sqrt(g1)*h1)/(sqrt(g1)-sqrt(g2))"
+      ],
+      [
+        "gm",
+        "g1*(r+h1)**2"
+      ],
+      [
+        "escape",
+        "sqrt(2*gm/r)"
+      ],
+      [
+        "period",
+        "2*pi*sqrt((r+h3)**3/gm)"
+      ],
+      [
+        "delta",
+        "gm*(1/(r+h1)-1/(r+h2))"
+      ]
+    ],
+    "tasks": [
+      [
+        "escape",
+        "Find the surface escape speed.",
+        "m/s"
+      ],
+      [
+        "period",
+        "Find the satellite’s period.",
+        "s"
+      ],
+      [
+        "delta",
+        "Find the external work per unit mass to move slowly from height h1 to h2.",
+        "J/kg"
+      ]
+    ],
+    "explanation": "The field ratio gives (R+h2)/(R+h1)=√(g1/g2), hence R={r} m and GM={gm} m³/s². Use that inferred radius and gravitational parameter: escape speed={escape} m/s, orbit period={period} s, and potential increase per mass={delta} J/kg. Heights must not be substituted as distances from the centre.",
+    "reason": "Recover both radius and gravitational parameter from two elevated field measurements, then use potential energy or circular dynamics.",
+    "checks": []
+  },
+  {
+    "unit": 6,
+    "key": "tangential_orbit_change",
+    "topic": "Energy and angular momentum at orbital turning points",
+    "stem": "A satellite is in a circular orbit of radius {r} m about a pointlike central body with GM={gm} m³/s². An instantaneous tangential impulse changes its speed to {f} times the original circular speed without changing radius. Here 1<f<√2. Afterwards only gravity acts. The impulse point is the orbit’s nearest point; at the farthest point velocity is again tangential.",
+    "variants": [
+      {
+        "r": 8000000.0,
+        "gm": 400000000000000.0,
+        "f": 1.2
+      },
+      {
+        "r": 10000000.0,
+        "gm": 500000000000000.0,
+        "f": 1.25
+      }
+    ],
+    "derived": [
+      [
+        "a",
+        "r/(2-f*f)"
+      ],
+      [
+        "far",
+        "f*f*r/(2-f*f)"
+      ],
+      [
+        "vf",
+        "f*sqrt(gm/r)*r/far"
+      ],
+      [
+        "ratio",
+        "far/r"
+      ],
+      [
+        "slowdown",
+        "f*sqrt(gm/r)-vf"
+      ]
+    ],
+    "tasks": [
+      [
+        "far",
+        "Find the greatest distance from the centre reached after the impulse.",
+        "m"
+      ],
+      [
+        "vf",
+        "Find the satellite’s speed at that farthest point.",
+        "m/s"
+      ],
+      [
+        "slowdown",
+        "Find the decrease in speed between the impulse point and the farthest point on the new orbit.",
+        "m/s"
+      ]
+    ],
+    "explanation": "Immediately after the impulse, specific energy is ε=GM(f²/2−1)/r and specific angular momentum is h=f√(GM r). At any turning radius x, ε=h²/(2x²)−GM/x. The two roots are r and r f²/(2−f²)={far} m. Then vfar=h/rfar={vf} m/s. Compared with the post-impulse speed f√(GM/r), the decrease is {slowdown} m/s.",
+    "reason": "Use two conserved quantities to distinguish two radial turning points after a velocity change and connect impulse work to the initial circular state.",
+    "checks": []
+  },
+  {
+    "unit": 7,
+    "key": "calorimeter_two_trials",
+    "topic": "Inverse calorimetry with a phase threshold",
+    "stem": "An insulated calorimeter of unknown heat capacity C contains {mw} kg water at 20°C. Adding {ms} kg of a solid at 100°C produces equilibrium at {T1}°C. In a second trial the same calorimeter instead contains {mw2} kg water at 20°C; adding {ms2} kg of the same solid at 100°C gives {T2}°C. No phase change occurs in these trials. Water specific heat is 4200 J/(kg K). For the fresh trial, remove the solid and replace the water with a fresh {mw} kg charge, equal to the first trial water mass. The calorimeter and this fresh water start at {hot}°C and {ice} kg ice at 0°C is added. Latent heat is 336000 J/kg.",
+    "variants": [
+      {
+        "mw": 0.2,
+        "mw2": 0.4,
+        "ms": 0.1,
+        "T1": 30,
+        "ms2": 0.1,
+        "T2": 26.557377049180328,
+        "hot": 30,
+        "ice": 0.05
+      },
+      {
+        "mw": 0.3,
+        "mw2": 0.5,
+        "ms": 0.2,
+        "T1": 30,
+        "ms2": 0.2,
+        "T2": 27.92079207920792,
+        "hot": 25,
+        "ice": 0.08
+      }
+    ],
+    "derived": [
+      [
+        "P",
+        "ms*(100-T1)/(T1-20)"
+      ],
+      [
+        "Q",
+        "ms2*(100-T2)/(T2-20)"
+      ],
+      [
+        "cs",
+        "4200*(mw2-mw)/(Q-P)"
+      ],
+      [
+        "H",
+        "P*cs"
+      ],
+      [
+        "C",
+        "H-mw*4200"
+      ],
+      [
+        "available",
+        "H*hot"
+      ],
+      [
+        "Tf",
+        "(available-ice*336000)/(H+ice*4200)"
+      ],
+      [
+        "maxice",
+        "available/336000"
+      ],
+      [
+        "extra",
+        "(H+ice*4200)*10"
+      ]
+    ],
+    "tasks": [
+      [
+        "Tf",
+        "All added ice melts. Find the final temperature in the fresh ice trial.",
+        "°C"
+      ],
+      [
+        "maxice",
+        "Find the largest ice mass at 0°C that could just melt in the fresh system at its stated initial temperature.",
+        "kg"
+      ],
+      [
+        "extra",
+        "After the stated ice trial, find the extra heat needed to raise the complete water-calorimeter system by 10 K.",
+        "J"
+      ]
+    ],
+    "explanation": "The two different water masses give C+mw cw=P cs and C+mw2 cw=Q cs, where P and Q follow from the measured temperature changes. Subtract to obtain the solid specific heat and then H=C+mw cw={H} J/K. Then C={C} J/K and cs={cs} J/(kg K). The available heat at 0°C is {available} J. After melting, Tf={Tf}°C; the just-melting ice mass is {maxice} kg and the subsequent 10 K heat is {extra} J.",
+    "reason": "Solve two independent mixing constraints for two thermal properties, then check a latent-heat threshold and the changed final heat capacity.",
+    "checks": []
+  },
+  {
+    "unit": 7,
+    "key": "inclined_venturi",
+    "topic": "Continuity, Bernoulli and a side pressure tap",
+    "stem": "Water of density 1000 kg/m³ flows steadily from section 1 of area {A1} cm² to section 2 of area {A2} cm² situated {h} m higher. The measured pressure difference p1−p2 is {dp} Pa. Ignore viscosity and take g=10 m/s². A third section at the height of section 1 has area {A3} cm². Its pressure is p3.",
+    "variants": [
+      {
+        "A1": 8,
+        "A2": 4,
+        "h": 0.5,
+        "dp": 11000,
+        "A3": 2
+      },
+      {
+        "A1": 12,
+        "A2": 6,
+        "h": 0.8,
+        "dp": 14000,
+        "A3": 3
+      }
+    ],
+    "derived": [
+      [
+        "v1",
+        "sqrt(2*(dp-10000*h)/(1000*((A1/A2)**2-1)))"
+      ],
+      [
+        "Q",
+        "A1*1e-4*v1"
+      ],
+      [
+        "v3",
+        "Q/(A3*1e-4)"
+      ],
+      [
+        "drop",
+        "500*(v3*v3-v1*v1)"
+      ],
+      [
+        "power",
+        "dp*Q"
+      ],
+      [
+        "rise",
+        "Q*10000*h"
+      ]
+    ],
+    "tasks": [
+      [
+        "drop",
+        "Find p1−p3.",
+        "Pa"
+      ],
+      [
+        "power",
+        "Find the net rate of pressure work on water between sections 1 and 2.",
+        "W"
+      ],
+      [
+        "rise",
+        "Find the rate of increase of gravitational potential energy between sections 1 and 2.",
+        "W"
+      ]
+    ],
+    "explanation": "Continuity gives v2/v1=A1/A2. Bernoulli requires dp=ρg h+ρ(v2²−v1²)/2. Thus v1={v1} m/s and Q={Q} m³/s. At section 3, v3={v3} m/s, giving p1−p3={drop} Pa. Pressure-work power is dp Q={power} W; only {rise} W becomes gravitational potential energy, the rest becomes kinetic energy.",
+    "reason": "Separate pressure work into elevation and kinetic terms, infer flow from an inclined measurement and predict a third section.",
+    "checks": []
+  },
+  {
+    "unit": 7,
+    "key": "bonded_thermal_rods",
+    "topic": "Thermal expansion under an internal constraint",
+    "stem": "Two straight rods have the same original length {L} m and are fastened side by side between two light rigid end plates. The plates can move freely axially and apply no net external force; they remain parallel. The rods share the same extension. Rod 1 has area {A1} mm², Young modulus {Y1} GPa and expansion coefficient {al1}×10⁻⁶ K⁻¹. Rod 2 has corresponding values {A2}, {Y2}, {al2}. Initially both are unstressed. Temperature rises by {DT} K. Use linear elasticity and small expansion.",
+    "variants": [
+      {
+        "L": 1,
+        "A1": 2,
+        "Y1": 200,
+        "al1": 12,
+        "A2": 3,
+        "Y2": 100,
+        "al2": 24,
+        "DT": 50
+      },
+      {
+        "L": 2,
+        "A1": 3,
+        "Y1": 100,
+        "al1": 10,
+        "A2": 2,
+        "Y2": 200,
+        "al2": 20,
+        "DT": 40
+      }
+    ],
+    "derived": [
+      [
+        "strain",
+        "(A1*Y1*al1+A2*Y2*al2)/(A1*Y1+A2*Y2)*1e-6*DT"
+      ],
+      [
+        "extension",
+        "L*strain*1000"
+      ],
+      [
+        "force",
+        "A1*1e-6*Y1*1e9*(strain-al1*1e-6*DT)"
+      ],
+      [
+        "energy",
+        "L*force*force/2*(1/(A1*1e-6*Y1*1e9)+1/(A2*1e-6*Y2*1e9))"
+      ]
+    ],
+    "tasks": [
+      [
+        "extension",
+        "Find the common extension.",
+        "mm"
+      ],
+      [
+        "force",
+        "Find the magnitude of the axial force in rod 1.",
+        "N"
+      ],
+      [
+        "energy",
+        "Find the total elastic strain energy in both rods.",
+        "J"
+      ]
+    ],
+    "explanation": "Equal total strain ε and zero net axial force give A1Y1(ε−α1ΔT)+A2Y2(ε−α2ΔT)=0. Hence ε={strain}, extension={extension} mm and rod-1 tensile force={force} N, balanced by rod-2 compression. Elastic energy uses the mechanical strain, not total thermal extension, and is {energy} J.",
+    "reason": "Couple compatibility and internal force balance, distinguish thermal from elastic strain and sum energy in both materials.",
+    "checks": []
+  },
+  {
+    "unit": 8,
+    "key": "heat_work_inverse",
+    "topic": "Inferring a thermodynamic path",
+    "stem": "One mole of an ideal gas has constant Cv={cv}R. In a reversible process pV^n is constant, with unknown n. Its temperature increases from {T1} K to {T2} K while the gas does {W} J of work. Use R=8 J/(mol K). Starting from that final state, the gas is returned to T1 by reversible adiabatic expansion.",
+    "variants": [
+      {
+        "cv": 1.5,
+        "T1": 300,
+        "T2": 450,
+        "W": 2400
+      },
+      {
+        "cv": 2.5,
+        "T1": 300,
+        "T2": 480,
+        "W": 2880
+      }
+    ],
+    "derived": [
+      [
+        "n",
+        "1-8*(T2-T1)/W"
+      ],
+      [
+        "gamma",
+        "1+1/cv"
+      ],
+      [
+        "vfirst",
+        "(T2/T1)**(1/(1-n))"
+      ],
+      [
+        "vsecond",
+        "(T2/T1)**cv"
+      ],
+      [
+        "vtotal",
+        "vfirst*vsecond"
+      ],
+      [
+        "ptotal",
+        "1/vtotal"
+      ],
+      [
+        "net",
+        "W+cv*8*(T2-T1)"
+      ]
+    ],
+    "tasks": [
+      [
+        "vtotal",
+        "Find the final-to-original volume ratio after both processes.",
+        ""
+      ],
+      [
+        "ptotal",
+        "Find the final-to-original pressure ratio after both processes.",
+        ""
+      ],
+      [
+        "net",
+        "Find the net work done by the gas over the two processes.",
+        "J"
+      ]
+    ],
+    "explanation": "Integrating pV^n=constant gives W=R(T2−T1)/(1−n), hence n={n}. The first volume factor is {vfirst}. For the adiabatic return γ=1+1/Cv(in R units), so its volume factor is {vsecond}. The total factor is {vtotal}. At the restored temperature the pressure ratio is {ptotal}. Adiabatic work equals Cv(T2−T1), so net work is {net} J.",
+    "reason": "Infer the path exponent from a work measurement, combine two different thermodynamic laws and track signs through an adiabatic return.",
+    "checks": []
+  },
+  {
+    "unit": 8,
+    "key": "cascade_power_constraint",
+    "topic": "Coupled reversible heat engines",
+    "stem": "Two reversible engines operate in cascade from {Th} K through an unknown intermediate temperature T to {Tc} K. All heat rejected by the first engine enters the second. The first absorbs {Q} J per cycle and delivers {ratio} times the work of the second. A refrigerator working reversibly between Tc and T is later driven by the second engine’s entire work per cycle.",
+    "variants": [
+      {
+        "Th": 600,
+        "Tc": 300,
+        "Q": 1800,
+        "ratio": 2
+      },
+      {
+        "Th": 800,
+        "Tc": 200,
+        "Q": 2400,
+        "ratio": 3
+      }
+    ],
+    "derived": [
+      [
+        "T",
+        "(Th+ratio*Tc)/(ratio+1)"
+      ],
+      [
+        "W1",
+        "Q*(1-T/Th)"
+      ],
+      [
+        "W2",
+        "Q*(T-Tc)/Th"
+      ],
+      [
+        "Qc",
+        "W2*Tc/(T-Tc)"
+      ],
+      [
+        "reject",
+        "Qc+W2"
+      ],
+      [
+        "fraction",
+        "W1/(Q+reject)"
+      ]
+    ],
+    "tasks": [
+      [
+        "T",
+        "Find the intermediate reservoir temperature.",
+        "K"
+      ],
+      [
+        "reject",
+        "Find the heat discharged by the driven refrigerator to its hot reservoir per cycle.",
+        "J"
+      ],
+      [
+        "fraction",
+        "Find W1 divided by the sum of the first engine’s heat input and the refrigerator’s hot-reservoir discharge.",
+        ""
+      ]
+    ],
+    "explanation": "W1=Q(1−T/Th), W2=Q(T−Tc)/Th. The measured work ratio gives T={T} K, W1={W1} J and W2={W2} J. The refrigerator has COP=Tc/(T−Tc), so it extracts {Qc} J and discharges {reject} J. The explicitly requested ratio is {fraction}; it is not a thermal efficiency of an isolated engine.",
+    "reason": "Use coupled heat flow and a work ratio to infer the middle reservoir, then reverse the thermodynamic device and distinguish heat extracted from heat discharged.",
+    "checks": []
+  },
+  {
+    "unit": 9,
+    "key": "gas_composition_inverse",
+    "topic": "Mixture composition from heat and mass",
+    "stem": "A mixture contains a monatomic gas of molar mass 4 g/mol and a rigid diatomic gas of molar mass 28 g/mol. The total mass is {mass} g. Heating at constant volume through {dt} K requires {Q} J. Use R=8 J/(mol K). Initially both gases are at {T} K. No rotational modes freeze out and vibration is inactive. The mixture is then reversibly compressed adiabatically to half its volume.",
+    "variants": [
+      {
+        "mass": 36,
+        "dt": 10,
+        "Q": 440,
+        "T": 300
+      },
+      {
+        "mass": 64,
+        "dt": 20,
+        "Q": 1040,
+        "T": 320
+      }
+    ],
+    "derived": [
+      [
+        "b",
+        "(mass-Q/(3*dt))/ (28-20/3)"
+      ],
+      [
+        "a",
+        "(mass-28*b)/4"
+      ],
+      [
+        "Cv",
+        "12*a+20*b"
+      ],
+      [
+        "gamma",
+        "1+8*(a+b)/Cv"
+      ],
+      [
+        "Tf",
+        "T*2**(gamma-1)"
+      ],
+      [
+        "vrms",
+        "sqrt(3*8*Tf/.028)"
+      ],
+      [
+        "workon",
+        "Cv*(Tf-T)"
+      ]
+    ],
+    "tasks": [
+      [
+        "Tf",
+        "Find the final temperature.",
+        "K"
+      ],
+      [
+        "vrms",
+        "Find the final rms speed of the diatomic molecules.",
+        "m/s"
+      ],
+      [
+        "workon",
+        "Find the work done ON the mixture during compression.",
+        "J"
+      ]
+    ],
+    "explanation": "Mass gives 4a+28b=mass; constant-volume heat gives (12a+20b)ΔT=Q. Thus a={a}, b={b} mol, Cv={Cv} J/K and γ={gamma}. Adiabatic compression gives Tf={Tf} K. Use the diatomic molar mass, not the mixture average, for vrms={vrms} m/s. Work on the gas equals the internal-energy increase, {workon} J.",
+    "reason": "Infer two gas amounts from independent mass and thermal measurements, form the mixture heat-capacity ratio and apply species-specific kinetic theory after compression.",
+    "checks": []
+  },
+  {
+    "unit": 9,
+    "key": "effusion_mixture",
+    "topic": "Kinetic theory with a selective change",
+    "stem": "A rigid insulated vessel contains {a} mol monatomic gas and {b} mol rigid diatomic gas at {T} K. Through controlled valves, half the monatomic molecules and one quarter of the diatomic molecules are removed slowly while a heater holds temperature at T. After the valves close, {Q} J of heat is supplied at constant volume. Use R=8 J/(mol K); there is no chemical reaction or further particle loss.",
+    "variants": [
+      {
+        "a": 2,
+        "b": 2,
+        "T": 300,
+        "Q": 4200
+      },
+      {
+        "a": 4,
+        "b": 2,
+        "T": 400,
+        "Q": 5400
+      }
+    ],
+    "derived": [
+      [
+        "af",
+        "a/2"
+      ],
+      [
+        "bf",
+        "3*b/4"
+      ],
+      [
+        "Cv",
+        "12*af+20*bf"
+      ],
+      [
+        "Tf",
+        "T+Q/Cv"
+      ],
+      [
+        "pressure",
+        "(af+bf)*Tf/((a+b)*T)"
+      ],
+      [
+        "energyfraction",
+        "20*bf/(12*af+20*bf)"
+      ],
+      [
+        "reversible",
+        "Cv*(Tf-T)*(1+8*(af+bf)/Cv)"
+      ]
+    ],
+    "tasks": [
+      [
+        "pressure",
+        "Find the final-to-original pressure ratio.",
+        ""
+      ],
+      [
+        "energyfraction",
+        "Find the fraction of the final internal energy belonging to the diatomic gas.",
+        ""
+      ],
+      [
+        "reversible",
+        "If the remaining mixture were instead heated from T to the same final temperature at constant pressure, find the required heat.",
+        "J"
+      ]
+    ],
+    "explanation": "The controlled removal leaves af={af}, bf={bf} mol. Its total Cv={Cv} J/K gives Tf={Tf} K. Pressure depends on both retained mole count and changed temperature: ratio={pressure}. The diatomic internal-energy fraction is {energyfraction}. For the counterfactual constant-pressure heating, Cp=Cv+nR, giving heat={reversible} J.",
+    "reason": "Track species-selective particle loss, recompute the heat capacity rather than reusing the original mixture, and distinguish particle fraction from energy fraction.",
+    "checks": []
+  },
+  {
+    "unit": 10,
+    "key": "spring_friction_cycles",
+    "topic": "Successive turning points with dry friction",
+    "stem": "A block of mass {m} kg is attached to a spring of stiffness {k} N/m on a horizontal rough surface. Kinetic and maximum static friction both have magnitude {F} N. At x={A} m to the right of the unstretched position, the block is released from rest. The supplied values guarantee crossings of x=0 on both the first and second traversals. Use Coulomb friction, not viscous damping.",
+    "variants": [
+      {
+        "m": 1,
+        "k": 100,
+        "F": 2,
+        "A": 0.3
+      },
+      {
+        "m": 2,
+        "k": 80,
+        "F": 2,
+        "A": 0.4
+      }
+    ],
+    "derived": [
+      [
+        "left",
+        "A-2*F/k"
+      ],
+      [
+        "right",
+        "A-4*F/k"
+      ],
+      [
+        "v2",
+        "sqrt((k*left*left-2*F*left)/m)"
+      ],
+      [
+        "heat",
+        "k*(A*A-right*right)/2"
+      ],
+      [
+        "negative",
+        "left"
+      ]
+    ],
+    "tasks": [
+      [
+        "right",
+        "Find the coordinate of the first right-hand turning point AFTER the first left-hand turning point.",
+        "m"
+      ],
+      [
+        "v2",
+        "Find the speed at the second crossing of x=0.",
+        "m/s"
+      ],
+      [
+        "heat",
+        "Find the total frictional heat by the first return to a right-hand turning point.",
+        "J"
+      ]
+    ],
+    "explanation": "For a half-cycle from +A to −B, k(A²−B²)/2=F(A+B), so B=A−2F/k={left} m. Both spring forces exceed static friction at the necessary reversals. The next right amplitude is B−2F/k={right} m. On the second centre crossing the energy is kB²/2−FB, giving speed {v2} m/s. Total dissipated energy is {heat} J.",
+    "reason": "Resolve the direction-dependent work over successive half-cycles and test whether a turning point permits another reversal.",
+    "checks": []
+  },
+  {
+    "unit": 10,
+    "key": "accelerating_pendulum_inverse",
+    "topic": "Inferring effective gravity and changing the support",
+    "stem": "A small-angle pendulum of length {L} m is in a vehicle with constant unknown horizontal acceleration a and unknown upward acceleration b. Its equilibrium string makes angle θ with the downward vertical, where sinθ={s}, cosθ={c}. Its measured small-oscillation period is {T} s. Take g=10 m/s². The vehicle’s upward acceleration is then set to zero while its horizontal acceleration remains a.",
+    "variants": [
+      {
+        "L": 1,
+        "s": 0.6,
+        "c": 0.8,
+        "T": 1.4049629462081452
+      },
+      {
+        "L": 2,
+        "s": 0.8,
+        "c": 0.6,
+        "T": 1.7771531752633465
+      }
+    ],
+    "derived": [
+      [
+        "ge",
+        "4*pi*pi*L/(T*T)"
+      ],
+      [
+        "a",
+        "ge*s"
+      ],
+      [
+        "b",
+        "ge*c-10"
+      ],
+      [
+        "newg",
+        "sqrt(100+a*a)"
+      ],
+      [
+        "newT",
+        "2*pi*sqrt(L/newg)"
+      ],
+      [
+        "newangle",
+        "atan(a/10)*180/pi"
+      ],
+      [
+        "ratio",
+        "newg/ge"
+      ]
+    ],
+    "tasks": [
+      [
+        "newT",
+        "Find the small-oscillation period about the NEW equilibrium.",
+        "s"
+      ],
+      [
+        "newangle",
+        "Find the new equilibrium angle from the downward vertical.",
+        "°"
+      ],
+      [
+        "ratio",
+        "Find the new-to-old equilibrium tension ratio for the same bob.",
+        ""
+      ]
+    ],
+    "explanation": "The measured period fixes ge=4π²L/T²={ge} m/s². Components give a={a} and b={b} m/s² (negative b denotes downward acceleration). Once b is set to zero, effective gravity is √(g²+a²)={newg} m/s². Thus the new period is {newT} s, angle {newangle}° and equilibrium tension ratio {ratio}.",
+    "reason": "Recover an acceleration vector from a period and tilt measurement, then recompute the equilibrium after changing only one component.",
+    "checks": []
+  },
+  {
+    "unit": 11,
+    "key": "floating_capacitor_switch",
+    "topic": "Charge conservation across a switched network",
+    "stem": "Capacitors C1={C1} μF and C2={C2} μF are separately charged to {V1} V and {V2} V and disconnected from their batteries. They are then joined in parallel with like-sign plates together and allowed to settle through small resistance. The wires are then removed. A dielectric of constant {K} is inserted fully into C1 while it remains isolated. C2 remains unchanged. Finally the two capacitors are again connected with like-sign plates together and allowed to settle. Ignore fringing and leakage.",
+    "variants": [
+      {
+        "C1": 2,
+        "C2": 3,
+        "V1": 100,
+        "V2": 20,
+        "K": 3
+      },
+      {
+        "C1": 4,
+        "C2": 2,
+        "V1": 80,
+        "V2": 20,
+        "K": 2
+      }
+    ],
+    "derived": [
+      [
+        "V",
+        "(C1*V1+C2*V2)/(C1+C2)"
+      ],
+      [
+        "Vf",
+        "(C1+C2)*V/(K*C1+C2)"
+      ],
+      [
+        "loss2",
+        ".5e-6*(C1*V*V/K+C2*V*V-(K*C1+C2)*Vf*Vf)"
+      ],
+      [
+        "work",
+        ".5e-6*C1*V*V*(1/K-1)"
+      ],
+      [
+        "transfer",
+        "K*C1*Vf-C1*V"
+      ]
+    ],
+    "tasks": [
+      [
+        "Vf",
+        "Find the final common voltage.",
+        "V"
+      ],
+      [
+        "loss2",
+        "Find the heat generated in the SECOND reconnection only.",
+        "J"
+      ],
+      [
+        "transfer",
+        "Find the magnitude of charge entering C1’s originally positive plate during the second reconnection.",
+        "μC"
+      ]
+    ],
+    "explanation": "First charge sharing gives V={V} V. Isolated dielectric insertion keeps C1 charge fixed, so its voltage becomes V/K and energy becomes C1 V²/(2K). The second reconnection preserves total plate charge, giving Vf={Vf} V. Its separate energy loss is {loss2} J and C1 gains {transfer} μC. Work during the dielectric step is {work} J and must not be counted as reconnection heat.",
+    "reason": "Track which charge and voltage remain fixed through three different connection states and separate dielectric work from each dissipative redistribution.",
+    "checks": []
+  },
+  {
+    "unit": 11,
+    "key": "field_potential_inverse",
+    "topic": "Inferring charges from a null and a potential",
+    "stem": "Two fixed positive charges are on the x-axis at x=0 and x={d} m. The electric field vanishes at x={x} m between them. The potential at that point is {V} V with zero at infinity. Use k=9×10⁹ N m²/C². A particle of charge {q} μC and mass {m} kg is moved slowly from x={r1} m to x={r2} m, both to the right of the charges.",
+    "variants": [
+      {
+        "d": 3,
+        "x": 1,
+        "V": 27000,
+        "q": 2,
+        "m": 0.001,
+        "r1": 4,
+        "r2": 6
+      },
+      {
+        "d": 4,
+        "x": 1,
+        "V": 36000,
+        "q": 3,
+        "m": 0.002,
+        "r1": 5,
+        "r2": 8
+      }
+    ],
+    "derived": [
+      [
+        "ratio",
+        "(d-x)**2/x**2"
+      ],
+      [
+        "Q",
+        "V/(9e9*(1/x+ratio/(d-x)))"
+      ],
+      [
+        "p1",
+        "9e9*Q*(1/r1+ratio/(r1-d))"
+      ],
+      [
+        "p2",
+        "9e9*Q*(1/r2+ratio/(r2-d))"
+      ],
+      [
+        "work",
+        "q*1e-6*(p2-p1)"
+      ],
+      [
+        "field",
+        "9e9*Q*(1/r2**2+ratio/(r2-d)**2)"
+      ],
+      [
+        "speed",
+        "sqrt(2*q*1e-6*(p1-p2)/m)"
+      ]
+    ],
+    "tasks": [
+      [
+        "work",
+        "Find the external work for the specified slow transfer.",
+        "J"
+      ],
+      [
+        "field",
+        "Find the electric-field magnitude at the final position.",
+        "N/C"
+      ],
+      [
+        "speed",
+        "In a separate trial released from rest at r1, find the speed at r2 under electric force alone.",
+        "m/s"
+      ]
+    ],
+    "explanation": "Field cancellation yields Q2/Q1={ratio}. The measured potential then gives Q1={Q} C. At r1 and r2, potentials are {p1} and {p2} V. Slow external work is q(V2−V1)={work} J. Field magnitudes add on the right, giving {field} N/C. In the free trial, the potential decrease gives speed {speed} m/s.",
+    "reason": "Infer two source charges from different observables, use signed potential work and distinguish quasistatic transport from release dynamics.",
+    "checks": []
+  },
+  {
+    "unit": 11,
+    "key": "dipole_measurement_pair",
+    "topic": "Dipole orientation from two energy measurements",
+    "stem": "A rigid dipole in a uniform electric field has unknown pE and initial angle θ with 0<θ<90°. The slow external work to rotate it from θ to 90° is {W} J. In a separate trial it is released from rest at θ; at first alignment its rotational kinetic energy is {K} J. Its moment of inertia is {I} kg m². Ignore damping. In a third trial it starts from rest at 90° in the same field.",
+    "variants": [
+      {
+        "W": 0.006,
+        "K": 0.004,
+        "I": 0.0002
+      },
+      {
+        "W": 0.009,
+        "K": 0.003,
+        "I": 0.0003
+      }
+    ],
+    "derived": [
+      [
+        "pE",
+        "W+K"
+      ],
+      [
+        "theta",
+        "acos(W/pE)*180/pi"
+      ],
+      [
+        "torque",
+        "sqrt(pE*pE-W*W)"
+      ],
+      [
+        "speed45",
+        "sqrt(2*pE*cos(pi/4)/I)"
+      ],
+      [
+        "period",
+        "2*pi*sqrt(I/pE)"
+      ]
+    ],
+    "tasks": [
+      [
+        "torque",
+        "Find the initial electric-torque magnitude at θ.",
+        "N m"
+      ],
+      [
+        "speed45",
+        "Find the angular speed when the third trial first passes 45° to the field.",
+        "rad/s"
+      ],
+      [
+        "period",
+        "Find the small-angle oscillation period about stable alignment.",
+        "s"
+      ]
+    ],
+    "explanation": "The slow work is pE cosθ=W; the release energy is pE(1−cosθ)=K. Hence pE={pE} J and θ={theta}°. Torque is √[(pE)²−W²]={torque} N m. From 90° to 45°, energy released is pE cos45°, giving {speed45} rad/s. Near alignment, Iθ̈=−pEθ, giving small-angle period {period} s.",
+    "reason": "Combine two distinct energy experiments to infer the dipole scale and orientation, then use torque or a separately specified dynamical regime.",
+    "checks": []
+  },
+  {
+    "unit": 12,
+    "key": "two_meter_loading",
+    "topic": "Source inference with finite voltmeters",
+    "stem": "A source has unknown emf E and internal resistance r. A voltmeter of resistance {R1} Ω reads {V1} V when connected alone across it. A second voltmeter of resistance {R2} Ω reads {V2} V when connected alone. Both voltmeters and an external resistor {load} Ω are now connected simultaneously in parallel across the source. All resistances are constant.",
+    "variants": [
+      {
+        "R1": 100,
+        "V1": 10,
+        "R2": 50,
+        "V2": 8.571428571428571,
+        "load": 50
+      },
+      {
+        "R1": 200,
+        "V1": 12,
+        "R2": 100,
+        "V2": 10,
+        "load": 100
+      }
+    ],
+    "derived": [
+      [
+        "r",
+        "(V2-V1)/(V1/R1-V2/R2)"
+      ],
+      [
+        "E",
+        "V1*(1+r/R1)"
+      ],
+      [
+        "Rp",
+        "1/(1/R1+1/R2+1/load)"
+      ],
+      [
+        "V",
+        "E*Rp/(r+Rp)"
+      ],
+      [
+        "power",
+        "V*V/load"
+      ],
+      [
+        "loss",
+        "(E/(r+Rp))**2*r"
+      ]
+    ],
+    "tasks": [
+      [
+        "V",
+        "Find the common voltmeter reading with all three branches connected.",
+        "V"
+      ],
+      [
+        "power",
+        "Find the power dissipated in the external resistor.",
+        "W"
+      ],
+      [
+        "loss",
+        "Find the power dissipated inside the source.",
+        "W"
+      ]
+    ],
+    "explanation": "Each reading obeys E=Vi(1+r/Ri). Solving the two equations gives r={r} Ω and E={E} V. The three loads have parallel resistance {Rp} Ω. Their common voltage is {V} V. External resistor power is {power} W, whereas source internal heating uses the total current and is {loss} W.",
+    "reason": "Recover source parameters from two loading measurements, then solve a new parallel loading condition without treating the meters as ideal.",
+    "checks": []
+  },
+  {
+    "unit": 12,
+    "key": "bridge_end_resistance",
+    "topic": "Metre bridge with end correction",
+    "stem": "A uniform 100 cm bridge wire has total resistance {Rw} Ω. A contact resistance e occurs only at its LEFT end before the uniform wire begins. With resistance X in the left gap and {R} Ω in the right gap, balance occurs at {l1} cm from the left end of the uniform wire. When the gap resistances are interchanged, balance occurs at {l2} cm. The contact resistance stays at the same physical end. The uniform wire temperature and e are unchanged.",
+    "variants": [
+      {
+        "Rw": 10,
+        "R": 10,
+        "l1": 30,
+        "l2": 45
+      },
+      {
+        "Rw": 8,
+        "R": 12,
+        "l1": 40,
+        "l2": 40
+      }
+    ],
+    "derived": [
+      [
+        "B",
+        "(Rw*l1/100+Rw*l2/100)"
+      ],
+      [
+        "C",
+        "Rw*Rw*(l1+l2-100)/100"
+      ],
+      [
+        "e",
+        "(-B+sqrt(B*B-4*C))/2"
+      ],
+      [
+        "X",
+        "R*(e+Rw*l1/100)/(Rw*(100-l1)/100)"
+      ],
+      [
+        "ideal",
+        "100*X/(X+R)"
+      ],
+      [
+        "shift",
+        "ideal-l1"
+      ],
+      [
+        "parallel",
+        "X*R/(X+R)"
+      ]
+    ],
+    "tasks": [
+      [
+        "X",
+        "Find the unknown resistance X.",
+        "Ω"
+      ],
+      [
+        "shift",
+        "If the left contact resistance is removed, find the shift of the ORIGINAL balance point (positive to the right).",
+        "cm"
+      ],
+      [
+        "parallel",
+        "Find the equivalent resistance of X and R connected in parallel outside the bridge.",
+        "Ω"
+      ]
+    ],
+    "explanation": "The two ratios are X/R=(e+Rw l1/100)/[Rw(100−l1)/100] and its reciprocal with l2. Multiplying produces e²+B e+C=0. The nonnegative root gives e={e} Ω and X={X} Ω. With e removed the original connection balances at {ideal} cm, a shift {shift} cm. The separate parallel combination is {parallel} Ω.",
+    "reason": "Keep the parasitic resistance at its physical end while swapping arms, solve the nonlinear pair of balance conditions and predict the corrected bridge.",
+    "checks": []
+  },
+  {
+    "unit": 13,
+    "key": "helix_from_measurements",
+    "topic": "Helical trajectory inferred from geometry",
+    "stem": "An ideal nonrelativistic positively charged particle is accelerated from rest through {V} V and enters a uniform magnetic field {B} T at an unknown angle. Its helical radius is {r} m and its advance parallel to the field per turn is {p} m. No electric field acts in this region. For a separate second trial, the particle is first brought to rest and then accelerated through {V2} V and enters a second magnetic region of field {B2} T at the SAME angle.",
+    "variants": [
+      {
+        "V": 1000,
+        "B": 0.2,
+        "r": 0.01,
+        "p": 0.06283185307179587,
+        "V2": 2000,
+        "B2": 0.4
+      },
+      {
+        "V": 2000,
+        "B": 0.5,
+        "r": 0.02,
+        "p": 0.06283185307179587,
+        "V2": 8000,
+        "B2": 0.25
+      }
+    ],
+    "derived": [
+      [
+        "slope",
+        "p/(2*pi*r)"
+      ],
+      [
+        "qm",
+        "2*V/(B*B*r*r*(1+slope*slope))"
+      ],
+      [
+        "speed",
+        "sqrt(2*qm*V2)"
+      ],
+      [
+        "period",
+        "2*pi/(qm*B2)"
+      ],
+      [
+        "path",
+        "speed*period"
+      ],
+      [
+        "pitch",
+        "speed*slope/sqrt(1+slope*slope)*period"
+      ]
+    ],
+    "tasks": [
+      [
+        "period",
+        "Find the gyroperiod in the second region.",
+        "s"
+      ],
+      [
+        "path",
+        "Find the actual distance travelled in one turn in the second region.",
+        "m"
+      ],
+      [
+        "pitch",
+        "Find the helical pitch in the second region.",
+        "m"
+      ]
+    ],
+    "explanation": "Geometry gives cotθ=p/(2πr)={slope}. Since v⊥=(q/m)Br and v²=2(q/m)V, q/m={qm} C/kg. The second speed is {speed} m/s and period {period} s. Actual path per turn is vT={path} m; only the parallel component produces pitch, {pitch} m.",
+    "reason": "Infer launch angle and charge-to-mass ratio from helical geometry and acceleration energy, then transfer both to a changed voltage and field.",
+    "checks": []
+  },
+  {
+    "unit": 13,
+    "key": "coil_torsion_calibration",
+    "topic": "Torsional equilibrium with magnetic torque",
+    "stem": "A coil of unknown magnetic moment magnitude μ is suspended on a linear torsion fibre of unknown torsion constant κ. Its untwisted normal is perpendicular to a uniform field. In field {B1} T it turns through {th1} radians toward alignment. A separate mechanical calibration with the field off stores {U} J in the fibre at twist {cal} radians. Use the exact sine/cosine torque law, not the small-angle approximation.",
+    "variants": [
+      {
+        "B1": 0.2,
+        "th1": 0.3,
+        "U": 0.0005,
+        "cal": 0.2
+      },
+      {
+        "B1": 0.3,
+        "th1": 0.4,
+        "U": 0.001,
+        "cal": 0.25
+      }
+    ],
+    "derived": [
+      [
+        "k",
+        "2*U/(cal*cal)"
+      ],
+      [
+        "mu",
+        "k*th1/(B1*cos(th1))"
+      ],
+      [
+        "B2",
+        "k*(2*th1)/(mu*cos(2*th1))"
+      ],
+      [
+        "work",
+        "k*(2*th1)**2/2-mu*B1*sin(2*th1)"
+      ],
+      [
+        "moment",
+        "mu*B1*cos(2*th1)-k*2*th1"
+      ]
+    ],
+    "tasks": [
+      [
+        "B2",
+        "Find the field magnitude that would give equilibrium at twice the original twist.",
+        "T"
+      ],
+      [
+        "work",
+        "At the ORIGINAL field B1, find the quasistatic external work to move from untwisted to twice the original twist.",
+        "J"
+      ],
+      [
+        "moment",
+        "At the original field B1 and twice the original twist, find the signed net torque, positive toward increasing twist.",
+        "N m"
+      ]
+    ],
+    "explanation": "The mechanical calibration gives κ={k} N m/rad. Equilibrium requires κθ=μB cosθ, yielding μ={mu} A m². At twice the twist equilibrium requires B2={B2} T. In the original field, total potential is κφ²/2−μB1 sinφ, so external work is {work} J and net torque μB1 cosφ−κφ is {moment} N m.",
+    "reason": "Combine a mechanical energy calibration and nonlinear magnetic equilibrium, then distinguish a changed-field equilibrium from forced rotation in the original field.",
+    "checks": []
+  },
+  {
+    "unit": 14,
+    "key": "rail_friction_inverse",
+    "topic": "Motional induction with mechanical friction",
+    "stem": "A conducting rod of length {L} m moves on horizontal rails in an unknown uniform perpendicular field B. The circuit resistance is {R} Ω. Mechanical kinetic friction has an unknown constant magnitude f. A horizontal force {F1} N gives terminal speed {v1} m/s; a second force {F2} N gives terminal speed {v2} m/s in the same direction. Self-inductance is negligible. A third force {F3} N is used under unchanged conditions.",
+    "variants": [
+      {
+        "L": 0.5,
+        "R": 2,
+        "F1": 3,
+        "v1": 2,
+        "F2": 5,
+        "v2": 4,
+        "F3": 6
+      },
+      {
+        "L": 0.4,
+        "R": 4,
+        "F1": 4,
+        "v1": 1,
+        "F2": 10,
+        "v2": 3,
+        "F3": 7
+      }
+    ],
+    "derived": [
+      [
+        "drag",
+        "(F2-F1)/(v2-v1)"
+      ],
+      [
+        "fr",
+        "F1-drag*v1"
+      ],
+      [
+        "B",
+        "sqrt(drag*R)/L"
+      ],
+      [
+        "v3",
+        "(F3-fr)/drag"
+      ],
+      [
+        "current",
+        "B*L*v3/R"
+      ],
+      [
+        "power",
+        "current*current*R"
+      ],
+      [
+        "charge",
+        "B*L*3/R"
+      ]
+    ],
+    "tasks": [
+      [
+        "current",
+        "Find the terminal current with the third force.",
+        "A"
+      ],
+      [
+        "power",
+        "Find the circuit’s terminal Joule-heating power with the third force.",
+        "W"
+      ],
+      [
+        "charge",
+        "Find the charge crossing a circuit section during a further 3 m displacement after terminal motion has been reached.",
+        "C"
+      ]
+    ],
+    "explanation": "At terminal speed F=f+(B²L²/R)v. The two trials give drag coefficient {drag} N s/m and f={fr} N, hence B={B} T. With F3, v={v3} m/s, current={current} A and Joule heat rate={power} W. Charge over distance d follows ∫I dt=BLd/R, giving {charge} C; mechanical frictional heat is separate.",
+    "reason": "Infer magnetic drag and mechanical friction from two terminal states, recover the field, and distinguish circuit dissipation from total applied power.",
+    "checks": []
+  },
+  {
+    "unit": 14,
+    "key": "two_frequency_rlc",
+    "topic": "Inferring RLC parameters from phase measurements",
+    "stem": "An ideal series RLC circuit is driven by a fixed RMS voltage {V} V. At angular frequency {w} rad/s its current is {I} A and lags voltage by 45°. At half that angular frequency its current is again I but leads by 45°. All component values remain fixed. The supply frequency is then set to resonance.",
+    "variants": [
+      {
+        "V": 100,
+        "I": 2,
+        "w": 1000
+      },
+      {
+        "V": 120,
+        "I": 3,
+        "w": 800
+      }
+    ],
+    "derived": [
+      [
+        "R",
+        "V/(I*sqrt(2))"
+      ],
+      [
+        "L",
+        "2*R/w"
+      ],
+      [
+        "C",
+        "1/(R*w)"
+      ],
+      [
+        "wr",
+        "1/sqrt(L*C)"
+      ],
+      [
+        "Ir",
+        "V/R"
+      ],
+      [
+        "Vc",
+        "Ir/(wr*C)"
+      ],
+      [
+        "energy",
+        "C*Vc*Vc"
+      ]
+    ],
+    "tasks": [
+      [
+        "wr",
+        "Find the resonant angular frequency.",
+        "rad/s"
+      ],
+      [
+        "Vc",
+        "Find the RMS capacitor voltage at resonance.",
+        "V"
+      ],
+      [
+        "energy",
+        "Find the maximum capacitor energy during resonance.",
+        "J"
+      ]
+    ],
+    "explanation": "At the first frequency ωL−1/(ωC)=R; at ω/2 the net reactance is −R. The magnitude gives R={R} Ω. Solving the signed equations gives L={L} H and C={C} F. Resonance is ω0={wr} rad/s with current {Ir} A. VC,rms={Vc} V. Maximum energy uses peak voltage √2VC, hence C VC,rms²={energy} J.",
+    "reason": "Use signed phase information at two frequencies to determine separate reactances and distinguish RMS from peak energy at resonance.",
+    "checks": []
+  },
+  {
+    "unit": 15,
+    "key": "radiation_calorimeter",
+    "topic": "Plane-wave energy measured by calorimetry",
+    "stem": "A small detector has unknown heat capacity C. A heater of resistance {R} Ω carrying {I} A for {t} s raises it by {dT} K. After cooling, a plane electromagnetic wave illuminates a detector area {A} cm² for {time} s and raises it by {rise} K. The face normal makes {theta}° with the propagation direction; a fraction {absorb} of the intercepted energy is absorbed. Ignore losses. Use ε0=8.85×10⁻¹² F/m, c=3×10⁸ m/s and photon energy hc/λ with h=6.63×10⁻³⁴ J s and λ={lam} nm.",
+    "variants": [
+      {
+        "R": 10,
+        "I": 0.2,
+        "t": 20,
+        "dT": 2,
+        "A": 4,
+        "time": 100,
+        "rise": 1,
+        "theta": 60,
+        "absorb": 0.5,
+        "lam": 600
+      },
+      {
+        "R": 8,
+        "I": 0.5,
+        "t": 10,
+        "dT": 5,
+        "A": 5,
+        "time": 80,
+        "rise": 2,
+        "theta": 30,
+        "absorb": 0.8,
+        "lam": 500
+      }
+    ],
+    "derived": [
+      [
+        "C",
+        "I*I*R*t/dT"
+      ],
+      [
+        "power",
+        "C*rise/time"
+      ],
+      [
+        "intensity",
+        "power/(A*1e-4*cos(theta*pi/180)*absorb)"
+      ],
+      [
+        "E",
+        "sqrt(2*intensity/(8.85e-12*3e8))"
+      ],
+      [
+        "B",
+        "E/3e8"
+      ],
+      [
+        "photons",
+        "power/(6.63e-34*3e8/(lam*1e-9))"
+      ]
+    ],
+    "tasks": [
+      [
+        "E",
+        "Find the peak electric-field magnitude of the wave.",
+        "V/m"
+      ],
+      [
+        "B",
+        "Find the peak magnetic-field magnitude.",
+        "T"
+      ],
+      [
+        "photons",
+        "Find the mean number of photons absorbed per second.",
+        "s⁻¹"
+      ]
+    ],
+    "explanation": "Electrical calibration gives C={C} J/K. The optical absorbed power is {power} W. Correct both projected area and absorption to get intensity {intensity} W/m². Mean intensity is ε0 c E0²/2, so E0={E} V/m and B0={B} T. Absorbed photons per second equal absorbed power divided by hc/λ, {photons} s⁻¹.",
+    "reason": "Combine electrical calibration, thermal energy, oblique interception and peak-versus-average wave energy before finding fields or photon counts.",
+    "checks": []
+  },
+  {
+    "unit": 15,
+    "key": "wave_photo_current",
+    "topic": "A plane wave and a loaded photoelectric detector",
+    "stem": "A monochromatic plane wave has peak electric field {E} V/m and frequency {freq} Hz. It is normally incident on a detector of area {A} cm². A fraction {reflect} is reflected; of the absorbed photons, {yieldq} produce one collected electron each. The photocurrent charges an initially uncharged capacitor {C} μF for {t} s; an ideal collection arrangement maintains that constant current. Take ε0=8.85×10⁻¹² F/m, c=3×10⁸ m/s, h=6.63×10⁻³⁴ J s and e=1.6×10⁻¹⁹ C.",
+    "variants": [
+      {
+        "E": 10,
+        "freq": 600000000000000.0,
+        "A": 2,
+        "reflect": 0.2,
+        "yieldq": 0.1,
+        "C": 10,
+        "t": 2
+      },
+      {
+        "E": 20,
+        "freq": 500000000000000.0,
+        "A": 3,
+        "reflect": 0.25,
+        "yieldq": 0.05,
+        "C": 20,
+        "t": 1
+      }
+    ],
+    "derived": [
+      [
+        "power",
+        "8.85e-12*3e8*E*E/2*A*1e-4*(1-reflect)"
+      ],
+      [
+        "current",
+        "power/(6.63e-34*freq)*yieldq*1.6e-19"
+      ],
+      [
+        "V",
+        "current*t/(C*1e-6)"
+      ],
+      [
+        "energy",
+        "(C*1e-6)*V*V/2"
+      ],
+      [
+        "ratio",
+        "energy/(power*t)"
+      ]
+    ],
+    "tasks": [
+      [
+        "V",
+        "Find the capacitor voltage after the stated time.",
+        "V"
+      ],
+      [
+        "energy",
+        "Find the stored capacitor energy then.",
+        "J"
+      ],
+      [
+        "ratio",
+        "Find stored capacitor energy divided by optical energy absorbed over that time.",
+        ""
+      ]
+    ],
+    "explanation": "Use mean rather than peak wave energy density. Absorbed power is {power} W and current is {current} A. Charge It gives voltage {V} V and capacitor energy {energy} J. The requested energy ratio is {ratio}. The specified ideal collection arrangement is part of the model; no claim is made that a passive solar cell holds constant current at arbitrary voltage.",
+    "reason": "Connect peak field, photon flux, reflection and quantum yield to a changing electrical storage state.",
+    "checks": []
+  },
+  {
+    "unit": 16,
+    "key": "lens_virtual_inverse",
+    "topic": "Two lenses with a virtual intermediate object",
+    "stem": "A converging lens L1 forms a real image of an object {u} cm to its left. The image is {v} cm to its right. A second thin converging lens L2 is placed {d} cm to the right of L1, before that first image would form (d<v). With both lenses present the final image is {z} cm to the right of L2. The object is then moved to {u2} cm to the left of L1, with both lenses fixed.",
+    "variants": [
+      {
+        "u": 30,
+        "v": 60,
+        "d": 20,
+        "z": 20,
+        "u2": 40
+      },
+      {
+        "u": 24,
+        "v": 48,
+        "d": 18,
+        "z": 15,
+        "u2": 30
+      }
+    ],
+    "derived": [
+      [
+        "f1",
+        "u*v/(u+v)"
+      ],
+      [
+        "f2",
+        "1/(1/z-1/(v-d))"
+      ],
+      [
+        "v1new",
+        "f1*u2/(u2-f1)"
+      ],
+      [
+        "u2lens",
+        "d-v1new"
+      ],
+      [
+        "final",
+        "f2*u2lens/(u2lens-f2)"
+      ],
+      [
+        "mag",
+        "v1new*final/(u2*u2lens)"
+      ],
+      [
+        "distance",
+        "u2+d+final"
+      ]
+    ],
+    "tasks": [
+      [
+        "final",
+        "Find the final image distance to the right of L2 for the moved object.",
+        "cm"
+      ],
+      [
+        "mag",
+        "Find the SIGNED overall transverse magnification for the moved object.",
+        ""
+      ],
+      [
+        "distance",
+        "Find the distance from the moved object to its final image.",
+        "cm"
+      ]
+    ],
+    "explanation": "L1 has f1={f1} cm. In the calibration, L2 sees a virtual object v−d cm to its right, so 1/f2=1/z−1/(v−d), giving f2={f2} cm. For the moved object L1 alone would image at {v1new} cm; the signed real-object distance at L2 is {u2lens} cm. The final image is {final} cm beyond L2, signed magnification {mag}, and object-image distance {distance} cm.",
+    "reason": "Infer the second lens from a virtual-object calibration, recompute the intermediate image after moving the object and preserve magnification signs.",
+    "checks": []
+  },
+  {
+    "unit": 16,
+    "key": "interference_filter_inverse",
+    "topic": "Interference visibility after attenuation",
+    "stem": "Two coherent monochromatic beams of identical linear polarisation produce maximum intensity {imax} and minimum intensity {imin} W/m². A filter with intensity transmission {t} is inserted in the initially stronger beam. An additional plate then introduces phase delay {phase}° in that beam. The original phase difference at the observation point was 0°.",
+    "variants": [
+      {
+        "imax": 100,
+        "imin": 4,
+        "t": 0.25,
+        "phase": 60
+      },
+      {
+        "imax": 144,
+        "imin": 16,
+        "t": 0.36,
+        "phase": 120
+      }
+    ],
+    "derived": [
+      [
+        "a",
+        "(sqrt(imax)+sqrt(imin))/2"
+      ],
+      [
+        "b",
+        "(sqrt(imax)-sqrt(imin))/2"
+      ],
+      [
+        "af",
+        "sqrt(t)*a"
+      ],
+      [
+        "I",
+        "af*af+b*b+2*af*b*cos(phase*pi/180)"
+      ],
+      [
+        "visibility",
+        "2*af*b/(af*af+b*b)"
+      ],
+      [
+        "factor",
+        "(b/a)**2"
+      ]
+    ],
+    "tasks": [
+      [
+        "I",
+        "Find the intensity at the specified point with both filter and plate present.",
+        "W/m²"
+      ],
+      [
+        "visibility",
+        "Find the visibility (Imax−Imin)/(Imax+Imin) after the filter is inserted.",
+        ""
+      ],
+      [
+        "factor",
+        "Find the filter intensity transmission that would instead make the interference minima exactly dark.",
+        ""
+      ]
+    ],
+    "explanation": "The original amplitude magnitudes are a={a}, b={b} in square-root intensity units. A transmission t multiplies amplitude by √t, so the filtered amplitude is {af}. Phasor addition gives I={I} W/m² and visibility={visibility}. Exactly dark minima require equal amplitudes, hence transmission (b/a)²={factor}.",
+    "reason": "Recover separate field amplitudes from two intensity extrema, distinguish amplitude and intensity transmission and impose a destructive-interference condition.",
+    "checks": []
+  },
+  {
+    "unit": 16,
+    "key": "ydse_two_plates",
+    "topic": "Interference shifts with two different media",
+    "stem": "In a Young double-slit experiment the slit separation is {d} mm and screen distance is {D} m. The measured fringe width is {beta} mm. A plate of thickness {t} μm is inserted before slit 1 and moves the central maximum by {shift} mm toward slit 1. The plate is then replaced by a stack containing {t2} μm of the same material and {t3} μm of index {n3}; slit 2 remains uncovered. Neglect reflection and use normal incidence. All shifts are small-angle shifts in air.",
+    "variants": [
+      {
+        "d": 0.5,
+        "D": 2,
+        "beta": 2,
+        "t": 10,
+        "shift": 20,
+        "t2": 6,
+        "t3": 4,
+        "n3": 1.25
+      },
+      {
+        "d": 0.4,
+        "D": 1.5,
+        "beta": 1.875,
+        "t": 12,
+        "shift": 22.5,
+        "t2": 4,
+        "t3": 8,
+        "n3": 1.3
+      }
+    ],
+    "derived": [
+      [
+        "lam",
+        "beta*1e-3*d*1e-3/D"
+      ],
+      [
+        "n",
+        "1+shift*1e-3*d*1e-3/(D*t*1e-6)"
+      ],
+      [
+        "delay",
+        "(n-1)*t2*1e-6+(n3-1)*t3*1e-6"
+      ],
+      [
+        "newshift",
+        "D*delay/(d*1e-3)*1000"
+      ],
+      [
+        "fringes",
+        "delay/lam"
+      ],
+      [
+        "comp",
+        "delay/(n3-1)*1e6"
+      ]
+    ],
+    "tasks": [
+      [
+        "newshift",
+        "Find the central-fringe shift with the replacement stack.",
+        "mm"
+      ],
+      [
+        "fringes",
+        "Find that shift in fringe widths.",
+        ""
+      ],
+      [
+        "comp",
+        "Find the thickness of index-n3 material needed before slit 2 to restore the central maximum to its original position while the stack stays before slit 1.",
+        "μm"
+      ]
+    ],
+    "explanation": "The baseline wavelength is {lam} m. The first shift gives original plate index n={n}. The replacement optical delay is the sum of the two excess optical paths, {delay} m. This gives shift {newshift} mm or {fringes} fringes. Compensation requires equal delay before slit 2, so thickness={comp} μm.",
+    "reason": "Infer wavelength and plate index from independent observations, add excess optical paths and solve a compensating-path condition.",
+    "checks": []
+  },
+  {
+    "unit": 17,
+    "key": "photoelectric_unknown_offset",
+    "topic": "Photoelectric measurements with a voltage offset",
+    "stem": "A photoelectric apparatus displays stopping reading S=Kmax/e+δ, where δ is an unknown constant instrumental offset. For photon energies {E1} and {E2} eV the displayed readings are {S1} and {S2} V. An independent calibration shows display δ={offset} V when true voltage is zero. Under illumination with photon energy {E3} eV, emitted electrons are accelerated through a further {Va} V. Use λ(nm)=√[0.0150/K(eV)] for a nonrelativistic electron and hc=1240 eV nm.",
+    "variants": [
+      {
+        "E1": 4,
+        "E2": 5,
+        "S1": 1.2,
+        "S2": 2.2,
+        "offset": 0.2,
+        "E3": 6,
+        "Va": 3
+      },
+      {
+        "E1": 3,
+        "E2": 5,
+        "S1": 0.6,
+        "S2": 2.6,
+        "offset": 0.1,
+        "E3": 4,
+        "Va": 2
+      }
+    ],
+    "derived": [
+      [
+        "phi",
+        "E1-(S1-offset)"
+      ],
+      [
+        "K",
+        "E3-phi"
+      ],
+      [
+        "final",
+        "K+Va"
+      ],
+      [
+        "wave",
+        "sqrt(.015/final)"
+      ],
+      [
+        "ratio",
+        "sqrt(final/K)"
+      ],
+      [
+        "threshold",
+        "1240/phi"
+      ]
+    ],
+    "tasks": [
+      [
+        "wave",
+        "Find the final de Broglie wavelength of the fastest electrons.",
+        "nm"
+      ],
+      [
+        "ratio",
+        "Find their final-to-initial speed ratio across the extra accelerating stage.",
+        ""
+      ],
+      [
+        "threshold",
+        "Find the threshold wavelength of the emitting surface.",
+        "nm"
+      ]
+    ],
+    "explanation": "Correct the offset before using Einstein’s equation: work function φ={phi} eV. The second measurement checks the same φ. For E3 the maximum kinetic energy is {K} eV; after extra acceleration it is {final} eV. The final matter wavelength is {wave} nm, speed ratio {ratio}, and optical threshold wavelength {threshold} nm.",
+    "reason": "Distinguish the measured stopping reading from physical stopping potential, infer work function and transfer photoelectron energy through a second electric stage.",
+    "checks": []
+  },
+  {
+    "unit": 17,
+    "key": "matter_wave_retardation",
+    "topic": "Matter-wave observations and energy selection",
+    "stem": "Electrons have unknown initial kinetic energy K0. Passing through a retarding potential {V} V increases their de Broglie wavelength by a factor {r}. They remain nonrelativistic and none is turned back. An identical initial electron beam is instead accelerated through {A} V. Use λ(nm)=√[0.0150/K(eV)]. A photon of energy {photon} eV produces the initial electrons as maximum-energy photoelectrons.",
+    "variants": [
+      {
+        "V": 6,
+        "r": 2,
+        "A": 4,
+        "photon": 12
+      },
+      {
+        "V": 12,
+        "r": 3,
+        "A": 6,
+        "photon": 18
+      }
+    ],
+    "derived": [
+      [
+        "K",
+        "V/(1-1/(r*r))"
+      ],
+      [
+        "new",
+        "K+A"
+      ],
+      [
+        "wave",
+        "sqrt(.015/new)"
+      ],
+      [
+        "phi",
+        "photon-K"
+      ],
+      [
+        "threshold",
+        "1240/phi"
+      ],
+      [
+        "ratio",
+        "new/(K-V)"
+      ]
+    ],
+    "tasks": [
+      [
+        "wave",
+        "Find the electron wavelength after the accelerating trial.",
+        "nm"
+      ],
+      [
+        "threshold",
+        "Find the emitter’s threshold wavelength, using hc=1240 eV nm.",
+        "nm"
+      ],
+      [
+        "ratio",
+        "Find the kinetic-energy ratio of the accelerated electrons to the retarded electrons.",
+        ""
+      ]
+    ],
+    "explanation": "Since wavelength is inverse momentum, Kret=K0/r²=K0−V, so K0={K} eV. The accelerated state has {new} eV and wavelength {wave} nm. Einstein’s equation gives φ={phi} eV and threshold {threshold} nm. The accelerated-to-retarded energy ratio is {ratio}.",
+    "reason": "Invert a matter-wave ratio under retarding work, select the transmitted regime and connect the recovered energy to a separate acceleration and photoelectric threshold.",
+    "checks": []
+  },
+  {
+    "unit": 18,
+    "key": "fusion_lab_frame",
+    "topic": "Energy partition with a moving centre of mass",
+    "stem": "A composite nucleus of mass {M}u moves along +x at speed {V} m/s and splits into products of masses {m1}u and {m2}u, where M=m1+m2 to the accuracy used for kinetic energy. The released internal energy is {Q} MeV. In the centre-of-mass frame the lighter product is emitted along +x and the heavier along −x. Use u=1.66×10⁻²⁷ kg and 1 MeV=1.6×10⁻¹³ J; all speeds are nonrelativistic. The small mass defect is included only through Q.",
+    "variants": [
+      {
+        "M": 5,
+        "m1": 1,
+        "m2": 4,
+        "V": 1000000.0,
+        "Q": 5
+      },
+      {
+        "M": 6,
+        "m1": 2,
+        "m2": 4,
+        "V": 2000000.0,
+        "Q": 4
+      }
+    ],
+    "derived": [
+      [
+        "p",
+        "sqrt(2*Q*1.6e-13/(1/(m1*1.66e-27)+1/(m2*1.66e-27)))"
+      ],
+      [
+        "v1",
+        "V+p/(m1*1.66e-27)"
+      ],
+      [
+        "v2",
+        "V-p/(m2*1.66e-27)"
+      ],
+      [
+        "K1",
+        ".5*m1*1.66e-27*v1*v1/1.6e-13"
+      ],
+      [
+        "K2",
+        ".5*m2*1.66e-27*v2*v2/1.6e-13"
+      ],
+      [
+        "relative",
+        "v1-v2"
+      ]
+    ],
+    "tasks": [
+      [
+        "K1",
+        "Find the lighter product’s kinetic energy in the laboratory.",
+        "MeV"
+      ],
+      [
+        "K2",
+        "Find the heavier product’s kinetic energy in the laboratory.",
+        "MeV"
+      ],
+      [
+        "relative",
+        "Find the rate at which their separation grows immediately after breakup.",
+        "m/s"
+      ]
+    ],
+    "explanation": "In the COM frame, equal opposite momenta give p={p} kg m/s from Q=p²/(2m1)+p²/(2m2). Add the COM velocity V to each signed product velocity. Laboratory velocities are {v1} and {v2} m/s. Their lab energies are {K1} and {K2} MeV and separation speed is {relative} m/s. The lab energies do not divide Q in the inverse-mass ratio.",
+    "reason": "Partition release energy in the centre-of-mass frame, transform signed velocities to the lab and distinguish released energy from total laboratory kinetic energy.",
+    "checks": []
+  },
+  {
+    "unit": 18,
+    "key": "hydrogen_spectrum_inverse",
+    "topic": "Inferring a hydrogenic state from two observables",
+    "stem": "For a one-electron ion of unknown nuclear charge Z, the ionisation energy from level n is {ion} eV and the orbital radius at that level is {radius} a0. Use En=−13.6 Z²/n² eV and rn=a0 n²/Z. The ion makes a transition to level {lower}, then absorbs a {photon} eV photon that ionises it. Use hc=1240 eV nm and the nonrelativistic electron relation λ(nm)=√[0.0150/K(eV)].",
+    "variants": [
+      {
+        "ion": 13.6,
+        "radius": 2,
+        "lower": 1,
+        "photon": 80
+      },
+      {
+        "ion": 13.6,
+        "radius": 3,
+        "lower": 2,
+        "photon": 50
+      }
+    ],
+    "derived": [
+      [
+        "Z",
+        "ion*radius/13.6"
+      ],
+      [
+        "n",
+        "sqrt(radius*Z)"
+      ],
+      [
+        "binding",
+        "13.6*Z*Z/(lower*lower)"
+      ],
+      [
+        "emitted",
+        "binding-ion"
+      ],
+      [
+        "wave",
+        "1240/emitted"
+      ],
+      [
+        "ewave",
+        "sqrt(.015/(photon-binding))"
+      ],
+      [
+        "rnew",
+        "lower*lower/Z"
+      ]
+    ],
+    "tasks": [
+      [
+        "wave",
+        "Find the wavelength emitted in the downward bound-state transition.",
+        "nm"
+      ],
+      [
+        "ewave",
+        "Find the de Broglie wavelength of the photoelectron produced afterwards.",
+        "nm"
+      ],
+      [
+        "rnew",
+        "Find the final bound orbit’s radius, before ionisation, in units of a0.",
+        ""
+      ]
+    ],
+    "explanation": "Multiply the initial radius factor and ionisation energy to obtain Z={Z}; then n={n}. The final bound level has binding {binding} eV and radius {rnew}a0. Transition photon energy is {emitted} eV, giving wavelength {wave} nm. Subsequent excess photon energy gives electron wavelength {ewave} nm.",
+    "reason": "Infer both atomic charge and state from independent radius and binding measurements, then distinguish a spectral photon from the later matter wave.",
+    "checks": []
+  },
+  {
+    "unit": 19,
+    "key": "zener_two_regimes",
+    "topic": "Zener regulation inferred from two load regimes",
+    "stem": "An ideal DC source of unknown voltage Vs supplies a node through an unknown series resistor R. A {Vz} V ideal Zener is reverse-connected from the node to ground. With load {L1} Ω to ground the node reads {U1} V, below breakdown; the Zener carries no current. With load {L2} Ω it regulates at Vz and carries {Iz} A. In a third trial the load is {L3} Ω. Ignore leakage and Zener dynamic resistance; verify the operating state before using Vz.",
+    "variants": [
+      {
+        "Vz": 6,
+        "L1": 100,
+        "U1": 4,
+        "L2": 400,
+        "Iz": 0.015,
+        "L3": 200
+      },
+      {
+        "Vz": 5,
+        "L1": 50,
+        "U1": 3,
+        "L2": 500,
+        "Iz": 0.03,
+        "L3": 100
+      }
+    ],
+    "derived": [
+      [
+        "R",
+        "(Vz-U1)/(U1/L1-Vz/L2-Iz)"
+      ],
+      [
+        "Vs",
+        "U1*(1+R/L1)"
+      ],
+      [
+        "unreg",
+        "Vs*L3/(R+L3)"
+      ],
+      [
+        "node",
+        "min(Vz,unreg)"
+      ],
+      [
+        "IZ3",
+        "max(0,(Vs-node)/R-node/L3)"
+      ],
+      [
+        "P",
+        "node*node/L3"
+      ],
+      [
+        "limit",
+        "Vz*R/(Vs-Vz)"
+      ]
+    ],
+    "tasks": [
+      [
+        "node",
+        "Find the third-trial node voltage.",
+        "V"
+      ],
+      [
+        "P",
+        "Find the third-trial load power.",
+        "W"
+      ],
+      [
+        "limit",
+        "Find the smallest load resistance at which the Zener just enters breakdown.",
+        "Ω"
+      ]
+    ],
+    "explanation": "The first state gives Vs=U1(1+R/L1). The second gives Vs=Vz+R(Vz/L2+Iz). Together R={R} Ω and Vs={Vs} V. The open-Zener divider would give {unreg} V in trial 3. Thus node={node} V and IZ={IZ3} A, with load power={P} W. The transition load is {limit} Ω.",
+    "reason": "Infer source parameters across two different diode regimes, test a third regime and solve the load threshold rather than assuming regulation.",
+    "checks": []
+  },
+  {
+    "unit": 19,
+    "key": "diode_two_thresholds",
+    "topic": "Piecewise diode clipping with a finite source",
+    "stem": "A source of unknown emf E feeds node X through an unknown series resistor R. A load {L} Ω connects X to ground. Two ideal diodes connect X to ideal reference nodes: the upper diode conducts from X into +{upper} V, and the lower from +{lower} V into X. Both are off in a calibration when an adjustable source replaces E: source voltage {S1} V gives X={X1} V, while source voltage {S2} V gives X={X2} V. After calibration the source is fixed at {E} V. The reference supplies can absorb or deliver current as necessary.",
+    "variants": [
+      {
+        "L": 100,
+        "upper": 6,
+        "lower": 2,
+        "S1": 6,
+        "X1": 3,
+        "S2": 8,
+        "X2": 4,
+        "E": 16
+      },
+      {
+        "L": 200,
+        "upper": 8,
+        "lower": 3,
+        "S1": 10,
+        "X1": 5,
+        "S2": 12,
+        "X2": 6,
+        "E": 20
+      }
+    ],
+    "derived": [
+      [
+        "R",
+        "L*(S1/X1-1)"
+      ],
+      [
+        "free",
+        "E*L/(R+L)"
+      ],
+      [
+        "X",
+        "min(upper,max(lower,free))"
+      ],
+      [
+        "Iupper",
+        "max(0,(E-X)/R-X/L)"
+      ],
+      [
+        "power",
+        "(E-X)**2/R"
+      ],
+      [
+        "threshold",
+        "lower*(1+R/L)"
+      ]
+    ],
+    "tasks": [
+      [
+        "Iupper",
+        "Find the current entering the upper reference through its diode.",
+        "A"
+      ],
+      [
+        "power",
+        "Find the series resistor’s power dissipation at the fixed source voltage.",
+        "W"
+      ],
+      [
+        "threshold",
+        "Find the source voltage below which the lower diode begins to conduct as the adjustable source is reduced.",
+        "V"
+      ]
+    ],
+    "explanation": "Off-state calibration gives R={R} Ω; the second point checks the same divider. At fixed E the unclipped node is {free} V. Testing the two inequalities gives X={X} V. Upper-reference current follows node balance, {Iupper} A, and the source resistor dissipates {power} W. The lower transition occurs when the off-state divider reaches the lower reference, at {threshold} V.",
+    "reason": "Infer the source resistance from an unclipped regime, test both ideal-diode inequalities and apply current balance in the conducting regime.",
+    "checks": []
+  },
+  {
+    "unit": 20,
+    "key": "caliper_density_experiment",
+    "topic": "Vernier readings and a displaced-volume crosscheck",
+    "stem": "A vernier has 20 divisions equal to 19 main-scale divisions; one main-scale division is 1 mm. With jaws closed its zero lies to the right and division {zero} coincides. For a solid sphere the main-scale reading is {ms} mm and division {coinc} coincides. The sphere’s mass is {mass} g. The displacement of water measured independently is {vol} cm³. Use π=3.14. Treat the mass and displacement measurement as exact; the corrected diameter has maximum uncertainty one least count.",
+    "variants": [
+      {
+        "zero": 2,
+        "ms": 10,
+        "coinc": 2,
+        "mass": 4.186666666666667,
+        "vol": 0.5233333333333333
+      },
+      {
+        "zero": 3,
+        "ms": 12,
+        "coinc": 3,
+        "mass": 7.23456,
+        "vol": 0.90432
+      }
+    ],
+    "derived": [
+      [
+        "lc",
+        "1/20"
+      ],
+      [
+        "d",
+        "ms+(coinc-zero)*lc"
+      ],
+      [
+        "V",
+        "3.14*(d/10)**3/6"
+      ],
+      [
+        "rho",
+        "mass/V"
+      ],
+      [
+        "error",
+        "100*3*lc/d"
+      ],
+      [
+        "absolute",
+        "rho*3*lc/d"
+      ],
+      [
+        "bias",
+        "100*((mass/(3.14*((ms+coinc*lc)/10)**3/6))/rho-1)"
+      ]
+    ],
+    "tasks": [
+      [
+        "absolute",
+        "Find the maximum absolute density uncertainty from the diameter reading.",
+        "g/cm³"
+      ],
+      [
+        "bias",
+        "If zero correction is omitted, find the signed percentage bias in inferred density relative to the corrected value.",
+        "%"
+      ],
+      [
+        "rho",
+        "Use the corrected geometric volume, checking it against the independent displacement, to find the sphere density.",
+        "g/cm³"
+      ]
+    ],
+    "explanation": "Least count is 1−19/20={lc} mm. Subtract the positive zero error, giving d={d} mm and V={V} cm³, consistent with the stated displacement. Density is {rho} g/cm³. Since ρ∝d⁻³, its first-order percentage bound is {error}% and absolute bound {absolute} g/cm³. Without correction the larger diameter lowers inferred density; signed bias={bias}%.",
+    "reason": "Derive least count, correct the signed zero error, reconcile an independent volume measurement and propagate a cubic measurement dependence.",
+    "checks": []
+  },
+  {
+    "unit": 20,
+    "key": "half_deflection_loading",
+    "topic": "Galvanometer calibration and ammeter conversion",
+    "stem": "A galvanometer in series with {R} Ω across an ideal {E} V source deflects {div} divisions. A shunt of {S} Ω across the galvanometer reduces the deflection to one half, while the same series resistor and source remain connected. Do not assume the series resistance is infinite. The instrument’s full-scale deflection is {fs} divisions. It will be converted to an ammeter with full-scale current {range} A.",
+    "variants": [
+      {
+        "R": 1000,
+        "E": 2,
+        "S": 100,
+        "div": 20,
+        "fs": 50,
+        "range": 0.5
+      },
+      {
+        "R": 2000,
+        "E": 3,
+        "S": 200,
+        "div": 30,
+        "fs": 60,
+        "range": 1
+      }
+    ],
+    "derived": [
+      [
+        "G",
+        "S*R/(R-S)"
+      ],
+      [
+        "merit",
+        "E/((R+G)*div)"
+      ],
+      [
+        "Ifs",
+        "merit*fs"
+      ],
+      [
+        "shunt",
+        "Ifs*G/(range-Ifs)"
+      ],
+      [
+        "power",
+        "Ifs*Ifs*G"
+      ],
+      [
+        "burden",
+        "Ifs*G"
+      ]
+    ],
+    "tasks": [
+      [
+        "shunt",
+        "Find the shunt resistance needed for the specified ammeter range.",
+        "Ω"
+      ],
+      [
+        "power",
+        "Find the coil heating power at full-scale ammeter current.",
+        "W"
+      ],
+      [
+        "burden",
+        "Find the ammeter’s terminal voltage drop at full scale.",
+        "V"
+      ]
+    ],
+    "explanation": "The exact half-deflection equations give G=SR/(R−S)={G} Ω. Current per division is {merit} A/div, so full-scale coil current is {Ifs} A. The ammeter shunt carries range−Ifs, giving {shunt} Ω. Coil power is {power} W and the common coil/shunt voltage is {burden} V.",
+    "reason": "Use the finite-resistance half-deflection circuit to infer coil resistance and current sensitivity, then design and evaluate an ammeter at a different full-scale current.",
+    "checks": []
+  },
+  {
+    "unit": 8,
+    "key": "loaded_piston_release",
+    "topic": "Thermal equilibrium followed by adiabatic loading",
+    "stem": "An ideal monatomic gas under a frictionless piston has initial pressure {p} Pa, volume {V} m³ and temperature {T} K. Heat is supplied quasistatically at constant pressure until the volume doubles. The system is then thermally insulated and compressed quasistatically until the pressure is {factor} times the initial pressure. Use γ=5/3. The gas amount remains fixed and the only mechanical work is p–V work.",
+    "variants": [
+      {
+        "p": 100000.0,
+        "V": 0.01,
+        "T": 300,
+        "factor": 4
+      },
+      {
+        "p": 200000.0,
+        "V": 0.02,
+        "T": 320,
+        "factor": 8
+      }
+    ],
+    "derived": [
+      [
+        "vf",
+        "2*V/factor**(.6)"
+      ],
+      [
+        "tf",
+        "2*T*factor**(.4)"
+      ],
+      [
+        "w2",
+        "(2*p*V-factor*p*vf)/(2/3)"
+      ],
+      [
+        "net",
+        "p*V+w2"
+      ],
+      [
+        "heat",
+        "2.5*p*V"
+      ],
+      [
+        "ratio",
+        "(1.5*(factor*p*vf-p*V))/heat"
+      ]
+    ],
+    "tasks": [
+      [
+        "net",
+        "Find the net work done BY the gas across both stages.",
+        "J"
+      ],
+      [
+        "tf",
+        "Find the final absolute temperature.",
+        "K"
+      ],
+      [
+        "ratio",
+        "Find the total internal-energy increase divided by the heat supplied in the first stage.",
+        ""
+      ]
+    ],
+    "explanation": "After constant-pressure expansion the state is (p,2V,2T). Adiabatic compression gives Vf={vf} m³ and Tf={tf} K. Its signed work is (p_initial V_initial−p_final V_final)/(γ−1)={w2} J. Adding first-stage work yields {net} J. The supplied heat is {heat} J; the specified internal-energy ratio is {ratio}.",
+    "reason": "Carry the intermediate state across a change in thermal regime, maintain work signs and reconcile heat with the overall internal-energy change.",
+    "checks": []
+  },
+  {
+    "unit": 16,
+    "key": "microscope_slab_layers",
+    "topic": "Apparent depth with a calibrated microscope",
+    "stem": "A travelling microscope has an additive vertical-coordinate zero offset. With no slab, a bottom mark reads {b} mm. After a transparent slab is placed over that mark, the slab top reads {top} mm and the apparent mark reads {apparent} mm, with increasing readings upward. All readings share the same zero. Under near-normal viewing, that slab is replaced by a two-layer stack with {t1} mm of the same material and {t2} mm of refractive index {n2}. The bottom mark is fixed and air is above the stack.",
+    "variants": [
+      {
+        "b": 10,
+        "top": 22,
+        "apparent": 14,
+        "t1": 9,
+        "t2": 6,
+        "n2": 2
+      },
+      {
+        "b": 5,
+        "top": 20,
+        "apparent": 10,
+        "t1": 6,
+        "t2": 8,
+        "n2": 2
+      }
+    ],
+    "derived": [
+      [
+        "n",
+        "(top-b)/(top-apparent)"
+      ],
+      [
+        "depth",
+        "t1/n+t2/n2"
+      ],
+      [
+        "shift",
+        "t1+t2-depth"
+      ],
+      [
+        "reading",
+        "b+shift"
+      ],
+      [
+        "effective",
+        "(t1+t2)/depth"
+      ]
+    ],
+    "tasks": [
+      [
+        "reading",
+        "Find the apparent-mark microscope reading with the stack.",
+        "mm"
+      ],
+      [
+        "effective",
+        "Find the effective refractive index inferred by treating the full stack as one uniform slab.",
+        ""
+      ],
+      [
+        "depth",
+        "Find the apparent depth of the mark measured downward from the stack’s top.",
+        "mm"
+      ]
+    ],
+    "explanation": "Coordinate differences remove the offset. The original real and apparent depths give n={n}. For the stack the apparent depths add: t1/n+t2/n2={depth} mm, so upward shift={shift} mm and reading={reading} mm. The single-slab inferred index is total thickness/apparent depth={effective}; it is not the arithmetic mean of the indices.",
+    "reason": "Remove a shared coordinate offset, infer an optical material property and combine two apparent depths with a different reference surface.",
+    "checks": []
+  },
+  {
+    "unit": 10,
+    "key": "resonance_thermal_comparison",
+    "topic": "Resonance readings with a fixed end correction",
+    "stem": "At air temperature {T1} K, the first two resonance lengths of a closed-end resonance tube are {l1} and {l2} cm with one tuning fork. At {T2} K the first resonance with the SAME fork is {newl} cm. The same end correction e applies in both trials; sound speed is proportional to √T. At T1 an independent sound-speed measurement gives {c1} m/s. Treat air as ideal, with tube dimensions unchanged.",
+    "variants": [
+      {
+        "T1": 300,
+        "T2": 363,
+        "l1": 16,
+        "l2": 50,
+        "newl": 17.7,
+        "c1": 340
+      },
+      {
+        "T1": 300,
+        "T2": 432,
+        "l1": 20,
+        "l2": 62,
+        "newl": 24.2,
+        "c1": 336
+      }
+    ],
+    "derived": [
+      [
+        "end",
+        "(l2-3*l1)/2"
+      ],
+      [
+        "lam1",
+        "2*(l2-l1)/100"
+      ],
+      [
+        "f",
+        "c1/lam1"
+      ],
+      [
+        "lam2",
+        "4*(newl+end)/100"
+      ],
+      [
+        "speed2",
+        "f*lam2"
+      ],
+      [
+        "third",
+        "newl+lam2*100"
+      ],
+      [
+        "beat",
+        "2*f*(1-1/sqrt(T2/T1))"
+      ]
+    ],
+    "tasks": [
+      [
+        "speed2",
+        "Find the sound speed in the warm trial, using the resonance readings and the independent T1 speed.",
+        "m/s"
+      ],
+      [
+        "third",
+        "Find the third resonance length at T2.",
+        "cm"
+      ],
+      [
+        "beat",
+        "A second fork has frequency 2f. Find the beat frequency between it and a hypothetical fork whose frequency is 2f/√(T2/T1).",
+        "Hz"
+      ]
+    ],
+    "explanation": "At T1, λ1=2(l2−l1)={lam1} m and e=(l2−3l1)/2={end} cm. Thus f={f} Hz. The warm first resonance gives λ2=4(newl+e)={lam2} m and c2={speed2} m/s, consistent with √T scaling. The third resonance length is newl+λ2={third} cm. The explicitly specified fork pair produces {beat} Hz beats.",
+    "reason": "Remove end correction using two modes, preserve the fork frequency across temperature change and distinguish physical tube length from effective resonant length.",
+    "checks": []
+  }
+]

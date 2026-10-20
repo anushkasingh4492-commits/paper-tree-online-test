@@ -1,0 +1,2141 @@
+[
+  {
+    "id": "JEE27-PHY-0192",
+    "before_after": {
+      "question": {
+        "before": "A taut massless string passes over a fixed massless pulley with a frictionless axle. The tension has:",
+        "after": "A taut massless string passes over a fixed massless pulley with a frictionless axle. Which statement about the tension is correct?"
+      },
+      "options": {
+        "before": {
+          "A": "is zero at the point where the string touches the pulley",
+          "B": "has the same magnitude at every point along the string",
+          "C": "is greater on the side carrying the heavier mass",
+          "D": "increases steadily with the length of string paid out"
+        },
+        "after": {
+          "A": "The tension is zero at the point where the string touches the pulley.",
+          "B": "The tension has the same magnitude at every point along the string.",
+          "C": "The tension is greater on the side carrying the heavier mass.",
+          "D": "The tension increases steadily with the length of string paid out."
+        }
+      },
+      "correct_answer": {
+        "before": "has the same magnitude at every point along the string",
+        "after": "The tension has the same magnitude at every point along the string."
+      }
+    },
+    "final_question": {
+      "id": "JEE27-PHY-0192",
+      "standard": "JEE Main",
+      "subject": "Physics",
+      "branch": "Mechanics",
+      "source_class": "XI",
+      "unit": "Unit 3: Laws of Motion",
+      "chapter": "Laws of Motion",
+      "topic": "Connected Bodies and Pulleys",
+      "subtopic": "Tension in the connecting string",
+      "question_type": "Direct MCQ",
+      "question": "A taut massless string passes over a fixed massless pulley with a frictionless axle. Which statement about the tension is correct?",
+      "options": {
+        "A": "The tension is zero at the point where the string touches the pulley.",
+        "B": "The tension has the same magnitude at every point along the string.",
+        "C": "The tension is greater on the side carrying the heavier mass.",
+        "D": "The tension increases steadily with the length of string paid out."
+      },
+      "correct_option": "B",
+      "correct_answer": "The tension has the same magnitude at every point along the string.",
+      "explanation": "For a pulley of negligible rotational inertia and a frictionless axle, torque balance requires equal tensions on its sides. Massless straight string segments transmit that same tension. This statement does not apply to a pulley with significant rotational inertia.",
+      "difficulty": "Easy",
+      "cognitive_level": "Recall",
+      "marks_correct": 4,
+      "marks_incorrect": -1,
+      "marks_unattempted": 0,
+      "source_document": "NTA JEE Main 2026 official syllabus (scope reference; questions are internally authored/adapted)",
+      "source_chapter": "Laws of Motion",
+      "source_page": "Physics syllabus: PDF pages 3–6; no textbook-page attribution is claimed.",
+      "syllabus_reference": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2025/10/202510311323551056.pdf#page=3",
+      "figures": [],
+      "figure_required": false,
+      "tags": [
+        "Physics",
+        "Unit 3: Laws of Motion",
+        "Connected Bodies and Pulleys",
+        "SRC-faef290ef1ce"
+      ],
+      "generator_eligible": true,
+      "validation_status": "STRUCTURE_CHECKED_CONTENT_REVIEWED",
+      "candidate_id": "NEET27-PHY-0198",
+      "unit_number": 3,
+      "difficulty_reason": "Direct principle, interpretation or short substitution.",
+      "concept_family": "SRC-faef290ef1ce",
+      "numerical_variant": null,
+      "provenance": {
+        "kind": "Reviewed and adapted internal candidate",
+        "source_candidate_id": "NEET27-PHY-0198",
+        "source_bank_sha256": "3703da6c92bd23f69e980f1c87408a8d5a3dcadd834ee7be00a29251c64f45ea",
+        "review": "Stem, options and keyed result reviewed; selected explanations amended. No external human review claimed."
+      },
+      "assumptions": "Use the stated friction model, massless inextensible strings and massless frictionless pulleys unless specified otherwise.",
+      "syllabus_basis_year": 2026,
+      "max_per_family_per_paper": 1
+    }
+  },
+  {
+    "id": "JEE27-PHY-0255",
+    "before_after": {
+      "explanation": {
+        "before": "Use the physical relations below with the missing input ξ. Matching the measured this maximum speed gives ξ=0.2 in the unit assigned to ξ in the question. Substitution checks the observation:\nAt the upper speed limit, friction acts down the bank. Vertical balance gives N(cosθ−μsinθ)=mg, while inward force is N(sinθ+μcosθ)=mv²/r. Therefore v = 19.46657054 m/s and N = 8680.22237 N. Dividing v² by rg tanθ gives the kinetic-energy ratio 1.894736842.",
+        "after": "Use the physical relations below with the missing input ξ. Matching the recorded maximum speed gives ξ=0.2 in the unit assigned to ξ in the question. Substitution checks the observation:\nAt the upper speed limit, friction acts down the bank. Vertical balance gives N(cosθ−μsinθ)=mg, while inward force is N(sinθ+μcosθ)=mv²/r. Therefore v = 19.46657054 m/s and N = 8680.22237 N. Dividing v² by rg tanθ gives the kinetic-energy ratio 1.894736842."
+      }
+    },
+    "final_question": {
+      "candidate_id": "NEW-U03-banked_friction-2-1",
+      "unit_number": 3,
+      "topic": "Banked-road limiting speeds",
+      "subtopic": "Find this maximum speed",
+      "question": "A circular road has radius 80 m and bank angle θ with tan θ = 0.25. The coefficient of static friction is ξ. Consider a 800 kg car at the maximum speed at which it can follow the circle without slipping. Take g = 10 m/s². The recorded value of this maximum speed is 19.46657054 m/s. Which listed positive value of ξ is consistent with this measurement?",
+      "correct_answer": "0.2",
+      "explanation": "Use the physical relations below with the missing input ξ. Matching the recorded maximum speed gives ξ=0.2 in the unit assigned to ξ in the question. Substitution checks the observation:\nAt the upper speed limit, friction acts down the bank. Vertical balance gives N(cosθ−μsinθ)=mg, while inward force is N(sinθ+μcosθ)=mv²/r. Therefore v = 19.46657054 m/s and N = 8680.22237 N. Dividing v² by rg tanθ gives the kinetic-energy ratio 1.894736842.",
+      "difficulty": "Difficult",
+      "difficulty_reason": "Choose the limiting friction direction; solve vertical balance and radial acceleration together. Assessed outcome: Find this maximum speed. Missing input: mu.",
+      "concept_family": "GLOBAL-BANKED-FRICTION",
+      "source_class": "XI",
+      "question_type": "Inverse numerical MCQ",
+      "figures": [],
+      "figure_required": false,
+      "numerical_variant": null,
+      "options": {
+        "A": "0.4",
+        "B": "0.2",
+        "C": "0.3",
+        "D": "0.1"
+      },
+      "correct_option": "B",
+      "chapter": "Laws of Motion",
+      "branch": "Mechanics and Thermal Physics",
+      "cognitive_level": "Analysis",
+      "provenance": {
+        "kind": "Original model-derived question",
+        "model": "banked_friction",
+        "variant": 2,
+        "task": 1,
+        "inverse_input": "mu",
+        "review": "Physical model, equations and numerical residuals reviewed; option substitution verifies inverse choices."
+      },
+      "id": "JEE27-PHY-0255",
+      "standard": "JEE Main",
+      "subject": "Physics",
+      "unit": "Unit 3: Laws of Motion",
+      "assumptions": "Use the stated friction model, massless inextensible strings and massless frictionless pulleys unless specified otherwise.",
+      "marks_correct": 4,
+      "marks_incorrect": -1,
+      "marks_unattempted": 0,
+      "source_document": "NTA JEE Main 2026 official syllabus (scope reference; questions are internally authored/adapted)",
+      "source_chapter": "Laws of Motion",
+      "source_page": "Physics syllabus: PDF pages 3–6; no textbook-page attribution is claimed.",
+      "syllabus_reference": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2025/10/202510311323551056.pdf#page=3",
+      "syllabus_basis_year": 2026,
+      "tags": [
+        "Physics",
+        "Unit 3: Laws of Motion",
+        "Banked-road limiting speeds",
+        "GLOBAL-BANKED-FRICTION"
+      ],
+      "generator_eligible": true,
+      "validation_status": "STRUCTURE_CHECKED_CONTENT_REVIEWED",
+      "max_per_family_per_paper": 1
+    }
+  },
+  {
+    "id": "JEE27-PHY-0708",
+    "before_after": {
+      "explanation": {
+        "before": "Use the physical relations below with the missing input ξ. Matching the measured its kinetic energy at terminal speed in the same liquid gives ξ=10 in the unit assigned to ξ in the question. Substitution checks the observation:\nAt terminal speed, weight minus buoyancy equals Stokes drag: (4πr³/3)(ρs−ρl)g = 6πηrv. This gives η = 0.2222222222 Pa s. Drag power is the effective weight times speed, 2.094395102 × 10⁻⁷ W. Since vt is proportional to r², doubling radius gives 40 mm/s. The doubled-radius bead has eight times the original mass and four times the speed. Its kinetic energy is 1.675516082 × 10⁻⁸ J.",
+        "after": "Use the physical relations below with the missing input ξ. Matching the recorded kinetic energy of the doubled-radius bead gives ξ=10 in the unit assigned to ξ in the question. Substitution checks the observation:\nAt terminal speed, weight minus buoyancy equals Stokes drag: (4πr³/3)(ρs−ρl)g = 6πηrv. This gives η = 0.2222222222 Pa s. Drag power is the effective weight times speed, 2.094395102 × 10⁻⁷ W. Since vt is proportional to r², doubling radius gives 40 mm/s. The doubled-radius bead has eight times the original mass and four times the speed. Its kinetic energy is 1.675516082 × 10⁻⁸ J."
+      }
+    },
+    "final_question": {
+      "candidate_id": "NEW-U07-stokes_inverse-2-3",
+      "unit_number": 7,
+      "topic": "Terminal speed and viscous dissipation",
+      "subtopic": "A bead of the same material has twice the radius and remains in Stokes flow. Find its kinetic energy at terminal speed in the same liquid",
+      "question": "A spherical bead of radius 0.5 mm and density 5000 kg/m³ falls at terminal speed ξ mm/s through a liquid of density 1000 kg/m³. Assume Stokes flow, no wall effects and g = 10 m/s². A bead of the same material has twice the radius and remains in Stokes flow. The recorded value of its kinetic energy at terminal speed in the same liquid is 1.675516082 × 10⁻⁸ J. Which listed positive value of ξ is consistent with this measurement?",
+      "correct_answer": "10",
+      "explanation": "Use the physical relations below with the missing input ξ. Matching the recorded kinetic energy of the doubled-radius bead gives ξ=10 in the unit assigned to ξ in the question. Substitution checks the observation:\nAt terminal speed, weight minus buoyancy equals Stokes drag: (4πr³/3)(ρs−ρl)g = 6πηrv. This gives η = 0.2222222222 Pa s. Drag power is the effective weight times speed, 2.094395102 × 10⁻⁷ W. Since vt is proportional to r², doubling radius gives 40 mm/s. The doubled-radius bead has eight times the original mass and four times the speed. Its kinetic energy is 1.675516082 × 10⁻⁸ J.",
+      "difficulty": "Medium",
+      "difficulty_reason": "Balance viscous drag against weight minus buoyancy and use the radius scaling of terminal speed. Assessed outcome: A bead of the same material has twice the radius and remains in Stokes flow. Find its kinetic energy at terminal speed in the same liquid. Missing input: v.",
+      "concept_family": "JM-stokes_inverse",
+      "source_class": "XI",
+      "question_type": "Inverse numerical MCQ",
+      "figures": [],
+      "figure_required": false,
+      "numerical_variant": null,
+      "options": {
+        "A": "15",
+        "B": "20",
+        "C": "5",
+        "D": "10"
+      },
+      "correct_option": "D",
+      "chapter": "Properties of Solids and Liquids",
+      "branch": "Mechanics and Thermal Physics",
+      "cognitive_level": "Analysis",
+      "provenance": {
+        "kind": "Original model-derived question",
+        "model": "stokes_inverse",
+        "variant": 2,
+        "task": 3,
+        "inverse_input": "v",
+        "review": "Physical model, equations and numerical residuals reviewed; option substitution verifies inverse choices."
+      },
+      "id": "JEE27-PHY-0708",
+      "standard": "JEE Main",
+      "subject": "Physics",
+      "unit": "Unit 7: Properties of Solids and Liquids",
+      "assumptions": "Use the specified ideal-fluid or Stokes-flow model. Neglect losses and end/wall effects where the ideal model is invoked; thermal-expansion formulae are first order.",
+      "marks_correct": 4,
+      "marks_incorrect": -1,
+      "marks_unattempted": 0,
+      "source_document": "NTA JEE Main 2026 official syllabus (scope reference; questions are internally authored/adapted)",
+      "source_chapter": "Properties of Solids and Liquids",
+      "source_page": "Physics syllabus: PDF pages 3–6; no textbook-page attribution is claimed.",
+      "syllabus_reference": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2025/10/202510311323551056.pdf#page=3",
+      "syllabus_basis_year": 2026,
+      "tags": [
+        "Physics",
+        "Unit 7: Properties of Solids and Liquids",
+        "Terminal speed and viscous dissipation",
+        "JM-stokes_inverse"
+      ],
+      "generator_eligible": true,
+      "validation_status": "STRUCTURE_CHECKED_CONTENT_REVIEWED",
+      "max_per_family_per_paper": 1
+    }
+  },
+  {
+    "id": "JEE27-PHY-1015",
+    "before_after": {
+      "candidate_id": {
+        "before": "NEW-U10-string_beats-1-1",
+        "after": "REV14-PHY-1015"
+      },
+      "subtopic": {
+        "before": "Find the initial string tension",
+        "after": "How far inward has the bridge moved from the 0.50 m setting, in cm?"
+      },
+      "question": {
+        "before": "A stretched string of length 0.5 m and linear mass density 0.001 kg/m is fixed at both ends. Its fundamental makes 4 beats/s with a 100 Hz tuning fork. Increasing tension by a factor 1.5625 makes the string frequency exceed the fork frequency by 20 Hz. Use the change in beats to determine whether the initial string frequency is above or below the fork frequency. Find the initial string tension. Choose the closest value.",
+        "after": "A uniform sonometer string has vibrating length 0.50 m. At its initial tension its fundamental makes 4 beats/s with an unknown tuning fork; a very small increase in tension decreases the beat frequency. Multiplying the initial tension by 1.5625 gives 20 beats/s with the same fork, without specifying the sign of that frequency difference. Restore the initial tension and length. A uniform coating increases the string linear mass density by 44%, without changing its tension. A bridge is then moved inward until the coated string second harmonic makes 5 beats/s with a 250 Hz fork; a further very small inward movement decreases this beat frequency. Neglect stiffness and stretching. How far inward has the bridge moved from the 0.50 m setting, in cm? Choose the closest value."
+      },
+      "correct_answer": {
+        "before": "9.216 N",
+        "after": "17.3469 cm"
+      },
+      "explanation": {
+        "before": "The beat measurement allows f = fork ± b₁. Testing the tension change using fnew/f = √(Tnew/T) selects f = 96 Hz; it gives the stated final beat difference. Since v = 2Lf = 96 m/s and v² = T/μ, initial tension is 9.216 N, final tension 14.4 N, and the initial second harmonic is 192 Hz.\nFor the requested outcome — Find the initial string tension. — the result is 9.216 N. The first observation gives 96 or 104 Hz. The tension multiplier raises these to 120 or 130 Hz; only 120 Hz exceeds the 100 Hz fork by 20 Hz.",
+        "after": "Let the initial string frequency be f and the unknown fork frequency F. The initial trend gives F=f+4. The changed tension gives |1.25f−F|=20, hence |0.25f−4|=20; only f=96 Hz is positive, and F=100 Hz. Initial wave speed is 2×0.50×96=96 m/s. The coating reduces it to 96/√1.44=80 m/s. Shortening raises the second harmonic frequency; decreasing beats therefore places it below 250 Hz, at 245 Hz. For the second harmonic, frequency=v/L, so L=80/245 m. The bridge moves 0.50−80/245=0.173469388 m, or 17.3469388 cm."
+      },
+      "difficulty_reason": {
+        "before": "Apply both frequency branches to the changed-tension observation, then connect wave speed to string tension. Assessed outcome: Find the initial string tension.",
+        "after": "Resolve the first beat branch using two observations, propagate the density change at fixed tension, resolve a second beat branch from its trend, and invert the second-harmonic length relation."
+      },
+      "question_type": {
+        "before": "Multi-step numerical MCQ",
+        "after": "Coupled reasoning MCQ"
+      },
+      "numerical_variant": {
+        "before": {
+          "question": "A stretched string of length 0.5 m and linear mass density 0.001 kg/m is fixed at both ends. Its fundamental makes 4 beats/s with a 100 Hz tuning fork. Increasing tension by a factor 1.5625 makes the string frequency exceed the fork frequency by 20 Hz. Use the change in beats to determine whether the initial string frequency is above or below the fork frequency. Find the initial string tension. Express the result in units of 10^(-2) N, and give the nearest integer.",
+          "unrounded_value": 921.6000000000001,
+          "answer_integer": 922,
+          "unit": "N",
+          "unit_scale_power10": -2,
+          "rounding": "nearest integer; exact half away from zero",
+          "parent_candidate": "NEW-U10-string_beats-1-1"
+        },
+        "after": {
+          "question": "A uniform sonometer string has vibrating length 0.50 m. At its initial tension its fundamental makes 4 beats/s with an unknown tuning fork; a very small increase in tension decreases the beat frequency. Multiplying the initial tension by 1.5625 gives 20 beats/s with the same fork, without specifying the sign of that frequency difference. Restore the initial tension and length. A uniform coating increases the string linear mass density by 44%, without changing its tension. A bridge is then moved inward until the coated string second harmonic makes 5 beats/s with a 250 Hz fork; a further very small inward movement decreases this beat frequency. Neglect stiffness and stretching. How far inward has the bridge moved from the 0.50 m setting, in cm? Give the numerical value in cm, rounded to the nearest integer.",
+          "unrounded_value": 17.346938775510207,
+          "answer_integer": 17,
+          "unit": "cm",
+          "unit_scale_power10": 0,
+          "rounding": "nearest integer; exact half away from zero",
+          "parent_candidate": "REV14-PHY-1015"
+        }
+      },
+      "options": {
+        "before": {
+          "A": "10.82 N",
+          "B": "18.43 N",
+          "C": "9.216 N",
+          "D": "2.304 N"
+        },
+        "after": {
+          "A": "18.6275 cm",
+          "B": "10.8163 cm",
+          "C": "17.3469 cm",
+          "D": "18 cm"
+        }
+      },
+      "provenance": {
+        "before": {
+          "kind": "Original model-derived question",
+          "model": "string_beats",
+          "variant": 1,
+          "task": 1,
+          "inverse_input": null,
+          "review": "Physical model, equations and numerical residuals reviewed; option substitution verifies inverse choices."
+        },
+        "after": {
+          "kind": "Replacement resolving v1.3.0 erratum E02",
+          "replaces_candidate": "NEW-U10-string_beats-1-1",
+          "review": "Separate printed-input calculation and shortest-path editorial review; not empirical difficulty calibration."
+        }
+      },
+      "assumptions": {
+        "before": "Use linear, lossless sinusoidal waves and small-amplitude pendulum motion unless stated otherwise. Organ-pipe lengths are effective lengths if no end correction is supplied. Path-difference interference assumes initially in-phase coherent sources.",
+        "after": "Use the idealisations, constants, geometry and sign conventions stated in this question. Any accompanying drawing is schematic."
+      }
+    },
+    "final_question": {
+      "candidate_id": "REV14-PHY-1015",
+      "unit_number": 10,
+      "topic": "String harmonics and beat measurements",
+      "subtopic": "How far inward has the bridge moved from the 0.50 m setting, in cm?",
+      "question": "A uniform sonometer string has vibrating length 0.50 m. At its initial tension its fundamental makes 4 beats/s with an unknown tuning fork; a very small increase in tension decreases the beat frequency. Multiplying the initial tension by 1.5625 gives 20 beats/s with the same fork, without specifying the sign of that frequency difference. Restore the initial tension and length. A uniform coating increases the string linear mass density by 44%, without changing its tension. A bridge is then moved inward until the coated string second harmonic makes 5 beats/s with a 250 Hz fork; a further very small inward movement decreases this beat frequency. Neglect stiffness and stretching. How far inward has the bridge moved from the 0.50 m setting, in cm? Choose the closest value.",
+      "correct_answer": "17.3469 cm",
+      "explanation": "Let the initial string frequency be f and the unknown fork frequency F. The initial trend gives F=f+4. The changed tension gives |1.25f−F|=20, hence |0.25f−4|=20; only f=96 Hz is positive, and F=100 Hz. Initial wave speed is 2×0.50×96=96 m/s. The coating reduces it to 96/√1.44=80 m/s. Shortening raises the second harmonic frequency; decreasing beats therefore places it below 250 Hz, at 245 Hz. For the second harmonic, frequency=v/L, so L=80/245 m. The bridge moves 0.50−80/245=0.173469388 m, or 17.3469388 cm.",
+      "difficulty": "Difficult",
+      "difficulty_reason": "Resolve the first beat branch using two observations, propagate the density change at fixed tension, resolve a second beat branch from its trend, and invert the second-harmonic length relation.",
+      "concept_family": "JM-string_beats",
+      "source_class": "XI",
+      "question_type": "Coupled reasoning MCQ",
+      "figures": [],
+      "figure_required": false,
+      "numerical_variant": {
+        "question": "A uniform sonometer string has vibrating length 0.50 m. At its initial tension its fundamental makes 4 beats/s with an unknown tuning fork; a very small increase in tension decreases the beat frequency. Multiplying the initial tension by 1.5625 gives 20 beats/s with the same fork, without specifying the sign of that frequency difference. Restore the initial tension and length. A uniform coating increases the string linear mass density by 44%, without changing its tension. A bridge is then moved inward until the coated string second harmonic makes 5 beats/s with a 250 Hz fork; a further very small inward movement decreases this beat frequency. Neglect stiffness and stretching. How far inward has the bridge moved from the 0.50 m setting, in cm? Give the numerical value in cm, rounded to the nearest integer.",
+        "unrounded_value": 17.346938775510207,
+        "answer_integer": 17,
+        "unit": "cm",
+        "unit_scale_power10": 0,
+        "rounding": "nearest integer; exact half away from zero",
+        "parent_candidate": "REV14-PHY-1015"
+      },
+      "options": {
+        "A": "18.6275 cm",
+        "B": "10.8163 cm",
+        "C": "17.3469 cm",
+        "D": "18 cm"
+      },
+      "correct_option": "C",
+      "chapter": "Oscillations and Waves",
+      "branch": "Mechanics and Thermal Physics",
+      "cognitive_level": "Analysis",
+      "provenance": {
+        "kind": "Replacement resolving v1.3.0 erratum E02",
+        "replaces_candidate": "NEW-U10-string_beats-1-1",
+        "review": "Separate printed-input calculation and shortest-path editorial review; not empirical difficulty calibration."
+      },
+      "id": "JEE27-PHY-1015",
+      "standard": "JEE Main",
+      "subject": "Physics",
+      "unit": "Unit 10: Oscillations and Waves",
+      "assumptions": "Use the idealisations, constants, geometry and sign conventions stated in this question. Any accompanying drawing is schematic.",
+      "marks_correct": 4,
+      "marks_incorrect": -1,
+      "marks_unattempted": 0,
+      "source_document": "NTA JEE Main 2026 official syllabus (scope reference; questions are internally authored/adapted)",
+      "source_chapter": "Oscillations and Waves",
+      "source_page": "Physics syllabus: PDF pages 3–6; no textbook-page attribution is claimed.",
+      "syllabus_reference": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2025/10/202510311323551056.pdf#page=3",
+      "syllabus_basis_year": 2026,
+      "tags": [
+        "Physics",
+        "Unit 10: Oscillations and Waves",
+        "String harmonics and beat measurements",
+        "JM-string_beats"
+      ],
+      "generator_eligible": true,
+      "validation_status": "STRUCTURE_CHECKED_CONTENT_REVIEWED",
+      "max_per_family_per_paper": 1
+    }
+  },
+  {
+    "id": "JEE27-PHY-1318",
+    "before_after": {
+      "tags": {
+        "before": [
+          "Physics",
+          "Unit 13: Magnetic Effects of Current and Magnetism",
+          "Curie Law and Curie Temperature",
+          "SRC-db1acdfe47b3"
+        ],
+        "after": [
+          "Physics",
+          "Unit 13: Magnetic Effects of Current and Magnetism",
+          "Curie Law and Curie Temperature",
+          "GLOBAL-CURIE-LAW"
+        ]
+      },
+      "concept_family": {
+        "before": "SRC-db1acdfe47b3",
+        "after": "GLOBAL-CURIE-LAW"
+      }
+    },
+    "final_question": {
+      "id": "JEE27-PHY-1318",
+      "standard": "JEE Main",
+      "subject": "Physics",
+      "branch": "Electricity and Magnetism",
+      "source_class": "XII",
+      "unit": "Unit 13: Magnetic Effects of Current and Magnetism",
+      "chapter": "Moving Charges and Magnetism; Magnetism and Matter",
+      "topic": "Curie Law and Curie Temperature",
+      "subtopic": "Curie law numerical",
+      "question_type": "One-step numerical MCQ",
+      "question": "The magnetic susceptibility of a paramagnetic material is 3.6 × 10⁻⁴ at 300 K. Assuming the Curie law, its susceptibility at 450 K is:",
+      "options": {
+        "A": "2.4 × 10⁻⁴",
+        "B": "1.6 × 10⁻⁴",
+        "C": "3.6 × 10⁻⁴",
+        "D": "5.4 × 10⁻⁴"
+      },
+      "correct_option": "A",
+      "correct_answer": "2.4 × 10⁻⁴",
+      "explanation": "By the Curie law chi is proportional to 1 / T, so chi_2 = chi_1 × (T₁ / T₂) = 3.6 × 10⁻⁴ x (300 / 450) = 3.6 × 10⁻⁴ x (2 / 3) = 2.4 × 10⁻⁴.",
+      "difficulty": "Medium",
+      "cognitive_level": "Application",
+      "marks_correct": 4,
+      "marks_incorrect": -1,
+      "marks_unattempted": 0,
+      "source_document": "NTA JEE Main 2026 official syllabus (scope reference; questions are internally authored/adapted)",
+      "source_chapter": "Magnetic Effects of Current and Magnetism",
+      "source_page": "Physics syllabus: PDF pages 3–6; no textbook-page attribution is claimed.",
+      "syllabus_reference": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2025/10/202510311323551056.pdf#page=3",
+      "figures": [],
+      "figure_required": false,
+      "tags": [
+        "Physics",
+        "Unit 13: Magnetic Effects of Current and Magnetism",
+        "Curie Law and Curie Temperature",
+        "GLOBAL-CURIE-LAW"
+      ],
+      "generator_eligible": true,
+      "validation_status": "STRUCTURE_CHECKED_CONTENT_REVIEWED",
+      "candidate_id": "NEET27-PHY-1326",
+      "unit_number": 13,
+      "difficulty_reason": "Linked principles or a nontrivial setup within the stated model.",
+      "concept_family": "GLOBAL-CURIE-LAW",
+      "numerical_variant": null,
+      "provenance": {
+        "kind": "Reviewed and adapted internal candidate",
+        "source_candidate_id": "NEET27-PHY-1326",
+        "source_bank_sha256": "3703da6c92bd23f69e980f1c87408a8d5a3dcadd834ee7be00a29251c64f45ea",
+        "review": "Stem, options and keyed result reviewed; selected explanations amended. No external human review claimed."
+      },
+      "assumptions": "Use steady source currents and vacuum unless specified otherwise. Particle motion is nonrelativistic, with other forces neglected in magnetic-orbit questions. Listed charge magnitudes are positive. Neglect end and demagnetising effects in ideal long-solenoid models.",
+      "syllabus_basis_year": 2026,
+      "max_per_family_per_paper": 1
+    }
+  },
+  {
+    "id": "JEE27-PHY-1321",
+    "before_after": {
+      "tags": {
+        "before": [
+          "Physics",
+          "Unit 13: Magnetic Effects of Current and Magnetism",
+          "Curie Law and Curie Temperature",
+          "SRC-e2d8de240c2b"
+        ],
+        "after": [
+          "Physics",
+          "Unit 13: Magnetic Effects of Current and Magnetism",
+          "Curie Law and Curie Temperature",
+          "GLOBAL-CURIE-LAW"
+        ]
+      },
+      "concept_family": {
+        "before": "SRC-e2d8de240c2b",
+        "after": "GLOBAL-CURIE-LAW"
+      }
+    },
+    "final_question": {
+      "id": "JEE27-PHY-1321",
+      "standard": "JEE Main",
+      "subject": "Physics",
+      "branch": "Electricity and Magnetism",
+      "source_class": "XII",
+      "unit": "Unit 13: Magnetic Effects of Current and Magnetism",
+      "chapter": "Moving Charges and Magnetism; Magnetism and Matter",
+      "topic": "Curie Law and Curie Temperature",
+      "subtopic": "Statement of the Curie law",
+      "question_type": "Direct MCQ",
+      "question": "According to the Curie law, the magnetic susceptibility of a paramagnetic material is:",
+      "options": {
+        "A": "independent of its temperature",
+        "B": "inversely proportional to its absolute temperature",
+        "C": "inversely proportional to the square of its absolute temperature",
+        "D": "directly proportional to its absolute temperature"
+      },
+      "correct_option": "B",
+      "correct_answer": "inversely proportional to its absolute temperature",
+      "explanation": "The Curie law states that for a paramagnetic material chi = C / T, with T the absolute temperature and C the Curie constant of the material. Raising the temperature increases the thermal agitation that disturbs the alignment of the dipoles, so the susceptibility falls.",
+      "difficulty": "Easy",
+      "cognitive_level": "Recall",
+      "marks_correct": 4,
+      "marks_incorrect": -1,
+      "marks_unattempted": 0,
+      "source_document": "NTA JEE Main 2026 official syllabus (scope reference; questions are internally authored/adapted)",
+      "source_chapter": "Magnetic Effects of Current and Magnetism",
+      "source_page": "Physics syllabus: PDF pages 3–6; no textbook-page attribution is claimed.",
+      "syllabus_reference": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2025/10/202510311323551056.pdf#page=3",
+      "figures": [],
+      "figure_required": false,
+      "tags": [
+        "Physics",
+        "Unit 13: Magnetic Effects of Current and Magnetism",
+        "Curie Law and Curie Temperature",
+        "GLOBAL-CURIE-LAW"
+      ],
+      "generator_eligible": true,
+      "validation_status": "STRUCTURE_CHECKED_CONTENT_REVIEWED",
+      "candidate_id": "NEET27-PHY-1332",
+      "unit_number": 13,
+      "difficulty_reason": "Direct principle, interpretation or short substitution.",
+      "concept_family": "GLOBAL-CURIE-LAW",
+      "numerical_variant": null,
+      "provenance": {
+        "kind": "Reviewed and adapted internal candidate",
+        "source_candidate_id": "NEET27-PHY-1332",
+        "source_bank_sha256": "3703da6c92bd23f69e980f1c87408a8d5a3dcadd834ee7be00a29251c64f45ea",
+        "review": "Stem, options and keyed result reviewed; selected explanations amended. No external human review claimed."
+      },
+      "assumptions": "Use steady source currents and vacuum unless specified otherwise. Particle motion is nonrelativistic, with other forces neglected in magnetic-orbit questions. Listed charge magnitudes are positive. Neglect end and demagnetising effects in ideal long-solenoid models.",
+      "syllabus_basis_year": 2026,
+      "max_per_family_per_paper": 1
+    }
+  },
+  {
+    "id": "JEE27-PHY-1427",
+    "before_after": {
+      "candidate_id": {
+        "before": "NEW-U13-selector_orbit-2-2",
+        "after": "REV14-PHY-1427"
+      },
+      "topic": {
+        "before": "Velocity selection followed by magnetic curvature",
+        "after": "Charged-particle curvature and retarding energy"
+      },
+      "subtopic": {
+        "before": "Find their revolution period in the second region",
+        "after": "Find ΔV for which the circular trajectory in the strip just touches the far boundary tangentially."
+      },
+      "question": {
+        "before": "Positive ions pass undeflected through crossed uniform fields E = ξ V/m and B₁ = 0.2 T, with velocity perpendicular to both. They then enter a second region containing only a perpendicular magnetic field B₂ = 0.3 T and describe circles of radius 0.04 m. Neglect gravity and relativistic effects. The recorded value of their revolution period in the second region is 1.675516082 × 10⁻⁶ s. Which listed positive value of ξ is consistent with this measurement?",
+        "after": "A source prepares identical ideal positive nonrelativistic particles with the same unknown speed. In a calibration region they describe circles of radius 0.040 m in a perpendicular magnetic field of 0.30 T. In a separate trial, fresh particles from this source cross a retarding potential of 600 V and then describe circles of radius 0.030 m in a perpendicular field of 0.20 T. In a third trial, fresh particles from this source cross a total retarding potential of (600+ΔV) V, with ΔV positive, and enter normally at the near straight boundary of a magnetic strip of field 0.50 T perpendicular to their motion plane; its parallel boundaries are 0.010 m apart. Neglect all other forces and fields; the strip is unbounded along its boundaries. Find ΔV for which the circular trajectory in the strip just touches the far boundary tangentially. Choose the closest value."
+      },
+      "correct_answer": {
+        "before": "30000",
+        "after": "61.1111 V"
+      },
+      "explanation": {
+        "before": "Use the physical relations below with the missing input ξ. Matching the measured their revolution period in the second region gives ξ=30000 in the unit assigned to ξ in the question. Substitution checks the observation:\nZero force in the selector requires qE=qvB₁, hence v=150000 m/s. In the second region qvB₂=mv²/r, giving q/m=12500000 C/kg. T=2πr/v=1.675516082 × 10⁻⁶ s. Acceleration from rest uses qΔV=mv²/2, so ΔV=900 V.",
+        "after": "Write k=q/m and v₀ for the initial speed supplied by the source. The first circle gives v₀=0.30×0.040 k=0.012k; after 600 V retardation, v₁=0.20×0.030 k=0.006k. Energy gives v₀²−v₁²=1200k, so k=1200/(0.012²−0.006²)=1.11111111×10⁷ C/kg. In the strip the maximum normal penetration is its radius. Tangency to the far boundary requires radius 0.010 m, hence v₂=0.50×0.010k=0.005k. The additional retardation obeys 2kΔV=v₁²−v₂², giving ΔV=k(0.006²−0.005²)/2=550/9 V. The result is positive and leaves nonzero kinetic energy. Equivalently, eliminating k directly gives ΔV/600=(0.006²−0.005²)/(0.012²−0.006²); both routes use the two measured curvatures, the calibration potential and the tangency condition."
+      },
+      "difficulty_reason": {
+        "before": "Use velocity selection and the separate magnetic-orbit measurement, then connect to acceleration energy. Assessed outcome: Find their revolution period in the second region. Missing input: E.",
+        "after": "Link two measured curvatures by retarding work, infer or eliminate the charge-to-mass ratio, and impose the strip tangency condition to obtain the additional energy loss. A ratio solution still requires all three magnetic geometries and the calibration potential."
+      },
+      "question_type": {
+        "before": "Inverse numerical MCQ",
+        "after": "Coupled reasoning MCQ"
+      },
+      "options": {
+        "before": {
+          "A": "30000",
+          "B": "15000",
+          "C": "45000",
+          "D": "60000"
+        },
+        "after": {
+          "A": "61.1111 V",
+          "B": "600 V",
+          "C": "661.111 V",
+          "D": "122.222 V"
+        }
+      },
+      "provenance": {
+        "before": {
+          "kind": "Original model-derived question",
+          "model": "selector_orbit",
+          "variant": 2,
+          "task": 2,
+          "inverse_input": "E",
+          "review": "Physical model, equations and numerical residuals reviewed; option substitution verifies inverse choices."
+        },
+        "after": {
+          "kind": "Replacement resolving v1.3.0 erratum E02",
+          "replaces_candidate": "NEW-U13-selector_orbit-2-2",
+          "review": "Separate printed-input calculation and shortest-path editorial review; not empirical difficulty calibration."
+        }
+      },
+      "assumptions": {
+        "before": "Use steady source currents and vacuum unless specified otherwise. Particle motion is nonrelativistic, with other forces neglected in magnetic-orbit questions. Listed charge magnitudes are positive. Neglect end and demagnetising effects in ideal long-solenoid models.",
+        "after": "Use the idealisations, constants, geometry and sign conventions stated in this question. Any accompanying drawing is schematic."
+      },
+      "tags": {
+        "before": [
+          "Physics",
+          "Unit 13: Magnetic Effects of Current and Magnetism",
+          "Velocity selection followed by magnetic curvature",
+          "JM-selector_orbit"
+        ],
+        "after": [
+          "Physics",
+          "Unit 13: Magnetic Effects of Current and Magnetism",
+          "Charged-particle curvature and retarding energy",
+          "JM-selector_orbit"
+        ]
+      }
+    },
+    "final_question": {
+      "candidate_id": "REV14-PHY-1427",
+      "unit_number": 13,
+      "topic": "Charged-particle curvature and retarding energy",
+      "subtopic": "Find ΔV for which the circular trajectory in the strip just touches the far boundary tangentially.",
+      "question": "A source prepares identical ideal positive nonrelativistic particles with the same unknown speed. In a calibration region they describe circles of radius 0.040 m in a perpendicular magnetic field of 0.30 T. In a separate trial, fresh particles from this source cross a retarding potential of 600 V and then describe circles of radius 0.030 m in a perpendicular field of 0.20 T. In a third trial, fresh particles from this source cross a total retarding potential of (600+ΔV) V, with ΔV positive, and enter normally at the near straight boundary of a magnetic strip of field 0.50 T perpendicular to their motion plane; its parallel boundaries are 0.010 m apart. Neglect all other forces and fields; the strip is unbounded along its boundaries. Find ΔV for which the circular trajectory in the strip just touches the far boundary tangentially. Choose the closest value.",
+      "correct_answer": "61.1111 V",
+      "explanation": "Write k=q/m and v₀ for the initial speed supplied by the source. The first circle gives v₀=0.30×0.040 k=0.012k; after 600 V retardation, v₁=0.20×0.030 k=0.006k. Energy gives v₀²−v₁²=1200k, so k=1200/(0.012²−0.006²)=1.11111111×10⁷ C/kg. In the strip the maximum normal penetration is its radius. Tangency to the far boundary requires radius 0.010 m, hence v₂=0.50×0.010k=0.005k. The additional retardation obeys 2kΔV=v₁²−v₂², giving ΔV=k(0.006²−0.005²)/2=550/9 V. The result is positive and leaves nonzero kinetic energy. Equivalently, eliminating k directly gives ΔV/600=(0.006²−0.005²)/(0.012²−0.006²); both routes use the two measured curvatures, the calibration potential and the tangency condition.",
+      "difficulty": "Difficult",
+      "difficulty_reason": "Link two measured curvatures by retarding work, infer or eliminate the charge-to-mass ratio, and impose the strip tangency condition to obtain the additional energy loss. A ratio solution still requires all three magnetic geometries and the calibration potential.",
+      "concept_family": "JM-selector_orbit",
+      "source_class": "XII",
+      "question_type": "Coupled reasoning MCQ",
+      "figures": [],
+      "figure_required": false,
+      "numerical_variant": null,
+      "options": {
+        "A": "61.1111 V",
+        "B": "600 V",
+        "C": "661.111 V",
+        "D": "122.222 V"
+      },
+      "correct_option": "A",
+      "chapter": "Magnetic Effects of Current and Magnetism",
+      "branch": "Electricity, Optics and Modern Physics",
+      "cognitive_level": "Analysis",
+      "provenance": {
+        "kind": "Replacement resolving v1.3.0 erratum E02",
+        "replaces_candidate": "NEW-U13-selector_orbit-2-2",
+        "review": "Separate printed-input calculation and shortest-path editorial review; not empirical difficulty calibration."
+      },
+      "id": "JEE27-PHY-1427",
+      "standard": "JEE Main",
+      "subject": "Physics",
+      "unit": "Unit 13: Magnetic Effects of Current and Magnetism",
+      "assumptions": "Use the idealisations, constants, geometry and sign conventions stated in this question. Any accompanying drawing is schematic.",
+      "marks_correct": 4,
+      "marks_incorrect": -1,
+      "marks_unattempted": 0,
+      "source_document": "NTA JEE Main 2026 official syllabus (scope reference; questions are internally authored/adapted)",
+      "source_chapter": "Magnetic Effects of Current and Magnetism",
+      "source_page": "Physics syllabus: PDF pages 3–6; no textbook-page attribution is claimed.",
+      "syllabus_reference": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2025/10/202510311323551056.pdf#page=3",
+      "syllabus_basis_year": 2026,
+      "tags": [
+        "Physics",
+        "Unit 13: Magnetic Effects of Current and Magnetism",
+        "Charged-particle curvature and retarding energy",
+        "JM-selector_orbit"
+      ],
+      "generator_eligible": true,
+      "validation_status": "STRUCTURE_CHECKED_CONTENT_REVIEWED",
+      "max_per_family_per_paper": 1
+    }
+  },
+  {
+    "id": "JEE27-PHY-1537",
+    "before_after": {
+      "question": {
+        "before": "The magnetic flux through each turn of an 100-turn coil is Φ(t) = 2t² + 3t mWb for t in seconds. The coil has resistance 10 Ω and negligible self-inductance. Its terminals are connected to form a closed circuit. Consider 0 ≤ t ≤ 2 s. Find the induced-current magnitude at the end of the interval. Choose the closest value.",
+        "after": "The magnetic flux through each turn of a coil with 100 turns is Φ(t) = 2t² + 3t mWb for t in seconds. The coil has resistance 10 Ω and negligible self-inductance. Its terminals are connected to form a closed circuit. Consider 0 ≤ t ≤ 2 s. Find the induced-current magnitude at the end of the interval. Choose the closest value."
+      },
+      "numerical_variant": {
+        "before": {
+          "question": "The magnetic flux through each turn of an 100-turn coil is Φ(t) = 2t² + 3t mWb for t in seconds. The coil has resistance 10 Ω and negligible self-inductance. Its terminals are connected to form a closed circuit. Consider 0 ≤ t ≤ 2 s. Find the induced-current magnitude at the end of the interval. Express the result in units of 10^(-3) A, and give the nearest integer.",
+          "unrounded_value": 110.00000000000001,
+          "answer_integer": 110,
+          "unit": "A",
+          "unit_scale_power10": -3,
+          "rounding": "nearest integer; exact half away from zero",
+          "parent_candidate": "NEW-U14-flux_polynomial-1-1"
+        },
+        "after": {
+          "question": "The magnetic flux through each turn of a coil with 100 turns is Φ(t) = 2t² + 3t mWb for t in seconds. The coil has resistance 10 Ω and negligible self-inductance. Its terminals are connected to form a closed circuit. Consider 0 ≤ t ≤ 2 s. Find the induced-current magnitude at the end of the interval. Express the result in units of 10^(-3) A, and give the nearest integer.",
+          "unrounded_value": 110.00000000000001,
+          "answer_integer": 110,
+          "unit": "A",
+          "unit_scale_power10": -3,
+          "rounding": "nearest integer; exact half away from zero",
+          "parent_candidate": "NEW-U14-flux_polynomial-1-1"
+        }
+      }
+    },
+    "final_question": {
+      "candidate_id": "NEW-U14-flux_polynomial-1-1",
+      "unit_number": 14,
+      "topic": "Time-dependent flux and resistance heating",
+      "subtopic": "Find the induced-current magnitude at the end of the interval",
+      "question": "The magnetic flux through each turn of a coil with 100 turns is Φ(t) = 2t² + 3t mWb for t in seconds. The coil has resistance 10 Ω and negligible self-inductance. Its terminals are connected to form a closed circuit. Consider 0 ≤ t ≤ 2 s. Find the induced-current magnitude at the end of the interval. Choose the closest value.",
+      "correct_answer": "0.11 A",
+      "explanation": "Faraday’s law gives emf magnitude N dΦ/dt = N(2at+b)×10⁻³ V. Divide by R for current; the final value is 0.11 A. Integrating gives transported charge NΔΦ/R=0.14 C. Integrating I²R over the interval yields 0.1086666667 J.\nFor the requested outcome — Find the induced-current magnitude at the end of the interval. — the result is 0.11 A.",
+      "difficulty": "Medium",
+      "difficulty_reason": "Differentiate flux for emf; heat requires integrating squared current rather than total charge. Assessed outcome: Find the induced-current magnitude at the end of the interval.",
+      "concept_family": "JM-flux_polynomial",
+      "source_class": "XII",
+      "question_type": "Multi-step numerical MCQ",
+      "figures": [],
+      "figure_required": false,
+      "numerical_variant": {
+        "question": "The magnetic flux through each turn of a coil with 100 turns is Φ(t) = 2t² + 3t mWb for t in seconds. The coil has resistance 10 Ω and negligible self-inductance. Its terminals are connected to form a closed circuit. Consider 0 ≤ t ≤ 2 s. Find the induced-current magnitude at the end of the interval. Express the result in units of 10^(-3) A, and give the nearest integer.",
+        "unrounded_value": 110.00000000000001,
+        "answer_integer": 110,
+        "unit": "A",
+        "unit_scale_power10": -3,
+        "rounding": "nearest integer; exact half away from zero",
+        "parent_candidate": "NEW-U14-flux_polynomial-1-1"
+      },
+      "options": {
+        "A": "0.22 A",
+        "B": "0.07 A",
+        "C": "0.0011 A",
+        "D": "0.11 A"
+      },
+      "correct_option": "D",
+      "chapter": "Electromagnetic Induction and Alternating Currents",
+      "branch": "Electricity, Optics and Modern Physics",
+      "cognitive_level": "Analysis",
+      "provenance": {
+        "kind": "Original model-derived question",
+        "model": "flux_polynomial",
+        "variant": 1,
+        "task": 1,
+        "inverse_input": null,
+        "review": "Physical model, equations and numerical residuals reviewed; option substitution verifies inverse choices."
+      },
+      "id": "JEE27-PHY-1537",
+      "standard": "JEE Main",
+      "subject": "Physics",
+      "unit": "Unit 14: Electromagnetic Induction and Alternating Currents",
+      "assumptions": "AC voltages/currents are sinusoidal RMS values unless a waveform or peak value is given. Components are ideal and linear; magnetic-field/rod/rail geometry is mutually perpendicular where the motional-emf formula is invoked. Neglect self-inductance in purely resistive induction loops.",
+      "marks_correct": 4,
+      "marks_incorrect": -1,
+      "marks_unattempted": 0,
+      "source_document": "NTA JEE Main 2026 official syllabus (scope reference; questions are internally authored/adapted)",
+      "source_chapter": "Electromagnetic Induction and Alternating Currents",
+      "source_page": "Physics syllabus: PDF pages 3–6; no textbook-page attribution is claimed.",
+      "syllabus_reference": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2025/10/202510311323551056.pdf#page=3",
+      "syllabus_basis_year": 2026,
+      "tags": [
+        "Physics",
+        "Unit 14: Electromagnetic Induction and Alternating Currents",
+        "Time-dependent flux and resistance heating",
+        "JM-flux_polynomial"
+      ],
+      "generator_eligible": true,
+      "validation_status": "STRUCTURE_CHECKED_CONTENT_REVIEWED",
+      "max_per_family_per_paper": 1
+    }
+  },
+  {
+    "id": "JEE27-PHY-1538",
+    "before_after": {
+      "question": {
+        "before": "The magnetic flux through each turn of an 100-turn coil is Φ(t) = 2t² + 3t mWb for t in seconds. The coil has resistance 10 Ω and negligible self-inductance. Its terminals are connected to form a closed circuit. Consider 0 ≤ t ≤ 2 s. Find the magnitude of charge transported during the interval. Choose the closest value.",
+        "after": "The magnetic flux through each turn of a coil with 100 turns is Φ(t) = 2t² + 3t mWb for t in seconds. The coil has resistance 10 Ω and negligible self-inductance. Its terminals are connected to form a closed circuit. Consider 0 ≤ t ≤ 2 s. Find the magnitude of charge transported during the interval. Choose the closest value."
+      },
+      "numerical_variant": {
+        "before": {
+          "question": "The magnetic flux through each turn of an 100-turn coil is Φ(t) = 2t² + 3t mWb for t in seconds. The coil has resistance 10 Ω and negligible self-inductance. Its terminals are connected to form a closed circuit. Consider 0 ≤ t ≤ 2 s. Find the magnitude of charge transported during the interval. Express the result in units of 10^(-3) C, and give the nearest integer.",
+          "unrounded_value": 140.0,
+          "answer_integer": 140,
+          "unit": "C",
+          "unit_scale_power10": -3,
+          "rounding": "nearest integer; exact half away from zero",
+          "parent_candidate": "NEW-U14-flux_polynomial-1-2"
+        },
+        "after": {
+          "question": "The magnetic flux through each turn of a coil with 100 turns is Φ(t) = 2t² + 3t mWb for t in seconds. The coil has resistance 10 Ω and negligible self-inductance. Its terminals are connected to form a closed circuit. Consider 0 ≤ t ≤ 2 s. Find the magnitude of charge transported during the interval. Express the result in units of 10^(-3) C, and give the nearest integer.",
+          "unrounded_value": 140.0,
+          "answer_integer": 140,
+          "unit": "C",
+          "unit_scale_power10": -3,
+          "rounding": "nearest integer; exact half away from zero",
+          "parent_candidate": "NEW-U14-flux_polynomial-1-2"
+        }
+      }
+    },
+    "final_question": {
+      "candidate_id": "NEW-U14-flux_polynomial-1-2",
+      "unit_number": 14,
+      "topic": "Time-dependent flux and resistance heating",
+      "subtopic": "Find the magnitude of charge transported during the interval",
+      "question": "The magnetic flux through each turn of a coil with 100 turns is Φ(t) = 2t² + 3t mWb for t in seconds. The coil has resistance 10 Ω and negligible self-inductance. Its terminals are connected to form a closed circuit. Consider 0 ≤ t ≤ 2 s. Find the magnitude of charge transported during the interval. Choose the closest value.",
+      "correct_answer": "0.14 C",
+      "explanation": "Faraday’s law gives emf magnitude N dΦ/dt = N(2at+b)×10⁻³ V. Divide by R for current; the final value is 0.11 A. Integrating gives transported charge NΔΦ/R=0.14 C. Integrating I²R over the interval yields 0.1086666667 J.\nFor the requested outcome — Find the magnitude of charge transported during the interval. — the result is 0.14 C.",
+      "difficulty": "Medium",
+      "difficulty_reason": "Differentiate flux for emf; heat requires integrating squared current rather than total charge. Assessed outcome: Find the magnitude of charge transported during the interval.",
+      "concept_family": "JM-flux_polynomial",
+      "source_class": "XII",
+      "question_type": "Multi-step numerical MCQ",
+      "figures": [],
+      "figure_required": false,
+      "numerical_variant": {
+        "question": "The magnetic flux through each turn of a coil with 100 turns is Φ(t) = 2t² + 3t mWb for t in seconds. The coil has resistance 10 Ω and negligible self-inductance. Its terminals are connected to form a closed circuit. Consider 0 ≤ t ≤ 2 s. Find the magnitude of charge transported during the interval. Express the result in units of 10^(-3) C, and give the nearest integer.",
+        "unrounded_value": 140.0,
+        "answer_integer": 140,
+        "unit": "C",
+        "unit_scale_power10": -3,
+        "rounding": "nearest integer; exact half away from zero",
+        "parent_candidate": "NEW-U14-flux_polynomial-1-2"
+      },
+      "options": {
+        "A": "0.0014 C",
+        "B": "0.07 C",
+        "C": "0.14 C",
+        "D": "0.22 C"
+      },
+      "correct_option": "C",
+      "chapter": "Electromagnetic Induction and Alternating Currents",
+      "branch": "Electricity, Optics and Modern Physics",
+      "cognitive_level": "Analysis",
+      "provenance": {
+        "kind": "Original model-derived question",
+        "model": "flux_polynomial",
+        "variant": 1,
+        "task": 2,
+        "inverse_input": null,
+        "review": "Physical model, equations and numerical residuals reviewed; option substitution verifies inverse choices."
+      },
+      "id": "JEE27-PHY-1538",
+      "standard": "JEE Main",
+      "subject": "Physics",
+      "unit": "Unit 14: Electromagnetic Induction and Alternating Currents",
+      "assumptions": "AC voltages/currents are sinusoidal RMS values unless a waveform or peak value is given. Components are ideal and linear; magnetic-field/rod/rail geometry is mutually perpendicular where the motional-emf formula is invoked. Neglect self-inductance in purely resistive induction loops.",
+      "marks_correct": 4,
+      "marks_incorrect": -1,
+      "marks_unattempted": 0,
+      "source_document": "NTA JEE Main 2026 official syllabus (scope reference; questions are internally authored/adapted)",
+      "source_chapter": "Electromagnetic Induction and Alternating Currents",
+      "source_page": "Physics syllabus: PDF pages 3–6; no textbook-page attribution is claimed.",
+      "syllabus_reference": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2025/10/202510311323551056.pdf#page=3",
+      "syllabus_basis_year": 2026,
+      "tags": [
+        "Physics",
+        "Unit 14: Electromagnetic Induction and Alternating Currents",
+        "Time-dependent flux and resistance heating",
+        "JM-flux_polynomial"
+      ],
+      "generator_eligible": true,
+      "validation_status": "STRUCTURE_CHECKED_CONTENT_REVIEWED",
+      "max_per_family_per_paper": 1
+    }
+  },
+  {
+    "id": "JEE27-PHY-1539",
+    "before_after": {
+      "question": {
+        "before": "The magnetic flux through each turn of an 100-turn coil is Φ(t) = 2t² + 3t mWb for t in seconds. The coil has resistance 10 Ω and negligible self-inductance. Its terminals are connected to form a closed circuit. Consider 0 ≤ t ≤ 2 s. Find the heat dissipated during the interval. Choose the closest value.",
+        "after": "The magnetic flux through each turn of a coil with 100 turns is Φ(t) = 2t² + 3t mWb for t in seconds. The coil has resistance 10 Ω and negligible self-inductance. Its terminals are connected to form a closed circuit. Consider 0 ≤ t ≤ 2 s. Find the heat dissipated during the interval. Choose the closest value."
+      },
+      "numerical_variant": {
+        "before": {
+          "question": "The magnetic flux through each turn of an 100-turn coil is Φ(t) = 2t² + 3t mWb for t in seconds. The coil has resistance 10 Ω and negligible self-inductance. Its terminals are connected to form a closed circuit. Consider 0 ≤ t ≤ 2 s. Find the heat dissipated during the interval. Express the result in units of 10^(-3) J, and give the nearest integer.",
+          "unrounded_value": 108.66666666666669,
+          "answer_integer": 109,
+          "unit": "J",
+          "unit_scale_power10": -3,
+          "rounding": "nearest integer; exact half away from zero",
+          "parent_candidate": "NEW-U14-flux_polynomial-1-3"
+        },
+        "after": {
+          "question": "The magnetic flux through each turn of a coil with 100 turns is Φ(t) = 2t² + 3t mWb for t in seconds. The coil has resistance 10 Ω and negligible self-inductance. Its terminals are connected to form a closed circuit. Consider 0 ≤ t ≤ 2 s. Find the heat dissipated during the interval. Express the result in units of 10^(-3) J, and give the nearest integer.",
+          "unrounded_value": 108.66666666666669,
+          "answer_integer": 109,
+          "unit": "J",
+          "unit_scale_power10": -3,
+          "rounding": "nearest integer; exact half away from zero",
+          "parent_candidate": "NEW-U14-flux_polynomial-1-3"
+        }
+      }
+    },
+    "final_question": {
+      "candidate_id": "NEW-U14-flux_polynomial-1-3",
+      "unit_number": 14,
+      "topic": "Time-dependent flux and resistance heating",
+      "subtopic": "Find the heat dissipated during the interval",
+      "question": "The magnetic flux through each turn of a coil with 100 turns is Φ(t) = 2t² + 3t mWb for t in seconds. The coil has resistance 10 Ω and negligible self-inductance. Its terminals are connected to form a closed circuit. Consider 0 ≤ t ≤ 2 s. Find the heat dissipated during the interval. Choose the closest value.",
+      "correct_answer": "0.1087 J",
+      "explanation": "Faraday’s law gives emf magnitude N dΦ/dt = N(2at+b)×10⁻³ V. Divide by R for current; the final value is 0.11 A. Integrating gives transported charge NΔΦ/R=0.14 C. Integrating I²R over the interval yields 0.1086666667 J.\nFor the requested outcome — Find the heat dissipated during the interval. — the result is 0.1087 J.",
+      "difficulty": "Difficult",
+      "difficulty_reason": "Differentiate flux for emf; heat requires integrating squared current rather than total charge. Assessed outcome: Find the heat dissipated during the interval.",
+      "concept_family": "JM-flux_polynomial",
+      "source_class": "XII",
+      "question_type": "Multi-step numerical MCQ",
+      "figures": [],
+      "figure_required": false,
+      "numerical_variant": {
+        "question": "The magnetic flux through each turn of a coil with 100 turns is Φ(t) = 2t² + 3t mWb for t in seconds. The coil has resistance 10 Ω and negligible self-inductance. Its terminals are connected to form a closed circuit. Consider 0 ≤ t ≤ 2 s. Find the heat dissipated during the interval. Express the result in units of 10^(-3) J, and give the nearest integer.",
+        "unrounded_value": 108.66666666666669,
+        "answer_integer": 109,
+        "unit": "J",
+        "unit_scale_power10": -3,
+        "rounding": "nearest integer; exact half away from zero",
+        "parent_candidate": "NEW-U14-flux_polynomial-1-3"
+      },
+      "options": {
+        "A": "0.05433 J",
+        "B": "0.1087 J",
+        "C": "0.242 J",
+        "D": "0.2173 J"
+      },
+      "correct_option": "B",
+      "chapter": "Electromagnetic Induction and Alternating Currents",
+      "branch": "Electricity, Optics and Modern Physics",
+      "cognitive_level": "Analysis",
+      "provenance": {
+        "kind": "Original model-derived question",
+        "model": "flux_polynomial",
+        "variant": 1,
+        "task": 3,
+        "inverse_input": null,
+        "review": "Physical model, equations and numerical residuals reviewed; option substitution verifies inverse choices."
+      },
+      "id": "JEE27-PHY-1539",
+      "standard": "JEE Main",
+      "subject": "Physics",
+      "unit": "Unit 14: Electromagnetic Induction and Alternating Currents",
+      "assumptions": "AC voltages/currents are sinusoidal RMS values unless a waveform or peak value is given. Components are ideal and linear; magnetic-field/rod/rail geometry is mutually perpendicular where the motional-emf formula is invoked. Neglect self-inductance in purely resistive induction loops.",
+      "marks_correct": 4,
+      "marks_incorrect": -1,
+      "marks_unattempted": 0,
+      "source_document": "NTA JEE Main 2026 official syllabus (scope reference; questions are internally authored/adapted)",
+      "source_chapter": "Electromagnetic Induction and Alternating Currents",
+      "source_page": "Physics syllabus: PDF pages 3–6; no textbook-page attribution is claimed.",
+      "syllabus_reference": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2025/10/202510311323551056.pdf#page=3",
+      "syllabus_basis_year": 2026,
+      "tags": [
+        "Physics",
+        "Unit 14: Electromagnetic Induction and Alternating Currents",
+        "Time-dependent flux and resistance heating",
+        "JM-flux_polynomial"
+      ],
+      "generator_eligible": true,
+      "validation_status": "STRUCTURE_CHECKED_CONTENT_REVIEWED",
+      "max_per_family_per_paper": 1
+    }
+  },
+  {
+    "id": "JEE27-PHY-1540",
+    "before_after": {
+      "question": {
+        "before": "The magnetic flux through each turn of an ξ-turn coil is Φ(t) = 3t² + 2t mWb for t in seconds. The coil has resistance 5 Ω and negligible self-inductance. Its terminals are connected to form a closed circuit. Consider 0 ≤ t ≤ 3 s. The recorded value of the induced-current magnitude at the end of the interval is 0.2 A. Which listed positive value of ξ is consistent with this measurement?",
+        "after": "The magnetic flux through each turn of a coil with ξ turns is Φ(t) = 3t² + 2t mWb for t in seconds. The coil has resistance 5 Ω and negligible self-inductance. Its terminals are connected to form a closed circuit. Consider 0 ≤ t ≤ 3 s. The recorded value of the induced-current magnitude at the end of the interval is 0.2 A. Which listed positive value of ξ is consistent with this measurement?"
+      }
+    },
+    "final_question": {
+      "candidate_id": "NEW-U14-flux_polynomial-2-1",
+      "unit_number": 14,
+      "topic": "Time-dependent flux and resistance heating",
+      "subtopic": "Find the induced-current magnitude at the end of the interval",
+      "question": "The magnetic flux through each turn of a coil with ξ turns is Φ(t) = 3t² + 2t mWb for t in seconds. The coil has resistance 5 Ω and negligible self-inductance. Its terminals are connected to form a closed circuit. Consider 0 ≤ t ≤ 3 s. The recorded value of the induced-current magnitude at the end of the interval is 0.2 A. Which listed positive value of ξ is consistent with this measurement?",
+      "correct_answer": "50",
+      "explanation": "Use the physical relations below with the missing input ξ. The recorded value of the induced-current magnitude at the end of the interval gives ξ=50 in the unit assigned to ξ in the question. Substitution checks the observation:\nFaraday’s law gives emf magnitude N dΦ/dt = N(2at+b)×10⁻³ V. Divide by R for current; the final value is 0.2 A. Integrating gives transported charge NΔΦ/R=0.33 C. Integrating I²R over the interval yields 0.222 J.",
+      "difficulty": "Medium",
+      "difficulty_reason": "Differentiate flux for emf; heat requires integrating squared current rather than total charge. Assessed outcome: Find the induced-current magnitude at the end of the interval. Missing input: N.",
+      "concept_family": "JM-flux_polynomial",
+      "source_class": "XII",
+      "question_type": "Inverse numerical MCQ",
+      "figures": [],
+      "figure_required": false,
+      "numerical_variant": null,
+      "options": {
+        "A": "75",
+        "B": "100",
+        "C": "25",
+        "D": "50"
+      },
+      "correct_option": "D",
+      "chapter": "Electromagnetic Induction and Alternating Currents",
+      "branch": "Electricity, Optics and Modern Physics",
+      "cognitive_level": "Analysis",
+      "provenance": {
+        "kind": "Original model-derived question",
+        "model": "flux_polynomial",
+        "variant": 2,
+        "task": 1,
+        "inverse_input": "N",
+        "review": "Physical model, equations and numerical residuals reviewed; option substitution verifies inverse choices."
+      },
+      "id": "JEE27-PHY-1540",
+      "standard": "JEE Main",
+      "subject": "Physics",
+      "unit": "Unit 14: Electromagnetic Induction and Alternating Currents",
+      "assumptions": "AC voltages/currents are sinusoidal RMS values unless a waveform or peak value is given. Components are ideal and linear; magnetic-field/rod/rail geometry is mutually perpendicular where the motional-emf formula is invoked. Neglect self-inductance in purely resistive induction loops.",
+      "marks_correct": 4,
+      "marks_incorrect": -1,
+      "marks_unattempted": 0,
+      "source_document": "NTA JEE Main 2026 official syllabus (scope reference; questions are internally authored/adapted)",
+      "source_chapter": "Electromagnetic Induction and Alternating Currents",
+      "source_page": "Physics syllabus: PDF pages 3–6; no textbook-page attribution is claimed.",
+      "syllabus_reference": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2025/10/202510311323551056.pdf#page=3",
+      "syllabus_basis_year": 2026,
+      "tags": [
+        "Physics",
+        "Unit 14: Electromagnetic Induction and Alternating Currents",
+        "Time-dependent flux and resistance heating",
+        "JM-flux_polynomial"
+      ],
+      "generator_eligible": true,
+      "validation_status": "STRUCTURE_CHECKED_CONTENT_REVIEWED",
+      "max_per_family_per_paper": 1
+    }
+  },
+  {
+    "id": "JEE27-PHY-1541",
+    "before_after": {
+      "question": {
+        "before": "The magnetic flux through each turn of an 50-turn coil is Φ(t) = 3t² + 2t mWb for t in seconds. The coil has resistance ξ Ω and negligible self-inductance. Its terminals are connected to form a closed circuit. Consider 0 ≤ t ≤ 3 s. The recorded value of the magnitude of charge transported during the interval is 0.33 C. Which listed positive value of ξ is consistent with this measurement?",
+        "after": "The magnetic flux through each turn of a coil with 50 turns is Φ(t) = 3t² + 2t mWb for t in seconds. The coil has resistance ξ Ω and negligible self-inductance. Its terminals are connected to form a closed circuit. Consider 0 ≤ t ≤ 3 s. The recorded value of the magnitude of charge transported during the interval is 0.33 C. Which listed positive value of ξ is consistent with this measurement?"
+      }
+    },
+    "final_question": {
+      "candidate_id": "NEW-U14-flux_polynomial-2-2",
+      "unit_number": 14,
+      "topic": "Time-dependent flux and resistance heating",
+      "subtopic": "Find the magnitude of charge transported during the interval",
+      "question": "The magnetic flux through each turn of a coil with 50 turns is Φ(t) = 3t² + 2t mWb for t in seconds. The coil has resistance ξ Ω and negligible self-inductance. Its terminals are connected to form a closed circuit. Consider 0 ≤ t ≤ 3 s. The recorded value of the magnitude of charge transported during the interval is 0.33 C. Which listed positive value of ξ is consistent with this measurement?",
+      "correct_answer": "5",
+      "explanation": "Use the physical relations below with the missing input ξ. The recorded value of the magnitude of charge transported during the interval gives ξ=5 in the unit assigned to ξ in the question. Substitution checks the observation:\nFaraday’s law gives emf magnitude N dΦ/dt = N(2at+b)×10⁻³ V. Divide by R for current; the final value is 0.2 A. Integrating gives transported charge NΔΦ/R=0.33 C. Integrating I²R over the interval yields 0.222 J.",
+      "difficulty": "Medium",
+      "difficulty_reason": "Differentiate flux for emf; heat requires integrating squared current rather than total charge. Assessed outcome: Find the magnitude of charge transported during the interval. Missing input: R.",
+      "concept_family": "JM-flux_polynomial",
+      "source_class": "XII",
+      "question_type": "Inverse numerical MCQ",
+      "figures": [],
+      "figure_required": false,
+      "numerical_variant": null,
+      "options": {
+        "A": "5",
+        "B": "8",
+        "C": "2",
+        "D": "10"
+      },
+      "correct_option": "A",
+      "chapter": "Electromagnetic Induction and Alternating Currents",
+      "branch": "Electricity, Optics and Modern Physics",
+      "cognitive_level": "Analysis",
+      "provenance": {
+        "kind": "Original model-derived question",
+        "model": "flux_polynomial",
+        "variant": 2,
+        "task": 2,
+        "inverse_input": "R",
+        "review": "Physical model, equations and numerical residuals reviewed; option substitution verifies inverse choices."
+      },
+      "id": "JEE27-PHY-1541",
+      "standard": "JEE Main",
+      "subject": "Physics",
+      "unit": "Unit 14: Electromagnetic Induction and Alternating Currents",
+      "assumptions": "AC voltages/currents are sinusoidal RMS values unless a waveform or peak value is given. Components are ideal and linear; magnetic-field/rod/rail geometry is mutually perpendicular where the motional-emf formula is invoked. Neglect self-inductance in purely resistive induction loops.",
+      "marks_correct": 4,
+      "marks_incorrect": -1,
+      "marks_unattempted": 0,
+      "source_document": "NTA JEE Main 2026 official syllabus (scope reference; questions are internally authored/adapted)",
+      "source_chapter": "Electromagnetic Induction and Alternating Currents",
+      "source_page": "Physics syllabus: PDF pages 3–6; no textbook-page attribution is claimed.",
+      "syllabus_reference": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2025/10/202510311323551056.pdf#page=3",
+      "syllabus_basis_year": 2026,
+      "tags": [
+        "Physics",
+        "Unit 14: Electromagnetic Induction and Alternating Currents",
+        "Time-dependent flux and resistance heating",
+        "JM-flux_polynomial"
+      ],
+      "generator_eligible": true,
+      "validation_status": "STRUCTURE_CHECKED_CONTENT_REVIEWED",
+      "max_per_family_per_paper": 1
+    }
+  },
+  {
+    "id": "JEE27-PHY-1542",
+    "before_after": {
+      "question": {
+        "before": "The magnetic flux through each turn of an 50-turn coil is Φ(t) = 3t² + 2t mWb for t in seconds. The coil has resistance 5 Ω and negligible self-inductance. Its terminals are connected to form a closed circuit. Consider 0 ≤ t ≤ ξ s. The recorded value of the heat dissipated during the interval is 0.222 J. Which listed positive value of ξ is consistent with this measurement?",
+        "after": "The magnetic flux through each turn of a coil with 50 turns is Φ(t) = 3t² + 2t mWb for t in seconds. The coil has resistance 5 Ω and negligible self-inductance. Its terminals are connected to form a closed circuit. Consider 0 ≤ t ≤ ξ s. The recorded value of the heat dissipated during the interval is 0.222 J. Which listed positive value of ξ is consistent with this measurement?"
+      }
+    },
+    "final_question": {
+      "candidate_id": "NEW-U14-flux_polynomial-2-3",
+      "unit_number": 14,
+      "topic": "Time-dependent flux and resistance heating",
+      "subtopic": "Find the heat dissipated during the interval",
+      "question": "The magnetic flux through each turn of a coil with 50 turns is Φ(t) = 3t² + 2t mWb for t in seconds. The coil has resistance 5 Ω and negligible self-inductance. Its terminals are connected to form a closed circuit. Consider 0 ≤ t ≤ ξ s. The recorded value of the heat dissipated during the interval is 0.222 J. Which listed positive value of ξ is consistent with this measurement?",
+      "correct_answer": "3",
+      "explanation": "Use the physical relations below with the missing input ξ. The recorded value of the heat dissipated during the interval gives ξ=3 in the unit assigned to ξ in the question. Substitution checks the observation:\nFaraday’s law gives emf magnitude N dΦ/dt = N(2at+b)×10⁻³ V. Divide by R for current; the final value is 0.2 A. Integrating gives transported charge NΔΦ/R=0.33 C. Integrating I²R over the interval yields 0.222 J.",
+      "difficulty": "Difficult",
+      "difficulty_reason": "Differentiate flux for emf; heat requires integrating squared current rather than total charge. Assessed outcome: Find the heat dissipated during the interval. Missing input: T.",
+      "concept_family": "JM-flux_polynomial",
+      "source_class": "XII",
+      "question_type": "Inverse numerical MCQ",
+      "figures": [],
+      "figure_required": false,
+      "numerical_variant": null,
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "2",
+        "D": "6"
+      },
+      "correct_option": "A",
+      "chapter": "Electromagnetic Induction and Alternating Currents",
+      "branch": "Electricity, Optics and Modern Physics",
+      "cognitive_level": "Analysis",
+      "provenance": {
+        "kind": "Original model-derived question",
+        "model": "flux_polynomial",
+        "variant": 2,
+        "task": 3,
+        "inverse_input": "T",
+        "review": "Physical model, equations and numerical residuals reviewed; option substitution verifies inverse choices."
+      },
+      "id": "JEE27-PHY-1542",
+      "standard": "JEE Main",
+      "subject": "Physics",
+      "unit": "Unit 14: Electromagnetic Induction and Alternating Currents",
+      "assumptions": "AC voltages/currents are sinusoidal RMS values unless a waveform or peak value is given. Components are ideal and linear; magnetic-field/rod/rail geometry is mutually perpendicular where the motional-emf formula is invoked. Neglect self-inductance in purely resistive induction loops.",
+      "marks_correct": 4,
+      "marks_incorrect": -1,
+      "marks_unattempted": 0,
+      "source_document": "NTA JEE Main 2026 official syllabus (scope reference; questions are internally authored/adapted)",
+      "source_chapter": "Electromagnetic Induction and Alternating Currents",
+      "source_page": "Physics syllabus: PDF pages 3–6; no textbook-page attribution is claimed.",
+      "syllabus_reference": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2025/10/202510311323551056.pdf#page=3",
+      "syllabus_basis_year": 2026,
+      "tags": [
+        "Physics",
+        "Unit 14: Electromagnetic Induction and Alternating Currents",
+        "Time-dependent flux and resistance heating",
+        "JM-flux_polynomial"
+      ],
+      "generator_eligible": true,
+      "validation_status": "STRUCTURE_CHECKED_CONTENT_REVIEWED",
+      "max_per_family_per_paper": 1
+    }
+  },
+  {
+    "id": "JEE27-PHY-1548",
+    "before_after": {
+      "candidate_id": {
+        "before": "NEW-U14-lr_switch-2-3",
+        "after": "REV14-PHY-1548"
+      },
+      "subtopic": {
+        "before": "Find the instantaneous rate of increase of magnetic energy",
+        "after": "Find the time after this reconnection at which the current first reaches 0.50 A in the direction opposite to its original direction."
+      },
+      "question": {
+        "before": "A series circuit has inductance 3 H, total resistance ξ Ω and an ideal 18 V DC source. At t=0 the switch closes with zero current. For this transient use I(t)=(V/R)(1−exp(−Rt/L)). Consider the instant when the current is 0.75 times its final value. The recorded value of the instantaneous rate of increase of magnetic energy is 10.125 W. Which listed positive value of ξ is consistent with this measurement?",
+        "after": "A coil of unknown constant inductance L and positive resistance r is connected to an ideal 18 V DC source. Its steady current is 3 A; during the initial growth from zero current, its current is increasing at 4 A/s when it equals 1 A. Once the steady state has been reached, the source is removed and an extra 6 Ω resistor completes the closed coil loop. During this decay, a switch acts when the heat generated in the extra resistor reaches 3 J. It reconnects the 18 V source with polarity opposite to the original current direction, while retaining the extra 6 Ω resistor in series. Switching is ideal, current is continuous, and no other losses occur. Find the time after this reconnection at which the current first reaches 0.50 A in the direction opposite to its original direction. Choose the closest value."
+      },
+      "correct_answer": {
+        "before": "6",
+        "after": "0.329508 s"
+      },
+      "explanation": {
+        "before": "Use the physical relations below with the missing input ξ. The recorded value of the instantaneous rate of increase of magnetic energy gives ξ=6 in the unit assigned to ξ in the question. Substitution checks the observation:\nSet I/I∞=0.75 in the supplied exponential relation: t=−(L/R)ln(1−f)=0.6931471806 s. At I=2.25 A, stored energy LI²/2=7.59375 J. Kirchhoff’s law gives L dI/dt=V−IR; multiplying by I gives magnetic-energy growth 10.125 W.",
+        "after": "Steady current gives r=18/3=6 Ω. During growth, L(dI/dt)=18−rI gives L=(18−6)/4=3 H. At the start of decay, magnetic energy is (1/2)×3×3²=13.5 J. The coil resistance and extra resistor are equal, so each receives half the dissipated energy; 3 J in the extra resistor means 6 J total loss. Remaining energy is 7.5 J and switching current is √5 A in the original direction. After reconnection, total resistance is 12 Ω, the signed final current is −1.5 A, and L/R=0.25 s. Thus I=−1.5+(√5+1.5)exp(−4t). Setting I=−0.50 gives t=ln(√5+1.5)/4 s. The decay heat must not be treated as the total magnetic-energy loss."
+      },
+      "difficulty_reason": {
+        "before": "Apply the exponential LR response and distinguish stored energy from its rate of increase. Assessed outcome: Find the instantaneous rate of increase of magnetic energy. Missing input: R.",
+        "after": "Infer both coil parameters, determine a heat-triggered switching current using dissipation sharing, and solve the reversed-source transient with current continuity and a signed target."
+      },
+      "question_type": {
+        "before": "Inverse numerical MCQ",
+        "after": "Coupled reasoning MCQ"
+      },
+      "options": {
+        "before": {
+          "A": "6",
+          "B": "9",
+          "C": "3",
+          "D": "12"
+        },
+        "after": {
+          "A": "0.329508 s",
+          "B": "0.376019 s",
+          "C": "0.313191 s",
+          "D": "0.659017 s"
+        }
+      },
+      "provenance": {
+        "before": {
+          "kind": "Original model-derived question",
+          "model": "lr_switch",
+          "variant": 2,
+          "task": 3,
+          "inverse_input": "R",
+          "review": "Physical model, equations and numerical residuals reviewed; option substitution verifies inverse choices."
+        },
+        "after": {
+          "kind": "Replacement resolving v1.3.0 erratum E02",
+          "replaces_candidate": "NEW-U14-lr_switch-2-3",
+          "review": "Separate printed-input calculation and shortest-path editorial review; not empirical difficulty calibration."
+        }
+      },
+      "assumptions": {
+        "before": "AC voltages/currents are sinusoidal RMS values unless a waveform or peak value is given. Components are ideal and linear; magnetic-field/rod/rail geometry is mutually perpendicular where the motional-emf formula is invoked. Neglect self-inductance in purely resistive induction loops.",
+        "after": "Use the idealisations, constants, geometry and sign conventions stated in this question. Any accompanying drawing is schematic."
+      }
+    },
+    "final_question": {
+      "candidate_id": "REV14-PHY-1548",
+      "unit_number": 14,
+      "topic": "Inductive current growth",
+      "subtopic": "Find the time after this reconnection at which the current first reaches 0.50 A in the direction opposite to its original direction.",
+      "question": "A coil of unknown constant inductance L and positive resistance r is connected to an ideal 18 V DC source. Its steady current is 3 A; during the initial growth from zero current, its current is increasing at 4 A/s when it equals 1 A. Once the steady state has been reached, the source is removed and an extra 6 Ω resistor completes the closed coil loop. During this decay, a switch acts when the heat generated in the extra resistor reaches 3 J. It reconnects the 18 V source with polarity opposite to the original current direction, while retaining the extra 6 Ω resistor in series. Switching is ideal, current is continuous, and no other losses occur. Find the time after this reconnection at which the current first reaches 0.50 A in the direction opposite to its original direction. Choose the closest value.",
+      "correct_answer": "0.329508 s",
+      "explanation": "Steady current gives r=18/3=6 Ω. During growth, L(dI/dt)=18−rI gives L=(18−6)/4=3 H. At the start of decay, magnetic energy is (1/2)×3×3²=13.5 J. The coil resistance and extra resistor are equal, so each receives half the dissipated energy; 3 J in the extra resistor means 6 J total loss. Remaining energy is 7.5 J and switching current is √5 A in the original direction. After reconnection, total resistance is 12 Ω, the signed final current is −1.5 A, and L/R=0.25 s. Thus I=−1.5+(√5+1.5)exp(−4t). Setting I=−0.50 gives t=ln(√5+1.5)/4 s. The decay heat must not be treated as the total magnetic-energy loss.",
+      "difficulty": "Difficult",
+      "difficulty_reason": "Infer both coil parameters, determine a heat-triggered switching current using dissipation sharing, and solve the reversed-source transient with current continuity and a signed target.",
+      "concept_family": "JM-lr_switch",
+      "source_class": "XII",
+      "question_type": "Coupled reasoning MCQ",
+      "figures": [],
+      "figure_required": false,
+      "numerical_variant": null,
+      "options": {
+        "A": "0.329508 s",
+        "B": "0.376019 s",
+        "C": "0.313191 s",
+        "D": "0.659017 s"
+      },
+      "correct_option": "A",
+      "chapter": "Electromagnetic Induction and Alternating Currents",
+      "branch": "Electricity, Optics and Modern Physics",
+      "cognitive_level": "Analysis",
+      "provenance": {
+        "kind": "Replacement resolving v1.3.0 erratum E02",
+        "replaces_candidate": "NEW-U14-lr_switch-2-3",
+        "review": "Separate printed-input calculation and shortest-path editorial review; not empirical difficulty calibration."
+      },
+      "id": "JEE27-PHY-1548",
+      "standard": "JEE Main",
+      "subject": "Physics",
+      "unit": "Unit 14: Electromagnetic Induction and Alternating Currents",
+      "assumptions": "Use the idealisations, constants, geometry and sign conventions stated in this question. Any accompanying drawing is schematic.",
+      "marks_correct": 4,
+      "marks_incorrect": -1,
+      "marks_unattempted": 0,
+      "source_document": "NTA JEE Main 2026 official syllabus (scope reference; questions are internally authored/adapted)",
+      "source_chapter": "Electromagnetic Induction and Alternating Currents",
+      "source_page": "Physics syllabus: PDF pages 3–6; no textbook-page attribution is claimed.",
+      "syllabus_reference": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2025/10/202510311323551056.pdf#page=3",
+      "syllabus_basis_year": 2026,
+      "tags": [
+        "Physics",
+        "Unit 14: Electromagnetic Induction and Alternating Currents",
+        "Inductive current growth",
+        "JM-lr_switch"
+      ],
+      "generator_eligible": true,
+      "validation_status": "STRUCTURE_CHECKED_CONTENT_REVIEWED",
+      "max_per_family_per_paper": 1
+    }
+  },
+  {
+    "id": "JEE27-PHY-1741",
+    "before_after": {
+      "question": {
+        "before": "A double slit has equal individual slit widths a and centre separation d. Monochromatic light of wavelength 500 nm falls normally. Every 3th interference maximum coincides with a diffraction minimum, with the first missing order at ±3. Screen distance is 2 m and interference fringe width is 2 mm. Use small angles. Find the width of each slit. Choose the closest value.",
+        "after": "A double slit has equal individual slit widths a and centre separation d. Monochromatic light of wavelength 500 nm falls normally. Every third interference maximum coincides with a diffraction minimum, with the first missing order at ±3. Screen distance is 2 m and interference fringe width is 2 mm. Use small angles. Find the width of each slit. Choose the closest value."
+      },
+      "numerical_variant": {
+        "before": {
+          "question": "A double slit has equal individual slit widths a and centre separation d. Monochromatic light of wavelength 500 nm falls normally. Every 3th interference maximum coincides with a diffraction minimum, with the first missing order at ±3. Screen distance is 2 m and interference fringe width is 2 mm. Use small angles. Find the width of each slit. Express the result in units of 10^(-6) m, and give the nearest integer.",
+          "unrounded_value": 166.6666666666667,
+          "answer_integer": 167,
+          "unit": "m",
+          "unit_scale_power10": -6,
+          "rounding": "nearest integer; exact half away from zero",
+          "parent_candidate": "NEW-U16-diffraction_missing-1-1"
+        },
+        "after": {
+          "question": "A double slit has equal individual slit widths a and centre separation d. Monochromatic light of wavelength 500 nm falls normally. Every third interference maximum coincides with a diffraction minimum, with the first missing order at ±3. Screen distance is 2 m and interference fringe width is 2 mm. Use small angles. Find the width of each slit. Express the result in units of 10^(-6) m, and give the nearest integer.",
+          "unrounded_value": 166.6666666666667,
+          "answer_integer": 167,
+          "unit": "m",
+          "unit_scale_power10": -6,
+          "rounding": "nearest integer; exact half away from zero",
+          "parent_candidate": "NEW-U16-diffraction_missing-1-1"
+        }
+      }
+    },
+    "final_question": {
+      "candidate_id": "NEW-U16-diffraction_missing-1-1",
+      "unit_number": 16,
+      "topic": "Interference fringes within a diffraction envelope",
+      "subtopic": "Find the width of each slit",
+      "question": "A double slit has equal individual slit widths a and centre separation d. Monochromatic light of wavelength 500 nm falls normally. Every third interference maximum coincides with a diffraction minimum, with the first missing order at ±3. Screen distance is 2 m and interference fringe width is 2 mm. Use small angles. Find the width of each slit. Choose the closest value.",
+      "correct_answer": "0.0001667 m",
+      "explanation": "Interference spacing gives d=λD/β=0.0005 m. Coincidence of the first diffraction minimum with order 3 gives d/a=3, so a=0.0001666666667 m. The envelope width is 2λD/a=12 mm. Orders −(3−1) through +(3−1) survive inside it, giving 5 maxima.\nFor the requested outcome — Find the width of each slit. — the result is 0.0001667 m.",
+      "difficulty": "Medium",
+      "difficulty_reason": "Connect missing interference order to the single-slit envelope; count strict interior maxima carefully. Assessed outcome: Find the width of each slit.",
+      "concept_family": "JM-diffraction_missing",
+      "source_class": "XII",
+      "question_type": "Multi-step numerical MCQ",
+      "figures": [],
+      "figure_required": false,
+      "numerical_variant": {
+        "question": "A double slit has equal individual slit widths a and centre separation d. Monochromatic light of wavelength 500 nm falls normally. Every third interference maximum coincides with a diffraction minimum, with the first missing order at ±3. Screen distance is 2 m and interference fringe width is 2 mm. Use small angles. Find the width of each slit. Express the result in units of 10^(-6) m, and give the nearest integer.",
+        "unrounded_value": 166.6666666666667,
+        "answer_integer": 167,
+        "unit": "m",
+        "unit_scale_power10": -6,
+        "rounding": "nearest integer; exact half away from zero",
+        "parent_candidate": "NEW-U16-diffraction_missing-1-1"
+      },
+      "options": {
+        "A": "0.0001667 m",
+        "B": "0.0015 m",
+        "C": "0.0005 m",
+        "D": "8.333 × 10⁻⁵ m"
+      },
+      "correct_option": "A",
+      "chapter": "Optics",
+      "branch": "Electricity, Optics and Modern Physics",
+      "cognitive_level": "Analysis",
+      "provenance": {
+        "kind": "Original model-derived question",
+        "model": "diffraction_missing",
+        "variant": 1,
+        "task": 1,
+        "inverse_input": null,
+        "review": "Physical model, equations and numerical residuals reviewed; option substitution verifies inverse choices."
+      },
+      "id": "JEE27-PHY-1741",
+      "standard": "JEE Main",
+      "subject": "Physics",
+      "unit": "Unit 16: Optics",
+      "assumptions": "Use paraxial geometrical optics, thin lenses in air and small diffraction/interference angles unless specified otherwise. Sources in path-difference questions are coherent, initially in phase and equally polarised. Media are transparent, isotropic and normally dispersive.",
+      "marks_correct": 4,
+      "marks_incorrect": -1,
+      "marks_unattempted": 0,
+      "source_document": "NTA JEE Main 2026 official syllabus (scope reference; questions are internally authored/adapted)",
+      "source_chapter": "Optics",
+      "source_page": "Physics syllabus: PDF pages 3–6; no textbook-page attribution is claimed.",
+      "syllabus_reference": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2025/10/202510311323551056.pdf#page=3",
+      "syllabus_basis_year": 2026,
+      "tags": [
+        "Physics",
+        "Unit 16: Optics",
+        "Interference fringes within a diffraction envelope",
+        "JM-diffraction_missing"
+      ],
+      "generator_eligible": true,
+      "validation_status": "STRUCTURE_CHECKED_CONTENT_REVIEWED",
+      "max_per_family_per_paper": 1
+    }
+  },
+  {
+    "id": "JEE27-PHY-1742",
+    "before_after": {
+      "question": {
+        "before": "A double slit has equal individual slit widths a and centre separation d. Monochromatic light of wavelength 500 nm falls normally. Every 3th interference maximum coincides with a diffraction minimum, with the first missing order at ±3. Screen distance is 2 m and interference fringe width is 2 mm. Use small angles. Find the width of the central diffraction envelope between its first minima.",
+        "after": "A double slit has equal individual slit widths a and centre separation d. Monochromatic light of wavelength 500 nm falls normally. Every third interference maximum coincides with a diffraction minimum, with the first missing order at ±3. Screen distance is 2 m and interference fringe width is 2 mm. Use small angles. Find the width of the central diffraction envelope between its first minima."
+      },
+      "numerical_variant": {
+        "before": {
+          "question": "A double slit has equal individual slit widths a and centre separation d. Monochromatic light of wavelength 500 nm falls normally. Every 3th interference maximum coincides with a diffraction minimum, with the first missing order at ±3. Screen distance is 2 m and interference fringe width is 2 mm. Use small angles. Find the width of the central diffraction envelope between its first minima. Give the numerical value in mm, rounded to the nearest integer.",
+          "unrounded_value": 12.0,
+          "answer_integer": 12,
+          "unit": "mm",
+          "unit_scale_power10": 0,
+          "rounding": "nearest integer; exact half away from zero",
+          "parent_candidate": "NEW-U16-diffraction_missing-1-2"
+        },
+        "after": {
+          "question": "A double slit has equal individual slit widths a and centre separation d. Monochromatic light of wavelength 500 nm falls normally. Every third interference maximum coincides with a diffraction minimum, with the first missing order at ±3. Screen distance is 2 m and interference fringe width is 2 mm. Use small angles. Find the width of the central diffraction envelope between its first minima. Give the numerical value in mm, rounded to the nearest integer.",
+          "unrounded_value": 12.0,
+          "answer_integer": 12,
+          "unit": "mm",
+          "unit_scale_power10": 0,
+          "rounding": "nearest integer; exact half away from zero",
+          "parent_candidate": "NEW-U16-diffraction_missing-1-2"
+        }
+      }
+    },
+    "final_question": {
+      "candidate_id": "NEW-U16-diffraction_missing-1-2",
+      "unit_number": 16,
+      "topic": "Interference fringes within a diffraction envelope",
+      "subtopic": "Find the width of the central diffraction envelope between its first minima",
+      "question": "A double slit has equal individual slit widths a and centre separation d. Monochromatic light of wavelength 500 nm falls normally. Every third interference maximum coincides with a diffraction minimum, with the first missing order at ±3. Screen distance is 2 m and interference fringe width is 2 mm. Use small angles. Find the width of the central diffraction envelope between its first minima.",
+      "correct_answer": "12 mm",
+      "explanation": "Interference spacing gives d=λD/β=0.0005 m. Coincidence of the first diffraction minimum with order 3 gives d/a=3, so a=0.0001666666667 m. The envelope width is 2λD/a=12 mm. Orders −(3−1) through +(3−1) survive inside it, giving 5 maxima.\nFor the requested outcome — Find the width of the central diffraction envelope between its first minima. — the result is 12 mm.",
+      "difficulty": "Medium",
+      "difficulty_reason": "Connect missing interference order to the single-slit envelope; count strict interior maxima carefully. Assessed outcome: Find the width of the central diffraction envelope between its first minima.",
+      "concept_family": "JM-diffraction_missing",
+      "source_class": "XII",
+      "question_type": "Multi-step numerical MCQ",
+      "figures": [],
+      "figure_required": false,
+      "numerical_variant": {
+        "question": "A double slit has equal individual slit widths a and centre separation d. Monochromatic light of wavelength 500 nm falls normally. Every third interference maximum coincides with a diffraction minimum, with the first missing order at ±3. Screen distance is 2 m and interference fringe width is 2 mm. Use small angles. Find the width of the central diffraction envelope between its first minima. Give the numerical value in mm, rounded to the nearest integer.",
+        "unrounded_value": 12.0,
+        "answer_integer": 12,
+        "unit": "mm",
+        "unit_scale_power10": 0,
+        "rounding": "nearest integer; exact half away from zero",
+        "parent_candidate": "NEW-U16-diffraction_missing-1-2"
+      },
+      "options": {
+        "A": "12 mm",
+        "B": "24 mm",
+        "C": "4 mm",
+        "D": "6 mm"
+      },
+      "correct_option": "A",
+      "chapter": "Optics",
+      "branch": "Electricity, Optics and Modern Physics",
+      "cognitive_level": "Analysis",
+      "provenance": {
+        "kind": "Original model-derived question",
+        "model": "diffraction_missing",
+        "variant": 1,
+        "task": 2,
+        "inverse_input": null,
+        "review": "Physical model, equations and numerical residuals reviewed; option substitution verifies inverse choices."
+      },
+      "id": "JEE27-PHY-1742",
+      "standard": "JEE Main",
+      "subject": "Physics",
+      "unit": "Unit 16: Optics",
+      "assumptions": "Use paraxial geometrical optics, thin lenses in air and small diffraction/interference angles unless specified otherwise. Sources in path-difference questions are coherent, initially in phase and equally polarised. Media are transparent, isotropic and normally dispersive.",
+      "marks_correct": 4,
+      "marks_incorrect": -1,
+      "marks_unattempted": 0,
+      "source_document": "NTA JEE Main 2026 official syllabus (scope reference; questions are internally authored/adapted)",
+      "source_chapter": "Optics",
+      "source_page": "Physics syllabus: PDF pages 3–6; no textbook-page attribution is claimed.",
+      "syllabus_reference": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2025/10/202510311323551056.pdf#page=3",
+      "syllabus_basis_year": 2026,
+      "tags": [
+        "Physics",
+        "Unit 16: Optics",
+        "Interference fringes within a diffraction envelope",
+        "JM-diffraction_missing"
+      ],
+      "generator_eligible": true,
+      "validation_status": "STRUCTURE_CHECKED_CONTENT_REVIEWED",
+      "max_per_family_per_paper": 1
+    }
+  },
+  {
+    "id": "JEE27-PHY-1743",
+    "before_after": {
+      "question": {
+        "before": "A double slit has equal individual slit widths a and centre separation d. Monochromatic light of wavelength 500 nm falls normally. Every 3th interference maximum coincides with a diffraction minimum, with the first missing order at ±3. Screen distance is 2 m and interference fringe width is 2 mm. Use small angles. How many interference bright maxima lie strictly inside the central diffraction envelope, including the central maximum?",
+        "after": "A double slit has equal individual slit widths a and centre separation d. Monochromatic light of wavelength 500 nm falls normally. Every third interference maximum coincides with a diffraction minimum, with the first missing order at ±3. Screen distance is 2 m and interference fringe width is 2 mm. Use small angles. How many interference bright maxima lie strictly inside the central diffraction envelope, including the central maximum?"
+      },
+      "numerical_variant": {
+        "before": {
+          "question": "A double slit has equal individual slit widths a and centre separation d. Monochromatic light of wavelength 500 nm falls normally. Every 3th interference maximum coincides with a diffraction minimum, with the first missing order at ±3. Screen distance is 2 m and interference fringe width is 2 mm. Use small angles. How many interference bright maxima lie strictly inside the central diffraction envelope, including the central maximum? Give the nearest integer.",
+          "unrounded_value": 5.0,
+          "answer_integer": 5,
+          "unit": "",
+          "unit_scale_power10": 0,
+          "rounding": "nearest integer; exact half away from zero",
+          "parent_candidate": "NEW-U16-diffraction_missing-1-3"
+        },
+        "after": {
+          "question": "A double slit has equal individual slit widths a and centre separation d. Monochromatic light of wavelength 500 nm falls normally. Every third interference maximum coincides with a diffraction minimum, with the first missing order at ±3. Screen distance is 2 m and interference fringe width is 2 mm. Use small angles. How many interference bright maxima lie strictly inside the central diffraction envelope, including the central maximum? Give the nearest integer.",
+          "unrounded_value": 5.0,
+          "answer_integer": 5,
+          "unit": "",
+          "unit_scale_power10": 0,
+          "rounding": "nearest integer; exact half away from zero",
+          "parent_candidate": "NEW-U16-diffraction_missing-1-3"
+        }
+      }
+    },
+    "final_question": {
+      "candidate_id": "NEW-U16-diffraction_missing-1-3",
+      "unit_number": 16,
+      "topic": "Interference fringes within a diffraction envelope",
+      "subtopic": "How many interference bright maxima lie strictly inside the central diffraction envelope, including the central maximum",
+      "question": "A double slit has equal individual slit widths a and centre separation d. Monochromatic light of wavelength 500 nm falls normally. Every third interference maximum coincides with a diffraction minimum, with the first missing order at ±3. Screen distance is 2 m and interference fringe width is 2 mm. Use small angles. How many interference bright maxima lie strictly inside the central diffraction envelope, including the central maximum?",
+      "correct_answer": "5",
+      "explanation": "Interference spacing gives d=λD/β=0.0005 m. Coincidence of the first diffraction minimum with order 3 gives d/a=3, so a=0.0001666666667 m. The envelope width is 2λD/a=12 mm. Orders −(3−1) through +(3−1) survive inside it, giving 5 maxima.\nFor the requested outcome — How many interference bright maxima lie strictly inside the central diffraction envelope, including the central maximum? — the result is 5.",
+      "difficulty": "Medium",
+      "difficulty_reason": "Connect missing interference order to the single-slit envelope; count strict interior maxima carefully. Assessed outcome: How many interference bright maxima lie strictly inside the central diffraction envelope, including the central maximum.",
+      "concept_family": "JM-diffraction_missing",
+      "source_class": "XII",
+      "question_type": "Multi-step numerical MCQ",
+      "figures": [],
+      "figure_required": false,
+      "numerical_variant": {
+        "question": "A double slit has equal individual slit widths a and centre separation d. Monochromatic light of wavelength 500 nm falls normally. Every third interference maximum coincides with a diffraction minimum, with the first missing order at ±3. Screen distance is 2 m and interference fringe width is 2 mm. Use small angles. How many interference bright maxima lie strictly inside the central diffraction envelope, including the central maximum? Give the nearest integer.",
+        "unrounded_value": 5.0,
+        "answer_integer": 5,
+        "unit": "",
+        "unit_scale_power10": 0,
+        "rounding": "nearest integer; exact half away from zero",
+        "parent_candidate": "NEW-U16-diffraction_missing-1-3"
+      },
+      "options": {
+        "A": "3",
+        "B": "5",
+        "C": "7",
+        "D": "6"
+      },
+      "correct_option": "B",
+      "chapter": "Optics",
+      "branch": "Electricity, Optics and Modern Physics",
+      "cognitive_level": "Analysis",
+      "provenance": {
+        "kind": "Original model-derived question",
+        "model": "diffraction_missing",
+        "variant": 1,
+        "task": 3,
+        "inverse_input": null,
+        "review": "Physical model, equations and numerical residuals reviewed; option substitution verifies inverse choices."
+      },
+      "id": "JEE27-PHY-1743",
+      "standard": "JEE Main",
+      "subject": "Physics",
+      "unit": "Unit 16: Optics",
+      "assumptions": "Use paraxial geometrical optics, thin lenses in air and small diffraction/interference angles unless specified otherwise. Sources in path-difference questions are coherent, initially in phase and equally polarised. Media are transparent, isotropic and normally dispersive.",
+      "marks_correct": 4,
+      "marks_incorrect": -1,
+      "marks_unattempted": 0,
+      "source_document": "NTA JEE Main 2026 official syllabus (scope reference; questions are internally authored/adapted)",
+      "source_chapter": "Optics",
+      "source_page": "Physics syllabus: PDF pages 3–6; no textbook-page attribution is claimed.",
+      "syllabus_reference": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2025/10/202510311323551056.pdf#page=3",
+      "syllabus_basis_year": 2026,
+      "tags": [
+        "Physics",
+        "Unit 16: Optics",
+        "Interference fringes within a diffraction envelope",
+        "JM-diffraction_missing"
+      ],
+      "generator_eligible": true,
+      "validation_status": "STRUCTURE_CHECKED_CONTENT_REVIEWED",
+      "max_per_family_per_paper": 1
+    }
+  },
+  {
+    "id": "JEE27-PHY-1745",
+    "before_after": {
+      "candidate_id": {
+        "before": "NEW-U16-diffraction_missing-2-2",
+        "after": "REV14-PHY-1745"
+      },
+      "subtopic": {
+        "before": "Find the width of the central diffraction envelope between its first minima",
+        "after": "How many distinct screen positions lie strictly inside both central diffraction envelopes and give constructive interference for each colour simultaneously? Count phase differences that are integer multiples of 2π; do not count an envelope boundary."
+      },
+      "question": {
+        "before": "A double slit has equal individual slit widths a and centre separation d. Monochromatic light of wavelength 600 nm falls normally. Every ξth interference maximum coincides with a diffraction minimum, with the first missing order at ±ξ. Screen distance is 1.5 m and interference fringe width is 1.5 mm. Use small angles. The recorded value of the width of the central diffraction envelope between its first minima is 12 mm. Which listed positive value of ξ is consistent with this measurement?",
+        "after": "A double slit has equal individual slit widths and is illuminated simultaneously by wavelengths 500 nm and 600 nm. The two colours are mutually incoherent, while each colour is coherent across the slits. For 500 nm light, the interference fringe spacing is 2.0 mm and the central single-slit diffraction envelope has width 48 mm between its first minima. A thin uniform plate of refractive index 1.50 and thickness 1.50 μm, replacing the same thickness of air, is inserted in one slit path. For this idealisation the refractive index is the same for both wavelengths and the plate changes only the relative phase, leaving both diffraction envelopes unchanged and centred at y=0. Use small angles. Define positive y so that the total optical path difference after insertion is dy/D+(n−1)t, where d is slit separation and D is screen distance. How many distinct screen positions lie strictly inside both central diffraction envelopes and give constructive interference for each colour simultaneously? Count phase differences that are integer multiples of 2π; do not count an envelope boundary."
+      },
+      "explanation": {
+        "before": "Use the physical relations below with the missing input ξ. The recorded value of the width of the central diffraction envelope between its first minima gives ξ=4 in the unit assigned to ξ in the question. Substitution checks the observation:\nInterference spacing gives d=λD/β=0.0006 m. Coincidence of the first diffraction minimum with order 4 gives d/a=4, so a=0.00015 m. The envelope width is 2λD/a=12 mm. Orders −(4−1) through +(4−1) survive inside it, giving 7 maxima.",
+        "after": "For 500 nm, D/d=2.0 mm/(500 nm)=4000. The added path is (1.50−1)×1.50 μm=750 nm. Simultaneous constructive interference requires the total path difference to be m×500 nm=p×600 nm, hence 3000k nm for integer k. Screen positions are therefore y=4000(3000k−750) nm=(12k−3) mm. The 500 nm central envelope has half-width 24 mm; the 600 nm half-width is 28.8 mm. Their strict overlap is −24<y<24 mm. The allowed integers are k=−1,0,1,2, giving y=−15,−3,9,21 mm. There are four positions. The wavelengths are not to be interfered with one another; the phase condition is imposed separately for each colour."
+      },
+      "difficulty_reason": {
+        "before": "Connect missing interference order to the single-slit envelope; count strict interior maxima carefully. Assessed outcome: Find the width of the central diffraction envelope between its first minima. Missing input: order.",
+        "after": "Combine two integer-order interference conditions, include the plate phase shift, determine the overlap of wavelength-dependent diffraction envelopes, and count only strictly interior positions."
+      },
+      "question_type": {
+        "before": "Inverse numerical MCQ",
+        "after": "Coupled reasoning MCQ"
+      },
+      "options": {
+        "before": {
+          "A": "4",
+          "B": "6",
+          "C": "2",
+          "D": "8"
+        },
+        "after": {
+          "A": "4",
+          "B": "2",
+          "C": "3",
+          "D": "5"
+        }
+      },
+      "provenance": {
+        "before": {
+          "kind": "Original model-derived question",
+          "model": "diffraction_missing",
+          "variant": 2,
+          "task": 2,
+          "inverse_input": "order",
+          "review": "Physical model, equations and numerical residuals reviewed; option substitution verifies inverse choices."
+        },
+        "after": {
+          "kind": "Replacement resolving v1.3.0 erratum E02",
+          "replaces_candidate": "NEW-U16-diffraction_missing-2-2",
+          "review": "Separate printed-input calculation and shortest-path editorial review; not empirical difficulty calibration."
+        }
+      },
+      "assumptions": {
+        "before": "Use paraxial geometrical optics, thin lenses in air and small diffraction/interference angles unless specified otherwise. Sources in path-difference questions are coherent, initially in phase and equally polarised. Media are transparent, isotropic and normally dispersive.",
+        "after": "Use the idealisations, constants, geometry and sign conventions stated in this question. Any accompanying drawing is schematic."
+      }
+    },
+    "final_question": {
+      "candidate_id": "REV14-PHY-1745",
+      "unit_number": 16,
+      "topic": "Interference fringes within a diffraction envelope",
+      "subtopic": "How many distinct screen positions lie strictly inside both central diffraction envelopes and give constructive interference for each colour simultaneously? Count phase differences that are integer multiples of 2π; do not count an envelope boundary.",
+      "question": "A double slit has equal individual slit widths and is illuminated simultaneously by wavelengths 500 nm and 600 nm. The two colours are mutually incoherent, while each colour is coherent across the slits. For 500 nm light, the interference fringe spacing is 2.0 mm and the central single-slit diffraction envelope has width 48 mm between its first minima. A thin uniform plate of refractive index 1.50 and thickness 1.50 μm, replacing the same thickness of air, is inserted in one slit path. For this idealisation the refractive index is the same for both wavelengths and the plate changes only the relative phase, leaving both diffraction envelopes unchanged and centred at y=0. Use small angles. Define positive y so that the total optical path difference after insertion is dy/D+(n−1)t, where d is slit separation and D is screen distance. How many distinct screen positions lie strictly inside both central diffraction envelopes and give constructive interference for each colour simultaneously? Count phase differences that are integer multiples of 2π; do not count an envelope boundary.",
+      "correct_answer": "4",
+      "explanation": "For 500 nm, D/d=2.0 mm/(500 nm)=4000. The added path is (1.50−1)×1.50 μm=750 nm. Simultaneous constructive interference requires the total path difference to be m×500 nm=p×600 nm, hence 3000k nm for integer k. Screen positions are therefore y=4000(3000k−750) nm=(12k−3) mm. The 500 nm central envelope has half-width 24 mm; the 600 nm half-width is 28.8 mm. Their strict overlap is −24<y<24 mm. The allowed integers are k=−1,0,1,2, giving y=−15,−3,9,21 mm. There are four positions. The wavelengths are not to be interfered with one another; the phase condition is imposed separately for each colour.",
+      "difficulty": "Difficult",
+      "difficulty_reason": "Combine two integer-order interference conditions, include the plate phase shift, determine the overlap of wavelength-dependent diffraction envelopes, and count only strictly interior positions.",
+      "concept_family": "JM-diffraction_missing",
+      "source_class": "XII",
+      "question_type": "Coupled reasoning MCQ",
+      "figures": [],
+      "figure_required": false,
+      "numerical_variant": null,
+      "options": {
+        "A": "4",
+        "B": "2",
+        "C": "3",
+        "D": "5"
+      },
+      "correct_option": "A",
+      "chapter": "Optics",
+      "branch": "Electricity, Optics and Modern Physics",
+      "cognitive_level": "Analysis",
+      "provenance": {
+        "kind": "Replacement resolving v1.3.0 erratum E02",
+        "replaces_candidate": "NEW-U16-diffraction_missing-2-2",
+        "review": "Separate printed-input calculation and shortest-path editorial review; not empirical difficulty calibration."
+      },
+      "id": "JEE27-PHY-1745",
+      "standard": "JEE Main",
+      "subject": "Physics",
+      "unit": "Unit 16: Optics",
+      "assumptions": "Use the idealisations, constants, geometry and sign conventions stated in this question. Any accompanying drawing is schematic.",
+      "marks_correct": 4,
+      "marks_incorrect": -1,
+      "marks_unattempted": 0,
+      "source_document": "NTA JEE Main 2026 official syllabus (scope reference; questions are internally authored/adapted)",
+      "source_chapter": "Optics",
+      "source_page": "Physics syllabus: PDF pages 3–6; no textbook-page attribution is claimed.",
+      "syllabus_reference": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2025/10/202510311323551056.pdf#page=3",
+      "syllabus_basis_year": 2026,
+      "tags": [
+        "Physics",
+        "Unit 16: Optics",
+        "Interference fringes within a diffraction envelope",
+        "JM-diffraction_missing"
+      ],
+      "generator_eligible": true,
+      "validation_status": "STRUCTURE_CHECKED_CONTENT_REVIEWED",
+      "max_per_family_per_paper": 1
+    }
+  },
+  {
+    "id": "JEE27-PHY-1840",
+    "before_after": {
+      "explanation": {
+        "before": "Use the physical relations below with the missing input ξ. Matching the measured its final de Broglie wavelength gives ξ=0.5 in the unit assigned to ξ in the question. Substitution checks the observation:\nThe initial kinetic energy is 0.1666666667 eV. Acceleration adds 0.5 eV, giving 0.6666666667 eV. The supplied matter-wave relation then gives λfinal=0.15 nm. Momentum scales as √K, so its ratio is 2; final energy is 1.066666667 × 10⁻¹⁹ J.",
+        "after": "Use the physical relations below with the missing input ξ. Matching the recorded final de Broglie wavelength gives ξ=0.5 in the unit assigned to ξ in the question. Substitution checks the observation:\nThe initial kinetic energy is 0.1666666667 eV. Acceleration adds 0.5 eV, giving 0.6666666667 eV. The supplied matter-wave relation then gives λfinal=0.15 nm. Momentum scales as √K, so its ratio is 2; final energy is 1.066666667 × 10⁻¹⁹ J."
+      }
+    },
+    "final_question": {
+      "candidate_id": "NEW-U17-debroglie_accelerate-2-1",
+      "unit_number": 17,
+      "topic": "Matter wavelength after an energy change",
+      "subtopic": "Find its final de Broglie wavelength",
+      "question": "An electron initially has de Broglie wavelength 0.3 nm. It is then accelerated through an additional ξ V in vacuum. Use the nonrelativistic approximation K(eV)=0.0150/[λ(nm)]² and take e=1.60 × 10⁻¹⁹ C. No energy is lost. The recorded value of its final de Broglie wavelength is 0.15 nm. Which listed positive value of ξ is consistent with this measurement?",
+      "correct_answer": "0.5",
+      "explanation": "Use the physical relations below with the missing input ξ. Matching the recorded final de Broglie wavelength gives ξ=0.5 in the unit assigned to ξ in the question. Substitution checks the observation:\nThe initial kinetic energy is 0.1666666667 eV. Acceleration adds 0.5 eV, giving 0.6666666667 eV. The supplied matter-wave relation then gives λfinal=0.15 nm. Momentum scales as √K, so its ratio is 2; final energy is 1.066666667 × 10⁻¹⁹ J.",
+      "difficulty": "Medium",
+      "difficulty_reason": "Convert wavelength to kinetic energy, add electric work, and convert back to momentum or wavelength. Assessed outcome: Find its final de Broglie wavelength. Missing input: V.",
+      "concept_family": "JM-debroglie_accelerate",
+      "source_class": "XII",
+      "question_type": "Inverse numerical MCQ",
+      "figures": [],
+      "figure_required": false,
+      "numerical_variant": null,
+      "options": {
+        "A": "1",
+        "B": "0.5",
+        "C": "0.25",
+        "D": "0.75"
+      },
+      "correct_option": "B",
+      "chapter": "Dual Nature of Matter and Radiation",
+      "branch": "Electricity, Optics and Modern Physics",
+      "cognitive_level": "Analysis",
+      "provenance": {
+        "kind": "Original model-derived question",
+        "model": "debroglie_accelerate",
+        "variant": 2,
+        "task": 1,
+        "inverse_input": "V",
+        "review": "Physical model, equations and numerical residuals reviewed; option substitution verifies inverse choices."
+      },
+      "id": "JEE27-PHY-1840",
+      "standard": "JEE Main",
+      "subject": "Physics",
+      "unit": "Unit 17: Dual Nature of Matter and Radiation",
+      "assumptions": "Use ordinary single-photon emission, fixed work function and nonrelativistic matter waves. Neglect contact potentials and space charge; emission comparisons use frequencies above threshold unless stated otherwise.",
+      "marks_correct": 4,
+      "marks_incorrect": -1,
+      "marks_unattempted": 0,
+      "source_document": "NTA JEE Main 2026 official syllabus (scope reference; questions are internally authored/adapted)",
+      "source_chapter": "Dual Nature of Matter and Radiation",
+      "source_page": "Physics syllabus: PDF pages 3–6; no textbook-page attribution is claimed.",
+      "syllabus_reference": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2025/10/202510311323551056.pdf#page=3",
+      "syllabus_basis_year": 2026,
+      "tags": [
+        "Physics",
+        "Unit 17: Dual Nature of Matter and Radiation",
+        "Matter wavelength after an energy change",
+        "JM-debroglie_accelerate"
+      ],
+      "generator_eligible": true,
+      "validation_status": "STRUCTURE_CHECKED_CONTENT_REVIEWED",
+      "max_per_family_per_paper": 1
+    }
+  },
+  {
+    "id": "JEE27-PHY-2046",
+    "before_after": {
+      "candidate_id": {
+        "before": "NEW-U19-diode_network-2-3",
+        "after": "REV14-PHY-2046"
+      },
+      "subtopic": {
+        "before": "As the positive supply voltage is reduced, at what supply value does the diode just cease to conduct",
+        "after": "Find the total charge delivered through the diode into the reference during one complete 2.0 s cycle, in mC."
+      },
+      "question": {
+        "before": "An ideal diode has its anode at node X and cathode at a fixed +ξ V reference. Node X connects to a +16 V ideal source through 400 Ω and to ground through 800 Ω. An ideal conducting diode has zero drop; a reverse-biased diode carries no current. The reference can absorb current. The recorded value of positive supply voltage at which the diode just stops conducting as that supply is reduced is 6 V. Which listed positive value of ξ is consistent with this measurement?",
+        "after": "Node X connects to a variable ideal source through an unknown positive resistance R and to ground through 800 Ω. An ideal diode has its anode at X and cathode at an unknown fixed positive reference voltage V₀; the reference can absorb current. In a DC calibration with source voltage 4 V, the diode is nonconducting and X is at 2 V. In a second calibration with source voltage 12 V, the diode conducts 5.0 mA into the reference. The same circuit is then driven periodically: source voltage rises linearly from 0 to 16 V in 1.0 s and falls linearly to 0 in the next 1.0 s. The diode has zero forward voltage and zero reverse current. There is no capacitance or inductance, and both resistances and the reference remain unchanged. Find the total charge delivered through the diode into the reference during one complete 2.0 s cycle, in mC. Choose the closest value."
+      },
+      "correct_answer": {
+        "before": "4",
+        "after": "5 mC"
+      },
+      "explanation": {
+        "before": "Use the physical relations below with the missing input ξ. Matching the measured positive supply voltage at which the diode just stops conducting as that supply is reduced gives ξ=4 in the unit assigned to ξ in the question. Substitution checks the observation:\nWith the diode open, the divider would give 10.66666667 V, above the reference, so the diode conducts and X is clamped. Kirchhoff’s law gives diode current 0.025 A. Load power is Vclamp²/Rl=0.02 W. At the boundary, open-circuit divider voltage equals Vclamp, requiring supply 6 V.",
+        "after": "The off-state divider gives 2=4×800/(R+800), so R=800 Ω. In the conducting calibration, (12−V₀)/800−V₀/800=0.005 A, giving V₀=4 V. The diode conducts only when the open-diode divider would exceed 4 V, namely when V_s>8 V. Then I_D=(V_s−8)/800 A; otherwise I_D=0. The two ramps together spend dt=dV_s/8 per voltage interval. Thus Q=∫₈¹⁶(V_s−8)dV_s/6400=32/6400 C=0.005 C=5 mC. Current is zero at the threshold and remains nonnegative on the conducting interval."
+      },
+      "difficulty_reason": {
+        "before": "Test the conducting state against the open-diode divider, then solve current balance or the transition threshold. Assessed outcome: As the positive supply voltage is reduced, at what supply value does the diode just cease to conduct. Missing input: clamp.",
+        "after": "Infer resistance and clamp voltage from distinct diode states, establish the switching threshold, and integrate only the conducting portion of both source ramps."
+      },
+      "question_type": {
+        "before": "Inverse numerical MCQ",
+        "after": "Coupled reasoning MCQ"
+      },
+      "options": {
+        "before": {
+          "A": "6",
+          "B": "8",
+          "C": "2",
+          "D": "4"
+        },
+        "after": {
+          "A": "2.5 mC",
+          "B": "10 mC",
+          "C": "20 mC",
+          "D": "5 mC"
+        }
+      },
+      "provenance": {
+        "before": {
+          "kind": "Original model-derived question",
+          "model": "diode_network",
+          "variant": 2,
+          "task": 3,
+          "inverse_input": "clamp",
+          "review": "Physical model, equations and numerical residuals reviewed; option substitution verifies inverse choices."
+        },
+        "after": {
+          "kind": "Replacement resolving v1.3.0 erratum E02",
+          "replaces_candidate": "NEW-U19-diode_network-2-3",
+          "review": "Separate printed-input calculation and shortest-path editorial review; not empirical difficulty calibration."
+        }
+      },
+      "assumptions": {
+        "before": "Use the elementary low-field semiconductor model at room temperature unless specified otherwise; silicon/germanium forward drops, when approximated, are 0.7/0.3 V. Reverse characteristics refer to operation below breakdown unless breakdown is stated.",
+        "after": "Use the idealisations, constants, geometry and sign conventions stated in this question. Any accompanying drawing is schematic."
+      }
+    },
+    "final_question": {
+      "candidate_id": "REV14-PHY-2046",
+      "unit_number": 19,
+      "topic": "Diode states and resistive circuit solution",
+      "subtopic": "Find the total charge delivered through the diode into the reference during one complete 2.0 s cycle, in mC.",
+      "question": "Node X connects to a variable ideal source through an unknown positive resistance R and to ground through 800 Ω. An ideal diode has its anode at X and cathode at an unknown fixed positive reference voltage V₀; the reference can absorb current. In a DC calibration with source voltage 4 V, the diode is nonconducting and X is at 2 V. In a second calibration with source voltage 12 V, the diode conducts 5.0 mA into the reference. The same circuit is then driven periodically: source voltage rises linearly from 0 to 16 V in 1.0 s and falls linearly to 0 in the next 1.0 s. The diode has zero forward voltage and zero reverse current. There is no capacitance or inductance, and both resistances and the reference remain unchanged. Find the total charge delivered through the diode into the reference during one complete 2.0 s cycle, in mC. Choose the closest value.",
+      "correct_answer": "5 mC",
+      "explanation": "The off-state divider gives 2=4×800/(R+800), so R=800 Ω. In the conducting calibration, (12−V₀)/800−V₀/800=0.005 A, giving V₀=4 V. The diode conducts only when the open-diode divider would exceed 4 V, namely when V_s>8 V. Then I_D=(V_s−8)/800 A; otherwise I_D=0. The two ramps together spend dt=dV_s/8 per voltage interval. Thus Q=∫₈¹⁶(V_s−8)dV_s/6400=32/6400 C=0.005 C=5 mC. Current is zero at the threshold and remains nonnegative on the conducting interval.",
+      "difficulty": "Difficult",
+      "difficulty_reason": "Infer resistance and clamp voltage from distinct diode states, establish the switching threshold, and integrate only the conducting portion of both source ramps.",
+      "concept_family": "JM-diode_network",
+      "source_class": "XII",
+      "question_type": "Coupled reasoning MCQ",
+      "figures": [],
+      "figure_required": false,
+      "numerical_variant": null,
+      "options": {
+        "A": "2.5 mC",
+        "B": "10 mC",
+        "C": "20 mC",
+        "D": "5 mC"
+      },
+      "correct_option": "D",
+      "chapter": "Electronic Devices",
+      "branch": "Electricity, Optics and Modern Physics",
+      "cognitive_level": "Analysis",
+      "provenance": {
+        "kind": "Replacement resolving v1.3.0 erratum E02",
+        "replaces_candidate": "NEW-U19-diode_network-2-3",
+        "review": "Separate printed-input calculation and shortest-path editorial review; not empirical difficulty calibration."
+      },
+      "id": "JEE27-PHY-2046",
+      "standard": "JEE Main",
+      "subject": "Physics",
+      "unit": "Unit 19: Electronic Devices",
+      "assumptions": "Use the idealisations, constants, geometry and sign conventions stated in this question. Any accompanying drawing is schematic.",
+      "marks_correct": 4,
+      "marks_incorrect": -1,
+      "marks_unattempted": 0,
+      "source_document": "NTA JEE Main 2026 official syllabus (scope reference; questions are internally authored/adapted)",
+      "source_chapter": "Electronic Devices",
+      "source_page": "Physics syllabus: PDF pages 3–6; no textbook-page attribution is claimed.",
+      "syllabus_reference": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2025/10/202510311323551056.pdf#page=3",
+      "syllabus_basis_year": 2026,
+      "tags": [
+        "Physics",
+        "Unit 19: Electronic Devices",
+        "Diode states and resistive circuit solution",
+        "JM-diode_network"
+      ],
+      "generator_eligible": true,
+      "validation_status": "STRUCTURE_CHECKED_CONTENT_REVIEWED",
+      "max_per_family_per_paper": 1
+    }
+  },
+  {
+    "id": "JEE27-PHY-2129",
+    "before_after": {
+      "question": {
+        "before": "The displayed scale is initially balanced with its knife edge exactly under its own centre of gravity and m1=2m2. The point of suspension of m1 is shifted 1 cm to the right, remaining on its original side of the pivot. Which shift of m2 restores balance if the knife edge stays fixed? Refer to experimental arrangement 04.",
+        "after": "The displayed scale is initially balanced with its knife edge exactly under its own centre of gravity and m1=2m2. The point of suspension of m1 is shifted 1 cm toward the knife edge, remaining on its original side of the pivot. Which shift of m2 restores balance if the knife edge stays fixed? Refer to experimental arrangement 04."
+      },
+      "explanation": {
+        "before": "The drawing places m1 left of the pivot and m2 right of it. Moving m1 right by 1 cm reduces its lever arm and anticlockwise moment by m1 g×1 cm. The clockwise moment must decrease equally, so the right-hand mass m2 moves toward the pivot, to the left, by (m1/m2)×1=2 cm. The scale’s own weight acts through the specified fixed pivot.",
+        "after": "The drawing places m1 to the left of the knife edge and m2 to the right. Moving m1 toward the knife edge means moving it rightward by 1 cm. With the pivot fixed, the change in total gravitational moment is zero only if m1 Δx1+m2 Δx2=0, taking right as positive. Since m1=2m2 and Δx1=+1 cm, Δx2=−2 cm: m2 must move 2 cm to the left, toward the pivot. If the depicted mass positions were reversed, the same inward movement of m1 would instead require m2 to move rightward; the figure supplies the necessary orientation."
+      },
+      "candidate_id": {
+        "before": "REV13-FIG-2129",
+        "after": "REV14-FIG-2129"
+      },
+      "difficulty_reason": {
+        "before": "Read the displayed components, positions or connections and apply the stated elementary physical relation.",
+        "after": "Read which labelled mass lies on each side of the pivot, translate the stated inward movement into a signed displacement, and balance the changes of moment."
+      },
+      "provenance": {
+        "before": {
+          "kind": "Figure-dependent rewrite resolving v1.2.0 erratum E04",
+          "replaces_candidate": "NEET27-PHY-2140",
+          "visual_dependency": "m1 is on the left and m2 on the right of the knife edge."
+        },
+        "after": {
+          "kind": "Figure-dependent correction resolving v1.3.0 erratum E03",
+          "replaces_candidate": "REV13-FIG-2129",
+          "visual_dependency": "The diagram places m1 left and m2 right of the pivot; the text supplies only an inward displacement, not an absolute direction."
+        }
+      }
+    },
+    "final_question": {
+      "id": "JEE27-PHY-2129",
+      "standard": "JEE Main",
+      "subject": "Physics",
+      "branch": "Experimental Skills",
+      "source_class": "XI",
+      "unit": "Unit 20: Experimental Skills",
+      "chapter": "NCERT Physics Laboratory Manual and official Experimental Skills list",
+      "topic": "Experimental skills",
+      "subtopic": "Identify and interpret the depicted apparatus",
+      "question_type": "Experimental skills MCQ",
+      "question": "The displayed scale is initially balanced with its knife edge exactly under its own centre of gravity and m1=2m2. The point of suspension of m1 is shifted 1 cm toward the knife edge, remaining on its original side of the pivot. Which shift of m2 restores balance if the knife edge stays fixed? Refer to experimental arrangement 04.",
+      "options": {
+        "A": "Move m2 2 cm to the right",
+        "B": "Move m2 1 cm to the left",
+        "C": "Move m2 2 cm to the left",
+        "D": "Move m2 1 cm to the right"
+      },
+      "correct_option": "C",
+      "correct_answer": "Move m2 2 cm to the left",
+      "explanation": "The drawing places m1 to the left of the knife edge and m2 to the right. Moving m1 toward the knife edge means moving it rightward by 1 cm. With the pivot fixed, the change in total gravitational moment is zero only if m1 Δx1+m2 Δx2=0, taking right as positive. Since m1=2m2 and Δx1=+1 cm, Δx2=−2 cm: m2 must move 2 cm to the left, toward the pivot. If the depicted mass positions were reversed, the same inward movement of m1 would instead require m2 to move rightward; the figure supplies the necessary orientation.",
+      "difficulty": "Easy",
+      "cognitive_level": "Application",
+      "marks_correct": 4,
+      "marks_incorrect": -1,
+      "marks_unattempted": 0,
+      "source_document": "NTA JEE Main 2026 official syllabus (scope reference; questions are internally authored/adapted)",
+      "source_chapter": "Experimental Skills",
+      "source_page": "Physics syllabus: PDF pages 3–6; no textbook-page attribution is claimed.",
+      "syllabus_reference": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2025/10/202510311323551056.pdf#page=3",
+      "figures": [
+        {
+          "file": "figures/experiment-04.png",
+          "alt_text": "m1 is on the left and m2 on the right of the knife edge. Schematic, not to scale.",
+          "source": "ORIGINAL",
+          "width": 1600,
+          "height": 900
+        }
+      ],
+      "figure_required": true,
+      "tags": [
+        "Physics",
+        "Unit 20: Experimental Skills",
+        "Experimental skills",
+        "SRC-EXPERIMENT-4"
+      ],
+      "generator_eligible": true,
+      "validation_status": "STRUCTURE_CHECKED_CONTENT_REVIEWED",
+      "candidate_id": "REV14-FIG-2129",
+      "unit_number": 20,
+      "difficulty_reason": "Read which labelled mass lies on each side of the pivot, translate the stated inward movement into a signed displacement, and balance the changes of moment.",
+      "concept_family": "SRC-EXPERIMENT-4",
+      "numerical_variant": null,
+      "provenance": {
+        "kind": "Figure-dependent correction resolving v1.3.0 erratum E03",
+        "replaces_candidate": "REV13-FIG-2129",
+        "visual_dependency": "The diagram places m1 left and m2 right of the pivot; the text supplies only an inward displacement, not an absolute direction."
+      },
+      "assumptions": "Treat drawings as schematic. Apply zero-error and parallax corrections; instrument idealisations and experimental limits stated in the question take precedence.",
+      "syllabus_basis_year": 2026,
+      "max_per_family_per_paper": 1
+    }
+  },
+  {
+    "id": "JEE27-PHY-2153",
+    "before_after": {
+      "explanation": {
+        "before": "Use the physical relations below with the missing input ξ. Matching the measured its figure of merit, defined as coil current per scale division gives ξ=1500 in the unit assigned to ξ in the question. Substitution checks the observation:\nBefore shunting Ig=E/(R+G). After shunting, coil current is Ig/2 and the shunt current is IgG/(2S). Applying the loop equation gives G=SR/(R−S)=62.5 Ω. Thus initial Ig=0.00192 A, figure of merit=6.4 × 10⁻⁵ A/division, and final total current=0.00196 A.",
+        "after": "Use the physical relations below with the missing input ξ. Matching the recorded figure of merit (coil current per scale division) gives ξ=1500 in the unit assigned to ξ in the question. Substitution checks the observation:\nBefore shunting Ig=E/(R+G). After shunting, coil current is Ig/2 and the shunt current is IgG/(2S). Applying the loop equation gives G=SR/(R−S)=62.5 Ω. Thus initial Ig=0.00192 A, figure of merit=6.4 × 10⁻⁵ A/division, and final total current=0.00196 A."
+      }
+    },
+    "final_question": {
+      "candidate_id": "NEW-U20-galvanometer_half-2-2",
+      "unit_number": 20,
+      "topic": "Half-deflection measurements with finite series resistance",
+      "subtopic": "Find its figure of merit, defined as coil current per scale division",
+      "question": "A cell of emf 3 V and negligible internal resistance drives a galvanometer through series resistance ξ Ω. Its deflection is 30 divisions. Connecting a shunt 60 Ω directly across the galvanometer halves its deflection, while the series resistor remains connected. Deflection is proportional to coil current. The recorded value of its figure of merit, defined as coil current per scale division is 6.4 × 10⁻⁵ A/division. Which listed positive value of ξ is consistent with this measurement?",
+      "correct_answer": "1500",
+      "explanation": "Use the physical relations below with the missing input ξ. Matching the recorded figure of merit (coil current per scale division) gives ξ=1500 in the unit assigned to ξ in the question. Substitution checks the observation:\nBefore shunting Ig=E/(R+G). After shunting, coil current is Ig/2 and the shunt current is IgG/(2S). Applying the loop equation gives G=SR/(R−S)=62.5 Ω. Thus initial Ig=0.00192 A, figure of merit=6.4 × 10⁻⁵ A/division, and final total current=0.00196 A.",
+      "difficulty": "Difficult",
+      "difficulty_reason": "Account for finite series resistance in the shunted circuit before inferring coil resistance and current per division. Assessed outcome: Find its figure of merit, defined as coil current per scale division. Missing input: R.",
+      "concept_family": "SRC-EXPERIMENT-12",
+      "source_class": "XII",
+      "question_type": "Inverse numerical MCQ",
+      "figures": [],
+      "figure_required": false,
+      "numerical_variant": null,
+      "options": {
+        "A": "750",
+        "B": "1500",
+        "C": "3000",
+        "D": "2250"
+      },
+      "correct_option": "B",
+      "chapter": "Experimental Skills",
+      "branch": "Electricity, Optics and Modern Physics",
+      "cognitive_level": "Analysis",
+      "provenance": {
+        "kind": "Original model-derived question",
+        "model": "galvanometer_half",
+        "variant": 2,
+        "task": 2,
+        "inverse_input": "R",
+        "review": "Physical model, equations and numerical residuals reviewed; option substitution verifies inverse choices."
+      },
+      "id": "JEE27-PHY-2153",
+      "standard": "JEE Main",
+      "subject": "Physics",
+      "unit": "Unit 20: Experimental Skills",
+      "assumptions": "Treat drawings as schematic. Apply zero-error and parallax corrections; instrument idealisations and experimental limits stated in the question take precedence.",
+      "marks_correct": 4,
+      "marks_incorrect": -1,
+      "marks_unattempted": 0,
+      "source_document": "NTA JEE Main 2026 official syllabus (scope reference; questions are internally authored/adapted)",
+      "source_chapter": "Experimental Skills",
+      "source_page": "Physics syllabus: PDF pages 3–6; no textbook-page attribution is claimed.",
+      "syllabus_reference": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2025/10/202510311323551056.pdf#page=3",
+      "syllabus_basis_year": 2026,
+      "tags": [
+        "Physics",
+        "Unit 20: Experimental Skills",
+        "Half-deflection measurements with finite series resistance",
+        "SRC-EXPERIMENT-12"
+      ],
+      "generator_eligible": true,
+      "validation_status": "STRUCTURE_CHECKED_CONTENT_REVIEWED",
+      "max_per_family_per_paper": 1
+    }
+  },
+  {
+    "id": "JEE27-PHY-2159",
+    "before_after": {
+      "candidate_id": {
+        "before": "NEW-U20-meter_resistivity-2-2",
+        "after": "REV14-PHY-2159"
+      },
+      "topic": {
+        "before": "Metre bridge, wire dimensions and uncertainty",
+        "after": "Metre bridge, gauge correction and uniform wire deformation"
+      },
+      "subtopic": {
+        "before": "If the positive zero error were ignored while all other processing stayed correct, by what percentage would the resistivity be overestimated",
+        "after": "Find the wire diameter after stretching, in mm."
+      },
+      "question": {
+        "before": "A wire in the left gap of an ideal metre bridge balances against 4 Ω in the right gap at 60 cm from the left. Its length is 3 m. A screw gauge of pitch 0.5 mm with 50 divisions shows main-scale reading ξ mm and circular reading 32; its positive zero error is 2 divisions. Neglect bridge end corrections. Take π=3.14. In a separate trial, the same wire carries 0.5 A for 60 s with unchanged resistance. The recorded value of percentage resistivity overestimate if the positive diameter zero error is ignored is 5.0625 %. Which listed positive value of ξ is consistent with this measurement?",
+        "after": "In an ideal metre bridge, a uniform test wire X in the left gap balances a 6 Ω standard in the right gap at 40 cm from the left end. Connecting an unknown resistor S in parallel with X changes the balance point to 25 cm from the left. Disconnect S, stretch the test wire uniformly without loss of volume, and measure again at the original temperature; assume its resistivity is unchanged. Connect the stretched wire in series with the same S in the left gap and replace the right-gap standard with 13 Ω: the bridge now balances at 50 cm from the left. Before stretching, a screw gauge of pitch 0.50 mm and 50 circular divisions gave sleeve reading 0.50 mm and circular reading 32 for the wire diameter; its positive zero error was 2 circular divisions. The wire is cylindrical before and after stretching. Neglect contact and bridge end resistances. Find the wire diameter after stretching, in mm. Choose the closest value."
+      },
+      "correct_answer": {
+        "before": "0.5",
+        "after": "0.653197 mm"
+      },
+      "explanation": {
+        "before": "Use the physical relations below with the missing input ξ. Matching the measured percentage resistivity overestimate if the positive diameter zero error is ignored gives ξ=0.5 in the unit assigned to ξ in the question. Substitution checks the observation:\nThe gauge least count is 0.01 mm; subtract its positive zero error to get diameter 0.8 mm. The bridge gives X=Rl/(100−l) =6 Ω. Then ρ=Xπd²/(4L)=1.0048 × 10⁻⁶ Ω m. Ignoring the zero error changes the squared diameter and overestimates ρ by 5.0625%. Swapping gaps replaces l by 100−l=40 cm. With resistance X found from the bridge, the separate trial produces I²Xt=90 J.",
+        "after": "Initially X=6×40/60=4 Ω. The parallel combination is 6×25/75=2 Ω, hence S=4 Ω. In the last balance the left-gap series combination equals 13 Ω, so the stretched wire has resistance 13−4=9 Ω. For fixed volume and resistivity, A is inversely proportional to length and R is proportional to length squared. Therefore L_new/L_old=√(9/4)=1.5. The gauge least count is 0.50/50=0.01 mm, and the corrected original diameter is 0.50+(32−2)×0.01=0.80 mm. Since diameter squared is inversely proportional to length, d_new=0.80/√1.5=0.653197265 mm."
+      },
+      "difficulty_reason": {
+        "before": "Combine bridge balance and corrected diameter for resistivity; heating alone only needs bridge resistance. Assessed outcome: If the positive zero error were ignored while all other processing stayed correct, by what percentage would the resistivity be overestimated. Missing input: ms.",
+        "after": "Use three bridge configurations to isolate the stretched-wire resistance, connect resistance change to constant-volume deformation, and apply the gauge zero correction before converting the length ratio into diameter."
+      },
+      "question_type": {
+        "before": "Inverse numerical MCQ",
+        "after": "Coupled reasoning MCQ"
+      },
+      "options": {
+        "before": {
+          "A": "1",
+          "B": "0.25",
+          "C": "0.5",
+          "D": "0.75"
+        },
+        "after": {
+          "A": "0.533333 mm",
+          "B": "0.8 mm",
+          "C": "0.653197 mm",
+          "D": "0.979796 mm"
+        }
+      },
+      "provenance": {
+        "before": {
+          "kind": "Original model-derived question",
+          "model": "meter_resistivity",
+          "variant": 2,
+          "task": 2,
+          "inverse_input": "ms",
+          "review": "Physical model, equations and numerical residuals reviewed; option substitution verifies inverse choices."
+        },
+        "after": {
+          "kind": "Replacement resolving v1.3.0 erratum E02",
+          "replaces_candidate": "NEW-U20-meter_resistivity-2-2",
+          "review": "Separate printed-input calculation and shortest-path editorial review; not empirical difficulty calibration."
+        }
+      },
+      "assumptions": {
+        "before": "Treat drawings as schematic. Apply zero-error and parallax corrections; instrument idealisations and experimental limits stated in the question take precedence.",
+        "after": "Use the idealisations, constants, geometry and sign conventions stated in this question. Any accompanying drawing is schematic."
+      },
+      "tags": {
+        "before": [
+          "Physics",
+          "Unit 20: Experimental Skills",
+          "Metre bridge, wire dimensions and uncertainty",
+          "SRC-EXPERIMENT-10"
+        ],
+        "after": [
+          "Physics",
+          "Unit 20: Experimental Skills",
+          "Metre bridge, gauge correction and uniform wire deformation",
+          "SRC-EXPERIMENT-10"
+        ]
+      }
+    },
+    "final_question": {
+      "candidate_id": "REV14-PHY-2159",
+      "unit_number": 20,
+      "topic": "Metre bridge, gauge correction and uniform wire deformation",
+      "subtopic": "Find the wire diameter after stretching, in mm.",
+      "question": "In an ideal metre bridge, a uniform test wire X in the left gap balances a 6 Ω standard in the right gap at 40 cm from the left end. Connecting an unknown resistor S in parallel with X changes the balance point to 25 cm from the left. Disconnect S, stretch the test wire uniformly without loss of volume, and measure again at the original temperature; assume its resistivity is unchanged. Connect the stretched wire in series with the same S in the left gap and replace the right-gap standard with 13 Ω: the bridge now balances at 50 cm from the left. Before stretching, a screw gauge of pitch 0.50 mm and 50 circular divisions gave sleeve reading 0.50 mm and circular reading 32 for the wire diameter; its positive zero error was 2 circular divisions. The wire is cylindrical before and after stretching. Neglect contact and bridge end resistances. Find the wire diameter after stretching, in mm. Choose the closest value.",
+      "correct_answer": "0.653197 mm",
+      "explanation": "Initially X=6×40/60=4 Ω. The parallel combination is 6×25/75=2 Ω, hence S=4 Ω. In the last balance the left-gap series combination equals 13 Ω, so the stretched wire has resistance 13−4=9 Ω. For fixed volume and resistivity, A is inversely proportional to length and R is proportional to length squared. Therefore L_new/L_old=√(9/4)=1.5. The gauge least count is 0.50/50=0.01 mm, and the corrected original diameter is 0.50+(32−2)×0.01=0.80 mm. Since diameter squared is inversely proportional to length, d_new=0.80/√1.5=0.653197265 mm.",
+      "difficulty": "Difficult",
+      "difficulty_reason": "Use three bridge configurations to isolate the stretched-wire resistance, connect resistance change to constant-volume deformation, and apply the gauge zero correction before converting the length ratio into diameter.",
+      "concept_family": "SRC-EXPERIMENT-10",
+      "source_class": "XII",
+      "question_type": "Coupled reasoning MCQ",
+      "figures": [],
+      "figure_required": false,
+      "numerical_variant": null,
+      "options": {
+        "A": "0.533333 mm",
+        "B": "0.8 mm",
+        "C": "0.653197 mm",
+        "D": "0.979796 mm"
+      },
+      "correct_option": "C",
+      "chapter": "Experimental Skills",
+      "branch": "Electricity, Optics and Modern Physics",
+      "cognitive_level": "Analysis",
+      "provenance": {
+        "kind": "Replacement resolving v1.3.0 erratum E02",
+        "replaces_candidate": "NEW-U20-meter_resistivity-2-2",
+        "review": "Separate printed-input calculation and shortest-path editorial review; not empirical difficulty calibration."
+      },
+      "id": "JEE27-PHY-2159",
+      "standard": "JEE Main",
+      "subject": "Physics",
+      "unit": "Unit 20: Experimental Skills",
+      "assumptions": "Use the idealisations, constants, geometry and sign conventions stated in this question. Any accompanying drawing is schematic.",
+      "marks_correct": 4,
+      "marks_incorrect": -1,
+      "marks_unattempted": 0,
+      "source_document": "NTA JEE Main 2026 official syllabus (scope reference; questions are internally authored/adapted)",
+      "source_chapter": "Experimental Skills",
+      "source_page": "Physics syllabus: PDF pages 3–6; no textbook-page attribution is claimed.",
+      "syllabus_reference": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2025/10/202510311323551056.pdf#page=3",
+      "syllabus_basis_year": 2026,
+      "tags": [
+        "Physics",
+        "Unit 20: Experimental Skills",
+        "Metre bridge, gauge correction and uniform wire deformation",
+        "SRC-EXPERIMENT-10"
+      ],
+      "generator_eligible": true,
+      "validation_status": "STRUCTURE_CHECKED_CONTENT_REVIEWED",
+      "max_per_family_per_paper": 1
+    }
+  }
+]

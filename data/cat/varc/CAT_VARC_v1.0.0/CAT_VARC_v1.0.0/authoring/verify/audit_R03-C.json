@@ -1,0 +1,90 @@
+[
+ {
+  "id": "R03-C-01-1",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation says 'The key covers both ...'.",
+  "fix": "Changed to 'The correct answer covers both ...'.",
+  "changed": true
+ },
+ {
+  "id": "R03-C-03-3",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation says 'The key describes the modern image'.",
+  "fix": "Changed to 'This option describes the modern image'.",
+  "changed": true
+ },
+ {
+  "id": "R03-C-05-3",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation says 'The key reproduces all of these' and uses 'the key question', which reads as a reference to the answer.",
+  "fix": "Changed to 'The correct answer reproduces all of these' and 'the decisive question'.",
+  "changed": true
+ },
+ {
+  "id": "R03-C-05-4",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation says 'The key links these two paragraphs'.",
+  "fix": "Changed to 'The correct answer links these two paragraphs'.",
+  "changed": true
+ },
+ {
+  "id": "R03-C-06-1",
+  "category": "E4",
+  "severity": "minor",
+  "finding": "Medium question tagged CAT/XAT only; spec gives Easy and Medium items all six exams.",
+  "fix": "Removed exams=DX (default six exams).",
+  "changed": true
+ },
+ {
+  "id": "R03-C-06-2",
+  "category": "E4",
+  "severity": "minor",
+  "finding": "Medium question tagged CAT/XAT only.",
+  "fix": "Removed exams=DX (default six exams).",
+  "changed": true
+ },
+ {
+  "id": "R03-C-03-4",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Correct option 'take on new roles as well as novices in bounded rites' is syntactically ambiguous (could read as 'and also novices').",
+  "fix": "Reworded to 'just as well as novices in bounded rites do'.",
+  "changed": true
+ },
+ {
+  "id": "R03-C-07",
+  "category": "E4",
+  "severity": "minor",
+  "finding": "Difficult passage tagged CAT/XAT while its Easy and Medium questions (07-1, 07-2) carry all six exams; passage and question tags differ.",
+  "fix": "none: question-level tags follow the spec (Easy/Medium take all six); passage tag reflects passage difficulty, consistent with other batches.",
+  "changed": false
+ },
+ {
+  "id": "R03-C-01-4",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "difficulty_reason fields in many items (01-4, 02-3, 03-2, 03-3, 04-3, 04-4, 05-3, 05-4, 06-1, 06-4, 07-3, 07-4, 07-5, 08-3, 08-4) use 'key'/'distractor'.",
+  "fix": "none: difficulty_reason is editorial metadata, not student-facing explanation, defence or misconception text.",
+  "changed": false
+ },
+ {
+  "id": "R03-C-04-4",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Correct option is the longest and most qualified of its set.",
+  "fix": "none: distractors are each refuted by a direct quotation (paragraphs 1, 2, 4); file-level key-longest rate is 11/34, under the 40% limit.",
+  "changed": false
+ },
+ {
+  "id": "ALL",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Blind-solver notes file for R03-C is an empty list: both solvers reached the key on all 34 items with no flags.",
+  "fix": "none: no solver notes to dismiss; independent cold solve also found every key uniquely defensible.",
+  "changed": false
+ }
+]

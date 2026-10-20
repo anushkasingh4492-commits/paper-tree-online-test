@@ -1,0 +1,72 @@
+{
+  "checked_date": "2026-09-07",
+  "syllabus_basis": 2026,
+  "future_exam_note": "No official 2027 syllabus was located during this build. Compare any subsequent official revision before adopting the bank for 2027.",
+  "attribution_note": "Chapter mapping is not a claim that a question appeared verbatim in that source. Textbook page numbers remain null. The 2026 bulletin states nearest-integer entry; half-away-from-zero is the supplied practice generator convention.",
+  "sources": [
+    {
+      "id": "S01",
+      "title": "NTA JEE Main 2026 syllabus",
+      "url": "https://jeemain.nta.nic.in/document/syllabus-2026/",
+      "scope": "Scope authority; Chemistry PDF pages 7-11; 20 units.",
+      "pdf_url": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2025/10/202510311323551056.pdf"
+    },
+    {
+      "id": "S02",
+      "title": "NTA JEE Main 2026 information bulletin",
+      "url": "https://jeemain.nta.nic.in/document/ib-2026/",
+      "scope": "Paper 1 format, marking and nearest-integer entry; PDF pages 17-18 and 21.",
+      "pdf_url": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2025/11/202511021649722475.pdf"
+    },
+    {
+      "id": "S03",
+      "title": "NCERT laboratory manuals",
+      "url": "https://ncert.nic.in/science-laboratory-manual.php",
+      "scope": "Primary practical reference index.",
+      "pdf_url": null
+    },
+    {
+      "id": "S04",
+      "title": "NCERT XI systematic qualitative analysis",
+      "url": "https://www.ncert.nic.in/pdf/publication/sciencelaboratorymanuals/classXI/chemistry/kelm207.pdf",
+      "scope": "Named cations, anions, reagents and observations.",
+      "pdf_url": null
+    },
+    {
+      "id": "S05",
+      "title": "NCERT XI titrimetric analysis",
+      "url": "https://www.ncert.nic.in/pdf/publication/sciencelaboratorymanuals/classXI/chemistry/kelm206.pdf",
+      "scope": "Indicators, standard solutions and titration procedures.",
+      "pdf_url": null
+    },
+    {
+      "id": "S06",
+      "title": "NCERT XII organic preparations",
+      "url": "https://www.ncert.nic.in/pdf/publication/sciencelaboratorymanuals/classXII/chemistry/lelm110.pdf",
+      "scope": "Prescribed organic preparations and reaction context.",
+      "pdf_url": null
+    },
+    {
+      "id": "S07",
+      "title": "CBSE p-block reference material 2026-27",
+      "url": "https://cbseacademic.nic.in/web_material/CurriculumMain27/SecPart2/Chemistry_SecP2_2026-27_RM.pdf",
+      "scope": "Corroboration of trends and first-element anomalies; NTA controls bank scope.",
+      "pdf_url": null
+    },
+    {
+      "id": "S08",
+      "title": "IIT Kanpur SATHEE: NCERT periodicity",
+      "url": "https://sathee.iitk.ac.in/ncert-books/ncert-books-theory/class-11/nbt-che-11/chemistry-11-chapter-3-classification-of-elements-and-periodicity-in-properties/",
+      "scope": "NCERT chapter reference for electronic configurations and periodic trends.",
+      "pdf_url": null
+    },
+    {
+      "id": "S09",
+      "title": "IIT Kanpur SATHEE: NCERT coordination compounds",
+      "url": "https://sathee.iitk.ac.in/ncert-books/ncert-books-theory/class-12/nbt-che-12/chem-12-unit-9-coordination-compounds/",
+      "scope": "NCERT chapter reference for coordination, isomerism, bonding and applications.",
+      "pdf_url": null
+    }
+  ],
+  "correction_source_note": "NCERT XII Laboratory Manual Unit 10, Experiment 10.5: main rearrangement route on printed pp.111-112 and alternative weakly acidic coupling on pp.112-113. Both read during correction; no claim that the old aniline answer was intrinsically false."
+}

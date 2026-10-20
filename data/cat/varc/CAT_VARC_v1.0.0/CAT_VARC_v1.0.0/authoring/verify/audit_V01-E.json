@@ -1,0 +1,42 @@
+[
+ {
+  "id": "V01-E-020",
+  "category": "E1",
+  "severity": "major",
+  "finding": "Order 4123 (definition, then 'Much of the debate turns on where to draw the line', then defenders and critics) was defensible: 'the debate' can follow a definition, and 'Its defenders' could still reach back to paternalism; one blind solver raised it.",
+  "fix": "Rewrote the closing sentence to open 'Since neither side holds its view without exception', which needs both sides already stated; updated explanation, trap reason for 4123 and difficulty_reason.",
+  "changed": true
+ },
+ {
+  "id": "V01-E-003",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Both blind solvers noted 41325 as a possible alternative (the 'But like all gestures' sentence before the 'Seen this way ... written gestures' sentence).",
+  "fix": "none: dismissed. 'like all gestures' presupposes that emoji have been classed as gestures, which only the 'Seen this way' sentence does, and 'Seen this way' must follow the gap-filling sentence it interprets; both solvers reached the correct order and rejected the alternative for this reason.",
+  "changed": false
+ },
+ {
+  "id": "V01-E-018",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "difficulty_reason referred to 'the second sentence', an ordinal in the original order that clashes with the printed labels a student sees.",
+  "fix": "Replaced with 'the general principle that every projection is a choice'.",
+  "changed": true
+ },
+ {
+  "id": "V01-E-022",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "difficulty_reason referred to 'the third sentence' and 'the second', ordinals that clash with printed labels.",
+  "fix": "Rephrased by content (the complaint of the person who owes her existence to a choice; the identity-affecting choices that raise the puzzle).",
+  "changed": true
+ },
+ {
+  "id": "V01-E-025",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "difficulty_reason referred to 'the third sentence', an ordinal that clashes with printed labels.",
+  "fix": "Rephrased as the trade described in the 'Their difficulty' sentence.",
+  "changed": true
+ }
+]

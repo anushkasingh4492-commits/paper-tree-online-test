@@ -1,0 +1,42 @@
+[
+ {
+  "id": "V01-G-004",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "3241",
+    "key": "3241",
+    "working": "Prediction (3), why: seconds vs days (2), 'Yet' work changed shape (4), 'The new shape' (1).",
+    "alternative": "3421 is weakly possible but breaks the 'change its shape' / 'The new shape' link.",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "3241",
+    "key": "3241",
+    "working": "3 spreadsheets predicted redundancy; 2 speed; 4 yet work changed shape; 1 new shape.",
+    "alternative": "",
+    "issue": ""
+   }
+  }
+ },
+ {
+  "id": "V01-G-019",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "53421",
+    "key": "53421",
+    "working": "5 standing desk idea; 3 'The idea mistakes the problem' (duration not posture); 4 motionless stander illustrates; 2 'such a worker'; 1 'therefore' advice.",
+    "alternative": "54231: 4 and 2 can directly follow 5 as illustration, then 3 diagnoses, then 1; weaker because 3's 'however' sits oddly after the illustration and 'The idea' is far from 5.",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "53421",
+    "key": "53421",
+    "working": "5 standing desks idea, 3 mistakes the problem, 4 motionless stander, 2 'such a worker' swaps pains, 1 'therefore' move often.",
+    "alternative": "",
+    "issue": ""
+   }
+  }
+ }
+]

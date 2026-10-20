@@ -1,0 +1,928 @@
+{
+ "alias_groups_added": [
+  {
+   "name": "ALIAS-ERR-U01-C-01",
+   "members": [
+    "U01-C-004",
+    "U01-C-010"
+   ],
+   "requested_by": "U01-C"
+  },
+  {
+   "name": "ALIAS-ERR-U01-C-02",
+   "members": [
+    "U01-C-009",
+    "U01-C-016"
+   ],
+   "requested_by": "U01-C"
+  },
+  {
+   "name": "ALIAS-ERR-U02-A-01",
+   "members": [
+    "U02-A-020",
+    "U02-A-021",
+    "U02-A-033"
+   ],
+   "requested_by": "U02-A"
+  },
+  {
+   "name": "ALIAS-ERR-U02-A-02",
+   "members": [
+    "U02-A-004",
+    "U02-A-047"
+   ],
+   "requested_by": "U02-A"
+  },
+  {
+   "name": "ALIAS-ERR-U02-B-01",
+   "members": [
+    "U02-B-016",
+    "U02-B-021",
+    "U02-B-022"
+   ],
+   "requested_by": "U02-B"
+  },
+  {
+   "name": "ALIAS-ERR-U02-B-02",
+   "members": [
+    "U02-B-024",
+    "U02-B-054"
+   ],
+   "requested_by": "U02-B"
+  },
+  {
+   "name": "ALIAS-ERR-U02-B-03",
+   "members": [
+    "U02-B-035",
+    "U02-B-051"
+   ],
+   "requested_by": "U02-B"
+  },
+  {
+   "name": "ALIAS-ERR-U02-C-01",
+   "members": [
+    "U02-C-006",
+    "U02-C-015"
+   ],
+   "requested_by": "U02-C"
+  },
+  {
+   "name": "ALIAS-ERR-U02-C-02",
+   "members": [
+    "U02-C-029",
+    "U02-C-044"
+   ],
+   "requested_by": "U02-C"
+  },
+  {
+   "name": "ALIAS-ERR-U02-D-01",
+   "members": [
+    "U02-C-005",
+    "U02-D-013"
+   ],
+   "requested_by": "U02-D"
+  },
+  {
+   "name": "ALIAS-ERR-U02-D-02",
+   "members": [
+    "U02-D-006",
+    "U02-D-018",
+    "U02-D-040"
+   ],
+   "requested_by": "U02-D"
+  },
+  {
+   "name": "ALIAS-ERR-U02-D-03",
+   "members": [
+    "U02-D-004",
+    "U02-D-035"
+   ],
+   "requested_by": "U02-D"
+  },
+  {
+   "name": "ALIAS-ERR-U02-D-04",
+   "members": [
+    "U02-D-036",
+    "U02-D-037"
+   ],
+   "requested_by": "U02-D"
+  },
+  {
+   "name": "ALIAS-ERR-U03-A-01",
+   "members": [
+    "U03-A-039",
+    "U03-A-051"
+   ],
+   "requested_by": "U03-A"
+  },
+  {
+   "name": "ALIAS-ERR-U03-B-01",
+   "members": [
+    "U03-B-015",
+    "U03-B-034"
+   ],
+   "requested_by": "U03-B"
+  },
+  {
+   "name": "ALIAS-ERR-U03-C-01",
+   "members": [
+    "U03-C-042",
+    "U03-C-045"
+   ],
+   "requested_by": "U03-C"
+  },
+  {
+   "name": "ALIAS-ERR-U03-D-01",
+   "members": [
+    "U03-C-039",
+    "U03-D-021",
+    "U03-D-051"
+   ],
+   "requested_by": "U03-D"
+  },
+  {
+   "name": "ALIAS-ERR-U03-D-02",
+   "members": [
+    "U03-D-002",
+    "U03-D-015"
+   ],
+   "requested_by": "U03-D"
+  },
+  {
+   "name": "ALIAS-ERR-U04-A-01",
+   "members": [
+    "U04-A-002",
+    "U04-A-040"
+   ],
+   "requested_by": "U04-A"
+  },
+  {
+   "name": "ALIAS-ERR-U04-A-02",
+   "members": [
+    "U04-A-020",
+    "U04-A-044",
+    "U04-A-049"
+   ],
+   "requested_by": "U04-A"
+  },
+  {
+   "name": "ALIAS-ERR-U04-B-01",
+   "members": [
+    "U04-B-001",
+    "U04-B-002",
+    "U04-B-015"
+   ],
+   "requested_by": "U04-B"
+  },
+  {
+   "name": "ALIAS-ERR-U04-C-01",
+   "members": [
+    "U04-C-004",
+    "U04-C-011",
+    "U04-C-032",
+    "U04-C-037"
+   ],
+   "requested_by": "U04-C"
+  },
+  {
+   "name": "ALIAS-ERR-U04-C-02",
+   "members": [
+    "U04-C-009",
+    "U04-C-028",
+    "U04-C-050"
+   ],
+   "requested_by": "U04-C"
+  },
+  {
+   "name": "ALIAS-ERR-U04-C-03",
+   "members": [
+    "U04-C-008",
+    "U04-C-029",
+    "U04-C-032"
+   ],
+   "requested_by": "U04-C"
+  },
+  {
+   "name": "ALIAS-ERR-U04-C-04",
+   "members": [
+    "U04-A-026",
+    "U04-C-007"
+   ],
+   "requested_by": "U04-C"
+  },
+  {
+   "name": "ALIAS-ERR-U05-A-01",
+   "members": [
+    "U05-A-009",
+    "U05-A-019",
+    "U05-A-040"
+   ],
+   "requested_by": "U05-A"
+  },
+  {
+   "name": "ALIAS-ERR-U05-A-02",
+   "members": [
+    "U05-A-010",
+    "U05-A-013",
+    "U05-A-046"
+   ],
+   "requested_by": "U05-A"
+  },
+  {
+   "name": "ALIAS-ERR-U05-B-01",
+   "members": [
+    "U05-B-008",
+    "U05-B-035"
+   ],
+   "requested_by": "U05-B"
+  },
+  {
+   "name": "ALIAS-ERR-U05-B-02",
+   "members": [
+    "U05-B-005",
+    "U05-B-035"
+   ],
+   "requested_by": "U05-B"
+  },
+  {
+   "name": "ALIAS-ERR-U05-B-03",
+   "members": [
+    "U05-B-011",
+    "U05-B-035"
+   ],
+   "requested_by": "U05-B"
+  },
+  {
+   "name": "ALIAS-ERR-U05-B-04",
+   "members": [
+    "U05-B-005",
+    "U05-B-011"
+   ],
+   "requested_by": "U05-B"
+  },
+  {
+   "name": "ALIAS-ERR-U05-B-05",
+   "members": [
+    "U05-B-009",
+    "U05-B-011"
+   ],
+   "requested_by": "U05-B"
+  },
+  {
+   "name": "ALIAS-ERR-U06-A-01",
+   "members": [
+    "U06-A-022",
+    "U06-A-046"
+   ],
+   "requested_by": "U06-A"
+  },
+  {
+   "name": "ALIAS-ERR-U06-B-01",
+   "members": [
+    "U06-B-020",
+    "U06-B-047"
+   ],
+   "requested_by": "U06-B"
+  },
+  {
+   "name": "ALIAS-ERR-U07-A-01",
+   "members": [
+    "U07-A-031",
+    "U07-A-040"
+   ],
+   "requested_by": "U07-A"
+  },
+  {
+   "name": "ALIAS-ERR-U07-C-01",
+   "members": [
+    "U07-B-009",
+    "U07-C-016"
+   ],
+   "requested_by": "U07-C"
+  },
+  {
+   "name": "ALIAS-ERR-U07-D-01",
+   "members": [
+    "U07-D-042",
+    "U07-D-052"
+   ],
+   "requested_by": "U07-D"
+  },
+  {
+   "name": "ALIAS-ERR-U07-E-01",
+   "members": [
+    "U07-E-002",
+    "U07-E-013"
+   ],
+   "requested_by": "U07-E"
+  },
+  {
+   "name": "ALIAS-ERR-U07-E-02",
+   "members": [
+    "U07-E-039",
+    "U07-E-052"
+   ],
+   "requested_by": "U07-E"
+  },
+  {
+   "name": "ALIAS-ERR-U07-E-03",
+   "members": [
+    "U07-E-022",
+    "U07-E-037"
+   ],
+   "requested_by": "U07-E"
+  },
+  {
+   "name": "ALIAS-ERR-U08-A-01",
+   "members": [
+    "U08-A-013",
+    "U08-A-047"
+   ],
+   "requested_by": "U08-A"
+  },
+  {
+   "name": "ALIAS-ERR-U08-A-02",
+   "members": [
+    "U08-A-004",
+    "U08-A-042"
+   ],
+   "requested_by": "U08-A"
+  },
+  {
+   "name": "ALIAS-ERR-U08-B-01",
+   "members": [
+    "U08-B-005",
+    "U08-B-042"
+   ],
+   "requested_by": "U08-B"
+  },
+  {
+   "name": "ALIAS-ERR-U08-B-02",
+   "members": [
+    "U08-B-002",
+    "U08-B-041"
+   ],
+   "requested_by": "U08-B"
+  },
+  {
+   "name": "ALIAS-ERR-U08-C-01",
+   "members": [
+    "U08-A-027",
+    "U08-C-031"
+   ],
+   "requested_by": "U08-C"
+  },
+  {
+   "name": "ALIAS-ERR-U08-C-02",
+   "members": [
+    "U08-C-001",
+    "U08-C-016"
+   ],
+   "requested_by": "U08-C"
+  },
+  {
+   "name": "ALIAS-ERR-U08-C-03",
+   "members": [
+    "U08-C-004",
+    "U08-C-016"
+   ],
+   "requested_by": "U08-C"
+  },
+  {
+   "name": "ALIAS-ERR-U08-C-04",
+   "members": [
+    "U08-C-008",
+    "U08-C-038"
+   ],
+   "requested_by": "U08-C"
+  },
+  {
+   "name": "ALIAS-ERR-U08-C-05",
+   "members": [
+    "U08-C-011",
+    "U08-C-038"
+   ],
+   "requested_by": "U08-C"
+  },
+  {
+   "name": "ALIAS-ERR-U08-C-06",
+   "members": [
+    "U08-C-024",
+    "U08-C-052"
+   ],
+   "requested_by": "U08-C"
+  },
+  {
+   "name": "ALIAS-ERR-U08-C-07",
+   "members": [
+    "U08-C-039",
+    "U08-C-052"
+   ],
+   "requested_by": "U08-C"
+  },
+  {
+   "name": "ALIAS-ERR-U08-C-08",
+   "members": [
+    "U08-C-025",
+    "U08-C-053"
+   ],
+   "requested_by": "U08-C"
+  },
+  {
+   "name": "ALIAS-ERR-U08-C-09",
+   "members": [
+    "U08-C-043",
+    "U08-C-053"
+   ],
+   "requested_by": "U08-C"
+  },
+  {
+   "name": "ALIAS-ERR-U08-D-01",
+   "members": [
+    "U08-D-008",
+    "U08-D-052"
+   ],
+   "requested_by": "U08-D"
+  },
+  {
+   "name": "ALIAS-ERR-U08-E-01",
+   "members": [
+    "U08-E-010",
+    "U08-E-032"
+   ],
+   "requested_by": "U08-E"
+  },
+  {
+   "name": "ALIAS-ERR-U09-A-01",
+   "members": [
+    "U09-A-021",
+    "U09-A-035"
+   ],
+   "requested_by": "U09-A"
+  },
+  {
+   "name": "ALIAS-ERR-U09-B-01",
+   "members": [
+    "U09-B-005",
+    "U09-B-019"
+   ],
+   "requested_by": "U09-B"
+  },
+  {
+   "name": "ALIAS-ERR-U09-B-02",
+   "members": [
+    "U09-B-004",
+    "U09-B-017",
+    "U09-B-041"
+   ],
+   "requested_by": "U09-B"
+  },
+  {
+   "name": "ALIAS-ERR-U09-B-03",
+   "members": [
+    "U09-B-035",
+    "U09-B-036"
+   ],
+   "requested_by": "U09-B"
+  },
+  {
+   "name": "ALIAS-ERR-U09-B-04",
+   "members": [
+    "U09-B-030",
+    "U09-B-035"
+   ],
+   "requested_by": "U09-B"
+  },
+  {
+   "name": "ALIAS-ERR-U09-B-05",
+   "members": [
+    "U09-B-007",
+    "U09-B-026"
+   ],
+   "requested_by": "U09-B"
+  },
+  {
+   "name": "ALIAS-ERR-U09-B-06",
+   "members": [
+    "U09-B-023",
+    "U09-B-045"
+   ],
+   "requested_by": "U09-B"
+  },
+  {
+   "name": "ALIAS-ERR-U09-C-01",
+   "members": [
+    "U09-C-015",
+    "U09-C-032"
+   ],
+   "requested_by": "U09-C"
+  },
+  {
+   "name": "ALIAS-ERR-U09-C-02",
+   "members": [
+    "U09-C-018",
+    "U09-C-019"
+   ],
+   "requested_by": "U09-C"
+  },
+  {
+   "name": "ALIAS-ERR-U09-C-03",
+   "members": [
+    "U09-C-003",
+    "U09-C-011"
+   ],
+   "requested_by": "U09-C"
+  },
+  {
+   "name": "ALIAS-ERR-U09-C-04",
+   "members": [
+    "U09-C-009",
+    "U09-C-016"
+   ],
+   "requested_by": "U09-C"
+  },
+  {
+   "name": "ALIAS-ERR-U10-A-01",
+   "members": [
+    "U10-A-028",
+    "U10-A-045"
+   ],
+   "requested_by": "U10-A"
+  },
+  {
+   "name": "ALIAS-ERR-U10-A-02",
+   "members": [
+    "U10-A-003",
+    "U10-A-023"
+   ],
+   "requested_by": "U10-A"
+  },
+  {
+   "name": "ALIAS-ERR-U10-A-03",
+   "members": [
+    "U10-A-018",
+    "U10-A-034"
+   ],
+   "requested_by": "U10-A"
+  },
+  {
+   "name": "ALIAS-ERR-U10-B-01",
+   "members": [
+    "U10-A-029",
+    "U10-B-002"
+   ],
+   "requested_by": "U10-B"
+  },
+  {
+   "name": "ALIAS-ERR-U10-B-02",
+   "members": [
+    "U10-B-004",
+    "U10-B-015",
+    "U10-B-030"
+   ],
+   "requested_by": "U10-B"
+  },
+  {
+   "name": "ALIAS-ERR-U10-B-03",
+   "members": [
+    "U10-B-007",
+    "U10-B-029"
+   ],
+   "requested_by": "U10-B"
+  },
+  {
+   "name": "ALIAS-ERR-U10-B-04",
+   "members": [
+    "U10-B-008",
+    "U10-B-029"
+   ],
+   "requested_by": "U10-B"
+  },
+  {
+   "name": "ALIAS-ERR-U10-C-01",
+   "members": [
+    "U10-A-019",
+    "U10-C-017"
+   ],
+   "requested_by": "U10-C"
+  },
+  {
+   "name": "ALIAS-ERR-U10-C-02",
+   "members": [
+    "U10-C-005",
+    "U10-C-045"
+   ],
+   "requested_by": "U10-C"
+  },
+  {
+   "name": "ALIAS-ERR-U10-C-03",
+   "members": [
+    "U10-C-042",
+    "U10-C-043",
+    "U10-C-044"
+   ],
+   "requested_by": "U10-C"
+  },
+  {
+   "name": "ALIAS-ERR-U10-C-04",
+   "members": [
+    "U10-C-039",
+    "U10-C-040"
+   ],
+   "requested_by": "U10-C"
+  },
+  {
+   "name": "ALIAS-ERR-U10-C-05",
+   "members": [
+    "U10-C-004",
+    "U10-C-033"
+   ],
+   "requested_by": "U10-C"
+  },
+  {
+   "name": "ALIAS-ERR-U10-C-06",
+   "members": [
+    "U10-C-006",
+    "U10-C-033"
+   ],
+   "requested_by": "U10-C"
+  },
+  {
+   "name": "ALIAS-ERR-U10-C-07",
+   "members": [
+    "U10-C-011",
+    "U10-C-033"
+   ],
+   "requested_by": "U10-C"
+  },
+  {
+   "name": "ALIAS-ERR-U10-C-08",
+   "members": [
+    "U10-C-009",
+    "U10-C-029"
+   ],
+   "requested_by": "U10-C"
+  },
+  {
+   "name": "ALIAS-ERR-U10-C-09",
+   "members": [
+    "U10-C-020",
+    "U10-C-029"
+   ],
+   "requested_by": "U10-C"
+  },
+  {
+   "name": "ALIAS-ERR-U10-C-10",
+   "members": [
+    "U10-C-003",
+    "U10-C-029"
+   ],
+   "requested_by": "U10-C"
+  },
+  {
+   "name": "ALIAS-ERR-U10-C-11",
+   "members": [
+    "U10-C-027",
+    "U10-C-038"
+   ],
+   "requested_by": "U10-C"
+  },
+  {
+   "name": "ALIAS-ERR-U10-E-01",
+   "members": [
+    "U10-E-009",
+    "U10-E-029"
+   ],
+   "requested_by": "U10-E"
+  },
+  {
+   "name": "ALIAS-ERR-U10-F-01",
+   "members": [
+    "U10-F-006",
+    "U10-F-048"
+   ],
+   "requested_by": "U10-F"
+  },
+  {
+   "name": "ALIAS-ERR-U10-F-02",
+   "members": [
+    "U10-F-010",
+    "U10-F-042",
+    "U10-F-043"
+   ],
+   "requested_by": "U10-F"
+  },
+  {
+   "name": "ALIAS-ERR-U11-B-01",
+   "members": [
+    "U11-B-015",
+    "U11-B-033"
+   ],
+   "requested_by": "U11-B"
+  },
+  {
+   "name": "ALIAS-ERR-U11-B-02",
+   "members": [
+    "U11-B-011",
+    "U11-B-021"
+   ],
+   "requested_by": "U11-B"
+  },
+  {
+   "name": "ALIAS-ERR-U11-B-03",
+   "members": [
+    "U11-A-009",
+    "U11-B-032"
+   ],
+   "requested_by": "U11-B"
+  },
+  {
+   "name": "ALIAS-ERR-U11-B-04",
+   "members": [
+    "U11-A-018",
+    "U11-B-014"
+   ],
+   "requested_by": "U11-B"
+  },
+  {
+   "name": "ALIAS-ERR-U11-C-01",
+   "members": [
+    "U11-A-002",
+    "U11-C-009"
+   ],
+   "requested_by": "U11-C"
+  },
+  {
+   "name": "ALIAS-ERR-U12-A-01",
+   "members": [
+    "U12-A-022",
+    "U12-A-050"
+   ],
+   "requested_by": "U12-A"
+  },
+  {
+   "name": "ALIAS-ERR-U12-A-02",
+   "members": [
+    "U12-A-036",
+    "U12-A-041"
+   ],
+   "requested_by": "U12-A"
+  },
+  {
+   "name": "ALIAS-ERR-U12-B-01",
+   "members": [
+    "U12-B-005",
+    "U12-B-039",
+    "U12-C-016"
+   ],
+   "requested_by": "U12-B"
+  },
+  {
+   "name": "ALIAS-ERR-U12-B-02",
+   "members": [
+    "U12-B-006",
+    "U12-B-011"
+   ],
+   "requested_by": "U12-B"
+  },
+  {
+   "name": "ALIAS-ERR-U12-C-01",
+   "members": [
+    "U12-B-046",
+    "U12-C-047"
+   ],
+   "requested_by": "U12-C"
+  },
+  {
+   "name": "ALIAS-ERR-U12-C-02",
+   "members": [
+    "U12-A-038",
+    "U12-C-010"
+   ],
+   "requested_by": "U12-C"
+  },
+  {
+   "name": "ALIAS-ERR-U13-A-01",
+   "members": [
+    "U13-A-013",
+    "U13-A-035"
+   ],
+   "requested_by": "U13-A"
+  },
+  {
+   "name": "ALIAS-ERR-U13-A-02",
+   "members": [
+    "U13-A-029",
+    "U13-A-040"
+   ],
+   "requested_by": "U13-A"
+  },
+  {
+   "name": "ALIAS-ERR-U13-A-03",
+   "members": [
+    "U13-A-009",
+    "U13-A-019"
+   ],
+   "requested_by": "U13-A"
+  },
+  {
+   "name": "ALIAS-ERR-U13-B-01",
+   "members": [
+    "U13-A-001",
+    "U13-B-001"
+   ],
+   "requested_by": "U13-B"
+  },
+  {
+   "name": "ALIAS-ERR-U13-B-02",
+   "members": [
+    "U13-B-007",
+    "U13-B-024",
+    "U13-B-025"
+   ],
+   "requested_by": "U13-B"
+  },
+  {
+   "name": "ALIAS-ERR-U13-B-03",
+   "members": [
+    "U13-A-003",
+    "U13-B-005"
+   ],
+   "requested_by": "U13-B"
+  },
+  {
+   "name": "ALIAS-ERR-U13-B-04",
+   "members": [
+    "U13-B-006",
+    "U13-B-023"
+   ],
+   "requested_by": "U13-B"
+  },
+  {
+   "name": "ALIAS-ERR-U13-B-05",
+   "members": [
+    "U13-B-010",
+    "U13-B-030",
+    "U13-B-037"
+   ],
+   "requested_by": "U13-B"
+  },
+  {
+   "name": "ALIAS-ERR-U14-A-01",
+   "members": [
+    "U14-A-005",
+    "U14-A-023",
+    "U14-A-024"
+   ],
+   "requested_by": "U14-A"
+  },
+  {
+   "name": "ALIAS-ERR-U14-C-01",
+   "members": [
+    "U14-C-016",
+    "U14-C-037"
+   ],
+   "requested_by": "U14-C"
+  },
+  {
+   "name": "ALIAS-ERR-U14-C-02",
+   "members": [
+    "U14-C-020",
+    "U14-C-044"
+   ],
+   "requested_by": "U14-C"
+  },
+  {
+   "name": "ALIAS-ERR-DUPSCAN-01",
+   "members": [
+    "U02-D-025",
+    "U02-D-051"
+   ],
+   "requested_by": "post-fix duplicate scan"
+  }
+ ],
+ "numerical_dropped": [
+  {
+   "local_id": "U03-C-031",
+   "difficulty": "Medium",
+   "reason": "negative or out-of-range answer"
+  },
+  {
+   "local_id": "U11-C-004",
+   "difficulty": "Easy",
+   "reason": "no numerical alternate"
+  }
+ ],
+ "numerical_added": [
+  {
+   "local_id": "U03-A-021",
+   "difficulty": "Medium",
+   "replaces": "U03-C-031"
+  },
+  {
+   "local_id": "U11-A-006",
+   "difficulty": "Easy",
+   "replaces": "U11-C-004"
+  }
+ ]
+}

@@ -1,0 +1,42 @@
+[
+ {
+  "id": "V01-B-014",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "1243",
+    "key": "1243",
+    "working": "Question headline (1), publication protected (2), 'Readers are not protected in the same way' (4), 'thus' summary (3).",
+    "alternative": "1234 is arguable: 3 can follow 2 with 4 as a closing extension, though 3 already states the reader's impression, making 4 redundant there.",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "1243",
+    "key": "1243",
+    "working": "1 question headline; 2 publication can say it asked; 4 readers not protected same way; 3 thus shields writer.",
+    "alternative": "",
+    "issue": ""
+   }
+  }
+ },
+ {
+  "id": "V01-B-021",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "25314",
+    "key": "25314",
+    "working": "Contrast 2, 'however' principle 5, example 3, qualification 1, 'thus' conclusion 4 citing reciting pupil.",
+    "alternative": "23514 (example before the general principle) is weaker but readable.",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "25314",
+    "key": "25314",
+    "working": "2 rote vs understanding; 5 understanding needs remembered facts; 3 example; 1 none of this means; 4 partners, reciting pupil.",
+    "alternative": "",
+    "issue": ""
+   }
+  }
+ }
+]

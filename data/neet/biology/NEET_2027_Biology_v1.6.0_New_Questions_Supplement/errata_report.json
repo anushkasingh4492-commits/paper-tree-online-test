@@ -1,0 +1,1217 @@
+{
+ "status": "PASS",
+ "version": "1.6.0-supplement",
+ "entries": [
+  {
+   "question_id": "NEET27-BIO-2212",
+   "category": "Blind verification: ambiguous",
+   "severity": "Major",
+   "original_text_or_value": "Assertion: Systematics studies the relationships among organisms in addition to their kinds and diversity. Reason: The word systematics is derived from the Latin word systema, meaning systematic arrangement of organisms.",
+   "problem_found": "Both true per NCERT; etymology (systema = systematic arrangement) does not clearly explain why systematics studies relationships, so D chosen but C is defensible",
+   "corrected_text_or_value": "Revised item (see question_bank.json)",
+   "verification_source": "Rationalised NCERT Biology XI/XII; independent blind re-solve",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-2323",
+   "category": "Blind verification: wording",
+   "severity": "Minor",
+   "original_text_or_value": "Arrange the following events in the life of a slime mould in the correct order. P. The body moves along decaying twigs and leaves, engulfing organic material. Q. Under suitable conditions, cells aggregate to form a plasmodium. R. Under unfavourable conditions, the plasmodium differentiates into fruiting bodies bearing spores at their tips. S. Spores are dispersed by air currents.",
+   "problem_found": "Order follows NCERT text but stem P (body moving) before Q (aggregation into plasmodium) is biologically loose",
+   "corrected_text_or_value": "Revised item (see question_bank.json)",
+   "verification_source": "Rationalised NCERT Biology XI/XII; independent blind re-solve",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-2336",
+   "category": "Blind verification: answer_leak",
+   "severity": "Minor",
+   "original_text_or_value": "Bread left on a kitchen shelf during the monsoon develops mould within days, while bread kept in a refrigerator lasts longer. The best explanation is that",
+   "problem_found": "Distractors A, B, D are absurd on common sense; C pickable without subject knowledge",
+   "corrected_text_or_value": "Revised item (see question_bank.json)",
+   "verification_source": "Rationalised NCERT Biology XI/XII; independent blind re-solve",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-2446",
+   "category": "Blind verification: answer_leak",
+   "severity": "Minor",
+   "original_text_or_value": "The plant body of members of Chlorophyceae may be",
+   "problem_found": "Options B, C, D all contain 'only', making A spottable by the absolute-word cue",
+   "corrected_text_or_value": "Revised item (see question_bank.json)",
+   "verification_source": "Rationalised NCERT Biology XI/XII; independent blind re-solve",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-2554",
+   "category": "Blind verification: ambiguous",
+   "severity": "Major",
+   "original_text_or_value": "Assertion: Arthropods and hemichordates have an open type of circulatory system. Reason: In an open circulatory system, blood pumped out through the heart directly bathes the cells and tissues.",
+   "problem_found": "Reason only defines open circulation; whether it 'explains' why arthropods/hemichordates have it is debatable (A vs B).",
+   "corrected_text_or_value": "Revised item (see question_bank.json)",
+   "verification_source": "Rationalised NCERT Biology XI/XII; independent blind re-solve",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-2636",
+   "category": "Blind verification: ambiguous",
+   "severity": "Major",
+   "original_text_or_value": "Assertion: The mantle cavity of molluscs contains feather-like gills. Reason: The gills of molluscs have respiratory and excretory functions.",
+   "problem_found": "Reason states gill function, not why gills are in the mantle cavity; A vs C debatable.",
+   "corrected_text_or_value": "Revised item (see question_bank.json)",
+   "verification_source": "Rationalised NCERT Biology XI/XII; independent blind re-solve",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-2688",
+   "category": "Blind verification: ambiguous",
+   "severity": "Major",
+   "original_text_or_value": "Assertion: Amphibians can live in aquatic as well as terrestrial habitats. Reason: Respiration in amphibians is by gills, lungs and through skin.",
+   "problem_found": "Gills/lungs/skin respiration can be read as explaining amphibious life; B vs A debatable.",
+   "corrected_text_or_value": "Revised item (see question_bank.json)",
+   "verification_source": "Rationalised NCERT Biology XI/XII; independent blind re-solve",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-2774",
+   "category": "Blind verification: wording",
+   "severity": "Minor",
+   "original_text_or_value": "Assertion: When a shoot tip transforms into a flower, the flower is always solitary. Reason: The arrangement of flowers on the floral axis is termed inflorescence.",
+   "problem_found": "Assertion rests on NCERT line 'when a shoot tip transforms into a flower, it is always solitary'; true per NCERT but reads oddly out of context",
+   "corrected_text_or_value": "Revised item (see question_bank.json)",
+   "verification_source": "Rationalised NCERT Biology XI/XII; independent blind re-solve",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-2944",
+   "category": "Blind verification: ambiguous",
+   "severity": "Major",
+   "original_text_or_value": "Consider the following statements. I. The ground tissue system forms the main bulk of the plant. II. The ground tissue is divided into three zones, namely cortex, pericycle and pith. III. The endodermis is part of the vascular tissue system. IV. Medullary rays of primary stems contain parenchymatous cells. Which of the statements are correct?",
+   "problem_found": "Statement II (cortex, pericycle, pith as the three zones) is not NCERT wording; NCERT also lists pericycle and medullary rays as ground tissue, so II could be argued true (D); key C assumes II false. Statement I 'main bulk' is also not verbatim NCERT.",
+   "corrected_text_or_value": "Revised item (see question_bank.json)",
+   "verification_source": "Rationalised NCERT Biology XI/XII; independent blind re-solve",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-2968",
+   "category": "Blind verification: key disagreement",
+   "severity": "Major",
+   "original_text_or_value": "Which option correctly compares the dicot root with the monocot root?",
+   "problem_found": "Independent solver answer differed from key",
+   "corrected_text_or_value": null,
+   "verification_source": "Rationalised NCERT Biology XI/XII; independent blind re-solve",
+   "resolution_status": "Verified, no change needed"
+  },
+  {
+   "question_id": "NEET27-BIO-3014",
+   "category": "Blind verification: ambiguous",
+   "severity": "Major",
+   "original_text_or_value": "Assertion: Ciliated epithelium is mainly present on the inner surface of hollow organs such as bronchioles and fallopian tubes. Reason: Cilia move particles or mucus in a specific direction over the epithelium.",
+   "problem_found": "Both true; whether cilia moving mucus explains their location in hollow organs is debatable (C vs D)",
+   "corrected_text_or_value": "Revised item (see question_bank.json)",
+   "verification_source": "Rationalised NCERT Biology XI/XII; independent blind re-solve",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-3102",
+   "category": "Blind verification: ambiguous",
+   "severity": "Major",
+   "original_text_or_value": "Assertion: During aestivation and hibernation, gaseous exchange in a frog takes place through the skin. Reason: In water, dissolved oxygen is exchanged through the skin of a frog by diffusion.",
+   "problem_found": "Both true; Reason describes cutaneous respiration in water, linkage to aestivation/hibernation arguable (C vs D)",
+   "corrected_text_or_value": "Revised item (see question_bank.json)",
+   "verification_source": "Rationalised NCERT Biology XI/XII; independent blind re-solve",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-3133",
+   "category": "Blind verification: ambiguous",
+   "severity": "Major",
+   "original_text_or_value": "Assertion: The cloaca of a male frog is used to pass faecal matter, urine and sperms to the exterior. Reason: The cloaca is a small, median chamber into which the rectum and the urinogenital ducts open.",
+   "problem_found": "Both true; Reason (rectum and urinogenital ducts open into cloaca) arguably explains Assertion, but D-option keying also defensible",
+   "corrected_text_or_value": "Revised item (see question_bank.json)",
+   "verification_source": "Rationalised NCERT Biology XI/XII; independent blind re-solve",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-3200",
+   "category": "Blind verification: key disagreement",
+   "severity": "Major",
+   "original_text_or_value": "In human beings, the membrane of the erythrocyte has approximately",
+   "problem_found": "Independent solver answer differed from key",
+   "corrected_text_or_value": null,
+   "verification_source": "Rationalised NCERT Biology XI/XII; independent blind re-solve",
+   "resolution_status": "Verified, no change needed"
+  },
+  {
+   "question_id": "NEET27-BIO-3379",
+   "category": "Blind verification: key disagreement",
+   "severity": "Major",
+   "original_text_or_value": "Statement I: The exoskeletons of arthropods have a complex polysaccharide called chitin. Statement II: Complex polysaccharides are mostly heteropolymers.",
+   "problem_found": "Independent solver answer differed from key",
+   "corrected_text_or_value": null,
+   "verification_source": "Rationalised NCERT Biology XI/XII; independent blind re-solve",
+   "resolution_status": "Verified, no change needed"
+  },
+  {
+   "question_id": "NEET27-BIO-3433",
+   "category": "Blind verification: wording",
+   "severity": "Minor",
+   "original_text_or_value": "In the scheme E + S forming ES, then EP, then E + P, match List I with List II. List I: (P) ES; (Q) EP; (R) E at the end of the scheme; (S) Transition state structure. List II: (I) Free enzyme, unchanged, ready for another substrate; (II) New structure of the substrate formed while it is bound to the active site; (III) Highly reactive, short-lived complex of enzyme and substrate; (IV) Complex formed after the active site breaks the bonds of the substrate. Choose the correct option.",
+   "problem_found": "List II (III) calls ES 'highly reactive, short-lived'; NCERT stresses transient/obligatory, minor wording only",
+   "corrected_text_or_value": "Revised item (see question_bank.json)",
+   "verification_source": "Rationalised NCERT Biology XI/XII; independent blind re-solve",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-3487",
+   "category": "Blind verification: wording",
+   "severity": "Minor",
+   "original_text_or_value": "Evaluate the following statements. I. Cells in G0 remain metabolically active. II. In animals, mitotic division is seen only in diploid somatic cells. III. In some lower plants and some social insects, haploid cells divide by mitosis. IV. Heart cells of adult animals divide continuously to replace cells lost through injury. Which set contains all and only the correct statements?",
+   "problem_found": "Statements II and III (both NCERT lines) sit uneasily together (animal mitosis only in diploid cells vs haploid mitosis in social insects); key A still unique.",
+   "corrected_text_or_value": "Revised item (see question_bank.json)",
+   "verification_source": "Rationalised NCERT Biology XI/XII; independent blind re-solve",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-3635",
+   "category": "Blind verification: ambiguous",
+   "severity": "Major",
+   "original_text_or_value": "Which of the following were known or proposed by the early experimenters? I. Plants use light energy to make carbohydrates from CO2 and water. II. O2 evolved by green plants comes from CO2. III. In green plants H2O is the hydrogen donor and is oxidised to O2. IV. The green substance of plants is located in special bodies later called chloroplasts. Choose the correct option.",
+   "problem_found": "'Early experimenters' is vague; III is van Niel's proposal (in NCERT Early Experiments section) so I,III,IV; if van Niel excluded, C (I and IV) becomes defensible",
+   "corrected_text_or_value": "Revised item (see question_bank.json)",
+   "verification_source": "Rationalised NCERT Biology XI/XII; independent blind re-solve",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-3669",
+   "category": "Blind verification: duplicate",
+   "severity": "Major",
+   "original_text_or_value": "Pigment molecules of a photosystem that absorb light of different wavelengths and pass the energy to a single chlorophyll a molecule are collectively called",
+   "problem_found": "Substantially same as NEET27-BIO-3666 (antennae / light harvesting system)",
+   "corrected_text_or_value": "Revised item (see question_bank.json)",
+   "verification_source": "Rationalised NCERT Biology XI/XII; independent blind re-solve",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-3916",
+   "category": "Blind verification: ambiguous",
+   "severity": "Major",
+   "original_text_or_value": "Assertion: In dicotyledons and gymnosperms, lateral meristems bring about an increase in girth of the organs. Reason: Lateral meristems appear later in the life of these plants.",
+   "problem_found": "Both true; that lateral meristems appear later does not explain why they increase girth, so C, but some keys may read it as D",
+   "corrected_text_or_value": "Revised item (see question_bank.json)",
+   "verification_source": "Rationalised NCERT Biology XI/XII; independent blind re-solve",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-3934",
+   "category": "Blind verification: ambiguous",
+   "severity": "Major",
+   "original_text_or_value": "Assertion: In geometric growth described by W1 = W0 e^(rt), the final size W1 depends on the initial size W0. Reason: The term r is a measure of the ability of the plant to produce new plant material.",
+   "problem_found": "Both true; dependence on W0 follows from the equation form, not from r measuring productive ability, so C-type (option A); explanation link is debatable",
+   "corrected_text_or_value": "Revised item (see question_bank.json)",
+   "verification_source": "Rationalised NCERT Biology XI/XII; independent blind re-solve",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-3975",
+   "category": "Blind verification: ambiguous",
+   "severity": "Major",
+   "original_text_or_value": "Assertion: The gaseous PGR ethylene could fit into either the growth promoter or the growth inhibitor group. Reason: Ethylene is largely an inhibitor of growth activities.",
+   "problem_found": "Both true; 'largely an inhibitor' does not explain why ethylene fits either group, so C; a key of B is conceivable",
+   "corrected_text_or_value": "Revised item (see question_bank.json)",
+   "verification_source": "Rationalised NCERT Biology XI/XII; independent blind re-solve",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-4023",
+   "category": "Blind verification: key disagreement",
+   "severity": "Major",
+   "original_text_or_value": "Statement I: Ethylene inhibits root growth and root hair formation. Statement II: Ethylene is used to initiate flowering and to synchronise fruit-set in pineapples. Which option is correct?",
+   "problem_found": "Independent solver answer differed from key",
+   "corrected_text_or_value": null,
+   "verification_source": "Rationalised NCERT Biology XI/XII; independent blind re-solve",
+   "resolution_status": "Verified, no change needed"
+  },
+  {
+   "question_id": "NEET27-BIO-4135",
+   "category": "Blind verification: answer_leak",
+   "severity": "Minor",
+   "original_text_or_value": "Occupational respiratory disorders are especially associated with industries involving:",
+   "problem_found": "Distractors (fruit canning, dairy, software) are implausible; answer spottable without subject knowledge.",
+   "corrected_text_or_value": "Revised item (see question_bank.json)",
+   "verification_source": "Rationalised NCERT Biology XI/XII; independent blind re-solve",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-4149",
+   "category": "Blind verification: ambiguous",
+   "severity": "Major",
+   "original_text_or_value": "Assertion: CO2 produced by cells must be removed from the body. Reason: The process of exchange of O2 from the atmosphere with CO2 produced by the cells is called breathing.",
+   "problem_found": "Reason restates NCERT definition of breathing; whether it explains need to remove CO2 is debatable (B vs C); keyed C.",
+   "corrected_text_or_value": "Revised item (see question_bank.json)",
+   "verification_source": "Rationalised NCERT Biology XI/XII; independent blind re-solve",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-4186",
+   "category": "Blind verification: answer_leak",
+   "severity": "Minor",
+   "original_text_or_value": "A person suffering from a seasonal allergy shows a rise in a granulocyte that normally forms only 2-3 per cent of total leucocytes. Which cell is it?",
+   "problem_found": "Option D repeats the stem's cue 'allergy'; the 2-3 per cent figure already identifies eosinophil, so the descriptor gives it away.",
+   "corrected_text_or_value": "Revised item (see question_bank.json)",
+   "verification_source": "Rationalised NCERT Biology XI/XII; independent blind re-solve",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-4292",
+   "category": "Blind verification: ambiguous",
+   "severity": "Major",
+   "original_text_or_value": "Assertion: The cardiac output of an athlete is much higher than that of an ordinary man. Reason: The body has the ability to alter stroke volume as well as heart rate.",
+   "problem_found": "NCERT gives the athlete as an example of the body's ability to alter stroke volume and heart rate; R explains A, but some keys may treat it as non-explanatory.",
+   "corrected_text_or_value": "Revised item (see question_bank.json)",
+   "verification_source": "Rationalised NCERT Biology XI/XII; independent blind re-solve",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-4312",
+   "category": "Blind verification: ambiguous",
+   "severity": "Major",
+   "original_text_or_value": "Assertion: The pulmonary artery carries deoxygenated blood. Reason: Arteries carry blood away from the heart.",
+   "problem_found": "Whether 'arteries carry blood away from heart' explains why the pulmonary artery carries deoxygenated blood is debatable; keyed D (R does not explain), A also arguable.",
+   "corrected_text_or_value": "Revised item (see question_bank.json)",
+   "verification_source": "Rationalised NCERT Biology XI/XII; independent blind re-solve",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-4472",
+   "category": "Blind verification: answer_leak",
+   "severity": "Minor",
+   "original_text_or_value": "In kidney transplantation, why is a functioning kidney preferably taken from a close relative of the patient?",
+   "problem_found": "Only option A is biologically plausible; distractors are absurd (no blood supply, no surgery).",
+   "corrected_text_or_value": "Revised item (see question_bank.json)",
+   "verification_source": "Rationalised NCERT Biology XI/XII; independent blind re-solve",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-4783",
+   "category": "Blind verification: ambiguous",
+   "severity": "Major",
+   "original_text_or_value": "Which of the following organs, apart from the organised endocrine bodies, also produce hormones? I. Gastrointestinal tract II. Kidney III. Heart IV. Liver",
+   "problem_found": "NCERT 22.1 lists GI tract, liver, kidney and heart as other hormone-producing organs, so all four (C); key may intend D if setter excluded liver",
+   "corrected_text_or_value": null,
+   "verification_source": "Rationalised NCERT Biology XI/XII; independent blind re-solve",
+   "resolution_status": "Verified, no change needed"
+  },
+  {
+   "question_id": "NEET27-BIO-4963",
+   "category": "Blind verification: wording",
+   "severity": "Minor",
+   "original_text_or_value": "A transverse section of a young anther shows four near-circular chambers at the corners, each surrounded by four wall layers and containing a central mass of compact, homogenous cells. Moving inward from the surface of one chamber, the third wall layer encountered is the:",
+   "problem_found": "wording: 'from the surface of one chamber' could be read as from the chamber's inner side, read as from anther surface: epidermis, endothecium, middle layers",
+   "corrected_text_or_value": "Revised item (see question_bank.json)",
+   "verification_source": "Rationalised NCERT Biology XI/XII; independent blind re-solve",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-5029",
+   "category": "Blind verification: ambiguous",
+   "severity": "Major",
+   "original_text_or_value": "Assertion: Not all aquatic plants use water for pollination. Reason: In water hyacinth and water lily, the flowers emerge above the level of water and are pollinated by insects or wind.",
+   "problem_found": "Reason gives NCERT examples supporting Assertion, a key of A (not explanation) is also arguable",
+   "corrected_text_or_value": "Revised item (see question_bank.json)",
+   "verification_source": "Rationalised NCERT Biology XI/XII; independent blind re-solve",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-5142",
+   "category": "Blind verification: ambiguous",
+   "severity": "Major",
+   "original_text_or_value": "Assertion: Fimbriae help in collection of the ovum after ovulation. Reason: Fimbriae are finger-like projections at the edges of the infundibulum, the part of the oviduct closer to the ovary.",
+   "problem_found": "Reason is a structural description of fimbriae; whether it 'explains' the collecting function is debatable (B vs D).",
+   "corrected_text_or_value": "Revised item (see question_bank.json)",
+   "verification_source": "Rationalised NCERT Biology XI/XII; independent blind re-solve",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-5397",
+   "category": "Blind verification: duplicate",
+   "severity": "Major",
+   "original_text_or_value": "Which statement about who can get STIs is correct?",
+   "problem_found": "Substantially the same fact as NEET27-BIO-5392 (STI incidence highest at 15-24 years).",
+   "corrected_text_or_value": "Revised item (see question_bank.json)",
+   "verification_source": "Rationalised NCERT Biology XI/XII; independent blind re-solve",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-5725",
+   "category": "Blind verification: ambiguous",
+   "severity": "Major",
+   "original_text_or_value": "Assertion: Insertion of three bases in a structural gene leaves the reading frame unaltered from that point onwards. Reason: Insertion of three bases adds one codon, and hence one amino acid, to the coded sequence.",
+   "problem_found": "Both true; whether 'adds one whole codon' counts as the explanation for the unaltered frame is debatable (B vs C); C chosen.",
+   "corrected_text_or_value": "Revised item (see question_bank.json)",
+   "verification_source": "Rationalised NCERT Biology XI/XII; independent blind re-solve",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-5781",
+   "category": "Blind verification: ambiguous",
+   "severity": "Major",
+   "original_text_or_value": "Assertion: DNA from blood, hair follicle, skin, bone, saliva or sperm of an individual shows the same degree of polymorphism. Reason: Polymorphisms are inheritable from parents to children.",
+   "problem_found": "Both true per NCERT; heritability does not really explain identical polymorphism across tissues (same zygote origin), so C chosen, but D is arguable.",
+   "corrected_text_or_value": "Revised item (see question_bank.json)",
+   "verification_source": "Rationalised NCERT Biology XI/XII; independent blind re-solve",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-5848",
+   "category": "Blind verification: duplicate",
+   "severity": "Major",
+   "original_text_or_value": "Which observation of Karl Ernst von Baer led to the disapproval of embryological support for evolution?",
+   "problem_found": "Substantially the same von Baer fact as NEET27-BIO-5848.",
+   "corrected_text_or_value": "Revised item (see question_bank.json)",
+   "verification_source": "Rationalised NCERT Biology XI/XII; independent blind re-solve",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-5910",
+   "category": "Blind verification: wording",
+   "severity": "Minor",
+   "original_text_or_value": "Consider the following statements. I. The sum total of all the allelic frequencies is 1. II. The frequency of Aa individuals is pq. III. When measured frequencies differ from expected values, the direction of difference indicates the extent of evolutionary change. IV. Hardy-Weinberg equilibrium is maintained when gene flow and genetic drift operate strongly. Which of the statements given above are correct?",
+   "problem_found": "Statement III reproduces NCERT's odd phrase 'direction of difference indicates extent'; key unaffected.",
+   "corrected_text_or_value": "Revised item (see question_bank.json)",
+   "verification_source": "Rationalised NCERT Biology XI/XII; independent blind re-solve",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-6142",
+   "category": "Blind verification: wording",
+   "severity": "Minor",
+   "original_text_or_value": "Arrange the steps of primary sewage treatment in the correct order. P. Floating debris is removed by sequential filtration. Q. Grit, soil and small pebbles, is removed by sedimentation. R. All settled solids form the primary sludge and the supernatant forms the effluent. S. The effluent from the primary settling tank is taken for secondary treatment.",
+   "problem_found": "Statement Q has a stray comma and number disagreement: 'Grit, soil and small pebbles, is removed'; should read 'Grit (soil and small pebbles) is removed'",
+   "corrected_text_or_value": "Revised item (see question_bank.json)",
+   "verification_source": "Rationalised NCERT Biology XI/XII; independent blind re-solve",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-6150",
+   "category": "Blind verification: ambiguous",
+   "severity": "Major",
+   "original_text_or_value": "Assertion: The major part of the activated sludge is pumped back into the aeration tank to serve as the inoculum. Reason: Activated sludge is the sediment of bacterial flocs in the settling tank.",
+   "problem_found": "Reason (sludge is bacterial flocs) arguably explains why it serves as inoculum; options B (explains) and C (does not explain) both defensible",
+   "corrected_text_or_value": null,
+   "verification_source": "Rationalised NCERT Biology XI/XII; independent blind re-solve",
+   "resolution_status": "Verified, no change needed"
+  },
+  {
+   "question_id": "NEET27-BIO-6207",
+   "category": "Blind verification: ambiguous",
+   "severity": "Major",
+   "original_text_or_value": "Assertion: Traditional hybridisation procedures used in plant and animal breeding very often lead to inclusion and multiplication of undesirable genes along with the desired genes. Reason: Genetic engineering techniques allow isolation and introduction of only one or a set of desirable genes into the target organism.",
+   "problem_found": "Both true; R contrasts genetic engineering with hybridisation but does not explain why hybridisation carries undesirable genes, so D; some keys may give B",
+   "corrected_text_or_value": "Revised item (see question_bank.json)",
+   "verification_source": "Rationalised NCERT Biology XI/XII; independent blind re-solve",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-6358",
+   "category": "Blind verification: key disagreement",
+   "severity": "Major",
+   "original_text_or_value": "Statement I: The increase in crop yields during the Green Revolution was mainly due to the use of improved crop varieties. Statement II: The Green Revolution succeeded in tripling the food supply.",
+   "problem_found": "Independent solver answer differed from key",
+   "corrected_text_or_value": null,
+   "verification_source": "Rationalised NCERT Biology XI/XII; independent blind re-solve",
+   "resolution_status": "Verified, no change needed"
+  },
+  {
+   "question_id": "NEET27-BIO-6370",
+   "category": "Blind verification: no_correct_option",
+   "severity": "Major",
+   "original_text_or_value": "Consider the following statements. I. GMOs are created by transferring genes using methods other than natural methods. II. Increased yields in the Green Revolution were mainly due to improved crop varieties. III. GM crops can reduce post-harvest losses. IV. Organic agriculture is one of the three options for increasing food production. Which statements are correct?",
+   "problem_found": "All four statements are true per NCERT (GMO definition, Green Revolution yields mainly from improved varieties, reduced post-harvest losses, organic agriculture as an option); no option lists I-IV. B chosen only if I is deemed false.",
+   "corrected_text_or_value": "Revised item (see question_bank.json)",
+   "verification_source": "Rationalised NCERT Biology XI/XII; independent blind re-solve",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-6506",
+   "category": "Blind verification: wording",
+   "severity": "Minor",
+   "original_text_or_value": "Consider the following statements. I. Population size is more technically called population density and is designated as N. II. Population density need not necessarily be measured in numbers only. III. Total number is an easily adoptable measure even when the population is huge and counting is very time-consuming. IV. Population sizes are mostly estimated indirectly, without actually counting or seeing the individuals. Which of the above are correct?",
+   "problem_found": "Statement IV 'mostly estimated indirectly' overstates NCERT (which says total number is generally the most appropriate measure); key still D as III is clearly false",
+   "corrected_text_or_value": "Revised item (see question_bank.json)",
+   "verification_source": "Rationalised NCERT Biology XI/XII; independent blind re-solve",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-6595",
+   "category": "Blind verification: wording",
+   "severity": "Minor",
+   "original_text_or_value": "Assertion: A pond is a convenient example for studying how an ecosystem functions. Reason: A pond is a shallow water body in which all the four basic functional components of an ecosystem are well exhibited.",
+   "problem_found": "Reason says 'four basic functional components'; NCERT says 'four basic components' (abiotic, producers, consumers, decomposers); 'functional' could be read as the four functional aspects. Key C.",
+   "corrected_text_or_value": "Revised item (see question_bank.json)",
+   "verification_source": "Rationalised NCERT Biology XI/XII; independent blind re-solve",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-6619",
+   "category": "Blind verification: ambiguous",
+   "severity": "Major",
+   "original_text_or_value": "Statement I: Gross primary productivity is the biomass remaining with producers after their respiratory utilisation. Statement II: Secondary productivity is the rate of assimilation of food energy by the consumers.",
+   "problem_found": "Statement II uses 'rate of assimilation of food energy by consumers', not NCERT's 'rate of formation of new organic matter by consumers'; assimilation is not strictly production, so II's truth is debatable. C intended (I clearly false); D defensible.",
+   "corrected_text_or_value": "Revised item (see question_bank.json)",
+   "verification_source": "Rationalised NCERT Biology XI/XII; independent blind re-solve",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-6725",
+   "category": "Blind verification: wording",
+   "severity": "Minor",
+   "original_text_or_value": "An ecologist compares two regions of equal area. Region X was repeatedly covered by glaciers in the past, while region Y has been relatively undisturbed for millions of years. Based on the hypothesis linking speciation to time, which prediction is correct?",
+   "problem_found": "Stem asks 'which prediction is correct' but never states what is predicted (which region has more species); options imply it",
+   "corrected_text_or_value": "Revised item (see question_bank.json)",
+   "verification_source": "Rationalised NCERT Biology XI/XII; independent blind re-solve",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-2301",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-2302",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-2346",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-2358",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-2413",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-2467",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-2558",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-2575",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-2588",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-2598",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-2677",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-2684",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-2691",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-2694",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-2701",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-2711",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-2779",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-2822",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-2889",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-2930",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-2959",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-3054",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-3069",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-3086",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-3089",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-3099",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-3350",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-3363",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-3378",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-3383",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-3387",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-3397",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-3424",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-3550",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-3980",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-4074",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-4090",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-4350",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-5043",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-5048",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-5178",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-5368",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-5385",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-5462",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-5579",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-5704",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-5733",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-5749",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-5753",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-5808",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-5988",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-6022",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-6039",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-6063",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-6140",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-6233",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-6262",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-6322",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-6328",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-6360",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-6427",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-6653",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-6726",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-6750",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-6758",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-6769",
+   "category": "Answer leakage (option length)",
+   "severity": "Minor",
+   "original_text_or_value": null,
+   "problem_found": "Correct option was clearly the longest option.",
+   "corrected_text_or_value": "Options rebalanced",
+   "verification_source": "Automated option-length scan",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "(removed candidate, Cell: The Unit of Life)",
+   "category": "Duplicate",
+   "severity": "Major",
+   "original_text_or_value": "Match List on bacterial shapes",
+   "problem_found": "Substantially duplicated a Biological Classification item.",
+   "corrected_text_or_value": null,
+   "verification_source": "Bank-wide near-duplicate scan",
+   "resolution_status": "Removed"
+  },
+  {
+   "question_id": "NEET27-BIO-0039",
+   "category": "Chapter tagging",
+   "severity": "Minor",
+   "original_text_or_value": "Chemical Coordination and Integration",
+   "problem_found": "Question content belongs to a different chapter from the one it was tagged with.",
+   "corrected_text_or_value": "Neural Control and Coordination",
+   "verification_source": "Question content checked against chapter scope",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-0567",
+   "category": "Chapter tagging",
+   "severity": "Minor",
+   "original_text_or_value": "Body Fluids and Circulation",
+   "problem_found": "Question content belongs to a different chapter from the one it was tagged with.",
+   "corrected_text_or_value": "Breathing and Exchange of Gases",
+   "verification_source": "Question content checked against chapter scope",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-1175",
+   "category": "Chapter tagging",
+   "severity": "Minor",
+   "original_text_or_value": "Body Fluids and Circulation",
+   "problem_found": "Question content belongs to a different chapter from the one it was tagged with.",
+   "corrected_text_or_value": "Breathing and Exchange of Gases",
+   "verification_source": "Question content checked against chapter scope",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-1692",
+   "category": "Chapter tagging",
+   "severity": "Minor",
+   "original_text_or_value": "Body Fluids and Circulation",
+   "problem_found": "Question content belongs to a different chapter from the one it was tagged with.",
+   "corrected_text_or_value": "Breathing and Exchange of Gases",
+   "verification_source": "Question content checked against chapter scope",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-2052",
+   "category": "Chapter tagging",
+   "severity": "Minor",
+   "original_text_or_value": "Chemical Coordination and Integration",
+   "problem_found": "Question content belongs to a different chapter from the one it was tagged with.",
+   "corrected_text_or_value": "Neural Control and Coordination",
+   "verification_source": "Question content checked against chapter scope",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-1011",
+   "category": "Style",
+   "severity": "Minor",
+   "original_text_or_value": "Mitochondrial matrix — Krebs-cycle site",
+   "problem_found": "Option text used an em dash separator, against house style.",
+   "corrected_text_or_value": "Mitochondrial matrix: Krebs-cycle site",
+   "verification_source": "House style",
+   "resolution_status": "Resolved"
+  },
+  {
+   "question_id": "NEET27-BIO-1488",
+   "category": "Style",
+   "severity": "Minor",
+   "original_text_or_value": "Inner mitochondrial membrane — ETC location",
+   "problem_found": "Option text used an em dash separator, against house style.",
+   "corrected_text_or_value": "Inner mitochondrial membrane: ETC location",
+   "verification_source": "House style",
+   "resolution_status": "Resolved"
+  }
+ ],
+ "unresolved": 0
+}

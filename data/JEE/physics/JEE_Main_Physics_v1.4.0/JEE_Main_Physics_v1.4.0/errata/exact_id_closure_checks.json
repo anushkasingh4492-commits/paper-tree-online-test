@@ -1,0 +1,269 @@
+[
+  {
+    "code": "E01",
+    "id": "JEE27-PHY-1318",
+    "status": "PASS",
+    "changed_fields": [
+      "tags",
+      "concept_family"
+    ]
+  },
+  {
+    "code": "E01",
+    "id": "JEE27-PHY-1321",
+    "status": "PASS",
+    "changed_fields": [
+      "tags",
+      "concept_family"
+    ]
+  },
+  {
+    "code": "E02",
+    "id": "JEE27-PHY-1015",
+    "status": "PASS",
+    "changed_fields": [
+      "candidate_id",
+      "subtopic",
+      "question",
+      "correct_answer",
+      "explanation",
+      "difficulty_reason",
+      "question_type",
+      "numerical_variant",
+      "options",
+      "provenance",
+      "assumptions"
+    ]
+  },
+  {
+    "code": "E02",
+    "id": "JEE27-PHY-1427",
+    "status": "PASS",
+    "changed_fields": [
+      "candidate_id",
+      "topic",
+      "subtopic",
+      "question",
+      "correct_answer",
+      "explanation",
+      "difficulty_reason",
+      "question_type",
+      "options",
+      "provenance",
+      "assumptions",
+      "tags"
+    ]
+  },
+  {
+    "code": "E02",
+    "id": "JEE27-PHY-1548",
+    "status": "PASS",
+    "changed_fields": [
+      "candidate_id",
+      "subtopic",
+      "question",
+      "correct_answer",
+      "explanation",
+      "difficulty_reason",
+      "question_type",
+      "options",
+      "provenance",
+      "assumptions"
+    ]
+  },
+  {
+    "code": "E02",
+    "id": "JEE27-PHY-1745",
+    "status": "PASS",
+    "changed_fields": [
+      "candidate_id",
+      "subtopic",
+      "question",
+      "explanation",
+      "difficulty_reason",
+      "question_type",
+      "options",
+      "provenance",
+      "assumptions"
+    ]
+  },
+  {
+    "code": "E02",
+    "id": "JEE27-PHY-2046",
+    "status": "PASS",
+    "changed_fields": [
+      "candidate_id",
+      "subtopic",
+      "question",
+      "correct_answer",
+      "explanation",
+      "difficulty_reason",
+      "question_type",
+      "options",
+      "provenance",
+      "assumptions"
+    ]
+  },
+  {
+    "code": "E02",
+    "id": "JEE27-PHY-2159",
+    "status": "PASS",
+    "changed_fields": [
+      "candidate_id",
+      "topic",
+      "subtopic",
+      "question",
+      "correct_answer",
+      "explanation",
+      "difficulty_reason",
+      "question_type",
+      "options",
+      "provenance",
+      "assumptions",
+      "tags"
+    ]
+  },
+  {
+    "code": "E03",
+    "id": "JEE27-PHY-2129",
+    "status": "PASS",
+    "changed_fields": [
+      "question",
+      "explanation",
+      "candidate_id",
+      "difficulty_reason",
+      "provenance"
+    ]
+  },
+  {
+    "code": "E04",
+    "id": "JEE27-PHY-0255",
+    "status": "PASS",
+    "changed_fields": [
+      "explanation"
+    ]
+  },
+  {
+    "code": "E04",
+    "id": "JEE27-PHY-0708",
+    "status": "PASS",
+    "changed_fields": [
+      "explanation"
+    ]
+  },
+  {
+    "code": "E04",
+    "id": "JEE27-PHY-1427",
+    "status": "PASS",
+    "changed_fields": [
+      "candidate_id",
+      "topic",
+      "subtopic",
+      "question",
+      "correct_answer",
+      "explanation",
+      "difficulty_reason",
+      "question_type",
+      "options",
+      "provenance",
+      "assumptions",
+      "tags"
+    ]
+  },
+  {
+    "code": "E04",
+    "id": "JEE27-PHY-1840",
+    "status": "PASS",
+    "changed_fields": [
+      "explanation"
+    ]
+  },
+  {
+    "code": "E04",
+    "id": "JEE27-PHY-2153",
+    "status": "PASS",
+    "changed_fields": [
+      "explanation"
+    ]
+  },
+  {
+    "code": "E05",
+    "id": "JEE27-PHY-1741",
+    "status": "PASS",
+    "changed_fields": [
+      "question",
+      "numerical_variant"
+    ]
+  },
+  {
+    "code": "E05",
+    "id": "JEE27-PHY-1742",
+    "status": "PASS",
+    "changed_fields": [
+      "question",
+      "numerical_variant"
+    ]
+  },
+  {
+    "code": "E05",
+    "id": "JEE27-PHY-1743",
+    "status": "PASS",
+    "changed_fields": [
+      "question",
+      "numerical_variant"
+    ]
+  },
+  {
+    "code": "E06",
+    "id": "JEE27-PHY-1537",
+    "status": "PASS",
+    "changed_fields": [
+      "question",
+      "numerical_variant"
+    ]
+  },
+  {
+    "code": "E06",
+    "id": "JEE27-PHY-1538",
+    "status": "PASS",
+    "changed_fields": [
+      "question",
+      "numerical_variant"
+    ]
+  },
+  {
+    "code": "E06",
+    "id": "JEE27-PHY-1539",
+    "status": "PASS",
+    "changed_fields": [
+      "question",
+      "numerical_variant"
+    ]
+  },
+  {
+    "code": "E06",
+    "id": "JEE27-PHY-1541",
+    "status": "PASS",
+    "changed_fields": [
+      "question"
+    ]
+  },
+  {
+    "code": "E06",
+    "id": "JEE27-PHY-1542",
+    "status": "PASS",
+    "changed_fields": [
+      "question"
+    ]
+  },
+  {
+    "code": "E07",
+    "id": "JEE27-PHY-0192",
+    "status": "PASS",
+    "changed_fields": [
+      "question",
+      "options",
+      "correct_answer"
+    ]
+  }
+]

@@ -1,0 +1,22 @@
+[
+ {
+  "id": "R01-D-06-3",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "C",
+    "key": "C",
+    "working": "P3 lists costs for supermajority, devolution, rights; the seat-share system gets no stated cost.",
+    "alternative": "",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "A",
+    "key": "A",
+    "working": "P3 costs listed for supermajority, devolution, entrenched rights; none for proportional seats.",
+    "alternative": "",
+    "issue": "A is an EXCEPT answer that is a plausible real-world cost; fine since passage lists no cost for share-of-seats systems."
+   }
+  }
+ }
+]

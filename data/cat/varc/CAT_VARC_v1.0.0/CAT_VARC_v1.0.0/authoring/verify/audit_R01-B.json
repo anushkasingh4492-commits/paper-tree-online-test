@@ -1,0 +1,66 @@
+[
+ {
+  "id": "R01-B-06-4",
+  "category": "E1",
+  "severity": "major",
+  "finding": "Blind solver S1 found the distractor 'Moral improvement consists in learning to see better rather than in learning to choose better' tempting; it differs from paragraph 4 ('frequently less a matter of') only by a soft shift in degree, so a strong candidate could argue the author broadly agrees with it.",
+  "fix": "Hardened the distractor to 'consists solely in learning to see better and never in learning to choose better', updated its defence and the misconception wording.",
+  "changed": true
+ },
+ {
+  "id": "R01-B-08-1",
+  "category": "E4",
+  "severity": "minor",
+  "finding": "Blind solver S2 noted the key closely paraphrases paragraph 1 and the item is very easy.",
+  "fix": "none: item is labelled Easy and is a Specific detail question meant to be located in one sentence; the verbatim descriptive-form distractor is a legitimate trap.",
+  "changed": false
+ },
+ {
+  "id": "R01-B-08-4",
+  "category": "E4",
+  "severity": "minor",
+  "finding": "Labelled Difficult, but the key is a near gloss of the quoted phrase and the advice distractor ('encourages people ... to work at changing their temperaments') was easy to discard, so the item played closer to Medium.",
+  "fix": "Replaced the weak advice distractor with one that states the author's own modest view ('mere differences of temperament, neither better than the other') as if it were the narrative view's, a who-holds-which-view trap that justifies the label.",
+  "changed": true
+ },
+ {
+  "id": "R01-B-03-4",
+  "category": "E5",
+  "severity": "minor",
+  "finding": "difficulty_reason said all three distractors describe limits on mind reading conceded in paragraph 4, but the third (children recognise mothers' feelings faster) is a compatible fact, not a conceded limit.",
+  "fix": "Rewrote difficulty_reason accurately.",
+  "changed": true
+ },
+ {
+  "id": "R01-B-01-4",
+  "category": "E5",
+  "severity": "minor",
+  "finding": "Explanation said paragraph 3 names 'the quiet alteration' of a notebook; that phrase is in paragraph 4, paragraph 3 says the notebook 'can be altered while its owner sleeps'.",
+  "fix": "Corrected the explanation to quote paragraph 3 accurately.",
+  "changed": true
+ },
+ {
+  "id": "R01-B-08-3",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Keys of 08-3 ('a different way of being a self rather than a defective one') and 08-4 ('lacking something when they merely differ in disposition') express the same idea, so each mildly cues the other.",
+  "fix": "none: both rest on the same central claim of paragraphs 2 and 5 and each still requires reading its own lines; a rewrite would cost more than the slight cue.",
+  "changed": false
+ },
+ {
+  "id": "R01-B-01-1",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Keys of 01-1 (reliance on trust) and 01-4 (betrayal of trust) share the trust theme, a slight cross-cue.",
+  "fix": "none: the trust thesis is the passage's main point and 01-4 additionally requires the noticing-versus-explaining distinction of paragraph 4.",
+  "changed": false
+ },
+ {
+  "id": "R01-B-02",
+  "category": "E7",
+  "severity": "minor",
+  "finding": "Passages 02 (weakness of will) and 06 (moral attention) both use attention as the explanatory notion.",
+  "fix": "none: subjects, theses and examples are clearly different (akrasia versus moral perception and responsibility); no near-duplicate items.",
+  "changed": false
+ }
+]

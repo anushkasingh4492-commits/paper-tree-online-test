@@ -1,0 +1,690 @@
+[
+ {
+  "id": "R06-A-08-1",
+  "answer": "A",
+  "working": "Ball takes unique path yet rests in the only hollow: unrepeatable route, likely endpoint.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-A-08-2",
+  "answer": "D",
+  "working": "P2: each school has a strong case but each mishandles evidence (post-hoc list; history taken as proof).",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-A-08-3",
+  "answer": "A",
+  "working": "Reconciliation rests on convergence at the functional level; if 'independent' origins share ancestry, that support collapses. B, C, D are compatible with it.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-A-08-4",
+  "answer": "C",
+  "working": "P4: recurrence of eyes and wings 'does not tell us that every capacity we value is among those solutions'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-A-08-5",
+  "answer": "A",
+  "working": "Functional roles recur (bakeries, schools), occupants decided by chance: mirrors design space vs occupants.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-C-03-1",
+  "answer": "B",
+  "working": "P2: upper layer stays porous for decades or centuries and surface air mixes downward until bubbles close.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-C-03-2",
+  "answer": "B",
+  "working": "P2: compaction model depends on temperature and snowfall, 'the very quantities the core is being used to reconstruct'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-C-03-3",
+  "answer": "C",
+  "working": "P4 generalises: almost all evidence is interpreted; strength depends on independent tests; applies to public argument.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-C-03-4",
+  "answer": "B",
+  "working": "Authority from agreement of independent archives resting on different assumptions; A is non-independent copies.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-G-02-1",
+  "answer": "A",
+  "working": "P2: where demand is close to saturation (lighting) the rebound tends to be modest.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-G-02-2",
+  "answer": "D",
+  "working": "P3: money saved is spent on something else that uses energy too; flight illustrates indirect rebound.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-G-02-3",
+  "answer": "A",
+  "working": "P1: both camps treat the question as having a single answer, 'when the size of the effect plainly depends on circumstances'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-G-02-4",
+  "answer": "D",
+  "working": "P4: efficiency paired with something keeping energy costly (carbon tax); D pairs insulation with a fuel tax rise.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-B-01-1",
+  "answer": "D",
+  "working": "P2: 'The list, in other words, translates every word it calls untranslatable.'",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-B-01-2",
+  "answer": "B",
+  "working": "P2: one language packages in a single word what another expresses in a phrase.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-B-01-3",
+  "answer": "B",
+  "working": "P3 concedes losses (ease, register, sound, associations, compression) beyond basic sense; P4 calls them degree not kind.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-B-01-4",
+  "answer": "B",
+  "working": "P3: a paraphrase gives the sense but not register, sound, associations. A contradicted by 'small piece of cultural information'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-F-07-1",
+  "answer": "C",
+  "working": "P3: some cities fed shut-up households at public expense and paid compensation for destroyed goods.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-F-07-2",
+  "answer": "B",
+  "working": "P1 cooperation needed; P2 information; P5 'measures which depend on people revealing something... are bargains'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-F-07-3",
+  "answer": "C",
+  "working": "Final sentence: success limited by what disclosure costs the discloser; make knowing bearable = lower that cost.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-F-07-4",
+  "answer": "C",
+  "working": "P4 claims harsher penalties drive concealment; C shows more early reports and no hidden rise under harsher penalties.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-F-07-5",
+  "answer": "D",
+  "working": "P3: records don't let us say how much difference relief made to mortality, but complaints suggest concealment rose when relief failed.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-G-02-1",
+  "answer": "D",
+  "working": "P2: not up to me is 'not to say that I should be indifferent'; goodness lies in acting well toward her.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-G-02-2",
+  "answer": "C",
+  "working": "Full seriousness in action while worth is staked on quality of choosing, not outcome. D stakes worth on wins; A, B withdraw.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-G-02-3",
+  "answer": "A",
+  "working": "P3: popular half-lesson used to withdraw; doctrine 'offers no permission to withdraw'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-G-02-4",
+  "answer": "D",
+  "working": "P3 more demanding; P4 genuine difficulty not removed; admire clarity but doubt it describes a lived life.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-D-08-1",
+  "answer": "B",
+  "working": "'Everyone rides the escalator up, but the order of people on it stays the same.'",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-D-08-2",
+  "answer": "D",
+  "working": "P3: 'The sense of closure is real; its diagnosis is frequently mistaken.'",
+  "confidence": "high",
+  "alternative": "",
+  "issue": "Passage P3 has a redundant, awkwardly sequenced pair of sentences: 'though their chances against the children of the office managers may be exactly what their parents' chances were' is immediately followed by 'But on the measures that track relative position, the chances may be much as they were', where 'But' contrasts with nothing. Looks like an inserted sentence; the answer is unaffected."
+ },
+ {
+  "id": "R03-D-08-3",
+  "answer": "C",
+  "working": "Absolute falls (few outearn parents) while relative rises (poor overtake rich in ranking). A neither rises; B, D booming.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-D-08-4",
+  "answer": "D",
+  "working": "P1 the two are run together; P3 misread slowdowns; P4 relative mobility's cost; P5 both questions matter.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-D-08-5",
+  "answer": "B",
+  "working": "P4: if positions are ranked, for one family to climb another must fall; growth cannot change ranks.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-E-08-1",
+  "answer": "D",
+  "working": "P2: it credits the borrower's account with a new deposit; money did not exist a moment earlier.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-E-08-2",
+  "answer": "B",
+  "working": "P5: both booms enlarge money supply 'yet they do very different things with it'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-E-08-3",
+  "answer": "C",
+  "working": "Lending creates deposits; system total rises without new saver money. A, B, D contradicted by P2-P4.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-E-08-4",
+  "answer": "C",
+  "working": "P3: 'The textbook is not simply wrong' for a single bank; error lies in generalising to the system.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-E-08-5",
+  "answer": "D",
+  "working": "P4 says under cautious borrowers and loss-fearing banks extra reserves sit unused; D shows proportionate rise under those conditions.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-C-05-1",
+  "answer": "B",
+  "working": "P3: an authority insists the site be registered, restored or claimed as belonging to one tradition alone.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-C-05-2",
+  "answer": "A",
+  "working": "P2's observations (parallel use, unasked questions) ground P3's rejection of both harmony and truce stories.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-C-05-3",
+  "answer": "C",
+  "working": "Parallel use, different names, custodian never asks whose it is. A, B, D involve settlement or agreement.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-C-05-4",
+  "answer": "C",
+  "working": "Ambiguity is 'carefully maintained' and an achievement: actively sustained, e.g. custodians refraining from asking.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-B-03-1",
+  "answer": "C",
+  "working": "P2: what passes is the affiliation of future children to the husband's lineage, which is why goods are returned if no children.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-B-03-2",
+  "answer": "D",
+  "working": "P2: 'A purchase ends a relationship between buyer and seller; this transfer begins several.'",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-B-03-3",
+  "answer": "C",
+  "working": "P4: critics 'are not simply repeating the old error' but the lesson is not that travellers were right; meaning depends on the web.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-B-03-4",
+  "answer": "B",
+  "working": "Nowhere does the passage say the bride could take back the goods; A (P3), C (P2), D (P2) are stated.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-F-04-1",
+  "answer": "A",
+  "working": "P2: much of what the perfect curve reproduced is noise.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-F-04-2",
+  "answer": "C",
+  "working": "P3: value of simplicity shrinks as data become abundant and precise; so strongest with few, noisy data.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-F-04-3",
+  "answer": "D",
+  "working": "P2 'more promising'; P3 cost; P4 it shows reliability, not truth, and the principle's authority is borrowed.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-F-04-4",
+  "answer": "A",
+  "working": "If simplicity were a discount for ignorance, its advantage should vanish with abundant precise data; A says it persists.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-D-01-1",
+  "answer": "C",
+  "working": "P1: cup is empty and in the game full; keep game from leaking yet follow consequences (toppled cup leaves bear wet).",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-D-01-2",
+  "answer": "C",
+  "working": "Refers to holding two descriptions of the world at once: real and in-game.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-D-01-3",
+  "answer": "C",
+  "working": "P3: shared capacity doesn't show more play makes better reasoners; not every game tracks causes; 'claim worth defending is narrower'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-D-01-4",
+  "answer": "A",
+  "working": "P4: child who knows a right answer is wanted 'stops supposing freely and starts guessing what the adult has in mind'. B contradicted (some guidance helps).",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-C-04-1",
+  "answer": "A",
+  "working": "Leaders' control overstated (P1-P3) and costly: boards pay saviours and churn them (P4). C contradicted by P4.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-C-04-2",
+  "answer": "D",
+  "working": "P4: 'None of this means that leaders are irrelevant'; error is overstating, not believing they matter.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-C-04-3",
+  "answer": "D",
+  "working": "P3: 'Such comparisons are rarely made, because the second firm has no story to tell.'",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-C-04-4",
+  "answer": "C",
+  "working": "Credit for results caused by predecessor's earlier decisions parallels P2 (products conceived under managers who have left).",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-G-07-1",
+  "answer": "B",
+  "working": "P2: we need relaxation because we cannot labour continuously; amusement exists for further activity.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-G-07-2",
+  "answer": "C",
+  "working": "P3: leisure inherits the standards of work; free time used productively.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-G-07-3",
+  "answer": "B",
+  "working": "P4: 'This objection is just, and it should not be softened. But it tells against the distribution... not against his account.'",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-G-07-4",
+  "answer": "D",
+  "working": "Activity chosen for its own sake (cultivated enjoyment of music), no instrumental aim. A amusement; B, C serve work.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-G-07-5",
+  "answer": "B",
+  "working": "Language values leisure only as recovery for work, so cannot state the value of activities done for their own sake.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-E-07-1",
+  "answer": "D",
+  "working": "P2: 'Nothing about her death has changed, but the survival figure has more than tripled.'",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-E-07-2",
+  "answer": "B",
+  "working": "P2: comparison rigged 'by the arithmetic of detection rather than by anyone's intent'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-E-07-3",
+  "answer": "C",
+  "working": "P3: 'Screening thus produces its own most sincere advocates'; harm generates gratitude.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-E-07-4",
+  "answer": "C",
+  "working": "P4: ask whether fewer people in the population die; randomised comparable populations avoid self-selection (A) and survival biases (B, D).",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-E-07-5",
+  "answer": "B",
+  "working": "P3: overdiagnosis 'is not an error in the usual sense, since the cells are what the pathologist says they are'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-B-01-1",
+  "answer": "A",
+  "working": "P1 input vs outcome confusion; P4 measure by area that becomes and remains forest. D contradicted by P4.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-B-01-2",
+  "answer": "C",
+  "working": "P3: for some years the land looks like scrub; 'it does not look like progress'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-B-01-3",
+  "answer": "C",
+  "working": "P4: planting sometimes needed; objection is to measuring success by count planted.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-B-01-4",
+  "answer": "B",
+  "working": "Regenerate near seed sources, plant only on degraded plots, judged by forest standing after 15 years (matches P4).",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-G-02-1",
+  "answer": "A",
+  "working": "P2: choosing what to do, with whom and on what terms is part of what volunteers value; managerial model removes say.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-G-02-2",
+  "answer": "B",
+  "working": "P4: not against training or rules; rescue teams need them; doubt applying standards across the board.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-G-02-3",
+  "answer": "B",
+  "working": "P3: 'There is also a quieter loss': practice of self-government shrinks, beyond individual's loss of say in P2.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-G-02-4",
+  "answer": "A",
+  "working": "Equal departure rates with or without managerial practices undercut the causal link to drifting away.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-D-04-1",
+  "answer": "B",
+  "working": "P3: long careers in delayed/noisy-feedback fields produce confidence without accuracy.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-D-04-2",
+  "answer": "C",
+  "working": "P2 'in that form, hard to sustain'; P4 the research was right but cannot deliver the promise made in its name.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-D-04-3",
+  "answer": "D",
+  "working": "Explanation is that quick, reliable feedback lets practice teach; D isolates feedback speed within one profession.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-D-04-4",
+  "answer": "D",
+  "working": "P4: 'None of this restores the old picture of talent'; research right on X and Y; cannot deliver promise.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-C-06-1",
+  "answer": "D",
+  "working": "P1: hazard is a physical event of a certain size that becomes a disaster only on meeting vulnerable people and structures.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-C-06-2",
+  "answer": "A",
+  "working": "P2: calling it natural encourages belief that loss is fate, calling for sympathy after rather than investment before.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-C-06-3",
+  "answer": "A",
+  "working": "P3 'Taken literally, however, the slogan claims too much'; P4 keep insight, drop absolutism.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-C-06-4",
+  "answer": "D",
+  "working": "P4: size of disaster is never simply natural even though nature sometimes sets challenges no society could fully meet.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-E-03-1",
+  "answer": "A",
+  "working": "P2: the explanation 'is the more convincing for being partly true'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-E-03-2",
+  "answer": "C",
+  "working": "Passage never says targeting provokes citizens to rally behind officials; A, B, D are in P2.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-E-03-3",
+  "answer": "C",
+  "working": "P4 criticises measures that hurt but promise nothing, giving reason to dig in; C matches. A and B include a clear offer.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-E-03-4",
+  "answer": "B",
+  "working": "P3: targeting spares ordinary people (moral cost) more surely than it adds pressure, since wealth is routed via intermediaries.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ }
+]

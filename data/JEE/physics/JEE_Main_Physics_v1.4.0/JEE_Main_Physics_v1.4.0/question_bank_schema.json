@@ -1,0 +1,244 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:paper-tree:jee-main-physics:1.1.0",
+  "title": "Paper Tree JEE Main Physics bank",
+  "type": "array",
+  "minItems": 2160,
+  "maxItems": 2160,
+  "items": {
+    "type": "object",
+    "required": [
+      "id",
+      "standard",
+      "subject",
+      "source_class",
+      "unit",
+      "chapter",
+      "topic",
+      "subtopic",
+      "question_type",
+      "question",
+      "assumptions",
+      "correct_answer",
+      "explanation",
+      "difficulty_reason",
+      "concept_family",
+      "validation_status",
+      "difficulty",
+      "unit_number",
+      "correct_option",
+      "options",
+      "figures",
+      "figure_required",
+      "marks_correct",
+      "marks_incorrect",
+      "marks_unattempted",
+      "generator_eligible",
+      "max_per_family_per_paper",
+      "syllabus_basis_year",
+      "provenance",
+      "numerical_variant"
+    ],
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^JEE27-PHY-[0-9]{4}$"
+      },
+      "standard": {
+        "const": "JEE Main"
+      },
+      "subject": {
+        "const": "Physics"
+      },
+      "source_class": {
+        "enum": [
+          "XI",
+          "XII"
+        ]
+      },
+      "unit": {
+        "type": "string",
+        "minLength": 1
+      },
+      "chapter": {
+        "type": "string",
+        "minLength": 1
+      },
+      "topic": {
+        "type": "string",
+        "minLength": 1
+      },
+      "subtopic": {
+        "type": "string",
+        "minLength": 1
+      },
+      "question_type": {
+        "type": "string",
+        "minLength": 1
+      },
+      "question": {
+        "type": "string",
+        "minLength": 1
+      },
+      "assumptions": {
+        "type": "string",
+        "minLength": 1
+      },
+      "correct_answer": {
+        "type": "string",
+        "minLength": 1
+      },
+      "explanation": {
+        "type": "string",
+        "minLength": 1
+      },
+      "difficulty_reason": {
+        "type": "string",
+        "minLength": 1
+      },
+      "concept_family": {
+        "type": "string",
+        "minLength": 1
+      },
+      "validation_status": {
+        "type": "string",
+        "minLength": 1
+      },
+      "difficulty": {
+        "enum": [
+          "Easy",
+          "Medium",
+          "Difficult"
+        ]
+      },
+      "unit_number": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 20
+      },
+      "correct_option": {
+        "enum": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ]
+      },
+      "options": {
+        "type": "object",
+        "required": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "A": {
+            "type": "string",
+            "minLength": 1
+          },
+          "B": {
+            "type": "string",
+            "minLength": 1
+          },
+          "C": {
+            "type": "string",
+            "minLength": 1
+          },
+          "D": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "figures": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "file",
+            "alt_text",
+            "source"
+          ],
+          "properties": {
+            "file": {
+              "type": "string",
+              "pattern": "^figures/[^/]+\\.png$"
+            },
+            "alt_text": {
+              "type": "string",
+              "minLength": 1
+            },
+            "source": {
+              "const": "ORIGINAL"
+            }
+          }
+        }
+      },
+      "figure_required": {
+        "type": "boolean"
+      },
+      "marks_correct": {
+        "const": 4
+      },
+      "marks_incorrect": {
+        "const": -1
+      },
+      "marks_unattempted": {
+        "const": 0
+      },
+      "generator_eligible": {
+        "type": "boolean"
+      },
+      "max_per_family_per_paper": {
+        "const": 1
+      },
+      "syllabus_basis_year": {
+        "const": 2026
+      },
+      "provenance": {
+        "type": "object"
+      },
+      "numerical_variant": {
+        "oneOf": [
+          {
+            "type": "null"
+          },
+          {
+            "type": "object",
+            "required": [
+              "question",
+              "answer_integer",
+              "unrounded_value",
+              "unit",
+              "unit_scale_power10",
+              "rounding"
+            ],
+            "properties": {
+              "question": {
+                "type": "string"
+              },
+              "answer_integer": {
+                "type": "integer"
+              },
+              "unrounded_value": {
+                "type": "number"
+              },
+              "unit": {
+                "type": "string"
+              },
+              "unit_scale_power10": {
+                "type": "integer"
+              },
+              "rounding": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "additionalProperties": true
+  }
+}

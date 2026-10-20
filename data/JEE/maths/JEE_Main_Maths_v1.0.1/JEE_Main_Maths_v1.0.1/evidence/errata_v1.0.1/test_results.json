@@ -1,0 +1,278 @@
+{
+ "release": "JEE_Main_Maths_v1.0.1",
+ "run_at": "2026-10-08 08:38 UTC",
+ "tests": 25,
+ "passed": 25,
+ "failed": [],
+ "results": [
+  {
+   "test": "T01 schema: every record validates against question_bank_schema.json",
+   "passed": true,
+   "seconds": 1.3,
+   "details": {
+    "records": 2700,
+    "errors": [],
+    "error_count": 0
+   }
+  },
+  {
+   "test": "T02 identity: 2,700 unique IDs, sequential per unit, unit counts as planned, local IDs unique",
+   "passed": true,
+   "seconds": 0.0,
+   "details": {
+    "problems": []
+   }
+  },
+  {
+   "test": "T03 options: 4 distinct options, key letter valid, key text equals keyed option, distinct after whitespace normalisation",
+   "passed": true,
+   "seconds": 0.0,
+   "details": {
+    "problems": [],
+    "count": 0
+   }
+  },
+  {
+   "test": "T04 export parity: JSON = JSONL = CSV; student and teacher exports and question index agree with the bank",
+   "passed": true,
+   "seconds": 0.2,
+   "details": {
+    "problems": [],
+    "count": 0
+   }
+  },
+  {
+   "test": "T05 KaTeX: every $...$ segment in every text field renders with throwOnError (strict parser)",
+   "passed": true,
+   "seconds": 4.3,
+   "details": {
+    "segments_source_strings": 32742,
+    "failures": [],
+    "failure_count": 0
+   }
+  },
+  {
+   "test": "T06 house style: no em/en dashes in any release text file; no control characters; one log convention; no letter references in solutions",
+   "passed": true,
+   "seconds": 1.0,
+   "details": {
+    "problems": [],
+    "count": 0
+   }
+  },
+  {
+   "test": "T07 books: student books contain every unit ID and no keys, solutions or integer answers; teacher books contain every ID and every key",
+   "passed": true,
+   "seconds": 6.9,
+   "details": {
+    "problems": [],
+    "count": 0
+   }
+  },
+  {
+   "test": "T08 rendered HTML: no raw LaTeX or stray $ in visible text of any book or sample page",
+   "passed": true,
+   "seconds": 1.0,
+   "details": {
+    "problems": []
+   }
+  },
+  {
+   "test": "T09 integer alternates: 342 present, each an exact non-negative integer, parent link correct, every non-equal value reviewed",
+   "passed": true,
+   "seconds": 0.0,
+   "details": {
+    "count": 342,
+    "per_unit": {
+     "1": 18,
+     "2": 28,
+     "3": 28,
+     "4": 20,
+     "5": 18,
+     "6": 23,
+     "7": 35,
+     "8": 35,
+     "9": 18,
+     "10": 38,
+     "11": 18,
+     "12": 20,
+     "13": 23,
+     "14": 20
+    },
+    "scaled": 38,
+    "problems": []
+   }
+  },
+  {
+   "test": "T10 machine-check evidence: every recomputed record has a matching evidence entry with distinct distractor values and check source",
+   "passed": true,
+   "seconds": 0.0,
+   "details": {
+    "machine_checked": 2681,
+    "problems": []
+   }
+  },
+  {
+   "test": "T11 reproducibility: rebuilding every unit from the shipped authoring sources reproduces the released records exactly",
+   "passed": true,
+   "seconds": 152.4,
+   "details": {
+    "build_errors": [],
+    "differing": [],
+    "differing_count": 0
+   }
+  },
+  {
+   "test": "T12 selection dependencies: family register matches records, every alias group links 2+ items, every errata alias request is enforced",
+   "passed": true,
+   "seconds": 0.0,
+   "details": {
+    "dependencies": 2401,
+    "alias_groups": 116,
+    "alias_requests_checked": 109,
+    "problems": []
+   }
+  },
+  {
+   "test": "T13 key balance: exact quotas per unit, no run longer than 3, no ABCD/DCBA run, no two units share a key sequence",
+   "passed": true,
+   "seconds": 0.0,
+   "details": {
+    "total": {
+     "C": 675,
+     "D": 675,
+     "A": 675,
+     "B": 675
+    },
+    "problems": []
+   }
+  },
+  {
+   "test": "T14 errata stability vs previous release: same IDs and key letters; unchanged items keep stem and option order; every change is in the closure register",
+   "passed": true,
+   "seconds": 0.1,
+   "details": {
+    "previous": "JEE_Main_Maths_v1.0.0",
+    "items_changed": 122,
+    "register_rows": 304,
+    "problems": []
+   }
+  },
+  {
+   "test": "T15 generator, full-bank mode: seeds 0-1004 each produce a paper that passes an independent validator; output is deterministic",
+   "passed": true,
+   "seconds": 3.3,
+   "details": {
+    "seeds": 1005,
+    "failures": [],
+    "failure_count": 0
+   }
+  },
+  {
+   "test": "T16 generator, unit-practice mode: seeds 0-199 for every unit pass the independent validator",
+   "passed": true,
+   "seconds": 1.5,
+   "details": {
+    "seeds_per_unit": 200,
+    "passed_by_unit": {
+     "1": 200,
+     "2": 200,
+     "3": 200,
+     "4": 200,
+     "5": 200,
+     "6": 200,
+     "7": 200,
+     "8": 200,
+     "9": 200,
+     "10": 200,
+     "11": 200,
+     "12": 200,
+     "13": 200,
+     "14": 200
+    },
+    "failures": []
+   }
+  },
+  {
+   "test": "T17 sample paper: sample files match seed 42 of the generator and the release summary",
+   "passed": true,
+   "seconds": 0.0,
+   "details": {
+    "problems": []
+   }
+  },
+  {
+   "test": "T18 checksums: every listed file matches; every non-KaTeX file is listed",
+   "passed": true,
+   "seconds": 0.1,
+   "details": {
+    "files": 224,
+    "problems": []
+   }
+  },
+  {
+   "test": "T19 shipped verifier: verify_release.py (standard library only) exits 0",
+   "passed": true,
+   "seconds": 0.3,
+   "details": {
+    "stdout": "records=2700 difficulty={'Easy': 810, 'Medium': 1215, 'Difficult': 675} keys={'C': 675, 'D': 675, 'A': 675, 'B': 675} numerical=342 machine_match=2681\nFAILURES: 0\n"
+   }
+  },
+  {
+   "test": "T20 links: every link in START_HERE.html and the README file list resolves inside the release",
+   "passed": true,
+   "seconds": 0.0,
+   "details": {
+    "problems": []
+   }
+  },
+  {
+   "test": "T21 zip: archive opens, passes CRC, and every file in it matches the release folder byte for byte",
+   "passed": true,
+   "seconds": 0.4,
+   "details": {
+    "zip": "JEE_Main_Maths_v1.0.1.zip",
+    "entries": 286,
+    "top": "JEE_Main_Maths_v1.0.1",
+    "problems": []
+   }
+  },
+  {
+   "test": "T22 duplicates: no two stems identical; near-identical stems (character 5-gram Jaccard >= 0.85, same unit) are dependency-linked or have different answers",
+   "passed": true,
+   "seconds": 3.1,
+   "details": {
+    "exact_duplicates": 0,
+    "near_pairs": 3,
+    "near_pairs_linked": 2,
+    "near_pairs_unlinked_same_answer": []
+   }
+  },
+  {
+   "test": "T23 option-length cue: the key is the strictly longest option in no more than chance (25%) of items",
+   "passed": true,
+   "seconds": 0.0,
+   "details": {
+    "key_strictly_longest": 135,
+    "rate": 0.05
+   }
+  },
+  {
+   "test": "T24 scope sweep: no stem uses a topic excluded under the strict NTA 2026 reading",
+   "passed": true,
+   "seconds": 0.1,
+   "details": {
+    "hits": [],
+    "note": "Legitimate uses not flagged: lines or points in a plane, the Argand plane, coordinate planes (xy, yz, xz), a plane mirror, the plane containing three points in vector algebra (cross-product application), and general solutions of differential equations."
+   }
+  },
+  {
+   "test": "T25 summary consistency: release_summary, coverage_map and question_index agree with the records",
+   "passed": true,
+   "seconds": 0.0,
+   "details": {
+    "problems": []
+   }
+  }
+ ]
+}

@@ -1,0 +1,111 @@
+[
+  {
+    "code": "R01",
+    "severity": "P1",
+    "status": "RESOLVED IN v1.2.0",
+    "title": "Fresh calorimetry conditions made explicit",
+    "ids": [
+      "JEE27-PHY-0620",
+      "JEE27-PHY-0623",
+      "JEE27-PHY-0664",
+      "JEE27-PHY-0676",
+      "JEE27-PHY-0679",
+      "JEE27-PHY-0684"
+    ],
+    "correction": "All six stems now specify removal of the solid and a fresh water charge equal to the first trial: 0.2 kg or 0.3 kg. Explanations identify that charge before the ice addition.",
+    "verification": "Both calibration heat balances were solved from the printed temperatures. Positive heat capacities, complete melting, all six outcomes and all three inverse-option sets pass. Existing answer letters and values are retained."
+  },
+  {
+    "code": "R02",
+    "severity": "P2",
+    "status": "RESOLVED IN v1.2.0",
+    "title": "Ideal charged-particle model stated",
+    "ids": [
+      "JEE27-PHY-1299",
+      "JEE27-PHY-1332",
+      "JEE27-PHY-1402"
+    ],
+    "correction": "The helical-motion object is described as an ideal nonrelativistic positively charged particle. Atomic-ion species are no longer implied. This wording is applied consistently to all six family members.",
+    "verification": "The three flagged results remain 6.283e-8 s, 0.06283 m and 0.04443 m. All six family calculations were re-run. The model assumes a free ideal charged particle rather than an ordinary atomic ion."
+  },
+  {
+    "code": "R03",
+    "severity": "P2",
+    "status": "RESOLVED IN v1.2.0",
+    "title": "Fourteen routine tasks replaced",
+    "ids": [
+      "JEE27-PHY-0923",
+      "JEE27-PHY-1872",
+      "JEE27-PHY-1203",
+      "JEE27-PHY-0240",
+      "JEE27-PHY-0235",
+      "JEE27-PHY-0095",
+      "JEE27-PHY-0349",
+      "JEE27-PHY-0260",
+      "JEE27-PHY-1276",
+      "JEE27-PHY-1555",
+      "JEE27-PHY-1994",
+      "JEE27-PHY-2010",
+      "JEE27-PHY-2103",
+      "JEE27-PHY-0972"
+    ],
+    "correction": "All 14 named IDs now contain strengthened tasks requiring linked constraints, inverse measurements, physical branch selection or changes of regime. The old answer-letter schedule is retained; options and explanations are regenerated. Two associated numerical alternatives are updated.",
+    "verification": "All 14 new tasks were separately derived without importing their authoring values; every revised key agrees. A shortest-path editorial review is documented below. No question was promoted solely to fill a numerical quota."
+  },
+  {
+    "code": "R04",
+    "severity": "P2",
+    "status": "RESOLVED IN v1.2.0",
+    "title": "Equivalent families share selection guards",
+    "ids": [
+      "JEE27-PHY-0412",
+      "JEE27-PHY-0424",
+      "JEE27-PHY-0433",
+      "JEE27-PHY-0435",
+      "JEE27-PHY-0863",
+      "JEE27-PHY-0869",
+      "JEE27-PHY-2013",
+      "JEE27-PHY-2016"
+    ],
+    "correction": "The four reported pairs are grouped by gas pressure/RMS, basic moment of inertia, or basic gate truth tables. Existing group membership is closed transitively. A further rod-drag guard protects related models introduced by R03.",
+    "verification": "All four named pairs, the preserved Kepler pair and the complete reviewed transitive groups are checked by ID as well as by family. Seeds 3391 and 830 now pass; 1,000 fresh seeds 4000-4999 also pass."
+  },
+  {
+    "code": "R05",
+    "severity": "P2",
+    "status": "RESOLVED IN v1.2.0",
+    "title": "Optional reading panels labelled accurately",
+    "ids": [
+      "JEE27-PHY-2067",
+      "JEE27-PHY-2078",
+      "JEE27-PHY-2104"
+    ],
+    "correction": "The three records are marked figure_required=false and describe their panels as optional context. The LED and capacitor are explicitly named in the stems, so removing the optional panel leaves no undefined A/B reference.",
+    "verification": "The three answers remain 4%, 300 ohm and 20 microfarad. All 216 figure links and 68 assets remain; the required-figure metadata count is now 101. This flag count is not a fresh certification of all remaining image dependencies."
+  },
+  {
+    "code": "R06",
+    "severity": "P3",
+    "status": "RESOLVED IN v1.2.0",
+    "title": "Comma-colon defects removed",
+    "ids": [
+      "JEE27-PHY-0114",
+      "JEE27-PHY-0608",
+      "JEE27-PHY-0628",
+      "JEE27-PHY-0734",
+      "JEE27-PHY-0737",
+      "JEE27-PHY-0748",
+      "JEE27-PHY-0759",
+      "JEE27-PHY-0875",
+      "JEE27-PHY-0879",
+      "JEE27-PHY-0916",
+      "JEE27-PHY-1031",
+      "JEE27-PHY-1297",
+      "JEE27-PHY-1335",
+      "JEE27-PHY-1385",
+      "JEE27-PHY-1805"
+    ],
+    "correction": "All 15 reported comma-colon sequences are replaced by a single colon. The corrected text is exported consistently.",
+    "verification": "A full-bank scan finds no comma-colon sequence in any stem. JSON, JSONL, CSV, student HTML and teacher HTML agree. No scoring change is needed."
+  }
+]

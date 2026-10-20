@@ -1,0 +1,19 @@
+{
+ "purpose": "Show that the test suite detects real defects, not only that it passes on a clean release.",
+ "injected": [
+  "record 6: key text replaced by malformed LaTeX ($\\frac{1}{$)",
+  "record 10: explanation ends with 'Hence option (B).'",
+  "Unit 3 student book: an 'Answer: (A)' paragraph inserted into the first article"
+ ],
+ "tests_failed": [
+  "T03 options: 4 distinct options, key letter valid, key text equals keyed option, distinct after whitespace normalisation",
+  "T04 export parity: JSON = JSONL = CSV; student and teacher exports and question index agree with the bank",
+  "T05 KaTeX: every $...$ segment in every text field renders with throwOnError (strict parser)",
+  "T06 house style: no em/en dashes in any release text file; no control characters; one log convention; no letter references in solutions",
+  "T07 books: student books contain every unit ID and no keys, solutions or integer answers; teacher books contain every ID and every key",
+  "T11 reproducibility: rebuilding every unit from the shipped authoring sources reproduces the released records exactly",
+  "T18 checksums: every listed file matches; every non-KaTeX file is listed",
+  "T19 shipped verifier: verify_release.py (standard library only) exits 0"
+ ],
+ "conclusion": "Each injected defect was caught by the test aimed at it (T03, T05, T06, T07) and by the integrity tests (T04, T11, T18, T19)."
+}

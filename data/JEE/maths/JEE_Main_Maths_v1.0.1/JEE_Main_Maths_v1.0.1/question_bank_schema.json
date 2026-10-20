@@ -1,0 +1,381 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "urn:paper-tree:jee-main-mathematics:1.0.0",
+ "title": "JEE Main Mathematics bank",
+ "description": "Array of canonical records. Mathematics is LaTeX inline ($...$), rendered with KaTeX. Cross-record quotas, key balance and family rules are checked by verify_release.py.",
+ "type": "array",
+ "items": {
+  "type": "object",
+  "properties": {
+   "id": {
+    "type": "string",
+    "pattern": "^JEE-MATH-U\\d{2}-\\d{3}$"
+   },
+   "unit_number": {
+    "type": "integer",
+    "minimum": 1,
+    "maximum": 14
+   },
+   "unit": {
+    "type": "string",
+    "minLength": 1
+   },
+   "chapter": {
+    "type": "string",
+    "minLength": 1
+   },
+   "topic": {
+    "type": "string",
+    "minLength": 1
+   },
+   "subtopic": {
+    "type": "string",
+    "minLength": 1
+   },
+   "source_class": {
+    "enum": [
+     "XI",
+     "XII"
+    ]
+   },
+   "branch": {
+    "enum": [
+     "Algebra",
+     "Calculus",
+     "Coordinate Geometry",
+     "Vectors and 3D Geometry",
+     "Statistics and Probability",
+     "Trigonometry"
+    ]
+   },
+   "standard": {
+    "const": "JEE Main"
+   },
+   "subject": {
+    "const": "Mathematics"
+   },
+   "question": {
+    "type": "string",
+    "minLength": 1
+   },
+   "options": {
+    "type": "object",
+    "properties": {
+     "A": {
+      "type": "string",
+      "minLength": 1
+     },
+     "B": {
+      "type": "string",
+      "minLength": 1
+     },
+     "C": {
+      "type": "string",
+      "minLength": 1
+     },
+     "D": {
+      "type": "string",
+      "minLength": 1
+     }
+    },
+    "required": [
+     "A",
+     "B",
+     "C",
+     "D"
+    ],
+    "additionalProperties": false
+   },
+   "correct_option": {
+    "enum": [
+     "A",
+     "B",
+     "C",
+     "D"
+    ]
+   },
+   "correct_answer": {
+    "type": "string",
+    "minLength": 1
+   },
+   "explanation": {
+    "type": "string",
+    "minLength": 1
+   },
+   "common_misconception": {
+    "type": "string",
+    "minLength": 1
+   },
+   "difficulty": {
+    "enum": [
+     "Easy",
+     "Medium",
+     "Difficult"
+    ]
+   },
+   "difficulty_reason": {
+    "type": "string",
+    "minLength": 1
+   },
+   "difficulty_basis": {
+    "type": "string",
+    "minLength": 1
+   },
+   "cognitive_level": {
+    "enum": [
+     "Recall",
+     "Understanding",
+     "Application",
+     "Analysis"
+    ]
+   },
+   "question_type": {
+    "enum": [
+     "Direct concept MCQ",
+     "Single-step computation MCQ",
+     "Multi-step computation MCQ",
+     "Inverse/parameter MCQ",
+     "Conceptual/application MCQ",
+     "Statement-based MCQ",
+     "Graph/diagram MCQ"
+    ]
+   },
+   "concept_family": {
+    "type": "string",
+    "minLength": 1
+   },
+   "family_dependencies": {
+    "type": "array",
+    "items": {
+     "type": "string",
+     "minLength": 1
+    },
+    "minItems": 1,
+    "uniqueItems": true
+   },
+   "max_per_family_per_paper": {
+    "const": 1
+   },
+   "figures": {
+    "type": "array",
+    "items": {
+     "type": "object",
+     "required": [
+      "file",
+      "alt_text"
+     ],
+     "properties": {
+      "file": {
+       "type": "string",
+       "minLength": 1
+      },
+      "alt_text": {
+       "type": "string",
+       "minLength": 1
+      }
+     }
+    }
+   },
+   "figure_required": {
+    "type": "boolean"
+   },
+   "assumptions": {
+    "type": "array",
+    "items": {
+     "type": "string",
+     "minLength": 1
+    }
+   },
+   "notation": {
+    "const": "latex-inline"
+   },
+   "machine_check": {
+    "type": "object",
+    "required": [
+     "method",
+     "status",
+     "computed_value"
+    ],
+    "properties": {
+     "method": {
+      "type": "string",
+      "minLength": 1
+     },
+     "status": {
+      "enum": [
+       "match",
+       "not applicable"
+      ]
+     },
+     "computed_value": {
+      "type": [
+       "string",
+       "null"
+      ]
+     }
+    },
+    "additionalProperties": false
+   },
+   "numerical_variant": {
+    "anyOf": [
+     {
+      "type": "null"
+     },
+     {
+      "type": "object",
+      "required": [
+       "question",
+       "answer_integer",
+       "unrounded_value",
+       "unit",
+       "unit_scale_power10",
+       "rounding",
+       "parent_id",
+       "verification_basis"
+      ],
+      "properties": {
+       "question": {
+        "type": "string",
+        "minLength": 1
+       },
+       "answer_integer": {
+        "type": "integer"
+       },
+       "unrounded_value": {
+        "type": "number"
+       },
+       "unit": {
+        "type": "string"
+       },
+       "unit_scale_power10": {
+        "type": "integer"
+       },
+       "rounding": {
+        "type": "string",
+        "minLength": 1
+       },
+       "parent_id": {
+        "type": "string",
+        "minLength": 1
+       },
+       "verification_basis": {
+        "type": "string",
+        "minLength": 1
+       }
+      },
+      "additionalProperties": false
+     }
+    ]
+   },
+   "provenance": {
+    "type": "object",
+    "required": [
+     "kind",
+     "authoring_batch",
+     "local_id"
+    ]
+   },
+   "source_document": {
+    "type": "string",
+    "minLength": 1
+   },
+   "source_chapter": {
+    "type": "string",
+    "minLength": 1
+   },
+   "source_page": {
+    "type": "null"
+   },
+   "syllabus_reference": {
+    "type": "string",
+    "minLength": 1
+   },
+   "source_verification_note": {
+    "type": "string",
+    "minLength": 1
+   },
+   "syllabus_basis_year": {
+    "const": 2026
+   },
+   "release_version": {
+    "type": "string",
+    "minLength": 1
+   },
+   "marks_correct": {
+    "const": 4
+   },
+   "marks_incorrect": {
+    "const": -1
+   },
+   "marks_unattempted": {
+    "const": 0
+   },
+   "generator_eligible": {
+    "type": "boolean"
+   },
+   "validation_status": {
+    "type": "string",
+    "minLength": 1
+   },
+   "human_subject_expert_reviewed": {
+    "const": false
+   },
+   "tags": {
+    "type": "array",
+    "items": {
+     "type": "string",
+     "minLength": 1
+    },
+    "minItems": 1
+   }
+  },
+  "required": [
+   "id",
+   "unit_number",
+   "unit",
+   "chapter",
+   "topic",
+   "subtopic",
+   "source_class",
+   "branch",
+   "standard",
+   "subject",
+   "question",
+   "options",
+   "correct_option",
+   "correct_answer",
+   "explanation",
+   "common_misconception",
+   "difficulty",
+   "difficulty_reason",
+   "difficulty_basis",
+   "cognitive_level",
+   "question_type",
+   "concept_family",
+   "family_dependencies",
+   "max_per_family_per_paper",
+   "figures",
+   "figure_required",
+   "assumptions",
+   "notation",
+   "machine_check",
+   "numerical_variant",
+   "provenance",
+   "source_document",
+   "source_chapter",
+   "source_page",
+   "syllabus_reference",
+   "source_verification_note",
+   "syllabus_basis_year",
+   "release_version",
+   "marks_correct",
+   "marks_incorrect",
+   "marks_unattempted",
+   "generator_eligible",
+   "validation_status",
+   "human_subject_expert_reviewed",
+   "tags"
+  ],
+  "additionalProperties": false
+ }
+}

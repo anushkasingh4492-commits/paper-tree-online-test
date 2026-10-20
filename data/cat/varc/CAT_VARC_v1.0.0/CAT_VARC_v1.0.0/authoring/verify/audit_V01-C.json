@@ -1,0 +1,58 @@
+[
+ {
+  "id": "V01-C-017",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Order 4123 (conclusion 'thus' sentence before the too easy/too difficult elaboration) was weakly arguable, since the concluding sentence did not depend on the elaboration.",
+  "fix": "Rewrote the closing sentence to open 'Since each of these failures is a failure of fit', locking it after the elaboration; updated explanation and added a trap for 4123.",
+  "changed": true
+ },
+ {
+  "id": "V01-C-025",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Trap rationale quotes 'Yet rulers kept hiring them' but the sentence reads 'Yet rulers went on hiring them regardless'.",
+  "fix": "Corrected the quotation to 'Yet rulers went on hiring them'.",
+  "changed": true
+ },
+ {
+  "id": "V01-C-003",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation and trap quote 'a remedy that worked without a reason' in lower case; the sentence begins 'A remedy'.",
+  "fix": "Capitalised the quotation to match.",
+  "changed": true
+ },
+ {
+  "id": "V01-C-004",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation quotes 'the opposite rule'; the sentence reads 'The opposite rule'.",
+  "fix": "Capitalised the quotation to match.",
+  "changed": true
+ },
+ {
+  "id": "V01-C-012",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Trap rationale quotes 'their' worry; the sentence reads 'Their worry'.",
+  "fix": "Changed to quote 'Their worry' exactly.",
+  "changed": true
+ },
+ {
+  "id": "V01-C-022",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Considered 2134 (grievance sentence before 'These same features, however'); it fails because 'These same features' would refer back across the grievance sentence and 'however' would contrast with nothing.",
+  "fix": "none: key order is the only defensible one; both blind solvers agreed.",
+  "changed": false
+ },
+ {
+  "id": "V01-C-ALL",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Blind-solver notes file is empty: both solvers reached the correct answer on all 25 items with no flags. Every item was re-solved cold and alternative orders tested; no other defects found.",
+  "fix": "none: no solver notes to dismiss.",
+  "changed": false
+ }
+]

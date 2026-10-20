@@ -1,0 +1,50 @@
+[
+ {
+  "id": "V02-K-001,V02-K-002,V02-K-003,V02-K-004,V02-K-005,V02-K-006,V02-K-007,V02-K-008,V02-K-009,V02-K-010,V02-K-011,V02-K-012,V02-K-013,V02-K-014,V02-K-015,V02-K-016,V02-K-017,V02-K-018,V02-K-019,V02-K-020,V02-K-021,V02-K-022,V02-K-023,V02-K-024,V02-K-025",
+  "category": "E3",
+  "severity": "major",
+  "finding": "Every explanation ended with a sentence referring to 'the key' (e.g. 'The key keeps the central claim and the qualification'), banned in student-facing text.",
+  "fix": "Replaced 'the key' with 'the correct answer' throughout the file, using a word boundary so 'keystone' in V02-K-013 was untouched (26 lines changed).",
+  "changed": true
+ },
+ {
+  "id": "V02-K-002",
+  "category": "E1",
+  "severity": "major",
+  "finding": "The correct answer stated only the first two steps (rules constitute the game; letter does not settle fairness) and omitted the paragraph's closing qualification that the spirit of a game is read from the rules, not invoked at will, so it did not capture the paragraph's full scope.",
+  "fix": "Correct answer rewritten: 'Rules constitute a game, yet obeying their letter does not settle fairness, since a legal move can empty the contest, though the game's spirit is itself read from the rules.' Explanation's last sentence updated to match. Length 30 words, in line with the options (29 to 30).",
+  "changed": true
+ },
+ {
+  "id": "V02-K-019",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Correct answer said 'most' digital photographs serve as passing messages; the paragraph says only 'Many of today's pictures do a different job', so a careful reader could fault the scope.",
+  "fix": "Changed 'most serving as passing messages' to 'many now serving as passing messages'.",
+  "changed": true
+ },
+ {
+  "id": "V02-K-001,V02-K-002,V02-K-003,V02-K-004,V02-K-005,V02-K-006,V02-K-007,V02-K-008,V02-K-009,V02-K-010,V02-K-011,V02-K-012,V02-K-013,V02-K-014,V02-K-015,V02-K-016,V02-K-017,V02-K-018,V02-K-019,V02-K-020,V02-K-021,V02-K-022,V02-K-023,V02-K-024,V02-K-025",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "difficulty_reason fields use 'distractor'.",
+  "fix": "none: difficulty_reason is internal metadata, not student-facing (harness treats it as such); left as written.",
+  "changed": false
+ },
+ {
+  "id": "V02-K-018,V02-K-021",
+  "category": "E7",
+  "severity": "minor",
+  "finding": "Two items touch translation (machine-translation fluency; retranslation of classics), as does V02-L-001 (translator credit on covers).",
+  "fix": "none: different subjects and different points (error visibility, ageing of translations, cover credit); not near-duplicates.",
+  "changed": false
+ },
+ {
+  "id": "V02-K",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Blind-solver notes file verify/notes/V02-K.json is an empty list (no disagreements or flags). Cold solve of all 25 found each correct answer uniquely defensible; closest calls (006 two opposite overshoots, 012 private-provision distractor, 016 reversed average, 024 difficulty-relocated distractor) are each excluded by a quoted line. Defences checked against the text; quotations in explanations and defences match the paragraphs; difficulty labels and exam tags (Difficult = CAT, XAT) fair; no invented facts attributed to real people or bodies.",
+  "fix": "none: no further defect found.",
+  "changed": false
+ }
+]

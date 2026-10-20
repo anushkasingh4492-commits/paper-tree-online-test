@@ -1,0 +1,674 @@
+[
+ {
+  "id": "R01-F-06-1",
+  "answer": "D",
+  "working": "If wrongly calling it safe is worse, the lab should demand less evidence before declaring it harmful; threshold depends on which error is worse.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-F-06-2",
+  "answer": "C",
+  "working": "P3: classification of ambiguous samples can err either way so weighing of errors persists before probabilities; C gives direct evidence of exactly that.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-F-06-3",
+  "answer": "D",
+  "working": "P4: 'It would be a mistake to conclude anything goes'; distinguishes setting the bar (proper) from moving the evidence (improper).",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-F-06-4",
+  "answer": "B",
+  "working": "'moving the evidence' contrasted with setting the bar; = letting values bear on what the evidence is, discounting unwelcome results.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-C-03-1",
+  "answer": "D",
+  "working": "P3-P4: promise carries implicit conditions fixed by what a reasonable promisee would take them to be.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-C-03-2",
+  "answer": "C",
+  "working": "P3: promisee acquired only a right against change of mind for convenience; cyclist reveals promise never extended so far, so no right violated.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-C-03-3",
+  "answer": "C",
+  "working": "Reply relies on reasonable-promisee standard keeping exceptions public; if reasonable people sharply disagree for most promises, the standard fails to restore firmness.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-C-03-4",
+  "answer": "B",
+  "working": "Author rejects the outweighing account: friend never acquired a right to presence in emergencies (P3). A, C, D are stated in P2, P4, P1.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-A-02-1",
+  "answer": "C",
+  "working": "P1: contract goes to firm whose survey was most optimistic; winning is evidence of overestimation.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-A-02-2",
+  "answer": "B",
+  "working": "P3: slowness partly because losers never discover the prize's true worth; B removes that.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-A-02-3",
+  "answer": "C",
+  "working": "P4: 'not that one format is always superior' but curse is property of information structure, eased by changing it.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-A-02-4",
+  "answer": "C",
+  "working": "Curse arises from scattered independent estimates with winner selected for highest; one shared survey removes selection on estimation error.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-B-06-1",
+  "answer": "C",
+  "working": "P1: 'fictive' covered relations not resting on birth and descent; milk kinship would be so classed (P2 says to call such ties fictive overrules people).",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-B-06-2",
+  "answer": "A",
+  "working": "P3: 'not an argument that biology is irrelevant... point is narrower'; 'Nor is the West an exception' with adoption, blended families, donor gametes.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-B-06-3",
+  "answer": "B",
+  "working": "P2 lists food grown on same land, same house, nursed at same breast; inheritance of land not mentioned.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": "Option C adds 'over a period of years', which the passage attaches to accumulation through feeding and sharing rather than to house-sharing; minor, still clearly supported."
+ },
+ {
+  "id": "R03-B-06-4",
+  "answer": "D",
+  "working": "Kin made through care (raising) displacing a birth tie, with mourning obligations; others rest on blood.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-D-01-1",
+  "answer": "B",
+  "working": "P1: hold 'cup is empty' and 'in the game the cup is full', keep game from leaking, follow its consequences (toppled cup leaves bear wet).",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-D-01-2",
+  "answer": "D",
+  "working": "Refers back to holding two descriptions of the world at once: actual and pretend.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-D-01-3",
+  "answer": "C",
+  "working": "P3: 'Some caution'; shared capacity does not show more play makes better reasoners; 'claim worth defending is narrower'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-D-01-4",
+  "answer": "D",
+  "working": "P4: child who knows a right answer is wanted stops supposing freely and starts guessing what the adult has in mind.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-F-03-1",
+  "answer": "C",
+  "working": "P1: nothing travelled fast enough for the difference to matter; coach journey absorbed discrepancy.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-F-03-2",
+  "answer": "A",
+  "working": "P2: standard account 'treats the change as a technical adjustment, like agreeing on a common gauge... It was more than that.'",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-F-03-3",
+  "answer": "B",
+  "working": "P3: 'they had grasped something'; P4: 'None of this is a case against standard time'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-F-03-4",
+  "answer": "D",
+  "working": "P2 change: from a locally checkable standard (sun) to one set by distant authority and transmitted; D maps paces anyone can walk to distant bureau.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-A-07-1",
+  "answer": "C",
+  "working": "P2: opens with a thesis, marshals evidence, dispatches objections, restates thesis at close.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-A-07-2",
+  "answer": "D",
+  "working": "P4: contrasted with the 'I' marking scope ('how the matter looks from here'); impersonal voice claims no particular position.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-A-07-3",
+  "answer": "B",
+  "working": "P3: treatise presents its conclusion as if it were the only place the evidence could lead.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-A-07-4",
+  "answer": "A",
+  "working": "Claim: showing alternatives passed through leaves reader better placed to disagree; A directly tests that.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-A-07-5",
+  "answer": "C",
+  "working": "P5: 'None of this licenses formlessness'; an essay that never claims anything has not attempted anything.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-F-07-1",
+  "answer": "B",
+  "working": "P1: anecdotes from pet owners in which the observer's own feelings were read into the animal's behaviour.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-F-07-2",
+  "answer": "D",
+  "working": "P3: shared mechanism 'arguably the simpler hypothesis'; insisting on lower mechanism multiplies explanations.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-F-07-3",
+  "answer": "C",
+  "working": "P2: 'As a corrective, the canon did its work well' but hardened into a presumption; P5 Morgan intended a guard, not a ban.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-F-07-4",
+  "answer": "D",
+  "working": "A (P4), B (P3), C (P3) are stated; author never says experiments cannot in principle distinguish accounts, indeed recommends designing ones that do.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-F-07-5",
+  "answer": "D",
+  "working": "P5: state rival hypotheses, rich and lean alike, design observations that would tell them apart. A is the asymmetric canon.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-D-07-1",
+  "answer": "B",
+  "working": "P2: a person who must stay in another's good graces learns to make interference unnecessary.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-D-07-2",
+  "answer": "B",
+  "working": "P5: rival view asks about what could happen; tenant example shows people not attempting complaints because of possible response.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-D-07-3",
+  "answer": "C",
+  "working": "Non-interference counts acts; ruler interferes very little while contestable law restrains, so his subjects could count as freer on that view.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-D-07-4",
+  "answer": "D",
+  "working": "Critics: candidate criteria smuggle back judgements about interference; D shows exactly that.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R01-D-07-5",
+  "answer": "C",
+  "working": "P5: answer 'better than critics allow' but not enough to turn it into a measure; identifies unfreedom a tally would not register.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-G-01-1",
+  "answer": "D",
+  "working": "P3-P4: danger lies in the combination of anonymity with gatekeeping power; if review merely improves papers, mask does little harm.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-G-01-2",
+  "answer": "D",
+  "working": "P1: young researcher may hesitate to criticise a powerful figure who may decide her promotion.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-G-01-3",
+  "answer": "C",
+  "working": "P1: anonymity lets the junior criticise the powerful, i.e. candour upward in hierarchy.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R06-G-01-4",
+  "answer": "C",
+  "working": "P3: when report merely advises, published alongside paper and answerable, identity matters far less.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-C-03-1",
+  "answer": "C",
+  "working": "P1: habit is good where disagreement is about values or interests; road proposal exemplifies this.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-C-03-2",
+  "answer": "C",
+  "working": "P2: 'The format has communicated a falsehood that neither speaker uttered.'",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-C-03-3",
+  "answer": "C",
+  "working": "Reply to first point: distribution of opinion is a checkable matter of fact; C denies it can reliably be checked.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-C-03-4",
+  "answer": "C",
+  "working": "P4: dissenters should be quoted as dissenters, and where science genuinely unsettled rival hypotheses side by side; author does not endorse presenting majority as settled whenever researchers disagree.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-D-06-1",
+  "answer": "A",
+  "working": "P3-P4: union has two faces including the cartel face; wage-only measure is a category error as a full account.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-D-06-2",
+  "answer": "D",
+  "working": "P3: voice hardens into obstruction and the cartel face (higher wages) is what remains; no offsetting information gain.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-D-06-3",
+  "answer": "C",
+  "working": "P2 relies on complaining individually marking a worker as troublesome, so leaving is the safe course; C denies that premise.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-D-06-4",
+  "answer": "B",
+  "working": "Final sentences: establishes only that the question cannot be answered by looking at the price of labour alone.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-F-01-1",
+  "answer": "D",
+  "working": "P1: skilful porcelain, sunset, verse are kitsch; amateur watercolour, child's drawing are not.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-F-01-2",
+  "answer": "A",
+  "working": "P2: serious painting may move us to tears but makes us work for them; contrasts with kitsch's lack of resistance.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-F-01-3",
+  "answer": "A",
+  "working": "P3: emotion is one we already possess and approve of; we feel good about ourselves, not the work.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R07-F-01-4",
+  "answer": "B",
+  "working": "P4: danger is ready-made feeling in public ceremonies about history standing in for finding out what happened.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-D-05-1",
+  "answer": "C",
+  "working": "P1: a person's place in society could be read from the position of their preferences on this ladder.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-D-05-2",
+  "answer": "C",
+  "working": "P3: omnivores consume popular forms differently from usual audiences; manner of liking marks distance.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-D-05-3",
+  "answer": "B",
+  "working": "P4: forms most rejected by the highly educated are those associated with the least educated; omnivore with that one exception.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R03-D-05-4",
+  "answer": "D",
+  "working": "P4: 'Nor is the omnivore's appetite unlimited' (further reason), 'genuine change', 'distinction has not disappeared... openness'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-G-04-1",
+  "answer": "B",
+  "working": "P2: forest counted as worth nothing because no one put a figure on it, so priced at zero.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-G-04-2",
+  "answer": "C",
+  "working": "P3: totals describe a world that no longer exists; striking but not accounts.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-G-04-3",
+  "answer": "D",
+  "working": "Defenders say explicit value protects nature; D shows explicit low values used to approve destructive projects.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-G-04-4",
+  "answer": "C",
+  "working": "P3-P4: valuation is a tool for small changes at the margin given most remains.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-C-02-1",
+  "answer": "B",
+  "working": "P2: seat, motion, familiar stretch bring hand to pocket before any wish; 'The cue is.'",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-C-02-2",
+  "answer": "D",
+  "working": "P3: the old cues have simply disappeared.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-C-02-3",
+  "answer": "C",
+  "working": "P3: change the circumstances that trigger the habit; a changed room removes the cues.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R02-C-02-4",
+  "answer": "B",
+  "working": "Habit = response attached to context rather than intention; B shows intention barely matters while setting does.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-C-01-1",
+  "answer": "B",
+  "working": "P1: skew comes from the definition of news; P3 rejects more good news; P4 remedy is to report the denominator (context).",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-C-01-2",
+  "answer": "C",
+  "working": "P1: 'no single day contains their story'; P2: improvements gradual and diffuse.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-C-01-3",
+  "answer": "C",
+  "working": "P2: a society slowly getting better can believe from its news that it is getting worse; no report need be false.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R08-C-01-4",
+  "answer": "C",
+  "working": "P4 examples: whether crimes rising or falling; how many take the drug without harm, i.e. the base count.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-G-08-1",
+  "answer": "A",
+  "working": "P2: default values penalise clean producers in dirty countries and reward dirty producers in clean ones.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-G-08-2",
+  "answer": "B",
+  "working": "P2 hard to administer; P3 threat may be overstated; P4 well-designed charge can act as a lever.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-G-08-3",
+  "answer": "D",
+  "working": "P3 caveat: past prices modest, so high prices may cause relocation; D shows high price produced large relocation.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-G-08-4",
+  "answer": "D",
+  "working": "Lever logic: exporting country prices carbon at home so revenue stays at home; only works if carbon prices paid abroad are credited at the border.",
+  "confidence": "medium",
+  "alternative": "",
+  "issue": "'only if' is a strong necessity claim; the passage implies it via the revenue-stays-home mechanism rather than stating it, but no other option fits."
+ },
+ {
+  "id": "R05-G-08-5",
+  "answer": "A",
+  "working": "A charge lacking the listed features 'will be read, not unreasonably, as protectionism' i.e. that reading would be justified.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-E-03-1",
+  "answer": "C",
+  "working": "P2: the explanation is 'the more convincing for being partly true'.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-E-03-2",
+  "answer": "A",
+  "working": "B, C, D are in P2; rallying behind targeted officials is never mentioned.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-E-03-3",
+  "answer": "D",
+  "working": "P4: a measure that hurts but promises nothing gives little reason to move and some reason to dig in.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R04-E-03-4",
+  "answer": "A",
+  "working": "P3: targeting spares ordinary people (sure) while its effect is limited by intermediaries (less sure).",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-B-06-1",
+  "answer": "A",
+  "working": "P3: fungibility weaker when budget is so stretched or rigid that there is little slack to shift.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-B-06-2",
+  "answer": "D",
+  "working": "P2: raises sector spending by less than the amount given, though rarely by nothing.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-B-06-3",
+  "answer": "D",
+  "working": "P3: funding what the government would not have undertaken cannot be redirected; D shows additional, non-fungible project spending.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ },
+ {
+  "id": "R05-B-06-4",
+  "answer": "C",
+  "working": "P1: clinic built either way; aid really financed whatever the government would otherwise have gone without.",
+  "confidence": "high",
+  "alternative": "",
+  "issue": ""
+ }
+]

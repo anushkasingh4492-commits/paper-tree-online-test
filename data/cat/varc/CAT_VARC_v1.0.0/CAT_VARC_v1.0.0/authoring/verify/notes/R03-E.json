@@ -1,0 +1,82 @@
+[
+ {
+  "id": "R03-E-03-4",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "B",
+    "key": "B",
+    "working": "P4: whether people cooking have room to cook what they think is good.",
+    "alternative": "C is close: author cares about cooks' freedom, but does not treat customer-prompted changes as illegitimate (P2), so B is better.",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "A",
+    "key": "A",
+    "working": "P4 final sentence: whether cooks have room to cook what they think is good.",
+    "alternative": "",
+    "issue": ""
+   }
+  }
+ },
+ {
+  "id": "R03-E-05-2",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "B",
+    "key": "B",
+    "working": "Three layers: global format, local meanings, menu in between; menu-centred debate misreads influence.",
+    "alternative": "D captures P2 but ignores P3, where customers bring their own meanings, so it is one-sided.",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "C",
+    "key": "C",
+    "working": "Three layers: format global, meanings local, menu between; reading from menu alone misleads. A says 'imposes', which P3 rejects; D overreaches.",
+    "alternative": "",
+    "issue": ""
+   }
+  }
+ },
+ {
+  "id": "R03-E-05-3",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "C",
+    "key": "C",
+    "working": "Format is the real export; local eateries adopting counter, fixed prices, standardised kitchens shows format influence.",
+    "alternative": "",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "B",
+    "key": "B",
+    "working": "The format is the deep influence; local eateries adopting the format while keeping dishes shows its 'global grammar' spreading.",
+    "alternative": "C could be argued (customers adopt chain venues for occasions), but P3 frames that as local meaning, not chain influence; B fits the format thesis.",
+    "issue": ""
+   }
+  }
+ },
+ {
+  "id": "R03-E-07-2",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "D",
+    "key": "D",
+    "working": "P2: respond as betrayed members, as though something belonging to them was taken.",
+    "alternative": "",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "B",
+    "key": "B",
+    "working": "'respond not as disappointed consumers but as betrayed members, as though something that belonged to them had been taken without their consent'.",
+    "alternative": "",
+    "issue": "Key is a near-verbatim lift of para 2 wording ('betrayed members... without their consent'), making it a pure retrieval item; acceptable for a detail question but very easy."
+   }
+  }
+ }
+]

@@ -1,0 +1,22 @@
+[
+ {
+  "id": "V04-C-017",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "4",
+    "key": "4",
+    "working": "Concluding 'then' prescription fits after the full set of examples, ending the paragraph.",
+    "alternative": "3: could follow 'becomes unfair when we use it to judge people', but then interrupts the move to the doctor/manager examples that elaborate the unfairness.",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "4",
+    "key": "4",
+    "working": "'then' conclusion after the doctor/manager and investigator examples.",
+    "alternative": "3 (after 'becomes unfair...') is weakly possible, but the examples then follow a 'then' conclusion awkwardly.",
+    "issue": ""
+   }
+  }
+ }
+]

@@ -1,0 +1,267 @@
+[
+  {
+    "number": 1,
+    "id": "JEE27-PHY-1567",
+    "section": "A",
+    "answer": "A",
+    "answer_text": "wavelengths from about 400 nm to 700 nm",
+    "explanation": "The highlighted visible light region has wavelengths from about 400 nm to 700 nm.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 2,
+    "id": "JEE27-PHY-0780",
+    "section": "A",
+    "answer": "D",
+    "answer_text": "P V^gamma = constant",
+    "explanation": "Combining dU = minus dW for an adiabatic change with the ideal gas equation gives P V^gamma = constant, where gamma is the ratio of the two principal molar heat capacities.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 3,
+    "id": "JEE27-PHY-0919",
+    "section": "A",
+    "answer": "C",
+    "answer_text": "3.14 m s⁻¹",
+    "explanation": "The angular frequency is ω = 2 π f = 2 × 3.14 × 500 = 3140 rad s⁻¹. The amplitude is A = 1 mm = 1 × 10⁻³ m. Hence the maximum particle speed is A ω = 1 × 10⁻³ x 3140 = 3.14 m s⁻¹. This is roughly a hundred times smaller than the wave speed of 340 m s⁻¹, which confirms that the particles only jiggle while the disturbance races ahead.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 4,
+    "id": "JEE27-PHY-0960",
+    "section": "A",
+    "answer": "B",
+    "answer_text": "the same for all audible frequencies, which is why a distant band is heard in tune and in time",
+    "explanation": "The speed of sound follows entirely from the elastic and inertial properties of the medium. Neither the frequency nor the amplitude of the disturbance appears in the expression. Hence all audible frequencies travel through the same air at the same speed, which is why a chord played at a distance still sounds as a chord.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 5,
+    "id": "JEE27-PHY-0466",
+    "section": "A",
+    "answer": "C",
+    "answer_text": "the net torque component along that axis is zero",
+    "explanation": "The component of the net external torque about the fixed axis is Iα. For constant I, zero angular acceleration requires that torque component to vanish. Constraint torques perpendicular to the rotation axis need not vanish.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 6,
+    "id": "JEE27-PHY-0116",
+    "section": "A",
+    "answer": "C",
+    "answer_text": "vertically downwards, staying directly below the aeroplane",
+    "explanation": "The package and aircraft retain equal horizontal velocities after release. Their horizontal relative velocity is zero; only vertical separation grows. Thus the pilot sees a vertical fall while the ground observer sees a parabola.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 7,
+    "id": "JEE27-PHY-0911",
+    "section": "A",
+    "answer": "B",
+    "answer_text": "0.75 J",
+    "explanation": "E = 0.5 × 50 × 0.2² = 0.5 × 50 × 0.04 = 1 J. PE at x = 0.1 m is 0.5 × 50 × 0.01 = 0.25 J. Hence KE = 1 minus 0.25 = 0.75 J. The mass is not needed because the force constant is given.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 8,
+    "id": "JEE27-PHY-0865",
+    "section": "A",
+    "answer": "A",
+    "answer_text": "their molecules have the same root mean square speed",
+    "explanation": "Rearranging the pressure expression gives v_rms = √(3P / ρ). If both P and ρ are the same for the two gases, then v_rms must be the same. Nothing follows about the molecular mass, since a gas of heavy molecules can reach the same density with fewer molecules per unit volume, and nothing follows about temperature because v_rms = √(3RT/M) involves the molar mass as well.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 9,
+    "id": "JEE27-PHY-1991",
+    "section": "A",
+    "answer": "B",
+    "answer_text": "1.1 eV",
+    "explanation": "Silicon is the most widely used semiconductor and its forbidden energy gap at room temperature is about 1.1 eV. Germanium, the other common elemental semiconductor, has a smaller gap of about 0.7 eV, while insulators such as diamond have gaps of several electron volt.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 10,
+    "id": "JEE27-PHY-2149",
+    "section": "A",
+    "answer": "B",
+    "answer_text": "52.63 Ω",
+    "explanation": "Before shunting Ig=E/(R+G). After shunting, coil current is Ig/2 and the shunt current is IgG/(2S). Applying the loop equation gives G=SR/(R−S)=52.63157895 Ω. Thus initial Ig=0.0019 A, figure of merit=9.5 × 10⁻⁵ A/division, and final total current=0.00195 A.\nFor the requested outcome — Find the galvanometer resistance without assuming R is infinite. — the result is 52.63 Ω.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 11,
+    "id": "JEE27-PHY-2134",
+    "section": "A",
+    "answer": "A",
+    "answer_text": "At minimum deviation, the internal refraction angles at the two sloping faces are equal",
+    "explanation": "The triangular element has two nonparallel refracting faces, so it is a prism. At minimum deviation its path is symmetric, with equal internal refraction angles (each A/2) and equal incidence and emergence angles. The alternatives describe different optical elements.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 12,
+    "id": "JEE27-PHY-1839",
+    "section": "A",
+    "answer": "C",
+    "answer_text": "1.6 × 10⁻¹⁹ J",
+    "explanation": "The initial kinetic energy is 0.375 eV. Acceleration adds 0.625 eV, giving 1 eV. The supplied matter-wave relation then gives λfinal=0.1224744871 nm. Momentum scales as √K, so its ratio is 1.632993162; final energy is 1.6 × 10⁻¹⁹ J.\nFor the requested outcome — Find the final kinetic energy. — the result is 1.6 × 10⁻¹⁹ J.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 13,
+    "id": "JEE27-PHY-1380",
+    "section": "A",
+    "answer": "D",
+    "answer_text": "0.10 Ω",
+    "explanation": "Equal voltage across galvanometer and shunt gives S = I_gG/(I-I_g) ≈ 0.1/0.999 ≈ 0.10 Ω.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 14,
+    "id": "JEE27-PHY-1376",
+    "section": "A",
+    "answer": "A",
+    "answer_text": "0.05 N m",
+    "explanation": "τ = mB sinθ = 0.5×0.2×sin30° = 0.05 N m.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 15,
+    "id": "JEE27-PHY-0724",
+    "section": "A",
+    "answer": "D",
+    "answer_text": "200",
+    "explanation": "Use the coupled physical relations below. The missing input is ξ=200 in the units assigned in the stem.\nW1=Q(1−T/Th), W2=Q(T−Tc)/Th. The measured work ratio gives T=350 K, W1=1350 J and W2=450 J. The refrigerator has COP=Tc/(T−Tc), so it extracts 600 J and discharges 1050 J. The explicitly requested ratio is 0.3913043478; it is not a thermal efficiency of an isolated engine.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 16,
+    "id": "JEE27-PHY-0869",
+    "section": "A",
+    "answer": "B",
+    "answer_text": "400 m s⁻¹",
+    "explanation": "From P = (1/3) ρ v_rms² we get v_rms² = 3P / ρ = 3 × 1.6 × 10⁵ / 3 = 1.6 × 10⁵. Taking the square root, v_rms = 400 m s⁻¹.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 17,
+    "id": "JEE27-PHY-2110",
+    "section": "A",
+    "answer": "A",
+    "answer_text": "2.667 %",
+    "explanation": "Resistivity is proportional to d². Thus its maximum relative error is 2δd/d=2(0.01)/0.75, or 2.6667%.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 18,
+    "id": "JEE27-PHY-0870",
+    "section": "A",
+    "answer": "D",
+    "answer_text": "320",
+    "explanation": "Use the coupled physical relations below. The missing input is ξ=320 in the units assigned in the stem.\nMass gives 4a+28b=mass; constant-volume heat gives (12a+20b)ΔT=Q. Thus a=0.6875, b=2.1875 mol, Cv=52 J/K and γ=1.442307692. Adiabatic compression gives Tf=434.8083354 K. Use the diatomic molar mass, not the mixture average, for vrms=610.4857565 m/s. Work on the gas equals the internal-energy increase, 5970.033439 J.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 19,
+    "id": "JEE27-PHY-0707",
+    "section": "A",
+    "answer": "C",
+    "answer_text": "5000",
+    "explanation": "Use the physical relations below with the missing input ξ. The recorded value of the rate of energy dissipation due to viscous drag on this bead gives ξ=5000 in the unit assigned to ξ in the question. Substitution checks the observation:\nAt terminal speed, weight minus buoyancy equals Stokes drag: (4πr³/3)(ρs−ρl)g = 6πηrv. This gives η = 0.2222222222 Pa s. Drag power is the effective weight times speed, 2.094395102 × 10⁻⁷ W. Since vt is proportional to r², doubling radius gives 40 mm/s. The doubled-radius bead has eight times the original mass and four times the speed. Its kinetic energy is 1.675516082 × 10⁻⁸ J.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 20,
+    "id": "JEE27-PHY-1546",
+    "section": "A",
+    "answer": "D",
+    "answer_text": "0.402359 s",
+    "explanation": "The original steady state gives r=18/3=6 Ω. Half-growth takes (L/r)ln2=(ln2)/2, so L=3 H. At twice that time the initial-direction current is 3(1−1/4)=2.25 A. After switching, total resistance is 12 Ω and the signed steady current is −18/12=−1.5 A. Hence I=−1.5+3.75 exp(−4τ). Setting I=−0.75 gives exp(−4τ)=1/5, so τ=(ln5)/4 s. The zero crossing occurs earlier.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 21,
+    "id": "JEE27-PHY-1137",
+    "section": "B",
+    "answer": 500,
+    "answer_text": "500",
+    "explanation": "Acceleration through V gives vx = √(2(q/m)V) = 20000 m/s. Transit time L/vx = 1 × 10⁻⁵ s. The vertical acceleration is (q/m)E, so y = 0.05 m and vy = 10000 m/s. Vector addition gives exit speed 22360.67977 m/s and tanθ = vy/vx = 0.5.\nFor the requested outcome — Find tan θ, where θ is the exit-velocity angle to the original direction. — the result is 0.5.",
+    "numerical_scaling": {
+      "question": "A particle with positive charge-to-mass ratio 1000000 C/kg starts from rest and is accelerated through 200 V. It then enters horizontally between parallel plates of length 0.2 m with uniform vertical electric field 1000 N/C. Ignore gravity and edge fields; the particle does not hit a plate. Find tan θ, where θ is the exit-velocity angle to the original direction. Express the result in units of 10^(-3) (dimensionless), and give the nearest integer.",
+      "unrounded_value": 500.0,
+      "answer_integer": 500,
+      "unit": "",
+      "unit_scale_power10": -3,
+      "rounding": "nearest integer; exact half away from zero",
+      "parent_candidate": "NEW-U11-charged_particle-1-3"
+    }
+  },
+  {
+    "number": 22,
+    "id": "JEE27-PHY-1556",
+    "section": "B",
+    "answer": 6,
+    "answer_text": "6",
+    "explanation": "Magnetic drag is bv with b=(BL)²/R=0.25 N s/m. The initial steady speed is (2−0.5)/0.25=6 m/s. During coasting, m dv/dt=−f−bv. The stopping distance is ∫₀⁶ mv/(f+bv) dv = (m/b)[6−(f/b)ln(1+6b/f)] =12−4ln4 m. Initial kinetic energy is 9 J; friction dissipates 0.5(12−4ln4) J. The rest becomes Joule heat: 9−6+2ln4=3+2ln4 J. All energy has been accounted for when the rod stops.",
+    "numerical_scaling": {
+      "question": "A conducting rod of mass 0.50 kg and length 0.50 m slides to the right on horizontal rails as illustrated. The uniform field into the page is 2.0 T; total closed-loop resistance is 4.0 Ω and inductance is negligible. The kinetic friction force on the rod has constant magnitude 0.50 N while it moves. A constant 2.0 N force to the right first maintains steady motion. This applied force is then removed abruptly. The rails and magnetic field extend through the entire subsequent motion; the rod eventually stops. Neglect all other losses. Find the total Joule heat generated after the applied force is removed. Give the numerical value in J, rounded to the nearest integer.",
+      "unrounded_value": 5.772588722239782,
+      "answer_integer": 6,
+      "unit": "J",
+      "unit_scale_power10": 0,
+      "rounding": "nearest integer; exact half away from zero",
+      "parent_candidate": "REV13-PHY-1556"
+    }
+  },
+  {
+    "number": 23,
+    "id": "JEE27-PHY-0061",
+    "section": "B",
+    "answer": 10,
+    "answer_text": "10",
+    "explanation": "The material volume is π(R²−r²)L = 94.2 cm³, so ρ = m/V = 10 g/cm³. The absolute error in R²−r² is 2RδR+2rδr. Therefore δV/V = 2.2% and δρ/ρ = δm/m+δV/V = 2.306157113%. The absolute density error is 0.2306157113 g/cm³.\nFor the requested outcome — What is the nominal density? — the result is 10 g/cm³.",
+    "numerical_scaling": {
+      "question": "A hollow cylindrical specimen has outer radius 2 cm, inner radius 1 cm, length 10 cm and mass 942 g. The maximum absolute errors in each radius, length and mass are 0.01 cm, 0.02 cm and 1 g respectively. Treat the errors as independent bounds and use first-order maximum-error propagation; take π = 3.14. What is the nominal density? Give the numerical value in g/cm³, rounded to the nearest integer.",
+      "unrounded_value": 10.0,
+      "answer_integer": 10,
+      "unit": "g/cm³",
+      "unit_scale_power10": 0,
+      "rounding": "nearest integer; exact half away from zero",
+      "parent_candidate": "NEW-U01-hollow_density-1-1"
+    }
+  },
+  {
+    "number": 24,
+    "id": "JEE27-PHY-1291",
+    "section": "B",
+    "answer": 192,
+    "answer_text": "192",
+    "explanation": "Constant volume makes area decrease by 1/f, so resistance at 20 °C grows by f² to 16 Ω. The temperature factor then gives 19.2 Ω. Thus final power is V²/Rfinal=30 W and the fixed-voltage current ratio is Rinitial/Rfinal=0.2083333333.\nFor the requested outcome — Find the final resistance. — the result is 19.2 Ω.",
+    "numerical_scaling": {
+      "question": "An initially uniform wire has resistance 4 Ω at 20 °C. It is stretched uniformly to 2 times its original length without changing its volume or resistivity at 20 °C, and then heated to 70 °C. Use a temperature coefficient 0.004 K⁻¹ referred to 20 °C and a linear resistivity law. A constant 24 V is applied to the final wire. Find the final resistance. Express the result in units of 10^(-1) Ω, and give the nearest integer.",
+      "unrounded_value": 191.99999999999997,
+      "answer_integer": 192,
+      "unit": "Ω",
+      "unit_scale_power10": -1,
+      "rounding": "nearest integer; exact half away from zero",
+      "parent_candidate": "NEW-U12-wire_stretch_heat-1-1"
+    }
+  },
+  {
+    "number": 25,
+    "id": "JEE27-PHY-1417",
+    "section": "B",
+    "answer": 100,
+    "answer_text": "100",
+    "explanation": "The magnetic moment is NIA=0.04 A m². Its torque is mB sinθ=0.01 N m. Divide by spring twist to get κ=0.1 N m/rad. Spring energy κφ²/2 is 0.0005 J, whereas magnetic potential energy −mB cosθ is -0.01732050808 J.\nFor the requested outcome — Find the torsion constant. — the result is 0.1 N m/rad.",
+    "numerical_scaling": {
+      "question": "A coil with 100 turns and area 20 cm² carries 0.2 A in a uniform 0.5 T magnetic field. It is attached to a torsion spring. The coil’s normal makes 30° with the field and the spring is twisted through 0.1 rad at equilibrium. The spring follows torque = κ × twist and balances the magnetic torque. Find the torsion constant. Express the result in units of 10^(-3) N m/rad, and give the nearest integer.",
+      "unrounded_value": 99.99999999999997,
+      "answer_integer": 100,
+      "unit": "N m/rad",
+      "unit_scale_power10": -3,
+      "rounding": "nearest integer; exact half away from zero",
+      "parent_candidate": "NEW-U13-loop_balance-1-1"
+    }
+  }
+]

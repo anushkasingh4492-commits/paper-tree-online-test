@@ -1,0 +1,22 @@
+[
+ {
+  "id": "V02-G-001",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "D",
+    "key": "D",
+    "working": "Difficulty is the number of dependants; awkwardness of a long-lived standard records success.",
+    "alternative": "A captures only the middle sentence, not the conclusion.",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "B",
+    "key": "B",
+    "working": "Clumsy standards survive because change costs fall on dependants; awkwardness records success. D omits the main point; A, C distort.",
+    "alternative": "",
+    "issue": ""
+   }
+  }
+ }
+]

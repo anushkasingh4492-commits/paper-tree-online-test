@@ -8,6 +8,7 @@ import {
   calculatePreset,
   type StudentGroup,
   type Preset,
+  type PresetSubject,
 } from "@/lib/test-presets";
 
 type Course = "MHT-CET" | "JEE" | "NEET" | "CAT";
@@ -17,7 +18,8 @@ type Subject =
   | "Chemistry"
   | "Mathematics"
   | "Biology"
-  | "Quantitative Ability";
+  | "Quantitative Ability"
+  | "Verbal Ability and Reading Comprehension";
 
 type DatabaseChapter = {
   exam: string;
@@ -67,7 +69,10 @@ const COURSE_CONFIG: Record<
 
   CAT: {
     description: "Common Admission Test",
-    subjects: ["Quantitative Ability"],
+    subjects: [
+      "Quantitative Ability",
+      "Verbal Ability and Reading Comprehension",
+    ],
     available: true,
   },
 };
@@ -79,20 +84,21 @@ const DIFFICULTIES = [
   "Difficult",
 ];
 
-const PRESET_SUBJECT_NAMES: Record<
-  string,
-  string
-> = {
+const PRESET_SUBJECT_NAMES: Record<PresetSubject, string> = {
   physics: "Physics",
   chemistry: "Chemistry",
   maths: "Mathematics",
   biology: "Biology",
   "cat-qa": "Quantitative Ability",
+  "cat-varc": "Verbal Ability and Reading Comprehension",
+  "jee-physics": "JEE Physics",
+  "jee-chemistry": "JEE Chemistry",
+  "jee-maths": "JEE Mathematics",
 };
 
 function subjectToPresetSubject(
   subject: Subject
-): "physics" | "chemistry" | "maths" | "biology" | "cat-qa" {
+): PresetSubject {
   switch (subject) {
     case "Physics":
       return "physics";
@@ -108,11 +114,14 @@ function subjectToPresetSubject(
 
     case "Quantitative Ability":
       return "cat-qa";
+
+    case "Verbal Ability and Reading Comprehension":
+      return "cat-varc";
   }
 }
 
 function presetSubjectToSubject(
-  subject: "physics" | "chemistry" | "maths" | "biology" | "cat-qa"
+  subject: PresetSubject
 ): Subject {
   switch (subject) {
     case "physics":
@@ -129,6 +138,18 @@ function presetSubjectToSubject(
 
     case "cat-qa":
       return "Quantitative Ability";
+
+    case "cat-varc":
+      return "Verbal Ability and Reading Comprehension";
+
+    case "jee-physics":
+      return "Physics";
+
+    case "jee-chemistry":
+      return "Chemistry";
+
+    case "jee-maths":
+      return "Mathematics";
   }
 }
 
@@ -187,6 +208,7 @@ export default function TestsPage() {
     Mathematics: [],
     Biology: [],
     "Quantitative Ability": [],
+    "Verbal Ability and Reading Comprehension": [],
   });
 
   const [
@@ -389,6 +411,7 @@ console.log(
             Mathematics: [],
             Biology: [],
             "Quantitative Ability": [],
+            "Verbal Ability and Reading Comprehension": [],
           });
           setSelectedPreset(null);
           return;
@@ -423,6 +446,7 @@ setSubjects([
             Mathematics: [],
             Biology: [],
             "Quantitative Ability": [],
+            "Verbal Ability and Reading Comprehension": [],
           });
 
           setSelectedPreset(null);
@@ -457,6 +481,7 @@ setSubjects([
             Mathematics: [],
             Biology: [],
             "Quantitative Ability": [],
+            "Verbal Ability and Reading Comprehension": [],
           });
 
           setSelectedPreset(null);
@@ -493,6 +518,7 @@ setSubjects([
             Mathematics: [],
             Biology: [],
             "Quantitative Ability": [],
+            "Verbal Ability and Reading Comprehension": [],
           });
 
           setSelectedPreset(null);
@@ -529,6 +555,7 @@ setSubjects([
             Mathematics: [],
             Biology: [],
             "Quantitative Ability": [],
+            "Verbal Ability and Reading Comprehension": [],
           });
 
           setSelectedPreset(null);
@@ -730,6 +757,17 @@ setSubjects([
       return;
     }
 
+    if (studentGroup === "CAT") {
+      if (subjects.includes(nextSubject)) {
+        return;
+      }
+
+      setSubjects([nextSubject]);
+      setActiveChapterSubject(nextSubject);
+      setSelectedPreset(null);
+      return;
+    }
+
     setSubjects(
       (previous) => {
         /*
@@ -800,12 +838,7 @@ setSubjects([
                 selectedPreset.subjects
               ).map(
                 (subject) =>
-                  subject as
-                    | "physics"
-                    | "chemistry"
-                    | "maths"
-                    | "biology"
-                    | "cat-qa"
+                  subject as PresetSubject
               );
 
             const updatedPresetStillValid =
@@ -954,12 +987,7 @@ setSubjects([
         preset.subjects
       ).map(
         (subject) =>
-          subject as
-            | "physics"
-            | "chemistry"
-            | "maths"
-            | "biology"
-            | "cat-qa"
+          subject as PresetSubject
       );
 
     const selectedSubjectKeys =
@@ -1507,7 +1535,10 @@ setSubjects([
                           }
 
                           if (studentGroup === "CAT") {
-                            return item === "Quantitative Ability";
+                            return [
+                              "Quantitative Ability",
+                              "Verbal Ability and Reading Comprehension",
+                            ].includes(item);
                           }
 
                           if (
@@ -1988,8 +2019,13 @@ setSubjects([
                             preset.id;
 
                           const subjectSplit =
-                            Object.entries(
-                              preset.subjects
+                            (
+                              Object.entries(
+                                preset.subjects
+                              ) as [
+                                PresetSubject,
+                                number,
+                              ][]
                             )
                               .map(
                                 (

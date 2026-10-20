@@ -1,0 +1,1 @@
+Run `python audit_tools/verify_release.py` from anywhere. Python and NumPy are required. The verifier reads the files beside this directory, checks manifest hashes and every numerical model, compares exports, and regenerates the 1,005-seed paper suite. It does not modify the bank. Scientific/difficulty review scope is described in the closure report.

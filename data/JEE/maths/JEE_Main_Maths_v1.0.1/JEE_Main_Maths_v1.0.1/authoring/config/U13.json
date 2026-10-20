@@ -1,0 +1,73 @@
+{
+ "unit_number": 13,
+ "unit_name": "Statistics and Probability",
+ "branch": "Statistics and Probability",
+ "count": 180,
+ "draft_files": [
+  "drafts/u13_a.py",
+  "drafts/u13_b.py",
+  "drafts/u13_c.py",
+  "drafts/u13_d.py"
+ ],
+ "alias_groups": {
+  "ALIAS-ERR-U13-A-01": [
+   "U13-A-013",
+   "U13-A-035"
+  ],
+  "ALIAS-ERR-U13-A-02": [
+   "U13-A-029",
+   "U13-A-040"
+  ],
+  "ALIAS-ERR-U13-A-03": [
+   "U13-A-009",
+   "U13-A-019"
+  ],
+  "ALIAS-ERR-U13-B-01": [
+   "U13-A-001",
+   "U13-B-001"
+  ],
+  "ALIAS-ERR-U13-B-02": [
+   "U13-B-007",
+   "U13-B-024",
+   "U13-B-025"
+  ],
+  "ALIAS-ERR-U13-B-03": [
+   "U13-A-003",
+   "U13-B-005"
+  ],
+  "ALIAS-ERR-U13-B-04": [
+   "U13-B-006",
+   "U13-B-023"
+  ],
+  "ALIAS-ERR-U13-B-05": [
+   "U13-B-010",
+   "U13-B-030",
+   "U13-B-037"
+  ]
+ },
+ "numerical_selection": [
+  "U13-A-036",
+  "U13-B-036",
+  "U13-C-009",
+  "U13-D-037",
+  "U13-A-038",
+  "U13-B-038",
+  "U13-C-036",
+  "U13-D-040",
+  "U13-A-039",
+  "U13-B-040",
+  "U13-C-037",
+  "U13-D-042",
+  "U13-A-016",
+  "U13-B-019",
+  "U13-C-007",
+  "U13-D-017",
+  "U13-A-017",
+  "U13-B-023",
+  "U13-C-023",
+  "U13-D-020",
+  "U13-A-004",
+  "U13-B-011",
+  "U13-C-001"
+ ]
+}

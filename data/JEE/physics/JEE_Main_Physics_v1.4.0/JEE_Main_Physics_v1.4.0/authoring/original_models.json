@@ -1,0 +1,7237 @@
+[
+  {
+    "unit": 1,
+    "key": "hollow_density",
+    "topic": "Errors in derived measurements",
+    "stem": "A hollow cylindrical specimen has outer radius {ro} cm, inner radius {ri} cm, length {L} cm and mass {m} g. The maximum absolute errors in each radius, length and mass are {dr} cm, {dL} cm and {dm} g respectively. Treat the errors as independent bounds and use first-order maximum-error propagation; take π = {p}.",
+    "variants": [
+      {
+        "ro": 2,
+        "ri": 1,
+        "L": 10,
+        "m": 942,
+        "dr": 0.01,
+        "dL": 0.02,
+        "dm": 1,
+        "p": 3.14
+      },
+      {
+        "ro": 3,
+        "ri": 2,
+        "L": 5,
+        "m": 785,
+        "dr": 0.01,
+        "dL": 0.01,
+        "dm": 1,
+        "p": 3.14
+      }
+    ],
+    "derived": [
+      [
+        "V",
+        "p*(ro*ro-ri*ri)*L"
+      ],
+      [
+        "rho",
+        "m/V"
+      ],
+      [
+        "ev",
+        "100*(2*(ro+ri)*dr/(ro*ro-ri*ri)+dL/L)"
+      ],
+      [
+        "er",
+        "ev+100*dm/m"
+      ],
+      [
+        "absolute",
+        "rho*er/100"
+      ]
+    ],
+    "tasks": [
+      [
+        "rho",
+        "What is the nominal density?",
+        "g/cm³",
+        [
+          "m/(p*ro*ro*L)",
+          "m/(p*(ro-ri)**2*L)",
+          "2*rho"
+        ]
+      ],
+      [
+        "er",
+        "What is the maximum percentage error in the density?",
+        "%",
+        [
+          "ev",
+          "100*dm/m",
+          "er/2"
+        ]
+      ],
+      [
+        "absolute",
+        "What is the maximum absolute error in the density?",
+        "g/cm³",
+        [
+          "rho*ev/100",
+          "absolute/2",
+          "absolute*2"
+        ]
+      ]
+    ],
+    "explanation": "The material volume is π(R²−r²)L = {V} cm³, so ρ = m/V = {rho} g/cm³. The absolute error in R²−r² is 2RδR+2rδr. Therefore δV/V = {ev}% and δρ/ρ = δm/m+δV/V = {er}%. The absolute density error is {absolute} g/cm³.",
+    "checks": [
+      "rho*p*(ro**2-ri**2)*L-m",
+      "absolute-rho*(dm/m+2*(ro+ri)*dr/(ro**2-ri**2)+dL/L)"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 1,
+    "key": "offset_wire",
+    "topic": "Systematic error and resistivity",
+    "stem": "A wire of length {L} m and cross-sectional area {A} mm² obeys Ohm’s law. A voltmeter has a constant additive zero error e, so its reading is IR+e. It reads {v1} V at {i1} A and {v2} V at {i2} A; current readings are exact. Ignore loading. Each voltage reading has maximum absolute error {dv} V. The length and area have maximum absolute errors {dl} m and {da} mm². Treat these as independent bounds.",
+    "variants": [
+      {
+        "L": 2,
+        "A": 0.5,
+        "v1": 1.3,
+        "v2": 2.5,
+        "i1": 0.2,
+        "i2": 0.4,
+        "dv": 0.01,
+        "dl": 0.02,
+        "da": 0.01
+      },
+      {
+        "L": 4,
+        "A": 0.8,
+        "v1": 1.7,
+        "v2": 3.2,
+        "i1": 0.3,
+        "i2": 0.6,
+        "dv": 0.01,
+        "dl": 0.02,
+        "da": 0.01
+      }
+    ],
+    "derived": [
+      [
+        "R",
+        "(v2-v1)/(i2-i1)"
+      ],
+      [
+        "er",
+        "200*dv/(v2-v1)"
+      ],
+      [
+        "el",
+        "100*dl/L"
+      ],
+      [
+        "ea",
+        "100*da/A"
+      ],
+      [
+        "e",
+        "v1-i1*R"
+      ],
+      [
+        "rho",
+        "R*A/L"
+      ],
+      [
+        "error",
+        "er+el+ea"
+      ],
+      [
+        "wrong",
+        "100*((v1/i1)/R-1)"
+      ]
+    ],
+    "tasks": [
+      [
+        "rho",
+        "What is the resistivity in units of 10⁻⁶ Ω m?",
+        "",
+        [
+          "rho*2",
+          "rho/2",
+          "(v1/i1)*A/L"
+        ]
+      ],
+      [
+        "wrong",
+        "If the first voltmeter reading were used without zero correction, by what percentage would the resistance be overestimated?",
+        "%",
+        [
+          "wrong/2",
+          "wrong*2",
+          "100*e/v1"
+        ]
+      ],
+      [
+        "error",
+        "After removing the zero error, what is the maximum percentage error in resistivity?",
+        "%",
+        [
+          "er+ea-el",
+          "er+el",
+          "er+ea"
+        ]
+      ]
+    ],
+    "explanation": "Subtract the two readings to cancel the zero error: R = (V₂−V₁)/(I₂−I₁) = {R} Ω. The offset is e = {e} V. Thus ρ = RA/L = {rho} × 10⁻⁶ Ω m. Uncorrected V₁/I₁ overestimates R by {wrong}%. For ρ = RA/L, the maximum fractional errors add, giving {error}%. The corrected-resistance percentage uncertainty is 100(2δV)/(V₂−V₁)={er}%; the length and area contributions are {el}% and {ea}%.",
+    "checks": [
+      "i1*R+e-v1",
+      "i2*R+e-v2",
+      "rho*L-R*A"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 2,
+    "key": "projectile_crossings",
+    "topic": "Inverse projectile motion",
+    "stem": "A projectile crosses a horizontal level {h} m above launch at times {t1} s and {t2} s after launch. Its horizontal displacement between those crossings is {dx} m. Air resistance is negligible; take g = {g} m/s² and use launch level as zero height.",
+    "variants": [
+      {
+        "h": 30,
+        "t1": 2,
+        "t2": 3,
+        "dx": 20,
+        "g": 10
+      },
+      {
+        "h": 40,
+        "t1": 2,
+        "t2": 4,
+        "dx": 30,
+        "g": 10
+      }
+    ],
+    "derived": [
+      [
+        "uy",
+        "g*(t1+t2)/2"
+      ],
+      [
+        "ux",
+        "dx/(t2-t1)"
+      ],
+      [
+        "speed",
+        "sqrt(ux*ux+uy*uy)"
+      ],
+      [
+        "height",
+        "uy*uy/(2*g)"
+      ],
+      [
+        "range",
+        "2*ux*uy/g"
+      ]
+    ],
+    "tasks": [
+      [
+        "speed",
+        "Find the launch speed.",
+        "m/s",
+        [
+          "ux+uy",
+          "sqrt(ux*ux+g*h)",
+          "uy"
+        ]
+      ],
+      [
+        "height",
+        "Find the maximum height above the launch level.",
+        "m",
+        [
+          "h",
+          "height-h",
+          "2*height"
+        ]
+      ],
+      [
+        "range",
+        "Find the horizontal range when it returns to launch level.",
+        "m",
+        [
+          "ux*(t2-t1)",
+          "ux*t2",
+          "range/2"
+        ]
+      ]
+    ],
+    "explanation": "At the two crossings, h = uᵧt−gt²/2. Adding the roots gives uᵧ = g(t₁+t₂)/2 = {uy} m/s. The horizontal speed is Δx/(t₂−t₁) = {ux} m/s. Therefore u = {speed} m/s, H = uᵧ²/(2g) = {height} m and R = 2uₓuᵧ/g = {range} m.",
+    "checks": [
+      "uy*t1-g*t1*t1/2-h",
+      "uy*t2-g*t2*t2/2-h",
+      "ux*(t2-t1)-dx"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 2,
+    "key": "meeting_delay",
+    "topic": "Relative motion with delayed start",
+    "stem": "Car A passes a marker at constant speed {v} m/s at t = 0. Car B starts from rest at the marker after a delay of {delay} s and then accelerates uniformly at {a} m/s². Both travel along the same straight road in the same direction. Let τ be the time B has been moving when it first catches A.",
+    "variants": [
+      {
+        "v": 10,
+        "delay": 4,
+        "a": 2
+      },
+      {
+        "v": 12,
+        "delay": 3,
+        "a": 3
+      }
+    ],
+    "derived": [
+      [
+        "tau",
+        "(v+sqrt(v*v+2*a*v*delay))/a"
+      ],
+      [
+        "catch",
+        "tau+delay"
+      ],
+      [
+        "distance",
+        "v*catch"
+      ],
+      [
+        "relative",
+        "a*tau-v"
+      ]
+    ],
+    "tasks": [
+      [
+        "catch",
+        "How long after A passed the marker does the catch occur?",
+        "s",
+        [
+          "tau",
+          "2*v/a",
+          "tau-delay"
+        ]
+      ],
+      [
+        "distance",
+        "How far from the marker does the catch occur?",
+        "m",
+        [
+          "v*tau",
+          "distance/2",
+          "a*tau*tau"
+        ]
+      ],
+      [
+        "relative",
+        "What is B’s speed relative to A at the catch?",
+        "m/s",
+        [
+          "a*tau",
+          "v",
+          "relative/2"
+        ]
+      ]
+    ],
+    "explanation": "The catch condition is aτ²/2 = v(τ+delay). Its positive root is τ = {tau} s. The clock time is {catch} s, the common position is {distance} m, and vB−vA = aτ−v = {relative} m/s.",
+    "checks": [
+      "a*tau*tau/2-v*(tau+delay)",
+      "distance-a*tau*tau/2"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 2,
+    "key": "river_inverse",
+    "topic": "Relative velocity and crossing constraints",
+    "stem": "A swimmer crosses a river of width {w} m. When swimming perpendicular to the banks relative to water, the crossing takes {fast} s. When heading upstream so as to land directly opposite, the crossing takes {straight} s. The swimmer’s speed relative to water and the uniform current speed are constant.",
+    "variants": [
+      {
+        "w": 120,
+        "fast": 24,
+        "straight": 30
+      },
+      {
+        "w": 240,
+        "fast": 30,
+        "straight": 40
+      }
+    ],
+    "derived": [
+      [
+        "u",
+        "w/fast"
+      ],
+      [
+        "perp",
+        "w/straight"
+      ],
+      [
+        "flow",
+        "sqrt(u*u-perp*perp)"
+      ],
+      [
+        "drift",
+        "flow*fast"
+      ],
+      [
+        "angle",
+        "asin(flow/u)*180/pi"
+      ]
+    ],
+    "tasks": [
+      [
+        "flow",
+        "What is the speed of the river current?",
+        "m/s",
+        [
+          "u-perp",
+          "u+perp",
+          "perp"
+        ]
+      ],
+      [
+        "drift",
+        "What is the downstream drift during the fastest crossing?",
+        "m",
+        [
+          "flow*straight",
+          "w",
+          "drift/2"
+        ]
+      ],
+      [
+        "angle",
+        "For the crossing with no drift, what upstream angle must be made with the perpendicular to the banks?",
+        "°",
+        [
+          "atan(flow/u)*180/pi",
+          "90-angle",
+          "asin(perp/u)*180/pi"
+        ]
+      ]
+    ],
+    "explanation": "The still-water speed is u = w/tfast = {u} m/s. For no drift the across-river component is w/tstraight = {perp} m/s. The upstream component cancels the current, so c = √(u²−v⊥²) = {flow} m/s. Drift = ctfast = {drift} m, and sin θ = c/u gives θ = {angle}°.",
+    "checks": [
+      "flow*flow+perp*perp-u*u",
+      "perp*straight-w"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 2,
+    "key": "velocity_turn",
+    "topic": "Velocity graphs and change of direction",
+    "stem": "A particle has v(t) = {b}−{a}t m/s for 0 ≤ t ≤ {T} s. It starts at x = {x0} m. Positive velocity is along the positive x-axis.",
+    "variants": [
+      {
+        "b": 12,
+        "a": 3,
+        "T": 8,
+        "x0": 5
+      },
+      {
+        "b": 10,
+        "a": 2,
+        "T": 12,
+        "x0": -4
+      }
+    ],
+    "derived": [
+      [
+        "turn",
+        "b/a"
+      ],
+      [
+        "net",
+        "b*T-a*T*T/2"
+      ],
+      [
+        "distance",
+        "b*b/(2*a)+(a*T-b)**2/(2*a)"
+      ],
+      [
+        "avg",
+        "distance/T"
+      ],
+      [
+        "position",
+        "x0+net"
+      ]
+    ],
+    "tasks": [
+      [
+        "distance",
+        "What total distance is travelled during the interval?",
+        "m",
+        [
+          "abs(net)",
+          "b*T",
+          "distance/2"
+        ]
+      ],
+      [
+        "avg",
+        "What is the average speed over the complete interval?",
+        "m/s",
+        [
+          "abs(net)/T",
+          "b",
+          "(b+abs(b-a*T))/2"
+        ]
+      ],
+      [
+        "position",
+        "What is the final position coordinate?",
+        "m",
+        [
+          "distance+x0",
+          "net",
+          "x0-net"
+        ]
+      ]
+    ],
+    "explanation": "The velocity changes sign at t = b/a = {turn} s. Integrate |v| on either side of that instant: distance = b²/(2a)+(aT−b)²/(2a) = {distance} m. The signed displacement is bT−aT²/2 = {net} m, so final x = {position} m and average speed = {avg} m/s.",
+    "checks": [
+      "net-(b+(b-a*T))*T/2",
+      "distance-b*b/(2*a)-(a*T-b)**2/(2*a)"
+    ],
+    "figure": "velocity",
+    "refined": true
+  },
+  {
+    "unit": 2,
+    "key": "relative_closest",
+    "topic": "Closest approach in two dimensions",
+    "stem": "At t = 0 the position of B relative to A is ({x} i + {y} j) m. Their constant velocities relative to the ground are vA = ({ax} i + {ay} j) m/s and vB = ({bx} i + {by} j) m/s. Consider t ≥ 0.",
+    "variants": [
+      {
+        "x": 30,
+        "y": 40,
+        "ax": 5,
+        "ay": 1,
+        "bx": 1,
+        "by": -1
+      },
+      {
+        "x": 60,
+        "y": 20,
+        "ax": 6,
+        "ay": 2,
+        "bx": 2,
+        "by": 1
+      }
+    ],
+    "derived": [
+      [
+        "vx",
+        "bx-ax"
+      ],
+      [
+        "vy",
+        "by-ay"
+      ],
+      [
+        "t",
+        "-(x*vx+y*vy)/(vx*vx+vy*vy)"
+      ],
+      [
+        "d",
+        "sqrt((x+vx*t)**2+(y+vy*t)**2)"
+      ],
+      [
+        "travel",
+        "sqrt(ax*ax+ay*ay)*t"
+      ]
+    ],
+    "tasks": [
+      [
+        "t",
+        "When is their separation minimum?",
+        "s",
+        [
+          "sqrt(x*x+y*y)/sqrt(vx*vx+vy*vy)",
+          "-x/vx",
+          "-y/vy"
+        ]
+      ],
+      [
+        "d",
+        "What is their minimum separation?",
+        "m",
+        [
+          "0",
+          "abs(x+vx*t)",
+          "sqrt(x*x+y*y)"
+        ]
+      ],
+      [
+        "travel",
+        "What distance has A travelled by the instant of minimum separation?",
+        "m",
+        [
+          "sqrt(bx*bx+by*by)*t",
+          "sqrt(vx*vx+vy*vy)*t",
+          "travel/2"
+        ]
+      ]
+    ],
+    "explanation": "Use relative velocity ({vx}, {vy}). Minimise |r₀+vrel t|², so (r₀+vrel t)·vrel = 0 and t = {t} s. Substitution gives dmin = {d} m. A moves uniformly, covering |vA|t = {travel} m.",
+    "checks": [
+      "(x+vx*t)*vx+(y+vy*t)*vy",
+      "d*d-(x+vx*t)**2-(y+vy*t)**2"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 3,
+    "key": "rough_pulley",
+    "topic": "Coupled motion with friction",
+    "stem": "A {m1} kg block on a rough horizontal table is connected by a light inextensible string over a smooth massless pulley to a hanging {m2} kg block. The coefficient of kinetic friction on the table is {mu}. Released from rest, the hanging block moves downward by {s} m. The string stays taut; use g = 10 m/s².",
+    "variants": [
+      {
+        "m1": 4,
+        "m2": 3,
+        "mu": 0.25,
+        "s": 3.5
+      },
+      {
+        "m1": 5,
+        "m2": 4,
+        "mu": 0.2,
+        "s": 3
+      }
+    ],
+    "derived": [
+      [
+        "friction",
+        "mu*m1*10"
+      ],
+      [
+        "a",
+        "(m2*10-friction)/(m1+m2)"
+      ],
+      [
+        "tension",
+        "m2*(10-a)"
+      ],
+      [
+        "speed",
+        "sqrt(2*a*s)"
+      ],
+      [
+        "time",
+        "sqrt(2*s/a)"
+      ]
+    ],
+    "tasks": [
+      [
+        "tension",
+        "Find the string tension during motion.",
+        "N",
+        [
+          "m2*10",
+          "m1*a",
+          "(m1+m2)*a"
+        ]
+      ],
+      [
+        "speed",
+        "Find the common speed after the stated displacement.",
+        "m/s",
+        [
+          "sqrt(20*s)",
+          "sqrt(a*s)",
+          "a*s"
+        ]
+      ],
+      [
+        "time",
+        "Find the time taken for the stated displacement.",
+        "s",
+        [
+          "sqrt(s/a)",
+          "sqrt(2*s/10)",
+          "s/speed"
+        ]
+      ]
+    ],
+    "explanation": "For the table block, T−μm₁g = m₁a; for the hanging block, m₂g−T = m₂a. Together they give a = {a} m/s² and T = {tension} N. Constant-acceleration motion from rest then gives v = √(2as) = {speed} m/s and t = √(2s/a) = {time} s.",
+    "checks": [
+      "tension-friction-m1*a",
+      "m2*10-tension-m2*a"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 3,
+    "key": "pull_angle",
+    "topic": "Friction with an inclined pulling force",
+    "stem": "A {m} kg block is pulled along a rough horizontal floor by a force of {F} N at angle θ above horizontal, with cos θ = {c} and sin θ = {s}. The block is already sliding forward. Its kinetic friction coefficient is {mu}. Starting at speed {u} m/s, it travels {d} m. Take g = 10 m/s².",
+    "variants": [
+      {
+        "m": 5,
+        "F": 30,
+        "c": 0.8,
+        "s": 0.6,
+        "mu": 0.25,
+        "u": 2,
+        "d": 4
+      },
+      {
+        "m": 4,
+        "F": 25,
+        "c": 0.8,
+        "s": 0.6,
+        "mu": 0.2,
+        "u": 3,
+        "d": 5
+      }
+    ],
+    "derived": [
+      [
+        "N",
+        "10*m-F*s"
+      ],
+      [
+        "fr",
+        "mu*N"
+      ],
+      [
+        "a",
+        "(F*c-fr)/m"
+      ],
+      [
+        "v",
+        "sqrt(u*u+2*a*d)"
+      ],
+      [
+        "work",
+        "(F*c-fr)*d"
+      ],
+      [
+        "time",
+        "(v-u)/a"
+      ]
+    ],
+    "tasks": [
+      [
+        "v",
+        "Find the final speed.",
+        "m/s",
+        [
+          "sqrt(u*u+2*F*c*d/m)",
+          "sqrt(u*u+2*(F*c-mu*m*10)*d/m)",
+          "v/2"
+        ]
+      ],
+      [
+        "work",
+        "Find the net work on the block over the displacement.",
+        "J",
+        [
+          "F*d",
+          "F*c*d",
+          "fr*d"
+        ]
+      ],
+      [
+        "time",
+        "Find the time for the displacement.",
+        "s",
+        [
+          "d/u",
+          "d/v",
+          "time/2"
+        ]
+      ]
+    ],
+    "explanation": "Vertical equilibrium gives N = mg−F sin θ = {N} N. Thus friction = {fr} N and a = (F cos θ−μN)/m = {a} m/s². Using v²−u² = 2ad gives v = {v} m/s; the net work is {work} J and (v−u)/a = {time} s.",
+    "checks": [
+      "N+F*s-m*10",
+      "F*c-fr-m*a",
+      "m*(v*v-u*u)/2-work"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 3,
+    "key": "incline_connected",
+    "topic": "Two coupled inclined blocks",
+    "stem": "Two blocks are connected over a smooth massless pulley by a light string. Block A of mass {ma} kg is on a smooth 30° incline and block B of mass {mb} kg is on a smooth incline whose sine is {sb}. Both inclines descend away from the pulley. Release the system from rest. Take g = 10 m/s²; B moves down its plane.",
+    "variants": [
+      {
+        "ma": 2,
+        "mb": 4,
+        "sb": 0.8,
+        "d": 2
+      },
+      {
+        "ma": 3,
+        "mb": 5,
+        "sb": 0.8,
+        "d": 3
+      }
+    ],
+    "derived": [
+      [
+        "a",
+        "(mb*10*sb-ma*5)/(ma+mb)"
+      ],
+      [
+        "T",
+        "ma*(a+5)"
+      ],
+      [
+        "v",
+        "sqrt(2*a*d)"
+      ],
+      [
+        "work",
+        "(mb*10*sb-ma*5)*d"
+      ]
+    ],
+    "tasks": [
+      [
+        "T",
+        "Find the string tension.",
+        "N",
+        [
+          "mb*10*sb",
+          "ma*5",
+          "(ma+mb)*a"
+        ]
+      ],
+      [
+        "v",
+        "Find the common speed after each block moves {d} m along its plane.",
+        "m/s",
+        [
+          "sqrt(20*d*sb)",
+          "sqrt(a*d)",
+          "sqrt(10*d)"
+        ]
+      ],
+      [
+        "work",
+        "Find the increase in total kinetic energy after each block moves {d} m.",
+        "J",
+        [
+          "mb*10*sb*d",
+          "ma*5*d",
+          "work/2"
+        ]
+      ]
+    ],
+    "explanation": "Along the planes: T−mAg sin30° = mAa and mBg sinβ−T = mBa. This gives a = {a} m/s², T = {T} N. With displacement {d} m, v = √(2ad) = {v} m/s. Net gravity work, equal to the total kinetic-energy increase, is {work} J.",
+    "checks": [
+      "T-ma*5-ma*a",
+      "mb*10*sb-T-mb*a",
+      "work-(ma+mb)*v*v/2"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 3,
+    "key": "banked_friction",
+    "topic": "Banked-road limiting speeds",
+    "stem": "A circular road has radius {r} m and bank angle θ with tan θ = {tanb}. The coefficient of static friction is {mu}. Consider a {m} kg car at the maximum speed at which it can follow the circle without slipping. Take g = 10 m/s².",
+    "variants": [
+      {
+        "r": 50,
+        "tanb": 0.5,
+        "mu": 0.2,
+        "m": 1000
+      },
+      {
+        "r": 80,
+        "tanb": 0.25,
+        "mu": 0.2,
+        "m": 800
+      }
+    ],
+    "derived": [
+      [
+        "c",
+        "1/sqrt(1+tanb*tanb)"
+      ],
+      [
+        "s",
+        "tanb*c"
+      ],
+      [
+        "v2",
+        "r*10*(tanb+mu)/(1-mu*tanb)"
+      ],
+      [
+        "v",
+        "sqrt(v2)"
+      ],
+      [
+        "N",
+        "m*10/(c-mu*s)"
+      ],
+      [
+        "ratio",
+        "v2/(r*10*tanb)"
+      ]
+    ],
+    "tasks": [
+      [
+        "v",
+        "Find this maximum speed.",
+        "m/s",
+        [
+          "sqrt(r*10*tanb)",
+          "sqrt(mu*r*10)",
+          "sqrt(r*10*(tanb+mu))"
+        ]
+      ],
+      [
+        "N",
+        "Find the normal reaction at this limiting speed.",
+        "N",
+        [
+          "m*10*c",
+          "m*10/c",
+          "m*10"
+        ]
+      ],
+      [
+        "ratio",
+        "Find the ratio of the limiting kinetic energy to that at the friction-free design speed.",
+        "",
+        [
+          "sqrt(ratio)",
+          "ratio/2",
+          "(tanb-mu)/(tanb+mu)"
+        ]
+      ]
+    ],
+    "explanation": "At the upper speed limit, friction acts down the bank. Vertical balance gives N(cosθ−μsinθ)=mg, while inward force is N(sinθ+μcosθ)=mv²/r. Therefore v = {v} m/s and N = {N} N. Dividing v² by rg tanθ gives the kinetic-energy ratio {ratio}.",
+    "checks": [
+      "N*(c-mu*s)-m*10",
+      "N*(s+mu*c)-m*v2/r"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 3,
+    "key": "two_blocks_contact",
+    "topic": "Contact forces and different friction coefficients",
+    "stem": "Two blocks of masses {m1} kg and {m2} kg touch on a horizontal floor. A horizontal force {F} N pushes the first block toward the second; both slide to the right. Their kinetic friction coefficients are {u1} and {u2}, respectively. They start from rest and move {d} m; g = 10 m/s².",
+    "variants": [
+      {
+        "m1": 3,
+        "m2": 2,
+        "F": 35,
+        "u1": 0.2,
+        "u2": 0.3,
+        "d": 5
+      },
+      {
+        "m1": 4,
+        "m2": 3,
+        "F": 50,
+        "u1": 0.25,
+        "u2": 0.2,
+        "d": 4
+      }
+    ],
+    "derived": [
+      [
+        "a",
+        "(F-10*(u1*m1+u2*m2))/(m1+m2)"
+      ],
+      [
+        "C",
+        "m2*(a+10*u2)"
+      ],
+      [
+        "v",
+        "sqrt(2*a*d)"
+      ],
+      [
+        "cw",
+        "C*d"
+      ]
+    ],
+    "tasks": [
+      [
+        "C",
+        "Find the contact force exerted by the first block on the second.",
+        "N",
+        [
+          "F*m2/(m1+m2)",
+          "m2*a",
+          "F"
+        ]
+      ],
+      [
+        "v",
+        "Find the common speed after the displacement.",
+        "m/s",
+        [
+          "sqrt(2*F*d/(m1+m2))",
+          "sqrt(a*d)",
+          "v*2"
+        ]
+      ],
+      [
+        "cw",
+        "Find the work done by the contact force on the second block.",
+        "J",
+        [
+          "m2*a*d",
+          "F*d",
+          "cw/2"
+        ]
+      ]
+    ],
+    "explanation": "For both blocks together, a = [F−g(μ₁m₁+μ₂m₂)]/(m₁+m₂) = {a} m/s². The second block satisfies C−μ₂m₂g = m₂a, so C = {C} N. The speed is √(2ad) = {v} m/s and contact work on block 2 is Cd = {cw} J.",
+    "checks": [
+      "C-u2*m2*10-m2*a",
+      "F-C-u1*m1*10-m1*a"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 4,
+    "key": "collision_spring",
+    "topic": "Inelastic collision followed by spring compression",
+    "stem": "A {m} kg block moving at {u} m/s hits a stationary {M} kg block attached to an initially uncompressed horizontal spring of constant {k} N/m. They stick together. The surface is smooth and the collision is brief enough that the spring impulse during collision is negligible.",
+    "variants": [
+      {
+        "m": 1,
+        "M": 3,
+        "u": 8,
+        "k": 100
+      },
+      {
+        "m": 2,
+        "M": 4,
+        "u": 6,
+        "k": 150
+      }
+    ],
+    "derived": [
+      [
+        "v",
+        "m*u/(m+M)"
+      ],
+      [
+        "loss",
+        "m*u*u/2-(m+M)*v*v/2"
+      ],
+      [
+        "x",
+        "v*sqrt((m+M)/k)"
+      ],
+      [
+        "force",
+        "k*x"
+      ],
+      [
+        "quarter",
+        "pi/2*sqrt((m+M)/k)"
+      ]
+    ],
+    "tasks": [
+      [
+        "x",
+        "Find the maximum compression.",
+        "m",
+        [
+          "u*sqrt(m/k)",
+          "v*sqrt(m/k)",
+          "x*2"
+        ]
+      ],
+      [
+        "loss",
+        "Find the mechanical energy lost in the collision.",
+        "J",
+        [
+          "(m+M)*v*v/2",
+          "m*u*u/2",
+          "loss/2"
+        ]
+      ],
+      [
+        "force",
+        "Find the maximum spring force after the collision.",
+        "N",
+        [
+          "k*u*sqrt(m/k)",
+          "force/2",
+          "k*v"
+        ]
+      ]
+    ],
+    "explanation": "During collision momentum is conserved, giving v = mu/(m+M) = {v} m/s. The collision loses {loss} J. The remaining kinetic energy becomes spring energy: kx²/2 = (m+M)v²/2, so x = {x} m and kx = {force} N.",
+    "checks": [
+      "(m+M)*v-m*u",
+      "k*x*x-(m+M)*v*v",
+      "loss+(m+M)*v*v/2-m*u*u/2"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 4,
+    "key": "rough_spring",
+    "topic": "Work and energy with friction and a spring",
+    "stem": "A {m} kg block is released from rest after compressing a horizontal spring of constant {k} N/m by {x} m on a rough horizontal floor. The kinetic friction coefficient is {mu}. The block is not attached to the spring. Take g = 10 m/s² and assume it leaves the spring at its natural length.",
+    "variants": [
+      {
+        "m": 2,
+        "k": 200,
+        "x": 0.5,
+        "mu": 0.2
+      },
+      {
+        "m": 1,
+        "k": 100,
+        "x": 0.4,
+        "mu": 0.25
+      }
+    ],
+    "derived": [
+      [
+        "E",
+        "k*x*x/2"
+      ],
+      [
+        "v",
+        "sqrt((k*x*x-2*mu*m*10*x)/m)"
+      ],
+      [
+        "beyond",
+        "v*v/(20*mu)"
+      ],
+      [
+        "total",
+        "x+beyond"
+      ],
+      [
+        "maxa",
+        "k*x/m-mu*10"
+      ]
+    ],
+    "tasks": [
+      [
+        "v",
+        "Find the speed when the block leaves the spring.",
+        "m/s",
+        [
+          "sqrt(k*x*x/m)",
+          "sqrt(k*x*x/m-10*mu*x)",
+          "v/2"
+        ]
+      ],
+      [
+        "beyond",
+        "How far beyond the natural-length position does it travel before stopping?",
+        "m",
+        [
+          "E/(mu*m*10)",
+          "beyond/2",
+          "x"
+        ]
+      ],
+      [
+        "maxa",
+        "What is the greatest forward acceleration during the spring-driven part of motion?",
+        "m/s²",
+        [
+          "k*x/m",
+          "mu*10",
+          "maxa/2"
+        ]
+      ]
+    ],
+    "explanation": "Initial spring energy is {E} J. Friction acts during decompression too: mv²/2 = kx²/2−μmgx, yielding v = {v} m/s. The remaining kinetic energy is lost over v²/(2μg) = {beyond} m beyond the spring. Forward acceleration is largest initially, kx/m−μg = {maxa} m/s².",
+    "checks": [
+      "m*v*v/2+mu*m*10*x-E",
+      "mu*m*10*beyond-m*v*v/2"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 4,
+    "key": "loop_height",
+    "topic": "Vertical-circle energy and contact condition",
+    "stem": "A small {m} kg bead starts from rest at height {h} m above the bottom of a smooth vertical circular track of radius {r} m. It moves on the inside of the loop. Ignore air resistance and use g = 10 m/s². The chosen height is sufficient for complete contact.",
+    "variants": [
+      {
+        "m": 0.5,
+        "h": 6,
+        "r": 2
+      },
+      {
+        "m": 1,
+        "h": 9,
+        "r": 3
+      }
+    ],
+    "derived": [
+      [
+        "vb2",
+        "20*h"
+      ],
+      [
+        "vt2",
+        "20*(h-2*r)"
+      ],
+      [
+        "Nt",
+        "m*(vt2/r-10)"
+      ],
+      [
+        "Nb",
+        "m*(vb2/r+10)"
+      ],
+      [
+        "Ns",
+        "m*20*(h-r)/r"
+      ]
+    ],
+    "tasks": [
+      [
+        "Nt",
+        "Find the normal force at the highest point.",
+        "N",
+        [
+          "m*vt2/r",
+          "m*(vt2/r+10)",
+          "0"
+        ]
+      ],
+      [
+        "Nb",
+        "Find the normal force at the lowest point.",
+        "N",
+        [
+          "m*vb2/r",
+          "m*(vb2/r-10)",
+          "Nb/2"
+        ]
+      ],
+      [
+        "Ns",
+        "Find the normal force when the bead is level with the centre.",
+        "N",
+        [
+          "m*10",
+          "Ns+m*10",
+          "Ns-m*10"
+        ]
+      ]
+    ],
+    "explanation": "Energy gives v² = 2g(h−y). At the top gravity and the normal force are both inward: Ntop = m(vtop²/r−g) = {Nt} N. At the bottom, Nbottom−mg = mvbottom²/r, giving {Nb} N. At centre height gravity has no radial component and Nside = 2mg(h−r)/r = {Ns} N.",
+    "checks": [
+      "Nt+m*10-m*vt2/r",
+      "Nb-m*10-m*vb2/r"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 4,
+    "key": "elastic_then_climb",
+    "topic": "Elastic impact followed by gravitational rise",
+    "stem": "A block of mass {m} kg moving at {u} m/s collides head-on elastically with a stationary {M} kg block on a smooth horizontal track. The second block then enters a smooth incline. Use g = 10 m/s².",
+    "variants": [
+      {
+        "m": 2,
+        "M": 3,
+        "u": 10
+      },
+      {
+        "m": 3,
+        "M": 5,
+        "u": 8
+      }
+    ],
+    "derived": [
+      [
+        "v1",
+        "(m-M)*u/(m+M)"
+      ],
+      [
+        "v2",
+        "2*m*u/(m+M)"
+      ],
+      [
+        "h",
+        "v2*v2/20"
+      ],
+      [
+        "fraction",
+        "4*m*M/(m+M)**2"
+      ],
+      [
+        "impulse",
+        "M*v2"
+      ]
+    ],
+    "tasks": [
+      [
+        "h",
+        "Find the greatest vertical height reached by the second block above the horizontal track.",
+        "m",
+        [
+          "u*u/20",
+          "h/2",
+          "v1*v1/20"
+        ]
+      ],
+      [
+        "fraction",
+        "What fraction of the initial kinetic energy is transferred to the second block?",
+        "",
+        [
+          "m/(m+M)",
+          "M/(m+M)",
+          "fraction/2"
+        ]
+      ],
+      [
+        "impulse",
+        "Find the magnitude of the impulse delivered to the second block during collision.",
+        "N s",
+        [
+          "m*u",
+          "m*abs(v1)",
+          "impulse/2"
+        ]
+      ]
+    ],
+    "explanation": "Momentum conservation and reversal of relative velocity give v₁ = {v1} m/s and v₂ = {v2} m/s. The second block rises to v₂²/(2g) = {h} m. Its energy fraction is Mv₂²/(mu²) = {fraction}; its impulse is Mv₂ = {impulse} N s.",
+    "checks": [
+      "m*v1+M*v2-m*u",
+      "v2-v1-u",
+      "m*v1*v1+M*v2*v2-m*u*u"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 4,
+    "key": "variable_force",
+    "topic": "Force-position integration and turning point",
+    "stem": "A {m} kg particle starts from rest at x = 0 on a smooth horizontal line. Its only horizontal force is F(x) = {A}−{B}x N, where x is in metres. The force remains described by this relation throughout the motion.",
+    "variants": [
+      {
+        "m": 2,
+        "A": 12,
+        "B": 3
+      },
+      {
+        "m": 3,
+        "A": 18,
+        "B": 2
+      }
+    ],
+    "derived": [
+      [
+        "xe",
+        "A/B"
+      ],
+      [
+        "xturn",
+        "2*A/B"
+      ],
+      [
+        "vmax",
+        "A/sqrt(B*m)"
+      ],
+      [
+        "time",
+        "pi*sqrt(m/B)"
+      ]
+    ],
+    "tasks": [
+      [
+        "vmax",
+        "Find the maximum speed reached.",
+        "m/s",
+        [
+          "sqrt(2*A*A/(B*m))",
+          "A/sqrt(2*B*m)",
+          "A/B"
+        ]
+      ],
+      [
+        "xturn",
+        "Find the first positive turning-point coordinate.",
+        "m",
+        [
+          "A/B",
+          "A/(2*B)",
+          "4*A/B"
+        ]
+      ],
+      [
+        "time",
+        "Find the time from release to the first positive turning point.",
+        "s",
+        [
+          "2*pi*sqrt(m/B)",
+          "pi/2*sqrt(m/B)",
+          "sqrt(2*xturn*m/A)"
+        ]
+      ]
+    ],
+    "explanation": "Integrating F gives K = Ax−Bx²/2. This is largest at x = A/B = {xe} m, giving vmax = A/√(Bm) = {vmax} m/s. The next zero of K is x = 2A/B = {xturn} m. Motion about x = A/B is SHM with ω = √(B/m); the turning point is reached after half a period, {time} s.",
+    "checks": [
+      "A*xturn-B*xturn*xturn/2",
+      "m*vmax*vmax/2-A*xe+B*xe*xe/2"
+    ],
+    "figure": "force",
+    "refined": true
+  },
+  {
+    "unit": 4,
+    "key": "ballistic_pendulum",
+    "topic": "Momentum loss followed by pendulum energy",
+    "stem": "A projectile of mass {m} kg moving horizontally embeds in a stationary pendulum bob of mass {M} kg on a light string of length {L} m. After impact the combined body rises until the string makes angle θ with vertical, with cos θ = {c}. Use g = 10 m/s²; the collision is brief.",
+    "variants": [
+      {
+        "m": 0.02,
+        "M": 0.98,
+        "L": 1,
+        "c": 0.8
+      },
+      {
+        "m": 0.05,
+        "M": 0.95,
+        "L": 2,
+        "c": 0.9
+      }
+    ],
+    "derived": [
+      [
+        "h",
+        "L*(1-c)"
+      ],
+      [
+        "v",
+        "sqrt(20*h)"
+      ],
+      [
+        "u",
+        "(m+M)*v/m"
+      ],
+      [
+        "lost",
+        "m*u*u/2-(m+M)*v*v/2"
+      ],
+      [
+        "T",
+        "(m+M)*(10+v*v/L)"
+      ]
+    ],
+    "tasks": [
+      [
+        "u",
+        "Find the incident projectile speed.",
+        "m/s",
+        [
+          "v",
+          "sqrt(20*h*(m+M)/m)",
+          "u/2"
+        ]
+      ],
+      [
+        "lost",
+        "Find the energy dissipated in embedding.",
+        "J",
+        [
+          "(m+M)*10*h",
+          "m*u*u/2",
+          "lost/2"
+        ]
+      ],
+      [
+        "T",
+        "Find the string tension immediately after embedding.",
+        "N",
+        [
+          "(m+M)*10",
+          "(m+M)*v*v/L",
+          "T/2"
+        ]
+      ]
+    ],
+    "explanation": "The rise is h = L(1−cosθ) = {h} m. Energy after the collision gives v = √(2gh) = {v} m/s. Momentum during impact then gives u = (m+M)v/m = {u} m/s. Collision energy loss is {lost} J. At the lowest point T−(m+M)g = (m+M)v²/L, so T = {T} N.",
+    "checks": [
+      "m*u-(m+M)*v",
+      "(m+M)*v*v/2-(m+M)*10*h"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 5,
+    "key": "massive_pulley",
+    "topic": "Translation coupled to pulley rotation",
+    "stem": "Two masses {m1} kg and {m2} kg hang on opposite sides of a light string over a uniform solid-disc pulley of mass {mp} kg and radius {r} m. The axle is frictionless and the string does not slip. The heavier mass starts from rest and descends {d} m. Use g = 10 m/s².",
+    "variants": [
+      {
+        "m1": 2,
+        "m2": 4,
+        "mp": 4,
+        "r": 0.2,
+        "d": 3
+      },
+      {
+        "m1": 3,
+        "m2": 6,
+        "mp": 6,
+        "r": 0.3,
+        "d": 2
+      }
+    ],
+    "derived": [
+      [
+        "I",
+        "mp*r*r/2"
+      ],
+      [
+        "a",
+        "(m2-m1)*10/(m1+m2+mp/2)"
+      ],
+      [
+        "T1",
+        "m1*(10+a)"
+      ],
+      [
+        "T2",
+        "m2*(10-a)"
+      ],
+      [
+        "omega",
+        "sqrt(2*a*d)/r"
+      ]
+    ],
+    "tasks": [
+      [
+        "T1",
+        "Find the tension on the lighter-mass side.",
+        "N",
+        [
+          "m1*10",
+          "m1*(10-a)",
+          "T2"
+        ]
+      ],
+      [
+        "T2",
+        "Find the tension on the heavier-mass side.",
+        "N",
+        [
+          "m2*10",
+          "T1",
+          "m2*(10+a)"
+        ]
+      ],
+      [
+        "omega",
+        "Find the pulley’s angular speed after that descent.",
+        "rad/s",
+        [
+          "sqrt(20*d)/r",
+          "sqrt(a*d)/r",
+          "sqrt(2*a*d)"
+        ]
+      ]
+    ],
+    "explanation": "For the masses, T₁−m₁g = m₁a and m₂g−T₂ = m₂a. The pulley satisfies (T₂−T₁)r = I(a/r), with I = Mpr²/2. Thus a = {a} m/s², T₁ = {T1} N, T₂ = {T2} N. From v² = 2ad and v = ωr, ω = {omega} rad/s.",
+    "checks": [
+      "T1-m1*10-m1*a",
+      "m2*10-T2-m2*a",
+      "(T2-T1)*r-I*a/r"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 5,
+    "key": "disc_stick",
+    "topic": "Angular-momentum conservation and rotational loss",
+    "stem": "A uniform horizontal disc of mass {M} kg and radius {R} m rotates at {w} rad/s about its frictionless fixed vertical axis. A small putty mass {m} kg is dropped vertically and sticks at distance {r} m from the axis. The putty has zero initial angular momentum about the axis. Consider only the change of rotational kinetic energy.",
+    "variants": [
+      {
+        "M": 4,
+        "R": 0.5,
+        "w": 12,
+        "m": 2,
+        "r": 0.5
+      },
+      {
+        "M": 6,
+        "R": 0.4,
+        "w": 15,
+        "m": 3,
+        "r": 0.4
+      }
+    ],
+    "derived": [
+      [
+        "I",
+        "M*R*R/2"
+      ],
+      [
+        "It",
+        "I+m*r*r"
+      ],
+      [
+        "wf",
+        "I*w/It"
+      ],
+      [
+        "loss",
+        "I*w*w/2-It*wf*wf/2"
+      ],
+      [
+        "force",
+        "m*wf*wf*r"
+      ]
+    ],
+    "tasks": [
+      [
+        "wf",
+        "Find the final angular speed.",
+        "rad/s",
+        [
+          "w",
+          "w*(M/(M+m))",
+          "w*2"
+        ]
+      ],
+      [
+        "loss",
+        "Find the loss of rotational kinetic energy.",
+        "J",
+        [
+          "It*wf*wf/2",
+          "I*w*w/2",
+          "loss/2"
+        ]
+      ],
+      [
+        "force",
+        "After sticking, what inward force is needed to maintain the putty’s circular motion?",
+        "N",
+        [
+          "m*w*w*r",
+          "m*wf*r",
+          "force/2"
+        ]
+      ]
+    ],
+    "explanation": "There is no external axial torque. Initial I = MR²/2 = {I} kg m²; final inertia is I+mr² = {It} kg m². Hence ωf = Iωi/(I+mr²) = {wf} rad/s. Subtracting rotational energies gives a loss of {loss} J. The putty requires centripetal force mωf²r = {force} N.",
+    "checks": [
+      "It*wf-I*w",
+      "loss+It*wf*wf/2-I*w*w/2"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 5,
+    "key": "rod_impulse",
+    "topic": "Off-centre impulse on a free rigid body",
+    "stem": "A uniform rod of mass {m} kg and length {L} m is initially at rest on a smooth horizontal table. A brief horizontal impulse of magnitude {J} N s acts perpendicular to the rod at one end. Ignore displacement during the impulse.",
+    "variants": [
+      {
+        "m": 3,
+        "L": 2,
+        "J": 6
+      },
+      {
+        "m": 2,
+        "L": 3,
+        "J": 8
+      }
+    ],
+    "derived": [
+      [
+        "v",
+        "J/m"
+      ],
+      [
+        "I",
+        "m*L*L/12"
+      ],
+      [
+        "w",
+        "J*L/(2*I)"
+      ],
+      [
+        "K",
+        "m*v*v/2+I*w*w/2"
+      ],
+      [
+        "vend",
+        "v+w*L/2"
+      ]
+    ],
+    "tasks": [
+      [
+        "w",
+        "Find the angular speed immediately after the impulse.",
+        "rad/s",
+        [
+          "J*L/I",
+          "J/(m*L)",
+          "w/2"
+        ]
+      ],
+      [
+        "K",
+        "Find the total kinetic energy immediately after the impulse.",
+        "J",
+        [
+          "m*v*v/2",
+          "I*w*w/2",
+          "K/2"
+        ]
+      ],
+      [
+        "vend",
+        "Find the speed of the struck end immediately after the impulse.",
+        "m/s",
+        [
+          "v",
+          "w*L/2",
+          "abs(v-w*L/2)"
+        ]
+      ]
+    ],
+    "explanation": "Linear impulse gives vCM = J/m = {v} m/s. Angular impulse about the centre is JL/2 = Iω with I = mL²/12, giving ω = {w} rad/s. Translation and rotation together carry {K} J. At the struck end the two velocity contributions add, giving {vend} m/s.",
+    "checks": [
+      "m*v-J",
+      "I*w-J*L/2",
+      "K-m*v*v/2-I*w*w/2"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 5,
+    "key": "rod_pivot_fall",
+    "topic": "Rigid-body energy and pivot reaction",
+    "stem": "A uniform rod of mass {m} kg and length {L} m is hinged at one end to a frictionless horizontal axle. It is released from rest while horizontal and swings in a vertical plane. Take g = 10 m/s².",
+    "variants": [
+      {
+        "m": 3,
+        "L": 2
+      },
+      {
+        "m": 2,
+        "L": 1.5
+      }
+    ],
+    "derived": [
+      [
+        "I",
+        "m*L*L/3"
+      ],
+      [
+        "w",
+        "sqrt(30/L)"
+      ],
+      [
+        "tip",
+        "w*L"
+      ],
+      [
+        "reaction",
+        "m*(10+w*w*L/2)"
+      ],
+      [
+        "a0",
+        "15/L"
+      ]
+    ],
+    "tasks": [
+      [
+        "tip",
+        "Find the free-end speed as the rod first becomes vertical.",
+        "m/s",
+        [
+          "sqrt(20*L)",
+          "sqrt(10*L)",
+          "tip/2"
+        ]
+      ],
+      [
+        "reaction",
+        "Find the magnitude of the hinge force at that vertical position.",
+        "N",
+        [
+          "m*10",
+          "m*w*w*L/2",
+          "reaction/2"
+        ]
+      ],
+      [
+        "a0",
+        "Find the angular acceleration immediately after release.",
+        "rad/s²",
+        [
+          "10/L",
+          "30/L",
+          "a0/2"
+        ]
+      ]
+    ],
+    "explanation": "The centre falls by L/2, so mgL/2 = Iω²/2 with I = mL²/3. Thus ω = {w} rad/s and the tip speed is {tip} m/s. At the bottom the centre has upward acceleration ω²L/2, giving hinge force m(g+ω²L/2) = {reaction} N. Initially mgL/2 = Iα, so α = {a0} rad/s².",
+    "checks": [
+      "I*w*w/2-m*10*L/2",
+      "reaction-m*10-m*w*w*L/2",
+      "I*a0-m*10*L/2"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 5,
+    "key": "rotational_brake",
+    "topic": "Rotational dynamics from two measured stages",
+    "stem": "A rigid rotor starts from rest. A constant driving torque {drive} N m acts for {t1} s while a constant opposing friction torque also acts. It then coasts to rest in {t2} s after the drive is removed. Its measured angle during the driven stage is {theta} rad. Assume friction torque is independent of speed.",
+    "variants": [
+      {
+        "drive": 12,
+        "t1": 4,
+        "t2": 8,
+        "theta": 32
+      },
+      {
+        "drive": 15,
+        "t1": 3,
+        "t2": 6,
+        "theta": 27
+      }
+    ],
+    "derived": [
+      [
+        "a",
+        "2*theta/t1**2"
+      ],
+      [
+        "w",
+        "a*t1"
+      ],
+      [
+        "decel",
+        "w/t2"
+      ],
+      [
+        "I",
+        "drive/(a+decel)"
+      ],
+      [
+        "fr",
+        "I*decel"
+      ],
+      [
+        "coast",
+        "w*t2/2"
+      ]
+    ],
+    "tasks": [
+      [
+        "I",
+        "Find the rotor’s moment of inertia.",
+        "kg m²",
+        [
+          "drive/a",
+          "drive/decel",
+          "I/2"
+        ]
+      ],
+      [
+        "fr",
+        "Find the opposing friction torque.",
+        "N m",
+        [
+          "drive",
+          "drive/2",
+          "fr*2"
+        ]
+      ],
+      [
+        "coast",
+        "Find the angle rotated during the coasting stage.",
+        "rad",
+        [
+          "theta",
+          "w*t2",
+          "coast/2"
+        ]
+      ]
+    ],
+    "explanation": "The driven acceleration is 2θ/t₁² = {a} rad/s², so the cut-off speed is {w} rad/s. Coasting deceleration is ω/t₂ = {decel} rad/s². Adding τdrive−τfr = Iα and τfr = Iβ gives I = {I} kg m² and τfr = {fr} N m. Coasting through average speed ω/2 gives {coast} rad.",
+    "checks": [
+      "drive-fr-I*a",
+      "fr-I*decel",
+      "coast-w*t2/2"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 5,
+    "key": "two_mass_com",
+    "topic": "Centre of mass and internal forces",
+    "stem": "Two particles of masses {m1} kg and {m2} kg lie at x = 0 and x = {d} m on a smooth horizontal line. A compressed ideal spring between them is released from rest and ultimately gives them total kinetic energy {E} J. No external horizontal force acts. The spring becomes detached after release.",
+    "variants": [
+      {
+        "m1": 2,
+        "m2": 3,
+        "d": 1,
+        "E": 30
+      },
+      {
+        "m1": 1,
+        "m2": 4,
+        "d": 2,
+        "E": 40
+      }
+    ],
+    "derived": [
+      [
+        "p",
+        "sqrt(2*E/(1/m1+1/m2))"
+      ],
+      [
+        "v1",
+        "p/m1"
+      ],
+      [
+        "v2",
+        "p/m2"
+      ],
+      [
+        "com",
+        "m2*d/(m1+m2)"
+      ],
+      [
+        "relative",
+        "v1+v2"
+      ]
+    ],
+    "tasks": [
+      [
+        "v1",
+        "Find the speed of the lighter particle after separation.",
+        "m/s",
+        [
+          "sqrt(2*E/m1)",
+          "v2",
+          "v1/2"
+        ]
+      ],
+      [
+        "relative",
+        "Find the speed with which their separation increases after detachment.",
+        "m/s",
+        [
+          "abs(v1-v2)",
+          "sqrt(2*E/(m1+m2))",
+          "relative/2"
+        ]
+      ],
+      [
+        "com",
+        "Find the centre-of-mass coordinate when the lighter particle has moved 1 m to the left of its initial position.",
+        "m",
+        [
+          "com-1",
+          "d/2",
+          "com+1"
+        ]
+      ]
+    ],
+    "explanation": "Equal and opposite momenta have magnitude p. Total energy gives p²(1/m₁+1/m₂)/2 = E, so the speeds are {v1} and {v2} m/s in opposite directions. Relative separation speed is {relative} m/s. The centre of mass remains fixed at m₂d/(m₁+m₂) = {com} m.",
+    "checks": [
+      "m1*v1-m2*v2",
+      "m1*v1*v1/2+m2*v2*v2/2-E"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 6,
+    "key": "satellite_energy",
+    "topic": "Satellite energy and orbital period",
+    "stem": "A satellite of mass {m} kg moves in a circular orbit of radius {r} m around a spherical planet whose gravitational parameter GM is {gm} m³/s². It is transferred to a circular orbit of twice that radius. Ignore other bodies and compare the two circular orbits only.",
+    "variants": [
+      {
+        "m": 200,
+        "r": 8000000,
+        "gm": 400000000000000.0
+      },
+      {
+        "m": 400,
+        "r": 10000000,
+        "gm": 400000000000000.0
+      }
+    ],
+    "derived": [
+      [
+        "work",
+        "gm*m/(4*r)"
+      ],
+      [
+        "ratio",
+        "2*sqrt(2)"
+      ],
+      [
+        "period",
+        "2*pi*sqrt((2*r)**3/gm)"
+      ],
+      [
+        "dv",
+        "sqrt(gm/r)*(1-1/sqrt(2))"
+      ],
+      [
+        "changeK",
+        "-gm*m/(4*r)"
+      ]
+    ],
+    "tasks": [
+      [
+        "work",
+        "What net increase in orbital mechanical energy is required?",
+        "J",
+        [
+          "gm*m/(2*r)",
+          "-work",
+          "work/2"
+        ]
+      ],
+      [
+        "period",
+        "Find the final orbital period.",
+        "s",
+        [
+          "period/2",
+          "period/sqrt(2)",
+          "period/(2*sqrt(2))"
+        ]
+      ],
+      [
+        "dv",
+        "By how much is the final circular-orbit speed smaller than the initial speed?",
+        "m/s",
+        [
+          "sqrt(gm/r)/2",
+          "sqrt(gm/(2*r))",
+          "dv*2"
+        ]
+      ]
+    ],
+    "explanation": "For a circular orbit, E = −GMm/(2r), v = √(GM/r), and T is proportional to r³ᐟ². Doubling r raises E by GMm/(4r) = {work} J, multiplies T by 2√2 = {ratio}, giving final period {period} s, and lowers speed by {dv} m/s.",
+    "checks": [
+      "work-(-gm*m/(4*r)+gm*m/(2*r))",
+      "ratio*ratio-8"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 6,
+    "key": "surface_escape",
+    "topic": "Planet parameters inferred from escape and orbital speeds",
+    "stem": "For a spherical planet of radius R, the escape speed from its surface is {ve} m/s. A satellite in a circular orbit at height {h} m above the surface has speed {vo} m/s. Ignore the planet’s rotation.",
+    "variants": [
+      {
+        "ve": 10000,
+        "h": 4000000,
+        "vo": 5000
+      },
+      {
+        "ve": 12000,
+        "h": 6000000,
+        "vo": 6000
+      }
+    ],
+    "derived": [
+      [
+        "R",
+        "h/(ve*ve/(2*vo*vo)-1)"
+      ],
+      [
+        "gm",
+        "ve*ve*R/2"
+      ],
+      [
+        "g",
+        "gm/(R*R)"
+      ],
+      [
+        "period",
+        "2*pi*(R+h)/vo"
+      ]
+    ],
+    "tasks": [
+      [
+        "R",
+        "Find the planet’s radius.",
+        "m",
+        [
+          "h/2",
+          "2*h",
+          "h/4"
+        ]
+      ],
+      [
+        "g",
+        "Find the acceleration due to gravity at its surface.",
+        "m/s²",
+        [
+          "vo*vo/R",
+          "ve*ve/R",
+          "g/2"
+        ]
+      ],
+      [
+        "period",
+        "Find the satellite’s orbital period.",
+        "s",
+        [
+          "2*pi*R/vo",
+          "pi*(R+h)/vo",
+          "2*pi*(R+h)/ve"
+        ]
+      ]
+    ],
+    "explanation": "The two observations imply ve² = 2GM/R and vo² = GM/(R+h). Eliminating GM gives R = h/[ve²/(2vo²)−1] = {R} m. Then GM = {gm} m³/s², g = GM/R² = {g} m/s², and T = 2π(R+h)/vo = {period} s.",
+    "checks": [
+      "ve*ve-2*gm/R",
+      "vo*vo-gm/(R+h)"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 6,
+    "key": "radial_launch",
+    "topic": "Radial launch below escape speed",
+    "stem": "A particle is projected radially outward from a spherical planet’s surface at a speed equal to {f} times its surface escape speed. The planet radius is {R} m and surface gravitational acceleration is {g} m/s². Ignore rotation, atmosphere and other bodies.",
+    "variants": [
+      {
+        "f": 0.6,
+        "R": 6000000,
+        "g": 10
+      },
+      {
+        "f": 0.8,
+        "R": 6400000,
+        "g": 10
+      }
+    ],
+    "derived": [
+      [
+        "rmax",
+        "R/(1-f*f)"
+      ],
+      [
+        "height",
+        "rmax-R"
+      ],
+      [
+        "accel",
+        "g*(R/rmax)**2"
+      ],
+      [
+        "potential",
+        "-g*R*R/rmax"
+      ]
+    ],
+    "tasks": [
+      [
+        "height",
+        "Find the greatest height above the surface.",
+        "m",
+        [
+          "rmax",
+          "f*f*R",
+          "height/2"
+        ]
+      ],
+      [
+        "accel",
+        "Find the gravitational acceleration magnitude at the highest point.",
+        "m/s²",
+        [
+          "g*(1-f*f)",
+          "g*f*f",
+          "g"
+        ]
+      ],
+      [
+        "potential",
+        "Find the gravitational potential per unit mass at the highest point, with zero at infinity.",
+        "J/kg",
+        [
+          "-g*R",
+          "g*R*f*f",
+          "-g*R/rmax"
+        ]
+      ]
+    ],
+    "explanation": "Energy per unit mass at launch is f²GM/R−GM/R = −(1−f²)GM/R. At the turning point the speed is zero, so rmax = R/(1−f²) = {rmax} m. The height is {height} m, acceleration g(R/rmax)² = {accel} m/s², and potential −GM/rmax = {potential} J/kg.",
+    "checks": [
+      "potential-(f*f-1)*g*R",
+      "potential+g*R*R/rmax"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 6,
+    "key": "binary_gravity",
+    "topic": "Two-body gravity and centre-of-mass motion",
+    "stem": "Two isolated spherical bodies of masses {m1} kg and {m2} kg move in circular orbits about their common centre of mass, maintaining separation {d} m. Treat them as point masses; G = {G} N m²/kg².",
+    "variants": [
+      {
+        "m1": 2e+20,
+        "m2": 6e+20,
+        "d": 2000000.0,
+        "G": 6.67e-11
+      },
+      {
+        "m1": 3e+20,
+        "m2": 9e+20,
+        "d": 3000000.0,
+        "G": 6.67e-11
+      }
+    ],
+    "derived": [
+      [
+        "r1",
+        "m2*d/(m1+m2)"
+      ],
+      [
+        "omega",
+        "sqrt(G*(m1+m2)/d**3)"
+      ],
+      [
+        "speed",
+        "omega*r1"
+      ],
+      [
+        "period",
+        "2*pi/omega"
+      ],
+      [
+        "energy",
+        "-G*m1*m2/(2*d)"
+      ]
+    ],
+    "tasks": [
+      [
+        "speed",
+        "Find the speed of the lighter body about the centre of mass.",
+        "m/s",
+        [
+          "sqrt(G*m2/d)",
+          "omega*d",
+          "speed/2"
+        ]
+      ],
+      [
+        "period",
+        "Find the common orbital period.",
+        "s",
+        [
+          "2*pi*sqrt(d**3/(G*m2))",
+          "pi/omega",
+          "4*pi/omega"
+        ]
+      ],
+      [
+        "energy",
+        "Find the total mechanical energy, with zero potential energy at infinite separation.",
+        "J",
+        [
+          "-G*m1*m2/d",
+          "G*m1*m2/(2*d)",
+          "energy/2"
+        ]
+      ]
+    ],
+    "explanation": "The lighter body has orbital radius m₂d/(m₁+m₂) = {r1} m. Mutual attraction provides centripetal acceleration, giving ω² = G(m₁+m₂)/d³. Hence its speed is {speed} m/s and the period is {period} s. Total kinetic energy is GM₁M₂/(2d), so total energy is {energy} J.",
+    "checks": [
+      "m1*omega*omega*r1-G*m1*m2/d**2",
+      "energy+G*m1*m2/(2*d)"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 7,
+    "key": "compound_wire",
+    "topic": "Elastic extension of a composite wire",
+    "stem": "Two wires are joined end to end and hang vertically under a {F} N load. Their weights are negligible. Wire A has length {L1} m, area {A1} mm² and Young’s modulus {Y1} GPa. Wire B has length {L2} m, area {A2} mm² and Young’s modulus {Y2} GPa. Both remain linearly elastic.",
+    "variants": [
+      {
+        "F": 100,
+        "L1": 1,
+        "L2": 2,
+        "A1": 1,
+        "A2": 2,
+        "Y1": 100,
+        "Y2": 200
+      },
+      {
+        "F": 120,
+        "L1": 2,
+        "L2": 1,
+        "A1": 2,
+        "A2": 1,
+        "Y1": 120,
+        "Y2": 80
+      }
+    ],
+    "derived": [
+      [
+        "x1",
+        "F*L1/(A1*Y1*1000)"
+      ],
+      [
+        "x2",
+        "F*L2/(A2*Y2*1000)"
+      ],
+      [
+        "extension",
+        "1000*(x1+x2)"
+      ],
+      [
+        "k",
+        "F/(x1+x2)"
+      ],
+      [
+        "energy",
+        "F*(x1+x2)/2"
+      ]
+    ],
+    "tasks": [
+      [
+        "extension",
+        "Find the total extension.",
+        "mm",
+        [
+          "1000*x1",
+          "1000*x2",
+          "extension/2"
+        ]
+      ],
+      [
+        "k",
+        "Find the effective force constant of the pair.",
+        "N/m",
+        [
+          "A1*Y1*1000/L1+A2*Y2*1000/L2",
+          "F/x1",
+          "F/x2"
+        ]
+      ],
+      [
+        "energy",
+        "Find the total elastic energy stored.",
+        "J",
+        [
+          "F*(x1+x2)",
+          "F*x1/2",
+          "F*x2/2"
+        ]
+      ]
+    ],
+    "explanation": "Series wires carry equal tension. Apply ΔL = FL/(AY) to each: ΔL₁ = {x1} m and ΔL₂ = {x2} m. The extensions add to {extension} mm; keff = F/(ΔL₁+ΔL₂) = {k} N/m. Quasistatic elastic energy is F(ΔL₁+ΔL₂)/2 = {energy} J.",
+    "checks": [
+      "x1*A1*Y1*1000-F*L1",
+      "x2*A2*Y2*1000-F*L2"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 7,
+    "key": "venturi",
+    "topic": "Continuity with a pressure measurement",
+    "stem": "Water of density 1000 kg/m³ flows steadily through a horizontal pipe. Its wide and narrow cross-sectional areas are {A1} cm² and {A2} cm². The pressure in the wide part exceeds that in the narrow part by {dp} Pa. Assume incompressible, nonviscous flow.",
+    "variants": [
+      {
+        "A1": 8,
+        "A2": 4,
+        "dp": 6000
+      },
+      {
+        "A1": 12,
+        "A2": 4,
+        "dp": 16000
+      }
+    ],
+    "derived": [
+      [
+        "ratio",
+        "A1/A2"
+      ],
+      [
+        "v1",
+        "sqrt(2*dp/(1000*(ratio*ratio-1)))"
+      ],
+      [
+        "v2",
+        "ratio*v1"
+      ],
+      [
+        "flow",
+        "A1*1e-4*v1*1000"
+      ],
+      [
+        "power",
+        "dp*flow/1000"
+      ]
+    ],
+    "tasks": [
+      [
+        "v2",
+        "Find the flow speed in the narrow part.",
+        "m/s",
+        [
+          "v1",
+          "sqrt(2*dp/1000)",
+          "ratio*sqrt(2*dp/1000)"
+        ]
+      ],
+      [
+        "flow",
+        "Find the volume flow rate.",
+        "litre/s",
+        [
+          "A2*1e-4*v1*1000",
+          "flow*2",
+          "flow/2"
+        ]
+      ],
+      [
+        "power",
+        "Find the rate at which pressure work is converted to kinetic energy between the sections.",
+        "W",
+        [
+          "dp*flow",
+          "power/2",
+          "power*2"
+        ]
+      ]
+    ],
+    "explanation": "Continuity gives v₂/v₁ = A₁/A₂ = {ratio}. Bernoulli’s equation gives Δp = ρ(v₂²−v₁²)/2, so v₁ = {v1} m/s and v₂ = {v2} m/s. Q = A₁v₁ = {flow} litre/s; pressure-power conversion ΔpQ = {power} W.",
+    "checks": [
+      "A1*v1-A2*v2",
+      "1000*(v2*v2-v1*v1)/2-dp"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 7,
+    "key": "droplet_merge",
+    "topic": "Surface energy in droplet coalescence",
+    "stem": "{n} identical spherical liquid drops of radius {r} mm combine into one spherical drop without loss of volume. Surface tension is {S} N/m and density is {rho} kg/m³. Neglect gravity for the shapes. Define an energy-equivalent speed v by Mv²/2 = released surface energy, where M is the total drop mass; this definition does not assert motion of its centre of mass.",
+    "variants": [
+      {
+        "n": 8,
+        "r": 1,
+        "S": 0.072,
+        "rho": 1000
+      },
+      {
+        "n": 27,
+        "r": 2,
+        "S": 0.05,
+        "rho": 800
+      }
+    ],
+    "derived": [
+      [
+        "R",
+        "n**(1/3)*r"
+      ],
+      [
+        "energy",
+        "4*pi*S*(n*(r*1e-3)**2-(R*1e-3)**2)"
+      ],
+      [
+        "speed",
+        "sqrt(2*energy/(n*rho*4*pi*(r*1e-3)**3/3))"
+      ],
+      [
+        "pressure",
+        "2*S/(R*1e-3)"
+      ]
+    ],
+    "tasks": [
+      [
+        "energy",
+        "Find the released surface energy.",
+        "J",
+        [
+          "4*pi*S*n*(r*1e-3)**2",
+          "energy/2",
+          "energy*2"
+        ]
+      ],
+      [
+        "speed",
+        "Find the defined energy-equivalent speed.",
+        "m/s",
+        [
+          "speed/sqrt(2)",
+          "speed*sqrt(2)",
+          "sqrt(6*S/(rho*r*1e-3))"
+        ]
+      ],
+      [
+        "pressure",
+        "Find the excess pressure inside the final liquid drop.",
+        "Pa",
+        [
+          "4*S/(R*1e-3)",
+          "2*S/(r*1e-3)",
+          "pressure/2"
+        ]
+      ]
+    ],
+    "explanation": "Conservation of volume gives R = n¹ᐟ³r = {R} mm. Surface energy falls by 4πS(nr²−R²) = {energy} J. Using the total liquid mass in mv²/2 gives {speed} m/s. A liquid drop has one interface, so excess pressure is 2S/R = {pressure} Pa.",
+    "checks": [
+      "R**3-n*r**3",
+      "pressure*R*1e-3-2*S"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 7,
+    "key": "stokes_inverse",
+    "topic": "Terminal speed and viscous dissipation",
+    "stem": "A spherical bead of radius {r} mm and density {rho} kg/m³ falls at terminal speed {v} mm/s through a liquid of density {rhol} kg/m³. Assume Stokes flow, no wall effects and g = 10 m/s².",
+    "variants": [
+      {
+        "r": 1,
+        "rho": 3000,
+        "rhol": 1000,
+        "v": 20
+      },
+      {
+        "r": 0.5,
+        "rho": 5000,
+        "rhol": 1000,
+        "v": 10
+      }
+    ],
+    "derived": [
+      [
+        "R",
+        "r*1e-3"
+      ],
+      [
+        "V",
+        "v*1e-3"
+      ],
+      [
+        "eta",
+        "2*R*R*(rho-rhol)*10/(9*V)"
+      ],
+      [
+        "power",
+        "4*pi*R**3*(rho-rhol)*10*V/3"
+      ],
+      [
+        "v2",
+        "4*v"
+      ],
+      [
+        "K2",
+        "0.5*(4*pi*(2*R)**3*rho/3)*(4*V)**2"
+      ]
+    ],
+    "tasks": [
+      [
+        "eta",
+        "Find the dynamic viscosity of the liquid.",
+        "Pa s",
+        [
+          "eta/2",
+          "eta*2",
+          "eta*rho/(rho-rhol)"
+        ]
+      ],
+      [
+        "power",
+        "Find the rate of energy dissipation due to viscous drag on this bead.",
+        "W",
+        [
+          "power*rho/(rho-rhol)",
+          "power/2",
+          "power*2"
+        ]
+      ],
+      [
+        "K2",
+        "A bead of the same material has twice the radius and remains in Stokes flow. Find its kinetic energy at terminal speed in the same liquid.",
+        "J",
+        [
+          "K2/16",
+          "K2/8",
+          "K2/2"
+        ]
+      ]
+    ],
+    "explanation": "At terminal speed, weight minus buoyancy equals Stokes drag: (4πr³/3)(ρs−ρl)g = 6πηrv. This gives η = {eta} Pa s. Drag power is the effective weight times speed, {power} W. Since vt is proportional to r², doubling radius gives {v2} mm/s. The doubled-radius bead has eight times the original mass and four times the speed. Its kinetic energy is {K2} J.",
+    "checks": [
+      "6*pi*eta*R*V-4*pi*R**3*(rho-rhol)*10/3"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 7,
+    "key": "ice_calorimeter",
+    "topic": "Calorimetry with a phase change",
+    "stem": "An insulated calorimeter of heat capacity {C} J/K contains {mw} kg water at {Tw} °C. Ice of mass {mi} kg at 0 °C is added. Use water specific heat 4200 J/(kg K), ice latent heat 336000 J/kg. The calorimeter initially has the water’s temperature and no heat escapes.",
+    "variants": [
+      {
+        "C": 210,
+        "mw": 0.4,
+        "Tw": 60,
+        "mi": 0.1
+      },
+      {
+        "C": 420,
+        "mw": 0.5,
+        "Tw": 50,
+        "mi": 0.1
+      }
+    ],
+    "derived": [
+      [
+        "Tf",
+        "((mw*4200+C)*Tw-mi*336000)/((mw+mi)*4200+C)"
+      ],
+      [
+        "iceheat",
+        "mi*(336000+4200*Tf)"
+      ],
+      [
+        "maxice",
+        "(mw*4200+C)*Tw/336000"
+      ]
+    ],
+    "tasks": [
+      [
+        "Tf",
+        "All the ice melts. Find the final equilibrium temperature.",
+        "°C",
+        [
+          "((mw*4200+C)*Tw)/((mw+mi)*4200+C)",
+          "Tf/2",
+          "Tw-mi*336000/(mw*4200+C)"
+        ]
+      ],
+      [
+        "iceheat",
+        "Find the total heat absorbed by the added ice, including warming after melting.",
+        "J",
+        [
+          "mi*336000",
+          "mi*4200*Tf",
+          "iceheat/2"
+        ]
+      ],
+      [
+        "maxice",
+        "What is the greatest mass of ice initially at 0 °C that could just melt in this initial calorimeter-water system?",
+        "kg",
+        [
+          "mw*4200*Tw/336000",
+          "maxice/2",
+          "maxice*2"
+        ]
+      ]
+    ],
+    "explanation": "Heat lost by water and calorimeter equals latent heat plus heating of the melted ice: (mw cw+C)(Tw−Tf)=mi L+mi cw Tf. The solution is Tf = {Tf} °C, confirming full melting. The ice absorbs {iceheat} J. The limiting just-melted case has Tf=0, giving {maxice} kg.",
+    "checks": [
+      "(mw*4200+C)*(Tw-Tf)-mi*(336000+4200*Tf)"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 7,
+    "key": "thermal_series",
+    "topic": "Steady conduction through two layers",
+    "stem": "Two plane slabs of equal area {A} m² are joined in series. Their thicknesses are {L1} m and {L2} m, and their thermal conductivities are {k1} and {k2} W/(m K). Their outer faces are maintained at {Th} °C and {Tc} °C, with slab 1 adjacent to the hot face. Contact resistance and side heat losses are negligible.",
+    "variants": [
+      {
+        "A": 0.1,
+        "L1": 0.02,
+        "L2": 0.04,
+        "k1": 20,
+        "k2": 10,
+        "Th": 100,
+        "Tc": 0
+      },
+      {
+        "A": 0.2,
+        "L1": 0.04,
+        "L2": 0.02,
+        "k1": 10,
+        "k2": 20,
+        "Th": 80,
+        "Tc": 20
+      }
+    ],
+    "derived": [
+      [
+        "R1",
+        "L1/(k1*A)"
+      ],
+      [
+        "R2",
+        "L2/(k2*A)"
+      ],
+      [
+        "rate",
+        "(Th-Tc)/(R1+R2)"
+      ],
+      [
+        "interface",
+        "Th-rate*R1"
+      ],
+      [
+        "keff",
+        "(L1+L2)/(L1/k1+L2/k2)"
+      ]
+    ],
+    "tasks": [
+      [
+        "rate",
+        "Find the steady heat-flow rate.",
+        "W",
+        [
+          "(Th-Tc)/R1",
+          "(Th-Tc)/R2",
+          "rate/2"
+        ]
+      ],
+      [
+        "interface",
+        "Find the interface temperature.",
+        "°C",
+        [
+          "(Th+Tc)/2",
+          "Th-rate*R2",
+          "Tc"
+        ]
+      ],
+      [
+        "keff",
+        "Find the conductivity of one uniform slab of the same total thickness and area that gives the same heat flow.",
+        "W/(m K)",
+        [
+          "(k1+k2)/2",
+          "k1+k2",
+          "keff/2"
+        ]
+      ]
+    ],
+    "explanation": "The thermal resistances L/(kA) add. Their sum gives heat rate {rate} W; the drop across slab 1 is rate×R₁, so the interface is {interface} °C. Equating the series resistance to (L₁+L₂)/(keff A) gives keff = {keff} W/(m K).",
+    "checks": [
+      "rate*R1-Th+interface",
+      "rate*R2-interface+Tc"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 8,
+    "key": "pv_cycle",
+    "topic": "Work and heat in a thermodynamic cycle",
+    "stem": "One mole of a monatomic ideal gas goes round A→B→C→A. A = ({V} m³, {P} Pa), B = ({V2} m³, {P} Pa), and C = ({V} m³, {P2} Pa), where coordinates are (volume, pressure). A→B is isobaric, B→C is a straight line in the p-V plane and C→A is isochoric. Work done by the gas is positive.",
+    "variants": [
+      {
+        "V": 0.01,
+        "V2": 0.03,
+        "P": 100000,
+        "P2": 300000
+      },
+      {
+        "V": 0.02,
+        "V2": 0.05,
+        "P": 100000,
+        "P2": 200000
+      }
+    ],
+    "derived": [
+      [
+        "Wab",
+        "P*(V2-V)"
+      ],
+      [
+        "Wbc",
+        "(P+P2)*(V-V2)/2"
+      ],
+      [
+        "net",
+        "Wab+Wbc"
+      ],
+      [
+        "Qab",
+        "2.5*P*(V2-V)"
+      ],
+      [
+        "Qbc",
+        "1.5*(P2*V-P*V2)+Wbc"
+      ]
+    ],
+    "tasks": [
+      [
+        "net",
+        "Find the net work done by the gas in the cycle.",
+        "J",
+        [
+          "-net",
+          "2*net",
+          "Wab"
+        ]
+      ],
+      [
+        "Qab",
+        "Find the heat supplied in A→B.",
+        "J",
+        [
+          "Wab",
+          "1.5*P*(V2-V)",
+          "Qab/2"
+        ]
+      ],
+      [
+        "Qbc",
+        "Find the signed heat transferred to the gas in B→C.",
+        "J",
+        [
+          "Wbc",
+          "1.5*(P2*V-P*V2)",
+          "-Qbc"
+        ]
+      ]
+    ],
+    "explanation": "Work is the signed area ∫p dV. WAB = {Wab} J and WBC = {Wbc} J; WCA = 0. Hence net work is {net} J. For a monatomic gas U = 3pV/2. Use Q = ΔU+W on each path to obtain QAB = {Qab} J and QBC = {Qbc} J.",
+    "checks": [
+      "net+(P2-P)*(V2-V)/2",
+      "Qab-1.5*P*(V2-V)-Wab"
+    ],
+    "figure": "pv",
+    "refined": true
+  },
+  {
+    "unit": 8,
+    "key": "adiabatic_then_isochoric",
+    "topic": "Successive thermodynamic processes",
+    "stem": "One mole of a monatomic ideal gas initially at {T} K and volume V expands reversibly and adiabatically to {factor}V, then is heated at fixed volume back to {T} K. Use γ = 5/3 and R = {R} J/(mol K).",
+    "variants": [
+      {
+        "T": 600,
+        "factor": 8,
+        "R": 8
+      },
+      {
+        "T": 800,
+        "factor": 8,
+        "R": 8
+      }
+    ],
+    "derived": [
+      [
+        "T2",
+        "T/factor**(2/3)"
+      ],
+      [
+        "W",
+        "1.5*R*(T-T2)"
+      ],
+      [
+        "Q",
+        "1.5*R*(T-T2)"
+      ],
+      [
+        "pfrac",
+        "1/factor"
+      ],
+      [
+        "intermediate",
+        "(1/factor)**(5/3)"
+      ]
+    ],
+    "tasks": [
+      [
+        "T2",
+        "Find the temperature immediately after the adiabatic expansion.",
+        "K",
+        [
+          "T/factor",
+          "T/factor**(5/3)",
+          "T/2"
+        ]
+      ],
+      [
+        "W",
+        "Find the net work done by the gas over both stages.",
+        "J",
+        [
+          "R*(T-T2)",
+          "2.5*R*(T-T2)",
+          "-W"
+        ]
+      ],
+      [
+        "pfrac",
+        "Find the final-to-initial pressure ratio after both stages.",
+        "",
+        [
+          "intermediate",
+          "1",
+          "1/sqrt(factor)"
+        ]
+      ]
+    ],
+    "explanation": "For the adiabatic stage TV^(γ−1) is constant, giving T₂ = {T2} K. With Q=0, gas work is the loss in internal energy, 3R(T−T₂)/2 = {W} J. The isochoric stage does no work. The final temperature equals the initial temperature, so pfinal/pinitial = Vinitial/Vfinal = {pfrac}.",
+    "checks": [
+      "T2*factor**(2/3)-T",
+      "W-1.5*R*(T-T2)"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 8,
+    "key": "engine_cascade",
+    "topic": "Reversible heat engines in series",
+    "stem": "Two reversible heat engines operate in series between reservoirs at {Th} K and {Tc} K, sharing an intermediate reservoir at T. Their efficiencies are equal. The first engine absorbs {Q} J per cycle from the hot reservoir; the second receives all the heat rejected by the first.",
+    "variants": [
+      {
+        "Th": 900,
+        "Tc": 400,
+        "Q": 900
+      },
+      {
+        "Th": 800,
+        "Tc": 200,
+        "Q": 1200
+      }
+    ],
+    "derived": [
+      [
+        "T",
+        "sqrt(Th*Tc)"
+      ],
+      [
+        "eta",
+        "1-T/Th"
+      ],
+      [
+        "W1",
+        "Q*eta"
+      ],
+      [
+        "Qmid",
+        "Q*(1-eta)"
+      ],
+      [
+        "W2",
+        "Qmid*eta"
+      ],
+      [
+        "total",
+        "Q*(1-Tc/Th)"
+      ]
+    ],
+    "tasks": [
+      [
+        "T",
+        "Find the intermediate temperature.",
+        "K",
+        [
+          "(Th+Tc)/2",
+          "Th-Tc",
+          "T/2"
+        ]
+      ],
+      [
+        "W2",
+        "Find the work produced by the second engine per cycle.",
+        "J",
+        [
+          "W1",
+          "Qmid",
+          "W2*2"
+        ]
+      ],
+      [
+        "total",
+        "Find the total work produced by both engines per cycle.",
+        "J",
+        [
+          "2*W1",
+          "Q*eta",
+          "Q*(Th-Tc)/Tc"
+        ]
+      ]
+    ],
+    "explanation": "Equal Carnot efficiencies imply 1−T/Th = 1−Tc/T, so T² = ThTc and T = {T} K. Each efficiency is {eta}. The first rejects {Qmid} J to the second, whose work is {W2} J. The pair has overall efficiency 1−Tc/Th and produces {total} J.",
+    "checks": [
+      "T*T-Th*Tc",
+      "W1+W2-total",
+      "Q-total-Q*Tc/Th"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 8,
+    "key": "linear_pv",
+    "topic": "Heat along a nonstandard straight p-V path",
+    "stem": "A monatomic ideal gas is taken quasistatically from (V,p) = ({V1} m³, {p1} Pa) to ({V2} m³, {p2} Pa) along the straight line joining these states in the p-V plane. Neglect non-pV work.",
+    "variants": [
+      {
+        "V1": 0.01,
+        "V2": 0.02,
+        "p1": 200000,
+        "p2": 300000
+      },
+      {
+        "V1": 0.02,
+        "V2": 0.04,
+        "p1": 100000,
+        "p2": 250000
+      }
+    ],
+    "derived": [
+      [
+        "W",
+        "(p1+p2)*(V2-V1)/2"
+      ],
+      [
+        "dU",
+        "1.5*(p2*V2-p1*V1)"
+      ],
+      [
+        "Q",
+        "W+dU"
+      ],
+      [
+        "Tratio",
+        "p2*V2/(p1*V1)"
+      ],
+      [
+        "fraction",
+        "W/Q"
+      ]
+    ],
+    "tasks": [
+      [
+        "Q",
+        "Find the heat supplied to the gas.",
+        "J",
+        [
+          "dU",
+          "W",
+          "dU-W"
+        ]
+      ],
+      [
+        "Tratio",
+        "Find the final-to-initial absolute-temperature ratio.",
+        "",
+        [
+          "p2/p1",
+          "V2/V1",
+          "Tratio/2"
+        ]
+      ],
+      [
+        "fraction",
+        "What fraction of the supplied heat becomes work done by the gas?",
+        "",
+        [
+          "W/dU",
+          "dU/Q",
+          "fraction/2"
+        ]
+      ]
+    ],
+    "explanation": "The work is the trapezoid area, W = (p₁+p₂)(V₂−V₁)/2 = {W} J. For a monatomic gas, ΔU = 3(p₂V₂−p₁V₁)/2 = {dU} J. Thus Q = {Q} J and W/Q = {fraction}. The ideal-gas equation gives T₂/T₁ = p₂V₂/(p₁V₁) = {Tratio}.",
+    "checks": [
+      "Q-W-dU"
+    ],
+    "figure": "linear_pv",
+    "refined": true
+  },
+  {
+    "unit": 9,
+    "key": "gas_mixture",
+    "topic": "Equipartition in an ideal-gas mixture",
+    "stem": "An ideal-gas mixture contains {a} mol of a monatomic gas and {b} mol of a rigid diatomic gas at the same temperature. Vibrational modes are frozen. The mixture is heated by {dT} K at constant volume. Use R = 8 J/(mol K); composition stays fixed.",
+    "variants": [
+      {
+        "a": 2,
+        "b": 1,
+        "dT": 50
+      },
+      {
+        "a": 1,
+        "b": 3,
+        "dT": 40
+      }
+    ],
+    "derived": [
+      [
+        "Cv",
+        "(1.5*a+2.5*b)*8"
+      ],
+      [
+        "Cp",
+        "Cv+(a+b)*8"
+      ],
+      [
+        "gamma",
+        "Cp/Cv"
+      ],
+      [
+        "Q",
+        "Cv*dT"
+      ],
+      [
+        "fraction",
+        "2.5*b*8*dT/Q"
+      ]
+    ],
+    "tasks": [
+      [
+        "gamma",
+        "Find Cp/Cv for the whole mixture.",
+        "",
+        [
+          "5/3",
+          "7/5",
+          "(a*5/3+b*7/5)/(a+b)"
+        ]
+      ],
+      [
+        "Q",
+        "Find the supplied heat.",
+        "J",
+        [
+          "(a+b)*1.5*8*dT",
+          "Cp*dT",
+          "Q/2"
+        ]
+      ],
+      [
+        "fraction",
+        "What fraction of the increase in internal energy belongs to the diatomic component?",
+        "",
+        [
+          "b/(a+b)",
+          "a/(a+b)",
+          "fraction/2"
+        ]
+      ]
+    ],
+    "explanation": "Heat capacities add in extensive form: CV = (3a/2+5b/2)R = {Cv} J/K; CP = CV+(a+b)R = {Cp} J/K. Therefore γ = {gamma}, QV = {Q} J. The diatomic energy increase is (5bR/2)ΔT, a fraction {fraction} of the total.",
+    "checks": [
+      "Cp-Cv-(a+b)*8",
+      "Q-(1.5*a+2.5*b)*8*dT"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 9,
+    "key": "rms_pressure",
+    "topic": "RMS speed, density and state change",
+    "stem": "An ideal gas initially has density {rho} kg/m³ and rms molecular speed {v} m/s. It is compressed to {vol} times its initial volume and heated to {temp} times its initial absolute temperature, with the number of molecules unchanged.",
+    "variants": [
+      {
+        "rho": 1.2,
+        "v": 500,
+        "vol": 0.5,
+        "temp": 2
+      },
+      {
+        "rho": 1.5,
+        "v": 400,
+        "vol": 0.25,
+        "temp": 4
+      }
+    ],
+    "derived": [
+      [
+        "p1",
+        "rho*v*v/3"
+      ],
+      [
+        "p2",
+        "p1*temp/vol"
+      ],
+      [
+        "v2",
+        "v*sqrt(temp)"
+      ],
+      [
+        "density",
+        "rho/vol"
+      ],
+      [
+        "ratio",
+        "temp/vol"
+      ],
+      [
+        "energy_density",
+        "0.5*density*v2*v2"
+      ]
+    ],
+    "tasks": [
+      [
+        "p2",
+        "Find the final pressure.",
+        "Pa",
+        [
+          "p1*temp",
+          "p1/vol",
+          "p2/2"
+        ]
+      ],
+      [
+        "v2",
+        "Find the final rms speed.",
+        "m/s",
+        [
+          "v*temp",
+          "v/vol",
+          "v*sqrt(temp/vol)"
+        ]
+      ],
+      [
+        "energy_density",
+        "Find the final translational kinetic energy per unit volume.",
+        "J/m³",
+        [
+          "energy_density/3",
+          "energy_density/2",
+          "0.5*rho*v*v"
+        ]
+      ]
+    ],
+    "explanation": "Initially p = ρvrms²/3 = {p1} Pa. The density increases inversely with volume to {density} kg/m³, whereas rms speed depends on √T and becomes {v2} m/s. Combining the two gives final pressure {p2} Pa. Translational kinetic energy per volume is ρv_rms²/2={energy_density} J/m³.",
+    "checks": [
+      "p2-density*v2*v2/3",
+      "density*vol-rho"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 9,
+    "key": "mean_free_path",
+    "topic": "Mean free path under simultaneous changes",
+    "stem": "For a dilute ideal gas, take the mean free path to be λ = 1/(√2πd²n), where d is collision diameter and n is number density. A comparison gas at the same pressure has absolute temperature {tr} times the original, molecular mass {mr} times the original and collision diameter {dr} times the original.",
+    "variants": [
+      {
+        "tr": 4,
+        "mr": 1,
+        "dr": 2
+      },
+      {
+        "tr": 9,
+        "mr": 4,
+        "dr": 3
+      }
+    ],
+    "derived": [
+      [
+        "lam",
+        "tr/dr**2"
+      ],
+      [
+        "speed",
+        "sqrt(tr/mr)"
+      ],
+      [
+        "time",
+        "lam/speed"
+      ]
+    ],
+    "tasks": [
+      [
+        "lam",
+        "Find the new-to-original mean-free-path ratio.",
+        "",
+        [
+          "1/dr**2",
+          "tr",
+          "tr/dr"
+        ]
+      ],
+      [
+        "speed",
+        "Find the new-to-original rms-speed ratio.",
+        "",
+        [
+          "tr/mr",
+          "sqrt(tr)",
+          "mr/tr"
+        ]
+      ],
+      [
+        "time",
+        "Using λ/vrms as an estimate of time between collisions, find the new-to-original time ratio.",
+        "",
+        [
+          "lam*speed",
+          "speed/lam",
+          "lam"
+        ]
+      ]
+    ],
+    "explanation": "At fixed pressure, n = p/(kBT), so the number density ratio is 1/{tr}. Therefore λnew/λold = tr/dr² = {lam}. The rms-speed ratio is √(tr/mr) = {speed}. Dividing these gives the collision-time ratio {time}.",
+    "checks": [
+      "lam*dr*dr-tr",
+      "speed*speed*mr-tr",
+      "time*speed-lam"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 10,
+    "key": "shm_inverse",
+    "topic": "Inferring an oscillator from speed-position data",
+    "stem": "A particle performs ideal SHM along a line. At displacement {x1} m its speed is {v1} m/s; at displacement {x2} m its speed is {v2} m/s. Its mass is {m} kg and displacement is measured from equilibrium.",
+    "variants": [
+      {
+        "x1": 0.1,
+        "x2": 0.2,
+        "v1": 4,
+        "v2": 2,
+        "m": 0.5
+      },
+      {
+        "x1": 0.2,
+        "x2": 0.4,
+        "v1": 8,
+        "v2": 4,
+        "m": 0.25
+      }
+    ],
+    "derived": [
+      [
+        "w2",
+        "(v1*v1-v2*v2)/(x2*x2-x1*x1)"
+      ],
+      [
+        "A",
+        "sqrt(x1*x1+v1*v1/w2)"
+      ],
+      [
+        "period",
+        "2*pi/sqrt(w2)"
+      ],
+      [
+        "E",
+        "m*w2*A*A/2"
+      ],
+      [
+        "maxforce",
+        "m*w2*A"
+      ]
+    ],
+    "tasks": [
+      [
+        "period",
+        "Find the period.",
+        "s",
+        [
+          "pi/sqrt(w2)",
+          "2*pi/w2",
+          "period*2"
+        ]
+      ],
+      [
+        "E",
+        "Find the total mechanical energy.",
+        "J",
+        [
+          "m*v1*v1/2",
+          "m*v2*v2/2",
+          "E*2"
+        ]
+      ],
+      [
+        "maxforce",
+        "Find the maximum restoring-force magnitude.",
+        "N",
+        [
+          "m*w2*x1",
+          "m*w2*x2",
+          "maxforce/2"
+        ]
+      ]
+    ],
+    "explanation": "Use v² = ω²(A²−x²) at both positions. Subtraction gives ω² = {w2} s⁻²; back-substitution gives A = {A} m. Hence T = {period} s, E = mω²A²/2 = {E} J and Fmax = mω²A = {maxforce} N.",
+    "checks": [
+      "v1*v1-w2*(A*A-x1*x1)",
+      "v2*v2-w2*(A*A-x2*x2)"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 10,
+    "key": "spring_cut",
+    "topic": "Spring modification and SHM energy",
+    "stem": "A uniform spring of force constant {k} N/m is cut into lengths in the ratio 1:{n}. The two pieces are connected in parallel to a {m} kg block on a smooth horizontal surface. The block is pulled {A} m from the common equilibrium position and released. Both pieces are unstretched at the common equilibrium, mounted on suitably offset fixed supports with their axes parallel to motion.",
+    "variants": [
+      {
+        "k": 60,
+        "n": 2,
+        "m": 1,
+        "A": 0.1
+      },
+      {
+        "k": 80,
+        "n": 3,
+        "m": 2,
+        "A": 0.2
+      }
+    ],
+    "derived": [
+      [
+        "k1",
+        "(n+1)*k"
+      ],
+      [
+        "k2",
+        "(n+1)*k/n"
+      ],
+      [
+        "keff",
+        "k1+k2"
+      ],
+      [
+        "period",
+        "2*pi*sqrt(m/keff)"
+      ],
+      [
+        "v",
+        "A*sqrt(keff/m)"
+      ],
+      [
+        "energy1",
+        "k1*A*A/2"
+      ]
+    ],
+    "tasks": [
+      [
+        "period",
+        "Find the oscillation period.",
+        "s",
+        [
+          "2*pi*sqrt(m/k)",
+          "2*pi*sqrt(m/(k1*k2/(k1+k2)))",
+          "period/2"
+        ]
+      ],
+      [
+        "v",
+        "Find the maximum block speed.",
+        "m/s",
+        [
+          "A*sqrt(k/m)",
+          "A*sqrt(k1/m)",
+          "v/2"
+        ]
+      ],
+      [
+        "energy1",
+        "Find the maximum elastic energy in the shorter piece.",
+        "J",
+        [
+          "keff*A*A/2",
+          "k2*A*A/2",
+          "k*A*A/2"
+        ]
+      ]
+    ],
+    "explanation": "For a uniform spring, stiffness is inversely proportional to length: kshort = {k1} N/m and klong = {k2} N/m. Parallel stiffnesses add to {keff} N/m. Thus T = {period} s and vmax = {v} m/s. Both pieces have amplitude {A} m, so maximum energy in the short piece is {energy1} J.",
+    "checks": [
+      "keff-k1-k2",
+      "m*v*v-keff*A*A"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 10,
+    "key": "pendulum_accelerated",
+    "topic": "Pendulum in an accelerating frame",
+    "stem": "A small-angle pendulum of length {L} m hangs inside a vehicle with constant horizontal acceleration {a} m/s² and constant upward acceleration {b} m/s². Take terrestrial g = 10 m/s². The bob has mass {m} kg. Oscillations are small about the tilted equilibrium.",
+    "variants": [
+      {
+        "L": 1,
+        "a": 9,
+        "b": 2,
+        "m": 0.2
+      },
+      {
+        "L": 1.5,
+        "a": 12,
+        "b": 6,
+        "m": 0.3
+      }
+    ],
+    "derived": [
+      [
+        "ge",
+        "sqrt(a*a+(10+b)**2)"
+      ],
+      [
+        "period",
+        "2*pi*sqrt(L/ge)"
+      ],
+      [
+        "angle",
+        "atan(a/(10+b))*180/pi"
+      ],
+      [
+        "tension",
+        "m*ge"
+      ]
+    ],
+    "tasks": [
+      [
+        "period",
+        "Find the small-oscillation period.",
+        "s",
+        [
+          "2*pi*sqrt(L/10)",
+          "2*pi*sqrt(L/(10+b))",
+          "2*pi*sqrt(L/(10+a+b))"
+        ]
+      ],
+      [
+        "angle",
+        "Find the equilibrium string angle with the downward vertical.",
+        "°",
+        [
+          "atan(a/10)*180/pi",
+          "atan((10+b)/a)*180/pi",
+          "angle/2"
+        ]
+      ],
+      [
+        "tension",
+        "Find the tension when the bob is at rest in its tilted equilibrium relative to the vehicle.",
+        "N",
+        [
+          "m*10",
+          "m*(10+b)",
+          "m*(10+a+b)"
+        ]
+      ]
+    ],
+    "explanation": "In the vehicle frame the effective gravity has components a backwards and g+b downward. Its magnitude is {ge} m/s². Hence Tperiod = 2π√(L/geff) = {period} s; tanθ = a/(g+b) gives {angle}°, and equilibrium string tension is mgeff = {tension} N.",
+    "checks": [
+      "ge*ge-a*a-(10+b)**2"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 10,
+    "key": "string_beats",
+    "topic": "String harmonics and beat measurements",
+    "stem": "A stretched string of length {L} m and linear mass density {mu} kg/m is fixed at both ends. Its fundamental makes {b1} beats/s with a {fork} Hz tuning fork. Increasing tension by a factor {ratio} makes the string frequency exceed the fork frequency by {b2} Hz. Use both beat observations to choose the initial-frequency branch.",
+    "variants": [
+      {
+        "L": 0.5,
+        "mu": 0.001,
+        "b1": 4,
+        "fork": 100,
+        "ratio": 1.5625,
+        "b2": 20
+      },
+      {
+        "L": 0.4,
+        "mu": 0.002,
+        "b1": 5,
+        "fork": 125,
+        "ratio": 1.21,
+        "b2": 7
+      }
+    ],
+    "derived": [
+      [
+        "f",
+        "fork-b1"
+      ],
+      [
+        "speed",
+        "2*L*f"
+      ],
+      [
+        "tension",
+        "mu*speed*speed"
+      ],
+      [
+        "second",
+        "2*f"
+      ],
+      [
+        "newT",
+        "ratio*tension"
+      ]
+    ],
+    "tasks": [
+      [
+        "tension",
+        "Find the initial string tension.",
+        "N",
+        [
+          "mu*(L*f)**2",
+          "mu*(2*L*(fork+b1))**2",
+          "tension*2"
+        ]
+      ],
+      [
+        "second",
+        "Find the initial second-harmonic frequency.",
+        "Hz",
+        [
+          "3*f",
+          "2*fork",
+          "f"
+        ]
+      ],
+      [
+        "newT",
+        "Find the final tension.",
+        "N",
+        [
+          "sqrt(ratio)*tension",
+          "tension",
+          "newT/2"
+        ]
+      ]
+    ],
+    "explanation": "The beat measurement allows f = fork ± b₁. Testing the tension change using fnew/f = √(Tnew/T) selects f = {f} Hz; it gives the stated final beat difference. Since v = 2Lf = {speed} m/s and v² = T/μ, initial tension is {tension} N, final tension {newT} N, and the initial second harmonic is {second} Hz.",
+    "checks": [
+      "f*sqrt(ratio)-fork-b2",
+      "tension/mu-speed*speed"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 10,
+    "key": "resonance_end",
+    "topic": "Resonance-tube readings and end correction",
+    "stem": "A tube closed by water at one end resonates with the same tuning fork at air-column lengths {l1} cm and {l2} cm in two successive resonances. The fork frequency is {f} Hz. Assume the open-end correction is the same in both readings and these are the first and second resonances.",
+    "variants": [
+      {
+        "l1": 16,
+        "l2": 50,
+        "f": 500
+      },
+      {
+        "l1": 20,
+        "l2": 62,
+        "f": 400
+      }
+    ],
+    "derived": [
+      [
+        "wave",
+        "2*(l2-l1)/100"
+      ],
+      [
+        "speed",
+        "f*wave"
+      ],
+      [
+        "end",
+        "(l2-3*l1)/2"
+      ],
+      [
+        "third",
+        "l1+2*(l2-l1)"
+      ]
+    ],
+    "tasks": [
+      [
+        "speed",
+        "Find the speed of sound.",
+        "m/s",
+        [
+          "4*f*l1/100",
+          "2*f*l2/100",
+          "speed/2"
+        ]
+      ],
+      [
+        "end",
+        "Find the open-end correction.",
+        "cm",
+        [
+          "l2-3*l1",
+          "(l2-l1)/4",
+          "end/2"
+        ]
+      ],
+      [
+        "third",
+        "Find the air-column length at the third resonance.",
+        "cm",
+        [
+          "3*l1",
+          "5*l1",
+          "third+end"
+        ]
+      ]
+    ],
+    "explanation": "For a closed tube, l₁+e = λ/4 and l₂+e = 3λ/4. Subtracting gives λ = {wave} m, hence v = {speed} m/s. Back-substitution gives e = {end} cm. The next length increases by another λ/2 and is {third} cm.",
+    "checks": [
+      "(l1+end)/100-wave/4",
+      "(l2+end)/100-3*wave/4"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 10,
+    "key": "two_waves",
+    "topic": "Superposition with phase and intensity",
+    "stem": "Two coherent harmonic waves have the same angular frequency. Their amplitudes at a point are {a} mm and {b} mm and their phase difference is {phase}°. Intensity is proportional to the square of amplitude with the same constant for both waves. The first wave alone has intensity {I} W/m². The waves have identical linear polarisation.",
+    "variants": [
+      {
+        "a": 3,
+        "b": 4,
+        "phase": 60,
+        "I": 9
+      },
+      {
+        "a": 2,
+        "b": 3,
+        "phase": 120,
+        "I": 8
+      }
+    ],
+    "derived": [
+      [
+        "amp",
+        "sqrt(a*a+b*b+2*a*b*cos(phase*pi/180))"
+      ],
+      [
+        "intensity",
+        "I*amp*amp/(a*a)"
+      ],
+      [
+        "ratio",
+        "(a+b)**2/(a-b)**2"
+      ],
+      [
+        "minI",
+        "I*(a-b)**2/(a*a)"
+      ]
+    ],
+    "tasks": [
+      [
+        "intensity",
+        "Find the resultant intensity at the stated phase difference.",
+        "W/m²",
+        [
+          "I+I*b*b/(a*a)",
+          "I*(a+b)**2/(a*a)",
+          "I*amp/a"
+        ]
+      ],
+      [
+        "ratio",
+        "If only the phase is varied, find the maximum-to-minimum resultant intensity ratio.",
+        "",
+        [
+          "(a+b)/abs(a-b)",
+          "(a*a+b*b)/(a-b)**2",
+          "ratio/2"
+        ]
+      ],
+      [
+        "minI",
+        "Find the minimum possible resultant intensity as phase varies.",
+        "W/m²",
+        [
+          "0",
+          "I*abs(a-b)/a",
+          "I*abs(a*a-b*b)/(a*a)"
+        ]
+      ]
+    ],
+    "explanation": "Phasor addition gives A² = a²+b²+2ab cosφ, so the amplitude is {amp} mm. The calibration I₁/a² gives resultant intensity {intensity} W/m². The extrema have amplitudes a+b and |a−b|, giving contrast ratio {ratio} and minimum intensity {minI} W/m².",
+    "checks": [
+      "amp*amp-a*a-b*b-2*a*b*cos(phase*pi/180)"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 11,
+    "key": "series_dielectric",
+    "topic": "Capacitor network with a dielectric change",
+    "stem": "Capacitors C₁ = {C1} μF and C₂ = {C2} μF are in series across a constant {V} V ideal battery. A dielectric of relative permittivity {K} completely fills C₁ without changing its geometry. The battery stays connected; changes are quasistatic.",
+    "variants": [
+      {
+        "C1": 2,
+        "C2": 3,
+        "V": 100,
+        "K": 3
+      },
+      {
+        "C1": 3,
+        "C2": 6,
+        "V": 120,
+        "K": 2
+      }
+    ],
+    "derived": [
+      [
+        "ce0",
+        "C1*C2/(C1+C2)"
+      ],
+      [
+        "ce",
+        "K*C1*C2/(K*C1+C2)"
+      ],
+      [
+        "q",
+        "ce*V"
+      ],
+      [
+        "v2",
+        "q/C2"
+      ],
+      [
+        "dq",
+        "(ce-ce0)*V"
+      ],
+      [
+        "battery",
+        "V*dq*1e-6"
+      ]
+    ],
+    "tasks": [
+      [
+        "v2",
+        "Find the final voltage across C₂.",
+        "V",
+        [
+          "V*C1/(C1+C2)",
+          "V",
+          "V-v2"
+        ]
+      ],
+      [
+        "dq",
+        "Find the additional charge supplied by the battery.",
+        "μC",
+        [
+          "q",
+          "ce0*V",
+          "dq/2"
+        ]
+      ],
+      [
+        "battery",
+        "Find the work done by the battery during insertion.",
+        "J",
+        [
+          "battery/2",
+          "-battery",
+          "battery*2"
+        ]
+      ]
+    ],
+    "explanation": "Initial equivalent capacitance is {ce0} μF; replacing C₁ by KC₁ gives final equivalent capacitance {ce} μF. Series charge becomes {q} μC, hence V₂ = {v2} V. Battery-supplied charge is {dq} μC and battery work VΔQ = {battery} J.",
+    "checks": [
+      "q/(K*C1)+q/C2-V",
+      "dq-(ce-ce0)*V"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 11,
+    "key": "charge_sharing",
+    "topic": "Charge conservation and energy loss in capacitors",
+    "stem": "Isolated capacitors of capacitances {C1} μF and {C2} μF are charged to {V1} V and {V2} V, respectively. Their positive plates are joined together and their negative plates joined together through a wire with a small resistance. Wait until a common voltage is reached. No battery is connected.",
+    "variants": [
+      {
+        "C1": 2,
+        "C2": 3,
+        "V1": 100,
+        "V2": 20
+      },
+      {
+        "C1": 4,
+        "C2": 2,
+        "V1": 60,
+        "V2": 15
+      }
+    ],
+    "derived": [
+      [
+        "V",
+        "(C1*V1+C2*V2)/(C1+C2)"
+      ],
+      [
+        "transfer",
+        "C1*(V1-V)"
+      ],
+      [
+        "loss",
+        "(C1*V1*V1+C2*V2*V2-(C1+C2)*V*V)*.5e-6"
+      ]
+    ],
+    "tasks": [
+      [
+        "V",
+        "Find the final common voltage.",
+        "V",
+        [
+          "(V1+V2)/2",
+          "V1+V2",
+          "(C1*V1-C2*V2)/(C1+C2)"
+        ]
+      ],
+      [
+        "transfer",
+        "Find the magnitude of charge that leaves the initially higher-voltage capacitor’s positive plate.",
+        "μC",
+        [
+          "C1*V1",
+          "C1*V",
+          "transfer/2"
+        ]
+      ],
+      [
+        "loss",
+        "Find the energy dissipated while charge redistributes.",
+        "J",
+        [
+          ".5e-6*(C1+C2)*V*V",
+          ".5e-6*(C1*V1*V1+C2*V2*V2)",
+          "loss*2"
+        ]
+      ]
+    ],
+    "explanation": "The joined positive plates retain total charge C₁V₁+C₂V₂. Thus Vf = {V} V. Charge transfer C₁(V₁−Vf) = {transfer} μC. Subtract final field energy from the initial sum, giving {loss} J dissipated.",
+    "checks": [
+      "(C1+C2)*V-C1*V1-C2*V2",
+      "C2*(V-V2)-transfer"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 11,
+    "key": "null_charge",
+    "topic": "Field cancellation and electric potential",
+    "stem": "Positive point charges Q = {Q} μC and q are fixed at x = 0 and x = d = {d} m. The total electric field vanishes at x = {x} m between them. Let k = 9 × 10⁹ N m²/C² and take potential zero at infinity.",
+    "variants": [
+      {
+        "Q": 4,
+        "d": 3,
+        "x": 1
+      },
+      {
+        "Q": 9,
+        "d": 4,
+        "x": 1
+      }
+    ],
+    "derived": [
+      [
+        "q",
+        "Q*(d-x)**2/(x*x)"
+      ],
+      [
+        "potential",
+        "9000*(Q/x+q/(d-x))"
+      ],
+      [
+        "mid",
+        "18000*(Q+q)/d"
+      ],
+      [
+        "field",
+        "9000*(Q/(2*d)**2+q/d**2)"
+      ]
+    ],
+    "tasks": [
+      [
+        "q",
+        "Find the unknown charge.",
+        "μC",
+        [
+          "Q*x*x/(d-x)**2",
+          "Q*(d-x)/x",
+          "Q"
+        ]
+      ],
+      [
+        "potential",
+        "Find the potential at the field-zero point.",
+        "V",
+        [
+          "0",
+          "9000*(Q/x-q/(d-x))",
+          "potential/2"
+        ]
+      ],
+      [
+        "field",
+        "Find the magnitude of the field at x = 2d.",
+        "N/C",
+        [
+          "9000*abs(Q/(2*d)**2-q/d**2)",
+          "9000*(Q+q)/(2*d)**2",
+          "field/2"
+        ]
+      ]
+    ],
+    "explanation": "At the point between positive charges the fields oppose. Set Q/x² = q/(d−x)² to obtain q = {q} μC. Potentials add as scalars, giving {potential} V there even though the field is zero. At x=2d both fields point to the right and add to {field} N/C.",
+    "checks": [
+      "Q/(x*x)-q/(d-x)**2"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 11,
+    "key": "shell_pair",
+    "topic": "Potential and field of concentric thin shells",
+    "stem": "Two concentric thin conducting spherical shells have radii {a} m and {b} m and net charges {q1} μC and {q2} μC, respectively. The region between them is vacuum. Take k = 9 × 10⁹ N m²/C² and potential zero at infinity. Let the observation radius be r = {r} m, strictly between the shells.",
+    "variants": [
+      {
+        "a": 0.1,
+        "b": 0.3,
+        "q1": 2,
+        "q2": -1,
+        "r": 0.2
+      },
+      {
+        "a": 0.2,
+        "b": 0.6,
+        "q1": 3,
+        "q2": -2,
+        "r": 0.4
+      }
+    ],
+    "derived": [
+      [
+        "E",
+        "9000*q1/(r*r)"
+      ],
+      [
+        "V",
+        "9000*(q1/r+q2/b)"
+      ],
+      [
+        "diff",
+        "9000*q1*(1/a-1/b)"
+      ],
+      [
+        "work",
+        "-2e-6*diff"
+      ]
+    ],
+    "tasks": [
+      [
+        "V",
+        "Find the potential at the observation point.",
+        "V",
+        [
+          "9000*(q1+q2)/r",
+          "9000*q1/r",
+          "0"
+        ]
+      ],
+      [
+        "diff",
+        "Find the inner-shell potential minus the outer-shell potential.",
+        "V",
+        [
+          "9000*(q1+q2)*(1/a-1/b)",
+          "9000*q1/a",
+          "-diff"
+        ]
+      ],
+      [
+        "work",
+        "Find the external work in slowly moving a +2 μC test charge from the inner shell to the outer shell.",
+        "J",
+        [
+          "-work",
+          "work/2",
+          "0"
+        ]
+      ]
+    ],
+    "explanation": "Within the outer shell its contribution to potential is kq₂/b, while the inner shell contributes kq₁/r. Thus V(r) = {V} V. Subtracting shell potentials cancels the outer-shell contribution: Vinner−Vouter = {diff} V. Quasistatic external work is qtest(Vouter−Vinner) = {work} J.",
+    "checks": [
+      "diff-9000*(q1/a+q2/b-(q1+q2)/b)"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 11,
+    "key": "dipole_energy",
+    "topic": "Electric-dipole torque and work",
+    "stem": "A rigid electric dipole of moment {p} μC m is in a uniform {E} N/C electric field. Initially its axis makes {theta}° with the field. A slow external rotation brings it to {final}°. The dipole’s moment of inertia about the rotation axis is {I} kg m².",
+    "variants": [
+      {
+        "p": 2,
+        "E": 5000,
+        "theta": 60,
+        "final": 120,
+        "I": 0.0001
+      },
+      {
+        "p": 3,
+        "E": 4000,
+        "theta": 30,
+        "final": 90,
+        "I": 0.0002
+      }
+    ],
+    "derived": [
+      [
+        "work",
+        "p*1e-6*E*(cos(theta*pi/180)-cos(final*pi/180))"
+      ],
+      [
+        "torque",
+        "p*1e-6*E*sin(theta*pi/180)"
+      ],
+      [
+        "speed",
+        "sqrt(2*p*1e-6*E*(1-cos(theta*pi/180))/I)"
+      ]
+    ],
+    "tasks": [
+      [
+        "work",
+        "Find the external work for the slow rotation.",
+        "J",
+        [
+          "-work",
+          "work/2",
+          "p*1e-6*E"
+        ]
+      ],
+      [
+        "torque",
+        "Find the initial electric-torque magnitude.",
+        "N m",
+        [
+          "p*1e-6*E",
+          "p*1e-6*E*cos(theta*pi/180)",
+          "torque/2"
+        ]
+      ],
+      [
+        "speed",
+        "In a separate trial the dipole is released from rest at its initial angle. With no damping, find its angular speed when it first aligns with the field.",
+        "rad/s",
+        [
+          "sqrt(2*p*1e-6*E/I)",
+          "speed/2",
+          "speed*sqrt(2)"
+        ]
+      ]
+    ],
+    "explanation": "The dipole potential is U = −pE cosθ. A slow rotation therefore requires ΔU = {work} J; the initial torque is pE sinθ = {torque} N m. For free rotation, the drop pE(1−cosθinitial) becomes Iω²/2, giving ω = {speed} rad/s at alignment.",
+    "checks": [
+      "I*speed*speed/2-p*1e-6*E*(1-cos(theta*pi/180))"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 11,
+    "key": "charged_particle",
+    "topic": "Electrostatic acceleration and transverse deflection",
+    "stem": "A particle with positive charge-to-mass ratio {qm} C/kg starts from rest and is accelerated through {V} V. It then enters horizontally between parallel plates of length {L} m with uniform vertical electric field {E} N/C. Ignore gravity and edge fields; the particle does not hit a plate.",
+    "variants": [
+      {
+        "qm": 1000000.0,
+        "V": 200,
+        "L": 0.2,
+        "E": 1000
+      },
+      {
+        "qm": 2000000.0,
+        "V": 100,
+        "L": 0.1,
+        "E": 2000
+      }
+    ],
+    "derived": [
+      [
+        "vx",
+        "sqrt(2*qm*V)"
+      ],
+      [
+        "t",
+        "L/vx"
+      ],
+      [
+        "vy",
+        "qm*E*t"
+      ],
+      [
+        "y",
+        "qm*E*t*t/2"
+      ],
+      [
+        "speed",
+        "sqrt(vx*vx+vy*vy)"
+      ],
+      [
+        "slope",
+        "vy/vx"
+      ]
+    ],
+    "tasks": [
+      [
+        "y",
+        "Find the magnitude of transverse deflection on leaving the plates.",
+        "m",
+        [
+          "qm*E*t*t",
+          "E*L/(2*V)",
+          "y/2"
+        ]
+      ],
+      [
+        "speed",
+        "Find the exit speed.",
+        "m/s",
+        [
+          "vx+vy",
+          "vx",
+          "vy"
+        ]
+      ],
+      [
+        "slope",
+        "Find tan θ, where θ is the exit-velocity angle to the original direction.",
+        "",
+        [
+          "y/L",
+          "2*vy/vx",
+          "vx/vy"
+        ]
+      ]
+    ],
+    "explanation": "Acceleration through V gives vx = √(2(q/m)V) = {vx} m/s. Transit time L/vx = {t} s. The vertical acceleration is (q/m)E, so y = {y} m and vy = {vy} m/s. Vector addition gives exit speed {speed} m/s and tanθ = vy/vx = {slope}.",
+    "checks": [
+      "vx*vx-2*qm*V",
+      "vy-qm*E*t",
+      "y-vy*t/2"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 11,
+    "key": "dielectric_layers",
+    "topic": "Parallel-plate capacitor with layered dielectric",
+    "stem": "A parallel-plate capacitor has vacuum capacitance {C0} μF and plate separation d. A dielectric slab of relative permittivity {K} occupies half the separation over the entire plate area; the remaining half is vacuum. A constant {V} V battery is connected. Ignore fringing.",
+    "variants": [
+      {
+        "C0": 2,
+        "K": 3,
+        "V": 120
+      },
+      {
+        "C0": 3,
+        "K": 5,
+        "V": 100
+      }
+    ],
+    "derived": [
+      [
+        "C",
+        "2*K*C0/(K+1)"
+      ],
+      [
+        "q",
+        "C*V"
+      ],
+      [
+        "vacvoltage",
+        "V*K/(K+1)"
+      ],
+      [
+        "U",
+        "C*1e-6*V*V/2"
+      ]
+    ],
+    "tasks": [
+      [
+        "C",
+        "Find the new capacitance.",
+        "μF",
+        [
+          "K*C0",
+          "(K+1)*C0/2",
+          "C0/K"
+        ]
+      ],
+      [
+        "vacvoltage",
+        "Find the potential drop across the vacuum half of the gap.",
+        "V",
+        [
+          "V/2",
+          "V/(K+1)",
+          "V"
+        ]
+      ],
+      [
+        "U",
+        "Find the final stored field energy.",
+        "J",
+        [
+          "C0*1e-6*V*V/2",
+          "K*C0*1e-6*V*V/2",
+          "U*2"
+        ]
+      ]
+    ],
+    "explanation": "The two half-gap regions are series capacitors 2C₀ and 2KC₀. Their equivalent is 2KC₀/(K+1) = {C} μF. Each carries {q} μC, so the vacuum voltage is Q/(2C₀) = {vacvoltage} V. Total energy is CV²/2 = {U} J.",
+    "checks": [
+      "1/C-1/(2*C0)-1/(2*K*C0)",
+      "q/(2*C0)-vacvoltage"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 12,
+    "key": "cell_inverse",
+    "topic": "Inferring a cell from two loaded measurements",
+    "stem": "A cell with constant emf and internal resistance supplies current {i1} A through an external resistance {R1} Ω, and {i2} A when the external resistance is changed to {R2} Ω. Treat the cell as an ideal emf in series with an ohmic internal resistance.",
+    "variants": [
+      {
+        "i1": 2,
+        "R1": 4,
+        "i2": 1,
+        "R2": 9
+      },
+      {
+        "i1": 3,
+        "R1": 2,
+        "i2": 2,
+        "R2": 3.5
+      }
+    ],
+    "derived": [
+      [
+        "r",
+        "(i2*R2-i1*R1)/(i1-i2)"
+      ],
+      [
+        "emf",
+        "i1*(R1+r)"
+      ],
+      [
+        "Isc",
+        "emf/r"
+      ],
+      [
+        "pmax",
+        "emf*emf/(4*r)"
+      ],
+      [
+        "eff",
+        "R1/(R1+r)"
+      ]
+    ],
+    "tasks": [
+      [
+        "Isc",
+        "Find the idealised short-circuit current.",
+        "A",
+        [
+          "emf/R1",
+          "i1+i2",
+          "Isc/2"
+        ]
+      ],
+      [
+        "pmax",
+        "Find the greatest power deliverable to an adjustable external resistor.",
+        "W",
+        [
+          "emf*emf/r",
+          "pmax/2",
+          "i1*i1*R1"
+        ]
+      ],
+      [
+        "eff",
+        "Find the fraction of the cell’s supplied electrical power reaching the external resistor in the first measurement.",
+        "",
+        [
+          "r/(R1+r)",
+          "R1/r",
+          "eff/2"
+        ]
+      ]
+    ],
+    "explanation": "The same emf satisfies ε=I₁(R₁+r)=I₂(R₂+r). Solving gives r = {r} Ω and ε = {emf} V. Hence Isc = {Isc} A. External power ε²R/(R+r)² is largest at R=r and equals {pmax} W. In the first circuit the useful-power fraction is R₁/(R₁+r) = {eff}.",
+    "checks": [
+      "emf-i1*(R1+r)",
+      "emf-i2*(R2+r)"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 12,
+    "key": "bridge_shunt",
+    "topic": "Metre bridge and an added parallel resistance",
+    "stem": "In an ideal metre bridge, unknown resistance X is in the left gap and {R} Ω in the right gap. Balance occurs {l} cm from the left end. A resistor S is then put in parallel with X, moving balance to {l2} cm from the left. Neglect end resistance and heating.",
+    "variants": [
+      {
+        "R": 6,
+        "l": 40,
+        "l2": 25
+      },
+      {
+        "R": 4,
+        "l": 60,
+        "l2": 40
+      }
+    ],
+    "derived": [
+      [
+        "X",
+        "R*l/(100-l)"
+      ],
+      [
+        "parallel",
+        "R*l2/(100-l2)"
+      ],
+      [
+        "S",
+        "parallel*X/(X-parallel)"
+      ],
+      [
+        "ratio",
+        "S/(X+S)"
+      ],
+      [
+        "seriesL",
+        "100*(X+S)/(X+S+R)"
+      ]
+    ],
+    "tasks": [
+      [
+        "S",
+        "Find the shunt resistance S.",
+        "Ω",
+        [
+          "parallel",
+          "X-parallel",
+          "X+parallel"
+        ]
+      ],
+      [
+        "ratio",
+        "When X and S are parallel, what fraction of their total current flows through X?",
+        "",
+        [
+          "X/(X+S)",
+          "S/X",
+          "ratio/2"
+        ]
+      ],
+      [
+        "seriesL",
+        "If S were instead connected in series with X, where would the bridge balance, measured from the left end?",
+        "cm",
+        [
+          "l+l2",
+          "100-seriesL",
+          "l2"
+        ]
+      ]
+    ],
+    "explanation": "At balance X/R=l/(100−l), giving X={X} Ω. The new left-gap equivalent is {parallel} Ω. From 1/Rparallel=1/X+1/S, S={S} Ω. Current division gives IX/Itotal=S/(X+S)={ratio}. With a series connection the left gap is X+S, giving {seriesL} cm.",
+    "checks": [
+      "1/parallel-1/X-1/S",
+      "X/R-l/(100-l)"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 12,
+    "key": "loaded_divider",
+    "topic": "Voltmeter loading in a potential divider",
+    "stem": "Resistors {R1} kΩ and {R2} kΩ are in series across an ideal {V} V source. A voltmeter of resistance {Rv} kΩ is connected across the second resistor. All components are ohmic.",
+    "variants": [
+      {
+        "R1": 2,
+        "R2": 3,
+        "Rv": 6,
+        "V": 12
+      },
+      {
+        "R1": 3,
+        "R2": 6,
+        "Rv": 6,
+        "V": 18
+      }
+    ],
+    "derived": [
+      [
+        "Rp",
+        "R2*Rv/(R2+Rv)"
+      ],
+      [
+        "reading",
+        "V*Rp/(R1+Rp)"
+      ],
+      [
+        "error",
+        "100*(1-reading/(V*R2/(R1+R2)))"
+      ],
+      [
+        "power",
+        "reading*reading/Rv"
+      ]
+    ],
+    "tasks": [
+      [
+        "reading",
+        "Find the voltmeter reading.",
+        "V",
+        [
+          "V*R2/(R1+R2)",
+          "V*Rv/(R1+Rv)",
+          "V/3"
+        ]
+      ],
+      [
+        "error",
+        "Find the percentage reduction from the voltage that was present across the second resistor before connecting the meter.",
+        "%",
+        [
+          "error/2",
+          "100*Rp/R2",
+          "100*(R2-Rp)/R2"
+        ]
+      ],
+      [
+        "power",
+        "Find the power dissipated inside the voltmeter.",
+        "mW",
+        [
+          "reading*reading/R2",
+          "reading*reading/Rp",
+          "power*2"
+        ]
+      ]
+    ],
+    "explanation": "The meter shunts the second resistor: Rparallel={Rp} kΩ. The loaded divider then gives {reading} V. Comparing this to the unloaded value VR₂/(R₁+R₂) gives a {error}% reduction. Meter power Vmeter²/Rv is {power} mW.",
+    "checks": [
+      "reading-V*Rp/(R1+Rp)",
+      "1/Rp-1/R2-1/Rv"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 12,
+    "key": "wire_stretch_heat",
+    "topic": "Resistance with stretching and heating",
+    "stem": "An initially uniform wire has resistance {R} Ω at 20 °C. It is stretched uniformly to {f} times its original length without changing its volume or resistivity at 20 °C, and then heated to {T} °C. Use a temperature coefficient {alpha} K⁻¹ referred to 20 °C and a linear resistivity law. A constant {V} V is applied to the final wire.",
+    "variants": [
+      {
+        "R": 4,
+        "f": 2,
+        "T": 70,
+        "alpha": 0.004,
+        "V": 24
+      },
+      {
+        "R": 5,
+        "f": 1.5,
+        "T": 120,
+        "alpha": 0.004,
+        "V": 21
+      }
+    ],
+    "derived": [
+      [
+        "cold",
+        "R*f*f"
+      ],
+      [
+        "hot",
+        "cold*(1+alpha*(T-20))"
+      ],
+      [
+        "current",
+        "V/hot"
+      ],
+      [
+        "power",
+        "V*V/hot"
+      ],
+      [
+        "ratio",
+        "R/hot"
+      ]
+    ],
+    "tasks": [
+      [
+        "hot",
+        "Find the final resistance.",
+        "Ω",
+        [
+          "R*f*(1+alpha*(T-20))",
+          "cold",
+          "R*(1+alpha*(T-20))"
+        ]
+      ],
+      [
+        "power",
+        "Find the final electrical heating power.",
+        "W",
+        [
+          "V*V/R",
+          "V*V/cold",
+          "power*2"
+        ]
+      ],
+      [
+        "ratio",
+        "Find the final-to-initial current ratio if the same voltage is used before any stretching or heating and after both changes.",
+        "",
+        [
+          "1/f",
+          "R/cold",
+          "hot/R"
+        ]
+      ]
+    ],
+    "explanation": "Constant volume makes area decrease by 1/f, so resistance at 20 °C grows by f² to {cold} Ω. The temperature factor then gives {hot} Ω. Thus final power is V²/Rfinal={power} W and the fixed-voltage current ratio is Rinitial/Rfinal={ratio}.",
+    "checks": [
+      "hot/R-f*f*(1+alpha*(T-20))"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 12,
+    "key": "two_emfs",
+    "topic": "Two sources feeding one load",
+    "stem": "Two cells of emfs {E1} V and {E2} V have internal resistances {r1} Ω and {r2} Ω. Their positive terminals are joined at P and their negative terminals at N. A {R} Ω load connects P to N. Use steady DC conditions and ideal series models for the cells.",
+    "variants": [
+      {
+        "E1": 12,
+        "E2": 6,
+        "r1": 2,
+        "r2": 2,
+        "R": 4
+      },
+      {
+        "E1": 18,
+        "E2": 9,
+        "r1": 3,
+        "r2": 3,
+        "R": 6
+      }
+    ],
+    "derived": [
+      [
+        "V",
+        "(E1/r1+E2/r2)/(1/r1+1/r2+1/R)"
+      ],
+      [
+        "I1",
+        "(E1-V)/r1"
+      ],
+      [
+        "I2",
+        "(E2-V)/r2"
+      ],
+      [
+        "power",
+        "V*V/R"
+      ]
+    ],
+    "tasks": [
+      [
+        "V",
+        "Find the terminal voltage VP−VN.",
+        "V",
+        [
+          "(E1+E2)/2",
+          "E1+E2",
+          "V/2"
+        ]
+      ],
+      [
+        "I2",
+        "Find the signed current delivered by the lower-emf cell, positive when it leaves that cell’s positive terminal.",
+        "A",
+        [
+          "abs(I2)",
+          "E2/(R+r2)",
+          "-2*I2"
+        ]
+      ],
+      [
+        "power",
+        "Find the power delivered to the load.",
+        "W",
+        [
+          "(E1+E2)**2/R",
+          "E1*I1+E2*I2",
+          "power/2"
+        ]
+      ]
+    ],
+    "explanation": "At P, (E₁−V)/r₁+(E₂−V)/r₂=V/R. Solving gives V={V} V. Cell currents are {I1} A and {I2} A; a negative second current means the lower-emf cell is being charged. Load power V²/R is {power} W.",
+    "checks": [
+      "I1+I2-V/R",
+      "E1-I1*r1-V",
+      "E2-I2*r2-V"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 12,
+    "key": "symmetric_network",
+    "topic": "A bridge network with symmetry",
+    "stem": "A resistor network has terminals A and B and interior nodes C and D. AC = AD = {r} Ω, CB = DB = {s} Ω, and CD = {bridge} Ω. An ideal {V} V source is connected with A positive relative to B. No other connections exist.",
+    "variants": [
+      {
+        "r": 3,
+        "s": 6,
+        "bridge": 5,
+        "V": 18
+      },
+      {
+        "r": 4,
+        "s": 8,
+        "bridge": 7,
+        "V": 24
+      }
+    ],
+    "derived": [
+      [
+        "Req",
+        "(r+s)/2"
+      ],
+      [
+        "current",
+        "V/Req"
+      ],
+      [
+        "VC",
+        "V*s/(r+s)"
+      ],
+      [
+        "power",
+        "(V/(r+s))**2*s"
+      ]
+    ],
+    "tasks": [
+      [
+        "Req",
+        "Find the equivalent resistance between A and B.",
+        "Ω",
+        [
+          "2*(r+s)",
+          "(r+s+bridge)/2",
+          "r+s"
+        ]
+      ],
+      [
+        "VC",
+        "Find the potential of C relative to B.",
+        "V",
+        [
+          "V/2",
+          "V*r/(r+s)",
+          "V"
+        ]
+      ],
+      [
+        "power",
+        "Find the power dissipated in resistor CB.",
+        "W",
+        [
+          "V*V/s",
+          "current*current*s",
+          "power/2"
+        ]
+      ]
+    ],
+    "explanation": "Swapping C and D leaves the network unchanged, so VC=VD and no current passes through CD. The remaining two series branches each have resistance r+s, in parallel. Req={Req} Ω. Each branch carries V/(r+s), giving VC={VC} V and PCB={power} W.",
+    "checks": [
+      "VC-V*s/(r+s)",
+      "current-2*V/(r+s)"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 13,
+    "key": "selector_orbit",
+    "topic": "Velocity selection followed by magnetic curvature",
+    "stem": "Positive ions pass undeflected through crossed uniform fields E = {E} V/m and B₁ = {B1} T, with velocity perpendicular to both. They then enter a second region containing only a perpendicular magnetic field B₂ = {B2} T and describe circles of radius {r} m. Neglect gravity and relativistic effects.",
+    "variants": [
+      {
+        "E": 20000,
+        "B1": 0.1,
+        "B2": 0.2,
+        "r": 0.05
+      },
+      {
+        "E": 30000,
+        "B1": 0.2,
+        "B2": 0.3,
+        "r": 0.04
+      }
+    ],
+    "derived": [
+      [
+        "v",
+        "E/B1"
+      ],
+      [
+        "qm",
+        "v/(B2*r)"
+      ],
+      [
+        "period",
+        "2*pi/(qm*B2)"
+      ],
+      [
+        "voltage",
+        "v*v/(2*qm)"
+      ]
+    ],
+    "tasks": [
+      [
+        "qm",
+        "Find the charge-to-mass ratio of the selected ions.",
+        "C/kg",
+        [
+          "E/(B2*r)",
+          "v*B2/r",
+          "qm/2"
+        ]
+      ],
+      [
+        "period",
+        "Find their revolution period in the second region.",
+        "s",
+        [
+          "pi*r/v",
+          "2*pi*r*B2/v",
+          "period*2"
+        ]
+      ],
+      [
+        "voltage",
+        "Find the accelerating potential difference that would produce this speed from rest.",
+        "V",
+        [
+          "v*v/qm",
+          "voltage/2",
+          "E*r"
+        ]
+      ]
+    ],
+    "explanation": "Zero force in the selector requires qE=qvB₁, hence v={v} m/s. In the second region qvB₂=mv²/r, giving q/m={qm} C/kg. T=2πr/v={period} s. Acceleration from rest uses qΔV=mv²/2, so ΔV={voltage} V.",
+    "checks": [
+      "qm*B2*r-v",
+      "v*B1-E"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 13,
+    "key": "helix",
+    "topic": "Helical charged-particle motion",
+    "stem": "A positive particle has charge-to-mass ratio {qm} C/kg. It enters a uniform magnetic field of magnitude {B} T with speed {v} m/s at angle θ to the field, where sin θ = {s} and cos θ = {c}. No other forces act.",
+    "variants": [
+      {
+        "qm": 1000000.0,
+        "B": 0.2,
+        "v": 100000,
+        "s": 0.6,
+        "c": 0.8
+      },
+      {
+        "qm": 2000000.0,
+        "B": 0.1,
+        "v": 200000,
+        "s": 0.8,
+        "c": 0.6
+      }
+    ],
+    "derived": [
+      [
+        "period",
+        "2*pi/(qm*B)"
+      ],
+      [
+        "radius",
+        "v*s/(qm*B)"
+      ],
+      [
+        "pitch",
+        "v*c*period"
+      ],
+      [
+        "path",
+        "v*period"
+      ]
+    ],
+    "tasks": [
+      [
+        "radius",
+        "Find the helix radius.",
+        "m",
+        [
+          "v/(qm*B)",
+          "v*c/(qm*B)",
+          "radius/2"
+        ]
+      ],
+      [
+        "pitch",
+        "Find the distance advanced along the field in one turn.",
+        "m",
+        [
+          "2*pi*radius",
+          "v*period",
+          "pitch/2"
+        ]
+      ],
+      [
+        "path",
+        "Find the actual path length travelled in one turn.",
+        "m",
+        [
+          "2*pi*radius",
+          "pitch",
+          "sqrt((pi*radius)**2+pitch*pitch)"
+        ]
+      ]
+    ],
+    "explanation": "Resolve speed into v⊥=v sinθ and v∥=v cosθ. The field bends only v⊥, giving radius {radius} m and period {period} s. Axial advance v∥T is {pitch} m; total path length at unchanged speed v is {path} m.",
+    "checks": [
+      "radius*qm*B-v*s",
+      "pitch/period-v*c",
+      "path*path-(2*pi*radius)**2-pitch*pitch"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 13,
+    "key": "galvanometer_two_ranges",
+    "topic": "Galvanometer conversion from two observations",
+    "stem": "The same moving-coil galvanometer becomes a {V1} V voltmeter with series resistance {S1} Ω, and a {V2} V voltmeter with series resistance {S2} Ω. Coil properties remain unchanged. It is then to be made into an ammeter of range {A} A.",
+    "variants": [
+      {
+        "V1": 3,
+        "S1": 2950,
+        "V2": 5,
+        "S2": 4950,
+        "A": 1
+      },
+      {
+        "V1": 2,
+        "S1": 1950,
+        "V2": 6,
+        "S2": 5950,
+        "A": 2
+      }
+    ],
+    "derived": [
+      [
+        "Ig",
+        "(V2-V1)/(S2-S1)"
+      ],
+      [
+        "G",
+        "V1/Ig-S1"
+      ],
+      [
+        "shunt",
+        "Ig*G/(A-Ig)"
+      ],
+      [
+        "power",
+        "Ig*Ig*G"
+      ],
+      [
+        "voltage",
+        "Ig*G"
+      ]
+    ],
+    "tasks": [
+      [
+        "shunt",
+        "Find the required shunt resistance.",
+        "Ω",
+        [
+          "Ig*G/A",
+          "G",
+          "G*A/Ig"
+        ]
+      ],
+      [
+        "power",
+        "Find the coil’s power dissipation at full-scale ammeter current.",
+        "W",
+        [
+          "A*A*G",
+          "A*Ig*G",
+          "power*2"
+        ]
+      ],
+      [
+        "voltage",
+        "Find the voltage drop across the completed ammeter at full scale.",
+        "V",
+        [
+          "A*G",
+          "Ig*shunt",
+          "voltage*2"
+        ]
+      ]
+    ],
+    "explanation": "V₁=Ig(G+S₁) and V₂=Ig(G+S₂) give Ig={Ig} A and G={G} Ω. The coil and shunt have equal voltage, so S=IgG/(A−Ig)={shunt} Ω. The coil still carries only Ig, dissipating {power} W. Full-scale ammeter voltage is IgG={voltage} V.",
+    "checks": [
+      "Ig*(G+S1)-V1",
+      "Ig*(G+S2)-V2",
+      "shunt*(A-Ig)-Ig*G"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 13,
+    "key": "loop_balance",
+    "topic": "Magnetic torque balanced by a spring",
+    "stem": "A coil with {N} turns and area {area} cm² carries {I} A in a uniform {B} T magnetic field. It is attached to a torsion spring. The coil’s normal makes {theta}° with the field and the spring is twisted through {twist} rad at equilibrium. The spring follows torque = κ × twist and balances the magnetic torque.",
+    "variants": [
+      {
+        "N": 100,
+        "area": 20,
+        "I": 0.2,
+        "B": 0.5,
+        "theta": 30,
+        "twist": 0.1
+      },
+      {
+        "N": 50,
+        "area": 40,
+        "I": 0.3,
+        "B": 0.4,
+        "theta": 60,
+        "twist": 0.2
+      }
+    ],
+    "derived": [
+      [
+        "moment",
+        "N*I*area*1e-4"
+      ],
+      [
+        "torque",
+        "moment*B*sin(theta*pi/180)"
+      ],
+      [
+        "kappa",
+        "torque/twist"
+      ],
+      [
+        "springenergy",
+        "torque*twist/2"
+      ],
+      [
+        "magenergy",
+        "-moment*B*cos(theta*pi/180)"
+      ]
+    ],
+    "tasks": [
+      [
+        "kappa",
+        "Find the torsion constant.",
+        "N m/rad",
+        [
+          "moment*B/twist",
+          "kappa/2",
+          "kappa*2"
+        ]
+      ],
+      [
+        "springenergy",
+        "Find the elastic energy stored in the torsion spring.",
+        "J",
+        [
+          "torque*twist",
+          "torque",
+          "springenergy/2"
+        ]
+      ],
+      [
+        "magenergy",
+        "Find the magnetic potential energy with zero at a 90° angle between the coil’s normal and the field.",
+        "J",
+        [
+          "-moment*B*sin(theta*pi/180)",
+          "moment*B*cos(theta*pi/180)",
+          "0"
+        ]
+      ]
+    ],
+    "explanation": "The magnetic moment is NIA={moment} A m². Its torque is mB sinθ={torque} N m. Divide by spring twist to get κ={kappa} N m/rad. Spring energy κφ²/2 is {springenergy} J, whereas magnetic potential energy −mB cosθ is {magenergy} J.",
+    "checks": [
+      "kappa*twist-torque"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 13,
+    "key": "wire_zero",
+    "topic": "Superposed fields of two long straight wires",
+    "stem": "Two infinitely long parallel wires carry currents {I1} A and {I2} A in the same direction. Their separation is {d} m. Let x measure distance from wire 1 along the line toward wire 2. Use μ₀/(2π)=2 × 10⁻⁷ T m/A.",
+    "variants": [
+      {
+        "I1": 3,
+        "I2": 6,
+        "d": 0.3,
+        "L": 2
+      },
+      {
+        "I1": 4,
+        "I2": 12,
+        "d": 0.4,
+        "L": 1.5
+      }
+    ],
+    "derived": [
+      [
+        "x",
+        "I1*d/(I1+I2)"
+      ],
+      [
+        "Bmid",
+        "2e-7*abs(I2-I1)/(d/2)"
+      ],
+      [
+        "force",
+        "2e-7*I1*I2*L/d"
+      ]
+    ],
+    "tasks": [
+      [
+        "x",
+        "Find the field-zero point between the wires.",
+        "m",
+        [
+          "I2*d/(I1+I2)",
+          "d/2",
+          "I1*d/I2"
+        ]
+      ],
+      [
+        "Bmid",
+        "Find the magnetic-field magnitude at the midpoint.",
+        "T",
+        [
+          "2e-7*(I1+I2)/(d/2)",
+          "0",
+          "Bmid/2"
+        ]
+      ],
+      [
+        "force",
+        "Find the force magnitude on a {L} m length of either wire due to the other.",
+        "N",
+        [
+          "2e-7*I1*I2*L/(d/2)",
+          "force/2",
+          "2e-7*(I1+I2)*L/d"
+        ]
+      ]
+    ],
+    "explanation": "Between the wires their fields oppose. Equating I₁/x=I₂/(d−x) gives x={x} m. At the midpoint subtract the two field magnitudes to obtain {Bmid} T. The mutual force is μ₀I₁I₂L/(2πd)={force} N and is attractive for parallel currents.",
+    "checks": [
+      "I1/x-I2/(d-x)"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 13,
+    "key": "solenoid_loop",
+    "topic": "Solenoid field and loop energetics",
+    "stem": "A long ideal air-core solenoid has {n} turns per metre and carries {Is} A. A small {N} turn coil of area {area} cm² carrying {Ic} A is placed fully inside it. The small coil’s normal initially makes {theta}° with the solenoid axis. Use μ₀ = 4π × 10⁻⁷ H/m; neglect the small coil’s effect on the solenoid.",
+    "variants": [
+      {
+        "n": 1000,
+        "Is": 2,
+        "N": 20,
+        "area": 10,
+        "Ic": 0.5,
+        "theta": 60
+      },
+      {
+        "n": 2000,
+        "Is": 1,
+        "N": 50,
+        "area": 8,
+        "Ic": 0.4,
+        "theta": 30
+      }
+    ],
+    "derived": [
+      [
+        "B",
+        "4*pi*1e-7*n*Is"
+      ],
+      [
+        "moment",
+        "N*area*1e-4*Ic"
+      ],
+      [
+        "torque",
+        "moment*B*sin(theta*pi/180)"
+      ],
+      [
+        "work",
+        "moment*B*(1+cos(theta*pi/180))"
+      ],
+      [
+        "flux",
+        "N*B*area*1e-4*cos(theta*pi/180)"
+      ]
+    ],
+    "tasks": [
+      [
+        "torque",
+        "Find the initial magnetic-torque magnitude on the small coil.",
+        "N m",
+        [
+          "moment*B",
+          "torque/2",
+          "moment*B*cos(theta*pi/180)"
+        ]
+      ],
+      [
+        "work",
+        "Find the quasistatic external work needed to rotate its normal from the initial orientation to directly opposite the solenoid field.",
+        "J",
+        [
+          "2*moment*B",
+          "-work",
+          "moment*B*(1-cos(theta*pi/180))"
+        ]
+      ],
+      [
+        "flux",
+        "Find the initial total flux linkage through the small coil due to the solenoid alone.",
+        "Wb turn",
+        [
+          "flux/N",
+          "N*B*area*1e-4",
+          "N*B*area*1e-4*sin(theta*pi/180)"
+        ]
+      ]
+    ],
+    "explanation": "First find the solenoid field B=μ₀nIs={B} T and coil moment m=NAIc={moment} A m². Torque is mB sinθ={torque} N m. Using U=−mB cosθ, work to reach θ=180° is {work} J. Initial flux linkage is NBA cosθ={flux} Wb turn.",
+    "checks": [
+      "B-4*pi*1e-7*n*Is",
+      "flux*Ic+(-moment*B*cos(theta*pi/180))"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 14,
+    "key": "sliding_rod",
+    "topic": "Motional emf with an applied driving force",
+    "stem": "A conducting rod of length {L} m slides at constant speed on smooth horizontal rails in a uniform perpendicular magnetic field {B} T. The closed circuit has total resistance {R} Ω and negligible inductance. A horizontal external force {F} N balances the magnetic drag. Rails and field are long enough for steady motion.",
+    "variants": [
+      {
+        "L": 0.5,
+        "B": 2,
+        "R": 4,
+        "F": 2
+      },
+      {
+        "L": 0.4,
+        "B": 1.5,
+        "R": 3,
+        "F": 1.2
+      }
+    ],
+    "derived": [
+      [
+        "current",
+        "F/(B*L)"
+      ],
+      [
+        "speed",
+        "current*R/(B*L)"
+      ],
+      [
+        "power",
+        "current*current*R"
+      ],
+      [
+        "charge",
+        "B*L*2/R"
+      ]
+    ],
+    "tasks": [
+      [
+        "speed",
+        "Find the steady speed.",
+        "m/s",
+        [
+          "F*R/(B*L)",
+          "speed/2",
+          "speed*2"
+        ]
+      ],
+      [
+        "power",
+        "Find the Joule-heating power.",
+        "W",
+        [
+          "F*speed/2",
+          "current*R",
+          "power*2"
+        ]
+      ],
+      [
+        "charge",
+        "Find the charge passing a circuit cross-section as the rod moves 2 m.",
+        "C",
+        [
+          "current*2",
+          "charge/2",
+          "charge*2"
+        ]
+      ]
+    ],
+    "explanation": "Force balance gives F=BIL, so I={current} A. Motional emf BLv=IR then gives v={speed} m/s. Mechanical power Fv equals I²R={power} W. For distance d, charge ∫I dt=BLd/R, giving {charge} C for 2 m.",
+    "checks": [
+      "B*L*current-F",
+      "B*L*speed-current*R",
+      "power-F*speed"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 14,
+    "key": "flux_polynomial",
+    "topic": "Time-dependent flux and resistance heating",
+    "stem": "The magnetic flux through each turn of a coil with {N} turns is Φ(t) = {a}t² + {b}t mWb for t in seconds. The coil has resistance {R} Ω and negligible self-inductance. Its terminals are connected to form a closed circuit. Consider 0 ≤ t ≤ {T} s.",
+    "variants": [
+      {
+        "N": 100,
+        "a": 2,
+        "b": 3,
+        "R": 10,
+        "T": 2
+      },
+      {
+        "N": 50,
+        "a": 3,
+        "b": 2,
+        "R": 5,
+        "T": 3
+      }
+    ],
+    "derived": [
+      [
+        "current",
+        "N*(2*a*T+b)*1e-3/R"
+      ],
+      [
+        "charge",
+        "N*(a*T*T+b*T)*1e-3/R"
+      ],
+      [
+        "heat",
+        "(N*1e-3)**2/R*(4*a*a*T**3/3+2*a*b*T*T+b*b*T)"
+      ]
+    ],
+    "tasks": [
+      [
+        "current",
+        "Find the induced-current magnitude at the end of the interval.",
+        "A",
+        [
+          "N*(a*T+b)*1e-3/R",
+          "current/N",
+          "current*2"
+        ]
+      ],
+      [
+        "charge",
+        "Find the magnitude of charge transported during the interval.",
+        "C",
+        [
+          "current*T",
+          "charge/N",
+          "charge/2"
+        ]
+      ],
+      [
+        "heat",
+        "Find the heat dissipated during the interval.",
+        "J",
+        [
+          "current*current*R*T",
+          "heat/2",
+          "heat*2"
+        ]
+      ]
+    ],
+    "explanation": "Faraday’s law gives emf magnitude N dΦ/dt = N(2at+b)×10⁻³ V. Divide by R for current; the final value is {current} A. Integrating gives transported charge NΔΦ/R={charge} C. Integrating I²R over the interval yields {heat} J.",
+    "checks": [
+      "charge*R-N*(a*T*T+b*T)*1e-3"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 14,
+    "key": "lr_switch",
+    "topic": "Inductive current growth",
+    "stem": "A series circuit has inductance {L} H, total resistance {R} Ω and an ideal {V} V DC source. At t=0 the switch closes with zero current. For this transient use I(t)=(V/R)(1−exp(−Rt/L)). Consider the instant when the current is {f} times its final value.",
+    "variants": [
+      {
+        "L": 2,
+        "R": 4,
+        "V": 12,
+        "f": 0.5
+      },
+      {
+        "L": 3,
+        "R": 6,
+        "V": 18,
+        "f": 0.75
+      }
+    ],
+    "derived": [
+      [
+        "I",
+        "f*V/R"
+      ],
+      [
+        "time",
+        "-L/R*log(1-f)"
+      ],
+      [
+        "energy",
+        "L*I*I/2"
+      ],
+      [
+        "rate",
+        "V*(1-f)/L"
+      ],
+      [
+        "power",
+        "L*I*rate"
+      ]
+    ],
+    "tasks": [
+      [
+        "time",
+        "Find the elapsed time.",
+        "s",
+        [
+          "L/R",
+          "-R/L*log(1-f)",
+          "time/2"
+        ]
+      ],
+      [
+        "energy",
+        "Find the stored magnetic energy.",
+        "J",
+        [
+          "L*(V/R)**2/2",
+          "L*I*I",
+          "energy/2"
+        ]
+      ],
+      [
+        "power",
+        "Find the instantaneous rate of increase of magnetic energy.",
+        "W",
+        [
+          "V*I",
+          "I*I*R",
+          "power*2"
+        ]
+      ]
+    ],
+    "explanation": "Set I/I∞={f} in the supplied exponential relation: t=−(L/R)ln(1−f)={time} s. At I={I} A, stored energy LI²/2={energy} J. Kirchhoff’s law gives L dI/dt=V−IR; multiplying by I gives magnetic-energy growth {power} W.",
+    "checks": [
+      "L*rate+I*R-V",
+      "power-V*I+I*I*R"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 14,
+    "key": "ac_inverse",
+    "topic": "Series AC circuit inferred from component voltages",
+    "stem": "In a series RLC circuit at one frequency, the rms source voltage is {V} V and the rms current is {I} A. The inductor voltage is {VL} V rms and capacitor voltage is {VC} V rms. Components are ideal except the series resistor; {VL} > {VC}.",
+    "variants": [
+      {
+        "V": 100,
+        "I": 2,
+        "VL": 100,
+        "VC": 40
+      },
+      {
+        "V": 130,
+        "I": 5,
+        "VL": 140,
+        "VC": 90
+      }
+    ],
+    "derived": [
+      [
+        "VR",
+        "sqrt(V*V-(VL-VC)**2)"
+      ],
+      [
+        "R",
+        "VR/I"
+      ],
+      [
+        "power",
+        "I*VR"
+      ],
+      [
+        "pf",
+        "VR/V"
+      ],
+      [
+        "resonant",
+        "V/R"
+      ]
+    ],
+    "tasks": [
+      [
+        "R",
+        "Find the series resistance.",
+        "Ω",
+        [
+          "V/I",
+          "(VL-VC)/I",
+          "VR/(2*I)"
+        ]
+      ],
+      [
+        "power",
+        "Find the average power absorbed.",
+        "W",
+        [
+          "V*I",
+          "I*(VL-VC)",
+          "power/2"
+        ]
+      ],
+      [
+        "resonant",
+        "If the frequency is changed to resonance while source rms voltage and resistance stay the same, find the new rms current.",
+        "A",
+        [
+          "I",
+          "V*I/(VL-VC)",
+          "resonant/2"
+        ]
+      ]
+    ],
+    "explanation": "Voltage phasors give V²=VR²+(VL−VC)². Thus VR={VR} V and R=VR/I={R} Ω. Average power is IVR={power} W. At resonance the net reactance vanishes and current is V/R={resonant} A.",
+    "checks": [
+      "VR*VR+(VL-VC)**2-V*V"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 14,
+    "key": "transformer_load",
+    "topic": "Ideal transformer and load power",
+    "stem": "An ideal transformer has {Np} primary turns and {Ns} secondary turns. The primary receives {Vp} V rms AC. A {R} Ω resistor is the only secondary load. Ignore magnetising current and losses.",
+    "variants": [
+      {
+        "Np": 1000,
+        "Ns": 200,
+        "Vp": 240,
+        "R": 12
+      },
+      {
+        "Np": 800,
+        "Ns": 200,
+        "Vp": 200,
+        "R": 10
+      }
+    ],
+    "derived": [
+      [
+        "Vs",
+        "Vp*Ns/Np"
+      ],
+      [
+        "Is",
+        "Vs/R"
+      ],
+      [
+        "Ip",
+        "Is*Ns/Np"
+      ],
+      [
+        "power",
+        "Vs*Is"
+      ],
+      [
+        "reflected",
+        "R*(Np/Ns)**2"
+      ]
+    ],
+    "tasks": [
+      [
+        "Ip",
+        "Find the primary rms current.",
+        "A",
+        [
+          "Is",
+          "Is*Np/Ns",
+          "Vp/R"
+        ]
+      ],
+      [
+        "power",
+        "Find the average input power.",
+        "W",
+        [
+          "Vp*Is",
+          "Vs*Ip",
+          "power/2"
+        ]
+      ],
+      [
+        "reflected",
+        "Find the effective load resistance seen at the primary, defined by Vp/Ip.",
+        "Ω",
+        [
+          "R*Np/Ns",
+          "R",
+          "R*(Ns/Np)**2"
+        ]
+      ]
+    ],
+    "explanation": "The turns ratio gives Vs={Vs} V. Secondary current is {Is} A; equal input and output power gives Ip={Ip} A and power={power} W. The reflected resistance is R(Np/Ns)²={reflected} Ω.",
+    "checks": [
+      "Vp*Ip-Vs*Is",
+      "Ip*reflected-Vp"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 14,
+    "key": "mutual_induction",
+    "topic": "Induced current and transported charge",
+    "stem": "Two stationary coils have mutual inductance {M} H. Current in coil 1 increases uniformly from {i0} A to {i1} A in {t} s. Coil 2 forms a closed circuit of resistance {R} Ω; its self-inductance and all capacitive effects are negligible.",
+    "variants": [
+      {
+        "M": 0.2,
+        "i0": 1,
+        "i1": 5,
+        "t": 0.4,
+        "R": 2
+      },
+      {
+        "M": 0.3,
+        "i0": 2,
+        "i1": 8,
+        "t": 0.6,
+        "R": 3
+      }
+    ],
+    "derived": [
+      [
+        "emf",
+        "M*(i1-i0)/t"
+      ],
+      [
+        "current",
+        "emf/R"
+      ],
+      [
+        "charge",
+        "M*(i1-i0)/R"
+      ],
+      [
+        "heat",
+        "emf*emf*t/R"
+      ]
+    ],
+    "tasks": [
+      [
+        "current",
+        "Find the magnitude of the induced current during the ramp.",
+        "A",
+        [
+          "M*i1/(t*R)",
+          "emf",
+          "current/2"
+        ]
+      ],
+      [
+        "charge",
+        "Find the magnitude of transported charge during the ramp.",
+        "C",
+        [
+          "M*i1/R",
+          "charge/2",
+          "charge*2"
+        ]
+      ],
+      [
+        "heat",
+        "Find the heat generated in coil 2 during the ramp.",
+        "J",
+        [
+          "emf*current",
+          "heat/2",
+          "heat*2"
+        ]
+      ]
+    ],
+    "explanation": "Mutual emf magnitude is MΔI/Δt={emf} V, constant during the linear ramp. It drives {current} A. Integrating gives charge MΔI/R={charge} C; I²RΔt gives {heat} J of heat.",
+    "checks": [
+      "charge-current*t",
+      "heat-current*current*R*t"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 15,
+    "key": "em_wave_detector",
+    "topic": "Electromagnetic-wave intensity and detection",
+    "stem": "A plane sinusoidal electromagnetic wave in vacuum has peak electric-field amplitude {E} V/m and frequency {f} Hz. A detector of area {A} cm² is perpendicular to propagation and absorbs {absorb} of the incident energy. Use c=3 × 10⁸ m/s and ε₀=8.85 × 10⁻¹² F/m; average intensity is ε₀cE₀²/2. For photon calculations use h=6.63 × 10⁻³⁴ J s.",
+    "variants": [
+      {
+        "E": 100,
+        "f": 600000000000000.0,
+        "A": 2,
+        "absorb": 0.8
+      },
+      {
+        "E": 200,
+        "f": 500000000000000.0,
+        "A": 1,
+        "absorb": 0.6
+      }
+    ],
+    "derived": [
+      [
+        "B",
+        "E/3e8"
+      ],
+      [
+        "intensity",
+        "8.85e-12*3e8*E*E/2"
+      ],
+      [
+        "power",
+        "intensity*A*1e-4*absorb"
+      ],
+      [
+        "energy",
+        "power*60"
+      ],
+      [
+        "wavelength",
+        "3e8/f*1e9"
+      ],
+      [
+        "photons",
+        "power/(6.63e-34*f)"
+      ]
+    ],
+    "tasks": [
+      [
+        "power",
+        "Find the average absorbed power.",
+        "W",
+        [
+          "intensity*A*1e-4",
+          "power*2",
+          "power/2"
+        ]
+      ],
+      [
+        "energy",
+        "Find the absorbed energy in one minute.",
+        "J",
+        [
+          "power",
+          "energy*2",
+          "energy/2"
+        ]
+      ],
+      [
+        "photons",
+        "Find the mean number of photons absorbed per second.",
+        "s⁻¹",
+        [
+          "photons/absorb",
+          "photons*2",
+          "photons/2"
+        ]
+      ]
+    ],
+    "explanation": "The peak magnetic field is E₀/c={B} T. Time-averaging the squared sinusoidal field gives intensity {intensity} W/m². Convert the detector area to m² and multiply by absorptance to get {power} W; in 60 s it absorbs {energy} J. Independently, λ=c/f={wavelength} nm. Each photon has energy hf; the absorbed photon rate is Pabsorbed/(hf)={photons} s⁻¹.",
+    "checks": [
+      "power-intensity*A*1e-4*absorb",
+      "wavelength*f-3e17"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 16,
+    "key": "lens_displacement",
+    "topic": "Lens displacement and conjugate positions",
+    "stem": "An object and screen are fixed {D} cm apart. A thin convex lens forms a sharp real image on the screen at two positions separated by {s} cm. Assume paraxial rays and that the lens is in air.",
+    "variants": [
+      {
+        "D": 100,
+        "s": 60
+      },
+      {
+        "D": 90,
+        "s": 30
+      }
+    ],
+    "derived": [
+      [
+        "u",
+        "(D-s)/2"
+      ],
+      [
+        "v",
+        "(D+s)/2"
+      ],
+      [
+        "f",
+        "u*v/D"
+      ],
+      [
+        "magnification",
+        "v/u"
+      ],
+      [
+        "ratio",
+        "(v/u)**2"
+      ]
+    ],
+    "tasks": [
+      [
+        "f",
+        "Find the focal length.",
+        "cm",
+        [
+          "D/4",
+          "(D*D+s*s)/(4*D)",
+          "(D-s)/4"
+        ]
+      ],
+      [
+        "magnification",
+        "Find the magnitude of the larger image magnification.",
+        "",
+        [
+          "D/s",
+          "u/v",
+          "v/D"
+        ]
+      ],
+      [
+        "ratio",
+        "Find the ratio of the larger image height to the smaller image height for the same object.",
+        "",
+        [
+          "v/u",
+          "u/v",
+          "ratio/2"
+        ]
+      ]
+    ],
+    "explanation": "The conjugate object and image distances satisfy u+v=D and v−u=s, giving u={u} cm and v={v} cm. Then f=uv/(u+v)={f} cm. Magnifications at the two positions have magnitudes v/u and u/v; the larger is {magnification} and the height ratio is {ratio}.",
+    "checks": [
+      "u+v-D",
+      "v-u-s",
+      "1/f-1/u-1/v"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 16,
+    "key": "two_lenses",
+    "topic": "Successive imaging by separated lenses",
+    "stem": "Two thin convex lenses L₁ and L₂ of focal lengths {f1} cm and {f2} cm are {d} cm apart on a common axis. An object is {u1} cm to the left of L₁. Light travels left to right. Use paraxial optics in air; report distances relative to L₂.",
+    "variants": [
+      {
+        "f1": 10,
+        "f2": 15,
+        "d": 50,
+        "u1": 30
+      },
+      {
+        "f1": 12,
+        "f2": 10,
+        "d": 60,
+        "u1": 24
+      }
+    ],
+    "derived": [
+      [
+        "v1",
+        "f1*u1/(u1-f1)"
+      ],
+      [
+        "u2",
+        "d-v1"
+      ],
+      [
+        "v2",
+        "f2*u2/(u2-f2)"
+      ],
+      [
+        "mag",
+        "v1*v2/(u1*u2)"
+      ],
+      [
+        "separation",
+        "d+u1+v2"
+      ]
+    ],
+    "tasks": [
+      [
+        "v2",
+        "How far to the right of L₂ is the final image?",
+        "cm",
+        [
+          "v1",
+          "f2",
+          "f2*d/(d-f2)"
+        ]
+      ],
+      [
+        "mag",
+        "Find the magnitude of the overall transverse magnification.",
+        "",
+        [
+          "v2/u2",
+          "v1/u1",
+          "mag*2"
+        ]
+      ],
+      [
+        "separation",
+        "Find the distance from the original object to the final image.",
+        "cm",
+        [
+          "d+v2",
+          "u1+v2",
+          "d+u1+v1"
+        ]
+      ]
+    ],
+    "explanation": "For L₁, 1/f₁=1/u₁+1/v₁ gives v₁={v1} cm to its right. This is a real object {u2} cm to the left of L₂. A second lens-equation calculation gives v₂={v2} cm. Each lens inverts the image, so their magnification product is positive with magnitude {mag}. Original-object to final-image distance is {separation} cm.",
+    "checks": [
+      "1/f1-1/u1-1/v1",
+      "1/f2-1/u2-1/v2"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 16,
+    "key": "prism_immersion",
+    "topic": "Prism refraction in two surrounding media",
+    "stem": "An equilateral glass prism of angle 60° has minimum deviation {dev}° in air. The same prism is immersed in a liquid of refractive index {liquid} relative to air. Use geometrical optics and assume no dispersion at the light’s wavelength.",
+    "variants": [
+      {
+        "dev": 60,
+        "liquid": 1.25
+      },
+      {
+        "dev": 40,
+        "liquid": 1.1
+      }
+    ],
+    "derived": [
+      [
+        "n",
+        "2*sin((60+dev)*pi/360)"
+      ],
+      [
+        "rel",
+        "n/liquid"
+      ],
+      [
+        "newdev",
+        "2*asin(rel*.5)*180/pi-60"
+      ],
+      [
+        "critical",
+        "asin(1/rel)*180/pi"
+      ],
+      [
+        "speed",
+        "3e8/n"
+      ]
+    ],
+    "tasks": [
+      [
+        "newdev",
+        "Find the minimum deviation in the liquid.",
+        "°",
+        [
+          "dev",
+          "dev/liquid",
+          "newdev/2"
+        ]
+      ],
+      [
+        "critical",
+        "Find the critical angle at a glass-to-liquid interface.",
+        "°",
+        [
+          "asin(1/n)*180/pi",
+          "asin(liquid/(n*n))*180/pi",
+          "critical/2"
+        ]
+      ],
+      [
+        "speed",
+        "Find the light speed inside this glass, taking vacuum light speed as 3 × 10⁸ m/s.",
+        "m/s",
+        [
+          "3e8*liquid/n",
+          "3e8*n",
+          "3e8/liquid"
+        ]
+      ]
+    ],
+    "explanation": "At minimum deviation, n=sin[(A+δ)/2]/sin(A/2)={n}. Immersion changes the relative index to {rel}. Hence δnew=2asin[(n/nliquid)sin(A/2)]−A={newdev}°. The critical angle is asin(nliquid/n)={critical}°. The glass’s absolute speed remains c/n={speed} m/s.",
+    "checks": [
+      "sin((60+newdev)*pi/360)-rel*.5"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 16,
+    "key": "ydse_plate",
+    "topic": "Interference with a thin transparent plate",
+    "stem": "In Young’s double-slit experiment, slit spacing is {d} mm and screen distance {D} m. The observed fringe width is {beta} mm. A plate of thickness {t} μm placed over one slit shifts the central fringe by {shift} mm. Assume normal incidence, thin plate geometry and the small-angle approximation.",
+    "variants": [
+      {
+        "d": 0.5,
+        "D": 2,
+        "beta": 2,
+        "t": 10,
+        "shift": 20
+      },
+      {
+        "d": 0.4,
+        "D": 1.5,
+        "beta": 1.875,
+        "t": 12,
+        "shift": 18
+      }
+    ],
+    "derived": [
+      [
+        "lam",
+        "beta*1e-3*d*1e-3/D"
+      ],
+      [
+        "path",
+        "shift*1e-3*d*1e-3/D"
+      ],
+      [
+        "n",
+        "1+path/(t*1e-6)"
+      ],
+      [
+        "order",
+        "path/lam"
+      ],
+      [
+        "double",
+        "2*shift"
+      ]
+    ],
+    "tasks": [
+      [
+        "n",
+        "Find the refractive index of the plate.",
+        "",
+        [
+          "path/(t*1e-6)",
+          "1+shift/beta",
+          "n/2"
+        ]
+      ],
+      [
+        "order",
+        "How many fringe widths does the central fringe move?",
+        "",
+        [
+          "shift/(2*beta)",
+          "2*shift/beta",
+          "path/(2*lam)"
+        ]
+      ],
+      [
+        "lam",
+        "Find the light wavelength.",
+        "m",
+        [
+          "beta*1e-3*D/(d*1e-3)",
+          "lam/2",
+          "lam*2"
+        ]
+      ]
+    ],
+    "explanation": "From β=λD/d, λ={lam} m. A plate adds optical path (n−1)t and shifts the pattern by D(n−1)t/d. The measured shift therefore implies added path {path} m and n={n}. The number of shifted fringes is added path/λ={order}.",
+    "checks": [
+      "(n-1)*t*1e-6-path",
+      "path/lam-shift/beta"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 16,
+    "key": "interference_inverse",
+    "topic": "Recovering source intensities from fringes",
+    "stem": "Two coherent beams have the same frequency and fixed polarisation. Their interference pattern has maximum intensity {imax} W/m² and minimum intensity {imin} W/m². Let I₁ be the larger individual-beam intensity and I₂ the smaller. Both beams have identical linear polarisation.",
+    "variants": [
+      {
+        "imax": 25,
+        "imin": 1
+      },
+      {
+        "imax": 49,
+        "imin": 9
+      }
+    ],
+    "derived": [
+      [
+        "I1",
+        "((sqrt(imax)+sqrt(imin))/2)**2"
+      ],
+      [
+        "I2",
+        "((sqrt(imax)-sqrt(imin))/2)**2"
+      ],
+      [
+        "newmax",
+        "(sqrt(I1)/2+sqrt(I2))**2"
+      ],
+      [
+        "quad",
+        "I1+I2"
+      ]
+    ],
+    "tasks": [
+      [
+        "I1",
+        "Find the larger individual intensity.",
+        "W/m²",
+        [
+          "(imax+imin)/2",
+          "imax-imin",
+          "I1/2"
+        ]
+      ],
+      [
+        "newmax",
+        "A filter reduces the larger beam’s intensity to one quarter while preserving coherence. Find the new maximum intensity.",
+        "W/m²",
+        [
+          "imax/4",
+          "(sqrt(I1)/4+sqrt(I2))**2",
+          "I1/4+I2"
+        ]
+      ],
+      [
+        "quad",
+        "Without the filter, find the intensity where the phase difference is 90°.",
+        "W/m²",
+        [
+          "sqrt(imax*imin)",
+          "imax-imin",
+          "quad/2"
+        ]
+      ]
+    ],
+    "explanation": "Maximum and minimum amplitudes are √I₁+√I₂ and √I₁−√I₂. Adding and subtracting their measured square roots gives I₁={I1}, I₂={I2} W/m². Quarter intensity means half amplitude, giving a new maximum of {newmax} W/m². At 90° the cross term vanishes and intensity is I₁+I₂={quad} W/m².",
+    "checks": [
+      "(sqrt(I1)+sqrt(I2))**2-imax",
+      "(sqrt(I1)-sqrt(I2))**2-imin"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 16,
+    "key": "diffraction_missing",
+    "topic": "Interference fringes within a diffraction envelope",
+    "stem": "A double slit has equal individual slit widths a and centre separation d. Monochromatic light of wavelength {lam} nm falls normally. Interference maxima of orders that are integer multiples of {order} coincide with diffraction minima, with the first missing order at ±{order}. Screen distance is {D} m and interference fringe width is {beta} mm. Use small angles.",
+    "variants": [
+      {
+        "lam": 500,
+        "order": 3,
+        "D": 2,
+        "beta": 2
+      },
+      {
+        "lam": 600,
+        "order": 4,
+        "D": 1.5,
+        "beta": 1.5
+      }
+    ],
+    "derived": [
+      [
+        "d",
+        "lam*1e-9*D/(beta*1e-3)"
+      ],
+      [
+        "a",
+        "d/order"
+      ],
+      [
+        "width",
+        "2*order*beta"
+      ],
+      [
+        "visible",
+        "2*order-1"
+      ]
+    ],
+    "tasks": [
+      [
+        "a",
+        "Find the width of each slit.",
+        "m",
+        [
+          "d",
+          "d*order",
+          "a/2"
+        ]
+      ],
+      [
+        "width",
+        "Find the width of the central diffraction envelope between its first minima.",
+        "mm",
+        [
+          "order*beta",
+          "2*beta",
+          "width/2"
+        ]
+      ],
+      [
+        "visible",
+        "How many interference bright maxima lie strictly inside the central diffraction envelope, including the central maximum?",
+        "",
+        [
+          "2*order",
+          "2*order+1",
+          "order"
+        ]
+      ]
+    ],
+    "explanation": "Interference spacing gives d=λD/β={d} m. Coincidence of the first diffraction minimum with order {order} gives d/a={order}, so a={a} m. The envelope width is 2λD/a={width} mm. Orders −({order}−1) through +({order}−1) survive inside it, giving {visible} maxima.",
+    "checks": [
+      "d/a-order",
+      "width-2*lam*1e-9*D/a*1000"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 16,
+    "key": "three_polaroids",
+    "topic": "Successive polarisation and intensity inference",
+    "stem": "Unpolarised light passes through three ideal polaroids. Their transmission axes make angles 0°, {middle}° and {last}° with a reference line. The emerging intensity is measured as {out} W/m². Ignore absorption except that described by ideal polariser transmission and Malus’s law.",
+    "variants": [
+      {
+        "middle": 30,
+        "last": 60,
+        "out": 9
+      },
+      {
+        "middle": 45,
+        "last": 90,
+        "out": 5
+      }
+    ],
+    "derived": [
+      [
+        "factor",
+        "cos(middle*pi/180)**2*cos((last-middle)*pi/180)**2"
+      ],
+      [
+        "input",
+        "2*out/factor"
+      ],
+      [
+        "without",
+        "input/2*cos(last*pi/180)**2"
+      ],
+      [
+        "after2",
+        "input/2*cos(middle*pi/180)**2"
+      ]
+    ],
+    "tasks": [
+      [
+        "input",
+        "Find the incident unpolarised intensity.",
+        "W/m²",
+        [
+          "out/factor",
+          "input/2",
+          "input*2"
+        ]
+      ],
+      [
+        "without",
+        "Find the final intensity if the middle polaroid is removed and the other axes are unchanged.",
+        "W/m²",
+        [
+          "out",
+          "input/2",
+          "input/2*cos((last-middle)*pi/180)**2"
+        ]
+      ],
+      [
+        "after2",
+        "With all three present, find the intensity just after the second polaroid.",
+        "W/m²",
+        [
+          "input/2",
+          "out",
+          "after2/2"
+        ]
+      ]
+    ],
+    "explanation": "The first polariser transmits I₀/2. Successive factors are cos²θmiddle and cos²(θlast−θmiddle), so the observed final intensity implies I₀={input} W/m². After the second the intensity is {after2} W/m². Removing it instead gives (I₀/2)cos²θlast={without} W/m².",
+    "checks": [
+      "input*factor/2-out"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 17,
+    "key": "photoelectric_two_colours",
+    "topic": "Photoelectric threshold and electron energy",
+    "stem": "Light of wavelength {lam} nm ejects electrons from a metal with stopping potential {stop} V. Use hc=1240 eV nm. Assume a clean surface with one work function and neglect contact potentials. A second illumination has wavelength {lam2} nm.",
+    "variants": [
+      {
+        "lam": 400,
+        "stop": 1.1,
+        "lam2": 250
+      },
+      {
+        "lam": 500,
+        "stop": 0.98,
+        "lam2": 310
+      }
+    ],
+    "derived": [
+      [
+        "work",
+        "1240/lam-stop"
+      ],
+      [
+        "threshold",
+        "1240/work"
+      ],
+      [
+        "stop2",
+        "1240/lam2-work"
+      ],
+      [
+        "ratio",
+        "sqrt(stop2/stop)"
+      ]
+    ],
+    "tasks": [
+      [
+        "threshold",
+        "Find the threshold wavelength.",
+        "nm",
+        [
+          "lam",
+          "1240/stop",
+          "threshold/2"
+        ]
+      ],
+      [
+        "stop2",
+        "Find the stopping potential under the second illumination.",
+        "V",
+        [
+          "1240/lam2",
+          "stop*lam/lam2",
+          "stop2/2"
+        ]
+      ],
+      [
+        "ratio",
+        "Find the second-to-first ratio of maximum photoelectron speeds, treating electrons nonrelativistically.",
+        "",
+        [
+          "stop2/stop",
+          "sqrt(lam/lam2)",
+          "stop/stop2"
+        ]
+      ]
+    ],
+    "explanation": "Einstein’s equation gives work function φ=hc/λ−eVs={work} eV. Thus threshold wavelength is {threshold} nm. The second maximum kinetic energy is hc/λ₂−φ={stop2} eV, numerically the stopping voltage. Since vmax is proportional to √Kmax, the speed ratio is {ratio}.",
+    "checks": [
+      "work+stop-1240/lam",
+      "work+stop2-1240/lam2"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 17,
+    "key": "photon_current",
+    "topic": "Photon flux and photoelectric current",
+    "stem": "A monochromatic source of wavelength {lam} nm emits {P} mW isotropically. A photocathode of area {A} cm² is normal to the rays at distance {r} m, with negligible variation over its small area. A fraction {yieldq} of incident photons release one collected electron each. Take h=6.63 × 10⁻³⁴ J s, c=3 × 10⁸ m/s and e=1.60 × 10⁻¹⁹ C.",
+    "variants": [
+      {
+        "lam": 400,
+        "P": 10,
+        "A": 4,
+        "r": 1,
+        "yieldq": 0.2
+      },
+      {
+        "lam": 500,
+        "P": 20,
+        "A": 2,
+        "r": 2,
+        "yieldq": 0.3
+      }
+    ],
+    "derived": [
+      [
+        "incident",
+        "P*1e-3*A*1e-4/(4*pi*r*r)"
+      ],
+      [
+        "photons",
+        "incident/(6.63e-34*3e8/(lam*1e-9))"
+      ],
+      [
+        "current",
+        "photons*yieldq*1.6e-19"
+      ],
+      [
+        "rate",
+        "photons*yieldq"
+      ],
+      [
+        "charge",
+        "current*120"
+      ]
+    ],
+    "tasks": [
+      [
+        "current",
+        "Find the saturation photocurrent.",
+        "A",
+        [
+          "photons*1.6e-19",
+          "current*4*pi",
+          "current/2"
+        ]
+      ],
+      [
+        "rate",
+        "Find the number of collected electrons per second.",
+        "s⁻¹",
+        [
+          "photons",
+          "rate/2",
+          "rate*2"
+        ]
+      ],
+      [
+        "charge",
+        "Find the collected charge in two minutes.",
+        "C",
+        [
+          "current*2",
+          "current*60",
+          "charge*2"
+        ]
+      ]
+    ],
+    "explanation": "The detector intercepts the area fraction A/(4πr²), giving incident power {incident} W. Divide by photon energy hc/λ to obtain {photons} photons/s, then multiply by yield to get {rate} electrons/s. Current is {current} A and charge in 120 s is {charge} C.",
+    "checks": [
+      "current-rate*1.6e-19",
+      "charge-current*120"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 17,
+    "key": "debroglie_accelerate",
+    "topic": "Matter wavelength after an energy change",
+    "stem": "An electron initially has de Broglie wavelength {lam} nm. It is then accelerated through an additional {V} V in vacuum. Use the nonrelativistic approximation K(eV)=0.0150/[λ(nm)]² and take e=1.60 × 10⁻¹⁹ C. No energy is lost.",
+    "variants": [
+      {
+        "lam": 0.2,
+        "V": 0.625
+      },
+      {
+        "lam": 0.3,
+        "V": 0.5
+      }
+    ],
+    "derived": [
+      [
+        "K1",
+        "0.015/(lam*lam)"
+      ],
+      [
+        "K2",
+        "K1+V"
+      ],
+      [
+        "newlam",
+        "sqrt(.015/K2)"
+      ],
+      [
+        "momentum",
+        "sqrt(K2/K1)"
+      ],
+      [
+        "energy",
+        "K2*1.6e-19"
+      ]
+    ],
+    "tasks": [
+      [
+        "newlam",
+        "Find its final de Broglie wavelength.",
+        "nm",
+        [
+          "lam/sqrt(V)",
+          "lam*K1/K2",
+          "newlam*2"
+        ]
+      ],
+      [
+        "momentum",
+        "Find the final-to-initial momentum ratio.",
+        "",
+        [
+          "K2/K1",
+          "K1/K2",
+          "sqrt(V/K1)"
+        ]
+      ],
+      [
+        "energy",
+        "Find the final kinetic energy.",
+        "J",
+        [
+          "V*1.6e-19",
+          "K1*1.6e-19",
+          "energy/2"
+        ]
+      ]
+    ],
+    "explanation": "The initial kinetic energy is {K1} eV. Acceleration adds {V} eV, giving {K2} eV. The supplied matter-wave relation then gives λfinal={newlam} nm. Momentum scales as √K, so its ratio is {momentum}; final energy is {energy} J.",
+    "checks": [
+      "K2-K1-V",
+      "newlam*newlam*K2-.015"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 18,
+    "key": "hydrogen_transition",
+    "topic": "Hydrogen spectra and excited-state ionisation",
+    "stem": "A hydrogen atom has energies En=−13.6/n² eV. An electron initially in level n={n} emits a photon on falling to level n={lower}. Use hc=1240 eV nm and Bohr radius a₀=0.053 nm. After this transition the atom is photoionised by a photon of wavelength {incident} nm. Use the nonrelativistic electron relation K(eV)=0.0150/[λ(nm)]².",
+    "variants": [
+      {
+        "n": 4,
+        "lower": 2,
+        "incident": 200
+      },
+      {
+        "n": 5,
+        "lower": 2,
+        "incident": 220
+      }
+    ],
+    "derived": [
+      [
+        "photon",
+        "13.6*(1/lower**2-1/n**2)"
+      ],
+      [
+        "wave",
+        "1240/photon"
+      ],
+      [
+        "ionise",
+        "13.6/lower**2"
+      ],
+      [
+        "radiusratio",
+        "(lower/n)**2"
+      ],
+      [
+        "total",
+        "photon+ionise"
+      ],
+      [
+        "electronK",
+        "1240/incident-ionise"
+      ],
+      [
+        "electronwave",
+        "sqrt(.015/electronK)"
+      ]
+    ],
+    "tasks": [
+      [
+        "wave",
+        "Find the emitted wavelength.",
+        "nm",
+        [
+          "1240/(13.6/n**2)",
+          "wave/2",
+          "wave*2"
+        ]
+      ],
+      [
+        "total",
+        "Find the sum of the emitted photon energy and the minimum subsequent energy needed to ionise the atom from its final bound level.",
+        "eV",
+        [
+          "13.6",
+          "ionise",
+          "photon"
+        ]
+      ],
+      [
+        "electronwave",
+        "Find the de Broglie wavelength of the emitted electron.",
+        "nm",
+        [
+          "sqrt(.015/(1240/incident))",
+          "electronwave/2",
+          "electronwave*2"
+        ]
+      ]
+    ],
+    "explanation": "The level-energy difference is {photon} eV, so λ=hc/ΔE is {wave} nm. Ionisation from the final bound state requires {ionise} eV; the requested sum is {total} eV. Since rn=a₀n², the orbital-radius ratio is {radiusratio}. Subsequent photoionisation leaves electron kinetic energy hc/λ_incident−13.6/n_final²={electronK} eV, giving electron wavelength {electronwave} nm.",
+    "checks": [
+      "photon-13.6/lower**2+13.6/n**2"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 18,
+    "key": "nuclear_reactor",
+    "topic": "Fission energy and conversion efficiency",
+    "stem": "A reactor produces {MW} MW of electrical power with overall thermal-to-electrical efficiency {eta}. Each fission releases {MeV} MeV. Treat each fission as consuming one nucleus of molar mass {A} g/mol. Use 1 eV=1.60 × 10⁻¹⁹ J and NA=6.02 × 10²³ mol⁻¹.",
+    "variants": [
+      {
+        "MW": 100,
+        "eta": 0.25,
+        "MeV": 200,
+        "A": 235
+      },
+      {
+        "MW": 200,
+        "eta": 0.4,
+        "MeV": 180,
+        "A": 235
+      }
+    ],
+    "derived": [
+      [
+        "thermal",
+        "MW*1e6/eta"
+      ],
+      [
+        "rate",
+        "thermal/(MeV*1e6*1.6e-19)"
+      ],
+      [
+        "mass",
+        "rate*86400*A/6.02e23"
+      ],
+      [
+        "waste",
+        "thermal-MW*1e6"
+      ]
+    ],
+    "tasks": [
+      [
+        "rate",
+        "Find the fission rate.",
+        "s⁻¹",
+        [
+          "rate*eta",
+          "rate/eta",
+          "rate/2"
+        ]
+      ],
+      [
+        "mass",
+        "Find the idealised fuel mass consumed in one day.",
+        "g",
+        [
+          "mass*eta",
+          "mass/86400",
+          "mass*2"
+        ]
+      ],
+      [
+        "waste",
+        "Find the heat rejected per second.",
+        "W",
+        [
+          "MW*1e6*(1-eta)",
+          "thermal",
+          "waste/2"
+        ]
+      ]
+    ],
+    "explanation": "Required thermal power is Pelec/η={thermal} W. Divide by {MeV} MeV converted to joules to get {rate} fissions/s. Over 86400 s, multiply consumed nuclei by A/NA to obtain {mass} g. Rejected heat rate is Pthermal−Pelec={waste} W.",
+    "checks": [
+      "rate*MeV*1e6*1.6e-19-thermal",
+      "waste+MW*1e6-thermal"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 18,
+    "key": "fusion_balance",
+    "topic": "Fusion mass defect and recoil partition",
+    "stem": "A two-product fusion reaction has total initial rest mass {mi} u and total final rest mass {mf} u. The incident kinetic energy is negligible and initial total momentum is zero. The product masses have ratio light:heavy = 1:{ratio}. Use 1 u c²=931.5 MeV, 1 u=1.66 × 10⁻²⁷ kg and 1 MeV=1.60 × 10⁻¹³ J; treat product speeds as nonrelativistic.",
+    "variants": [
+      {
+        "mi": 5.03015,
+        "mf": 5.01136,
+        "ratio": 4
+      },
+      {
+        "mi": 4.0302,
+        "mf": 4.0115,
+        "ratio": 3
+      }
+    ],
+    "derived": [
+      [
+        "Q",
+        "(mi-mf)*931.5"
+      ],
+      [
+        "light",
+        "Q*ratio/(ratio+1)"
+      ],
+      [
+        "heavy",
+        "Q/(ratio+1)"
+      ],
+      [
+        "speedratio",
+        "ratio"
+      ],
+      [
+        "speed",
+        "sqrt(2*light*1.6e-13/(mf/(ratio+1)*1.66e-27))"
+      ]
+    ],
+    "tasks": [
+      [
+        "light",
+        "Find the lighter product’s kinetic energy.",
+        "MeV",
+        [
+          "Q/2",
+          "Q/(ratio+1)",
+          "Q"
+        ]
+      ],
+      [
+        "heavy",
+        "Find the heavier product’s kinetic energy.",
+        "MeV",
+        [
+          "Q/2",
+          "Q*ratio/(ratio+1)",
+          "Q"
+        ]
+      ],
+      [
+        "speed",
+        "Find the lighter product’s speed.",
+        "m/s",
+        [
+          "speed/sqrt(ratio)",
+          "speed/2",
+          "speed*sqrt(2)"
+        ]
+      ]
+    ],
+    "explanation": "The positive mass defect releases Q={Q} MeV. Momentum conservation gives equal and opposite momenta. Since K=p²/(2m), kinetic energies are inverse to mass: Klight={light} MeV and Kheavy={heavy} MeV. With equal momentum, speeds are inverse to mass as well, giving ratio {speedratio}. Using the lighter mass mf/(ratio+1), its speed is {speed} m/s.",
+    "checks": [
+      "light+heavy-Q",
+      "light-ratio*heavy"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 19,
+    "key": "zener_design",
+    "topic": "Zener regulator across changing load",
+    "stem": "A {Vin} V ideal DC source feeds a {Vz} V ideal Zener regulator through a series resistor {R} Ω. The load is connected across the Zener. To remain regulated the Zener current must be between {Imin} mA and {Imax} mA inclusive. Ignore dynamic resistance and assume the load is ohmic. In a separate operating trial the load resistance is {load} Ω.",
+    "variants": [
+      {
+        "Vin": 12,
+        "Vz": 6,
+        "R": 100,
+        "Imin": 5,
+        "Imax": 50,
+        "load": 200
+      },
+      {
+        "Vin": 15,
+        "Vz": 5,
+        "R": 200,
+        "Imin": 5,
+        "Imax": 40,
+        "load": 200
+      }
+    ],
+    "derived": [
+      [
+        "total",
+        "(Vin-Vz)/R"
+      ],
+      [
+        "minload",
+        "Vz/(total-Imin/1000)"
+      ],
+      [
+        "maxload",
+        "Vz/(total-Imax/1000)"
+      ],
+      [
+        "maxpower",
+        "Vz*Imax/1000"
+      ],
+      [
+        "trialcurrent",
+        "total-Vz/load"
+      ],
+      [
+        "trialpower",
+        "Vz*trialcurrent"
+      ]
+    ],
+    "tasks": [
+      [
+        "minload",
+        "Find the smallest load resistance that permits regulation.",
+        "Ω",
+        [
+          "Vz/total",
+          "minload/2",
+          "maxload"
+        ]
+      ],
+      [
+        "maxload",
+        "Find the largest load resistance that keeps Zener current within the stated range.",
+        "Ω",
+        [
+          "minload",
+          "maxload*2",
+          "R"
+        ]
+      ],
+      [
+        "trialpower",
+        "Find the Zener power dissipation in the separate operating trial.",
+        "W",
+        [
+          "Vz*total",
+          "Vz*Vz/load",
+          "trialpower/2"
+        ]
+      ]
+    ],
+    "explanation": "Regulation fixes total series current at (Vin−Vz)/R={total} A. The load receives Itotal−Iz. The smallest resistance occurs at minimum Zener current and is {minload} Ω; the largest occurs at maximum Zener current and is {maxload} Ω. The permitted peak Zener power VzIz,max is {maxpower} W. For the stated trial load, I_Z=I_total−Vz/R_load={trialcurrent} A, which is within the regulation limits. Zener power is {trialpower} W.",
+    "checks": [
+      "Vz/minload+Imin/1000-total",
+      "Vz/maxload+Imax/1000-total"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 19,
+    "key": "diode_network",
+    "topic": "Diode states and resistive circuit solution",
+    "stem": "An ideal diode has its anode at node X and cathode at a fixed +{clamp} V reference. Node X connects to a +{supply} V ideal source through {Rs} Ω and to ground through {Rl} Ω. An ideal conducting diode has zero drop; a reverse-biased diode carries no current. The reference can absorb current.",
+    "variants": [
+      {
+        "clamp": 3,
+        "supply": 12,
+        "Rs": 300,
+        "Rl": 600
+      },
+      {
+        "clamp": 4,
+        "supply": 16,
+        "Rs": 400,
+        "Rl": 800
+      }
+    ],
+    "derived": [
+      [
+        "unclamped",
+        "supply*Rl/(Rs+Rl)"
+      ],
+      [
+        "diode",
+        "(supply-clamp)/Rs-clamp/Rl"
+      ],
+      [
+        "power",
+        "clamp*clamp/Rl"
+      ],
+      [
+        "threshold",
+        "clamp*(Rs+Rl)/Rl"
+      ]
+    ],
+    "tasks": [
+      [
+        "diode",
+        "Find the diode current from X into the reference.",
+        "A",
+        [
+          "(supply-clamp)/Rs",
+          "clamp/Rl",
+          "diode/2"
+        ]
+      ],
+      [
+        "power",
+        "Find the power dissipated in the load resistor.",
+        "W",
+        [
+          "unclamped*unclamped/Rl",
+          "supply*supply/Rl",
+          "power*2"
+        ]
+      ],
+      [
+        "threshold",
+        "As the positive supply voltage is reduced, at what supply value does the diode just cease to conduct?",
+        "V",
+        [
+          "clamp",
+          "supply/2",
+          "threshold*2"
+        ]
+      ]
+    ],
+    "explanation": "With the diode open, the divider would give {unclamped} V, above the reference, so the diode conducts and X is clamped. Kirchhoff’s law gives diode current {diode} A. Load power is Vclamp²/Rl={power} W. At the boundary, open-circuit divider voltage equals Vclamp, requiring supply {threshold} V.",
+    "checks": [
+      "diode+clamp/Rl-(supply-clamp)/Rs"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 20,
+    "key": "meter_resistivity",
+    "topic": "Metre bridge, wire dimensions and uncertainty",
+    "stem": "A wire in the left gap of an ideal metre bridge balances against {R} Ω in the right gap at {l} cm from the left. Its length is {L} m. A screw gauge of pitch 0.5 mm with 50 divisions shows main-scale reading {ms} mm and circular reading {cs}; its positive zero error is {zero} divisions. Neglect bridge end corrections. Take π=3.14. In a separate trial, the same wire carries {I} A for {t} s with unchanged resistance.",
+    "variants": [
+      {
+        "R": 6,
+        "l": 40,
+        "L": 2,
+        "ms": 0.5,
+        "cs": 22,
+        "zero": 2,
+        "I": 2,
+        "t": 30
+      },
+      {
+        "R": 4,
+        "l": 60,
+        "L": 3,
+        "ms": 0.5,
+        "cs": 32,
+        "zero": 2,
+        "I": 0.5,
+        "t": 60
+      }
+    ],
+    "derived": [
+      [
+        "d",
+        "ms+(cs-zero)*.01"
+      ],
+      [
+        "X",
+        "R*l/(100-l)"
+      ],
+      [
+        "rho",
+        "X*3.14*(d*1e-3)**2/(4*L)"
+      ],
+      [
+        "wrong",
+        "100*((ms+cs*.01)**2/d**2-1)"
+      ],
+      [
+        "balance",
+        "100-l"
+      ],
+      [
+        "heat",
+        "I*I*X*t"
+      ]
+    ],
+    "tasks": [
+      [
+        "rho",
+        "Find the wire resistivity.",
+        "Ω m",
+        [
+          "X*3.14*(d*1e-3)**2/L",
+          "rho/2",
+          "R*3.14*(d*1e-3)**2/(4*L)"
+        ]
+      ],
+      [
+        "wrong",
+        "If the positive zero error were ignored while all other processing stayed correct, by what percentage would the resistivity be overestimated?",
+        "%",
+        [
+          "100*.01*zero/d",
+          "wrong/2",
+          "wrong*2"
+        ]
+      ],
+      [
+        "heat",
+        "Find the heat generated in the wire during the separate current trial.",
+        "J",
+        [
+          "I*I*R*t",
+          "heat/2",
+          "heat*2"
+        ]
+      ]
+    ],
+    "explanation": "The gauge least count is 0.01 mm; subtract its positive zero error to get diameter {d} mm. The bridge gives X=Rl/(100−l) ={X} Ω. Then ρ=Xπd²/(4L)={rho} Ω m. Ignoring the zero error changes the squared diameter and overestimates ρ by {wrong}%. Swapping gaps replaces l by 100−l={balance} cm. With resistance X found from the bridge, the separate trial produces I²Xt={heat} J.",
+    "checks": [
+      "X/R-l/(100-l)",
+      "rho*4*L-X*3.14*(d*1e-3)**2"
+    ],
+    "figure": null,
+    "refined": true
+  },
+  {
+    "unit": 20,
+    "key": "galvanometer_half",
+    "topic": "Half-deflection measurements with finite series resistance",
+    "stem": "A cell of emf {E} V and negligible internal resistance drives a galvanometer through series resistance {R} Ω. Its deflection is {div} divisions. Connecting a shunt {S} Ω directly across the galvanometer halves its deflection, while the series resistor remains connected. Deflection is proportional to coil current.",
+    "variants": [
+      {
+        "E": 2,
+        "R": 1000,
+        "S": 50,
+        "div": 20
+      },
+      {
+        "E": 3,
+        "R": 1500,
+        "S": 60,
+        "div": 30
+      }
+    ],
+    "derived": [
+      [
+        "G",
+        "S*R/(R-S)"
+      ],
+      [
+        "Ig",
+        "E/(R+G)"
+      ],
+      [
+        "merit",
+        "Ig/div"
+      ],
+      [
+        "total",
+        "Ig/2+Ig*G/(2*S)"
+      ]
+    ],
+    "tasks": [
+      [
+        "G",
+        "Find the galvanometer resistance without assuming R is infinite.",
+        "Ω",
+        [
+          "S",
+          "S*R/(R+S)",
+          "G/2"
+        ]
+      ],
+      [
+        "merit",
+        "Find its figure of merit, defined as coil current per scale division.",
+        "A/division",
+        [
+          "E/(R*div)",
+          "merit/2",
+          "merit*2"
+        ]
+      ],
+      [
+        "total",
+        "Find the total current drawn from the cell after the shunt is connected.",
+        "A",
+        [
+          "Ig/2",
+          "Ig",
+          "total*2"
+        ]
+      ]
+    ],
+    "explanation": "Before shunting Ig=E/(R+G). After shunting, coil current is Ig/2 and the shunt current is IgG/(2S). Applying the loop equation gives G=SR/(R−S)={G} Ω. Thus initial Ig={Ig} A, figure of merit={merit} A/division, and final total current={total} A.",
+    "checks": [
+      "E-Ig*(R+G)",
+      "E-total*R-Ig*G/2"
+    ],
+    "figure": null,
+    "refined": true
+  }
+]

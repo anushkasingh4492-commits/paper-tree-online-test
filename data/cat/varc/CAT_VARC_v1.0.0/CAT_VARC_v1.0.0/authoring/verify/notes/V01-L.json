@@ -1,0 +1,42 @@
+[
+ {
+  "id": "V01-L-001",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "1432",
+    "key": "1432",
+    "working": "1 direct access; 4 written in heat of moment (immediacy); 3 'that very immediacy' constraint; 2 'therefore' performance.",
+    "alternative": "",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "1432",
+    "key": "1432",
+    "working": "1 direct access; 4 heat of moment (immediacy); 3 yet that very immediacy constrained; 2 therefore performance.",
+    "alternative": "1342 weakly possible if 'that very immediacy' points back to 1, but 4 then dangles before 'therefore' in 2.",
+    "issue": ""
+   }
+  }
+ },
+ {
+  "id": "V01-L-017",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "3124",
+    "key": "3124",
+    "working": "3 hill towns built; 1 'These hill stations, as they came to be called' names them at once and notes growth; 2 builders imitated home; 4 'Such deliberate imitation' conclusion.",
+    "alternative": "3241: 2 can follow 3 directly ('Their builders laid them out'), 4 comments, 1 ends on growth; weaker because the naming clause 'as they came to be called' belongs at first reference and 4 reads as the closing interpretation.",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "3124",
+    "key": "3124",
+    "working": "3 British build hill towns, 1 'these hill stations, as they came to be called' names them at first mention, 2 builders imitated home, 4 'such deliberate imitation' concludes.",
+    "alternative": "3241 is possible (2 'them' = towns, 4, then 1), but naming 'as they came to be called' belongs right after the introduction and 1 makes a weak ending.",
+    "issue": ""
+   }
+  }
+ }
+]

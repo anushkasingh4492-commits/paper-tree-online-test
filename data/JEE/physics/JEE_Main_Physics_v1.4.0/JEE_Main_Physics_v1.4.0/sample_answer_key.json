@@ -1,0 +1,267 @@
+[
+  {
+    "number": 1,
+    "id": "JEE27-PHY-0504",
+    "section": "A",
+    "answer": "C",
+    "answer_text": "4",
+    "explanation": "Use the physical relations below with the missing input ξ. The recorded value of the centre-of-mass coordinate when the lighter particle has moved 1 m to the left of its initial position gives ξ=4 in the unit assigned to ξ in the question. Substitution checks the observation:\nEqual and opposite momenta have magnitude p. Total energy gives p²(1/m₁+1/m₂)/2 = E, so the speeds are 8 and 2 m/s in opposite directions. Relative separation speed is 10 m/s. The centre of mass remains fixed at m₂d/(m₁+m₂) = 1.6 m.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 2,
+    "id": "JEE27-PHY-1163",
+    "section": "A",
+    "answer": "A",
+    "answer_text": "6",
+    "explanation": "Use the physical relations below with the missing input ξ. The recorded value of the additional charge supplied by the battery gives ξ=6 in the unit assigned to ξ in the question. Substitution checks the observation:\nInitial equivalent capacitance is 2 μF; replacing C₁ by KC₁ gives final equivalent capacitance 3 μF. Series charge becomes 360 μC, hence V₂ = 60 V. Battery-supplied charge is 120 μC and battery work VΔQ = 0.0144 J.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 3,
+    "id": "JEE27-PHY-0989",
+    "section": "A",
+    "answer": "B",
+    "answer_text": "π / 2 rad",
+    "explanation": "Using φ = (2 π / λ) x delta x with delta x = λ / 4 gives φ = (2 π / λ) × (λ / 4) = π / 2 rad, which is 90° or a quarter of a cycle.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 4,
+    "id": "JEE27-PHY-0014",
+    "section": "A",
+    "answer": "B",
+    "answer_text": "2.64 cm",
+    "explanation": "Mean = (2.63 + 2.65 + 2.64 + 2.62 + 2.66)/5 = 13.20/5 = 2.64 cm.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 5,
+    "id": "JEE27-PHY-0517",
+    "section": "A",
+    "answer": "C",
+    "answer_text": "44.8 km s⁻¹",
+    "explanation": "Writing M = (4/3) π R³ ρ in v_e = √(2 G M / R) gives v_e = R √(8 π G ρ / 3). For a fixed density the escape velocity is directly proportional to R, so four times the radius gives 4 × 11.2 = 44.8 km s⁻¹.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 6,
+    "id": "JEE27-PHY-0075",
+    "section": "A",
+    "answer": "D",
+    "answer_text": "5 N",
+    "explanation": "Since the resultant is perpendicular to the smaller force Q, the relation R² = P² - Q² holds, so P² - Q² = 144. Writing this as (P - Q)(P + Q) = 144 and using P + Q = 18 gives P - Q = 8. Solving, P = 13 N and Q = 5 N, so the smaller force is 5 N.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 7,
+    "id": "JEE27-PHY-1833",
+    "section": "A",
+    "answer": "A",
+    "answer_text": "half its earlier value",
+    "explanation": "Since λ is inversely proportional to v at fixed mass, doubling v halves λ. Note that the kinetic energy in this case becomes four times as large, consistent with λ being inversely proportional to √(K).",
+    "numerical_scaling": null
+  },
+  {
+    "number": 8,
+    "id": "JEE27-PHY-1567",
+    "section": "A",
+    "answer": "A",
+    "answer_text": "wavelengths from about 400 nm to 700 nm",
+    "explanation": "The highlighted visible light region has wavelengths from about 400 nm to 700 nm.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 9,
+    "id": "JEE27-PHY-1203",
+    "section": "A",
+    "answer": "B",
+    "answer_text": "11.6667 cm",
+    "explanation": "The two balance conditions give X/14=(e+2.4)/5.6 and 14/X=(e+4)/4. Multiplying yields (e+2.4)(e+4)=22.4, or e²+6.4e-12.8=0. The roots are 1.6 Ω and -8 Ω; only e=1.6 Ω is allowed. Thus X=10 Ω. With e removed, the original connection balances at 100X/(X+14)=41.6667 cm. The rightward shift is 11.6667 cm.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 10,
+    "id": "JEE27-PHY-0497",
+    "section": "A",
+    "answer": "C",
+    "answer_text": "3",
+    "explanation": "Use the physical relations below with the missing input ξ. The recorded value of the opposing friction torque gives ξ=3 in the unit assigned to ξ in the question. Substitution checks the observation:\nThe driven acceleration is 2θ/t₁² = 6 rad/s², so the cut-off speed is 18 rad/s. Coasting deceleration is ω/t₂ = 3 rad/s². Adding τdrive−τfr = Iα and τfr = Iβ gives I = 1.666666667 kg m² and τfr = 5 N m. Coasting through average speed ω/2 gives 54 rad.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 11,
+    "id": "JEE27-PHY-2059",
+    "section": "A",
+    "answer": "A",
+    "answer_text": "1.5",
+    "explanation": "Real thickness=22−10=12 mm; apparent depth=22−14=8 mm. Thus n=12/8=1.5. A shared zero offset cancels.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 12,
+    "id": "JEE27-PHY-0583",
+    "section": "A",
+    "answer": "A",
+    "answer_text": "2.5 × 10⁹ J",
+    "explanation": "For a circular orbit, E = −GMm/(2r), v = √(GM/r), and T is proportional to r³ᐟ². Doubling r raises E by GMm/(4r) = 2500000000 J, multiplies T by 2√2 = 2.828427125, giving final period 20106.19298 s, and lowers speed by 2071.067812 m/s.\nFor the requested outcome — What net increase in orbital mechanical energy is required? — the result is 2.5 × 10⁹ J.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 13,
+    "id": "JEE27-PHY-1271",
+    "section": "A",
+    "answer": "B",
+    "answer_text": "3.5",
+    "explanation": "Use the physical relations below with the missing input ξ. The recorded value of the greatest power deliverable to an adjustable external resistor gives ξ=3.5 in the unit assigned to ξ in the question. Substitution checks the observation:\nThe same emf satisfies ε=I₁(R₁+r)=I₂(R₂+r). Solving gives r = 1 Ω and ε = 9 V. Hence Isc = 9 A. External power ε²R/(R+r)² is largest at R=r and equals 20.25 W. In the first circuit the useful-power fraction is R₁/(R₁+r) = 0.6666666667.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 14,
+    "id": "JEE27-PHY-2154",
+    "section": "A",
+    "answer": "C",
+    "answer_text": "60",
+    "explanation": "Use the physical relations below with the missing input ξ. The recorded value of the total current drawn from the cell after the shunt is connected gives ξ=60 in the unit assigned to ξ in the question. Substitution checks the observation:\nBefore shunting Ig=E/(R+G). After shunting, coil current is Ig/2 and the shunt current is IgG/(2S). Applying the loop equation gives G=SR/(R−S)=62.5 Ω. Thus initial Ig=0.00192 A, figure of merit=6.4 × 10⁻⁵ A/division, and final total current=0.00196 A.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 15,
+    "id": "JEE27-PHY-0219",
+    "section": "A",
+    "answer": "D",
+    "answer_text": "20 N",
+    "explanation": "The normal reaction is N = 5 × 10 = 50 N. Hence the limiting friction is 0.4 × 50 = 20 N. Any applied horizontal force smaller than 20 N will be exactly balanced by friction and the block will stay at rest.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 16,
+    "id": "JEE27-PHY-1710",
+    "section": "A",
+    "answer": "D",
+    "answer_text": "travel parallel to the principal axis",
+    "explanation": "By the reversibility of light rays, since a parallel beam converges to the focus, a source at the focus sends out a beam that is parallel to the principal axis after reflection. Formally u = f gives 1/v = 1/f - 1/f = 0, so v is infinite.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 17,
+    "id": "JEE27-PHY-0979",
+    "section": "A",
+    "answer": "D",
+    "answer_text": "kg m⁻¹",
+    "explanation": "For the expression √(T/m) to have the unit of speed, T in N divided by m must give m² s⁻². Since N is kg m s⁻², m must be in kg m⁻¹, which is indeed mass per unit length.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 18,
+    "id": "JEE27-PHY-0813",
+    "section": "A",
+    "answer": "B",
+    "answer_text": "500 J",
+    "explanation": "Equal Carnot efficiencies imply 1−T/Th = 1−Tc/T, so T² = ThTc and T = 600 K. Each efficiency is 0.3333333333. The first rejects 600 J to the second, whose work is 200 J. The pair has overall efficiency 1−Tc/Th and produces 500 J.\nFor the requested outcome — Find the total work produced by both engines per cycle. — the result is 500 J.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 19,
+    "id": "JEE27-PHY-1009",
+    "section": "A",
+    "answer": "D",
+    "answer_text": "0.3824 s",
+    "explanation": "For a uniform spring, stiffness is inversely proportional to length: kshort = 180 N/m and klong = 90 N/m. Parallel stiffnesses add to 270 N/m. Thus T = 0.3823824806 s and vmax = 1.643167673 m/s. Both pieces have amplitude 0.1 m, so maximum energy in the short piece is 0.9 J.\nFor the requested outcome — Find the oscillation period. — the result is 0.3824 s. Both pieces are unstretched at equilibrium, so the shorter spring’s extension ranges from −A to +A and its maximum elastic energy is kshort A²/2.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 20,
+    "id": "JEE27-PHY-0126",
+    "section": "A",
+    "answer": "C",
+    "answer_text": "7 units",
+    "explanation": "|P| = √(2² + 3² + 6²) = √(4 + 9 + 36) = √(49) = 7 units.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 21,
+    "id": "JEE27-PHY-1551",
+    "section": "B",
+    "answer": 800,
+    "answer_text": "800",
+    "explanation": "Mutual emf magnitude is MΔI/Δt=2 V, constant during the linear ramp. It drives 1 A. Integrating gives charge MΔI/R=0.4 C; I²RΔt gives 0.8 J of heat.\nFor the requested outcome — Find the heat generated in coil 2 during the ramp. — the result is 0.8 J.",
+    "numerical_scaling": {
+      "question": "Two stationary coils have mutual inductance 0.2 H. Current in coil 1 increases uniformly from 1 A to 5 A in 0.4 s. Coil 2 forms a closed circuit of resistance 2 Ω; its self-inductance and all capacitive effects are negligible. Find the heat generated in coil 2 during the ramp. Express the result in units of 10^(-3) J, and give the nearest integer.",
+      "unrounded_value": 800.0,
+      "answer_integer": 800,
+      "unit": "J",
+      "unit_scale_power10": -3,
+      "rounding": "nearest integer; exact half away from zero",
+      "parent_candidate": "NEW-U14-mutual_induction-1-3"
+    }
+  },
+  {
+    "number": 22,
+    "id": "JEE27-PHY-1767",
+    "section": "B",
+    "answer": 12,
+    "answer_text": "12",
+    "explanation": "The first polariser transmits I₀/2. Successive factors are cos²θmiddle and cos²(θlast−θmiddle), so the observed final intensity implies I₀=32 W/m². After the second the intensity is 12 W/m². Removing it instead gives (I₀/2)cos²θlast=4 W/m².\nFor the requested outcome — With all three present, find the intensity just after the second polaroid. — the result is 12 W/m².",
+    "numerical_scaling": {
+      "question": "Unpolarised light passes through three ideal polaroids. Their transmission axes make angles 0°, 30° and 60° with a reference line. The emerging intensity is measured as 9 W/m². Ignore absorption except that described by ideal polariser transmission and Malus’s law. With all three present, find the intensity just after the second polaroid. Give the numerical value in W/m², rounded to the nearest integer.",
+      "unrounded_value": 11.999999999999996,
+      "answer_integer": 12,
+      "unit": "W/m²",
+      "unit_scale_power10": 0,
+      "rounding": "nearest integer; exact half away from zero",
+      "parent_candidate": "NEW-U16-three_polaroids-1-3"
+    }
+  },
+  {
+    "number": 23,
+    "id": "JEE27-PHY-1561",
+    "section": "B",
+    "answer": 800,
+    "answer_text": "800",
+    "explanation": "The turns ratio gives Vs=48 V. Secondary current is 4 A; equal input and output power gives Ip=0.8 A and power=192 W. The reflected resistance is R(Np/Ns)²=300 Ω.\nFor the requested outcome — Find the primary rms current. — the result is 0.8 A.",
+    "numerical_scaling": {
+      "question": "An ideal transformer has 1000 primary turns and 200 secondary turns. The primary receives 240 V rms AC. A 12 Ω resistor is the only secondary load. Ignore magnetising current and losses. Find the primary rms current. Express the result in units of 10^(-3) A, and give the nearest integer.",
+      "unrounded_value": 800.0,
+      "answer_integer": 800,
+      "unit": "A",
+      "unit_scale_power10": -3,
+      "rounding": "nearest integer; exact half away from zero",
+      "parent_candidate": "NEW-U14-transformer_load-1-1"
+    }
+  },
+  {
+    "number": 24,
+    "id": "JEE27-PHY-0164",
+    "section": "B",
+    "answer": 224,
+    "answer_text": "224",
+    "explanation": "Use relative velocity (-4, -2). Minimise |r₀+vrel t|², so (r₀+vrel t)·vrel = 0 and t = 10 s. Substitution gives dmin = 22.36067977 m. A moves uniformly, covering |vA|t = 50.99019514 m.\nFor the requested outcome — What is their minimum separation? — the result is 22.36 m.",
+    "numerical_scaling": {
+      "question": "At t = 0 the position of B relative to A is (30 i + 40 j) m. Their constant velocities relative to the ground are vA = (5 i + 1 j) m/s and vB = (1 i + -1 j) m/s. Consider t ≥ 0. What is their minimum separation? Express the result in units of 10^(-1) m, and give the nearest integer.",
+      "unrounded_value": 223.60679774997897,
+      "answer_integer": 224,
+      "unit": "m",
+      "unit_scale_power10": -1,
+      "rounding": "nearest integer; exact half away from zero",
+      "parent_candidate": "NEW-U02-relative_closest-1-2"
+    }
+  },
+  {
+    "number": 25,
+    "id": "JEE27-PHY-1555",
+    "section": "B",
+    "answer": 4,
+    "answer_text": "4",
+    "explanation": "At steady speed, F=f+B²L²v/R. Subtracting the first two trials gives B²L²/4=(5-3)/(8-4)=0.5 N s/m, so B²L²=2 and f=1 N. In the third trial the drag coefficient is 2/8=0.25 N s/m, so v=(2-1)/0.25=4 m/s. Electrical dissipation is magnetic-drag power (F-f)v=1×4=4 W; friction dissipates the other 4 W supplied mechanically.",
+    "numerical_scaling": {
+      "question": "A conducting rod of length 0.50 m moves to the right on horizontal rails in an unknown uniform perpendicular magnetic field B. The total circuit resistance is initially 4.0 Ω, inductance is negligible, and a constant kinetic friction force opposes the motion. A rightward external force of 3.0 N maintains a steady speed of 4.0 m/s; a force of 5.0 N maintains 8.0 m/s. In a third steady-motion trial the total resistance is changed to 8.0 Ω and the applied force is 2.0 N. The magnetic field and kinetic friction force are unchanged, with sufficient rail length for steady motion. Find the electrical power dissipated in the complete circuit during the third trial. Give the numerical value in W, rounded to the nearest integer.",
+      "unrounded_value": 4,
+      "answer_integer": 4,
+      "unit": "W",
+      "unit_scale_power10": 0,
+      "rounding": "nearest integer; exact half away from zero",
+      "parent_candidate": "REV12-PHY-1555"
+    }
+  }
+]

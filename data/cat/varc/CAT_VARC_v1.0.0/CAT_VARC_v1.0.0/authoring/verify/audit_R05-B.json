@@ -1,0 +1,26 @@
+[
+ {
+  "id": "R05-B-04-2",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Blind solver S2 recorded the option about measures adopted deliberately to reduce inequality, although its own working rejected that option (war and inflation are not deliberate) and matched the correct answer; a recording slip, not a key defect. On review the correct answer's 'having depended on' read causally while the defence of the deliberate-measures option stressed that the passage says only 'came alongside', so a hostile reader could charge the correct answer with the same overreach.",
+  "fix": "Correct answer reworded to 'having involved more than the shift of workers between sectors, since the fall usually came together with other changes'; deliberate-measures defence and explanation tightened to match 'rarely arrived on its own'.",
+  "changed": true
+ },
+ {
+  "id": "R05-B-06-2",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Defence of the 'no measurable effect' option was garbled ('The studies found the effect was 'rarely' nothing').",
+  "fix": "Rewritten to quote the full clause and state that some effect was usually found.",
+  "changed": true
+ },
+ {
+  "id": "R05-B-01-1",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "difficulty_reason fields in 19 items (01-1, 01-4, 02-2, 03-1, 03-3, 03-4, 04-1, 04-2, 04-4, 05-4, 06-1, 06-4, 07-2, 07-3, 07-4, 08-1, 08-2, 08-4, 08-5) and the R05-B-07 passage difficulty_reason used 'distractor(s)' or 'the key'.",
+  "fix": "Replaced with 'wrong option(s)', 'the correct answer' and 'the central move'.",
+  "changed": true
+ }
+]

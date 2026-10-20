@@ -1,0 +1,50 @@
+[
+ {
+  "id": "V03-E-007",
+  "category": "E5",
+  "severity": "minor",
+  "finding": "Trap reason said 'sentences 2 to 3', a range of printed labels that does not correspond to the coherent sentences (printed 2, 5, 3) and wrongly suggests sentence 4 is included.",
+  "fix": "Replaced the range with an explicit list: 'sentences [[1]], [[2]] and [[3]]'.",
+  "changed": true
+ },
+ {
+  "id": "V03-E-009",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Trap quotation 'full languages rather than codes' did not match the passage text 'full languages rather than as codes'; difficulty_reason used the phrase 'key phrase'.",
+  "fix": "Corrected the quotation to 'full languages rather than as codes'; changed 'key phrase' to 'central phrase'.",
+  "changed": true
+ },
+ {
+  "id": "V03-E-012",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "difficulty_reason used 'the key word', which reads as answer-key jargon in student-facing text.",
+  "fix": "Changed to 'shares the word'.",
+  "changed": true
+ },
+ {
+  "id": "V03-E-013",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Blind-solver flag (S2): sentence 1 on unsupervised home exams is topically close and might be tried as a foil for the opener.",
+  "fix": "none: both solvers reached the correct answer; sentence 1 raises honesty in unsupervised work, a different concern from whether open-book papers are easy, and sentence 3 is the only workable opener.",
+  "changed": false
+ },
+ {
+  "id": "V03-E-017",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Blind-solver flag (S2): the relative order of sentences 3 and 4 among the coherent sentences is flexible.",
+  "fix": "none: order of kept sentences does not affect an odd-one-out answer; sentence 2 (similarity of helper and victim) is the only sentence unrelated to crowds diffusing responsibility.",
+  "changed": false
+ },
+ {
+  "id": "V03-E-021",
+  "category": "E4",
+  "severity": "minor",
+  "finding": "Difficult label is generous: the species-versus-individual shift in sentence 1 is fairly visible once the suffering argument is traced.",
+  "fix": "none: within the CAT upper-Medium/Difficult boundary and file quotas are exact; label left as is.",
+  "changed": false
+ }
+]

@@ -1,0 +1,42 @@
+[
+ {
+  "id": "V02-A-001,V02-A-002,V02-A-003,V02-A-004,V02-A-005,V02-A-006,V02-A-007,V02-A-008,V02-A-009,V02-A-010,V02-A-011,V02-A-012,V02-A-013,V02-A-014,V02-A-015,V02-A-016,V02-A-017,V02-A-018,V02-A-019,V02-A-020,V02-A-021,V02-A-022,V02-A-023,V02-A-024,V02-A-025",
+  "category": "E3",
+  "severity": "major",
+  "finding": "Every explanation (and some difficulty_reason fields) referred to 'the key' (e.g. 'The key captures both halves', 'Only the key keeps both halves'), banned in student-facing text.",
+  "fix": "Replaced 'the key' with 'the correct answer' throughout the file (27 occurrences).",
+  "changed": true
+ },
+ {
+  "id": "V02-A-024",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Defence of the 'spend entirely on wild habitats' option said the paragraph calls the vault a 'valuable' backup; 'valuable' is not in the paragraph, so the defence embellished the text.",
+  "fix": "Defence now quotes the paragraph exactly: calls the vault 'a backup for living populations'.",
+  "changed": true
+ },
+ {
+  "id": "V02-A-017",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Correct answer put switching cost and data gathering on the same footing as what loyalty schemes 'chiefly' do, while the paragraph (and the defence of the data option) treats data as secondary to the switching cost.",
+  "fix": "Correct answer reworded: 'chiefly serve sellers by making it costlier for customers to switch, while also gathering purchase data, even if many customers benefit from them too.'",
+  "changed": true
+ },
+ {
+  "id": "V02-A-001..025",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "difficulty_reason fields use 'distractor' and 'the solver'.",
+  "fix": "none: difficulty_reason is internal metadata, not student-facing; left as written.",
+  "changed": false
+ },
+ {
+  "id": "V02-A",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Blind-solver notes file verify/notes/V02-A.json is empty (no disagreements or flags). Cold solve of all 25 items found each correct answer uniquely defensible; the closest calls (003 principle-wins distractor, 007 'incomplete rather than mistaken', 012 print-every-variant remedy) are each excluded by a quoted line.",
+  "fix": "none: no key defect found.",
+  "changed": false
+ }
+]

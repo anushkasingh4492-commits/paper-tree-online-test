@@ -1,0 +1,90 @@
+[
+ {
+  "id": "R06-D-02-4",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Correct answer spoke of 'coordination needs', but paragraph 2 says self-contained towns had 'little need to coordinate'; local time suited them because it matched daylight, so the wording fit only half the author's view.",
+  "fix": "Rewrote correct answer: 'should be judged by how well it suits the needs of those who keep it, not by its closeness to a true time.'",
+  "changed": true
+ },
+ {
+  "id": "R06-D-02-4",
+  "category": "E3",
+  "severity": "major",
+  "finding": "Misconception says 'Picking the second option'; option letters and order are assigned by the build, so the positional reference is wrong for students.",
+  "fix": "Replaced with a content reference ('the option about correcting unnoticed errors').",
+  "changed": true
+ },
+ {
+  "id": "R06-D-03-3",
+  "category": "E3",
+  "severity": "major",
+  "finding": "Misconception says 'Choosing the first option'; positional reference invalid after letter assignment.",
+  "fix": "Replaced with 'the option about the copies gaining mass'.",
+  "changed": true
+ },
+ {
+  "id": "R06-D-08-5",
+  "category": "E3",
+  "severity": "major",
+  "finding": "Misconception says 'Choosing the first option'; positional reference invalid after letter assignment.",
+  "fix": "Replaced with 'the option about current cosmological theories'.",
+  "changed": true
+ },
+ {
+  "id": "R06-D-06-1",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation says 'The key covers both the reframing and its limit' (student-facing 'the key').",
+  "fix": "Changed to 'The correct answer covers ...'.",
+  "changed": true
+ },
+ {
+  "id": "R06-D-08-5",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation says 'The key holds all three steps' after listing four paragraphs; uses 'the key' and the count is unclear.",
+  "fix": "Changed to 'The correct answer holds all three elements: the correction for bias, the need for an ensemble, and the inability to establish that ensemble.'",
+  "changed": true
+ },
+ {
+  "id": "R06-D-04-4",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Misconception has garbled 'not the hand-on'.",
+  "fix": "Changed to 'not the handing on'.",
+  "changed": true
+ },
+ {
+  "id": "R06-D-07-5",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Both blind solvers reached the correct answer but flagged its phrasing ('escape the objection the author presses most directly') as an indirect counterfactual inference.",
+  "fix": "Reworded correct answer more directly: 'The chief defect the author finds in the textbook rule would be removed if the theory stated precisely what counts as a measurement.' Still grounded in paragraph 2 ('invokes a notion the theory never defines') and paragraph 4 ('relies on a word it cannot define').",
+  "changed": true
+ },
+ {
+  "id": "R06-D-01-1",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Blind solver S2 noted 'counts decisively against' is slightly strong.",
+  "fix": "none: paragraph 4 says the dark sky 'rules out' that combination of assumptions and is 'incompatible' with it, so 'decisively' is supported; the hedge in the passage concerns proving a beginning, which a distractor covers.",
+  "changed": false
+ },
+ {
+  "id": "R06-D-07-4",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Both solvers reached the correct answer; both mentioned the null-results option as a weaker alternative.",
+  "fix": "none: a null result so far is consistent with the author's statement that experiments 'are now searching', whereas in-principle undetectability removes the stated ground for non-equivalence; the defence already says this.",
+  "changed": false
+ },
+ {
+  "id": "R06-D-05-4",
+  "category": "E4",
+  "severity": "minor",
+  "finding": "Labelled Difficult although paragraph 4 states the needed assumption almost outright ('Cross-checks catch only the errors that differ between methods'); arguably upper Medium.",
+  "fix": "none: exact difficulty quota (10/15/9) would be broken by relabelling; the assumption must still be linked across paragraphs 3 and 4 and distractors are plausible reliability conditions.",
+  "changed": false
+ }
+]

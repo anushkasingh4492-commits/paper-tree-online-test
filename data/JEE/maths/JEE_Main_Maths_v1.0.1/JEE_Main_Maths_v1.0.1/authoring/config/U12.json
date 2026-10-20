@@ -1,0 +1,60 @@
+{
+ "unit_number": 12,
+ "unit_name": "Vector Algebra",
+ "branch": "Vectors and 3D Geometry",
+ "count": 160,
+ "draft_files": [
+  "drafts/u12_a.py",
+  "drafts/u12_b.py",
+  "drafts/u12_c.py"
+ ],
+ "alias_groups": {
+  "ALIAS-ERR-U12-A-01": [
+   "U12-A-022",
+   "U12-A-050"
+  ],
+  "ALIAS-ERR-U12-A-02": [
+   "U12-A-036",
+   "U12-A-041"
+  ],
+  "ALIAS-ERR-U12-B-01": [
+   "U12-B-005",
+   "U12-B-039",
+   "U12-C-016"
+  ],
+  "ALIAS-ERR-U12-B-02": [
+   "U12-B-006",
+   "U12-B-011"
+  ],
+  "ALIAS-ERR-U12-C-01": [
+   "U12-B-046",
+   "U12-C-047"
+  ],
+  "ALIAS-ERR-U12-C-02": [
+   "U12-A-038",
+   "U12-C-010"
+  ]
+ },
+ "numerical_selection": [
+  "U12-A-041",
+  "U12-B-041",
+  "U12-C-046",
+  "U12-A-043",
+  "U12-B-045",
+  "U12-C-048",
+  "U12-A-047",
+  "U12-B-049",
+  "U12-C-050",
+  "U12-A-050",
+  "U12-A-019",
+  "U12-B-022",
+  "U12-A-024",
+  "U12-C-020",
+  "U12-A-029",
+  "U12-B-032",
+  "U12-C-027",
+  "U12-A-002",
+  "U12-B-002",
+  "U12-C-005"
+ ]
+}

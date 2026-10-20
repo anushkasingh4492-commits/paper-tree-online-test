@@ -1,0 +1,1153 @@
+{
+ "kind": "RC",
+ "passages": [
+  {
+   "passage_id": "R01-F-01",
+   "passage": [
+    "Students meeting physics for the first time are often unsettled to learn that the planes in their textbooks have no friction, the pendulums swing without air, and the planets are treated as points. Economics and population biology are worse offenders: their agents calculate perfectly and their populations are infinitely large. A natural response is to say that science, at least in its models, trades truth for convenience, and that a model is a useful fiction whose only virtue is that it lets us calculate. On this view the idealisation is a debt to be repaid later, when better methods allow the missing details to be added back.",
+    "This response gets the matter backwards. An idealisation is not usually a lapse in description but a claim about relevance. To leave friction out of an account of a stone sliding down a smooth slope is to assert, implicitly, that friction makes no appreciable difference to the feature one is trying to explain, namely the way the stone's speed grows with time. If that assertion is correct, the idealised model is not a fiction about the stone; it is a true statement about what the stone's motion depends on. The model is false about the world in its details and accurate about the structure of dependence, and the second is frequently what we wanted to know. Adding every missing factor would not improve such a model; it would bury the very pattern the model was built to display.",
+    "This does not mean that every idealisation is innocent. The claim of irrelevance can be wrong, and it is often wrong in a particular way: an assumption that holds well within one range of conditions fails outside it. Treating air as absent is harmless for a stone dropped from a window and disastrous for a feather, or for a parachutist. The danger lies less in the falsehood itself than in forgetting that it was a bet about relevance, so that a model calibrated in one setting is carried into another where the bet no longer pays.",
+    "The sensible test, then, is not whether a model is literally true, since almost none are, but whether its conclusions survive when the idealisation is relaxed. If a result about a population holds whether the population is taken to be infinite or merely very large, the assumption of infinity was doing no harm. If the result vanishes as soon as the assumption is loosened, it was an artefact of the simplification rather than a discovery about the world. Read in this way, the frictionless plane is less an embarrassment than a hypothesis, and like any hypothesis it can be checked."
+   ],
+   "questions": [
+    {
+     "id": "R01-F-01-1",
+     "type": "RC",
+     "options": {
+      "A": "argue that models in economics and biology idealise more heavily, and therefore less reliably, than the models used in physics.",
+      "B": "defend the familiar view that idealised models are convenient fictions whose missing details ought to be restored once better methods allow it.",
+      "C": "show that every idealisation is eventually exposed as harmful once a model is carried into conditions it was not built for.",
+      "D": "recast the falsehoods in scientific models as claims about which factors matter, claims that can be checked by relaxing them."
+     },
+     "question": "The primary purpose of the passage is to"
+    },
+    {
+     "id": "R01-F-01-2",
+     "type": "RC",
+     "options": {
+      "A": "show that an assumption that some factor does not matter can hold in one setting yet fail in another.",
+      "B": "demonstrate that air resistance is the most common source of error in the models that physicists actually use.",
+      "C": "illustrate the earlier claim that adding missing factors to a model buries the very pattern it was built to display.",
+      "D": "suggest that the motion of falling objects can never be modelled usefully without including the effect of the air."
+     },
+     "question": "The examples of the feather and the parachutist in paragraph 3 serve to"
+    },
+    {
+     "id": "R01-F-01-3",
+     "type": "RC",
+     "options": {
+      "A": "owes its existence to the model's simplifying assumption rather than to any feature of the world being modelled.",
+      "B": "was first reached through a simplified model and was later confirmed by more detailed observation of the world itself.",
+      "C": "survives unchanged when the population is treated as very large rather than as infinitely large.",
+      "D": "is valuable chiefly as a historical record of the way in which an earlier model was put together."
+     },
+     "question": "As used in paragraph 4, the phrase 'an artefact of the simplification' refers to a result that"
+    },
+    {
+     "id": "R01-F-01-4",
+     "type": "RC",
+     "options": {
+      "A": "Rerun with a realistic spread of reaction times among drivers, the model still places the queues in the same spots.",
+      "B": "Treating drivers as identical lets the model's equations be solved far more quickly than any more realistic formulation would allow.",
+      "C": "Every traffic engineer consulted agrees that no real population of drivers has identical reaction times.",
+      "D": "The model's predictions about where queues form have been presented to city planners for many years without any complaint."
+     },
+     "question": "A traffic model treats all drivers as having identical reaction times, which is plainly false. On the passage's reasoning, which of the following would best show that this idealisation is harmless for the model's prediction of where queues form?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R01-D-03",
+   "passage": [
+    "Theories of punishment have long been divided between those that look forward and those that look back. Forward-looking theories justify punishment by its effects: it deters, it incapacitates, perhaps it reforms. Their persistent embarrassment is that they seem to license too much. If the point of punishment were simply to discourage crime, then punishing an innocent person whom the public believed guilty might serve that point as well as punishing the guilty one, and sometimes better, since it would be quicker. Most people regard this conclusion as monstrous, which suggests that the effects of punishment, however important, cannot be the whole of its justification.",
+    "An expressive theory offers to supply what is missing. On this view punishment is, before anything else, a form of communication: the community's way of declaring that an act was wrong and that the person who did it is answerable for it. This explains at once why the innocent may not be punished. To condemn someone who did nothing is not an inefficient use of punishment but a lie told in its language. It also explains why we distinguish a fine from a tax, though both take money: the tax carries no message of blame, while the fine carries little else.",
+    "The obvious objection is that condemnation can be expressed in words. If the point of a prison sentence is to say that an act was wrong, why not simply say so, in a formal judgement solemnly delivered? The expressive theorist's reply is that words alone are too cheap to carry the message. A declaration that costs the offender nothing would be heard as a declaration that the wrong did not matter much; only something that is felt as a burden registers the seriousness of what was done.",
+    "This reply is ingenious, but it has an uncomfortable implication. If hard treatment communicates because of the meanings a society attaches to it, then how much hard treatment is needed depends on those meanings, and meanings can drift. A society accustomed to long sentences will hear a short one as a shrug; the same sentence elsewhere might sound like thunder. The expressive theory, in other words, cannot by itself tell us how severe punishment should be, because severity is fixed by convention, and conventions can escalate without limit. That is not a reason to abandon the theory, which captures something the forward-looking view plainly misses. It is a reason to think that the theory needs a partner: some independent principle, perhaps of proportion or of humanity, that sets limits the language of condemnation cannot set for itself."
+   ],
+   "questions": [
+    {
+     "id": "R01-D-03-1",
+     "type": "RC",
+     "options": {
+      "A": "argue that public opinion is an unreliable guide to whether accused persons are guilty or innocent.",
+      "B": "show that forward-looking theories are mistaken in assuming that punishment actually deters people from committing crime.",
+      "C": "establish that swift punishment deters more effectively than slow and careful punishment of offenders.",
+      "D": "suggest that justifying punishment only by its effects would permit something most people find unacceptable."
+     },
+     "question": "The case of punishing an innocent person whom the public believed guilty (paragraph 1) is used to"
+    },
+    {
+     "id": "R01-D-03-2",
+     "type": "RC",
+     "options": {
+      "A": "the first is felt as a heavier burden, since a fine is normally larger than a charge for a service.",
+      "B": "the first is meant to discourage future offences, whereas the second only raises money for the road.",
+      "C": "only the second is a declaration by the community, since the toll is fixed in advance by public authority.",
+      "D": "only the first conveys that the driver has done something wrong for which he is answerable."
+     },
+     "question": "The passage suggests that, on the expressive view, a fine for parking in a forbidden place differs from an equal charge for using a toll road in that"
+    },
+    {
+     "id": "R01-D-03-3",
+     "type": "RC",
+     "options": {
+      "A": "Long prison sentences do less to reduce reoffending than shorter sentences combined with close supervision after release.",
+      "B": "Fines that are very small relative to an offender's wealth tend to be treated by offenders as a routine cost of doing business.",
+      "C": "Where courts declare offenders guilty without imposing any penalty, the public judges those offences to be as serious as offences punished by imprisonment.",
+      "D": "Judges in different countries tend to deliver their verdicts in quite different styles and in very different forms of language."
+     },
+     "question": "Which of the following, if true, would most weaken the expressive theorist's reply in paragraph 3?"
+    },
+    {
+     "id": "R01-D-03-4",
+     "type": "RC",
+     "options": {
+      "A": "the same prison sentence may be heard as lenient in one society and as harsh in another.",
+      "B": "a principle of proportion is the only constraint that could set limits on how severe punishment becomes.",
+      "C": "a theory that justifies punishment solely by its effects faces a serious difficulty about the innocent.",
+      "D": "the expressive theory, though it needs supplementing, captures something that forward-looking theories overlook."
+     },
+     "question": "Each of the following is supported by the passage EXCEPT"
+    }
+   ]
+  },
+  {
+   "passage_id": "R06-A-07",
+   "passage": [
+    "Debates about the origin of life have long been organised around a chicken-and-egg problem. In every living cell today, the information needed to build proteins is stored in nucleic acids, while the work of copying those nucleic acids is done by proteins. Neither seems able to arise without the other. One family of proposals breaks the circle by giving priority to the molecule that carries information: life began, on this view, when some molecule capable of copying itself appeared, however clumsily, and natural selection among its variants did the rest. A rival family gives priority to chemistry that sustains itself: life began as networks of reactions, perhaps on mineral surfaces near hot springs on the sea floor, that captured energy from their surroundings and kept themselves going long before any of their components stored heritable information.",
+    "The case for putting the replicator first gained great force from a discovery about RNA, a close chemical relative of DNA. RNA, it turned out, can not only carry information but also catalyse reactions, and the core of the machinery that assembles proteins in every cell is itself made of RNA. A world in which RNA did both jobs, storing instructions and doing chemical work, would dissolve the chicken-and-egg problem, and that protein-building machinery looks very much like a relic of such a world. Replicator theorists add a deeper argument. Without heredity, they say, there is no evolution in any serious sense: a chemical network that merely persists cannot accumulate improvements, because there is nothing to record which variants did better.",
+    "Metabolism-first theorists reply that the RNA world has a chemistry problem it has never solved. The building blocks of RNA are intricate molecules, hard to make without the help of enzymes and prone to fall apart in water; assembling them into long chains that can copy themselves requires a degree of order that seems unlikely to arise unaided. Self-sustaining reaction networks, by contrast, need only simple ingredients and a source of energy. These theorists also argue that heredity need not wait for a dedicated molecule. A network in which certain reactions reinforce one another could persist in several alternative states, and if fragments that break away from a network tend to restart the same state, something like inheritance exists before any gene.",
+    "It is worth noticing that the two camps are often answering different questions. Replicator theorists ask what made open-ended evolution possible, and their answer, a molecule that copies information with modest accuracy, is hard to dispute as an account of that threshold. Metabolism theorists ask where the materials and energy for any such molecule came from, and their answer, a geochemical setting that drives reactions without the help of life, is equally hard to dispute as an account of the prior stage. Presented as rivals, each side scores easy points against the other's weakest claim: that replicators could assemble themselves in a chemical vacuum, or that self-maintaining networks could evolve indefinitely without anything like genes.",
+    "The more promising view, then, treats the problem as one of sequence rather than of priority in the abstract. A chemistry able to sustain itself may have been the setting in which the first replicators formed and on which they depended, and the replicators may in turn have captured and refined the network that fed them. This does not settle the matter, since the details of each stage remain obscure and may never be recovered from a planet whose earliest rocks have been largely destroyed. But it changes what counts as progress. The question is no longer which came first, as though one of them had to be the true beginning, but how a world of self-maintaining chemistry could have given rise to one in which information was inherited."
+   ],
+   "questions": [
+    {
+     "id": "R06-A-07-1",
+     "type": "RC",
+     "options": {
+      "A": "can copy itself with high accuracy in water without the help of any protein at all.",
+      "B": "forms readily from simple ingredients and a source of energy near hot springs on the sea floor.",
+      "C": "can speed up chemical reactions as well as carry information.",
+      "D": "is the molecule in which the cell stores most of its instructions for building proteins."
+     },
+     "question": "According to the passage, the discovery that strengthened the replicator-first case was that RNA"
+    },
+    {
+     "id": "R06-A-07-2",
+     "type": "RC",
+     "options": {
+      "A": "the claim that the building blocks of RNA are difficult to make without enzymes.",
+      "B": "the proposal that life began on mineral surfaces near hot springs on the sea floor.",
+      "C": "the claim that a network without heredity has no means of building up improvements.",
+      "D": "the discovery that the cell's protein-building machinery is made largely of RNA."
+     },
+     "question": "In arguing that 'something like inheritance exists before any gene' (paragraph 3), metabolism-first theorists are responding chiefly to"
+    },
+    {
+     "id": "R06-A-07-3",
+     "type": "RC",
+     "options": {
+      "A": "a setting without the RNA molecules on which all later living things came to rely.",
+      "B": "the absence of any earlier chemistry to supply materials and energy.",
+      "C": "a region of space entirely empty of matter, where no molecules could exist.",
+      "D": "a stage of history in which no selection among competing molecules had yet begun."
+     },
+     "question": "In paragraph 4, the phrase 'in a chemical vacuum' refers to"
+    },
+    {
+     "id": "R06-A-07-4",
+     "type": "RC",
+     "options": {
+      "A": "Because the earliest stages of life left almost no record, the question of which came first should be set aside as unanswerable.",
+      "B": "Replicator and metabolism theorists often address different questions, which is why each wins easy points against the other's weakest claim.",
+      "C": "Because replicators could not have assembled themselves unaided, the metabolism-first account of life's origin is the more plausible one.",
+      "D": "Accounts giving priority to replication or to self-sustaining chemistry are better read as describing successive stages than as rivals."
+     },
+     "question": "Which of the following best expresses the main point of the passage?"
+    },
+    {
+     "id": "R06-A-07-5",
+     "type": "RC",
+     "options": {
+      "A": "showing that the central thesis of the opposing camp is mistaken about life's origin.",
+      "B": "raising questions about the earliest stages of life that can now never be answered.",
+      "C": "the metabolism camp alone, through its criticisms of the chemistry of the RNA world.",
+      "D": "attacking claims that a staged account combining both views would not need to make."
+     },
+     "question": "It can be inferred that the 'easy points' mentioned in paragraph 4 are won by"
+    }
+   ]
+  },
+  {
+   "passage_id": "R01-C-07",
+   "passage": [
+    "Talk of moral progress makes many people uneasy. It sounds like the self-congratulation of every age that has looked back on its predecessors and found them wanting, and it seems to require a fixed standard against which the direction of change could be measured, a standard that is itself in dispute. Yet it is hard to describe the abolition of legal slavery, or the end of public torture as a form of entertainment, merely as changes in fashion, as though they were on a par with a shift in the length of coats. Most people who doubt the idea of moral progress in theory find themselves unable to give it up in particular cases.",
+    "One influential way of making sense of the idea is to describe progress as the expansion of a circle of concern. Early moral codes, on this telling, extended full consideration only to kin or to members of the tribe; over time the boundary has been pushed outward, to strangers, to foreigners, to people of other races and faiths, and, more recently and more contentiously, to animals. Progress consists in recognising as morally considerable those whom we previously ignored. The picture is appealing because it gives progress a direction without requiring agreement on a complete moral theory: one needs only the modest premise that arbitrary exclusion is a mistake. It also explains why reformers have so often described their work as opening the eyes of their contemporaries rather than changing their values: the values, on this telling, were already present, and only their application had been blocked.",
+    "The picture is not wrong, but it is incomplete in a way that matters. Some of the clearest cases of progress involve not who counts but what we owe to those who already counted. The view that a husband may beat his wife was not, in most societies that held it, a view that wives fell outside moral concern; wives were very much inside the circle, assigned a place in it that we now regard as degrading. Reform came not from widening the boundary but from revising the terms within it. The same is true of changing attitudes to children, who have always been objects of intense concern, and whose treatment has nonetheless been transformed.",
+    "There is also a danger in the circle image that its admirers tend to overlook. If progress is measured by the width of the circle, then any extension looks like an advance, and any contraction like a regression. But concern can be extended in ways that are themselves harmful: the circle of a missionary empire was wide, and that width was part of its justification for interfering in other people's lives. Inclusion that comes with a presumption of authority over the included is not obviously better than the indifference it replaces. What matters is not only that more beings are counted, but how they are counted.",
+    "None of this means that we should abandon the idea of moral progress. It means that progress is less like a single line along which societies advance and more like a series of corrections, each prompted by the discovery that some practice depended on a mistaken belief, an unexamined interest or a failure of imagination. Such corrections can be recognised as improvements without a finished theory of the good, in the way that a scientist can recognise an error without possessing the final truth. That is a more modest claim than the circle image offers, but it is also harder to dismiss as the vanity of the present."
+   ],
+   "questions": [
+    {
+     "id": "R01-C-07-1",
+     "type": "RC",
+     "options": {
+      "A": "Talk of moral progress is largely the self-congratulation of each age as it looks back on the ages before it.",
+      "B": "Moral progress is real but is better understood as a series of corrections than as the widening of a circle of concern.",
+      "C": "Moral progress consists in extending moral concern to those beings who were previously left outside its boundary.",
+      "D": "Moral progress can be recognised only once a complete theory of the good has been agreed upon by all."
+     },
+     "question": "Which of the following best states the central claim of the passage?"
+    },
+    {
+     "id": "R01-C-07-2",
+     "type": "RC",
+     "options": {
+      "A": "in the societies that permitted such beating, wives were not regarded as being morally considerable at all.",
+      "B": "a practice can be gravely wrong even when those it harms are fully recognised as objects of moral concern.",
+      "C": "the reform of such practices came about by extending moral concern to people who stood outside the circle.",
+      "D": "attitudes to wives have changed far less over time than attitudes to the treatment of children have."
+     },
+     "question": "The author's discussion of the beating of wives in paragraph 3 suggests that"
+    },
+    {
+     "id": "R01-C-07-3",
+     "type": "RC",
+     "options": {
+      "A": "An age may rightly judge some earlier practices mistaken without being able to state a complete moral theory.",
+      "B": "Any extension of moral concern to new beings is an advance, whatever form the extension takes.",
+      "C": "Changes in moral attitudes, like changes in fashion, are neither better nor worse than what they replace.",
+      "D": "The inclusion of animals within moral concern is the clearest case of moral progress in recent times."
+     },
+     "question": "The author would most likely agree with which of the following?"
+    },
+    {
+     "id": "R01-C-07-4",
+     "type": "RC",
+     "options": {
+      "A": "Concern for the welfare of animals has grown steadily in many countries over the course of the last century.",
+      "B": "Many people who doubt the idea of moral progress in theory still accept it when they consider particular cases.",
+      "C": "Several societies that once excluded foreigners from moral concern later came to include them fully and fairly.",
+      "D": "Some movements that extended concern to distant peoples used that concern chiefly as grounds for ruling them against their wishes."
+     },
+     "question": "Which of the following, if true, would most strengthen the author's criticism of the circle image in paragraph 4?"
+    },
+    {
+     "id": "R01-C-07-5",
+     "type": "RC",
+     "options": {
+      "A": "a society's pride in how wide its own circle of concern is compared with the circles of its neighbours",
+      "B": "an age's habit of treating its own standards as the measure by which earlier ages are found wanting",
+      "C": "the belief of present societies that they are more prosperous and comfortable than those of the past",
+      "D": "the preference of each generation for its own fashions, such as the length of coats, over older ones"
+     },
+     "question": "Which of the following best captures what the author means by 'the vanity of the present' in paragraph 5?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R05-D-06",
+   "passage": [
+    "The economist's textbook treats a trade union as a cartel of sellers. By bargaining collectively, workers withhold their labour unless paid more than a competitive market would offer, and the familiar consequences follow: fewer people employed in the unionised firm, more crowding into the sectors that remain open, and an output somewhat smaller than it might have been. On this view the only interesting question about a union is how large a premium it extracts and how much inefficiency that premium causes. Whatever else unions do, their grievance committees, their disputes over safety rules, their elected stewards on the shop floor, is incidental to the price they set.",
+    "That picture leaves out a choice every dissatisfied worker faces. She can leave, taking her skills to another employer, or she can stay and try to change what troubles her. Without a union, leaving is often the only safe course, because an individual who complains about a dangerous machine or an arbitrary supervisor marks herself as troublesome, and whatever she might have told the firm is lost when she walks out. A union changes the calculation. It allows complaints to be made collectively, through procedures, by people who cannot easily be singled out, and so it converts a stream of quiet departures into a stream of information that management would otherwise have had to buy, if it could buy it at all. Firms that hear this information may lose fewer trained workers and correct faults they did not know they had.",
+    "Seen this way, a union has two faces, and the question is not which of them is real but which predominates in a given setting. Where management treats the grievance procedure as an adversary to be outmanoeuvred, voice tends to harden into obstruction, and the cartel face is what remains. Where management treats the same procedure as an early warning, voice can make the firm more productive than a non-union rival, enough in some cases to offset the higher wage bill. The evidence on unions and productivity is accordingly mixed, and it ought to be; a single average effect conceals the very variation that matters.",
+    "This is why measuring unions only by their wage premium is a category error rather than a harmless simplification. It judges an institution that partly exists to carry information by the one effect, the price it sets, that carries no information about what is going wrong on the shop floor. It also hides the fact that the value of voice depends on whether anyone is listening, so that the same union under a different management can be a burden or an asset. None of this establishes that unions are good for firms, still less that they always raise productivity. It establishes only that the question cannot be answered by looking at the price of labour alone."
+   ],
+   "questions": [
+    {
+     "id": "R05-D-06-1",
+     "type": "RC",
+     "options": {
+      "A": "broad agreement with it, together with a complaint that it understates the inefficiency unions cause.",
+      "B": "studied neutrality, setting it beside the voice view without preferring one account to the other.",
+      "C": "outright dismissal of it as an ideological error with no basis in the way labour markets work.",
+      "D": "acceptance of it as an account of one real effect, joined to rejection of it as a full account."
+     },
+     "question": "The author's attitude towards the textbook view of unions described in paragraph 1 is best described as"
+    },
+    {
+     "id": "R05-D-06-2",
+     "type": "RC",
+     "options": {
+      "A": "impose a higher wage bill while yielding little of the information that might have offset it.",
+      "B": "make the firm more productive than its non-union rivals, though by less than under cooperative managers.",
+      "C": "lead more workers to quit than would quit a comparable firm in which no union had been organised.",
+      "D": "stop bargaining over wages, since its energy is absorbed by disputes conducted through the grievance procedure."
+     },
+     "question": "It can be inferred that, in a firm whose management treats the grievance procedure as an adversary to be outmanoeuvred, the union is likely to"
+    },
+    {
+     "id": "R05-D-06-3",
+     "type": "RC",
+     "options": {
+      "A": "Workers who leave a firm often take with them skills that their employer finds slow and costly to replace.",
+      "B": "Some managers in unionised firms regard the grievance procedure as a nuisance to be kept to a minimum.",
+      "C": "In firms without unions, workers who complain about safety or supervision are no more likely than silent colleagues to be dismissed or passed over.",
+      "D": "Unionised firms pay noticeably higher wages than otherwise similar firms in which there is no union."
+     },
+     "question": "Which of the following findings, if true, would most undermine the reasoning of paragraph 2?"
+    },
+    {
+     "id": "R05-D-06-4",
+     "type": "RC",
+     "options": {
+      "A": "withdraw the earlier argument that collective voice can make a unionised firm more productive than its rivals.",
+      "B": "introduce new evidence that unions, on balance, reduce the productivity of the firms in which they organise.",
+      "C": "confine the conclusion to a claim about how unions should be judged rather than a verdict on their worth.",
+      "D": "concede that the textbook view of unions as cartels is, after all, a complete and accurate account of them."
+     },
+     "question": "The sentence beginning 'None of this establishes that unions are good for firms' in the final paragraph serves to"
+    }
+   ]
+  },
+  {
+   "passage_id": "R03-A-06",
+   "passage": [
+    "Arguments about gentrification tend to collapse into a single question: are the people who lived in a neighbourhood forced out when wealthier newcomers arrive? The question has the merit of being answerable, at least in principle. One can follow households over time, count how many leave, and compare the rate with that in neighbourhoods that have not changed. Suppose such a count found that long-standing residents of a gentrifying district left no faster than residents of similar districts elsewhere. Many would conclude that the harm of gentrification had been exaggerated, and that what remained of the complaint was mere nostalgia.",
+    "That conclusion would be premature, because it assumes that the only way to lose a neighbourhood is to leave it. Consider the resident who stays. The grocer who extended credit has been replaced by a shop whose prices assume another income; the bench outside it, once a place to sit for an afternoon, now draws the attention of a security guard; the park is the same park, but the conduct expected in it has quietly changed, and complaints to the police now come from people she does not know, about behaviour that was ordinary a decade ago. She has not moved, and no count of departures will register her, yet the place in which she lives has been withdrawn from her as surely as if she had. To call this nostalgia is to mistake a loss of standing for a loss of scenery.",
+    "The difficulty is that the language best suited to describing this loss, the language of a neighbourhood's 'character', is also the language most readily turned to the opposite purpose. Affluent districts invoke their character to resist new housing, to keep out flats that might bring poorer residents, to preserve a streetscape that functions, whatever its owners intend, as a barrier. If character means the look of the buildings and the tone of the streets, then the long-standing resident and the exclusionary homeowner are making the same argument, and it is not one that deserves much sympathy.",
+    "The way out is to locate character not in the fabric of a place but in the relations it sustains: who is able to use it, on what terms, and with what claim to be heard. On this view, what the staying resident has lost is not a familiar shopfront but the practical standing she once had in her own street, and what the exclusionary homeowner defends is not a set of relations at all but the absence of people who might form new ones. The distinction will not settle every case, and it asks more of planners than a count of departures does. But it allows us to take the quieter harms of gentrification seriously without lending our sympathy to every resident who would prefer that nothing near them ever changed."
+   ],
+   "questions": [
+    {
+     "id": "R03-A-06-1",
+     "type": "RC",
+     "options": {
+      "A": "prove that complaints about gentrification amount to little more than nostalgia for a vanished streetscape.",
+      "B": "be impossible to carry out in practice, because households that leave a district cannot be traced afterwards.",
+      "C": "measure what it set out to measure, but would miss a kind of harm suffered by residents who stay.",
+      "D": "show that long-standing residents of gentrifying districts leave much faster than residents of districts that have not changed."
+     },
+     "question": "The author implies that the count of departures described in paragraph 1, if carried out carefully, would"
+    },
+    {
+     "id": "R03-A-06-2",
+     "type": "RC",
+     "options": {
+      "A": "a fall in the market value of the resident's home as the neighbourhood around it changes and its prices rise.",
+      "B": "the disappearance of familiar shopfronts, benches and buildings that once gave the street its particular look.",
+      "C": "the resident's being compelled, sooner or later, to leave the district in which she has lived for many years.",
+      "D": "the decline of the resident's accepted place in her street: her ease in using it and her claim to belong there."
+     },
+     "question": "In paragraph 2, the 'loss of standing' that the author distinguishes from 'a loss of scenery' refers to"
+    },
+    {
+     "id": "R03-A-06-3",
+     "type": "RC",
+     "options": {
+      "A": "Planners report that judging which relations a place sustains is a good deal harder and slower than counting the households that leave it.",
+      "B": "Later and more careful counts showed that departures from gentrifying districts were in fact somewhat higher than the earlier counts had suggested.",
+      "C": "Newcomers to gentrifying districts frequently form close ties with one another through the new shops, schools and associations that open there.",
+      "D": "Residents of many affluent districts that resist new housing object chiefly that newcomers would erode the informal ties and local voice they have built up over decades."
+     },
+     "question": "Which of the following, if true, would most weaken the distinction the author draws in paragraph 4?"
+    },
+    {
+     "id": "R03-A-06-4",
+     "type": "RC",
+     "options": {
+      "A": "Judging character by the relations a place sustains demands more of planners than counting those who leave.",
+      "B": "The same appeal to a neighbourhood's character can serve both to describe a genuine loss and to justify exclusion.",
+      "C": "Residents who invoke their district's character to oppose new housing usually know that their streetscape keeps poorer people out.",
+      "D": "A count of departures, however careful, cannot register the losses of residents who remain in a changing district."
+     },
+     "question": "The passage supports each of the following statements EXCEPT:"
+    }
+   ]
+  },
+  {
+   "passage_id": "R02-B-08",
+   "passage": [
+    "For several decades one research tradition in psychology has proceeded by a simple method. Set people a problem whose correct answer is fixed by logic or probability theory, record the ways in which their answers depart from it, and infer from the pattern of departures the shortcuts the mind must be using. The method has been extraordinarily productive. It has yielded a catalogue of systematic errors, and with it a picture of human judgement as a set of serviceable but crude rules of thumb that fail predictably whenever a problem is constructed to expose them. That picture has travelled well beyond psychology, into economics, law and medicine, where it is now invoked to justify the design of forms, defaults and warnings meant to protect people from their own shortcuts.",
+    "A rival tradition objects not to the findings but to the frame. A rule of thumb, it argues, can be judged only against the environment in which it is used, and the problems of the laboratory are often unlike the environments in which human judgement developed and in which it is mostly exercised. More provocatively, it points out that simple rules can outperform elaborate ones. When a decision must be made from a small sample in a noisy world, a model that weighs many cues carefully will fit the data at hand closely, including its accidents, and will then predict new cases worse than a rule that attends to one or two strong cues and ignores the rest. Ignoring information, which the first tradition tends to read as a symptom of limited capacity, can on this account be a source of accuracy.",
+    "The point is sound, and it is worth seeing why it does not abandon the idea of a norm. The advantage of the simple rule is itself a result of statistical theory: it accepts a little systematic error in exchange for a large reduction in sensitivity to noise, and in small, noisy samples that exchange is often a good one. To praise frugal heuristics on these grounds is not to reject normative standards but to replace one standard, agreement with a probabilistic calculation on a fully specified problem, with another, accuracy in predicting cases one has not yet seen. That second standard is arguably the one that matters for creatures who must act on incomplete information.",
+    "Where the rival tradition overreaches is in moving from what heuristics can do to what people actually do. To show that a rule performs well in some environments is not to show that people use it in those environments and abandon it in others. That further claim, that minds select their tools to suit the structure of the task, is an empirical hypothesis, and the evidence for it is uneven. People sometimes apply a rule where it serves them and sometimes carry it into settings where it misleads, and modern life supplies many settings, from the interpretation of medical test results to the assessment of financial risk, that resemble the laboratory more than the forest or the village market.",
+    "The disagreement, then, is narrower than its polemics suggest. Both traditions accept that judgement relies on shortcuts, and both, when pressed, accept that a shortcut can be good or bad depending on where it is used. What separates them is a question that neither has fully answered: how well people match their methods to their circumstances. Answering it requires studying environments as carefully as minds, which neither tradition, in its more confident moments, has been much inclined to do."
+   ],
+   "questions": [
+    {
+     "id": "R02-B-08-1",
+     "type": "RC",
+     "options": {
+      "A": "people's own reports, given after the task, of the rules they believe they followed.",
+      "B": "the pattern in which people's answers depart from answers fixed by logic or probability.",
+      "C": "studies of the environments in which human judgement first developed and is now exercised.",
+      "D": "comparisons of how well simple and complex rules predict cases that have not yet been seen."
+     },
+     "question": "According to the passage, the first research tradition infers the shortcuts the mind uses from"
+    },
+    {
+     "id": "R02-B-08-2",
+     "type": "RC",
+     "options": {
+      "A": "the wording in which experimental problems are put to participants, which shapes the answers they give.",
+      "B": "the practice of judging responses against logical and probabilistic norms on problems built in the laboratory.",
+      "C": "the theory that human judgement developed in environments quite unlike those of the modern laboratory.",
+      "D": "the statistical techniques that researchers in the first tradition use to analyse their experimental results."
+     },
+     "question": "In paragraph 2, the 'frame' to which the rival tradition objects is best understood as"
+    },
+    {
+     "id": "R02-B-08-3",
+     "type": "RC",
+     "options": {
+      "A": "requires more computation than people with limited capacity are able to carry out reliably.",
+      "B": "fits accidental features of the sample at hand that will not recur in the new cases.",
+      "C": "contains more systematic error than the simple rule, which it trades for a gain in flexibility.",
+      "D": "neglects the one or two strong cues on which the simple rule relies for its predictions."
+     },
+     "question": "The passage suggests that, in a small and noisy sample, a model that weighs many cues will predict new cases worse than a simple rule because it"
+    },
+    {
+     "id": "R02-B-08-4",
+     "type": "RC",
+     "options": {
+      "A": "establish that simple rules are superior to elaborate models in every environment in which decisions are made.",
+      "B": "argue that the case for simple rules appeals to a different normative standard rather than discarding normative standards.",
+      "C": "concede that the first tradition was right to judge responses by their agreement with a probabilistic calculation.",
+      "D": "show that the rival tradition, by praising heuristics that ignore information, rejects the authority of statistical theory."
+     },
+     "question": "Paragraph 3 serves chiefly to"
+    },
+    {
+     "id": "R02-B-08-5",
+     "type": "RC",
+     "options": {
+      "A": "approval of its success in refuting the first tradition's findings about the systematic errors people make.",
+      "B": "rejection of its argument, on the ground that ignoring information is in the end a symptom of limited mental capacity.",
+      "C": "acceptance of its critique of how errors are judged, with doubt that people have been shown to fit their rules to their tasks.",
+      "D": "endorsement of its main claims, including its further claim that minds reliably select whichever rules best suit the task at hand."
+     },
+     "question": "The author's attitude toward the rival tradition is best described as"
+    }
+   ]
+  },
+  {
+   "passage_id": "R06-D-04",
+   "passage": [
+    "It is tempting to treat discarded scientific theories as simple errors, interesting only as warnings. The caloric theory, which held that heat is a subtle, weightless fluid flowing from hotter bodies into colder ones, is a favourite example. We now understand heat in terms of the disordered motion of the particles that make up matter, and nothing like a heat fluid exists. Yet to file caloric under mistakes is to miss what made it, for several decades, the most useful account of heat available, and to misunderstand how the theory that replaced it came to be built.",
+    "The fluid picture explained a great deal, and explained it naturally. It said why heat moves from hot to cold, as water runs downhill, and why a hot body and a cold one placed together settle at a common temperature. It made heat something that could be counted, conserved and tracked through a process, which encouraged careful measurements of how much heat different substances absorbed as they warmed or melted. Some of the most enduring results of early thermal science were first obtained by investigators who believed in caloric, and an influential analysis of steam engines, which showed that the work an engine can extract depends on the temperatures between which it operates, was framed entirely in its terms. That result survived the theory's collapse.",
+    "The difficulties were real, and they were noticed early. Observations of cannon being bored suggested that friction could produce heat, apparently without limit, for as long as the boring continued. If heat were a conserved fluid squeezed out of the metal, the supply should eventually have run out. Defenders of caloric had replies, some ingenious and some strained, and the theory survived the objection for decades. It is easy to call this stubbornness. It is more accurate to say that a theory which organises a large body of successful work is not abandoned because of one anomaly, particularly when no rival yet explains everything the old theory explained.",
+    "None of this is to say that false theories are as good as true ones, or that caloric deserved to last forever. It did, in the end, mislead: it could make no sense of heat turning into work and work into heat, which became central once engines were studied closely. The claim is narrower. A theory can be wrong about what something is while being right about many of the ways it behaves, and those behavioural truths can pass, nearly intact, to its successor. Judging past science only by whether its picture of reality was correct makes its history look like a series of failures, when much of it was a series of partial successes handed on."
+   ],
+   "questions": [
+    {
+     "id": "R06-D-04-1",
+     "type": "RC",
+     "options": {
+      "A": "prove that caloric gave a correct account of heat at least in so far as engines were concerned.",
+      "B": "show that a result reached within the caloric framework could outlast the framework itself.",
+      "C": "explain why heat moves from hot bodies to cold ones in the way that water runs downhill.",
+      "D": "illustrate how close study of engines eventually exposed the caloric theory as mistaken."
+     },
+     "question": "The analysis of steam engines mentioned in paragraph 2 serves mainly to"
+    },
+    {
+     "id": "R06-D-04-2",
+     "type": "RC",
+     "options": {
+      "A": "were being stubborn in refusing to accept evidence that plainly and decisively refuted their theory.",
+      "B": "acted reasonably in retaining a productive theory while no rival yet explained as much.",
+      "C": "produced replies that were uniformly ingenious and that fully disposed of the objection for decades.",
+      "D": "were right to dismiss the observations of cannon boring as the product of careless experimental work."
+     },
+     "question": "The author's view of the defenders of caloric who answered the cannon-boring objection is that they"
+    },
+    {
+     "id": "R06-D-04-3",
+     "type": "RC",
+     "options": {
+      "A": "they were carried out by investigators who had already rejected caloric in favour of another theory.",
+      "B": "they demonstrated that heat has a measurable weight, whereas caloric was supposed to be weightless.",
+      "C": "a fluid that is merely conserved and released should not be available in a supply without limit.",
+      "D": "they showed that heat could pass from colder bodies into hotter ones when metal was being bored."
+     },
+     "question": "It can be inferred that the cannon-boring observations troubled the caloric theory chiefly because"
+    },
+    {
+     "id": "R06-D-04-4",
+     "type": "RC",
+     "options": {
+      "A": "An old map records accurate routes but a mistaken outline of the land, and later mapmakers throw it away entirely because the outline is wrong.",
+      "B": "An old map is mistaken in places, but mapmakers keep using it unchanged for generations only out of loyalty to the person who drew it.",
+      "C": "An old map is accurate in every detail but is replaced because a newer method of printing makes it cheaper to draw a fresh one.",
+      "D": "An old map drawn on a mistaken belief about the shape of the land records routes between towns accurately, and later mapmakers keep the routes while redrawing the outline."
+     },
+     "question": "Which of the following is most closely analogous to the author's account of the caloric theory?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R03-B-01",
+   "passage": [
+    "Most people in the modern West assume that a name is a fixed possession, given once at birth and carried, with perhaps one change at marriage, until death. The assumption is so deep that we rarely notice it is an assumption at all, yet in a wide range of societies a person's name has been expected to change over a lifetime, and one of the commonest occasions for the change is the birth of a child. When a man becomes known as the father of his first child, or a woman as the mother of hers, anthropologists speak of teknonymy: naming a parent through the offspring. The Arabic custom of addressing a man as Abu, 'father of', followed by the name of his eldest son, is perhaps the most familiar instance, but the practice in various forms has been recorded on several continents.",
+    "It is tempting to read teknonymy as a simple sign that children are prized, and there is something in this. But the more interesting point is what the custom reveals about how such societies understand a person. In a system of fixed names, identity is treated as something an individual owns from the start, and relationships are added to it later, like rooms built onto a house. In a teknonymous system the order is reversed: a person becomes fully visible in social life only by standing in a relationship; the new name announces not that the individual has changed but that their position in a web of kin has changed. One is addressed less as a self than as a point where generations meet.",
+    "This also explains a feature that puzzles outsiders. In some communities it becomes mildly rude to use the old personal name of an adult who has a child, much as it would be odd for us to call a judge by a childhood nickname in court. The personal name has not been forbidden; it has simply been outranked by a title that carries more social information. Where the practice extends further, so that a grandparent is named after a grandchild, a person's name can track their rise through the generations, and the most senior people come to be known almost entirely through their descendants.",
+    "None of this should be romanticised, for a system that names people through their children can be hard on those who have none, who may remain, in the language of address, permanently junior. Nor is the Western fixed name as individualistic as it looks, since a surname itself announces a lineage. The contrast is one of emphasis rather than of kind, but the emphasis matters. To change a person's name at the birth of a child is to state, every time that person is greeted, that adulthood is not a private achievement but a place in a sequence."
+   ],
+   "questions": [
+    {
+     "id": "R03-B-01-1",
+     "type": "RC",
+     "options": {
+      "A": "the parent's earlier personal name has been formally prohibited and may no longer be spoken by anyone.",
+      "B": "the parent's place among their kin has shifted, not that the parent has become a different individual.",
+      "C": "the parent has acquired property that will later pass to the child whose name now appears in the title.",
+      "D": "the parent has reached the age at which the community grants full rights to take part in its decisions."
+     },
+     "question": "According to the passage, in a teknonymous system the new name that a parent receives chiefly announces that"
+    },
+    {
+     "id": "R03-B-01-2",
+     "type": "RC",
+     "options": {
+      "A": "a lapse of tact, because a form of address carrying more social information is now available.",
+      "B": "a mark of special intimacy that only the parent's closest relatives are entitled to claim.",
+      "C": "acceptable in formal settings such as courts but quite inappropriate in ordinary daily conversation.",
+      "D": "a serious offence that the elders of the community would be expected to punish severely."
+     },
+     "question": "The comparison with calling a judge by a childhood nickname in court (paragraph 3) suggests that addressing a parent by the old personal name would be"
+    },
+    {
+     "id": "R03-B-01-3",
+     "type": "RC",
+     "options": {
+      "A": "forgotten entirely by the community soon after the birth of the first child.",
+      "B": "replaced in law through an official ceremony of renaming the parent.",
+      "C": "judged inferior in moral worth to the personal names of the parent's children.",
+      "D": "displaced in everyday use by a title that carries greater social weight."
+     },
+     "question": "As used in paragraph 3, the statement that the personal name has been 'outranked' means that it has been"
+    },
+    {
+     "id": "R03-B-01-4",
+     "type": "RC",
+     "options": {
+      "A": "Fixed personal names in the West are really a concealed form of teknonymy, since surnames identify people through their descendants.",
+      "B": "Teknonymy shows chiefly that the societies practising it value their children more highly than societies that use fixed names do.",
+      "C": "Naming parents through their children expresses a view of persons as made by their place among kin, differing from fixed naming in emphasis.",
+      "D": "Teknonymy is unjust to childless adults and should be judged a less humane way of naming people than the system of fixed names."
+     },
+     "question": "Which of the following best expresses the central claim of the passage?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R01-A-05",
+   "passage": [
+    "We tend to assume that each of us has a special and nearly infallible access to our own minds. Others must infer what I think and feel from my speech and behaviour, whereas I, it seems, am acquainted with my own mental states directly, without any need for inference or interpretation. For some states the assumption is plausible. If I sincerely report a sharp pain in my knee, it is hard to see what better evidence anyone could have, including me, about whether the pain is there. But the assumption is usually extended, without much reflection, to a quite different class of facts: the facts about why I did what I did.",
+    "Here the case for special access is far weaker. Imagine a shopper who chooses one of several identical scarves laid out in a row and who, asked why, cites the richer colour or the finer weave of the one she took. Since the scarves really are identical, her explanation cannot be true, yet it is offered sincerely and without hesitation. What she supplies is not a report of a cause she observed operating within her but a plausible reconstruction, drawn from a shared and largely unexamined theory of human motivation, of the kind anyone might give of why a person would choose a scarf. An onlooker armed with the same commonsense theory could have produced the same explanation, and would have been no more and no less likely to be right.",
+    "It is tempting to conclude from such cases that self-knowledge is an illusion and that we stand to ourselves essentially as strangers do, but that conclusion overreaches. The shopper's error concerns the causes of a past choice, and about such causes she may well be no better placed than anyone else. But there is another kind of question about which her position is not that of an observer at all. If she is asked which scarf she will wear tomorrow, or whether she thinks scarves make a sensible gift, she does not answer by studying evidence about herself; she answers by deciding, or by considering the merits of scarves. Her authority here derives from the fact that the answer is, in part, up to her.",
+    "The lesson, then, is not that the first person has no privilege but that its privilege has been misplaced. We are poorly placed to discover, by looking inward, the forces that moved us; we are well placed to settle what we will stand by. Confusing the two invites a double error: an unearned confidence about our own motives, and an exaggerated scepticism that would deny us even the authority we exercise whenever we make up our minds."
+   ],
+   "questions": [
+    {
+     "id": "R01-A-05-1",
+     "type": "RC",
+     "options": {
+      "A": "an onlooker would have given a quite different explanation of the very same choice.",
+      "B": "the scarves she chose among did not differ in the respects that she cited.",
+      "C": "she was not paying attention to the scarves at the moment she made her choice.",
+      "D": "she gave it without hesitation, which shows that she had rehearsed it in advance."
+     },
+     "question": "According to the passage, the shopper's explanation of her choice cannot be true because"
+    },
+    {
+     "id": "R01-A-05-2",
+     "type": "RC",
+     "options": {
+      "A": "likely to explain her choice more accurately if he had first watched her shopping on other occasions.",
+      "B": "unable to explain the choice at all, since he has no access to the inner states that caused it.",
+      "C": "no worse placed than the shopper herself to say why she chose the scarf she did.",
+      "D": "better placed than the shopper to explain her choice, since he is free of the biases that distort her view of herself."
+     },
+     "question": "It can be inferred that the author regards the onlooker mentioned in paragraph 2 as"
+    },
+    {
+     "id": "R01-A-05-3",
+     "type": "RC",
+     "options": {
+      "A": "We know our sensations with certainty, but we can know our beliefs and intentions only by inference from what we do.",
+      "B": "Our sincere explanations of our own choices are usually false, and so self-knowledge is for the most part an illusion.",
+      "C": "People ought to be far more sceptical than they are about their own reports of bodily sensations such as pain.",
+      "D": "First-person authority is genuine but lies in settling our own commitments, not in discerning the causes of our past actions."
+     },
+     "question": "Which of the following best expresses the central claim of the passage?"
+    },
+    {
+     "id": "R01-A-05-4",
+     "type": "RC",
+     "options": {
+      "A": "Why she chose ten years ago to study law rather than medicine when she left school.",
+      "B": "Whether she will accept the post she has just been offered, now that she has had time to think it over.",
+      "C": "Whether the ache she has been feeling in her shoulder since the morning is still there now.",
+      "D": "Whether her irritability over the past week has been caused by her lack of sleep."
+     },
+     "question": "Which of the following questions would a person answer with the kind of authority the passage describes in paragraph 3?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R08-B-04",
+   "passage": [
+    "Each new medium of reading arrives with a lament attached. The prevailing anxiety is that screens are making us worse readers: that a generation raised on phones can no longer follow a sustained argument, and that anything read on a device is necessarily read badly. Some of this anxiety is supported by evidence. A number of studies have reported that people tend to understand long and demanding texts somewhat less well on screens than on paper, especially when they are working against the clock. But the usual interpretation of such findings, that the screen itself damages comprehension, is too quick.",
+    "Consider what readers characteristically do on screens. Most of what they encounter there is brief, and much of it is read in order to decide whether to read it at all: headlines, messages, feeds, search results. Over years, this produces a thoroughly practised habit of skimming, in which the eye hunts for familiar key words and moves on, and when the same reader is later handed a dense essay on a tablet, the habit accompanies the device. The reader skims because skimming is what that screen has always been for, and comprehension suffers accordingly. On this account the difficulty lies less in the glass than in the expectations that the glass has gradually trained.",
+    "This explanation carries a more encouraging implication. Habits, unlike physiological limitations, can be changed, and some of the gaps reported in the research seem to narrow when readers are given more time, or are asked to slow down and summarise what they have read. A reader who approaches a screen with the deliberate intentions he would bring to a printed book may perform nearly as well as he would with the book itself. The underlying capacity for sustained attention is not lost; it is simply not being called upon.",
+    "Yet none of this shows that the medium makes no difference at all. Paper offers a reader a sense of place that a scrolling screen does not: the thickness of the pages already read, the position of a passage on the left or right page, the feel of a chapter's length in the hand. These cues help some readers remember where an idea appeared and how a long argument is organised, and a screen supplies them only weakly. The sensible conclusion is therefore a qualified one. Screens are not destroying our capacity to read deeply, but they make it easier not to, and readers and teachers who want deep reading on screens will have to ask for it deliberately rather than expect it by default."
+   ],
+   "questions": [
+    {
+     "id": "R08-B-04-1",
+     "type": "RC",
+     "options": {
+      "A": "show that screens are destroying the capacity of a generation raised on phones to follow long arguments.",
+      "B": "demonstrate that the medium of reading makes no difference to comprehension once habits are corrected.",
+      "C": "argue that weaker reading on screens stems largely from trained habits, while granting that paper keeps some genuine advantages.",
+      "D": "recommend that schools return to printed books because paper gives readers a better sense of place in a text."
+     },
+     "question": "The primary purpose of the passage is to"
+    },
+    {
+     "id": "R08-B-04-2",
+     "type": "RC",
+     "options": {
+      "A": "A greater willingness among readers to slow down and summarise what they have read.",
+      "B": "Physical cues of position and length that help some readers recall where an idea appeared.",
+      "C": "Freedom from the headlines, messages and feeds that interrupt reading on a device.",
+      "D": "Faster reading of long and demanding texts when the reader is working against the clock."
+     },
+     "question": "According to paragraph 4, which advantage does paper offer that a scrolling screen supplies only weakly?"
+    },
+    {
+     "id": "R08-B-04-3",
+     "type": "RC",
+     "options": {
+      "A": "no better than with no summary at all, because the screen itself is what damages understanding.",
+      "B": "markedly better than the same reader would achieve when reading the essay on paper.",
+      "C": "closer to what the same reader would manage on paper than if no summary had been asked for.",
+      "D": "unchanged, since the passage says that only extra time, not a change of task, narrows the gap."
+     },
+     "question": "A habitual phone reader is asked to read a long essay on a tablet and then write a summary of it. Based on the passage, the author would most likely expect this reader's comprehension to be"
+    },
+    {
+     "id": "R08-B-04-4",
+     "type": "RC",
+     "options": {
+      "A": "Readers given extra time to finish a long text on a screen understood noticeably more of it than readers who were hurried.",
+      "B": "Adults who had seldom used screens before showed the same comprehension gap on tablets as habitual screen readers did.",
+      "C": "Readers of printed books were better than screen readers at remembering on which page an idea had appeared.",
+      "D": "Most of the material that people read on their phones each day consists of short headlines, messages and search results."
+     },
+     "question": "Which of the following, if true, would most weaken the explanation offered in paragraph 2?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R03-E-03",
+   "passage": [
+    "Few words are used more freely by restaurant reviewers than 'authentic', and few are applied more selectively. A dish is praised as authentic when it is served in a cramped room, by a cook who speaks the diner's language haltingly, at a price that suggests nobody is getting rich. The same dish, served with tablecloths and a wine list, is suspected of having been tamed. Authenticity, in this usage, is less a property of the food than of the scene around it, and the scene is one that the visiting diner has come to consume.",
+    "Consider a hypothetical family that opens a restaurant serving the cooking of its home region in a city several thousand kilometres away. From the start, the cooks make changes. Some ingredients cannot be found and are replaced with local ones; some dishes are too laborious for a kitchen that must turn out fifty plates a night; others are sweetened or softened because the first customers sent them back. Within a generation the menu has become something that exists nowhere else: neither the food of the home region nor the food of the new city, but the food of the people who moved between them.",
+    "Purists treat this history as a decline, and they reward the restaurants that seem to have resisted it, the ones with a second menu in the home language that outsiders must know to ask for. Yet even that second menu has passed through the same kitchen, the same suppliers and the same compromises. To call it the real food and the first menu a betrayal is to take one stage of a continuous adaptation and freeze it as the original. More troubling, the judgement is usually made by people with no stake in the tradition, who are in effect asking immigrant cooks to perform their own foreignness for an audience's satisfaction.",
+    "None of this means that every adaptation is innocent. Cooks under commercial pressure sometimes strip a cuisine of everything difficult until it is recognisable only by name, and something real is lost when that happens. But the loss is better described as a narrowing of what the cooks themselves are free to make than as a departure from a fixed original. The more useful question to ask of a restaurant is not whether its food matches some imagined source, but whether the people cooking it have the room to cook what they think is good."
+   ],
+   "questions": [
+    {
+     "id": "R03-E-03-1",
+     "type": "RC",
+     "options": {
+      "A": "how much the critic has paid for the meal compared with similar restaurants.",
+      "B": "the modest and unfamiliar setting in which the dish is served rather than the dish itself.",
+      "C": "whether the cook has been trained in the region from which the cuisine comes.",
+      "D": "how closely the recipe matches the way the dish is cooked in its region of origin."
+     },
+     "question": "Paragraph 1 suggests that when reviewers call a dish authentic, their judgement depends chiefly on"
+    },
+    {
+     "id": "R03-E-03-2",
+     "type": "RC",
+     "options": {
+      "A": "demonstrate that immigrant cooks change their recipes chiefly because they are pressured by reviewers who demand authenticity.",
+      "B": "provide evidence that restaurants which adapt to local tastes are commercially more successful than those that refuse to adapt.",
+      "C": "illustrate the kind of loss that occurs when cooks strip a cuisine of everything difficult so that it is recognised only by name.",
+      "D": "show that migration itself produces a distinct cuisine, which sets up the author's objection to the purists' idea of decline."
+     },
+     "question": "The hypothetical family restaurant in paragraph 2 functions in the argument mainly to"
+    },
+    {
+     "id": "R03-E-03-3",
+     "type": "RC",
+     "options": {
+      "A": "Reviewers praise restaurants with second menus more highly than restaurants that offer only a single menu to all diners.",
+      "B": "Diners from the home community order mostly from the second menu, while other customers rarely know that it exists.",
+      "C": "The dishes on such second menus are found to be prepared with imported ingredients and unchanged methods, and to match versions cooked in the home region.",
+      "D": "Many cooks who run such restaurants say they would like to cook more ambitious dishes than their customers will accept."
+     },
+     "question": "Which of the following, if true, would most weaken the author's claim that the second menu is only 'one stage of a continuous adaptation'?"
+    },
+    {
+     "id": "R03-E-03-4",
+     "type": "RC",
+     "options": {
+      "A": "Whether those cooking its food have the latitude to make the dishes they themselves consider good.",
+      "B": "Whether its adaptations were chosen by the cooks rather than prompted by complaints from customers.",
+      "C": "Whether its dishes are prepared in the way they are still prepared in the region of origin.",
+      "D": "Whether it has entirely resisted the commercial pressures that lead cooks to simplify a cuisine."
+     },
+     "question": "Which of the following tests for judging a restaurant would the author most likely endorse?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R05-B-06",
+   "passage": [
+    "A donor that pays for a new clinic likes to believe that it has paid for a clinic. Often it has not, or not in the sense it imagines. Suppose a government had already planned to build the clinic from its own revenue. When a donor offers to fund it, the government can accept, release the money it had set aside and spend it on something else entirely: a road, a pay rise for civil servants, an extra battalion. The clinic gets built either way. What the aid has really financed is whatever the government would otherwise have gone without, and the donor, which may never learn what that was, has had no say in choosing it.",
+    "Economists call this fungibility, and once it has been seen it is hard to unsee. It implies that the earmark on a grant, the label saying that the money is for health or for schools, may tell us little about what the grant actually changes. Studies comparing donors' allocations with recipients' overall spending have often found that aid labelled for a sector raises spending in that sector by less than the amount given, though rarely by nothing. The lesson many have drawn is that donors are funding governments, not projects, whether or not they admit it.",
+    "The lesson is right, but it is easy to overstate. Fungibility depends on the government having planned to do the thing anyway. Where a donor funds something the government would not have undertaken, a programme against a neglected disease, say, or a school in a district whose population carries no political weight, the money cannot be redirected in the same way, because there was no planned expenditure to release. Fungibility is also weaker when a government's budget is so stretched or so rigid that there is little slack to shift. And aid often brings more than money: technical staff, systems for buying supplies, and a degree of scrutiny that can change how a sector is run, effects that no accounting of shifted budget lines will capture.",
+    "Nor is fungibility in itself a scandal. If a recipient government has sound priorities, the freedom to move money to where it is most needed is an advantage, and donors who insist on rigid earmarks may simply be paying for the comfort of a plaque. The difficulty arises where priorities are poor, because there the earmark offers protection only on paper. What follows is not that earmarking is useless but that donors cannot rely on it to do their thinking for them. The question that matters is less what a grant is labelled for than what kind of government receives it."
+   ],
+   "questions": [
+    {
+     "id": "R05-B-06-1",
+     "type": "RC",
+     "options": {
+      "A": "most of the recipient's spending is locked into commitments that cannot easily be cut or moved.",
+      "B": "the donor attaches a plaque and a public ceremony to the project so that its role is widely seen.",
+      "C": "the recipient government has sound priorities and is free to move money to where it is most needed.",
+      "D": "the recipient government had already set aside its own revenue to pay for the same project."
+     },
+     "question": "The author would most likely agree that an earmarked grant is least likely to be diverted to other uses when"
+    },
+    {
+     "id": "R05-B-06-2",
+     "type": "RC",
+     "options": {
+      "A": "had no measurable effect at all on spending in the sector for which it was labelled.",
+      "B": "raised spending in that sector by more than the amount given, because it attracted matching funds from governments.",
+      "C": "raised spending in that sector, though usually by less than the full amount of the aid.",
+      "D": "was mostly lost to corruption before it could be spent in any sector of the recipient's budget."
+     },
+     "question": "According to paragraph 2, studies comparing donors' allocations with recipients' overall spending have often found that aid labelled for a sector"
+    },
+    {
+     "id": "R05-B-06-3",
+     "type": "RC",
+     "options": {
+      "A": "Recipient governments seldom publish detailed accounts showing how their own revenue is divided among sectors.",
+      "B": "Donor-funded vaccination teams reached regions left out of the health ministry's own plans, while the ministry's spending elsewhere was unchanged.",
+      "C": "A government that received a grant for roads reduced its own road budget by almost exactly the amount of the grant.",
+      "D": "Donors that earmark their grants report greater satisfaction with the results than donors who give general budget support."
+     },
+     "question": "Which of the following, if true, would most weaken the claim that donors 'are funding governments, not projects'?"
+    },
+    {
+     "id": "R05-B-06-4",
+     "type": "RC",
+     "options": {
+      "A": "argue that recipient governments tend to divert aid money into military spending rather than social services.",
+      "B": "illustrate how money given for one purpose can end up financing something quite different.",
+      "C": "show that clinics paid for by donors are seldom actually built by the governments that receive the money.",
+      "D": "demonstrate that fungibility is harmful whatever the priorities of the government that receives the aid."
+     },
+     "question": "The hypothetical clinic in paragraph 1 functions chiefly to"
+    }
+   ]
+  },
+  {
+   "passage_id": "R01-G-04",
+   "passage": [
+    "Epicurus held that death is nothing to us, since where death is, we are not, and his Roman follower Lucretius added an argument that has been discussed ever since. Look back, Lucretius suggests, at the endless stretch of time that passed before you were born, which did not trouble you then and does not trouble you now. The time after your death is a mirror held up to that earlier time, and it would be inconsistent to dread the one while feeling nothing about the other. If non-existence before birth is no evil, non-existence after death can be none either.",
+    "The argument has a pleasing economy, and against one target it is decisive. Many people who fear death picture it, half consciously, as a condition they will find themselves in: a darkness, a silence, an interminable wait. Against this picture the mirror works admirably: nobody imagines that they spent the centuries before their birth sitting patiently in the dark, and the comparison exposes the fear of being dead as a confusion, since there will be no one there to suffer the darkness.",
+    "But most people who fear death are not chiefly afraid of a condition; they are afraid of losing what they would otherwise have had: the next conversation, the completion of their work, the sight of their children grown. Here the symmetry breaks down, because our attitudes to past and future are not symmetrical even in ordinary life; we look forward to pleasures and dread pains that are still to come in a way that has no counterpart for those already over. More importantly, the goods we stand to lose by dying are goods that this very life would have contained had it continued, whereas the goods of the centuries before our birth were never ours to lose. A person could hardly have been born a hundred years earlier and remained the same person, with the same parents and history; but the same person can very easily die later than he in fact does.",
+    "This does not mean that Lucretius has nothing to teach. If the fear of death is partly a fear of a condition, then his argument removes part of the fear, and that is no small gift. What remains is better described as grief in advance for a life cut short, and grief of that kind is not a confusion to be argued away. It is the shadow cast by caring about one's own future, and a consolation that worked perfectly against it would have to work by teaching us to care less."
+   ],
+   "questions": [
+    {
+     "id": "R01-G-04-1",
+     "type": "RC",
+     "options": {
+      "A": "the dread of the physical pain that people expect to suffer in the course of dying.",
+      "B": "the fear of missing the future events and achievements that a longer life would have brought.",
+      "C": "the regret people feel about the many centuries of history that passed before they were born.",
+      "D": "the fear of death imagined as a condition in which one will somehow find oneself."
+     },
+     "question": "According to the passage, the mirror argument is most effective against"
+    },
+    {
+     "id": "R01-G-04-2",
+     "type": "RC",
+     "options": {
+      "A": "the goods lost by dying would have belonged to this very life, whereas the goods of earlier centuries could never have been ours.",
+      "B": "our attitudes in ordinary life to the pleasures that are still to come differ from our attitudes to pleasures that are already over.",
+      "C": "people are inconsistent when they dread the time after their death but feel nothing at all about the time before their birth.",
+      "D": "the fear of death as a dark and silent condition is a confusion that the mirror argument exposes."
+     },
+     "question": "The final sentence of paragraph 3, contrasting being born earlier with dying later, is used to support the claim that"
+    },
+    {
+     "id": "R01-G-04-3",
+     "type": "RC",
+     "options": {
+      "A": "Many people who say they fear death admit, when questioned closely, that they picture it as a dark and silent condition they will endure.",
+      "B": "Some people who are dying report that they fear the process of dying far more than they fear being dead.",
+      "C": "Epicurus and Lucretius both wrote in the hope of freeing their readers from fears they considered groundless.",
+      "D": "On reflection, people regret the goods they missed by being born late as much as the goods they will lose by dying."
+     },
+     "question": "Which of the following, if true, would most weaken the author's objection to the symmetry argument in paragraph 3?"
+    },
+    {
+     "id": "R01-G-04-4",
+     "type": "RC",
+     "options": {
+      "A": "Lucretius intended his argument to teach readers to care less about the future, and the author shares that aim.",
+      "B": "any argument that wholly removed the fear of losing one's future would also weaken a concern that the author regards as legitimate.",
+      "C": "no argument about death can offer any genuine consolation, since every fear of death reflects care for the future.",
+      "D": "grief in advance for a life cut short is a confusion that a better argument than Lucretius' could dispel."
+     },
+     "question": "The last sentence of the passage implies that"
+    }
+   ]
+  },
+  {
+   "passage_id": "R01-A-02",
+   "passage": [
+    "The sceptic's argument has an irritating simplicity. You claim to know that you are sitting in a room reading. But if you were dreaming vividly, or if your experiences were being produced by some elaborate deception, everything would seem exactly as it now does. Since you cannot tell from the inside that you are not in such a situation, you cannot rule it out; and if you cannot rule it out, the sceptic concludes, you do not know that you are reading. The argument generalises to almost everything, and many careful attempts to refute it have the air of a lawyer winning on a technicality rather than of anyone actually seeing the truth.",
+    "One response is to concede the argument and shrug: perhaps we know nothing, but we must act as if we did, and so nothing of practical importance changes. This concession is too generous. It treats the sceptic's standard, that knowing requires excluding every alternative one cannot distinguish from the actual situation, as if it were simply the correct standard, which we happen to fall short of. Yet we nowhere apply that standard outside the philosophy seminar. A birdwatcher who reports a heron on the riverbank is not asked whether she has excluded the possibility of a mechanical decoy indistinguishable at that distance; she is asked whether she looked carefully, knows her birds and had a clear view. If a park ranger has just announced that decoys have been placed along that stretch of river, the question changes, and it is right that it should.",
+    "What this suggests is that the alternatives a knower must exclude are fixed by something other than bare conceivability: by what is live in the circumstances, by what a reasonable person has some ground to take seriously. The sceptic does not discover a hidden flaw in our ordinary claims; he changes the subject by importing a standard that no ordinary claim was ever meant to satisfy. This is why his argument feels at once unanswerable and beside the point.",
+    "None of this makes scepticism worthless. Its exaggerated standard has the merit of exposing how much of our confidence rests on background assumptions we rarely state, and in particular circumstances, the decoy case among them, those assumptions deserve scrutiny. The error lies in moving from the observation that every assumption could in principle be questioned to the conclusion that every assumption must be questioned before anything is known. The first is a useful reminder; the second would make knowledge impossible by definition, and a definition that guarantees its own emptiness is a poor account of what we were trying to describe."
+   ],
+   "questions": [
+    {
+     "id": "R01-A-02-1",
+     "type": "RC",
+     "options": {
+      "A": "someone in a position to know had just announced that decoys were placed along that part of the river.",
+      "B": "a philosopher pointed out that a decoy indistinguishable at that distance is perfectly conceivable.",
+      "C": "she could not tell from the inside whether she was dreaming the scene she reported to others.",
+      "D": "her view of the riverbank had been partly blocked by trees or by the light on the water."
+     },
+     "question": "According to the passage, the birdwatcher would properly be asked whether she had ruled out a mechanical decoy if"
+    },
+    {
+     "id": "R01-A-02-2",
+     "type": "RC",
+     "options": {
+      "A": "uncovers a hidden flaw in ordinary claims to know that the people making those claims had failed to notice.",
+      "B": "abandons the question of what we know and turns instead to the practical question of how we ought to act.",
+      "C": "introduces a new topic, dreaming, that has no bearing on whether someone is really sitting in a room reading.",
+      "D": "replaces the standard that governs ordinary claims to know with a far stricter one and then judges those claims by it."
+     },
+     "question": "In paragraph 3, the author says the sceptic 'changes the subject'. This most nearly means that the sceptic"
+    },
+    {
+     "id": "R01-A-02-3",
+     "type": "RC",
+     "options": {
+      "A": "dismissive, because the response overlooks the real possibility that we are in fact dreaming at this moment.",
+      "B": "critical, because the response grants the sceptic's standard a correctness that it has never been shown to have.",
+      "C": "ambivalent, because the response is generous to the sceptic in one respect but unfair to him in another.",
+      "D": "approving, because the response rightly sees that the sceptic's conclusion leaves practical life entirely untouched."
+     },
+     "question": "The author's attitude to the response that would 'concede the argument and shrug' (paragraph 2) is best described as"
+    },
+    {
+     "id": "R01-A-02-4",
+     "type": "RC",
+     "options": {
+      "A": "Experienced birdwatchers misidentify herons far less often than beginners do, even when they view the birds from a considerable distance in poor light.",
+      "B": "In everyday conversation, people readily withdraw a claim to know as soon as an unlikely alternative is merely mentioned, even with no reason to think it obtains.",
+      "C": "On rivers where decoys are known to be common, careful observers routinely check for them before they report a sighting of any wading bird.",
+      "D": "Many trained philosophers find the sceptic's argument very hard to refute, and some of them regard every refutation proposed so far as unsuccessful."
+     },
+     "question": "Which of the following, if true, would most weaken the author's account of which alternatives a knower must exclude?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R04-A-04",
+   "passage": [
+    "Historians trained on written records have long treated oral testimony with suspicion, and their reasons are not foolish. Memories fade and are reshaped by everything that happened afterwards; a speaker recalling events of fifty years ago has also absorbed fifty years of conversation, newspapers and family retelling, and cannot always tell what she saw from what she later heard. Anyone who has compared an elderly person's account of a local event with the surviving paperwork knows how often the dates, the sequence and even the participants differ. As a chronicle of what happened and when, the spoken memory of a single witness is frequently unreliable.",
+    "The objection assumes, however, that the only purpose of testimony is to establish what happened. Consider a hypothetical mining town in which many older residents, interviewed separately, place a bitter strike in the same year as a disastrous flood, although the records show that the two events were several years apart. As evidence about dates, these accounts are simply wrong. As evidence about how the town came to understand its own past, they are remarkably revealing, for the merging of the two events suggests that residents experienced them as a single catastrophe, perhaps because in both the company that owned the mine was felt to have abandoned them.",
+    "The crucial point is that shared and patterned errors are not the same as noise. Individual slips of memory are scattered more or less at random; one witness misplaces a year, another confuses two neighbours. When many people independently make the same mistake, however, the mistake becomes a social fact, something that calls for explanation rather than mere correction. And patterned error of this kind is precisely what written records cannot supply, because documents tend to record events, while the meanings that people attached to those events, and the way those meanings settled over decades, rarely find their way into an official file.",
+    "None of this licenses the historian to treat every inaccuracy as meaningful or to abandon the ordinary work of checking. An error can be interpreted only once it has been established that it is an error, and that usually requires the very documents that oral historians are sometimes too quick to dismiss. The strongest work therefore uses the two kinds of source together, letting each expose what the other cannot see: the record correcting the memory, and the memory revealing what the record left out."
+   ],
+   "questions": [
+    {
+     "id": "R04-A-04-1",
+     "type": "RC",
+     "options": {
+      "A": "is less likely to be an error at all, since agreement among witnesses usually indicates that they are right.",
+      "B": "can be corrected more easily, because the written records usually show where the witnesses went wrong.",
+      "C": "becomes a feature of shared understanding that needs to be explained rather than merely corrected.",
+      "D": "reveals the date of the event more reliably than an official document written at the time could do."
+     },
+     "question": "According to the passage, a mistake made independently by many witnesses differs from an individual slip of memory in that it"
+    },
+    {
+     "id": "R04-A-04-2",
+     "type": "RC",
+     "options": {
+      "A": "a falsehood that a community spreads deliberately in order to mislead outsiders.",
+      "B": "something true of the community's shared outlook, as distinct from a single person's lapse.",
+      "C": "a statistic about how often older people make errors when recalling dates.",
+      "D": "an event that is confirmed by both oral testimony and official written records."
+     },
+     "question": "As used in paragraph 3, the phrase 'a social fact' most nearly means"
+    },
+    {
+     "id": "R04-A-04-3",
+     "type": "RC",
+     "options": {
+      "A": "are of little further use to the historian once the residents' interviews have been recorded and analysed.",
+      "B": "show how the residents felt about the mine's owners during the years between the two events.",
+      "C": "should be doubted, since so many residents interviewed separately agreed on a different account of the dates.",
+      "D": "are needed to establish that the residents' dating is mistaken before that mistake can be interpreted."
+     },
+     "question": "The author would most likely agree that, in the mining-town case, the records showing when the strike and the flood occurred"
+    },
+    {
+     "id": "R04-A-04-4",
+     "type": "RC",
+     "options": {
+      "A": "Shared mistakes in oral testimony can reveal how a community understood its past, once documents have shown them to be mistakes.",
+      "B": "Oral testimony is more trustworthy than written records, because documents generally leave out the meanings that people gave to events.",
+      "C": "Older people's memories of local events are usually inaccurate, so oral history should be confined to questions of meaning.",
+      "D": "In mining towns, residents tend to merge separate disasters because they blame the owners of the mines for both."
+     },
+     "question": "Which of the following best expresses the main point of the passage?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R08-D-04",
+   "passage": [
+    "Imagine a photograph of a cat staring with great solemnity at an empty food bowl. In its first appearance the caption beneath it complains, in the cat's voice, about a late breakfast. Within days the same photograph carries hundreds of other captions: a student staring at an exam paper, an investor staring at a falling share price, a voter staring at a ballot. The cat, and the bowl, have stopped meaning anything about cats. They have become a frame into which almost any experience of disappointed expectation can be placed.",
+    "This is the ordinary life of an internet meme, and it is worth noticing what has actually spread. It is not a message, since the messages are all different and many contradict one another. What has spread is a template: a recognisable structure with a slot in it, together with a tacit rule about what kind of thing goes in the slot. Those who share the meme are not endorsing a claim; they are demonstrating that they know the form and can fill it aptly. The pleasure is the pleasure of a good fit, much like the pleasure an audience once took in a skilled performer's handling of a familiar tale, where the interest lay less in what happened than in how well the expected moves were made.",
+    "This has consequences for how memes are read by those who study public opinion. It is tempting to treat the reach of a political meme as a measure of agreement with it, as if each share were a small vote. But a template can carry a sentiment its sharers do not hold, simply because the sentiment fits the slot neatly, and a meme that mocks one side may be passed along by the other side in an inverted version that keeps the frame and reverses the point. Counting shares, in such cases, measures the vitality of the form far more reliably than the distribution of belief.",
+    "It would be too quick to conclude that memes persuade nobody. Repetition has effects, and a frame that is used often enough can make one way of seeing a situation feel natural before anyone has argued for it. If the cat's bowl is used a thousand times to describe a particular government's policies, the idea that those policies are a disappointment may come to seem like common knowledge. But the persuasive power, where it exists, lies in the frame's quiet familiarity rather than in any argument, and it is precisely because memes do not look like arguments that their influence is so hard to measure and so easy to misread."
+   ],
+   "questions": [
+    {
+     "id": "R08-D-04-1",
+     "type": "RC",
+     "options": {
+      "A": "a written guideline issued by the platform on which the meme first appeared.",
+      "B": "an unstated shared sense of which contents suit a particular template.",
+      "C": "an agreement among sharers to keep the meme's message the same in each version.",
+      "D": "the original caption, which every later version of the meme must repeat."
+     },
+     "question": "In paragraph 2, 'a tacit rule about what kind of thing goes in the slot' refers to"
+    },
+    {
+     "id": "R08-D-04-2",
+     "type": "RC",
+     "options": {
+      "A": "may be showing skill with a familiar form rather than declaring support for the view its caption expresses.",
+      "B": "is usually trying to ridicule the view that the original version of the meme expressed.",
+      "C": "has in effect cast a small vote that analysts can reliably count as a sign of agreement with the meme's sentiment.",
+      "D": "is generally unaware that earlier versions of the same template carried quite different messages."
+     },
+     "question": "It can be inferred that, in the author's view, a person who shares a version of a political meme"
+    },
+    {
+     "id": "R08-D-04-3",
+     "type": "RC",
+     "options": {
+      "A": "A news photograph is shared widely because it records an important event that many people wish to remember.",
+      "B": "A rumour changes a little with every retelling until its original source can no longer be traced at all.",
+      "C": "A campaign slogan is repeated, word for word, by thousands of supporters who all agree with what it says.",
+      "D": "A melody becomes the basis of hundreds of new songs whose lyrics are unrelated to each other and often contradictory."
+     },
+     "question": "Which of the following is most closely analogous to the spread of the cat photograph as the passage describes it?"
+    },
+    {
+     "id": "R08-D-04-4",
+     "type": "RC",
+     "options": {
+      "A": "It reverses it by showing that the reach of a meme does after all indicate how widely its sentiment is held.",
+      "B": "It illustrates it with a case in which a meme's sharers held the opposite view to the one the meme expressed.",
+      "C": "It qualifies it by granting that memes can sway opinion while placing that influence where share counts cannot capture it.",
+      "D": "It extends it by adding a second reason for thinking that memes have no effect on what people believe."
+     },
+     "question": "Which of the following best describes how paragraph 4 relates to paragraph 3?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R04-A-03",
+   "passage": [
+    "Most national histories begin with a land and a people presented as though they had always been there, waiting to become a nation. Kings who reigned many centuries earlier, battles fought for reasons that had nothing to do with any modern state, and poets who wrote in dialects their supposed descendants can barely read are enlisted as the opening chapters of a single story whose last chapter is the present. Rulers who owed allegiance to dynasties spread across several of today's countries, and who would not have recognised the modern map, are recast as founders. The past is read backwards from its outcome and then retold forwards as if the outcome had been its purpose all along.",
+    "Critics call this anachronism, and on the main charge they are right. But the criticism is often pressed further than it can go, into the claim that because nations are modern creations, the materials of national history are simply invented. That does not follow. Languages, forms of worship, routes of trade and shared songs long predated modern states, and they plainly did shape which communities later found it easy, and which found it hard, to imagine themselves as one. The national historian's mistake is not to notice these continuities. It is to arrange them as stages on the way to an end that was fixed in advance.",
+    "The distinction matters because the arrangement has consequences. If the nation is the hero of the story, then whatever the past contained that does not fit the hero's career must be either left out or cast as a failure of loyalty. Regions that resisted unification, communities whose ties ran across the eventual border, rival projects that might have produced a different state or several smaller ones: all of these become obstacles overcome rather than possibilities that once existed and were, for a time, taken seriously by the people who lived among them. A province that held out for its own arrangements appears only as a delay, and a language that lost out to the standard tongue appears, if at all, as a quaint survival. The coherence of the story is purchased by narrowing its cast.",
+    "A better history would keep the continuities and restore the alternatives. It would ask what other political communities were possible at each point, what the people of the time thought they were choosing between, and why this one prevailed, treating the result as an outcome to be explained rather than a destiny to be celebrated. Such a history may make for less stirring lessons in school. It is also far less likely to make citizens strangers to whole regions and peoples of their own past."
+   ],
+   "questions": [
+    {
+     "id": "R04-A-03-1",
+     "type": "RC",
+     "options": {
+      "A": "qualified agreement: accepting their central charge while rejecting one conclusion some of them draw from it.",
+      "B": "dismissive disagreement: treating their charge of anachronism as a basic misunderstanding of how history is actually written.",
+      "C": "unreserved support: endorsing both their charge and the claim that national history is simply invented.",
+      "D": "studied neutrality: reporting their charge without indicating whether it is persuasive."
+     },
+     "question": "The author's attitude towards the critics mentioned at the start of paragraph 2 is best described as"
+    },
+    {
+     "id": "R04-A-03-2",
+     "type": "RC",
+     "options": {
+      "A": "tracing real continuities of language, worship and trade over many centuries of the region's history.",
+      "B": "describing how rival political projects were peacefully absorbed into the nation once it was formed.",
+      "C": "relying on poets and chroniclers who were themselves committed to the idea of a unified nation.",
+      "D": "omitting or condemning those parts of the past that pointed towards other political outcomes."
+     },
+     "question": "The passage suggests that the 'coherence' of a national history of the kind it criticises is achieved chiefly by"
+    },
+    {
+     "id": "R04-A-03-3",
+     "type": "RC",
+     "options": {
+      "A": "Many modern states, once formed, required a single standard language in their schools and steadily suppressed regional dialects in all official business.",
+      "B": "Studies of several regions found that national feeling formed just as readily within borders that cut across older zones of shared language, worship and trade.",
+      "C": "Some medieval rulers spoke several languages and held lands in regions that now belong to two or three different modern countries.",
+      "D": "National histories in many countries trace the nation back to a legendary founder whose actual existence cannot be confirmed from any surviving written or archaeological source."
+     },
+     "question": "Which of the following, if true, would most weaken the author's claim that older continuities shaped which communities later found it easy to imagine themselves as one?"
+    },
+    {
+     "id": "R04-A-03-4",
+     "type": "RC",
+     "options": {
+      "A": "A way of writing history is described, a criticism of it is accepted but limited, the harm of the error is traced, and an alternative proposed.",
+      "B": "A historical example is narrated in detail, a general principle is drawn from it, and the principle is applied to the teaching of history in schools.",
+      "C": "A criticism of national history is stated, the criticism is rejected as anachronistic, examples of its errors are given, and national history is defended.",
+      "D": "Two rival accounts of the origins of nations are compared, evidence for each is weighed, and the author concludes that both are partly mistaken."
+     },
+     "question": "Which of the following best describes the structure of the passage?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R01-G-05",
+   "passage": [
+    "On the eve of a battle, the Bhagavad Gita relates, the warrior Arjuna loses heart at the prospect of fighting his own kinsmen, and his charioteer Krishna answers him in a long discourse. One of its central teachings is that a person has a claim on his action but not on its fruits: he should act, and act well, without making the outcome the motive of what he does, and he should meet success and failure with the same evenness of mind. The teaching has been admired across many centuries and many traditions, and it has also been accused of something close to moral recklessness. An agent who does not care about outcomes, the objection runs, is an agent who will not count the cost of what he does.",
+    "The objection rests on running together two different things: attending to consequences and depending on them. Nothing in the idea of acting without attachment forbids a person from considering what his action is likely to bring about; a physician who acts in this spirit still chooses the treatment most likely to help. What the teaching asks is that the physician's steadiness, and his sense of having done what he should, not be held hostage to whether the patient recovers. Consequences enter into deciding what to do. They do not enter into the agent's claim to a reward, or into the anxious craving that so often bends judgement toward whatever promises to be noticed and praised.",
+    "Seen this way, detachment is less a withdrawal from the world than a condition for acting well in it. Anxiety about results is notoriously bad for performance; the craftsman watching the clock and the speaker imagining the applause both tend to do worse work than the one absorbed in the task. More seriously, an agent fixed on fruits is tempted to choose the action whose success will be visible over the one that is right, and to abandon a just course the moment it begins to fail. The teaching guards against both distortions.",
+    "It would be too quick, however, to declare the tension dissolved. Consequences cannot be considered in choosing and then set aside entirely in acting, because most actions unfold over time and must be adjusted as their effects appear. The physician has to watch whether the treatment is working. What the teaching can sensibly ask is not blindness to results but a particular relation to them, in which they are information to be used rather than verdicts on one's worth. Whether that relation can be sustained by ordinary people under real pressure is a question the teaching poses rather than settles."
+   ],
+   "questions": [
+    {
+     "id": "R01-G-05-1",
+     "type": "RC",
+     "options": {
+      "A": "acting without weighing what one's actions are likely to bring about.",
+      "B": "refusing to act at all whenever the outcome of an action is uncertain.",
+      "C": "choosing whatever action will be most visibly successful and most widely praised.",
+      "D": "meeting success with pride and failure with an equally strong sense of shame."
+     },
+     "question": "It can be inferred that those who accuse the teaching of 'moral recklessness' understand it to recommend"
+    },
+    {
+     "id": "R01-G-05-2",
+     "type": "RC",
+     "options": {
+      "A": "One who chooses whichever methods will produce the most impressive results for visiting inspectors, whether or not her pupils actually benefit from them.",
+      "B": "One who sees that a new method is not helping her class, changes it, and does not take the failure as proof she is a poor teacher.",
+      "C": "One who keeps using a method she believes is right without checking whether her pupils are learning anything from it.",
+      "D": "One who gives up teaching a difficult class altogether once her first method fails, concluding from the failure that she simply lacks the talent for the work."
+     },
+     "question": "Which of the following teachers best shows the relation to results that paragraph 4 says the teaching can sensibly ask for?"
+    },
+    {
+     "id": "R01-G-05-3",
+     "type": "RC",
+     "options": {
+      "A": "introducing the difficulty that most actions unfold over time and so must be adjusted as their effects gradually appear.",
+      "B": "conceding that anxiety about results is sometimes useful because it keeps agents attentive to what they do.",
+      "C": "restating the objection of paragraph 1 in a stronger form before the author's final reply in paragraph 4.",
+      "D": "going beyond showing that detachment is compatible with good action to claim that it actually helps action go well."
+     },
+     "question": "Paragraph 3 contributes to the argument chiefly by"
+    },
+    {
+     "id": "R01-G-05-4",
+     "type": "RC",
+     "options": {
+      "A": "Sympathetic, having rejected the charge of recklessness, yet unwilling to claim that the teaching removes every difficulty.",
+      "B": "Sceptical, since the author ends by doubting that anyone could actually live by the teaching under real pressure.",
+      "C": "Neutral, since the author declines to say whether the objection that the teaching is reckless succeeds or fails.",
+      "D": "Dismissive, since the physician example shows that the teaching cannot be followed by anyone whose work has consequences."
+     },
+     "question": "Which of the following best describes the author's stance toward the teaching by the end of the passage?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R06-B-08",
+   "passage": [
+    "Ecological restoration has traditionally worked towards a picture. A degraded marsh or heath is compared with a reference state, usually the condition of the site at some earlier date as reconstructed from records, maps or surviving fragments, and success is measured by how closely the site comes to resemble it. Rewilding, in many of its versions, refuses this. Rather than aiming at a particular assemblage of species, it seeks to restore processes: grazing and browsing by large herbivores, the flooding of rivers that have been confined to channels, predation, the falling and rotting of trees. What the landscape then becomes is left open. Its advocates present this refusal to name an end state not as a gap in the method but as its central virtue.",
+    "Their reasons are serious. Any reference state is chosen, not found: a site has passed through many conditions, and to select one of them as the true or original form of the place is to privilege one moment of its history over all the others. Under a changing climate, moreover, the conditions that sustained a historical community may no longer exist, so that holding a landscape to an old picture would require ever more intervention, mowing, planting, culling and weeding on a scale that amounts to gardening, however large the garden. Better, the argument runs, to set processes going and accept whatever community they produce.",
+    "The obvious objection is that a project with no target cannot fail. If whatever emerges is by definition what nature has chosen, then no outcome, however disappointing, counts as evidence against the project, and those who fund it, live beside it or simply care about the place are left with no way to hold it to account. The objection becomes sharper when the results are unwelcome: when scrub swallows a flower-rich meadow that people valued, or when a rare species that depended on the old management quietly disappears. To answer that this, too, is nature taking its course is to make the project immune to criticism, and a claim that nothing could count against is not much of a claim.",
+    "Advocates have a partial reply. A project can be held to account for its processes even if not for its outcome: one can ask whether the river is in fact allowed to flood, whether herbivore numbers rise and fall with the food available rather than being fixed by managers, whether dead wood is left where it falls. These are checkable commitments, and a project that fails to keep them has failed in a sense that matters. But the reply does not dissolve the difficulty, because the choice of processes is itself a choice about outcomes. Which animals are released, in what numbers, within what fences and over how large an area will go a long way towards deciding whether the land becomes closed woodland, open pasture or something between, and often these consequences can be foreseen. A few cattle and ponies at low density on a large area will produce a different landscape from many of them on a small one, and those who set the density know this.",
+    "What rewilding achieves, then, is not the withdrawal of human choice from the landscape but its relocation, from the end of the process to its beginning. This is not an argument against rewilding, which may well be the most sensible response available in a world where no historical picture can be held still. It is an argument against a certain way of describing it. The phrase 'letting nature decide' conceals decisions that people have already made, and the method is more honest, and more open to the scrutiny it needs, when its advocates own those decisions."
+   ],
+   "questions": [
+    {
+     "id": "R06-B-08-1",
+     "type": "RC",
+     "options": {
+      "A": "Holding rewilding projects to account for the processes they restore, rather than for their outcomes, fully answers the charge that the method cannot fail.",
+      "B": "Since every reference state is chosen and climate change puts old states out of reach, conservation should restore natural processes and leave the outcome entirely to nature.",
+      "C": "By declining to name an end state, rewilding does not remove human choice but moves it to the start of the process, which its advocates should admit.",
+      "D": "Because a rewilding project without a target can never be shown to have failed, restoration towards a recorded earlier state remains the more accountable method."
+     },
+     "question": "Which of the following best expresses the main point of the passage?"
+    },
+    {
+     "id": "R06-B-08-2",
+     "type": "RC",
+     "options": {
+      "A": "grazing animals should be released at low density on large areas so that closed woodland is able to return.",
+      "B": "what a rewilding project will produce can often be foreseen from choices made at its start, even though no end state was named.",
+      "C": "the number of grazing animals matters less to the result of a project than whether its rivers are allowed to flood.",
+      "D": "measuring processes is of little real use, because the numbers of grazing animals roaming large areas cannot be counted reliably."
+     },
+     "question": "The example of cattle and ponies at different densities (paragraph 4) implies that"
+    },
+    {
+     "id": "R06-B-08-3",
+     "type": "RC",
+     "options": {
+      "A": "One that makes no commitments of any kind and describes whatever landscape appears on the site as the result that nature has chosen.",
+      "B": "One that promises to let a river overflow its banks in wet years and reports each year whether it did, without saying which habitats should result.",
+      "C": "One that promises to raise visitor numbers and reports each year how many people came and how much money they gave to the project.",
+      "D": "One that promises to recreate the marsh shown on a map from a chosen century and reports each year how closely the site now matches that map."
+     },
+     "question": "Which of the following projects best matches what paragraph 4 describes as holding a project to account for its processes rather than its outcome?"
+    },
+    {
+     "id": "R06-B-08-4",
+     "type": "RC",
+     "options": {
+      "A": "holding a landscape to an old picture would call for ever more mowing, planting, culling and weeding.",
+      "B": "under a changing climate the conditions that once sustained a historical community may no longer exist at all.",
+      "C": "selecting one past condition of a site as its true form gives one moment of its history priority over all the others.",
+      "D": "a fixed target would make it harder to win support from funders and neighbours who prefer projects without set goals."
+     },
+     "question": "The passage presents each of the following as a reason given by advocates of rewilding for refusing a fixed target EXCEPT that"
+    },
+    {
+     "id": "R06-B-08-5",
+     "type": "RC",
+     "options": {
+      "A": "unwelcome results such as scrub swallowing a valued meadow show that most rewilding projects end in failure.",
+      "B": "a project or claim deserves to be taken seriously only if some possible outcome would count against it.",
+      "C": "the people who live beside a rewilding project ought to be the ones who decide what the landscape should become.",
+      "D": "a project should be judged by how closely its result comes to resemble the condition of the site at an earlier date."
+     },
+     "question": "The objection in paragraph 3 that a project with no target 'cannot fail' depends on the assumption that"
+    }
+   ]
+  }
+ ]
+}

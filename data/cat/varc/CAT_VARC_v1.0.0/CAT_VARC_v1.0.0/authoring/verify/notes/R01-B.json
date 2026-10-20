@@ -1,0 +1,42 @@
+[
+ {
+  "id": "R01-B-06-4",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "D",
+    "key": "D",
+    "working": "P3: no single lapse is a choice, but attention is shaped over time by things we influence, so answerable.",
+    "alternative": "A is tempting (mirrors P4) but 'consists in ... rather than' overstates 'frequently less a matter of'; not fully defensible.",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "B",
+    "key": "B",
+    "working": "P3: no single lapse is a choice, but attention is shaped over time by things we influence, so we can be answerable.",
+    "alternative": "",
+    "issue": ""
+   }
+  }
+ },
+ {
+  "id": "R01-B-08-1",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "C",
+    "key": "C",
+    "working": "P1: normative form says a life not gathered into a coherent narrative is 'impoverished or broken'.",
+    "alternative": "",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "C",
+    "key": "C",
+    "working": "P1: normative form adds 'a life which cannot be gathered into a coherent narrative is in some way impoverished or broken'.",
+    "alternative": "",
+    "issue": "Option C paraphrases P1 closely; D is the descriptive form verbatim, which is the intended trap. Fine but very easy."
+   }
+  }
+ }
+]

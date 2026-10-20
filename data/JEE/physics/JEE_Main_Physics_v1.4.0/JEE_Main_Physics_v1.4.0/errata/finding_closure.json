@@ -1,0 +1,95 @@
+[
+  {
+    "code": "E01",
+    "severity": "P2",
+    "status": "RESOLVED IN v1.4.0",
+    "title": "Curie-law pair excluded from the same paper",
+    "ids": [
+      "JEE27-PHY-1318",
+      "JEE27-PHY-1321"
+    ],
+    "correction": "1318 and 1321 now share GLOBAL-CURIE-LAW. Their tags and all exports agree. The previously constructed selection now has only 24 unique families and is rejected by the generator family rule.",
+    "verification": "All exact-ID closure checks PASS; see release_crosscheck.json and the dedicated evidence."
+  },
+  {
+    "code": "E02",
+    "severity": "P2",
+    "status": "RESOLVED IN v1.4.0",
+    "title": "Six Difficult tasks replaced with coupled problems",
+    "ids": [
+      "JEE27-PHY-1015",
+      "JEE27-PHY-1427",
+      "JEE27-PHY-1548",
+      "JEE27-PHY-1745",
+      "JEE27-PHY-2046",
+      "JEE27-PHY-2159"
+    ],
+    "correction": "1015, 1427, 1548, 1745, 2046 and 2159 have new stems, distractors, answers, explanations and outcome-specific difficulty rationales. All six have separate printed-input calculations. The 1015 numerical alternate is regenerated.",
+    "verification": "All exact-ID closure checks PASS; see release_crosscheck.json and the dedicated evidence."
+  },
+  {
+    "code": "E03",
+    "severity": "P2",
+    "status": "RESOLVED IN v1.4.0",
+    "title": "2129 now requires the diagram orientation",
+    "ids": [
+      "JEE27-PHY-2129"
+    ],
+    "correction": "The movement of m1 is stated as 1 cm toward the knife edge. The picture is needed to decide the absolute direction. Its mirror arrangement requires the opposite answer. The current drawing still gives option C.",
+    "verification": "All exact-ID closure checks PASS; see release_crosscheck.json and the dedicated evidence."
+  },
+  {
+    "code": "E04",
+    "severity": "P3",
+    "status": "RESOLVED IN v1.4.0",
+    "title": "Five malformed explanation clauses removed",
+    "ids": [
+      "JEE27-PHY-0255",
+      "JEE27-PHY-0708",
+      "JEE27-PHY-1427",
+      "JEE27-PHY-1840",
+      "JEE27-PHY-2153"
+    ],
+    "correction": "Four inverse-solution clauses were rewritten as complete sentences. Question 1427 received a complete replacement explanation. No reported determiner construction remains in current question, solution or numerical-alternate text.",
+    "verification": "All exact-ID closure checks PASS; see release_crosscheck.json and the dedicated evidence."
+  },
+  {
+    "code": "E05",
+    "severity": "P3",
+    "status": "RESOLVED IN v1.4.0",
+    "title": "Three diffraction ordinals corrected",
+    "ids": [
+      "JEE27-PHY-1741",
+      "JEE27-PHY-1742",
+      "JEE27-PHY-1743"
+    ],
+    "correction": "1741, 1742 and 1743 now say “Every third”. Their three numerical alternates receive the same wording. The authoring template uses an integer-multiple formulation that does not generate “3th”.",
+    "verification": "All exact-ID closure checks PASS; see release_crosscheck.json and the dedicated evidence."
+  },
+  {
+    "code": "E06",
+    "severity": "P3",
+    "status": "RESOLVED IN v1.4.0",
+    "title": "Coil article problem corrected throughout its family",
+    "ids": [
+      "JEE27-PHY-1537",
+      "JEE27-PHY-1538",
+      "JEE27-PHY-1539",
+      "JEE27-PHY-1541",
+      "JEE27-PHY-1542"
+    ],
+    "correction": "1537-1542 now use “a coil with ... turns”, including the five reported stems and adjacent symbolic case 1540. Three numerical alternates and the shared authoring template are synchronized.",
+    "verification": "All exact-ID closure checks PASS; see release_crosscheck.json and the dedicated evidence."
+  },
+  {
+    "code": "E07",
+    "severity": "P3",
+    "status": "RESOLVED IN v1.4.0",
+    "title": "0192 stem and options form complete sentences",
+    "ids": [
+      "JEE27-PHY-0192"
+    ],
+    "correction": "The stem now asks which statement about tension is correct. All four options are complete sentences; the equal-tension statement remains keyed B.",
+    "verification": "All exact-ID closure checks PASS; see release_crosscheck.json and the dedicated evidence."
+  }
+]

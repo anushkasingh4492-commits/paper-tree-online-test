@@ -1,0 +1,62 @@
+[
+ {
+  "id": "R06-D-01-1",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "B",
+    "key": "B",
+    "working": "P4: a fact available to anyone after sunset is incompatible with the long-natural picture (infinite, uniform, unchanging).",
+    "alternative": "",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "D",
+    "key": "D",
+    "working": "P4: everyday fact incompatible with infinite, uniform, unchanging cosmos.",
+    "alternative": "",
+    "issue": "Key D says 'counts decisively against'; acceptable since P4 says it rules out that combination, but 'decisively' slightly strong."
+   }
+  }
+ },
+ {
+  "id": "R06-D-07-4",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "A",
+    "key": "A",
+    "working": "Non-equivalence rests on testable departures; if always adjustable below detection, effectively equivalent.",
+    "alternative": "C (no departures found) is a weaker distractor: absence so far does not show equivalence in principle.",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "B",
+    "key": "B",
+    "working": "non-equivalence rests on collapse theories predicting detectable departures; if always tunable below detection, they are empirically equivalent",
+    "alternative": "C also weakens a little (no departures found yet), but absence of evidence so far is weaker than B's in-principle undetectability.",
+    "issue": ""
+   }
+  }
+ },
+ {
+  "id": "R06-D-07-5",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "A",
+    "key": "A",
+    "working": "Main objection to textbook rule: relies on a word it cannot define.",
+    "alternative": "",
+    "issue": "A is phrased 'escape the objection the author presses most directly', an inference; correct but slightly indirect."
+   },
+   "S2": {
+    "answer": "C",
+    "key": "C",
+    "working": "the objection pressed against the textbook rule is that 'it relies on a word it cannot define'",
+    "alternative": "",
+    "issue": "C is phrased as a counterfactual the author never states; it is supported by P4 ('relies on a word it cannot define') but requires an inferential step."
+   }
+  }
+ }
+]

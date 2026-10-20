@@ -1,0 +1,42 @@
+[
+ {
+  "id": "R06-A-07-5",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "D",
+    "key": "D",
+    "working": "Easy points are against each side's weakest claim, which the P5 sequential view drops.",
+    "alternative": "",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "D",
+    "key": "D",
+    "working": "Easy points scored against each side's weakest claim, which the staged view of P5 drops.",
+    "alternative": "A arguably: each side attacks the other; but 'central thesis' contradicts P4 'weakest claim', so A rejected.",
+    "issue": ""
+   }
+  }
+ },
+ {
+  "id": "R06-A-08-5",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "B",
+    "key": "B",
+    "working": "Functional roles (bakeries, schools) recur; particular occupants decided by chance, mirrors design-space vs occupants.",
+    "alternative": "C has a fixed-outcome/variable-detail shape but lacks the role vs occupant split; weaker.",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "A",
+    "key": "A",
+    "working": "Functional roles recur (bakeries, schools), occupants decided by chance: mirrors design space vs occupants.",
+    "alternative": "",
+    "issue": ""
+   }
+  }
+ }
+]

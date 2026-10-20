@@ -1,0 +1,529 @@
+{
+ "kind": "RC",
+ "passages": [
+  {
+   "passage_id": "R07-F-08",
+   "passage": [
+    "When readers began, in large numbers, to write and circulate their own stories about the characters of popular novels and television series, the reaction from some authors was indignation. The characters were theirs, they said; to send them on adventures their creators had never imagined, to pair them with new lovers or to bring the dead back to life was a kind of trespass. Defenders of the practice replied with equal heat that a story, once released into the world, belongs to those who love it, and that the fans who keep a fictional world alive with their own inventions have a better claim to it than the person who merely began it. Both sides, I think, have misdescribed what is at stake.",
+    "Consider first how unusual the authors' position is, historically speaking. For most of the history of storytelling, retelling was the ordinary way in which stories lived. The same heroes passed from one teller to another, gaining episodes, companions and endings along the way; a poet who took up an old legend was expected to change it, and was admired for the changes. The idea that a fictional person belongs to a single creator, and that others may not set that person in new situations, took shape alongside printing, markets for books and laws that made authorship a form of property. It is not a natural fact about stories, though it now feels like one. Fan writers, from this angle, are less the vandals of a settled order than the late heirs of a much older one.",
+    "Yet the fans' champions claim too much when they turn this history into a counter-theory of ownership. To say that a story belongs to those who love it is still to speak of belonging, merely moving the title deeds from one party to another. What the older practice suggests is rather that stories are not the sort of thing that is owned in the first place, though particular tellings are. An author can reasonably object to having her text copied and sold under someone else's name, or to having her own work altered and passed off as hers. It is much harder to see what she loses when a reader imagines her characters on another afternoon, so long as no one mistakes that afternoon for one she wrote. The distinction between a text and a world is precisely the one that both sides have blurred.",
+    "There is an irony here that deserves notice. Fan communities, which began by contesting an author's exclusive authority, have often developed authorities of their own. Long debates arise over what counts as 'canon', over which inventions are faithful and which are betrayals, and newcomers who ignore the accumulated rules can be treated with a severity that few authors would dare to show their readers. In such moments the community reproduces, on a smaller scale, the very proprietary attitude it set out to resist, as though the impulse to fix a story and guard its boundaries were not peculiar to authors but a temptation that comes with loving any story at all.",
+    "None of this settles every case, and there are surely retellings that wound in ways the distinction does not capture, as when a living author's characters are put to uses she finds degrading. But it does suggest a more useful question than the one with which the quarrel began, which asked whose story it is. The better question is what each kind of claim protects: the integrity of a particular telling, which deserves defence, or the boundaries of an imagined world, which, on the evidence of the long history of storytelling, have never been defensible for long."
+   ],
+   "questions": [
+    {
+     "id": "R07-F-08-2",
+     "type": "RC",
+     "options": {
+      "A": "A poet retells an ancient legend that she too once retold, adding new episodes and a different ending.",
+      "B": "A fan community holds long debates over which events in her series ought to count as canon.",
+      "C": "A reader writes and circulates a story in which two of her minor characters fall in love on holiday.",
+      "D": "A reader alters several chapters of the author's novel and circulates them, under the author's name, as the original text."
+     },
+     "question": "On the passage's reasoning, which of the following would give an author the strongest grounds for complaint?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R06-F-06",
+   "passage": [
+    "Whenever a machine produces fluent language, the question returns of whether it understands what it says. Two answers dominate. One holds that understanding is shown in behaviour: if a system answers questions, follows instructions and sustains a conversation in ways we cannot distinguish from a competent person, there is nothing further we could reasonably ask of it, and to withhold the word is mere prejudice in favour of our own kind. The other holds that behaviour, however impressive, can be produced by manipulating symbols whose connection to the world the system never grasps, and that understanding requires something behind the performance, some grounding of words in perception, action or experience.",
+    "The two camps disagree about almost everything except one assumption, and that shared assumption is where the trouble lies. Both treat understanding as a single property that a system either has or lacks, so that the only task is to decide which side of the line it falls on. Yet when we attribute understanding to people we do nothing of the kind. A student may understand a theorem well enough to apply it to textbook problems but not well enough to see why it fails when one condition is dropped; a mechanic may understand an engine thoroughly in practice while being unable to explain its thermodynamics. We judge understanding by a battery of loosely connected abilities: explaining, extending to unfamiliar cases, noticing one's own mistakes, connecting what one knows to what one does. These abilities can come apart, and people possess them in very different measures.",
+    "If understanding is a cluster of this kind, the all-or-nothing question about machines is badly posed. A system may display some of the abilities to a high degree and others hardly at all; it may extend a pattern brilliantly in one domain and fail, without any sign of noticing, at a trivial variation in another. Saying that it 'really understands' flattens this profile into a verdict that tells us little, and saying that it 'merely manipulates symbols' does the same in the opposite direction. The useful work lies in mapping which abilities are present, under what conditions, and how robustly.",
+    "This proposal will not satisfy everyone. Someone who believes that understanding involves an inner experience of meaning will say that mapping abilities, however finely, leaves the essential question untouched. Perhaps it does. But that question, whatever its answer, is a question about experience, and it arises equally for any being whose inner life we cannot inspect. It should not be allowed to stand in for the more tractable question of what a system can and cannot reliably do, which is, after all, the question on which most practical decisions about such systems depend."
+   ],
+   "questions": [
+    {
+     "id": "R06-F-06-1",
+     "type": "RC",
+     "options": {
+      "A": "defend the view that behaviour indistinguishable from that of a competent person is sufficient evidence of genuine understanding.",
+      "B": "argue that no question about machine understanding can be answered until the nature of inner experience has been settled.",
+      "C": "show that both sides in the debate wrongly treat understanding as all-or-nothing, and to propose mapping separate abilities instead.",
+      "D": "show that fluent machines lack the grounding in perception and action without which there can be no genuine understanding."
+     },
+     "question": "The primary purpose of the passage is to"
+    },
+    {
+     "id": "R06-F-06-3",
+     "type": "RC",
+     "options": {
+      "A": "The abilities by which we judge understanding always come together, each present to exactly the degree the others are.",
+      "B": "Many people who exercise a practical skill expertly are unable to explain the principles on which it rests.",
+      "C": "Philosophers continue to disagree about whether an inner experience of meaning could ever be detected from behaviour.",
+      "D": "Some machines that converse fluently fail at trivial variations of problems that they otherwise solve quickly and with ease."
+     },
+     "question": "Which of the following, if true, would most seriously weaken the argument of paragraphs 2 and 3?"
+    },
+    {
+     "id": "R06-F-06-4",
+     "type": "RC",
+     "options": {
+      "A": "perhaps a real question, but not one peculiar to machines or one on which most practical decisions turn.",
+      "B": "a question that arises only for machines, because only their inner workings are closed to inspection.",
+      "C": "decisive, so that practical decisions about such systems ought to wait until the question has been resolved.",
+      "D": "meaningless, since nothing that cannot be inspected from outside could ever be the subject of a sensible question at all."
+     },
+     "question": "It can be inferred that the author regards the question of whether understanding involves an inner experience of meaning as"
+    }
+   ]
+  },
+  {
+   "passage_id": "R02-C-02",
+   "passage": [
+    "Popular advice about habits tends to treat them as a contest of will. Bad habits persist, on this account, because people lack the resolve to stop, and good ones fail to form because people give up too soon. The remedy is accordingly motivational: set firmer goals, remind yourself why they matter, and try harder. This view has the appeal of moral simplicity, since it locates every failure in a lack of character and every success in effort, and it is repeated in a great deal of well-meant advice. The trouble with this picture is that it misdescribes what a habit is. A habit is not a desire that has grown strong but a response that has become attached to a context, so that the context itself, rather than any present intention, sets the behaviour going.",
+    "Consider someone who checks her phone each time she sits down on the morning train. At first the action may have been chosen, perhaps as a way of passing an otherwise idle part of the trip, but after hundreds of repetitions it no longer needs choosing. The seat, the motion of the carriage and the familiar stretch of the journey are enough to bring the hand to the pocket, and she may find the phone in her hand before she has formed any wish to look at it. Asking her to resolve more firmly misses the point, since resolve is not what produces the act. The cue is.",
+    "If this is right, the most effective way to change a habit is often to change the circumstances that trigger it, not to strengthen the will that opposes it. Putting the phone in a bag rather than a pocket, sitting in a different carriage, or giving the first minutes of the journey to some specific task all interrupt the link between cue and response. Each of these requires a single decision rather than a renewed act of resistance every morning, which is precisely why such changes tend to outlast good intentions. It is often observed that people find it easier to alter their routines after moving house or changing jobs, and the account explains why: the old cues have simply disappeared, and with them much of the pressure to repeat old behaviour.",
+    "Two cautions are in order, however, if the argument is not to be pushed further than it can go. First, not every repeated behaviour is a habit in this sense; some acts are repeated because the person goes on wanting the result each time, and for these, motivation does matter. Second, the power of context cuts both ways. The same disruption that frees someone from an unwanted routine can dissolve a welcome one, which is why a regular exercise habit so often lapses after a move. Willpower is not irrelevant, then, but it is a poor tool for a job that the environment, suitably arranged, performs more cheaply and more reliably."
+   ],
+   "questions": [
+    {
+     "id": "R02-C-02-1",
+     "type": "RC",
+     "options": {
+      "A": "she lacks the firmness of resolve that would allow her to keep the phone in her pocket.",
+      "B": "the familiar features of the journey set off the action without any present decision by her.",
+      "C": "she has a strong wish to look at it each time she sits down in the carriage.",
+      "D": "she decided long ago that the journey was the right time for checking her messages."
+     },
+     "question": "The passage implies that the commuter in paragraph 2 now takes out her phone mainly because"
+    }
+   ]
+  },
+  {
+   "passage_id": "R01-D-01",
+   "passage": [
+    "A familiar answer to the question of why citizens owe obedience to their state is that they have agreed to it. Few of us, of course, ever signed anything, so the agreement is said to be tacit: by continuing to live within a country's borders, using its roads and accepting the protection of its courts, a person signals consent to its authority. The view is attractive because it seems to reconcile two things that are otherwise difficult to hold together, allowing us to say that political authority is genuinely binding while also maintaining that no one is bound against their will, since anyone who objects remains free to leave.",
+    "The trouble lies in that word 'free'. We do not normally count a choice as consent unless the person had a real alternative that could be taken at a bearable cost. Imagine a mining town with a single employer that also owns every shop, and suppose the company announces that anyone who keeps buying bread at its counters has thereby accepted all of its rules. No one would treat the purchase of bread as agreement, because the only way to refuse is to give up eating or to give up the town. Leaving a country is usually costlier still: it can mean abandoning one's language, one's family, one's work and the only place one knows well. There is, moreover, a further difficulty: almost every habitable stretch of the earth is now claimed by some state, so the emigrant does not escape political authority at all. She merely exchanges one authority for another, if another will admit her. The option on offer is not freedom from rule but the choice of a ruler.",
+    "Defenders of the view have a reasonable reply. Consent, they say, comes in degrees, and the availability of exit is not nothing. A state that lets its citizens leave, and lets them take their savings with them, really does treat them differently from one that seals its borders, and it seems right to say that the first has a stronger claim on their loyalty. This should be granted. A right of exit is a genuine good, and a state that denies it has failed one important test of legitimacy.",
+    "But to grant this is not to rescue the theory. That free exit is a condition of legitimacy does not make it the source of legitimacy, any more than an unlocked door makes a house a home. If a state's authority over those who stay can be justified, the justification must come from what the state does for and to them: whether its laws are fairly made, whether its burdens are fairly shared, whether its protection is extended to all. The language of tacit consent tends to obscure this question, since it allows a state to take credit for the mere fact that people have not fled, and to treat the absence of an escape as though it were an act of agreement."
+   ],
+   "questions": [
+    {
+     "id": "R01-D-01-1",
+     "type": "RC",
+     "options": {
+      "A": "citizens owe obedience to their state only if they have signed an explicit agreement to obey its laws and accept its courts.",
+      "B": "tacit consent is a sound basis for political authority provided that emigration is made cheap and easy for every citizen.",
+      "C": "merely living in a country cannot supply the consent that would legitimise its authority, though the freedom to leave still matters.",
+      "D": "the right to leave a country is the most important test of whether a state's authority over its citizens is legitimate."
+     },
+     "question": "The central argument of the passage is that"
+    }
+   ]
+  },
+  {
+   "passage_id": "R02-C-03",
+   "passage": [
+    "Few findings in happiness research have travelled further than the idea of hedonic adaptation. People who experience a good or bad change in their circumstances, the finding goes, tend over time to drift back towards their earlier level of wellbeing, as though each of us were tethered to a personal set point from which events can pull us only temporarily. In its popular form the idea has hardened into something like a philosophy: since we adapt to everything, the pursuit of better circumstances is futile, and contentment is a matter of temperament rather than of how one lives. The research, read with any care, gives considerably less support to this conclusion than its popularity would suggest.",
+    "To begin with, adaptation is uneven. People appear to adjust quite quickly to many gains, such as a higher salary or a larger house, which soon become the new normal against which further comparisons are made. But some conditions resist adaptation stubbornly. Persistent noise, a long and unpredictable commute and chronic pain seem to remain unpleasant year after year, perhaps because they keep demanding attention and never settle into the background of experience. The lesson is not that circumstances do not matter but that they matter selectively: what we stop noticing stops affecting us, and what keeps intruding does not.",
+    "A second problem lies in how the evidence is summarised. Many studies report that, on average, a group's wellbeing returns towards its earlier level some time after an event such as marriage or the loss of a job. An average, however, can conceal very different individual paths. A group in which some people end up much happier and others much less happy can show almost no change overall, and the reassuring flat line then describes almost nobody in it. When researchers have examined individuals rather than averages, they have tended to find that a substantial minority do not return to where they began, which is precisely the information that a headline about set points discards.",
+    "None of this means that the original insight was mistaken. People do adapt to a great deal, and the observation usefully corrects the belief that one more purchase or promotion will produce lasting delight. The error lies in the step from 'we adapt to much' to 'nothing we do makes a lasting difference'. That step is no more justified than its opposite, and it carries a practical cost, since it can discourage people from changing the very conditions, the noisy flat or the gruelling journey, that are most likely to keep wearing them down."
+   ],
+   "questions": [
+    {
+     "id": "R02-C-03-2",
+     "type": "RC",
+     "options": {
+      "A": "an average showing no change can coexist with large changes, in both directions, for nearly everyone in a group of that kind.",
+      "B": "individuals who return to their earlier level after a major life event are very rare in such studies.",
+      "C": "most people in such studies are unwilling to report honestly how their wellbeing has changed.",
+      "D": "the average wellbeing of such groups has usually been misreported in the studies that measure it."
+     },
+     "question": "In paragraph 3, the remark that the flat line 'describes almost nobody in it' implies that"
+    }
+   ]
+  },
+  {
+   "passage_id": "R02-C-07",
+   "passage": [
+    "The word 'stress' entered the study of living things from the study of materials, where its meaning is reasonably exact: the internal force per unit area within a body subjected to a load. In engineering, stress is distinguished from strain, the deformation that the load produces, and both are distinguished from the load itself. When the word was borrowed to describe what happens to organisms under pressure, these distinctions did not travel with it. In ordinary speech, and in a good deal of research, 'stress' can refer to the demanding situation, to the bodily and emotional reaction it provokes, or to the relation between the two, and it is often far from clear which of these is meant. A survey announcing that most workers feel stressed may be measuring their workloads, their symptoms or their sense of being overwhelmed, and the headline rarely says which.",
+    "The slippage is not merely a matter of untidy usage. Consider the familiar claim that stress is bad for health. If stress means the reaction, and the reaction is defined partly by its harmful effects, the claim is close to true by definition. If stress means the demanding situation, the claim is plainly false as a generalisation, since many people meet heavy demands without harm and some appear to thrive on them. Only if stress means a particular relation, demands that exceed what a person believes they can manage, does the claim become a substantive hypothesis that could turn out to be wrong. Much popular discussion moves among these meanings without noticing, and so acquires the authority of the first reading and the scope of the second.",
+    "The same confusion shadows the more recent enthusiasm for 'good stress'. To say that some stress is beneficial may mean that some demanding situations are worth seeking out, which is uncontroversial; or that some physiological reactions to demand improve performance, which is plausible within limits; or that people who interpret their reactions as helpful fare better than those who do not, which is a specific claim requiring specific evidence. Advice built on the phrase often slides from the first meaning, which everyone accepts, to the third, which is the one actually being sold. Each of the three deserves to be judged on its own evidence, and the plausibility of the first lends nothing to the third.",
+    "It might seem that the remedy is to abandon the word altogether. That would be a mistake, and not only because ordinary language is not so easily reformed. The very breadth of the term has allowed researchers in physiology, psychology, sociology and medicine to recognise that they were studying related things, and it has drawn attention to connections, between working conditions and heart disease, say, that narrower vocabularies might have kept apart. Whole programmes of research, on bereavement, on unemployment, on the burdens of caring for a sick relative, found a common frame in it. A concept can be scientifically fruitful precisely because it is loose at the edges, so long as those who use it know where the looseness lies.",
+    "What the word cannot do is carry an argument by itself. The useful discipline is to ask, whenever a claim about stress is made, which of its meanings is in play, and whether the evidence offered supports the claim under that meaning or only under a different one. A finding about reactions does not automatically license advice about situations, and a finding about interpretations says little about either. Keeping the senses apart costs a few extra words; failing to keep them apart has cost a good deal of confusion, some of it in the very places where clarity matters most."
+   ],
+   "questions": [
+    {
+     "id": "R02-C-07-1",
+     "type": "RC",
+     "options": {
+      "A": "the relation between a load and the capacity of a body to withstand it.",
+      "B": "the load itself, considered apart from the body that has to bear its weight.",
+      "C": "the internal force per unit area within a body that is subjected to a load.",
+      "D": "the deformation that a load produces in the body that is subjected to it."
+     },
+     "question": "According to the passage, in engineering the term 'strain' refers to"
+    }
+   ]
+  },
+  {
+   "passage_id": "R01-D-08",
+   "passage": [
+    "Egalitarians hold that there is something wrong with inequality as such: that when some people are much worse off than others through no fault of their own, the situation is bad, and bad in part simply because of the gap. The most famous objection to this view asks us to consider what follows from it. Suppose that the only way to remove an inequality were to make the better off worse off, with no benefit to anyone, as if a town in which some households had gardens and others had none could reach equality only by paving over every garden. If inequality is bad in itself, then such a change would remove something bad, and so would be in one respect an improvement. Yet the change helps no one and harms many. To call it an improvement in any respect, the objectors say, is absurd.",
+    "Many philosophers have been moved by this objection to give up equality as a fundamental value. Some have adopted the view that benefits matter more the worse off their recipient is, so that a gain to a poor person counts for more than the same gain to a rich one; others hold that what matters is that everyone should have enough, after which differences cease to be of moral concern. Neither view is troubled by levelling down, since on neither does reducing the well-being of the better off, by itself, improve anything. Both also capture much of what drew people to equality in the first place, which was a concern for those who are badly off.",
+    "Yet the objection is less decisive than it is usually taken to be. The egalitarian need not claim that a levelled-down world is better all things considered, only that it is better in one respect while much worse in others. Plural values often pull apart in this way. We can think that a promise kept at terrible cost was in one respect admirable without thinking that it should have been kept. Seen this way, the levelling-down case shows only that equality is not the only thing that matters, which almost no egalitarian ever believed.",
+    "This defence succeeds, but at a price. It keeps equality as a value only by making it a strangely impersonal one: something that can make a state of affairs better while making it better for no one at all. Many will find such a value hard to care about. There is, however, another way to understand what egalitarians were after. On a relational view, the core of equality lies not in how goods are distributed but in how people stand to one another: in the absence of rank, servility and contempt, in a society where no one must bow and no one may command another merely by virtue of birth or wealth. Inequalities of resources matter on this view chiefly because, beyond some point, they turn into inequalities of standing, as when wealth buys influence over others or poverty forces deference to them.",
+    "The relational view is untouched by the levelling-down objection, because paving over gardens neither creates nor abolishes any relation of rank between neighbours. Whether it can say enough about distribution is a further question. A society might abolish titles and deference while leaving vast differences in income intact, and the relational egalitarian owes us an account of when such differences begin to corrode equal standing. But the view has at least located the value of equality in a relation between persons, which is where most of its defenders always felt it to be."
+   ],
+   "questions": [
+    {
+     "id": "R01-D-08-3",
+     "type": "RC",
+     "options": {
+      "A": "could make a situation better even though the situation was better for no particular person.",
+      "B": "is held in a detached and unemotional way, as a matter of principle rather than of feeling for others.",
+      "C": "can be assessed only by impartial officials who have no personal stake in how goods are distributed.",
+      "D": "applies to the design of public institutions rather than to private relationships between individuals."
+     },
+     "question": "In paragraph 4, calling equality, on the defence just given, 'a strangely impersonal' value means that it"
+    }
+   ]
+  },
+  {
+   "passage_id": "R06-F-07",
+   "passage": [
+    "Suppose a lender uses a scoring system to estimate how likely each applicant is to default, and suppose applicants belong to two groups that differ, for whatever historical reasons, in how often their members in fact default. There are several natural ways to ask whether the system treats the groups fairly. One may ask whether a given score means the same thing in both groups, so that among applicants scored as having a one-in-five chance of default, roughly one in five defaults whichever group they belong to. One may ask instead whether applicants who would in fact have repaid are wrongly refused at the same rate in both groups, or whether those who would in fact have defaulted are wrongly approved at the same rate. Each of these looks like a reasonable requirement, and each has been proposed as the meaning of fairness.",
+    "It turns out that they cannot, in general, all be satisfied together. When the groups' underlying default rates differ and the prediction is less than perfect, a score that means the same thing in both groups will produce different rates of error between them, in wrongful refusals, wrongful approvals or both, and equalising both kinds of error will make the same score mean different things in different groups. This is not a defect of any particular system that better engineering might remove; it follows from the arithmetic of prediction under unequal base rates. The finding was greeted in some quarters as a kind of scandal, and two conclusions were quickly drawn from it: that the idea of a fair algorithm is incoherent, or, conversely, that since some criterion must be chosen, the choice is a technical matter best left to the people who build the systems.",
+    "Both conclusions seem to me mistaken, and for related reasons. The impossibility does not show that fairness is incoherent; it shows that our everyday notion of fairness bundles together several demands that usually travel together and part company only under specific conditions. Discovering that two values can conflict is not the same as discovering that one of them is empty, any more than the occasional conflict between honesty and kindness shows that one of these is an illusion. Nor does the need to choose make the choice technical. Which criterion should give way depends on what the decision does to the people it touches: who bears the cost of being wrongly refused, how severe that cost is, and whether the different base rates are themselves the residue of earlier unfairness that the decision would perpetuate. Those are questions about harm and responsibility, not about arithmetic.",
+    "It is worth adding that the dilemma is not peculiar to algorithms. A loan officer who judges applicants by experience faces exactly the same trade-off whenever the groups differ in base rates; the officer simply does not have to declare which criterion is being sacrificed, and may not know. In this respect the formal analysis has done something valuable. By making the conflict explicit, it has turned a choice that was always being made silently into one that must be made in the open, and has removed the comfortable belief that a sufficiently careful decision maker could satisfy every reasonable demand at once. The danger is that the explicitness is squandered, that the choice is buried again inside the system, this time under a layer of technical vocabulary instead of a layer of personal discretion."
+   ],
+   "questions": [
+    {
+     "id": "R06-F-07-3",
+     "type": "RC",
+     "options": {
+      "A": "cannot be made on any principled basis, because the competing criteria have been shown to be incompatible.",
+      "B": "should be left to those who build the scoring system, since they understand the arithmetic of prediction best.",
+      "C": "should favour whichever criterion produces the smallest total number of errors across both groups combined.",
+      "D": "would rest partly on how heavily each kind of mistaken decision falls on those who must bear it."
+     },
+     "question": "The author would most likely agree that the decision about which fairness criterion should give way"
+    }
+   ]
+  },
+  {
+   "passage_id": "R05-G-08",
+   "passage": [
+    "A country that puts a serious price on carbon faces an awkward possibility. If its steelmakers, cement works and chemical firms must pay for their emissions while their competitors abroad do not, production may move to places where emitting is free. The country's own emissions fall, but the world's do not, and some of its industry has been lost for nothing. Economists call this leakage, and fear of it has been among the most effective arguments against acting alone. The obvious answer is a border adjustment: a charge on imports equal to the carbon price that would have been paid had the goods been made at home, perhaps paired with a rebate for exporters. Domestic and foreign producers would then compete on equal terms, and the incentive to relocate would disappear.",
+    "The proposal is simpler to state than to carry out. To charge an import for its carbon, one must know how much carbon went into making it, and that depends on the plant, the fuel it burned and the electricity grid it drew from, none of which an importing government can observe directly. Default values can be assigned by product and by country, but these penalise clean producers in dirty countries and reward dirty producers in clean ones. Letting producers prove their actual emissions instead requires inspectors or trusted certifiers inside the exporting country, which raises questions of sovereignty as well as of cost. Trading partners, moreover, are apt to see the charge as protection dressed in green, and some have a further complaint: that countries which grew rich by burning carbon for two centuries are now taxing the goods of countries trying to do the same, and calling it fairness.",
+    "There is also reason to think the problem itself has been overstated. For most industries the cost of carbon is a small share of total costs beside labour, transport, access to markets and the quality of local institutions, and firms do not move plants lightly. A steelworks embodies decades of investment in a site, a workforce and a web of local suppliers, and escaping a modest carbon price would seldom justify abandoning all of that. The evidence from carbon prices so far suggests less relocation than the warnings predicted, though the prices in question have mostly been modest and some heavy industries have been shielded from them by free allowances, so the past may be a poor guide to the effect of prices high enough to matter.",
+    "If leakage is less of a threat than feared, why does the border adjustment matter? Its most important effect may lie not in the trade it reshapes but in the decisions it prompts elsewhere. An exporting country whose firms face a charge at the border has a reason to prefer that its own government levy an equivalent price at home, so that the revenue stays at home instead of flowing to a foreign treasury. A border adjustment can thus act less as a wall than as a lever, drawing other countries towards carbon pricing of their own. Whether it does so, or instead provokes retaliation, depends heavily on how it is designed and presented. A charge that credits carbon prices already paid abroad, that measures actual emissions where producers can show them, and that directs some of its revenue to helping poorer exporters cut their emissions has a chance of being accepted as what it claims to be. One that does none of these things will be read, not unreasonably, as the protectionism its critics allege."
+   ],
+   "questions": [
+    {
+     "id": "R05-G-08-4",
+     "type": "RC",
+     "options": {
+      "A": "is set high enough to stop most imports from countries that have not yet introduced a price on carbon.",
+      "B": "lets the importing country keep all of its revenue, so that it can be spent on reducing emissions at home.",
+      "C": "applies only to trading partners whose own carbon prices are already as high as the importing country's price.",
+      "D": "is reduced or waived for goods whose makers have already paid a carbon price in their own country."
+     },
+     "question": "The exporting country's reasoning described in paragraph 4, which lets a border charge work as 'a lever', depends on the charge being one that"
+    }
+   ]
+  },
+  {
+   "passage_id": "R01-F-07",
+   "passage": [
+    "Thought experiments occupy an awkward place in the theory of knowledge. Scientists and philosophers have long used them to settle questions, and some of the most admired episodes in the history of physics turn on an imagined scenario rather than an actual measurement. Yet a thought experiment, by definition, collects no new data. The experimenter sits still and imagines. If we learn something about the world this way, it is not obvious where the information comes from, and two answers have dominated discussion.",
+    "According to the first, a thought experiment is an argument in disguise. Its vivid scenario can always be rewritten as a set of premises and a conclusion, and whatever it teaches, it teaches because the premises were already believed and the conclusion follows from them. The imagery is persuasive packaging, useful perhaps for teaching, but adding nothing to the logical content. According to the second, the best thought experiments give us something no argument could: a kind of direct intellectual insight into the necessary structure of nature, as if the mind could see a law of physics in the way the eye sees a colour.",
+    "Neither answer fits the most celebrated example well. Galileo asked his readers to imagine a heavy body and a light one tied together and dropped. If heavier bodies fall faster, as the received physics of his day held, the light body should hold back the heavy one, so that the pair falls more slowly than the heavy body alone; but the pair is heavier than the heavy body, so it should fall faster. The supposition contradicts itself, and the natural way out is that all bodies fall at the same rate, at least in the absence of a resisting medium. The argument reading can reconstruct this, but only by writing in premises that no one had formulated before the scenario was imagined: for instance, that the speed of a composite body must lie somewhere between the speeds of its parts. The insight reading, for its part, makes the result mysterious, as though Galileo had glimpsed a law rather than noticed a contradiction in what he and his readers already believed.",
+    "A better account is that thought experiments work by drawing on knowledge we have but have never made explicit. Everyone who has carried a load or watched things fall has a large stock of tacit expectations about how bodies behave. A well-constructed scenario brings these expectations to bear on a case where they collide with an explicit theory, and so exposes a tension that was there all along. What is new is not the information but its arrangement. This explains why thought experiments can be genuinely informative without new data, and also why they cannot be reduced to an argument that someone might have written down beforehand: the premises are found by running the scenario, not before it.",
+    "It also explains when they should not be trusted. Our tacit expectations were formed in a narrow band of experience, among objects of moderate size moving at moderate speeds. A thought experiment that asks us to imagine the very small, the very fast or the very distant invites us to apply those expectations where they were never tested, and the resulting conviction, however vivid, carries only the authority of the experience behind it. The method is neither a trick of rhetoric nor a window onto necessity. It is a way of interrogating what we already know, and it is exactly as reliable as that knowledge."
+   ],
+   "questions": [
+    {
+     "id": "R01-F-07-2",
+     "type": "RC",
+     "options": {
+      "A": "at exactly the speed of the heavy body alone, since the light body, being so much lighter, adds nothing to the pair.",
+      "B": "faster than either body alone in the imagined case, while in actual trials the pair is observed to fall more slowly.",
+      "C": "more slowly than the light body alone, since the air around them drags the heavier of the two bodies back.",
+      "D": "more slowly than the heavy body alone, since the light one holds it back, and yet faster, since the pair is heavier."
+     },
+     "question": "According to paragraph 3, the supposition that heavier bodies fall faster contradicts itself because the two bodies tied together should fall"
+    }
+   ]
+  },
+  {
+   "passage_id": "R07-A-02",
+   "passage": [
+    "A persistent habit of literary talk treats the short story as a smaller novel: the same materials of character, setting and incident, simply supplied in lesser quantities. On this view the story is where writers practise before attempting the larger form, and a collection of stories is a kind of portfolio of novels not yet written. The habit is reinforced by publishers, who have long regarded collections as harder to sell, and by critics who praise a story for being 'as rich as a novel', as though richness of that kind were the measure of success. Prizes and anthologies have sometimes followed suit, treating a writer's stories as preparation and the first novel as the real debut.",
+    "The comparison misunderstands where a short story does its work. A novel accumulates; it earns its effects through duration, letting the reader live alongside its people for enough days that change in them can be felt as change. A story has no such time to spend. What it has instead is selection, and selection pressed hard enough becomes a kind of meaning in itself. When a story shows a woman packing a suitcase, pausing over a single photograph and putting it back in the drawer, the eleven years of marriage that the story never describes are present precisely because they are withheld. The reader does not receive them; she supplies them, and the supplying is the experience.",
+    "This is why expanding a fine story so rarely improves it. Give the woman a history, a sister to confide in, a chapter on the courtship, and the photograph becomes one detail among many rather than the point on which everything turns. The gaps that had been doing the work are filled with information, and information, however well written, is less charged than implication. The reader who had been supplying the marriage is now simply told about it, and being told is a lesser kind of participation. The story's brevity was not a limitation it laboured under but the condition of its force.",
+    "None of this means that stories and novels never meet. Some writers have plainly used stories as sketches, and more than one long novel began as a few pages its author could not leave alone. Nor is brevity a virtue in itself; a weak story can hide behind its shortness, gesturing at depths it has not earned. The claim is narrower: that when a story succeeds on its own terms, it succeeds by a method the novel mostly cannot use, and that judging it by the novel's standards will reliably mistake its strengths for omissions."
+   ],
+   "questions": [
+    {
+     "id": "R07-A-02-4",
+     "type": "RC",
+     "options": {
+      "A": "Readers comparing admired stories with later full-length versions by the same writers mostly found the longer versions stronger, because of the added history.",
+      "B": "Writers who began with short stories and later turned to novels often say that the shorter form taught them economy.",
+      "C": "Several admired novels are known to have grown out of rough, unfinished short pieces that their authors went on revising, sometimes for many years, before finally publishing them.",
+      "D": "Publishers continue to report that collections of short stories sell fewer copies than novels by the same writers."
+     },
+     "question": "Which of the following, if true, would most weaken the author's claim about expanding fine stories?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R06-F-05",
+   "passage": [
+    "Few technical metaphors have succeeded as completely as the cloud. To store files 'in the cloud' is to imagine them floating somewhere overhead, available from anywhere, belonging to no place in particular and weighing nothing at all. The image is not simply wrong; from the point of view of a user, it describes the experience rather well. A photograph taken on a phone appears on a laptop moments later, and the user neither knows nor needs to know where it has been in between. Yet the metaphor has migrated from describing an experience to shaping how whole societies think about a vast industrial system, and in that second role it misleads.",
+    "What sits behind the cloud is emphatically material. It consists of large buildings filled with servers, which consume great quantities of electricity and must be kept cool, often with water drawn from local supplies; of cables laid across sea floors and along railway lines; of particular sites chosen for cheap power, favourable taxes or stable ground. Each of these is somewhere, and being somewhere means being subject to the laws of a particular state, to the weather and geology of a particular region, and to the politics of the towns asked to host the buildings and supply their power. A data centre can strain a local grid or compete with farms for water, and a damaged cable can slow communication across a region.",
+    "The metaphor makes all of this hard to see. A cloud has no address, so questions about which country's courts can demand access to stored data come to seem technical rather than political. A cloud uses nothing, so the energy cost of keeping old files indefinitely available is easy to forget. And a cloud is diffuse, which suggests resilience, whereas in practice a large share of the services people rely on may depend on a small number of companies and sites, so that a single failure can ripple outward with surprising speed.",
+    "Defenders of the metaphor might point out that hiding complexity is precisely what good computing does. Nobody wants to think about the location of a server before sending a message, and abstractions of this kind are why ordinary people can use powerful systems at all. That is true, but it confuses two audiences. Abstraction is a gift to the user at the moment of use; it becomes a liability when it is carried over into the deliberations of citizens, regulators and planners, whose task is precisely to decide where the buildings go, who supplies their power and whose laws govern what they hold. For them, the useful question is not where the cloud is but how it came to seem to be nowhere."
+   ],
+   "questions": [
+    {
+     "id": "R06-F-05-2",
+     "type": "RC",
+     "options": {
+      "A": "It brings forward fresh evidence about the environmental costs of data centres to reinforce the claims of paragraph 2.",
+      "B": "It answers a defence of the metaphor by separating what users need from what those who govern the infrastructure need.",
+      "C": "It concedes that hiding complexity is what good computing does and therefore withdraws the earlier criticism of the metaphor.",
+      "D": "It argues that ordinary users ought to learn where their data is physically stored before they make use of online services."
+     },
+     "question": "Which of the following best describes the role of the final paragraph in the argument?"
+    },
+    {
+     "id": "R06-F-05-3",
+     "type": "RC",
+     "options": {
+      "A": "users are unable to tell where their files travel between one of their devices and another.",
+      "B": "storing old files indefinitely uses up so much energy that the system will eventually be unable to cope.",
+      "C": "data centres are often built on unstable ground, which makes them liable to sudden and widespread failure across a region.",
+      "D": "the image invites a belief that services are widely spread, when they may hinge on a few points of failure."
+     },
+     "question": "The author's remark that a cloud 'is diffuse, which suggests resilience' implies that"
+    },
+    {
+     "id": "R06-F-05-4",
+     "type": "RC",
+     "options": {
+      "A": "A city that buries its power lines for the sake of appearance pays more to repair them, since faults become harder to find.",
+      "B": "A driver who knows nothing about engines is a worse driver than one who understands how the car works under the bonnet.",
+      "C": "Using a tap without a thought for reservoirs is a convenience, but a water board that planned as if water came from taps would plan badly.",
+      "D": "A map that leaves out minor roads misleads every traveller, since it gives a false picture of the ground to anyone who uses it."
+     },
+     "question": "Which of the following situations most closely parallels the author's reply to the defenders of the metaphor?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R03-C-03",
+   "passage": [
+    "Anthropologists have long described rites of passage as moving in three phases. The person undergoing the rite is first separated from an existing status, then passes through a transitional period in which he or she belongs to neither the old condition nor the new, and is finally incorporated into the community in a new role: adult, married, initiated, ordained. Of these phases the middle one, often called liminal, from the Latin word for a threshold, has attracted by far the most attention, and for good reason. It is there that most of the strange features of such rites are concentrated: seclusion in the forest or a special hut, the shaving of heads, the wearing of identical plain garments, the suspension of names, the imposition of hardship and silence.",
+    "A simple reading treats these features as a waiting room, a pause while the real change, the conferral of new status, is prepared offstage. This misses their function. Stripping novices of names, clothing and possessions removes the markers by which they were previously ranked, so that for a time sons of important families and sons of poor ones are indistinguishable. Shared hardship then does two things at once. It makes the novices receptive to instruction, since people deprived of their usual footing listen differently, and it binds them to one another in a way that often outlasts the ritual, creating cohorts whose loyalty cuts across lineage and wealth.",
+    "In recent decades, however, the idea has travelled far from its origins, and something has been lost on the way. The liminal phase is now often celebrated as a zone of freedom, creativity and play, and the word is applied to almost any in-between experience: the years after school, a period of unemployment, a long journey abroad. This enthusiasm overlooks how tightly the traditional threshold was managed. Elders set its length, prescribed what novices could eat and say, and decided when it was over. Its ambiguity was real, but it was ambiguity held inside a firm frame, and its whole point was the return.",
+    "That frame is what most modern transitions lack. A young person who drifts between education and employment may experience the disorientation of the threshold without its discipline, its companions or, above all, its exit. There is no moment at which the community declares the passage complete and receives the person in a new capacity. None of this implies that the old rites should be revived, since their authority rested on forms of social life that no longer exist. But the comparison suggests that what made liminality productive was not the openness that its modern admirers praise. It was the certainty that the openness would end."
+   ],
+   "questions": [
+    {
+     "id": "R03-C-03-4",
+     "type": "RC",
+     "options": {
+      "A": "Young people passing through open-ended, unmarked transitions are found to form lasting ties and take on new roles just as well as novices in bounded rites do.",
+      "B": "Elders in some traditional societies extended the seclusion of novices who had broken the rules of the rite.",
+      "C": "Many young people who drift between education and employment say that they feel disoriented, lack companions and cannot tell when, if ever, their transition will be over.",
+      "D": "In some societies the period of seclusion during initiation lasted several years rather than a few weeks."
+     },
+     "question": "Which of the following, if true, would most weaken the author's conclusion about what made liminality productive?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R01-C-07",
+   "passage": [
+    "Talk of moral progress makes many people uneasy. It sounds like the self-congratulation of every age that has looked back on its predecessors and found them wanting, and it seems to require a fixed standard against which the direction of change could be measured, a standard that is itself in dispute. Yet it is hard to describe the abolition of legal slavery, or the end of public torture as a form of entertainment, merely as changes in fashion, as though they were on a par with a shift in the length of coats. Most people who doubt the idea of moral progress in theory find themselves unable to give it up in particular cases.",
+    "One influential way of making sense of the idea is to describe progress as the expansion of a circle of concern. Early moral codes, on this telling, extended full consideration only to kin or to members of the tribe; over time the boundary has been pushed outward, to strangers, to foreigners, to people of other races and faiths, and, more recently and more contentiously, to animals. Progress consists in recognising as morally considerable those whom we previously ignored. The picture is appealing because it gives progress a direction without requiring agreement on a complete moral theory: one needs only the modest premise that arbitrary exclusion is a mistake. It also explains why reformers have so often described their work as opening the eyes of their contemporaries rather than changing their values: the values, on this telling, were already present, and only their application had been blocked.",
+    "The picture is not wrong, but it is incomplete in a way that matters. Some of the clearest cases of progress involve not who counts but what we owe to those who already counted. The view that a husband may beat his wife was not, in most societies that held it, a view that wives fell outside moral concern; wives were very much inside the circle, assigned a place in it that we now regard as degrading. Reform came not from widening the boundary but from revising the terms within it. The same is true of changing attitudes to children, who have always been objects of intense concern, and whose treatment has nonetheless been transformed.",
+    "There is also a danger in the circle image that its admirers tend to overlook. If progress is measured by the width of the circle, then any extension looks like an advance, and any contraction like a regression. But concern can be extended in ways that are themselves harmful: the circle of a missionary empire was wide, and that width was part of its justification for interfering in other people's lives. Inclusion that comes with a presumption of authority over the included is not obviously better than the indifference it replaces. What matters is not only that more beings are counted, but how they are counted.",
+    "None of this means that we should abandon the idea of moral progress. It means that progress is less like a single line along which societies advance and more like a series of corrections, each prompted by the discovery that some practice depended on a mistaken belief, an unexamined interest or a failure of imagination. Such corrections can be recognised as improvements without a finished theory of the good, in the way that a scientist can recognise an error without possessing the final truth. That is a more modest claim than the circle image offers, but it is also harder to dismiss as the vanity of the present."
+   ],
+   "questions": [
+    {
+     "id": "R01-C-07-1",
+     "type": "RC",
+     "options": {
+      "A": "Moral progress is real but is better understood as a series of corrections than as the widening of a circle of concern.",
+      "B": "Moral progress is best pictured as a single line along which every society advances in the same direction.",
+      "C": "Talk of moral progress is largely the self-congratulation of each age as it looks back on the ages before it.",
+      "D": "Moral progress consists in extending moral concern to those beings who were previously left outside its boundary."
+     },
+     "question": "Which of the following best states the central claim of the passage?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R07-C-05",
+   "passage": [
+    "When a painting sells at auction for a sum that would fund a hospital, two responses compete for the headlines. The first treats the price as a verdict: the market, pooling the judgements of many informed buyers, has declared this one of the most important works of its kind. The second treats it as a scandal: the sum has nothing to do with art and everything to do with vanity, speculation and the search for places to park wealth. Each response captures something, but both share a mistaken premise, which is that the price is either a measure of artistic value or a measure of nothing at all.",
+    "A price measures what someone will pay to own a thing, and owning a painting is not the same as valuing it as a painting. The buyer acquires an object that is unique, that cannot be reproduced without losing the very property being purchased, and that carries a name capable of conferring distinction on whoever holds it. Each of these features has a market logic of its own. Scarcity helps explain why a minor work by a celebrated painter can outsell a masterpiece by an obscure one; the name explains why a newly accepted attribution can multiply a canvas's price overnight without a single brushstroke changing. In neither case has anyone's experience of looking at the picture altered.",
+    "This does not mean that prices float free of critical judgement. Over long periods, the artists whom critics, historians and museums take seriously tend also to be the ones whose works command high prices, and it would be perverse to call this coincidence. But the connection runs largely through reputation rather than through the works themselves: esteem builds a name, the name creates demand, and demand sets the price. The market thus registers critical judgement at second hand, much as a credit rating registers a company's prospects without being the same thing as its earnings.",
+    "The real danger lies in the return journey. Once prices are reported as verdicts, they begin to shape the judgements they supposedly reflect. Visitors crowd around the record-breaking canvas while the room beside it stands empty; institutions hesitate to show or lend works whose insurance values have become unmanageable; young artists learn which styles sell. A measure of ownership, mistaken for a measure of worth, ends by teaching people what to look at. Resisting that confusion requires nothing more radical than remembering what a price is the price of."
+   ],
+   "questions": [
+    {
+     "id": "R07-C-05-3",
+     "type": "RC",
+     "options": {
+      "A": "warn that the art market, like the market for company debt, is liable to sudden collapses in value.",
+      "B": "suggest that auction prices are as carefully calculated by experts as the ratings given to companies.",
+      "C": "illustrate how one thing can track another at second hand while remaining a different kind of thing.",
+      "D": "argue that buying paintings is a sounder investment than lending money to companies with good ratings."
+     },
+     "question": "The comparison with a credit rating in paragraph 3 is used to"
+    }
+   ]
+  },
+  {
+   "passage_id": "R07-D-07",
+   "passage": [
+    "A familiar way of thinking about Western art music divides the creative labour with reassuring neatness. The composer makes the work and records it in a score; the performer's task is to realise the score faithfully, adding as little of himself as the music allows. On this view the score is the work, or at least its complete specification, and a performance is good to the degree that it delivers what the notation contains. Its attractions are considerable. It accounts for our confidence that two strikingly different performances are nevertheless performances of the same composition, and it furnishes the critic with a standard: the performer who alters the notes has made a mistake, whatever the result sounds like.",
+    "The difficulty is that notation specifies far less than the view requires. A score fixes pitches and their order with considerable precision, and durations rather less, but a great deal of what listeners hear as the character of a performance is left open or indicated only roughly. A marking that asks for a loud passage does not say how loud, and the right loudness in a small room is not the right loudness in a large hall. A word indicating a lively tempo admits a range of speeds wide enough to make one performance sound urgent and another relaxed. Nothing in the marks tells the player exactly how long to linger at the high point of a phrase, or how to weigh the notes of a chord against one another. These are not trivial details that a faithful performer can safely settle at random; they are much of what makes the music sound the way it does.",
+    "One response is to swing to the opposite extreme and say that the work simply is the performance, the score being no more than a set of instructions that each performer completes as she pleases. This rescues the performer's creative contribution, but at a considerable theoretical price. It cannot explain why some performances strike informed listeners as wrong-headed even when every note is in place, or why a performer who takes a slow movement at double speed has done something worse than make an unusual choice. If the score were merely a recipe to be finished at will, there would be no ground for such judgements, and yet musicians make them constantly and with considerable agreement.",
+    "That agreement points to what both positions conspicuously omit. Scores are never interpreted in isolation. They are read by musicians trained in a practice: a shared and largely unwritten understanding of what the marks mean in a given style, which conventions apply, what kinds of freedom are expected and where those freedoms stop. In music of one period a trill is understood to begin on the note above; in another it begins on the main note; the score is usually silent on the point, and the practice supplies the answer. The work, on this account, is neither the marks alone nor whatever a given performance makes of them, but the marks as a practice reads them. Fidelity is owed to that combination.",
+    "It may be objected that practices evolve, so that the work would apparently evolve with them, which seems absurd. But the objection establishes considerably less than it appears to. Practices do change, slowly, and the identity of a work is correspondingly less fixed than the first view supposed; that is a cost worth accepting, since it matches how musicians actually argue about performances. What does not follow is that anything goes. A practice at any moment draws lines that its members can defend, and a performer who knowingly crosses them is making a claim that must be argued for, not exercising a right."
+   ],
+   "questions": [
+    {
+     "id": "R07-D-07-3",
+     "type": "RC",
+     "options": {
+      "A": "exercised a performer's right to complete the score in whatever way she judges best.",
+      "B": "been accurate to the marks on the page without being faithful to the work they belong to.",
+      "C": "been faithful to the work, since a performance is good to the degree that it delivers what the notation contains.",
+      "D": "created a new work, because a work changes whenever the practice used to read its score changes."
+     },
+     "question": "The author would most likely say that a performer who plays every note exactly as written but ignores the conventions by which the style is ordinarily read has"
+    }
+   ]
+  },
+  {
+   "passage_id": "R07-B-01",
+   "passage": [
+    "Few kinds of article travel as easily as the list of untranslatable words. A language is said to possess a single word for the particular light that falls through leaves, another for the guilty pleasure of buying books one will never read, a third for the melancholy of a Sunday evening, and the reader is invited to marvel that English, or whatever language the list happens to be written in, has nothing to match them. The lists are charming, and most of the words in them are real. What is doubtful is the conclusion they are usually taken to support: that the speakers of a language without such a word cannot quite have the experience it names, or that a vocabulary is a window onto a national soul.",
+    "Look at what the lists actually demonstrate. Each entry pairs a foreign word with a sentence or two of English explaining it, and the explanation is usually clear enough that the reader recognises the experience at once, often with a small shock of familiarity. The list, in other words, translates every word it calls untranslatable. What it shows is not that a meaning cannot cross from one language to another but that one language packages in a single word what another expresses in a phrase. That is a fact about how vocabularies happen to be divided up, and it tells us very little about what their speakers are able to think or feel. Every language lacks single words for countless things its speakers understand perfectly well.",
+    "This is not to say that nothing is lost when such a word is carried across. A single word is easy to reach for; a phrase is not. A word that ordinary speakers use daily carries the weight of all those uses, along with a register, a sound and a set of associations that no paraphrase reproduces. The very existence of the word suggests that a community has found the experience worth naming, and that fact is itself a small piece of cultural information. For a translator working on a poem, where sound and compression matter as much as sense, these losses are real and constant, and no amount of explanation in a footnote restores them.",
+    "But the losses are of degree, not of kind, and they are not peculiar to exotic words. They occur whenever any word is rendered by another, and even within a single language, where no two synonyms carry quite the same associations. Seen this way, the romance of the untranslatable flatters the reader, who feels worldly for knowing the rare word, and it encourages a picture of cultures as sealed rooms whose inhabitants can only be gazed at, never understood. The more modest and more accurate lesson is that translation is always possible and never complete, and that its difficulties lie less in the dictionary than in everything a word drags along with it."
+   ],
+   "questions": [
+    {
+     "id": "R07-B-01-1",
+     "type": "RC",
+     "options": {
+      "A": "explain each supposedly untranslatable word clearly in the very language said to have no equivalent for it.",
+      "B": "include many words that are invented or exaggerated and that ordinary speakers of the original language never use.",
+      "C": "present foreign words without examples, so that readers never learn how the words are used in daily speech.",
+      "D": "show that speakers of every language share exactly the same experiences, which makes the special words unnecessary."
+     },
+     "question": "According to the passage, lists of untranslatable words tend to undermine their own claim because they"
+    },
+    {
+     "id": "R07-B-01-2",
+     "type": "RC",
+     "options": {
+      "A": "the process by which a translator compresses a long explanation of a word into a brief footnote.",
+      "B": "the attractive manner in which popular articles present foreign words so that they seem more exotic than they are.",
+      "C": "the way one language bundles into a single word a meaning that another language spreads across several words.",
+      "D": "the cultural information that a word conveys about the community that first found an experience worth naming."
+     },
+     "question": "As used in paragraph 2, the word 'packages' refers to"
+    },
+    {
+     "id": "R07-B-01-3",
+     "type": "RC",
+     "options": {
+      "A": "It abandons the argument of paragraph 2 by admitting that some experiences cannot be grasped outside their own language.",
+      "B": "It argues that explanatory footnotes are the most effective means a translator has of restoring what is lost.",
+      "C": "It concedes that something is lost in translation, while locating that loss in qualities other than a word's basic sense.",
+      "D": "It gives the example of a particular poem whose translation failed because it contained a single untranslatable word."
+     },
+     "question": "Which of the following best describes the function of paragraph 3 in the passage?"
+    },
+    {
+     "id": "R07-B-01-4",
+     "type": "RC",
+     "options": {
+      "A": "The real difficulties of translation are confined mostly to rare words that name experiences peculiar to one culture.",
+      "B": "Since every language lacks words for many things, the presence or absence of a word reveals nothing about a community.",
+      "C": "A translation may render a word's sense accurately and yet fail to carry over much of what that word does in the original.",
+      "D": "Languages with larger vocabularies allow their speakers to perceive a wider range of experiences than other languages do."
+     },
+     "question": "The author would most likely agree with which of the following statements?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R04-E-06",
+   "passage": [
+    "Collective security is one of those ideas that seem obviously right until one asks what they require. The principle is that an attack on any member of an international system is to be treated as an attack on all, so that every aggressor faces the combined strength of everyone else. Against this, the older practice of the balance of power looks cynical: states align against whichever power threatens to dominate, and they change sides as readily as the threat shifts, guided by interest rather than by any judgement about who is in the right.",
+    "The appeal of collective security lies in its impartiality, and so does its weakness. For the scheme to work, states must be willing to fight an aggressor regardless of who it is, which means fighting, if necessary, a friend, a major trading partner or a power whose goodwill they need elsewhere. They must also be willing to fight over places where they have no interest at all, because the principle admits no distinction between an attack that matters to them and one that does not. This is a great deal to ask of governments that answer to their own citizens, and the interwar experience suggests that, when the moment came, many would not pay the price. An organisation founded on the principle found its members ready to condemn aggression and reluctant to resist it.",
+    "The balance of power asks less and so delivers more reliably, at least within its narrower aims. It does not require states to care about aggression as such, only about the rise of a power that could threaten them, and so it draws on motives that governments actually have. But its reliability comes at a price. Because it attends only to the distribution of strength, it is indifferent to the fate of small states whose conquest does not upset the balance; it can tolerate, and has often arranged, the partition of a weak country as a way of keeping the strong ones satisfied. Stability is its aim, and justice enters only by accident.",
+    "The lesson is not that one principle should replace the other, but that each supplies what the other lacks. A norm against aggression, however imperfectly enforced, gives resistance to an expanding power a public justification and makes it easier to assemble allies who would hesitate to act on calculation alone. Balancing, in turn, supplies the motive that the norm cannot generate by itself. Orders that have lasted have usually combined the two, borrowing their legitimacy from the first and their enforcement from the second, and the mistake of the reformers who championed collective security was to imagine that legitimacy could do the work of both."
+   ],
+   "questions": [
+    {
+     "id": "R04-E-06-4",
+     "type": "RC",
+     "options": {
+      "A": "A worldwide body votes by a large majority to condemn the invasion of a remote island and calls on its members to resist, but no member sends any forces.",
+      "B": "A group of states pledges to defend any member that is attacked and honours the pledge even against a small aggressor that could never threaten any of them.",
+      "C": "Two great powers agree to divide a weak buffer state between them so that neither gains an advantage, and the arrangement keeps the peace between them for a generation.",
+      "D": "States already uneasy at a neighbour's military growth unite against it once it seizes a border province, citing a shared rule against conquest to win wider support."
+     },
+     "question": "Which of the following situations would the author most likely regard as an instance of the combination described in paragraph 4?"
+    }
+   ]
+  },
+  {
+   "passage_id": "R07-C-07",
+   "passage": [
+    "We tend to judge a portrait by asking whether it captures the person. A good portrait, on this view, reveals something of the sitter's inner life: a habit of mind, a private sorrow, the particular way one face differs from all others. Measured against this standard, many older portraits seem stiff and oddly impersonal. Rows of nobles stand in nearly identical poses, their faces composed into the same calm, their individuality apparently buried beneath velvet and armour. It is easy to conclude that their painters were trying to capture the person and largely failing.",
+    "That conclusion mistakes what such portraits were for. For much of the history of European portraiture, and of several other traditions, the purpose of a commissioned portrait was less to record a personality than to establish a position. The sitter appeared as a holder of office, an heir, a bride, the head of a house. Costume, setting and objects carried meanings that contemporaries could read: the chain of a civic office, a dog standing for fidelity, a column suggesting constancy, a distant estate glimpsed through a window. A portrait of this kind was closer to a document than to a confession. Its sameness was not a failure of observation but a deliberate placing of the individual within a recognisable type, since what the patron wished to have recorded was precisely the type he had come to occupy. A contemporary who knew the conventions could read an entire biography of rank in a single canvas, whereas a modern viewer expecting the revelation of a character finds only an inventory of possessions.",
+    "Likeness was not irrelevant. Families wanted to know what an absent bride looked like, and painters could be criticised for flattering too much or too little. But likeness served the larger purpose rather than defining it. A face had to be recognisable enough to attach the role to the right person, and beyond that the painter's task was to make the person fit the role. The expectation that a portrait should instead expose the sitter, catching him off guard or revealing what he might prefer to hide, belongs to a later and narrower moment in the genre's history. Where an older portrait does strike modern eyes as startlingly intimate, it is worth asking whether it was made for a public hall or for a private room, since the obligations of display weighed very differently in the two settings.",
+    "Several changes made that expectation possible. The growth of a buying public outside courts and great houses created sitters with no office to display. New ideas about the self encouraged the belief that a person's truth lay within rather than in his station. And when photography arrived in the nineteenth century, it soon took over much of the trade in cheap likenesses, leaving painters free, or obliged, to offer something a camera seemed unable to supply. The psychological portrait, in other words, is not the essence of the genre finally achieved but one of its historical forms.",
+    "To say this is not to claim that the older portraits had no inner life, or that modern ones are free of display. A shrewd painter could let a sitter's character show through the conventions, and a present-day portrait of a company chairman, with its carefully chosen office and posture, documents a position as surely as any court painting did. The point is only that we should judge a portrait by the question it was asked to answer. Faulting a court painter for failing to reveal a soul is like faulting a map for failing to be a landscape painting."
+   ],
+   "questions": [
+    {
+     "id": "R07-C-07-4",
+     "type": "RC",
+     "options": {
+      "A": "bringing to an end the tradition of painting sitters with symbols of office, such as chains and columns.",
+      "B": "making painted portraits more truthful, because painters could now correct their work against photographs.",
+      "C": "taking over the trade in cheap likenesses, so that painters turned to offering what a camera seemed unable to give.",
+      "D": "introducing the belief that a person's truth lies within, which painters then tried to express in their portraits."
+     },
+     "question": "The passage suggests that the arrival of photography affected portrait painting by"
+    }
+   ]
+  },
+  {
+   "passage_id": "R02-A-06",
+   "passage": [
+    "There is a small puzzle about time that most people have noticed without ever stating it. A week spent travelling somewhere new seems to vanish while it is happening, so that there is never enough of it; yet once the traveller is home, the same week looks enormous, crowded with places and faces, as if it had lasted a month. A week at a familiar desk behaves in the opposite way. It drags while it is lived, each afternoon longer than the last, and then collapses in memory into a single grey item that seems to have taken no time at all.",
+    "The puzzle dissolves once we accept that we judge duration in two quite different ways. While an interval is passing, our sense of its length depends largely on how much attention we pay to time itself: boredom draws attention to the clock and stretches the hour, while absorption draws it away and the hour shrinks. Looking back, however, we have no clock to consult. We estimate how long a period lasted from what it left behind, and a period that left many distinct memories is judged to have been long. Novelty therefore works in opposite directions on the two judgements, shortening the interval as experienced and lengthening it as remembered.",
+    "This distinction sheds light on a complaint that becomes common in middle age, that the years go faster than they used to. The complaint is almost always retrospective. Few people find that a particular afternoon passes faster at fifty than at fifteen; what they find is that last year, viewed as a whole, seems to have been brief. If remembered duration tracks the number of distinct memories, the explanation is not far to seek, since adult life is more routine than youth, with fewer firsts, and a year of repeated weeks leaves less behind to measure it by.",
+    "The account is persuasive, but it should be held loosely. It is unlikely that a single factor explains how time seems at every age, and other changes, in health, in responsibility, in how far ahead people habitually plan, probably play a part. Still less does it follow, as some cheerful advice suggests, that one can lengthen a life simply by filling it with novelty. A crowded year may indeed look longer in retrospect, but it will feel shorter while it is lived, and there is no obvious reason to prefer one of these measures over the other. What the distinction teaches is not a technique for buying time but a caution against speaking of how long something 'really' felt, as though there were only one answer."
+   ],
+   "questions": [
+    {
+     "id": "R02-A-06-4",
+     "type": "RC",
+     "options": {
+      "A": "Middle-aged adults habitually plan further ahead than adolescents do, and many of them say that they spend more of their time thinking about the future.",
+      "B": "Adults whose lives remain as full of first experiences as in youth report the same speeding up of the years as adults with routine lives.",
+      "C": "Travellers returning from a varied holiday judge it to have lasted longer than a routine week at work of the same length.",
+      "D": "Middle-aged adults report that individual afternoons pass at much the same rate as they did when they were adolescents."
+     },
+     "question": "Which of the following, if true, would most weaken the explanation offered in paragraph 3 for why the years seem to pass faster in middle age?"
+    }
+   ]
+  }
+ ]
+}

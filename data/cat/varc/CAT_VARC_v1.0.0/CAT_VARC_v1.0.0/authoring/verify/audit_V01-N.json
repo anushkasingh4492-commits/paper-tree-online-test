@@ -1,0 +1,42 @@
+[
+ {
+  "id": "V01-N-007",
+  "category": "E7",
+  "severity": "major",
+  "finding": "Near-duplicate of V01-M-024 (volcanic cooling by stratospheric sulphur haze rather than ash), same subject, same mechanism and much the same wording.",
+  "fix": "Replaced the item with a new Easy five-sentence jumble on legume nitrogen fixation and crop rotation (family V01N-legume-nitrogen-fixation), locked by 'an exception', 'these plants', 'this store' and 'This is why'; new explanation, misconception and traps. Subject not in claims.json (checked with claim.py --list); the claim registry was not edited per audit rules.",
+  "changed": true
+ },
+ {
+  "id": "V01-N-012",
+  "category": "E1",
+  "severity": "major",
+  "finding": "Order 24531 was defensible: the appeal sentence ('The idea is appealing because it flatters...') reads naturally as an explanation of why the belief persists after the failed tests, and the 'Yet' sentence could attach directly to the belief.",
+  "fix": "Rewrote the evidence sentence as 'Yet appealing as it is, the idea has generally failed when tested directly, since...', which must follow the appeal; updated explanation, misconception and trap.",
+  "changed": true
+ },
+ {
+  "id": "V01-N-015",
+  "category": "E1",
+  "severity": "major",
+  "finding": "Order 21345 was defensible: the 'therefore' conclusion could follow sentence 3 alone, with 'Equally, missing data says little' added afterwards as a further point.",
+  "fix": "Conclusion sentence now treats the record 'whether present or missing' as one witness among several, so it must follow the missing-data sentence; updated explanation and the 21345 trap.",
+  "changed": true
+ },
+ {
+  "id": "V01-N-018",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Checked 32145 (remedy before 'The result is a cruel irony'): fails because 'The result' would then refer to the remedy making wards safer, a contradiction. Order is locked.",
+  "fix": "none: key is the only defensible order.",
+  "changed": false
+ },
+ {
+  "id": "V01-N (blind solvers)",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Blind-solver notes file is empty: both solvers reached the correct order on all 25 items with no flags.",
+  "fix": "none: nothing to dismiss.",
+  "changed": false
+ }
+]

@@ -1,0 +1,42 @@
+[
+ {
+  "id": "V01-D-014",
+  "category": "E1",
+  "severity": "major",
+  "finding": "'Only then' in the closing sentence could refer either to the brake (sentence printed 1) or to passenger trust (printed 4), making 25134 defensible alongside 25143.",
+  "fix": "Rewrote the closing sentence to 'Only when the lift had become that ordinary did it make commercial sense...', which points back to 'an ordinary part of daily life'; updated explanation, misconception and trap.",
+  "changed": true
+ },
+ {
+  "id": "V01-D-014",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation said 'the key invention', using the word 'key' in student-facing text.",
+  "fix": "Changed to 'the decisive invention', which also matches the sentence.",
+  "changed": true
+ },
+ {
+  "id": "V01-D-020",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation and difficulty reason quote 'shaped by its audience'; the sentence reads 'shaped, in part, by its audience'.",
+  "fix": "Explanation now quotes 'shaped, in part, by its audience'; difficulty reason paraphrases without quotation marks.",
+  "changed": true
+ },
+ {
+  "id": "V01-D-025",
+  "category": "E4",
+  "severity": "minor",
+  "finding": "Labelled Difficult, but the four-sentence order is fixed by fairly plain cues ('then', 'that stretch', 'therefore'); closer to upper Medium.",
+  "fix": "none: relabelling would break the exact 8/12/5 quota and no Medium item is clearly harder; the principle-before-application step gives it some depth.",
+  "changed": false
+ },
+ {
+  "id": "V01-D-ALL",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Blind-solver notes file is empty: both solvers reached the correct answer on all 25 items with no flags. Every item was re-solved cold and alternative orders tested; facts (monsoon wind directions, telegraphese, etc.) checked and no invented attributions found.",
+  "fix": "none: no solver notes to dismiss.",
+  "changed": false
+ }
+]

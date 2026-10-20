@@ -1,0 +1,98 @@
+[
+ {
+  "id": "V03-F-006",
+  "category": "E1",
+  "severity": "major",
+  "finding": "Both blind solvers noted that sentence 1 was weakly arguable as the odd one: the original odd sentence (communities writing labels so the account is less exclusively the institution's) could close the paragraph as a remedy to the framing power of labels, so 3-2-4-5 also read coherently.",
+  "fix": "Rewrote the odd sentence to concern correcting factual errors on labels (wrong date, misattributed maker), which shares the vocabulary but is irrelevant to the paragraph's point that accurate labels still frame objects by selection; updated explanation, misconception and difficulty_reason accordingly.",
+  "changed": true
+ },
+ {
+  "id": "V03-F-019",
+  "category": "E5",
+  "severity": "major",
+  "finding": "Explanation opened 'Sentences 1 to 4', a printed-label range that includes the odd sentence 3 and so misdescribes the coherent set.",
+  "fix": "Replaced with 'The four coherent sentences', keeping the per-sentence labels that follow.",
+  "changed": true
+ },
+ {
+  "id": "V03-F-025",
+  "category": "E5",
+  "severity": "major",
+  "finding": "Explanation opened 'Sentences 1 to 3', a printed-label range that includes the odd sentence 2 and omits coherent sentences 4 and 5; trap quoted 'stolen password', not in the text ('stolen a password').",
+  "fix": "Replaced the range with 'The four coherent sentences'; corrected the quotation to 'stolen a password'.",
+  "changed": true
+ },
+ {
+  "id": "V03-F-003",
+  "category": "E5",
+  "severity": "minor",
+  "finding": "Explanation range 'Sentences 4 to 5' produced by placeholder substitution is meaningless in printed labels.",
+  "fix": "Replaced with 'The four coherent sentences'.",
+  "changed": true
+ },
+ {
+  "id": "V03-F-007",
+  "category": "E5",
+  "severity": "minor",
+  "finding": "Explanation range 'Sentences 5 to 3' is meaningless in printed labels.",
+  "fix": "Replaced with 'The four coherent sentences'.",
+  "changed": true
+ },
+ {
+  "id": "V03-F-012",
+  "category": "E5",
+  "severity": "minor",
+  "finding": "Explanation range 'Sentences 3 to 1' is meaningless in printed labels.",
+  "fix": "Replaced with 'The four coherent sentences'.",
+  "changed": true
+ },
+ {
+  "id": "V03-F-014",
+  "category": "E5",
+  "severity": "minor",
+  "finding": "Explanation range 'Sentences 5 to 4' is meaningless in printed labels.",
+  "fix": "Replaced with 'The four coherent sentences'.",
+  "changed": true
+ },
+ {
+  "id": "V03-F-017",
+  "category": "E5",
+  "severity": "minor",
+  "finding": "Explanation range 'Sentences 2 to 5' reads as including the odd sentence 3.",
+  "fix": "Replaced with 'The four coherent sentences'.",
+  "changed": true
+ },
+ {
+  "id": "V03-F-013",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Trap quoted sentence 4 as 'meant to make managers think like owners'; the sentence says 'intended to make managers think like owners'.",
+  "fix": "Corrected the quotation.",
+  "changed": true
+ },
+ {
+  "id": "V03-F-022",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "difficulty_reason used 'the key term', answer-key jargon.",
+  "fix": "Changed to 'the central term'.",
+  "changed": true
+ },
+ {
+  "id": "V03-F-009",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Sentence 3 (defence financed by taxation) attaches smoothly after sentence 4 and does not actively contradict anything; it is odd only because the argument never returns to it.",
+  "fix": "none: both blind solvers reached the correct answer without flags, and the remaining sentences form a locked chain (4, 2 'however', 5 'The lesson', 1 'therefore') with no other removable sentence.",
+  "changed": false
+ },
+ {
+  "id": "V03-F-011",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Blind-solver flag (S2): sentence 2 could follow sentence 1 as an accuracy point.",
+  "fix": "none: sentence 4 ('The question is fair') must follow sentence 1 directly, and sentence 2 argues on the accuracy ground the paragraph sets aside; both solvers reached the correct answer.",
+  "changed": false
+ }
+]

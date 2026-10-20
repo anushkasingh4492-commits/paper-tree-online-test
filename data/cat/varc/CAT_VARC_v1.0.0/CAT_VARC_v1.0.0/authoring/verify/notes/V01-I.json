@@ -1,0 +1,22 @@
+[
+ {
+  "id": "V01-I-019",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "32514",
+    "key": "32514",
+    "working": "Puzzle (3), menu-cost explanation (2), seem too small (5), 'force lies elsewhere' (1), aggregated delays (4).",
+    "alternative": "",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "32514",
+    "key": "32514",
+    "working": "3 puzzle; 2 menu cost; 5 seems small; 1 force lies elsewhere; 4 summed across firms.",
+    "alternative": "",
+    "issue": "Near-duplicate of V01-H-006 in the same pack."
+   }
+  }
+ }
+]

@@ -1,0 +1,272 @@
+[
+  {
+    "number": 1,
+    "id": "JEE-CHEM-1662",
+    "section": "A",
+    "answer": "B",
+    "answer_text": "coupling of alkyl halides with sodium in dry ether",
+    "explanation": "Wurtz reaction is coupling of alkyl halides with sodium in dry ether. It is most suitable for symmetrical alkanes with even carbon count.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 2,
+    "id": "JEE-CHEM-1461",
+    "section": "A",
+    "answer": "D",
+    "answer_text": "0.14736842 g",
+    "explanation": "The saturated monoamine formula CnH2n+3N loses two H for the C=C, giving C3H7N, M=57. One N per molecule produces half a mole N₂ per mole, so mass=0.14736842 g.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 3,
+    "id": "JEE-CHEM-0424",
+    "section": "A",
+    "answer": "A",
+    "answer_text": "gas solubility in a liquid is proportional to gas partial pressure at constant temperature",
+    "explanation": "Henry law is gas solubility in a liquid is proportional to gas partial pressure at constant temperature. In the form p equals kh x, larger kh means lower solubility at fixed pressure.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 4,
+    "id": "JEE-CHEM-0574",
+    "section": "A",
+    "answer": "A",
+    "answer_text": "cell notation",
+    "explanation": "The defining statement matches cell notation. In addition, a double vertical line represents the salt bridge.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 5,
+    "id": "JEE-CHEM-0306",
+    "section": "A",
+    "answer": "C",
+    "answer_text": "36.312849 %",
+    "explanation": "Solution mass=100ρ=106 g. Subtract total solute mass to get solvent mass. The total amount is molality times solvent kilograms. Solve x+y=0.0412 and 60x+180y=4.296 to get x=0.026 mol. Mass percentage of A=100×60x/4.296=36.312849%.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 6,
+    "id": "JEE-CHEM-1803",
+    "section": "A",
+    "answer": "B",
+    "answer_text": "0.45 g",
+    "explanation": "Ester hydrolysis releases ethanol, whose complete oxidation gives ethanoic acid; the separately formed acid fraction is excluded. The stoichiometric target amount is 1×0.01 mol. Applying the overall yield and M=60 gives 0.45 g.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 7,
+    "id": "JEE-CHEM-1746",
+    "section": "A",
+    "answer": "C",
+    "answer_text": "0.93536 g",
+    "explanation": "Aqueous substitution gives propan-1-ol, then oxidation of a primary alcohol gives propanoic acid. The stoichiometric target amount is 1×0.016 mol. Applying the overall yield and M=74 gives 0.93536 g.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 8,
+    "id": "JEE-CHEM-1720",
+    "section": "A",
+    "answer": "B",
+    "answer_text": "a compound with halogen directly bonded to an aromatic ring",
+    "explanation": "Haloarene is a compound with halogen directly bonded to an aromatic ring. Its carbon-halogen bond has partial double-bond character.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 9,
+    "id": "JEE-CHEM-1280",
+    "section": "A",
+    "answer": "C",
+    "answer_text": "0.4182 g",
+    "explanation": "Coordination number six leaves 6−3=3 NH₃ ligands per Co. Released mass=0.0082×3×17=0.4182 g.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 10,
+    "id": "JEE-CHEM-0060",
+    "section": "A",
+    "answer": "A",
+    "answer_text": "45 %",
+    "explanation": "Both CaCO₃ and CaO consume two HCl per Ca, so initial carbonate=0.2/2=0.1 mol. Decomposed carbonate=1.98/44=0.045 mol. Fraction=0.45.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 11,
+    "id": "JEE-CHEM-0724",
+    "section": "A",
+    "answer": "A",
+    "answer_text": "a reaction whose rate is independent of reactant concentration",
+    "explanation": "Zero-order reaction is a reaction whose rate is independent of reactant concentration. A plot of concentration against time is linear with slope minus k.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 12,
+    "id": "JEE-CHEM-1058",
+    "section": "A",
+    "answer": "B",
+    "answer_text": "actinoids",
+    "explanation": "The defining statement matches actinoids. In addition, they show more variable oxidation states than lanthanoids.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 13,
+    "id": "JEE-CHEM-1882",
+    "section": "A",
+    "answer": "A",
+    "answer_text": "Cleavage at the methyl–O bond; phenol",
+    "explanation": "Iodide attacks the methyl carbon; the aryl carbon is unsuitable for ordinary backside SN2 displacement. Phenol is the aromatic product.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 14,
+    "id": "JEE-CHEM-1582",
+    "section": "A",
+    "answer": "D",
+    "answer_text": "elimination",
+    "explanation": "The bond changes match the stated reaction class.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 15,
+    "id": "JEE-CHEM-0471",
+    "section": "A",
+    "answer": "B",
+    "answer_text": "4.4147663",
+    "explanation": "Neutralisation leaves HA=0.0248 mol and forms A⁻=0.0112 mol. pH=pKa+log[n(A⁻)/n(HA)]=4.4147663.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 16,
+    "id": "JEE-CHEM-0435",
+    "section": "A",
+    "answer": "D",
+    "answer_text": "44.444444",
+    "explanation": "Dilution gives [Ag⁺]=0.0066666667 and [Cl⁻]=0.0066666667 M. Their product times 10⁶ is 44.444444.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 17,
+    "id": "JEE-CHEM-0067",
+    "section": "A",
+    "answer": "D",
+    "answer_text": "5.04 g",
+    "explanation": "Let carbonate and bicarbonate amounts be x and y. Then 106x+84y=10.34 and 2x+y=0.16. Subtract 53 times the second equation from the first: 31y=1.86. Hence y=0.06 mol and mass=5.04 g.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 18,
+    "id": "JEE-CHEM-2101",
+    "section": "A",
+    "answer": "D",
+    "answer_text": "1.70208 g",
+    "explanation": "This is the prescribed diazoamino-to-aminoazo rearrangement, with 1:1 molecular stoichiometry. M=12×12+11+3×14=197. Mass=n×yield×197=1.70208 g.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 19,
+    "id": "JEE-CHEM-0280",
+    "section": "A",
+    "answer": "C",
+    "answer_text": "-3.4024141",
+    "explanation": "First ΔG°=ΔH°−TΔS°=10.325 kJ mol⁻¹; then ln K=−ΔG°/(RT)=-3.4024141.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 20,
+    "id": "JEE-CHEM-1683",
+    "section": "A",
+    "answer": "C",
+    "answer_text": "54.736842 %",
+    "explanation": "Alkyne=x, alkene=y. Hydrogen balance: 2x+y=0.0147; mass: 54x+56y=0.5216. Eliminate y: x=(56×0.0147−0.5216)/58=0.0052 mol. Then y=0.0043, giving 54.73684%.",
+    "numerical_scaling": null
+  },
+  {
+    "number": 21,
+    "id": "JEE-CHEM-0510",
+    "section": "B",
+    "answer": 41,
+    "answer_text": "41",
+    "explanation": "Δn=2−3=−1. Under the stated numerical conventions, Kp/Kc=1/(0.0821×300)=0.0406009, closest to 0.041.",
+    "numerical_scaling": {
+      "question": "For 2SO₂(g)+O₂(g) ⇌ 2SO₃(g), use Kp=Kc(RT)^Δn with pressures in atm, concentrations in mol L⁻¹ and R=0.0821 L atm mol⁻¹ K⁻¹. At 300 K, the numerical ratio Kp/Kc is what value? Multiply the numerical value in the requested units by 10^3, then enter the nearest integer.",
+      "unrounded_value": 40.60089321965083,
+      "answer_integer": 41,
+      "unit": "",
+      "unit_scale_power10": 3,
+      "rounding": "nearest integer; exact halves away from zero",
+      "parent_candidate": "NEET27-CHEM-0501",
+      "verification_basis": "Recomputed from Kp/Kc=(RT)^−1; R=0.0821 and T=300, then multiplied by 1000."
+    }
+  },
+  {
+    "number": 22,
+    "id": "JEE-CHEM-1315",
+    "section": "B",
+    "answer": 2,
+    "answer_text": "2",
+    "explanation": "Molar masses are 260.5 and 243.5. Their ion yields are four and three per formula unit. Hence 260.5x+243.5y=1.1003, 4x+3y=0.0149. Eliminating y gives x=[3mass−243.5n_ions]/[3×260.5−4×243.5]=0.0017 mol.",
+    "numerical_scaling": {
+      "question": "A 1.1003 g mixture contains only [Cr(NH₃)₆]Cl₃ and [Cr(NH₃)₅Cl]Cl₂. In a sufficiently dilute ideal solution, an independent particle-count measurement gives 0.0149 mol total solute ions. Outer-sphere ions dissociate completely and no ligand exchange occurs. Use Cr=52, NH₃=17, Cl=35.5 g mol⁻¹. Find the amount of [Cr(NH₃)₆]Cl₃. Enter the numerical value in the requested units, rounded to the nearest integer.",
+      "unrounded_value": 1.7000000000000002,
+      "answer_integer": 2,
+      "unit": "mmol",
+      "unit_scale_power10": 0,
+      "rounding": "nearest integer; exact halves away from zero",
+      "parent_candidate": "Werner-mass-ions-07",
+      "verification_basis": "Recomputed from the recorded givens; option-independent integer presentation."
+    }
+  },
+  {
+    "number": 23,
+    "id": "JEE-CHEM-0419",
+    "section": "B",
+    "answer": 73,
+    "answer_text": "73",
+    "explanation": "Solution mass=100ρ; solvent mass=100ρ−w=104.4 g. Divide urea amount w/60 by solvent kilograms: 0.73435504 mol kg⁻¹.",
+    "numerical_scaling": {
+      "question": "100.0 mL solution has density 1.09 g mL⁻¹ and contains 4.6 g urea (60 g mol⁻¹). Find its molality. Multiply the numerical value in the requested units by 10^2, then enter the nearest integer.",
+      "unrounded_value": 73.43550446998721,
+      "answer_integer": 73,
+      "unit": "mol kg⁻¹",
+      "unit_scale_power10": 2,
+      "rounding": "nearest integer; exact halves away from zero",
+      "parent_candidate": "REV11-05-XII-035",
+      "verification_basis": "Recomputed from the recorded givens; option-independent integer presentation."
+    }
+  },
+  {
+    "number": 24,
+    "id": "JEE-CHEM-1653",
+    "section": "B",
+    "answer": 16,
+    "answer_text": "16",
+    "explanation": "Each but-2-ene produces two ethanal molecules. Each ethanal reduces two Ag⁺, so n(Ag)=4n(alkene). Mass=16.416 g.",
+    "numerical_scaling": {
+      "question": "0.038 mol but-2-ene undergoes complete reductive ozonolysis. All carbonyl products are then treated with excess Tollens reagent. Find the mass of silver formed, assuming quantitative reactions. Ag=108 g mol⁻¹. Enter the numerical value in the requested units, rounded to the nearest integer.",
+      "unrounded_value": 16.416000000000004,
+      "answer_integer": 16,
+      "unit": "g",
+      "unit_scale_power10": 0,
+      "rounding": "nearest integer; exact halves away from zero",
+      "parent_candidate": "REV11-15-XI-031",
+      "verification_basis": "Recomputed from the recorded givens; option-independent integer presentation."
+    }
+  },
+  {
+    "number": 25,
+    "id": "JEE-CHEM-0032",
+    "section": "B",
+    "answer": 43,
+    "answer_text": "43",
+    "explanation": "Mg+2H⁺ gives one H₂ per Mg; 2Al+6H⁺ gives three H₂. Thus 24x+27y=2.52 and x+1.5y=0.12. Solve y=(24×0.12−2.52)/9=0.04 mol. Al percentage=27y/2.52×100=42.85714%.",
+    "numerical_scaling": {
+      "question": "A 2.52 g mixture of Mg and Al dissolves completely in excess dilute HCl, releasing 0.12 mol H₂. Assume no oxide coating or impurities. Use Mg=24 and Al=27 g mol⁻¹. What percentage of the original mass was Al? Enter the numerical value in the requested units, rounded to the nearest integer.",
+      "unrounded_value": 42.857142857142854,
+      "answer_integer": 43,
+      "unit": "%",
+      "unit_scale_power10": 0,
+      "rounding": "nearest integer; exact halves away from zero",
+      "parent_candidate": "metal-mixture-02",
+      "verification_basis": "Recomputed from the recorded givens; option-independent integer presentation."
+    }
+  }
+]

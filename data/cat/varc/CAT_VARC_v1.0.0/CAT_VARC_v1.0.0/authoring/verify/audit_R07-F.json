@@ -1,0 +1,106 @@
+[
+ {
+  "id": "R07-F-02-1",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation says 'The key captures ...' (house-style word in student-facing text).",
+  "fix": "Changed to 'The correct answer captures ...'.",
+  "changed": true
+ },
+ {
+  "id": "R07-F-02-4",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation says 'Both halves of the key are supported.'",
+  "fix": "Changed to 'the correct answer'.",
+  "changed": true
+ },
+ {
+  "id": "R07-F-06-4",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation says 'The key joins power, ambivalence ...'.",
+  "fix": "Changed to 'The correct answer joins ...'.",
+  "changed": true
+ },
+ {
+  "id": "R07-F-04-1",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Misconception quotes 'fragile, mystical', which does not match the passage ('fragile, almost mystical').",
+  "fix": "Quotation corrected to match the passage exactly.",
+  "changed": true
+ },
+ {
+  "id": "R07-F-03-4",
+  "category": "E1",
+  "severity": "major",
+  "finding": "Key ('people who often call their pleasures guilty are found to rate those works as highly as approved ones') was only a correlation; it did not show the phrase itself eroding the ranking, while the explanation claimed a causal effect. A strong candidate could say such people simply rate the works highly despite the phrase, so the weakener was soft.",
+  "fix": "Rewrote key as causal: 'Habitually confessing a pleasure as guilty is found, over time, to make people rate that work as highly as the approved ones.' Explanation now matches.",
+  "changed": true
+ },
+ {
+  "id": "R07-F-06-1",
+  "category": "E2",
+  "severity": "major",
+  "finding": "Distractor 'are found chiefly in objects and creatures that genuinely need to be cared for' was arguably true: paragraph 2 says the cute features are those of the very young, who do need care; the defence addressed the response, not where the features are found.",
+  "fix": "Rewrote distractor to 'appeal to us only when they belong to creatures that genuinely need care', which the cartoon kettle in paragraph 2 plainly contradicts; existing defence now fits.",
+  "changed": true
+ },
+ {
+  "id": "R07-F-08-2",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Blind solver S2 flag: 'under her name' in the correct option is ambiguous between the reader and the author (both solvers still reached the key).",
+  "fix": "Reworded to 'alters several chapters of the author's novel and circulates them, under the author's name, as the original text'.",
+  "changed": true
+ },
+ {
+  "id": "R07-F-08-4",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Defence of the 'more hostile to newcomers' option misattributed 'often' to the severity (in the passage 'often' modifies developing authorities) and did not acknowledge that paragraph 4 does compare fan severity with authors.",
+  "fix": "Rewrote defence: the passage says newcomers only 'can be' treated with a severity few authors would show, an occasional case not a verdict on fan communities as a whole; the irony concerns the source of the impulse.",
+  "changed": true
+ },
+ {
+  "id": "R07-F-07-2",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Correct option (121 chars) much longer and more qualified than every distractor (max 92), a length cue.",
+  "fix": "Lengthened the 'so heated' distractor ('... though both still have reasons to give'); its defence still holds.",
+  "changed": true
+ },
+ {
+  "id": "R07-F-07-4",
+  "category": "E2",
+  "severity": "minor",
+  "finding": "Correct option noticeably longer than the distractors (129 vs 107 chars).",
+  "fix": "Lengthened the 'invoke the maxim to avoid an argument' distractor slightly.",
+  "changed": true
+ },
+ {
+  "id": "R07-F-06-4",
+  "category": "E4",
+  "severity": "minor",
+  "finding": "Labelled Difficult, but distractors (moral failing, pure biology, trivial and agreed) are fairly easy to eliminate; closer to upper Medium.",
+  "fix": "none: label kept to preserve the exact Easy/Medium/Difficult quota; the item is still a whole-passage main-idea question on a Difficult-tagged scale.",
+  "changed": false
+ },
+ {
+  "id": "R07-F-04-3",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "EXCEPT key ('can never again amuse anyone who has studied it') is contradicted only indirectly: paragraph 3 says analysis does not undo the laugh already had, not that the joke can amuse again.",
+  "fix": "none: paragraph 2 'The joke is not killed because it has been examined' directly contradicts the claim that examination destroys a joke, and the three other options are each explicitly stated; the key is the only inconsistent option.",
+  "changed": false
+ },
+ {
+  "id": "R07-F-08-2",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Blind-solver note reviewed: both solvers reached the key; the only issue raised was the pronoun ambiguity.",
+  "fix": "none beyond the rewording logged above.",
+  "changed": false
+ }
+]

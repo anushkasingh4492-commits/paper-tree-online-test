@@ -1,0 +1,48 @@
+{
+ "unit_number": 14,
+ "unit_name": "Trigonometry",
+ "branch": "Trigonometry",
+ "count": 160,
+ "draft_files": [
+  "drafts/u14_a.py",
+  "drafts/u14_b.py",
+  "drafts/u14_c.py"
+ ],
+ "alias_groups": {
+  "ALIAS-ERR-U14-A-01": [
+   "U14-A-005",
+   "U14-A-023",
+   "U14-A-024"
+  ],
+  "ALIAS-ERR-U14-C-01": [
+   "U14-C-016",
+   "U14-C-037"
+  ],
+  "ALIAS-ERR-U14-C-02": [
+   "U14-C-020",
+   "U14-C-044"
+  ]
+ },
+ "numerical_selection": [
+  "U14-A-043",
+  "U14-B-045",
+  "U14-C-040",
+  "U14-A-044",
+  "U14-B-046",
+  "U14-C-044",
+  "U14-A-048",
+  "U14-B-050",
+  "U14-C-049",
+  "U14-A-054",
+  "U14-A-020",
+  "U14-B-020",
+  "U14-C-020",
+  "U14-A-024",
+  "U14-B-021",
+  "U14-C-025",
+  "U14-A-026",
+  "U14-A-007",
+  "U14-B-003",
+  "U14-C-010"
+ ]
+}

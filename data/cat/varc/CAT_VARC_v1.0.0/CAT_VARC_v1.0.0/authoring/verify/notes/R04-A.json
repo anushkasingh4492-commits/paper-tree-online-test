@@ -1,0 +1,22 @@
+[
+ {
+  "id": "R04-A-08-4",
+  "kind": "flag",
+  "solvers": {
+   "S1": {
+    "answer": "B",
+    "key": "B",
+    "working": "P3 a generation later the balance shifts; P5 provisional arrangement, worst is silence permanent by default.",
+    "alternative": "",
+    "issue": ""
+   },
+   "S2": {
+    "answer": "D",
+    "key": "D",
+    "working": "Thirty years on, institutions settled, combatants old: the case P3 says may look different; silence provisional.",
+    "alternative": "",
+    "issue": "Author is hedged (\"may look quite different\", \"may reasonably ask\"); \"mistaken\" in D is somewhat strong, but no other option is close."
+   }
+  }
+ }
+]

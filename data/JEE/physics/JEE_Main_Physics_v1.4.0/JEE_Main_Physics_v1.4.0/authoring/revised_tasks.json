@@ -1,0 +1,226 @@
+[
+  {
+    "id": "JEE27-PHY-0095",
+    "candidate_id": "REV12-PHY-0095",
+    "stem": "A particle starts at (0,0) with velocity (10 i + 20 j) m/s between two smooth vertical walls at x=10 m and x=-2 m. The coefficient of restitution is 0.5 at the right wall and 0.4 at the left wall; each collision changes only the horizontal velocity. Both walls extend above all impacts. Gravity is 10 m/s² downward, the floor is y=0, and air resistance is negligible.",
+    "request": "Find the x-coordinate of its first subsequent impact with the floor.",
+    "value": -0.8,
+    "unit": "m",
+    "wrong": [
+      -5,
+      1.2,
+      -2
+    ],
+    "explanation": "Vertical motion is unaffected by the walls: y=20t-5t², so the floor is reached at t=4 s. The right-wall collision occurs at t=1 s and changes vx from +10 to -5 m/s. Reaching the left wall then takes 12/5=2.4 s, so the second collision is at t=3.4 s, when y=10.2 m>0. It changes vx to +2 m/s. In the remaining 0.6 s, x=-2+2(0.6)=-0.8 m. The particle cannot reach the right wall again before landing.",
+    "reason": "Resolve two successive impact regimes, check both occur before landing, and combine the horizontal timeline with the independent vertical flight time.",
+    "family": null
+  },
+  {
+    "id": "JEE27-PHY-0235",
+    "candidate_id": "REV12-PHY-0235",
+    "stem": "An incline fixed in an elevator has sinθ=0.6 and cosθ=0.8. The elevator accelerates upward at 2 m/s²; take g=10 m/s². A 2 kg block is acted on by a force P whose component up the incline is 0.8P and whose component away from it is 0.6P. Starting from a value that keeps the block in static equilibrium, P is increased quasistatically until upward slip is just impending. No other applied force holds the block. It is then given an arbitrarily small upward nudge. P stays at that threshold during the subsequent upward slide. The kinetic friction coefficient is 0.20, and contact with the incline is maintained. After sliding 3.0 m relative to the elevator, its relative speed is 2.34482021 m/s.",
+    "request": "Find the coefficient of static friction.",
+    "value": 0.5,
+    "unit": "",
+    "wrong": [
+      0.3,
+      0.4,
+      0.6
+    ],
+    "explanation": "The measured motion gives a=v²/(2d)=0.9163636364 m/s². The normal reaction is N=19.2-0.6P. Kinetic motion requires 2a=0.8P-14.4-0.20(19.2-0.6P), hence P=21.81818182 N and N=6.109090909 N>0. At the static threshold, 0.8P=14.4+μsN, giving μs=0.50. Substitution in the kinetic equation reproduces the measured speed.",
+    "reason": "Infer acceleration from a measurement, solve the force-dependent normal reaction during kinetic sliding, then reverse the distinct static threshold condition.",
+    "family": null
+  },
+  {
+    "id": "JEE27-PHY-0240",
+    "candidate_id": "REV12-PHY-0240",
+    "stem": "An incline fixed in an elevator has sinθ=0.6 and cosθ=0.8. The elevator accelerates upward at 2 m/s²; take g=10 m/s². A 2 kg block is acted on by a force P whose component up the incline is 0.8P and whose component away from it is 0.6P. Starting from a value that keeps the block in static equilibrium, P is increased quasistatically until upward slip is just impending. No other applied force holds the block. It is then given an arbitrarily small upward nudge. P stays at that threshold during the subsequent upward slide. The kinetic friction coefficient is 0.20, and contact with the incline is maintained. The static friction coefficient is 0.50. After the block has slid 3.0 m relative to the elevator, P is switched off instantaneously.",
+    "request": "How much farther up the incline does it travel before first coming to rest relative to the elevator?",
+    "value": 0.3014354066985644,
+    "unit": "m",
+    "wrong": [
+      0.6029,
+      0.384,
+      1.0
+    ],
+    "explanation": "At the upward-slip threshold, 0.8P=14.4+0.50(19.2-0.6P), giving P=21.81818182 N and N=6.109090909 N. Kinetic friction gives a=0.9163636364 m/s², so v²=2a(3)=5.498181818 m²/s². After P is removed, N rises to 19.2 N and the downward acceleration magnitude is 12(0.6+0.20×0.8)=9.12 m/s². The additional upward distance is v²/(2×9.12)=0.3014354067 m. This is the first stopping point; later reversal is not part of the question.",
+    "reason": "Use a force-dependent static threshold, transition to kinetic friction, and recompute the normal force and deceleration after the applied force is removed.",
+    "family": null
+  },
+  {
+    "id": "JEE27-PHY-0260",
+    "candidate_id": "REV12-PHY-0260",
+    "stem": "Two blocks are connected by a light inextensible string over a smooth massless pulley. Block A (2 kg) is on a rough 30° incline, with both static and kinetic friction coefficients 0.20. Block B (4 kg) is on a smooth incline with sinβ=0.8. Both inclines descend away from the pulley. The system is released from rest. After each block has moved 2.0 m, the string is cut without imparting an impulse. The inclines are long enough; take g=10 m/s².",
+    "request": "Find the total distance A travels up its incline from its initial position to its first stopping point after the cut.",
+    "value": 2.917793547845393,
+    "unit": "m",
+    "wrong": [
+      2.5,
+      3.5,
+      4.0
+    ],
+    "explanation": "The downward drive on B exceeds the weight component plus limiting friction on A, so B descends and A ascends. During connected motion, 6a=32-10-2√3, giving a=3.089316397 m/s² and v²=2a(2)=12.35726559 m²/s². After cutting, A still moves upward, so both gravity and kinetic friction act downward; its deceleration is 10(0.5+0.20 cos30°). The extra ascent is v²/[20(0.5+0.20 cos30°)], and adding the first 2 m gives 2.917793548 m.",
+    "reason": "Determine the admissible initial direction, solve the coupled motion with friction, then change to the independent post-cut stopping regime.",
+    "family": null
+  },
+  {
+    "id": "JEE27-PHY-0349",
+    "candidate_id": "REV12-PHY-0349",
+    "stem": "A particle of mass 2 kg moving at 10 m/s along +x collides elastically with an identical particle initially at rest on a smooth horizontal plane. The incident particle emerges at 30° to +x, with positive x and y velocity components. The second particle enters, without energy loss, a rough straight incline aligned with its outgoing direction. On the incline sinθ=0.6, cosθ=0.8 and the kinetic friction coefficient is 0.25. After travelling 1.0 m up the incline it meets an initially uncompressed light spring of force constant 100 N/m, fixed farther up the incline. Friction acts throughout the ascent and compression. Take g=10 m/s².",
+    "request": "Find the first maximum compression of the spring.",
+    "value": 0.2934313619501854,
+    "unit": "m",
+    "wrong": [
+      0.4243,
+      0.18,
+      0.7071
+    ],
+    "explanation": "For an elastic equal-mass collision with one particle initially stationary, the outgoing velocities are perpendicular. Resolving momentum gives the second speed 10 sin30°=5 m/s, hence its kinetic energy is 25 J. Gravity and friction oppose ascent with constant force 2×10(0.6+0.25×0.8)=16 N. It reaches the spring with 25-16=9 J. During compression, 50x²+16x=9. The sole positive root is x=0.293431362 m.",
+    "reason": "Use vector momentum and elastic energy to infer the outgoing speed, include rough-incline work before and during compression, and select the physical root of the spring-energy equation.",
+    "family": null
+  },
+  {
+    "id": "JEE27-PHY-0923",
+    "candidate_id": "REV12-PHY-0923",
+    "stem": "A pendulum of length 2.0 m is in a vehicle with constant unknown horizontal acceleration a>0 and constant unknown upward acceleration b>0. Its small-oscillation period about the tilted equilibrium is 1.777153175 s. In a second trial the upward acceleration is set to zero, the horizontal acceleration stays a, and the period is 1.879110698 s. Take g=10 m/s². The string is light and inextensible; oscillations are small about each equilibrium.",
+    "request": "Find the upward acceleration b in the first trial.",
+    "value": 5,
+    "unit": "m/s²",
+    "wrong": [
+      2,
+      10,
+      15
+    ],
+    "explanation": "Each period gives the magnitude of effective gravity, ge=4π²L/T². The two magnitudes are 25 m/s² and √500 m/s². The second trial gives a²+10²=500, hence a=20 m/s². The first then gives (10+b)²+20²=25². Since b>0, 10+b=15, so b=5 m/s².",
+    "reason": "Invert two period measurements, separate horizontal and vertical components of effective gravity, and select the branch consistent with upward acceleration.",
+    "family": null
+  },
+  {
+    "id": "JEE27-PHY-0972",
+    "candidate_id": "REV12-PHY-0972",
+    "stem": "At 300 K, a closed-end resonance tube has first and second resonance lengths 16.0 cm and 50.0 cm with a tuning fork. An independent measurement gives sound speed 340 m/s at this temperature. A second fork makes 50 beats per second with the original fork. In air at an unknown temperature between 400 K and 500 K, the first resonance length with the second fork is 18.0 cm. The end correction and tube dimensions are unchanged; sound speed is proportional to the square root of absolute temperature. The two fork frequencies remain fixed during these trials.",
+    "request": "Find the unknown air temperature.",
+    "value": 453.4359861591696,
+    "unit": "K",
+    "wrong": [
+      425,
+      475,
+      490
+    ],
+    "explanation": "At 300 K, λ=2(0.50-0.16)=0.68 m and f=340/0.68=500 Hz. The end correction is (50-3×16)/2=1 cm. Beats allow second-fork frequencies 450 or 550 Hz. The hot first resonance implies λhot=4(0.18+0.01)=0.76 m, giving speeds 342 or 418 m/s. The corresponding temperatures are 300(342/340)²=303.5398 K or 300(418/340)²=453.4359862 K. Only the latter lies in the specified interval.",
+    "reason": "Calibrate the end correction and original frequency, retain both beat-frequency branches, then use thermal scaling and the physical interval to resolve the ambiguity.",
+    "family": null
+  },
+  {
+    "id": "JEE27-PHY-1203",
+    "candidate_id": "REV12-PHY-1203",
+    "stem": "A uniform 100 cm metre-bridge wire has total resistance 8.0 Ω. An unknown nonnegative contact resistance e lies only at its left end, before the uniform wire begins. With unknown resistance X in the left gap and 14.0 Ω in the right gap, balance occurs 30.0 cm from the left end of the uniform wire. Interchanging the gap resistances gives balance at 50.0 cm. The contact resistance remains at the same physical end. Temperature is unchanged. The original gap connection is restored and the contact resistance is then removed.",
+    "request": "By how many centimetres does the balance point move to the right of its original 30.0 cm position?",
+    "value": 11.666666666666664,
+    "unit": "cm",
+    "wrong": [
+      5,
+      8,
+      20
+    ],
+    "explanation": "The two balance conditions give X/14=(e+2.4)/5.6 and 14/X=(e+4)/4. Multiplying yields (e+2.4)(e+4)=22.4, or e²+6.4e-12.8=0. The roots are 1.6 Ω and -8 Ω; only e=1.6 Ω is allowed. Thus X=10 Ω. With e removed, the original connection balances at 100X/(X+14)=41.6667 cm. The rightward shift is 11.6667 cm.",
+    "reason": "Solve two nonreciprocal measured wire ratios for a fixed-end parasitic resistance, reject the negative root, and predict the third configuration.",
+    "family": null
+  },
+  {
+    "id": "JEE27-PHY-1276",
+    "candidate_id": "REV12-PHY-1276",
+    "stem": "Two unknown positive resistors R1 and R2 form a series divider across an ideal 18.0 V source, with R1 above R2 and the lower end grounded. A single voltmeter of resistance 6.0 kΩ is first connected across R2 and reads 9.0 V. It is then disconnected from R2 and connected across R1, where it reads 4.5 V. All components are ohmic and the resistors are unchanged between trials.",
+    "request": "Find the voltage across R2 when the voltmeter is removed completely.",
+    "value": 12,
+    "unit": "V",
+    "wrong": [
+      9,
+      10.5,
+      13.5
+    ],
+    "explanation": "Write x=R1 and y=R2 in kΩ. In the first trial the loaded lower arm is 6y/(6+y), and a 9 V reading implies x=6y/(6+y). In the second trial the loaded upper arm is 6x/(6+x); its 4.5 V reading gives y=3[6x/(6+x)]. Combining the two positive-resistance conditions gives x=3 kΩ and y=6 kΩ. With the meter removed the lower-arm voltage is 18y/(x+y)=12 V.",
+    "reason": "Account for two different meter-loading configurations, jointly infer two unknown resistors, and recover the unmeasured unloaded voltage.",
+    "family": null
+  },
+  {
+    "id": "JEE27-PHY-1555",
+    "candidate_id": "REV12-PHY-1555",
+    "stem": "A conducting rod of length 0.50 m moves to the right on horizontal rails in an unknown uniform perpendicular magnetic field B. The total circuit resistance is initially 4.0 Ω, inductance is negligible, and a constant kinetic friction force opposes the motion. A rightward external force of 3.0 N maintains a steady speed of 4.0 m/s; a force of 5.0 N maintains 8.0 m/s. In a third steady-motion trial the total resistance is changed to 8.0 Ω and the applied force is 2.0 N. The magnetic field and kinetic friction force are unchanged, with sufficient rail length for steady motion.",
+    "request": "Find the electrical power dissipated in the complete circuit during the third trial.",
+    "value": 4,
+    "unit": "W",
+    "wrong": [
+      8,
+      2,
+      16
+    ],
+    "explanation": "At steady speed, F=f+B²L²v/R. Subtracting the first two trials gives B²L²/4=(5-3)/(8-4)=0.5 N s/m, so B²L²=2 and f=1 N. In the third trial the drag coefficient is 2/8=0.25 N s/m, so v=(2-1)/0.25=4 m/s. Electrical dissipation is magnetic-drag power (F-f)v=1×4=4 W; friction dissipates the other 4 W supplied mechanically.",
+    "reason": "Infer magnetic drag and kinetic friction separately from two steady states, update the circuit loading, and distinguish electrical dissipation from total mechanical power.",
+    "family": "GLOBAL-ROD-MAGNETIC-DRAG"
+  },
+  {
+    "id": "JEE27-PHY-1872",
+    "candidate_id": "REV12-PHY-1872",
+    "stem": "A nucleus moving along +x breaks into two products of masses 2u and 4u. Immediately after breakup, the 2u product travels along +x with laboratory kinetic energy 3.373498664 MeV, while the 4u product travels along -x with laboratory kinetic energy 0.751001336 MeV. There is no external impulse. For kinetic-energy and momentum calculations, take the parent mass as 6u; the small mass defect is represented only by the released internal energy Q. Use u=1.66×10⁻²⁷ kg and 1 MeV=1.60×10⁻¹³ J. All speeds are nonrelativistic.",
+    "request": "Find the released internal energy Q.",
+    "value": 4,
+    "unit": "MeV",
+    "wrong": [
+      4.1245,
+      2.622497327986629,
+      3.5
+    ],
+    "explanation": "Using the stated directions, v1=+√(2K1/m1)=18032096.32 m/s and v2=-√(2K2/m2)=-6016048.161 m/s. Momentum conservation gives the parent velocity (m1v1+m2v2)/(6u)=2.0000×10⁶ m/s. Its initial kinetic energy is 0.1245 MeV. The total final laboratory kinetic energy is 4.1245 MeV, so Q=4.1245-0.1245=4.0000 MeV. Adding the product energies alone incorrectly includes the parent’s translational energy.",
+    "reason": "Convert measured energies to signed momenta, infer the unmeasured parent motion, and subtract its laboratory kinetic energy to isolate the internal energy release.",
+    "family": null
+  },
+  {
+    "id": "JEE27-PHY-1994",
+    "candidate_id": "REV12-PHY-1994",
+    "stem": "A source feeds node X through an unknown resistor R. A 100 Ω load joins X to ground. An ideal upper diode conducts from X into a +6.0 V reference, and an ideal lower diode conducts from a +2.0 V reference into X. With both diodes off, a source setting of 6.0 V gives X=3.0 V. The source then repeatedly spends 40% of each cycle at 16.0 V and 60% at 0 V. There is no capacitance or inductance, so the node reaches its static state immediately. The references can absorb or deliver current, and the zero-volt source can absorb current.",
+    "request": "Find the mean net power absorbed by the pair of reference supplies, counting delivered power as negative.",
+    "value": 0.048,
+    "unit": "W",
+    "wrong": [
+      0.144,
+      0.096,
+      0.08
+    ],
+    "explanation": "The off-state divider fixes R=100 Ω. At a 16 V source, the free divider value 8 V exceeds 6 V, so the upper diode clamps X to 6 V. Its reference absorbs current (16-6)/100-6/100=0.04 A, or 0.24 W. At a zero-volt source, the lower diode clamps X to 2 V and supplies both load and source-resistor currents: 2/100+2/100=0.04 A, delivering 0.08 W. The average net absorption is 0.40(0.24)-0.60(0.08)=0.048 W.",
+    "reason": "Calibrate an unknown resistance, determine two different diode states, apply node-current balances with opposite power signs, and average over the drive cycle.",
+    "family": null
+  },
+  {
+    "id": "JEE27-PHY-2010",
+    "candidate_id": "REV12-PHY-2010",
+    "stem": "An adjustable source feeds node X through an unknown resistor R. An unknown positive load resistance L joins X to ground. An ideal upper diode conducts from X into +8.0 V, and an ideal lower diode conducts from +3.0 V into X. With both diodes off, a source setting of 10.0 V gives X=4.0 V. The source is then alternated between 24.0 V for one-third of each cycle and 0 V for two-thirds. The measured mean power dissipated in R is 0.3044444444 W. There is no capacitance or inductance. The references and source can absorb or deliver current as required.",
+    "request": "Find the load resistance L.",
+    "value": 200,
+    "unit": "Ω",
+    "wrong": [
+      100,
+      150,
+      300
+    ],
+    "explanation": "Off-state calibration gives R/L=10/4-1=1.5. The free divider values at 24 V and 0 V are 9.6 V and 0 V; hence X is clamped to 8 V and 3 V respectively. The voltage magnitudes across R are 16 V and 3 V. Its mean power is [(1/3)16²+(2/3)3²]/R=274/(3R). The measurement gives R=300 Ω and L=R/1.5=200 Ω. Both diode states are self-consistent.",
+    "reason": "Combine an unknown divider ratio with two clipping regimes and a measured mean dissipation to infer two circuit resistances.",
+    "family": null
+  },
+  {
+    "id": "JEE27-PHY-2103",
+    "candidate_id": "REV12-PHY-2103",
+    "stem": "A vernier has 20 divisions equal to 19 main-scale divisions; one main-scale division is 1 mm. With its jaws closed, the vernier zero lies to the right and division 2 coincides. A hollow cylindrical tube gives outer-diameter main-scale reading 20 mm with division 6 coinciding, and inner-diameter main-scale reading 12 mm with division 10 coinciding. Its mass and length are exact. After subtracting the measured zero error, a possible residual zero offset of at most one least count contributes the SAME additive error to both corrected diameters. Each diameter also has an independent reading error of at most half a least count. Use first-order maximum-error propagation and the tube’s material volume, excluding the bore.",
+    "request": "Find the maximum percentage uncertainty in the inferred material density.",
+    "value": 0.9477741072833099,
+    "unit": "%",
+    "wrong": [
+      1.2821,
+      0.6409,
+      1.5894
+    ],
+    "explanation": "The least count is 1-19/20=0.05 mm and the positive zero error is 0.10 mm. Corrected diameters are D=20.2 mm and d=12.4 mm. Density is proportional to 1/(D²-d²). Write the diameter errors as z+εD and z+εd, with |z|≤0.05 mm and |εD|,|εd|≤0.025 mm. The first-order area error is 2(D-d)z+2DεD-2dεd. Its maximum magnitude divided by D²-d² is 2(0.05)/(D+d)+2(0.025)/(D-d). Thus the maximum density uncertainty is 0.9477741073%. The common offset must not be counted as two independent errors.",
+    "reason": "Read and correct two instrument measurements, use the hollow-cylinder geometry, and propagate a common systematic error separately from independent reading errors.",
+    "family": null
+  }
+]

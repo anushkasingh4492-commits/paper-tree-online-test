@@ -1,0 +1,56 @@
+[
+  {
+    "id": "JEE27-PHY-0620",
+    "water_mass": 0.3,
+    "C": 1540.0000013466647,
+    "solid_specific_heat": 2000.0000009619027,
+    "final_temperature": 13.750000004830985,
+    "requested_outcome": 13.750000004830985,
+    "status": "PASS"
+  },
+  {
+    "id": "JEE27-PHY-0623",
+    "water_mass": 0.2,
+    "C": 560.0000005083331,
+    "solid_specific_heat": 2000.0000007261901,
+    "final_temperature": 15.652173917573583,
+    "requested_outcome": 0.12500000004538686,
+    "status": "PASS"
+  },
+  {
+    "id": "JEE27-PHY-0664",
+    "water_mass": 0.3,
+    "C": 1540.0000013466647,
+    "solid_specific_heat": 2000.0000009619027,
+    "final_temperature": 13.750000004830985,
+    "requested_outcome": 0.20833333343353158,
+    "status": "PASS"
+  },
+  {
+    "id": "JEE27-PHY-0676",
+    "water_mass": 0.2,
+    "C": 560.0000005083331,
+    "solid_specific_heat": 2000.0000007261901,
+    "final_temperature": 15.652173917573583,
+    "requested_outcome": 16100.00000508333,
+    "status": "PASS"
+  },
+  {
+    "id": "JEE27-PHY-0679",
+    "water_mass": 0.3,
+    "C": 1540.0000013466647,
+    "solid_specific_heat": 2000.0000009619027,
+    "final_temperature": 13.750000004830985,
+    "requested_outcome": 31360.000013466648,
+    "status": "PASS"
+  },
+  {
+    "id": "JEE27-PHY-0684",
+    "water_mass": 0.2,
+    "C": 560.0000005083331,
+    "solid_specific_heat": 2000.0000007261901,
+    "final_temperature": 15.652173917573583,
+    "requested_outcome": 15.652173917573583,
+    "status": "PASS"
+  }
+]

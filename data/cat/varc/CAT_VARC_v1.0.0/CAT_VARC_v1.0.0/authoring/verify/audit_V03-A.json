@@ -1,0 +1,42 @@
+[
+ {
+  "id": "V03-A-002",
+  "category": "E3",
+  "severity": "minor",
+  "finding": "Explanation quotes 'this the spacing effect', a fragment that reads as a misquotation of 'Psychologists call this the spacing effect'.",
+  "fix": "Quotation changed to 'call this the spacing effect', an exact and readable substring.",
+  "changed": true
+ },
+ {
+  "id": "V03-A-015",
+  "category": "E5",
+  "severity": "minor",
+  "finding": "Explanation claims 'by contrast' in the odd sentence has nothing to contrast with; in fact it contrasts writing with oral tradition, so the stated reason is inaccurate (the key itself is sound).",
+  "fix": "Explanation rewritten: 'by contrast' sets writing against oral tradition, but on survival, a point the paragraph never raises.",
+  "changed": true
+ },
+ {
+  "id": "V03-A-006",
+  "category": "E4",
+  "severity": "minor",
+  "finding": "Odd sentence (light hiding the stars) is a fairly visible change of victim; Medium is at the easy edge.",
+  "fix": "none: shares the light-pollution theme and the 'also' connective, Medium defensible; exact quota kept.",
+  "changed": false
+ },
+ {
+  "id": "V03-A-004",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Checked whether the 'Open voting was also slow' sentence could attach after sentence 2 as a second drawback; it would break the reference of 'that possibility' in the secret-ballot sentence and cannot follow sentence 1 because 'also' needs a prior drawback.",
+  "fix": "none: key unique on inspection.",
+  "changed": false
+ },
+ {
+  "id": "(file)",
+  "category": "E1",
+  "severity": "minor",
+  "finding": "Blind-solver notes file verify/notes/V03-A.json is empty (no disagreements or flags). All 25 items solved cold; each key unique, removal of any other sentence breaks a backward reference or the conclusion. No facts attributed to named persons or studies; no near-duplicates.",
+  "fix": "none: no solver notes to dismiss.",
+  "changed": false
+ }
+]

@@ -1,0 +1,2001 @@
+{
+ "method": "Every item whose stem, options or numerical alternate changed was rebuilt and sent, with options in released order but no key, to fresh verifier agents who recomputed it with their own code.",
+ "items": 132,
+ "agree": 132,
+ "numerical_checked": 27,
+ "first_pass_issues": [
+  {
+   "id": "JEE-MATH-U02-152",
+   "issue": "No option equals the solution set: at k=5 the equation is (x-5)^2=0, double root 5, which satisfies 'less than 5 (possibly equal)', so k=5 must be included; intended key A (-inf,4] omits it. Fix: say 'strictly less than 5' (then answer is (-inf,4], option A).",
+   "choice": null
+  },
+  {
+   "id": "JEE-MATH-U02-160",
+   "issue": "Wording 'open interval (1, 5) (possibly equal)' is ambiguous: 'possibly equal' is meant for the roots, but can be read as allowing endpoints, which would give [2, 5/2] (no option). Suggest 'both roots (not necessarily distinct) lie in (1, 5)'.",
+   "choice": "D"
+  }
+ ],
+ "first_pass_resolution": "Two U02-C stems were flagged as ambiguous ('possibly equal'). The editor reworded them and a third stem with the same phrase; all three were re-verified in pack V101-7 with no issue.",
+ "results": [
+  {
+   "id": "JEE-MATH-U01-053",
+   "local_id": "U01-B-006",
+   "key": "A",
+   "verifier_choice": "A",
+   "matching_options": [
+    "A"
+   ],
+   "agree": true,
+   "numerical_answer": 9,
+   "verifier_numerical": 9,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U01-134",
+   "local_id": "U01-C-040",
+   "key": "B",
+   "verifier_choice": "B",
+   "matching_options": [
+    "B"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U02-008",
+   "local_id": "U02-A-008",
+   "key": "C",
+   "verifier_choice": "C",
+   "matching_options": [
+    "C"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U02-052",
+   "local_id": "U02-A-052",
+   "key": "A",
+   "verifier_choice": "A",
+   "matching_options": [
+    "A"
+   ],
+   "agree": true,
+   "numerical_answer": 90,
+   "verifier_numerical": 90,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U02-091",
+   "local_id": "U02-B-036",
+   "key": "B",
+   "verifier_choice": "B",
+   "matching_options": [
+    "B"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U02-120",
+   "local_id": "U02-C-010",
+   "key": "C",
+   "verifier_choice": "C",
+   "matching_options": [
+    "C"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U02-133",
+   "local_id": "U02-C-023",
+   "key": "B",
+   "verifier_choice": "B",
+   "matching_options": [
+    "B"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U02-141",
+   "local_id": "U02-C-031",
+   "key": "A",
+   "verifier_choice": "A",
+   "matching_options": [
+    "A"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U02-142",
+   "local_id": "U02-C-032",
+   "key": "C",
+   "verifier_choice": "C",
+   "matching_options": [
+    "C"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U02-152",
+   "local_id": "U02-C-042",
+   "key": "B",
+   "verifier_choice": "B",
+   "matching_options": [
+    "B"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U02-160",
+   "local_id": "U02-C-050",
+   "key": "D",
+   "verifier_choice": "D",
+   "matching_options": [
+    "D"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U02-168",
+   "local_id": "U02-D-003",
+   "key": "C",
+   "verifier_choice": "C",
+   "matching_options": [
+    "C"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U02-216",
+   "local_id": "U02-D-051",
+   "key": "C",
+   "verifier_choice": "C",
+   "matching_options": [
+    "C"
+   ],
+   "agree": true,
+   "numerical_answer": 5,
+   "verifier_numerical": 5,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U03-008",
+   "local_id": "U03-A-008",
+   "key": "B",
+   "verifier_choice": "B",
+   "matching_options": [
+    "B"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U03-019",
+   "local_id": "U03-A-019",
+   "key": "B",
+   "verifier_choice": "B",
+   "matching_options": [
+    "B"
+   ],
+   "agree": true,
+   "numerical_answer": 12,
+   "verifier_numerical": 12,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U03-021",
+   "local_id": "U03-A-021",
+   "key": "A",
+   "verifier_choice": "A",
+   "matching_options": [
+    "A"
+   ],
+   "agree": true,
+   "numerical_answer": 24,
+   "verifier_numerical": 24,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U03-141",
+   "local_id": "U03-C-031",
+   "key": "C",
+   "verifier_choice": "C",
+   "matching_options": [
+    "C"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U03-154",
+   "local_id": "U03-C-044",
+   "key": "B",
+   "verifier_choice": "B",
+   "matching_options": [
+    "B"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U03-213",
+   "local_id": "U03-D-048",
+   "key": "C",
+   "verifier_choice": "C",
+   "matching_options": [
+    "C"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U03-219",
+   "local_id": "U03-D-054",
+   "key": "D",
+   "verifier_choice": "D",
+   "matching_options": [
+    "D"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U04-004",
+   "local_id": "U04-A-004",
+   "key": "D",
+   "verifier_choice": "D",
+   "matching_options": [
+    "D"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U04-012",
+   "local_id": "U04-A-012",
+   "key": "D",
+   "verifier_choice": "D",
+   "matching_options": [
+    "D"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U04-017",
+   "local_id": "U04-A-017",
+   "key": "B",
+   "verifier_choice": "B",
+   "matching_options": [
+    "B"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U04-028",
+   "local_id": "U04-A-028",
+   "key": "C",
+   "verifier_choice": "C",
+   "matching_options": [
+    "C"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U04-035",
+   "local_id": "U04-A-035",
+   "key": "C",
+   "verifier_choice": "C",
+   "matching_options": [
+    "C"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U04-036",
+   "local_id": "U04-A-036",
+   "key": "A",
+   "verifier_choice": "A",
+   "matching_options": [
+    "A"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U04-047",
+   "local_id": "U04-A-047",
+   "key": "B",
+   "verifier_choice": "B",
+   "matching_options": [
+    "B"
+   ],
+   "agree": true,
+   "numerical_answer": 180,
+   "verifier_numerical": 180,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U04-066",
+   "local_id": "U04-B-012",
+   "key": "C",
+   "verifier_choice": "C",
+   "matching_options": [
+    "C"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U04-073",
+   "local_id": "U04-B-019",
+   "key": "C",
+   "verifier_choice": "C",
+   "matching_options": [
+    "C"
+   ],
+   "agree": true,
+   "numerical_answer": 7,
+   "verifier_numerical": 7,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U04-092",
+   "local_id": "U04-B-038",
+   "key": "C",
+   "verifier_choice": "C",
+   "matching_options": [
+    "C"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U04-113",
+   "local_id": "U04-C-006",
+   "key": "B",
+   "verifier_choice": "B",
+   "matching_options": [
+    "B"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U04-116",
+   "local_id": "U04-C-009",
+   "key": "A",
+   "verifier_choice": "A",
+   "matching_options": [
+    "A"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U04-120",
+   "local_id": "U04-C-013",
+   "key": "A",
+   "verifier_choice": "A",
+   "matching_options": [
+    "A"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U04-128",
+   "local_id": "U04-C-021",
+   "key": "A",
+   "verifier_choice": "A",
+   "matching_options": [
+    "A"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U04-140",
+   "local_id": "U04-C-033",
+   "key": "D",
+   "verifier_choice": "D",
+   "matching_options": [
+    "D"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U04-145",
+   "local_id": "U04-C-038",
+   "key": "D",
+   "verifier_choice": "D",
+   "matching_options": [
+    "D"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U04-152",
+   "local_id": "U04-C-045",
+   "key": "A",
+   "verifier_choice": "A",
+   "matching_options": [
+    "A"
+   ],
+   "agree": true,
+   "numerical_answer": 175,
+   "verifier_numerical": 175,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U05-058",
+   "local_id": "U05-B-011",
+   "key": "C",
+   "verifier_choice": "C",
+   "matching_options": [
+    "C"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U05-077",
+   "local_id": "U05-B-030",
+   "key": "B",
+   "verifier_choice": "B",
+   "matching_options": [
+    "B"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U06-011",
+   "local_id": "U06-A-011",
+   "key": "C",
+   "verifier_choice": "C",
+   "matching_options": [
+    "C"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U06-017",
+   "local_id": "U06-A-017",
+   "key": "C",
+   "verifier_choice": "C",
+   "matching_options": [
+    "C"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U06-081",
+   "local_id": "U06-B-021",
+   "key": "B",
+   "verifier_choice": "B",
+   "matching_options": [
+    "B"
+   ],
+   "agree": true,
+   "numerical_answer": 8525,
+   "verifier_numerical": 8525,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U06-114",
+   "local_id": "U06-B-054",
+   "key": "D",
+   "verifier_choice": "D",
+   "matching_options": [
+    "D"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U06-161",
+   "local_id": "U06-C-041",
+   "key": "A",
+   "verifier_choice": "A",
+   "matching_options": [
+    "A"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U07-034",
+   "local_id": "U07-A-034",
+   "key": "D",
+   "verifier_choice": "D",
+   "matching_options": [
+    "D"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U07-093",
+   "local_id": "U07-B-037",
+   "key": "B",
+   "verifier_choice": "B",
+   "matching_options": [
+    "B"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U07-109",
+   "local_id": "U07-C-001",
+   "key": "C",
+   "verifier_choice": "C",
+   "matching_options": [
+    "C"
+   ],
+   "agree": true,
+   "numerical_answer": 5,
+   "verifier_numerical": 5,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U07-110",
+   "local_id": "U07-C-002",
+   "key": "B",
+   "verifier_choice": "B",
+   "matching_options": [
+    "B"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U07-116",
+   "local_id": "U07-C-008",
+   "key": "A",
+   "verifier_choice": "A",
+   "matching_options": [
+    "A"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U07-138",
+   "local_id": "U07-C-030",
+   "key": "D",
+   "verifier_choice": "D",
+   "matching_options": [
+    "D"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U07-140",
+   "local_id": "U07-C-032",
+   "key": "D",
+   "verifier_choice": "D",
+   "matching_options": [
+    "D"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U07-148",
+   "local_id": "U07-C-040",
+   "key": "B",
+   "verifier_choice": "B",
+   "matching_options": [
+    "B"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U07-252",
+   "local_id": "U07-E-030",
+   "key": "D",
+   "verifier_choice": "D",
+   "matching_options": [
+    "D"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U07-263",
+   "local_id": "U07-E-041",
+   "key": "A",
+   "verifier_choice": "A",
+   "matching_options": [
+    "A"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U08-065",
+   "local_id": "U08-B-009",
+   "key": "D",
+   "verifier_choice": "D",
+   "matching_options": [
+    "D"
+   ],
+   "agree": true,
+   "numerical_answer": 3,
+   "verifier_numerical": 3,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U08-087",
+   "local_id": "U08-B-031",
+   "key": "C",
+   "verifier_choice": "C",
+   "matching_options": [
+    "C"
+   ],
+   "agree": true,
+   "numerical_answer": 27,
+   "verifier_numerical": 27,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U08-088",
+   "local_id": "U08-B-032",
+   "key": "A",
+   "verifier_choice": "A",
+   "matching_options": [
+    "A"
+   ],
+   "agree": true,
+   "numerical_answer": 3,
+   "verifier_numerical": 3,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U08-091",
+   "local_id": "U08-B-035",
+   "key": "B",
+   "verifier_choice": "B",
+   "matching_options": [
+    "B"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U08-092",
+   "local_id": "U08-B-036",
+   "key": "D",
+   "verifier_choice": "D",
+   "matching_options": [
+    "D"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U08-105",
+   "local_id": "U08-B-049",
+   "key": "A",
+   "verifier_choice": "A",
+   "matching_options": [
+    "A"
+   ],
+   "agree": true,
+   "numerical_answer": 8,
+   "verifier_numerical": 8,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U08-110",
+   "local_id": "U08-B-054",
+   "key": "D",
+   "verifier_choice": "D",
+   "matching_options": [
+    "D"
+   ],
+   "agree": true,
+   "numerical_answer": 6,
+   "verifier_numerical": 6,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U08-124",
+   "local_id": "U08-C-012",
+   "key": "D",
+   "verifier_choice": "D",
+   "matching_options": [
+    "D"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U08-131",
+   "local_id": "U08-C-019",
+   "key": "A",
+   "verifier_choice": "A",
+   "matching_options": [
+    "A"
+   ],
+   "agree": true,
+   "numerical_answer": 5,
+   "verifier_numerical": 5,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U08-133",
+   "local_id": "U08-C-021",
+   "key": "C",
+   "verifier_choice": "C",
+   "matching_options": [
+    "C"
+   ],
+   "agree": true,
+   "numerical_answer": 5,
+   "verifier_numerical": 5,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U08-139",
+   "local_id": "U08-C-027",
+   "key": "D",
+   "verifier_choice": "D",
+   "matching_options": [
+    "D"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U08-147",
+   "local_id": "U08-C-035",
+   "key": "D",
+   "verifier_choice": "D",
+   "matching_options": [
+    "D"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U08-163",
+   "local_id": "U08-C-051",
+   "key": "D",
+   "verifier_choice": "D",
+   "matching_options": [
+    "D"
+   ],
+   "agree": true,
+   "numerical_answer": 6,
+   "verifier_numerical": 6,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U08-168",
+   "local_id": "U08-C-056",
+   "key": "D",
+   "verifier_choice": "D",
+   "matching_options": [
+    "D"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U08-211",
+   "local_id": "U08-D-043",
+   "key": "D",
+   "verifier_choice": "D",
+   "matching_options": [
+    "D"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U08-246",
+   "local_id": "U08-E-022",
+   "key": "B",
+   "verifier_choice": "B",
+   "matching_options": [
+    "B"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U08-264",
+   "local_id": "U08-E-040",
+   "key": "D",
+   "verifier_choice": "D",
+   "matching_options": [
+    "D"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U09-018",
+   "local_id": "U09-A-018",
+   "key": "C",
+   "verifier_choice": "C",
+   "matching_options": [
+    "C"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "reasoning",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U09-025",
+   "local_id": "U09-A-025",
+   "key": "B",
+   "verifier_choice": "B",
+   "matching_options": [
+    "B"
+   ],
+   "agree": true,
+   "numerical_answer": 20,
+   "verifier_numerical": 20,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U09-027",
+   "local_id": "U09-A-027",
+   "key": "D",
+   "verifier_choice": "D",
+   "matching_options": [
+    "D"
+   ],
+   "agree": true,
+   "numerical_answer": 7,
+   "verifier_numerical": 7,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U09-102",
+   "local_id": "U09-C-008",
+   "key": "C",
+   "verifier_choice": "C",
+   "matching_options": [
+    "C"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U09-127",
+   "local_id": "U09-C-033",
+   "key": "A",
+   "verifier_choice": "A",
+   "matching_options": [
+    "A"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U10-036",
+   "local_id": "U10-A-036",
+   "key": "D",
+   "verifier_choice": "D",
+   "matching_options": [
+    "D"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U10-070",
+   "local_id": "U10-B-020",
+   "key": "A",
+   "verifier_choice": "A",
+   "matching_options": [
+    "A"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U10-083",
+   "local_id": "U10-B-033",
+   "key": "A",
+   "verifier_choice": "A",
+   "matching_options": [
+    "A"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U10-095",
+   "local_id": "U10-B-045",
+   "key": "C",
+   "verifier_choice": "C",
+   "matching_options": [
+    "C"
+   ],
+   "agree": true,
+   "numerical_answer": 61,
+   "verifier_numerical": 61,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U10-110",
+   "local_id": "U10-C-010",
+   "key": "D",
+   "verifier_choice": "D",
+   "matching_options": [
+    "D"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U10-163",
+   "local_id": "U10-D-013",
+   "key": "C",
+   "verifier_choice": "C",
+   "matching_options": [
+    "C"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U10-201",
+   "local_id": "U10-E-001",
+   "key": "A",
+   "verifier_choice": "A",
+   "matching_options": [
+    "A"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U10-207",
+   "local_id": "U10-E-007",
+   "key": "D",
+   "verifier_choice": "D",
+   "matching_options": [
+    "D"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U10-212",
+   "local_id": "U10-E-012",
+   "key": "A",
+   "verifier_choice": "A",
+   "matching_options": [
+    "A"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U10-232",
+   "local_id": "U10-E-032",
+   "key": "B",
+   "verifier_choice": "B",
+   "matching_options": [
+    "B"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U10-237",
+   "local_id": "U10-E-037",
+   "key": "B",
+   "verifier_choice": "B",
+   "matching_options": [
+    "B"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U10-248",
+   "local_id": "U10-E-048",
+   "key": "A",
+   "verifier_choice": "A",
+   "matching_options": [
+    "A"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U10-250",
+   "local_id": "U10-E-050",
+   "key": "C",
+   "verifier_choice": "C",
+   "matching_options": [
+    "C"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U10-252",
+   "local_id": "U10-F-002",
+   "key": "D",
+   "verifier_choice": "D",
+   "matching_options": [
+    "D"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U10-262",
+   "local_id": "U10-F-012",
+   "key": "D",
+   "verifier_choice": "D",
+   "matching_options": [
+    "D"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U10-266",
+   "local_id": "U10-F-016",
+   "key": "D",
+   "verifier_choice": "D",
+   "matching_options": [
+    "D"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U10-270",
+   "local_id": "U10-F-020",
+   "key": "B",
+   "verifier_choice": "B",
+   "matching_options": [
+    "B"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U10-283",
+   "local_id": "U10-F-033",
+   "key": "B",
+   "verifier_choice": "B",
+   "matching_options": [
+    "B"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U10-285",
+   "local_id": "U10-F-035",
+   "key": "D",
+   "verifier_choice": "D",
+   "matching_options": [
+    "D"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U10-297",
+   "local_id": "U10-F-047",
+   "key": "D",
+   "verifier_choice": "D",
+   "matching_options": [
+    "D"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U11-006",
+   "local_id": "U11-A-006",
+   "key": "B",
+   "verifier_choice": "B",
+   "matching_options": [
+    "B"
+   ],
+   "agree": true,
+   "numerical_answer": 60,
+   "verifier_numerical": 60,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U11-072",
+   "local_id": "U11-B-025",
+   "key": "D",
+   "verifier_choice": "D",
+   "matching_options": [
+    "D"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U11-098",
+   "local_id": "U11-C-004",
+   "key": "D",
+   "verifier_choice": "D",
+   "matching_options": [
+    "D"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U11-105",
+   "local_id": "U11-C-011",
+   "key": "B",
+   "verifier_choice": "B",
+   "matching_options": [
+    "B"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U11-110",
+   "local_id": "U11-C-016",
+   "key": "D",
+   "verifier_choice": "D",
+   "matching_options": [
+    "D"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U12-123",
+   "local_id": "U12-C-016",
+   "key": "A",
+   "verifier_choice": "A",
+   "matching_options": [
+    "A"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U12-134",
+   "local_id": "U12-C-027",
+   "key": "D",
+   "verifier_choice": "D",
+   "matching_options": [
+    "D"
+   ],
+   "agree": true,
+   "numerical_answer": 4,
+   "verifier_numerical": 4,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U12-147",
+   "local_id": "U12-C-040",
+   "key": "B",
+   "verifier_choice": "B",
+   "matching_options": [
+    "B"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U13-060",
+   "local_id": "U13-B-015",
+   "key": "D",
+   "verifier_choice": "D",
+   "matching_options": [
+    "D"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U13-092",
+   "local_id": "U13-C-002",
+   "key": "A",
+   "verifier_choice": "A",
+   "matching_options": [
+    "A"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U13-094",
+   "local_id": "U13-C-004",
+   "key": "A",
+   "verifier_choice": "A",
+   "matching_options": [
+    "A"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U13-096",
+   "local_id": "U13-C-006",
+   "key": "C",
+   "verifier_choice": "C",
+   "matching_options": [
+    "C"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U13-097",
+   "local_id": "U13-C-007",
+   "key": "D",
+   "verifier_choice": "D",
+   "matching_options": [
+    "D"
+   ],
+   "agree": true,
+   "numerical_answer": 74,
+   "verifier_numerical": 74,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U13-099",
+   "local_id": "U13-C-009",
+   "key": "B",
+   "verifier_choice": "B",
+   "matching_options": [
+    "B"
+   ],
+   "agree": true,
+   "numerical_answer": 47,
+   "verifier_numerical": 47,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U13-102",
+   "local_id": "U13-C-012",
+   "key": "A",
+   "verifier_choice": "A",
+   "matching_options": [
+    "A"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U13-103",
+   "local_id": "U13-C-013",
+   "key": "A",
+   "verifier_choice": "A",
+   "matching_options": [
+    "A"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U13-107",
+   "local_id": "U13-C-017",
+   "key": "C",
+   "verifier_choice": "C",
+   "matching_options": [
+    "C"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U13-109",
+   "local_id": "U13-C-019",
+   "key": "D",
+   "verifier_choice": "D",
+   "matching_options": [
+    "D"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U13-112",
+   "local_id": "U13-C-022",
+   "key": "D",
+   "verifier_choice": "D",
+   "matching_options": [
+    "D"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U13-114",
+   "local_id": "U13-C-024",
+   "key": "A",
+   "verifier_choice": "A",
+   "matching_options": [
+    "A"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U13-119",
+   "local_id": "U13-C-029",
+   "key": "B",
+   "verifier_choice": "B",
+   "matching_options": [
+    "B"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U13-121",
+   "local_id": "U13-C-031",
+   "key": "C",
+   "verifier_choice": "C",
+   "matching_options": [
+    "C"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U13-123",
+   "local_id": "U13-C-033",
+   "key": "C",
+   "verifier_choice": "C",
+   "matching_options": [
+    "C"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U13-125",
+   "local_id": "U13-C-035",
+   "key": "D",
+   "verifier_choice": "D",
+   "matching_options": [
+    "D"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U13-126",
+   "local_id": "U13-C-036",
+   "key": "A",
+   "verifier_choice": "A",
+   "matching_options": [
+    "A"
+   ],
+   "agree": true,
+   "numerical_answer": 8,
+   "verifier_numerical": 8,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U13-127",
+   "local_id": "U13-C-037",
+   "key": "C",
+   "verifier_choice": "C",
+   "matching_options": [
+    "C"
+   ],
+   "agree": true,
+   "numerical_answer": 30,
+   "verifier_numerical": 30,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U13-132",
+   "local_id": "U13-C-042",
+   "key": "D",
+   "verifier_choice": "D",
+   "matching_options": [
+    "D"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U13-133",
+   "local_id": "U13-C-043",
+   "key": "D",
+   "verifier_choice": "D",
+   "matching_options": [
+    "D"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U13-134",
+   "local_id": "U13-C-044",
+   "key": "D",
+   "verifier_choice": "D",
+   "matching_options": [
+    "D"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U13-158",
+   "local_id": "U13-D-023",
+   "key": "D",
+   "verifier_choice": "D",
+   "matching_options": [
+    "D"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U13-166",
+   "local_id": "U13-D-031",
+   "key": "A",
+   "verifier_choice": "A",
+   "matching_options": [
+    "A"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U13-178",
+   "local_id": "U13-D-043",
+   "key": "A",
+   "verifier_choice": "A",
+   "matching_options": [
+    "A"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U14-069",
+   "local_id": "U14-B-014",
+   "key": "D",
+   "verifier_choice": "D",
+   "matching_options": [
+    "D"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U14-097",
+   "local_id": "U14-B-042",
+   "key": "D",
+   "verifier_choice": "D",
+   "matching_options": [
+    "D"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U14-133",
+   "local_id": "U14-C-023",
+   "key": "C",
+   "verifier_choice": "C",
+   "matching_options": [
+    "C"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  },
+  {
+   "id": "JEE-MATH-U14-144",
+   "local_id": "U14-C-034",
+   "key": "B",
+   "verifier_choice": "B",
+   "matching_options": [
+    "B"
+   ],
+   "agree": true,
+   "numerical_answer": null,
+   "verifier_numerical": null,
+   "numerical_agree": true,
+   "method": "code",
+   "issue": ""
+  }
+ ]
+}
