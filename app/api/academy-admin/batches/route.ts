@@ -76,6 +76,24 @@ export async function GET(request: Request) {
       ALTER TABLE batches
       ADD COLUMN IF NOT EXISTS course_name VARCHAR(255)
     `);
+    await pool.query(`
+      ALTER TABLE academies
+      ADD COLUMN IF NOT EXISTS allowed_batch_courses JSONB
+    `);
+
+    const accessResult = await pool.query(
+      `SELECT allowed_batch_courses FROM academies WHERE id = $1 LIMIT 1`,
+      [session.academyId]
+    );
+    let configuredCourses: string[] | null = null;
+    const rawAllowed = accessResult.rows[0]?.allowed_batch_courses;
+    if (Array.isArray(rawAllowed)) configuredCourses = rawAllowed.map(String);
+    else if (typeof rawAllowed === "string") {
+      try {
+        const parsed = JSON.parse(rawAllowed);
+        if (Array.isArray(parsed)) configuredCourses = parsed.map(String);
+      } catch {}
+    }
 
     const result = await pool.query(
       `
@@ -102,6 +120,7 @@ export async function GET(request: Request) {
     return NextResponse.json({
       success: true,
       academyId: session.academyId,
+      allowedCourses: configuredCourses ?? ALLOWED_COURSES,
       batches: result.rows,
     });
   } catch (error) {
@@ -185,6 +204,30 @@ export async function POST(request: Request) {
             "Invalid course. Choose MHT-CET PCM, MHT-CET PCB, NEET PCB, CAT or JEE PCM.",
         },
         { status: 400 }
+      );
+    }
+
+    await pool.query(`
+      ALTER TABLE academies
+      ADD COLUMN IF NOT EXISTS allowed_batch_courses JSONB
+    `);
+    const accessResult = await pool.query(
+      `SELECT allowed_batch_courses FROM academies WHERE id = $1 LIMIT 1`,
+      [session.academyId]
+    );
+    let configuredCourses: string[] | null = null;
+    const rawAllowed = accessResult.rows[0]?.allowed_batch_courses;
+    if (Array.isArray(rawAllowed)) configuredCourses = rawAllowed.map(String);
+    else if (typeof rawAllowed === "string") {
+      try {
+        const parsed = JSON.parse(rawAllowed);
+        if (Array.isArray(parsed)) configuredCourses = parsed.map(String);
+      } catch {}
+    }
+    if (configuredCourses !== null && !configuredCourses.includes(courseName)) {
+      return NextResponse.json(
+        { success: false, error: `Your academy is not permitted to create ${courseName} batches. Ask the Paper Tree admin to enable this course.` },
+        { status: 403 }
       );
     }
 

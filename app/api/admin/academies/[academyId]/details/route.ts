@@ -35,11 +35,15 @@ export async function GET(
   const { academyId } = await params;
 
   try {
+    await pool.query(`
+      ALTER TABLE academies
+      ADD COLUMN IF NOT EXISTS allowed_batch_courses JSONB
+    `);
     const [academy, students, teachers, batches, papers, scheduledTests, questions] =
       await Promise.all([
         pool.query(
           `
-          SELECT id, name, code, created_at
+          SELECT id, name, code, created_at, allowed_batch_courses
           FROM academies
           WHERE id = $1
           LIMIT 1

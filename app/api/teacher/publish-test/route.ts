@@ -332,7 +332,8 @@ export async function POST(request: Request) {
       ADD COLUMN IF NOT EXISTS academy_id UUID,
       ADD COLUMN IF NOT EXISTS created_by_teacher_id UUID,
       ADD COLUMN IF NOT EXISTS title VARCHAR(255),
-      ADD COLUMN IF NOT EXISTS duration_minutes INTEGER
+      ADD COLUMN IF NOT EXISTS duration_minutes INTEGER,
+      ADD COLUMN IF NOT EXISTS tab_switch_warnings INTEGER NOT NULL DEFAULT 0
     `);
 
     await client.query(`
@@ -367,7 +368,8 @@ export async function POST(request: Request) {
           academy_id,
           created_by_teacher_id,
           title,
-          duration_minutes
+          duration_minutes,
+          tab_switch_warnings
         )
         VALUES (
           $1::uuid,
@@ -379,7 +381,8 @@ export async function POST(request: Request) {
           $6::uuid,
           $7::uuid,
           $8,
-          $9
+          $9,
+          $10
         )
       `,
       [
@@ -392,6 +395,7 @@ export async function POST(request: Request) {
         teacher.id,
         title,
         duration,
+        Math.max(0, Math.min(1, Number(generatedTest.tabSwitchWarnings ?? 0))),
       ]
     );
 

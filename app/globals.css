@@ -184,3 +184,54 @@ body {
   .summary-test { align-items: start; flex-direction: column; gap: 12px; }
   .summary-test-meta { width: 100%; justify-content: space-between; }
 }
+
+
+/* Student dashboard dark theme. Scoped to the dashboard so staff pages and
+   test-result layouts retain their existing appearance. */
+.student-dashboard-dark {
+  background: #101522 !important;
+  color: #e8edf7 !important;
+}
+.student-dashboard-dark [class*="bg-white"],
+.student-dashboard-dark [class*="bg-[#f8f9fc]"],
+.student-dashboard-dark [class*="bg-[#f9fafb]"],
+.student-dashboard-dark [class*="bg-[#f6f8fc]"],
+.student-dashboard-dark [class*="bg-[#f0efff]"] {
+  background-color: #1a2232 !important;
+}
+.student-dashboard-dark [class*="text-[#1d2435]"],
+.student-dashboard-dark [class*="text-[#202638]"],
+.student-dashboard-dark [class*="text-slate-900"],
+.student-dashboard-dark [class*="text-gray-900"] {
+  color: #edf2fb !important;
+}
+.student-dashboard-dark [class*="text-[#697184]"],
+.student-dashboard-dark [class*="text-[#858c9b]"],
+.student-dashboard-dark [class*="text-[#9aa1ae]"],
+.student-dashboard-dark [class*="text-[#9ba1ad]"],
+.student-dashboard-dark [class*="text-slate-500"],
+.student-dashboard-dark [class*="text-slate-600"],
+.student-dashboard-dark [class*="text-gray-500"] {
+  color: #aeb9cc !important;
+}
+.student-dashboard-dark [class*="border-[#e"],
+.student-dashboard-dark [class*="border-slate-200"],
+.student-dashboard-dark [class*="border-gray-200"] {
+  border-color: #303b50 !important;
+}
+.student-dashboard-dark input,
+.student-dashboard-dark select,
+.student-dashboard-dark textarea {
+  background-color: #121a28 !important;
+  color: #edf2fb !important;
+  border-color: #3b4962 !important;
+}
+.student-dashboard-dark .bg-gradient-to-br {
+  color: #fff !important;
+}
+
+.student-dashboard-dark > button[aria-label] {
+  background-color: #253047 !important;
+  color: #f4f7ff !important;
+  border-color: #3b4962 !important;
+}

@@ -43,7 +43,8 @@ type Section =
   | "batches"
   | "tests"
   | "subscription"
-  | "admins";
+  | "admins"
+  | "batch-access";
 
 type Toast = {
   id: number;
@@ -144,6 +145,7 @@ const [resettingAdmin, setResettingAdmin] = useState(false);
 
   const [batchName, setBatchName] = useState("");
   const [batchCourse, setBatchCourse] = useState("");
+  const [allowedBatchCourses, setAllowedBatchCourses] = useState<string[]>(BATCH_COURSE_OPTIONS);
 
   const [subscriptionSeats, setSubscriptionSeats] =
     useState("50");
@@ -260,6 +262,12 @@ const [resettingAdmin, setResettingAdmin] = useState(false);
       }
 
       setDetails(data);
+      const configured = data?.academy?.allowed_batch_courses;
+      setAllowedBatchCourses(
+        Array.isArray(configured)
+          ? configured.map(String).filter((course: string) => BATCH_COURSE_OPTIONS.includes(course))
+          : [...BATCH_COURSE_OPTIONS]
+      );
     } catch (e) {
       notify(
         e instanceof Error
@@ -1623,7 +1631,7 @@ async function resetAcademyAdmin(adminId: string) {
                 </div>
               </div>
 
-              <div className="mt-5 grid grid-cols-2 gap-2 md:grid-cols-6">
+              <div className="mt-5 grid grid-cols-2 gap-2 md:grid-cols-4 xl:grid-cols-8">
                 {(
                   [
                     [
@@ -1653,7 +1661,11 @@ async function resetAcademyAdmin(adminId: string) {
                     [
                       "admins",
                       "👤 Academy Admin",
-                   ],
+                    ],
+                    [
+                      "batch-access",
+                      "🔐 Batch Access",
+                    ],
                   ] as [
                     Section,
                     string
@@ -1718,6 +1730,50 @@ async function resetAcademyAdmin(adminId: string) {
   />
 )}
                     {"}"}
+                    {section === "batch-access" && (
+                      <section className="max-w-3xl rounded-2xl border border-[#e8ecf4] bg-white p-6">
+                        <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#315bea]">Academy permissions</p>
+                        <h3 className="mt-1 text-xl font-black">Allowed batch courses</h3>
+                        <p className="mt-2 text-sm text-[#697386]">
+                          Only selected courses can be used to create batches for this academy. The restriction is enforced by the server as well as the batch form.
+                        </p>
+                        <div className="mt-5 grid gap-3 sm:grid-cols-2">
+                          {BATCH_COURSE_OPTIONS.map((course) => (
+                            <label key={course} className="flex items-center gap-3 rounded-xl border border-[#e8ecf4] p-3 text-sm font-semibold">
+                              <input
+                                type="checkbox"
+                                checked={allowedBatchCourses.includes(course)}
+                                onChange={(event) => setAllowedBatchCourses((current) =>
+                                  event.target.checked
+                                    ? [...new Set([...current, course])]
+                                    : current.filter((item) => item !== course)
+                                )}
+                                className="h-4 w-4 accent-[#315bea]"
+                              />
+                              {course}
+                            </label>
+                          ))}
+                        </div>
+                        <div className="mt-5 flex flex-wrap items-center gap-3">
+                          <button
+                            type="button"
+                            onClick={() => patchAcademy({ allowedBatchCourses }, "Allowed batch courses updated")}
+                            className="rounded-xl bg-[#315bea] px-5 py-3 text-sm font-black text-white"
+                          >
+                            Save course permissions
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => setAllowedBatchCourses([...BATCH_COURSE_OPTIONS])}
+                            className="rounded-xl border border-[#dfe4ee] px-5 py-3 text-sm font-bold"
+                          >
+                            Allow all courses
+                          </button>
+                          <span className="text-xs text-[#697386]">{allowedBatchCourses.length} of {BATCH_COURSE_OPTIONS.length} enabled</span>
+                        </div>
+                      </section>
+                    )}
+
                     {section === "admins" && (
                     <div className="space-y-6">
 

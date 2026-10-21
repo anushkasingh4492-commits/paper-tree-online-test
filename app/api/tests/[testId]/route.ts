@@ -78,7 +78,8 @@ export async function GET(
 
     await pool.query(`
       ALTER TABLE tests
-      ADD COLUMN IF NOT EXISTS academy_id UUID
+      ADD COLUMN IF NOT EXISTS academy_id UUID,
+      ADD COLUMN IF NOT EXISTS tab_switch_warnings INTEGER NOT NULL DEFAULT 0
     `);
 
     const result = await pool.query(
@@ -88,7 +89,8 @@ export async function GET(
         exam,
         question_count,
         questions,
-        created_at
+        created_at,
+        COALESCE(tab_switch_warnings, 0)::int AS tab_switch_warnings
       FROM tests
       WHERE id = $1
         AND (
@@ -137,6 +139,7 @@ export async function GET(
         exam: row.exam,
         question_count: row.question_count,
         created_at: row.created_at,
+        tab_switch_warnings: Math.max(0, Math.min(1, Number(row.tab_switch_warnings || 0))),
         questions: safeQuestions,
       };
     });

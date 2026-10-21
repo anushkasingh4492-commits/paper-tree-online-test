@@ -64,6 +64,7 @@ export default function AcademyBatchesPage() {
   const [name, setName] = useState("");
 
   const [courseName, setCourseName] = useState("");
+  const [allowedCourses, setAllowedCourses] = useState<string[]>(COURSE_OPTIONS.map((option) => option.value));
 
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
@@ -214,6 +215,11 @@ export default function AcademyBatchesPage() {
 
       if (data.success) {
         setBatches(data.batches || []);
+        const nextAllowed = Array.isArray(data.allowedCourses)
+          ? data.allowedCourses.map(String)
+          : COURSE_OPTIONS.map((option) => option.value);
+        setAllowedCourses(nextAllowed);
+        setCourseName((current) => nextAllowed.includes(current) ? current : "");
       } else {
         setMessage(
           data.error ||
@@ -738,7 +744,7 @@ export default function AcademyBatchesPage() {
                 Select course / stream
               </option>
 
-              {COURSE_OPTIONS.map(
+              {COURSE_OPTIONS.filter((option) => allowedCourses.includes(option.value)).map(
                 (option) => (
                   <option
                     key={
@@ -760,7 +766,8 @@ export default function AcademyBatchesPage() {
             <button
               disabled={
                 loading ||
-                academyLoading
+                academyLoading ||
+                allowedCourses.length === 0
               }
               type="submit"
               className="mt-5 w-full rounded-xl bg-[#315bea] px-4 py-3 text-sm font-bold text-white disabled:opacity-50"

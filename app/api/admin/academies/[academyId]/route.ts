@@ -52,7 +52,8 @@ export async function PATCH(
     await pool.query(`
       ALTER TABLE academies
       ADD COLUMN IF NOT EXISTS logo_data TEXT,
-      ADD COLUMN IF NOT EXISTS domain VARCHAR(255)
+      ADD COLUMN IF NOT EXISTS domain VARCHAR(255),
+      ADD COLUMN IF NOT EXISTS allowed_batch_courses JSONB
     `);
 
     const updates: string[] = [];
@@ -79,6 +80,21 @@ export async function PATCH(
 
       updates.push(`domain = $${values.length + 1}`);
       values.push(domain || null);
+    }
+
+    if (body.allowedBatchCourses !== undefined) {
+      const allowedOptions = ["MHT-CET PCM", "MHT-CET PCB", "NEET PCB", "CAT", "JEE PCM"];
+      if (
+        !Array.isArray(body.allowedBatchCourses) ||
+        body.allowedBatchCourses.some((course: unknown) => !allowedOptions.includes(String(course)))
+      ) {
+        return NextResponse.json(
+          { success: false, error: "Invalid allowed batch course list." },
+          { status: 400 }
+        );
+      }
+      updates.push(`allowed_batch_courses = $${values.length + 1}::jsonb`);
+      values.push(JSON.stringify([...new Set(body.allowedBatchCourses.map(String))]));
     }
 
     if (body.studentLimit !== undefined) {
@@ -140,6 +156,7 @@ export async function PATCH(
         code,
         logo_data,
         domain,
+        allowed_batch_courses,
         status,
         student_limit,
         subscription_end,

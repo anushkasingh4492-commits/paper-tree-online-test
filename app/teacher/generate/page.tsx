@@ -152,6 +152,8 @@ export default function TeacherGeneratePage() {
 
   const [questionCount, setQuestionCount] = useState(10);
   const [duration, setDuration] = useState(30);
+  // Number of allowed tab-leave warnings before automatic submission (0 or 1).
+  const [tabSwitchWarnings, setTabSwitchWarnings] = useState<0 | 1>(1);
 
   const [questions, setQuestions] = useState<Question[]>([]);
   const [selectedQuestionIds, setSelectedQuestionIds] = useState<Set<string>>(
@@ -653,7 +655,10 @@ export default function TeacherGeneratePage() {
        */
       localStorage.setItem(
         "teacherGeneratedTest",
-        JSON.stringify(data)
+        JSON.stringify({
+          ...data,
+          tabSwitchWarnings,
+        })
       );
 
       router.push("/teacher/publish");
@@ -694,6 +699,24 @@ export default function TeacherGeneratePage() {
               and choose the exact questions for the test.
             </p>
           </div>
+
+          <section className="mb-6 rounded-xl border border-amber-200 bg-amber-50 p-4">
+            <label htmlFor="tab-switch-warnings" className="block text-sm font-bold text-amber-950">
+              Test security — leaving the test window
+            </label>
+            <p className="mt-1 text-xs leading-5 text-amber-800">
+              Choose whether students get one warning before a second tab switch automatically submits their test.
+            </p>
+            <select
+              id="tab-switch-warnings"
+              value={tabSwitchWarnings}
+              onChange={(event) => setTabSwitchWarnings(Number(event.target.value) as 0 | 1)}
+              className="mt-3 w-full max-w-sm rounded-lg border border-amber-300 bg-white px-3 py-2 text-sm font-semibold text-slate-800"
+            >
+              <option value={1}>One warning, then auto-submit</option>
+              <option value={0}>No warning — auto-submit on first leave</option>
+            </select>
+          </section>
 
           <div className="sticky top-2 z-10 mb-6 flex flex-col items-stretch justify-between gap-3 sm:top-4 sm:mb-8 sm:flex-row sm:items-center sm:gap-4 rounded-2xl border border-blue-200 bg-blue-50/95 p-4 shadow-lg shadow-blue-900/10 backdrop-blur">
             <div>

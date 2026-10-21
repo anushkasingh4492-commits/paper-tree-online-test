@@ -120,7 +120,7 @@ export async function getStudentGamification(studentId: string, academyId: strin
     let parsed: any[] = [];
     if (Array.isArray(attempt.questions)) parsed = attempt.questions;
     else if (typeof attempt.questions === "string") { try { const value = JSON.parse(attempt.questions); if (Array.isArray(value)) parsed = value; } catch {} }
-    const subjects = [...new Set(parsed.map((q: any) => String(q?.subject || q?.subject_name || "").trim()).filter(Boolean))];
+    const subjects = [...new Set(parsed.map((q: any) => String(q?.subject || q?.subject_name || "").trim().toLowerCase()).filter(Boolean))];
     return { ...attempt, subject: subjects.length === 1 ? subjects[0] : null };
   });
 
@@ -167,10 +167,49 @@ export async function getStudentGamification(studentId: string, academyId: strin
     ? attempts.reduce((sum, a) => sum + pct(a), 0) / attempts.length
     : 0;
 
-  // Score badges: each test awards only its highest score badge.
-  const scoreCounts = { crushing: 0, beast: 0, flawless: 0 };
+  // Score badges are awarded once per exact subject + chapter combination.
+  // Repeating the same chapter combination cannot farm Flawless/Beast/Crushing
+  // tiers. Keep the best score ever achieved for each combination, so a later
+  // improvement can upgrade that combination's single score badge. Glow Up is
+  // intentionally calculated separately below and remains repeatable.
+  const bestScoreByCombination = new Map<string, number>();
   for (const a of attempts) {
+    let questionList: any[] = [];
+    if (Array.isArray(a.questions)) questionList = a.questions;
+    else if (typeof a.questions === "string") {
+      try {
+        const parsed = JSON.parse(a.questions);
+        if (Array.isArray(parsed)) questionList = parsed;
+      } catch {}
+    }
+
+    const subjects = [...new Set(questionList
+      .map((q: any) => String(q?.subject || q?.subject_name || "").trim())
+      .filter(Boolean))].sort((x, y) => x.localeCompare(y));
+    const chapters = [...new Set(questionList
+      .map((q: any) => String(q?.chapter_name || q?.chapter || "").trim().toLowerCase())
+      .filter(Boolean))].sort((x, y) => x.localeCompare(y));
+
+    // Prefer the semantic combination (subject + chapters). If legacy test data
+    // has no chapter metadata, use its question IDs as a stable fallback.
+    const questionIds = [...new Set(questionList
+      .map((q: any) => String(q?.id || q?.question_id || "").trim())
+      .filter(Boolean))].sort();
+    const combinationKey = subjects.length && chapters.length
+      ? `chapters::${subjects.join("|")}::${chapters.join("|")}`
+      : questionIds.length
+        ? `questions::${questionIds.join("|")}`
+        : `legacy-test::${String(a.test_id || a.scheduled_test_id || a.id)}`;
+
     const score = pct(a);
+    bestScoreByCombination.set(
+      combinationKey,
+      Math.max(bestScoreByCombination.get(combinationKey) ?? 0, score)
+    );
+  }
+
+  const scoreCounts = { crushing: 0, beast: 0, flawless: 0 };
+  for (const score of bestScoreByCombination.values()) {
     if (score >= 100) scoreCounts.flawless += 1;
     else if (score >= 90) scoreCounts.beast += 1;
     else if (score >= 75) scoreCounts.crushing += 1;

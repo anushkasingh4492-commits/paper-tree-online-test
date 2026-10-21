@@ -928,6 +928,7 @@ export default function DashboardPage() {
   ] = useState(
     "Student"
   );
+  const [darkMode, setDarkMode] = useState(false);
   const [academyBranding, setAcademyBranding] = useState<AcademyBranding | null>(null);
 
   const [
@@ -996,6 +997,37 @@ export default function DashboardPage() {
     error,
     setError,
   ] = useState("");
+
+  useEffect(() => {
+    try {
+      setDarkMode(localStorage.getItem("paperTreeStudentDarkMode") === "true");
+    } catch {}
+  }, []);
+
+  useEffect(() => {
+    try {
+      localStorage.setItem("paperTreeStudentDarkMode", String(darkMode));
+    } catch {}
+  }, [darkMode]);
+
+  // Best-effort screenshot/printing deterrents. Browser code cannot prevent
+  // operating-system screenshots, external capture tools, or another camera.
+  useEffect(() => {
+    const blockContextMenu = (event: MouseEvent) => event.preventDefault();
+    const blockCaptureShortcuts = (event: KeyboardEvent) => {
+      const key = event.key.toLowerCase();
+      if (
+        event.key === "PrintScreen" ||
+        ((event.ctrlKey || event.metaKey) && ["p", "s"].includes(key))
+      ) event.preventDefault();
+    };
+    document.addEventListener("contextmenu", blockContextMenu);
+    document.addEventListener("keydown", blockCaptureShortcuts, true);
+    return () => {
+      document.removeEventListener("contextmenu", blockContextMenu);
+      document.removeEventListener("keydown", blockCaptureShortcuts, true);
+    };
+  }, []);
 
   /* ==========================================================
      LOAD REAL STUDENT DASHBOARD
@@ -1534,7 +1566,17 @@ export default function DashboardPage() {
   ============================================================ */
 
   return (
-    <main className="min-h-screen w-full max-w-full overflow-x-hidden bg-[#f8f9fc] text-[#1d2435]">
+    <main className={`student-dashboard ${darkMode ? "student-dashboard-dark" : ""} min-h-screen w-full max-w-full overflow-x-hidden bg-[#f8f9fc] text-[#1d2435]`}>
+      <button
+        type="button"
+        onClick={() => setDarkMode((value) => !value)}
+        aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
+        aria-pressed={darkMode}
+        className="fixed right-4 top-4 z-[120] flex items-center gap-2 rounded-full border border-slate-300 bg-white/95 px-4 py-2 text-xs font-bold text-slate-800 shadow-lg backdrop-blur hover:bg-slate-50"
+      >
+        <span aria-hidden="true">{darkMode ? "☀️" : "🌙"}</span>
+        {darkMode ? "Light mode" : "Dark mode"}
+      </button>
 
       <div className="flex min-h-screen w-full min-w-0">
 

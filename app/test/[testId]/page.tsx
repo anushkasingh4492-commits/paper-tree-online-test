@@ -34,6 +34,7 @@ type TestData = {
   question_count: number;
   questions: Question[] | string;
   created_at?: string;
+  tab_switch_warnings?: number;
 };
 
 type Answers = Record<string, number | number[] | string>;
@@ -389,6 +390,8 @@ export default function TestPage() {
     setShowWarning,
   ] = useState(false);
 
+  const [showLeaveWarning, setShowLeaveWarning] = useState(false);
+
   const [
     submitting,
     setSubmitting,
@@ -428,6 +431,8 @@ export default function TestPage() {
 
   const navigatingToResultRef =
     useRef(false);
+
+  const leaveCountRef = useRef(0);
 
   const startedAtRef =
     useRef<number | null>(null);
@@ -2065,6 +2070,37 @@ const figureAsset =
   ]);
 
   /*
+   * Best-effort browser screenshot deterrents. Websites cannot block
+   * operating-system or external-camera screenshots, but we can disable
+   * common browser shortcuts, context-menu capture and printing.
+   */
+  useEffect(() => {
+    if (!test || loading) return;
+
+    const blockContextMenu = (event: MouseEvent) => event.preventDefault();
+    const blockPrintShortcuts = (event: KeyboardEvent) => {
+      const key = event.key.toLowerCase();
+      if (
+        event.key === "PrintScreen" ||
+        ((event.ctrlKey || event.metaKey) && ["p", "s"].includes(key))
+      ) {
+        event.preventDefault();
+      }
+    };
+    const blockPrint = () => window.alert("Printing is disabled during a test.");
+
+    document.addEventListener("contextmenu", blockContextMenu);
+    document.addEventListener("keydown", blockPrintShortcuts, true);
+    window.addEventListener("beforeprint", blockPrint);
+
+    return () => {
+      document.removeEventListener("contextmenu", blockContextMenu);
+      document.removeEventListener("keydown", blockPrintShortcuts, true);
+      window.removeEventListener("beforeprint", blockPrint);
+    };
+  }, [test, loading]);
+
+  /*
    * =========================================================
    * TAB LEAVE / VISIBILITY WARNING
    * =========================================================
@@ -2083,6 +2119,15 @@ const figureAsset =
       loading
     ) {
       return;
+    }
+
+    if (leaveCountRef.current === 0) {
+      try {
+        const savedLeaveCount = Number(localStorage.getItem(`test-${testId}-leave-count`) || 0);
+        if (Number.isFinite(savedLeaveCount) && savedLeaveCount > 0) {
+          leaveCountRef.current = Math.min(100, Math.floor(savedLeaveCount));
+        }
+      } catch {}
     }
 
     function saveProgress() {
@@ -2113,25 +2158,31 @@ const figureAsset =
     function submitForLeavingTest() {
       if (
         submittedRef.current ||
-        navigatingToResultRef.current
+        navigatingToResultRef.current ||
+        submitting
       ) {
         return;
       }
 
-      /*
-       * Save everything before submission.
-       */
-
       saveProgress();
+      leaveCountRef.current += 1;
+      try {
+        localStorage.setItem(`test-${testId}-leave-count`, String(leaveCountRef.current));
+      } catch {}
 
-      /*
-       * Show the warning immediately.
-       */
-
-      setShowWarning(
-        true
+      const allowedWarnings = Math.max(
+        0,
+        Math.min(1, Number(test?.tab_switch_warnings ?? 0))
       );
 
+      if (leaveCountRef.current <= allowedWarnings) {
+        // First leave: warn but keep the test and answers intact.
+        setShowLeaveWarning(true);
+        return;
+      }
+
+      // Any leave after the configured warning count auto-submits.
+      setShowWarning(true);
       submitTest(true);
     }
 
@@ -2184,6 +2235,7 @@ const figureAsset =
   }, [
     test,
     loading,
+    submitting,
     testId,
     answers,
     marked,
@@ -3391,6 +3443,25 @@ const figureAsset =
           </aside>
         </div>
       </div>
+
+      {showLeaveWarning && (
+        <div className="fixed inset-0 z-[100] bg-slate-950/70 backdrop-blur-sm flex items-center justify-center p-5">
+          <div role="alertdialog" aria-modal="true" className="w-full max-w-md rounded-3xl bg-white p-7 text-center shadow-2xl">
+            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-amber-100 text-amber-700 text-2xl">!</div>
+            <h2 className="mt-4 text-xl font-bold text-slate-900">Stay on the test window</h2>
+            <p className="mt-3 text-sm leading-6 text-slate-600">
+              You left the test window. This is your one warning. Leaving the test window again will automatically submit your test.
+            </p>
+            <button
+              type="button"
+              onClick={() => setShowLeaveWarning(false)}
+              className="mt-6 w-full rounded-xl bg-blue-600 px-5 py-3 text-sm font-bold text-white hover:bg-blue-700"
+            >
+              Return to test
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* =====================================================
           AUTO SUBMISSION WARNING
