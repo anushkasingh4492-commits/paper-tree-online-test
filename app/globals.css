@@ -236,26 +236,100 @@ body {
   border-color: #3b4962 !important;
 }
 
-/* =========================================================
-   Motivational Loader Animations
-   ========================================================= */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
+/* Persistent student dark mode: shared by tests, results, history, reports and trophy wall. */
+body.student-theme-dark {
+  background: #101522 !important;
+  color: #e8edf7 !important;
+  color-scheme: dark;
+}
+body.student-theme-dark main,
+body.student-theme-dark .summary-shell {
+  background-color: #101522 !important;
+  color: #e8edf7 !important;
+}
+body.student-theme-dark header,
+body.student-theme-dark footer,
+body.student-theme-dark [class*="bg-white"],
+body.student-theme-dark [class*="bg-gray-50"],
+body.student-theme-dark [class*="bg-slate-50"],
+body.student-theme-dark [class*="bg-zinc-50"],
+body.student-theme-dark [class*="bg-neutral-50"],
+body.student-theme-dark [class*="bg-stone-50"],
+body.student-theme-dark [class*="bg-gray-100"],
+body.student-theme-dark [class*="bg-slate-100"],
+body.student-theme-dark [class*="bg-[#f5"],
+body.student-theme-dark [class*="bg-[#f6"],
+body.student-theme-dark [class*="bg-[#f7"],
+body.student-theme-dark [class*="bg-[#f8"],
+body.student-theme-dark [class*="bg-[#f9"],
+body.student-theme-dark [class*="bg-[#fff"],
+body.student-theme-dark [class*="bg-[#eef"],
+body.student-theme-dark [class*="bg-[#eff"],
+body.student-theme-dark [class*="bg-[#edf"],
+body.student-theme-dark [class*="bg-[#e7"],
+body.student-theme-dark [class*="bg-[#e8"],
+body.student-theme-dark [class*="bg-[#e9"],
+body.student-theme-dark [class*="bg-[#f0"] {
+  background-color: #1a2232 !important;
+  color: #e8edf7 !important;
+}
+/* Explicitly fix the unearned badge card and its locked icon tile. These use
+   pale gradients, so changing background-color alone would not be sufficient. */
+body.student-theme-dark [class*="from-white"][class*="to-slate-50"] {
+  background-image: linear-gradient(135deg, #1a2232, #202b3e) !important;
+  background-color: #1a2232 !important;
+}
+body.student-theme-dark [class*="from-slate-100"][class*="to-slate-200"] {
+  background-image: linear-gradient(135deg, #202b3e, #29364b) !important;
+  background-color: #202b3e !important;
+}
+body.student-theme-dark [class*="text-slate-950"],
+body.student-theme-dark [class*="text-slate-900"],
+body.student-theme-dark [class*="text-slate-800"],
+body.student-theme-dark [class*="text-gray-900"],
+body.student-theme-dark [class*="text-[#111827]"],
+body.student-theme-dark [class*="text-[#172033]"],
+body.student-theme-dark [class*="text-[#1d2435]"],
+body.student-theme-dark [class*="text-[#202638]"] {
+  color: #edf2fb !important;
+}
+body.student-theme-dark [class*="text-slate-600"],
+body.student-theme-dark [class*="text-slate-500"],
+body.student-theme-dark [class*="text-slate-400"],
+body.student-theme-dark [class*="text-gray-600"],
+body.student-theme-dark [class*="text-gray-500"],
+body.student-theme-dark [class*="text-[#697184]"],
+body.student-theme-dark [class*="text-[#7a8495]"],
+body.student-theme-dark [class*="text-[#858c9b]"],
+body.student-theme-dark [class*="text-[#8a93a3]"],
+body.student-theme-dark [class*="text-[#9299a8]"],
+body.student-theme-dark [class*="text-[#9aa1ae]"],
+body.student-theme-dark [class*="text-[#9ba1ad]"] {
+  color: #aeb9cc !important;
+}
+body.student-theme-dark [class*="border-slate-100"],
+body.student-theme-dark [class*="border-slate-200"],
+body.student-theme-dark [class*="border-gray-100"],
+body.student-theme-dark [class*="border-gray-200"],
+body.student-theme-dark [class*="border-[#e"] {
+  border-color: #303b50 !important;
+}
+body.student-theme-dark input,
+body.student-theme-dark select,
+body.student-theme-dark textarea {
+  background-color: #121a28 !important;
+  color: #edf2fb !important;
+  border-color: #3b4962 !important;
+}
+body.student-theme-dark .summary-shell .summary-panel,
+body.student-theme-dark .summary-shell .summary-stats div {
+  background: #1a2232 !important;
+  color: #e8edf7 !important;
+  border-color: #303b50 !important;
+}
+body.student-theme-dark .summary-subtitle,
+body.student-theme-dark .summary-test p,
+body.student-theme-dark .summary-state {
+  color: #aeb9cc !important;
 }

@@ -1008,6 +1008,9 @@ export default function DashboardPage() {
     try {
       localStorage.setItem("paperTreeStudentDarkMode", String(darkMode));
     } catch {}
+    if (typeof window !== "undefined") {
+      window.dispatchEvent(new Event("paperTreeStudentThemeChange"));
+    }
   }, [darkMode]);
 
   // Best-effort screenshot/printing deterrents. Browser code cannot prevent

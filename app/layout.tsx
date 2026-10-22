@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import StudentThemeManager from "@/components/StudentThemeManager";
 
 export const metadata: Metadata = {
  title: "Paper Tree CBT | Online Testing for Institutes",
@@ -13,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>{children}<StudentThemeManager /></body>
     </html>
   );
 }

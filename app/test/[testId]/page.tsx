@@ -13,7 +13,6 @@ import "katex/dist/katex.min.css";
 import { InlineMath, BlockMath } from "react-katex";
 import AcademyBranding from "@/components/AcademyBranding";
 import StudentAccountMenu from "@/components/StudentAccountMenu";
-import MotivationalLoader from "@/components/MotivationalLoader";
 type Question = {
   id: string;
   number: number;
@@ -361,9 +360,6 @@ export default function TestPage() {
 
   const [loading, setLoading] =
     useState(true);
-
-  const [motivationDone, setMotivationDone] =
-    useState(false);
 
   const [error, setError] =
     useState("");
@@ -2564,12 +2560,21 @@ const figureAsset =
    * =========================================================
    */
 
-  if (loading || !motivationDone) {
+  if (loading) {
     return (
-      <MotivationalLoader
-        durationSeconds={3}
-        onComplete={() => setMotivationDone(true)}
-      />
+      <main className="min-h-screen flex items-center justify-center bg-[#f5f7fb]">
+        <div className="text-center">
+          <div className="w-11 h-11 border-4 border-blue-100 border-t-blue-600 rounded-full animate-spin mx-auto" />
+
+          <p className="mt-4 text-sm font-medium text-slate-500">
+            Preparing your test...
+          </p>
+
+          <p className="mt-1 text-xs text-slate-400">
+            Loading questions and test timer
+          </p>
+        </div>
+      </main>
     );
   }
 
