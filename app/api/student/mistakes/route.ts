@@ -103,7 +103,7 @@ export async function GET(request: Request): Promise<NextResponse> {
       SELECT
         $1::uuid,
         ta.question_id,
-        t.test_id,
+        t.test_id::uuid,
         ta.attempt_id,
         ta.selected_answer::text,
         q.correct_option::text,
