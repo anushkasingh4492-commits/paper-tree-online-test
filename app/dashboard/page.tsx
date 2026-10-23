@@ -1666,6 +1666,17 @@ export default function DashboardPage() {
                 Batch Leaderboard
               </button>
 
+              <button
+                onClick={() => router.push("/student/mistakes")}
+                className="w-full h-10 flex items-center gap-3 px-2.5 rounded-xl text-[#657083] hover:bg-[#f7f8fb] text-xs font-medium transition"
+              >
+                <span className="w-7 h-7 rounded-lg bg-gradient-to-br from-red-50 to-pink-50 flex items-center justify-center text-base">
+                  📓
+                </span>
+
+                Mistake Notebook
+              </button>
+
             </nav>
           </div>
 <button
