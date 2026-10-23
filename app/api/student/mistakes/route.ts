@@ -83,11 +83,11 @@ export async function GET(request: Request): Promise<NextResponse> {
 
     const backfillConditions: string[] = [
       "ta.is_correct = false",
-      "t.student_id::text = $1::text",
+      "t.student_id::text = $2",
       "t.test_id IS NOT NULL",
     ];
-    const backfillValues: unknown[] = [studentId];
-    let bi = 2;
+    const backfillValues: unknown[] = [studentId, studentId];
+    let bi = 3;
     if (subject) {
       backfillConditions.push(`q.subject = $${bi}`);
       backfillValues.push(subject);
@@ -101,7 +101,7 @@ export async function GET(request: Request): Promise<NextResponse> {
         chapter_name, difficulty, question_text, options
       )
       SELECT
-        $1,
+        $1::uuid,
         ta.question_id,
         t.test_id,
         ta.attempt_id,
@@ -123,7 +123,7 @@ export async function GET(request: Request): Promise<NextResponse> {
       WHERE ${backfillConditions.join(" AND ")}
         AND NOT EXISTS (
           SELECT 1 FROM student_mistakes sm
-          WHERE sm.student_id::text = $1::text
+          WHERE sm.student_id = $1::uuid
             AND sm.question_id::text = ta.question_id::text
             AND sm.test_id::text = t.test_id::text
             AND sm.attempt_id::text = ta.attempt_id::text
