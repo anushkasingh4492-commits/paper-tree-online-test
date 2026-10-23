@@ -19,7 +19,8 @@ type Subject =
   | "Mathematics"
   | "Biology"
   | "Quantitative Ability"
-  | "Verbal Ability and Reading Comprehension";
+  | "Verbal Ability and Reading Comprehension"
+  | "Data Interpretation and Logical Reasoning";
 
 type DatabaseChapter = {
   exam: string;
@@ -70,8 +71,9 @@ const COURSE_CONFIG: Record<
   CAT: {
     description: "Common Admission Test",
     subjects: [
-      "Quantitative Ability",
       "Verbal Ability and Reading Comprehension",
+      "Data Interpretation and Logical Reasoning",
+      "Quantitative Ability",
     ],
     available: true,
   },
@@ -91,6 +93,7 @@ const PRESET_SUBJECT_NAMES: Record<PresetSubject, string> = {
   biology: "Biology",
   "cat-qa": "Quantitative Ability",
   "cat-varc": "Verbal Ability and Reading Comprehension",
+  "cat-dilr": "Data Interpretation and Logical Reasoning",
   "jee-physics": "JEE Physics",
   "jee-chemistry": "JEE Chemistry",
   "jee-maths": "JEE Mathematics",
@@ -117,6 +120,9 @@ function subjectToPresetSubject(
 
     case "Verbal Ability and Reading Comprehension":
       return "cat-varc";
+
+    case "Data Interpretation and Logical Reasoning":
+      return "cat-dilr";
   }
 }
 
@@ -141,6 +147,9 @@ function presetSubjectToSubject(
 
     case "cat-varc":
       return "Verbal Ability and Reading Comprehension";
+
+    case "cat-dilr":
+      return "Data Interpretation and Logical Reasoning";
 
     case "jee-physics":
       return "Physics";
@@ -209,6 +218,7 @@ export default function TestsPage() {
     Biology: [],
     "Quantitative Ability": [],
     "Verbal Ability and Reading Comprehension": [],
+    "Data Interpretation and Logical Reasoning": [],
   });
 
   const [
@@ -403,8 +413,8 @@ console.log(
         if (courseName.includes("CAT")) {
           setCourse("CAT");
           setStudentGroup("CAT");
-          setSubjects(["Quantitative Ability"]);
-          setActiveChapterSubject("Quantitative Ability");
+          setSubjects(["Verbal Ability and Reading Comprehension"]);
+          setActiveChapterSubject("Verbal Ability and Reading Comprehension");
           setChaptersBySubject({
             Physics: [],
             Chemistry: [],
@@ -412,6 +422,7 @@ console.log(
             Biology: [],
             "Quantitative Ability": [],
             "Verbal Ability and Reading Comprehension": [],
+            "Data Interpretation and Logical Reasoning": [],
           });
           setSelectedPreset(null);
           return;
@@ -447,6 +458,7 @@ setSubjects([
             Biology: [],
             "Quantitative Ability": [],
             "Verbal Ability and Reading Comprehension": [],
+            "Data Interpretation and Logical Reasoning": [],
           });
 
           setSelectedPreset(null);
@@ -482,6 +494,7 @@ setSubjects([
             Biology: [],
             "Quantitative Ability": [],
             "Verbal Ability and Reading Comprehension": [],
+            "Data Interpretation and Logical Reasoning": [],
           });
 
           setSelectedPreset(null);
@@ -519,6 +532,7 @@ setSubjects([
             Biology: [],
             "Quantitative Ability": [],
             "Verbal Ability and Reading Comprehension": [],
+            "Data Interpretation and Logical Reasoning": [],
           });
 
           setSelectedPreset(null);
@@ -556,6 +570,7 @@ setSubjects([
             Biology: [],
             "Quantitative Ability": [],
             "Verbal Ability and Reading Comprehension": [],
+            "Data Interpretation and Logical Reasoning": [],
           });
 
           setSelectedPreset(null);
@@ -1517,7 +1532,7 @@ setSubjects([
 
                     <p className="text-sm text-[#6b7280] mt-1">
                       {course === "CAT"
-                        ? "Select the CAT section for your practice test."
+                        ? "CAT section mocks use 40 minutes per section. VARC full sections target 8 VA questions and 16 RC questions across 4 passages; DILR mocks use 4–5 sets; QA full sections target 22–24 questions."
                         : "Select one or more subjects. Mathematics and Biology cannot be selected together."}
                     </p>
 
@@ -1538,6 +1553,7 @@ setSubjects([
                             return [
                               "Quantitative Ability",
                               "Verbal Ability and Reading Comprehension",
+                              "Data Interpretation and Logical Reasoning",
                             ].includes(item);
                           }
 

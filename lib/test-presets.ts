@@ -7,6 +7,7 @@ export type PresetSubject =
   | "biology"
   | "cat-qa"
   | "cat-varc"
+  | "cat-dilr"
   | "jee-physics"
   | "jee-chemistry"
   | "jee-maths";
@@ -34,6 +35,7 @@ export const MARKS_PER_QUESTION: Record<
   biology: 1,
   "cat-qa": 3,
   "cat-varc": 3,
+  "cat-dilr": 3,
   "jee-physics": 4,
   "jee-chemistry": 4,
   "jee-maths": 4,
@@ -73,7 +75,7 @@ export const GROUP_SUBJECTS: Record<
     "biology",
   ],
 
-  CAT: ["cat-qa", "cat-varc"],
+  CAT: ["cat-qa", "cat-varc", "cat-dilr"],
 
   JEE: [
     "jee-physics",
@@ -470,10 +472,19 @@ export const PRESETS: Preset[] = [
   },
 
   {
-    id: "CAT-QA-22",
+    id: "CAT-QA-24",
     name: "Full section",
     subjects: {
-      "cat-qa": 22,
+      "cat-qa": 24,
+    },
+    examAccurate: true,
+  },
+
+  {
+    id: "CAT-DILR-24",
+    name: "Full section",
+    subjects: {
+      "cat-dilr": 24,
     },
     examAccurate: true,
   },
@@ -630,12 +641,16 @@ export function calculatePreset(
     totalMarks *
     MINUTES_PER_MARK;
 
-  const durationMinutes =
-    Math.ceil(
-      rawMinutes /
-        ROUND_MINUTES
-    ) *
-    ROUND_MINUTES;
+  const isCatFullSection =
+    preset.examAccurate === true &&
+    Object.keys(preset.subjects).length === 1 &&
+    Object.keys(preset.subjects).some((subject) =>
+      subject.startsWith("cat-")
+    );
+
+  const durationMinutes = isCatFullSection
+    ? 40
+    : Math.ceil(rawMinutes / ROUND_MINUTES) * ROUND_MINUTES;
 
   return {
     totalQuestions,

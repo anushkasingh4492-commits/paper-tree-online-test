@@ -262,6 +262,16 @@ function normalizePresetSubject(
   }
 
   if (
+    subject === "data interpretation and logical reasoning" ||
+    subject === "logical reasoning and data interpretation" ||
+    subject === "cat dilr" ||
+    subject === "dilr" ||
+    subject === "lrdi"
+  ) {
+    return "cat-dilr";
+  }
+
+  if (
     subject === "jee physics" ||
     subject === "jee-physics" ||
     subject === "physics (jee)"
@@ -316,6 +326,9 @@ function displaySubject(
 
     case "cat-varc":
       return "Verbal Ability and Reading Comprehension";
+
+    case "cat-dilr":
+      return "Data Interpretation and Logical Reasoning";
 
     default:
       return subject;
@@ -985,10 +998,15 @@ export async function POST(
       const rawMinutes =
         totalMarks * 0.9;
 
-      duration =
-        Math.ceil(
-          rawMinutes / 5
-        ) * 5;
+      const isCatFullSection =
+        String(body.course ?? body.exam ?? "").toLowerCase().includes("cat") &&
+        Boolean(body.presetId) &&
+        String(body.presetId).startsWith("CAT-") &&
+        String(body.presetId).endsWith("24");
+
+      duration = isCatFullSection
+        ? 40
+        : Math.ceil(rawMinutes / 5) * 5;
 
       questionCount =
         totalQuestions;

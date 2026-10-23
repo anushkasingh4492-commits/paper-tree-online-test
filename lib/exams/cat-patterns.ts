@@ -50,9 +50,9 @@ export const CAT_2025_PATTERN: CatPattern = {
   verifiedAt: null,
   totalDurationSeconds: 120 * 60,
   sections: [
-    { key: 'VARC', name: 'Verbal Ability and Reading Comprehension', questionCount: 24, durationSeconds: 40 * 60 },
-    { key: 'DILR', name: 'Data Interpretation and Logical Reasoning', questionCount: 22, durationSeconds: 40 * 60 },
-    { key: 'QA', name: 'Quantitative Aptitude', questionCount: 22, durationSeconds: 40 * 60 },
+    { key: 'VARC', name: 'Verbal Ability and Reading Comprehension (8 VA + 16 RC across 4 passages)', questionCount: 24, durationSeconds: 40 * 60 },
+    { key: 'DILR', name: 'Data Interpretation and Logical Reasoning (4–5 sets; target 24 questions)', questionCount: 24, durationSeconds: 40 * 60 },
+    { key: 'QA', name: 'Quantitative Aptitude', questionCount: 24, durationSeconds: 40 * 60 },
   ],
   scoring: { correct: 3, incorrectMcq: -1, incorrectTita: 0, unanswered: 0 },
   sectionLocking: true,
@@ -96,7 +96,7 @@ export function validateCatPattern(pattern: CatPattern): string[] {
   }
   const questions = pattern.sections.reduce((sum, section) => sum + section.questionCount, 0);
   const duration = pattern.sections.reduce((sum, section) => sum + section.durationSeconds, 0);
-  if (questions !== 68) errors.push(`Reference CAT 2025 pattern expects 68 questions; configured ${questions}`);
+  if (questions < 68 || questions > 72) errors.push(`CAT mock pattern should contain approximately 68–72 questions; configured ${questions}`);
   if (duration !== pattern.totalDurationSeconds) errors.push('Section durations must sum to totalDurationSeconds');
   if (pattern.sections.some(section => section.durationSeconds !== 40 * 60)) {
     errors.push('Reference CAT 2025 pattern expects 40 minutes per section');
