@@ -81,7 +81,11 @@ export async function GET(request: Request): Promise<NextResponse> {
     const limit = Math.min(Math.max(Number(searchParams.get("limit")) || 50, 1), 200);
     const offset = Math.max(Number(searchParams.get("offset")) || 0, 0);
 
-    const backfillConditions: string[] = ["ta.is_correct = false", "t.student_id = $1"];
+    const backfillConditions: string[] = [
+      "ta.is_correct = false",
+      "t.student_id::text = $1::text",
+      "t.test_id IS NOT NULL",
+    ];
     const backfillValues: unknown[] = [studentId];
     let bi = 2;
     if (subject) {
@@ -99,7 +103,7 @@ export async function GET(request: Request): Promise<NextResponse> {
       SELECT
         $1,
         ta.question_id,
-        t.id,
+        t.test_id,
         ta.attempt_id,
         ta.selected_answer::text,
         q.correct_option::text,
@@ -110,16 +114,19 @@ export async function GET(request: Request): Promise<NextResponse> {
         q.stem,
         q.options::jsonb
       FROM test_answers ta
-      INNER JOIN test_attempts t ON ta.attempt_id = t.id
-      INNER JOIN questions q ON ta.question_id = q.id
-      LEFT JOIN tests ts ON ts.id = t.test_id
+      INNER JOIN test_attempts t
+        ON ta.attempt_id::text = t.id::text
+      INNER JOIN questions q
+        ON ta.question_id::text = q.id::text
+      LEFT JOIN tests ts
+        ON ts.id::text = t.test_id::text
       WHERE ${backfillConditions.join(" AND ")}
         AND NOT EXISTS (
           SELECT 1 FROM student_mistakes sm
-          WHERE sm.student_id = $1
-            AND sm.question_id = ta.question_id
-            AND sm.test_id = t.id
-            AND sm.attempt_id = ta.attempt_id
+          WHERE sm.student_id::text = $1::text
+            AND sm.question_id::text = ta.question_id::text
+            AND sm.test_id::text = t.test_id::text
+            AND sm.attempt_id::text = ta.attempt_id::text
         )
       ON CONFLICT DO NOTHING
     `;
