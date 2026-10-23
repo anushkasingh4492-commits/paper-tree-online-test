@@ -104,7 +104,7 @@ export async function GET(request: Request): Promise<NextResponse> {
         ta.selected_answer::text,
         q.correct_option::text,
         q.subject,
-        t.exam,
+        COALESCE(ts.exam, '') AS exam,
         q.chapter_name,
         q.difficulty,
         q.stem,
@@ -112,6 +112,7 @@ export async function GET(request: Request): Promise<NextResponse> {
       FROM test_answers ta
       INNER JOIN test_attempts t ON ta.attempt_id = t.id
       INNER JOIN questions q ON ta.question_id = q.id
+      LEFT JOIN tests ts ON ts.id = t.test_id
       WHERE ${backfillConditions.join(" AND ")}
         AND NOT EXISTS (
           SELECT 1 FROM student_mistakes sm
