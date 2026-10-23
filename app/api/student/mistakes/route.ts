@@ -12,7 +12,7 @@ async function ensureMistakesTable(): Promise<void> {
       id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
       student_id UUID NOT NULL,
       question_id VARCHAR(100) NOT NULL,
-      test_id UUID NOT NULL,
+      test_id TEXT NOT NULL,
       attempt_id TEXT NOT NULL,
       selected_answer TEXT,
       correct_answer TEXT,
@@ -28,6 +28,11 @@ async function ensureMistakesTable(): Promise<void> {
       first_made TIMESTAMPTZ NOT NULL DEFAULT NOW(),
       last_made TIMESTAMPTZ NOT NULL DEFAULT NOW()
     )
+  `);
+
+  await pool.query(`
+    ALTER TABLE student_mistakes
+    ALTER COLUMN test_id TYPE TEXT USING test_id::text
   `);
 
   await pool.query(`
@@ -103,7 +108,7 @@ export async function GET(request: Request): Promise<NextResponse> {
       SELECT
         $1::uuid,
         ta.question_id,
-        t.test_id::uuid,
+        t.test_id::text,
         ta.attempt_id,
         ta.selected_answer::text,
         q.correct_option::text,
