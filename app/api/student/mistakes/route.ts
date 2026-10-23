@@ -140,6 +140,13 @@ export async function GET(request: Request): Promise<NextResponse> {
       ci++;
     }
 
+    const countConditions: string[] = ["sm.student_id = $1"];
+    const countValues: unknown[] = [studentId];
+    if (subject) {
+      countConditions.push(`sm.subject = $${countValues.length + 1}`);
+      countValues.push(subject);
+    }
+
     const query = `
       SELECT
         id, student_id, question_id, test_id, attempt_id,
@@ -163,9 +170,9 @@ export async function GET(request: Request): Promise<NextResponse> {
         COUNT(*) FILTER (WHERE is_resolved = false) AS unresolved_count,
         COUNT(*) AS total_count
       FROM student_mistakes sm
-      WHERE ${conditions.slice(0, -1).join(" AND ")}
+      WHERE ${countConditions.join(" AND ")}
       `,
-      values.slice(0, -2)
+      countValues
     );
 
     const mistakes = result.rows.map((row) => {
