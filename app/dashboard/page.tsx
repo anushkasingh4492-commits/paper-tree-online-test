@@ -2,6 +2,7 @@
 
 import StudentInsights from "@/components/StudentInsights";
 import StudentAccountMenu from "@/components/StudentAccountMenu";
+import StudentTestHub from "@/components/StudentTestHub";
 import {
   useEffect,
   useMemo,
@@ -1677,6 +1678,21 @@ export default function DashboardPage() {
                 Mistake Notebook
               </button>
 
+              <button
+                onClick={() => {
+                  // Scroll to StudentTestHub section on dashboard
+                  const el = document.getElementById("weak-areas-test-hub");
+                  if (el) el.scrollIntoView({ behavior: "smooth" });
+                }}
+                className="w-full h-10 flex items-center gap-3 px-2.5 rounded-xl text-[#657083] hover:bg-[#f7f8fb] text-xs font-medium transition"
+              >
+                <span className="w-7 h-7 rounded-lg bg-gradient-to-br from-indigo-50 to-purple-50 flex items-center justify-center text-base">
+                  🤖
+                </span>
+
+                Weak Areas Test
+              </button>
+
             </nav>
           </div>
 <button
@@ -2519,6 +2535,11 @@ export default function DashboardPage() {
                   )}
 
                 </div>
+              </div>
+
+              {/* Weak Areas Test Builder */}
+              <div id="weak-areas-test-hub" className="mt-6">
+                <StudentTestHub />
               </div>
 
               {/* Weak Areas */}
