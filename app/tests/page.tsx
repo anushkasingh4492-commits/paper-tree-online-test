@@ -2049,12 +2049,16 @@ setSubjects([
                                     subject,
                                     count,
                                   ]
-                                ) =>
-                                  `${
+                                ) => {
+                                  const presetSubject =
+                                    subject as PresetSubject;
+
+                                  return `${
                                     PRESET_SUBJECT_NAMES[
-                                      subject
+                                      presetSubject
                                     ]
-                                  } ${count}`
+                                  } ${count}`;
+                                }
                               )
                               .join(
                                 " + "

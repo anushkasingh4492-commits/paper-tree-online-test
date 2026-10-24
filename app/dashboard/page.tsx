@@ -2,6 +2,7 @@
 
 import StudentInsights from "@/components/StudentInsights";
 import StudentAccountMenu from "@/components/StudentAccountMenu";
+import StudentBatchLeaderboardPreview from "@/components/StudentBatchLeaderboardPreview";
 import StudentTestHub from "@/components/StudentTestHub";
 import {
   useEffect,
@@ -988,6 +989,9 @@ export default function DashboardPage() {
 
   const [notifications, setNotifications] = useState<NotificationItem[]>([]);
   const [currentTime, setCurrentTime] = useState(() => Date.now());
+  const [totalMistakes, setTotalMistakes] = useState(0);
+  const [unresolvedMistakes, setUnresolvedMistakes] = useState(0);
+  const [masteredMistakes, setMasteredMistakes] = useState(0);
 
   const [
     loading,
@@ -1162,6 +1166,25 @@ export default function DashboardPage() {
           data.statistics ||
             {}
         );
+
+        // Fetch mistake counts from mistake notebook
+        try {
+          const mistakeRes = await fetch(
+            "/api/student/mistakes?limit=1",
+            { cache: "no-store", credentials: "include" }
+          );
+          const mistakeData = await mistakeRes.json();
+          if (mistakeData.success) {
+            setTotalMistakes(mistakeData.stats?.total || 0);
+            setUnresolvedMistakes(mistakeData.stats?.unresolved || 0);
+            setMasteredMistakes(
+              (mistakeData.stats?.total || 0) -
+                (mistakeData.stats?.unresolved || 0)
+            );
+          }
+        } catch {
+          // silent
+        }
       } catch (err) {
         console.error(
           "Dashboard loading error:",
@@ -1679,6 +1702,50 @@ export default function DashboardPage() {
               </button>
 
               <button
+                onClick={() => router.push("/notifications")}
+                className="w-full h-10 flex items-center gap-3 px-2.5 rounded-xl text-[#657083] hover:bg-[#f7f8fb] text-xs font-medium transition"
+              >
+                <span className="w-7 h-7 rounded-lg bg-gradient-to-br from-purple-50 to-indigo-50 flex items-center justify-center text-base">
+                  🔔
+                </span>
+
+                Notifications
+              </button>
+
+              <button
+                onClick={() => router.push("/edit-profile")}
+                className="w-full h-10 flex items-center gap-3 px-2.5 rounded-xl text-[#657083] hover:bg-[#f7f8fb] text-xs font-medium transition"
+              >
+                <span className="w-7 h-7 rounded-lg bg-gradient-to-br from-blue-50 to-cyan-50 flex items-center justify-center text-base">
+                  👤
+                </span>
+
+                Edit Profile
+              </button>
+
+              <button
+                onClick={() => router.push("/achievements")}
+                className="w-full h-10 flex items-center gap-3 px-2.5 rounded-xl text-[#657083] hover:bg-[#f7f8fb] text-xs font-medium transition"
+              >
+                <span className="w-7 h-7 rounded-lg bg-gradient-to-br from-green-50 to-emerald-50 flex items-center justify-center text-base">
+                  🏅
+                </span>
+
+                My Achievements
+              </button>
+
+              <button
+                onClick={() => router.push("/boss-fight")}
+                className="w-full h-10 flex items-center gap-3 px-2.5 rounded-xl text-[#657083] hover:bg-[#f7f8fb] text-xs font-medium transition"
+              >
+                <span className="w-7 h-7 rounded-lg bg-gradient-to-br from-orange-50 to-red-50 flex items-center justify-center text-base">
+                  👊
+                </span>
+
+                Boss Fight Queue
+              </button>
+
+              <button
                 onClick={() => {
                   // Scroll to StudentTestHub section on dashboard
                   const el = document.getElementById("weak-areas-test-hub");
@@ -2002,7 +2069,87 @@ export default function DashboardPage() {
 
             </section>
 
+            {/* Assigned Course */}
+            <div className="bg-white rounded-[14px] border border-[#e8eaf0] p-5 shadow-[0_3px_12px_rgba(30,35,60,.035)] mb-5">
+              <div className="flex items-center justify-between">
+                <div>
+                  <h2 className="text-[14px] font-extrabold">Your Assigned Course</h2>
+                  <p className="mt-1 text-[10px] text-[#939aa8]">
+                    Your current batch syllabus
+                  </p>
+                </div>
+                <span className="text-[10px] font-bold text-[#315bea] bg-[#eef2ff] px-2.5 py-1 rounded-full">
+                  Active
+                </span>
+              </div>
+              <div className="mt-4 h-1 bg-[#f0f2f6] rounded-full overflow-hidden">
+                <div className="h-full bg-gradient-to-r from-[#315bea] to-[#6338e5]" style={{ width: "65%" }} />
+              </div>
+              <div className="mt-2 flex justify-between text-[10px] text-[#697386]">
+                <span>MHT-CET 2026</span>
+                <span>65% complete</span>
+              </div>
+            </div>
+
+            {/* Your Batch Card */}
+            <div className="bg-white rounded-[14px] border border-[#e8eaf0] p-5 shadow-[0_3px_12px_rgba(30,35,60,.035)] mb-5">
+              <div className="flex items-center justify-between">
+                <div>
+                  <h2 className="text-[14px] font-extrabold">Your Batch</h2>
+                  <p className="mt-1 text-[10px] text-[#939aa8]">
+                    NEET Crash Course • Batch B2
+                  </p>
+                </div>
+                <div className="w-8 h-8 rounded-full bg-[#f0f9ff] flex items-center justify-center text-lg">
+                  👥
+                </div>
+              </div>
+              <div className="mt-4 grid grid-cols-3 gap-3 text-center">
+                <div className="p-2 rounded-lg bg-[#f0f5ff]">
+                  <p className="text-[9px] text-[#697386] font-semibold uppercase">Tests</p>
+                  <p className="text-[14px] font-bold text-[#315bea]">12</p>
+                </div>
+                <div className="p-2 rounded-lg bg-[#f0fdf4]">
+                  <p className="text-[9px] text-[#697386] font-semibold uppercase">Avg Score</p>
+                  <p className="text-[14px] font-bold text-[#16a34a]">78%</p>
+                </div>
+                <div className="p-2 rounded-lg bg-[#fff7ed]">
+                  <p className="text-[9px] text-[#697386] font-semibold uppercase">Rank</p>
+                  <p className="text-[14px] font-bold text-[#ca8a04]">#4</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Mistake Summary Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-5">
+              <div className="rounded-xl border border-[#fca5a5] bg-[#fef2f2] p-4">
+                <div className="text-[9px] font-bold uppercase tracking-[0.15em] text-rose-600">
+                  Total Mistakes
+                </div>
+                <div className="mt-1 text-2xl font-black text-rose-600">
+                  {totalMistakes}
+                </div>
+              </div>
+              <div className="rounded-xl border border-[#fde047] bg-[#fefce8] p-4">
+                <div className="text-[9px] font-bold uppercase tracking-[0.15em] text-amber-600">
+                  Unresolved
+                </div>
+                <div className="mt-1 text-2xl font-black text-amber-600">
+                  {unresolvedMistakes}
+                </div>
+              </div>
+              <div className="rounded-xl border border-[#86efac] bg-[#f0fdf4] p-4">
+                <div className="text-[9px] font-bold uppercase tracking-[0.15em] text-emerald-600">
+                  Mastered
+                </div>
+                <div className="mt-1 text-2xl font-black text-emerald-600">
+                  {masteredMistakes}
+                </div>
+              </div>
+            </div>
+
             <div id="trophy-wall"><StudentInsights /></div>
+            <StudentBatchLeaderboardPreview />
 
             {/* =================================================
                 PERFORMANCE + SCORE DISTRIBUTION
@@ -2252,11 +2399,11 @@ export default function DashboardPage() {
                 UPCOMING SCHEDULED TESTS
             ================================================== */}
 
-            {notifications.length > 0 && (
-              <section id="notifications" className="mt-5 rounded-[14px] border border-[#e8eaf0] bg-white shadow-[0_3px_12px_rgba(30,35,60,.035)]">
-                <div className="border-b border-[#eff0f4] px-5 py-4">
-                  <h2 className="text-[14px] font-extrabold text-[#172033]">Notifications</h2>
-                </div>
+            <section id="notifications" className="mt-5 rounded-[14px] border border-[#e8eaf0] bg-white shadow-[0_3px_12px_rgba(30,35,60,.035)]">
+              <div className="border-b border-[#eff0f4] px-5 py-4">
+                <h2 className="text-[14px] font-extrabold text-[#172033]">Notifications</h2>
+              </div>
+              {notifications.length > 0 ? (
                 <div className="divide-y divide-[#eff0f4]">
                   {notifications.slice(0, 5).map((notification) => (
                     <button
@@ -2270,8 +2417,12 @@ export default function DashboardPage() {
                     </button>
                   ))}
                 </div>
-              </section>
-            )}
+              ) : (
+                <p className="px-5 py-4 text-xs text-[#697386]">
+                  You&apos;re all caught up. New test and academy updates will appear here.
+                </p>
+              )}
+            </section>
 
             {visibleScheduledTests.length >
               0 && (
