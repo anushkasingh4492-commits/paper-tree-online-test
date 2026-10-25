@@ -1045,6 +1045,8 @@ const figureAsset =
                 id:
                   String(
                     question.id ??
+                      question.question_id ??
+                      question.questionId ??
                       ""
                   ) ||
                   `question-${index + 1}`,
@@ -1463,10 +1465,13 @@ const figureAsset =
   const answeredCount =
     useMemo(() => {
       return questions.filter(
-        (question) =>
-          answers[
-            question.id
-          ] !== undefined
+        (question) => {
+          const answer = answers[question.id];
+          return answer !== undefined &&
+            answer !== null &&
+            !(typeof answer === "string" && answer.trim() === "") &&
+            !(Array.isArray(answer) && answer.length === 0);
+        }
       ).length;
     }, [
       answers,

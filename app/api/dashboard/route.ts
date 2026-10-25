@@ -465,7 +465,9 @@ console.log(
       studentResult.rows[0];
       const batchCoursesResult = await client.query(
   `
-  SELECT DISTINCT
+  SELECT
+    b.id,
+    b.name,
     UPPER(TRIM(b.course_name)) AS course_name
   FROM batch_students bs
   INNER JOIN batches b
@@ -473,6 +475,8 @@ console.log(
   WHERE bs.student_id::text = $1::text
     AND b.academy_id::text = $2::text
     AND b.course_name IS NOT NULL
+    AND TRIM(b.course_name) <> ''
+  ORDER BY b.created_at DESC
   `,
   [studentId, academyId]
 );
@@ -480,6 +484,13 @@ console.log(
 const batchCourses = batchCoursesResult.rows.map(
   (row: any) => String(row.course_name || "").trim()
 );
+const assignment = batchCoursesResult.rows[0]
+  ? {
+      batchId: String(batchCoursesResult.rows[0].id),
+      batchName: String(batchCoursesResult.rows[0].name ?? ""),
+      courseName: String(batchCoursesResult.rows[0].course_name ?? ""),
+    }
+  : null;
 
 const hasPCM = batchCourses.some((course: string) =>
   course.endsWith("PCM")
@@ -573,9 +584,6 @@ const attemptsResult =
           )
       );
 
-    const testsTaken =
-      completedAttempts.length;
-
     /* ========================================================
        GLOBAL ANALYTICS
     ======================================================== */
@@ -665,15 +673,11 @@ const attemptsResult =
         answers.length > 0
       ) {
         questionIds =
-          Array.from(
-            new Set(
-              answers.map(
-                (answer: any) =>
-                  String(
-                    answer.question_id
-                  )
+          answers.map(
+            (answer: any) =>
+              String(
+                answer.question_id
               )
-            )
           );
       }
 
@@ -798,20 +802,13 @@ FROM questions
                 )
             );
 
-      const uniqueAnalysisIds =
-        Array.from(
-          new Set(
-            analysisIds
-          )
-        );
-
       /* ------------------------------------------------------
          ANALYSE QUESTIONS
       ------------------------------------------------------ */
 
       for (
         const questionId of
-          uniqueAnalysisIds
+          analysisIds
       ) {
         const question =
           questionMap.get(
@@ -1026,7 +1023,7 @@ FROM questions
       ------------------------------------------------------ */
 
       if (
-        uniqueAnalysisIds.length ===
+        analysisIds.length ===
           0 &&
         answers.length > 0
       ) {
@@ -1138,15 +1135,25 @@ FROM questions
        SCORE STATISTICS
     ======================================================== */
 
-    const scores: number[] =
-      completedAttempts.map(
-        (
-          attempt: any
-        ): number =>
-          Number(
-            attempt.score ?? 0
-          )
-      );
+    type ScoredAttempt = {
+      id: unknown;
+      score?: number | string | null;
+      total_marks?: number | string | null;
+    };
+    const validPerformanceAttempts = completedAttempts.filter(
+      (attempt: ScoredAttempt) =>
+        Number(attempt.total_marks ?? 0) > 0 &&
+        (attemptAnalytics.get(String(attempt.id))?.attempted ?? 0) > 0
+    );
+    const testsTaken = validPerformanceAttempts.length;
+    const scorePercentage = (attempt: {
+      score?: number | string | null;
+      total_marks?: number | string | null;
+    }) =>
+      Number(attempt.total_marks) > 0
+        ? (Number(attempt.score ?? 0) / Number(attempt.total_marks)) * 100
+        : 0;
+    const scores: number[] = validPerformanceAttempts.map(scorePercentage);
 
     const averageScore =
       scores.length > 0
@@ -1252,7 +1259,7 @@ FROM questions
 
     const performanceTrend =
       [
-        ...completedAttempts,
+        ...validPerformanceAttempts,
       ]
         .reverse()
         .map(
@@ -1278,10 +1285,7 @@ FROM questions
               testId,
 
               score:
-                Number(
-                  attempt.score ??
-                    0
-                ),
+                scorePercentage(attempt),
 
               date,
 
@@ -1659,14 +1663,13 @@ const allowedDashboardSubjects =
               exam:
                 String(
                   attempt.test_exam ??
-                    "MHT-CET"
+                    "Practice Test"
                 ),
 
               score:
-                Number(
-                  attempt.score ??
-                    0
-                ),
+                Number(attempt.total_marks ?? 0) > 0
+                  ? scorePercentage(attempt)
+                  : 0,
 
               totalMarks:
                 Number(
@@ -1803,7 +1806,7 @@ const allowedDashboardSubjects =
             exam:
               String(
                 attempt.test_exam ??
-                  "MHT-CET"
+                  "Practice Test"
               ),
 
             paperId:
@@ -1842,13 +1845,9 @@ const allowedDashboardSubjects =
               ),
 
             score:
-              attempt.score ===
-              null
-                ? null
-                : Number(
-                    attempt.score ??
-                      0
-                  ),
+              Number(attempt.total_marks ?? 0) > 0
+                ? scorePercentage(attempt)
+                : null,
 
             totalMarks:
               Number(
@@ -2083,16 +2082,16 @@ console.log(
 
         name:
           testId ??
-          "MHT-CET Test",
+          "Practice Test",
 
         title:
           testId ??
-          "MHT-CET Test",
+          "Practice Test",
 
         exam:
           String(
             attempt.test_exam ??
-              "MHT-CET"
+              "Practice Test"
           ),
 
         status:
@@ -2208,16 +2207,16 @@ console.log(
 
         name:
           testId ??
-          "MHT-CET Test",
+          "Practice Test",
 
         title:
           testId ??
-          "MHT-CET Test",
+          "Practice Test",
 
         exam:
           String(
             attempt.test_exam ??
-              "MHT-CET"
+              "Practice Test"
           ),
 
         status:
@@ -2367,7 +2366,7 @@ console.log(
         exam:
           String(
             scheduled.paper_exam ??
-              "MHT-CET"
+              "Unknown Exam"
           ),
 
         description:
@@ -2594,6 +2593,8 @@ console.log(
           student.email ??
           null,
       },
+
+      assignment,
 
       /* ------------------------------------------------------
          STATISTICS

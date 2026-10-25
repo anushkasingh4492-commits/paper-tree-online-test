@@ -89,7 +89,8 @@ export async function GET(request: Request): Promise<NextResponse> {
     const backfillConditions: string[] = [
       "ta.is_correct = false",
       "t.student_id::text = $2",
-      "t.test_id IS NOT NULL",
+      "LOWER(REPLACE(COALESCE(t.status, ''), '-', '_')) IN ('submitted', 'auto_submitted', 'auto submitted', 'completed', 'complete')",
+      "COALESCE(NULLIF(t.test_id::text, ''), NULLIF(st.test_id::text, ''), NULLIF(t.scheduled_test_id::text, '')) IS NOT NULL",
     ];
     const backfillValues: unknown[] = [studentId, studentId];
     let bi = 3;
@@ -108,7 +109,7 @@ export async function GET(request: Request): Promise<NextResponse> {
       SELECT
         $1::uuid,
         ta.question_id,
-        t.test_id::text,
+        COALESCE(NULLIF(t.test_id::text, ''), NULLIF(st.test_id::text, ''), NULLIF(t.scheduled_test_id::text, '')),
         ta.attempt_id,
         ta.selected_answer::text,
         q.correct_option::text,
@@ -123,14 +124,24 @@ export async function GET(request: Request): Promise<NextResponse> {
         ON ta.attempt_id::text = t.id::text
       INNER JOIN questions q
         ON ta.question_id::text = q.id::text
+      LEFT JOIN scheduled_tests st
+        ON st.id::text = t.scheduled_test_id::text
       LEFT JOIN tests ts
-        ON ts.id::text = t.test_id::text
+        ON ts.id::text = COALESCE(
+          NULLIF(t.test_id::text, ''),
+          NULLIF(st.test_id::text, ''),
+          NULLIF(t.scheduled_test_id::text, '')
+        )
       WHERE ${backfillConditions.join(" AND ")}
         AND NOT EXISTS (
           SELECT 1 FROM student_mistakes sm
           WHERE sm.student_id = $1::uuid
             AND sm.question_id::text = ta.question_id::text
-            AND sm.test_id::text = t.test_id::text
+            AND sm.test_id::text = COALESCE(
+              NULLIF(t.test_id::text, ''),
+              NULLIF(st.test_id::text, ''),
+              NULLIF(t.scheduled_test_id::text, '')
+            )
             AND sm.attempt_id::text = ta.attempt_id::text
         )
       ON CONFLICT DO NOTHING

@@ -18,11 +18,13 @@ export async function GET() {
     }
 
     const batchResult = await pool.query(
-      `SELECT b.id, b.name
+      `SELECT b.id, b.name, b.course_name
        FROM batch_students bs
        INNER JOIN batches b ON b.id = bs.batch_id
        WHERE bs.student_id = $1 AND b.academy_id = $2
-       ORDER BY b.created_at DESC
+       ORDER BY
+         CASE WHEN NULLIF(TRIM(COALESCE(b.course_name, '')), '') IS NOT NULL THEN 0 ELSE 1 END,
+         b.created_at DESC
        LIMIT 1`,
       [studentId, academyId]
     );
@@ -49,12 +51,26 @@ export async function GET() {
                WHEN LOWER(REPLACE(COALESCE(ta.status, ''), '-', '_'))
                     IN ('submitted', 'auto_submitted', 'auto submitted', 'completed', 'complete')
                 AND COALESCE(ta.total_marks, 0) > 0
+                 AND EXISTS (
+                   SELECT 1
+                   FROM test_answers answered
+                   WHERE answered.attempt_id::text = ta.id::text
+                     AND answered.selected_answer IS NOT NULL
+                     AND answered.selected_answer::text <> ''
+                 )
                THEN (ta.score::numeric / ta.total_marks::numeric) * 100
              END
            ), 0) AS avg_pct,
            COUNT(CASE
              WHEN LOWER(REPLACE(COALESCE(ta.status, ''), '-', '_'))
                   IN ('submitted', 'auto_submitted', 'auto submitted', 'completed', 'complete')
+               AND EXISTS (
+                 SELECT 1
+                 FROM test_answers answered
+                 WHERE answered.attempt_id::text = ta.id::text
+                   AND answered.selected_answer IS NOT NULL
+                   AND answered.selected_answer::text <> ''
+               )
              THEN 1 END)::int AS tests_taken,
            COALESCE(SUM(CASE
              WHEN LOWER(REPLACE(COALESCE(ta.status, ''), '-', '_'))
@@ -93,6 +109,7 @@ export async function GET() {
       batch: {
         id: String(batch.id),
         name: String(batch.name),
+        courseName: batch.course_name == null ? null : String(batch.course_name),
         size: students.length,
       },
       students,

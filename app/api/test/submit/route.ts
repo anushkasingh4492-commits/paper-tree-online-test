@@ -36,6 +36,7 @@ type AnswerMap = Record<string, number | string | number[] | null>;
 type QuestionAnswerData = {
   id?: unknown;
   question_id?: unknown;
+  questionId?: unknown;
   question_type?: unknown;
   questionType?: unknown;
   answer_format?: unknown;
@@ -655,6 +656,7 @@ export async function POST(request: NextRequest) {
       const questionId = String(
         question.id ??
           question.question_id ??
+          question.questionId ??
           `question-${index + 1}`
       );
 

@@ -100,6 +100,12 @@ type DashboardPayload = {
     email?: string | null;
   };
 
+  assignment?: {
+    batchId: string;
+    batchName: string;
+    courseName: string;
+  } | null;
+
   statistics?: {
     testsTaken?: number;
     averageScore?: number;
@@ -988,10 +994,13 @@ export default function DashboardPage() {
   >([]);
 
   const [notifications, setNotifications] = useState<NotificationItem[]>([]);
+  const [assignment, setAssignment] = useState<DashboardPayload["assignment"]>(null);
   const [currentTime, setCurrentTime] = useState(() => Date.now());
   const [totalMistakes, setTotalMistakes] = useState(0);
   const [unresolvedMistakes, setUnresolvedMistakes] = useState(0);
   const [masteredMistakes, setMasteredMistakes] = useState(0);
+  const [mistakesLoaded, setMistakesLoaded] = useState(false);
+  const [mistakesError, setMistakesError] = useState("");
 
   const [
     loading,
@@ -1116,6 +1125,7 @@ export default function DashboardPage() {
           data.student?.name?.trim() ||
             "Student"
         );
+        setAssignment(data.assignment ?? null);
 
         setResults(
           Array.isArray(
@@ -1174,16 +1184,23 @@ export default function DashboardPage() {
             { cache: "no-store", credentials: "include" }
           );
           const mistakeData = await mistakeRes.json();
-          if (mistakeData.success) {
-            setTotalMistakes(mistakeData.stats?.total || 0);
-            setUnresolvedMistakes(mistakeData.stats?.unresolved || 0);
-            setMasteredMistakes(
-              (mistakeData.stats?.total || 0) -
-                (mistakeData.stats?.unresolved || 0)
-            );
+          if (!mistakeRes.ok || !mistakeData.success) {
+            throw new Error(mistakeData.error || "Could not load mistake counts.");
           }
-        } catch {
-          // silent
+          const total = Number(mistakeData.stats?.total ?? 0);
+          const unresolved = Number(mistakeData.stats?.unresolved ?? 0);
+          setTotalMistakes(total);
+          setUnresolvedMistakes(unresolved);
+          setMasteredMistakes(Math.max(0, total - unresolved));
+          setMistakesLoaded(true);
+          setMistakesError("");
+        } catch (mistakeError) {
+          console.error("Dashboard mistake counts error:", mistakeError);
+          setMistakesError(
+            mistakeError instanceof Error
+              ? mistakeError.message
+              : "Could not load mistake counts."
+          );
         }
       } catch (err) {
         console.error(
@@ -1376,6 +1393,7 @@ export default function DashboardPage() {
           ?.attempts ??
         0
     );
+  const averageLabel = testsTaken > 0 ? `${average.toFixed(1)}%` : "—";
 
   const studyTime =
     statistics?.studyTime ||
@@ -1977,9 +1995,7 @@ export default function DashboardPage() {
 
                 [
                   "Average Score",
-                  `${average.toFixed(
-                    1
-                  )}%`,
+                  averageLabel,
                   `${
                     statistics
                       ?.overallAccuracy ??
@@ -2075,49 +2091,13 @@ export default function DashboardPage() {
                 <div>
                   <h2 className="text-[14px] font-extrabold">Your Assigned Course</h2>
                   <p className="mt-1 text-[10px] text-[#939aa8]">
-                    Your current batch syllabus
+                    {assignment?.batchName || "Your current batch"}
                   </p>
                 </div>
-                <span className="text-[10px] font-bold text-[#315bea] bg-[#eef2ff] px-2.5 py-1 rounded-full">
-                  Active
-                </span>
               </div>
-              <div className="mt-4 h-1 bg-[#f0f2f6] rounded-full overflow-hidden">
-                <div className="h-full bg-gradient-to-r from-[#315bea] to-[#6338e5]" style={{ width: "65%" }} />
-              </div>
-              <div className="mt-2 flex justify-between text-[10px] text-[#697386]">
-                <span>MHT-CET 2026</span>
-                <span>65% complete</span>
-              </div>
-            </div>
-
-            {/* Your Batch Card */}
-            <div className="bg-white rounded-[14px] border border-[#e8eaf0] p-5 shadow-[0_3px_12px_rgba(30,35,60,.035)] mb-5">
-              <div className="flex items-center justify-between">
-                <div>
-                  <h2 className="text-[14px] font-extrabold">Your Batch</h2>
-                  <p className="mt-1 text-[10px] text-[#939aa8]">
-                    NEET Crash Course • Batch B2
-                  </p>
-                </div>
-                <div className="w-8 h-8 rounded-full bg-[#f0f9ff] flex items-center justify-center text-lg">
-                  👥
-                </div>
-              </div>
-              <div className="mt-4 grid grid-cols-3 gap-3 text-center">
-                <div className="p-2 rounded-lg bg-[#f0f5ff]">
-                  <p className="text-[9px] text-[#697386] font-semibold uppercase">Tests</p>
-                  <p className="text-[14px] font-bold text-[#315bea]">12</p>
-                </div>
-                <div className="p-2 rounded-lg bg-[#f0fdf4]">
-                  <p className="text-[9px] text-[#697386] font-semibold uppercase">Avg Score</p>
-                  <p className="text-[14px] font-bold text-[#16a34a]">78%</p>
-                </div>
-                <div className="p-2 rounded-lg bg-[#fff7ed]">
-                  <p className="text-[9px] text-[#697386] font-semibold uppercase">Rank</p>
-                  <p className="text-[14px] font-bold text-[#ca8a04]">#4</p>
-                </div>
-              </div>
+              <p className="mt-4 text-lg font-extrabold text-[#202638]">
+                {assignment?.courseName || "No course assigned"}
+              </p>
             </div>
 
             {/* Mistake Summary Cards */}
@@ -2127,7 +2107,7 @@ export default function DashboardPage() {
                   Total Mistakes
                 </div>
                 <div className="mt-1 text-2xl font-black text-rose-600">
-                  {totalMistakes}
+                  {mistakesLoaded ? totalMistakes : "—"}
                 </div>
               </div>
               <div className="rounded-xl border border-[#fde047] bg-[#fefce8] p-4">
@@ -2135,7 +2115,7 @@ export default function DashboardPage() {
                   Unresolved
                 </div>
                 <div className="mt-1 text-2xl font-black text-amber-600">
-                  {unresolvedMistakes}
+                  {mistakesLoaded ? unresolvedMistakes : "—"}
                 </div>
               </div>
               <div className="rounded-xl border border-[#86efac] bg-[#f0fdf4] p-4">
@@ -2143,9 +2123,14 @@ export default function DashboardPage() {
                   Mastered
                 </div>
                 <div className="mt-1 text-2xl font-black text-emerald-600">
-                  {masteredMistakes}
+                  {mistakesLoaded ? masteredMistakes : "—"}
                 </div>
               </div>
+              {mistakesError && (
+                <p role="alert" className="sm:col-span-3 text-xs font-semibold text-rose-600">
+                  {mistakesError}
+                </p>
+              )}
             </div>
 
             <div id="trophy-wall"><StudentInsights /></div>

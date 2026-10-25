@@ -450,38 +450,26 @@ for (
      * -------------------------------------------------------
      */
 
-    const total =
-      Number(
-        attempt.question_count ??
-          questions.length ??
-          0
-      );
-
-    const correct =
-      Number(
-        attempt.correct_count ??
-          0
-      );
-
-    const wrong =
-      Number(
-        attempt.incorrect_count ??
-          0
-      );
-
-    const unattempted =
-      Number(
-        attempt.unanswered_count ??
-          Math.max(
-            0,
-            total -
-              correct -
-              wrong
-          )
-      );
-
-    const attempted =
-      correct + wrong;
+    const total = Math.max(
+      Number(attempt.question_count ?? 0),
+      questions.length,
+      answersResult.rows.length
+    );
+    const attempted = answersResult.rows.filter((answer) => {
+      if (answer.selected_answer === null || answer.selected_answer === undefined) {
+        return false;
+      }
+      return typeof answer.selected_answer !== "string" ||
+        answer.selected_answer.trim() !== "";
+    }).length;
+    const correct = answersResult.rows.filter((answer) =>
+      answer.selected_answer !== null &&
+      answer.selected_answer !== undefined &&
+      String(answer.selected_answer).trim() !== "" &&
+      answer.is_correct === true
+    ).length;
+    const wrong = Math.max(0, attempted - correct);
+    const unattempted = Math.max(0, total - attempted);
 
     const accuracy =
       attempted > 0
