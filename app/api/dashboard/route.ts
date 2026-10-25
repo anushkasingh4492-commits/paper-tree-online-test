@@ -1074,22 +1074,25 @@ FROM questions
         }
       }
 
-      /* ------------------------------------------------------
-         SAFETY
-      ------------------------------------------------------ */
-
-      if (
-        attemptAttempted +
-          attemptUnanswered <
-        attemptTotal
-      ) {
-        attemptUnanswered =
-          Math.max(
-            0,
-            attemptTotal -
-              attemptAttempted
-          );
+      const savedAnsweredQuestions = Array.from(
+        answerMap.values()
+      ).filter(
+        (answer: any) =>
+          normalizeAnswer(answer.selected_answer) !== null
+      );
+      if (savedAnsweredQuestions.length > 0) {
+        attemptAttempted = savedAnsweredQuestions.length;
+        attemptCorrect = savedAnsweredQuestions.filter(
+          (answer: any) => answer.is_correct === true
+        ).length;
+        attemptWrong = attemptAttempted - attemptCorrect;
+      } else if (answerMap.size === 0) {
+        attemptCorrect = Number(attempt.correct_count ?? 0);
+        attemptWrong = Number(attempt.incorrect_count ?? 0);
+        attemptAttempted = attemptCorrect + attemptWrong;
       }
+      attemptTotal = Math.max(attemptTotal, answerMap.size);
+      attemptUnanswered = Math.max(0, attemptTotal - attemptAttempted);
 
       totalAttempted +=
         attemptAttempted;

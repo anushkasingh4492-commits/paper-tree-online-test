@@ -1741,6 +1741,9 @@ const figureAsset =
               reattempt: config?.reattempt === true,
               studentId,
               answers,
+              answersByQuestion: questions.map(
+                (question) => answers[question.id] ?? null
+              ),
               marked,
               questionTimes,
               automatic,

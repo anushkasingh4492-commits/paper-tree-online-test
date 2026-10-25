@@ -106,7 +106,10 @@ export async function getStudentGamification(studentId: string, academyId: strin
        COALESCE(t.question_count, 0)::int AS question_count,
        COALESCE(t.difficulty, '') AS difficulty,
        t.questions,
-       COUNT(CASE WHEN ans.selected_answer IS NOT NULL THEN 1 END)::int AS answered_count
+       COUNT(DISTINCT ans.question_id) FILTER (
+         WHERE ans.selected_answer IS NOT NULL
+           AND ans.selected_answer::text <> ''
+       )::int AS answered_count
      FROM test_attempts ta
      LEFT JOIN tests t ON t.id = COALESCE(ta.test_id, ta.scheduled_test_id)
      LEFT JOIN test_answers ans ON ans.attempt_id = ta.id

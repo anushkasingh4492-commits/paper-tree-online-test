@@ -28,6 +28,7 @@ export async function GET() {
     const testCols = new Set(testColsResult.rows.map((r) => String(r.column_name)));
     const testTitle = testCols.has("title") ? "t.title" : testCols.has("name") ? "t.name" : "NULL";
     const testExam = testCols.has("exam") ? "t.exam" : "NULL";
+    const testQuestionCount = testCols.has("question_count") ? "t.question_count" : "NULL";
 
     const query = `
       SELECT
@@ -40,15 +41,38 @@ export async function GET() {
         ) AS test_id,
         COALESCE(${testTitle}, ${testExam}, 'Practice Test') AS test_title,
         ${testExam} AS test_exam,
+        ${testQuestionCount} AS question_count,
         ${pick("score", "0")} AS score,
         ${pick("total_marks", "0")} AS total_marks,
         ${pick("status", "''")} AS status,
         ${pick("started_at")} AS started_at,
         ${pick("submitted_at")} AS submitted_at,
-        ${pick("correct_count", "0")} AS correct_count,
-        ${pick("incorrect_count", "0")} AS incorrect_count,
+        CASE
+          WHEN COALESCE(answer_counts.attempted_count, 0) > 0
+          THEN COALESCE(answer_counts.correct_count, 0)
+          ELSE ${pick("correct_count", "0")}
+        END::int AS correct_count,
+        CASE
+          WHEN COALESCE(answer_counts.attempted_count, 0) > 0
+          THEN GREATEST(answer_counts.attempted_count - answer_counts.correct_count, 0)
+          ELSE ${pick("incorrect_count", "0")}
+        END::int AS incorrect_count,
         ${pick("unanswered_count", "0")} AS unanswered_count
       FROM test_attempts ta
+      LEFT JOIN LATERAL (
+        SELECT
+          COUNT(DISTINCT answer.question_id) FILTER (
+            WHERE answer.selected_answer IS NOT NULL
+              AND answer.selected_answer::text <> ''
+          )::int AS attempted_count,
+          COUNT(DISTINCT answer.question_id) FILTER (
+            WHERE answer.selected_answer IS NOT NULL
+              AND answer.selected_answer::text <> ''
+              AND answer.is_correct = TRUE
+          )::int AS correct_count
+        FROM test_answers answer
+        WHERE answer.attempt_id::text = ${pick("id")}::text
+      ) answer_counts ON TRUE
       LEFT JOIN scheduled_tests st
         ON st.id::text = ${pick("scheduled_test_id")}::text
       LEFT JOIN tests t
@@ -68,6 +92,9 @@ export async function GET() {
     const tests = result.rows.map((r) => {
       const score = Number(r.score ?? 0);
       const total = Number(r.total_marks ?? 0);
+      const correct = Number(r.correct_count ?? 0);
+      const incorrect = Number(r.incorrect_count ?? 0);
+      const questionCount = Number(r.question_count ?? 0);
       return {
         attemptId: String(r.attempt_id ?? ""),
         testId: r.test_id == null ? null : String(r.test_id),
@@ -75,12 +102,15 @@ export async function GET() {
         score,
         totalMarks: total,
         percentage: total > 0 ? Number(((score / total) * 100).toFixed(1)) : 0,
+        questionCount,
         status: String(r.status || "completed"),
         startedAt: r.started_at,
         submittedAt: r.submitted_at,
-        correct: Number(r.correct_count ?? 0),
-        incorrect: Number(r.incorrect_count ?? 0),
-        unanswered: Number(r.unanswered_count ?? 0),
+        correct,
+        incorrect,
+        unanswered: questionCount > 0
+          ? Math.max(0, questionCount - correct - incorrect)
+          : Number(r.unanswered_count ?? 0),
       };
     });
 

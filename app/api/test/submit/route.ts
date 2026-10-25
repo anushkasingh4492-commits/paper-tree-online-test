@@ -59,6 +59,7 @@ type SubmitBody = {
   scheduledTestId?: string;
   studentId?: string;
   answers?: AnswerMap;
+  answersByQuestion?: unknown[];
   marked?: MarkedMap;
   automatic?: boolean;
   reattempt?: boolean;
@@ -425,6 +426,9 @@ export async function POST(request: NextRequest) {
       typeof body.answers === "object"
         ? body.answers
         : {};
+    const answersByQuestion = Array.isArray(body.answersByQuestion)
+      ? body.answersByQuestion
+      : [];
 
     /*
      * =======================================================
@@ -660,7 +664,12 @@ export async function POST(request: NextRequest) {
           `question-${index + 1}`
       );
 
-      const selectedRaw = answers[questionId];
+      const selectedRaw = Object.prototype.hasOwnProperty.call(
+        answersByQuestion,
+        index
+      )
+        ? answersByQuestion[index]
+        : answers[questionId];
 
       const titaQuestion = isTitaQuestion(question);
       const multiSelectQuestion = isMultiSelectQuestion(question);

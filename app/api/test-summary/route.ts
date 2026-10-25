@@ -375,7 +375,9 @@ export async function GET(request: NextRequest) {
         st.batch_id AS scheduled_batch_id,
         st.start_time AS scheduled_start_time,
         st.end_time AS scheduled_end_time,
-        st.duration_minutes AS scheduled_duration_minutes
+        st.duration_minutes AS scheduled_duration_minutes,
+        COALESCE(answer_counts.attempted_count, 0)::int AS saved_attempted_count,
+        COALESCE(answer_counts.correct_count, 0)::int AS saved_correct_count
 
       FROM test_attempts ta
 
@@ -385,6 +387,21 @@ export async function GET(request: NextRequest) {
       LEFT JOIN scheduled_tests st
         ON st.id::text = ta.scheduled_test_id::text
         AND st.academy_id::text = $2::text
+
+      LEFT JOIN LATERAL (
+        SELECT
+          COUNT(DISTINCT answer.question_id) FILTER (
+            WHERE answer.selected_answer IS NOT NULL
+              AND answer.selected_answer::text <> ''
+          )::int AS attempted_count,
+          COUNT(DISTINCT answer.question_id) FILTER (
+            WHERE answer.selected_answer IS NOT NULL
+              AND answer.selected_answer::text <> ''
+              AND answer.is_correct = TRUE
+          )::int AS correct_count
+        FROM test_answers answer
+        WHERE answer.attempt_id::text = ta.id::text
+      ) answer_counts ON TRUE
 
       WHERE ta.student_id::text = $1::text
         AND (
@@ -411,11 +428,14 @@ export async function GET(request: NextRequest) {
     const completedTests: TestSummaryItem[] = attempts
       .filter((attempt) => isCompletedStatus(attempt.status))
       .map((attempt) => {
-        const correct = safeNumber(attempt.correct_count);
-        const incorrect = safeNumber(attempt.incorrect_count);
-        const unanswered = safeNumber(attempt.unanswered_count);
-
-        const attempted = correct + incorrect;
+        const savedAttempted = safeNumber(attempt.saved_attempted_count);
+        const correct = savedAttempted > 0
+          ? safeNumber(attempt.saved_correct_count)
+          : safeNumber(attempt.correct_count);
+        const attempted = savedAttempted > 0
+          ? savedAttempted
+          : correct + safeNumber(attempt.incorrect_count);
+        const incorrect = Math.max(0, attempted - correct);
 
         const accuracy =
           attempted > 0
@@ -428,6 +448,9 @@ export async function GET(request: NextRequest) {
         );
 
         const questionCount = getQuestionCount(attempt);
+        const unanswered = questionCount > 0
+          ? Math.max(0, questionCount - attempted)
+          : safeNumber(attempt.unanswered_count);
 
         const exam =
           String(attempt.exam || "MHT-CET").trim() || "MHT-CET";
@@ -514,11 +537,19 @@ export async function GET(request: NextRequest) {
         isInProgressStatus(attempt.status)
       )
       .map((attempt) => {
-        const correct = safeNumber(attempt.correct_count);
-        const incorrect = safeNumber(attempt.incorrect_count);
-        const unanswered = safeNumber(attempt.unanswered_count);
+        const savedAttempted = safeNumber(attempt.saved_attempted_count);
+        const correct = savedAttempted > 0
+          ? safeNumber(attempt.saved_correct_count)
+          : safeNumber(attempt.correct_count);
+        const attempted = savedAttempted > 0
+          ? savedAttempted
+          : correct + safeNumber(attempt.incorrect_count);
+        const incorrect = Math.max(0, attempted - correct);
 
         const questionCount = getQuestionCount(attempt);
+        const unanswered = questionCount > 0
+          ? Math.max(0, questionCount - attempted)
+          : safeNumber(attempt.unanswered_count);
 
         const exam =
           String(attempt.exam || "MHT-CET").trim() || "MHT-CET";

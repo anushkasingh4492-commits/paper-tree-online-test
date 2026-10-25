@@ -218,6 +218,12 @@ st.allow_reattempt
     [attempt.attempt_id]
   );
 
+const answersByQuestionId = new Map<string, (typeof answersResult.rows)[number]>();
+for (const answer of answersResult.rows) {
+  answersByQuestionId.set(String(answer.question_id), answer);
+}
+const savedAnswers = Array.from(answersByQuestionId.values());
+
 const answers: Record<
   string,
   number | string
@@ -453,16 +459,16 @@ for (
     const total = Math.max(
       Number(attempt.question_count ?? 0),
       questions.length,
-      answersResult.rows.length
+      answersByQuestionId.size
     );
-    const attempted = answersResult.rows.filter((answer) => {
+    const attempted = savedAnswers.filter((answer) => {
       if (answer.selected_answer === null || answer.selected_answer === undefined) {
         return false;
       }
       return typeof answer.selected_answer !== "string" ||
         answer.selected_answer.trim() !== "";
     }).length;
-    const correct = answersResult.rows.filter((answer) =>
+    const correct = savedAnswers.filter((answer) =>
       answer.selected_answer !== null &&
       answer.selected_answer !== undefined &&
       String(answer.selected_answer).trim() !== "" &&
