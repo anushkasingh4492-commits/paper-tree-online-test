@@ -67,6 +67,22 @@ export async function GET(request: Request) {
       LOWER(REPLACE(COALESCE(ta.status, ''), '-', '_')) IN
       ('submitted', 'auto_submitted', 'auto submitted', 'completed', 'complete')
     `;
+    const reportableTest = `
+      COALESCE(
+        NULLIF(test.question_count, 0),
+        CASE
+          WHEN jsonb_typeof(test.questions) = 'array'
+          THEN jsonb_array_length(test.questions)
+        END,
+        NULLIF(
+          COALESCE(ta.correct_count, 0) +
+          COALESCE(ta.incorrect_count, 0) +
+          COALESCE(ta.unanswered_count, 0),
+          0
+        ),
+        2
+      ) <> 1
+    `;
 
     const studentId = new URL(request.url).searchParams.get("studentId")?.trim();
 
@@ -103,25 +119,30 @@ export async function GET(request: Request) {
             ta.status,
             ta.started_at,
             ta.submitted_at,
-            t.exam,
-            t.question_count,
-            t.questions AS test_questions,
+            test.exam,
+            test.question_count,
+            test.questions AS test_questions,
             COALESCE(
               p.description,
               st.title,
               CONCAT('Test ', LEFT(COALESCE(ta.test_id, ta.scheduled_test_id)::text, 8))
             ) AS test_title
           FROM test_attempts ta
-          LEFT JOIN tests t
-            ON t.id::text = COALESCE(ta.test_id, ta.scheduled_test_id)::text
           LEFT JOIN scheduled_tests st
             ON st.id::text = ta.scheduled_test_id::text
            AND st.academy_id::text = $2::text
+          LEFT JOIN tests test
+            ON test.id::text = COALESCE(
+              NULLIF(ta.test_id::text, ''),
+              NULLIF(st.test_id::text, ''),
+              NULLIF(ta.scheduled_test_id::text, '')
+            )
           LEFT JOIN papers p
             ON p.id::text = st.paper_id::text
            AND p.academy_id::text = $2::text
           WHERE ta.student_id::text = $1::text
             AND ${completedStatuses}
+            AND ${reportableTest}
           ORDER BY ta.submitted_at DESC NULLS LAST, ta.started_at DESC NULLS LAST
         `,
         [studentId, teacher.academy_id]
@@ -298,12 +319,15 @@ export async function GET(request: Request) {
         LEFT JOIN (
           SELECT
             ta.student_id,
-            COUNT(ta.id) FILTER (WHERE ${completedStatuses})::int AS tests_taken,
+            COUNT(ta.id) FILTER (
+              WHERE ${completedStatuses} AND ${reportableTest}
+            )::int AS tests_taken,
             COALESCE(
               ROUND(
                 AVG(
                   CASE
                     WHEN ${completedStatuses}
+                     AND ${reportableTest}
                      AND COALESCE(ta.total_marks, 0) > 0
                     THEN (ta.score::numeric / ta.total_marks::numeric) * 100
                   END
@@ -317,6 +341,7 @@ export async function GET(request: Request) {
                 MAX(
                   CASE
                     WHEN ${completedStatuses}
+                     AND ${reportableTest}
                      AND COALESCE(ta.total_marks, 0) > 0
                     THEN (ta.score::numeric / ta.total_marks::numeric) * 100
                   END
@@ -328,7 +353,7 @@ export async function GET(request: Request) {
             COALESCE(
               SUM(
                 CASE
-                  WHEN ${completedStatuses} THEN COALESCE(ta.correct_count, 0)
+                  WHEN ${completedStatuses} AND ${reportableTest} THEN COALESCE(ta.correct_count, 0)
                   ELSE 0
                 END
               ),
@@ -337,7 +362,7 @@ export async function GET(request: Request) {
             COALESCE(
               SUM(
                 CASE
-                  WHEN ${completedStatuses} THEN COALESCE(ta.incorrect_count, 0)
+                  WHEN ${completedStatuses} AND ${reportableTest} THEN COALESCE(ta.incorrect_count, 0)
                   ELSE 0
                 END
               ),
@@ -346,13 +371,19 @@ export async function GET(request: Request) {
             COALESCE(
               SUM(
                 CASE
-                  WHEN ${completedStatuses} THEN COALESCE(ta.unanswered_count, 0)
+                  WHEN ${completedStatuses} AND ${reportableTest} THEN COALESCE(ta.unanswered_count, 0)
                   ELSE 0
                 END
               ),
               0
             )::int AS unanswered_questions
           FROM test_attempts ta
+          LEFT JOIN scheduled_tests st ON st.id::text = ta.scheduled_test_id::text
+          LEFT JOIN tests test ON test.id::text = COALESCE(
+            NULLIF(ta.test_id::text, ''),
+            NULLIF(st.test_id::text, ''),
+            NULLIF(ta.scheduled_test_id::text, '')
+          )
           GROUP BY ta.student_id
         ) perf
           ON perf.student_id = s.id

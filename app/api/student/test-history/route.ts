@@ -29,6 +29,7 @@ export async function GET() {
     const testTitle = testCols.has("title") ? "t.title" : testCols.has("name") ? "t.name" : "NULL";
     const testExam = testCols.has("exam") ? "t.exam" : "NULL";
     const testQuestionCount = testCols.has("question_count") ? "t.question_count" : "NULL";
+    const testQuestions = testCols.has("questions") ? "t.questions" : "'[]'::jsonb";
 
     const query = `
       SELECT
@@ -84,6 +85,20 @@ export async function GET() {
       WHERE ta.student_id::text = $1::text
         AND LOWER(REPLACE(COALESCE(${pick("status", "''")}, ''), '-', '_'))
           IN ('submitted', 'auto_submitted', 'auto submitted', 'completed', 'complete')
+        AND COALESCE(
+          NULLIF(${testQuestionCount}, 0),
+          CASE
+            WHEN jsonb_typeof(${testQuestions}) = 'array'
+            THEN jsonb_array_length(${testQuestions})
+          END,
+          NULLIF(
+            COALESCE(${pick("correct_count", "0")}, 0) +
+            COALESCE(${pick("incorrect_count", "0")}, 0) +
+            COALESCE(${pick("unanswered_count", "0")}, 0),
+            0
+          ),
+          2
+        ) <> 1
       ORDER BY COALESCE(${pick("submitted_at")}, ${pick("started_at")}) DESC NULLS LAST
       LIMIT 100
     `;

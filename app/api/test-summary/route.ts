@@ -381,12 +381,16 @@ export async function GET(request: NextRequest) {
 
       FROM test_attempts ta
 
-      LEFT JOIN tests t
-        ON t.id::text = ta.test_id::text
-
       LEFT JOIN scheduled_tests st
         ON st.id::text = ta.scheduled_test_id::text
         AND st.academy_id::text = $2::text
+
+      LEFT JOIN tests t
+        ON t.id::text = COALESCE(
+          NULLIF(ta.test_id::text, ''),
+          NULLIF(st.test_id::text, ''),
+          NULLIF(ta.scheduled_test_id::text, '')
+        )
 
       LEFT JOIN LATERAL (
         SELECT
@@ -426,7 +430,11 @@ export async function GET(request: NextRequest) {
     ======================================================== */
 
     const completedTests: TestSummaryItem[] = attempts
-      .filter((attempt) => isCompletedStatus(attempt.status))
+      .filter(
+        (attempt) =>
+          isCompletedStatus(attempt.status) &&
+          getQuestionCount(attempt) !== 1
+      )
       .map((attempt) => {
         const savedAttempted = safeNumber(attempt.saved_attempted_count);
         const correct = savedAttempted > 0
@@ -703,7 +711,10 @@ export async function GET(request: NextRequest) {
     const completedTestIds = new Set<string>();
 
     for (const attempt of attempts) {
-      if (!isCompletedStatus(attempt.status)) {
+      if (
+        !isCompletedStatus(attempt.status) ||
+        getQuestionCount(attempt) === 1
+      ) {
         continue;
       }
 

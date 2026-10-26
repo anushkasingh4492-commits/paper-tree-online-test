@@ -11,6 +11,20 @@ export async function POST(request: Request) {
 
     const email = String(body.email || "").trim().toLowerCase();
     const password = String(body.password || "");
+    const requestedPortalRole = String(body.portalRole || "").trim().toUpperCase();
+    const portalRole =
+      requestedPortalRole === "ADMIN" ||
+      requestedPortalRole === "TEACHER" ||
+      requestedPortalRole === "STAFF"
+        ? requestedPortalRole
+        : "";
+
+    if (requestedPortalRole && !portalRole) {
+      return NextResponse.json(
+        { success: false, error: "Invalid staff account type." },
+        { status: 400 }
+      );
+    }
 
     if (!email || !password) {
       return NextResponse.json(
@@ -44,7 +58,7 @@ export async function POST(request: Request) {
       [email]
     );
 
-    if (adminResult.rows.length > 0) {
+    if (adminResult.rows.length > 0 && portalRole !== "TEACHER") {
       const admin = adminResult.rows[0];
 
       const valid = await bcrypt.compare(
@@ -52,7 +66,7 @@ export async function POST(request: Request) {
         admin.password_hash
       );
 
-      if (!valid) {
+      if (!valid && portalRole === "ADMIN") {
         return NextResponse.json(
           {
             success: false,
@@ -62,40 +76,42 @@ export async function POST(request: Request) {
         );
       }
 
-      const role = admin.is_master
-        ? "ADMIN"
-        : "ACADEMY_ADMIN";
+      if (valid) {
+        const role = admin.is_master
+          ? "ADMIN"
+          : "ACADEMY_ADMIN";
 
-      const response = NextResponse.json({
-        success: true,
-        role,
-        user: {
-          id: admin.id,
-          name: admin.name,
-          email: admin.email,
-          academyId: admin.academy_id,
-        },
-      });
-
-      response.cookies.delete("student_session");
-
-      response.cookies.set(
-        "master_session",
-        createSessionCookie({
-          id: admin.id,
+        const response = NextResponse.json({
+          success: true,
           role,
-          academyId: admin.academy_id || null,
-        }),
-        {
-          httpOnly: true,
-          secure: process.env.NODE_ENV === "production",
-          sameSite: "lax",
-          path: "/",
-          maxAge: 60 * 60 * 24 * 7,
-        }
-      );
+          user: {
+            id: admin.id,
+            name: admin.name,
+            email: admin.email,
+            academyId: admin.academy_id,
+          },
+        });
 
-      return response;
+        response.cookies.delete("student_session");
+
+        response.cookies.set(
+          "master_session",
+          createSessionCookie({
+            id: admin.id,
+            role,
+            academyId: admin.academy_id || null,
+          }),
+          {
+            httpOnly: true,
+            secure: process.env.NODE_ENV === "production",
+            sameSite: "lax",
+            path: "/",
+            maxAge: 60 * 60 * 24 * 7,
+          }
+        );
+
+        return response;
+      }
     }
 
     /*
@@ -119,7 +135,7 @@ export async function POST(request: Request) {
       [email]
     );
 
-    if (teacherResult.rows.length > 0) {
+    if (teacherResult.rows.length > 0 && portalRole !== "ADMIN") {
       const teacher = teacherResult.rows[0];
 
       const valid = await bcrypt.compare(
@@ -127,7 +143,7 @@ export async function POST(request: Request) {
         teacher.password_hash
       );
 
-      if (!valid) {
+      if (!valid && portalRole === "TEACHER") {
         return NextResponse.json(
           {
             success: false,
@@ -137,7 +153,7 @@ export async function POST(request: Request) {
         );
       }
 
-      if (!teacher.academy_id) {
+      if (valid && !teacher.academy_id) {
         return NextResponse.json(
           {
             success: false,
@@ -148,36 +164,38 @@ export async function POST(request: Request) {
         );
       }
 
-      const response = NextResponse.json({
-        success: true,
-        role: "TEACHER",
-        user: {
-          id: teacher.id,
-          name: teacher.name,
-          email: teacher.email,
-          academyId: teacher.academy_id,
-        },
-      });
-
-      response.cookies.delete("student_session");
-
-      response.cookies.set(
-        "master_session",
-        createSessionCookie({
-          id: teacher.id,
+      if (valid) {
+        const response = NextResponse.json({
+          success: true,
           role: "TEACHER",
-          academyId: teacher.academy_id,
-        }),
-        {
-          httpOnly: true,
-          secure: process.env.NODE_ENV === "production",
-          sameSite: "lax",
-          path: "/",
-          maxAge: 60 * 60 * 24 * 7,
-        }
-      );
+          user: {
+            id: teacher.id,
+            name: teacher.name,
+            email: teacher.email,
+            academyId: teacher.academy_id,
+          },
+        });
 
-      return response;
+        response.cookies.delete("student_session");
+
+        response.cookies.set(
+          "master_session",
+          createSessionCookie({
+            id: teacher.id,
+            role: "TEACHER",
+            academyId: teacher.academy_id,
+          }),
+          {
+            httpOnly: true,
+            secure: process.env.NODE_ENV === "production",
+            sameSite: "lax",
+            path: "/",
+            maxAge: 60 * 60 * 24 * 7,
+          }
+        );
+
+        return response;
+      }
     }
 
     /*
@@ -185,6 +203,13 @@ export async function POST(request: Request) {
      * 3. STUDENT
      * ==========================================
      */
+
+    if (portalRole) {
+      return NextResponse.json(
+        { success: false, error: "Invalid email or password." },
+        { status: 401 }
+      );
+    }
 
     const studentResult = await pool.query(
       `

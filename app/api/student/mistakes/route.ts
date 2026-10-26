@@ -44,6 +44,7 @@ async function ensureMistakesTable(): Promise<void> {
     CREATE INDEX IF NOT EXISTS idx_student_mistakes_resolved
     ON student_mistakes(is_resolved, last_made DESC)
   `);
+
 }
 
 function parseOptions(raw: unknown): string[] {
@@ -163,13 +164,6 @@ export async function GET(request: Request): Promise<NextResponse> {
       ci++;
     }
 
-    const countConditions: string[] = ["sm.student_id = $1"];
-    const countValues: unknown[] = [studentId];
-    if (subject) {
-      countConditions.push(`sm.subject = $${countValues.length + 1}`);
-      countValues.push(subject);
-    }
-
     const query = `
       SELECT
         id, student_id, question_id, test_id, attempt_id,
@@ -186,6 +180,13 @@ export async function GET(request: Request): Promise<NextResponse> {
     values.push(limit, offset);
 
     const result = await pool.query(query, values);
+
+    const countConditions: string[] = ["sm.student_id = $1"];
+    const countValues: unknown[] = [studentId];
+    if (subject) {
+      countConditions.push(`sm.subject = $${countValues.length + 1}`);
+      countValues.push(subject);
+    }
 
     const countResult = await pool.query(
       `

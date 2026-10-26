@@ -58,6 +58,20 @@ export async function GET() {
                      AND answered.selected_answer IS NOT NULL
                      AND answered.selected_answer::text <> ''
                  )
+                 AND COALESCE(
+                 NULLIF(test.question_count, 0),
+                 CASE
+                   WHEN jsonb_typeof(test.questions) = 'array'
+                   THEN jsonb_array_length(test.questions)
+                 END,
+                 NULLIF(
+                   COALESCE(ta.correct_count, 0) +
+                   COALESCE(ta.incorrect_count, 0) +
+                   COALESCE(ta.unanswered_count, 0),
+                   0
+                 ),
+                 2
+                 ) <> 1
                THEN (ta.score::numeric / ta.total_marks::numeric) * 100
              END
            ), 0) AS avg_pct,
@@ -71,16 +85,50 @@ export async function GET() {
                    AND answered.selected_answer IS NOT NULL
                    AND answered.selected_answer::text <> ''
                )
+               AND COALESCE(
+               NULLIF(test.question_count, 0),
+               CASE
+                 WHEN jsonb_typeof(test.questions) = 'array'
+                 THEN jsonb_array_length(test.questions)
+               END,
+               NULLIF(
+                 COALESCE(ta.correct_count, 0) +
+                 COALESCE(ta.incorrect_count, 0) +
+                 COALESCE(ta.unanswered_count, 0),
+                 0
+               ),
+               2
+               ) <> 1
              THEN 1 END)::int AS tests_taken,
            COALESCE(SUM(CASE
              WHEN LOWER(REPLACE(COALESCE(ta.status, ''), '-', '_'))
-                  IN ('submitted', 'auto_submitted', 'auto submitted', 'completed', 'complete')
+                IN ('submitted', 'auto_submitted', 'auto submitted', 'completed', 'complete')
+              AND COALESCE(
+                NULLIF(test.question_count, 0),
+                CASE
+                WHEN jsonb_typeof(test.questions) = 'array'
+                THEN jsonb_array_length(test.questions)
+                END,
+                NULLIF(
+                COALESCE(ta.correct_count, 0) +
+                COALESCE(ta.incorrect_count, 0) +
+                COALESCE(ta.unanswered_count, 0),
+                0
+                ),
+                2
+              ) <> 1
              THEN COALESCE(ta.correct_count, 0) + COALESCE(ta.incorrect_count, 0)
                     + COALESCE(ta.unanswered_count, 0)
              ELSE 0 END), 0)::int AS questions_seen
          FROM batch_students bs
          INNER JOIN students s ON s.id = bs.student_id
          LEFT JOIN test_attempts ta ON ta.student_id = s.id
+         LEFT JOIN scheduled_tests st ON st.id::text = ta.scheduled_test_id::text
+         LEFT JOIN tests test ON test.id::text = COALESCE(
+           NULLIF(ta.test_id::text, ''),
+           NULLIF(st.test_id::text, ''),
+           NULLIF(ta.scheduled_test_id::text, '')
+         )
          WHERE bs.batch_id = $1
            AND s.academy_id = $2
          GROUP BY s.id, s.name

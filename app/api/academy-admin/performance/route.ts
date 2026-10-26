@@ -42,6 +42,22 @@ export async function GET(request: Request) {
       LOWER(REPLACE(COALESCE(ta.status, ''), '-', '_')) IN
       ('submitted', 'auto_submitted', 'auto submitted', 'completed', 'complete')
     `;
+    const reportableTest = `
+      COALESCE(
+        NULLIF(test.question_count, 0),
+        CASE
+          WHEN jsonb_typeof(test.questions) = 'array'
+          THEN jsonb_array_length(test.questions)
+        END,
+        NULLIF(
+          COALESCE(ta.correct_count, 0) +
+          COALESCE(ta.incorrect_count, 0) +
+          COALESCE(ta.unanswered_count, 0),
+          0
+        ),
+        2
+      ) <> 1
+    `;
 
     const studentId = new URL(request.url).searchParams.get("studentId")?.trim();
 
@@ -85,18 +101,25 @@ export async function GET(request: Request) {
             ) AS test_title
           FROM test_attempts ta
           LEFT JOIN LATERAL (
-            SELECT st.id, st.title, st.paper_id
+            SELECT st.id, st.title, st.paper_id, st.test_id
             FROM scheduled_tests st
             WHERE st.test_id::text = ta.test_id::text
               AND st.academy_id::text = $2::text
             ORDER BY st.start_time DESC NULLS LAST
             LIMIT 1
           ) st ON TRUE
+          LEFT JOIN tests test
+            ON test.id::text = COALESCE(
+              NULLIF(ta.test_id::text, ''),
+              NULLIF(st.test_id::text, ''),
+              NULLIF(ta.scheduled_test_id::text, '')
+            )
           LEFT JOIN papers p
             ON p.id::text = st.paper_id::text
            AND p.academy_id::text = $2::text
           WHERE ta.student_id::text = $1::text
             AND ${completedStatuses}
+            AND ${reportableTest}
           ORDER BY ta.submitted_at DESC NULLS LAST, ta.started_at DESC NULLS LAST
         `,
         [studentId, academyId]
@@ -134,12 +157,15 @@ export async function GET(request: Request) {
         LEFT JOIN (
           SELECT
             ta.student_id,
-            COUNT(ta.id) FILTER (WHERE ${completedStatuses})::int AS tests_taken,
+            COUNT(ta.id) FILTER (
+              WHERE ${completedStatuses} AND ${reportableTest}
+            )::int AS tests_taken,
             COALESCE(
               ROUND(
                 AVG(
                   CASE
                     WHEN ${completedStatuses}
+                     AND ${reportableTest}
                      AND COALESCE(ta.total_marks, 0) > 0
                     THEN (ta.score::numeric / ta.total_marks::numeric) * 100
                   END
@@ -153,6 +179,7 @@ export async function GET(request: Request) {
                 MAX(
                   CASE
                     WHEN ${completedStatuses}
+                     AND ${reportableTest}
                      AND COALESCE(ta.total_marks, 0) > 0
                     THEN (ta.score::numeric / ta.total_marks::numeric) * 100
                   END
@@ -161,10 +188,16 @@ export async function GET(request: Request) {
               ),
               0
             ) AS best_percentage,
-            COALESCE(SUM(CASE WHEN ${completedStatuses} THEN COALESCE(ta.correct_count, 0) ELSE 0 END), 0)::int AS correct_answers,
-            COALESCE(SUM(CASE WHEN ${completedStatuses} THEN COALESCE(ta.incorrect_count, 0) ELSE 0 END), 0)::int AS wrong_answers,
-            COALESCE(SUM(CASE WHEN ${completedStatuses} THEN COALESCE(ta.unanswered_count, 0) ELSE 0 END), 0)::int AS unanswered_questions
+            COALESCE(SUM(CASE WHEN ${completedStatuses} AND ${reportableTest} THEN COALESCE(ta.correct_count, 0) ELSE 0 END), 0)::int AS correct_answers,
+            COALESCE(SUM(CASE WHEN ${completedStatuses} AND ${reportableTest} THEN COALESCE(ta.incorrect_count, 0) ELSE 0 END), 0)::int AS wrong_answers,
+            COALESCE(SUM(CASE WHEN ${completedStatuses} AND ${reportableTest} THEN COALESCE(ta.unanswered_count, 0) ELSE 0 END), 0)::int AS unanswered_questions
           FROM test_attempts ta
+          LEFT JOIN scheduled_tests st ON st.id::text = ta.scheduled_test_id::text
+          LEFT JOIN tests test ON test.id::text = COALESCE(
+            NULLIF(ta.test_id::text, ''),
+            NULLIF(st.test_id::text, ''),
+            NULLIF(ta.scheduled_test_id::text, '')
+          )
           GROUP BY ta.student_id
         ) perf ON perf.student_id = s.id
         WHERE s.academy_id = $1

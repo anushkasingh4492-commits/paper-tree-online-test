@@ -41,6 +41,8 @@ export default function MistakesPage() {
   const [filter, setFilter] = useState<"all" | "unresolved">("all");
   const [subjectFilter, setSubjectFilter] = useState("");
   const [retrying, setRetrying] = useState<Set<string>>(new Set());
+  const [retryAnswers, setRetryAnswers] = useState<Record<string, string>>({});
+  const [retryResults, setRetryResults] = useState<Record<string, "correct" | "wrong">>({});
 
   const fetchMistakes = useCallback(async () => {
     setLoading(true);
@@ -91,46 +93,60 @@ export default function MistakesPage() {
 
   const unresolvedMistakes = mistakes.filter((m) => !m.isResolved);
 
-  const resolveMistake = async (mistakeId: string) => {
-    try {
-      const response = await fetch(
-        `/api/student/mistakes/${mistakeId}`,
-        { method: "DELETE" }
-      );
-      if (!response.ok) {
-        const payload = (await response.json()) as { error?: string };
-        throw new Error(payload.error || "Could not resolve mistake.");
-      }
-      await fetchMistakes();
-    } catch (err) {
-      setError(err instanceof Error ? err.message : "Could not resolve mistake.");
-    }
+  const retryAnswerChange = (questionId: string, value: string) => {
+    setRetryAnswers((prev) => ({ ...prev, [questionId]: value }));
+    setRetryResults((prev) => {
+      const next = { ...prev };
+      delete next[questionId];
+      return next;
+    });
   };
 
-  const retryMistake = async (questionId: string) => {
+  const submitRetryAnswer = async (mistake: Mistake) => {
+    const questionId = mistake.questionId;
+    const userAnswer = retryAnswers[questionId]?.trim() || "";
+    const correctAnswer = mistake.correctAnswer.trim();
+
     setRetrying((prev) => new Set([...prev, questionId]));
+
     try {
-      const response = await fetch("/api/tests/generate", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          questionIds: [questionId],
-          questionCount: 1,
-          duration: 10,
-          difficulty: "Balanced",
-        }),
-      });
-      const payload = (await response.json()) as {
-        success?: boolean;
-        testId?: string;
-        error?: string;
-      };
-      if (!response.ok || !payload.success || !payload.testId) {
-        throw new Error(payload.error || "Could not generate retry test.");
+      const normalize = (s: string) =>
+        s
+          .toLowerCase()
+          .replace(/\s+/g, " ")
+          .trim()
+          .replace(/[.,;:!?]$/, "");
+
+      const correctLetter = mistake.correctIndex == null
+        ? ""
+        : String.fromCharCode(65 + mistake.correctIndex);
+      const correctOption = mistake.correctIndex == null
+        ? ""
+        : mistake.options[mistake.correctIndex] ?? "";
+      const isCorrect = [
+        correctAnswer,
+        correctLetter,
+        correctOption,
+      ].some((answer) => answer && normalize(userAnswer) === normalize(answer));
+
+      setRetryResults((prev) => ({
+        ...prev,
+        [questionId]: isCorrect ? "correct" : "wrong",
+      }));
+
+      if (isCorrect) {
+        const response = await fetch(
+          `/api/student/mistakes/${mistake.mistakeId}`,
+          { method: "DELETE" }
+        );
+        if (!response.ok) {
+          throw new Error("Could not mark mistake as resolved.");
+        }
       }
-      router.push(`/test/${payload.testId}`);
+
+      await fetchMistakes();
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Could not start retry.");
+      setError(err instanceof Error ? err.message : "Retry failed.");
     } finally {
       setRetrying((prev) => {
         const next = new Set(prev);
@@ -144,28 +160,25 @@ export default function MistakesPage() {
     if (unresolvedMistakes.length === 0) return;
     setRetrying(new Set(unresolvedMistakes.map((m) => m.questionId)));
     try {
-      const questionIds = unresolvedMistakes.map((m) => m.questionId);
-      const response = await fetch("/api/tests/generate", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          questionIds,
-          questionCount: questionIds.length,
-          duration: Math.max(5, questionIds.length * 2),
-          difficulty: "Balanced",
-        }),
-      });
-      const payload = (await response.json()) as {
-        success?: boolean;
-        testId?: string;
-        error?: string;
-      };
-      if (!response.ok || !payload.success || !payload.testId) {
-        throw new Error(payload.error || "Could not generate retry test.");
+      const results = await Promise.allSettled(
+        unresolvedMistakes.map((m) =>
+          fetch(`/api/student/mistakes/${m.mistakeId}`, {
+            method: "DELETE",
+          })
+        )
+      );
+
+      const failed = results.filter(
+        (r) => r.status === "rejected"
+      ).length;
+
+      if (failed > 0) {
+        setError(`Failed to resolve ${failed} mistake(s).`);
       }
-      router.push(`/test/${payload.testId}`);
+
+      await fetchMistakes();
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Could not start retry.");
+      setError(err instanceof Error ? err.message : "Could not resolve mistakes.");
     } finally {
       setRetrying(new Set());
     }
@@ -184,6 +197,11 @@ export default function MistakesPage() {
     }
   };
 
+  const statusColor = (isResolved: boolean) =>
+    isResolved
+      ? "text-green-600 bg-green-50 border-green-100"
+      : "text-amber-600 bg-amber-50 border-amber-100";
+
   const s = (n: number) => (n !== 1 ? "s" : "");
 
   return (
@@ -194,11 +212,11 @@ export default function MistakesPage() {
             onClick={() => router.push("/dashboard")}
             className="text-sm font-semibold text-[#315bea] mb-4 inline-flex items-center gap-1 transition hover:underline"
           >
-            ← Back to Dashboard
+            &#x2190; Back to Dashboard
           </button>
           <div className="flex items-center gap-3">
             <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#f0f9ff] text-2xl">
-              📓
+              &#x1F4D3;
             </div>
             <div>
               <h1 className="text-2xl font-extrabold tracking-tight">
@@ -210,6 +228,7 @@ export default function MistakesPage() {
             </div>
           </div>
         </header>
+
         {error && (
           <div className="mb-6 rounded-xl bg-red-50 border border-red-100 p-4 text-sm font-medium text-red-700">
             {error}
@@ -249,11 +268,12 @@ export default function MistakesPage() {
                 </span>
               ) : (
                 <>
-                  <span>🔄</span>
+                  <span>&#x1F504;</span>
                   <span>
-                    Retry All {unresolvedMistakes.length}{s(
+                    Mark All {unresolvedMistakes.length}{s(
                       unresolvedMistakes.length
                     )}
+                    as Resolved
                   </span>
                 </>
               )}
@@ -266,21 +286,13 @@ export default function MistakesPage() {
             <span className="font-medium text-[#697386]">Filter:</span>
             <button
               onClick={() => setFilter("all")}
-              className={`px-3 py-1 rounded-md text-sm font-medium transition ${
-                filter === "all"
-                  ? "bg-[#315bea] text-white"
-                  : "text-[#697386] hover:bg-[#f0f2f6]"
-              }`}
+              className={`px-3 py-1 rounded-md text-sm font-medium transition ${filter === "all" ? "bg-[#315bea] text-white" : "text-[#697386] hover:bg-[#f0f2f6]"}`}
             >
               All
             </button>
             <button
               onClick={() => setFilter("unresolved")}
-              className={`px-3 py-1 rounded-md text-sm font-medium transition ${
-                filter === "unresolved"
-                  ? "bg-[#315bea] text-white"
-                  : "text-[#697386] hover:bg-[#f0f2f6]"
-              }`}
+              className={`px-3 py-1 rounded-md text-sm font-medium transition ${filter === "unresolved" ? "bg-[#315bea] text-white" : "text-[#697386] hover:bg-[#f0f2f6]"}`}
             >
               Unresolved Only
             </button>
@@ -308,17 +320,18 @@ export default function MistakesPage() {
             )} showing
           </div>
         </div>
+
         {loading ? (
           <div className="h-64 flex items-center justify-center">
             <div className="w-8 h-8 border-4 border-blue-100 border-t-blue-600 rounded-full animate-spin" />
           </div>
         ) : filteredMistakes.length === 0 ? (
           <div className="rounded-2xl border border-[#e5e8ef] bg-white p-12 text-center shadow-sm">
-            <div className="text-4xl mb-4">📓</div>
+            <div className="text-4xl mb-4">&#x1F4D3;</div>
             {filter === "unresolved" && unresolvedMistakes.length === 0 ? (
               <>
                 <h2 className="text-xl font-bold text-[#172033]">
-                  No unresolved mistakes! 🎉
+                  No unresolved mistakes! &#x1F389;
                 </h2>
                 <p className="mt-2 text-[#697386]">
                   You&apos;ve mastered all your past mistakes. Keep it up!
@@ -357,7 +370,7 @@ export default function MistakesPage() {
                     Status
                   </th>
                   <th className="px-5 py-3 font-bold text-[#697386] uppercase text-[10px] tracking-[0.12em]">
-                    Action
+                    Retry
                   </th>
                 </tr>
               </thead>
@@ -372,12 +385,29 @@ export default function MistakesPage() {
                         {m.stem}
                       </div>
                       <div className="mt-1 text-xs text-[#8a93a5]">
-                        Q#{m.questionId} · {m.exam} · {formatDate(m.lastMade)}
+                        Q#{m.questionId} &#x00B7; {m.exam} &#x00B7; {formatDate(m.lastMade)}
                       </div>
+                      {m.options.length > 0 && (
+                        <div className="mt-3 space-y-1">
+                          {m.options.map((opt, idx) => {
+                            const letter = String.fromCharCode(65 + idx);
+                            const isCorrect = idx === m.correctIndex;
+                            const isSelected = idx === m.selectedIndex;
+                            return (
+                              <div
+                                key={idx}
+                                className={`text-xs px-3 py-2 rounded border ${isCorrect ? "bg-green-50 text-green-700 border-green-100" : isSelected ? "bg-rose-50 text-rose-700 border-rose-100" : "bg-[#f8fafc] text-[#697386] border-[#f0f2f6]"}`}
+                              >
+                                {letter}. {opt}
+                              </div>
+                            );
+                          })}
+                        </div>
+                      )}
                     </td>
                     <td className="px-5 py-4">{m.subject}</td>
                     <td className="px-5 py-4 text-sm text-[#172033]">
-                      {m.chapter || "—"}
+                      {m.chapter || "\u2014"}
                     </td>
                     <td className="px-5 py-4 text-right text-sm font-semibold text-[#697386]">
                       {m.attemptCount}
@@ -390,28 +420,52 @@ export default function MistakesPage() {
                       </span>
                     </td>
                     <td className="px-5 py-4">
-                      {!m.isResolved && (
-                        <button
-                          onClick={() => retryMistake(m.questionId)}
-                          disabled={retrying.has(m.questionId)}
-                          className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-[#dfe4ee] bg-white text-sm font-semibold text-[#315bea] hover:bg-[#f0f7ff] transition disabled:opacity-50"
-                        >
-                          {retrying.has(m.questionId) ? (
-                            <span className="w-3 h-3 border-2 border-current border-t-transparent rounded-full animate-spin" />
+                      {!m.isResolved ? (
+                        <>
+                          {retryResults[m.questionId] === "correct" ? (
+                            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-[#16a34a] bg-[#f0fdf4] text-sm font-semibold text-[#16a34a]">
+                              <span className="w-3 h-3 rounded-full bg-[#16a34a] text-white flex items-center justify-center text-[10px]">
+                                &#x2713;
+                              </span>
+                              Correct &#x2014; resolved!
+                            </div>
+                          ) : retryResults[m.questionId] === "wrong" ? (
+                            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-[#dc2626] bg-[#fef2f2] text-sm font-semibold text-[#dc2626]">
+                              <span className="w-3 h-3 rounded-full bg-[#dc2626] text-white flex items-center justify-center text-[10px]">
+                                &#x2717;
+                              </span>
+                              Try again
+                            </div>
                           ) : (
-                            "🔄 Retry"
+                            <>
+                              <div className="flex items-center gap-2 mb-2">
+                                <input
+                                  type="text"
+                                  value={retryAnswers[m.questionId] || ""}
+                                  onChange={(e) =>
+                                    retryAnswerChange(m.questionId, e.target.value)
+                                  }
+                                  placeholder="Your answer"
+                                  className="flex-1 px-3 py-2 rounded-xl border border-[#dfe4ee] bg-white text-sm focus:border-[#315bea] focus:outline-none"
+                                  disabled={retrying.has(m.questionId)}
+                                />
+                                <button
+                                  onClick={() => submitRetryAnswer(m)}
+                                  disabled={retrying.has(m.questionId) || !retryAnswers[m.questionId]?.trim()}
+                                  className="px-3 py-2 rounded-xl border border-[#315bea] bg-[#315bea] text-white text-sm font-semibold hover:bg-[#264ac7] disabled:opacity-50 disabled:cursor-not-allowed"
+                                >
+                                  Check
+                                </button>
+                              </div>
+                              {retrying.has(m.questionId) && (
+                                <span className="text-xs text-[#697386]">
+                                  Checking&#x2026;
+                                </span>
+                              )}
+                            </>
                           )}
-                        </button>
-                      )}
-                      {!m.isResolved && (
-                        <button
-                          onClick={() => resolveMistake(m.mistakeId)}
-                          className="mt-2 flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-[#dfe4ee] bg-white text-sm font-semibold text-[#16a34a] hover:bg-[#f0fdf4] transition"
-                        >
-                          ✅ Mark Resolved
-                        </button>
-                      )}
-                      {m.isResolved && (
+                        </>
+                      ) : (
                         <span className="text-xs text-[#8a93a5]">Mastered</span>
                       )}
                     </td>
@@ -425,11 +479,6 @@ export default function MistakesPage() {
     </main>
   );
 }
-
-const statusColor = (isResolved: boolean) =>
-  isResolved
-    ? "text-green-600 bg-green-50 border-green-100"
-    : "text-amber-600 bg-amber-50 border-amber-100";
 
 function StatCard({
   label,
@@ -449,4 +498,3 @@ function StatCard({
     </div>
   );
 }
-

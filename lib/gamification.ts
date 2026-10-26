@@ -111,10 +111,29 @@ export async function getStudentGamification(studentId: string, academyId: strin
            AND ans.selected_answer::text <> ''
        )::int AS answered_count
      FROM test_attempts ta
-     LEFT JOIN tests t ON t.id = COALESCE(ta.test_id, ta.scheduled_test_id)
-     LEFT JOIN test_answers ans ON ans.attempt_id = ta.id
-     WHERE ta.student_id = $1
-       AND LOWER(REPLACE(COALESCE(ta.status,''),'-','_')) IN ('submitted','auto_submitted','auto submitted','completed','complete')
+       LEFT JOIN scheduled_tests st ON st.id::text = ta.scheduled_test_id::text
+       LEFT JOIN tests t ON t.id::text = COALESCE(
+         NULLIF(ta.test_id::text, ''),
+         NULLIF(st.test_id::text, ''),
+         NULLIF(ta.scheduled_test_id::text, '')
+       )
+       LEFT JOIN test_answers ans ON ans.attempt_id = ta.id
+       WHERE ta.student_id = $1
+         AND LOWER(REPLACE(COALESCE(ta.status,''),'-','_')) IN ('submitted','auto_submitted','auto submitted','completed','complete')
+         AND COALESCE(
+           NULLIF(t.question_count, 0),
+           CASE
+             WHEN jsonb_typeof(t.questions) = 'array'
+             THEN jsonb_array_length(t.questions)
+           END,
+           NULLIF(
+             COALESCE(ta.correct_count, 0) +
+             COALESCE(ta.incorrect_count, 0) +
+             COALESCE(ta.unanswered_count, 0),
+             0
+           ),
+           2
+         ) <> 1
      GROUP BY ta.id, t.question_count, t.difficulty, t.questions
      ORDER BY COALESCE(ta.submitted_at, ta.started_at, ta.created_at) ASC`,
     [studentId]
@@ -145,15 +164,13 @@ export async function getStudentGamification(studentId: string, academyId: strin
     }
   }
 
-  // Streaks are based on ALL completed tests. The final catalogue says
-  // “take at least one test every day”; it does not restrict streaks to
-  // qualifying tests. Multiple tests on the same IST day count as one day.
+  // Single-question mistake retries are not full tests and must not affect
+  // streaks, levels, averages, or test-based badges.
   const allTestDays = attempts.map((a) => istDay(a.submitted_at || a.started_at)).filter(Boolean);
   const streak = currentStreak(allTestDays);
   const maxStreak = maxConsecutive(allTestDays);
 
-  // Levels are based on every completed test. Qualifying-test rules are
-  // reserved for XP/advanced metrics and do not block normal level progression.
+  // Levels are based on completed tests, excluding legacy one-question retries.
   const levelTestCount = attempts.length;
   let levelIndex = 0;
   for (let i = 0; i < LEVELS.length; i++) {

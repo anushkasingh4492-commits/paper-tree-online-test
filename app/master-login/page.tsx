@@ -9,9 +9,12 @@ function MasterLoginForm() {
   const requestedRole = searchParams.get("role");
 
   const role =
-    requestedRole === "ADMIN" ? "ADMIN" : "TEACHER";
+    requestedRole === "ADMIN" || requestedRole === "TEACHER"
+      ? requestedRole
+      : null;
 
   const isAdmin = role === "ADMIN";
+  const isTeacher = role === "TEACHER";
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -34,6 +37,7 @@ function MasterLoginForm() {
         body: JSON.stringify({
           email,
           password,
+          portalRole: role ?? "STAFF",
         }),
       });
 
@@ -45,19 +49,17 @@ function MasterLoginForm() {
         );
       }
 
-   const validPortalRole =
-  role === "ADMIN"
-    ? result.role === "ADMIN" ||
-      result.role === "ACADEMY_ADMIN"
-    : result.role === "TEACHER";
+      const validPortalRole = role === null
+        ? ["ADMIN", "ACADEMY_ADMIN", "TEACHER"].includes(result.role)
+        : role === "ADMIN"
+          ? result.role === "ADMIN" || result.role === "ACADEMY_ADMIN"
+          : result.role === "TEACHER";
 
-if (!validPortalRole) {
-  throw new Error(
-    `This account is not an ${
-      isAdmin ? "Admin" : "Teacher"
-    } account.`
-  );
-}
+      if (!validPortalRole) {
+        throw new Error(
+          `This account is not an ${isAdmin ? "Admin" : "Teacher"} account.`
+        );
+      }
 
      if (result.role === "ADMIN") {
   router.replace("/admin");
@@ -97,9 +99,7 @@ if (!validPortalRole) {
           </h1>
 
           <p className="mt-1 text-sm text-[#697386]">
-            {isAdmin
-              ? "Admin Portal"
-              : "Teacher Portal"}
+            {isAdmin ? "Admin Portal" : isTeacher ? "Teacher Portal" : "Staff Portal"}
           </p>
 
         </div>
@@ -111,18 +111,16 @@ if (!validPortalRole) {
           <div className="mb-7">
 
             <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#315bea]">
-              {isAdmin ? "ADMIN LOGIN" : "TEACHER LOGIN"}
+              {isAdmin ? "ADMIN LOGIN" : isTeacher ? "TEACHER LOGIN" : "STAFF LOGIN"}
             </p>
 
             <h2 className="mt-2 text-2xl font-extrabold text-[#172033]">
-              {isAdmin
-                ? "Welcome, Admin"
-                : "Welcome, Teacher"}
+              {isAdmin ? "Welcome, Admin" : isTeacher ? "Welcome, Teacher" : "Welcome"}
             </h2>
 
             <p className="mt-2 text-sm text-[#697386]">
               Sign in to access your{" "}
-              {isAdmin ? "admin" : "teacher"} dashboard.
+              {isAdmin ? "admin" : isTeacher ? "teacher" : "staff"} dashboard.
             </p>
 
           </div>
@@ -195,7 +193,7 @@ if (!validPortalRole) {
             >
               {loading
                 ? "Signing in..."
-                : `Sign in as ${isAdmin ? "Admin" : "Teacher"}`}
+                : role ? `Sign in as ${isAdmin ? "Admin" : "Teacher"}` : "Sign in"}
             </button>
             <button
   type="button"

@@ -533,6 +533,7 @@ const attemptsResult =
 
           COALESCE(
             NULLIF(ta.test_id::text, ''),
+            NULLIF(st.test_id::text, ''),
             NULLIF(ta.scheduled_test_id::text, '')
           ) AS resolved_test_id,
 
@@ -544,13 +545,31 @@ const attemptsResult =
 
         FROM test_attempts ta
 
+        LEFT JOIN scheduled_tests st
+          ON st.id::text = ta.scheduled_test_id::text
+
         LEFT JOIN tests t
           ON t.id::text = COALESCE(
             NULLIF(ta.test_id::text, ''),
+            NULLIF(st.test_id::text, ''),
             NULLIF(ta.scheduled_test_id::text, '')
           )
 
         WHERE ta.student_id::text = $1::text
+          AND COALESCE(
+            NULLIF(t.question_count, 0),
+            CASE
+              WHEN jsonb_typeof(t.questions) = 'array'
+              THEN jsonb_array_length(t.questions)
+            END,
+            NULLIF(
+              COALESCE(ta.correct_count, 0) +
+              COALESCE(ta.incorrect_count, 0) +
+              COALESCE(ta.unanswered_count, 0),
+              0
+            ),
+            2
+          ) <> 1
 
         ORDER BY
           COALESCE(
