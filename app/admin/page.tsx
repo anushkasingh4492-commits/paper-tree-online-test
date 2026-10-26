@@ -66,149 +66,79 @@ export default function AdminPage() {
           <div className="pointer-events-none absolute -bottom-28 right-24 h-48 w-48 rounded-full bg-[#315bea]/5" />
         </section>
 
-        {/* SECTION HEADER */}
-        <section className="mt-10">
-          <div className="mb-5">
-            <h3 className="text-xl font-extrabold">
-              🏢 Academy Management
-            </h3>
+        {/* ACTION GRID */}
+        <section className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
 
-            <p className="mt-1 text-sm text-[#8a93a5]">
-              Full control over all academy tenants and their
-              administration.
-            </p>
-          </div>
-
-          {/* ACADEMY CARD */}
           <button
             type="button"
             onClick={() => router.push("/admin/academies")}
-            className="group w-full rounded-3xl border border-[#e0e5f0] bg-white p-7 text-left shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-[#cbd5f5] hover:shadow-lg sm:p-8"
+            className="group rounded-3xl border border-[#e0e5f0] bg-white p-7 text-left shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-[#cbd5f5] hover:shadow-lg"
           >
-            <div className="flex flex-col gap-7 sm:flex-row sm:items-center sm:justify-between">
-              <div className="flex items-start gap-5">
-                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-[#f1f4ff] text-3xl">
-                  🏫
-                </div>
-
-                <div>
-                  <h4 className="text-xl font-extrabold">
-                    Academies
-                  </h4>
-
-                  <p className="mt-2 max-w-2xl text-sm leading-6 text-[#697386]">
-                    Create and manage academy tenants, academy
-                    administrators, teachers, students, batches and
-                    academy-level data.
-                  </p>
-
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    <span className="rounded-lg bg-[#f7f8fb] px-3 py-1.5 text-xs font-semibold text-[#697386]">
-                      ➕ Create
-                    </span>
-
-                    <span className="rounded-lg bg-[#f7f8fb] px-3 py-1.5 text-xs font-semibold text-[#697386]">
-                      ✏️ Update
-                    </span>
-
-                    <span className="rounded-lg bg-[#f7f8fb] px-3 py-1.5 text-xs font-semibold text-[#697386]">
-                      ⚙️ Manage
-                    </span>
-
-                    <span className="rounded-lg bg-[#f7f8fb] px-3 py-1.5 text-xs font-semibold text-[#697386]">
-                      🔐 Full Access
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#e2e6ee] text-lg text-[#315bea] transition group-hover:border-[#315bea] group-hover:bg-[#315bea] group-hover:text-white">
-                →
-              </div>
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#f0f5ff] text-2xl mb-4 group-hover:bg-[#315bea] group-hover:text-white transition-colors">
+              🏢
             </div>
+            <h4 className="text-lg font-extrabold text-[#172033] mb-1">
+              Academy Management
+            </h4>
+            <p className="text-sm leading-6 text-[#697386]">
+              Full control over all academy tenants and their
+              administration.
+            </p>
           </button>
+
           <button
             type="button"
             onClick={() => router.push("/academy-admin/batches")}
-            className="mt-5 group w-full rounded-3xl border border-[#e0e5f0] bg-white p-7 text-left shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-[#cbd5f5] hover:shadow-lg sm:p-8"
+            className="group rounded-3xl border border-[#e0e5f0] bg-white p-7 text-left shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-[#cbd5f5] hover:shadow-lg"
           >
-            <div className="flex items-center justify-between gap-5">
-              <div className="flex items-start gap-5">
-                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-[#ecfdf5] text-3xl">
-                  📚
-                </div>
-                <div>
-                  <h4 className="text-xl font-extrabold">
-                    Batch Course Setup
-                  </h4>
-                  <p className="mt-2 text-sm leading-6 text-[#697386]">
-                    Create academy batches for MHT-CET, NEET, JEE, and CAT.
-                    CAT question-bank import is available with the bundled CAT data.
-                  </p>
-                </div>
-              </div>
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#e2e6ee] text-lg text-[#315bea] transition group-hover:border-[#315bea] group-hover:bg-[#315bea] group-hover:text-white">
-                →
-              </div>
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#f0f9ff] text-2xl mb-4 group-hover:bg-[#315bea] group-hover:text-white transition-colors">
+              📚
             </div>
+            <h4 className="text-lg font-extrabold text-[#172033] mb-1">
+              Batch Course Setup
+            </h4>
+            <p className="text-sm leading-6 text-[#697386]">
+              Create academy batches for MHT-CET, NEET, JEE, and CAT.
+              CAT question-bank import is available with the bundled CAT
+              data.
+            </p>
           </button>
+
           <button
             type="button"
             onClick={() => router.push("/admin/upload-dataset")}
-            className="mt-5 group w-full rounded-3xl border border-[#e0e5f0] bg-white p-7 text-left shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-[#cbd5f5] hover:shadow-lg sm:p-8"
+            className="group rounded-3xl border border-[#e0e5f0] bg-white p-7 text-left shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-[#cbd5f5] hover:shadow-lg"
           >
-            <div className="flex items-center justify-between gap-5">
-              <div className="flex items-start gap-5">
-                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-[#f0f9ff] text-3xl">
-                  📦
-                </div>
-
-                <div>
-                  <h4 className="text-xl font-extrabold">
-                    Upload Dataset
-                  </h4>
-                  <p className="mt-2 text-sm leading-6 text-[#697386]">
-                    Import question-bank datasets (JSON, CSV, Excel) by
-                    course/subject so students can see new questions
-                    alongside existing ones.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#e2e6ee] text-lg text-[#315bea] transition group-hover:border-[#315bea] group-hover:bg-[#315bea] group-hover:text-white">
-                →
-              </div>
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#f0f9ff] text-2xl mb-4 group-hover:bg-[#315bea] group-hover:text-white transition-colors">
+              📦
             </div>
+            <h4 className="text-lg font-extrabold text-[#172033] mb-1">
+              Upload Dataset
+            </h4>
+            <p className="text-sm leading-6 text-[#697386]">
+              Import question-bank datasets (JSON, CSV, Excel) by
+              course/subject so students can see new questions alongside
+              existing ones.
+            </p>
           </button>
 
           <button
-  type="button"
-  onClick={() => router.push("/admin/password-reset")}
-  className="mt-5 group w-full rounded-3xl border border-[#e0e5f0] bg-white p-7 text-left shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-[#cbd5f5] hover:shadow-lg sm:p-8"
->
-  <div className="flex items-center justify-between gap-5">
-    <div className="flex items-start gap-5">
-      <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-[#fff7ed] text-3xl">
-        🔐
-      </div>
+            type="button"
+            onClick={() => router.push("/admin/password-reset")}
+            className="group rounded-3xl border border-[#e0e5f0] bg-white p-7 text-left shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-[#cbd5f5] hover:shadow-lg"
+          >
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#fff7ed] text-2xl mb-4 group-hover:bg-[#315bea] group-hover:text-white transition-colors">
+              🔐
+            </div>
+            <h4 className="text-lg font-extrabold text-[#172033] mb-1">
+              Password Management
+            </h4>
+            <p className="text-sm leading-6 text-[#697386]">
+              Reset passwords for students and teachers whenever
+              required.
+            </p>
+          </button>
 
-      <div>
-        <h4 className="text-xl font-extrabold">
-          Password Management
-        </h4>
-
-        <p className="mt-2 text-sm leading-6 text-[#697386]">
-          Reset passwords for students and teachers
-          whenever required.
-        </p>
-      </div>
-    </div>
-
-    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#e2e6ee] text-lg text-[#315bea]">
-      →
-    </div>
-  </div>
-</button>
         </section>
 
         {/* ACCESS NOTE */}
