@@ -3,10 +3,12 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import StudentBadgeModal from "@/components/StudentBadgeModal";
+import StudentAvatar from "@/components/StudentAvatar";
 
 type LeaderboardStudent = {
   id: string;
   name: string;
+  avatarKey?: string | null;
   average: number;
   testsTaken: number;
   rank: number;
@@ -145,6 +147,7 @@ export default function StudentBatchLeaderboardPreview() {
                   <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white text-lg shadow-sm">
                     {["🥇", "🥈", "🥉"][student.rank - 1] ?? `#${student.rank}`}
                   </span>
+                  <StudentAvatar avatarKey={student.avatarKey} name={student.name} size={36} />
                   <div className="min-w-0 flex-1">
                     <p className="truncate text-xs font-extrabold text-[#263148]">
                       {student.name}

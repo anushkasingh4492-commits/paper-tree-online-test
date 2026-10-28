@@ -17,6 +17,8 @@ export async function GET() {
       return NextResponse.json({ success: false, error: "Student login required." }, { status: 401 });
     }
 
+    await pool.query(`ALTER TABLE students ADD COLUMN IF NOT EXISTS avatar_key VARCHAR(20)`);
+
     const batchResult = await pool.query(
       `SELECT b.id, b.name, b.course_name
        FROM batch_students bs
@@ -45,6 +47,7 @@ export async function GET() {
       `WITH scores AS (
          SELECT
            s.id AS student_id,
+           s.avatar_key,
            COALESCE(NULLIF(TRIM(COALESCE(s.name, '')), ''), 'Student') AS name,
            COALESCE(AVG(
              CASE
@@ -131,7 +134,7 @@ export async function GET() {
          )
          WHERE bs.batch_id = $1
            AND s.academy_id = $2
-         GROUP BY s.id, s.name
+         GROUP BY s.id, s.name, s.avatar_key
        ), ranked AS (
          SELECT *, ROW_NUMBER() OVER (ORDER BY avg_pct DESC, name ASC, student_id ASC) AS rank
          FROM scores
@@ -143,6 +146,7 @@ export async function GET() {
     const students = result.rows.map((row) => ({
       id: String(row.student_id),
       name: String(row.name),
+      avatarKey: row.avatar_key == null ? null : String(row.avatar_key),
       average: Number(Number(row.avg_pct ?? 0).toFixed(1)),
       testsTaken: Number(row.tests_taken ?? 0),
       questionsSeen: Number(row.questions_seen ?? 0),

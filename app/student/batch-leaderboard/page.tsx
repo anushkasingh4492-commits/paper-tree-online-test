@@ -3,10 +3,12 @@
 import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import StudentBadgeModal from "@/components/StudentBadgeModal";
+import StudentAvatar from "@/components/StudentAvatar";
 
  type LeaderboardStudent = {
   id: string;
   name: string;
+  avatarKey?: string | null;
   average: number;
   testsTaken: number;
   questionsSeen: number;
@@ -141,7 +143,7 @@ export default function BatchLeaderboardPage() {
                     <div className={`text-center font-black ${student.rank <= 3 ? "text-xl" : "text-sm text-white/45"}`}>{student.rank <= 3 ? ["🥇","🥈","🥉"][student.rank-1] : `#${student.rank}`}</div>
                     <div className="min-w-0 flex items-center justify-between gap-2">
                       <div className="min-w-0">
-                        <div className="font-bold truncate">{student.name} {student.isCurrent && <span className="ml-2 text-[9px] uppercase tracking-wider text-indigo-300 bg-indigo-400/10 px-2 py-1 rounded-full">You</span>}</div>
+                        <div className="flex min-w-0 items-center gap-3"><StudentAvatar avatarKey={student.avatarKey} name={student.name} size={36} /><div className="font-bold truncate">{student.name} {student.isCurrent && <span className="ml-2 text-[9px] uppercase tracking-wider text-indigo-300 bg-indigo-400/10 px-2 py-1 rounded-full">You</span>}</div></div>
                         <div className="text-[11px] text-white/35 mt-1">{student.testsTaken} tests · {student.questionsSeen} questions</div>
                       </div>
                       <button type="button" onClick={() => setBadgeStudent(student)} className="shrink-0 rounded-lg bg-violet-400/10 px-2 py-1 text-[10px] font-bold text-violet-200 sm:hidden">🏆</button>
@@ -180,7 +182,7 @@ function Podium({ student, place, onViewBadges }: { student: LeaderboardStudent;
     <div className={`relative ${height} rounded-[28px] border ${student.isCurrent ? "border-indigo-300/40" : "border-white/10"} bg-white/[.06] p-5 flex flex-col justify-end text-center overflow-hidden ${place === 1 ? "shadow-[0_0_50px_rgba(250,204,21,.12)]" : ""}`}>
       <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-white/[.06] to-transparent" />
       <div className="relative text-4xl mb-2">{medal}</div>
-      <div className="relative font-black truncate">{student.name?.trim() || "Student"}</div>
+      <div className="relative flex items-center justify-center gap-2 font-black truncate"><StudentAvatar avatarKey={student.avatarKey} name={student.name} size={42} />{student.name?.trim() || "Student"}</div>
       <div className="relative text-2xl font-black mt-1">{student.average}%</div>
       <div className="relative text-[10px] uppercase tracking-widest text-white/35 mt-1">#{student.rank} · {student.testsTaken} tests</div>
       <button type="button" onClick={onViewBadges} className="relative mx-auto mt-3 rounded-lg bg-violet-400/10 px-3 py-1.5 text-[10px] font-black text-violet-200 hover:bg-violet-400/20">🏆 View badges</button>

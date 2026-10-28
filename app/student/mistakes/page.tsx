@@ -206,7 +206,7 @@ export default function MistakesPage() {
 
   return (
     <main className="min-h-screen bg-[#f6f8fc] text-[#172033]">
-      <div className="mx-auto max-w-4xl px-6 py-10">
+      <div className="mx-auto w-full max-w-4xl px-3 py-5 sm:px-6 sm:py-10">
         <header className="mb-8">
           <button
             onClick={() => router.push("/dashboard")}
@@ -219,7 +219,7 @@ export default function MistakesPage() {
               &#x1F4D3;
             </div>
             <div>
-              <h1 className="text-2xl font-extrabold tracking-tight">
+              <h1 className="text-xl sm:text-2xl font-extrabold tracking-tight">
                 Mistake Notebook
               </h1>
               <p className="text-sm text-[#697386]">
@@ -281,8 +281,8 @@ export default function MistakesPage() {
           </div>
         )}
 
-        <div className="flex flex-wrap items-center gap-3 mb-6">
-          <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl border border-[#dfe4ee] bg-white text-sm">
+        <div className="flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-3 mb-6">
+          <div className="flex flex-wrap items-center gap-1.5 px-2 sm:px-3 py-2 rounded-xl border border-[#dfe4ee] bg-white text-sm">
             <span className="font-medium text-[#697386]">Filter:</span>
             <button
               onClick={() => setFilter("all")}
@@ -298,12 +298,12 @@ export default function MistakesPage() {
             </button>
           </div>
 
-          <div className="flex-1 flex items-center gap-2 px-3 py-1.5 rounded-xl border border-[#dfe4ee] bg-white text-sm">
+          <div className="w-full sm:flex-1 min-w-0 flex items-center gap-2 px-3 py-2 rounded-xl border border-[#dfe4ee] bg-white text-sm">
             <span className="font-medium text-[#697386]">Subject:</span>
             <select
               value={subjectFilter}
               onChange={(e) => setSubjectFilter(e.target.value)}
-              className="bg-transparent border-none text-sm text-[#172033] focus:ring-0 sm:px-2"
+              className="min-w-0 flex-1 bg-transparent border-none text-sm text-[#172033] focus:ring-0 sm:px-2"
             >
               <option value="">All Subjects</option>
               {subjects.map((sub) => (
@@ -314,7 +314,7 @@ export default function MistakesPage() {
             </select>
           </div>
 
-          <div className="ml-auto text-xs text-[#8a93a5]">
+          <div className="sm:ml-auto text-xs text-[#8a93a5]">
             {filteredMistakes.length} of {mistakes.length} mistake{s(
               mistakes.length
             )} showing
@@ -350,7 +350,20 @@ export default function MistakesPage() {
             )}
           </div>
         ) : (
-          <div className="rounded-xl border border-[#e5e8ef] bg-white shadow-sm overflow-hidden">
+          <>
+          <div className="space-y-3 md:hidden">
+            {filteredMistakes.map((m) => (
+              <article key={m.mistakeId} className="min-w-0 rounded-2xl border border-[#e5e8ef] bg-white p-4 shadow-sm">
+                <div className="flex items-start justify-between gap-2"><span className="rounded-lg bg-indigo-50 px-2 py-1 text-[10px] font-black text-indigo-700">{m.subject || "General"}</span><span className={`shrink-0 rounded-md border px-2 py-1 text-[10px] font-bold ${statusColor(m.isResolved)}`}>{m.isResolved ? "Resolved" : "Unresolved"}</span></div>
+                <h2 className="mt-3 break-words text-sm font-bold leading-6 text-[#172033]">{m.stem}</h2>
+                <p className="mt-1 break-words text-[11px] text-[#8a93a5]">{m.chapter || "No chapter"} · {m.exam || "Practice"} · {formatDate(m.lastMade)}</p>
+                {m.options.length > 0 && <div className="mt-3 space-y-1.5">{m.options.map((opt, idx) => { const correct = idx === m.correctIndex; const selected = idx === m.selectedIndex; return <div key={idx} className={`break-words rounded-lg border px-3 py-2 text-xs ${correct ? "border-green-100 bg-green-50 text-green-700" : selected ? "border-rose-100 bg-rose-50 text-rose-700" : "border-[#f0f2f6] bg-[#f8fafc] text-[#697386]"}`}>{String.fromCharCode(65 + idx)}. {opt}</div>; })}</div>}
+                <div className="mt-3 flex flex-wrap items-center justify-between gap-2 text-[11px] text-[#697386]"><span>{m.attemptCount} attempt{m.attemptCount === 1 ? "" : "s"}</span><span>Q#{m.questionId}</span></div>
+                {!m.isResolved && <div className="mt-3">{retryResults[m.questionId] === "correct" ? <div className="rounded-lg bg-green-50 p-3 text-xs font-bold text-green-700">✓ Correct — resolved!</div> : retryResults[m.questionId] === "wrong" ? <p className="mb-2 text-xs font-bold text-rose-600">Not quite — try again.</p> : null}<div className="flex gap-2"><input type="text" value={retryAnswers[m.questionId] || ""} onChange={(e) => retryAnswerChange(m.questionId, e.target.value)} placeholder="Your answer" className="min-w-0 flex-1 rounded-xl border border-[#dfe4ee] px-3 py-2.5 text-sm focus:border-[#315bea] focus:outline-none" disabled={retrying.has(m.questionId)} /><button type="button" onClick={() => void submitRetryAnswer(m)} disabled={retrying.has(m.questionId) || !retryAnswers[m.questionId]?.trim()} className="shrink-0 rounded-xl bg-[#315bea] px-4 py-2.5 text-sm font-bold text-white disabled:opacity-50">{retrying.has(m.questionId) ? "…" : "Check"}</button></div></div>}
+              </article>
+            ))}
+          </div>
+          <div className="hidden md:block rounded-xl border border-[#e5e8ef] bg-white shadow-sm overflow-hidden">
             <table className="w-full text-left text-sm">
               <thead>
                 <tr className="border-b border-[#f0f2f6] bg-[#fafbfc]">
@@ -474,6 +487,7 @@ export default function MistakesPage() {
               </tbody>
             </table>
           </div>
+           </>
         )}
       </div>
     </main>

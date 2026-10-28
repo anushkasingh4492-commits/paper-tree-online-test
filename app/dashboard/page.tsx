@@ -2932,6 +2932,16 @@ export default function DashboardPage() {
             <span className="text-[9px] font-semibold">Leaderboard</span>
           </button>
 
+          {/* Mistake Notebook */}
+          <button
+            type="button"
+            onClick={() => router.push("/student/mistakes")}
+            className="flex flex-col items-center gap-1 text-[#7d8595]"
+          >
+            <span className="text-[18px] leading-none">📓</span>
+            <span className="text-[9px] font-semibold">Mistakes</span>
+          </button>
+
           {/* Change Password */}
           <button
             type="button"
