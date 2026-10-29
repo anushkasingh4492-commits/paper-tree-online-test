@@ -59,7 +59,16 @@ export async function PATCH(request: Request) {
         return NextResponse.json({ success: false, error: "Choose one of the available preferences." }, { status: 400 });
       }
       const result = await pool.query(
-        `UPDATE students SET avatar_gender_preference = $1, avatar_key = CASE WHEN $1 = 'girl' AND avatar_key LIKE 'boy-%' THEN NULL WHEN $1 = 'boy' AND avatar_key LIKE 'girl-%' THEN NULL ELSE avatar_key END WHERE id::text = $2 AND academy_id::text = $3 RETURNING avatar_gender_preference, avatar_key`,
+        `UPDATE students
+ SET
+   avatar_gender_preference = $1::varchar,
+   avatar_key = CASE
+     WHEN $1::varchar = 'girl' AND avatar_key LIKE 'boy-%' THEN NULL
+     WHEN $1::varchar = 'boy' AND avatar_key LIKE 'girl-%' THEN NULL
+     ELSE avatar_key
+   END
+ WHERE id::text = $2 AND academy_id::text = $3
+ RETURNING avatar_gender_preference, avatar_key`,
         [genderPreference, student.studentId, student.academyId],
       );
       if (!result.rows.length) return NextResponse.json({ success: false, error: "Student account was not found." }, { status: 404 });
