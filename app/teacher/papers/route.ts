@@ -39,7 +39,6 @@ export async function GET() {
         p.exam,
         p.description,
         p.duration_minutes,
-        p.status,
         p.created_at,
         COUNT(pq.id)::int AS question_count
       FROM papers p

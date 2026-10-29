@@ -1683,21 +1683,6 @@ export default function DashboardPage() {
               </button>
 
               <button
-                onClick={() =>
-                  router.push(
-                    "/tests/test-summary"
-                  )
-                }
-                className="w-full h-10 flex items-center gap-3 px-2.5 rounded-xl text-[#657083] hover:bg-[#f7f8fb] text-xs font-medium"
-              >
-                <span className="w-7 h-7 rounded-lg bg-[#f5f6f9] flex items-center justify-center">
-                  <MiniIcon type="calendar" />
-                </span>
-
-                Test Summary
-              </button>
-
-              <button
                 onClick={() => router.push("/student/batch-leaderboard")}
                 className="w-full h-10 flex items-center gap-3 px-2.5 rounded-xl text-[#657083] hover:bg-[#f7f8fb] text-xs font-medium transition"
               >
@@ -1780,16 +1765,7 @@ export default function DashboardPage() {
 
             </nav>
           </div>
-<button
-  type="button"
-  onClick={() => router.push("/change-password")}
-  className="w-full h-10 flex items-center gap-3 px-2.5 rounded-xl text-[#657083] hover:bg-[#f7f8fb] text-xs font-medium"
->
-  <span className="w-7 h-7 rounded-lg bg-[#f5f6f9] flex items-center justify-center">
-    🔐
-  </span>
-  <span>Change Password</span>
-</button>
+
          
 
         </aside>
@@ -2543,7 +2519,7 @@ export default function DashboardPage() {
 
                   <button
                     onClick={() =>
-                      router.push("/tests/test-summary")
+                      router.push("/tests")
                     }
                     className="h-8 px-3 rounded-lg border border-[#dedaff] text-[10px] font-bold text-[#5541dd]"
                   >
@@ -2913,7 +2889,7 @@ export default function DashboardPage() {
           {/* My Tests */}
           <button
             type="button"
-            onClick={() => router.push("/tests/test-summary")}
+            onClick={() => router.push("/tests")}
             className="flex flex-col items-center gap-1 text-[#7d8595]"
           >
             <MiniIcon type="tests" size={19} />
@@ -2930,30 +2906,6 @@ export default function DashboardPage() {
           >
             <span className="text-[18px] leading-none">🏆</span>
             <span className="text-[9px] font-semibold">Leaderboard</span>
-          </button>
-
-          {/* Mistake Notebook */}
-          <button
-            type="button"
-            onClick={() => router.push("/student/mistakes")}
-            className="flex flex-col items-center gap-1 text-[#7d8595]"
-          >
-            <span className="text-[18px] leading-none">📓</span>
-            <span className="text-[9px] font-semibold">Mistakes</span>
-          </button>
-
-          {/* Change Password */}
-          <button
-            type="button"
-            onClick={() => router.push("/change-password")}
-            className="flex flex-col items-center gap-1 text-[#7d8595]"
-          >
-            <span className="text-[18px] leading-none">
-              🔐
-            </span>
-            <span className="text-[9px] font-semibold">
-              Password
-            </span>
           </button>
 
           {/* Logout */}

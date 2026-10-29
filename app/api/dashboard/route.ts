@@ -538,6 +538,7 @@ const attemptsResult =
           ) AS resolved_test_id,
 
           t.id AS test_table_id,
+          t.title AS test_title,
           t.exam AS test_exam,
           t.question_count AS test_question_count,
           t.questions AS test_questions,
@@ -1800,13 +1801,9 @@ const allowedDashboardSubjects =
             null;
 
           const name =
-            testId
-              ? String(
-                  testId
-                )
-              : `Test ${
-                  index + 1
-                }`;
+            String(attempt.test_title || "").trim() ||
+            String(attempt.test_exam || "").trim() ||
+            `Test ${index + 1}`;
 
           return {
             id: testId

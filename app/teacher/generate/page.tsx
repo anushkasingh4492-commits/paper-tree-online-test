@@ -53,6 +53,8 @@ type GenerateResponse = {
   error?: string;
 };
 
+type TargetBatch = { id: string; name: string; class_name?: string | null };
+
 function getQuestionText(question: Question) {
   return (
     question.question ??
@@ -148,14 +150,18 @@ export default function TeacherGeneratePage() {
   const [chaptersBySubject, setChaptersBySubject] = useState<
     Record<string, string[]>
   >({});
-  const [difficulty, setDifficulty] = useState("Balanced");
+  const [difficulty, setDifficulty] = useState<string[]>(["Balanced"]);
 
   const [questionCount, setQuestionCount] = useState(10);
   const [duration, setDuration] = useState(30);
+  const [targetBatches, setTargetBatches] = useState<TargetBatch[]>([]);
+  const [targetBatchId, setTargetBatchId] = useState("");
   // Number of allowed tab-leave warnings before automatic submission (0 or 1).
   const [tabSwitchWarnings, setTabSwitchWarnings] = useState<0 | 1>(1);
 
   const [questions, setQuestions] = useState<Question[]>([]);
+  const [questionSubjectFilter, setQuestionSubjectFilter] = useState("All subjects");
+  const [questionChapterFilter, setQuestionChapterFilter] = useState("All chapters");
   const [selectedQuestionIds, setSelectedQuestionIds] = useState<Set<string>>(
     new Set()
   );
@@ -184,6 +190,18 @@ export default function TeacherGeneratePage() {
   /*
    * Load the database schema used for the dropdowns.
    */
+  useEffect(() => {
+    fetch("/api/teacher/targets", { credentials: "include", cache: "no-store" })
+      .then(async (response) => {
+        const data = await response.json();
+        if (response.ok && data?.success && Array.isArray(data.batches)) {
+          setTargetBatches(data.batches);
+          setTargetBatchId((current) => current || String(data.batches[0]?.id || ""));
+        }
+      })
+      .catch(() => undefined);
+  }, []);
+
   useEffect(() => {
     fetch("/api/db-schema")
       .then(async (res) => {
@@ -322,7 +340,7 @@ export default function TeacherGeneratePage() {
           subjects: selectedSubjects,
           chapters: [],
           chaptersBySubject,
-          difficulty,
+          difficulty: difficulty.join(","),
           questionCount,
           duration,
         }),
@@ -384,6 +402,8 @@ export default function TeacherGeneratePage() {
     setSelectedSubjects([]);
     setChaptersBySubject({});
     setQuestions([]);
+    setQuestionSubjectFilter("All subjects");
+    setQuestionChapterFilter("All chapters");
     setPreviewTotal(0);
     setPreviewPage(0);
     setSelectedQuestionIds(new Set());
@@ -494,7 +514,7 @@ export default function TeacherGeneratePage() {
   setSelectedQuestionIds((previous) => {
     const next = new Set(previous);
 
-    for (const question of questions) {
+    for (const question of visibleQuestions) {
       if (next.size >= questionCount) break;
       next.add(String(question.id));
     }
@@ -628,7 +648,7 @@ export default function TeacherGeneratePage() {
 
           chaptersBySubject,
 
-          difficulty,
+          difficulty: difficulty.join(","),
 
           questionCount,
 
@@ -658,6 +678,7 @@ export default function TeacherGeneratePage() {
         JSON.stringify({
           ...data,
           tabSwitchWarnings,
+          targetBatchId,
         })
       );
 
@@ -672,6 +693,17 @@ export default function TeacherGeneratePage() {
       setLoading(false);
     }
   }
+
+  const questionSubjectOptions = Array.from(new Set(questions.map((question) => String(question.subject || "").trim()).filter(Boolean)));
+  const questionChapterOptions = Array.from(new Set(questions
+    .filter((question) => questionSubjectFilter === "All subjects" || String(question.subject || "") === questionSubjectFilter)
+    .map((question) => String(question.chapter_name || question.chapter || "").trim())
+    .filter(Boolean)));
+  const visibleQuestions = questions.filter((question) =>
+    (questionSubjectFilter === "All subjects" || String(question.subject || "") === questionSubjectFilter) &&
+    (questionChapterFilter === "All chapters" || String(question.chapter_name || question.chapter || "") === questionChapterFilter)
+  );
+  const questionChapterNav = Array.from(new Set(visibleQuestions.map((question) => String(question.chapter_name || question.chapter || "Other").trim())));
 
   return (
     <main className="min-h-screen bg-[#f6f8fc] text-[#172033]">
@@ -699,6 +731,18 @@ export default function TeacherGeneratePage() {
               and choose the exact questions for the test.
             </p>
           </div>
+
+          <section className="mb-6 rounded-xl border border-indigo-100 bg-indigo-50/70 p-4">
+            <label htmlFor="paper-target-batch" className="block text-sm font-bold text-indigo-950">Allot paper to a batch</label>
+            <p className="mt-1 text-xs text-indigo-800">Choose the default batch here. You can review the assignment on the Publish step before it is scheduled.</p>
+            {targetBatches.length ? (
+              <select id="paper-target-batch" value={targetBatchId} onChange={(event) => setTargetBatchId(event.target.value)} className="mt-3 w-full max-w-md rounded-lg border border-indigo-200 bg-white px-3 py-2.5 text-sm font-semibold text-slate-800">
+                {targetBatches.map((batch) => <option key={batch.id} value={batch.id}>{batch.name}{batch.class_name ? ` · ${batch.class_name}` : ""}</option>)}
+              </select>
+            ) : (
+              <p className="mt-3 text-xs text-indigo-800">No batches were returned for this teacher account. You can still choose a target on the Publish step.</p>
+            )}
+          </section>
 
           <section className="mb-6 rounded-xl border border-amber-200 bg-amber-50 p-4">
             <label htmlFor="tab-switch-warnings" className="block text-sm font-bold text-amber-950">
@@ -983,29 +1027,30 @@ export default function TeacherGeneratePage() {
                 Difficulty
               </label>
 
-              <select
-                value={difficulty}
-                onChange={(e) =>
-                  setDifficulty(e.target.value)
-                }
-                className="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 outline-none focus:border-[#315bea]"
-              >
-                <option value="Balanced">
-                  Balanced
-                </option>
-
-                <option value="Easy">
-                  Easy
-                </option>
-
-                <option value="Challenging">
-                  Challenging
-                </option>
-
-                <option value="Difficult">
-                  Difficult
-                </option>
-              </select>
+              <div className="grid grid-cols-2 gap-2">
+                {["Easy", "Challenging", "Balanced", "Difficult"].map((level) => {
+                  const checked = difficulty.includes(level);
+                  return (
+                    <label key={level} className={`flex cursor-pointer items-center gap-2 rounded-xl border px-3 py-3 text-sm font-semibold transition ${checked ? "border-[#315bea] bg-blue-50 text-[#2448bb]" : "border-gray-300 bg-white hover:border-blue-300"}`}>
+                      <input
+                        type="checkbox"
+                        checked={checked}
+                        onChange={() => setDifficulty((current) => {
+                          if (checked) {
+                            const next = current.filter((item) => item !== level);
+                            return next.length ? next : ["Balanced"];
+                          }
+                          if (level === "Balanced") return ["Balanced"];
+                          return [...current.filter((item) => item !== "Balanced"), level];
+                        })}
+                        className="h-4 w-4 accent-[#315bea]"
+                      />
+                      {level}
+                    </label>
+                  );
+                })}
+              </div>
+              <p className="mt-2 text-xs text-gray-500">Choose multiple levels to mix question difficulty. Balanced includes the full available mix.</p>
             </div>
 
             {/* QUESTION COUNT */}
@@ -1210,11 +1255,42 @@ export default function TeacherGeneratePage() {
                 </div>
               )}
 
+            {/* QUESTION FILTERS */}
+            {!loadingQuestions && questions.length > 0 && (
+              <div className="mt-6 flex flex-col gap-3 rounded-xl border border-gray-200 bg-gray-50 p-3 sm:flex-row sm:items-center">
+                <label className="flex flex-1 flex-col gap-1 text-xs font-bold text-gray-600">
+                  Filter by subject
+                  <select value={questionSubjectFilter} onChange={(event) => { setQuestionSubjectFilter(event.target.value); setQuestionChapterFilter("All chapters"); }} className="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium text-gray-800">
+                    <option>All subjects</option>
+                    {questionSubjectOptions.map((subject) => <option key={subject}>{subject}</option>)}
+                  </select>
+                </label>
+                <label className="flex flex-1 flex-col gap-1 text-xs font-bold text-gray-600">
+                  Filter by chapter
+                  <select value={questionChapterFilter} onChange={(event) => setQuestionChapterFilter(event.target.value)} className="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium text-gray-800">
+                    <option>All chapters</option>
+                    {questionChapterOptions.map((chapter) => <option key={chapter}>{chapter}</option>)}
+                  </select>
+                </label>
+              </div>
+            )}
+
             {/* QUESTIONS */}
             {!loadingQuestions &&
               questions.length > 0 && (
-                <div className="mt-6 space-y-4">
-                  {questions.map((question, index) => {
+                <div className="mt-6 grid grid-cols-1 gap-4 lg:grid-cols-[190px_minmax(0,1fr)]">
+                  <aside className="h-fit rounded-xl border border-gray-200 bg-gray-50 p-3 lg:sticky lg:top-24">
+                    <p className="mb-2 text-xs font-extrabold uppercase tracking-wide text-gray-500">Question sections</p>
+                    <div className="flex gap-2 overflow-x-auto lg:flex-col lg:overflow-visible">
+                      {questionChapterNav.map((chapter) => (
+                        <button key={chapter} type="button" onClick={() => document.getElementById(`question-section-${encodeURIComponent(chapter)}`)?.scrollIntoView({ behavior: "smooth", block: "start" })} className="shrink-0 rounded-lg border border-gray-200 bg-white px-3 py-2 text-left text-xs font-semibold text-gray-700 hover:border-[#315bea]">
+                          {chapter}
+                        </button>
+                      ))}
+                    </div>
+                  </aside>
+                  <div className="min-w-0 space-y-4">
+                  {visibleQuestions.map((question, index) => {
                     const id = String(question.id);
 
                     const selected =
@@ -1230,11 +1306,19 @@ export default function TeacherGeneratePage() {
                     const figureSrc = getFigureSrc(
                       question.figure_asset ?? question.figureAsset
                     );
+                    const subjectAccent = /physics/i.test(String(question.subject || "")) ? "#0ea5e9"
+                      : /chemistry/i.test(String(question.subject || "")) ? "#8b5cf6"
+                      : /math/i.test(String(question.subject || "")) ? "#f59e0b"
+                      : /biology/i.test(String(question.subject || "")) ? "#10b981"
+                      : /verbal|reading/i.test(String(question.subject || "")) ? "#ec4899"
+                      : "#64748b";
 
                     return (
                       <label
                         key={id}
-                        className={`block cursor-pointer rounded-2xl border p-3 transition sm:p-5 ${
+                        id={index === visibleQuestions.findIndex((candidate) => String(candidate.chapter_name || candidate.chapter || "Other").trim() === String(question.chapter_name || question.chapter || "Other").trim()) ? `question-section-${encodeURIComponent(String(question.chapter_name || question.chapter || "Other").trim())}` : undefined}
+                        style={{ borderLeftColor: subjectAccent }}
+                        className={`block cursor-pointer rounded-2xl border-l-4 border p-3 transition sm:p-5 ${
                           selected
                             ? "border-[#315bea] bg-blue-50"
                             : "border-gray-200 bg-white hover:border-gray-300"
@@ -1335,20 +1419,13 @@ export default function TeacherGeneratePage() {
                                 </span>
                               )}
 
-                              {question.exam && (
-                                <span>
-                                  Exam:{" "}
-                                  <strong>
-                                    {question.exam}
-                                  </strong>
-                                </span>
-                              )}
                             </div>
                           </div>
                         </div>
                       </label>
                     );
                   })}
+                  </div>
                 </div>
               )}
 

@@ -9,6 +9,9 @@ const THEME_EVENT = "paperTreeStudentThemeChange";
 function isStudentRoute(pathname: string): boolean {
   return (
     pathname === "/dashboard" ||
+    pathname === "/profile" ||
+    pathname === "/edit-profile" ||
+    pathname === "/achievements" ||
     pathname === "/tests" ||
     pathname.startsWith("/tests/") ||
     pathname.startsWith("/test/") ||

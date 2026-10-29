@@ -121,6 +121,13 @@ export default function TeacherPerformancePage() {
     );
   }, [students]);
 
+  // Default to the first batch instead of loading all batches together.
+  useEffect(() => {
+    if (batchOptions.length > 0 && batchFilter === "ALL") {
+      setBatchFilter(batchOptions[0]);
+    }
+  }, [batchOptions]);
+
   const filteredStudents = useMemo(() => {
     const query = search.trim().toLowerCase();
 
@@ -245,6 +252,30 @@ export default function TeacherPerformancePage() {
           </button>
         </header>
 
+        {!loading && !error && filteredStudents.length > 0 && (
+          <section className="mb-6 rounded-2xl border border-[#e3e8f5] bg-white p-5 shadow-sm sm:p-6">
+            <div className="mb-5">
+              <h2 className="text-lg font-extrabold">Performance at a glance</h2>
+              <p className="mt-1 text-sm text-[#8a93a5]">A separate visual summary of the students currently shown by your filters.</p>
+            </div>
+            {[
+              { label: "Average score", value: Math.round(filteredStudents.reduce((sum, student) => sum + student.averagePercentage, 0) / filteredStudents.length), color: "bg-indigo-500" },
+              { label: "Average accuracy", value: Math.round(filteredStudents.reduce((sum, student) => sum + student.accuracy, 0) / filteredStudents.length), color: "bg-emerald-500" },
+              { label: "Students with 5+ tests", value: Math.round((filteredStudents.filter((student) => student.testsTaken >= 5).length / filteredStudents.length) * 100), color: "bg-amber-500" },
+            ].map((metric) => (
+              <div key={metric.label} className="mb-4 last:mb-0">
+                <div className="mb-2 flex items-center justify-between gap-3 text-sm">
+                  <span className="font-semibold text-[#465064]">{metric.label}</span>
+                  <span className="font-extrabold text-[#172033]">{metric.value}%</span>
+                </div>
+                <div className="h-3 overflow-hidden rounded-full bg-[#edf0f6]">
+                  <div className={`h-full rounded-full ${metric.color}`} style={{ width: `${Math.max(0, Math.min(100, metric.value))}%` }} />
+                </div>
+              </div>
+            ))}
+          </section>
+        )}
+
         <section className="rounded-2xl border border-[#e3e8f5] bg-white shadow-sm">
           <div className="border-b border-[#eef0f4] px-6 py-5">
             <div className="flex flex-wrap items-center justify-between gap-4">
@@ -269,12 +300,12 @@ export default function TeacherPerformancePage() {
                 onChange={(event) => setBatchFilter(event.target.value)}
                 className="rounded-xl border border-[#dfe4ee] bg-white px-3 py-2.5 text-sm font-semibold outline-none focus:border-[#315bea]"
               >
-                <option value="ALL">All batches</option>
                 {batchOptions.map((batch) => (
                   <option key={batch} value={batch}>
                     {batch}
                   </option>
                 ))}
+                <option value="ALL">All batches</option>
               </select>
 
               <select
@@ -415,16 +446,7 @@ export default function TeacherPerformancePage() {
                               if (!response.ok || !data.success) throw new Error(data.error || "Could not create summary.");
                               setReport({ studentId: student.id, text: data.summary });
                             } catch (error) { setError(error instanceof Error ? error.message : "Could not create summary."); } finally { setSending(null); }
-                          }} className="rounded-lg border border-violet-200 bg-violet-50 px-2.5 py-1.5 text-[10px] font-bold text-violet-700">{sending === student.id ? "..." : "AI Summary"}</button>}
-                          {features?.parentWhatsAppReports && <button type="button" onClick={async () => {
-                            setSending(student.id);
-                            try {
-                              const response = await fetch("/api/whatsapp/report", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ studentId: student.id }) });
-                              const data = await response.json();
-                              if (!response.ok || !data.success) throw new Error(data.error || "Could not create report.");
-                              if (data.sent) alert("WhatsApp report sent."); else window.open(data.clickToChat, "_blank", "noopener,noreferrer");
-                            } catch (error) { setError(error instanceof Error ? error.message : "Could not create WhatsApp report."); } finally { setSending(null); }
-                          }} className="rounded-lg bg-[#25D366] px-2.5 py-1.5 text-[10px] font-bold text-white">WhatsApp</button>}
+                          }} className="rounded-lg border border-violet-200 bg-violet-50 px-2.5 py-1.5 text-[10px] font-bold text-violet-700">{sending === student.id ? "..." : "View Feedback"}</button>}
                         </div>
                       </td>
                     </tr>
@@ -479,9 +501,12 @@ export default function TeacherPerformancePage() {
                   </p>
                 ) : (
                   <div className="space-y-3">
-                    {attempts.map((attempt) => {
+                    {attempts.map((attempt, index) => {
                       const score = Number(attempt.score || 0);
                       const total = Number(attempt.total_marks || 0);
+                      const correct = Number(attempt.correct_count ?? 0);
+                      const wrong = Number(attempt.incorrect_count ?? 0);
+                      const unanswered = Number(attempt.unanswered_count ?? 0);
                       const percentage =
                         typeof attempt.percentage === "number"
                           ? attempt.percentage.toFixed(1)
@@ -526,8 +551,11 @@ const otherDifficulties = normalizedDifficulties
                         >
                           <div className="flex flex-wrap items-start justify-between gap-3">
                             <div>
-                              <p className="font-bold">
-                                {attempt.test_title}
+                              <p className="font-bold flex items-center gap-2">
+                                #{index + 1} {attempt.test_title} &middot; {subjects}
+                                <span className={`inline-block rounded-full px-2 py-0.5 text-[10px] font-bold ${difficulties.length ? (difficulties.includes("Easy") ? "bg-green-100 text-green-800" : difficulties.includes("Medium") ? "bg-amber-100 text-amber-800" : difficulties.includes("Hard") ? "bg-red-100 text-red-800" : "bg-purple-100 text-purple-800") : "bg-slate-200 text-slate-700"}`}>
+                                  {difficulties.length ? difficulties.join(", ") : otherDifficulties.length ? otherDifficulties.join(", ") : "—"}
+                                </span>
                               </p>
                               <p className="mt-1 text-xs text-[#8a93a5]">
                                 {attempt.submitted_at
@@ -603,12 +631,22 @@ const otherDifficulties = normalizedDifficulties
                           </div>
 
                           <div className="mt-3 flex flex-wrap gap-4 text-xs font-semibold text-[#697386]">
-                            <span>✓ Correct: {attempt.correct_count ?? 0}</span>
-                            <span>✕ Wrong: {attempt.incorrect_count ?? 0}</span>
-                            <span>— Unanswered: {attempt.unanswered_count ?? 0}</span>
+                            <span>✓ Correct: {correct}</span>
+                            <span>✕ Wrong: {wrong}</span>
+                            <span>— Unanswered: {unanswered}</span>
                             {attempt.question_types?.length ? (
                               <span>Type: {attempt.question_types.join(", ")}</span>
                             ) : null}
+                          </div>
+
+                          <div className="mt-4 flex justify-end">
+                            <button
+                              type="button"
+                              onClick={() => router.push(`/test/${attempt.test_id}`)}
+                              className="rounded-lg border border-[#315bea] px-3 py-1.5 text-xs font-bold text-[#315bea] hover:bg-[#315bea] hover:text-white transition"
+                            >
+                              View Test
+                            </button>
                           </div>
                         </div>
                       );
@@ -633,7 +671,13 @@ const otherDifficulties = normalizedDifficulties
             <div className="w-full max-w-lg rounded-2xl bg-white p-6 shadow-2xl" onClick={(event) => event.stopPropagation()}>
               <div className="flex items-center justify-between"><h3 className="text-lg font-extrabold">AI Parent Summary</h3><button onClick={() => setReport(null)} className="text-sm font-bold text-[#697386]">Close</button></div>
               <p className="mt-5 whitespace-pre-wrap rounded-xl bg-[#f7f8fc] p-4 text-sm leading-6 text-[#475168]">{report.text}</p>
-              <button type="button" onClick={() => navigator.clipboard?.writeText(report.text)} className="mt-4 rounded-xl bg-[#315bea] px-4 py-2.5 text-sm font-bold text-white">Copy Summary</button>
+              <div className="mt-4 flex items-center gap-3">
+                <button type="button" onClick={() => navigator.clipboard?.writeText(report.text)} className="rounded-xl bg-[#315bea] px-4 py-2.5 text-sm font-bold text-white">Copy Summary</button>
+                <button type="button" onClick={() => {
+                  const text = encodeURIComponent(report.text || "");
+                  window.open(`https://wa.me/?text=${text}`, "_blank", "noopener,noreferrer");
+                }} className="rounded-xl bg-[#25D366] px-4 py-2.5 text-sm font-bold text-white">Share via WhatsApp</button>
+              </div>
             </div>
           </div>
         )}

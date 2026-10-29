@@ -386,40 +386,36 @@ function addDifficultyFilter(
   difficulty: string,
   conditions: string[]
 ) {
-  const normalizedDifficulty = normalize(difficulty);
+  const selectedDifficulties = difficulty
+    .split(",")
+    .map((item) => normalize(item))
+    .filter(Boolean);
 
-  if (normalizedDifficulty === "easy") {
-    conditions.push(`
-      LOWER(TRIM(difficulty)) = 'easy'
-    `);
-    return;
+  // Balanced means the teacher wants the full available difficulty mix.
+  if (!selectedDifficulties.length || selectedDifficulties.includes("balanced")) return;
+
+  const difficultyConditions: string[] = [];
+  for (const normalizedDifficulty of selectedDifficulties) {
+    if (normalizedDifficulty === "easy") {
+      difficultyConditions.push("LOWER(TRIM(difficulty)) = 'easy'");
+      continue;
+    }
+    if (normalizedDifficulty === "medium") {
+      difficultyConditions.push("LOWER(TRIM(difficulty)) = 'medium'");
+      continue;
+    }
+    if (normalizedDifficulty === "hard" || normalizedDifficulty === "difficult") {
+      difficultyConditions.push("LOWER(TRIM(difficulty)) IN ('hard', 'difficult')");
+      continue;
+    }
+    if (normalizedDifficulty === "challenging") {
+      difficultyConditions.push("LOWER(TRIM(difficulty)) = 'challenging'");
+    }
   }
 
-  if (normalizedDifficulty === "medium") {
-    conditions.push(`
-      LOWER(TRIM(difficulty)) = 'medium'
-    `);
-    return;
+  if (difficultyConditions.length) {
+    conditions.push(`(${difficultyConditions.join(" OR ")})`);
   }
-
-  if (
-    normalizedDifficulty === "hard" ||
-    normalizedDifficulty === "difficult"
-  ) {
-    conditions.push(`
-      LOWER(TRIM(difficulty)) IN ('hard', 'difficult')
-    `);
-    return;
-  }
-
-  if (normalizedDifficulty === "challenging") {
-    conditions.push(`
-      LOWER(TRIM(difficulty)) = 'challenging'
-    `);
-    return;
-  }
-
-  // Balanced or an unrecognized value: don't filter by difficulty.
 }
 
 /*

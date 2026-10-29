@@ -166,15 +166,23 @@ export default function TeacherPublishPage() {
       setAcademy(data.academy || null);
       setTeacher(data.teacher || null);
 
-      // Automatically select the first available batch.
+      // Honor the batch chosen on Generate Paper; otherwise use the first available batch.
+      let requestedBatchId = "";
+      try {
+        const savedTest = JSON.parse(localStorage.getItem("teacherGeneratedTest") || "{}");
+        requestedBatchId = String(savedTest.targetBatchId || "");
+      } catch {
+        requestedBatchId = "";
+      }
       if (nextBatches.length > 0) {
         setTargetType("batch");
 
-        setBatchId((current) =>
-          nextBatches.some((batch) => batch.id === current)
-            ? current
-            : nextBatches[0].id
-        );
+        setBatchId((current) => {
+          const preferred = requestedBatchId || current;
+          return nextBatches.some((batch) => batch.id === preferred)
+            ? preferred
+            : nextBatches[0].id;
+        });
 
         setSelectedStudentIds([]);
       } else if (nextStudents.length > 0) {

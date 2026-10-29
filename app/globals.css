@@ -333,3 +333,23 @@ body.student-theme-dark .summary-test p,
 body.student-theme-dark .summary-state {
   color: #aeb9cc !important;
 }
+
+
+/* Dark-mode contrast refinements for all student surfaces. The page canvas is
+   intentionally darker than interactive cards to make content groups distinct. */
+body.student-theme-dark main {
+  background-color: #101522 !important;
+}
+body.student-theme-dark [class*="shadow"] {
+  --tw-shadow-color: rgb(0 0 0 / 0.18);
+}
+
+/* Page canvas must stay darker than the cards so content groups remain distinct. */
+body.student-theme-dark main {
+  background-color: #0f1420 !important;
+}
+body.student-theme-dark [class*="bg-white"],
+body.student-theme-dark [class*="bg-[#f8f9fc]"],
+body.student-theme-dark [class*="bg-[#f6f8fc]"] {
+  background-color: #1a2232 !important;
+}
