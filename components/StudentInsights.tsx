@@ -69,6 +69,7 @@ export default function StudentInsights() {
   const [levelOpen, setLevelOpen] = useState(false);
   const [sharing, setSharing] = useState(false);
   const [category, setCategory] = useState("All");
+  const [viewAll, setViewAll] = useState(false);
 
   useEffect(() => {
     Promise.all([
@@ -139,6 +140,7 @@ export default function StudentInsights() {
 
   if (loading || !data) return null;
   const filtered = data.badges.filter((b) => category === "All" || b.category === category);
+  const badgesToShow = viewAll ? data.badges : filtered;
   const earned = data.badges.filter((b) => b.earned);
   const levelIndex = Math.max(0, data.level - 1);
   const nextName = data.nextLevelName;
@@ -211,7 +213,7 @@ export default function StudentInsights() {
         <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between"><div><div className="text-[10px] font-black uppercase tracking-[.2em] text-slate-400">Achievement Vault</div><h2 className="mt-1 text-2xl font-black tracking-tight text-slate-950">🏆 Trophy Wall</h2><p className="mt-1 text-xs font-semibold text-slate-500">Earn them. Upgrade them. Show them off.</p></div><div className="text-xs font-black text-slate-400">{earned.length}/{data.badges.length} unlocked</div></div>
         <div className="mt-5 flex gap-2 overflow-x-auto pb-1">{CATEGORIES.map((c)=><button key={c} onClick={()=>setCategory(c)} className={`whitespace-nowrap rounded-full px-3 py-2 text-[10px] font-black transition ${category===c?"bg-slate-950 text-white shadow":"bg-slate-100 text-slate-500 hover:bg-slate-200"}`}>{c}</button>)}</div>
         <div className="mt-4 grid grid-cols-2 gap-2.5 sm:grid-cols-3 lg:grid-cols-5 2xl:grid-cols-6">
-          {filtered.map((badge) => { const pct = badge.target ? clamp((badge.progress / badge.target) * 100) : badge.earned ? 100 : 0; const colors = COLORS[badge.category] || COLORS.Score; return <button key={badge.id} type="button" onClick={() => {
+          {badgesToShow.map((badge) => { const pct = badge.target ? clamp((badge.progress / badge.target) * 100) : badge.earned ? 100 : 0; const colors = COLORS[badge.category] || COLORS.Score; return <button key={badge.id} type="button" onClick={() => {
   setSelectedBadge({
     ...badge,
     name: String(badge.name ?? "Achievement"),
