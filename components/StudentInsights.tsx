@@ -212,6 +212,7 @@ export default function StudentInsights() {
       <div className="rounded-[24px] border border-slate-200 bg-white p-4 shadow-sm md:p-5">
         <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between"><div><div className="text-[10px] font-black uppercase tracking-[.2em] text-slate-400">Achievement Vault</div><h2 className="mt-1 text-2xl font-black tracking-tight text-slate-950">🏆 Trophy Wall</h2><p className="mt-1 text-xs font-semibold text-slate-500">Earn them. Upgrade them. Show them off.</p></div><div className="text-xs font-black text-slate-400">{earned.length}/{data.badges.length} unlocked</div></div>
         <div className="mt-5 flex gap-2 overflow-x-auto pb-1">{CATEGORIES.map((c)=><button key={c} onClick={()=>setCategory(c)} className={`whitespace-nowrap rounded-full px-3 py-2 text-[10px] font-black transition ${category===c?"bg-slate-950 text-white shadow":"bg-slate-100 text-slate-500 hover:bg-slate-200"}`}>{c}</button>)}</div>
+          <button type="button" onClick={()=>setViewAll(!viewAll)} className="rounded-xl border border-slate-200 px-3 py-1.5 text-[10px] font-black text-slate-700 hover:bg-slate-50">View All</button>
         <div className="mt-4 grid grid-cols-2 gap-2.5 sm:grid-cols-3 lg:grid-cols-5 2xl:grid-cols-6">
           {badgesToShow.map((badge) => { const pct = badge.target ? clamp((badge.progress / badge.target) * 100) : badge.earned ? 100 : 0; const colors = COLORS[badge.category] || COLORS.Score; return <button key={badge.id} type="button" onClick={() => {
   setSelectedBadge({

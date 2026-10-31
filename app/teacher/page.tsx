@@ -146,7 +146,7 @@ export default function TeacherPage() {
               <span className="block text-xl">👥</span><span className="mt-2 block">Collaboration</span><span className="mt-1 block text-xs font-normal text-[#697386]">Build a paper with other teachers</span>
             </button>
             <button type="button" onClick={() => router.push("/teacher/generate")} className="rounded-xl border border-[#e0e5f0] bg-[#f3faf6] px-4 py-4 text-left font-bold text-[#172033] hover:border-[#16a34a]">
-              <span className="block text-xl">✨</span><span className="mt-2 block">Auto Generate</span><span className="mt-1 block text-xs font-normal text-[#697386]">Generate from the question bank</span>
+              <span className="block text-xl">✨</span><span className="mt-2 block">Generate Paper</span><span className="mt-1 block text-xs font-normal text-[#697386]">Generate from the question bank</span>
             </button>
           </div>
         </section>
