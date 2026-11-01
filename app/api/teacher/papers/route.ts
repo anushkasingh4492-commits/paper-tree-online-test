@@ -86,7 +86,7 @@ export async function GET() {
           t.created_by_teacher_id AS created_by,
           t.created_at,
           t.created_at AS updated_at,
-          COALESCE(t.status, 'generated') AS status,
+          'generated'::text AS status,
           NULL::text AS custom_section,
           COALESCE(t.question_count, jsonb_array_length(COALESCE(t.questions, '[]'::jsonb)))::int AS question_count,
           'TEST'::text AS source_type,
