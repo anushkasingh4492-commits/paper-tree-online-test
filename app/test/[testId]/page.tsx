@@ -1884,6 +1884,29 @@ const figureAsset =
         "true"
       );
 
+      /* Clean up per-test localStorage keys so quota is not exceeded over time. */
+      function cleanupTestStorage() {
+        try {
+          const keysToRemove: string[] = [];
+          for (let i = 0; i < localStorage.length; i++) {
+            const key = localStorage.key(i);
+            if (
+              key &&
+              key.startsWith(`test-${testId}-`)
+            ) {
+              keysToRemove.push(key);
+            }
+          }
+          keysToRemove.forEach((key) => {
+            try {
+              localStorage.removeItem(key);
+            } catch {}
+          });
+        } catch {}
+      }
+
+      cleanupTestStorage();
+
       localStorage.setItem(
         "paperTreeDashboardRefresh",
         String(
@@ -2239,6 +2262,25 @@ const figureAsset =
         "beforeunload",
         handleBeforeUnload
       );
+
+      /* Clean up per-test localStorage on unmount to prevent quota exhaustion. */
+      try {
+        const keysToRemove: string[] = [];
+        for (let i = 0; i < localStorage.length; i++) {
+          const key = localStorage.key(i);
+          if (
+            key &&
+            key.startsWith(`test-${testId}-`)
+          ) {
+            keysToRemove.push(key);
+          }
+        }
+        keysToRemove.forEach((key) => {
+          try {
+            localStorage.removeItem(key);
+          } catch {}
+        });
+      } catch {}
     };
   }, [
     test,
