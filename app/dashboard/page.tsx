@@ -2080,17 +2080,20 @@ export default function DashboardPage() {
               </p>
             </div>
 
-            {/* Mistake Summary Card Stack — reveals progressively as progress is made */}
+            {/* Mistake Summary Card Stack — subtle neutral cards, progressive reveal */}
             <div className="relative h-48 mb-5">
               {/* Back card: Mastered — reveals only when you have mastered mistakes */}
               {masteredMistakes > 0 && (
                 <div
-                  className="absolute left-0 top-0 w-full h-full z-10 rounded-xl border border-[#86efac] bg-state-success p-4 transform translate-y-12 -rotate-1 opacity-70 shadow-lg transition-all duration-500 ease-out"
+                  className="absolute left-0 top-0 w-full h-full z-10 rounded-xl border border-border-default bg-surface-surface p-4 shadow-md transform translate-y-12 -rotate-1 opacity-60 transition-all duration-500 ease-out"
                 >
-                  <div className="text-[9px] font-bold uppercase tracking-[0.15em] text-white">
-                    Mastered
+                  <div className="flex justify-between items-start mb-1">
+                    <div className="text-[9px] font-bold uppercase tracking-[0.15em] text-text-supporting-label">
+                      Mastered
+                    </div>
+                    <span className="w-2 h-2 rounded-full bg-state-success"></span>
                   </div>
-                  <div className="mt-1 text-2xl font-black text-white">
+                  <div className="mt-2 text-xl font-black text-text-primary">
                     {mistakesLoaded ? masteredMistakes : "—"}
                   </div>
                 </div>
@@ -2099,23 +2102,29 @@ export default function DashboardPage() {
               {/* Middle card: Unresolved — reveals only when you have unresolved mistakes */}
               {unresolvedMistakes > 0 && (
                 <div
-                  className="absolute left-0 top-0 w-full h-full z-20 rounded-xl border border-[#fde047] bg-state-warning p-4 transform translate-y-6 -rotate-0.5 opacity-85 shadow-lg transition-all duration-500 ease-out"
+                  className="absolute left-0 top-0 w-full h-full z-20 rounded-xl border border-border-default bg-surface-surface p-4 shadow-md transform translate-y-6 -rotate-0.5 opacity-80 transition-all duration-500 ease-out"
                 >
-                  <div className="text-[9px] font-bold uppercase tracking-[0.15em] text-text-primary">
-                    Unresolved
+                  <div className="flex justify-between items-start mb-1">
+                    <div className="text-[9px] font-bold uppercase tracking-[0.15em] text-text-supporting-label">
+                      Unresolved
+                    </div>
+                    <span className="w-2 h-2 rounded-full bg-state-warning"></span>
                   </div>
-                  <div className="mt-1 text-2xl font-black text-text-primary">
+                  <div className="mt-2 text-xl font-black text-text-primary">
                     {mistakesLoaded ? unresolvedMistakes : "—"}
                   </div>
                 </div>
               )}
 
               {/* Front card: Total Mistakes — always visible */}
-              <div className="relative z-30 rounded-xl border border-[#fca5a5] bg-state-error p-4 shadow-lg">
-                <div className="text-[9px] font-bold uppercase tracking-[0.15em] text-white">
-                  Total Mistakes
+              <div className="relative z-30 rounded-xl border border-border-default bg-surface-surface p-4 shadow-lg">
+                <div className="flex justify-between items-start mb-1">
+                  <div className="text-[9px] font-bold uppercase tracking-[0.15em] text-text-supporting-label">
+                    Total Mistakes
+                  </div>
+                  <span className="w-2 h-2 rounded-full bg-brand-primary"></span>
                 </div>
-                <div className="mt-1 text-2xl font-black text-white">
+                <div className="mt-2 text-xl font-black text-text-primary">
                   {mistakesLoaded ? totalMistakes : "—"}
                 </div>
               </div>
