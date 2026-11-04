@@ -2080,9 +2080,38 @@ export default function DashboardPage() {
               </p>
             </div>
 
-            {/* Mistake Summary Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-5">
-              <div className="rounded-xl border border-[#fca5a5] bg-state-error p-4">
+            {/* Mistake Summary Card Stack — reveals progressively as progress is made */}
+            <div className="relative h-48 mb-5">
+              {/* Back card: Mastered — reveals only when you have mastered mistakes */}
+              {masteredMistakes > 0 && (
+                <div
+                  className="absolute left-0 top-0 w-full h-full z-10 rounded-xl border border-[#86efac] bg-state-success p-4 transform translate-y-12 -rotate-1 opacity-70 shadow-lg transition-all duration-500 ease-out"
+                >
+                  <div className="text-[9px] font-bold uppercase tracking-[0.15em] text-white">
+                    Mastered
+                  </div>
+                  <div className="mt-1 text-2xl font-black text-white">
+                    {mistakesLoaded ? masteredMistakes : "—"}
+                  </div>
+                </div>
+              )}
+
+              {/* Middle card: Unresolved — reveals only when you have unresolved mistakes */}
+              {unresolvedMistakes > 0 && (
+                <div
+                  className="absolute left-0 top-0 w-full h-full z-20 rounded-xl border border-[#fde047] bg-state-warning p-4 transform translate-y-6 -rotate-0.5 opacity-85 shadow-lg transition-all duration-500 ease-out"
+                >
+                  <div className="text-[9px] font-bold uppercase tracking-[0.15em] text-text-primary">
+                    Unresolved
+                  </div>
+                  <div className="mt-1 text-2xl font-black text-text-primary">
+                    {mistakesLoaded ? unresolvedMistakes : "—"}
+                  </div>
+                </div>
+              )}
+
+              {/* Front card: Total Mistakes — always visible */}
+              <div className="relative z-30 rounded-xl border border-[#fca5a5] bg-state-error p-4 shadow-lg">
                 <div className="text-[9px] font-bold uppercase tracking-[0.15em] text-white">
                   Total Mistakes
                 </div>
@@ -2090,24 +2119,9 @@ export default function DashboardPage() {
                   {mistakesLoaded ? totalMistakes : "—"}
                 </div>
               </div>
-              <div className="rounded-xl border border-[#fde047] bg-state-warning p-4">
-                <div className="text-[9px] font-bold uppercase tracking-[0.15em] text-text-primary">
-                  Unresolved
-                </div>
-                <div className="mt-1 text-2xl font-black text-text-primary">
-                  {mistakesLoaded ? unresolvedMistakes : "—"}
-                </div>
-              </div>
-              <div className="rounded-xl border border-[#86efac] bg-state-success p-4">
-                <div className="text-[9px] font-bold uppercase tracking-[0.15em] text-white">
-                  Mastered
-                </div>
-                <div className="mt-1 text-2xl font-black text-white">
-                  {mistakesLoaded ? masteredMistakes : "—"}
-                </div>
-              </div>
+
               {mistakesError && (
-                <p role="alert" className="sm:col-span-3 text-xs font-semibold text-rose-600">
+                <p role="alert" className="absolute bottom-0 left-0 w-full text-xs font-semibold text-rose-600 mt-2">
                   {mistakesError}
                 </p>
               )}
