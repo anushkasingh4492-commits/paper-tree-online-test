@@ -2612,15 +2612,15 @@ const figureAsset =
 
   if (loading) {
     return (
-      <main className="min-h-screen flex items-center justify-center bg-[#f5f7fb]">
+      <main className="min-h-screen flex items-center justify-center bg-surface-app-bg">
         <div className="text-center">
           <div className="w-11 h-11 border-4 border-blue-100 border-t-blue-600 rounded-full animate-spin mx-auto" />
 
-          <p className="mt-4 text-sm font-medium text-slate-500">
+          <p className="mt-4 text-sm font-medium text-text-body">
             Preparing your test...
           </p>
 
-          <p className="mt-1 text-xs text-slate-400">
+          <p className="mt-1 text-xs text-text-supporting-label">
             Loading questions and test timer
           </p>
         </div>
@@ -2636,21 +2636,21 @@ const figureAsset =
 
   if (error) {
     return (
-      <main className="min-h-screen flex items-center justify-center bg-[#f5f7fb] p-6">
-        <div className="bg-white rounded-2xl border border-slate-200 p-8 max-w-md w-full text-center shadow-sm">
-          <div className="w-14 h-14 mx-auto rounded-2xl bg-red-50 text-red-600 flex items-center justify-center text-2xl font-bold">
+      <main className="min-h-screen flex items-center justify-center bg-surface-app-bg p-6">
+        <div className="bg-white rounded-2xl border border-border-default p-8 max-w-md w-full text-center shadow-sm">
+          <div className="w-14 h-14 mx-auto rounded-2xl bg-red-50 text-state-error flex items-center justify-center text-2xl font-bold">
             !
           </div>
 
-          <h1 className="mt-5 text-xl font-bold text-slate-900">
+          <h1 className="mt-5 text-xl font-bold text-text-primary">
             Unable to load test
           </h1>
 
-          <p className="mt-3 text-sm text-slate-500">
+          <p className="mt-3 text-sm text-text-body">
             {error}
           </p>
 
-          <p className="mt-4 text-xs text-slate-400 break-all">
+          <p className="mt-4 text-xs text-text-supporting-label break-all">
             {testId}
           </p>
 
@@ -2661,7 +2661,7 @@ const figureAsset =
                 "/tests"
               )
             }
-            className="mt-6 px-5 h-11 rounded-xl bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 transition"
+            className="mt-6 px-5 h-11 rounded-xl bg-brand-primary text-white text-sm font-semibold hover:bg-blue-700 transition"
           >
             Back to Tests
           </button>
@@ -2678,13 +2678,13 @@ const figureAsset =
 
   if (!questions.length) {
     return (
-      <main className="min-h-screen flex items-center justify-center bg-[#f5f7fb] p-6">
-        <div className="bg-white rounded-2xl border border-slate-200 p-8 max-w-md w-full text-center shadow-sm">
-          <h1 className="text-xl font-bold text-slate-900">
+      <main className="min-h-screen flex items-center justify-center bg-surface-app-bg p-6">
+        <div className="bg-white rounded-2xl border border-border-default p-8 max-w-md w-full text-center shadow-sm">
+          <h1 className="text-xl font-bold text-text-primary">
             No questions found
           </h1>
 
-          <p className="mt-2 text-sm text-slate-500">
+          <p className="mt-2 text-sm text-text-body">
             This test does not contain any
             questions.
           </p>
@@ -2696,7 +2696,7 @@ const figureAsset =
                 "/tests"
               )
             }
-            className="mt-6 px-5 h-11 rounded-xl bg-blue-600 text-white text-sm font-semibold"
+            className="mt-6 px-5 h-11 rounded-xl bg-brand-primary text-white text-sm font-semibold"
           >
             Back to Tests
           </button>
@@ -2731,10 +2731,10 @@ const figureAsset =
    */
 
   return (
-    <main className="min-h-screen bg-[#f5f7fb] text-slate-900">
+    <main className="min-h-screen bg-surface-app-bg text-text-primary">
       {/* HEADER */}
 
-      <header className="sticky top-0 z-40 h-[72px] bg-white border-b border-slate-200 shadow-sm">
+      <header className="sticky top-0 z-40 h-[72px] bg-white border-b border-border-default shadow-sm">
         <div className="h-full max-w-[1500px] mx-auto px-4 lg:px-6 flex items-center justify-between gap-4">
           <div className="flex items-center gap-3 min-w-0">
             <AcademyBranding variant="compact" />
@@ -2747,7 +2747,7 @@ const figureAsset =
 
           <div className="hidden md:flex items-center gap-2">
             <div className="px-4 py-2 rounded-xl bg-blue-50 border border-blue-100">
-              <div className="text-[10px] uppercase tracking-wide font-bold text-blue-500">
+              <div className="text-[10px] uppercase tracking-wide font-bold text-brand-action-blue">
                 Total
               </div>
 
@@ -2757,7 +2757,7 @@ const figureAsset =
             </div>
 
             <div className="px-4 py-2 rounded-xl bg-green-50 border border-green-100">
-              <div className="text-[10px] uppercase tracking-wide font-bold text-green-600">
+              <div className="text-[10px] uppercase tracking-wide font-bold text-state-success">
                 Answered
               </div>
 
@@ -2766,12 +2766,12 @@ const figureAsset =
               </div>
             </div>
 
-            <div className="px-4 py-2 rounded-xl bg-slate-50 border border-slate-200">
-              <div className="text-[10px] uppercase tracking-wide font-bold text-slate-500">
+            <div className="px-4 py-2 rounded-xl bg-surface-subtle border border-border-default">
+              <div className="text-[10px] uppercase tracking-wide font-bold text-text-body">
                 Left
               </div>
 
-              <div className="text-sm font-bold text-slate-700">
+              <div className="text-sm font-bold text-text-secondary">
                 {remainingCount}
               </div>
             </div>
@@ -2784,7 +2784,7 @@ const figureAsset =
                 ? "bg-red-50 border-red-200 text-red-700 animate-pulse"
                 : timerWarning
                 ? "bg-amber-50 border-amber-200 text-amber-700"
-                : "bg-slate-50 border-slate-200 text-slate-800",
+                : "bg-surface-subtle border-border-default text-text-secondary",
             ].join(" ")}
           >
             <div className="flex items-center justify-center gap-2">
@@ -2808,14 +2808,14 @@ const figureAsset =
 
       {/* MOBILE STATS */}
 
-      <div className="md:hidden bg-white border-b border-slate-200 px-4 py-3">
+      <div className="md:hidden bg-white border-b border-border-default px-4 py-3">
         <div className="grid grid-cols-3 gap-2">
           <div className="text-center rounded-lg bg-blue-50 py-2">
             <div className="text-sm font-bold text-blue-700">
               {questions.length}
             </div>
 
-            <div className="text-[10px] text-blue-500">
+            <div className="text-[10px] text-brand-action-blue">
               Total
             </div>
           </div>
@@ -2830,12 +2830,12 @@ const figureAsset =
             </div>
           </div>
 
-          <div className="text-center rounded-lg bg-slate-50 py-2">
-            <div className="text-sm font-bold text-slate-700">
+          <div className="text-center rounded-lg bg-surface-subtle py-2">
+            <div className="text-sm font-bold text-text-secondary">
               {remainingCount}
             </div>
 
-            <div className="text-[10px] text-slate-500">
+            <div className="text-[10px] text-text-body">
               Left
             </div>
           </div>
@@ -2849,17 +2849,17 @@ const figureAsset =
           <section>
             {/* PROGRESS */}
 
-            <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm mb-5">
+            <div className="bg-white border border-border-default rounded-2xl p-4 shadow-sm mb-5">
               <div className="flex items-center justify-between gap-4">
                 <div>
-                  <p className="text-xs font-semibold text-blue-600 uppercase tracking-wide">
+                  <p className="text-xs font-semibold text-brand-primary uppercase tracking-wide">
                     Question{" "}
                     {currentQuestion + 1}{" "}
                     of{" "}
                     {questions.length}
                   </p>
 
-                  <p className="mt-1 text-sm text-slate-500">
+                  <p className="mt-1 text-sm text-text-body">
                     {answered
                       ? "Answer selected"
                       : "Not answered yet"}
@@ -2867,7 +2867,7 @@ const figureAsset =
                 </div>
 
                 <div className="text-right">
-                  <div className="text-sm font-bold text-slate-800">
+                  <div className="text-sm font-bold text-text-secondary">
                     {Math.round(
                       (answeredCount /
                         questions.length) *
@@ -2876,15 +2876,15 @@ const figureAsset =
                     %
                   </div>
 
-                  <div className="text-[10px] text-slate-400">
+                  <div className="text-[10px] text-text-supporting-label">
                     Completed
                   </div>
                 </div>
               </div>
 
-              <div className="mt-3 h-2 bg-slate-100 rounded-full overflow-hidden">
+              <div className="mt-3 h-2 bg-surface-subtle rounded-full overflow-hidden">
                 <div
-                  className="h-full bg-blue-600 rounded-full transition-all duration-300"
+                  className="h-full bg-brand-primary rounded-full transition-all duration-300"
                   style={{
                     width: `${Math.min(
                       100,
@@ -2900,28 +2900,28 @@ const figureAsset =
               </div>
             </div>
 
-            <div className="bg-white border border-slate-200 rounded-2xl shadow-sm overflow-hidden">
-              <div className="px-5 sm:px-7 py-5 border-b border-slate-100 flex items-center justify-between gap-4">
+            <div className="bg-white border border-border-default rounded-2xl shadow-sm overflow-hidden">
+              <div className="px-5 sm:px-7 py-5 border-b border-border-default flex items-center justify-between gap-4">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-700 flex items-center justify-center font-bold">
                     {current.number}
                   </div>
 
                   <div>
-                    <div className="font-bold text-slate-900">
+                    <div className="font-bold text-text-primary">
                       Question{" "}
                       {current.number}
                     </div>
 
                     {current.subject && (
-                      <div className="text-xs text-slate-400">
+                      <div className="text-xs text-text-supporting-label">
                         {current.subject}
                         {current.chapter
                           ? ` • ${current.chapter}`
                           : ""}
                       </div>
                     )}
-                    <div className="mt-1 text-[11px] font-semibold text-slate-400">Time on question: {Math.floor((questionTimes[current.id] || 0) / 60)}m {(questionTimes[current.id] || 0) % 60}s</div>
+                    <div className="mt-1 text-[11px] font-semibold text-text-supporting-label">Time on question: {Math.floor((questionTimes[current.id] || 0) / 60)}m {(questionTimes[current.id] || 0) % 60}s</div>
                   </div>
                 </div>
 
@@ -2936,7 +2936,7 @@ const figureAsset =
                       current.id
                     ]
                       ? "bg-red-50 border-red-200 text-red-700"
-                      : "bg-white border-slate-200 text-slate-500 hover:bg-slate-50",
+                      : "bg-white border-border-default text-text-body hover:bg-surface-subtle",
                   ].join(" ")}
                 >
                   {marked[
@@ -2950,7 +2950,7 @@ const figureAsset =
               <div className="p-5 sm:p-7">
                 {/* QUESTION */}
 
-                <div className="text-[17px] sm:text-lg leading-8 font-medium text-slate-900 whitespace-pre-wrap">
+                <div className="text-[17px] sm:text-lg leading-8 font-medium text-text-primary whitespace-pre-wrap">
                   <MathText
                     text={
                       current.question
@@ -2963,7 +2963,7 @@ const figureAsset =
                     <button
                       type="button"
                       onClick={() => setCalculatorOpen(true)}
-                      className="rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
+                      className="rounded-xl border border-border-default bg-white px-4 py-2.5 text-sm font-semibold text-text-secondary transition hover:bg-surface-subtle"
                     >
                       Open calculator
                     </button>
@@ -2980,7 +2980,7 @@ const figureAsset =
                           current.figureAsset
                         }
                         alt={`Figure for question ${current.number}`}
-                        className="max-w-full max-h-[450px] w-auto h-auto object-contain rounded-xl border border-slate-200 bg-white p-3 shadow-sm"
+                        className="max-w-full max-h-[450px] w-auto h-auto object-contain rounded-xl border border-border-default bg-white p-3 shadow-sm"
                         onError={(
                           event
                         ) => {
@@ -3012,9 +3012,9 @@ const figureAsset =
                       onChange={(e) => setTitaAnswer(e.target.value.slice(0, 500))}
                       placeholder="Type your answer"
                       aria-label="TITA answer"
-                      className="w-full resize-y rounded-xl border border-slate-200 bg-white px-4 py-4 text-lg font-mono text-slate-900 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
+                      className="w-full resize-y rounded-xl border border-border-default bg-white px-4 py-4 text-lg font-mono text-text-primary outline-none focus:border-brand-action-blue focus:ring-2 focus:ring-blue-500"
                     />
-                    <div className="space-y-2 rounded-xl border border-slate-200 bg-slate-50 p-3">
+                    <div className="space-y-2 rounded-xl border border-border-default bg-surface-subtle p-3">
                       {[
                         ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"],
                         ["a", "s", "d", "f", "g", "h", "j", "k", "l"],
@@ -3043,7 +3043,7 @@ const figureAsset =
                                     ? "Toggle uppercase"
                                     : `Enter ${key}`
                               }
-                              className="min-w-0 flex-1 rounded-lg border border-slate-200 bg-white px-1 py-2.5 text-sm font-semibold text-slate-700 shadow-sm hover:bg-blue-50 active:bg-blue-100"
+                              className="min-w-0 flex-1 rounded-lg border border-border-default bg-white px-1 py-2.5 text-sm font-semibold text-text-secondary shadow-sm hover:bg-blue-50 active:bg-surface-subtle"
                             >
                               {key === "backspace"
                                 ? "⌫"
@@ -3066,7 +3066,7 @@ const figureAsset =
                             aria-label={
                               key === "clear" ? "Clear answer" : `Enter ${key}`
                             }
-                            className="rounded-lg border border-slate-200 bg-white py-2.5 font-semibold text-slate-700 hover:bg-slate-50"
+                            className="rounded-lg border border-border-default bg-white py-2.5 font-semibold text-text-secondary hover:bg-surface-subtle"
                           >
                             {key === "clear" ? "Clear" : key}
                           </button>
@@ -3075,13 +3075,13 @@ const figureAsset =
                         <button
                           type="button"
                           onClick={() => pressTitaKey(" ")}
-                          className="col-span-7 rounded-lg border border-slate-200 bg-white py-2.5 font-semibold text-slate-700 hover:bg-slate-50"
+                          className="col-span-7 rounded-lg border border-border-default bg-white py-2.5 font-semibold text-text-secondary hover:bg-surface-subtle"
                         >
                           Space
                         </button>
                     </div>
                     </div>
-                    <p className="text-xs text-slate-400">
+                    <p className="text-xs text-text-supporting-label">
                       Enter a number or text answer using your device keyboard or the on-screen keyboard. If multiple answer forms are configured, any accepted form is graded correct.
                     </p>
                   </div>
@@ -3105,16 +3105,16 @@ const figureAsset =
                             className={[
                               "w-full text-left rounded-xl border p-4 sm:p-5 flex items-start gap-4 transition-all",
                               selected
-                                ? "border-blue-500 bg-blue-50 shadow-sm"
-                                : "border-slate-200 bg-white hover:border-blue-300 hover:bg-slate-50",
+                                ? "border-brand-action-blue bg-blue-50 shadow-sm"
+                                : "border-border-default bg-white hover:border-blue-300 hover:bg-surface-subtle",
                             ].join(" ")}
                           >
                             <span
                               className={[
                                 "w-9 h-9 shrink-0 rounded-lg flex items-center justify-center font-bold text-sm border",
                                 selected
-                                  ? "bg-blue-600 text-white border-blue-600"
-                                  : "bg-slate-50 text-slate-600 border-slate-200",
+                                  ? "bg-brand-primary text-white border-brand-primary"
+                                  : "bg-surface-subtle text-text-body border-border-default",
                               ].join(" ")}
                             >
                               {isMulti ? (
@@ -3132,13 +3132,13 @@ const figureAsset =
                                 "pt-1 text-sm sm:text-base leading-6 flex-1",
                                 selected
                                   ? "text-blue-900 font-semibold"
-                                  : "text-slate-700",
+                                  : "text-text-secondary",
                               ].join(" ")}
                             >
                               <MathText text={option} />
                             </span>
                             {selected && (
-                              <span className="ml-auto text-blue-600 font-bold">
+                              <span className="ml-auto text-brand-primary font-bold">
                                 {isMulti ? "Selected" : ""}
                               </span>
                             )}
@@ -3153,7 +3153,7 @@ const figureAsset =
 
               {/* NAVIGATION */}
 
-              <div className="px-5 sm:px-7 py-4 border-t border-slate-100 flex flex-col sm:flex-row gap-3 justify-between">
+              <div className="px-5 sm:px-7 py-4 border-t border-border-default flex flex-col sm:flex-row gap-3 justify-between">
                 <button
                   type="button"
                   disabled={
@@ -3170,7 +3170,7 @@ const figureAsset =
                         )
                     )
                   }
-                  className="h-11 px-5 rounded-xl border border-slate-200 bg-white text-sm font-semibold text-slate-700 disabled:opacity-40 disabled:cursor-not-allowed hover:bg-slate-50 transition"
+                  className="h-11 px-5 rounded-xl border border-border-default bg-white text-sm font-semibold text-text-secondary disabled:opacity-40 disabled:cursor-not-allowed hover:bg-surface-subtle transition"
                 >
                   ← Previous
                 </button>
@@ -3191,7 +3191,7 @@ const figureAsset =
                           )
                       )
                     }
-                    className="h-11 px-6 rounded-xl bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 transition"
+                    className="h-11 px-6 rounded-xl bg-brand-primary text-white text-sm font-semibold hover:bg-blue-700 transition"
                   >
                     Save & Next →
                   </button>
@@ -3224,18 +3224,18 @@ const figureAsset =
               onClick={() => setCalculatorOpen(false)}
             >
               <div
-                className="bg-white rounded-2xl p-6 shadow-2xl w-full max-w-md mx-4 border border-slate-200"
+                className="bg-white rounded-2xl p-6 shadow-2xl w-full max-w-md mx-4 border border-border-default"
                 role="dialog"
                 aria-modal="true"
                 aria-label="CAT calculator"
                 onClick={(e) => e.stopPropagation()}
               >
                 <div className="flex items-center justify-between mb-4">
-                  <h3 className="font-bold text-slate-900">Calculator</h3>
+                  <h3 className="font-bold text-text-primary">Calculator</h3>
                   <button
                     type="button"
                     onClick={() => setCalculatorOpen(false)}
-                    className="text-slate-500 hover:text-slate-700"
+                    className="text-text-body hover:text-text-secondary"
                   >
                     &times;
                   </button>
@@ -3243,7 +3243,7 @@ const figureAsset =
 
                 <div className="mb-4">
                   <div
-                    className="mb-1 min-h-5 text-right text-xs font-mono text-slate-500"
+                    className="mb-1 min-h-5 text-right text-xs font-mono text-text-body"
                     aria-live="polite"
                   >
                     {calculatorState.operation &&
@@ -3252,43 +3252,43 @@ const figureAsset =
                       : "\u00a0"}
                   </div>
                   <div
-                    className="text-right text-2xl font-mono text-slate-900 bg-slate-50 rounded-xl p-3 border border-slate-200 min-h-[48px] flex items-end justify-end"
+                    className="text-right text-2xl font-mono text-text-primary bg-surface-subtle rounded-xl p-3 border border-border-default min-h-[48px] flex items-end justify-end"
                     aria-live="polite"
                     aria-label={`Calculator display: ${calculatorState.display}`}
                   >
                     {calculatorState.display}
                   </div>
                   {calculatorState.error && (
-                    <p role="alert" className="mt-2 text-right text-sm text-red-600">
+                    <p role="alert" className="mt-2 text-right text-sm text-state-error">
                       {calculatorState.error}
                     </p>
                   )}
                 </div>
 
                 <div className="grid grid-cols-4 gap-2">
-                  <button type="button" onClick={() => calculatorPress("C")} className="py-3 rounded-xl border border-slate-200 bg-slate-100 text-slate-700 font-semibold hover:bg-slate-200">C</button>
-                  <button type="button" onClick={() => calculatorPress("+/-")} className="py-3 rounded-xl border border-slate-200 bg-slate-100 text-slate-700 font-semibold hover:bg-slate-200">+/-</button>
-                  <button type="button" onClick={() => calculatorPress("%")} className="py-3 rounded-xl border border-slate-200 bg-slate-100 text-slate-700 font-semibold hover:bg-slate-200">%</button>
-                  <button type="button" onClick={() => calculatorPress("/")} className="py-3 rounded-xl border border-slate-200 bg-blue-50 text-blue-600 font-semibold hover:bg-blue-100">&divide;</button>
-                  <button type="button" onClick={() => calculatorPress("7")} className="py-3 rounded-xl border border-slate-200 bg-white text-slate-900 font-semibold hover:bg-slate-50">7</button>
-                  <button type="button" onClick={() => calculatorPress("8")} className="py-3 rounded-xl border border-slate-200 bg-white text-slate-900 font-semibold hover:bg-slate-50">8</button>
-                  <button type="button" onClick={() => calculatorPress("9")} className="py-3 rounded-xl border border-slate-200 bg-white text-slate-900 font-semibold hover:bg-slate-50">9</button>
-                  <button type="button" onClick={() => calculatorPress("*")} className="py-3 rounded-xl border border-slate-200 bg-blue-50 text-blue-600 font-semibold hover:bg-blue-100">&times;</button>
-                  <button type="button" onClick={() => calculatorPress("4")} className="py-3 rounded-xl border border-slate-200 bg-white text-slate-900 font-semibold hover:bg-slate-50">4</button>
-                  <button type="button" onClick={() => calculatorPress("5")} className="py-3 rounded-xl border border-slate-200 bg-white text-slate-900 font-semibold hover:bg-slate-50">5</button>
-                  <button type="button" onClick={() => calculatorPress("6")} className="py-3 rounded-xl border border-slate-200 bg-white text-slate-900 font-semibold hover:bg-slate-50">6</button>
-                  <button type="button" onClick={() => calculatorPress("-")} className="py-3 rounded-xl border border-slate-200 bg-blue-50 text-blue-600 font-semibold hover:bg-blue-100">&#8722;</button>
-                  <button type="button" onClick={() => calculatorPress("1")} className="py-3 rounded-xl border border-slate-200 bg-white text-slate-900 font-semibold hover:bg-slate-50">1</button>
-                  <button type="button" onClick={() => calculatorPress("2")} className="py-3 rounded-xl border border-slate-200 bg-white text-slate-900 font-semibold hover:bg-slate-50">2</button>
-                  <button type="button" onClick={() => calculatorPress("3")} className="py-3 rounded-xl border border-slate-200 bg-white text-slate-900 font-semibold hover:bg-slate-50">3</button>
-                  <button type="button" onClick={() => calculatorPress("+")} className="py-3 rounded-xl border border-slate-200 bg-blue-50 text-blue-600 font-semibold hover:bg-blue-100">+</button>
-                  <button type="button" onClick={() => calculatorPress("0")} className="py-3 rounded-xl border border-slate-200 bg-white text-slate-900 font-semibold hover:bg-slate-50 col-span-2">0</button>
-                  <button type="button" onClick={() => calculatorPress(".")} className="py-3 rounded-xl border border-slate-200 bg-white text-slate-900 font-semibold hover:bg-slate-50">.</button>
-                  <button type="button" onClick={() => calculatorPress("=")} className="py-3 rounded-xl border border-slate-200 bg-blue-600 text-white font-semibold hover:bg-blue-700">=</button>
-                  <button type="button" onClick={() => calculatorPress("backspace")} className="py-3 rounded-xl border border-slate-200 bg-slate-100 text-slate-700 font-semibold hover:bg-slate-200 col-span-4" aria-label="Delete last calculator digit">⌫ Backspace</button>
+                  <button type="button" onClick={() => calculatorPress("C")} className="py-3 rounded-xl border border-border-default bg-surface-subtle text-text-secondary font-semibold hover:bg-surface-muted">C</button>
+                  <button type="button" onClick={() => calculatorPress("+/-")} className="py-3 rounded-xl border border-border-default bg-surface-subtle text-text-secondary font-semibold hover:bg-surface-muted">+/-</button>
+                  <button type="button" onClick={() => calculatorPress("%")} className="py-3 rounded-xl border border-border-default bg-surface-subtle text-text-secondary font-semibold hover:bg-surface-muted">%</button>
+                  <button type="button" onClick={() => calculatorPress("/")} className="py-3 rounded-xl border border-border-default bg-blue-50 text-brand-primary font-semibold hover:bg-surface-subtle">&divide;</button>
+                  <button type="button" onClick={() => calculatorPress("7")} className="py-3 rounded-xl border border-border-default bg-white text-text-primary font-semibold hover:bg-surface-subtle">7</button>
+                  <button type="button" onClick={() => calculatorPress("8")} className="py-3 rounded-xl border border-border-default bg-white text-text-primary font-semibold hover:bg-surface-subtle">8</button>
+                  <button type="button" onClick={() => calculatorPress("9")} className="py-3 rounded-xl border border-border-default bg-white text-text-primary font-semibold hover:bg-surface-subtle">9</button>
+                  <button type="button" onClick={() => calculatorPress("*")} className="py-3 rounded-xl border border-border-default bg-blue-50 text-brand-primary font-semibold hover:bg-surface-subtle">&times;</button>
+                  <button type="button" onClick={() => calculatorPress("4")} className="py-3 rounded-xl border border-border-default bg-white text-text-primary font-semibold hover:bg-surface-subtle">4</button>
+                  <button type="button" onClick={() => calculatorPress("5")} className="py-3 rounded-xl border border-border-default bg-white text-text-primary font-semibold hover:bg-surface-subtle">5</button>
+                  <button type="button" onClick={() => calculatorPress("6")} className="py-3 rounded-xl border border-border-default bg-white text-text-primary font-semibold hover:bg-surface-subtle">6</button>
+                  <button type="button" onClick={() => calculatorPress("-")} className="py-3 rounded-xl border border-border-default bg-blue-50 text-brand-primary font-semibold hover:bg-surface-subtle">&#8722;</button>
+                  <button type="button" onClick={() => calculatorPress("1")} className="py-3 rounded-xl border border-border-default bg-white text-text-primary font-semibold hover:bg-surface-subtle">1</button>
+                  <button type="button" onClick={() => calculatorPress("2")} className="py-3 rounded-xl border border-border-default bg-white text-text-primary font-semibold hover:bg-surface-subtle">2</button>
+                  <button type="button" onClick={() => calculatorPress("3")} className="py-3 rounded-xl border border-border-default bg-white text-text-primary font-semibold hover:bg-surface-subtle">3</button>
+                  <button type="button" onClick={() => calculatorPress("+")} className="py-3 rounded-xl border border-border-default bg-blue-50 text-brand-primary font-semibold hover:bg-surface-subtle">+</button>
+                  <button type="button" onClick={() => calculatorPress("0")} className="py-3 rounded-xl border border-border-default bg-white text-text-primary font-semibold hover:bg-surface-subtle col-span-2">0</button>
+                  <button type="button" onClick={() => calculatorPress(".")} className="py-3 rounded-xl border border-border-default bg-white text-text-primary font-semibold hover:bg-surface-subtle">.</button>
+                  <button type="button" onClick={() => calculatorPress("=")} className="py-3 rounded-xl border border-border-default bg-brand-primary text-white font-semibold hover:bg-blue-700">=</button>
+                  <button type="button" onClick={() => calculatorPress("backspace")} className="py-3 rounded-xl border border-border-default bg-surface-subtle text-text-secondary font-semibold hover:bg-surface-muted col-span-4" aria-label="Delete last calculator digit">⌫ Backspace</button>
                 </div>
 
-                <p className="mt-4 text-xs text-slate-400 text-center">Choose an operator, enter the next number, then press =. You can use the buttons or keyboard. Press Esc to close.</p>
+                <p className="mt-4 text-xs text-text-supporting-label text-center">Choose an operator, enter the next number, then press =. You can use the buttons or keyboard. Press Esc to close.</p>
               </div>
             </div>
           )}
@@ -3305,12 +3305,12 @@ const figureAsset =
                   ? "bg-red-50 border-red-200"
                   : timerWarning
                   ? "bg-amber-50 border-amber-200"
-                  : "bg-white border-slate-200",
+                  : "bg-white border-border-default",
               ].join(" ")}
             >
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-text-body">
                     Time Remaining
                   </p>
 
@@ -3321,7 +3321,7 @@ const figureAsset =
                         ? "text-red-700"
                         : timerWarning
                         ? "text-amber-700"
-                        : "text-slate-900",
+                        : "text-text-primary",
                     ].join(" ")}
                   >
                     {formattedTime}
@@ -3343,7 +3343,7 @@ const figureAsset =
               </div>
 
               {timerCritical && (
-                <p className="mt-4 text-xs font-semibold text-red-600">
+                <p className="mt-4 text-xs font-semibold text-state-error">
                   Time is almost over.
                   Your test will submit
                   automatically.
@@ -3353,19 +3353,19 @@ const figureAsset =
 
             {/* QUESTION PALETTE */}
 
-            <div className="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm">
+            <div className="bg-white border border-border-default rounded-2xl p-5 shadow-sm">
               <div className="flex items-center justify-between">
                 <div>
-                  <h2 className="font-bold text-slate-900">
+                  <h2 className="font-bold text-text-primary">
                     Questions
                   </h2>
 
-                  <p className="text-xs text-slate-400 mt-1">
+                  <p className="text-xs text-text-supporting-label mt-1">
                     Select a question
                   </p>
                 </div>
 
-                <div className="text-xs font-semibold text-slate-500">
+                <div className="text-xs font-semibold text-text-body">
                   {answeredCount}/
                   {questions.length}
                 </div>
@@ -3373,14 +3373,14 @@ const figureAsset =
 
               {/* LEGEND */}
 
-              <div className="mt-4 flex flex-wrap gap-x-3 gap-y-2 text-[10px] text-slate-500">
+              <div className="mt-4 flex flex-wrap gap-x-3 gap-y-2 text-[10px] text-text-body">
                 <span className="flex items-center gap-1">
-                  <span className="w-2.5 h-2.5 rounded-full bg-green-500" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-state-success" />
                   Answered
                 </span>
 
                 <span className="flex items-center gap-1">
-                  <span className="w-2.5 h-2.5 rounded-full bg-red-500" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-state-error" />
                   Visited
                 </span>
 
@@ -3390,7 +3390,7 @@ const figureAsset =
                 </span>
 
                 <span className="flex items-center gap-1">
-                  <span className="w-2.5 h-2.5 rounded-full bg-slate-200" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-surface-muted" />
                   Not visited
                 </span>
               </div>
@@ -3447,7 +3447,7 @@ const figureAsset =
                             ? "bg-amber-50 border-amber-300 text-amber-700"
                             : isVisited
                             ? "bg-red-50 border-red-300 text-red-700"
-                            : "bg-slate-50 border-slate-200 text-slate-500 hover:bg-slate-100",
+                            : "bg-surface-subtle border-border-default text-text-body hover:bg-surface-subtle",
                         ].join(" ")}
                       >
                         {index + 1}
@@ -3477,14 +3477,14 @@ const figureAsset =
                 disabled={
                   submitting
                 }
-                className="mt-3 w-full h-11 rounded-xl bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 transition disabled:opacity-60"
+                className="mt-3 w-full h-11 rounded-xl bg-brand-primary text-white text-sm font-semibold hover:bg-blue-700 transition disabled:opacity-60"
               >
                 {submitting
                   ? "Submitting..."
                   : "Submit Test"}
               </button>
 
-              <p className="mt-3 text-[10px] leading-4 text-slate-400 text-center">
+              <p className="mt-3 text-[10px] leading-4 text-text-supporting-label text-center">
                 Leaving this test tab
                 will automatically
                 submit your test.
@@ -3498,14 +3498,14 @@ const figureAsset =
         <div className="fixed inset-0 z-[100] bg-slate-950/70 backdrop-blur-sm flex items-center justify-center p-5">
           <div role="alertdialog" aria-modal="true" className="w-full max-w-md rounded-3xl bg-white p-7 text-center shadow-2xl">
             <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-amber-100 text-amber-700 text-2xl">!</div>
-            <h2 className="mt-4 text-xl font-bold text-slate-900">Stay on the test window</h2>
-            <p className="mt-3 text-sm leading-6 text-slate-600">
+            <h2 className="mt-4 text-xl font-bold text-text-primary">Stay on the test window</h2>
+            <p className="mt-3 text-sm leading-6 text-text-body">
               You left the test window. This is your one warning. Leaving the test window again will automatically submit your test.
             </p>
             <button
               type="button"
               onClick={() => setShowLeaveWarning(false)}
-              className="mt-6 w-full rounded-xl bg-blue-600 px-5 py-3 text-sm font-bold text-white hover:bg-blue-700"
+              className="mt-6 w-full rounded-xl bg-brand-primary px-5 py-3 text-sm font-bold text-white hover:bg-blue-700"
             >
               Return to test
             </button>
@@ -3520,15 +3520,15 @@ const figureAsset =
       {showWarning && (
         <div className="fixed inset-0 z-[100] bg-slate-950/70 backdrop-blur-sm flex items-center justify-center p-5">
           <div className="w-full max-w-md bg-white rounded-3xl shadow-2xl p-7 text-center">
-            <div className="w-16 h-16 mx-auto rounded-2xl bg-red-50 text-red-600 flex items-center justify-center text-3xl">
+            <div className="w-16 h-16 mx-auto rounded-2xl bg-red-50 text-state-error flex items-center justify-center text-3xl">
 
             </div>
 
-            <h2 className="mt-5 text-xl font-bold text-slate-900">
+            <h2 className="mt-5 text-xl font-bold text-text-primary">
               Test Automatically Submitted
             </h2>
 
-            <p className="mt-3 text-sm leading-6 text-slate-500">
+            <p className="mt-3 text-sm leading-6 text-text-body">
               You left the test
               window. For exam
               security, your test has
@@ -3549,7 +3549,7 @@ const figureAsset =
               </p>
             </div>
 
-            <div className="mt-5 text-xs text-slate-400">
+            <div className="mt-5 text-xs text-text-supporting-label">
               Preparing your result...
             </div>
           </div>
@@ -3564,11 +3564,11 @@ const figureAsset =
             <div className="bg-white rounded-2xl shadow-xl px-8 py-7 text-center">
               <div className="w-10 h-10 border-4 border-blue-100 border-t-blue-600 rounded-full animate-spin mx-auto" />
 
-              <h2 className="mt-4 font-bold text-slate-900">
+              <h2 className="mt-4 font-bold text-text-primary">
                 Submitting your test
               </h2>
 
-              <p className="mt-1 text-xs text-slate-500">
+              <p className="mt-1 text-xs text-text-body">
                 Calculating your result...
               </p>
             </div>

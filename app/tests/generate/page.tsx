@@ -218,12 +218,12 @@ function toggleSubject(subject: string) {
   }
 
   return (
-    <main className="min-h-screen bg-[#f6f8fc] text-[#172033]">
+    <main className="min-h-screen bg-surface-app-bg text-text-primary">
       <div className="flex min-h-screen">
         {/* SIDEBAR */}
 
-        <aside className="hidden w-[245px] shrink-0 border-r border-[#e8ebf1] bg-white lg:flex lg:flex-col">
-          <div className="flex h-[82px] items-center border-b border-[#eef0f4] px-7">
+        <aside className="hidden w-[245px] shrink-0 border-r border-border-default bg-white lg:flex lg:flex-col">
+          <div className="flex h-[82px] items-center border-b border-border-default px-7">
             <AcademyBranding variant="header" />
           </div>
 
@@ -235,14 +235,14 @@ function toggleSubject(subject: string) {
             <nav className="space-y-1">
               <button
                 onClick={() => router.push("/dashboard")}
-                className="flex w-full items-center gap-3 rounded-xl px-3.5 py-3 text-sm font-medium text-[#697386] transition hover:bg-[#f7f8fb] hover:text-[#172033]"
+                className="flex w-full items-center gap-3 rounded-xl px-3.5 py-3 text-sm font-medium text-text-tertiary transition hover:bg-surface-app-bg hover:text-text-primary"
               >
                 <DashboardIcon />
                 Dashboard
               </button>
 
               <button
-                className="flex w-full items-center gap-3 rounded-xl bg-[#eef2ff] px-3.5 py-3 text-sm font-bold text-[#315bea]"
+                className="flex w-full items-center gap-3 rounded-xl bg-surface-subtle px-3.5 py-3 text-sm font-bold text-brand-primary"
               >
                 <TestIcon />
                 Create Test
@@ -250,7 +250,7 @@ function toggleSubject(subject: string) {
 
               <button
                 onClick={() => router.push("/tests")}
-                className="flex w-full items-center gap-3 rounded-xl px-3.5 py-3 text-sm font-medium text-[#697386] transition hover:bg-[#f7f8fb] hover:text-[#172033]"
+                className="flex w-full items-center gap-3 rounded-xl px-3.5 py-3 text-sm font-medium text-text-tertiary transition hover:bg-surface-app-bg hover:text-text-primary"
               >
                 <ChartIcon />
                 My Tests
@@ -258,7 +258,7 @@ function toggleSubject(subject: string) {
 
               <button
                 onClick={() => router.push("/tests/generate")}
-                className="flex w-full items-center gap-3 rounded-xl px-3.5 py-3 text-sm font-medium text-[#697386] transition hover:bg-[#f7f8fb] hover:text-[#172033]"
+                className="flex w-full items-center gap-3 rounded-xl px-3.5 py-3 text-sm font-medium text-text-tertiary transition hover:bg-surface-app-bg hover:text-text-primary"
               >
                 <ChartIcon />
                 Practice
@@ -270,21 +270,21 @@ function toggleSubject(subject: string) {
             </p>
 
             <nav>
-              <button className="flex w-full items-center gap-3 rounded-xl px-3.5 py-3 text-sm font-medium text-[#697386] transition hover:bg-[#f7f8fb] hover:text-[#172033]">
+              <button className="flex w-full items-center gap-3 rounded-xl px-3.5 py-3 text-sm font-medium text-text-tertiary transition hover:bg-surface-app-bg hover:text-text-primary">
                 <SettingsIcon />
                 Settings
               </button>
             </nav>
           </div>
 
-          <div className="border-t border-[#eef0f4] p-4">
-            <div className="flex items-center gap-3 rounded-2xl bg-[#f7f8fb] p-3">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#dfe7ff] text-sm font-bold text-[#315bea]">
+          <div className="border-t border-border-default p-4">
+            <div className="flex items-center gap-3 rounded-2xl bg-surface-app-bg p-3">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#dfe7ff] text-sm font-bold text-brand-primary">
                 {initials}
               </div>
 
               <div className="min-w-0">
-                <p className="truncate text-sm font-bold text-[#263044]">
+                <p className="truncate text-sm font-bold text-text-primary">
                   {studentName}
                 </p>
 
@@ -301,13 +301,13 @@ function toggleSubject(subject: string) {
         <section className="min-w-0 flex-1">
           {/* TOPBAR */}
 
-          <header className="flex h-[82px] items-center justify-between border-b border-[#e8ebf1] bg-white px-5 sm:px-8 lg:px-10">
+          <header className="flex h-[82px] items-center justify-between border-b border-border-default bg-white px-5 sm:px-8 lg:px-10">
             <div>
               <p className="text-xs font-medium text-[#99a1b0]">
                 Student Dashboard
               </p>
 
-              <h1 className="mt-1 text-lg font-bold tracking-[-0.02em] text-[#172033] sm:text-xl">
+              <h1 className="mt-1 text-lg font-bold tracking-[-0.02em] text-text-primary sm:text-xl">
                 Create a Test
               </h1>
             </div>
@@ -315,12 +315,12 @@ function toggleSubject(subject: string) {
             <div className="flex items-center gap-3">
               <button
                 onClick={() => router.push("/dashboard")}
-                className="hidden rounded-xl border border-[#e4e7ed] bg-white px-4 py-2.5 text-xs font-bold text-[#5d6677] transition hover:border-[#cfd5df] hover:text-[#172033] sm:block"
+                className="hidden rounded-xl border border-[#e4e7ed] bg-white px-4 py-2.5 text-xs font-bold text-[#5d6677] transition hover:border-[#cfd5df] hover:text-text-primary sm:block"
               >
                 Dashboard
               </button>
 
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#dfe7ff] text-sm font-bold text-[#315bea]">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#dfe7ff] text-sm font-bold text-brand-primary">
                 {initials}
               </div>
             </div>
@@ -330,12 +330,12 @@ function toggleSubject(subject: string) {
             {/* PAGE INTRO */}
 
             <div className="mb-8">
-              <div className="inline-flex items-center gap-2 rounded-full bg-[#eef2ff] px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.12em] text-[#315bea]">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#315bea]" />
+              <div className="inline-flex items-center gap-2 rounded-full bg-surface-subtle px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.12em] text-brand-primary">
+                <span className="h-1.5 w-1.5 rounded-full bg-brand-primary" />
                 MHT-CET · 2026
               </div>
 
-              <h2 className="mt-4 text-[30px] font-extrabold tracking-[-0.04em] text-[#172033] sm:text-[36px]">
+              <h2 className="mt-4 text-[30px] font-extrabold tracking-[-0.04em] text-text-primary sm:text-[36px]">
                 Build your practice test
               </h2>
 
@@ -352,20 +352,20 @@ function toggleSubject(subject: string) {
               <div className="space-y-6">
                 {/* SUBJECT */}
 
-                <section className="rounded-[20px] border border-[#e7eaf0] bg-white p-6 shadow-[0_4px_20px_rgba(20,30,55,0.025)] sm:p-7">
+                <section className="rounded-[20px] border border-border-default bg-white p-6 shadow-[0_4px_20px_rgba(20,30,55,0.025)] sm:p-7">
                   <div className="mb-5">
                     <div className="flex items-center justify-between">
                       <div>
-                        <h3 className="text-base font-extrabold text-[#172033]">
+                        <h3 className="text-base font-extrabold text-text-primary">
                           Select subjects
                         </h3>
 
-                      <p className="mt-1 text-xs text-[#929aaa]">
+                      <p className="mt-1 text-xs text-text-body">
   Choose one or more subjects. Select either Mathematics or Biology.
 </p>
                       </div>
 
-                      <span className="rounded-lg bg-[#f7f8fb] px-3 py-1.5 text-[10px] font-bold text-[#697386]">
+                      <span className="rounded-lg bg-surface-app-bg px-3 py-1.5 text-[10px] font-bold text-text-tertiary">
                         {subjectLabel}
                       </span>
                     </div>
@@ -388,15 +388,15 @@ function toggleSubject(subject: string) {
 onClick={() => toggleSubject(subject.name)}
                           className={`group rounded-[16px] border p-4 text-left transition ${
                             selected
-                              ? "border-[#315bea] bg-[#eef2ff]"
-                              : "border-[#e7eaf0] bg-white hover:border-[#cfd7f7] hover:bg-[#fafbff]"
+                              ? "border-brand-primary bg-surface-subtle"
+                              : "border-border-default bg-white hover:border-[#cfd7f7] hover:bg-surface-app-bg"
                           }`}
                         >
                           <div className="flex items-start justify-between">
                             <div
                               className={`flex h-10 w-10 items-center justify-center rounded-xl text-[10px] font-extrabold ${
                                 selected
-                                  ? "bg-[#315bea] text-white"
+                                  ? "bg-brand-primary text-white"
                                   : "bg-[#f0f3f8] text-[#687386]"
                               }`}
                             >
@@ -406,7 +406,7 @@ onClick={() => toggleSubject(subject.name)}
                             <div
                               className={`flex h-5 w-5 items-center justify-center rounded-full border-2 ${
                                 selected
-                                  ? "border-[#315bea] bg-[#315bea] text-white"
+                                  ? "border-brand-primary bg-brand-primary text-white"
                                   : "border-[#d7dce5]"
                               }`}
                             >
@@ -418,7 +418,7 @@ onClick={() => toggleSubject(subject.name)}
                             </div>
                           </div>
 
-                          <h4 className="mt-4 text-sm font-extrabold text-[#263044]">
+                          <h4 className="mt-4 text-sm font-extrabold text-text-primary">
                             {subject.name}
                           </h4>
 
@@ -433,25 +433,25 @@ onClick={() => toggleSubject(subject.name)}
 
                 {/* CHAPTERS */}
 
-                <section className="rounded-[20px] border border-[#e7eaf0] bg-white p-6 shadow-[0_4px_20px_rgba(20,30,55,0.025)] sm:p-7">
+                <section className="rounded-[20px] border border-border-default bg-white p-6 shadow-[0_4px_20px_rgba(20,30,55,0.025)] sm:p-7">
                   <div className="flex items-center justify-between">
                     <div>
-                      <h3 className="text-base font-extrabold text-[#172033]">
+                      <h3 className="text-base font-extrabold text-text-primary">
                         Chapters
                       </h3>
 
-                      <p className="mt-1 text-xs text-[#929aaa]">
+                      <p className="mt-1 text-xs text-text-body">
                         Leave empty to include all chapters.
                       </p>
                     </div>
 
-                    <span className="rounded-lg bg-[#f7f8fb] px-3 py-1.5 text-[10px] font-bold text-[#8b94a4]">
+                    <span className="rounded-lg bg-surface-app-bg px-3 py-1.5 text-[10px] font-bold text-[#8b94a4]">
                       All chapters
                     </span>
                   </div>
 
-                  <div className="mt-5 rounded-xl border border-dashed border-[#dfe3ea] bg-[#fafbfc] p-5 text-center">
-                    <p className="text-sm font-bold text-[#697386]">
+                  <div className="mt-5 rounded-xl border border-dashed border-border-default bg-surface-app-bg p-5 text-center">
+                    <p className="text-sm font-bold text-text-tertiary">
                       All available chapters
                     </p>
 
@@ -465,13 +465,13 @@ onClick={() => toggleSubject(subject.name)}
 
                 {/* DIFFICULTY */}
 
-                <section className="rounded-[20px] border border-[#e7eaf0] bg-white p-6 shadow-[0_4px_20px_rgba(20,30,55,0.025)] sm:p-7">
+                <section className="rounded-[20px] border border-border-default bg-white p-6 shadow-[0_4px_20px_rgba(20,30,55,0.025)] sm:p-7">
                   <div>
-                    <h3 className="text-base font-extrabold text-[#172033]">
+                    <h3 className="text-base font-extrabold text-text-primary">
                       Difficulty
                     </h3>
 
-                    <p className="mt-1 text-xs text-[#929aaa]">
+                    <p className="mt-1 text-xs text-text-body">
                       Choose the difficulty of your test.
                     </p>
                   </div>
@@ -487,8 +487,8 @@ onClick={() => toggleSubject(subject.name)}
                           onClick={() => setDifficulty(item)}
                           className={`rounded-xl border px-4 py-3 text-xs font-bold transition ${
                             selected
-                              ? "border-[#315bea] bg-[#315bea] text-white"
-                              : "border-[#e3e6ec] bg-white text-[#697386] hover:border-[#cbd3eb] hover:bg-[#fafbff]"
+                              ? "border-brand-primary bg-brand-primary text-white"
+                              : "border-[#e3e6ec] bg-white text-text-tertiary hover:border-[#cbd3eb] hover:bg-surface-app-bg"
                           }`}
                         >
                           {item}
@@ -501,12 +501,12 @@ onClick={() => toggleSubject(subject.name)}
                 {/* QUESTION + DURATION */}
 
                 <section className="grid gap-6 sm:grid-cols-2">
-                  <div className="rounded-[20px] border border-[#e7eaf0] bg-white p-6 shadow-[0_4px_20px_rgba(20,30,55,0.025)]">
-                    <h3 className="text-base font-extrabold text-[#172033]">
+                  <div className="rounded-[20px] border border-border-default bg-white p-6 shadow-[0_4px_20px_rgba(20,30,55,0.025)]">
+                    <h3 className="text-base font-extrabold text-text-primary">
                       Questions
                     </h3>
 
-                    <p className="mt-1 text-xs text-[#929aaa]">
+                    <p className="mt-1 text-xs text-text-body">
                       Number of questions
                     </p>
 
@@ -524,8 +524,8 @@ onClick={() => toggleSubject(subject.name)}
                             }
                             className={`rounded-xl border py-3 text-xs font-bold transition ${
                               selected
-                                ? "border-[#315bea] bg-[#315bea] text-white"
-                                : "border-[#e3e6ec] text-[#697386] hover:border-[#cbd3eb]"
+                                ? "border-brand-primary bg-brand-primary text-white"
+                                : "border-[#e3e6ec] text-text-tertiary hover:border-[#cbd3eb]"
                             }`}
                           >
                             {count}
@@ -535,12 +535,12 @@ onClick={() => toggleSubject(subject.name)}
                     </div>
                   </div>
 
-                  <div className="rounded-[20px] border border-[#e7eaf0] bg-white p-6 shadow-[0_4px_20px_rgba(20,30,55,0.025)]">
-                    <h3 className="text-base font-extrabold text-[#172033]">
+                  <div className="rounded-[20px] border border-border-default bg-white p-6 shadow-[0_4px_20px_rgba(20,30,55,0.025)]">
+                    <h3 className="text-base font-extrabold text-text-primary">
                       Duration
                     </h3>
 
-                    <p className="mt-1 text-xs text-[#929aaa]">
+                    <p className="mt-1 text-xs text-text-body">
                       Test time limit
                     </p>
 
@@ -551,7 +551,7 @@ onClick={() => toggleSubject(subject.name)}
                           Number(event.target.value)
                         )
                       }
-                      className="mt-5 h-11 w-full rounded-xl border border-[#dfe3ea] bg-white px-3 text-sm font-semibold text-[#394255] outline-none transition focus:border-[#315bea] focus:ring-4 focus:ring-[#315bea]/10"
+                      className="mt-5 h-11 w-full rounded-xl border border-border-default bg-white px-3 text-sm font-semibold text-[#394255] outline-none transition focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10"
                     >
                       {durationOptions.map((option) => (
                         <option
@@ -569,7 +569,7 @@ onClick={() => toggleSubject(subject.name)}
               {/* RIGHT SUMMARY */}
 
               <aside className="lg:sticky lg:top-7 lg:h-fit">
-                <div className="overflow-hidden rounded-[22px] border border-[#dfe5ff] bg-[#315bea] shadow-[0_18px_45px_rgba(49,91,234,0.12)]">
+                <div className="overflow-hidden rounded-[22px] border border-[#dfe5ff] bg-brand-primary shadow-[0_18px_45px_rgba(49,91,234,0.12)]">
                   <div className="p-6">
                     <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-blue-100">
                       Test summary
@@ -629,7 +629,7 @@ onClick={() => toggleSubject(subject.name)}
 
                   <div className="border-t border-white/10 bg-[#2b51d2] p-5">
                     {error && (
-                      <div className="mb-4 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-xs font-semibold leading-5 text-red-600">
+                      <div className="mb-4 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-xs font-semibold leading-5 text-state-error">
                         {error}
                       </div>
                     )}
@@ -638,11 +638,11 @@ onClick={() => toggleSubject(subject.name)}
                       type="button"
                       onClick={generateTest}
                       disabled={loading}
-                      className="flex h-12 w-full items-center justify-center gap-3 rounded-xl bg-white text-sm font-extrabold text-[#315bea] shadow-lg transition hover:-translate-y-0.5 hover:bg-[#f8faff] disabled:cursor-not-allowed disabled:opacity-70"
+                      className="flex h-12 w-full items-center justify-center gap-3 rounded-xl bg-white text-sm font-extrabold text-brand-primary shadow-lg transition hover:-translate-y-0.5 hover:bg-surface-app-bg disabled:cursor-not-allowed disabled:opacity-70"
                     >
                       {loading ? (
                         <>
-                          <span className="h-4 w-4 animate-spin rounded-full border-2 border-[#315bea]/30 border-t-[#315bea]" />
+                          <span className="h-4 w-4 animate-spin rounded-full border-2 border-brand-primary/30 border-t-[#315bea]" />
                           Generating test...
                         </>
                       ) : (
@@ -662,7 +662,7 @@ onClick={() => toggleSubject(subject.name)}
 
                 {/* INFO CARD */}
 
-                <div className="mt-4 rounded-[18px] border border-[#e7eaf0] bg-white p-5">
+                <div className="mt-4 rounded-[18px] border border-border-default bg-white p-5">
                   <div className="flex gap-3">
                     <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#ecfdf3] text-sm font-bold text-[#19a463]">
 

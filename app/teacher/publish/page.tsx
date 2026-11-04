@@ -371,15 +371,15 @@ export default function TeacherPublishPage() {
 
   if (loadingTest || !test) {
     return (
-      <main className="flex min-h-screen items-center justify-center bg-slate-50 px-6">
-        <div className="rounded-2xl border border-slate-200 bg-white px-8 py-7 text-center shadow-sm">
-          <div className="mx-auto h-10 w-10 animate-spin rounded-full border-4 border-slate-200 border-t-blue-600" />
+      <main className="flex min-h-screen items-center justify-center bg-surface-subtle px-6">
+        <div className="rounded-2xl border border-border-default bg-white px-8 py-7 text-center shadow-sm">
+          <div className="mx-auto h-10 w-10 animate-spin rounded-full border-4 border-border-default border-t-blue-600" />
 
-          <p className="mt-4 font-semibold text-slate-900">
+          <p className="mt-4 font-semibold text-text-primary">
             Preparing your test…
           </p>
 
-          <p className="mt-1 text-sm text-slate-500">
+          <p className="mt-1 text-sm text-text-body">
             Loading the generated test.
           </p>
         </div>
@@ -388,7 +388,7 @@ export default function TeacherPublishPage() {
   }
 
   return (
-    <main className="min-h-screen bg-slate-50 text-slate-900">
+    <main className="min-h-screen bg-surface-subtle text-text-primary">
       <div className="mx-auto w-full max-w-5xl px-3 py-5 sm:px-5 sm:py-8 md:px-8">
 
         {/* TOP BAR */}
@@ -398,17 +398,17 @@ export default function TeacherPublishPage() {
             onClick={() =>
               router.push("/teacher/generate")
             }
-            className="rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 shadow-sm transition hover:bg-slate-50"
+            className="rounded-xl border border-border-default bg-white px-4 py-2.5 text-sm font-semibold text-text-secondary shadow-sm transition hover:bg-surface-subtle"
           >
             ← Back to Generator
           </button>
 
           <div className="text-left sm:text-right">
-            <p className="text-xs font-bold uppercase tracking-wider text-blue-600">
+            <p className="text-xs font-bold uppercase tracking-wider text-brand-primary">
               Teacher Portal
             </p>
 
-            <p className="mt-1 text-sm text-slate-500">
+            <p className="mt-1 text-sm text-text-body">
               {teacher?.name || "Teacher"}
 
               {academy?.name
@@ -419,7 +419,7 @@ export default function TeacherPublishPage() {
         </div>
 
         {/* MAIN CARD */}
-        <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-xl shadow-slate-200/50">
+        <div className="overflow-hidden rounded-3xl border border-border-default bg-white shadow-xl shadow-slate-200/50">
 
           {/* HEADER */}
           <div className="bg-gradient-to-r from-blue-700 to-indigo-700 px-4 py-5 text-white sm:px-6 sm:py-7 md:px-8">
@@ -475,7 +475,7 @@ export default function TeacherPublishPage() {
                   1. Test details
                 </h2>
 
-                <p className="mt-1 text-sm text-slate-500">
+                <p className="mt-1 text-sm text-text-body">
                   Set the title, start time and duration.
                 </p>
               </div>
@@ -483,7 +483,7 @@ export default function TeacherPublishPage() {
               <div className="grid gap-4 sm:gap-5 md:grid-cols-2">
 
                 <label className="md:col-span-2">
-                  <span className="mb-2 block text-sm font-semibold text-slate-700">
+                  <span className="mb-2 block text-sm font-semibold text-text-secondary">
                     Test title
                   </span>
 
@@ -492,13 +492,13 @@ export default function TeacherPublishPage() {
                     onChange={(e) =>
                       setTitle(e.target.value)
                     }
-                    className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3.5 text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-blue-600 focus:ring-4 focus:ring-blue-100"
+                    className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3.5 text-text-primary outline-none transition placeholder:text-text-supporting-label focus:border-brand-primary focus:ring-4 focus:ring-blue-100"
                     placeholder="e.g. Physics Weekly Test"
                   />
                 </label>
 
                 <label>
-                  <span className="mb-2 block text-sm font-semibold text-slate-700">
+                  <span className="mb-2 block text-sm font-semibold text-text-secondary">
                     Start date & time
                   </span>
 
@@ -508,17 +508,17 @@ export default function TeacherPublishPage() {
                     onChange={(e) =>
                       setStartTime(e.target.value)
                     }
-                    className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3.5 text-slate-900 outline-none transition focus:border-blue-600 focus:ring-4 focus:ring-blue-100"
+                    className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3.5 text-text-primary outline-none transition focus:border-brand-primary focus:ring-4 focus:ring-blue-100"
                   />
                 </label>
 
                 <label className="md:col-span-2 flex cursor-pointer items-start gap-3 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3.5">
                   <input type="checkbox" checked={allowReattempt} onChange={(e) => setAllowReattempt(e.target.checked)} className="mt-1 h-4 w-4 accent-blue-600" />
-                  <span><strong className="block text-sm text-slate-800">Allow reattempt after automatic submission</strong><span className="mt-1 block text-xs text-slate-600">Students can start this test again only if it was auto-submitted because they changed tabs or the timer ended.</span></span>
+                  <span><strong className="block text-sm text-text-secondary">Allow reattempt after automatic submission</strong><span className="mt-1 block text-xs text-text-body">Students can start this test again only if it was auto-submitted because they changed tabs or the timer ended.</span></span>
                 </label>
 
                 <label>
-                  <span className="mb-2 block text-sm font-semibold text-slate-700">
+                  <span className="mb-2 block text-sm font-semibold text-text-secondary">
                     Duration (minutes)
                   </span>
 
@@ -534,14 +534,14 @@ export default function TeacherPublishPage() {
                         )
                       )
                     }
-                    className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3.5 text-slate-900 outline-none transition focus:border-blue-600 focus:ring-4 focus:ring-blue-100"
+                    className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3.5 text-text-primary outline-none transition focus:border-brand-primary focus:ring-4 focus:ring-blue-100"
                   />
                 </label>
 
               </div>
             </section>
 
-            <div className="my-8 border-t border-slate-200" />
+            <div className="my-8 border-t border-border-default" />
 
             {/* TARGET */}
             <section>
@@ -553,7 +553,7 @@ export default function TeacherPublishPage() {
                     2. Who receives it?
                   </h2>
 
-                  <p className="mt-1 text-sm text-slate-500">
+                  <p className="mt-1 text-sm text-text-body">
                     Use a whole batch or assign it to one student.
                   </p>
                 </div>
@@ -562,7 +562,7 @@ export default function TeacherPublishPage() {
                   type="button"
                   onClick={loadTargets}
                   disabled={loadingTargets}
-                  className="rounded-lg border border-slate-200 px-3 py-2 text-xs font-semibold text-slate-600 transition hover:bg-slate-50 disabled:opacity-50"
+                  className="rounded-lg border border-border-default px-3 py-2 text-xs font-semibold text-text-body transition hover:bg-surface-subtle disabled:opacity-50"
                 >
                   {loadingTargets
                     ? "Refreshing…"
@@ -596,8 +596,8 @@ export default function TeacherPublishPage() {
                   }}
                   className={`rounded-2xl border-2 p-4 text-left transition sm:p-5 ${
                     targetType === "batch"
-                      ? "border-blue-600 bg-blue-50 shadow-sm"
-                      : "border-slate-200 bg-white hover:border-slate-300"
+                      ? "border-brand-primary bg-blue-50 shadow-sm"
+                      : "border-border-default bg-white hover:border-slate-300"
                   }`}
                 >
                   <div className="text-2xl">
@@ -608,7 +608,7 @@ export default function TeacherPublishPage() {
                     Assign to a batch
                   </p>
 
-                  <p className="mt-1 text-sm text-slate-500">
+                  <p className="mt-1 text-sm text-text-body">
                     All students assigned to that batch receive the test.
                   </p>
 
@@ -640,8 +640,8 @@ export default function TeacherPublishPage() {
                   }}
                   className={`rounded-2xl border-2 p-4 text-left transition sm:p-5 ${
                     targetType === "student"
-                      ? "border-blue-600 bg-blue-50 shadow-sm"
-                      : "border-slate-200 bg-white hover:border-slate-300"
+                      ? "border-brand-primary bg-blue-50 shadow-sm"
+                      : "border-border-default bg-white hover:border-slate-300"
                   }`}
                 >
                   <div className="text-2xl">
@@ -652,7 +652,7 @@ export default function TeacherPublishPage() {
                     Assign to selected students
                   </p>
 
-                  <p className="mt-1 text-sm text-slate-500">
+                  <p className="mt-1 text-sm text-text-body">
                     Select one or more academy students to receive the test.
                   </p>
 
@@ -669,17 +669,17 @@ export default function TeacherPublishPage() {
 
               {/* LOADING */}
               {loadingTargets ? (
-                <div className="mt-5 rounded-2xl border border-slate-200 bg-slate-50 p-5">
-                  <div className="h-4 w-40 animate-pulse rounded bg-slate-200" />
+                <div className="mt-5 rounded-2xl border border-border-default bg-surface-subtle p-5">
+                  <div className="h-4 w-40 animate-pulse rounded bg-surface-muted" />
 
-                  <div className="mt-3 h-12 animate-pulse rounded-xl bg-slate-200" />
+                  <div className="mt-3 h-12 animate-pulse rounded-xl bg-surface-muted" />
                 </div>
               ) : targetType === "batch" ? (
 
                 /* BATCH */
                 <div className="mt-5">
 
-                  <label className="mb-2 block text-sm font-semibold text-slate-700">
+                  <label className="mb-2 block text-sm font-semibold text-text-secondary">
                     Select batch
                   </label>
 
@@ -689,7 +689,7 @@ export default function TeacherPublishPage() {
                       setBatchId(e.target.value)
                     }
                     disabled={batches.length === 0}
-                    className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3.5 text-slate-900 outline-none transition focus:border-blue-600 focus:ring-4 focus:ring-blue-100 disabled:bg-slate-100"
+                    className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3.5 text-text-primary outline-none transition focus:border-brand-primary focus:ring-4 focus:ring-blue-100 disabled:bg-surface-subtle"
                   >
                     <option value="">
                       {batches.length
@@ -762,12 +762,12 @@ export default function TeacherPublishPage() {
                 <div className="mt-5">
 
                   <div className="mb-2 flex items-center justify-between">
-                    <p className="text-sm font-semibold text-slate-700">Select students</p>
+                    <p className="text-sm font-semibold text-text-secondary">Select students</p>
                     <span className="text-xs font-semibold text-blue-700">{selectedStudentIds.length} selected</span>
                   </div>
 
                   <div className="max-h-64 overflow-y-auto rounded-xl border border-slate-300 bg-white p-2">
-                    {students.map((student) => <label key={student.id} className="flex cursor-pointer items-start gap-3 rounded-lg px-3 py-3 hover:bg-blue-50"><input type="checkbox" checked={selectedStudentIds.includes(student.id)} onChange={() => setSelectedStudentIds((current) => current.includes(student.id) ? current.filter((id) => id !== student.id) : [...current, student.id])} className="mt-1 h-4 w-4 accent-blue-600" /><span><strong className="block text-sm text-slate-800">{student.name}</strong><span className="text-xs text-slate-500">{student.email}{student.class_name ? ` · ${student.class_name}` : ""}</span></span></label>)}
+                    {students.map((student) => <label key={student.id} className="flex cursor-pointer items-start gap-3 rounded-lg px-3 py-3 hover:bg-blue-50"><input type="checkbox" checked={selectedStudentIds.includes(student.id)} onChange={() => setSelectedStudentIds((current) => current.includes(student.id) ? current.filter((id) => id !== student.id) : [...current, student.id])} className="mt-1 h-4 w-4 accent-blue-600" /><span><strong className="block text-sm text-text-secondary">{student.name}</strong><span className="text-xs text-text-body">{student.email}{student.class_name ? ` · ${student.class_name}` : ""}</span></span></label>)}
                   </div>
 
                   {!students.length && (
@@ -781,14 +781,14 @@ export default function TeacherPublishPage() {
 
             </section>
 
-            <div className="my-8 border-t border-slate-200" />
+            <div className="my-8 border-t border-border-default" />
 
             {/* QUESTION REVIEW — must be checked before publishing */}
             <section className="mb-8">
               <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
                 <div>
                   <h2 className="text-lg font-bold">3. Review your questions</h2>
-                  <p className="mt-1 text-sm text-slate-500">Check each question, edit wording/options/answer/explanation, or remove a question before students receive the paper.</p>
+                  <p className="mt-1 text-sm text-text-body">Check each question, edit wording/options/answer/explanation, or remove a question before students receive the paper.</p>
                 </div>
                 <span className="rounded-full bg-amber-100 px-3 py-1 text-xs font-bold text-amber-800">Professor review required</span>
               </div>
@@ -799,33 +799,33 @@ export default function TeacherPublishPage() {
                   const answerValue = String(q?.correct_option ?? q?.correctOption ?? q?.correct_answer ?? q?.answer ?? "");
                   const explanation = String(q?.solution ?? q?.explanation ?? q?.correct_answer_text ?? "");
                   const figure = q?.figure_asset ?? q?.figureAsset ?? q?.figure_url ?? null;
-                  return <article key={String(q?.id ?? index) + "-" + index} className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-5">
+                  return <article key={String(q?.id ?? index) + "-" + index} className="rounded-2xl border border-border-default bg-white p-4 shadow-sm sm:p-5">
                     <div className="mb-3 flex items-start justify-between gap-3">
-                      <div><p className="text-xs font-bold uppercase tracking-wide text-blue-700">Question {index + 1}</p><p className="mt-1 text-xs text-slate-500">{q?.subject || "Subject"}{q?.chapter_name || q?.chapter ? ` · ${q.chapter_name || q.chapter}` : ""}{q?.difficulty ? ` · ${q.difficulty}` : ""}</p></div>
+                      <div><p className="text-xs font-bold uppercase tracking-wide text-blue-700">Question {index + 1}</p><p className="mt-1 text-xs text-text-body">{q?.subject || "Subject"}{q?.chapter_name || q?.chapter ? ` · ${q.chapter_name || q.chapter}` : ""}{q?.difficulty ? ` · ${q.difficulty}` : ""}</p></div>
                       <button type="button" onClick={() => removeQuestion(index)} className="shrink-0 rounded-lg border border-red-200 px-3 py-2 text-xs font-bold text-red-700 hover:bg-red-50">Remove</button>
                     </div>
-                    <label className="block"><span className="mb-1 block text-xs font-semibold text-slate-600">Question text</span><textarea rows={3} value={text} onChange={(e) => updateQuestion(index, { stem: e.target.value, question: e.target.value, question_text: e.target.value })} className="w-full rounded-xl border border-slate-300 px-3 py-2.5 text-sm text-slate-900 focus:border-blue-500 focus:outline-none" /></label>
-                    {figure && <div className="mt-3 rounded-lg bg-slate-50 p-2 text-xs text-slate-600">Diagram/figure attached: {String(figure).slice(0, 140)}</div>}
-                    {options.length > 0 && <div className="mt-3 grid gap-3 sm:grid-cols-2">{options.map((option, oi) => <label key={oi} className="block"><span className="mb-1 block text-xs font-semibold text-slate-600">Option {String.fromCharCode(65 + oi)}</span><input value={option} onChange={(e) => { const next = [...options]; next[oi] = e.target.value; updateQuestion(index, { options: next }); }} className="w-full rounded-xl border border-slate-300 px-3 py-2.5 text-sm text-slate-900 focus:border-blue-500 focus:outline-none" /></label>)}</div>}
-                    <div className="mt-3 grid gap-3 sm:grid-cols-2"><label className="block"><span className="mb-1 block text-xs font-semibold text-slate-600">Correct answer (option letter or answer)</span><input value={answerValue} onChange={(e) => updateQuestion(index, { correct_option: e.target.value, correctOption: e.target.value, correct_answer: e.target.value })} className="w-full rounded-xl border border-slate-300 px-3 py-2.5 text-sm text-slate-900 focus:border-blue-500 focus:outline-none" /></label><label className="block"><span className="mb-1 block text-xs font-semibold text-slate-600">Explanation / solution</span><textarea rows={2} value={explanation} onChange={(e) => updateQuestion(index, { solution: e.target.value, explanation: e.target.value, correct_answer_text: e.target.value })} className="w-full rounded-xl border border-slate-300 px-3 py-2.5 text-sm text-slate-900 focus:border-blue-500 focus:outline-none" /></label></div>
+                    <label className="block"><span className="mb-1 block text-xs font-semibold text-text-body">Question text</span><textarea rows={3} value={text} onChange={(e) => updateQuestion(index, { stem: e.target.value, question: e.target.value, question_text: e.target.value })} className="w-full rounded-xl border border-slate-300 px-3 py-2.5 text-sm text-text-primary focus:border-brand-action-blue focus:outline-none" /></label>
+                    {figure && <div className="mt-3 rounded-lg bg-surface-subtle p-2 text-xs text-text-body">Diagram/figure attached: {String(figure).slice(0, 140)}</div>}
+                    {options.length > 0 && <div className="mt-3 grid gap-3 sm:grid-cols-2">{options.map((option, oi) => <label key={oi} className="block"><span className="mb-1 block text-xs font-semibold text-text-body">Option {String.fromCharCode(65 + oi)}</span><input value={option} onChange={(e) => { const next = [...options]; next[oi] = e.target.value; updateQuestion(index, { options: next }); }} className="w-full rounded-xl border border-slate-300 px-3 py-2.5 text-sm text-text-primary focus:border-brand-action-blue focus:outline-none" /></label>)}</div>}
+                    <div className="mt-3 grid gap-3 sm:grid-cols-2"><label className="block"><span className="mb-1 block text-xs font-semibold text-text-body">Correct answer (option letter or answer)</span><input value={answerValue} onChange={(e) => updateQuestion(index, { correct_option: e.target.value, correctOption: e.target.value, correct_answer: e.target.value })} className="w-full rounded-xl border border-slate-300 px-3 py-2.5 text-sm text-text-primary focus:border-brand-action-blue focus:outline-none" /></label><label className="block"><span className="mb-1 block text-xs font-semibold text-text-body">Explanation / solution</span><textarea rows={2} value={explanation} onChange={(e) => updateQuestion(index, { solution: e.target.value, explanation: e.target.value, correct_answer_text: e.target.value })} className="w-full rounded-xl border border-slate-300 px-3 py-2.5 text-sm text-text-primary focus:border-brand-action-blue focus:outline-none" /></label></div>
                   </article>;
                 })}
               </div>
-              <p className="mt-3 text-xs text-slate-500">Changes are saved in this draft on your device. Review the correct answer carefully before publishing.</p>
+              <p className="mt-3 text-xs text-text-body">Changes are saved in this draft on your device. Review the correct answer carefully before publishing.</p>
             </section>
 
             {/* SUMMARY */}
             <section>
-              <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+              <div className="rounded-2xl border border-border-default bg-surface-subtle p-5">
 
                 <div className="flex flex-wrap items-center justify-between gap-4">
 
                   <div>
-                    <p className="text-sm font-semibold text-slate-700">
+                    <p className="text-sm font-semibold text-text-secondary">
                       Test summary
                     </p>
 
-                    <p className="mt-1 text-sm text-slate-500">
+                    <p className="mt-1 text-sm text-text-body">
                       {questionCount} questions •{" "}
                       {duration} minutes
                     </p>
@@ -833,11 +833,11 @@ export default function TeacherPublishPage() {
 
                   <div className="text-left sm:text-right">
 
-                    <p className="text-xs uppercase tracking-wide text-slate-400">
+                    <p className="text-xs uppercase tracking-wide text-text-supporting-label">
                       Destination
                     </p>
 
-                    <p className="mt-1 font-bold text-slate-900">
+                    <p className="mt-1 font-bold text-text-primary">
                       {targetType === "batch"
                         ? selectedBatch?.name ||
                           "Select a batch"
@@ -868,7 +868,7 @@ export default function TeacherPublishPage() {
                 (targetType === "student" &&
                   selectedStudentIds.length === 0)
               }
-              className="mt-7 w-full rounded-2xl bg-blue-600 px-5 py-4 text-base font-bold text-white shadow-lg shadow-blue-600/20 transition hover:bg-blue-700 hover:shadow-xl disabled:cursor-not-allowed disabled:bg-slate-300 disabled:shadow-none"
+              className="mt-7 w-full rounded-2xl bg-brand-primary px-5 py-4 text-base font-bold text-white shadow-lg shadow-blue-600/20 transition hover:bg-blue-700 hover:shadow-xl disabled:cursor-not-allowed disabled:bg-slate-300 disabled:shadow-none"
             >
               {loading
                 ? "Publishing test…"

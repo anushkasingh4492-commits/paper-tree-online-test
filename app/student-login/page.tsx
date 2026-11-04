@@ -112,12 +112,12 @@ async function handleSubmit(
 }
 
   return (
-    <main className="min-h-screen bg-[#f6f8fc] text-[#172033]">
+    <main className="min-h-screen bg-surface-app-bg text-text-primary">
       <div className="flex min-h-screen">
 
         {/* LEFT BRAND PANEL */}
 
-        <section className="hidden lg:flex lg:w-[52%] bg-[#315bea] relative overflow-hidden">
+        <section className="hidden lg:flex lg:w-[52%] bg-brand-primary relative overflow-hidden">
 
           <div className="absolute -right-32 -top-32 h-[500px] w-[500px] rounded-full border-[70px] border-white/[0.05]" />
 
@@ -189,15 +189,15 @@ async function handleSubmit(
             </div>
 
             <div className="mb-8">
-              <p className="text-xs font-semibold text-[#315bea]">
+              <p className="text-xs font-semibold text-brand-primary">
                 STUDENT PORTAL
               </p>
 
-              <h2 className="mt-2 text-[30px] font-extrabold tracking-[-0.035em] text-[#172033]">
+              <h2 className="mt-2 text-[30px] font-extrabold tracking-[-0.035em] text-text-primary">
                 Welcome back
               </h2>
 
-              <p className="mt-2 text-sm leading-6 text-[#929aaa]">
+              <p className="mt-2 text-sm leading-6 text-text-body">
                 Sign in to continue your exam preparation.
               </p>
             </div>
@@ -207,7 +207,7 @@ async function handleSubmit(
               className="rounded-[22px] border border-[#e5e8ee] bg-white p-6 shadow-[0_12px_40px_rgba(20,30,55,0.05)] sm:p-8"
             >
               {error && (
-                <div className="mb-5 rounded-xl border border-red-100 bg-red-50 px-4 py-3 text-xs font-medium leading-5 text-red-600">
+                <div className="mb-5 rounded-xl border border-red-100 bg-red-50 px-4 py-3 text-xs font-medium leading-5 text-state-error">
                   {error}
                 </div>
               )}
@@ -215,7 +215,7 @@ async function handleSubmit(
               <div>
                 <label
                   htmlFor="email"
-                  className="mb-2 block text-xs font-bold text-[#4d5668]"
+                  className="mb-2 block text-xs font-bold text-text-tertiary"
                 >
                   Email address
                 </label>
@@ -229,7 +229,7 @@ async function handleSubmit(
                   autoComplete="email"
                   required
                   disabled={loading}
-                  className="h-12 w-full rounded-xl border border-[#dfe3ea] bg-white px-4 text-sm text-[#172033] outline-none transition placeholder:text-[#b1b7c2] focus:border-[#315bea] focus:ring-4 focus:ring-[#315bea]/10 disabled:bg-[#f7f8fb]"
+                  className="h-12 w-full rounded-xl border border-border-default bg-white px-4 text-sm text-text-primary outline-none transition placeholder:text-text-supporting-label focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10 disabled:bg-surface-app-bg"
                 />
               </div>
 
@@ -237,12 +237,12 @@ async function handleSubmit(
                 <div className="mb-2 flex items-center justify-between">
                   <label
                     htmlFor="password"
-                    className="block text-xs font-bold text-[#4d5668]"
+                    className="block text-xs font-bold text-text-tertiary"
                   >
                     Password
                   </label>
 
-                  <span className="text-[10px] font-medium text-[#a0a7b4]">
+                  <span className="text-[10px] font-medium text-text-body">
                     Secure login
                   </span>
                 </div>
@@ -256,14 +256,14 @@ async function handleSubmit(
                   autoComplete="current-password"
                   required
                   disabled={loading}
-                  className="h-12 w-full rounded-xl border border-[#dfe3ea] bg-white px-4 text-sm text-[#172033] outline-none transition placeholder:text-[#b1b7c2] focus:border-[#315bea] focus:ring-4 focus:ring-[#315bea]/10 disabled:bg-[#f7f8fb]"
+                  className="h-12 w-full rounded-xl border border-border-default bg-white px-4 text-sm text-text-primary outline-none transition placeholder:text-text-supporting-label focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10 disabled:bg-surface-app-bg"
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={loading}
-                className="mt-7 flex h-12 w-full items-center justify-center rounded-xl bg-[#315bea] text-sm font-bold text-white shadow-[0_8px_20px_rgba(49,91,234,0.18)] transition hover:bg-[#284ed2] active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-60"
+                className="mt-7 flex h-12 w-full items-center justify-center rounded-xl bg-brand-primary text-sm font-bold text-white shadow-[0_8px_20px_rgba(49,91,234,0.18)] transition hover:bg-[#284ed2] active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-60"
               >
                 {loading ? "Signing in..." : "Sign in"}
               </button>
@@ -271,7 +271,7 @@ async function handleSubmit(
               <button
                 type="button"
                 onClick={() => router.push("/change-password")}
-                className="mt-4 w-full rounded-xl border border-[#dfe3ea] bg-white px-4 py-3 text-sm font-bold text-[#315bea] transition hover:bg-[#f7f9ff]"
+                className="mt-4 w-full rounded-xl border border-border-default bg-white px-4 py-3 text-sm font-bold text-brand-primary transition hover:bg-surface-subtle"
               >
                 🔐 Change Password
               </button>
@@ -282,14 +282,14 @@ async function handleSubmit(
               <button
                 type="button"
                 onClick={() => router.push("/master-login")}
-                className="w-full rounded-xl border border-[#dfe3ea] bg-white px-4 py-3 text-sm font-bold text-[#315bea] transition hover:bg-[#f7f9ff]"
+                className="w-full rounded-xl border border-border-default bg-white px-4 py-3 text-sm font-bold text-brand-primary transition hover:bg-surface-subtle"
               >
                 Teacher / Admin Login
               </button>
             </div>
 
             <div className="mt-7 text-center">
-              <p className="text-[11px] leading-5 text-[#a0a7b4]">
+              <p className="text-[11px] leading-5 text-text-body">
                 Competitive Exam Preparation Platform
               </p>
 

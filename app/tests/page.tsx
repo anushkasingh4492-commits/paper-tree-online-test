@@ -1295,11 +1295,11 @@ setSubjects([
    */
 
   return (
-    <main className="min-h-screen bg-[#f5f7fb] text-[#111827]">
+    <main className="min-h-screen bg-surface-app-bg text-[#111827]">
 
       {/* HEADER */}
 
-      <header className="h-16 bg-white border-b border-[#e5e7eb] flex items-center justify-between px-6">
+      <header className="h-16 bg-white border-b border-border-default flex items-center justify-between px-6">
 
         <div className="flex items-center gap-3">
 
@@ -1309,7 +1309,7 @@ setSubjects([
                 "/dashboard"
               )
             }
-            className="w-9 h-9 rounded-xl bg-[#1d4ed8] text-white flex items-center justify-center font-bold"
+            className="w-9 h-9 rounded-xl bg-brand-primary text-white flex items-center justify-center font-bold"
           >
             P
           </button>
@@ -1319,7 +1319,7 @@ setSubjects([
               Paper Tree
             </div>
 
-            <div className="text-xs text-[#6b7280]">
+            <div className="text-xs text-text-body">
               Create Test
             </div>
           </div>
@@ -1332,7 +1332,7 @@ setSubjects([
               "/dashboard"
             )
           }
-          className="text-sm text-[#6b7280] hover:text-[#111827]"
+          className="text-sm text-text-body hover:text-[#111827]"
         >
           Dashboard
         </button>
@@ -1345,7 +1345,7 @@ setSubjects([
 
         <div className="mb-8">
 
-          <div className="text-sm font-medium text-[#2563eb] mb-2">
+          <div className="text-sm font-medium text-brand-primary mb-2">
             TEST GENERATOR
           </div>
 
@@ -1353,7 +1353,7 @@ setSubjects([
             Create a New Test
           </h1>
 
-          <p className="mt-2 text-sm text-[#6b7280]">
+          <p className="mt-2 text-sm text-text-body">
             Configure your test and start
             practising with questions from
             the Paper Tree question bank.
@@ -1364,12 +1364,12 @@ setSubjects([
         {/* ASSIGNMENT LOADING */}
 
         {assignmentLoading && (
-          <div className="mb-6 rounded-2xl bg-white border border-[#e5e7eb] shadow-sm p-6">
+          <div className="mb-6 rounded-2xl bg-white border border-border-default shadow-sm p-6">
             <div className="text-sm font-semibold">
               Loading your assigned course...
             </div>
 
-            <div className="text-sm text-[#6b7280] mt-2">
+            <div className="text-sm text-text-body mt-2">
               Please wait while we load the
               batch assigned to your account.
             </div>
@@ -1380,12 +1380,12 @@ setSubjects([
 
         {!assignmentLoading &&
           assignmentError && (
-            <div className="mb-6 rounded-2xl bg-[#fff7ed] border border-[#fed7aa] p-6">
-              <div className="text-sm font-semibold text-[#9a3412]">
+            <div className="mb-6 rounded-2xl bg-state-warning border border-state-warning p-6">
+              <div className="text-sm font-semibold text-state-error">
                 Unable to load your assigned course
               </div>
 
-              <div className="text-sm text-[#9a3412] mt-2">
+              <div className="text-sm text-state-error mt-2">
                 {assignmentError}
               </div>
 
@@ -1394,7 +1394,7 @@ setSubjects([
                 onClick={() =>
                   window.location.reload()
                 }
-                className="mt-4 px-4 py-2 rounded-xl bg-[#1d4ed8] text-white text-sm font-semibold"
+                className="mt-4 px-4 py-2 rounded-xl bg-brand-primary text-white text-sm font-semibold"
               >
                 Try Again
               </button>
@@ -1412,7 +1412,7 @@ setSubjects([
 
                 {/* ASSIGNED COURSE */}
 
-                <section className="bg-white border border-[#e5e7eb] rounded-2xl shadow-sm p-6">
+                <section className="bg-white border border-border-default rounded-2xl shadow-sm p-6">
 
                   <div className="mb-5">
 
@@ -1420,15 +1420,15 @@ setSubjects([
                       1. Your Assigned Course
                     </h2>
 
-                    <p className="text-sm text-[#6b7280] mt-1">
+                    <p className="text-sm text-text-body mt-1">
                       Your course is assigned by your academy.
                     </p>
 
                   </div>
 
-                  <div className="rounded-xl border-2 border-[#2563eb] bg-[#eff6ff] p-5">
+                  <div className="rounded-xl border-2 border-brand-primary bg-surface-subtle p-5">
 
-                    <div className="text-lg font-bold text-[#1d4ed8]">
+                    <div className="text-lg font-bold text-brand-primary">
                       {course}
 
                       {course ===
@@ -1439,26 +1439,26 @@ setSubjects([
 
                     {course ===
                       "NEET" && (
-                      <div className="text-sm text-[#6b7280] mt-2">
+                      <div className="text-sm text-text-body mt-2">
                         PCB — Physics + Chemistry + Biology
                       </div>
                     )}
 
                     {course ===
                       "JEE" && (
-                      <div className="text-sm text-[#6b7280] mt-2">
+                      <div className="text-sm text-text-body mt-2">
                         PCM — Physics + Chemistry + Mathematics
                       </div>
                     )}
 
                     {assignedBatchName && (
-                      <div className="text-sm text-[#6b7280] mt-2">
+                      <div className="text-sm text-text-body mt-2">
                         Batch:{" "}
                         {assignedBatchName}
                       </div>
                     )}
 
-                    <div className="text-xs text-[#6b7280] mt-3">
+                    <div className="text-xs text-text-body mt-3">
                       This course and group were assigned by
                       your academy and cannot be changed.
                     </div>
@@ -1471,7 +1471,7 @@ setSubjects([
 
                 {course ===
                   "MHT-CET" && (
-                  <section className="bg-white border border-[#e5e7eb] rounded-2xl shadow-sm p-6">
+                  <section className="bg-white border border-border-default rounded-2xl shadow-sm p-6">
 
                     <div className="mb-5">
 
@@ -1479,7 +1479,7 @@ setSubjects([
                         2. Your Assigned Group
                       </h2>
 
-                      <p className="text-sm text-[#6b7280] mt-1">
+                      <p className="text-sm text-text-body mt-1">
                         Your MHT-CET group is assigned by
                         your academy.
                       </p>
@@ -1487,27 +1487,27 @@ setSubjects([
                     </div>
 
                     {studentGroup ? (
-                      <div className="rounded-xl border-2 border-[#2563eb] bg-[#eff6ff] p-5">
+                      <div className="rounded-xl border-2 border-brand-primary bg-surface-subtle p-5">
 
-                        <div className="text-lg font-bold text-[#1d4ed8]">
+                        <div className="text-lg font-bold text-brand-primary">
                           {studentGroup}
                         </div>
 
-                        <div className="text-sm text-[#6b7280] mt-2">
+                        <div className="text-sm text-text-body mt-2">
                           {studentGroup ===
                           "PCM"
                             ? "Physics + Chemistry + Mathematics"
                             : "Physics + Chemistry + Biology"}
                         </div>
 
-                        <div className="text-xs text-[#6b7280] mt-3">
+                        <div className="text-xs text-text-body mt-3">
                           This group was assigned by your
                           academy and cannot be changed.
                         </div>
 
                       </div>
                     ) : (
-                      <div className="rounded-xl bg-[#fff7ed] border border-[#fed7aa] p-4 text-sm text-[#9a3412]">
+                      <div className="rounded-xl bg-state-warning border border-state-warning p-4 text-sm text-state-error">
                         No valid group has been assigned
                         to your batch.
                       </div>
@@ -1518,7 +1518,7 @@ setSubjects([
 
                 {/* SUBJECT */}
 
-                <section className="bg-white border border-[#e5e7eb] rounded-2xl shadow-sm p-6">
+                <section className="bg-white border border-border-default rounded-2xl shadow-sm p-6">
 
                   <div className="mb-5">
 
@@ -1530,7 +1530,7 @@ setSubjects([
                       Choose Subject
                     </h2>
 
-                    <p className="text-sm text-[#6b7280] mt-1">
+                    <p className="text-sm text-text-body mt-1">
                       {course === "CAT"
                         ? "CAT section mocks use 40 minutes per section. VARC full sections target 8 VA questions and 16 RC questions across 4 passages; DILR mocks use 4–5 sets; QA full sections target 22–24 questions."
                         : "Select one or more subjects. Mathematics and Biology cannot be selected together."}
@@ -1614,10 +1614,10 @@ setSubjects([
                               }
                               className={`p-4 rounded-xl border-2 text-sm font-semibold transition ${
                                 selected
-                                  ? "border-[#2563eb] bg-[#eff6ff] text-[#1d4ed8]"
+                                  ? "border-brand-primary bg-surface-subtle text-brand-primary"
                                   : blocked
-                                  ? "border-[#e5e7eb] bg-[#f9fafb] opacity-50 cursor-not-allowed"
-                                  : "border-[#e5e7eb] hover:border-[#bfdbfe]"
+                                  ? "border-border-default bg-surface-app-bg opacity-50 cursor-not-allowed"
+                                  : "border-border-default hover:border-border-default"
                               }`}
                             >
                               <div>
@@ -1631,9 +1631,9 @@ setSubjects([
                   </div>
 
                   {studentGroup && (
-                    <div className="mt-4 rounded-xl bg-[#f9fafb] border border-[#e5e7eb] p-3">
+                    <div className="mt-4 rounded-xl bg-surface-app-bg border border-border-default p-3">
 
-                      <div className="text-xs text-[#6b7280] mb-2">
+                      <div className="text-xs text-text-body mb-2">
                         Selected subjects
                       </div>
 
@@ -1643,7 +1643,7 @@ setSubjects([
                           (item) => (
                             <span
                               key={item}
-                              className="px-3 py-1.5 rounded-lg bg-[#eff6ff] text-[#1d4ed8] text-xs font-semibold"
+                              className="px-3 py-1.5 rounded-lg bg-surface-subtle text-brand-primary text-xs font-semibold"
                             >
                               {item}
                             </span>
@@ -1659,7 +1659,7 @@ setSubjects([
 
                 {/* CHAPTERS */}
 
-                <section className="bg-white border border-[#e5e7eb] rounded-2xl shadow-sm p-6">
+                <section className="bg-white border border-border-default rounded-2xl shadow-sm p-6">
 
                   <div className="mb-5">
 
@@ -1671,7 +1671,7 @@ setSubjects([
                       Choose Chapters
                     </h2>
 
-                    <p className="text-sm text-[#6b7280] mt-1">
+                    <p className="text-sm text-text-body mt-1">
                       Select chapters separately for
                       each selected subject.
                     </p>
@@ -1679,7 +1679,7 @@ setSubjects([
                   </div>
 
                   {!studentGroup ? (
-                    <div className="rounded-xl bg-[#fff7ed] border border-[#fed7aa] p-4 text-sm text-[#9a3412]">
+                    <div className="rounded-xl bg-state-warning border border-state-warning p-4 text-sm text-state-error">
                       No valid course group is assigned
                       to your batch.
                     </div>
@@ -1711,8 +1711,8 @@ setSubjects([
                                 }
                                 className={`px-4 py-2.5 rounded-xl border-2 text-sm font-semibold transition ${
                                   active
-                                    ? "border-[#2563eb] bg-[#eff6ff] text-[#1d4ed8]"
-                                    : "border-[#e5e7eb] hover:border-[#bfdbfe]"
+                                    ? "border-brand-primary bg-surface-subtle text-brand-primary"
+                                    : "border-border-default hover:border-border-default"
                                 }`}
                               >
                                 {item}
@@ -1736,7 +1736,7 @@ setSubjects([
                       </div>
 
                       {loadingDatabase && (
-                        <div className="rounded-xl bg-[#f9fafb] border border-[#e5e7eb] p-4 text-sm text-[#6b7280]">
+                        <div className="rounded-xl bg-surface-app-bg border border-border-default p-4 text-sm text-text-body">
                           Loading chapters from
                           the question bank...
                         </div>
@@ -1753,7 +1753,7 @@ setSubjects([
                               }
                             </div>
 
-                            <div className="text-xs text-[#6b7280] mt-1">
+                            <div className="text-xs text-text-body mt-1">
                               Select chapters for{" "}
                               {
                                 activeChapterSubject
@@ -1776,7 +1776,7 @@ setSubjects([
                                 currentSubjectChapters.length ===
                                 0
                               }
-                              className="text-xs font-semibold text-[#2563eb] hover:underline disabled:text-[#9ca3af] disabled:no-underline"
+                              className="text-xs font-semibold text-brand-primary hover:underline disabled:text-[#9ca3af] disabled:no-underline"
                             >
                               Select All
                             </button>
@@ -1792,7 +1792,7 @@ setSubjects([
                                   activeChapterSubject
                                 )
                               }
-                              className="text-xs font-semibold text-[#6b7280] hover:underline"
+                              className="text-xs font-semibold text-text-body hover:underline"
                             >
                               Clear
                             </button>
@@ -1834,8 +1834,8 @@ setSubjects([
                                     }
                                     className={`w-full flex items-center justify-between p-3.5 rounded-xl border transition text-left ${
                                       selected
-                                        ? "border-[#93c5fd] bg-[#eff6ff]"
-                                        : "border-[#e5e7eb] hover:bg-[#f9fafb]"
+                                        ? "border-[#93c5fd] bg-surface-subtle"
+                                        : "border-border-default hover:bg-surface-app-bg"
                                     }`}
                                   >
 
@@ -1848,7 +1848,7 @@ setSubjects([
                                     <span
                                       className={`w-5 h-5 rounded-md border flex items-center justify-center text-xs ${
                                         selected
-                                          ? "bg-[#2563eb] border-[#2563eb] text-white"
+                                          ? "bg-brand-primary border-brand-primary text-white"
                                           : "border-[#d1d5db]"
                                       }`}
                                     >
@@ -1868,7 +1868,7 @@ setSubjects([
                       {!loadingDatabase &&
                         currentSubjectChapters.length ===
                           0 && (
-                          <div className="rounded-xl bg-[#fff7ed] border border-[#fed7aa] p-4 text-sm text-[#9a3412]">
+                          <div className="rounded-xl bg-state-warning border border-state-warning p-4 text-sm text-state-error">
                             No chapters found in
                             the database for{" "}
                             <strong>
@@ -1892,7 +1892,7 @@ setSubjects([
                             return (
                               <div
                                 key={item}
-                                className="rounded-xl bg-[#f9fafb] border border-[#e5e7eb] p-3"
+                                className="rounded-xl bg-surface-app-bg border border-border-default p-3"
                               >
 
                                 <div className="flex items-center justify-between">
@@ -1901,7 +1901,7 @@ setSubjects([
                                     {item}
                                   </span>
 
-                                  <span className="text-[11px] text-[#6b7280]">
+                                  <span className="text-[11px] text-text-body">
                                     {
                                       selected.length
                                     }{" "}
@@ -1912,7 +1912,7 @@ setSubjects([
 
                                 {selected.length >
                                   0 && (
-                                  <div className="text-[11px] text-[#6b7280] mt-2">
+                                  <div className="text-[11px] text-text-body mt-2">
                                     {selected.join(
                                       ", "
                                     )}
@@ -1928,7 +1928,7 @@ setSubjects([
 
                       {selectedChapters.length ===
                         0 && (
-                        <div className="mt-4 rounded-xl bg-[#f9fafb] border border-[#e5e7eb] p-3 text-xs text-[#6b7280]">
+                        <div className="mt-4 rounded-xl bg-surface-app-bg border border-border-default p-3 text-xs text-text-body">
                           No chapter selected —
                           questions can be taken
                           from the selected subjects.
@@ -1941,7 +1941,7 @@ setSubjects([
 
                 {/* DIFFICULTY */}
 
-                <section className="bg-white border border-[#e5e7eb] rounded-2xl shadow-sm p-6">
+                <section className="bg-white border border-border-default rounded-2xl shadow-sm p-6">
 
                   <div className="mb-5">
 
@@ -1953,7 +1953,7 @@ setSubjects([
                       Difficulty
                     </h2>
 
-                    <p className="text-sm text-[#6b7280] mt-1">
+                    <p className="text-sm text-text-body mt-1">
                       Choose the difficulty level.
                     </p>
 
@@ -1978,8 +1978,8 @@ setSubjects([
                             }
                             className={`p-3.5 rounded-xl border-2 text-sm font-semibold transition ${
                               selected
-                                ? "border-[#2563eb] bg-[#eff6ff] text-[#1d4ed8]"
-                                : "border-[#e5e7eb] hover:border-[#bfdbfe]"
+                                ? "border-brand-primary bg-surface-subtle text-brand-primary"
+                                : "border-border-default hover:border-border-default"
                             }`}
                           >
                             {item}
@@ -1994,7 +1994,7 @@ setSubjects([
 
                 {/* PRESETS */}
 
-                <section className="bg-white border border-[#e5e7eb] rounded-2xl shadow-sm p-6">
+                <section className="bg-white border border-border-default rounded-2xl shadow-sm p-6">
 
                   <div className="mb-5">
 
@@ -2006,7 +2006,7 @@ setSubjects([
                       Choose Test Preset
                     </h2>
 
-                    <p className="text-sm text-[#6b7280] mt-1">
+                    <p className="text-sm text-text-body mt-1">
                       Choose a fixed test length.
                       Questions, marks and duration
                       are automatically determined.
@@ -2077,13 +2077,13 @@ setSubjects([
                               }
                               className={`relative w-full text-left rounded-xl border-2 p-4 transition ${
                                 selected
-                                  ? "border-[#2563eb] bg-[#eff6ff]"
-                                  : "border-[#e5e7eb] hover:border-[#bfdbfe]"
+                                  ? "border-brand-primary bg-surface-subtle"
+                                  : "border-border-default hover:border-border-default"
                               }`}
                             >
 
                               {selected && (
-                                <div className="absolute top-4 right-4 w-5 h-5 rounded-full bg-[#2563eb] text-white flex items-center justify-center text-xs">
+                                <div className="absolute top-4 right-4 w-5 h-5 rounded-full bg-brand-primary text-white flex items-center justify-center text-xs">
                                   ✓
                                 </div>
                               )}
@@ -2098,7 +2098,7 @@ setSubjects([
                                     }
                                   </div>
 
-                                  <div className="text-xs text-[#6b7280] mt-1">
+                                  <div className="text-xs text-text-body mt-1">
                                     {
                                       subjectSplit
                                     }
@@ -2117,21 +2117,21 @@ setSubjects([
 
                               <div className="flex flex-wrap gap-2 mt-4">
 
-                                <span className="px-3 py-1.5 rounded-lg bg-white border border-[#e5e7eb] text-xs font-semibold">
+                                <span className="px-3 py-1.5 rounded-lg bg-white border border-border-default text-xs font-semibold">
                                   {
                                     details.totalQuestions
                                   }{" "}
                                   questions
                                 </span>
 
-                                <span className="px-3 py-1.5 rounded-lg bg-white border border-[#e5e7eb] text-xs font-semibold">
+                                <span className="px-3 py-1.5 rounded-lg bg-white border border-border-default text-xs font-semibold">
                                   {
                                     details.totalMarks
                                   }{" "}
                                   marks
                                 </span>
 
-                                <span className="px-3 py-1.5 rounded-lg bg-white border border-[#e5e7eb] text-xs font-semibold">
+                                <span className="px-3 py-1.5 rounded-lg bg-white border border-border-default text-xs font-semibold">
                                   {
                                     details.durationMinutes
                                   }{" "}
@@ -2152,7 +2152,7 @@ setSubjects([
                         )
                     ).length ===
                       0 && (
-                      <div className="rounded-xl bg-[#f9fafb] border border-[#e5e7eb] p-4 text-sm text-[#6b7280]">
+                      <div className="rounded-xl bg-surface-app-bg border border-border-default p-4 text-sm text-text-body">
                         No presets are available
                         for the selected subject
                         combination.
@@ -2169,11 +2169,11 @@ setSubjects([
 
               <aside className="lg:sticky lg:top-6 h-fit">
 
-                <div className="bg-white border border-[#e5e7eb] rounded-2xl shadow-sm overflow-hidden">
+                <div className="bg-white border border-border-default rounded-2xl shadow-sm overflow-hidden">
 
-                  <div className="p-6 border-b border-[#e5e7eb]">
+                  <div className="p-6 border-b border-border-default">
 
-                    <div className="text-xs font-semibold uppercase tracking-wider text-[#6b7280]">
+                    <div className="text-xs font-semibold uppercase tracking-wider text-text-body">
                       Test Summary
                     </div>
 
@@ -2181,7 +2181,7 @@ setSubjects([
                       {course}
                     </h2>
 
-                    <p className="text-sm text-[#6b7280] mt-1">
+                    <p className="text-sm text-text-body mt-1">
                       {subjects.join(
                         " + "
                       )}
@@ -2280,7 +2280,7 @@ setSubjects([
                           !selectedPreset ||
                           !presetDetails
                         }
-                        className="w-full h-12 rounded-xl bg-[#1d4ed8] text-white text-sm font-semibold hover:bg-[#1e40af] disabled:opacity-60 disabled:cursor-not-allowed transition"
+                        className="w-full h-12 rounded-xl bg-brand-primary text-white text-sm font-semibold hover:bg-[#1e40af] disabled:opacity-60 disabled:cursor-not-allowed transition"
                       >
                         {generating
                           ? "Generating Test..."
@@ -2295,7 +2295,7 @@ setSubjects([
                       according to your configuration.
                     </p>
 
-                    <div className="rounded-xl bg-[#f9fafb] border border-[#e5e7eb] p-3 text-[11px] text-[#6b7280] text-center">
+                    <div className="rounded-xl bg-surface-app-bg border border-border-default p-3 text-[11px] text-text-body text-center">
                       No negative marking. Wrong and
                       unattempted questions score zero.
                     </div>
@@ -2331,7 +2331,7 @@ function SummaryRow({
   return (
     <div className="flex items-center justify-between gap-4">
 
-      <span className="text-sm text-[#6b7280]">
+      <span className="text-sm text-text-body">
         {label}
       </span>
 

@@ -73,18 +73,18 @@ export default function ChangePasswordPage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#f6f8fc] flex items-center justify-center px-6">
+    <main className="min-h-screen bg-surface-app-bg flex items-center justify-center px-6">
       <div className="w-full max-w-md">
         <div className="mb-7 text-center">
-          <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-[#315bea] text-2xl font-extrabold text-white">
+          <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-primary text-2xl font-extrabold text-white">
             P
           </div>
 
-          <h1 className="mt-4 text-2xl font-extrabold text-[#172033]">
+          <h1 className="mt-4 text-2xl font-extrabold text-text-primary">
             Change Password
           </h1>
 
-          <p className="mt-2 text-sm text-[#697386]">
+          <p className="mt-2 text-sm text-text-tertiary">
             Update your Paper Tree account password.
           </p>
         </div>
@@ -94,7 +94,7 @@ export default function ChangePasswordPage() {
           className="rounded-3xl border border-[#e5e8ee] bg-white p-7 shadow-sm"
         >
           {error && (
-            <div className="mb-5 rounded-xl border border-red-100 bg-red-50 px-4 py-3 text-sm font-medium text-red-600">
+            <div className="mb-5 rounded-xl border border-red-100 bg-red-50 px-4 py-3 text-sm font-medium text-state-error">
               {error}
             </div>
           )}
@@ -105,7 +105,7 @@ export default function ChangePasswordPage() {
             </div>
           )}
 
-          <label className="mb-2 block text-sm font-semibold text-[#263044]">
+          <label className="mb-2 block text-sm font-semibold text-text-primary">
             Current password
           </label>
 
@@ -117,10 +117,10 @@ export default function ChangePasswordPage() {
             }
             autoComplete="current-password"
             required
-            className="mb-5 h-12 w-full rounded-xl border border-[#dfe3eb] px-4 text-sm outline-none focus:border-[#315bea] focus:ring-4 focus:ring-[#315bea]/10"
+            className="mb-5 h-12 w-full rounded-xl border border-border-default px-4 text-sm outline-none focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10"
           />
 
-          <label className="mb-2 block text-sm font-semibold text-[#263044]">
+          <label className="mb-2 block text-sm font-semibold text-text-primary">
             New password
           </label>
 
@@ -133,14 +133,14 @@ export default function ChangePasswordPage() {
             autoComplete="new-password"
             required
             minLength={8}
-            className="h-12 w-full rounded-xl border border-[#dfe3eb] px-4 text-sm outline-none focus:border-[#315bea] focus:ring-4 focus:ring-[#315bea]/10"
+            className="h-12 w-full rounded-xl border border-border-default px-4 text-sm outline-none focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10"
           />
 
-          <p className="mt-2 text-xs text-[#8a93a5]">
+          <p className="mt-2 text-xs text-text-body">
             Minimum 8 characters.
           </p>
 
-          <label className="mb-2 mt-5 block text-sm font-semibold text-[#263044]">
+          <label className="mb-2 mt-5 block text-sm font-semibold text-text-primary">
             Confirm new password
           </label>
 
@@ -153,13 +153,13 @@ export default function ChangePasswordPage() {
             autoComplete="new-password"
             required
             minLength={8}
-            className="h-12 w-full rounded-xl border border-[#dfe3eb] px-4 text-sm outline-none focus:border-[#315bea] focus:ring-4 focus:ring-[#315bea]/10"
+            className="h-12 w-full rounded-xl border border-border-default px-4 text-sm outline-none focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10"
           />
 
           <button
             type="submit"
             disabled={loading}
-            className="mt-7 w-full rounded-xl bg-[#315bea] px-4 py-3 font-bold text-white transition hover:bg-[#264ac7] disabled:opacity-60"
+            className="mt-7 w-full rounded-xl bg-brand-primary px-4 py-3 font-bold text-white transition hover:bg-brand-primary disabled:opacity-60"
           >
             {loading
               ? "Changing password..."
@@ -169,7 +169,7 @@ export default function ChangePasswordPage() {
           <button
             type="button"
             onClick={() => router.back()}
-            className="mt-4 w-full text-sm font-semibold text-[#697386] hover:text-[#315bea]"
+            className="mt-4 w-full text-sm font-semibold text-text-tertiary hover:text-brand-primary"
           >
             ← Back
           </button>

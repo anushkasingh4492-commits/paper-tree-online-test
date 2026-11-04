@@ -54,7 +54,7 @@ export default function StudentBadgeModal({ studentId, studentName, onClose }: P
         </div>
 
         <div className="max-h-[68vh] overflow-y-auto p-6">
-          {loading ? <div className="py-16 text-center text-sm text-white/45">Loading achievements...</div> : error ? <div className="rounded-2xl border border-red-400/20 bg-red-500/10 p-5 text-sm text-red-200">{error}</div> : data && data.badges.length === 0 ? <div className="py-16 text-center"><div className="text-5xl">🏆</div><p className="mt-4 font-bold">No badges earned yet.</p><p className="mt-1 text-sm text-white/40">Keep completing tests to unlock achievements.</p></div> : (
+          {loading ? <div className="py-16 text-center text-sm text-white/45">Loading achievements...</div> : error ? <div className="rounded-2xl border border-red-400/20 bg-state-error/10 p-5 text-sm text-red-200">{error}</div> : data && data.badges.length === 0 ? <div className="py-16 text-center"><div className="text-5xl">🏆</div><p className="mt-4 font-bold">No badges earned yet.</p><p className="mt-1 text-sm text-white/40">Keep completing tests to unlock achievements.</p></div> : (
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
               {data?.badges.map((badge) => (
                 <article key={badge.id} className="rounded-2xl border border-white/10 bg-white/[.05] p-4 text-center transition hover:-translate-y-1 hover:bg-white/[.08]">

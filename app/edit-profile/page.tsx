@@ -32,19 +32,19 @@ export default function EditProfilePage() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-[#f6f8fc] text-[#172033]">
+    <main className="min-h-screen bg-surface-app-bg text-text-primary">
       <div className="mx-auto max-w-2xl px-6 py-10">
         <div className="mb-8">
           <button
             onClick={() => router.push("/dashboard")}
-            className="text-sm font-semibold text-[#315bea] mb-2 inline-block transition hover:underline"
+            className="text-sm font-semibold text-brand-primary mb-2 inline-block transition hover:underline"
           >
             ← Back to Dashboard
           </button>
           <h1 className="text-2xl font-extrabold tracking-tight">
             Edit Profile
           </h1>
-          <p className="text-sm text-[#697386]">
+          <p className="text-sm text-text-tertiary">
             Update your personal information.
           </p>
         </div>
@@ -65,16 +65,16 @@ export default function EditProfilePage() {
             }}
             className="space-y-5"
           >
-            <div className="rounded-xl border border-[#e5e8ef] bg-white p-5 shadow-sm">
+            <div className="rounded-xl border border-border-default bg-white p-5 shadow-sm">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-14 h-14 rounded-full bg-[#f0f5ff] flex items-center justify-center text-2xl overflow-hidden border border-[#dbe6f3]">
+                <div className="w-14 h-14 rounded-full bg-surface-subtle flex items-center justify-center text-2xl overflow-hidden border border-[#dbe6f3]">
                   {profile.name?.charAt(0)?.toUpperCase() || "U"}
                 </div>
                 <div>
-                  <p className="font-bold text-sm text-[#172033]">
+                  <p className="font-bold text-sm text-text-primary">
                     {profile.name || "Student"}
                   </p>
-                  <p className="text-[10px] text-[#8a93a5]">
+                  <p className="text-[10px] text-text-body">
                     {profile.rollNumber || "Roll number not set"}
                   </p>
                 </div>
@@ -82,57 +82,57 @@ export default function EditProfilePage() {
 
               <div className="space-y-4">
                 <div>
-                  <label className="block text-[10px] font-bold uppercase tracking-[0.15em] text-[#697386] mb-1">
+                  <label className="block text-[10px] font-bold uppercase tracking-[0.15em] text-text-tertiary mb-1">
                     Full Name
                   </label>
                   <input
                     type="text"
                     defaultValue={profile.name}
-                    className="w-full rounded-xl border border-[#dfe4ee] bg-[#fafbfc] px-4 py-2.5 text-sm focus:border-[#315bea] focus:outline-none"
+                    className="w-full rounded-xl border border-border-default bg-surface-app-bg px-4 py-2.5 text-sm focus:border-brand-primary focus:outline-none"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-[10px] font-bold uppercase tracking-[0.15em] text-[#697386] mb-1">
+                  <label className="block text-[10px] font-bold uppercase tracking-[0.15em] text-text-tertiary mb-1">
                     Email Address
                   </label>
                   <input
                     type="email"
                     defaultValue={profile.email}
-                    className="w-full rounded-xl border border-[#dfe4ee] bg-[#fafbfc] px-4 py-2.5 text-sm focus:border-[#315bea] focus:outline-none"
+                    className="w-full rounded-xl border border-border-default bg-surface-app-bg px-4 py-2.5 text-sm focus:border-brand-primary focus:outline-none"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-[10px] font-bold uppercase tracking-[0.15em] text-[#697386] mb-1">
+                  <label className="block text-[10px] font-bold uppercase tracking-[0.15em] text-text-tertiary mb-1">
                     Roll Number
                   </label>
                   <input
                     type="text"
                     defaultValue={profile.rollNumber}
-                    className="w-full rounded-xl border border-[#dfe4ee] bg-[#fafbfc] px-4 py-2.5 text-sm focus:border-[#315bea] focus:outline-none"
+                    className="w-full rounded-xl border border-border-default bg-surface-app-bg px-4 py-2.5 text-sm focus:border-brand-primary focus:outline-none"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-[10px] font-bold uppercase tracking-[0.15em] text-[#697386] mb-1">
+                  <label className="block text-[10px] font-bold uppercase tracking-[0.15em] text-text-tertiary mb-1">
                     Class / Batch
                   </label>
                   <input
                     type="text"
                     defaultValue={profile.className}
-                    className="w-full rounded-xl border border-[#dfe4ee] bg-[#fafbfc] px-4 py-2.5 text-sm focus:border-[#315bea] focus:outline-none"
+                    className="w-full rounded-xl border border-border-default bg-surface-app-bg px-4 py-2.5 text-sm focus:border-brand-primary focus:outline-none"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-[10px] font-bold uppercase tracking-[0.15em] text-[#697386] mb-1">
+                  <label className="block text-[10px] font-bold uppercase tracking-[0.15em] text-text-tertiary mb-1">
                     Academy / Institute
                   </label>
                   <input
                     type="text"
                     defaultValue={profile.academy}
-                    className="w-full rounded-xl border border-[#dfe4ee] bg-[#fafbfc] px-4 py-2.5 text-sm focus:border-[#315bea] focus:outline-none"
+                    className="w-full rounded-xl border border-border-default bg-surface-app-bg px-4 py-2.5 text-sm focus:border-brand-primary focus:outline-none"
                   />
                 </div>
               </div>
@@ -141,7 +141,7 @@ export default function EditProfilePage() {
             <button
               type="submit"
               disabled={saving}
-              className="w-full rounded-xl bg-[#315bea] px-5 py-3 font-bold text-white hover:bg-[#264ac7] disabled:opacity-50 disabled:cursor-not-allowed transition"
+              className="w-full rounded-xl bg-brand-primary px-5 py-3 font-bold text-white hover:bg-brand-primary disabled:opacity-50 disabled:cursor-not-allowed transition"
             >
               {saving ? "Saving…" : "Save Changes"}
             </button>
@@ -149,7 +149,7 @@ export default function EditProfilePage() {
             <button
               type="button"
               onClick={() => router.push("/profile")}
-              className="w-full rounded-xl border border-[#e5e8ef] bg-white px-5 py-3 font-bold text-[#172033] hover:bg-[#f8f9fb] transition"
+              className="w-full rounded-xl border border-border-default bg-white px-5 py-3 font-bold text-text-primary hover:bg-surface-app-bg transition"
             >
               Cancel
             </button>

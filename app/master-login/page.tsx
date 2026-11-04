@@ -82,7 +82,7 @@ function MasterLoginForm() {
   }
 
   return (
-    <main className="flex min-h-screen items-center justify-center bg-[#f6f8fc] px-6">
+    <main className="flex min-h-screen items-center justify-center bg-surface-app-bg px-6">
 
       <div className="w-full max-w-md">
 
@@ -90,15 +90,15 @@ function MasterLoginForm() {
 
         <div className="mb-8 text-center">
 
-          <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#315bea] text-2xl font-extrabold text-white">
+          <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-primary text-2xl font-extrabold text-white">
             P
           </div>
 
-          <h1 className="text-2xl font-extrabold text-[#172033]">
+          <h1 className="text-2xl font-extrabold text-text-primary">
             Paper Tree Educational Studio
           </h1>
 
-          <p className="mt-1 text-sm text-[#697386]">
+          <p className="mt-1 text-sm text-text-tertiary">
             {isAdmin ? "Admin Portal" : isTeacher ? "Teacher Portal" : "Staff Portal"}
           </p>
 
@@ -106,19 +106,19 @@ function MasterLoginForm() {
 
         {/* LOGIN CARD */}
 
-        <div className="rounded-3xl border border-[#e8ebf1] bg-white p-8 shadow-sm">
+        <div className="rounded-3xl border border-border-default bg-white p-8 shadow-sm">
 
           <div className="mb-7">
 
-            <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#315bea]">
+            <p className="text-xs font-bold uppercase tracking-[0.15em] text-brand-primary">
               {isAdmin ? "ADMIN LOGIN" : isTeacher ? "TEACHER LOGIN" : "STAFF LOGIN"}
             </p>
 
-            <h2 className="mt-2 text-2xl font-extrabold text-[#172033]">
+            <h2 className="mt-2 text-2xl font-extrabold text-text-primary">
               {isAdmin ? "Welcome, Admin" : isTeacher ? "Welcome, Teacher" : "Welcome"}
             </h2>
 
-            <p className="mt-2 text-sm text-[#697386]">
+            <p className="mt-2 text-sm text-text-tertiary">
               Sign in to access your{" "}
               {isAdmin ? "admin" : isTeacher ? "teacher" : "staff"} dashboard.
             </p>
@@ -134,7 +134,7 @@ function MasterLoginForm() {
 
             <div>
 
-              <label className="mb-2 block text-sm font-semibold text-[#263044]">
+              <label className="mb-2 block text-sm font-semibold text-text-primary">
                 Email
               </label>
 
@@ -148,7 +148,7 @@ function MasterLoginForm() {
                 autoComplete="email"
                 disabled={loading}
                 required
-                className="h-12 w-full rounded-xl border border-[#dfe3eb] px-4 text-sm outline-none transition focus:border-[#315bea] focus:ring-4 focus:ring-[#315bea]/10 disabled:bg-[#f7f8fb]"
+                className="h-12 w-full rounded-xl border border-border-default px-4 text-sm outline-none transition focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10 disabled:bg-surface-app-bg"
               />
 
             </div>
@@ -157,7 +157,7 @@ function MasterLoginForm() {
 
             <div>
 
-              <label className="mb-2 block text-sm font-semibold text-[#263044]">
+              <label className="mb-2 block text-sm font-semibold text-text-primary">
                 Password
               </label>
 
@@ -171,7 +171,7 @@ function MasterLoginForm() {
                 autoComplete="current-password"
                 disabled={loading}
                 required
-                className="h-12 w-full rounded-xl border border-[#dfe3eb] px-4 text-sm outline-none transition focus:border-[#315bea] focus:ring-4 focus:ring-[#315bea]/10 disabled:bg-[#f7f8fb]"
+                className="h-12 w-full rounded-xl border border-border-default px-4 text-sm outline-none transition focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10 disabled:bg-surface-app-bg"
               />
 
             </div>
@@ -179,7 +179,7 @@ function MasterLoginForm() {
             {/* ERROR */}
 
             {error && (
-              <div className="rounded-xl border border-red-100 bg-red-50 px-4 py-3 text-sm font-medium text-red-600">
+              <div className="rounded-xl border border-red-100 bg-red-50 px-4 py-3 text-sm font-medium text-state-error">
                 {error}
               </div>
             )}
@@ -189,7 +189,7 @@ function MasterLoginForm() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full rounded-xl bg-[#315bea] px-4 py-3 font-bold text-white transition hover:bg-[#264ac7] disabled:cursor-not-allowed disabled:opacity-60"
+              className="w-full rounded-xl bg-brand-primary px-4 py-3 font-bold text-white transition hover:bg-brand-primary disabled:cursor-not-allowed disabled:opacity-60"
             >
               {loading
                 ? "Signing in..."
@@ -198,7 +198,7 @@ function MasterLoginForm() {
             <button
   type="button"
   onClick={() => router.push("/change-password")}
-  className="mt-4 w-full rounded-xl border border-[#dfe3ea] bg-white px-4 py-3 text-sm font-bold text-[#315bea] transition hover:bg-[#f7f9ff]"
+  className="mt-4 w-full rounded-xl border border-border-default bg-white px-4 py-3 text-sm font-bold text-brand-primary transition hover:bg-surface-subtle"
 >
   🔐 Change Password
 </button>
@@ -210,7 +210,7 @@ function MasterLoginForm() {
           <button
             type="button"
             onClick={() => router.push("/login")}
-            className="mt-5 w-full text-center text-sm font-semibold text-[#697386] hover:text-[#315bea]"
+            className="mt-5 w-full text-center text-sm font-semibold text-text-tertiary hover:text-brand-primary"
           >
             ← Back to Login
           </button>
@@ -226,8 +226,8 @@ export default function MasterLoginPage() {
   return (
     <Suspense
       fallback={
-        <main className="flex min-h-screen items-center justify-center bg-[#f6f8fc]">
-          <p className="text-sm text-[#697386]">
+        <main className="flex min-h-screen items-center justify-center bg-surface-app-bg">
+          <p className="text-sm text-text-tertiary">
             Loading...
           </p>
         </main>

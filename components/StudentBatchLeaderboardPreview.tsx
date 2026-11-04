@@ -68,13 +68,13 @@ export default function StudentBatchLeaderboardPreview() {
     .filter((student): student is LeaderboardStudent => Boolean(student));
 
   return (
-    <section className="mt-5 overflow-hidden rounded-[14px] border border-[#e8eaf0] bg-white shadow-[0_3px_12px_rgba(30,35,60,.035)]">
-      <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[#eff0f4] px-5 py-4">
+    <section className="mt-5 overflow-hidden rounded-[14px] border border-border-default bg-white shadow-[0_3px_12px_rgba(30,35,60,.035)]">
+      <div className="flex flex-wrap items-center justify-between gap-3 border-b border-border-default px-5 py-4">
         <div>
-          <h2 className="text-[14px] font-extrabold text-[#172033]">
+          <h2 className="text-[14px] font-extrabold text-text-primary">
             Your Batch
           </h2>
-          <p className="mt-1 text-[10px] text-[#939aa8]">
+          <p className="mt-1 text-[10px] text-text-body">
             {batch
               ? `${batch.name} · ${batch.size} students`
               : "Your position and top performers"}
@@ -83,7 +83,7 @@ export default function StudentBatchLeaderboardPreview() {
         <button
           type="button"
           onClick={() => router.push("/student/batch-leaderboard")}
-          className="rounded-lg border border-[#dedaff] px-3 py-2 text-[10px] font-bold text-[#5541dd] transition hover:bg-[#f7f5ff]"
+          className="rounded-lg border border-border-default px-3 py-2 text-[10px] font-bold text-brand-purple transition hover:bg-[#f7f5ff]"
         >
           View leaderboard →
         </button>
@@ -98,17 +98,17 @@ export default function StudentBatchLeaderboardPreview() {
           {[1, 2, 3].map((item) => (
             <div
               key={item}
-              className="h-20 animate-pulse rounded-xl bg-slate-100"
+              className="h-20 animate-pulse rounded-xl bg-surface-subtle"
             />
           ))}
         </div>
       ) : !batch ? (
-        <p className="px-5 py-6 text-center text-xs text-[#697386]">
+        <p className="px-5 py-6 text-center text-xs text-text-tertiary">
           You haven&apos;t been assigned to a batch yet.
         </p>
       ) : (
         <>
-          <div className="grid gap-3 border-b border-[#eff0f4] p-5 sm:grid-cols-3">
+          <div className="grid gap-3 border-b border-border-default p-5 sm:grid-cols-3">
             <SummaryCard
               label="Your Position"
               value={currentStudent ? `#${currentStudent.rank}` : "—"}
@@ -117,7 +117,7 @@ export default function StudentBatchLeaderboardPreview() {
                   ? `${currentStudent.average}% average`
                   : "Complete a test to appear"
               }
-              tone="text-indigo-600"
+              tone="text-brand-purple"
             />
             <SummaryCard
               label="Completed Tests"
@@ -141,7 +141,7 @@ export default function StudentBatchLeaderboardPreview() {
                   className={`flex items-center gap-3 rounded-xl border p-3 ${
                     student.isCurrent
                       ? "border-indigo-200 bg-indigo-50/70"
-                      : "border-[#edf0f4] bg-[#fafbfc]"
+                      : "border-border-default bg-surface-app-bg"
                   }`}
                 >
                   <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white text-lg shadow-sm">
@@ -160,14 +160,14 @@ export default function StudentBatchLeaderboardPreview() {
                   <button
                     type="button"
                     onClick={() => setBadgeStudent(student)}
-                    className="shrink-0 text-[9px] font-bold text-[#5541dd] hover:underline"
+                    className="shrink-0 text-[9px] font-bold text-brand-purple hover:underline"
                   >
                     View badges
                   </button>
                 </article>
               ))
             ) : (
-              <p className="text-xs text-[#697386] md:col-span-3">
+              <p className="text-xs text-text-tertiary md:col-span-3">
                 Complete a test to help your batch leaderboard take shape.
               </p>
             )}
@@ -198,8 +198,8 @@ function SummaryCard({
   tone: string;
 }) {
   return (
-    <div className="rounded-xl border border-[#edf0f4] bg-[#fafbfc] p-4">
-      <p className="text-[9px] font-bold uppercase tracking-wider text-[#939aa8]">
+    <div className="rounded-xl border border-border-default bg-surface-app-bg p-4">
+      <p className="text-[9px] font-bold uppercase tracking-wider text-text-body">
         {label}
       </p>
       <p className={`mt-1 text-2xl font-extrabold ${tone}`}>{value}</p>

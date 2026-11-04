@@ -91,7 +91,7 @@ export default function BatchLeaderboardPage() {
             {[1,2,3].map((i) => <div key={i} className="h-48 rounded-3xl bg-white/[.06] animate-pulse" />)}
           </div>
         ) : error ? (
-          <div className="rounded-3xl border border-red-400/20 bg-red-500/10 p-6 text-sm text-red-200">{error}</div>
+          <div className="rounded-3xl border border-red-400/20 bg-state-error/10 p-6 text-sm text-red-200">{error}</div>
         ) : !data?.batch ? (
           <div className="rounded-3xl border border-white/10 bg-white/[.05] p-10 text-center">
             <div className="text-5xl mb-4">🎮</div>

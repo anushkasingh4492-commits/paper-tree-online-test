@@ -229,34 +229,34 @@ export default function TeacherPerformancePage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#f6f8fc] text-[#172033]">
+    <main className="min-h-screen bg-surface-app-bg text-text-primary">
       <div className="mx-auto max-w-7xl px-6 py-10">
         <header className="mb-8 flex flex-wrap items-center justify-between gap-4">
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#315bea]">
+            <p className="text-xs font-bold uppercase tracking-[0.15em] text-brand-primary">
               Teacher Portal
             </p>
             <h1 className="mt-2 text-3xl font-extrabold tracking-tight">
               Student Performance
             </h1>
-            <p className="mt-2 text-sm text-[#697386]">
+            <p className="mt-2 text-sm text-text-tertiary">
               View performance across all students in your academy.
             </p>
           </div>
 
           <button
             onClick={() => router.push("/teacher")}
-            className="rounded-xl border border-[#e2e6ee] bg-white px-4 py-2.5 text-sm font-bold text-[#697386] hover:bg-[#f7f8fb]"
+            className="rounded-xl border border-border-default bg-white px-4 py-2.5 text-sm font-bold text-text-tertiary hover:bg-surface-app-bg"
           >
             ← Back to Teacher Portal
           </button>
         </header>
 
         {!loading && !error && filteredStudents.length > 0 && (
-          <section className="mb-6 rounded-2xl border border-[#e3e8f5] bg-white p-5 shadow-sm sm:p-6">
+          <section className="mb-6 rounded-2xl border border-border-default bg-white p-5 shadow-sm sm:p-6">
             <div className="mb-5">
               <h2 className="text-lg font-extrabold">Performance at a glance</h2>
-              <p className="mt-1 text-sm text-[#8a93a5]">A separate visual summary of the students currently shown by your filters.</p>
+              <p className="mt-1 text-sm text-text-body">A separate visual summary of the students currently shown by your filters.</p>
             </div>
             {[
               { label: "Average score", value: Math.round(filteredStudents.reduce((sum, student) => sum + student.averagePercentage, 0) / filteredStudents.length), color: "bg-indigo-500" },
@@ -266,7 +266,7 @@ export default function TeacherPerformancePage() {
               <div key={metric.label} className="mb-4 last:mb-0">
                 <div className="mb-2 flex items-center justify-between gap-3 text-sm">
                   <span className="font-semibold text-[#465064]">{metric.label}</span>
-                  <span className="font-extrabold text-[#172033]">{metric.value}%</span>
+                  <span className="font-extrabold text-text-primary">{metric.value}%</span>
                 </div>
                 <div className="h-3 overflow-hidden rounded-full bg-[#edf0f6]">
                   <div className={`h-full rounded-full ${metric.color}`} style={{ width: `${Math.max(0, Math.min(100, metric.value))}%` }} />
@@ -276,12 +276,12 @@ export default function TeacherPerformancePage() {
           </section>
         )}
 
-        <section className="rounded-2xl border border-[#e3e8f5] bg-white shadow-sm">
-          <div className="border-b border-[#eef0f4] px-6 py-5">
+        <section className="rounded-2xl border border-border-default bg-white shadow-sm">
+          <div className="border-b border-border-default px-6 py-5">
             <div className="flex flex-wrap items-center justify-between gap-4">
               <div>
                 <h2 className="text-lg font-extrabold">All Students</h2>
-                <p className="mt-1 text-sm text-[#8a93a5]">
+                <p className="mt-1 text-sm text-text-body">
                   Filter by batch and sort by any available performance metric.
                 </p>
               </div>
@@ -290,7 +290,7 @@ export default function TeacherPerformancePage() {
                 value={search}
                 onChange={(event) => setSearch(event.target.value)}
                 placeholder="Search student or batch"
-                className="w-full max-w-xs rounded-xl border border-[#dfe4ee] px-4 py-2.5 text-sm outline-none focus:border-[#315bea]"
+                className="w-full max-w-xs rounded-xl border border-border-default px-4 py-2.5 text-sm outline-none focus:border-brand-primary"
               />
             </div>
 
@@ -298,7 +298,7 @@ export default function TeacherPerformancePage() {
               <select
                 value={batchFilter}
                 onChange={(event) => setBatchFilter(event.target.value)}
-                className="rounded-xl border border-[#dfe4ee] bg-white px-3 py-2.5 text-sm font-semibold outline-none focus:border-[#315bea]"
+                className="rounded-xl border border-border-default bg-white px-3 py-2.5 text-sm font-semibold outline-none focus:border-brand-primary"
               >
                 {batchOptions.map((batch) => (
                   <option key={batch} value={batch}>
@@ -311,7 +311,7 @@ export default function TeacherPerformancePage() {
               <select
                 value={sortBy}
                 onChange={(event) => setSortBy(event.target.value)}
-                className="rounded-xl border border-[#dfe4ee] bg-white px-3 py-2.5 text-sm font-semibold outline-none focus:border-[#315bea]"
+                className="rounded-xl border border-border-default bg-white px-3 py-2.5 text-sm font-semibold outline-none focus:border-brand-primary"
               >
                 <option value="name">Sort: Name</option>
                 <option value="batch">Sort: Batch</option>
@@ -335,43 +335,43 @@ export default function TeacherPerformancePage() {
                     current === "asc" ? "desc" : "asc"
                   )
                 }
-                className="rounded-xl border border-[#dfe4ee] bg-white px-4 py-2.5 text-sm font-bold text-[#315bea] hover:bg-[#f7f9ff]"
+                className="rounded-xl border border-border-default bg-white px-4 py-2.5 text-sm font-bold text-brand-primary hover:bg-surface-subtle"
               >
                 {sortDirection === "asc" ? "↑ Ascending" : "↓ Descending"}
               </button>
 
-              <span className="text-xs font-semibold text-[#8a93a5]">
+              <span className="text-xs font-semibold text-text-body">
                 Showing {filteredStudents.length} of {students.length}
               </span>
             </div>
           </div>
 
           {loading && (
-            <div className="p-8 text-sm text-[#697386]">
+            <div className="p-8 text-sm text-text-tertiary">
               Loading performance...
             </div>
           )}
 
           {error && (
-            <div className="p-8 text-sm font-semibold text-red-600">
+            <div className="p-8 text-sm font-semibold text-state-error">
               {error}
             </div>
           )}
 
           {!loading && !error && filteredStudents.length === 0 && (
-            <div className="p-10 text-center text-sm text-[#697386]">
+            <div className="p-10 text-center text-sm text-text-tertiary">
               No students found.
             </div>
           )}
 
           {!loading && !error && filteredStudents.length > 0 && (
             <div className="w-full min-w-0 max-w-full">
-              <p className="mb-2 flex items-center gap-2 px-4 text-xs font-semibold text-[#697386] sm:px-6">
+              <p className="mb-2 flex items-center gap-2 px-4 text-xs font-semibold text-text-tertiary sm:px-6">
                 <span aria-hidden="true">↔</span> Scroll horizontally to view all performance columns
               </p>
               <div className="w-full max-w-full overflow-x-scroll overscroll-x-contain rounded-b-xl border-t border-[#e7ebf3] [scrollbar-gutter:stable]">
               <table className="min-w-[1280px] w-full text-left">
-                <thead className="bg-[#fafbfe] text-[11px] uppercase tracking-wider text-[#8a93a5]">
+                <thead className="bg-surface-app-bg text-[11px] uppercase tracking-wider text-text-body">
                   <tr>
                     <th className="px-6 py-4 font-bold">Student</th>
                     <th className="px-4 py-4 font-bold">Batch</th>
@@ -390,30 +390,30 @@ export default function TeacherPerformancePage() {
                 </thead>
                 <tbody className="divide-y divide-[#eef0f4]">
                   {filteredStudents.map((student) => (
-                    <tr key={student.id} className="hover:bg-[#fafbfe]">
+                    <tr key={student.id} className="hover:bg-surface-app-bg">
                       <td className="px-6 py-5">
                         <button
                           type="button"
                           onClick={() => void openAttempts(student)}
                           className="text-left"
                         >
-                          <p className="font-bold text-[#172033] hover:text-[#315bea]">
+                          <p className="font-bold text-text-primary hover:text-brand-primary">
                             {student.name}
                           </p>
-                          <p className="mt-1 text-xs text-[#8a93a5]">
+                          <p className="mt-1 text-xs text-text-body">
                             {student.email}
                           </p>
-                          <p className="mt-1 text-[10px] font-bold text-[#315bea]">
+                          <p className="mt-1 text-[10px] font-bold text-brand-primary">
                             View attempted tests →
                           </p>
                         </button>
                       </td>
-                      <td className="px-4 py-5 text-sm text-[#697386]">
+                      <td className="px-4 py-5 text-sm text-text-tertiary">
                         {student.batches}
                       </td>
                       <td className="px-4 py-5 text-center">
-                        <div className="font-black text-indigo-600">L{student.level}</div>
-                        <div className="text-[10px] text-slate-400">{student.levelName}</div>
+                        <div className="font-black text-brand-purple">L{student.level}</div>
+                        <div className="text-[10px] text-text-supporting-label">{student.levelName}</div>
                       </td>
                       <td className="px-4 py-5 text-center font-black text-orange-500">🔥 {student.currentStreak}</td>
                       <td className="px-4 py-5 text-center font-semibold">{student.testsTaken}</td>
@@ -423,7 +423,7 @@ export default function TeacherPerformancePage() {
                       <td className="px-4 py-5 text-center font-bold">
                         {student.bestPercentage}%
                       </td>
-                      <td className="px-4 py-5 text-center font-bold text-[#315bea]">
+                      <td className="px-4 py-5 text-center font-bold text-brand-primary">
                         {student.accuracy}%
                       </td>
                       <td className="px-4 py-5 text-center text-sm">
@@ -435,7 +435,7 @@ export default function TeacherPerformancePage() {
                       <td className="px-4 py-5 text-center">
                         <button type="button" onClick={() => setBadgeStudent(student)} className="rounded-lg bg-violet-50 px-2.5 py-1.5 font-bold text-violet-700 transition hover:bg-violet-100">🏆 {student.badgesEarned}</button>
                       </td>
-                      <td className="px-4 py-5 text-center text-xs font-medium text-slate-500">{student.lastActiveDate || "—"}</td>
+                      <td className="px-4 py-5 text-center text-xs font-medium text-text-body">{student.lastActiveDate || "—"}</td>
                       <td className="px-4 py-5 text-center">
                         <div className="flex justify-center gap-2">
                           {features?.aiPerformanceSummaries && <button type="button" onClick={async () => {
@@ -467,12 +467,12 @@ export default function TeacherPerformancePage() {
               className="max-h-[85vh] w-full max-w-4xl overflow-hidden rounded-2xl bg-white shadow-2xl"
               onClick={(event) => event.stopPropagation()}
             >
-              <div className="flex items-center justify-between border-b border-[#eef0f4] px-6 py-5">
+              <div className="flex items-center justify-between border-b border-border-default px-6 py-5">
                 <div>
                   <h3 className="text-lg font-extrabold">
                     {attemptStudent.name}
                   </h3>
-                  <p className="mt-1 text-sm text-[#8a93a5]">
+                  <p className="mt-1 text-sm text-text-body">
                     Attempted tests
                   </p>
                 </div>
@@ -480,7 +480,7 @@ export default function TeacherPerformancePage() {
                 <button
                   type="button"
                   onClick={() => setAttemptStudent(null)}
-                  className="rounded-lg border border-[#e2e6ee] px-3 py-1.5 text-sm font-bold text-[#697386]"
+                  className="rounded-lg border border-border-default px-3 py-1.5 text-sm font-bold text-text-tertiary"
                 >
                   Close
                 </button>
@@ -488,15 +488,15 @@ export default function TeacherPerformancePage() {
 
               <div className="max-h-[65vh] overflow-y-auto p-6">
                 {attemptLoading ? (
-                  <p className="text-sm text-[#697386]">
+                  <p className="text-sm text-text-tertiary">
                     Loading attempted tests...
                   </p>
                 ) : attemptError ? (
-                  <p className="rounded-xl bg-red-50 px-4 py-3 text-sm font-semibold text-red-600">
+                  <p className="rounded-xl bg-red-50 px-4 py-3 text-sm font-semibold text-state-error">
                     {attemptError}
                   </p>
                 ) : attempts.length === 0 ? (
-                  <p className="rounded-xl bg-[#f7f8fc] px-4 py-5 text-center text-sm text-[#697386]">
+                  <p className="rounded-xl bg-surface-app-bg px-4 py-5 text-center text-sm text-text-tertiary">
                     No completed tests found for this student.
                   </p>
                 ) : (
@@ -547,17 +547,17 @@ const otherDifficulties = normalizedDifficulties
                       return (
                         <div
                           key={attempt.id}
-                          className="rounded-xl border border-[#e7eaf0] p-4"
+                          className="rounded-xl border border-border-default p-4"
                         >
                           <div className="flex flex-wrap items-start justify-between gap-3">
                             <div>
                               <p className="font-bold flex items-center gap-2">
                                 #{index + 1} {attempt.test_title} &middot; {subjects}
-                                <span className={`inline-block rounded-full px-2 py-0.5 text-[10px] font-bold ${difficulties.length ? (difficulties.includes("Easy") ? "bg-green-100 text-green-800" : difficulties.includes("Medium") ? "bg-amber-100 text-amber-800" : difficulties.includes("Hard") ? "bg-red-100 text-red-800" : "bg-purple-100 text-purple-800") : "bg-slate-200 text-slate-700"}`}>
+                                <span className={`inline-block rounded-full px-2 py-0.5 text-[10px] font-bold ${difficulties.length ? (difficulties.includes("Easy") ? "bg-green-100 text-green-800" : difficulties.includes("Medium") ? "bg-amber-100 text-amber-800" : difficulties.includes("Hard") ? "bg-red-100 text-red-800" : "bg-purple-100 text-purple-800") : "bg-surface-muted text-text-secondary"}`}>
                                   {difficulties.length ? difficulties.join(", ") : otherDifficulties.length ? otherDifficulties.join(", ") : "—"}
                                 </span>
                               </p>
-                              <p className="mt-1 text-xs text-[#8a93a5]">
+                              <p className="mt-1 text-xs text-text-body">
                                 {attempt.submitted_at
                                   ? new Date(
                                       attempt.submitted_at
@@ -567,31 +567,31 @@ const otherDifficulties = normalizedDifficulties
                             </div>
 
                             <div className="text-right">
-                              <p className="text-lg font-black text-[#315bea]">
+                              <p className="text-lg font-black text-brand-primary">
                                 {score.toFixed(1)} / {total.toFixed(1)}
                               </p>
-                              <p className="text-xs font-bold text-[#697386]">
+                              <p className="text-xs font-bold text-text-tertiary">
                                 {percentage}%
                               </p>
                             </div>
                           </div>
 
                           <div className="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2">
-                            <div className="rounded-lg bg-[#f7f8fc] px-3 py-2">
-                              <p className="text-[10px] font-bold uppercase tracking-wide text-[#8a93a5]">Subject</p>
-                              <p className="mt-1 text-xs font-bold text-[#172033]">{subjects}</p>
+                            <div className="rounded-lg bg-surface-app-bg px-3 py-2">
+                              <p className="text-[10px] font-bold uppercase tracking-wide text-text-body">Subject</p>
+                              <p className="mt-1 text-xs font-bold text-text-primary">{subjects}</p>
                             </div>
-                            <div className="rounded-lg bg-[#f7f8fc] px-3 py-2">
-                              <p className="text-[10px] font-bold uppercase tracking-wide text-[#8a93a5]">Chapter</p>
-                              <p className="mt-1 text-xs font-bold text-[#172033]">{chapters}</p>
+                            <div className="rounded-lg bg-surface-app-bg px-3 py-2">
+                              <p className="text-[10px] font-bold uppercase tracking-wide text-text-body">Chapter</p>
+                              <p className="mt-1 text-xs font-bold text-text-primary">{chapters}</p>
                             </div>
-                            <div className="rounded-lg bg-[#f7f8fc] px-3 py-2">
-  <p className="text-[10px] font-bold uppercase tracking-wide text-[#8a93a5]">
+                            <div className="rounded-lg bg-surface-app-bg px-3 py-2">
+  <p className="text-[10px] font-bold uppercase tracking-wide text-text-body">
     Difficulty levels
   </p>
 
   {difficulties.length === 0 && otherDifficulties.length === 0 ? (
-    <p className="mt-2 text-xs font-medium text-[#697386]">
+    <p className="mt-2 text-xs font-medium text-text-tertiary">
       Difficulty unavailable
     </p>
   ) : (
@@ -616,7 +616,7 @@ const otherDifficulties = normalizedDifficulties
       {otherDifficulties.map((level) => (
         <span
           key={level}
-          className="rounded-full bg-slate-200 px-2 py-1 text-[11px] font-bold text-slate-700"
+          className="rounded-full bg-surface-muted px-2 py-1 text-[11px] font-bold text-text-secondary"
         >
           {level}
         </span>
@@ -624,13 +624,13 @@ const otherDifficulties = normalizedDifficulties
     </div>
   )}
 </div>
-                            <div className="rounded-lg bg-[#f7f8fc] px-3 py-2">
-                              <p className="text-[10px] font-bold uppercase tracking-wide text-[#8a93a5]">Questions</p>
-                              <p className="mt-1 text-xs font-bold text-[#172033]">{attempt.question_count ?? "—"}</p>
+                            <div className="rounded-lg bg-surface-app-bg px-3 py-2">
+                              <p className="text-[10px] font-bold uppercase tracking-wide text-text-body">Questions</p>
+                              <p className="mt-1 text-xs font-bold text-text-primary">{attempt.question_count ?? "—"}</p>
                             </div>
                           </div>
 
-                          <div className="mt-3 flex flex-wrap gap-4 text-xs font-semibold text-[#697386]">
+                          <div className="mt-3 flex flex-wrap gap-4 text-xs font-semibold text-text-tertiary">
                             <span>✓ Correct: {correct}</span>
                             <span>✕ Wrong: {wrong}</span>
                             <span>— Unanswered: {unanswered}</span>
@@ -643,7 +643,7 @@ const otherDifficulties = normalizedDifficulties
                             <button
                               type="button"
                               onClick={() => router.push(`/test/${attempt.test_id}`)}
-                              className="rounded-lg border border-[#315bea] px-3 py-1.5 text-xs font-bold text-[#315bea] hover:bg-[#315bea] hover:text-white transition"
+                              className="rounded-lg border border-brand-primary px-3 py-1.5 text-xs font-bold text-brand-primary hover:bg-brand-primary hover:text-white transition"
                             >
                               View Test
                             </button>
@@ -669,10 +669,10 @@ const otherDifficulties = normalizedDifficulties
         {report && (
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 p-5" onClick={() => setReport(null)}>
             <div className="w-full max-w-lg rounded-2xl bg-white p-6 shadow-2xl" onClick={(event) => event.stopPropagation()}>
-              <div className="flex items-center justify-between"><h3 className="text-lg font-extrabold">AI Parent Summary</h3><button onClick={() => setReport(null)} className="text-sm font-bold text-[#697386]">Close</button></div>
-              <p className="mt-5 whitespace-pre-wrap rounded-xl bg-[#f7f8fc] p-4 text-sm leading-6 text-[#475168]">{report.text}</p>
+              <div className="flex items-center justify-between"><h3 className="text-lg font-extrabold">AI Parent Summary</h3><button onClick={() => setReport(null)} className="text-sm font-bold text-text-tertiary">Close</button></div>
+              <p className="mt-5 whitespace-pre-wrap rounded-xl bg-surface-app-bg p-4 text-sm leading-6 text-[#475168]">{report.text}</p>
               <div className="mt-4 flex items-center gap-3">
-                <button type="button" onClick={() => navigator.clipboard?.writeText(report.text)} className="rounded-xl bg-[#315bea] px-4 py-2.5 text-sm font-bold text-white">Copy Summary</button>
+                <button type="button" onClick={() => navigator.clipboard?.writeText(report.text)} className="rounded-xl bg-brand-primary px-4 py-2.5 text-sm font-bold text-white">Copy Summary</button>
                 <button type="button" onClick={() => {
                   const text = encodeURIComponent(report.text || "");
                   window.open(`https://wa.me/?text=${text}`, "_blank", "noopener,noreferrer");

@@ -1804,15 +1804,15 @@ export default function TestResultPage() {
 
   if (loading) {
     return (
-      <main className="min-h-screen bg-[#f5f7fb] flex items-center justify-center">
+      <main className="min-h-screen bg-surface-app-bg flex items-center justify-center">
         <div className="text-center">
           <div className="w-11 h-11 border-4 border-blue-100 border-t-blue-600 rounded-full animate-spin mx-auto" />
 
-          <p className="mt-4 text-sm font-semibold text-slate-600">
+          <p className="mt-4 text-sm font-semibold text-text-body">
             Loading your result...
           </p>
 
-          <p className="mt-1 text-xs text-slate-400">
+          <p className="mt-1 text-xs text-text-supporting-label">
             Please wait
           </p>
         </div>
@@ -1822,17 +1822,17 @@ export default function TestResultPage() {
 
   if (!result) {
     return (
-      <main className="min-h-screen bg-[#f5f7fb] flex items-center justify-center p-6">
-        <div className="w-full max-w-md bg-white border border-slate-200 rounded-3xl shadow-sm p-8 text-center">
-          <div className="w-16 h-16 mx-auto rounded-2xl bg-red-50 text-red-600 flex items-center justify-center text-2xl font-bold">
+      <main className="min-h-screen bg-surface-app-bg flex items-center justify-center p-6">
+        <div className="w-full max-w-md bg-white border border-border-default rounded-3xl shadow-sm p-8 text-center">
+          <div className="w-16 h-16 mx-auto rounded-2xl bg-red-50 text-state-error flex items-center justify-center text-2xl font-bold">
             !
           </div>
 
-          <h1 className="mt-5 text-xl font-bold text-slate-900">
+          <h1 className="mt-5 text-xl font-bold text-text-primary">
             Result not found
           </h1>
 
-          <p className="mt-2 text-sm leading-6 text-slate-500">
+          <p className="mt-2 text-sm leading-6 text-text-body">
             We could not find the saved
             result for this test.
           </p>
@@ -1842,7 +1842,7 @@ export default function TestResultPage() {
             onClick={() =>
               router.push("/tests")
             }
-            className="mt-6 h-11 px-6 rounded-xl bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 transition"
+            className="mt-6 h-11 px-6 rounded-xl bg-brand-primary text-white text-sm font-semibold hover:bg-blue-700 transition"
           >
             Back to Tests
           </button>
@@ -2866,13 +2866,13 @@ if (ctx === null) {
 }
 
   return (
-    <main className="min-h-screen bg-[#f5f7fb] text-slate-900">
+    <main className="min-h-screen bg-surface-app-bg text-text-primary">
       <style jsx>{`@keyframes ptBadgePop {0%{transform:scale(.2) rotate(-12deg);opacity:0}70%{transform:scale(1.12) rotate(3deg);opacity:1}100%{transform:scale(1) rotate(0)}} @keyframes ptLevelPop {0%{transform:scale(.55);opacity:0}65%{transform:scale(1.08);opacity:1}100%{transform:scale(1);opacity:1}} @keyframes ptConfetti {0%{transform:translateY(-20px) rotate(0deg);opacity:0}15%{opacity:1}100%{transform:translateY(180px) rotate(540deg);opacity:0}}`}</style>
-      <header className="sticky top-0 z-40 bg-white border-b border-slate-200 shadow-sm">
+      <header className="sticky top-0 z-40 bg-white border-b border-border-default shadow-sm">
         <div className="max-w-[1400px] mx-auto min-h-[72px] px-4 lg:px-6 py-3 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           {/* Academy branding */}
           <div className="flex items-center gap-3 min-w-0">
-            <div className="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-lg overflow-hidden shrink-0">
+            <div className="w-10 h-10 rounded-xl bg-brand-primary text-white flex items-center justify-center font-bold text-lg overflow-hidden shrink-0">
               {academyBranding?.logo_data ? (
                 <img
                   src={
@@ -2893,7 +2893,7 @@ if (ctx === null) {
                 {academyName}
               </h1>
 
-              <p className="text-xs text-slate-400">
+              <p className="text-xs text-text-supporting-label">
                 Test Result
               </p>
             </div>
@@ -2903,7 +2903,7 @@ if (ctx === null) {
             <button
               type="button"
               onClick={() => router.push("/dashboard")}
-              className="hidden sm:block h-10 px-4 rounded-xl border border-slate-200 bg-white text-sm font-semibold text-slate-700 hover:bg-slate-50 transition"
+              className="hidden sm:block h-10 px-4 rounded-xl border border-border-default bg-white text-sm font-semibold text-text-secondary hover:bg-surface-subtle transition"
             >
               Dashboard
             </button>
@@ -2914,7 +2914,7 @@ if (ctx === null) {
             <button
               type="button"
               onClick={downloadResult}
-              className="flex-1 sm:flex-none h-10 px-3 sm:px-4 rounded-xl bg-blue-600 text-white text-xs sm:text-sm font-semibold hover:bg-blue-700 transition touch-manipulation"
+              className="flex-1 sm:flex-none h-10 px-3 sm:px-4 rounded-xl bg-brand-primary text-white text-xs sm:text-sm font-semibold hover:bg-blue-700 transition touch-manipulation"
             >
               ↓ Download Result
             </button>
@@ -2940,7 +2940,7 @@ if (ctx === null) {
               onClick={() =>
                 router.push("/tests/test-summary")
               }
-              className="hidden sm:block h-10 px-4 rounded-xl border border-slate-200 bg-white text-sm font-semibold text-slate-700 hover:bg-slate-50 transition"
+              className="hidden sm:block h-10 px-4 rounded-xl border border-border-default bg-white text-sm font-semibold text-text-secondary hover:bg-surface-subtle transition"
             >
               Back to Tests
             </button>
@@ -2954,16 +2954,16 @@ if (ctx === null) {
             <div className="absolute -right-10 -top-16 h-44 w-44 rounded-full bg-fuchsia-500/20 blur-3xl" />
             <div className="relative flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
               <div><div className="text-[10px] font-black uppercase tracking-[.25em] text-indigo-200">⚡ Mission Complete</div><div className="mt-1 text-2xl font-black">Level {gameProgress.level} • {gameProgress.levelName}</div><div className="mt-1 text-sm font-semibold text-slate-300">+{gameProgress.points.toLocaleString()} XP • 🔥 {gameProgress.streak} day streak</div></div>
-              <div className="min-w-[240px]"><div className="flex justify-between text-[10px] font-black uppercase tracking-wider text-slate-400"><span>Next level</span><span>{gameProgress.nextLevelName ? `${Math.max(0,(gameProgress.nextLevelAt||0)-gameProgress.qualifyingTests)} tests to ${gameProgress.nextLevelName}` : "GOAT"}</span></div><div className="mt-2 h-3 rounded-full bg-white/10 p-0.5"><div className="h-full rounded-full bg-gradient-to-r from-cyan-300 via-indigo-400 to-fuchsia-400" style={{width:`${gameProgress.levelProgress}%`}}/></div></div>
+              <div className="min-w-[240px]"><div className="flex justify-between text-[10px] font-black uppercase tracking-wider text-text-supporting-label"><span>Next level</span><span>{gameProgress.nextLevelName ? `${Math.max(0,(gameProgress.nextLevelAt||0)-gameProgress.qualifyingTests)} tests to ${gameProgress.nextLevelName}` : "GOAT"}</span></div><div className="mt-2 h-3 rounded-full bg-white/10 p-0.5"><div className="h-full rounded-full bg-gradient-to-r from-cyan-300 via-indigo-400 to-fuchsia-400" style={{width:`${gameProgress.levelProgress}%`}}/></div></div>
             </div>
           </div>
         )}
-        <div className="bg-white border border-slate-200 rounded-3xl shadow-sm overflow-hidden">
+        <div className="bg-white border border-border-default rounded-3xl shadow-sm overflow-hidden">
           <div className="p-6 sm:p-8 lg:p-10">
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
               <div>
                 <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-50 border border-green-100 text-green-700 text-xs font-bold">
-                  <span className="w-2 h-2 rounded-full bg-green-500" />
+                  <span className="w-2 h-2 rounded-full bg-state-success" />
                   TEST COMPLETED
                 </div>
 
@@ -2971,7 +2971,7 @@ if (ctx === null) {
                   Your Test Result
                 </h1>
 
-                <p className="mt-2 text-sm text-slate-500">
+                <p className="mt-2 text-sm text-text-body">
                   {result.automatic
                     ? "Your test was automatically submitted due to exam security or time expiry."
                     : "Your test has been successfully submitted and evaluated."}
@@ -2979,18 +2979,18 @@ if (ctx === null) {
               </div>
 
               <div className="text-left lg:text-right">
-                <p className="text-xs uppercase tracking-wider font-bold text-slate-400">
+                <p className="text-xs uppercase tracking-wider font-bold text-text-supporting-label">
                   Performance
                 </p>
 
-                <p className="mt-1 text-xl font-bold text-blue-600">
+                <p className="mt-1 text-xl font-bold text-brand-primary">
                   {grade}
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="border-t border-slate-100 bg-slate-50/60 p-6 sm:p-8">
+          <div className="border-t border-border-default bg-surface-subtle/60 p-6 sm:p-8">
             <div className="grid grid-cols-1 lg:grid-cols-[260px_1fr] gap-8 items-center">
               <div className="flex justify-center">
                 <div className="relative w-52 h-52">
@@ -3005,7 +3005,7 @@ if (ctx === null) {
                       fill="none"
                       stroke="currentColor"
                       strokeWidth="16"
-                      className="text-slate-200"
+                      className="text-text-supporting-label"
                     />
 
                     <circle
@@ -3016,7 +3016,7 @@ if (ctx === null) {
                       stroke="currentColor"
                       strokeWidth="16"
                       strokeLinecap="round"
-                      className="text-blue-600"
+                      className="text-brand-primary"
                       strokeDasharray={
                         2 *
                         Math.PI *
@@ -3034,15 +3034,15 @@ if (ctx === null) {
                   </svg>
 
                   <div className="absolute inset-0 flex flex-col items-center justify-center">
-                    <span className="text-4xl font-bold text-slate-900">
+                    <span className="text-4xl font-bold text-text-primary">
                       {percentage}%
                     </span>
 
-                    <span className="mt-1 text-xs font-semibold text-slate-400">
+                    <span className="mt-1 text-xs font-semibold text-text-supporting-label">
                       SCORE
                     </span>
                     {result.totalMarks !== undefined && result.totalMarks > 0 && (
-                      <span className="mt-2 text-sm font-bold text-slate-600">
+                      <span className="mt-2 text-sm font-bold text-text-body">
                         {Number(result.score ?? 0)} / {Number(result.totalMarks)} marks
                       </span>
                     )}
@@ -3052,7 +3052,7 @@ if (ctx === null) {
 
               <div className="grid grid-cols-2 xl:grid-cols-4 gap-3">
                 <div className="rounded-2xl bg-white border border-green-100 p-5">
-                  <div className="w-10 h-10 rounded-xl bg-green-50 text-green-600 flex items-center justify-center font-bold">
+                  <div className="w-10 h-10 rounded-xl bg-green-50 text-state-success flex items-center justify-center font-bold">
                     ✓
                   </div>
 
@@ -3060,13 +3060,13 @@ if (ctx === null) {
                     {result.correct}
                   </p>
 
-                  <p className="mt-1 text-xs font-semibold text-slate-400">
+                  <p className="mt-1 text-xs font-semibold text-text-supporting-label">
                     Correct
                   </p>
                 </div>
 
                 <div className="rounded-2xl bg-white border border-red-100 p-5">
-                  <div className="w-10 h-10 rounded-xl bg-red-50 text-red-600 flex items-center justify-center font-bold">
+                  <div className="w-10 h-10 rounded-xl bg-red-50 text-state-error flex items-center justify-center font-bold">
                     ×
                   </div>
 
@@ -3074,27 +3074,27 @@ if (ctx === null) {
                     {result.wrong}
                   </p>
 
-                  <p className="mt-1 text-xs font-semibold text-slate-400">
+                  <p className="mt-1 text-xs font-semibold text-text-supporting-label">
                     Wrong
                   </p>
                 </div>
 
-                <div className="rounded-2xl bg-white border border-slate-200 p-5">
-                  <div className="w-10 h-10 rounded-xl bg-slate-100 text-slate-600 flex items-center justify-center font-bold">
+                <div className="rounded-2xl bg-white border border-border-default p-5">
+                  <div className="w-10 h-10 rounded-xl bg-surface-subtle text-text-body flex items-center justify-center font-bold">
                     —
                   </div>
 
-                  <p className="mt-4 text-2xl font-bold text-slate-700">
+                  <p className="mt-4 text-2xl font-bold text-text-secondary">
                     {result.unattempted}
                   </p>
 
-                  <p className="mt-1 text-xs font-semibold text-slate-400">
+                  <p className="mt-1 text-xs font-semibold text-text-supporting-label">
                     Unattempted
                   </p>
                 </div>
 
                 <div className="rounded-2xl bg-white border border-blue-100 p-5">
-                  <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center font-bold">
+                  <div className="w-10 h-10 rounded-xl bg-blue-50 text-brand-primary flex items-center justify-center font-bold">
                     %
                   </div>
 
@@ -3102,7 +3102,7 @@ if (ctx === null) {
                     {accuracy}%
                   </p>
 
-                  <p className="mt-1 text-xs font-semibold text-slate-400">
+                  <p className="mt-1 text-xs font-semibold text-text-supporting-label">
                     Accuracy
                   </p>
                 </div>
@@ -3112,14 +3112,14 @@ if (ctx === null) {
         </div>
 
         <div className="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-5">
-          <div className="lg:col-span-2 bg-white border border-slate-200 rounded-2xl shadow-sm p-6">
+          <div className="lg:col-span-2 bg-white border border-border-default rounded-2xl shadow-sm p-6">
             <div className="flex items-center justify-between">
               <div>
-                <h2 className="font-bold text-slate-900">
+                <h2 className="font-bold text-text-primary">
                   Test Overview
                 </h2>
 
-                <p className="mt-1 text-xs text-slate-400">
+                <p className="mt-1 text-xs text-text-supporting-label">
                   Summary of this attempt
                 </p>
               </div>
@@ -3179,12 +3179,12 @@ if (ctx === null) {
             </div>
           </div>
 
-          <div className="bg-white border border-slate-200 rounded-2xl shadow-sm p-6">
-            <h2 className="font-bold text-slate-900">
+          <div className="bg-white border border-border-default rounded-2xl shadow-sm p-6">
+            <h2 className="font-bold text-text-primary">
               Performance
             </h2>
 
-            <p className="mt-1 text-xs text-slate-400">
+            <p className="mt-1 text-xs text-text-supporting-label">
               Your answer breakdown
             </p>
 
@@ -3212,13 +3212,13 @@ if (ctx === null) {
           </div>
         </div>
 
-        <div className="mt-6 bg-white border border-slate-200 rounded-2xl shadow-sm overflow-hidden">
-          <div className="p-6 border-b border-slate-100">
-            <h2 className="font-bold text-slate-900">
+        <div className="mt-6 bg-white border border-border-default rounded-2xl shadow-sm overflow-hidden">
+          <div className="p-6 border-b border-border-default">
+            <h2 className="font-bold text-text-primary">
               Question Review
             </h2>
 
-            <p className="mt-1 text-xs text-slate-400">
+            <p className="mt-1 text-xs text-text-supporting-label">
               Review your answers and correct
               answers
             </p>
@@ -3228,12 +3228,12 @@ if (ctx === null) {
             {result.questions.length ===
             0 ? (
               <div className="p-10 text-center">
-                <p className="text-sm font-semibold text-slate-700">
+                <p className="text-sm font-semibold text-text-secondary">
                   Questions are not
                   available for this result.
                 </p>
 
-                <p className="mt-2 text-xs text-slate-400">
+                <p className="mt-2 text-xs text-text-supporting-label">
                   Your score was saved, but
                   the question data could not
                   be loaded.
@@ -3289,7 +3289,7 @@ if (ctx === null) {
                               ? "bg-green-50 text-green-700"
                               : hasAnswer
                                 ? "bg-red-50 text-red-700"
-                                : "bg-slate-100 text-slate-600",
+                                : "bg-surface-subtle text-text-body",
                           ].join(" ")}
                         >
                           {question.number ||
@@ -3305,14 +3305,14 @@ if (ctx === null) {
                                   ? "bg-green-50 text-green-700"
                                   : hasAnswer
                                     ? "bg-red-50 text-red-700"
-                                    : "bg-slate-100 text-slate-500",
+                                    : "bg-surface-subtle text-text-body",
                               ].join(" ")}
                             >
                               {status}
                             </span>
 
                             {question.subject && (
-                              <span className="px-2.5 py-1 rounded-md bg-slate-50 text-[10px] font-semibold text-slate-500">
+                              <span className="px-2.5 py-1 rounded-md bg-surface-subtle text-[10px] font-semibold text-text-body">
                                 {
                                   question.subject
                                 }
@@ -3320,7 +3320,7 @@ if (ctx === null) {
                             )}
 
                             {question.chapter && (
-                              <span className="px-2.5 py-1 rounded-md bg-slate-50 text-[10px] font-semibold text-slate-500">
+                              <span className="px-2.5 py-1 rounded-md bg-surface-subtle text-[10px] font-semibold text-text-body">
                                 {
                                   question.chapter
                                 }
@@ -3328,7 +3328,7 @@ if (ctx === null) {
                             )}
 
                             {question.difficulty && (
-                              <span className="px-2.5 py-1 rounded-md bg-slate-50 text-[10px] font-semibold text-slate-500">
+                              <span className="px-2.5 py-1 rounded-md bg-surface-subtle text-[10px] font-semibold text-text-body">
                                 {
                                   question.difficulty
                                 }
@@ -3339,8 +3339,8 @@ if (ctx === null) {
                               ⏱ {Math.floor(Number(result.timeSpent?.[question.id] || 0) / 60)}m {Number(result.timeSpent?.[question.id] || 0) % 60}s
                             </span>
                           </div>
-<div className="mt-4 rounded-2xl bg-slate-50 border border-slate-100 p-5">
-  <div className="text-sm sm:text-base font-medium leading-7 text-slate-800">
+<div className="mt-4 rounded-2xl bg-surface-subtle border border-border-default p-5">
+  <div className="text-sm sm:text-base font-medium leading-7 text-text-secondary">
     <MathText
       text={question.question}
     />
@@ -3353,7 +3353,7 @@ if (ctx === null) {
         alt={`Figure for question ${
           question.number || index + 1
         }`}
-        className="max-w-full max-h-[420px] w-auto h-auto object-contain rounded-xl border border-slate-200 bg-white p-3"
+        className="max-w-full max-h-[420px] w-auto h-auto object-contain rounded-xl border border-border-default bg-white p-3"
       />
     </div>
   )}
@@ -3391,7 +3391,7 @@ if (ctx === null) {
                                   optionIndex;
 
                               let optionClass =
-                                "border-slate-200 bg-white";
+                                "border-border-default bg-white";
 
                               if (
                                 isCorrectOption
@@ -3424,7 +3424,7 @@ if (ctx === null) {
                                         ? "bg-green-600 text-white border-green-600"
                                         : isSelected
                                           ? "bg-red-600 text-white border-red-600"
-                                          : "bg-slate-50 text-slate-500 border-slate-200",
+                                          : "bg-surface-subtle text-text-body border-border-default",
                                     ].join(
                                       " "
                                     )}
@@ -3441,7 +3441,7 @@ if (ctx === null) {
                                         option ??
                                           ""
                                       )}
-                                      className="text-sm sm:text-[15px] text-slate-700 leading-7"
+                                      className="text-sm sm:text-[15px] text-text-secondary leading-7"
                                     />
                                   </div>
 
@@ -3480,10 +3480,10 @@ if (ctx === null) {
                               ? isCorrect
                                 ? "border-green-200 bg-green-50"
                                 : "border-red-200 bg-red-50"
-                              : "border-slate-200 bg-slate-50",
+                              : "border-border-default bg-surface-subtle",
                           ].join(" ")}
                         >
-                          <p className="text-[10px] uppercase tracking-wide font-bold text-slate-400">
+                          <p className="text-[10px] uppercase tracking-wide font-bold text-text-supporting-label">
                             Your Answer
                           </p>
 
@@ -3521,14 +3521,14 @@ if (ctx === null) {
                               )}
                             </div>
                           ) : (
-                            <p className="mt-2 text-sm font-bold text-slate-500">
+                            <p className="mt-2 text-sm font-bold text-text-body">
                               Not Attempted
                             </p>
                           )}
                         </div>
 
                         <div className="rounded-xl border border-green-200 bg-green-50 p-4">
-                          <p className="text-[10px] uppercase tracking-wide font-bold text-green-600">
+                          <p className="text-[10px] uppercase tracking-wide font-bold text-state-success">
                             Correct Answer
                           </p>
 
@@ -3590,7 +3590,7 @@ if (ctx === null) {
                       {question.solution && (
                         <div className="mt-5 ml-0 sm:ml-14 rounded-2xl bg-blue-50 border border-blue-100 p-5">
                           <div className="flex items-center gap-2">
-                            <div className="w-7 h-7 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center text-xs font-bold">
+                            <div className="w-7 h-7 rounded-lg bg-surface-subtle text-blue-700 flex items-center justify-center text-xs font-bold">
                               i
                             </div>
 
@@ -3620,7 +3620,7 @@ if (ctx === null) {
           <button
             type="button"
             onClick={downloadResult}
-            className="h-12 px-7 rounded-xl bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 transition"
+            className="h-12 px-7 rounded-xl bg-brand-primary text-white text-sm font-semibold hover:bg-blue-700 transition"
           >
             ↓ Download Complete Result
           </button>
@@ -3630,7 +3630,7 @@ if (ctx === null) {
             onClick={() =>
               router.push("/tests")
             }
-            className="h-12 px-7 rounded-xl border border-slate-200 bg-white text-sm font-semibold text-slate-700 hover:bg-slate-50 transition"
+            className="h-12 px-7 rounded-xl border border-border-default bg-white text-sm font-semibold text-text-secondary hover:bg-surface-subtle transition"
           >
             ← Back to Tests
           </button>
@@ -3656,7 +3656,7 @@ if (ctx === null) {
                 <button type="button" onClick={() => { const text = `🏆 I unlocked ${celebrationBadge.name}! 🔥 ${gameProgress?.streak || 0} day streak • Level ${gameProgress?.level || 1} ${gameProgress?.levelName || "Rookie"}.`; window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank", "noopener,noreferrer"); }} className="rounded-xl bg-[#25D366] px-4 py-3 text-xs font-black text-white">WhatsApp</button>
                 <button type="button" onClick={() => setCelebrationBadge(null)} className="rounded-xl bg-slate-950 px-4 py-3 text-xs font-black text-white">Continue</button>
               </div>
-              <p className="mt-3 text-center text-[10px] font-semibold text-slate-400">Your new achievement is now visible in the Trophy Wall.</p>
+              <p className="mt-3 text-center text-[10px] font-semibold text-text-supporting-label">Your new achievement is now visible in the Trophy Wall.</p>
             </div>
           </div>
         </div>
@@ -3691,12 +3691,12 @@ function InfoItem({
   value: string;
 }) {
   return (
-    <div className="rounded-xl bg-slate-50 border border-slate-100 p-4">
-      <p className="text-[10px] uppercase tracking-wide font-bold text-slate-400">
+    <div className="rounded-xl bg-surface-subtle border border-border-default p-4">
+      <p className="text-[10px] uppercase tracking-wide font-bold text-text-supporting-label">
         {label}
       </p>
 
-      <p className="mt-1 text-sm font-bold text-slate-800 truncate">
+      <p className="mt-1 text-sm font-bold text-text-secondary truncate">
         {value}
       </p>
     </div>
@@ -3722,21 +3722,21 @@ function PerformanceBar({
   return (
     <div>
       <div className="flex items-center justify-between mb-2">
-        <span className="text-xs font-semibold text-slate-600">
+        <span className="text-xs font-semibold text-text-body">
           {label}
         </span>
 
-        <span className="text-xs font-bold text-slate-800">
+        <span className="text-xs font-bold text-text-secondary">
           {value}{" "}
-          <span className="text-slate-400 font-medium">
+          <span className="text-text-supporting-label font-medium">
             ({percentage}%)
           </span>
         </span>
       </div>
 
-      <div className="h-2.5 rounded-full bg-slate-100 overflow-hidden">
+      <div className="h-2.5 rounded-full bg-surface-subtle overflow-hidden">
         <div
-          className="h-full bg-blue-500 rounded-full transition-all"
+          className="h-full bg-brand-action-blue rounded-full transition-all"
           style={{
             width: `${percentage}%`,
           }}

@@ -632,15 +632,15 @@ export default function AcademyBatchesPage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#f6f8fc] text-[#172033]">
-      <header className="border-b border-[#e7eaf0] bg-white">
+    <main className="min-h-screen bg-surface-app-bg text-text-primary">
+      <header className="border-b border-border-default bg-white">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
           <div>
             <h1 className="text-xl font-extrabold">
               Batch Management
             </h1>
 
-            <p className="mt-1 text-xs font-bold tracking-wider text-[#315bea]">
+            <p className="mt-1 text-xs font-bold tracking-wider text-brand-primary">
               ACADEMY ADMIN
             </p>
           </div>
@@ -649,7 +649,7 @@ export default function AcademyBatchesPage() {
             onClick={() =>
               history.back()
             }
-            className="rounded-xl border border-[#e2e6ee] bg-white px-4 py-2.5 text-sm font-bold text-[#697386]"
+            className="rounded-xl border border-border-default bg-white px-4 py-2.5 text-sm font-bold text-text-tertiary"
           >
             ← Back
           </button>
@@ -658,7 +658,7 @@ export default function AcademyBatchesPage() {
 
       <div className="mx-auto max-w-7xl px-6 py-10">
         <div className="mb-10">
-          <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#315bea]">
+          <p className="text-xs font-bold uppercase tracking-[0.15em] text-brand-primary">
             Academy Management
           </p>
 
@@ -666,7 +666,7 @@ export default function AcademyBatchesPage() {
             Batches
           </h2>
 
-          <p className="mt-2 text-sm text-[#697386]">
+          <p className="mt-2 text-sm text-text-tertiary">
             Create and manage classes and
             batches for your academy.
           </p>
@@ -676,7 +676,7 @@ export default function AcademyBatchesPage() {
           {/* CREATE BATCH */}
           <form
             onSubmit={createBatch}
-            className="h-fit rounded-2xl border border-[#e3e8f5] bg-white p-6 shadow-sm"
+            className="h-fit rounded-2xl border border-border-default bg-white p-6 shadow-sm"
           >
             <h3 className="text-lg font-extrabold">
               Create Batch
@@ -694,7 +694,7 @@ export default function AcademyBatchesPage() {
                     e.target.value
                   )
                 }
-                className="mt-5 w-full rounded-xl border border-[#dfe4ee] bg-white px-4 py-3 text-sm outline-none focus:border-[#315bea]"
+                className="mt-5 w-full rounded-xl border border-border-default bg-white px-4 py-3 text-sm outline-none focus:border-brand-primary"
               >
                 <option value="">
                   Select academy
@@ -727,7 +727,7 @@ export default function AcademyBatchesPage() {
                 )
               }
               placeholder="Batch name"
-              className="mt-5 w-full rounded-xl border border-[#dfe4ee] px-4 py-3 text-sm outline-none focus:border-[#315bea]"
+              className="mt-5 w-full rounded-xl border border-border-default px-4 py-3 text-sm outline-none focus:border-brand-primary"
             />
 
             <select
@@ -738,7 +738,7 @@ export default function AcademyBatchesPage() {
                   e.target.value
                 )
               }
-              className="mt-3 w-full rounded-xl border border-[#dfe4ee] bg-white px-4 py-3 text-sm outline-none focus:border-[#315bea]"
+              className="mt-3 w-full rounded-xl border border-border-default bg-white px-4 py-3 text-sm outline-none focus:border-brand-primary"
             >
               <option value="">
                 Select course / stream
@@ -770,7 +770,7 @@ export default function AcademyBatchesPage() {
                 allowedCourses.length === 0
               }
               type="submit"
-              className="mt-5 w-full rounded-xl bg-[#315bea] px-4 py-3 text-sm font-bold text-white disabled:opacity-50"
+              className="mt-5 w-full rounded-xl bg-brand-primary px-4 py-3 text-sm font-bold text-white disabled:opacity-50"
             >
               {loading
                 ? "Creating..."
@@ -778,20 +778,20 @@ export default function AcademyBatchesPage() {
             </button>
 
             {message && (
-              <p className="mt-4 text-sm font-medium text-[#697386]">
+              <p className="mt-4 text-sm font-medium text-text-tertiary">
                 {message}
               </p>
             )}
           </form>
 
           {/* BATCH LIST */}
-          <section className="rounded-2xl border border-[#e3e8f5] bg-white p-6 shadow-sm">
+          <section className="rounded-2xl border border-border-default bg-white p-6 shadow-sm">
             <div className="flex items-center justify-between">
               <h3 className="text-lg font-extrabold">
                 Academy Batches
               </h3>
 
-              <span className="rounded-full bg-[#f2f5ff] px-3 py-1 text-xs font-bold text-[#315bea]">
+              <span className="rounded-full bg-surface-subtle px-3 py-1 text-xs font-bold text-brand-primary">
                 {batches.length}{" "}
                 batches
               </span>
@@ -800,7 +800,7 @@ export default function AcademyBatchesPage() {
             <div className="mt-5 space-y-3">
               {batches.length ===
               0 ? (
-                <div className="rounded-xl border border-dashed border-[#dfe4ee] p-8 text-center text-sm text-[#697386]">
+                <div className="rounded-xl border border-dashed border-border-default p-8 text-center text-sm text-text-tertiary">
                   No batches yet.
                 </div>
               ) : (
@@ -810,7 +810,7 @@ export default function AcademyBatchesPage() {
                       key={
                         batch.id
                       }
-                      className="flex items-center justify-between rounded-xl border border-[#e7eaf0] p-4"
+                      className="flex items-center justify-between rounded-xl border border-border-default p-4"
                     >
                       <div>
                         <p className="font-bold">
@@ -820,7 +820,7 @@ export default function AcademyBatchesPage() {
                         </p>
 
                         {batch.course_name && (
-                          <p className="mt-1 text-sm font-semibold text-[#315bea]">
+                          <p className="mt-1 text-sm font-semibold text-brand-primary">
                             {
                               batch.course_name
                             }
@@ -828,7 +828,7 @@ export default function AcademyBatchesPage() {
                         )}
 
                         {batch.class_name && (
-                          <p className="mt-1 text-sm text-[#697386]">
+                          <p className="mt-1 text-sm text-text-tertiary">
                             Class:{" "}
                             {
                               batch.class_name
@@ -844,7 +844,7 @@ export default function AcademyBatchesPage() {
                               batch
                             )
                           }
-                          className="rounded-lg bg-[#eef2ff] px-3 py-1.5 text-xs font-bold text-[#315bea] hover:bg-[#e3e9ff]"
+                          className="rounded-lg bg-surface-subtle px-3 py-1.5 text-xs font-bold text-brand-primary hover:bg-[#e3e9ff]"
                         >
                           Manage
                           Students
@@ -856,12 +856,12 @@ export default function AcademyBatchesPage() {
                               batch
                             )
                           }
-                          className="rounded-lg border border-red-200 bg-red-50 px-3 py-1.5 text-xs font-bold text-red-600"
+                          className="rounded-lg border border-red-200 bg-red-50 px-3 py-1.5 text-xs font-bold text-state-error"
                         >
                           Remove
                         </button>
 
-                        <span className="rounded-lg bg-[#f4f6fa] px-3 py-1.5 text-xs font-bold text-[#697386]">
+                        <span className="rounded-lg bg-[#f4f6fa] px-3 py-1.5 text-xs font-bold text-text-tertiary">
                           Batch
                         </span>
                       </div>
@@ -878,20 +878,20 @@ export default function AcademyBatchesPage() {
       {selectedBatch && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 px-4">
           <div className="max-h-[80vh] w-full max-w-2xl overflow-hidden rounded-2xl bg-white shadow-2xl">
-            <div className="flex items-center justify-between border-b border-[#e7eaf0] px-6 py-5">
+            <div className="flex items-center justify-between border-b border-border-default px-6 py-5">
               <div>
                 <h3 className="text-lg font-extrabold">
                   Manage Students
                 </h3>
 
-                <p className="mt-1 text-sm text-[#697386]">
+                <p className="mt-1 text-sm text-text-tertiary">
                   {
                     selectedBatch.name
                   }
                 </p>
 
                 {selectedBatch.course_name && (
-                  <p className="mt-1 text-xs font-bold text-[#315bea]">
+                  <p className="mt-1 text-xs font-bold text-brand-primary">
                     {
                       selectedBatch.course_name
                     }
@@ -908,7 +908,7 @@ export default function AcademyBatchesPage() {
                     []
                   );
                 }}
-                className="rounded-lg border border-[#e2e6ee] px-3 py-2 text-sm font-bold text-[#697386]"
+                className="rounded-lg border border-border-default px-3 py-2 text-sm font-bold text-text-tertiary"
               >
                 ×
               </button>
@@ -916,13 +916,13 @@ export default function AcademyBatchesPage() {
 
             <div className="max-h-[60vh] overflow-y-auto p-6">
               {studentLoading ? (
-                <div className="py-10 text-center text-sm text-[#697386]">
+                <div className="py-10 text-center text-sm text-text-tertiary">
                   Loading
                   students...
                 </div>
               ) : students.length ===
                 0 ? (
-                <div className="rounded-xl border border-dashed border-[#dfe4ee] p-8 text-center text-sm text-[#697386]">
+                <div className="rounded-xl border border-dashed border-border-default p-8 text-center text-sm text-text-tertiary">
                   No students in
                   this academy
                   yet.
@@ -952,8 +952,8 @@ export default function AcademyBatchesPage() {
                           }
                           className={`flex w-full items-center justify-between rounded-xl border p-4 text-left transition ${
                             assigned
-                              ? "border-[#315bea] bg-[#f2f5ff]"
-                              : "border-[#e7eaf0] bg-white hover:bg-[#fafbfe]"
+                              ? "border-brand-primary bg-surface-subtle"
+                              : "border-border-default bg-white hover:bg-surface-app-bg"
                           }`}
                         >
                           <div>
@@ -963,7 +963,7 @@ export default function AcademyBatchesPage() {
                               }
                             </p>
 
-                            <p className="mt-1 text-xs text-[#697386]">
+                            <p className="mt-1 text-xs text-text-tertiary">
                               {
                                 student.email
                               }
@@ -977,7 +977,7 @@ export default function AcademyBatchesPage() {
                           <div
                             className={`flex h-6 w-6 items-center justify-center rounded-md border text-xs font-extrabold ${
                               assigned
-                                ? "border-[#315bea] bg-[#315bea] text-white"
+                                ? "border-brand-primary bg-brand-primary text-white"
                                 : "border-[#d8deea] bg-white text-transparent"
                             }`}
                           >
@@ -993,9 +993,9 @@ export default function AcademyBatchesPage() {
               )}
             </div>
 
-            <div className="border-t border-[#e7eaf0] px-6 py-4">
+            <div className="border-t border-border-default px-6 py-4">
               <div className="flex items-center justify-between">
-                <p className="text-sm font-bold text-[#697386]">
+                <p className="text-sm font-bold text-text-tertiary">
                   {
                     assignedStudents.length
                   }{" "}
@@ -1016,7 +1016,7 @@ export default function AcademyBatchesPage() {
                       []
                     );
                   }}
-                  className="rounded-xl bg-[#315bea] px-5 py-2.5 text-sm font-bold text-white"
+                  className="rounded-xl bg-brand-primary px-5 py-2.5 text-sm font-bold text-white"
                 >
                   Done
                 </button>

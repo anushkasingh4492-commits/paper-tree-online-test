@@ -33,20 +33,20 @@ export default function BossFightPage() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-[#f6f8fc] text-[#172033]">
+    <main className="min-h-screen bg-surface-app-bg text-text-primary">
       <div className="mx-auto max-w-4xl px-6 py-10">
         <div className="flex items-center justify-between mb-8">
           <div>
             <button
               onClick={() => router.push("/dashboard")}
-              className="text-sm font-semibold text-[#315bea] mb-2 inline-block transition hover:underline"
+              className="text-sm font-semibold text-brand-primary mb-2 inline-block transition hover:underline"
             >
               ← Back to Dashboard
             </button>
             <h1 className="text-2xl font-extrabold tracking-tight">
               Boss Fight Queue
             </h1>
-            <p className="text-sm text-[#697386]">
+            <p className="text-sm text-text-tertiary">
               Chapters to Conquer — master your weakest areas first.
             </p>
           </div>
@@ -57,17 +57,17 @@ export default function BossFightPage() {
             <div className="w-8 h-8 border-4 border-blue-100 border-t-blue-600 rounded-full animate-spin" />
           </div>
         ) : chapters.length === 0 ? (
-          <div className="rounded-2xl border border-[#e5e8ef] bg-white p-16 text-center shadow-sm">
+          <div className="rounded-2xl border border-border-default bg-white p-16 text-center shadow-sm">
             <div className="text-4xl mb-4">👑</div>
-            <h2 className="text-xl font-bold text-[#172033]">
+            <h2 className="text-xl font-bold text-text-primary">
               No chapters to conquer!
             </h2>
-            <p className="mt-2 text-[#697386]">
+            <p className="mt-2 text-text-tertiary">
               You've mastered all your weak areas. Keep testing to find new challenges.
             </p>
             <button
               onClick={() => router.push("/tests/generate")}
-              className="mt-6 px-5 py-2.5 rounded-xl bg-[#315bea] text-white text-sm font-semibold hover:bg-[#264ac7] transition"
+              className="mt-6 px-5 py-2.5 rounded-xl bg-brand-primary text-white text-sm font-semibold hover:bg-brand-primary transition"
             >
               Create a New Test
             </button>
@@ -79,15 +79,15 @@ export default function BossFightPage() {
                 key={`${c.subject}-${c.chapter}`}
                 className={`rounded-xl border p-4 flex items-center justify-between ${
                   c.status === "weak"
-                    ? "border-[#fca5a5] bg-[#fef2f2]"
+                    ? "border-[#fca5a5] bg-state-error"
                     : c.status === "improving"
-                      ? "border-[#fde047] bg-[#fefce8]"
-                      : "border-[#86efac] bg-[#f0fdf4]"
+                      ? "border-[#fde047] bg-state-warning"
+                      : "border-[#86efac] bg-state-success"
                 }`}
               >
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 mb-1">
-                    <span className="text-[10px] font-bold text-[#697386] uppercase tracking-[0.15em]">
+                    <span className="text-[10px] font-bold text-text-tertiary uppercase tracking-[0.15em]">
                       {c.subject}
                     </span>
                     <span
@@ -102,10 +102,10 @@ export default function BossFightPage() {
                       {c.status}
                     </span>
                   </div>
-                  <h3 className="font-bold text-sm text-[#172033] leading-tight">
+                  <h3 className="font-bold text-sm text-text-primary leading-tight">
                     {c.chapter}
                   </h3>
-                  <div className="mt-1 flex items-center gap-2 text-xs text-[#697386]">
+                  <div className="mt-1 flex items-center gap-2 text-xs text-text-tertiary">
                     <span>Correct: {c.correct}</span>
                     <span>•</span>
                     <span>Wrong: {c.wrong}</span>
@@ -115,7 +115,7 @@ export default function BossFightPage() {
                     <span>Accuracy: {c.accuracy.toFixed(0)}%</span>
                   </div>
                 </div>
-                <div className="mt-2 ml-9 h-1.5 rounded-full bg-[#e8eaf0] overflow-hidden w-48">
+                <div className="mt-2 ml-9 h-1.5 rounded-full bg-surface-app-bg overflow-hidden w-48">
                   <div
                     className="h-full rounded-full"
                     style={{
@@ -131,7 +131,7 @@ export default function BossFightPage() {
                 </div>
                 <button
                   onClick={() => router.push(`/tests/generate?chapter=${encodeURIComponent(c.chapter)}&subject=${encodeURIComponent(c.subject)}`)}
-                  className="px-4 py-2 rounded-lg border border-[#dfe4ee] bg-white text-sm font-semibold text-[#315bea] hover:bg-[#f0f7ff] transition"
+                  className="px-4 py-2 rounded-lg border border-border-default bg-white text-sm font-semibold text-brand-primary hover:bg-[#f0f7ff] transition"
                 >
                   Conquer
                 </button>

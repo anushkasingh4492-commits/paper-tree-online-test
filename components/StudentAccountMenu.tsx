@@ -119,22 +119,22 @@ export default function StudentAccountMenu({ studentName, activeTest = false }: 
         type="button"
         onClick={() => setOpen((value) => !value)}
         aria-expanded={open}
-        className="flex items-center gap-2 rounded-xl border border-[#e8eaf1] bg-white px-2 py-1.5 shadow-[0_2px_8px_rgba(30,35,60,.03)] hover:bg-[#f8f9fc] transition"
+        className="flex items-center gap-2 rounded-xl border border-border-default bg-white px-2 py-1.5 shadow-[0_2px_8px_rgba(30,35,60,.03)] hover:bg-surface-app-bg transition"
       >
         <StudentAvatar avatarKey={avatarKey} name={studentName} size={32} />
-        <span className="hidden sm:block max-w-[130px] truncate text-[11px] font-bold text-[#33405a]">{studentName || "Student"}</span>
+        <span className="hidden sm:block max-w-[130px] truncate text-[11px] font-bold text-text-secondary">{studentName || "Student"}</span>
         <span className="text-[11px] text-[#8a91a0]">⌄</span>
       </button>
 
       {open && (
-        <div className="absolute right-0 top-[calc(100%+8px)] z-[100] w-64 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-2xl">
-          <div className="border-b border-slate-100 bg-slate-50 px-4 py-3">
+        <div className="absolute right-0 top-[calc(100%+8px)] z-[100] w-64 overflow-hidden rounded-2xl border border-border-default bg-white shadow-2xl">
+          <div className="border-b border-border-default bg-surface-subtle px-4 py-3">
             <div className="flex items-center gap-3">
               <StudentAvatar avatarKey={avatarKey} name={studentName} size={42} />
-              <div className="min-w-0"><div className="text-sm font-black text-slate-900 truncate">{studentName || "Student"}</div>
-                <button type="button" onClick={() => { setOpen(false); setGenderStep(!genderPreference); setAvatarPickerOpen(true); }} className="mt-1 text-[10px] font-black text-indigo-600 hover:underline">Change avatar</button></div>
+              <div className="min-w-0"><div className="text-sm font-black text-text-primary truncate">{studentName || "Student"}</div>
+                <button type="button" onClick={() => { setOpen(false); setGenderStep(!genderPreference); setAvatarPickerOpen(true); }} className="mt-1 text-[10px] font-black text-brand-purple hover:underline">Change avatar</button></div>
             </div>
-            <div className="mt-0.5 text-[10px] font-bold uppercase tracking-wider text-slate-400">Student Account</div>
+            <div className="mt-0.5 text-[10px] font-bold uppercase tracking-wider text-text-supporting-label">Student Account</div>
           </div>
           <div className="p-2">
             <MenuItem icon="👤" label="My Profile" onClick={() => router.push("/profile")} />
@@ -142,7 +142,7 @@ export default function StudentAccountMenu({ studentName, activeTest = false }: 
             <MenuItem icon="📝" label="My Tests" onClick={() => router.push("/tests/test-summary")} />
             <MenuItem icon="🏆" label="My Achievements" onClick={() => router.push("/dashboard#trophy-wall")} />
             <MenuItem icon="🔐" label="Change Password" onClick={() => router.push("/change-password")} />
-            <div className="my-1 border-t border-slate-100" />
+            <div className="my-1 border-t border-border-default" />
             <button type="button" onClick={() => { setOpen(false); setConfirmLogout(true); }} className="flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left text-xs font-bold text-rose-600 hover:bg-rose-50 transition"><span>🚪</span>Logout</button>
           </div>
         </div>
@@ -153,11 +153,11 @@ export default function StudentAccountMenu({ studentName, activeTest = false }: 
           <div className="w-full max-w-3xl max-h-[92dvh] overflow-y-auto rounded-3xl bg-white p-4 sm:p-6 shadow-2xl">
             <div className="flex items-start justify-between gap-3">
               <div>
-                <div className="text-xs font-black uppercase tracking-[.18em] text-indigo-600">Make it yours</div>
-                <h2 id="avatar-picker-title" className="mt-1 text-xl sm:text-2xl font-black text-slate-900">{genderStep ? "Choose your preference" : "Choose your student avatar"}</h2>
-                <p className="mt-1 text-xs sm:text-sm text-slate-500">{genderStep ? "Choose which avatar collection you would like to see. You can change this later." : "Your avatar will appear beside your name around Paper Tree CBT."}</p>
+                <div className="text-xs font-black uppercase tracking-[.18em] text-brand-purple">Make it yours</div>
+                <h2 id="avatar-picker-title" className="mt-1 text-xl sm:text-2xl font-black text-text-primary">{genderStep ? "Choose your preference" : "Choose your student avatar"}</h2>
+                <p className="mt-1 text-xs sm:text-sm text-text-body">{genderStep ? "Choose which avatar collection you would like to see. You can change this later." : "Your avatar will appear beside your name around Paper Tree CBT."}</p>
               </div>
-              {avatarKey && genderPreference && <button type="button" onClick={() => setAvatarPickerOpen(false)} className="rounded-xl px-3 py-2 text-sm font-bold text-slate-500 hover:bg-slate-100">Later</button>}
+              {avatarKey && genderPreference && <button type="button" onClick={() => setAvatarPickerOpen(false)} className="rounded-xl px-3 py-2 text-sm font-bold text-text-body hover:bg-surface-subtle">Later</button>}
             </div>
             {avatarError && <p className="mt-3 rounded-lg bg-rose-50 p-2 text-xs text-rose-700">{avatarError}</p>}
             {genderStep ? (
@@ -167,30 +167,30 @@ export default function StudentAccountMenu({ studentName, activeTest = false }: 
                   { value: "boy", title: "Boy avatars", detail: "Show the boy avatar collection", emoji: "⭐" },
                   { value: "prefer_not_to_say", title: "Prefer not to say", detail: "Let me choose from all avatars", emoji: "🌈" },
                 ] as const).map((option) => (
-                  <button key={option.value} type="button" disabled={avatarSaving} onClick={() => void chooseGender(option.value)} className={`rounded-2xl border-2 p-5 text-left transition hover:border-indigo-400 hover:bg-indigo-50/50 disabled:opacity-60 ${genderPreference === option.value ? "border-indigo-600 bg-indigo-50" : "border-slate-200 bg-white"}`}>
+                  <button key={option.value} type="button" disabled={avatarSaving} onClick={() => void chooseGender(option.value)} className={`rounded-2xl border-2 p-5 text-left transition hover:border-indigo-400 hover:bg-indigo-50/50 disabled:opacity-60 ${genderPreference === option.value ? "border-brand-purple bg-indigo-50" : "border-border-default bg-white"}`}>
                     <span className="text-3xl" aria-hidden="true">{option.emoji}</span>
-                    <span className="mt-3 block text-sm font-black text-slate-900">{option.title}</span>
-                    <span className="mt-1 block text-xs leading-5 text-slate-500">{option.detail}</span>
+                    <span className="mt-3 block text-sm font-black text-text-primary">{option.title}</span>
+                    <span className="mt-1 block text-xs leading-5 text-text-body">{option.detail}</span>
                   </button>
                 ))}
               </div>
             ) : (
               <>
                 <div className="mt-4 flex flex-wrap items-center justify-between gap-2">
-                  <p className="text-xs font-semibold text-slate-500">{visibleAvatars.length} avatars available</p>
-                  <button type="button" disabled={avatarSaving} onClick={() => setGenderStep(true)} className="text-xs font-bold text-indigo-600 hover:underline">Change preference</button>
+                  <p className="text-xs font-semibold text-text-body">{visibleAvatars.length} avatars available</p>
+                  <button type="button" disabled={avatarSaving} onClick={() => setGenderStep(true)} className="text-xs font-bold text-brand-purple hover:underline">Change preference</button>
                 </div>
                 <div className="mt-4 grid grid-cols-4 sm:grid-cols-5 md:grid-cols-7 lg:grid-cols-8 gap-3 sm:gap-4">
                   {visibleAvatars.map((key) => (
-                    <button key={key} type="button" disabled={avatarSaving} onClick={() => void saveAvatar(key)} aria-label={`Choose ${key.startsWith("girl-") ? "girl" : "boy"} avatar ${key.slice(-2)}`} className={`relative aspect-square min-w-0 overflow-hidden rounded-full bg-slate-100 p-0.5 transition hover:scale-105 focus:outline-none focus:ring-2 focus:ring-indigo-500 ${avatarKey === key ? "ring-2 ring-indigo-600 ring-offset-2" : ""}`}>
+                    <button key={key} type="button" disabled={avatarSaving} onClick={() => void saveAvatar(key)} aria-label={`Choose ${key.startsWith("girl-") ? "girl" : "boy"} avatar ${key.slice(-2)}`} className={`relative aspect-square min-w-0 overflow-hidden rounded-full bg-surface-subtle p-0.5 transition hover:scale-105 focus:outline-none focus:ring-2 focus:ring-indigo-500 ${avatarKey === key ? "ring-2 ring-indigo-600 ring-offset-2" : ""}`}>
                       <img src={`/avatars/${key}.webp`} alt={`${key.startsWith("girl-") ? "Girl" : "Boy"} avatar ${key.slice(-2)}`} className="block h-full w-full rounded-full object-cover" width="512" height="512" loading="lazy" decoding="async" />
-                      {avatarKey === key && <span className="absolute right-0 top-0 rounded-full bg-indigo-600 px-1.5 py-0.5 text-[9px] font-black text-white">✓</span>}
+                      {avatarKey === key && <span className="absolute right-0 top-0 rounded-full bg-brand-purple px-1.5 py-0.5 text-[9px] font-black text-white">✓</span>}
                     </button>
                   ))}
                 </div>
               </>
             )}
-            <p className="mt-4 text-center text-[11px] text-slate-400">{avatarSaving ? "Saving your choice…" : genderStep ? "This only filters the avatar choices; choose any option you feel comfortable with." : "Tap an avatar to select it. You can change it later."}</p>
+            <p className="mt-4 text-center text-[11px] text-text-supporting-label">{avatarSaving ? "Saving your choice…" : genderStep ? "This only filters the avatar choices; choose any option you feel comfortable with." : "Tap an avatar to select it. You can change it later."}</p>
           </div>
         </div>
       )}
@@ -199,10 +199,10 @@ export default function StudentAccountMenu({ studentName, activeTest = false }: 
         <div className="fixed inset-0 z-[200] flex items-center justify-center bg-slate-950/60 p-4 backdrop-blur-sm" onClick={() => !loggingOut && setConfirmLogout(false)}>
           <div className="w-full max-w-sm rounded-3xl bg-white p-6 shadow-2xl" onClick={(event) => event.stopPropagation()}>
             <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-rose-50 text-xl">🚪</div>
-            <h2 className="mt-4 text-center text-xl font-black text-slate-900">Log out?</h2>
-            <p className="mt-2 text-center text-sm leading-6 text-slate-500">{activeTest ? "You are currently taking a test. Leaving now may submit or interrupt your test." : "You can sign in again whenever you want."}</p>
+            <h2 className="mt-4 text-center text-xl font-black text-text-primary">Log out?</h2>
+            <p className="mt-2 text-center text-sm leading-6 text-text-body">{activeTest ? "You are currently taking a test. Leaving now may submit or interrupt your test." : "You can sign in again whenever you want."}</p>
             <div className="mt-5 grid grid-cols-2 gap-3">
-              <button type="button" disabled={loggingOut} onClick={() => setConfirmLogout(false)} className="rounded-xl border border-slate-200 px-4 py-3 text-xs font-black text-slate-700 hover:bg-slate-50 disabled:opacity-50">Cancel</button>
+              <button type="button" disabled={loggingOut} onClick={() => setConfirmLogout(false)} className="rounded-xl border border-border-default px-4 py-3 text-xs font-black text-text-secondary hover:bg-surface-subtle disabled:opacity-50">Cancel</button>
               <button type="button" disabled={loggingOut} onClick={() => void logout()} className="rounded-xl bg-rose-600 px-4 py-3 text-xs font-black text-white hover:bg-rose-700 disabled:opacity-50">{loggingOut ? "Logging out…" : "Logout"}</button>
             </div>
           </div>
@@ -213,5 +213,5 @@ export default function StudentAccountMenu({ studentName, activeTest = false }: 
 }
 
 function MenuItem({ icon, label, onClick }: { icon: string; label: string; onClick: () => void }) {
-  return <button type="button" onClick={onClick} className="flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left text-xs font-bold text-slate-700 hover:bg-slate-50 transition"><span className="w-6 text-center">{icon}</span>{label}</button>;
+  return <button type="button" onClick={onClick} className="flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left text-xs font-bold text-text-secondary hover:bg-surface-subtle transition"><span className="w-6 text-center">{icon}</span>{label}</button>;
 }

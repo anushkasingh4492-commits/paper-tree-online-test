@@ -63,11 +63,11 @@ export default function AcademyAdminPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-[#f6f8fc] text-[#172033]">
-      <header className="border-b border-[#e7eaf0] bg-white">
+    <main className="min-h-screen bg-surface-app-bg text-text-primary">
+      <header className="border-b border-border-default bg-white">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-          <div className="flex items-center gap-3">{overview?.academy.logo_data ? <img src={overview.academy.logo_data} alt="Institute logo" className="h-10 w-10 rounded-lg object-contain" /> : null}<div><p className="text-xs font-black tracking-[.16em] text-[#315bea]">ACADEMY ADMIN</p><h1 className="mt-1 text-xl font-extrabold">{overview?.academy.name || "Academy control centre"}</h1></div></div>
-          <button onClick={logout} className="rounded-xl border border-[#e2e6ee] px-4 py-2.5 text-sm font-bold text-[#697386]">Logout</button>
+          <div className="flex items-center gap-3">{overview?.academy.logo_data ? <img src={overview.academy.logo_data} alt="Institute logo" className="h-10 w-10 rounded-lg object-contain" /> : null}<div><p className="text-xs font-black tracking-[.16em] text-brand-primary">ACADEMY ADMIN</p><h1 className="mt-1 text-xl font-extrabold">{overview?.academy.name || "Academy control centre"}</h1></div></div>
+          <button onClick={logout} className="rounded-xl border border-border-default px-4 py-2.5 text-sm font-bold text-text-tertiary">Logout</button>
         </div>
       </header>
 
@@ -81,16 +81,16 @@ export default function AcademyAdminPage() {
         </section>
 
         <section className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-          {countCards.map(([label, value, icon]) => <div key={String(label)} className="rounded-2xl border border-[#e3e8f5] bg-white p-5 shadow-sm"><span className="text-2xl">{icon}</span><p className="mt-4 text-3xl font-extrabold">{value}</p><p className="mt-1 text-sm font-semibold text-[#697386]">{label}</p></div>)}
+          {countCards.map(([label, value, icon]) => <div key={String(label)} className="rounded-2xl border border-border-default bg-white p-5 shadow-sm"><span className="text-2xl">{icon}</span><p className="mt-4 text-3xl font-extrabold">{value}</p><p className="mt-1 text-sm font-semibold text-text-tertiary">{label}</p></div>)}
         </section>
 
         <section className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-5">
-          {actions.map((action) => <button key={action.title} onClick={() => router.push(action.href)} className="rounded-2xl border border-[#e3e8f5] bg-white p-5 text-left shadow-sm transition hover:-translate-y-0.5 hover:border-[#315bea]"><span className="text-2xl">{action.icon}</span><h3 className="mt-4 font-extrabold">{action.title}</h3><p className="mt-1 text-sm leading-6 text-[#697386]">{action.description}</p><span className="mt-4 block text-sm font-bold text-[#315bea]">Manage →</span></button>)}
+          {actions.map((action) => <button key={action.title} onClick={() => router.push(action.href)} className="rounded-2xl border border-border-default bg-white p-5 text-left shadow-sm transition hover:-translate-y-0.5 hover:border-brand-primary"><span className="text-2xl">{action.icon}</span><h3 className="mt-4 font-extrabold">{action.title}</h3><p className="mt-1 text-sm leading-6 text-text-tertiary">{action.description}</p><span className="mt-4 block text-sm font-bold text-brand-primary">Manage →</span></button>)}
         </section>
 
         <section className="mt-8 grid gap-6 lg:grid-cols-2">
-          <div className="rounded-2xl border border-[#e3e8f5] bg-white p-6 shadow-sm"><div className="flex items-center justify-between"><h3 className="font-extrabold">Batch snapshot</h3><button onClick={() => router.push("/academy-admin/batches")} className="text-sm font-bold text-[#315bea]">Manage</button></div><div className="mt-4 space-y-3">{overview?.batches.length ? overview.batches.map((batch) => <div key={batch.id} className="flex justify-between rounded-xl bg-[#f7f8fc] px-4 py-3"><span><b>{batch.name}</b><small className="ml-2 text-[#697386]">{batch.class_name}</small></span><span className="text-sm font-bold text-[#315bea]">{batch.student_count} students</span></div>) : <p className="text-sm text-[#697386]">Create your first batch to organise students.</p>}</div></div>
-          <div className="rounded-2xl border border-[#e3e8f5] bg-white p-6 shadow-sm"><div className="flex items-center justify-between"><h3 className="font-extrabold">Upcoming tests</h3><button onClick={() => router.push("/academy-admin/tests")} className="text-sm font-bold text-[#315bea]">Schedule test</button></div><div className="mt-4 space-y-3">{overview?.tests.length ? overview.tests.map((test) => <div key={test.id} className="rounded-xl bg-[#f7f8fc] px-4 py-3"><b>{test.title}</b><p className="mt-1 text-xs text-[#697386]">{test.batch_name || "Academy"} · {new Date(test.start_time).toLocaleString("en-IN")}</p></div>) : <p className="text-sm text-[#697386]">No upcoming tests. Schedule one when a paper is ready.</p>}</div></div>
+          <div className="rounded-2xl border border-border-default bg-white p-6 shadow-sm"><div className="flex items-center justify-between"><h3 className="font-extrabold">Batch snapshot</h3><button onClick={() => router.push("/academy-admin/batches")} className="text-sm font-bold text-brand-primary">Manage</button></div><div className="mt-4 space-y-3">{overview?.batches.length ? overview.batches.map((batch) => <div key={batch.id} className="flex justify-between rounded-xl bg-surface-app-bg px-4 py-3"><span><b>{batch.name}</b><small className="ml-2 text-text-tertiary">{batch.class_name}</small></span><span className="text-sm font-bold text-brand-primary">{batch.student_count} students</span></div>) : <p className="text-sm text-text-tertiary">Create your first batch to organise students.</p>}</div></div>
+          <div className="rounded-2xl border border-border-default bg-white p-6 shadow-sm"><div className="flex items-center justify-between"><h3 className="font-extrabold">Upcoming tests</h3><button onClick={() => router.push("/academy-admin/tests")} className="text-sm font-bold text-brand-primary">Schedule test</button></div><div className="mt-4 space-y-3">{overview?.tests.length ? overview.tests.map((test) => <div key={test.id} className="rounded-xl bg-surface-app-bg px-4 py-3"><b>{test.title}</b><p className="mt-1 text-xs text-text-tertiary">{test.batch_name || "Academy"} · {new Date(test.start_time).toLocaleString("en-IN")}</p></div>) : <p className="text-sm text-text-tertiary">No upcoming tests. Schedule one when a paper is ready.</p>}</div></div>
         </section>
       </div>
     </main>

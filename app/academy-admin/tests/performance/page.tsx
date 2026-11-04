@@ -175,17 +175,17 @@ export default function AcademyAdminPerformancePage() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-[#f6f8fc] text-[#172033]">
-      <header className="border-b border-[#e7eaf0] bg-white">
+    <main className="min-h-screen bg-surface-app-bg text-text-primary">
+      <header className="border-b border-border-default bg-white">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-5">
           <div>
-            <p className="text-xs font-black tracking-[.16em] text-[#315bea]">ACADEMY ADMIN</p>
+            <p className="text-xs font-black tracking-[.16em] text-brand-primary">ACADEMY ADMIN</p>
             <h1 className="mt-1 text-2xl font-extrabold">Student Performance</h1>
-            <p className="mt-1 text-sm text-[#697386]">Review every student&apos;s completed tests and performance in your academy.</p>
+            <p className="mt-1 text-sm text-text-tertiary">Review every student&apos;s completed tests and performance in your academy.</p>
           </div>
           <button
             onClick={() => router.push("/academy-admin")}
-            className="rounded-xl border border-[#e2e6ee] bg-white px-4 py-2.5 text-sm font-bold text-[#315bea]"
+            className="rounded-xl border border-border-default bg-white px-4 py-2.5 text-sm font-bold text-brand-primary"
           >
             ← Dashboard
           </button>
@@ -199,18 +199,18 @@ export default function AcademyAdminPerformancePage() {
           </div>
         )}
 
-        <section className="rounded-2xl border border-[#e3e8f5] bg-white p-5 shadow-sm">
+        <section className="rounded-2xl border border-border-default bg-white p-5 shadow-sm">
           <div className="grid gap-3 lg:grid-cols-[1fr_220px_220px]">
             <input
               value={search}
               onChange={(event) => setSearch(event.target.value)}
               placeholder="Search student, email or batch"
-              className="rounded-xl border border-[#dfe4ed] px-4 py-3 text-sm outline-none focus:border-[#315bea]"
+              className="rounded-xl border border-border-default px-4 py-3 text-sm outline-none focus:border-brand-primary"
             />
             <select
               value={batch}
               onChange={(event) => setBatch(event.target.value)}
-              className="rounded-xl border border-[#dfe4ed] px-4 py-3 text-sm"
+              className="rounded-xl border border-border-default px-4 py-3 text-sm"
             >
               <option value="ALL">All batches</option>
               {batches.map((value) => <option key={value} value={value}>{value}</option>)}
@@ -218,7 +218,7 @@ export default function AcademyAdminPerformancePage() {
             <select
               value={sortKey}
               onChange={(event) => changeSort(event.target.value as SortKey)}
-              className="rounded-xl border border-[#dfe4ed] px-4 py-3 text-sm"
+              className="rounded-xl border border-border-default px-4 py-3 text-sm"
             >
               <option value="name">Name</option>
               <option value="averagePercentage">Average %</option>
@@ -235,26 +235,26 @@ export default function AcademyAdminPerformancePage() {
             </select>
           </div>
 
-          <div className="mt-4 flex items-center justify-between text-xs font-bold text-[#697386]">
+          <div className="mt-4 flex items-center justify-between text-xs font-bold text-text-tertiary">
             <span>{filtered.length} students shown</span>
             <button
               onClick={() => setDirection((current) => (current === "asc" ? "desc" : "asc"))}
-              className="rounded-lg border border-[#e2e6ee] px-3 py-1.5 text-[#315bea]"
+              className="rounded-lg border border-border-default px-3 py-1.5 text-brand-primary"
             >
               {direction === "asc" ? "Ascending ↑" : "Descending ↓"}
             </button>
           </div>
         </section>
 
-        <section className="mt-5 overflow-hidden rounded-2xl border border-[#e3e8f5] bg-white shadow-sm">
+        <section className="mt-5 overflow-hidden rounded-2xl border border-border-default bg-white shadow-sm">
           {loading ? (
-            <div className="p-10 text-center text-sm font-semibold text-[#697386]">Loading performance…</div>
+            <div className="p-10 text-center text-sm font-semibold text-text-tertiary">Loading performance…</div>
           ) : filtered.length === 0 ? (
-            <div className="p-10 text-center text-sm font-semibold text-[#697386]">No students match the current filters.</div>
+            <div className="p-10 text-center text-sm font-semibold text-text-tertiary">No students match the current filters.</div>
           ) : (
             <div className="overflow-x-auto">
               <table className="min-w-[1250px] w-full text-left text-sm">
-                <thead className="bg-[#f7f8fc] text-[11px] uppercase tracking-wider text-[#697386]">
+                <thead className="bg-surface-app-bg text-[11px] uppercase tracking-wider text-text-tertiary">
                   <tr>
                     {[
                       ["name", "Student"],
@@ -271,7 +271,7 @@ export default function AcademyAdminPerformancePage() {
                       ["lastActiveDate", "Last active"],
                     ].map(([key, label]) => (
                       <th key={key} className="px-4 py-3">
-                        <button onClick={() => changeSort(key as SortKey)} className="font-black hover:text-[#315bea]">
+                        <button onClick={() => changeSort(key as SortKey)} className="font-black hover:text-brand-primary">
                           {label} {sortKey === key ? (direction === "asc" ? "↑" : "↓") : ""}
                         </button>
                       </th>
@@ -281,12 +281,12 @@ export default function AcademyAdminPerformancePage() {
                 </thead>
                 <tbody>
                   {filtered.map((student) => (
-                    <tr key={student.id} className="border-t border-[#eef0f4] hover:bg-[#fbfcff]">
+                    <tr key={student.id} className="border-t border-border-default hover:bg-[#fbfcff]">
                       <td className="px-4 py-4">
                         <button onClick={() => openAttempts(student)} className="text-left">
-                          <p className="font-extrabold text-[#172033]">{student.name}</p>
-                          <p className="mt-0.5 text-xs text-[#697386]">{student.email}</p>
-                          <p className="mt-0.5 text-[11px] text-[#315bea]">{student.batches}</p>
+                          <p className="font-extrabold text-text-primary">{student.name}</p>
+                          <p className="mt-0.5 text-xs text-text-tertiary">{student.email}</p>
+                          <p className="mt-0.5 text-[11px] text-brand-primary">{student.batches}</p>
                         </button>
                       </td>
                       <td className="px-4 py-4 font-bold">{student.testsTaken}</td>
@@ -301,7 +301,7 @@ export default function AcademyAdminPerformancePage() {
                       <td className="px-4 py-4">{student.badgesEarned}</td>
                       <td className="px-4 py-4">{student.lastActiveDate ? new Date(student.lastActiveDate).toLocaleDateString("en-IN") : "—"}</td>
                       <td className="px-4 py-4">
-                        <button onClick={() => openAttempts(student)} className="rounded-lg bg-[#315bea] px-3 py-2 text-xs font-bold text-white">
+                        <button onClick={() => openAttempts(student)} className="rounded-lg bg-brand-primary px-3 py-2 text-xs font-bold text-white">
                           View tests
                         </button>
                       </td>
@@ -319,21 +319,21 @@ export default function AcademyAdminPerformancePage() {
           <div className="max-h-[85vh] w-full max-w-5xl overflow-auto rounded-3xl bg-white p-6 shadow-2xl" onClick={(event) => event.stopPropagation()}>
             <div className="flex items-start justify-between gap-4">
               <div>
-                <p className="text-xs font-black tracking-wider text-[#315bea]">COMPLETED TESTS</p>
+                <p className="text-xs font-black tracking-wider text-brand-primary">COMPLETED TESTS</p>
                 <h2 className="mt-1 text-2xl font-extrabold">{attemptStudent.name}</h2>
-                <p className="text-sm text-[#697386]">{attemptStudent.email}</p>
+                <p className="text-sm text-text-tertiary">{attemptStudent.email}</p>
               </div>
               <button onClick={() => setAttemptStudent(null)} className="rounded-xl border px-3 py-2 text-sm font-bold">Close</button>
             </div>
 
             {attemptLoading ? (
-              <div className="py-12 text-center text-sm font-semibold text-[#697386]">Loading attempted tests…</div>
+              <div className="py-12 text-center text-sm font-semibold text-text-tertiary">Loading attempted tests…</div>
             ) : attempts.length === 0 ? (
-              <div className="py-12 text-center text-sm font-semibold text-[#697386]">No completed tests found.</div>
+              <div className="py-12 text-center text-sm font-semibold text-text-tertiary">No completed tests found.</div>
             ) : (
               <div className="mt-6 overflow-x-auto">
                 <table className="min-w-[850px] w-full text-left text-sm">
-                  <thead className="bg-[#f7f8fc] text-[11px] uppercase tracking-wider text-[#697386]">
+                  <thead className="bg-surface-app-bg text-[11px] uppercase tracking-wider text-text-tertiary">
                     <tr>
                       <th className="px-3 py-3">Test</th>
                       <th className="px-3 py-3">Marks</th>
@@ -350,7 +350,7 @@ export default function AcademyAdminPerformancePage() {
                       const total = Number(attempt.total_marks || 0);
                       const percentage = total > 0 ? (score / total) * 100 : 0;
                       return (
-                        <tr key={attempt.id} className="border-t border-[#eef0f4]">
+                        <tr key={attempt.id} className="border-t border-border-default">
                           <td className="px-3 py-3 font-bold">{attempt.test_title}</td>
                           <td className="px-3 py-3">{score} / {total}</td>
                           <td className="px-3 py-3 font-bold">{percentage.toFixed(2)}%</td>

@@ -285,18 +285,18 @@ export default function CherryPickPage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#f6f8fc] text-[#172033]">
+    <main className="min-h-screen bg-surface-app-bg text-text-primary">
       <div className="mx-auto max-w-7xl px-6 py-10">
 
         <button
           onClick={() => router.push("/teacher")}
-          className="mb-6 text-sm font-semibold text-[#315bea]"
+          className="mb-6 text-sm font-semibold text-brand-primary"
         >
           ← Back to Teacher Portal
         </button>
 
         <div className="mb-8">
-          <p className="text-sm font-bold uppercase tracking-wider text-[#315bea]">
+          <p className="text-sm font-bold uppercase tracking-wider text-brand-primary">
             Teacher Portal
           </p>
 
@@ -304,28 +304,28 @@ export default function CherryPickPage() {
             Cherry Pick Questions
           </h1>
 
-          <p className="mt-2 text-sm text-[#697386]">
+          <p className="mt-2 text-sm text-text-tertiary">
             Select exactly which questions you want in the test.
           </p>
         </div>
 
         {canCustomQuestions !== false && (
-        <section className="mb-6 rounded-2xl border border-[#dfe4ee] bg-white p-5 shadow-sm">
+        <section className="mb-6 rounded-2xl border border-border-default bg-white p-5 shadow-sm">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-            <div><h2 className="font-extrabold">Create Your Own Question</h2><p className="mt-1 text-xs text-[#697386]">Write institute-specific questions and immediately add them to your question bank.</p></div>
-            <button type="button" onClick={() => setShowCustomForm((v) => !v)} className="rounded-xl bg-[#315bea] px-4 py-2.5 text-sm font-bold text-white">{showCustomForm ? "Close" : "+ Add Your Own Question"}</button>
+            <div><h2 className="font-extrabold">Create Your Own Question</h2><p className="mt-1 text-xs text-text-tertiary">Write institute-specific questions and immediately add them to your question bank.</p></div>
+            <button type="button" onClick={() => setShowCustomForm((v) => !v)} className="rounded-xl bg-brand-primary px-4 py-2.5 text-sm font-bold text-white">{showCustomForm ? "Close" : "+ Add Your Own Question"}</button>
           </div>
           {showCustomForm && (
             <div className="mt-5 grid gap-3 md:grid-cols-2">
-              <textarea value={customStem} onChange={(e) => setCustomStem(e.target.value)} placeholder="Question text" rows={4} className="md:col-span-2 rounded-xl border border-[#dfe4ee] px-4 py-3 text-sm" />
-              {customOptions.map((value, index) => <input key={index} value={value} onChange={(e) => setCustomOptions((current) => current.map((item, i) => i === index ? e.target.value : item))} placeholder={`Option ${String.fromCharCode(65 + index)}`} className="rounded-xl border border-[#dfe4ee] px-4 py-3 text-sm" />)}
-              <input value={customSubject} onChange={(e) => setCustomSubject(e.target.value)} placeholder="Subject" className="rounded-xl border border-[#dfe4ee] px-4 py-3 text-sm" />
-              <input value={customChapter} onChange={(e) => setCustomChapter(e.target.value)} placeholder="Chapter" className="rounded-xl border border-[#dfe4ee] px-4 py-3 text-sm" />
-              <select value={customCorrect} onChange={(e) => setCustomCorrect(e.target.value)} className="rounded-xl border border-[#dfe4ee] bg-white px-4 py-3 text-sm">{["A","B","C","D"].map((x) => <option key={x}>{x}</option>)}</select>
-              <select value={customDifficulty} onChange={(e) => setCustomDifficulty(e.target.value)} className="rounded-xl border border-[#dfe4ee] bg-white px-4 py-3 text-sm"><option>Easy</option><option>Medium</option><option>Hard</option></select>
+              <textarea value={customStem} onChange={(e) => setCustomStem(e.target.value)} placeholder="Question text" rows={4} className="md:col-span-2 rounded-xl border border-border-default px-4 py-3 text-sm" />
+              {customOptions.map((value, index) => <input key={index} value={value} onChange={(e) => setCustomOptions((current) => current.map((item, i) => i === index ? e.target.value : item))} placeholder={`Option ${String.fromCharCode(65 + index)}`} className="rounded-xl border border-border-default px-4 py-3 text-sm" />)}
+              <input value={customSubject} onChange={(e) => setCustomSubject(e.target.value)} placeholder="Subject" className="rounded-xl border border-border-default px-4 py-3 text-sm" />
+              <input value={customChapter} onChange={(e) => setCustomChapter(e.target.value)} placeholder="Chapter" className="rounded-xl border border-border-default px-4 py-3 text-sm" />
+              <select value={customCorrect} onChange={(e) => setCustomCorrect(e.target.value)} className="rounded-xl border border-border-default bg-white px-4 py-3 text-sm">{["A","B","C","D"].map((x) => <option key={x}>{x}</option>)}</select>
+              <select value={customDifficulty} onChange={(e) => setCustomDifficulty(e.target.value)} className="rounded-xl border border-border-default bg-white px-4 py-3 text-sm"><option>Easy</option><option>Medium</option><option>Hard</option></select>
               <div className="md:col-span-2 rounded-xl border border-dashed border-[#cbd5e1] p-4">
                 <label className="block text-sm font-semibold text-[#273449]" htmlFor="custom-question-image">Question image (optional)</label>
-                <p className="mt-1 text-xs text-[#697386]">PNG, JPG, WEBP, or GIF · maximum 3 MB</p>
+                <p className="mt-1 text-xs text-text-tertiary">PNG, JPG, WEBP, or GIF · maximum 3 MB</p>
                 <input
                   id="custom-question-image"
                   type="file"
@@ -353,10 +353,10 @@ export default function CherryPickPage() {
                     reader.readAsDataURL(file);
                   }}
                 />
-                {customImageError && <p role="alert" className="mt-2 text-xs font-semibold text-red-600">{customImageError}</p>}
-                {customFigureAsset && <div className="mt-3 flex items-start gap-3"><img src={customFigureAsset} alt="Question image preview" className="max-h-40 max-w-full rounded-lg border border-slate-200 object-contain" /><button type="button" onClick={() => { setCustomFigureAsset(""); const input = document.getElementById("custom-question-image") as HTMLInputElement | null; if (input) input.value = ""; }} className="rounded-lg border px-3 py-2 text-xs font-semibold">Remove image</button></div>}
+                {customImageError && <p role="alert" className="mt-2 text-xs font-semibold text-state-error">{customImageError}</p>}
+                {customFigureAsset && <div className="mt-3 flex items-start gap-3"><img src={customFigureAsset} alt="Question image preview" className="max-h-40 max-w-full rounded-lg border border-border-default object-contain" /><button type="button" onClick={() => { setCustomFigureAsset(""); const input = document.getElementById("custom-question-image") as HTMLInputElement | null; if (input) input.value = ""; }} className="rounded-lg border px-3 py-2 text-xs font-semibold">Remove image</button></div>}
               </div>
-              <textarea value={customSolution} onChange={(e) => setCustomSolution(e.target.value)} placeholder="Solution / explanation (optional)" rows={3} className="md:col-span-2 rounded-xl border border-[#dfe4ee] px-4 py-3 text-sm" />
+              <textarea value={customSolution} onChange={(e) => setCustomSolution(e.target.value)} placeholder="Solution / explanation (optional)" rows={3} className="md:col-span-2 rounded-xl border border-border-default px-4 py-3 text-sm" />
               <button type="button" disabled={customSaving} onClick={async () => {
                 setCustomSaving(true); setError("");
                 try {
@@ -373,7 +373,7 @@ export default function CherryPickPage() {
         </section>
         )}
 
-        <section className="mb-6 rounded-2xl border border-[#e5e8ef] bg-white p-5 shadow-sm">
+        <section className="mb-6 rounded-2xl border border-border-default bg-white p-5 shadow-sm">
 
           <div className="grid gap-4 md:grid-cols-4">
 
@@ -493,7 +493,7 @@ export default function CherryPickPage() {
               {selected.length} selected
             </p>
 
-            <p className="mt-1 text-xs text-[#8a93a5]">
+            <p className="mt-1 text-xs text-text-body">
               Showing {questions.length} questions
             </p>
           </div>
@@ -501,7 +501,7 @@ export default function CherryPickPage() {
           {selected.length > 0 && (
             <button
               onClick={() => setSelected([])}
-              className="rounded-xl border bg-white px-4 py-2 text-sm font-bold text-[#697386]"
+              className="rounded-xl border bg-white px-4 py-2 text-sm font-bold text-text-tertiary"
             >
               Clear selection
             </button>
@@ -511,7 +511,7 @@ export default function CherryPickPage() {
             <button
               type="button"
               onClick={toggleAllQuestions}
-              className="rounded-xl border bg-white px-4 py-2 text-sm font-bold text-[#315bea]"
+              className="rounded-xl border bg-white px-4 py-2 text-sm font-bold text-brand-primary"
             >
               {questions.every((question) => selected.includes(question.id))
                 ? "Deselect all"
@@ -522,13 +522,13 @@ export default function CherryPickPage() {
         </div>
 
         {error && (
-          <div className="mb-5 rounded-xl bg-red-50 p-4 text-sm font-semibold text-red-600">
+          <div className="mb-5 rounded-xl bg-red-50 p-4 text-sm font-semibold text-state-error">
             {error}
           </div>
         )}
 
         {loading && (
-          <div className="rounded-2xl bg-white p-10 text-center text-sm text-[#697386]">
+          <div className="rounded-2xl bg-white p-10 text-center text-sm text-text-tertiary">
             Loading questions...
           </div>
         )}
@@ -541,7 +541,7 @@ export default function CherryPickPage() {
                 No questions found.
               </p>
 
-              <p className="mt-2 text-sm text-[#8a93a5]">
+              <p className="mt-2 text-sm text-text-body">
                 Try another subject, chapter or difficulty.
               </p>
             </div>
@@ -566,8 +566,8 @@ export default function CherryPickPage() {
                   }
                   className={`w-full rounded-2xl border bg-white p-5 text-left shadow-sm transition ${
                     isSelected
-                      ? "border-[#315bea] ring-2 ring-[#315bea]/10"
-                      : "border-[#e5e8ef] hover:border-[#cbd3e5]"
+                      ? "border-brand-primary ring-2 ring-brand-primary/10"
+                      : "border-border-default hover:border-[#cbd3e5]"
                   }`}
                 >
 
@@ -576,7 +576,7 @@ export default function CherryPickPage() {
                     <div
                       className={`mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-md border text-xs font-bold ${
                         isSelected
-                          ? "border-[#315bea] bg-[#315bea] text-white"
+                          ? "border-brand-primary bg-brand-primary text-white"
                           : "border-[#cbd3df] text-transparent"
                       }`}
                     >
@@ -587,22 +587,22 @@ export default function CherryPickPage() {
 
                       <div className="mb-3 flex flex-wrap gap-2">
 
-                        <span className="rounded-full bg-[#f0f3fa] px-2.5 py-1 text-xs font-bold text-[#697386]">
+                        <span className="rounded-full bg-[#f0f3fa] px-2.5 py-1 text-xs font-bold text-text-tertiary">
                           #{index + 1}
                         </span>
 
-                        <span className="rounded-full bg-[#eef2ff] px-2.5 py-1 text-xs font-bold text-[#315bea]">
+                        <span className="rounded-full bg-surface-subtle px-2.5 py-1 text-xs font-bold text-brand-primary">
                           {question.subject}
                         </span>
 
                         {question.chapter_name && (
-                          <span className="rounded-full bg-[#f5f6f8] px-2.5 py-1 text-xs font-semibold text-[#697386]">
+                          <span className="rounded-full bg-[#f5f6f8] px-2.5 py-1 text-xs font-semibold text-text-tertiary">
                             {question.chapter_name}
                           </span>
                         )}
 
                         {question.difficulty && (
-                          <span className="rounded-full bg-[#f5f6f8] px-2.5 py-1 text-xs font-semibold text-[#697386]">
+                          <span className="rounded-full bg-[#f5f6f8] px-2.5 py-1 text-xs font-semibold text-text-tertiary">
                             {question.difficulty}
                           </span>
                         )}
@@ -617,7 +617,7 @@ export default function CherryPickPage() {
                         <img
                           src={figureSrc}
                           alt={`Figure for question ${index + 1}`}
-                          className="mt-4 max-h-80 max-w-full rounded-xl border border-[#e5e8ef] bg-white object-contain"
+                          className="mt-4 max-h-80 max-w-full rounded-xl border border-border-default bg-white object-contain"
                           onError={(event) => {
                             event.currentTarget.style.display = "none";
                           }}
@@ -631,7 +631,7 @@ export default function CherryPickPage() {
                             (option, optionIndex) => (
                               <div
                                 key={optionIndex}
-                                className="rounded-lg bg-[#f8f9fc] px-3 py-2 text-xs text-[#697386]"
+                                className="rounded-lg bg-surface-app-bg px-3 py-2 text-xs text-text-tertiary"
                               >
                                 {option}
                               </div>
@@ -659,7 +659,7 @@ export default function CherryPickPage() {
               {selected.length} questions selected
             </p>
 
-            <p className="text-xs text-[#8a93a5]">
+            <p className="text-xs text-text-body">
               Select the questions you want to publish.
             </p>
           </div>
@@ -667,7 +667,7 @@ export default function CherryPickPage() {
           <button
             onClick={continueToPublish}
             disabled={selected.length === 0}
-            className="rounded-xl bg-[#315bea] px-6 py-3 text-sm font-bold text-white hover:bg-[#264ac7] disabled:cursor-not-allowed disabled:opacity-50"
+            className="rounded-xl bg-brand-primary px-6 py-3 text-sm font-bold text-white hover:bg-brand-primary disabled:cursor-not-allowed disabled:opacity-50"
           >
             Continue to Publish →
           </button>

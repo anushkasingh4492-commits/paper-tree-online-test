@@ -164,15 +164,15 @@ export default function AdminPasswordResetPage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#f6f8fc] text-[#172033]">
-      <header className="border-b border-[#e7eaf0] bg-white">
+    <main className="min-h-screen bg-surface-app-bg text-text-primary">
+      <header className="border-b border-border-default bg-white">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
           <div>
             <h1 className="text-xl font-extrabold">
               🔐 Password Management
             </h1>
 
-            <p className="mt-1 text-xs text-[#8a93a5]">
+            <p className="mt-1 text-xs text-text-body">
               Master Admin
             </p>
           </div>
@@ -181,7 +181,7 @@ export default function AdminPasswordResetPage() {
             onClick={() =>
               router.push("/admin")
             }
-            className="rounded-xl border border-[#e2e6ee] bg-white px-4 py-2.5 text-sm font-bold text-[#697386] hover:bg-[#f8f9fb]"
+            className="rounded-xl border border-border-default bg-white px-4 py-2.5 text-sm font-bold text-text-tertiary hover:bg-surface-app-bg"
           >
             ← Admin
           </button>
@@ -194,13 +194,13 @@ export default function AdminPasswordResetPage() {
             Reset Student / Teacher Password
           </h2>
 
-          <p className="mt-2 text-sm text-[#697386]">
+          <p className="mt-2 text-sm text-text-tertiary">
             You can reset an account password without
             knowing the user's current password.
           </p>
 
           {error && (
-            <div className="mt-5 rounded-xl border border-red-100 bg-red-50 px-4 py-3 text-sm font-medium text-red-600">
+            <div className="mt-5 rounded-xl border border-red-100 bg-red-50 px-4 py-3 text-sm font-medium text-state-error">
               {error}
             </div>
           )}
@@ -219,8 +219,8 @@ export default function AdminPasswordResetPage() {
               }}
               className={`rounded-xl border-2 px-4 py-3 text-sm font-bold ${
                 type === "STUDENT"
-                  ? "border-[#315bea] bg-blue-50 text-[#315bea]"
-                  : "border-[#e2e6ee] text-[#697386]"
+                  ? "border-brand-primary bg-blue-50 text-brand-primary"
+                  : "border-border-default text-text-tertiary"
               }`}
             >
               🎓 Student
@@ -233,8 +233,8 @@ export default function AdminPasswordResetPage() {
               }}
               className={`rounded-xl border-2 px-4 py-3 text-sm font-bold ${
                 type === "TEACHER"
-                  ? "border-[#315bea] bg-blue-50 text-[#315bea]"
-                  : "border-[#e2e6ee] text-[#697386]"
+                  ? "border-brand-primary bg-blue-50 text-brand-primary"
+                  : "border-border-default text-text-tertiary"
               }`}
             >
               👨‍🏫 Teacher
@@ -251,7 +251,7 @@ export default function AdminPasswordResetPage() {
               setUserId(e.target.value)
             }
             disabled={loading}
-            className="mt-2 h-12 w-full rounded-xl border border-[#dfe3eb] bg-white px-4 text-sm outline-none focus:border-[#315bea]"
+            className="mt-2 h-12 w-full rounded-xl border border-border-default bg-white px-4 text-sm outline-none focus:border-brand-primary"
           >
             <option value="">
               {loading
@@ -284,13 +284,13 @@ export default function AdminPasswordResetPage() {
             }
             placeholder="Minimum 8 characters"
             minLength={8}
-            className="mt-2 h-12 w-full rounded-xl border border-[#dfe3eb] px-4 text-sm outline-none focus:border-[#315bea]"
+            className="mt-2 h-12 w-full rounded-xl border border-border-default px-4 text-sm outline-none focus:border-brand-primary"
           />
 
           <button
             onClick={resetPassword}
             disabled={resetting || loading}
-            className="mt-7 w-full rounded-xl bg-[#315bea] px-4 py-3 font-bold text-white hover:bg-[#264ac7] disabled:opacity-60"
+            className="mt-7 w-full rounded-xl bg-brand-primary px-4 py-3 font-bold text-white hover:bg-brand-primary disabled:opacity-60"
           >
             {resetting
               ? "Resetting..."

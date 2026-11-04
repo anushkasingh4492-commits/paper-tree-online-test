@@ -69,9 +69,9 @@ export default function AcademyBranding({
       <div
         className={`flex items-center gap-3 ${className}`}
       >
-        <div className="h-10 w-10 animate-pulse rounded-xl bg-slate-200" />
+        <div className="h-10 w-10 animate-pulse rounded-card bg-surface-muted" />
 
-        <div className="h-4 w-32 animate-pulse rounded bg-slate-200" />
+        <div className="h-4 w-32 animate-pulse rounded-standard bg-surface-muted" />
       </div>
     );
   }
@@ -95,10 +95,10 @@ export default function AcademyBranding({
           <img
             src={logo}
             alt={`${name} logo`}
-            className="h-10 w-10 shrink-0 rounded-xl object-contain bg-white"
+            className="h-10 w-10 shrink-0 rounded-card object-contain bg-surface-surface"
           />
         ) : (
-          <div className="h-10 w-10 shrink-0 rounded-xl bg-blue-600 text-white flex items-center justify-center font-black text-lg">
+          <div className="h-10 w-10 shrink-0 rounded-xl bg-brand-primary text-white flex items-center justify-center font-black text-lg">
             {name.charAt(0).toUpperCase()}
           </div>
         )}
@@ -108,7 +108,7 @@ export default function AcademyBranding({
             {name}
           </div>
 
-          <div className="text-[9px] font-bold tracking-[0.16em] text-slate-400 truncate">
+          <div className="text-[9px] font-bold tracking-[0.16em] text-text-supporting-label truncate">
             {subtitle}
           </div>
         </div>
@@ -125,10 +125,10 @@ export default function AcademyBranding({
           <img
             src={logo}
             alt={`${name} logo`}
-            className="h-11 w-11 rounded-[13px] object-contain bg-white"
+            className="h-11 w-11 rounded-[13px] object-contain bg-surface-surface"
           />
         ) : (
-          <div className="h-11 w-11 rounded-[13px] bg-white text-[#315bea] flex items-center justify-center text-lg font-extrabold">
+          <div className="h-11 w-11 rounded-[13px] bg-surface-surface text-brand-primary flex items-center justify-center text-lg font-extrabold">
             {name.charAt(0).toUpperCase()}
           </div>
         )}
@@ -138,7 +138,7 @@ export default function AcademyBranding({
             {name}
           </p>
 
-          <p className="text-[9px] font-bold tracking-[0.18em] text-blue-100">
+          <p className="text-[9px] font-bold tracking-[0.18em] text-text-on-secondary-light">
             {subtitle}
           </p>
         </div>
@@ -157,7 +157,7 @@ export default function AcademyBranding({
           className="h-10 w-10 shrink-0 rounded-xl object-contain bg-white"
         />
       ) : (
-        <div className="h-10 w-10 shrink-0 rounded-xl bg-blue-600 text-white flex items-center justify-center font-black text-lg">
+        <div className="h-10 w-10 shrink-0 rounded-xl bg-brand-primary text-white flex items-center justify-center font-black text-lg">
           {name.charAt(0).toUpperCase()}
         </div>
       )}
@@ -167,7 +167,7 @@ export default function AcademyBranding({
           {name}
         </div>
 
-        <div className="text-[9px] font-semibold tracking-[.17em] text-slate-400 mt-1 truncate">
+        <div className="text-[9px] font-semibold tracking-[.17em] text-text-supporting-label mt-1 truncate">
           {subtitle}
         </div>
       </div>

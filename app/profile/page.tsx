@@ -101,8 +101,8 @@ export default function ProfilePage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#f8f9fc] text-slate-900">
-      <header className="flex h-[72px] items-center justify-between border-b border-slate-200 bg-white px-5 lg:px-8">
+    <main className="min-h-screen bg-surface-app-bg text-text-primary">
+      <header className="flex h-[72px] items-center justify-between border-b border-border-default bg-white px-5 lg:px-8">
         <AcademyBranding variant="compact" />
         <StudentAccountMenu studentName={student?.name || "Student"} />
       </header>
@@ -110,7 +110,7 @@ export default function ProfilePage() {
       <div className="mx-auto max-w-3xl p-5 lg:p-8">
         <button
           onClick={() => router.push("/dashboard")}
-          className="text-xs font-bold text-indigo-600"
+          className="text-xs font-bold text-brand-purple"
         >
           ← Dashboard
         </button>
@@ -118,7 +118,7 @@ export default function ProfilePage() {
         <div className="mt-5 flex flex-wrap items-center justify-between gap-3">
           <div>
             <h1 className="text-3xl font-black">My Profile</h1>
-            <p className="mt-1 text-sm text-slate-500">
+            <p className="mt-1 text-sm text-text-body">
               View and manage your student account details.
             </p>
           </div>
@@ -131,7 +131,7 @@ export default function ProfilePage() {
                 setError("");
                 setNotice("");
               }}
-              className="rounded-xl bg-indigo-600 px-4 py-2.5 text-sm font-bold text-white hover:bg-indigo-700"
+              className="rounded-xl bg-brand-purple px-4 py-2.5 text-sm font-bold text-white hover:bg-indigo-700"
             >
               Edit Profile
             </button>
@@ -151,7 +151,7 @@ export default function ProfilePage() {
         )}
 
         {loading ? (
-          <div className="mt-7 rounded-2xl border border-slate-200 bg-white p-8 text-center text-sm text-slate-500">
+          <div className="mt-7 rounded-2xl border border-border-default bg-white p-8 text-center text-sm text-text-body">
             Loading your profile…
           </div>
         ) : student ? (
@@ -159,7 +159,7 @@ export default function ProfilePage() {
             <div className="mt-7 grid gap-4 sm:grid-cols-2">
               {editing ? (
                 <div className="rounded-2xl border border-indigo-200 bg-white p-5 shadow-sm sm:col-span-2">
-                  <label htmlFor="profile-name" className="text-[10px] font-black uppercase tracking-wider text-slate-400">
+                  <label htmlFor="profile-name" className="text-[10px] font-black uppercase tracking-wider text-text-supporting-label">
                     Full name
                   </label>
                   <input
@@ -170,7 +170,7 @@ export default function ProfilePage() {
                     autoComplete="name"
                     className="mt-2 w-full rounded-xl border border-slate-300 px-4 py-3 text-base font-semibold outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
                   />
-                  <p className="mt-2 text-xs text-slate-500">
+                  <p className="mt-2 text-xs text-text-body">
                     Your student ID, roll number, and email cannot be changed here.
                   </p>
                 </div>
@@ -187,14 +187,14 @@ export default function ProfilePage() {
                 <button
                   onClick={cancelEditing}
                   disabled={saving}
-                  className="rounded-xl border border-slate-300 bg-white px-5 py-2.5 text-sm font-bold text-slate-700 disabled:opacity-50"
+                  className="rounded-xl border border-slate-300 bg-white px-5 py-2.5 text-sm font-bold text-text-secondary disabled:opacity-50"
                 >
                   Cancel
                 </button>
                 <button
                   onClick={saveProfile}
                   disabled={saving}
-                  className="rounded-xl bg-indigo-600 px-5 py-2.5 text-sm font-bold text-white hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-50"
+                  className="rounded-xl bg-brand-purple px-5 py-2.5 text-sm font-bold text-white hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-50"
                 >
                   {saving ? "Saving…" : "Save Changes"}
                 </button>
@@ -202,7 +202,7 @@ export default function ProfilePage() {
             )}
           </>
         ) : (
-          <div className="mt-7 rounded-2xl border border-slate-200 bg-white p-8 text-center text-sm text-slate-500">
+          <div className="mt-7 rounded-2xl border border-border-default bg-white p-8 text-center text-sm text-text-body">
             Profile details are unavailable.
           </div>
         )}
@@ -213,11 +213,11 @@ export default function ProfilePage() {
 
 function Info({ label, value }: { label: string; value: string }) {
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-      <div className="text-[10px] font-black uppercase tracking-wider text-slate-400">
+    <div className="rounded-2xl border border-border-default bg-white p-5 shadow-sm">
+      <div className="text-[10px] font-black uppercase tracking-wider text-text-supporting-label">
         {label}
       </div>
-      <div className="mt-2 break-words text-base font-black text-slate-800">
+      <div className="mt-2 break-words text-base font-black text-text-secondary">
         {value}
       </div>
     </div>

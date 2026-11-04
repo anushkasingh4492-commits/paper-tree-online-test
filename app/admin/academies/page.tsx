@@ -1302,13 +1302,13 @@ async function resetAcademyAdmin(adminId: string) {
   );
 
   return (
-    <main className="min-h-screen bg-[#f5f7fb] text-[#172033]">
+    <main className="min-h-screen bg-surface-app-bg text-text-primary">
       <Toasts toasts={toasts} />
 
-      <header className="sticky top-0 z-30 border-b border-[#e3e8f5] bg-white/95 backdrop-blur">
+      <header className="sticky top-0 z-30 border-b border-border-default bg-white/95 backdrop-blur">
         <div className="mx-auto flex max-w-[1500px] items-center justify-between px-6 py-4">
           <div>
-            <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#315bea]">
+            <p className="text-[10px] font-black uppercase tracking-[0.2em] text-brand-primary">
               Paper Tree Educational Studio
             </p>
 
@@ -1321,7 +1321,7 @@ async function resetAcademyAdmin(adminId: string) {
             onClick={() =>
               router.push("/admin")
             }
-            className="rounded-xl border border-[#dfe4ed] px-4 py-2 text-sm font-bold hover:bg-[#f7f9fc]"
+            className="rounded-xl border border-border-default px-4 py-2 text-sm font-bold hover:bg-[#f7f9fc]"
           >
             ← Dashboard
           </button>
@@ -1355,14 +1355,14 @@ async function resetAcademyAdmin(adminId: string) {
           />
         </section>
 
-        <section className="rounded-3xl border border-[#e3e8f5] bg-white p-6 shadow-sm">
+        <section className="rounded-3xl border border-border-default bg-white p-6 shadow-sm">
           <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
             <div>
               <h2 className="text-lg font-black">
                 🏫 Create Academy
               </h2>
 
-              <p className="text-xs text-[#697386]">
+              <p className="text-xs text-text-tertiary">
                 Create an academy and its first admin account.
               </p>
             </div>
@@ -1422,7 +1422,7 @@ async function resetAcademyAdmin(adminId: string) {
               <select
                 value={subscriptionTier}
                 onChange={(e) => setSubscriptionTier(e.target.value as "BRONZE" | "SILVER" | "GOLD")}
-                className="mt-1 w-full rounded-xl border border-[#dfe4ed] bg-white px-3 py-3 text-sm"
+                className="mt-1 w-full rounded-xl border border-border-default bg-white px-3 py-3 text-sm"
               >
                 <option value="BRONZE">Bronze</option>
                 <option value="SILVER">Silver</option>
@@ -1449,7 +1449,7 @@ async function resetAcademyAdmin(adminId: string) {
                     e.target.value
                   )
                 }
-                className="mt-1 w-full rounded-xl border border-[#dfe4ed] px-3 py-3 text-sm"
+                className="mt-1 w-full rounded-xl border border-border-default px-3 py-3 text-sm"
                 required
               />
             </label>
@@ -1457,7 +1457,7 @@ async function resetAcademyAdmin(adminId: string) {
             <div className="md:col-span-2 xl:col-span-4">
               <button
                 disabled={saving}
-                className="rounded-xl bg-[#315bea] px-5 py-3 text-sm font-black text-white disabled:opacity-50"
+                className="rounded-xl bg-brand-primary px-5 py-3 text-sm font-black text-white disabled:opacity-50"
               >
                 {saving
                   ? "Creating…"
@@ -1474,7 +1474,7 @@ async function resetAcademyAdmin(adminId: string) {
                 Your Academies
               </h2>
 
-              <p className="text-xs text-[#697386]">
+              <p className="text-xs text-text-tertiary">
                 Only live database academies appear here.
               </p>
             </div>
@@ -1487,7 +1487,7 @@ async function resetAcademyAdmin(adminId: string) {
                 )
               }
               placeholder="🔍 Search academies"
-              className="rounded-xl border border-[#dfe4ed] bg-white px-4 py-3 text-sm outline-none focus:border-[#315bea]"
+              className="rounded-xl border border-border-default bg-white px-4 py-3 text-sm outline-none focus:border-brand-primary"
             />
           </div>
 
@@ -1524,7 +1524,7 @@ async function resetAcademyAdmin(adminId: string) {
           >
             <form
               onSubmit={saveBranding}
-              className="flex flex-wrap items-end gap-3 border-b border-[#e8ecf4] bg-[#fafbfe] p-5"
+              className="flex flex-wrap items-end gap-3 border-b border-border-default bg-surface-app-bg p-5"
             >
               <label className="min-w-[220px] flex-1 text-xs font-bold">
                 Institute name
@@ -1536,7 +1536,7 @@ async function resetAcademyAdmin(adminId: string) {
                       e.target.value
                     )
                   }
-                  className="mt-1 w-full rounded-xl border border-[#dfe4ed] bg-white px-3 py-2.5 text-sm"
+                  className="mt-1 w-full rounded-xl border border-border-default bg-white px-3 py-2.5 text-sm"
                   required
                 />
               </label>
@@ -1552,7 +1552,7 @@ async function resetAcademyAdmin(adminId: string) {
                     )
                   }
                   placeholder="web.infinityclasses.net"
-                  className="mt-1 w-full rounded-xl border border-[#dfe4ed] bg-white px-3 py-2.5 text-sm"
+                  className="mt-1 w-full rounded-xl border border-border-default bg-white px-3 py-2.5 text-sm"
                 />
               </label>
 
@@ -1581,7 +1581,7 @@ async function resetAcademyAdmin(adminId: string) {
 
               <button
                 disabled={brandSaving}
-                className="rounded-xl bg-[#315bea] px-4 py-2.5 text-xs font-black text-white disabled:opacity-50"
+                className="rounded-xl bg-brand-primary px-4 py-2.5 text-xs font-black text-white disabled:opacity-50"
               >
                 {brandSaving
                   ? "Saving..."
@@ -1589,10 +1589,10 @@ async function resetAcademyAdmin(adminId: string) {
               </button>
             </form>
 
-            <div className="border-b border-[#e8ecf4] p-6">
+            <div className="border-b border-border-default p-6">
               <div className="flex flex-wrap items-start justify-between gap-4">
                 <div>
-                  <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#315bea]">
+                  <p className="text-[10px] font-black uppercase tracking-[0.18em] text-brand-primary">
                     Selected academy
                   </p>
 
@@ -1600,7 +1600,7 @@ async function resetAcademyAdmin(adminId: string) {
                     {selectedAcademy.name}
                   </h2>
 
-                  <p className="mt-1 text-xs text-[#697386]">
+                  <p className="mt-1 text-xs text-text-tertiary">
                     Code:{" "}
                     {selectedAcademy.code} ·{" "}
                     {statusLabel(
@@ -1612,7 +1612,7 @@ async function resetAcademyAdmin(adminId: string) {
                 <div className="flex gap-2">
                   <button
                     onClick={deleteAcademy}
-                    className="rounded-xl border border-red-200 px-4 py-2 text-xs font-bold text-red-600"
+                    className="rounded-xl border border-red-200 px-4 py-2 text-xs font-bold text-state-error"
                   >
                     Delete Academy
                   </button>
@@ -1679,8 +1679,8 @@ async function resetAcademyAdmin(adminId: string) {
                       }
                       className={`rounded-xl px-3 py-3 text-xs font-black transition ${
                         section === id
-                          ? "bg-[#315bea] text-white"
-                          : "bg-[#f6f8fc] hover:bg-[#edf1fb]"
+                          ? "bg-brand-primary text-white"
+                          : "bg-surface-app-bg hover:bg-[#edf1fb]"
                       }`}
                     >
                       {label}
@@ -1691,7 +1691,7 @@ async function resetAcademyAdmin(adminId: string) {
             </div>
 
             {detailsLoading ? (
-              <div className="p-10 text-center text-sm font-bold text-[#697386]">
+              <div className="p-10 text-center text-sm font-bold text-text-tertiary">
                 Loading live academy data…
               </div>
             ) : details ? (
@@ -1731,15 +1731,15 @@ async function resetAcademyAdmin(adminId: string) {
 )}
                     {"}"}
                     {section === "batch-access" && (
-                      <section className="max-w-3xl rounded-2xl border border-[#e8ecf4] bg-white p-6">
-                        <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#315bea]">Academy permissions</p>
+                      <section className="max-w-3xl rounded-2xl border border-border-default bg-white p-6">
+                        <p className="text-[10px] font-black uppercase tracking-[0.18em] text-brand-primary">Academy permissions</p>
                         <h3 className="mt-1 text-xl font-black">Allowed batch courses</h3>
-                        <p className="mt-2 text-sm text-[#697386]">
+                        <p className="mt-2 text-sm text-text-tertiary">
                           Only selected courses can be used to create batches for this academy. The restriction is enforced by the server as well as the batch form.
                         </p>
                         <div className="mt-5 grid gap-3 sm:grid-cols-2">
                           {BATCH_COURSE_OPTIONS.map((course) => (
-                            <label key={course} className="flex items-center gap-3 rounded-xl border border-[#e8ecf4] p-3 text-sm font-semibold">
+                            <label key={course} className="flex items-center gap-3 rounded-xl border border-border-default p-3 text-sm font-semibold">
                               <input
                                 type="checkbox"
                                 checked={allowedBatchCourses.includes(course)}
@@ -1758,18 +1758,18 @@ async function resetAcademyAdmin(adminId: string) {
                           <button
                             type="button"
                             onClick={() => patchAcademy({ allowedBatchCourses }, "Allowed batch courses updated")}
-                            className="rounded-xl bg-[#315bea] px-5 py-3 text-sm font-black text-white"
+                            className="rounded-xl bg-brand-primary px-5 py-3 text-sm font-black text-white"
                           >
                             Save course permissions
                           </button>
                           <button
                             type="button"
                             onClick={() => setAllowedBatchCourses([...BATCH_COURSE_OPTIONS])}
-                            className="rounded-xl border border-[#dfe4ee] px-5 py-3 text-sm font-bold"
+                            className="rounded-xl border border-border-default px-5 py-3 text-sm font-bold"
                           >
                             Allow all courses
                           </button>
-                          <span className="text-xs text-[#697386]">{allowedBatchCourses.length} of {BATCH_COURSE_OPTIONS.length} enabled</span>
+                          <span className="text-xs text-text-tertiary">{allowedBatchCourses.length} of {BATCH_COURSE_OPTIONS.length} enabled</span>
                         </div>
                       </section>
                     )}
@@ -1778,7 +1778,7 @@ async function resetAcademyAdmin(adminId: string) {
                     <div className="space-y-6">
 
                      <div>
-                     <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#315bea]">
+                     <p className="text-[10px] font-black uppercase tracking-[0.18em] text-brand-primary">
                       Academy administration
                           </p>
 
@@ -1786,28 +1786,28 @@ async function resetAcademyAdmin(adminId: string) {
         Manage Academy Admins
       </h3>
 
-      <p className="mt-1 text-sm text-[#697386]">
+      <p className="mt-1 text-sm text-text-tertiary">
         View existing administrators, reset their passwords,
         or create another administrator for this academy.
       </p>
     </div>
 
-    <div className="rounded-2xl border border-[#e8ecf4] bg-white p-5">
+    <div className="rounded-2xl border border-border-default bg-white p-5">
       <h4 className="text-sm font-black">
         Current Academy Admins
       </h4>
 
       {adminsLoading ? (
-        <p className="mt-4 text-sm text-[#697386]">
+        <p className="mt-4 text-sm text-text-tertiary">
           Loading admins…
         </p>
       ) : academyAdmins.length === 0 ? (
-        <div className="mt-4 rounded-xl bg-[#f6f8fc] p-4">
+        <div className="mt-4 rounded-xl bg-surface-app-bg p-4">
           <p className="text-sm font-bold">
             No academy administrator found.
           </p>
 
-          <p className="mt-1 text-xs text-[#697386]">
+          <p className="mt-1 text-xs text-text-tertiary">
             Create one using the form below.
           </p>
         </div>
@@ -1816,14 +1816,14 @@ async function resetAcademyAdmin(adminId: string) {
           {academyAdmins.map((admin) => (
             <div
               key={admin.id}
-              className="flex flex-col gap-4 rounded-xl border border-[#e8ecf4] p-4 md:flex-row md:items-center md:justify-between"
+              className="flex flex-col gap-4 rounded-xl border border-border-default p-4 md:flex-row md:items-center md:justify-between"
             >
               <div>
                 <p className="font-black">
                   {admin.name}
                 </p>
 
-                <p className="mt-1 text-xs text-[#697386]">
+                <p className="mt-1 text-xs text-text-tertiary">
                   {admin.email}
                 </p>
               </div>
@@ -1833,7 +1833,7 @@ async function resetAcademyAdmin(adminId: string) {
                   setResetAdminId(admin.id);
                   setResetAdminPassword("");
                 }}
-                className="rounded-xl border border-[#315bea] px-4 py-2 text-xs font-black text-[#315bea]"
+                className="rounded-xl border border-brand-primary px-4 py-2 text-xs font-black text-brand-primary"
               >
                 Reset Password
               </button>
@@ -1843,7 +1843,7 @@ async function resetAcademyAdmin(adminId: string) {
       )}
     </div>
 
-    <div className="rounded-2xl border border-[#e8ecf4] bg-white p-5">
+    <div className="rounded-2xl border border-border-default bg-white p-5">
       <h4 className="text-sm font-black">
         Add New Academy Admin
       </h4>
@@ -1855,7 +1855,7 @@ async function resetAcademyAdmin(adminId: string) {
             setNewAdminName(e.target.value)
           }
           placeholder="Admin name"
-          className="rounded-xl border px-4 py-3 text-sm outline-none focus:border-[#315bea]"
+          className="rounded-xl border px-4 py-3 text-sm outline-none focus:border-brand-primary"
         />
 
         <input
@@ -1865,7 +1865,7 @@ async function resetAcademyAdmin(adminId: string) {
           }
           type="email"
           placeholder="Admin email"
-          className="rounded-xl border px-4 py-3 text-sm outline-none focus:border-[#315bea]"
+          className="rounded-xl border px-4 py-3 text-sm outline-none focus:border-brand-primary"
         />
 
         <input
@@ -1875,14 +1875,14 @@ async function resetAcademyAdmin(adminId: string) {
           }
           type="password"
           placeholder="Password (min 6 characters)"
-          className="rounded-xl border px-4 py-3 text-sm outline-none focus:border-[#315bea]"
+          className="rounded-xl border px-4 py-3 text-sm outline-none focus:border-brand-primary"
         />
       </div>
 
       <button
         onClick={addAcademyAdmin}
         disabled={adminSaving}
-        className="mt-4 rounded-xl bg-[#315bea] px-5 py-3 text-xs font-black text-white disabled:opacity-50"
+        className="mt-4 rounded-xl bg-brand-primary px-5 py-3 text-xs font-black text-white disabled:opacity-50"
       >
         {adminSaving
           ? "Adding Admin..."
@@ -1896,7 +1896,7 @@ async function resetAcademyAdmin(adminId: string) {
           Reset Admin Password
         </h4>
 
-        <p className="mt-1 text-xs text-[#697386]">
+        <p className="mt-1 text-xs text-text-tertiary">
           Set a new password for the selected academy administrator.
         </p>
 
@@ -1908,7 +1908,7 @@ async function resetAcademyAdmin(adminId: string) {
             }
             type="password"
             placeholder="New password"
-            className="flex-1 rounded-xl border bg-white px-4 py-3 text-sm outline-none focus:border-[#315bea]"
+            className="flex-1 rounded-xl border bg-white px-4 py-3 text-sm outline-none focus:border-brand-primary"
           />
 
           <button
@@ -1916,7 +1916,7 @@ async function resetAcademyAdmin(adminId: string) {
               resetAcademyAdmin(resetAdminId)
             }
             disabled={resettingAdmin}
-            className="rounded-xl bg-[#315bea] px-5 py-3 text-xs font-black text-white disabled:opacity-50"
+            className="rounded-xl bg-brand-primary px-5 py-3 text-xs font-black text-white disabled:opacity-50"
           >
             {resettingAdmin
               ? "Resetting..."
@@ -1939,7 +1939,7 @@ async function resetAcademyAdmin(adminId: string) {
 )} {section === "admins" && (
   <div className="space-y-6">
     <div>
-      <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#315bea]">
+      <p className="text-[10px] font-black uppercase tracking-[0.18em] text-brand-primary">
         Academy administration
       </p>
 
@@ -1947,28 +1947,28 @@ async function resetAcademyAdmin(adminId: string) {
         Manage Academy Admins
       </h3>
 
-      <p className="mt-1 text-sm text-[#697386]">
+      <p className="mt-1 text-sm text-text-tertiary">
         View existing administrators, reset their passwords,
         or create another administrator for this academy.
       </p>
     </div>
 
-    <div className="rounded-2xl border border-[#e8ecf4] bg-white p-5">
+    <div className="rounded-2xl border border-border-default bg-white p-5">
       <h4 className="text-sm font-black">
         Current Academy Admins
       </h4>
 
       {adminsLoading ? (
-        <p className="mt-4 text-sm text-[#697386]">
+        <p className="mt-4 text-sm text-text-tertiary">
           Loading admins…
         </p>
       ) : academyAdmins.length === 0 ? (
-        <div className="mt-4 rounded-xl bg-[#f6f8fc] p-4">
+        <div className="mt-4 rounded-xl bg-surface-app-bg p-4">
           <p className="text-sm font-bold">
             No academy administrator found.
           </p>
 
-          <p className="mt-1 text-xs text-[#697386]">
+          <p className="mt-1 text-xs text-text-tertiary">
             Create one using the form below.
           </p>
         </div>
@@ -1977,14 +1977,14 @@ async function resetAcademyAdmin(adminId: string) {
           {academyAdmins.map((admin) => (
             <div
               key={admin.id}
-              className="flex flex-col gap-4 rounded-xl border border-[#e8ecf4] p-4 md:flex-row md:items-center md:justify-between"
+              className="flex flex-col gap-4 rounded-xl border border-border-default p-4 md:flex-row md:items-center md:justify-between"
             >
               <div>
                 <p className="font-black">
                   {admin.name}
                 </p>
 
-                <p className="mt-1 text-xs text-[#697386]">
+                <p className="mt-1 text-xs text-text-tertiary">
                   {admin.email}
                 </p>
               </div>
@@ -1994,7 +1994,7 @@ async function resetAcademyAdmin(adminId: string) {
                   setResetAdminId(admin.id);
                   setResetAdminPassword("");
                 }}
-                className="rounded-xl border border-[#315bea] px-4 py-2 text-xs font-black text-[#315bea]"
+                className="rounded-xl border border-brand-primary px-4 py-2 text-xs font-black text-brand-primary"
               >
                 Reset Password
               </button>
@@ -2004,7 +2004,7 @@ async function resetAcademyAdmin(adminId: string) {
       )}
     </div>
 
-    <div className="rounded-2xl border border-[#e8ecf4] bg-white p-5">
+    <div className="rounded-2xl border border-border-default bg-white p-5">
       <h4 className="text-sm font-black">
         Add New Academy Admin
       </h4>
@@ -2016,7 +2016,7 @@ async function resetAcademyAdmin(adminId: string) {
             setNewAdminName(e.target.value)
           }
           placeholder="Admin name"
-          className="rounded-xl border px-4 py-3 text-sm outline-none focus:border-[#315bea]"
+          className="rounded-xl border px-4 py-3 text-sm outline-none focus:border-brand-primary"
         />
 
         <input
@@ -2026,7 +2026,7 @@ async function resetAcademyAdmin(adminId: string) {
           }
           type="email"
           placeholder="Admin email"
-          className="rounded-xl border px-4 py-3 text-sm outline-none focus:border-[#315bea]"
+          className="rounded-xl border px-4 py-3 text-sm outline-none focus:border-brand-primary"
         />
 
         <input
@@ -2036,14 +2036,14 @@ async function resetAcademyAdmin(adminId: string) {
           }
           type="password"
           placeholder="Password (min 6 characters)"
-          className="rounded-xl border px-4 py-3 text-sm outline-none focus:border-[#315bea]"
+          className="rounded-xl border px-4 py-3 text-sm outline-none focus:border-brand-primary"
         />
       </div>
 
       <button
         onClick={addAcademyAdmin}
         disabled={adminSaving}
-        className="mt-4 rounded-xl bg-[#315bea] px-5 py-3 text-xs font-black text-white disabled:opacity-50"
+        className="mt-4 rounded-xl bg-brand-primary px-5 py-3 text-xs font-black text-white disabled:opacity-50"
       >
         {adminSaving
           ? "Adding Admin..."
@@ -2057,7 +2057,7 @@ async function resetAcademyAdmin(adminId: string) {
           Reset Admin Password
         </h4>
 
-        <p className="mt-1 text-xs text-[#697386]">
+        <p className="mt-1 text-xs text-text-tertiary">
           Set a new password for the selected academy administrator.
         </p>
 
@@ -2069,7 +2069,7 @@ async function resetAcademyAdmin(adminId: string) {
             }
             type="password"
             placeholder="New password"
-            className="flex-1 rounded-xl border bg-white px-4 py-3 text-sm outline-none focus:border-[#315bea]"
+            className="flex-1 rounded-xl border bg-white px-4 py-3 text-sm outline-none focus:border-brand-primary"
           />
 
           <button
@@ -2077,7 +2077,7 @@ async function resetAcademyAdmin(adminId: string) {
               resetAcademyAdmin(resetAdminId)
             }
             disabled={resettingAdmin}
-            className="rounded-xl bg-[#315bea] px-5 py-3 text-xs font-black text-white disabled:opacity-50"
+            className="rounded-xl bg-brand-primary px-5 py-3 text-xs font-black text-white disabled:opacity-50"
           >
             {resettingAdmin
               ? "Resetting..."
@@ -2249,7 +2249,7 @@ async function resetAcademyAdmin(adminId: string) {
                           label=""
                         />
 
-                        <button className="w-full rounded-xl bg-[#315bea] px-4 py-3 text-xs font-black text-white">
+                        <button className="w-full rounded-xl bg-brand-primary px-4 py-3 text-xs font-black text-white">
                           ➕ Add Student
                         </button>
                       </form>
@@ -2340,7 +2340,7 @@ async function resetAcademyAdmin(adminId: string) {
                           }
                         />
 
-                        <button className="w-full rounded-xl bg-[#315bea] px-4 py-3 text-xs font-black text-white">
+                        <button className="w-full rounded-xl bg-brand-primary px-4 py-3 text-xs font-black text-white">
                           ✨ Create Batch
                         </button>
                       </form>
@@ -2479,7 +2479,7 @@ function Overview({
                   id as Section
                 )
               }
-              className="rounded-2xl border border-[#e3e8f5] p-5 text-left transition hover:-translate-y-0.5 hover:border-[#315bea]"
+              className="rounded-2xl border border-border-default p-5 text-left transition hover:-translate-y-0.5 hover:border-brand-primary"
             >
               <span className="text-2xl">
                 {icon}
@@ -2489,7 +2489,7 @@ function Overview({
                 {label}
               </p>
 
-              <p className="mt-1 text-xs text-[#697386]">
+              <p className="mt-1 text-xs text-text-tertiary">
                 Open live academy data →
               </p>
             </button>
@@ -2562,7 +2562,7 @@ function StudentsPanel({
                           )
                         )
                       }
-                      className="rounded-lg border border-red-200 px-3 py-2 text-xs font-bold text-red-600"
+                      className="rounded-lg border border-red-200 px-3 py-2 text-xs font-bold text-state-error"
                     >
                       🗑️ Remove
                     </button>
@@ -2641,7 +2641,7 @@ function TeachersPanel({
                           )
                         )
                       }
-                      className="rounded-lg border border-red-200 px-3 py-2 text-xs font-bold text-red-600"
+                      className="rounded-lg border border-red-200 px-3 py-2 text-xs font-bold text-state-error"
                     >
                       🗑️ Remove
                     </button>
@@ -2696,7 +2696,7 @@ function BatchesPanel({
             return (
               <div
                 key={b.id}
-                className="rounded-2xl border border-[#e3e8f5] p-4"
+                className="rounded-2xl border border-border-default p-4"
               >
                 <div className="flex flex-wrap items-center justify-between gap-3">
                   <div>
@@ -2705,7 +2705,7 @@ function BatchesPanel({
                       {b.name || "-"}
                     </p>
 
-                    <p className="mt-1 text-xs text-[#697386]">
+                    <p className="mt-1 text-xs text-text-tertiary">
                       Course:{" "}
                       {b.course_name ||
                         "Not assigned"}{" "}
@@ -2753,7 +2753,7 @@ function BatchesPanel({
                           )
                         )
                       }
-                      className="rounded-lg border border-red-200 px-3 py-2 text-xs font-bold text-red-600"
+                      className="rounded-lg border border-red-200 px-3 py-2 text-xs font-bold text-state-error"
                     >
                       🗑️ Delete
                     </button>
@@ -2765,7 +2765,7 @@ function BatchesPanel({
                   <div className="mt-4 border-t pt-4">
                     {batchLoading ===
                     b.id ? (
-                      <p className="text-xs text-[#697386]">
+                      <p className="text-xs text-text-tertiary">
                         Loading students…
                       </p>
                     ) : (
@@ -2784,7 +2784,7 @@ function BatchesPanel({
                                   key={
                                     s.id
                                   }
-                                  className="rounded-full bg-[#eef2ff] px-3 py-1.5 text-xs font-bold"
+                                  className="rounded-full bg-surface-subtle px-3 py-1.5 text-xs font-bold"
                                 >
                                   🎓{" "}
                                   {
@@ -2799,7 +2799,7 @@ function BatchesPanel({
                                         "remove"
                                       )
                                     }
-                                    className="ml-1 text-red-600"
+                                    className="ml-1 text-state-error"
                                   >
                                     ×
                                   </button>
@@ -2808,7 +2808,7 @@ function BatchesPanel({
                             )}
                           </div>
                         ) : (
-                          <p className="mb-4 text-xs text-[#929aaa]">
+                          <p className="mb-4 text-xs text-text-body">
                             No students assigned yet.
                           </p>
                         )}
@@ -2844,7 +2844,7 @@ function BatchesPanel({
                                       "add"
                                     )
                                   }
-                                  className="rounded-lg border px-3 py-2 text-xs font-bold hover:border-[#315bea]"
+                                  className="rounded-lg border px-3 py-2 text-xs font-bold hover:border-brand-primary"
                                 >
                                   ➕{" "}
                                   {
@@ -2861,7 +2861,7 @@ function BatchesPanel({
                               )
                           ).length ===
                             0 && (
-                            <span className="text-xs text-[#929aaa]">
+                            <span className="text-xs text-text-body">
                               All academy students are already assigned.
                             </span>
                           )}
@@ -2908,7 +2908,7 @@ function TestsPanel({
               return (
                 <details
                   key={p.id}
-                  className="rounded-2xl border border-[#e3e8f5] bg-[#fcfdff] p-4"
+                  className="rounded-2xl border border-border-default bg-[#fcfdff] p-4"
                 >
                   <summary className="cursor-pointer list-none">
                     <p className="font-black">
@@ -2920,7 +2920,7 @@ function TestsPanel({
                         "Untitled"}
                     </p>
 
-                    <p className="mt-1 text-xs font-semibold text-[#315bea]">
+                    <p className="mt-1 text-xs font-semibold text-brand-primary">
                       {p.exam || "-"}{" "}
                       ·{" "}
                       {p.status ||
@@ -2932,7 +2932,7 @@ function TestsPanel({
                       questions
                     </p>
 
-                    <p className="mt-1 text-xs text-[#697386]">
+                    <p className="mt-1 text-xs text-text-tertiary">
                       Creator:{" "}
                       {p.creator_name ||
                         p.creator_email ||
@@ -2955,7 +2955,7 @@ function TestsPanel({
                             key={`${q.id}-${i}`}
                             className="rounded-xl border bg-white p-3"
                           >
-                            <p className="text-[11px] font-black text-[#315bea]">
+                            <p className="text-[11px] font-black text-brand-primary">
                               Question{" "}
                               {q.question_order ||
                                 i + 1}{" "}
@@ -2972,7 +2972,7 @@ function TestsPanel({
                                 "Question text unavailable"}
                             </p>
 
-                            <p className="mt-2 text-xs text-[#697386]">
+                            <p className="mt-2 text-xs text-text-tertiary">
                               Difficulty:{" "}
                               {q.difficulty ||
                                 "-"}{" "}
@@ -2985,7 +2985,7 @@ function TestsPanel({
                             </p>
 
                             {q.solution ? (
-                              <p className="mt-2 whitespace-pre-wrap text-xs text-[#697386]">
+                              <p className="mt-2 whitespace-pre-wrap text-xs text-text-tertiary">
                                 Solution:{" "}
                                 {q.solution}
                               </p>
@@ -3136,7 +3136,7 @@ function SubscriptionPanel({
 
         <div className="mt-2 h-3 overflow-hidden rounded-full bg-[#edf0f5]">
           <div
-            className="h-full rounded-full bg-[#315bea]"
+            className="h-full rounded-full bg-brand-primary"
             style={{
               width: `${percent}%`,
             }}
@@ -3196,7 +3196,7 @@ function Panel({
       <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
         <h3 className="text-lg font-black">
           {title}{" "}
-          <span className="ml-1 rounded-full bg-[#eef2ff] px-2 py-1 text-xs text-[#315bea]">
+          <span className="ml-1 rounded-full bg-surface-subtle px-2 py-1 text-xs text-brand-primary">
             {count}
           </span>
         </h3>
@@ -3212,7 +3212,7 @@ function Panel({
             placeholder={
               placeholder
             }
-            className="rounded-xl border border-[#dfe4ed] px-4 py-2.5 text-sm outline-none focus:border-[#315bea]"
+            className="rounded-xl border border-border-default px-4 py-2.5 text-sm outline-none focus:border-brand-primary"
           />
         )}
       </div>
@@ -3230,14 +3230,14 @@ function RecordCard({
   actions,
 }: any) {
   return (
-    <div className="rounded-2xl border border-[#e3e8f5] bg-[#fcfdff] p-4">
+    <div className="rounded-2xl border border-border-default bg-[#fcfdff] p-4">
       <div className="flex flex-wrap justify-between gap-4">
         <div className="min-w-0">
           <p className="font-black">
             {icon} {title}
           </p>
 
-          <p className="mt-1 text-xs font-semibold text-[#315bea]">
+          <p className="mt-1 text-xs font-semibold text-brand-primary">
             {meta}
           </p>
 
@@ -3245,7 +3245,7 @@ function RecordCard({
             (x: string) => (
               <p
                 key={x}
-                className="mt-1 text-xs text-[#697386]"
+                className="mt-1 text-xs text-text-tertiary"
               >
                 {x}
               </p>
@@ -3276,8 +3276,8 @@ function AcademyCard({
     <div
       className={`rounded-2xl border bg-white p-5 shadow-sm ${
         selected
-          ? "border-[#315bea] ring-2 ring-[#315bea]/10"
-          : "border-[#e3e8f5]"
+          ? "border-brand-primary ring-2 ring-brand-primary/10"
+          : "border-border-default"
       }`}
     >
       <div className="flex items-start justify-between gap-3">
@@ -3286,12 +3286,12 @@ function AcademyCard({
             🏫 {academy.name}
           </p>
 
-          <p className="mt-1 text-xs text-[#697386]">
+          <p className="mt-1 text-xs text-text-tertiary">
             Code: {academy.code}
           </p>
         </div>
 
-        <span className="rounded-full bg-[#eef2ff] px-3 py-1 text-[10px] font-black text-[#315bea]">
+        <span className="rounded-full bg-surface-subtle px-3 py-1 text-[10px] font-black text-brand-primary">
           {statusLabel(
             academy
           )}
@@ -3359,7 +3359,7 @@ function Modal({
     "subscription";
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#101828]/50 p-4">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-surface-app-bg/50 p-4">
       <div className="w-full max-w-lg rounded-3xl bg-white p-6 shadow-2xl">
         <div className="flex items-center justify-between">
           <h3 className="text-lg font-black">
@@ -3464,7 +3464,7 @@ function Modal({
 
         {modal.type ===
           "delete" && (
-          <p className="mt-5 text-sm text-[#697386]">
+          <p className="mt-5 text-sm text-text-tertiary">
             This removes the record
             from the academy. This
             action cannot be undone.
@@ -3485,7 +3485,7 @@ function Modal({
               modal.type ===
               "delete"
                 ? "bg-red-600"
-                : "bg-[#315bea]"
+                : "bg-brand-primary"
             }`}
           >
             {modal.type ===
@@ -3511,12 +3511,12 @@ function ManagementCard({
   children: ReactNode;
 }) {
   return (
-    <div className="rounded-2xl border border-[#e3e8f5] bg-[#fafbfe] p-5">
+    <div className="rounded-2xl border border-border-default bg-surface-app-bg p-5">
       <h3 className="font-black">
         {title}
       </h3>
 
-      <p className="mb-4 mt-1 text-xs leading-5 text-[#697386]">
+      <p className="mb-4 mt-1 text-xs leading-5 text-text-tertiary">
         {description}
       </p>
 
@@ -3546,7 +3546,7 @@ function Field({
           placeholder
         }
         type={type}
-        className="mt-1 w-full rounded-xl border border-[#dfe4ed] bg-white px-3 py-3 text-sm outline-none focus:border-[#315bea]"
+        className="mt-1 w-full rounded-xl border border-border-default bg-white px-3 py-3 text-sm outline-none focus:border-brand-primary"
       />
     </label>
   );
@@ -3568,7 +3568,7 @@ function Select({
         onChange={(e) =>
           onChange(e.target.value)
         }
-        className="mt-1 w-full rounded-xl border border-[#dfe4ed] bg-white px-3 py-3 text-sm outline-none focus:border-[#315bea]"
+        className="mt-1 w-full rounded-xl border border-border-default bg-white px-3 py-3 text-sm outline-none focus:border-brand-primary"
       >
         <option value="">
           Select…
@@ -3595,9 +3595,9 @@ function Stat({
   icon,
 }: any) {
   return (
-    <div className="rounded-2xl border border-[#e3e8f5] bg-white p-5 shadow-sm">
+    <div className="rounded-2xl border border-border-default bg-white p-5 shadow-sm">
       <div className="flex justify-between">
-        <p className="text-xs font-bold text-[#929aaa]">
+        <p className="text-xs font-bold text-text-body">
           {title}
         </p>
 
@@ -3618,12 +3618,12 @@ function BigStat({
   sub,
 }: any) {
   return (
-    <div className="rounded-2xl border border-[#e3e8f5] bg-[#fafbfe] p-5">
+    <div className="rounded-2xl border border-border-default bg-surface-app-bg p-5">
       <span className="text-xl">
         {icon}
       </span>
 
-      <p className="mt-3 text-[10px] font-black uppercase tracking-wide text-[#929aaa]">
+      <p className="mt-3 text-[10px] font-black uppercase tracking-wide text-text-body">
         {label}
       </p>
 
@@ -3631,7 +3631,7 @@ function BigStat({
         {value}
       </p>
 
-      <p className="mt-1 text-xs text-[#697386]">
+      <p className="mt-1 text-xs text-text-tertiary">
         {sub}
       </p>
     </div>
@@ -3645,7 +3645,7 @@ function Mini({
 }: any) {
   return (
     <div className="rounded-xl bg-[#f7f9fc] p-3">
-      <p className="text-[10px] font-bold text-[#929aaa]">
+      <p className="text-[10px] font-bold text-text-body">
         {icon} {label}
       </p>
 
@@ -3662,7 +3662,7 @@ function Empty({
   text: string;
 }) {
   return (
-    <div className="rounded-2xl border border-dashed border-[#dfe4ed] bg-white p-8 text-center text-sm font-bold text-[#929aaa]">
+    <div className="rounded-2xl border border-dashed border-border-default bg-white p-8 text-center text-sm font-bold text-text-body">
       {text}
     </div>
   );

@@ -199,18 +199,18 @@ export default function MistakesPage() {
 
   const statusColor = (isResolved: boolean) =>
     isResolved
-      ? "text-green-600 bg-green-50 border-green-100"
+      ? "text-state-success bg-green-50 border-green-100"
       : "text-amber-600 bg-amber-50 border-amber-100";
 
   const s = (n: number) => (n !== 1 ? "s" : "");
 
   return (
-    <main className="min-h-screen bg-[#f6f8fc] text-[#172033]">
+    <main className="min-h-screen bg-surface-app-bg text-text-primary">
       <div className="mx-auto w-full max-w-4xl px-3 py-5 sm:px-6 sm:py-10">
         <header className="mb-8">
           <button
             onClick={() => router.push("/dashboard")}
-            className="text-sm font-semibold text-[#315bea] mb-4 inline-flex items-center gap-1 transition hover:underline"
+            className="text-sm font-semibold text-brand-primary mb-4 inline-flex items-center gap-1 transition hover:underline"
           >
             &#x2190; Back to Dashboard
           </button>
@@ -218,13 +218,16 @@ export default function MistakesPage() {
             <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#f0f9ff] text-2xl">
               &#x1F4D3;
             </div>
-            <div>
-              <h1 className="text-xl sm:text-2xl font-extrabold tracking-tight">
-                Mistake Notebook
-              </h1>
-              <p className="text-sm text-[#697386]">
-                Review questions you got wrong and retry them to improve.
-              </p>
+            <div className="flex items-center gap-2">
+              <div>
+                <h1 className="text-xl sm:text-2xl font-extrabold tracking-tight">
+                  Mistake Notebook
+                </h1>
+                <p className="text-sm text-text-tertiary">
+                  Review questions you got wrong and retry them to improve.
+                </p>
+              </div>
+              <MistakeInfoTooltip />
             </div>
           </div>
         </header>
@@ -239,7 +242,7 @@ export default function MistakesPage() {
           <StatCard
             label="Total Mistakes"
             value={stats.total}
-            color="text-red-600 bg-red-50 border-red-100"
+            color="text-state-error bg-red-50 border-red-100"
           />
           <StatCard
             label="Unresolved"
@@ -249,7 +252,7 @@ export default function MistakesPage() {
           <StatCard
             label="Mastered"
             value={stats.total - stats.unresolved}
-            color="text-green-600 bg-green-50 border-green-100"
+            color="text-state-success bg-green-50 border-green-100"
           />
         </div>
 
@@ -282,28 +285,28 @@ export default function MistakesPage() {
         )}
 
         <div className="flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-3 mb-6">
-          <div className="flex flex-wrap items-center gap-1.5 px-2 sm:px-3 py-2 rounded-xl border border-[#dfe4ee] bg-white text-sm">
-            <span className="font-medium text-[#697386]">Filter:</span>
+          <div className="flex flex-wrap items-center gap-1.5 px-2 sm:px-3 py-2 rounded-xl border border-border-default bg-white text-sm">
+            <span className="font-medium text-text-tertiary">Filter:</span>
             <button
               onClick={() => setFilter("all")}
-              className={`px-3 py-1 rounded-md text-sm font-medium transition ${filter === "all" ? "bg-[#315bea] text-white" : "text-[#697386] hover:bg-[#f0f2f6]"}`}
+              className={`px-3 py-1 rounded-md text-sm font-medium transition ${filter === "all" ? "bg-brand-primary text-white" : "text-text-tertiary hover:bg-border-default"}`}
             >
               All
             </button>
             <button
               onClick={() => setFilter("unresolved")}
-              className={`px-3 py-1 rounded-md text-sm font-medium transition ${filter === "unresolved" ? "bg-[#315bea] text-white" : "text-[#697386] hover:bg-[#f0f2f6]"}`}
+              className={`px-3 py-1 rounded-md text-sm font-medium transition ${filter === "unresolved" ? "bg-brand-primary text-white" : "text-text-tertiary hover:bg-border-default"}`}
             >
               Unresolved Only
             </button>
           </div>
 
-          <div className="w-full sm:flex-1 min-w-0 flex items-center gap-2 px-3 py-2 rounded-xl border border-[#dfe4ee] bg-white text-sm">
-            <span className="font-medium text-[#697386]">Subject:</span>
+          <div className="w-full sm:flex-1 min-w-0 flex items-center gap-2 px-3 py-2 rounded-xl border border-border-default bg-white text-sm">
+            <span className="font-medium text-text-tertiary">Subject:</span>
             <select
               value={subjectFilter}
               onChange={(e) => setSubjectFilter(e.target.value)}
-              className="min-w-0 flex-1 bg-transparent border-none text-sm text-[#172033] focus:ring-0 sm:px-2"
+              className="min-w-0 flex-1 bg-transparent border-none text-sm text-text-primary focus:ring-0 sm:px-2"
             >
               <option value="">All Subjects</option>
               {subjects.map((sub) => (
@@ -314,7 +317,7 @@ export default function MistakesPage() {
             </select>
           </div>
 
-          <div className="sm:ml-auto text-xs text-[#8a93a5]">
+          <div className="sm:ml-auto text-xs text-text-body">
             {filteredMistakes.length} of {mistakes.length} mistake{s(
               mistakes.length
             )} showing
@@ -326,23 +329,23 @@ export default function MistakesPage() {
             <div className="w-8 h-8 border-4 border-blue-100 border-t-blue-600 rounded-full animate-spin" />
           </div>
         ) : filteredMistakes.length === 0 ? (
-          <div className="rounded-2xl border border-[#e5e8ef] bg-white p-12 text-center shadow-sm">
+          <div className="rounded-2xl border border-border-default bg-white p-12 text-center shadow-sm">
             <div className="text-4xl mb-4">&#x1F4D3;</div>
             {filter === "unresolved" && unresolvedMistakes.length === 0 ? (
               <>
-                <h2 className="text-xl font-bold text-[#172033]">
+                <h2 className="text-xl font-bold text-text-primary">
                   No unresolved mistakes! &#x1F389;
                 </h2>
-                <p className="mt-2 text-[#697386]">
+                <p className="mt-2 text-text-tertiary">
                   You&apos;ve mastered all your past mistakes. Keep it up!
                 </p>
               </>
             ) : (
               <>
-                <h2 className="text-xl font-bold text-[#172033]">
+                <h2 className="text-xl font-bold text-text-primary">
                   No mistakes yet.
                 </h2>
-                <p className="mt-2 text-[#697386]">
+                <p className="mt-2 text-text-tertiary">
                   Take some tests and your wrong answers will appear here
                   automatically.
                 </p>
@@ -353,36 +356,36 @@ export default function MistakesPage() {
           <>
           <div className="space-y-3 md:hidden">
             {filteredMistakes.map((m) => (
-              <article key={m.mistakeId} className="min-w-0 rounded-2xl border border-[#e5e8ef] bg-white p-4 shadow-sm">
+              <article key={m.mistakeId} className="min-w-0 rounded-2xl border border-border-default bg-white p-4 shadow-sm">
                 <div className="flex items-start justify-between gap-2"><span className="rounded-lg bg-indigo-50 px-2 py-1 text-[10px] font-black text-indigo-700">{m.subject || "General"}</span><span className={`shrink-0 rounded-md border px-2 py-1 text-[10px] font-bold ${statusColor(m.isResolved)}`}>{m.isResolved ? "Resolved" : "Unresolved"}</span></div>
-                <h2 className="mt-3 break-words text-sm font-bold leading-6 text-[#172033]">{m.stem}</h2>
-                <p className="mt-1 break-words text-[11px] text-[#8a93a5]">{m.chapter || "No chapter"} · {m.exam || "Practice"} · {formatDate(m.lastMade)}</p>
-                {m.options.length > 0 && <div className="mt-3 space-y-1.5">{m.options.map((opt, idx) => { const correct = idx === m.correctIndex; const selected = idx === m.selectedIndex; return <div key={idx} className={`break-words rounded-lg border px-3 py-2 text-xs ${correct ? "border-green-100 bg-green-50 text-green-700" : selected ? "border-rose-100 bg-rose-50 text-rose-700" : "border-[#f0f2f6] bg-[#f8fafc] text-[#697386]"}`}>{String.fromCharCode(65 + idx)}. {opt}</div>; })}</div>}
-                <div className="mt-3 flex flex-wrap items-center justify-between gap-2 text-[11px] text-[#697386]"><span>{m.attemptCount} attempt{m.attemptCount === 1 ? "" : "s"}</span><span>Q#{m.questionId}</span></div>
-                {!m.isResolved && <div className="mt-3">{retryResults[m.questionId] === "correct" ? <div className="rounded-lg bg-green-50 p-3 text-xs font-bold text-green-700">✓ Correct — resolved!</div> : retryResults[m.questionId] === "wrong" ? <p className="mb-2 text-xs font-bold text-rose-600">Not quite — try again.</p> : null}<div className="flex gap-2"><input type="text" value={retryAnswers[m.questionId] || ""} onChange={(e) => retryAnswerChange(m.questionId, e.target.value)} placeholder="Your answer" className="min-w-0 flex-1 rounded-xl border border-[#dfe4ee] px-3 py-2.5 text-sm focus:border-[#315bea] focus:outline-none" disabled={retrying.has(m.questionId)} /><button type="button" onClick={() => void submitRetryAnswer(m)} disabled={retrying.has(m.questionId) || !retryAnswers[m.questionId]?.trim()} className="shrink-0 rounded-xl bg-[#315bea] px-4 py-2.5 text-sm font-bold text-white disabled:opacity-50">{retrying.has(m.questionId) ? "…" : "Check"}</button></div></div>}
+                <h2 className="mt-3 break-words text-sm font-bold leading-6 text-text-primary">{m.stem}</h2>
+                <p className="mt-1 break-words text-[11px] text-text-body">{m.chapter || "No chapter"} · {m.exam || "Practice"} · {formatDate(m.lastMade)}</p>
+                {m.options.length > 0 && <div className="mt-3 space-y-1.5">{m.options.map((opt, idx) => { const correct = idx === m.correctIndex; const selected = idx === m.selectedIndex; return <div key={idx} className={`break-words rounded-lg border px-3 py-2 text-xs ${correct ? "border-green-100 bg-green-50 text-green-700" : selected ? "border-rose-100 bg-rose-50 text-rose-700" : "border-border-default bg-[#f8fafc] text-text-tertiary"}`}>{String.fromCharCode(65 + idx)}. {opt}</div>; })}</div>}
+                <div className="mt-3 flex flex-wrap items-center justify-between gap-2 text-[11px] text-text-tertiary"><span>{m.attemptCount} attempt{m.attemptCount === 1 ? "" : "s"}</span><span>Q#{m.questionId}</span></div>
+                {!m.isResolved && <div className="mt-3">{retryResults[m.questionId] === "correct" ? <div className="rounded-lg bg-green-50 p-3 text-xs font-bold text-green-700">✓ Correct — resolved!</div> : retryResults[m.questionId] === "wrong" ? <p className="mb-2 text-xs font-bold text-rose-600">Not quite — try again.</p> : null}<div className="flex gap-2"><input type="text" value={retryAnswers[m.questionId] || ""} onChange={(e) => retryAnswerChange(m.questionId, e.target.value)} placeholder="Your answer" className="min-w-0 flex-1 rounded-xl border border-border-default px-3 py-2.5 text-sm focus:border-brand-primary focus:outline-none" disabled={retrying.has(m.questionId)} /><button type="button" onClick={() => void submitRetryAnswer(m)} disabled={retrying.has(m.questionId) || !retryAnswers[m.questionId]?.trim()} className="shrink-0 rounded-xl bg-brand-primary px-4 py-2.5 text-sm font-bold text-white disabled:opacity-50">{retrying.has(m.questionId) ? "…" : "Check"}</button></div></div>}
               </article>
             ))}
           </div>
-          <div className="hidden md:block rounded-xl border border-[#e5e8ef] bg-white shadow-sm overflow-hidden">
+          <div className="hidden md:block rounded-xl border border-border-default bg-white shadow-sm overflow-hidden">
             <table className="w-full text-left text-sm">
               <thead>
-                <tr className="border-b border-[#f0f2f6] bg-[#fafbfc]">
-                  <th className="px-5 py-3 font-bold text-[#697386] uppercase text-[10px] tracking-[0.12em]">
+                <tr className="border-b border-border-default bg-surface-app-bg">
+                  <th className="px-5 py-3 font-bold text-text-tertiary uppercase text-[10px] tracking-[0.12em]">
                     Question
                   </th>
-                  <th className="px-5 py-3 font-bold text-[#697386] uppercase text-[10px] tracking-[0.12em]">
+                  <th className="px-5 py-3 font-bold text-text-tertiary uppercase text-[10px] tracking-[0.12em]">
                     Subject
                   </th>
-                  <th className="px-5 py-3 font-bold text-[#697386] uppercase text-[10px] tracking-[0.12em]">
+                  <th className="px-5 py-3 font-bold text-text-tertiary uppercase text-[10px] tracking-[0.12em]">
                     Chapter
                   </th>
-                  <th className="px-5 py-3 font-bold text-[#697386] uppercase text-[10px] tracking-[0.12em] text-right">
+                  <th className="px-5 py-3 font-bold text-text-tertiary uppercase text-[10px] tracking-[0.12em] text-right">
                     Attempts
                   </th>
-                  <th className="px-5 py-3 font-bold text-[#697386] uppercase text-[10px] tracking-[0.12em]">
+                  <th className="px-5 py-3 font-bold text-text-tertiary uppercase text-[10px] tracking-[0.12em]">
                     Status
                   </th>
-                  <th className="px-5 py-3 font-bold text-[#697386] uppercase text-[10px] tracking-[0.12em]">
+                  <th className="px-5 py-3 font-bold text-text-tertiary uppercase text-[10px] tracking-[0.12em]">
                     Retry
                   </th>
                 </tr>
@@ -394,10 +397,10 @@ export default function MistakesPage() {
                     className="border-b border-[#f5f7fb] hover:bg-[#f8fafc] transition"
                   >
                     <td className="px-5 py-4">
-                      <div className="font-semibold text-[#172033] truncate max-w-[220px]">
+                      <div className="font-semibold text-text-primary truncate max-w-[220px]">
                         {m.stem}
                       </div>
-                      <div className="mt-1 text-xs text-[#8a93a5]">
+                      <div className="mt-1 text-xs text-text-body">
                         Q#{m.questionId} &#x00B7; {m.exam} &#x00B7; {formatDate(m.lastMade)}
                       </div>
                       {m.options.length > 0 && (
@@ -409,7 +412,7 @@ export default function MistakesPage() {
                             return (
                               <div
                                 key={idx}
-                                className={`text-xs px-3 py-2 rounded border ${isCorrect ? "bg-green-50 text-green-700 border-green-100" : isSelected ? "bg-rose-50 text-rose-700 border-rose-100" : "bg-[#f8fafc] text-[#697386] border-[#f0f2f6]"}`}
+                                className={`text-xs px-3 py-2 rounded border ${isCorrect ? "bg-green-50 text-green-700 border-green-100" : isSelected ? "bg-rose-50 text-rose-700 border-rose-100" : "bg-[#f8fafc] text-text-tertiary border-border-default"}`}
                               >
                                 {letter}. {opt}
                               </div>
@@ -419,10 +422,10 @@ export default function MistakesPage() {
                       )}
                     </td>
                     <td className="px-5 py-4">{m.subject}</td>
-                    <td className="px-5 py-4 text-sm text-[#172033]">
+                    <td className="px-5 py-4 text-sm text-text-primary">
                       {m.chapter || "\u2014"}
                     </td>
-                    <td className="px-5 py-4 text-right text-sm font-semibold text-[#697386]">
+                    <td className="px-5 py-4 text-right text-sm font-semibold text-text-tertiary">
                       {m.attemptCount}
                     </td>
                     <td className="px-5 py-4">
@@ -436,14 +439,14 @@ export default function MistakesPage() {
                       {!m.isResolved ? (
                         <>
                           {retryResults[m.questionId] === "correct" ? (
-                            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-[#16a34a] bg-[#f0fdf4] text-sm font-semibold text-[#16a34a]">
+                            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-[#16a34a] bg-state-success text-sm font-semibold text-[#16a34a]">
                               <span className="w-3 h-3 rounded-full bg-[#16a34a] text-white flex items-center justify-center text-[10px]">
                                 &#x2713;
                               </span>
                               Correct &#x2014; resolved!
                             </div>
                           ) : retryResults[m.questionId] === "wrong" ? (
-                            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-[#dc2626] bg-[#fef2f2] text-sm font-semibold text-[#dc2626]">
+                            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-[#dc2626] bg-state-error text-sm font-semibold text-[#dc2626]">
                               <span className="w-3 h-3 rounded-full bg-[#dc2626] text-white flex items-center justify-center text-[10px]">
                                 &#x2717;
                               </span>
@@ -459,19 +462,19 @@ export default function MistakesPage() {
                                     retryAnswerChange(m.questionId, e.target.value)
                                   }
                                   placeholder="Your answer"
-                                  className="flex-1 px-3 py-2 rounded-xl border border-[#dfe4ee] bg-white text-sm focus:border-[#315bea] focus:outline-none"
+                                  className="flex-1 px-3 py-2 rounded-xl border border-border-default bg-white text-sm focus:border-brand-primary focus:outline-none"
                                   disabled={retrying.has(m.questionId)}
                                 />
                                 <button
                                   onClick={() => submitRetryAnswer(m)}
                                   disabled={retrying.has(m.questionId) || !retryAnswers[m.questionId]?.trim()}
-                                  className="px-3 py-2 rounded-xl border border-[#315bea] bg-[#315bea] text-white text-sm font-semibold hover:bg-[#264ac7] disabled:opacity-50 disabled:cursor-not-allowed"
+                                  className="px-3 py-2 rounded-xl border border-brand-primary bg-brand-primary text-white text-sm font-semibold hover:bg-brand-primary disabled:opacity-50 disabled:cursor-not-allowed"
                                 >
                                   Check
                                 </button>
                               </div>
                               {retrying.has(m.questionId) && (
-                                <span className="text-xs text-[#697386]">
+                                <span className="text-xs text-text-tertiary">
                                   Checking&#x2026;
                                 </span>
                               )}
@@ -479,7 +482,7 @@ export default function MistakesPage() {
                           )}
                         </>
                       ) : (
-                        <span className="text-xs text-[#8a93a5]">Mastered</span>
+                        <span className="text-xs text-text-body">Mastered</span>
                       )}
                     </td>
                   </tr>
@@ -510,5 +513,65 @@ function StatCard({
       </div>
       <div className="text-2xl font-black mt-1">{value}</div>
     </div>
+  );
+}
+
+function MistakeInfoTooltip() {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <>
+      <button
+        type="button"
+        onClick={() => setOpen((prev) => !prev)}
+        className="flex items-center justify-center w-7 h-7 rounded-full border border-border-default bg-white text-text-body hover:bg-surface-subtle hover:border-slate-300 transition text-[10px] font-bold"
+        aria-label="About Mistake Notebook"
+      >
+        ?
+      </button>
+      {open && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center"
+          onClick={() => setOpen(false)}
+        >
+          <div
+            className="absolute inset-0 bg-black/40 backdrop-blur-sm"
+            onClick={(e) => e.stopPropagation()}
+          />
+          <div
+            className="w-full max-w-md rounded-2xl bg-white p-6 shadow-2xl border border-border-default mx-4"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="font-extrabold text-text-primary text-sm">
+                About Mistake Notebook
+              </h3>
+              <button
+                type="button"
+                onClick={() => setOpen(false)}
+                className="rounded-md p-1.5 text-text-supporting-label hover:bg-surface-subtle transition"
+                aria-label="Close"
+              >
+                <span className="text-[10px]">✕</span>
+              </button>
+            </div>
+            <p className="text-sm text-text-body leading-relaxed mb-4">
+              The Mistake Notebook is a repository of all the mistakes you make.
+              Your mistakes will not be automatically marked resolved just
+              because you get them right once. Mark a mistake as resolved only
+              when you are sure you have conquered it and no longer think it
+              deserves a spot in your repository.
+            </p>
+            <button
+              type="button"
+              onClick={() => setOpen(false)}
+              className="w-full rounded-xl border border-border-default px-4 py-2.5 text-sm font-bold text-text-secondary hover:bg-surface-subtle transition"
+            >
+              Got it
+            </button>
+          </div>
+        </div>
+      )}
+    </>
   );
 }

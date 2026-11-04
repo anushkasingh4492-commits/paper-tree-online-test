@@ -382,7 +382,7 @@ function scoreTone(score: number) {
   }
 
   if (score >= 60) {
-    return "text-blue-600";
+    return "text-brand-primary";
   }
 
   if (score >= 50) {
@@ -400,8 +400,8 @@ function subjectConfig(
 
   if (normalized === "physics") {
     return {
-      bar: "bg-blue-500",
-      text: "text-blue-600",
+      bar: "bg-brand-action-blue",
+      text: "text-brand-primary",
       iconBg: "bg-blue-50",
       icon: "",
     };
@@ -517,7 +517,7 @@ function PerformanceChart({
   return (
     <div className="mt-5 overflow-hidden">
       {points.length === 0 ? (
-        <div className="h-[225px] flex items-center justify-center text-xs text-[#9aa1ae]">
+        <div className="h-[225px] flex items-center justify-center text-xs text-text-supporting-label">
           Complete a test to see your
           performance trend.
         </div>
@@ -771,11 +771,11 @@ function Donut({
     return (
       <div className="flex items-center justify-center h-[150px]">
         <div className="text-center">
-          <div className="text-[22px] font-extrabold text-[#202638]">
+          <div className="text-[22px] font-extrabold text-text-primary">
             0
           </div>
 
-          <div className="text-[10px] text-[#9299a8]">
+          <div className="text-[10px] text-text-body">
             Tests
           </div>
         </div>
@@ -839,11 +839,11 @@ function Donut({
         </svg>
 
         <div className="absolute inset-0 flex flex-col items-center justify-center">
-          <span className="text-[20px] font-extrabold text-[#202638]">
+          <span className="text-[20px] font-extrabold text-text-primary">
             {total}
           </span>
 
-          <span className="text-[10px] text-[#9299a8]">
+          <span className="text-[10px] text-text-body">
             Tests
           </span>
         </div>
@@ -892,11 +892,11 @@ function Donut({
                 }}
               />
 
-              <span className="text-[#697184] flex-1">
+              <span className="text-text-tertiary flex-1">
                 {label}
               </span>
 
-              <span className="font-semibold text-[#6b7280]">
+              <span className="font-semibold text-text-body">
                 {count} (
                 {Math.round(
                   (Number(
@@ -1549,18 +1549,18 @@ export default function DashboardPage() {
 
   if (loading) {
     return (
-      <main className="min-h-screen bg-[#f8f9fc] flex items-center justify-center">
+      <main className="min-h-screen bg-surface-app-bg flex items-center justify-center">
         <div className="text-center">
           <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#2563eb] to-[#6338e5] text-white flex items-center justify-center font-black text-lg mx-auto animate-pulse">
             P
           </div>
 
-          <p className="mt-4 text-sm font-semibold text-[#4e596c]">
+          <p className="mt-4 text-sm font-semibold text-text-tertiary">
             Loading your
             dashboard...
           </p>
 
-          <p className="mt-1 text-xs text-[#9aa1ae]">
+          <p className="mt-1 text-xs text-text-supporting-label">
             Preparing your
             personal performance
             data
@@ -1577,18 +1577,18 @@ export default function DashboardPage() {
 
   if (error) {
     return (
-      <main className="min-h-screen bg-[#f8f9fc] flex items-center justify-center px-5">
-        <div className="bg-white border border-[#e8eaf0] rounded-2xl p-7 max-w-md w-full text-center shadow-sm">
+      <main className="min-h-screen bg-surface-app-bg flex items-center justify-center px-5">
+        <div className="bg-white border border-border-default rounded-2xl p-7 max-w-md w-full text-center shadow-sm">
           <div className="w-12 h-12 rounded-full bg-rose-50 text-rose-500 flex items-center justify-center mx-auto text-xl">
             !
           </div>
 
-          <h1 className="mt-4 text-lg font-extrabold text-[#202638]">
+          <h1 className="mt-4 text-lg font-extrabold text-text-primary">
             Unable to load
             dashboard
           </h1>
 
-          <p className="mt-2 text-xs text-[#858c9b]">
+          <p className="mt-2 text-xs text-text-tertiary">
             {error}
           </p>
 
@@ -1596,7 +1596,7 @@ export default function DashboardPage() {
             onClick={() =>
               window.location.reload()
             }
-            className="mt-5 h-9 px-5 rounded-lg bg-[#6246e5] text-white text-xs font-bold"
+            className="mt-5 h-9 px-5 rounded-lg bg-brand-purple text-white text-xs font-bold"
           >
             Try Again
           </button>
@@ -1611,27 +1611,16 @@ export default function DashboardPage() {
   ============================================================ */
 
   return (
-    <main className={`student-dashboard ${darkMode ? "student-dashboard-dark" : ""} min-h-screen w-full max-w-full overflow-x-hidden bg-[#f8f9fc] text-[#1d2435]`}>
-      <button
-        type="button"
-        onClick={() => setDarkMode((value) => !value)}
-        aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
-        aria-pressed={darkMode}
-        className="fixed right-4 top-4 z-[120] flex items-center gap-2 rounded-full border border-slate-300 bg-white/95 px-4 py-2 text-xs font-bold text-slate-800 shadow-lg backdrop-blur hover:bg-slate-50"
-      >
-        <span aria-hidden="true">{darkMode ? "☀️" : "🌙"}</span>
-        {darkMode ? "Light mode" : "Dark mode"}
-      </button>
-
+    <main className={`student-dashboard ${darkMode ? "student-dashboard-dark" : ""} min-h-screen w-full max-w-full overflow-x-hidden bg-surface-app-bg text-text-primary`}>
       <div className="flex min-h-screen w-full min-w-0">
 
         {/* =====================================================
             SIDEBAR
         ====================================================== */}
 
-        <aside className="hidden xl:flex w-[220px] shrink-0 bg-white border-r border-[#e9ebf1] flex-col">
+        <aside className="hidden xl:flex w-[220px] shrink-0 bg-white border-r border-border-default flex-col">
 
-          <div className="h-[82px] px-5 flex items-center gap-3 border-b border-[#f0f1f5]">
+          <div className="h-[82px] px-5 flex items-center gap-3 border-b border-border-default">
             {academyBranding?.logo_data ? <img src={academyBranding.logo_data} alt="Institute logo" className="h-9 w-9 rounded-[11px] object-contain shadow-sm" /> : <div className="w-9 h-9 rounded-[11px] bg-gradient-to-br from-[#2563eb] to-[#6338e5] text-white flex items-center justify-center font-black text-lg shadow-sm">P</div>}
 
             <div>
@@ -1639,14 +1628,14 @@ export default function DashboardPage() {
                 {academyBranding?.name || "Academy"}
               </div>
 
-              <div className="text-[9px] font-semibold tracking-[.17em] text-[#9ba1ad] mt-1">
+              <div className="text-[9px] font-semibold tracking-[.17em] text-text-supporting-label mt-1">
                 EDUCATIONAL STUDIO
               </div>
             </div>
           </div>
 
           <div className="px-4 pt-5 flex-1">
-            <p className="px-2 mb-2 text-[9px] uppercase tracking-[.16em] font-bold text-[#a1a7b3]">
+            <p className="px-2 mb-2 text-[9px] uppercase tracking-[.16em] font-bold text-text-supporting-label">
               Workspace
             </p>
 
@@ -1658,7 +1647,7 @@ export default function DashboardPage() {
                     "/dashboard"
                   )
                 }
-                className="w-full h-10 flex items-center gap-3 px-2.5 rounded-xl bg-[#f0efff] text-[#5640db] text-xs font-bold"
+                className="w-full h-10 flex items-center gap-3 px-2.5 rounded-xl bg-surface-subtle text-brand-purple text-xs font-bold"
               >
                 <span className="w-7 h-7 rounded-lg bg-white flex items-center justify-center">
                   <MiniIcon type="home" />
@@ -1673,9 +1662,9 @@ export default function DashboardPage() {
                     "/tests"
                   )
                 }
-                className="w-full h-10 flex items-center gap-3 px-2.5 rounded-xl text-[#657083] hover:bg-[#f7f8fb] text-xs font-medium"
+                className="w-full h-10 flex items-center gap-3 px-2.5 rounded-xl text-text-secondary hover:bg-surface-app-bg text-xs font-medium"
               >
-                <span className="w-7 h-7 rounded-lg bg-[#f5f6f9] flex items-center justify-center">
+                <span className="w-7 h-7 rounded-lg bg-surface-app-bg flex items-center justify-center">
                   <MiniIcon type="tests" />
                 </span>
 
@@ -1684,7 +1673,7 @@ export default function DashboardPage() {
 
               <button
                 onClick={() => router.push("/student/batch-leaderboard")}
-                className="w-full h-10 flex items-center gap-3 px-2.5 rounded-xl text-[#657083] hover:bg-[#f7f8fb] text-xs font-medium transition"
+                className="w-full h-10 flex items-center gap-3 px-2.5 rounded-xl text-text-secondary hover:bg-surface-app-bg text-xs font-medium transition"
               >
                 <span className="w-7 h-7 rounded-lg bg-gradient-to-br from-amber-50 to-orange-50 flex items-center justify-center text-base">
                   🏆
@@ -1695,7 +1684,7 @@ export default function DashboardPage() {
 
               <button
                 onClick={() => router.push("/student/mistakes")}
-                className="w-full h-10 flex items-center gap-3 px-2.5 rounded-xl text-[#657083] hover:bg-[#f7f8fb] text-xs font-medium transition"
+                className="w-full h-10 flex items-center gap-3 px-2.5 rounded-xl text-text-secondary hover:bg-surface-app-bg text-xs font-medium transition"
               >
                 <span className="w-7 h-7 rounded-lg bg-gradient-to-br from-red-50 to-pink-50 flex items-center justify-center text-base">
                   📓
@@ -1706,7 +1695,7 @@ export default function DashboardPage() {
 
               <button
                 onClick={() => router.push("/notifications")}
-                className="w-full h-10 flex items-center gap-3 px-2.5 rounded-xl text-[#657083] hover:bg-[#f7f8fb] text-xs font-medium transition"
+                className="w-full h-10 flex items-center gap-3 px-2.5 rounded-xl text-text-secondary hover:bg-surface-app-bg text-xs font-medium transition"
               >
                 <span className="w-7 h-7 rounded-lg bg-gradient-to-br from-purple-50 to-indigo-50 flex items-center justify-center text-base">
                   🔔
@@ -1717,7 +1706,7 @@ export default function DashboardPage() {
 
               <button
                 onClick={() => router.push("/edit-profile")}
-                className="w-full h-10 flex items-center gap-3 px-2.5 rounded-xl text-[#657083] hover:bg-[#f7f8fb] text-xs font-medium transition"
+                className="w-full h-10 flex items-center gap-3 px-2.5 rounded-xl text-text-secondary hover:bg-surface-app-bg text-xs font-medium transition"
               >
                 <span className="w-7 h-7 rounded-lg bg-gradient-to-br from-blue-50 to-cyan-50 flex items-center justify-center text-base">
                   👤
@@ -1728,7 +1717,7 @@ export default function DashboardPage() {
 
               <button
                 onClick={() => router.push("/achievements")}
-                className="w-full h-10 flex items-center gap-3 px-2.5 rounded-xl text-[#657083] hover:bg-[#f7f8fb] text-xs font-medium transition"
+                className="w-full h-10 flex items-center gap-3 px-2.5 rounded-xl text-text-secondary hover:bg-surface-app-bg text-xs font-medium transition"
               >
                 <span className="w-7 h-7 rounded-lg bg-gradient-to-br from-green-50 to-emerald-50 flex items-center justify-center text-base">
                   🏅
@@ -1739,7 +1728,7 @@ export default function DashboardPage() {
 
               <button
                 onClick={() => router.push("/boss-fight")}
-                className="w-full h-10 flex items-center gap-3 px-2.5 rounded-xl text-[#657083] hover:bg-[#f7f8fb] text-xs font-medium transition"
+                className="w-full h-10 flex items-center gap-3 px-2.5 rounded-xl text-text-secondary hover:bg-surface-app-bg text-xs font-medium transition"
               >
                 <span className="w-7 h-7 rounded-lg bg-gradient-to-br from-orange-50 to-red-50 flex items-center justify-center text-base">
                   👊
@@ -1754,7 +1743,7 @@ export default function DashboardPage() {
                   const el = document.getElementById("weak-areas-test-hub");
                   if (el) el.scrollIntoView({ behavior: "smooth" });
                 }}
-                className="w-full h-10 flex items-center gap-3 px-2.5 rounded-xl text-[#657083] hover:bg-[#f7f8fb] text-xs font-medium transition"
+                className="w-full h-10 flex items-center gap-3 px-2.5 rounded-xl text-text-secondary hover:bg-surface-app-bg text-xs font-medium transition"
               >
                 <span className="w-7 h-7 rounded-lg bg-gradient-to-br from-indigo-50 to-purple-50 flex items-center justify-center text-base">
                   🤖
@@ -1768,8 +1757,23 @@ export default function DashboardPage() {
 
          
 
-        </aside>
+          {/* Dark mode toggle at the bottom of the sidebar */}
+          <div className="mt-auto px-4 pt-4 pb-8 border-t border-border-default">
+            <button
+              type="button"
+              onClick={() => setDarkMode((value) => !value)}
+              aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
+              aria-pressed={darkMode}
+              className="w-full h-10 flex items-center gap-3 px-2.5 rounded-xl text-text-secondary hover:bg-surface-app-bg text-xs font-medium transition"
+            >
+              <span className="w-7 h-7 rounded-lg bg-surface-app-bg flex items-center justify-center text-base">
+                {darkMode ? "☀️" : "🌙"}
+              </span>
+              {darkMode ? "Light mode" : "Dark mode"}
+            </button>
+          </div>
 
+        </aside>
         {/* =====================================================
             MAIN CONTENT
         ====================================================== */}
@@ -1778,12 +1782,12 @@ export default function DashboardPage() {
 
           {/* Header */}
 
-          <header className="min-h-[82px] w-full bg-white border-b border-[#e9ebf1] px-4 sm:px-5 lg:px-8 py-3 sm:py-0 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <header className="min-h-[82px] w-full bg-white border-b border-border-default px-4 sm:px-5 lg:px-8 py-3 sm:py-0 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
 
             <div className="min-w-0 w-full sm:w-auto">
               <h1 className="text-[18px] sm:text-[20px] leading-tight font-extrabold tracking-tight break-words">
                 Welcome back,{" "}
-                <span className="text-[#315fea]">
+                <span className="text-brand-primary">
                   {studentName}
                 </span>{" "}
                 <span className="text-[18px]">
@@ -1791,7 +1795,7 @@ export default function DashboardPage() {
                 </span>
               </h1>
 
-              <p className="mt-1 text-[11px] text-[#858c9b]">
+              <p className="mt-1 text-[11px] text-text-tertiary">
                 Here's your
                 performance overview
                 and test insights
@@ -1800,8 +1804,8 @@ export default function DashboardPage() {
 
             <div className="flex items-center justify-end gap-2.5 w-full sm:w-auto">
 
-              <button className="hidden sm:flex items-center gap-2 px-3.5 h-9 rounded-xl border border-[#e8eaf1] bg-white text-[11px] font-semibold text-[#33405a] shadow-[0_2px_8px_rgba(30,35,60,.03)]">
-                <span className="text-[#6544e8]">
+              <button className="hidden sm:flex items-center gap-2 px-3.5 h-9 rounded-xl border border-border-default bg-white text-[11px] font-semibold text-text-secondary shadow-[0_2px_8px_rgba(30,35,60,.03)]">
+                <span className="text-brand-purple">
                   <MiniIcon
                     type="calendar"
                     size={15}
@@ -1810,7 +1814,7 @@ export default function DashboardPage() {
 
                 COMPETITIVE EXAMS
 
-                <span className="text-[#9da4b1]">
+                <span className="text-text-body">
                   ⌄
                 </span>
               </button>
@@ -1818,7 +1822,7 @@ export default function DashboardPage() {
               <button
                 type="button"
                 onClick={() => document.getElementById("notifications")?.scrollIntoView({ behavior: "smooth" })}
-                className="relative w-9 h-9 rounded-xl border border-[#eceef3] bg-white flex items-center justify-center text-[#596275]"
+                className="relative w-9 h-9 rounded-xl border border-border-default bg-white flex items-center justify-center text-text-tertiary"
               >
                 <MiniIcon
                   type="bell"
@@ -1854,7 +1858,7 @@ export default function DashboardPage() {
               <div className="relative w-full md:max-w-[53%]">
 
                 <div className="flex items-center gap-2 text-[11px] font-semibold">
-                  <span className="w-2 h-2 rounded-full bg-[#28d48a]" />
+                  <span className="w-2 h-2 rounded-full bg-state-success" />
 
                   Competitive Exam Preparation
                 </div>
@@ -1877,7 +1881,7 @@ export default function DashboardPage() {
                       "/tests"
                     )
                   }
-                  className="mt-5 h-9 px-4 rounded-lg bg-white text-[#2f58e8] text-[11px] font-bold shadow-sm"
+                  className="mt-5 h-9 px-4 rounded-lg bg-white text-brand-primary text-[11px] font-bold shadow-sm"
                 >
                   Start New Test
                   <span className="ml-2">
@@ -1892,11 +1896,11 @@ export default function DashboardPage() {
 
                 <div className="absolute left-0 bottom-5 w-[235px] h-4 rounded-full bg-[#58a8f3]/70 shadow-lg" />
 
-                <div className="absolute left-8 bottom-9 w-10 h-9 rounded-sm bg-[#e9f1ff] border-4 border-[#3b5878] rotate-[-2deg]" />
+                <div className="absolute left-8 bottom-9 w-10 h-9 rounded-sm bg-state-info border-4 border-[#3b5878] rotate-[-2deg]" />
 
-                <div className="absolute left-15 bottom-9 w-28 h-5 rounded-sm bg-[#f0c6c6] border border-[#34465e]" />
+                <div className="absolute left-15 bottom-9 w-28 h-5 rounded-sm bg-state-error border border-border-default" />
 
-                <div className="absolute left-[115px] bottom-9 w-[105px] h-[82px] rounded-md bg-[#dce7f9] border-[6px] border-[#283951] rotate-[2deg]">
+                <div className="absolute left-[115px] bottom-9 w-[105px] h-[82px] rounded-md bg-state-info border-[6px] border-[#283951] rotate-[2deg]">
                   <div className="m-3 space-y-2">
                     {[1, 2, 3].map(
                       (item) => (
@@ -1965,7 +1969,7 @@ export default function DashboardPage() {
                       ?.totalQuestions ??
                     0
                   } questions analyzed`,
-                  "bg-blue-50 text-blue-600",
+                  "bg-blue-50 text-brand-primary",
                   "▣",
                 ],
 
@@ -2030,20 +2034,20 @@ export default function DashboardPage() {
                 ]) => (
                   <div
                     key={label}
-                    className="bg-white rounded-[14px] border border-[#e8eaf0] px-4 py-4 shadow-[0_3px_12px_rgba(30,35,60,.035)]"
+                    className="bg-white rounded-[14px] border border-border-default px-4 py-4 shadow-[0_3px_12px_rgba(30,35,60,.035)]"
                   >
                     <div className="flex justify-between gap-2">
 
                       <div className="min-w-0">
-                        <p className="text-[10px] font-semibold text-[#858c9b]">
+                        <p className="text-[10px] font-semibold text-text-tertiary">
                           {label}
                         </p>
 
-                        <p className="mt-2 text-[22px] font-extrabold text-[#202638]">
+                        <p className="mt-2 text-[22px] font-extrabold text-text-primary">
                           {value}
                         </p>
 
-                        <p className="mt-1 text-[9px] text-[#858c9b] truncate">
+                        <p className="mt-1 text-[9px] text-text-tertiary truncate">
                           {sub}
                         </p>
                       </div>
@@ -2062,43 +2066,43 @@ export default function DashboardPage() {
             </section>
 
             {/* Assigned Course */}
-            <div className="bg-white rounded-[14px] border border-[#e8eaf0] p-5 shadow-[0_3px_12px_rgba(30,35,60,.035)] mb-5">
+            <div className="bg-white rounded-[14px] border border-border-default p-5 shadow-[0_3px_12px_rgba(30,35,60,.035)] mb-5">
               <div className="flex items-center justify-between">
                 <div>
                   <h2 className="text-[14px] font-extrabold">Your Assigned Course</h2>
-                  <p className="mt-1 text-[10px] text-[#939aa8]">
+                  <p className="mt-1 text-[10px] text-text-body">
                     {assignment?.batchName || "Your current batch"}
                   </p>
                 </div>
               </div>
-              <p className="mt-4 text-lg font-extrabold text-[#202638]">
+              <p className="mt-4 text-lg font-extrabold text-text-primary">
                 {assignment?.courseName || "No course assigned"}
               </p>
             </div>
 
             {/* Mistake Summary Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-5">
-              <div className="rounded-xl border border-[#fca5a5] bg-[#fef2f2] p-4">
-                <div className="text-[9px] font-bold uppercase tracking-[0.15em] text-rose-600">
+              <div className="rounded-xl border border-[#fca5a5] bg-state-error p-4">
+                <div className="text-[9px] font-bold uppercase tracking-[0.15em] text-white">
                   Total Mistakes
                 </div>
-                <div className="mt-1 text-2xl font-black text-rose-600">
+                <div className="mt-1 text-2xl font-black text-white">
                   {mistakesLoaded ? totalMistakes : "—"}
                 </div>
               </div>
-              <div className="rounded-xl border border-[#fde047] bg-[#fefce8] p-4">
-                <div className="text-[9px] font-bold uppercase tracking-[0.15em] text-amber-600">
+              <div className="rounded-xl border border-[#fde047] bg-state-warning p-4">
+                <div className="text-[9px] font-bold uppercase tracking-[0.15em] text-text-primary">
                   Unresolved
                 </div>
-                <div className="mt-1 text-2xl font-black text-amber-600">
+                <div className="mt-1 text-2xl font-black text-text-primary">
                   {mistakesLoaded ? unresolvedMistakes : "—"}
                 </div>
               </div>
-              <div className="rounded-xl border border-[#86efac] bg-[#f0fdf4] p-4">
-                <div className="text-[9px] font-bold uppercase tracking-[0.15em] text-emerald-600">
+              <div className="rounded-xl border border-[#86efac] bg-state-success p-4">
+                <div className="text-[9px] font-bold uppercase tracking-[0.15em] text-white">
                   Mastered
                 </div>
-                <div className="mt-1 text-2xl font-black text-emerald-600">
+                <div className="mt-1 text-2xl font-black text-white">
                   {mistakesLoaded ? masteredMistakes : "—"}
                 </div>
               </div>
@@ -2120,7 +2124,7 @@ export default function DashboardPage() {
 
               {/* Performance */}
 
-              <div className="bg-white rounded-[14px] border border-[#e8eaf0] p-5 shadow-[0_3px_12px_rgba(30,35,60,.035)]">
+              <div className="bg-white rounded-[14px] border border-border-default p-5 shadow-[0_3px_12px_rgba(30,35,60,.035)]">
 
                 <div className="flex items-start justify-between">
 
@@ -2130,14 +2134,14 @@ export default function DashboardPage() {
                       Trend
                     </h2>
 
-                    <p className="mt-1 text-[10px] text-[#939aa8]">
+                    <p className="mt-1 text-[10px] text-text-body">
                       Your actual
                       score across
                       completed tests
                     </p>
                   </div>
 
-                  <div className="h-8 px-3 rounded-lg border border-[#e7e9f0] text-[10px] font-semibold text-[#4e596c] flex items-center">
+                  <div className="h-8 px-3 rounded-lg border border-border-default text-[10px] font-semibold text-text-tertiary flex items-center">
                     All Completed
                     Tests
                   </div>
@@ -2152,16 +2156,16 @@ export default function DashboardPage() {
 
                 <div className="grid grid-cols-3 gap-3 mt-2">
 
-                  <div className="rounded-xl border border-[#e9e2ff] bg-[#faf8ff] p-3">
+                  <div className="rounded-xl border border-border-default bg-surface-subtle p-3">
 
                     <div className="flex items-center gap-2">
 
-                      <span className="w-8 h-8 rounded-lg bg-[#eee7ff] text-[#7047e7] flex items-center justify-center">
+                      <span className="w-8 h-8 rounded-lg bg-[#eee7ff] text-brand-purple flex items-center justify-center">
 
                       </span>
 
                       <div>
-                        <p className="text-[9px] text-[#7d8493]">
+                        <p className="text-[9px] text-text-tertiary">
                           Highest Score
                         </p>
 
@@ -2172,7 +2176,7 @@ export default function DashboardPage() {
                           %
                         </p>
 
-                        <p className="text-[8px] text-[#9aa0ad]">
+                        <p className="text-[8px] text-text-supporting-label">
                           {highestTest
                             ?.date ||
                             "—"}
@@ -2186,12 +2190,12 @@ export default function DashboardPage() {
 
                     <div className="flex items-center gap-2">
 
-                      <span className="w-8 h-8 rounded-lg bg-[#ffeaf0] text-[#ec4f73] flex items-center justify-center">
+                      <span className="w-8 h-8 rounded-lg bg-state-error text-state-error flex items-center justify-center">
                         ↘
                       </span>
 
                       <div>
-                        <p className="text-[9px] text-[#7d8493]">
+                        <p className="text-[9px] text-text-tertiary">
                           Lowest Score
                         </p>
 
@@ -2202,7 +2206,7 @@ export default function DashboardPage() {
                           %
                         </p>
 
-                        <p className="text-[8px] text-[#9aa0ad]">
+                        <p className="text-[8px] text-text-supporting-label">
                           {lowestTest
                             ?.date ||
                             "—"}
@@ -2212,16 +2216,16 @@ export default function DashboardPage() {
                     </div>
                   </div>
 
-                  <div className="rounded-xl border border-[#e4efff] bg-[#f8fbff] p-3">
+                  <div className="rounded-xl border border-[#e4efff] bg-surface-subtle p-3">
 
                     <div className="flex items-center gap-2">
 
-                      <span className="w-8 h-8 rounded-lg bg-[#eaf3ff] text-[#3673e9] flex items-center justify-center">
+                      <span className="w-8 h-8 rounded-lg bg-state-info text-brand-primary flex items-center justify-center">
                         ⌁
                       </span>
 
                       <div>
-                        <p className="text-[9px] text-[#7d8493]">
+                        <p className="text-[9px] text-text-tertiary">
                           Consistency
                         </p>
 
@@ -2229,7 +2233,7 @@ export default function DashboardPage() {
                           {consistency}%
                         </p>
 
-                        <p className="text-[8px] text-[#9aa0ad]">
+                        <p className="text-[8px] text-text-supporting-label">
                           {consistency >=
                           80
                             ? "Excellent"
@@ -2252,14 +2256,14 @@ export default function DashboardPage() {
 
                 {/* Score Distribution */}
 
-                <div className="bg-white rounded-[14px] border border-[#e8eaf0] p-5 shadow-[0_3px_12px_rgba(30,35,60,.035)]">
+                <div className="bg-white rounded-[14px] border border-border-default p-5 shadow-[0_3px_12px_rgba(30,35,60,.035)]">
 
                   <h2 className="text-[14px] font-extrabold">
                     Score
                     Distribution
                   </h2>
 
-                  <p className="mt-1 text-[10px] text-[#939aa8]">
+                  <p className="mt-1 text-[10px] text-text-body">
                     Based on your{" "}
                     {results.length}{" "}
                     completed tests
@@ -2277,14 +2281,14 @@ export default function DashboardPage() {
 
                 {/* Subject Performance */}
 
-                <div className="bg-white rounded-[14px] border border-[#e8eaf0] p-5 shadow-[0_3px_12px_rgba(30,35,60,.035)]">
+                <div className="bg-white rounded-[14px] border border-border-default p-5 shadow-[0_3px_12px_rgba(30,35,60,.035)]">
 
                   <h2 className="text-[14px] font-extrabold">
                     Subject
                     Performance
                   </h2>
 
-                  <p className="mt-1 text-[10px] text-[#939aa8]">
+                  <p className="mt-1 text-[10px] text-text-body">
                     Based on this
                     student's actual
                     answers
@@ -2293,7 +2297,7 @@ export default function DashboardPage() {
                   <div className="mt-5 space-y-4">
 
                     {subjectRows.map(
-                      (item) => {
+                      (item, index) => {
                         const c =
                           subjectConfig(
                             item.subject
@@ -2302,7 +2306,7 @@ export default function DashboardPage() {
                         return (
                           <button
                             key={
-                              item.subject
+                              `${item.subject}-${index}`
                             }
                             className="w-full flex items-center gap-2.5 text-left"
                           >
@@ -2312,7 +2316,7 @@ export default function DashboardPage() {
                               {c.icon}
                             </span>
 
-                            <span className="w-[68px] text-[10px] font-semibold text-[#4e596c]">
+                            <span className="w-[68px] text-[10px] font-semibold text-text-tertiary">
                               {
                                 item.subject
                               }
@@ -2342,7 +2346,7 @@ export default function DashboardPage() {
                               %
                             </span>
 
-                            <span className="text-[#a0a6b2]">
+                            <span className="text-text-body">
                               ›
                             </span>
                           </button>
@@ -2360,9 +2364,9 @@ export default function DashboardPage() {
                 UPCOMING SCHEDULED TESTS
             ================================================== */}
 
-            <section id="notifications" className="mt-5 rounded-[14px] border border-[#e8eaf0] bg-white shadow-[0_3px_12px_rgba(30,35,60,.035)]">
-              <div className="border-b border-[#eff0f4] px-5 py-4">
-                <h2 className="text-[14px] font-extrabold text-[#172033]">Notifications</h2>
+            <section id="notifications" className="mt-5 rounded-[14px] border border-border-default bg-white shadow-[0_3px_12px_rgba(30,35,60,.035)]">
+              <div className="border-b border-border-default px-5 py-4">
+                <h2 className="text-[14px] font-extrabold text-text-primary">Notifications</h2>
               </div>
               {notifications.length > 0 ? (
                 <div className="divide-y divide-[#eff0f4]">
@@ -2371,15 +2375,15 @@ export default function DashboardPage() {
                       key={notification.id}
                       type="button"
                       onClick={() => router.push(`/scheduled-test/${notification.scheduledTestId}`)}
-                      className="w-full px-5 py-3 text-left hover:bg-[#fafbff]"
+                      className="w-full px-5 py-3 text-left hover:bg-surface-app-bg"
                     >
-                      <p className="text-[12px] font-bold text-[#172033]">{notification.title}</p>
-                      <p className="mt-1 text-[10px] text-[#697386]">{notification.message}</p>
+                      <p className="text-[12px] font-bold text-text-primary">{notification.title}</p>
+                      <p className="mt-1 text-[10px] text-text-tertiary">{notification.message}</p>
                     </button>
                   ))}
                 </div>
               ) : (
-                <p className="px-5 py-4 text-xs text-[#697386]">
+                <p className="px-5 py-4 text-xs text-text-tertiary">
                   You&apos;re all caught up. New test and academy updates will appear here.
                 </p>
               )}
@@ -2389,21 +2393,21 @@ export default function DashboardPage() {
               0 && (
               <section className="mt-5">
 
-                <div className="bg-white rounded-[14px] border border-[#e8eaf0] shadow-[0_3px_12px_rgba(30,35,60,.035)] overflow-hidden">
+                <div className="bg-white rounded-[14px] border border-border-default shadow-[0_3px_12px_rgba(30,35,60,.035)] overflow-hidden">
 
-                  <div className="px-5 py-4 flex items-center justify-between border-b border-[#eff0f4]">
+                  <div className="px-5 py-4 flex items-center justify-between border-b border-border-default">
 
                     <div>
-                      <h2 className="text-[14px] font-extrabold text-[#172033]">
+                      <h2 className="text-[14px] font-extrabold text-text-primary">
                         Scheduled Tests
                       </h2>
 
-                      <p className="mt-1 text-[10px] text-[#939aa8]">
+                      <p className="mt-1 text-[10px] text-text-body">
                         Your upcoming and live exams
                       </p>
                     </div>
 
-                    <span className="text-[10px] font-bold text-[#315bea] bg-[#eef2ff] px-2.5 py-1 rounded-full">
+                    <span className="text-[10px] font-bold text-brand-primary bg-surface-subtle px-2.5 py-1 rounded-full">
                       {
                         visibleScheduledTests.length
                       }{" "}
@@ -2440,18 +2444,18 @@ export default function DashboardPage() {
                                 `/scheduled-test/${scheduledId}`
                               );
                             }}
-                            className="w-full px-5 py-4 flex items-center justify-between gap-4 text-left hover:bg-[#fafbff] transition disabled:cursor-default"
+                            className="w-full px-5 py-4 flex items-center justify-between gap-4 text-left hover:bg-surface-app-bg transition disabled:cursor-default"
                           >
 
                             <div className="min-w-0">
 
-                              <h3 className="text-[12px] font-extrabold text-[#172033] truncate">
+                              <h3 className="text-[12px] font-extrabold text-text-primary truncate">
                                 {test.title ||
                                   test.name ||
                                   "Scheduled Test"}
                               </h3>
 
-                              <div className="mt-1 flex flex-wrap items-center gap-3 text-[10px] text-[#939aa8]">
+                              <div className="mt-1 flex flex-wrap items-center gap-3 text-[10px] text-text-body">
 
                                 <span>
                                   {test.startTime ||
@@ -2472,11 +2476,11 @@ export default function DashboardPage() {
 
                             <div className="shrink-0 flex items-center gap-2">
 
-                              <span className="text-[10px] font-bold text-[#315bea] bg-[#eef2ff] px-3 py-1.5 rounded-lg">
+                              <span className="text-[10px] font-bold text-brand-primary bg-surface-subtle px-3 py-1.5 rounded-lg">
                                 {scheduleCountdown(test)}
                               </span>
 
-                              <span className="text-[#9ba1ad]">
+                              <span className="text-text-supporting-label">
                                 ›
                               </span>
 
@@ -2502,16 +2506,16 @@ export default function DashboardPage() {
 
               {/* Recent Tests */}
 
-              <div className="bg-white rounded-[14px] border border-[#e8eaf0] shadow-[0_3px_12px_rgba(30,35,60,.035)] overflow-hidden">
+              <div className="bg-white rounded-[14px] border border-border-default shadow-[0_3px_12px_rgba(30,35,60,.035)] overflow-hidden">
 
-                <div className="px-5 py-4 flex items-center justify-between border-b border-[#eff0f4]">
+                <div className="px-5 py-4 flex items-center justify-between border-b border-border-default">
 
                   <div>
                     <h2 className="text-[14px] font-extrabold">
                       Recent Tests
                     </h2>
 
-                    <p className="mt-1 text-[10px] text-[#939aa8]">
+                    <p className="mt-1 text-[10px] text-text-body">
                       Your latest
                       completed tests
                     </p>
@@ -2521,7 +2525,7 @@ export default function DashboardPage() {
                     onClick={() =>
                       router.push("/tests")
                     }
-                    className="h-8 px-3 rounded-lg border border-[#dedaff] text-[10px] font-bold text-[#5541dd]"
+                    className="h-8 px-3 rounded-lg border border-border-default text-[10px] font-bold text-brand-purple"
                   >
                     View All Tests
 
@@ -2534,7 +2538,7 @@ export default function DashboardPage() {
 
                 <div className="px-5">
 
-                  <div className="grid grid-cols-[2fr_.8fr_.7fr_.7fr_.7fr_1fr_20px] gap-3 py-3 text-[9px] font-semibold text-[#9198a6] border-b border-[#f1f2f5]">
+                  <div className="grid grid-cols-[2fr_.8fr_.7fr_.7fr_.7fr_1fr_20px] gap-3 py-3 text-[9px] font-semibold text-text-body border-b border-border-default">
                     <span>
                       Test Name
                     </span>
@@ -2573,21 +2577,21 @@ export default function DashboardPage() {
                             `/test/result/${test.id}`
                           )
                         }
-                        className="w-full grid grid-cols-[2fr_.8fr_.7fr_.7fr_.7fr_1fr_20px] gap-3 items-center py-3.5 text-left border-b border-[#f1f2f5] last:border-b-0 hover:bg-[#fbfbfe]"
+                        className="w-full grid grid-cols-[2fr_.8fr_.7fr_.7fr_.7fr_1fr_20px] gap-3 items-center py-3.5 text-left border-b border-border-default last:border-b-0 hover:bg-surface-app-bg"
                       >
                         <span className="min-w-0 flex items-center gap-2">
 
-                          <span className="w-6 h-6 rounded-md bg-[#f1efff] text-[#5c45df] flex items-center justify-center text-[9px] font-bold">
+                          <span className="w-6 h-6 rounded-md bg-[#f1efff] text-brand-purple flex items-center justify-center text-[9px] font-bold">
                             ▣
                           </span>
 
-                          <span className="truncate text-[10px] font-semibold text-[#3e4657]">
+                          <span className="truncate text-[10px] font-semibold text-text-secondary">
                             {test.name}
                           </span>
 
                         </span>
 
-                        <span className="text-[10px] text-[#626b7b] capitalize">
+                        <span className="text-[10px] text-text-tertiary capitalize">
                           {test.difficulty ||
                             "Balanced"}
                         </span>
@@ -2603,22 +2607,22 @@ export default function DashboardPage() {
                           %
                         </span>
 
-                        <span className="text-[10px] text-[#626b7b]">
+                        <span className="text-[10px] text-text-tertiary">
                           {test.accuracy.toFixed(
                             1
                           )}
                           %
                         </span>
 
-                        <span className="text-[10px] text-[#626b7b]">
+                        <span className="text-[10px] text-text-tertiary">
                           {test.time}
                         </span>
 
-                        <span className="text-[10px] text-[#626b7b]">
+                        <span className="text-[10px] text-text-tertiary">
                           {test.date}
                         </span>
 
-                        <span className="text-[#9ba1ad]">
+                        <span className="text-text-supporting-label">
                           ›
                         </span>
 
@@ -2632,12 +2636,12 @@ export default function DashboardPage() {
 
                       </div>
 
-                      <p className="mt-2 text-xs font-semibold text-[#596275]">
+                      <p className="mt-2 text-xs font-semibold text-text-tertiary">
                         No completed tests
                         yet
                       </p>
 
-                      <p className="mt-1 text-[10px] text-[#9aa1ae]">
+                      <p className="mt-1 text-[10px] text-text-supporting-label">
                         Start your first
                         test to see your
                         results here.
@@ -2656,22 +2660,22 @@ export default function DashboardPage() {
 
               {/* Weak Areas */}
 
-              <div className="bg-white rounded-[14px] border border-[#e8eaf0] shadow-[0_3px_12px_rgba(30,35,60,.035)] overflow-hidden">
+              <div className="bg-white rounded-[14px] border border-border-default shadow-[0_3px_12px_rgba(30,35,60,.035)] overflow-hidden">
 
-                <div className="px-5 py-4 flex items-center justify-between border-b border-[#eff0f4]">
+                <div className="px-5 py-4 flex items-center justify-between border-b border-border-default">
 
                   <div>
                     <h2 className="text-[14px] font-extrabold">
                       Weak Areas
                     </h2>
 
-                    <p className="mt-1 text-[10px] text-[#939aa8]">
+                    <p className="mt-1 text-[10px] text-text-body">
                       Topics that need
                       more practice
                     </p>
                   </div>
 
-                  <button className="h-8 px-3 rounded-lg border border-[#dedaff] text-[10px] font-bold text-[#5541dd]">
+                  <button className="h-8 px-3 rounded-lg border border-border-default text-[10px] font-bold text-brand-purple">
                     View All
 
                     <span className="ml-1">
@@ -2688,21 +2692,21 @@ export default function DashboardPage() {
                     .map((area) => (
                       <div
                         key={`${area.subject}-${area.chapter}`}
-                        className="rounded-xl border border-[#edf0f4] p-3"
+                        className="rounded-xl border border-border-default p-3"
                       >
 
                         <div className="flex items-center gap-2">
 
-                          <span className="w-7 h-7 rounded-lg bg-[#fff0f4] text-[#ed4e73] flex items-center justify-center text-[10px]">
+                          <span className="w-7 h-7 rounded-lg bg-state-error text-state-error flex items-center justify-center text-[10px]">
 
                           </span>
 
-                          <span className="text-[10px] font-bold text-[#3f4758] flex-1 truncate">
+                          <span className="text-[10px] font-bold text-text-secondary flex-1 truncate">
                             {area.topic ||
                               area.chapter}
                           </span>
 
-                          <span className="text-[9px] text-[#858c99]">
+                          <span className="text-[9px] text-text-tertiary">
                             {area.subject}
                           </span>
 
@@ -2715,7 +2719,7 @@ export default function DashboardPage() {
 
                         </div>
 
-                        <div className="mt-2.5 ml-9 h-1.5 rounded-full bg-[#e8eaf0] overflow-hidden">
+                        <div className="mt-2.5 ml-9 h-1.5 rounded-full bg-surface-app-bg overflow-hidden">
 
                           <div
                             className="h-full rounded-full bg-rose-500"
@@ -2732,7 +2736,7 @@ export default function DashboardPage() {
 
                         </div>
 
-                        <div className="mt-2 ml-9 text-[8px] text-[#9aa1ae]">
+                        <div className="mt-2 ml-9 text-[8px] text-text-supporting-label">
                           {area.correct}{" "}
                           correct ·{" "}
                           {area.wrong}{" "}
@@ -2753,11 +2757,11 @@ export default function DashboardPage() {
 
                       </div>
 
-                      <p className="mt-2 text-xs font-semibold text-[#596275]">
+                      <p className="mt-2 text-xs font-semibold text-text-tertiary">
                         No weak areas yet
                       </p>
 
-                      <p className="mt-1 text-[9px] text-[#9aa1ae]">
+                      <p className="mt-1 text-[9px] text-text-supporting-label">
                         Complete more tests
                         to generate chapter
                         analysis.
@@ -2826,7 +2830,7 @@ export default function DashboardPage() {
                 ]) => (
                   <div
                     key={label}
-                    className="bg-white rounded-[14px] border border-[#e8eaf0] p-4 flex items-center gap-3"
+                    className="bg-white rounded-[14px] border border-border-default p-4 flex items-center gap-3"
                   >
 
                     <div
@@ -2845,7 +2849,7 @@ export default function DashboardPage() {
                     </div>
 
                     <div>
-                      <p className="text-[9px] text-[#858c9b] font-semibold">
+                      <p className="text-[9px] text-text-tertiary font-semibold">
                         {label}
                       </p>
 
@@ -2871,14 +2875,14 @@ export default function DashboardPage() {
           MOBILE NAVIGATION
       ======================================================== */}
 
-      <nav className="xl:hidden fixed bottom-0 inset-x-0 z-50 bg-white/95 backdrop-blur border-t border-[#e8eaf0] px-3 py-2.5">
+      <nav className="xl:hidden fixed bottom-0 inset-x-0 z-50 bg-white/95 backdrop-blur border-t border-border-default px-3 py-2.5">
         <div className="max-w-lg mx-auto flex items-center justify-around">
 
           {/* Dashboard */}
           <button
             type="button"
             onClick={() => router.push("/dashboard")}
-            className="flex flex-col items-center gap-1 text-[#5b43df]"
+            className="flex flex-col items-center gap-1 text-brand-purple"
           >
             <MiniIcon type="home" size={19} />
             <span className="text-[9px] font-bold">
@@ -2890,7 +2894,7 @@ export default function DashboardPage() {
           <button
             type="button"
             onClick={() => router.push("/tests")}
-            className="flex flex-col items-center gap-1 text-[#7d8595]"
+            className="flex flex-col items-center gap-1 text-text-tertiary"
           >
             <MiniIcon type="tests" size={19} />
             <span className="text-[9px] font-semibold">
@@ -2902,7 +2906,7 @@ export default function DashboardPage() {
           <button
             type="button"
             onClick={() => router.push("/student/batch-leaderboard")}
-            className="flex flex-col items-center gap-1 text-[#7d8595]"
+            className="flex flex-col items-center gap-1 text-text-tertiary"
           >
             <span className="text-[18px] leading-none">🏆</span>
             <span className="text-[9px] font-semibold">Leaderboard</span>
@@ -2912,7 +2916,7 @@ export default function DashboardPage() {
           <button
             type="button"
             onClick={logout}
-            className="flex flex-col items-center gap-1 text-[#7d8595]"
+            className="flex flex-col items-center gap-1 text-text-tertiary"
           >
             <MiniIcon type="logout" size={19} />
             <span className="text-[9px] font-semibold">

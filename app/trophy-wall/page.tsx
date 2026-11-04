@@ -12,19 +12,19 @@ export default function TrophyWallPage() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-[#f6f8fc] text-[#172033]">
+    <main className="min-h-screen bg-surface-app-bg text-text-primary">
       <div className="mx-auto max-w-5xl px-6 py-10">
         <div className="mb-8">
           <button
             onClick={() => router.push("/dashboard")}
-            className="text-sm font-semibold text-[#315bea] mb-2 inline-block transition hover:underline"
+            className="text-sm font-semibold text-brand-primary mb-2 inline-block transition hover:underline"
           >
             ← Back to Dashboard
           </button>
           <h1 className="text-2xl font-extrabold tracking-tight">
             Achievement Vault
           </h1>
-          <p className="text-sm text-[#697386]">
+          <p className="text-sm text-text-tertiary">
             View all your earned badges and trophies in one place.
           </p>
         </div>
@@ -34,12 +34,12 @@ export default function TrophyWallPage() {
             <div className="w-8 h-8 border-4 border-blue-100 border-t-blue-600 rounded-full animate-spin" />
           </div>
         ) : (
-          <div className="rounded-2xl border border-[#e5e8ef] bg-white p-8 shadow-sm">
+          <div className="rounded-2xl border border-border-default bg-white p-8 shadow-sm">
             <div className="flex items-center justify-between mb-6">
-              <h2 className="text-lg font-extrabold text-[#172033]">
+              <h2 className="text-lg font-extrabold text-text-primary">
                 Trophy Wall
               </h2>
-              <p className="text-sm text-[#697386]">
+              <p className="text-sm text-text-tertiary">
                 Collect achievements as you master chapters and ace tests.
               </p>
             </div>
@@ -65,15 +65,15 @@ export default function TrophyWallPage() {
               ].map((badge) => (
                 <div
                   key={badge.name}
-                  className="rounded-xl border border-[#e5e8ef] bg-white p-4 flex flex-col items-center gap-2 text-center"
+                  className="rounded-xl border border-border-default bg-white p-4 flex flex-col items-center gap-2 text-center"
                 >
-                  <div className="w-14 h-14 rounded-2xl bg-[#f0f5ff] flex items-center justify-center text-3xl mb-1">
+                  <div className="w-14 h-14 rounded-2xl bg-surface-subtle flex items-center justify-center text-3xl mb-1">
                     {badge.icon}
                   </div>
-                  <h3 className="text-sm font-bold text-[#172033]">
+                  <h3 className="text-sm font-bold text-text-primary">
                     {badge.name}
                   </h3>
-                  <p className="text-[10px] text-[#8a93a5]">Tier {badge.tier}</p>
+                  <p className="text-[10px] text-text-body">Tier {badge.tier}</p>
                 </div>
               ))}
             </div>
@@ -91,15 +91,15 @@ export default function TrophyWallPage() {
               ].map((badge) => (
                 <div
                   key={badge.name}
-                  className="rounded-xl border border-[#e5e8ef] bg-white p-4 flex flex-col items-center gap-2 text-center"
+                  className="rounded-xl border border-border-default bg-white p-4 flex flex-col items-center gap-2 text-center"
                 >
-                  <div className="w-14 h-14 rounded-2xl bg-[#f0f5ff] flex items-center justify-center text-3xl mb-1">
+                  <div className="w-14 h-14 rounded-2xl bg-surface-subtle flex items-center justify-center text-3xl mb-1">
                     {badge.icon}
                   </div>
-                  <h3 className="text-sm font-bold text-[#172033]">
+                  <h3 className="text-sm font-bold text-text-primary">
                     {badge.name}
                   </h3>
-                  <p className="text-[10px] text-[#8a93a5]">Tier {badge.tier}</p>
+                  <p className="text-[10px] text-text-body">Tier {badge.tier}</p>
                 </div>
               ))}
             </div>
@@ -117,15 +117,15 @@ export default function TrophyWallPage() {
               ].map((badge) => (
                 <div
                   key={badge.name}
-                  className="rounded-xl border border-[#e5e8ef] bg-white p-4 flex flex-col items-center gap-2 text-center"
+                  className="rounded-xl border border-border-default bg-white p-4 flex flex-col items-center gap-2 text-center"
                 >
-                  <div className="w-14 h-14 rounded-2xl bg-[#f0f5ff] flex items-center justify-center text-3xl mb-1">
+                  <div className="w-14 h-14 rounded-2xl bg-surface-subtle flex items-center justify-center text-3xl mb-1">
                     {badge.icon}
                   </div>
-                  <h3 className="text-sm font-bold text-[#172033]">
+                  <h3 className="text-sm font-bold text-text-primary">
                     {badge.name}
                   </h3>
-                  <p className="text-[10px] text-[#8a93a5]">Tier {badge.tier}</p>
+                  <p className="text-[10px] text-text-body">Tier {badge.tier}</p>
                 </div>
               ))}
             </div>
@@ -141,15 +141,15 @@ export default function TrophyWallPage() {
               ].map((badge) => (
                 <div
                   key={badge.name}
-                  className="rounded-xl border border-[#e5e8ef] bg-white p-4 flex flex-col items-center gap-2 text-center"
+                  className="rounded-xl border border-border-default bg-white p-4 flex flex-col items-center gap-2 text-center"
                 >
-                  <div className="w-14 h-14 rounded-2xl bg-[#f0f5ff] flex items-center justify-center text-3xl mb-1">
+                  <div className="w-14 h-14 rounded-2xl bg-surface-subtle flex items-center justify-center text-3xl mb-1">
                     {badge.icon}
                   </div>
-                  <h3 className="text-sm font-bold text-[#172033]">
+                  <h3 className="text-sm font-bold text-text-primary">
                     {badge.name}
                   </h3>
-                  <p className="text-[10px] text-[#8a93a5]">Tier {badge.tier}</p>
+                  <p className="text-[10px] text-text-body">Tier {badge.tier}</p>
                 </div>
               ))}
             </div>

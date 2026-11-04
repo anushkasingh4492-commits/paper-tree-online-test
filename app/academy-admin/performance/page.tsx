@@ -215,35 +215,35 @@ export default function AcademyAdminPerformancePage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#f6f8fc] text-[#172033]">
+    <main className="min-h-screen bg-surface-app-bg text-text-primary">
       <div className="mx-auto max-w-7xl px-6 py-10">
         <header className="mb-8 flex flex-wrap items-center justify-between gap-4">
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#315bea]">
+            <p className="text-xs font-bold uppercase tracking-[0.15em] text-brand-primary">
               Academy Admin
             </p>
             <h1 className="mt-2 text-3xl font-extrabold tracking-tight">
               Student Performance
             </h1>
-            <p className="mt-2 text-sm text-[#697386]">
+            <p className="mt-2 text-sm text-text-tertiary">
               View performance across all students in your academy.
             </p>
           </div>
 
           <button
             onClick={() => router.push("/academy-admin")}
-            className="rounded-xl border border-[#e2e6ee] bg-white px-4 py-2.5 text-sm font-bold text-[#697386] hover:bg-[#f7f8fb]"
+            className="rounded-xl border border-border-default bg-white px-4 py-2.5 text-sm font-bold text-text-tertiary hover:bg-surface-app-bg"
           >
             ← Back to Academy Admin
           </button>
         </header>
 
-        <section className="rounded-2xl border border-[#e3e8f5] bg-white shadow-sm">
-          <div className="border-b border-[#eef0f4] px-6 py-5">
+        <section className="rounded-2xl border border-border-default bg-white shadow-sm">
+          <div className="border-b border-border-default px-6 py-5">
             <div className="flex flex-wrap items-center justify-between gap-4">
               <div>
                 <h2 className="text-lg font-extrabold">All Students</h2>
-                <p className="mt-1 text-sm text-[#8a93a5]">
+                <p className="mt-1 text-sm text-text-body">
                   Filter by batch and sort by any available performance metric.
                 </p>
               </div>
@@ -252,7 +252,7 @@ export default function AcademyAdminPerformancePage() {
                 value={search}
                 onChange={(event) => setSearch(event.target.value)}
                 placeholder="Search student or batch"
-                className="w-full max-w-xs rounded-xl border border-[#dfe4ee] px-4 py-2.5 text-sm outline-none focus:border-[#315bea]"
+                className="w-full max-w-xs rounded-xl border border-border-default px-4 py-2.5 text-sm outline-none focus:border-brand-primary"
               />
             </div>
 
@@ -260,7 +260,7 @@ export default function AcademyAdminPerformancePage() {
               <select
                 value={batchFilter}
                 onChange={(event) => setBatchFilter(event.target.value)}
-                className="rounded-xl border border-[#dfe4ee] bg-white px-3 py-2.5 text-sm font-semibold outline-none focus:border-[#315bea]"
+                className="rounded-xl border border-border-default bg-white px-3 py-2.5 text-sm font-semibold outline-none focus:border-brand-primary"
               >
                 <option value="ALL">All batches</option>
                 {batchOptions.map((batch) => (
@@ -273,7 +273,7 @@ export default function AcademyAdminPerformancePage() {
               <select
                 value={sortBy}
                 onChange={(event) => setSortBy(event.target.value)}
-                className="rounded-xl border border-[#dfe4ee] bg-white px-3 py-2.5 text-sm font-semibold outline-none focus:border-[#315bea]"
+                className="rounded-xl border border-border-default bg-white px-3 py-2.5 text-sm font-semibold outline-none focus:border-brand-primary"
               >
                 <option value="name">Sort: Name</option>
                 <option value="batch">Sort: Batch</option>
@@ -297,31 +297,31 @@ export default function AcademyAdminPerformancePage() {
                     current === "asc" ? "desc" : "asc"
                   )
                 }
-                className="rounded-xl border border-[#dfe4ee] bg-white px-4 py-2.5 text-sm font-bold text-[#315bea] hover:bg-[#f7f9ff]"
+                className="rounded-xl border border-border-default bg-white px-4 py-2.5 text-sm font-bold text-brand-primary hover:bg-surface-subtle"
               >
                 {sortDirection === "asc" ? "↑ Ascending" : "↓ Descending"}
               </button>
 
-              <span className="text-xs font-semibold text-[#8a93a5]">
+              <span className="text-xs font-semibold text-text-body">
                 Showing {filteredStudents.length} of {students.length}
               </span>
             </div>
           </div>
 
           {loading && (
-            <div className="p-8 text-sm text-[#697386]">
+            <div className="p-8 text-sm text-text-tertiary">
               Loading performance...
             </div>
           )}
 
           {error && (
-            <div className="p-8 text-sm font-semibold text-red-600">
+            <div className="p-8 text-sm font-semibold text-state-error">
               {error}
             </div>
           )}
 
           {!loading && !error && filteredStudents.length === 0 && (
-            <div className="p-10 text-center text-sm text-[#697386]">
+            <div className="p-10 text-center text-sm text-text-tertiary">
               No students found.
             </div>
           )}
@@ -329,7 +329,7 @@ export default function AcademyAdminPerformancePage() {
           {!loading && !error && filteredStudents.length > 0 && (
             <div className="overflow-x-auto">
               <table className="min-w-[1280px] w-full text-left">
-                <thead className="bg-[#fafbfe] text-[11px] uppercase tracking-wider text-[#8a93a5]">
+                <thead className="bg-surface-app-bg text-[11px] uppercase tracking-wider text-text-body">
                   <tr>
                     <th className="px-6 py-4 font-bold">Student</th>
                     <th className="px-4 py-4 font-bold">Batch</th>
@@ -348,30 +348,30 @@ export default function AcademyAdminPerformancePage() {
                 </thead>
                 <tbody className="divide-y divide-[#eef0f4]">
                   {filteredStudents.map((student) => (
-                    <tr key={student.id} className="hover:bg-[#fafbfe]">
+                    <tr key={student.id} className="hover:bg-surface-app-bg">
                       <td className="px-6 py-5">
                         <button
                           type="button"
                           onClick={() => void openAttempts(student)}
                           className="text-left"
                         >
-                          <p className="font-bold text-[#172033] hover:text-[#315bea]">
+                          <p className="font-bold text-text-primary hover:text-brand-primary">
                             {student.name}
                           </p>
-                          <p className="mt-1 text-xs text-[#8a93a5]">
+                          <p className="mt-1 text-xs text-text-body">
                             {student.email}
                           </p>
-                          <p className="mt-1 text-[10px] font-bold text-[#315bea]">
+                          <p className="mt-1 text-[10px] font-bold text-brand-primary">
                             View attempted tests →
                           </p>
                         </button>
                       </td>
-                      <td className="px-4 py-5 text-sm text-[#697386]">
+                      <td className="px-4 py-5 text-sm text-text-tertiary">
                         {student.batches}
                       </td>
                       <td className="px-4 py-5 text-center">
-                        <div className="font-black text-indigo-600">L{student.level}</div>
-                        <div className="text-[10px] text-slate-400">{student.levelName}</div>
+                        <div className="font-black text-brand-purple">L{student.level}</div>
+                        <div className="text-[10px] text-text-supporting-label">{student.levelName}</div>
                       </td>
                       <td className="px-4 py-5 text-center font-black text-orange-500">🔥 {student.currentStreak}</td>
                       <td className="px-4 py-5 text-center font-semibold">{student.testsTaken}</td>
@@ -381,7 +381,7 @@ export default function AcademyAdminPerformancePage() {
                       <td className="px-4 py-5 text-center font-bold">
                         {student.bestPercentage}%
                       </td>
-                      <td className="px-4 py-5 text-center font-bold text-[#315bea]">
+                      <td className="px-4 py-5 text-center font-bold text-brand-primary">
                         {student.accuracy}%
                       </td>
                       <td className="px-4 py-5 text-center text-sm">
@@ -393,7 +393,7 @@ export default function AcademyAdminPerformancePage() {
                       <td className="px-4 py-5 text-center">
                         <button type="button" onClick={() => setBadgeStudent(student)} className="rounded-lg bg-violet-50 px-2.5 py-1.5 font-bold text-violet-700 transition hover:bg-violet-100">🏆 {student.badgesEarned}</button>
                       </td>
-                      <td className="px-4 py-5 text-center text-xs font-medium text-slate-500">{student.lastActiveDate || "—"}</td>
+                      <td className="px-4 py-5 text-center text-xs font-medium text-text-body">{student.lastActiveDate || "—"}</td>
                       <td className="px-4 py-5 text-center">
                         <div className="flex justify-center gap-2">
                           {features?.aiPerformanceSummaries && <button type="button" onClick={async () => {
@@ -433,12 +433,12 @@ export default function AcademyAdminPerformancePage() {
               className="max-h-[85vh] w-full max-w-4xl overflow-hidden rounded-2xl bg-white shadow-2xl"
               onClick={(event) => event.stopPropagation()}
             >
-              <div className="flex items-center justify-between border-b border-[#eef0f4] px-6 py-5">
+              <div className="flex items-center justify-between border-b border-border-default px-6 py-5">
                 <div>
                   <h3 className="text-lg font-extrabold">
                     {attemptStudent.name}
                   </h3>
-                  <p className="mt-1 text-sm text-[#8a93a5]">
+                  <p className="mt-1 text-sm text-text-body">
                     Attempted tests
                   </p>
                 </div>
@@ -446,7 +446,7 @@ export default function AcademyAdminPerformancePage() {
                 <button
                   type="button"
                   onClick={() => setAttemptStudent(null)}
-                  className="rounded-lg border border-[#e2e6ee] px-3 py-1.5 text-sm font-bold text-[#697386]"
+                  className="rounded-lg border border-border-default px-3 py-1.5 text-sm font-bold text-text-tertiary"
                 >
                   Close
                 </button>
@@ -454,15 +454,15 @@ export default function AcademyAdminPerformancePage() {
 
               <div className="max-h-[65vh] overflow-y-auto p-6">
                 {attemptLoading ? (
-                  <p className="text-sm text-[#697386]">
+                  <p className="text-sm text-text-tertiary">
                     Loading attempted tests...
                   </p>
                 ) : attemptError ? (
-                  <p className="rounded-xl bg-red-50 px-4 py-3 text-sm font-semibold text-red-600">
+                  <p className="rounded-xl bg-red-50 px-4 py-3 text-sm font-semibold text-state-error">
                     {attemptError}
                   </p>
                 ) : attempts.length === 0 ? (
-                  <p className="rounded-xl bg-[#f7f8fc] px-4 py-5 text-center text-sm text-[#697386]">
+                  <p className="rounded-xl bg-surface-app-bg px-4 py-5 text-center text-sm text-text-tertiary">
                     No completed tests found for this student.
                   </p>
                 ) : (
@@ -478,14 +478,14 @@ export default function AcademyAdminPerformancePage() {
                       return (
                         <div
                           key={attempt.id}
-                          className="rounded-xl border border-[#e7eaf0] p-4"
+                          className="rounded-xl border border-border-default p-4"
                         >
                           <div className="flex flex-wrap items-start justify-between gap-3">
                             <div>
                               <p className="font-bold">
                                 {attempt.test_title}
                               </p>
-                              <p className="mt-1 text-xs text-[#8a93a5]">
+                              <p className="mt-1 text-xs text-text-body">
                                 {attempt.submitted_at
                                   ? new Date(
                                       attempt.submitted_at
@@ -495,16 +495,16 @@ export default function AcademyAdminPerformancePage() {
                             </div>
 
                             <div className="text-right">
-                              <p className="text-lg font-black text-[#315bea]">
+                              <p className="text-lg font-black text-brand-primary">
                                 {score.toFixed(1)} / {total.toFixed(1)}
                               </p>
-                              <p className="text-xs font-bold text-[#697386]">
+                              <p className="text-xs font-bold text-text-tertiary">
                                 {percentage}%
                               </p>
                             </div>
                           </div>
 
-                          <div className="mt-3 flex flex-wrap gap-4 text-xs font-semibold text-[#697386]">
+                          <div className="mt-3 flex flex-wrap gap-4 text-xs font-semibold text-text-tertiary">
                             <span>✓ Correct: {attempt.correct_count ?? 0}</span>
                             <span>✕ Wrong: {attempt.incorrect_count ?? 0}</span>
                             <span>
@@ -532,9 +532,9 @@ export default function AcademyAdminPerformancePage() {
         {report && (
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 p-5" onClick={() => setReport(null)}>
             <div className="w-full max-w-lg rounded-2xl bg-white p-6 shadow-2xl" onClick={(event) => event.stopPropagation()}>
-              <div className="flex items-center justify-between"><h3 className="text-lg font-extrabold">AI Parent Summary</h3><button onClick={() => setReport(null)} className="text-sm font-bold text-[#697386]">Close</button></div>
-              <p className="mt-5 whitespace-pre-wrap rounded-xl bg-[#f7f8fc] p-4 text-sm leading-6 text-[#475168]">{report.text}</p>
-              <button type="button" onClick={() => navigator.clipboard?.writeText(report.text)} className="mt-4 rounded-xl bg-[#315bea] px-4 py-2.5 text-sm font-bold text-white">Copy Summary</button>
+              <div className="flex items-center justify-between"><h3 className="text-lg font-extrabold">AI Parent Summary</h3><button onClick={() => setReport(null)} className="text-sm font-bold text-text-tertiary">Close</button></div>
+              <p className="mt-5 whitespace-pre-wrap rounded-xl bg-surface-app-bg p-4 text-sm leading-6 text-[#475168]">{report.text}</p>
+              <button type="button" onClick={() => navigator.clipboard?.writeText(report.text)} className="mt-4 rounded-xl bg-brand-primary px-4 py-2.5 text-sm font-bold text-white">Copy Summary</button>
             </div>
           </div>
         )}

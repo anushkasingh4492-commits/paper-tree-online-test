@@ -60,11 +60,11 @@ export default function StudentTestHub() {
 
       <div className="relative">
         <div>
-          <div className="text-[10px] font-black uppercase tracking-[.22em] text-indigo-600">Test</div>
+          <div className="text-[10px] font-black uppercase tracking-[.22em] text-brand-purple">Test</div>
           <h2 className="mt-1 text-xl font-black tracking-tight text-slate-950 sm:text-2xl">
             Target your weak areas
           </h2>
-          <p className="mt-1 max-w-2xl text-xs font-semibold text-slate-500 sm:text-sm">
+          <p className="mt-1 max-w-2xl text-xs font-semibold text-text-body sm:text-sm">
             Check your level, open your badges, or build an AI-generated test from your weakest areas.
           </p>
         </div>
@@ -73,7 +73,7 @@ export default function StudentTestHub() {
           <button
             type="button"
             onClick={() => router.push("/tests")}
-            className="group min-h-[112px] rounded-2xl bg-indigo-600 p-4 text-left text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-indigo-700 hover:shadow-md"
+            className="group min-h-[112px] rounded-2xl bg-brand-purple p-4 text-left text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-indigo-700 hover:shadow-md"
           >
             <div className="flex items-center justify-between">
               <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/15 text-lg">📝</span>
@@ -94,10 +94,10 @@ export default function StudentTestHub() {
               <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-50 text-lg">⭐</span>
               <span className="text-[10px] font-black uppercase tracking-wider text-indigo-500">View level</span>
             </div>
-            <div className="mt-3 text-sm font-black text-slate-900">
+            <div className="mt-3 text-sm font-black text-text-primary">
               Level {data?.level ?? "—"}{data?.levelName ? ` · ${data.levelName}` : ""}
             </div>
-            <div className="mt-1 text-[11px] font-semibold text-slate-500">
+            <div className="mt-1 text-[11px] font-semibold text-text-body">
               {data ? `${data.testsCompleted} tests · ${data.points.toLocaleString()} XP` : "Loading progress…"}
             </div>
           </button>
@@ -111,8 +111,8 @@ export default function StudentTestHub() {
               <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-50 text-lg">🏆</span>
               <span className="text-[10px] font-black uppercase tracking-wider text-amber-600">View badges</span>
             </div>
-            <div className="mt-3 text-sm font-black text-slate-900">Badges</div>
-            <div className="mt-1 text-[11px] font-semibold text-slate-500">
+            <div className="mt-3 text-sm font-black text-text-primary">Badges</div>
+            <div className="mt-1 text-[11px] font-semibold text-text-body">
               {data ? `${earnedBadges} unlocked · ${totalBadges} achievements` : "Loading achievements…"}
             </div>
           </button>
@@ -121,7 +121,7 @@ export default function StudentTestHub() {
             type="button"
             onClick={() => void createRevisionTest()}
             disabled={revisionLoading}
-            className="group min-h-[112px] rounded-2xl bg-slate-950 p-4 text-left text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-slate-900 hover:shadow-md disabled:cursor-wait disabled:opacity-60"
+            className="group min-h-[112px] rounded-2xl bg-slate-950 p-4 text-left text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-brand-deep-navy hover:shadow-md disabled:cursor-wait disabled:opacity-60"
           >
             <div className="flex items-center justify-between">
               <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 text-lg">🤖</span>
@@ -136,7 +136,7 @@ export default function StudentTestHub() {
           </button>
         </div>
 
-        {message && <p className="mt-3 text-xs font-bold text-red-600">{message}</p>}
+        {message && <p className="mt-3 text-xs font-bold text-state-error">{message}</p>}
       </div>
     </section>
   );

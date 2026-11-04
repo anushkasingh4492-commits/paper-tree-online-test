@@ -196,25 +196,25 @@ export default function AcademyAdminTestsPage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#f6f8fc]">
+    <main className="min-h-screen bg-surface-app-bg">
       <div className="mx-auto w-full max-w-6xl px-3 py-5 sm:px-6 sm:py-10">
         <button
           onClick={() => router.push("/academy-admin")}
-          className="mb-6 text-sm font-semibold text-[#315bea]"
+          className="mb-6 text-sm font-semibold text-brand-primary"
         >
           ← Back to Academy Admin
         </button>
 
         <div className="mb-8">
-          <p className="text-sm font-bold uppercase tracking-wider text-[#315bea]">
+          <p className="text-sm font-bold uppercase tracking-wider text-brand-primary">
             Academy Admin
           </p>
 
-          <h1 className="mt-2 text-2xl font-bold text-gray-900 sm:text-3xl">
+          <h1 className="mt-2 text-2xl font-bold text-text-primary sm:text-3xl">
             Scheduled Tests
           </h1>
 
-          <p className="mt-2 text-gray-500">
+          <p className="mt-2 text-text-body">
             Schedule papers for your academy batches.
           </p>
         </div>
@@ -222,7 +222,7 @@ export default function AcademyAdminTestsPage() {
         <div className="grid gap-5 lg:grid-cols-[1fr_1.2fr] lg:gap-8">
           {/* Schedule form */}
           <div className="rounded-2xl bg-white p-4 shadow-sm sm:p-6">
-            <h2 className="text-lg font-bold text-gray-900 sm:text-xl">
+            <h2 className="text-lg font-bold text-text-primary sm:text-xl">
               Schedule New Test
             </h2>
 
@@ -253,7 +253,7 @@ export default function AcademyAdminTestsPage() {
                 </select>
 
                 {papers.length === 0 && !loading && (
-                  <p className="mt-2 text-sm text-gray-500">
+                  <p className="mt-2 text-sm text-text-body">
                     No papers are available for this academy yet.
                   </p>
                 )}
@@ -283,7 +283,7 @@ export default function AcademyAdminTestsPage() {
                 </select>
 
                 {batches.length === 0 && !loading && (
-                  <p className="mt-2 text-sm text-gray-500">
+                  <p className="mt-2 text-sm text-text-body">
                     No batches are available yet.
                   </p>
                 )}
@@ -345,7 +345,7 @@ export default function AcademyAdminTestsPage() {
                   papers.length === 0 ||
                   batches.length === 0
                 }
-                className="w-full rounded-xl bg-[#315bea] px-5 py-4 font-bold text-white hover:bg-[#264ac7] disabled:cursor-not-allowed disabled:opacity-50"
+                className="w-full rounded-xl bg-brand-primary px-5 py-4 font-bold text-white hover:bg-brand-primary disabled:cursor-not-allowed disabled:opacity-50"
               >
                 {saving ? "Scheduling..." : "Schedule Test"}
               </button>
@@ -355,7 +355,7 @@ export default function AcademyAdminTestsPage() {
           {/* Existing tests */}
           <div className="rounded-2xl bg-white p-4 shadow-sm sm:p-6">
             <div className="flex flex-wrap items-center justify-between gap-3">
-              <h2 className="text-lg font-bold text-gray-900 sm:text-xl">
+              <h2 className="text-lg font-bold text-text-primary sm:text-xl">
                 Scheduled Tests
               </h2>
 
@@ -368,11 +368,11 @@ export default function AcademyAdminTestsPage() {
             </div>
 
             {loading ? (
-              <div className="py-12 text-center text-gray-500">
+              <div className="py-12 text-center text-text-body">
                 Loading...
               </div>
             ) : tests.length === 0 ? (
-              <div className="py-12 text-center text-gray-500">
+              <div className="py-12 text-center text-text-body">
                 No tests scheduled yet.
               </div>
             ) : (
@@ -384,11 +384,11 @@ export default function AcademyAdminTestsPage() {
                   >
                     <div className="flex items-start justify-between gap-4">
                       <div>
-                        <h3 className="font-bold text-gray-900">
+                        <h3 className="font-bold text-text-primary">
                           {test.title}
                         </h3>
 
-                        <p className="mt-1 text-sm text-gray-500">
+                        <p className="mt-1 text-sm text-text-body">
                           Batch:{" "}
                           <span className="font-medium text-gray-700">
                             {test.batch_name || "Unknown"}
@@ -401,7 +401,7 @@ export default function AcademyAdminTestsPage() {
                       </span>
                     </div>
 
-                    <div className="mt-4 grid gap-2 text-sm text-gray-600">
+                    <div className="mt-4 grid gap-2 text-sm text-text-body">
                       <p>
                         <span className="font-semibold">
                           Starts:
@@ -434,7 +434,7 @@ export default function AcademyAdminTestsPage() {
                       </p>
                     </div>
 
-                    <button onClick={() => void cancelTest(test)} className="mt-4 rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-xs font-bold text-red-600">Cancel scheduled test</button>
+                    <button onClick={() => void cancelTest(test)} className="mt-4 rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-xs font-bold text-state-error">Cancel scheduled test</button>
                   </div>
                 ))}
               </div>

@@ -88,12 +88,12 @@ export default function MotivationalLoader({
   }, [durationSeconds, onComplete]);
 
   return (
-    <div className="fixed inset-0 z-50 bg-[#f5f7fb] flex flex-col items-center justify-center text-center p-6">
+    <div className="fixed inset-0 z-50 bg-surface-app-bg flex flex-col items-center justify-center text-center p-6">
       {/* TOP: decorative glow */}
       <div className="absolute -top-20 -left-20 w-64 h-64 rounded-full bg-blue-50/40 blur-[100px] animate-pulse" />
 
       {/* Main card */}
-      <div className="relative z-10 bg-white rounded-3xl border border-slate-200 shadow-2xl p-10 max-w-md w-full animate-[fadeIn_0.6s_ease-out]">
+      <div className="relative z-10 bg-white rounded-3xl border border-border-default shadow-2xl p-10 max-w-md w-full animate-[fadeIn_0.6s_ease-out]">
         {/* Header icon */}
         <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-blue-50 mb-6 text-2xl animate-bounce">
           📚
@@ -101,33 +101,33 @@ export default function MotivationalLoader({
 
         {/* Countdown */}
         <div className="mb-8">
-          <span className="text-5xl font-black text-blue-600 tracking-tighter animate-pulse">
+          <span className="text-5xl font-black text-brand-primary tracking-tighter animate-pulse">
             {count}
           </span>
-          <p className="mt-2 text-xs uppercase tracking-widest font-bold text-slate-400">
+          <p className="mt-2 text-xs uppercase tracking-widest font-bold text-text-supporting-label">
             seconds to go
           </p>
         </div>
 
         {/* Status message */}
         <div className="mb-6">
-          <p className="text-sm font-medium text-slate-600">
+          <p className="text-sm font-medium text-text-body">
             {STATUS_MESSAGES[statusIndex]}
           </p>
         </div>
 
         {/* Progress bar */}
-        <div className="w-full h-3 bg-slate-100 rounded-full overflow-hidden mb-8 border border-slate-200">
+        <div className="w-full h-3 bg-surface-subtle rounded-full overflow-hidden mb-8 border border-border-default">
           <div
-            className="h-full bg-blue-600 rounded-full transition-all duration-300 ease-out"
+            className="h-full bg-brand-primary rounded-full transition-all duration-300 ease-out"
             style={{ width: `${progress}%` }}
           />
         </div>
 
         {/* Quote box */}
-        <div className="relative rounded-2xl border border-slate-100 bg-slate-50 p-6 mb-8 animate-[float_3s_ease-in-out_infinite]">
+        <div className="relative rounded-2xl border border-border-default bg-surface-subtle p-6 mb-8 animate-[float_3s_ease-in-out_infinite]">
           <div className="absolute left-4 top-4 text-slate-300 text-xl">&quot;</div>
-          <p className="text-sm italic text-slate-700 leading-relaxed">
+          <p className="text-sm italic text-text-secondary leading-relaxed">
             {QUOTES[quoteIndex]}
           </p>
           <div className="absolute right-4 bottom-4 text-slate-300 text-xl">&quot;</div>
@@ -136,7 +136,7 @@ export default function MotivationalLoader({
         {/* Footer */}
         <div className="flex items-center gap-2 justify-center">
           <div className="h-2 w-2 rounded-full bg-blue-400 animate-ping" />
-          <span className="text-xs text-slate-500 font-medium">
+          <span className="text-xs text-text-body font-medium">
             Finalizing your paper…
           </span>
         </div>

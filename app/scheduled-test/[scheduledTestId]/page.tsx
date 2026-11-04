@@ -242,8 +242,8 @@ export default function ScheduledTestPage() {
 
   if (loading) {
     return (
-      <main className="min-h-screen bg-[#f5f7fb] flex items-center justify-center">
-        <div className="text-sm text-[#697386]">
+      <main className="min-h-screen bg-surface-app-bg flex items-center justify-center">
+        <div className="text-sm text-text-tertiary">
           Loading scheduled test...
         </div>
       </main>
@@ -252,13 +252,13 @@ export default function ScheduledTestPage() {
 
   if (error || !test) {
     return (
-      <main className="min-h-screen bg-[#f5f7fb] flex items-center justify-center p-6">
-        <div className="bg-white rounded-2xl border border-[#e8eaf0] p-6 max-w-md w-full text-center">
-          <h1 className="text-lg font-extrabold text-[#172033]">
+      <main className="min-h-screen bg-surface-app-bg flex items-center justify-center p-6">
+        <div className="bg-white rounded-2xl border border-border-default p-6 max-w-md w-full text-center">
+          <h1 className="text-lg font-extrabold text-text-primary">
             Unable to load test
           </h1>
 
-          <p className="mt-2 text-sm text-[#697386]">
+          <p className="mt-2 text-sm text-text-tertiary">
             {error || "Scheduled test not found."}
           </p>
 
@@ -266,7 +266,7 @@ export default function ScheduledTestPage() {
             onClick={() =>
               router.push("/dashboard")
             }
-            className="mt-5 h-10 px-5 rounded-lg bg-[#315bea] text-white text-sm font-bold"
+            className="mt-5 h-10 px-5 rounded-lg bg-brand-primary text-white text-sm font-bold"
           >
             Back to Dashboard
           </button>
@@ -276,7 +276,7 @@ export default function ScheduledTestPage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#f5f7fb] text-[#172033]">
+    <main className="min-h-screen bg-surface-app-bg text-text-primary">
       <div className="max-w-5xl mx-auto px-5 py-8">
 
         {/* Back */}
@@ -285,20 +285,20 @@ export default function ScheduledTestPage() {
           onClick={() =>
             router.push("/dashboard")
           }
-          className="text-sm font-semibold text-[#697386] hover:text-[#315bea]"
+          className="text-sm font-semibold text-text-tertiary hover:text-brand-primary"
         >
           ← Back to Dashboard
         </button>
 
         {/* Header */}
 
-        <div className="mt-5 bg-white rounded-2xl border border-[#e8eaf0] shadow-[0_3px_12px_rgba(30,35,60,.035)] overflow-hidden">
+        <div className="mt-5 bg-white rounded-2xl border border-border-default shadow-[0_3px_12px_rgba(30,35,60,.035)] overflow-hidden">
 
-          <div className="p-6 border-b border-[#eff0f4]">
+          <div className="p-6 border-b border-border-default">
             <div className="flex items-start justify-between gap-4">
 
               <div>
-                <p className="text-[10px] font-bold uppercase tracking-wider text-[#315bea]">
+                <p className="text-[10px] font-bold uppercase tracking-wider text-brand-primary">
                   {test.exam}
                 </p>
 
@@ -307,13 +307,13 @@ export default function ScheduledTestPage() {
                 </h1>
 
                 {test.description && (
-                  <p className="mt-2 text-sm text-[#697386]">
+                  <p className="mt-2 text-sm text-text-tertiary">
                     {test.description}
                   </p>
                 )}
               </div>
 
-              <span className="shrink-0 px-3 py-1.5 rounded-lg bg-[#eef2ff] text-[#315bea] text-xs font-bold">
+              <span className="shrink-0 px-3 py-1.5 rounded-lg bg-surface-subtle text-brand-primary text-xs font-bold">
                 {timing.ended
                   ? "Ended"
                   : timing.started
@@ -326,50 +326,50 @@ export default function ScheduledTestPage() {
 
           {/* Countdown */}
 
-          <div className="p-6 bg-[#f8faff] border-b border-[#eff0f4]">
+          <div className="p-6 bg-surface-app-bg border-b border-border-default">
 
             {!timing.started &&
               !timing.ended && (
                 <div className="text-center">
 
-                  <p className="text-xs font-bold text-[#697386]">
+                  <p className="text-xs font-bold text-text-tertiary">
                     Test starts in
                   </p>
 
                   <div className="mt-4 flex justify-center gap-3">
 
-                    <div className="bg-white rounded-xl border border-[#e5e9f5] px-4 py-3 min-w-[70px]">
-                      <div className="text-2xl font-extrabold text-[#315bea]">
+                    <div className="bg-white rounded-xl border border-border-default px-4 py-3 min-w-[70px]">
+                      <div className="text-2xl font-extrabold text-brand-primary">
                         {countdown.days}
                       </div>
-                      <div className="text-[9px] uppercase font-bold text-[#939aa8]">
+                      <div className="text-[9px] uppercase font-bold text-text-body">
                         Days
                       </div>
                     </div>
 
-                    <div className="bg-white rounded-xl border border-[#e5e9f5] px-4 py-3 min-w-[70px]">
-                      <div className="text-2xl font-extrabold text-[#315bea]">
+                    <div className="bg-white rounded-xl border border-border-default px-4 py-3 min-w-[70px]">
+                      <div className="text-2xl font-extrabold text-brand-primary">
                         {pad(countdown.hours)}
                       </div>
-                      <div className="text-[9px] uppercase font-bold text-[#939aa8]">
+                      <div className="text-[9px] uppercase font-bold text-text-body">
                         Hours
                       </div>
                     </div>
 
-                    <div className="bg-white rounded-xl border border-[#e5e9f5] px-4 py-3 min-w-[70px]">
-                      <div className="text-2xl font-extrabold text-[#315bea]">
+                    <div className="bg-white rounded-xl border border-border-default px-4 py-3 min-w-[70px]">
+                      <div className="text-2xl font-extrabold text-brand-primary">
                         {pad(countdown.minutes)}
                       </div>
-                      <div className="text-[9px] uppercase font-bold text-[#939aa8]">
+                      <div className="text-[9px] uppercase font-bold text-text-body">
                         Minutes
                       </div>
                     </div>
 
-                    <div className="bg-white rounded-xl border border-[#e5e9f5] px-4 py-3 min-w-[70px]">
-                      <div className="text-2xl font-extrabold text-[#315bea]">
+                    <div className="bg-white rounded-xl border border-border-default px-4 py-3 min-w-[70px]">
+                      <div className="text-2xl font-extrabold text-brand-primary">
                         {pad(countdown.seconds)}
                       </div>
-                      <div className="text-[9px] uppercase font-bold text-[#939aa8]">
+                      <div className="text-[9px] uppercase font-bold text-text-body">
                         Seconds
                       </div>
                     </div>
@@ -388,7 +388,7 @@ export default function ScheduledTestPage() {
 
                   <button
                     onClick={handleStart}
-                    className="mt-4 h-12 px-10 rounded-xl bg-[#315bea] text-white text-sm font-extrabold shadow-[0_8px_20px_rgba(49,91,234,.18)] hover:bg-[#284ed2]"
+                    className="mt-4 h-12 px-10 rounded-xl bg-brand-primary text-white text-sm font-extrabold shadow-[0_8px_20px_rgba(49,91,234,.18)] hover:bg-[#284ed2]"
                   >
                     Start Test →
                   </button>
@@ -410,8 +410,8 @@ export default function ScheduledTestPage() {
 
           <div className="p-6 grid grid-cols-2 md:grid-cols-4 gap-4">
 
-            <div className="rounded-xl bg-[#f8f9fc] p-4">
-              <p className="text-[10px] font-bold text-[#939aa8]">
+            <div className="rounded-xl bg-surface-app-bg p-4">
+              <p className="text-[10px] font-bold text-text-body">
                 QUESTIONS
               </p>
               <p className="mt-1 text-lg font-extrabold">
@@ -419,8 +419,8 @@ export default function ScheduledTestPage() {
               </p>
             </div>
 
-            <div className="rounded-xl bg-[#f8f9fc] p-4">
-              <p className="text-[10px] font-bold text-[#939aa8]">
+            <div className="rounded-xl bg-surface-app-bg p-4">
+              <p className="text-[10px] font-bold text-text-body">
                 DURATION
               </p>
               <p className="mt-1 text-lg font-extrabold">
@@ -428,8 +428,8 @@ export default function ScheduledTestPage() {
               </p>
             </div>
 
-            <div className="rounded-xl bg-[#f8f9fc] p-4">
-              <p className="text-[10px] font-bold text-[#939aa8]">
+            <div className="rounded-xl bg-surface-app-bg p-4">
+              <p className="text-[10px] font-bold text-text-body">
                 START
               </p>
               <p className="mt-1 text-sm font-extrabold">
@@ -439,8 +439,8 @@ export default function ScheduledTestPage() {
               </p>
             </div>
 
-            <div className="rounded-xl bg-[#f8f9fc] p-4">
-              <p className="text-[10px] font-bold text-[#939aa8]">
+            <div className="rounded-xl bg-surface-app-bg p-4">
+              <p className="text-[10px] font-bold text-text-body">
                 END
               </p>
               <p className="mt-1 text-sm font-extrabold">
@@ -467,14 +467,14 @@ export default function ScheduledTestPage() {
                   (subject) => (
                     <span
                       key={subject}
-                      className="px-3 py-1.5 rounded-lg bg-[#eef2ff] text-[#315bea] text-xs font-bold"
+                      className="px-3 py-1.5 rounded-lg bg-surface-subtle text-brand-primary text-xs font-bold"
                     >
                       {subject}
                     </span>
                   )
                 )
               ) : (
-                <span className="text-xs text-[#939aa8]">
+                <span className="text-xs text-text-body">
                   No subjects configured
                 </span>
               )}
@@ -498,14 +498,14 @@ export default function ScheduledTestPage() {
                   (chapter) => (
                     <span
                       key={chapter}
-                      className="px-3 py-1.5 rounded-lg bg-[#f7f8fb] border border-[#e5e8ef] text-[#596477] text-xs font-semibold"
+                      className="px-3 py-1.5 rounded-lg bg-surface-app-bg border border-border-default text-[#596477] text-xs font-semibold"
                     >
                       {chapter}
                     </span>
                   )
                 )
               ) : (
-                <span className="text-xs text-[#939aa8]">
+                <span className="text-xs text-text-body">
                   No chapters configured
                 </span>
               )}

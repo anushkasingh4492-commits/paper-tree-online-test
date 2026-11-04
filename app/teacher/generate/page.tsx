@@ -706,11 +706,11 @@ export default function TeacherGeneratePage() {
   const questionChapterNav = Array.from(new Set(visibleQuestions.map((question) => String(question.chapter_name || question.chapter || "Other").trim())));
 
   return (
-    <main className="min-h-screen bg-[#f6f8fc] text-[#172033]">
+    <main className="min-h-screen bg-surface-app-bg text-text-primary">
       <div className="mx-auto w-full max-w-6xl px-3 py-5 sm:px-6 sm:py-10">
         <button
           onClick={() => router.push("/teacher")}
-          className="mb-6 text-sm font-semibold text-[#315bea]"
+          className="mb-6 text-sm font-semibold text-brand-primary"
         >
           ← Back to Teacher Portal
         </button>
@@ -718,7 +718,7 @@ export default function TeacherGeneratePage() {
         <div className="rounded-2xl bg-white p-4 shadow-sm sm:p-8">
           {/* HEADER */}
           <div className="mb-8">
-            <p className="text-sm font-bold uppercase tracking-wider text-[#315bea]">
+            <p className="text-sm font-bold uppercase tracking-wider text-brand-primary">
               Teacher Portal
             </p>
 
@@ -726,7 +726,7 @@ export default function TeacherGeneratePage() {
               Generate Paper
             </h1>
 
-            <p className="mt-2 text-gray-500">
+            <p className="mt-2 text-text-body">
               Select multiple subjects and their chapters, review matching questions,
               and choose the exact questions for the test.
             </p>
@@ -736,7 +736,7 @@ export default function TeacherGeneratePage() {
             <label htmlFor="paper-target-batch" className="block text-sm font-bold text-indigo-950">Allot paper to a batch</label>
             <p className="mt-1 text-xs text-indigo-800">Choose the default batch here. You can review the assignment on the Publish step before it is scheduled.</p>
             {targetBatches.length ? (
-              <select id="paper-target-batch" value={targetBatchId} onChange={(event) => setTargetBatchId(event.target.value)} className="mt-3 w-full max-w-md rounded-lg border border-indigo-200 bg-white px-3 py-2.5 text-sm font-semibold text-slate-800">
+              <select id="paper-target-batch" value={targetBatchId} onChange={(event) => setTargetBatchId(event.target.value)} className="mt-3 w-full max-w-md rounded-lg border border-indigo-200 bg-white px-3 py-2.5 text-sm font-semibold text-text-secondary">
                 {targetBatches.map((batch) => <option key={batch.id} value={batch.id}>{batch.name}{batch.class_name ? ` · ${batch.class_name}` : ""}</option>)}
               </select>
             ) : (
@@ -755,7 +755,7 @@ export default function TeacherGeneratePage() {
               id="tab-switch-warnings"
               value={tabSwitchWarnings}
               onChange={(event) => setTabSwitchWarnings(Number(event.target.value) as 0 | 1)}
-              className="mt-3 w-full max-w-sm rounded-lg border border-amber-300 bg-white px-3 py-2 text-sm font-semibold text-slate-800"
+              className="mt-3 w-full max-w-sm rounded-lg border border-amber-300 bg-white px-3 py-2 text-sm font-semibold text-text-secondary"
             >
               <option value={1}>One warning, then auto-submit</option>
               <option value={0}>No warning — auto-submit on first leave</option>
@@ -771,7 +771,7 @@ export default function TeacherGeneratePage() {
               type="button"
               onClick={generatePaper}
               disabled={loading || loadingQuestions || selectedSubjects.length === 0 || !exactCountSelected}
-              className="w-full rounded-xl bg-[#315bea] px-5 py-3 text-sm font-bold sm:w-auto text-white shadow-sm transition hover:bg-[#264ac7] disabled:cursor-not-allowed disabled:opacity-50"
+              className="w-full rounded-xl bg-brand-primary px-5 py-3 text-sm font-bold sm:w-auto text-white shadow-sm transition hover:bg-brand-primary disabled:cursor-not-allowed disabled:opacity-50"
             >
               {loading ? "Opening Publish..." : "Generate & Publish Paper"}
             </button>
@@ -841,7 +841,7 @@ export default function TeacherGeneratePage() {
                     placeholder={`Option ${String.fromCharCode(65 + index)}`}
                     className="w-full rounded-xl border border-emerald-200 bg-white px-4 py-3 text-sm outline-none focus:border-emerald-500"
                   />
-                  <p className="text-xs text-gray-500">Unicode symbols work here too (e.g. H₂O, x², α, ∞).</p>
+                  <p className="text-xs text-text-body">Unicode symbols work here too (e.g. H₂O, x², α, ∞).</p>
                   </div>
                 ))}
 
@@ -912,7 +912,7 @@ export default function TeacherGeneratePage() {
                 onChange={(e) =>
                   handleExamChange(e.target.value)
                 }
-                className="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 outline-none focus:border-[#315bea]"
+                className="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 outline-none focus:border-brand-primary"
               >
                 <option value="MHT-CET">MHT-CET</option>
                 <option value="NEET">NEET</option>
@@ -935,7 +935,7 @@ export default function TeacherGeneratePage() {
                       key={item}
                       className={`flex cursor-pointer items-center gap-3 rounded-xl border px-4 py-3 transition ${
                         selected
-                          ? "border-[#315bea] bg-blue-50"
+                          ? "border-brand-primary bg-blue-50"
                           : "border-gray-300 bg-white hover:border-blue-300"
                       }`}
                     >
@@ -951,7 +951,7 @@ export default function TeacherGeneratePage() {
                 })}
               </div>
 
-              <p className="mt-2 text-xs text-gray-500">
+              <p className="mt-2 text-xs text-text-body">
                 Select multiple subjects. For MHT-CET, Mathematics and Biology remain mutually exclusive (PCM or PCB).
               </p>
             </div>
@@ -961,7 +961,7 @@ export default function TeacherGeneratePage() {
               <p className="mb-2 text-sm font-semibold">Chapters by subject</p>
 
               {selectedSubjects.length === 0 ? (
-                <div className="rounded-xl border border-dashed border-gray-300 bg-gray-50 p-5 text-sm text-gray-500">
+                <div className="rounded-xl border border-dashed border-gray-300 bg-gray-50 p-5 text-sm text-text-body">
                   Select at least one subject to choose chapters.
                 </div>
               ) : (
@@ -975,11 +975,11 @@ export default function TeacherGeneratePage() {
                     return (
                       <div
                         key={selectedSubject}
-                        className="rounded-xl border border-gray-200 bg-gray-50 p-4"
+                        className="rounded-xl border border-border-default bg-gray-50 p-4"
                       >
                         <div className="mb-3 flex items-center justify-between">
                           <p className="text-sm font-bold">{selectedSubject}</p>
-                          <span className="text-xs text-gray-500">
+                          <span className="text-xs text-text-body">
                             {chosenChapters.length === 0
                               ? "All chapters"
                               : `${chosenChapters.length} selected`}
@@ -987,7 +987,7 @@ export default function TeacherGeneratePage() {
                         </div>
 
                         {availableChapters.length === 0 ? (
-                          <p className="text-sm text-gray-500">
+                          <p className="text-sm text-text-body">
                             No chapters found for this subject.
                           </p>
                         ) : (
@@ -1016,7 +1016,7 @@ export default function TeacherGeneratePage() {
                 </div>
               )}
 
-              <p className="mt-2 text-xs text-gray-500">
+              <p className="mt-2 text-xs text-text-body">
                 Leave a subject's chapters unchecked to include all chapters for that subject.
               </p>
             </div>
@@ -1031,7 +1031,7 @@ export default function TeacherGeneratePage() {
                 {["Easy", "Challenging", "Balanced", "Difficult"].map((level) => {
                   const checked = difficulty.includes(level);
                   return (
-                    <label key={level} className={`flex cursor-pointer items-center gap-2 rounded-xl border px-3 py-3 text-sm font-semibold transition ${checked ? "border-[#315bea] bg-blue-50 text-[#2448bb]" : "border-gray-300 bg-white hover:border-blue-300"}`}>
+                    <label key={level} className={`flex cursor-pointer items-center gap-2 rounded-xl border px-3 py-3 text-sm font-semibold transition ${checked ? "border-brand-primary bg-blue-50 text-[#2448bb]" : "border-gray-300 bg-white hover:border-blue-300"}`}>
                       <input
                         type="checkbox"
                         checked={checked}
@@ -1050,7 +1050,7 @@ export default function TeacherGeneratePage() {
                   );
                 })}
               </div>
-              <p className="mt-2 text-xs text-gray-500">Choose multiple levels to mix question difficulty. Balanced includes the full available mix.</p>
+              <p className="mt-2 text-xs text-text-body">Choose multiple levels to mix question difficulty. Balanced includes the full available mix.</p>
             </div>
 
             {/* QUESTION COUNT */}
@@ -1089,7 +1089,7 @@ export default function TeacherGeneratePage() {
                     );
                   });
                 }}
-                className="w-full rounded-xl border border-gray-300 px-4 py-3 outline-none focus:border-[#315bea]"
+                className="w-full rounded-xl border border-gray-300 px-4 py-3 outline-none focus:border-brand-primary"
               />
             </div>
 
@@ -1111,21 +1111,21 @@ export default function TeacherGeneratePage() {
                     )
                   )
                 }
-                className="w-full rounded-xl border border-gray-300 px-4 py-3 outline-none focus:border-[#315bea]"
+                className="w-full rounded-xl border border-gray-300 px-4 py-3 outline-none focus:border-brand-primary"
               />
             </div>
           </div>
 
           {/* SCHEMA ERROR */}
           {schemaError && (
-            <div className="mt-6 rounded-xl bg-red-50 p-4 text-sm text-red-600">
+            <div className="mt-6 rounded-xl bg-red-50 p-4 text-sm text-state-error">
               {schemaError}
             </div>
           )}
 
           {/* ERROR */}
           {error && (
-            <div className="mt-6 rounded-xl bg-red-50 p-4 text-sm text-red-600">
+            <div className="mt-6 rounded-xl bg-red-50 p-4 text-sm text-state-error">
               {error}
             </div>
           )}
@@ -1138,7 +1138,7 @@ export default function TeacherGeneratePage() {
                   Matching Questions
                 </h2>
 
-                <p className="mt-1 text-sm text-gray-500">
+                <p className="mt-1 text-sm text-text-body">
                   {loadingQuestions
                     ? "Loading a small page of matching questions..."
                     : `${previewTotal} question${
@@ -1168,7 +1168,7 @@ export default function TeacherGeneratePage() {
                     questions.length === 0 ||
                     questionCount <= 0
                   }
-                  className="rounded-lg bg-gray-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-gray-800 disabled:cursor-not-allowed disabled:opacity-50"
+                  className="rounded-lg bg-brand-deep-navy px-4 py-2 text-sm font-semibold text-white transition hover:bg-gray-800 disabled:cursor-not-allowed disabled:opacity-50"
                 >
                   Select Visible Questions
                 </button>
@@ -1199,7 +1199,7 @@ export default function TeacherGeneratePage() {
                       {selectedCount} / {questionCount} selected
                     </p>
 
-                    <p className="text-sm text-gray-600">
+                    <p className="text-sm text-text-body">
                       {exactCountSelected
                         ? "Perfect. You can generate the test."
                         : selectedCount < questionCount
@@ -1234,7 +1234,7 @@ export default function TeacherGeneratePage() {
                   Loading questions...
                 </p>
 
-                <p className="mt-1 text-sm text-gray-500">
+                <p className="mt-1 text-sm text-text-body">
                   Loading only 25 questions at a time to keep the browser fast.
                 </p>
               </div>
@@ -1249,7 +1249,7 @@ export default function TeacherGeneratePage() {
                     No matching questions found.
                   </p>
 
-                  <p className="mt-1 text-sm text-gray-500">
+                  <p className="mt-1 text-sm text-text-body">
                     Try another chapter or difficulty.
                   </p>
                 </div>
@@ -1257,15 +1257,15 @@ export default function TeacherGeneratePage() {
 
             {/* QUESTION FILTERS */}
             {!loadingQuestions && questions.length > 0 && (
-              <div className="mt-6 flex flex-col gap-3 rounded-xl border border-gray-200 bg-gray-50 p-3 sm:flex-row sm:items-center">
-                <label className="flex flex-1 flex-col gap-1 text-xs font-bold text-gray-600">
+              <div className="mt-6 flex flex-col gap-3 rounded-xl border border-border-default bg-gray-50 p-3 sm:flex-row sm:items-center">
+                <label className="flex flex-1 flex-col gap-1 text-xs font-bold text-text-body">
                   Filter by subject
                   <select value={questionSubjectFilter} onChange={(event) => { setQuestionSubjectFilter(event.target.value); setQuestionChapterFilter("All chapters"); }} className="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium text-gray-800">
                     <option>All subjects</option>
                     {questionSubjectOptions.map((subject) => <option key={subject}>{subject}</option>)}
                   </select>
                 </label>
-                <label className="flex flex-1 flex-col gap-1 text-xs font-bold text-gray-600">
+                <label className="flex flex-1 flex-col gap-1 text-xs font-bold text-text-body">
                   Filter by chapter
                   <select value={questionChapterFilter} onChange={(event) => setQuestionChapterFilter(event.target.value)} className="rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium text-gray-800">
                     <option>All chapters</option>
@@ -1279,11 +1279,11 @@ export default function TeacherGeneratePage() {
             {!loadingQuestions &&
               questions.length > 0 && (
                 <div className="mt-6 grid grid-cols-1 gap-4 lg:grid-cols-[190px_minmax(0,1fr)]">
-                  <aside className="h-fit rounded-xl border border-gray-200 bg-gray-50 p-3 lg:sticky lg:top-24">
-                    <p className="mb-2 text-xs font-extrabold uppercase tracking-wide text-gray-500">Question sections</p>
+                  <aside className="h-fit rounded-xl border border-border-default bg-gray-50 p-3 lg:sticky lg:top-24">
+                    <p className="mb-2 text-xs font-extrabold uppercase tracking-wide text-text-body">Question sections</p>
                     <div className="flex gap-2 overflow-x-auto lg:flex-col lg:overflow-visible">
                       {questionChapterNav.map((chapter) => (
-                        <button key={chapter} type="button" onClick={() => document.getElementById(`question-section-${encodeURIComponent(chapter)}`)?.scrollIntoView({ behavior: "smooth", block: "start" })} className="shrink-0 rounded-lg border border-gray-200 bg-white px-3 py-2 text-left text-xs font-semibold text-gray-700 hover:border-[#315bea]">
+                        <button key={chapter} type="button" onClick={() => document.getElementById(`question-section-${encodeURIComponent(chapter)}`)?.scrollIntoView({ behavior: "smooth", block: "start" })} className="shrink-0 rounded-lg border border-border-default bg-white px-3 py-2 text-left text-xs font-semibold text-gray-700 hover:border-brand-primary">
                           {chapter}
                         </button>
                       ))}
@@ -1320,8 +1320,8 @@ export default function TeacherGeneratePage() {
                         style={{ borderLeftColor: subjectAccent }}
                         className={`block cursor-pointer rounded-2xl border-l-4 border p-3 transition sm:p-5 ${
                           selected
-                            ? "border-[#315bea] bg-blue-50"
-                            : "border-gray-200 bg-white hover:border-gray-300"
+                            ? "border-brand-primary bg-blue-50"
+                            : "border-border-default bg-white hover:border-gray-300"
                         }`}
                       >
                         <div className="flex gap-4">
@@ -1342,31 +1342,31 @@ export default function TeacherGeneratePage() {
                           {/* QUESTION */}
                           <div className="min-w-0 flex-1">
                             <div className="flex flex-wrap items-center gap-2">
-                              <span className="text-sm font-bold text-[#315bea]">
+                              <span className="text-sm font-bold text-brand-primary">
                                 Question {previewPage * PREVIEW_PAGE_SIZE + index + 1}
                               </span>
 
                               {question.difficulty && (
-                                <span className="rounded-full bg-gray-100 px-2 py-1 text-xs font-semibold text-gray-600">
+                                <span className="rounded-full bg-surface-subtle px-2 py-1 text-xs font-semibold text-text-body">
                                   {question.difficulty}
                                 </span>
                               )}
 
                               {question.question_type && (
-                                <span className="rounded-full bg-gray-100 px-2 py-1 text-xs font-semibold text-gray-600">
+                                <span className="rounded-full bg-surface-subtle px-2 py-1 text-xs font-semibold text-text-body">
                                   {question.question_type}
                                 </span>
                               )}
 
                               {question.type &&
                                 !question.question_type && (
-                                  <span className="rounded-full bg-gray-100 px-2 py-1 text-xs font-semibold text-gray-600">
+                                  <span className="rounded-full bg-surface-subtle px-2 py-1 text-xs font-semibold text-text-body">
                                     {question.type}
                                   </span>
                                 )}
                             </div>
 
-                            <p className="mt-3 whitespace-pre-wrap text-base font-medium leading-7 text-[#172033]">
+                            <p className="mt-3 whitespace-pre-wrap text-base font-medium leading-7 text-text-primary">
                               <MathText text={questionText} />
                             </p>
 
@@ -1374,7 +1374,7 @@ export default function TeacherGeneratePage() {
                               <img
                                 src={figureSrc}
                                 alt={`Figure for question ${index + 1}`}
-                                className="mt-4 max-h-80 max-w-full rounded-xl border border-gray-200 bg-white object-contain"
+                                className="mt-4 max-h-80 max-w-full rounded-xl border border-border-default bg-white object-contain"
                                 onError={(event) => {
                                   event.currentTarget.style.display = "none";
                                 }}
@@ -1388,7 +1388,7 @@ export default function TeacherGeneratePage() {
                                   (option, optionIndex) => (
                                     <div
                                       key={`${id}-option-${optionIndex}`}
-                                      className="rounded-lg border border-gray-200 bg-gray-50 px-3 py-2 text-sm text-gray-700"
+                                      className="rounded-lg border border-border-default bg-gray-50 px-3 py-2 text-sm text-gray-700"
                                     >
                                       <MathText text={option} />
                                     </div>
@@ -1398,7 +1398,7 @@ export default function TeacherGeneratePage() {
                             )}
 
                             {/* METADATA */}
-                            <div className="mt-4 flex flex-wrap gap-x-5 gap-y-1 text-xs text-gray-500">
+                            <div className="mt-4 flex flex-wrap gap-x-5 gap-y-1 text-xs text-text-body">
                               {question.subject && (
                                 <span>
                                   Subject:{" "}
@@ -1441,7 +1441,7 @@ export default function TeacherGeneratePage() {
                   Previous
                 </button>
 
-                <span className="text-sm font-semibold text-gray-600">
+                <span className="text-sm font-semibold text-text-body">
                   Page {previewPage + 1} of {Math.ceil(previewTotal / PREVIEW_PAGE_SIZE)}
                 </span>
 
@@ -1452,7 +1452,7 @@ export default function TeacherGeneratePage() {
                     previewPage >=
                     Math.ceil(previewTotal / PREVIEW_PAGE_SIZE) - 1
                   }
-                  className="rounded-lg bg-[#315bea] px-4 py-2 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-40"
+                  className="rounded-lg bg-brand-primary px-4 py-2 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-40"
                 >
                   Next
                 </button>

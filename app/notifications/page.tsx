@@ -23,20 +23,20 @@ export default function NotificationsPage() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-[#f6f8fc] text-[#172033]">
+    <main className="min-h-screen bg-surface-app-bg text-text-primary">
       <div className="mx-auto max-w-3xl px-6 py-10">
         <div className="flex items-center justify-between mb-8">
           <div>
             <button
               onClick={() => router.push("/dashboard")}
-              className="text-sm font-semibold text-[#315bea] mb-2 inline-block transition hover:underline"
+              className="text-sm font-semibold text-brand-primary mb-2 inline-block transition hover:underline"
             >
               ← Back to Dashboard
             </button>
             <h1 className="text-2xl font-extrabold tracking-tight">
               Notifications
             </h1>
-            <p className="text-sm text-[#697386]">
+            <p className="text-sm text-text-tertiary">
               Stay updated with your test schedules and announcements.
             </p>
           </div>
@@ -47,10 +47,10 @@ export default function NotificationsPage() {
             <div className="w-8 h-8 border-4 border-blue-100 border-t-blue-600 rounded-full animate-spin" />
           </div>
         ) : notifications.length === 0 ? (
-          <div className="rounded-2xl border border-[#e5e8ef] bg-white p-16 text-center shadow-sm">
+          <div className="rounded-2xl border border-border-default bg-white p-16 text-center shadow-sm">
             <div className="text-4xl mb-4">𔔩</div>
-            <h2 className="text-xl font-bold text-[#172033]">No notifications</h2>
-            <p className="mt-2 text-[#697386]">
+            <h2 className="text-xl font-bold text-text-primary">No notifications</h2>
+            <p className="mt-2 text-text-tertiary">
               You're all caught up. New test schedules and announcements will appear here.
             </p>
           </div>
@@ -59,23 +59,23 @@ export default function NotificationsPage() {
             {notifications.map((n) => (
               <div
                 key={n.id}
-                className={`rounded-xl border p-4 flex items-start gap-3 ${!n.isRead ? "border-[#315bea] bg-[#f0f5ff]" : "border-[#e5e8ef] bg-white"}`}
+                className={`rounded-xl border p-4 flex items-start gap-3 ${!n.isRead ? "border-brand-primary bg-surface-subtle" : "border-border-default bg-white"}`}
               >
                 <div className="w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-0.5">
                   {!n.isRead ? (
                     <span className="text-[10px]">𔔩</span>
                   ) : (
-                    <span className="text-[10px] text-[#8a93a5]">✓</span>
+                    <span className="text-[10px] text-text-body">✓</span>
                   )}
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="text-sm font-semibold text-[#172033] leading-tight">
+                  <p className="text-sm font-semibold text-text-primary leading-tight">
                     {n.title}
                   </p>
-                  <p className="mt-1 text-sm text-[#697386] leading-relaxed">
+                  <p className="mt-1 text-sm text-text-tertiary leading-relaxed">
                     {n.message}
                   </p>
-                  <p className="mt-2 text-[10px] text-[#8a93a5]">
+                  <p className="mt-2 text-[10px] text-text-body">
                     {n.createdAt}
                   </p>
                 </div>

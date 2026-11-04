@@ -70,11 +70,11 @@ export default function TeacherStudentsPage() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-[#f6f8fc] text-[#172033]">
+    <main className="min-h-screen bg-surface-app-bg text-text-primary">
       <div className="mx-auto max-w-7xl px-6 py-10">
         <div className="mb-8 flex items-center justify-between">
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#315bea]">
+            <p className="text-xs font-bold uppercase tracking-[0.15em] text-brand-primary">
               Teacher Portal
             </p>
 
@@ -82,7 +82,7 @@ export default function TeacherStudentsPage() {
               Student Performance
             </h1>
 
-            <p className="mt-2 text-sm text-[#697386]">
+            <p className="mt-2 text-sm text-text-tertiary">
               Performance from tests created by you.
             </p>
           </div>
@@ -91,21 +91,21 @@ export default function TeacherStudentsPage() {
             onClick={() =>
               router.push("/teacher")
             }
-            className="rounded-xl border border-[#e2e6ee] bg-white px-4 py-2.5 text-sm font-bold text-[#697386] hover:bg-[#f8f9fb]"
+            className="rounded-xl border border-border-default bg-white px-4 py-2.5 text-sm font-bold text-text-tertiary hover:bg-surface-app-bg"
           >
             ← Teacher Portal
           </button>
         </div>
 
         {error && (
-          <div className="rounded-xl border border-red-100 bg-red-50 px-4 py-3 text-sm font-medium text-red-600">
+          <div className="rounded-xl border border-red-100 bg-red-50 px-4 py-3 text-sm font-medium text-state-error">
             {error}
           </div>
         )}
 
-        <section className="overflow-hidden rounded-2xl border border-[#e5e8ef] bg-white shadow-sm">
+        <section className="overflow-hidden rounded-2xl border border-border-default bg-white shadow-sm">
           {loading ? (
-            <div className="p-8 text-sm text-[#697386]">
+            <div className="p-8 text-sm text-text-tertiary">
               Loading student performance...
             </div>
           ) : students.length === 0 ? (
@@ -114,7 +114,7 @@ export default function TeacherStudentsPage() {
                 No completed student performance is available yet.
               </p>
 
-              <p className="mt-2 text-sm text-[#8a93a5]">
+              <p className="mt-2 text-sm text-text-body">
                 Once students complete tests created by you,
                 their performance will appear here.
               </p>
@@ -122,33 +122,33 @@ export default function TeacherStudentsPage() {
           ) : (
             <div className="overflow-x-auto">
               <table className="w-full min-w-[900px] text-left">
-                <thead className="border-b border-[#eef0f4] bg-[#fafbfc]">
+                <thead className="border-b border-border-default bg-surface-app-bg">
                   <tr>
-                    <th className="px-5 py-4 text-xs font-bold text-[#697386]">
+                    <th className="px-5 py-4 text-xs font-bold text-text-tertiary">
                       Student
                     </th>
 
-                    <th className="px-5 py-4 text-xs font-bold text-[#697386]">
+                    <th className="px-5 py-4 text-xs font-bold text-text-tertiary">
                       Tests
                     </th>
 
-                    <th className="px-5 py-4 text-xs font-bold text-[#697386]">
+                    <th className="px-5 py-4 text-xs font-bold text-text-tertiary">
                       Avg. Score
                     </th>
 
-                    <th className="px-5 py-4 text-xs font-bold text-[#697386]">
+                    <th className="px-5 py-4 text-xs font-bold text-text-tertiary">
                       Avg. Accuracy
                     </th>
 
-                    <th className="px-5 py-4 text-xs font-bold text-[#697386]">
+                    <th className="px-5 py-4 text-xs font-bold text-text-tertiary">
                       Correct
                     </th>
 
-                    <th className="px-5 py-4 text-xs font-bold text-[#697386]">
+                    <th className="px-5 py-4 text-xs font-bold text-text-tertiary">
                       Wrong
                     </th>
 
-                    <th className="px-5 py-4 text-xs font-bold text-[#697386]">
+                    <th className="px-5 py-4 text-xs font-bold text-text-tertiary">
                       Unanswered
                     </th>
                   </tr>
@@ -158,14 +158,14 @@ export default function TeacherStudentsPage() {
                   {students.map((student) => (
                     <tr
                       key={student.student_id}
-                      className="hover:bg-[#fafbff]"
+                      className="hover:bg-surface-app-bg"
                     >
                       <td className="px-5 py-4">
-                        <p className="font-bold text-[#172033]">
+                        <p className="font-bold text-text-primary">
                           {student.student_name}
                         </p>
 
-                        <p className="mt-1 text-xs text-[#8a93a5]">
+                        <p className="mt-1 text-xs text-text-body">
                           {student.email}
                           {student.class_name
                             ? ` · ${student.class_name}`
@@ -177,7 +177,7 @@ export default function TeacherStudentsPage() {
                         {student.tests_taken}
                       </td>
 
-                      <td className="px-5 py-4 text-sm font-bold text-[#315bea]">
+                      <td className="px-5 py-4 text-sm font-bold text-brand-primary">
                         {Number(
                           student.average_score || 0
                         ).toFixed(1)}
@@ -198,7 +198,7 @@ export default function TeacherStudentsPage() {
                         {student.wrong}
                       </td>
 
-                      <td className="px-5 py-4 text-sm font-semibold text-[#697386]">
+                      <td className="px-5 py-4 text-sm font-semibold text-text-tertiary">
                         {student.unanswered}
                       </td>
                     </tr>

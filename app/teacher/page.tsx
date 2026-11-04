@@ -75,12 +75,12 @@ export default function TeacherPage() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-[#f6f8fc] text-[#172033]">
+    <main className="min-h-screen bg-surface-app-bg text-text-primary">
       <div className="mx-auto max-w-7xl px-6 py-10">
 
         <div className="mb-10 flex items-center justify-between gap-4">
           <div>
-            <div className="mb-2 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.15em] text-[#315bea]">
+            <div className="mb-2 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.15em] text-brand-primary">
               {branding?.logo_data ? (
                 <img
                   src={branding.logo_data}
@@ -96,7 +96,7 @@ export default function TeacherPage() {
               📝 Create & Publish Tests
             </h1>
 
-            <p className="mt-2 text-sm text-[#697386]">
+            <p className="mt-2 text-sm text-text-tertiary">
               Create papers automatically or select questions manually.
             </p>
           </div>
@@ -109,7 +109,7 @@ export default function TeacherPage() {
               <button
                 type="button"
                 onClick={() => router.push("/teacher/performance")}
-                className="rounded-xl border border-[#e2e6ee] bg-white px-4 py-2.5 text-sm font-bold text-[#315bea] hover:bg-[#f7f9ff]"
+                className="rounded-xl border border-border-default bg-white px-4 py-2.5 text-sm font-bold text-brand-primary hover:bg-surface-subtle"
               >
                 📊 Student Performance
               </button>
@@ -128,7 +128,7 @@ export default function TeacherPage() {
                   router.push("/login");
                 }
               }}
-              className="rounded-xl border border-[#e2e6ee] bg-white px-4 py-2.5 text-sm font-bold text-[#697386] hover:bg-[#f7f8fb]"
+              className="rounded-xl border border-border-default bg-white px-4 py-2.5 text-sm font-bold text-text-tertiary hover:bg-surface-app-bg"
             >
               Logout
             </button>
@@ -136,43 +136,43 @@ export default function TeacherPage() {
         </div>
 
         {/* GENERATE PAPER MODES */}
-        <section className="mt-8 rounded-2xl border border-[#e0e5f0] bg-white p-4 sm:p-5">
-          <h2 className="mb-3 text-sm font-extrabold uppercase tracking-wide text-[#697386]">Generate Paper</h2>
+        <section className="mt-8 rounded-2xl border border-border-default bg-white p-4 sm:p-5">
+          <h2 className="mb-3 text-sm font-extrabold uppercase tracking-wide text-text-tertiary">Generate Paper</h2>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
-            <button type="button" onClick={() => router.push("/teacher/cherry-pick")} className="rounded-xl border border-[#e0e5f0] bg-[#f8faff] px-4 py-4 text-left font-bold text-[#172033] hover:border-[#315bea]">
-              <span className="block text-xl">☑️</span><span className="mt-2 block">Single</span><span className="mt-1 block text-xs font-normal text-[#697386]">Select questions manually</span>
+            <button type="button" onClick={() => router.push("/teacher/cherry-pick")} className="rounded-xl border border-border-default bg-surface-app-bg px-4 py-4 text-left font-bold text-text-primary hover:border-brand-primary">
+              <span className="block text-xl">☑️</span><span className="mt-2 block">Single</span><span className="mt-1 block text-xs font-normal text-text-tertiary">Select questions manually</span>
             </button>
-            <button type="button" onClick={() => router.push("/teacher/collaborative-papers")} className="rounded-xl border border-[#e0e5f0] bg-[#fbf8ff] px-4 py-4 text-left font-bold text-[#172033] hover:border-[#8b5cf6]">
-              <span className="block text-xl">👥</span><span className="mt-2 block">Collaboration</span><span className="mt-1 block text-xs font-normal text-[#697386]">Build a paper with other teachers</span>
+            <button type="button" onClick={() => router.push("/teacher/collaborative-papers")} className="rounded-xl border border-border-default bg-[#fbf8ff] px-4 py-4 text-left font-bold text-text-primary hover:border-[#8b5cf6]">
+              <span className="block text-xl">👥</span><span className="mt-2 block">Collaboration</span><span className="mt-1 block text-xs font-normal text-text-tertiary">Build a paper with other teachers</span>
             </button>
-            <button type="button" onClick={() => router.push("/teacher/generate")} className="rounded-xl border border-[#e0e5f0] bg-[#f3faf6] px-4 py-4 text-left font-bold text-[#172033] hover:border-[#16a34a]">
-              <span className="block text-xl">✨</span><span className="mt-2 block">Generate Paper</span><span className="mt-1 block text-xs font-normal text-[#697386]">Generate from the question bank</span>
+            <button type="button" onClick={() => router.push("/teacher/generate")} className="rounded-xl border border-border-default bg-[#f3faf6] px-4 py-4 text-left font-bold text-text-primary hover:border-[#16a34a]">
+              <span className="block text-xl">✨</span><span className="mt-2 block">Generate Paper</span><span className="mt-1 block text-xs font-normal text-text-tertiary">Generate from the question bank</span>
             </button>
           </div>
         </section>
 
-        <section className="rounded-2xl border border-[#e5e8ef] bg-white shadow-sm">
+        <section className="rounded-2xl border border-border-default bg-white shadow-sm">
 
-          <div className="flex items-center justify-between border-b border-[#eef0f4] px-6 py-5">
+          <div className="flex items-center justify-between border-b border-border-default px-6 py-5">
             <div>
               <h2 className="text-lg font-extrabold">
                 My Papers
               </h2>
 
-              <p className="mt-1 text-sm text-[#8a93a5]">
+              <p className="mt-1 text-sm text-text-body">
                 Papers created by you
               </p>
             </div>
           </div>
 
           {loading && (
-            <div className="p-8 text-sm text-[#697386]">
+            <div className="p-8 text-sm text-text-tertiary">
               Loading papers...
             </div>
           )}
 
           {error && (
-            <div className="p-8 text-sm font-semibold text-red-600">
+            <div className="p-8 text-sm font-semibold text-state-error">
               {error}
             </div>
           )}
@@ -183,7 +183,7 @@ export default function TeacherPage() {
                 No papers created yet.
               </p>
 
-              <p className="mt-2 text-sm text-[#8a93a5]">
+              <p className="mt-2 text-sm text-text-body">
                 Use Generate Paper, Collaboration, or Single Question Selection to create your first paper.
               </p>
             </div>
@@ -201,7 +201,7 @@ export default function TeacherPage() {
                       {paper.description || paper.code}
                     </p>
 
-                    <p className="mt-1 text-xs text-[#8a93a5]">
+                    <p className="mt-1 text-xs text-text-body">
                       {paper.exam} · {paper.question_count} questions ·{" "}
                       {paper.duration_minutes} minutes
                     </p>

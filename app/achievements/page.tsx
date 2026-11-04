@@ -36,26 +36,26 @@ export default function AchievementsPage() {
   const earnedCount = achievements.filter((a) => a.earned).length;
 
   return (
-    <main className="min-h-screen bg-[#f6f8fc] text-[#172033]">
+    <main className="min-h-screen bg-surface-app-bg text-text-primary">
       <div className="mx-auto max-w-4xl px-6 py-10">
         <div className="flex items-center justify-between mb-8">
           <div>
             <button
               onClick={() => router.push("/dashboard")}
-              className="text-sm font-semibold text-[#315bea] mb-2 inline-block transition hover:underline"
+              className="text-sm font-semibold text-brand-primary mb-2 inline-block transition hover:underline"
             >
               ← Back to Dashboard
             </button>
             <h1 className="text-2xl font-extrabold tracking-tight">
               My Achievements
             </h1>
-            <p className="text-sm text-[#697386]">
+            <p className="text-sm text-text-tertiary">
               Unlock badges and track your progress milestones.
             </p>
           </div>
-          <div className="rounded-xl border border-[#e5e8ef] bg-white px-4 py-2 text-sm">
-            <span className="font-bold text-[#172033]">{earnedCount}</span>{" "}
-            <span className="text-[#697386]">of {achievements.length} unlocked</span>
+          <div className="rounded-xl border border-border-default bg-white px-4 py-2 text-sm">
+            <span className="font-bold text-text-primary">{earnedCount}</span>{" "}
+            <span className="text-text-tertiary">of {achievements.length} unlocked</span>
           </div>
         </div>
 
@@ -69,7 +69,7 @@ export default function AchievementsPage() {
               <div
                 key={a.id}
                 className={`rounded-xl border p-4 flex items-center gap-4 ${
-                  a.earned ? "border-[#315bea] bg-[#f0f5ff]" : "border-[#e5e8ef] bg-white"
+                  a.earned ? "border-brand-primary bg-surface-subtle" : "border-border-default bg-white"
                 }`}
               >
                 <div className="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0">
@@ -79,7 +79,7 @@ export default function AchievementsPage() {
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 mb-1">
-                    <h3 className="font-bold text-sm text-[#172033] truncate">
+                    <h3 className="font-bold text-sm text-text-primary truncate">
                       {a.name}
                     </h3>
                     <span
@@ -90,33 +90,33 @@ export default function AchievementsPage() {
                             ? "text-silver-600 bg-silver-50"
                             : a.tier === 3
                               ? "text-bronze-600 bg-bronze-50"
-                              : "text-[#315bea] bg-[#eef2ff]"
+                              : "text-brand-primary bg-surface-subtle"
                       }`}
                     >
                       Tier {a.tier}
                     </span>
                     {!a.earned && (
-                      <span className="text-[10px] font-bold text-[#8a93a5]">
+                      <span className="text-[10px] font-bold text-text-body">
                         Locked
                       </span>
                     )}
                   </div>
-                  <p className="text-sm text-[#697386] leading-relaxed">
+                  <p className="text-sm text-text-tertiary leading-relaxed">
                     {a.description}
                   </p>
                   <div className="mt-2 flex items-center gap-2">
-                    <span className="text-[10px] font-semibold text-[#8a93a5]">
+                    <span className="text-[10px] font-semibold text-text-body">
                       {a.category}
                     </span>
                     {a.earned && a.earnedAt && (
-                      <span className="text-[10px] text-[#8a93a5]">
+                      <span className="text-[10px] text-text-body">
                         • Earned {new Date(a.earnedAt).toLocaleDateString()}
                       </span>
                     )}
                   </div>
                 </div>
                 {!a.earned ? (
-                  <div className="w-8 h-8 rounded-full bg-[#f0f2f6] flex items-center justify-center text-[10px] text-[#8a93a5]">
+                  <div className="w-8 h-8 rounded-full bg-border-default flex items-center justify-center text-[10px] text-text-body">
                     🔒
                   </div>
                 ) : (

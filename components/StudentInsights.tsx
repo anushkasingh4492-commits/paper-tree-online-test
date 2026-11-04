@@ -194,25 +194,25 @@ export default function StudentInsights() {
         <div className="relative grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
           <div>
             <div className="flex items-center justify-between gap-3"><div className="flex items-center gap-2 text-[11px] font-black uppercase tracking-[.25em] text-indigo-200"><Sparkles size={15}/> Player Progress</div><span className="rounded-full border border-white/10 bg-white/10 px-3 py-1.5 text-[9px] font-black uppercase tracking-widest text-indigo-100 opacity-80 transition group-hover:bg-white/15 group-hover:opacity-100">Tap to view level</span></div>
-            <div className="mt-3 flex items-end gap-4"><div className="text-7xl font-black leading-none tracking-[-.08em] text-transparent bg-clip-text bg-gradient-to-b from-white to-indigo-200">{data.level}</div><div className="pb-1"><div className="text-2xl font-black uppercase">{data.levelName}</div><div className="mt-1 text-xs font-bold text-slate-400">{data.testsCompleted} completed tests</div></div></div>
-            <div className="mt-6 max-w-2xl"><div className="flex items-center justify-between text-[11px] font-black uppercase tracking-wider text-slate-400"><span>Level progress</span><span>{nextName ? `${Math.max(0, (data.nextLevelAt || 0) - data.testsCompleted)} more tests to ${nextName}` : "MAX LEVEL • GOAT"}</span></div><div className="mt-2 h-4 overflow-hidden rounded-full bg-white/10 p-1"><div className="relative h-full overflow-hidden rounded-full bg-gradient-to-r from-cyan-300 via-indigo-400 to-fuchsia-400 transition-all duration-1000" style={{width:`${clamp(data.levelProgress)}%`}}><span className="absolute inset-0 w-1/3 bg-white/30 blur-sm" style={{animation:"ptShine 2.5s linear infinite"}}/></div></div></div>
+            <div className="mt-3 flex items-end gap-4"><div className="text-7xl font-black leading-none tracking-[-.08em] text-transparent bg-clip-text bg-gradient-to-b from-white to-indigo-200">{data.level}</div><div className="pb-1"><div className="text-2xl font-black uppercase">{data.levelName}</div><div className="mt-1 text-xs font-bold text-text-supporting-label">{data.testsCompleted} completed tests</div></div></div>
+            <div className="mt-6 max-w-2xl"><div className="flex items-center justify-between text-[11px] font-black uppercase tracking-wider text-text-supporting-label"><span>Level progress</span><span>{nextName ? `${Math.max(0, (data.nextLevelAt || 0) - data.testsCompleted)} more tests to ${nextName}` : "MAX LEVEL • GOAT"}</span></div><div className="mt-2 h-4 overflow-hidden rounded-full bg-white/10 p-1"><div className="relative h-full overflow-hidden rounded-full bg-gradient-to-r from-cyan-300 via-indigo-400 to-fuchsia-400 transition-all duration-1000" style={{width:`${clamp(data.levelProgress)}%`}}><span className="absolute inset-0 w-1/3 bg-white/30 blur-sm" style={{animation:"ptShine 2.5s linear infinite"}}/></div></div></div>
             <div className="mt-5 flex flex-wrap gap-2 text-xs font-black"><span className="rounded-full border border-white/10 bg-white/10 px-3 py-2">⚡ {data.points.toLocaleString()} XP</span><span className="rounded-full border border-white/10 bg-white/10 px-3 py-2">🏆 {earned.length} badges</span><span className="rounded-full border border-white/10 bg-white/10 px-3 py-2">🎯 {data.averagePercentage}% avg</span></div>
           </div>
-          <div className="pt-float flex min-w-[210px] flex-col items-center rounded-[30px] border border-orange-300/20 bg-orange-400/10 px-9 py-7 backdrop-blur transition group-hover:border-orange-200/40 group-hover:bg-orange-400/15"><div className="pt-fire text-7xl">🔥</div><div className="mt-1 text-6xl font-black tracking-tight">{data.streak}</div><div className="text-[11px] font-black uppercase tracking-[.25em] text-orange-200">Day Streak</div><div className="mt-2 text-center text-[10px] font-semibold text-slate-400">Best: {data.maxStreak} days</div></div>
+          <div className="pt-float flex min-w-[210px] flex-col items-center rounded-[30px] border border-orange-300/20 bg-orange-400/10 px-9 py-7 backdrop-blur transition group-hover:border-orange-200/40 group-hover:bg-orange-400/15"><div className="pt-fire text-7xl">🔥</div><div className="mt-1 text-6xl font-black tracking-tight">{data.streak}</div><div className="text-[11px] font-black uppercase tracking-[.25em] text-orange-200">Day Streak</div><div className="mt-2 text-center text-[10px] font-semibold text-text-supporting-label">Best: {data.maxStreak} days</div></div>
         </div>
         <div className="pointer-events-none absolute bottom-4 right-6 text-[9px] font-black uppercase tracking-[.25em] text-white/30 transition group-hover:text-white/60">Open level details →</div>
       </button>
 
       <div className="grid gap-3 sm:grid-cols-3">
-        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"><div className="flex items-center gap-2 text-xs font-black uppercase tracking-wider text-slate-400"><Trophy size={15}/> Batch Rank</div><div className="mt-2 text-3xl font-black text-indigo-600">{data.rank ? `#${data.rank}` : "—"}</div><div className="mt-1 text-xs font-semibold text-slate-500">{data.batchName || "No batch assigned"}{data.batchSize ? ` • ${data.batchSize} students` : ""}</div></div>
-        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"><div className="flex items-center gap-2 text-xs font-black uppercase tracking-wider text-slate-400"><Target size={15}/> Completed Tests</div><div className="mt-2 text-3xl font-black text-emerald-600">{data.testsCompleted}</div><div className="mt-1 text-xs font-semibold text-slate-500">Every completed test counts toward your level.</div></div>
-        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"><div className="flex items-center gap-2 text-xs font-black uppercase tracking-wider text-slate-400"><Zap size={15}/> XP Power</div><div className="mt-2 text-3xl font-black text-fuchsia-600">{data.points.toLocaleString()}</div><div className="mt-1 text-xs font-semibold text-slate-500">Keep completing challenges</div></div>
+        <div className="rounded-2xl border border-border-default bg-white p-5 shadow-sm"><div className="flex items-center gap-2 text-xs font-black uppercase tracking-wider text-text-supporting-label"><Trophy size={15}/> Batch Rank</div><div className="mt-2 text-3xl font-black text-brand-purple">{data.rank ? `#${data.rank}` : "—"}</div><div className="mt-1 text-xs font-semibold text-text-body">{data.batchName || "No batch assigned"}{data.batchSize ? ` • ${data.batchSize} students` : ""}</div></div>
+        <div className="rounded-2xl border border-border-default bg-white p-5 shadow-sm"><div className="flex items-center gap-2 text-xs font-black uppercase tracking-wider text-text-supporting-label"><Target size={15}/> Completed Tests</div><div className="mt-2 text-3xl font-black text-emerald-600">{data.testsCompleted}</div><div className="mt-1 text-xs font-semibold text-text-body">Every completed test counts toward your level.</div></div>
+        <div className="rounded-2xl border border-border-default bg-white p-5 shadow-sm"><div className="flex items-center gap-2 text-xs font-black uppercase tracking-wider text-text-supporting-label"><Zap size={15}/> XP Power</div><div className="mt-2 text-3xl font-black text-fuchsia-600">{data.points.toLocaleString()}</div><div className="mt-1 text-xs font-semibold text-text-body">Keep completing challenges</div></div>
       </div>
 
-      <div className="rounded-[24px] border border-slate-200 bg-white p-4 shadow-sm md:p-5">
-        <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between"><div><div className="text-[10px] font-black uppercase tracking-[.2em] text-slate-400">Achievement Vault</div><h2 className="mt-1 text-2xl font-black tracking-tight text-slate-950">🏆 Trophy Wall</h2><p className="mt-1 text-xs font-semibold text-slate-500">Earn them. Upgrade them. Show them off.</p></div><div className="text-xs font-black text-slate-400">{earned.length}/{data.badges.length} unlocked</div></div>
-        <div className="mt-5 flex gap-2 overflow-x-auto pb-1">{CATEGORIES.map((c)=><button key={c} onClick={()=>setCategory(c)} className={`whitespace-nowrap rounded-full px-3 py-2 text-[10px] font-black transition ${category===c?"bg-slate-950 text-white shadow":"bg-slate-100 text-slate-500 hover:bg-slate-200"}`}>{c}</button>)}</div>
-          <button type="button" onClick={()=>setViewAll(!viewAll)} className="rounded-xl border border-slate-200 px-3 py-1.5 text-[10px] font-black text-slate-700 hover:bg-slate-50">View All</button>
+      <div className="rounded-[24px] border border-border-default bg-white p-4 shadow-sm md:p-5">
+        <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between"><div><div className="text-[10px] font-black uppercase tracking-[.2em] text-text-supporting-label">Achievement Vault</div><h2 className="mt-1 text-2xl font-black tracking-tight text-slate-950">🏆 Trophy Wall</h2><p className="mt-1 text-xs font-semibold text-text-body">Earn them. Upgrade them. Show them off.</p></div><div className="text-xs font-black text-text-supporting-label">{earned.length}/{data.badges.length} unlocked</div></div>
+        <div className="mt-5 flex gap-2 overflow-x-auto pb-1">{CATEGORIES.map((c)=><button key={c} onClick={()=>setCategory(c)} className={`whitespace-nowrap rounded-full px-3 py-2 text-[10px] font-black transition ${category===c?"bg-slate-950 text-white shadow":"bg-surface-subtle text-text-body hover:bg-surface-muted"}`}>{c}</button>)}</div>
+          <button type="button" onClick={()=>setViewAll(!viewAll)} className="rounded-xl border border-border-default px-3 py-1.5 text-[10px] font-black text-text-secondary hover:bg-surface-subtle">View All</button>
         <div className="mt-4 grid grid-cols-2 gap-2.5 sm:grid-cols-3 lg:grid-cols-5 2xl:grid-cols-6">
           {badgesToShow.map((badge) => { const pct = badge.target ? clamp((badge.progress / badge.target) * 100) : badge.earned ? 100 : 0; const colors = COLORS[badge.category] || COLORS.Score; return <button key={badge.id} type="button" onClick={() => {
   setSelectedBadge({
@@ -231,8 +231,8 @@ export default function StudentInsights() {
   });
 }}className={`group relative overflow-hidden rounded-xl border p-3 text-left transition duration-300 hover:-translate-y-1 hover:shadow-xl ${
   badge.earned
-    ? "border-slate-200 bg-white"
-    : "border-slate-200 bg-gradient-to-br from-white to-slate-50"
+    ? "border-border-default bg-white"
+    : "border-border-default bg-gradient-to-br from-white to-slate-50"
 }`}
 >
   <div
@@ -264,11 +264,11 @@ export default function StudentInsights() {
       <Lock size={13} />
     </span>
   )}
-</div><div className={`mt-3 text-center text-xs font-black ${badge.earned?"text-slate-900":"text-slate-400"}`}>{badge.name}{badge.tier?` ${TIER_NAMES[badge.tier]}`:""}</div><div className="mt-1 text-center text-[9px] font-bold uppercase tracking-wider text-slate-400">{badge.earned ? (badge.tier > 0 && badge.tier < 4 ? `${badge.progress.toLocaleString()} / ${TIER_TARGETS[badge.tier + 1].toLocaleString()} to Tier ${TIER_NAMES[badge.tier + 1]}` : badge.detail) : `${badge.progress.toLocaleString()} / ${badge.target.toLocaleString()}`}</div>{!badge.earned&&<div className="mt-2 h-1.5 overflow-hidden rounded-full bg-slate-200"><div className="h-full rounded-full bg-slate-400 transition-all" style={{width:`${pct}%`}}/></div>}</button>})}
+</div><div className={`mt-3 text-center text-xs font-black ${badge.earned?"text-text-primary":"text-text-supporting-label"}`}>{badge.name}{badge.tier?` ${TIER_NAMES[badge.tier]}`:""}</div><div className="mt-1 text-center text-[9px] font-bold uppercase tracking-wider text-text-supporting-label">{badge.earned ? (badge.tier > 0 && badge.tier < 4 ? `${badge.progress.toLocaleString()} / ${TIER_TARGETS[badge.tier + 1].toLocaleString()} to Tier ${TIER_NAMES[badge.tier + 1]}` : badge.detail) : `${badge.progress.toLocaleString()} / ${badge.target.toLocaleString()}`}</div>{!badge.earned&&<div className="mt-2 h-1.5 overflow-hidden rounded-full bg-surface-muted"><div className="h-full rounded-full bg-slate-400 transition-all" style={{width:`${pct}%`}}/></div>}</button>})}
         </div>
       </div>
 
-      {data.weakAreas.length>0&&<div className="rounded-[26px] border border-rose-100 bg-white p-5 shadow-sm"><div className="text-[10px] font-black uppercase tracking-[.2em] text-rose-500">Boss Fight Queue</div><div className="mt-1 text-xl font-black text-slate-900">Chapters to conquer</div><div className="mt-4 grid gap-2 md:grid-cols-2">{data.weakAreas.map((area)=><div key={`${area.subject}-${area.chapter}`} className="rounded-xl border border-slate-100 bg-slate-50 p-3"><div className="flex items-center justify-between gap-3"><span className="truncate text-sm font-black text-slate-700">{area.chapter}</span><span className="text-xs font-black text-rose-500">{area.rate}% misses</span></div><div className="mt-2 h-1.5 overflow-hidden rounded-full bg-slate-200"><div className="h-full rounded-full bg-gradient-to-r from-amber-400 to-rose-500" style={{width:`${clamp(area.rate)}%`}}/></div></div>)}</div></div>}
+      {data.weakAreas.length>0&&<div className="rounded-[26px] border border-rose-100 bg-white p-5 shadow-sm"><div className="text-[10px] font-black uppercase tracking-[.2em] text-rose-500">Boss Fight Queue</div><div className="mt-1 text-xl font-black text-text-primary">Chapters to conquer</div><div className="mt-4 grid gap-2 md:grid-cols-2">{data.weakAreas.map((area)=><div key={`${area.subject}-${area.chapter}`} className="rounded-xl border border-border-default bg-surface-subtle p-3"><div className="flex items-center justify-between gap-3"><span className="truncate text-sm font-black text-text-secondary">{area.chapter}</span><span className="text-xs font-black text-rose-500">{area.rate}% misses</span></div><div className="mt-2 h-1.5 overflow-hidden rounded-full bg-surface-muted"><div className="h-full rounded-full bg-gradient-to-r from-amber-400 to-rose-500" style={{width:`${clamp(area.rate)}%`}}/></div></div>)}</div></div>}
 
       {levelOpen && (
         <div
@@ -311,23 +311,23 @@ export default function StudentInsights() {
 
             <div className="p-5 sm:p-6">
               <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-                <div className="rounded-2xl bg-slate-50 p-4 text-center">
-                  <div className="text-xl font-black text-indigo-600">{data.testsCompleted}</div>
-                  <div className="mt-1 text-[9px] font-black uppercase tracking-wider text-slate-400">Tests</div>
+                <div className="rounded-2xl bg-surface-subtle p-4 text-center">
+                  <div className="text-xl font-black text-brand-purple">{data.testsCompleted}</div>
+                  <div className="mt-1 text-[9px] font-black uppercase tracking-wider text-text-supporting-label">Tests</div>
                 </div>
-                <div className="rounded-2xl bg-slate-50 p-4 text-center">
+                <div className="rounded-2xl bg-surface-subtle p-4 text-center">
                   <div className="text-xl font-black text-fuchsia-600">{data.points.toLocaleString()}</div>
-                  <div className="mt-1 text-[9px] font-black uppercase tracking-wider text-slate-400">XP</div>
+                  <div className="mt-1 text-[9px] font-black uppercase tracking-wider text-text-supporting-label">XP</div>
                 </div>
-                <div className="rounded-2xl bg-slate-50 p-4 text-center col-span-2 sm:col-span-1">
+                <div className="rounded-2xl bg-surface-subtle p-4 text-center col-span-2 sm:col-span-1">
                   <div className="text-xl font-black text-orange-500">{data.maxStreak}</div>
-                  <div className="mt-1 text-[9px] font-black uppercase tracking-wider text-slate-400">Best streak</div>
+                  <div className="mt-1 text-[9px] font-black uppercase tracking-wider text-text-supporting-label">Best streak</div>
                 </div>
               </div>
 
               <div className="mt-4 rounded-2xl border border-indigo-100 bg-indigo-50/60 p-4">
                 <div className="text-[10px] font-black uppercase tracking-[.18em] text-indigo-500">Next milestone</div>
-                <div className="mt-1 text-sm font-black text-slate-900">
+                <div className="mt-1 text-sm font-black text-text-primary">
                   {data.nextLevelAt ? `${Math.max(0, data.nextLevelAt - data.points).toLocaleString()} XP to ${nextName || "the next level"}` : "You have reached the highest level."}
                 </div>
               </div>
@@ -401,7 +401,7 @@ export default function StudentInsights() {
           {!safeSelectedBadge.earned &&
             safeSelectedBadge.target > 0 && (
               <div className="mx-auto mt-6 max-w-xs">
-                <div className="mb-2 flex justify-between text-[10px] font-black text-slate-400">
+                <div className="mb-2 flex justify-between text-[10px] font-black text-text-supporting-label">
                   <span>PROGRESS</span>
 
                   <span>
@@ -469,17 +469,17 @@ export default function StudentInsights() {
         )}
 
         {!safeSelectedBadge.earned && (
-          <div className="rounded-2xl bg-slate-50 p-4 text-center">
+          <div className="rounded-2xl bg-surface-subtle p-4 text-center">
             <div className="text-2xl">🔐</div>
 
-            <p className="mt-2 text-xs font-bold text-slate-600">
+            <p className="mt-2 text-xs font-bold text-text-body">
               Keep completing tests to unlock this achievement.
             </p>
           </div>
         )}
 
         {safeSelectedBadge.earned && (
-          <p className="text-center text-[10px] font-semibold text-slate-400">
+          <p className="text-center text-[10px] font-semibold text-text-supporting-label">
             Share your achievement and show your progress.
           </p>
         )}
@@ -487,7 +487,7 @@ export default function StudentInsights() {
         <button
           type="button"
           onClick={() => setSelectedBadge(null)}
-          className="w-full rounded-xl bg-slate-100 px-4 py-3 text-xs font-black text-slate-600 transition hover:bg-slate-200"
+          className="w-full rounded-xl bg-surface-subtle px-4 py-3 text-xs font-black text-text-body transition hover:bg-surface-muted"
         >
           CLOSE
         </button>
