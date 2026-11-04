@@ -531,15 +531,15 @@ function MistakeInfoTooltip() {
       </button>
       {open && (
         <div
-          className="fixed inset-0 z-[100] flex items-center justify-center"
+          className="fixed inset-0 z-50 flex items-center justify-center"
           onClick={() => setOpen(false)}
         >
           <div
-            className="absolute inset-0 bg-black/40 backdrop-blur-sm"
+            className="absolute inset-0 bg-black/60"
             onClick={(e) => e.stopPropagation()}
           />
           <div
-            className="w-full max-w-md rounded-2xl bg-white p-6 shadow-2xl border border-border-default mx-4"
+            className="relative z-10 w-full max-w-md rounded-2xl bg-white p-6 shadow-2xl border border-border-default mx-4 opacity-100"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-center justify-between mb-4">
@@ -549,10 +549,10 @@ function MistakeInfoTooltip() {
               <button
                 type="button"
                 onClick={() => setOpen(false)}
-                className="rounded-md p-1.5 text-text-supporting-label hover:bg-surface-subtle transition"
+                className="rounded-md p-1.5 text-brand-primary hover:bg-state-subtle-lavender transition"
                 aria-label="Close"
               >
-                <span className="text-[10px]">✕</span>
+                <span className="text-[11px] font-bold">✕</span>
               </button>
             </div>
             <p className="text-sm text-text-body leading-relaxed mb-4">
@@ -565,7 +565,7 @@ function MistakeInfoTooltip() {
             <button
               type="button"
               onClick={() => setOpen(false)}
-              className="w-full rounded-xl border border-border-default px-4 py-2.5 text-sm font-bold text-text-secondary hover:bg-surface-subtle transition"
+              className="w-full rounded-xl bg-brand-primary px-4 py-2.5 text-sm font-bold text-white hover:bg-brand-action-blue transition"
             >
               Got it
             </button>
