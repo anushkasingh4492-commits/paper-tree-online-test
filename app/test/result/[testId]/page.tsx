@@ -3653,7 +3653,7 @@ if (ctx === null) {
             </div>
             <div className="p-5">
               <div className="grid grid-cols-2 gap-3">
-                <button type="button" onClick={() => { const text = `🏆 I unlocked ${celebrationBadge.name}! 🔥 ${gameProgress?.streak || 0} day streak • Level ${gameProgress?.level || 1} ${gameProgress?.levelName || "Rookie"}.`; window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank", "noopener,noreferrer"); }} className="rounded-xl bg-[#25D366] px-4 py-3 text-xs font-black text-white">WhatsApp</button>
+                <button type="button" onClick={() => { const text = `🏆 I unlocked ${celebrationBadge.name}! 🔥 ${gameProgress?.streak || 0} day streak • Level ${gameProgress?.level || 1} ${gameProgress?.levelName || "Rookie"}.`; window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank", "noopener,noreferrer"); }} className="rounded-xl bg-state-success px-4 py-3 text-xs font-black text-white">WhatsApp</button>
                 <button type="button" onClick={() => setCelebrationBadge(null)} className="rounded-xl bg-slate-950 px-4 py-3 text-xs font-black text-white">Continue</button>
               </div>
               <p className="mt-3 text-center text-[10px] font-semibold text-text-supporting-label">Your new achievement is now visible in the Trophy Wall.</p>

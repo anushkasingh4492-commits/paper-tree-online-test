@@ -228,7 +228,7 @@ function toggleSubject(subject: string) {
           </div>
 
           <div className="flex-1 px-4 py-7">
-            <p className="mb-3 px-3 text-[10px] font-bold uppercase tracking-[0.14em] text-[#a3aaba]">
+            <p className="mb-3 px-3 text-[10px] font-bold uppercase tracking-[0.14em] text-text-supporting-label">
               Workspace
             </p>
 
@@ -265,7 +265,7 @@ function toggleSubject(subject: string) {
               </button>
             </nav>
 
-            <p className="mb-3 mt-9 px-3 text-[10px] font-bold uppercase tracking-[0.14em] text-[#a3aaba]">
+            <p className="mb-3 mt-9 px-3 text-[10px] font-bold uppercase tracking-[0.14em] text-text-supporting-label">
               Account
             </p>
 
@@ -279,7 +279,7 @@ function toggleSubject(subject: string) {
 
           <div className="border-t border-border-default p-4">
             <div className="flex items-center gap-3 rounded-2xl bg-surface-app-bg p-3">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#dfe7ff] text-sm font-bold text-brand-primary">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-subtle-lavender text-sm font-bold text-brand-primary">
                 {initials}
               </div>
 
@@ -288,7 +288,7 @@ function toggleSubject(subject: string) {
                   {studentName}
                 </p>
 
-                <p className="truncate text-[11px] text-[#919aaa]">
+                <p className="truncate text-[11px] text-text-secondary">
                   MHT-CET Preparation
                 </p>
               </div>
@@ -303,7 +303,7 @@ function toggleSubject(subject: string) {
 
           <header className="flex h-[82px] items-center justify-between border-b border-border-default bg-white px-5 sm:px-8 lg:px-10">
             <div>
-              <p className="text-xs font-medium text-[#99a1b0]">
+              <p className="text-xs font-medium text-text-secondary">
                 Student Dashboard
               </p>
 
@@ -315,12 +315,12 @@ function toggleSubject(subject: string) {
             <div className="flex items-center gap-3">
               <button
                 onClick={() => router.push("/dashboard")}
-                className="hidden rounded-xl border border-[#e4e7ed] bg-white px-4 py-2.5 text-xs font-bold text-[#5d6677] transition hover:border-[#cfd5df] hover:text-text-primary sm:block"
+                className="hidden rounded-xl border border-border-default bg-surface-surface px-4 py-2.5 text-xs font-bold text-text-secondary transition hover:border-border-default hover:text-text-primary sm:block"
               >
                 Dashboard
               </button>
 
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#dfe7ff] text-sm font-bold text-brand-primary">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-subtle-lavender text-sm font-bold text-brand-primary">
                 {initials}
               </div>
             </div>
@@ -339,7 +339,7 @@ function toggleSubject(subject: string) {
                 Build your practice test
               </h2>
 
-              <p className="mt-2 max-w-2xl text-sm leading-6 text-[#7f899b]">
+              <p className="mt-2 max-w-2xl text-sm leading-6 text-text-secondary">
                 Choose your subjects, difficulty, number of questions and
                 duration. Your academy will generate a fresh test from the
                 MHT-CET question bank.
@@ -389,7 +389,7 @@ onClick={() => toggleSubject(subject.name)}
                           className={`group rounded-[16px] border p-4 text-left transition ${
                             selected
                               ? "border-brand-primary bg-surface-subtle"
-                              : "border-border-default bg-white hover:border-[#cfd7f7] hover:bg-surface-app-bg"
+                              : "border-border-default bg-white hover:border-border-default hover:bg-surface-subtle"
                           }`}
                         >
                           <div className="flex items-start justify-between">
@@ -397,7 +397,7 @@ onClick={() => toggleSubject(subject.name)}
                               className={`flex h-10 w-10 items-center justify-center rounded-xl text-[10px] font-extrabold ${
                                 selected
                                   ? "bg-brand-primary text-white"
-                                  : "bg-[#f0f3f8] text-[#687386]"
+                                  : "bg-surface-subtle text-text-secondary"
                               }`}
                             >
                               {subject.code}
@@ -407,7 +407,7 @@ onClick={() => toggleSubject(subject.name)}
                               className={`flex h-5 w-5 items-center justify-center rounded-full border-2 ${
                                 selected
                                   ? "border-brand-primary bg-brand-primary text-white"
-                                  : "border-[#d7dce5]"
+                                  : "border-border-default"
                               }`}
                             >
                               {selected && (
@@ -422,7 +422,7 @@ onClick={() => toggleSubject(subject.name)}
                             {subject.name}
                           </h4>
 
-                          <p className="mt-1 text-[11px] leading-5 text-[#9aa2b0]">
+                          <p className="mt-1 text-[11px] leading-5 text-text-secondary">
                             {subject.description}
                           </p>
                         </button>
@@ -445,7 +445,7 @@ onClick={() => toggleSubject(subject.name)}
                       </p>
                     </div>
 
-                    <span className="rounded-lg bg-surface-app-bg px-3 py-1.5 text-[10px] font-bold text-[#8b94a4]">
+                    <span className="rounded-lg bg-surface-app-bg px-3 py-1.5 text-[10px] font-bold text-text-secondary">
                       All chapters
                     </span>
                   </div>
@@ -455,7 +455,7 @@ onClick={() => toggleSubject(subject.name)}
                       All available chapters
                     </p>
 
-                    <p className="mt-1 text-[11px] leading-5 text-[#a1a8b5]">
+                    <p className="mt-1 text-[11px] leading-5 text-text-secondary">
                       No chapter filter is selected. Questions will be
                       picked from all available chapters for the selected
                       subjects.
@@ -488,7 +488,7 @@ onClick={() => toggleSubject(subject.name)}
                           className={`rounded-xl border px-4 py-3 text-xs font-bold transition ${
                             selected
                               ? "border-brand-primary bg-brand-primary text-white"
-                              : "border-[#e3e6ec] bg-white text-text-tertiary hover:border-[#cbd3eb] hover:bg-surface-app-bg"
+                              : "border-border-default bg-white text-text-tertiary hover:border-border-default hover:bg-surface-app-bg"
                           }`}
                         >
                           {item}
@@ -525,7 +525,7 @@ onClick={() => toggleSubject(subject.name)}
                             className={`rounded-xl border py-3 text-xs font-bold transition ${
                               selected
                                 ? "border-brand-primary bg-brand-primary text-white"
-                                : "border-[#e3e6ec] text-text-tertiary hover:border-[#cbd3eb]"
+                                : "border-border-default text-text-tertiary hover:border-border-default"
                             }`}
                           >
                             {count}
@@ -551,7 +551,7 @@ onClick={() => toggleSubject(subject.name)}
                           Number(event.target.value)
                         )
                       }
-                      className="mt-5 h-11 w-full rounded-xl border border-border-default bg-white px-3 text-sm font-semibold text-[#394255] outline-none transition focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10"
+                      className="mt-5 h-11 w-full rounded-xl border border-border-default bg-surface-surface px-3 text-sm font-semibold text-text-secondary outline-none transition focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10"
                     >
                       {durationOptions.map((option) => (
                         <option
@@ -569,7 +569,7 @@ onClick={() => toggleSubject(subject.name)}
               {/* RIGHT SUMMARY */}
 
               <aside className="lg:sticky lg:top-7 lg:h-fit">
-                <div className="overflow-hidden rounded-[22px] border border-[#dfe5ff] bg-brand-primary shadow-[0_18px_45px_rgba(49,91,234,0.12)]">
+                <div className="overflow-hidden rounded-[22px] border border-border-default bg-brand-primary shadow-[0_18px_45px_rgba(49,91,234,0.12)]">
                   <div className="p-6">
                     <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-blue-100">
                       Test summary
@@ -627,7 +627,7 @@ onClick={() => toggleSubject(subject.name)}
                     </div>
                   </div>
 
-                  <div className="border-t border-white/10 bg-[#2b51d2] p-5">
+                  <div className="border-t border-white/10 bg-brand-primary p-5">
                     {error && (
                       <div className="mb-4 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-xs font-semibold leading-5 text-state-error">
                         {error}
@@ -664,16 +664,16 @@ onClick={() => toggleSubject(subject.name)}
 
                 <div className="mt-4 rounded-[18px] border border-border-default bg-white p-5">
                   <div className="flex gap-3">
-                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#ecfdf3] text-sm font-bold text-[#19a463]">
+                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-state-success/10 text-sm font-bold text-state-success">
 
                     </div>
 
                     <div>
-                      <p className="text-xs font-extrabold text-[#394255]">
+                      <p className="text-xs font-extrabold text-text-secondary">
                         Ready when you are
                       </p>
 
-                      <p className="mt-1 text-[11px] leading-5 text-[#9aa2b0]">
+                      <p className="mt-1 text-[11px] leading-5 text-text-secondary">
                         Your answers and result will be saved automatically
                         when you complete the test.
                       </p>

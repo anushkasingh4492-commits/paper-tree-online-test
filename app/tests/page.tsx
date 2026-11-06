@@ -1295,7 +1295,7 @@ setSubjects([
    */
 
   return (
-    <main className="min-h-screen bg-surface-app-bg text-[#111827]">
+    <main className="min-h-screen bg-surface-app-bg text-text-primary">
 
       {/* HEADER */}
 
@@ -1332,7 +1332,7 @@ setSubjects([
               "/dashboard"
             )
           }
-          className="text-sm text-text-body hover:text-[#111827]"
+          className="text-sm text-text-body hover:text-text-primary"
         >
           Dashboard
         </button>
@@ -1776,12 +1776,12 @@ setSubjects([
                                 currentSubjectChapters.length ===
                                 0
                               }
-                              className="text-xs font-semibold text-brand-primary hover:underline disabled:text-[#9ca3af] disabled:no-underline"
+                              className="text-xs font-semibold text-brand-primary hover:underline disabled:text-text-disabled disabled:no-underline"
                             >
                               Select All
                             </button>
 
-                            <span className="text-[#d1d5db]">
+                            <span className="text-text-disabled">
                               |
                             </span>
 
@@ -1834,7 +1834,7 @@ setSubjects([
                                     }
                                     className={`w-full flex items-center justify-between p-3.5 rounded-xl border transition text-left ${
                                       selected
-                                        ? "border-[#93c5fd] bg-surface-subtle"
+                                        ? "border-brand-primary/20 bg-surface-subtle"
                                         : "border-border-default hover:bg-surface-app-bg"
                                     }`}
                                   >
@@ -1849,7 +1849,7 @@ setSubjects([
                                       className={`w-5 h-5 rounded-md border flex items-center justify-center text-xs ${
                                         selected
                                           ? "bg-brand-primary border-brand-primary text-white"
-                                          : "border-[#d1d5db]"
+                                          : "border-border-default"
                                       }`}
                                     >
                                       {selected
@@ -2280,7 +2280,7 @@ setSubjects([
                           !selectedPreset ||
                           !presetDetails
                         }
-                        className="w-full h-12 rounded-xl bg-brand-primary text-white text-sm font-semibold hover:bg-[#1e40af] disabled:opacity-60 disabled:cursor-not-allowed transition"
+                        className="w-full h-12 rounded-xl bg-brand-primary text-white text-sm font-semibold hover:bg-brand-action-blue disabled:opacity-60 disabled:cursor-not-allowed transition"
                       >
                         {generating
                           ? "Generating Test..."
@@ -2289,7 +2289,7 @@ setSubjects([
 
                     </div>
 
-                    <p className="text-[11px] leading-relaxed text-[#9ca3af] text-center">
+                    <p className="text-[11px] leading-relaxed text-text-secondary text-center">
                       Questions will be selected from
                       the Paper Tree question bank
                       according to your configuration.

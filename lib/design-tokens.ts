@@ -11,26 +11,26 @@ export const brand = {
   /** Primary Blue — main brand colour, primary CTAs, selected states */
   primary: "#2455C8",
   /** Deep Navy — pressed/active states, dark emphasis */
-  deepNavy: "#081C49",
+  deepNavy: "#0B1C49",
   /** Action Blue — hover / brighter primary state */
   actionBlue: "#3478E8",
   /** Purple — accent / secondary brand */
   purple: "#6846D9",
+  /** Yellow — highlights and important indicators */
+  yellow: "#FFC928",
+  /** Subtle lavender — secondary surfaces and selected states */
+  subtleLavender: "#E5E9FF",
 } as const;
 
 export const state = {
   /** Error / destructive */
   error: "#D64545",
   /** Success / positive */
-  success: "#20A568",
+  success: "#20A56B",
   /** Warning / attention */
-  warning: "#E5B400",
+  warning: "#E69A25",
   /** Info — same as Action Blue */
   info: "#3478E8",
-  /** Yellow accent */
-  yellow: "#FFC928",
-  /** Subtle lavender surface for selected chips / tabs */
-  subtleLavender: "#E5E9FF",
 } as const;
 
 /** Light-mode surface & background colours */
@@ -44,20 +44,20 @@ export const surfaceLight = {
 
 /** Dark-mode surface & background colours */
 export const surfaceDark = {
-  appBackground: "#101828",
-  surface: "#1B2942",
+  appBackground: "#10182B",
+  surface: "#1C2942",
   elevatedSurface: "#263653",
-  mutedSurface: "#303850",
+  mutedSurface: "#303B5C",
 } as const;
 
 /** Text colour hierarchy (light mode) */
 export const textLight = {
   primary: "#17233F",
-  secondary: "#2A3868",
-  tertiary: "#58688F",
+  secondary: "#2A3B68",
+  tertiary: "#5B6B8F",
   body: "#6F7E9E",
-  supportingLabel: "#9AABCF",
-  disabled: "#CFCEDC",
+  supportingLabel: "#9AA6C1",
+  disabled: "#C7CEDC",
 } as const;
 
 /** Text colour hierarchy (dark mode) */
@@ -73,9 +73,9 @@ export const textDark = {
 /** Text-on-colour accessibility */
 export const textOnColor = {
   onPrimary: "#FFFFFF",
-  onSecondaryLight: "#2455CB",
+  onSecondaryLight: "#2455C8",
   onSecondaryDark: "#FFFFFF",
-  onDisabled: "#9AABCF",
+  onDisabled: "#9AA6C1",
 } as const;
 
 /** Corner radius scale */
@@ -97,16 +97,16 @@ export const spacing = {
 /** Interactive / CTA colours */
 export const cta = {
   primary: {
-    default: "#2455CB",
+    default: "#2455C8",
     hover: "#3478E8",
-    pressed: "#081C49",
+    pressed: "#0B1C49",
     disabled: "#D6DBE8",
   },
   secondaryLight: {
     default: "#E5E9FF",
   },
   secondaryDark: {
-    default: "#30385C",
+    default: "#303B5C",
   },
   disabled: "#D6DBE8",
 } as const;
@@ -114,17 +114,17 @@ export const cta = {
 /** Selection control colours */
 export const selection = {
   radio: {
-    selectedOuter: "#2455CB",
-    selectedCenter: "#3455C8",
+    selectedOuter: "#2455C8",
+    selectedCenter: "#3478E8",
   },
   tabChip: {
     selectedBg: "#EEF2FF",
-    selectedText: "#2455CB",
+    selectedText: "#2455C8",
   },
   checkbox: {
-    selectedFill: "#2455CB",
+    selectedFill: "#2455C8",
     selectedCheckmark: "#FFFFFF",
-    selectedBorder: "#2455CB",
+    selectedBorder: "#2455C8",
     unselectedFill: "#FFFFFF",
     unselectedBorder: "#D6DBE8",
   },
@@ -138,13 +138,9 @@ export const borderLight = {
 
 /** Border colour (dark) */
 export const borderDark = {
-  default: "#303850",
-  muted: "#303850",
+  default: "#303B5C",
+  muted: "#303B5C",
 } as const;
-
-/** Gradient rule: gradients are strictly reserved for progress bars and graphs only. */
-export const gradientRule =
-  "Gradients are strictly reserved for progress bars and graphs only.";
 
 /** Convenience: resolve surface / text / border by theme */
 export function tokens(theme: "light" | "dark") {
@@ -154,3 +150,7 @@ export function tokens(theme: "light" | "dark") {
     border: theme === "dark" ? borderDark : borderLight,
   };
 }
+
+/** Gradient rule: gradients are strictly reserved for progress bars and graphs only. */
+export const gradientRule =
+  "Gradients are strictly reserved for progress bars and graphs only.";

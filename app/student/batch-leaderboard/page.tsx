@@ -62,7 +62,7 @@ export default function BatchLeaderboardPage() {
   const current = data?.currentStudent ?? null;
 
   return (
-    <main className="min-h-screen bg-[#070b18] text-white overflow-hidden">
+    <main className="min-h-screen bg-surface-app-bg text-white overflow-hidden">
       <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_20%_10%,rgba(99,102,241,.20),transparent_30%),radial-gradient(circle_at_85%_20%,rgba(14,165,233,.16),transparent_28%),radial-gradient(circle_at_50%_90%,rgba(168,85,247,.13),transparent_32%)]" />
 
       <div className="relative min-h-screen max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-10">
@@ -91,7 +91,7 @@ export default function BatchLeaderboardPage() {
             {[1,2,3].map((i) => <div key={i} className="h-48 rounded-3xl bg-white/[.06] animate-pulse" />)}
           </div>
         ) : error ? (
-          <div className="rounded-3xl border border-red-400/20 bg-state-error/10 p-6 text-sm text-red-200">{error}</div>
+          <div className="rounded-3xl border border-state-error/20 bg-state-error/10 p-6 text-sm text-state-error">{error}</div>
         ) : !data?.batch ? (
           <div className="rounded-3xl border border-white/10 bg-white/[.05] p-10 text-center">
             <div className="text-5xl mb-4">🎮</div>
@@ -146,11 +146,11 @@ export default function BatchLeaderboardPage() {
                         <div className="flex min-w-0 items-center gap-3"><StudentAvatar avatarKey={student.avatarKey} name={student.name} size={36} /><div className="font-bold truncate">{student.name} {student.isCurrent && <span className="ml-2 text-[9px] uppercase tracking-wider text-indigo-300 bg-indigo-400/10 px-2 py-1 rounded-full">You</span>}</div></div>
                         <div className="text-[11px] text-white/35 mt-1">{student.testsTaken} tests · {student.questionsSeen} questions</div>
                       </div>
-                      <button type="button" onClick={() => setBadgeStudent(student)} className="shrink-0 rounded-lg bg-violet-400/10 px-2 py-1 text-[10px] font-bold text-violet-200 sm:hidden">🏆</button>
+                      <button type="button" onClick={() => setBadgeStudent(student)} className="shrink-0 rounded-lg bg-brand-primary/10 px-2 py-1 text-[10px] font-bold text-brand-primary sm:hidden">🏆</button>
                     </div>
                     <div className="hidden sm:block text-right"><div className="font-black">{student.average}%</div><div className="text-[10px] text-white/30">average</div></div>
                     <div className="hidden sm:flex items-center justify-end gap-3 text-xs text-white/40">
-                      <button type="button" onClick={() => setBadgeStudent(student)} className="rounded-lg bg-violet-400/10 px-2.5 py-1.5 font-bold text-violet-200 transition hover:bg-violet-400/20">🏆 Badges</button>
+                      <button type="button" onClick={() => setBadgeStudent(student)} className="rounded-lg bg-brand-primary/10 px-2.5 py-1.5 font-bold text-brand-primary transition hover:bg-brand-primary/10">🏆 Badges</button>
                       <span>Rank {student.rank}</span>
                     </div>
                   </div>
@@ -185,7 +185,7 @@ function Podium({ student, place, onViewBadges }: { student: LeaderboardStudent;
       <div className="relative flex items-center justify-center gap-2 font-black truncate"><StudentAvatar avatarKey={student.avatarKey} name={student.name} size={42} />{student.name?.trim() || "Student"}</div>
       <div className="relative text-2xl font-black mt-1">{student.average}%</div>
       <div className="relative text-[10px] uppercase tracking-widest text-white/35 mt-1">#{student.rank} · {student.testsTaken} tests</div>
-      <button type="button" onClick={onViewBadges} className="relative mx-auto mt-3 rounded-lg bg-violet-400/10 px-3 py-1.5 text-[10px] font-black text-violet-200 hover:bg-violet-400/20">🏆 View badges</button>
+      <button type="button" onClick={onViewBadges} className="relative mx-auto mt-3 rounded-lg bg-brand-primary/10 px-3 py-1.5 text-[10px] font-black text-brand-primary hover:bg-brand-primary/10">🏆 View badges</button>
     </div>
   );
 }

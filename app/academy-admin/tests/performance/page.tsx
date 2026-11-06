@@ -194,7 +194,7 @@ export default function AcademyAdminPerformancePage() {
 
       <div className="mx-auto max-w-7xl px-6 py-8">
         {error && (
-          <div className="mb-5 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-semibold text-red-700">
+          <div className="mb-5 rounded-xl border border-state-error/20 bg-state-error/10 px-4 py-3 text-sm font-semibold text-state-error">
             {error}
           </div>
         )}
@@ -281,7 +281,7 @@ export default function AcademyAdminPerformancePage() {
                 </thead>
                 <tbody>
                   {filtered.map((student) => (
-                    <tr key={student.id} className="border-t border-border-default hover:bg-[#fbfcff]">
+                    <tr key={student.id} className="border-t border-border-default hover:bg-surface-subtle">
                       <td className="px-4 py-4">
                         <button onClick={() => openAttempts(student)} className="text-left">
                           <p className="font-extrabold text-text-primary">{student.name}</p>

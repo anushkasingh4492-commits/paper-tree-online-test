@@ -91,16 +91,16 @@ export default function ChangePasswordPage() {
 
         <form
           onSubmit={submit}
-          className="rounded-3xl border border-[#e5e8ee] bg-white p-7 shadow-sm"
+          className="rounded-3xl border border-border-default bg-white p-7 shadow-sm"
         >
           {error && (
-            <div className="mb-5 rounded-xl border border-red-100 bg-red-50 px-4 py-3 text-sm font-medium text-state-error">
+            <div className="mb-5 rounded-xl border border-state-error/20 bg-state-error/10 px-4 py-3 text-sm font-medium text-state-error">
               {error}
             </div>
           )}
 
           {message && (
-            <div className="mb-5 rounded-xl border border-emerald-100 bg-emerald-50 px-4 py-3 text-sm font-medium text-emerald-600">
+            <div className="mb-5 rounded-xl border border-state-success/20 bg-state-success/10 px-4 py-3 text-sm font-medium text-state-success">
               {message}
             </div>
           )}

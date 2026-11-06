@@ -844,7 +844,7 @@ export default function AcademyBatchesPage() {
                               batch
                             )
                           }
-                          className="rounded-lg bg-surface-subtle px-3 py-1.5 text-xs font-bold text-brand-primary hover:bg-[#e3e9ff]"
+                          className="rounded-lg bg-surface-subtle px-3 py-1.5 text-xs font-bold text-brand-primary hover:bg-surface-subtle"
                         >
                           Manage
                           Students
@@ -856,12 +856,12 @@ export default function AcademyBatchesPage() {
                               batch
                             )
                           }
-                          className="rounded-lg border border-red-200 bg-red-50 px-3 py-1.5 text-xs font-bold text-state-error"
+                          className="rounded-lg border border-state-error/20 bg-state-error/10 px-3 py-1.5 text-xs font-bold text-state-error"
                         >
                           Remove
                         </button>
 
-                        <span className="rounded-lg bg-[#f4f6fa] px-3 py-1.5 text-xs font-bold text-text-tertiary">
+                        <span className="rounded-lg bg-surface-subtle px-3 py-1.5 text-xs font-bold text-text-tertiary">
                           Batch
                         </span>
                       </div>
@@ -978,7 +978,7 @@ export default function AcademyBatchesPage() {
                             className={`flex h-6 w-6 items-center justify-center rounded-md border text-xs font-extrabold ${
                               assigned
                                 ? "border-brand-primary bg-brand-primary text-white"
-                                : "border-[#d8deea] bg-white text-transparent"
+                                : "border-border-default bg-white text-transparent"
                             }`}
                           >
                             {assigned

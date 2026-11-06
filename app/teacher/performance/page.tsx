@@ -260,15 +260,15 @@ export default function TeacherPerformancePage() {
             </div>
             {[
               { label: "Average score", value: Math.round(filteredStudents.reduce((sum, student) => sum + student.averagePercentage, 0) / filteredStudents.length), color: "bg-indigo-500" },
-              { label: "Average accuracy", value: Math.round(filteredStudents.reduce((sum, student) => sum + student.accuracy, 0) / filteredStudents.length), color: "bg-emerald-500" },
-              { label: "Students with 5+ tests", value: Math.round((filteredStudents.filter((student) => student.testsTaken >= 5).length / filteredStudents.length) * 100), color: "bg-amber-500" },
+              { label: "Average accuracy", value: Math.round(filteredStudents.reduce((sum, student) => sum + student.accuracy, 0) / filteredStudents.length), color: "bg-state-success" },
+              { label: "Students with 5+ tests", value: Math.round((filteredStudents.filter((student) => student.testsTaken >= 5).length / filteredStudents.length) * 100), color: "bg-state-warning" },
             ].map((metric) => (
               <div key={metric.label} className="mb-4 last:mb-0">
                 <div className="mb-2 flex items-center justify-between gap-3 text-sm">
-                  <span className="font-semibold text-[#465064]">{metric.label}</span>
+                  <span className="font-semibold text-text-secondary">{metric.label}</span>
                   <span className="font-extrabold text-text-primary">{metric.value}%</span>
                 </div>
-                <div className="h-3 overflow-hidden rounded-full bg-[#edf0f6]">
+                <div className="h-3 overflow-hidden rounded-full bg-surface-subtle">
                   <div className={`h-full rounded-full ${metric.color}`} style={{ width: `${Math.max(0, Math.min(100, metric.value))}%` }} />
                 </div>
               </div>
@@ -369,7 +369,7 @@ export default function TeacherPerformancePage() {
               <p className="mb-2 flex items-center gap-2 px-4 text-xs font-semibold text-text-tertiary sm:px-6">
                 <span aria-hidden="true">↔</span> Scroll horizontally to view all performance columns
               </p>
-              <div className="w-full max-w-full overflow-x-scroll overscroll-x-contain rounded-b-xl border-t border-[#e7ebf3] [scrollbar-gutter:stable]">
+              <div className="w-full max-w-full overflow-x-scroll overscroll-x-contain rounded-b-xl border-t border-border-default [scrollbar-gutter:stable]">
               <table className="min-w-[1280px] w-full text-left">
                 <thead className="bg-surface-app-bg text-[11px] uppercase tracking-wider text-text-body">
                   <tr>
@@ -415,7 +415,7 @@ export default function TeacherPerformancePage() {
                         <div className="font-black text-brand-purple">L{student.level}</div>
                         <div className="text-[10px] text-text-supporting-label">{student.levelName}</div>
                       </td>
-                      <td className="px-4 py-5 text-center font-black text-orange-500">🔥 {student.currentStreak}</td>
+                      <td className="px-4 py-5 text-center font-black text-state-warning">🔥 {student.currentStreak}</td>
                       <td className="px-4 py-5 text-center font-semibold">{student.testsTaken}</td>
                       <td className="px-4 py-5 text-center font-bold">
                         {student.averagePercentage}%
@@ -433,7 +433,7 @@ export default function TeacherPerformancePage() {
                         {student.wrongAnswers}
                       </td>
                       <td className="px-4 py-5 text-center">
-                        <button type="button" onClick={() => setBadgeStudent(student)} className="rounded-lg bg-violet-50 px-2.5 py-1.5 font-bold text-violet-700 transition hover:bg-violet-100">🏆 {student.badgesEarned}</button>
+                        <button type="button" onClick={() => setBadgeStudent(student)} className="rounded-lg bg-brand-primary/10 px-2.5 py-1.5 font-bold text-brand-primary transition hover:bg-brand-primary/10">🏆 {student.badgesEarned}</button>
                       </td>
                       <td className="px-4 py-5 text-center text-xs font-medium text-text-body">{student.lastActiveDate || "—"}</td>
                       <td className="px-4 py-5 text-center">
@@ -446,7 +446,7 @@ export default function TeacherPerformancePage() {
                               if (!response.ok || !data.success) throw new Error(data.error || "Could not create summary.");
                               setReport({ studentId: student.id, text: data.summary });
                             } catch (error) { setError(error instanceof Error ? error.message : "Could not create summary."); } finally { setSending(null); }
-                          }} className="rounded-lg border border-violet-200 bg-violet-50 px-2.5 py-1.5 text-[10px] font-bold text-violet-700">{sending === student.id ? "..." : "View Feedback"}</button>}
+                          }} className="rounded-lg border border-brand-primary/20 bg-brand-primary/10 px-2.5 py-1.5 text-[10px] font-bold text-brand-primary">{sending === student.id ? "..." : "View Feedback"}</button>}
                         </div>
                       </td>
                     </tr>
@@ -492,7 +492,7 @@ export default function TeacherPerformancePage() {
                     Loading attempted tests...
                   </p>
                 ) : attemptError ? (
-                  <p className="rounded-xl bg-red-50 px-4 py-3 text-sm font-semibold text-state-error">
+                  <p className="rounded-xl bg-state-error/10 px-4 py-3 text-sm font-semibold text-state-error">
                     {attemptError}
                   </p>
                 ) : attempts.length === 0 ? (
@@ -553,7 +553,7 @@ const otherDifficulties = normalizedDifficulties
                             <div>
                               <p className="font-bold flex items-center gap-2">
                                 #{index + 1} {attempt.test_title} &middot; {subjects}
-                                <span className={`inline-block rounded-full px-2 py-0.5 text-[10px] font-bold ${difficulties.length ? (difficulties.includes("Easy") ? "bg-green-100 text-green-800" : difficulties.includes("Medium") ? "bg-amber-100 text-amber-800" : difficulties.includes("Hard") ? "bg-red-100 text-red-800" : "bg-purple-100 text-purple-800") : "bg-surface-muted text-text-secondary"}`}>
+                                <span className={`inline-block rounded-full px-2 py-0.5 text-[10px] font-bold ${difficulties.length ? (difficulties.includes("Easy") ? "bg-state-success/10 text-state-success" : difficulties.includes("Medium") ? "bg-state-warning/10 text-state-warning" : difficulties.includes("Hard") ? "bg-state-error/10 text-state-error" : "bg-brand-primary/10 text-brand-primary") : "bg-surface-muted text-text-secondary"}`}>
                                   {difficulties.length ? difficulties.join(", ") : otherDifficulties.length ? otherDifficulties.join(", ") : "—"}
                                 </span>
                               </p>
@@ -601,12 +601,12 @@ const otherDifficulties = normalizedDifficulties
           key={level}
           className={`rounded-full px-2 py-1 text-[11px] font-bold ${
             level === "Easy"
-              ? "bg-green-100 text-green-800"
+              ? "bg-state-success/10 text-state-success"
               : level === "Medium"
-                ? "bg-amber-100 text-amber-800"
+                ? "bg-state-warning/10 text-state-warning"
                 : level === "Hard"
-                  ? "bg-red-100 text-red-800"
-                  : "bg-purple-100 text-purple-800"
+                  ? "bg-state-error/10 text-state-error"
+                  : "bg-brand-primary/10 text-brand-primary"
           }`}
         >
           {level}
@@ -670,13 +670,13 @@ const otherDifficulties = normalizedDifficulties
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 p-5" onClick={() => setReport(null)}>
             <div className="w-full max-w-lg rounded-2xl bg-white p-6 shadow-2xl" onClick={(event) => event.stopPropagation()}>
               <div className="flex items-center justify-between"><h3 className="text-lg font-extrabold">AI Parent Summary</h3><button onClick={() => setReport(null)} className="text-sm font-bold text-text-tertiary">Close</button></div>
-              <p className="mt-5 whitespace-pre-wrap rounded-xl bg-surface-app-bg p-4 text-sm leading-6 text-[#475168]">{report.text}</p>
+              <p className="mt-5 whitespace-pre-wrap rounded-xl bg-surface-app-bg p-4 text-sm leading-6 text-text-secondary">{report.text}</p>
               <div className="mt-4 flex items-center gap-3">
                 <button type="button" onClick={() => navigator.clipboard?.writeText(report.text)} className="rounded-xl bg-brand-primary px-4 py-2.5 text-sm font-bold text-white">Copy Summary</button>
                 <button type="button" onClick={() => {
                   const text = encodeURIComponent(report.text || "");
                   window.open(`https://wa.me/?text=${text}`, "_blank", "noopener,noreferrer");
-                }} className="rounded-xl bg-[#25D366] px-4 py-2.5 text-sm font-bold text-white">Share via WhatsApp</button>
+                }} className="rounded-xl bg-state-success px-4 py-2.5 text-sm font-bold text-white">Share via WhatsApp</button>
               </div>
             </div>
           </div>

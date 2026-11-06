@@ -142,10 +142,10 @@ export default function TeacherPage() {
             <button type="button" onClick={() => router.push("/teacher/cherry-pick")} className="rounded-xl border border-border-default bg-surface-app-bg px-4 py-4 text-left font-bold text-text-primary hover:border-brand-primary">
               <span className="block text-xl">☑️</span><span className="mt-2 block">Single</span><span className="mt-1 block text-xs font-normal text-text-tertiary">Select questions manually</span>
             </button>
-            <button type="button" onClick={() => router.push("/teacher/collaborative-papers")} className="rounded-xl border border-border-default bg-[#fbf8ff] px-4 py-4 text-left font-bold text-text-primary hover:border-[#8b5cf6]">
+            <button type="button" onClick={() => router.push("/teacher/collaborative-papers")} className="rounded-xl border border-border-default bg-brand-subtle-lavender px-4 py-4 text-left font-bold text-text-primary hover:border-brand-purple">
               <span className="block text-xl">👥</span><span className="mt-2 block">Collaboration</span><span className="mt-1 block text-xs font-normal text-text-tertiary">Build a paper with other teachers</span>
             </button>
-            <button type="button" onClick={() => router.push("/teacher/generate")} className="rounded-xl border border-border-default bg-[#f3faf6] px-4 py-4 text-left font-bold text-text-primary hover:border-[#16a34a]">
+            <button type="button" onClick={() => router.push("/teacher/generate")} className="rounded-xl border border-border-default bg-state-success/10 px-4 py-4 text-left font-bold text-text-primary hover:border-state-success">
               <span className="block text-xl">✨</span><span className="mt-2 block">Generate Paper</span><span className="mt-1 block text-xs font-normal text-text-tertiary">Generate from the question bank</span>
             </button>
           </div>

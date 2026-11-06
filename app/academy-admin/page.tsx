@@ -72,12 +72,12 @@ export default function AcademyAdminPage() {
       </header>
 
       <div className="mx-auto max-w-7xl px-6 py-9">
-        {error && <div className="mb-6 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-semibold text-red-700">{error}</div>}
+        {error && <div className="mb-6 rounded-xl border border-state-error/20 bg-state-error/10 px-4 py-3 text-sm font-semibold text-state-error">{error}</div>}
         <section className="rounded-3xl bg-gradient-to-r from-[#315bea] to-[#6b47e8] px-7 py-8 text-white shadow-lg">
-          <p className="text-xs font-black tracking-[.16em] text-blue-100">ONE PLACE TO RUN YOUR ACADEMY</p>
+          <p className="text-xs font-black tracking-[.16em] text-white/90">ONE PLACE TO RUN YOUR ACADEMY</p>
           <h2 className="mt-2 text-3xl font-extrabold">Everything is in sync.</h2>
-          <p className="mt-3 max-w-2xl text-sm leading-6 text-blue-100">Teachers, students, batches and tests use the same academy records that the master admin sees. Changes appear there automatically.</p>
-          {overview?.academy.subscription_end && <p className="mt-5 text-xs font-bold text-blue-100">Plan: {overview?.academy.subscription_tier || "GOLD"} · Subscription ends {new Date(overview.academy.subscription_end).toLocaleDateString("en-IN")}</p>}
+          <p className="mt-3 max-w-2xl text-sm leading-6 text-white/90">Teachers, students, batches and tests use the same academy records that the master admin sees. Changes appear there automatically.</p>
+          {overview?.academy.subscription_end && <p className="mt-5 text-xs font-bold text-white/90">Plan: {overview?.academy.subscription_tier || "GOLD"} · Subscription ends {new Date(overview.academy.subscription_end).toLocaleDateString("en-IN")}</p>}
         </section>
 
         <section className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">

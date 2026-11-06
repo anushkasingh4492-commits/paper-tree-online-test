@@ -4,6 +4,7 @@ import StudentInsights from "@/components/StudentInsights";
 import StudentAccountMenu from "@/components/StudentAccountMenu";
 import StudentBatchLeaderboardPreview from "@/components/StudentBatchLeaderboardPreview";
 import StudentTestHub from "@/components/StudentTestHub";
+import { Icon, type IconName } from "@/components/Icon";
 import {
   useEffect,
   useMemo,
@@ -378,7 +379,7 @@ function initials(name: string) {
 
 function scoreTone(score: number) {
   if (score >= 80) {
-    return "text-emerald-600";
+    return "text-state-success";
   }
 
   if (score >= 60) {
@@ -386,10 +387,10 @@ function scoreTone(score: number) {
   }
 
   if (score >= 50) {
-    return "text-amber-500";
+    return "text-state-warning";
   }
 
-  return "text-rose-500";
+  return "text-state-error";
 }
 
 function subjectConfig(
@@ -402,16 +403,16 @@ function subjectConfig(
     return {
       bar: "bg-brand-action-blue",
       text: "text-brand-primary",
-      iconBg: "bg-blue-50",
+      iconBg: "bg-brand-primary/10",
       icon: "",
     };
   }
 
   if (normalized === "chemistry") {
     return {
-      bar: "bg-emerald-500",
+      bar: "bg-state-success",
       text: "text-emerald-600",
-      iconBg: "bg-emerald-50",
+      iconBg: "bg-brand-primary/10",
       icon: "",
     };
   }
@@ -422,17 +423,17 @@ function subjectConfig(
     normalized === "maths"
   ) {
     return {
-      bar: "bg-pink-500",
-      text: "text-pink-600",
-      iconBg: "bg-pink-50",
+      bar: "bg-state-error",
+      text: "text-state-error",
+      iconBg: "bg-state-error/10",
       icon: "∑",
     };
   }
 
   return {
-    bar: "bg-violet-500",
-    text: "text-violet-600",
-    iconBg: "bg-violet-50",
+    bar: "bg-brand-primary",
+    text: "text-brand-primary",
+    iconBg: "bg-brand-primary/10",
     icon: "B",
   };
 }
@@ -635,13 +636,13 @@ function PerformanceChart({
             >
               <stop
                 offset="0%"
-                stopColor="#7658ef"
+                stopColor="#3478E8"
                 stopOpacity=".20"
               />
 
               <stop
                 offset="100%"
-                stopColor="#7658ef"
+                stopColor="#3478E8"
                 stopOpacity=".02"
               />
             </linearGradient>
@@ -687,10 +688,10 @@ function Donut({
     results.length;
 
   const colors = [
-    "#20b77a",
-    "#3b73e9",
-    "#f5a900",
-    "#ee4c72",
+    "#20A56B",
+    "#3478E8",
+    "#FFC928",
+    "#D64545",
   ];
 
   let start = 0;
@@ -1551,7 +1552,7 @@ export default function DashboardPage() {
     return (
       <main className="min-h-screen bg-surface-app-bg flex items-center justify-center">
         <div className="text-center">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#2563eb] to-[#6338e5] text-white flex items-center justify-center font-black text-lg mx-auto animate-pulse">
+          <div className="w-10 h-10 rounded-xl bg-brand-primary text-white flex items-center justify-center font-black text-lg mx-auto animate-pulse">
             P
           </div>
 
@@ -1579,7 +1580,7 @@ export default function DashboardPage() {
     return (
       <main className="min-h-screen bg-surface-app-bg flex items-center justify-center px-5">
         <div className="bg-white border border-border-default rounded-2xl p-7 max-w-md w-full text-center shadow-sm">
-          <div className="w-12 h-12 rounded-full bg-rose-50 text-rose-500 flex items-center justify-center mx-auto text-xl">
+          <div className="w-12 h-12 rounded-full bg-brand-primary/10 text-brand-primary flex items-center justify-center mx-auto text-xl">
             !
           </div>
 
@@ -1621,7 +1622,7 @@ export default function DashboardPage() {
         <aside className="hidden xl:flex w-[220px] shrink-0 bg-white border-r border-border-default flex-col">
 
           <div className="h-[82px] px-5 flex items-center gap-3 border-b border-border-default">
-            {academyBranding?.logo_data ? <img src={academyBranding.logo_data} alt="Institute logo" className="h-9 w-9 rounded-[11px] object-contain shadow-sm" /> : <div className="w-9 h-9 rounded-[11px] bg-gradient-to-br from-[#2563eb] to-[#6338e5] text-white flex items-center justify-center font-black text-lg shadow-sm">P</div>}
+            {academyBranding?.logo_data ? <img src={academyBranding.logo_data} alt="Institute logo" className="h-9 w-9 rounded-[11px] object-contain shadow-sm" /> : <div className="w-9 h-9 rounded-[11px] bg-brand-primary text-white flex items-center justify-center font-black text-lg shadow-sm">P</div>}
 
             <div>
               <div className="font-extrabold text-[15px] leading-4">
@@ -1675,8 +1676,8 @@ export default function DashboardPage() {
                 onClick={() => router.push("/student/batch-leaderboard")}
                 className="w-full h-10 flex items-center gap-3 px-2.5 rounded-xl text-text-secondary hover:bg-surface-app-bg text-xs font-medium transition"
               >
-                <span className="w-7 h-7 rounded-lg bg-gradient-to-br from-amber-50 to-orange-50 flex items-center justify-center text-base">
-                  🏆
+                <span className="w-7 h-7 rounded-lg bg-brand-subtle-lavender flex items-center justify-center">
+                  <Icon name="trophy" size={14} color="text-brand-primary" />
                 </span>
 
                 Batch Leaderboard
@@ -1686,8 +1687,8 @@ export default function DashboardPage() {
                 onClick={() => router.push("/student/mistakes")}
                 className="w-full h-10 flex items-center gap-3 px-2.5 rounded-xl text-text-secondary hover:bg-surface-app-bg text-xs font-medium transition"
               >
-                <span className="w-7 h-7 rounded-lg bg-gradient-to-br from-red-50 to-pink-50 flex items-center justify-center text-base">
-                  📓
+                <span className="w-7 h-7 rounded-lg bg-brand-subtle-lavender flex items-center justify-center">
+                  <Icon name="bookmark" size={14} color="text-brand-primary" />
                 </span>
 
                 Mistake Notebook
@@ -1697,8 +1698,8 @@ export default function DashboardPage() {
                 onClick={() => router.push("/notifications")}
                 className="w-full h-10 flex items-center gap-3 px-2.5 rounded-xl text-text-secondary hover:bg-surface-app-bg text-xs font-medium transition"
               >
-                <span className="w-7 h-7 rounded-lg bg-gradient-to-br from-purple-50 to-indigo-50 flex items-center justify-center text-base">
-                  🔔
+                <span className="w-7 h-7 rounded-lg bg-brand-subtle-lavender flex items-center justify-center">
+                  <Icon name="bell" size={14} color="text-brand-primary" />
                 </span>
 
                 Notifications
@@ -1708,8 +1709,8 @@ export default function DashboardPage() {
                 onClick={() => router.push("/edit-profile")}
                 className="w-full h-10 flex items-center gap-3 px-2.5 rounded-xl text-text-secondary hover:bg-surface-app-bg text-xs font-medium transition"
               >
-                <span className="w-7 h-7 rounded-lg bg-gradient-to-br from-blue-50 to-cyan-50 flex items-center justify-center text-base">
-                  👤
+                <span className="w-7 h-7 rounded-lg bg-brand-subtle-lavender flex items-center justify-center">
+                  <Icon name="user" size={14} color="text-brand-primary" />
                 </span>
 
                 Edit Profile
@@ -1719,8 +1720,8 @@ export default function DashboardPage() {
                 onClick={() => router.push("/achievements")}
                 className="w-full h-10 flex items-center gap-3 px-2.5 rounded-xl text-text-secondary hover:bg-surface-app-bg text-xs font-medium transition"
               >
-                <span className="w-7 h-7 rounded-lg bg-gradient-to-br from-green-50 to-emerald-50 flex items-center justify-center text-base">
-                  🏅
+                <span className="w-7 h-7 rounded-lg bg-brand-subtle-lavender flex items-center justify-center">
+                  <Icon name="star" size={14} color="text-brand-primary" />
                 </span>
 
                 My Achievements
@@ -1730,8 +1731,8 @@ export default function DashboardPage() {
                 onClick={() => router.push("/boss-fight")}
                 className="w-full h-10 flex items-center gap-3 px-2.5 rounded-xl text-text-secondary hover:bg-surface-app-bg text-xs font-medium transition"
               >
-                <span className="w-7 h-7 rounded-lg bg-gradient-to-br from-orange-50 to-red-50 flex items-center justify-center text-base">
-                  👊
+                <span className="w-7 h-7 rounded-lg bg-brand-subtle-lavender flex items-center justify-center">
+                  <Icon name="star" size={14} color="text-brand-primary" />
                 </span>
 
                 Boss Fight Queue
@@ -1745,8 +1746,8 @@ export default function DashboardPage() {
                 }}
                 className="w-full h-10 flex items-center gap-3 px-2.5 rounded-xl text-text-secondary hover:bg-surface-app-bg text-xs font-medium transition"
               >
-                <span className="w-7 h-7 rounded-lg bg-gradient-to-br from-indigo-50 to-purple-50 flex items-center justify-center text-base">
-                  🤖
+                <span className="w-7 h-7 rounded-lg bg-brand-subtle-lavender flex items-center justify-center">
+                  <Icon name="analytics" size={14} color="text-brand-primary" />
                 </span>
 
                 Weak Areas Test
@@ -1766,8 +1767,8 @@ export default function DashboardPage() {
               aria-pressed={darkMode}
               className="w-full h-10 flex items-center gap-3 px-2.5 rounded-xl text-text-secondary hover:bg-surface-app-bg text-xs font-medium transition"
             >
-              <span className="w-7 h-7 rounded-lg bg-surface-app-bg flex items-center justify-center text-base">
-                {darkMode ? "☀️" : "🌙"}
+              <span className="w-7 h-7 rounded-lg bg-surface-app-bg flex items-center justify-center">
+                <Icon name={darkMode ? "sun" : "moon"} size={14} color="text-brand-primary" />
               </span>
               {darkMode ? "Light mode" : "Dark mode"}
             </button>
@@ -1829,7 +1830,7 @@ export default function DashboardPage() {
                   size={17}
                 />
 
-                <span className="absolute -right-1 -top-1 w-4 h-4 rounded-full bg-[#ed4567] text-white text-[8px] font-bold flex items-center justify-center">
+                <span className="absolute -right-1 -top-1 w-4 h-4 rounded-full bg-state-error text-white text-[8px] font-bold flex items-center justify-center">
                   {notifications.filter((notification) => !notification.isRead).length}
                 </span>
               </button>
@@ -1847,7 +1848,7 @@ export default function DashboardPage() {
                 HERO
             ================================================== */}
 
-            <section className="relative overflow-hidden rounded-[16px] min-h-[198px] bg-gradient-to-r from-[#2460ef] via-[#4b3fe8] to-[#8735ee] text-white px-7 py-6 shadow-[0_8px_24px_rgba(83,65,220,.14)]">
+            <section className="relative overflow-hidden rounded-[16px] min-h-[198px] bg-brand-primary text-white px-7 py-6 shadow-[0_8px_24px_rgba(36,85,200,0.18)]">
 
               <div className="absolute -right-16 -top-20 w-56 h-56 rounded-full bg-white/[.07]" />
 
@@ -1894,13 +1895,13 @@ export default function DashboardPage() {
 
               <div className="hidden md:flex absolute right-[23%] bottom-0 w-[245px] h-[145px] items-end">
 
-                <div className="absolute left-0 bottom-5 w-[235px] h-4 rounded-full bg-[#58a8f3]/70 shadow-lg" />
+                <div className="absolute left-0 bottom-5 w-[235px] h-4 rounded-full bg-brand-action-blue/70 shadow-lg" />
 
-                <div className="absolute left-8 bottom-9 w-10 h-9 rounded-sm bg-state-info border-4 border-[#3b5878] rotate-[-2deg]" />
+                <div className="absolute left-8 bottom-9 w-10 h-9 rounded-sm bg-state-info border-4 border-brand-deep-navy rotate-[-2deg]" />
 
                 <div className="absolute left-15 bottom-9 w-28 h-5 rounded-sm bg-state-error border border-border-default" />
 
-                <div className="absolute left-[115px] bottom-9 w-[105px] h-[82px] rounded-md bg-state-info border-[6px] border-[#283951] rotate-[2deg]">
+                <div className="absolute left-[115px] bottom-9 w-[105px] h-[82px] rounded-md bg-state-info border-[6px] border-brand-deep-navy rotate-[2deg]">
                   <div className="m-3 space-y-2">
                     {[1, 2, 3].map(
                       (item) => (
@@ -1908,7 +1909,7 @@ export default function DashboardPage() {
                           className="flex gap-2"
                           key={item}
                         >
-                          <span className="text-[#26bd84]">
+                          <span className="text-state-success">
 
                           </span>
 
@@ -1919,13 +1920,13 @@ export default function DashboardPage() {
                   </div>
                 </div>
 
-                <div className="absolute right-0 bottom-[91px] w-2 h-12 bg-[#26334a] rotate-[22deg]" />
+                <div className="absolute right-0 bottom-[91px] w-2 h-12 bg-brand-deep-navy rotate-[22deg]" />
 
-                <div className="absolute right-[-5px] bottom-[101px] w-7 h-5 rounded-full bg-[#17263b] rotate-[22deg]" />
+                <div className="absolute right-[-5px] bottom-[101px] w-7 h-5 rounded-full bg-brand-deep-navy rotate-[22deg]" />
 
-                <div className="absolute left-[55px] bottom-10 w-7 h-12 rounded-b-xl bg-[#6ac16c]" />
+                <div className="absolute left-[55px] bottom-10 w-7 h-12 rounded-b-xl bg-state-success" />
 
-                <div className="absolute left-[51px] bottom-[57px] w-8 h-8 rounded-full bg-[#84d777]" />
+                <div className="absolute left-[51px] bottom-[57px] w-8 h-8 rounded-full bg-brand-action-blue" />
 
               </div>
 
@@ -1969,8 +1970,8 @@ export default function DashboardPage() {
                       ?.totalQuestions ??
                     0
                   } questions analyzed`,
-                  "bg-blue-50 text-brand-primary",
-                  "▣",
+                  "bg-brand-subtle-lavender text-brand-primary",
+                  "analytics",
                 ],
 
                 [
@@ -1983,8 +1984,8 @@ export default function DashboardPage() {
                       ?.accuracy ??
                     0
                   }% answer accuracy`,
-                  "bg-pink-50 text-pink-600",
-                  "▥",
+                  "bg-brand-subtle-lavender text-brand-primary",
+                  "graduation-cap",
                 ],
 
                 [
@@ -1995,8 +1996,8 @@ export default function DashboardPage() {
                   highestTest
                     ?.date ||
                     "Highest completed score",
-                  "bg-emerald-50 text-emerald-600",
-                  "",
+                  "bg-brand-subtle-lavender text-brand-primary",
+                  "trophy",
                 ],
 
                 [
@@ -2009,8 +2010,8 @@ export default function DashboardPage() {
                       ?.totalCorrect ??
                     0
                   } correct answers`,
-                  "bg-violet-50 text-violet-600",
-                  "↗",
+                  "bg-brand-subtle-lavender text-brand-primary",
+                  "check",
                 ],
 
                 [
@@ -2021,8 +2022,8 @@ export default function DashboardPage() {
                       ?.totalAttempted ??
                     0
                   } questions attempted`,
-                  "bg-orange-50 text-orange-500",
-                  "◷",
+                  "bg-brand-subtle-lavender text-brand-primary",
+                  "clock",
                 ],
               ].map(
                 ([
@@ -2030,11 +2031,11 @@ export default function DashboardPage() {
                   value,
                   sub,
                   iconBg,
-                  icon,
+                  iconName,
                 ]) => (
                   <div
                     key={label}
-                    className="bg-white rounded-[14px] border border-border-default px-4 py-4 shadow-[0_3px_12px_rgba(30,35,60,.035)]"
+                    className="bg-surface-surface rounded-[14px] border border-border-default px-4 py-4 shadow-[0_3px_12px_rgba(30,35,60,.035)]"
                   >
                     <div className="flex justify-between gap-2">
 
@@ -2053,9 +2054,9 @@ export default function DashboardPage() {
                       </div>
 
                       <span
-                        className={`w-10 h-10 rounded-full ${iconBg} flex items-center justify-center text-base font-bold shrink-0`}
+                        className={`w-10 h-10 rounded-full ${iconBg} flex items-center justify-center text-base shrink-0`}
                       >
-                        {icon}
+                        <Icon name={iconName as IconName} size={16} color="text-brand-primary" />
                       </span>
 
                     </div>
@@ -2066,7 +2067,7 @@ export default function DashboardPage() {
             </section>
 
             {/* Assigned Course */}
-            <div className="bg-white rounded-[14px] border border-border-default p-5 shadow-[0_3px_12px_rgba(30,35,60,.035)] mb-5">
+            <div className="bg-surface-surface rounded-[14px] border border-border-default p-5 shadow-[0_3px_12px_rgba(30,35,60,.035)] mb-5">
               <div className="flex items-center justify-between">
                 <div>
                   <h2 className="text-[14px] font-extrabold">Your Assigned Course</h2>
@@ -2130,7 +2131,7 @@ export default function DashboardPage() {
               </div>
 
               {mistakesError && (
-                <p role="alert" className="absolute bottom-0 left-0 w-full text-xs font-semibold text-rose-600 mt-2">
+                <p role="alert" className="absolute bottom-0 left-0 w-full text-xs font-semibold text-state-error mt-2">
                   {mistakesError}
                 </p>
               )}
@@ -2183,7 +2184,7 @@ export default function DashboardPage() {
 
                     <div className="flex items-center gap-2">
 
-                      <span className="w-8 h-8 rounded-lg bg-[#eee7ff] text-brand-purple flex items-center justify-center">
+                      <span className="w-8 h-8 rounded-lg bg-brand-subtle-lavender text-brand-primary flex items-center justify-center">
 
                       </span>
 
@@ -2209,12 +2210,12 @@ export default function DashboardPage() {
                     </div>
                   </div>
 
-                  <div className="rounded-xl border border-[#ffe5eb] bg-[#fff9fa] p-3">
+                  <div className="rounded-xl border border-state-error/20 bg-state-error/10 p-3">
 
                     <div className="flex items-center gap-2">
 
-                      <span className="w-8 h-8 rounded-lg bg-state-error text-state-error flex items-center justify-center">
-                        ↘
+                      <span className="w-8 h-8 rounded-lg bg-state-error text-white flex items-center justify-center">
+                        <Icon name="cross" size={12} color="text-white" />
                       </span>
 
                       <div>
@@ -2239,12 +2240,12 @@ export default function DashboardPage() {
                     </div>
                   </div>
 
-                  <div className="rounded-xl border border-[#e4efff] bg-surface-subtle p-3">
+                  <div className="rounded-xl border border-brand-action-blue/20 bg-surface-subtle p-3">
 
                     <div className="flex items-center gap-2">
 
-                      <span className="w-8 h-8 rounded-lg bg-state-info text-brand-primary flex items-center justify-center">
-                        ⌁
+                      <span className="w-8 h-8 rounded-lg bg-state-info text-white flex items-center justify-center">
+                        <Icon name="alert" size={12} color="text-white" />
                       </span>
 
                       <div>
@@ -2345,7 +2346,7 @@ export default function DashboardPage() {
                               }
                             </span>
 
-                            <span className="flex-1 h-1.5 rounded-full bg-[#e9ebf1] overflow-hidden">
+                            <span className="flex-1 h-1.5 rounded-full bg-surface-muted overflow-hidden">
                               <span
                                 className={`block h-full rounded-full ${c.bar}`}
                                 style={{
@@ -2392,7 +2393,7 @@ export default function DashboardPage() {
                 <h2 className="text-[14px] font-extrabold text-text-primary">Notifications</h2>
               </div>
               {notifications.length > 0 ? (
-                <div className="divide-y divide-[#eff0f4]">
+                <div className="divide-y divide-border-default">
                   {notifications.slice(0, 5).map((notification) => (
                     <button
                       key={notification.id}
@@ -2439,7 +2440,7 @@ export default function DashboardPage() {
 
                   </div>
 
-                  <div className="divide-y divide-[#eff0f4]">
+                  <div className="divide-y divide-border-default">
 
                     {visibleScheduledTests.map(
                       (test) => {
@@ -2604,8 +2605,8 @@ export default function DashboardPage() {
                       >
                         <span className="min-w-0 flex items-center gap-2">
 
-                          <span className="w-6 h-6 rounded-md bg-[#f1efff] text-brand-purple flex items-center justify-center text-[9px] font-bold">
-                            ▣
+                          <span className="w-6 h-6 rounded-md bg-brand-subtle-lavender text-brand-primary flex items-center justify-center text-[9px] font-bold">
+                            <Icon name="test-tube" size={10} color="text-brand-primary" />
                           </span>
 
                           <span className="truncate text-[10px] font-semibold text-text-secondary">
@@ -2745,7 +2746,7 @@ export default function DashboardPage() {
                         <div className="mt-2.5 ml-9 h-1.5 rounded-full bg-surface-app-bg overflow-hidden">
 
                           <div
-                            className="h-full rounded-full bg-rose-500"
+                            className="h-full rounded-full bg-state-error"
                             style={{
                               width: `${Math.min(
                                 100,
@@ -2819,7 +2820,7 @@ export default function DashboardPage() {
                   statistics
                     ?.totalWrong ??
                     0,
-                  "text-rose-600",
+                  "text-state-error",
                   "bg-rose-50",
                 ],
 

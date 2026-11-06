@@ -51,7 +51,7 @@ export default function EditProfilePage() {
 
         {loading ? (
           <div className="h-64 flex items-center justify-center">
-            <div className="w-8 h-8 border-4 border-blue-100 border-t-blue-600 rounded-full animate-spin" />
+            <div className="w-8 h-8 border-4 border-brand-primary/20 border-t-brand-primary rounded-full animate-spin" />
           </div>
         ) : (
           <form
@@ -67,7 +67,7 @@ export default function EditProfilePage() {
           >
             <div className="rounded-xl border border-border-default bg-white p-5 shadow-sm">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-14 h-14 rounded-full bg-surface-subtle flex items-center justify-center text-2xl overflow-hidden border border-[#dbe6f3]">
+                <div className="w-14 h-14 rounded-full bg-surface-subtle flex items-center justify-center text-2xl overflow-hidden border border-border-default">
                   {profile.name?.charAt(0)?.toUpperCase() || "U"}
                 </div>
                 <div>

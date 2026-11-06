@@ -323,8 +323,8 @@ export default function CherryPickPage() {
               <input value={customChapter} onChange={(e) => setCustomChapter(e.target.value)} placeholder="Chapter" className="rounded-xl border border-border-default px-4 py-3 text-sm" />
               <select value={customCorrect} onChange={(e) => setCustomCorrect(e.target.value)} className="rounded-xl border border-border-default bg-white px-4 py-3 text-sm">{["A","B","C","D"].map((x) => <option key={x}>{x}</option>)}</select>
               <select value={customDifficulty} onChange={(e) => setCustomDifficulty(e.target.value)} className="rounded-xl border border-border-default bg-white px-4 py-3 text-sm"><option>Easy</option><option>Medium</option><option>Hard</option></select>
-              <div className="md:col-span-2 rounded-xl border border-dashed border-[#cbd5e1] p-4">
-                <label className="block text-sm font-semibold text-[#273449]" htmlFor="custom-question-image">Question image (optional)</label>
+              <div className="md:col-span-2 rounded-xl border border-dashed border-border-default p-4">
+                <label className="block text-sm font-semibold text-text-secondary" htmlFor="custom-question-image">Question image (optional)</label>
                 <p className="mt-1 text-xs text-text-tertiary">PNG, JPG, WEBP, or GIF · maximum 3 MB</p>
                 <input
                   id="custom-question-image"
@@ -367,7 +367,7 @@ export default function CherryPickPage() {
                   await loadQuestions();
                   setError("Question added successfully.");
                 } catch (err) { setError(err instanceof Error ? err.message : "Could not create question."); } finally { setCustomSaving(false); }
-              }} className="md:col-span-2 rounded-xl bg-[#16a36a] px-4 py-3 text-sm font-bold text-white disabled:opacity-50">{customSaving ? "Saving..." : "Save to Question Bank"}</button>
+              }} className="md:col-span-2 rounded-xl bg-brand-primary px-4 py-3 text-sm font-bold text-white disabled:opacity-50">{customSaving ? "Saving..." : "Save to Question Bank"}</button>
             </div>
           )}
         </section>
@@ -522,7 +522,7 @@ export default function CherryPickPage() {
         </div>
 
         {error && (
-          <div className="mb-5 rounded-xl bg-red-50 p-4 text-sm font-semibold text-state-error">
+          <div className="mb-5 rounded-xl bg-state-error/10 p-4 text-sm font-semibold text-state-error">
             {error}
           </div>
         )}
@@ -567,7 +567,7 @@ export default function CherryPickPage() {
                   className={`w-full rounded-2xl border bg-white p-5 text-left shadow-sm transition ${
                     isSelected
                       ? "border-brand-primary ring-2 ring-brand-primary/10"
-                      : "border-border-default hover:border-[#cbd3e5]"
+                      : "border-border-default hover:border-border-default"
                   }`}
                 >
 
@@ -577,7 +577,7 @@ export default function CherryPickPage() {
                       className={`mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-md border text-xs font-bold ${
                         isSelected
                           ? "border-brand-primary bg-brand-primary text-white"
-                          : "border-[#cbd3df] text-transparent"
+                          : "border-border-default text-transparent"
                       }`}
                     >
                       {isSelected ? "✓" : ""}
@@ -587,7 +587,7 @@ export default function CherryPickPage() {
 
                       <div className="mb-3 flex flex-wrap gap-2">
 
-                        <span className="rounded-full bg-[#f0f3fa] px-2.5 py-1 text-xs font-bold text-text-tertiary">
+                        <span className="rounded-full bg-brand-subtle-lavender px-2.5 py-1 text-xs font-bold text-text-tertiary">
                           #{index + 1}
                         </span>
 
@@ -596,13 +596,13 @@ export default function CherryPickPage() {
                         </span>
 
                         {question.chapter_name && (
-                          <span className="rounded-full bg-[#f5f6f8] px-2.5 py-1 text-xs font-semibold text-text-tertiary">
+                          <span className="rounded-full bg-surface-app-bg px-2.5 py-1 text-xs font-semibold text-text-tertiary">
                             {question.chapter_name}
                           </span>
                         )}
 
                         {question.difficulty && (
-                          <span className="rounded-full bg-[#f5f6f8] px-2.5 py-1 text-xs font-semibold text-text-tertiary">
+                          <span className="rounded-full bg-surface-app-bg px-2.5 py-1 text-xs font-semibold text-text-tertiary">
                             {question.difficulty}
                           </span>
                         )}
@@ -652,7 +652,7 @@ export default function CherryPickPage() {
           </div>
         )}
 
-        <div className="fixed bottom-4 left-1/2 z-20 flex w-[calc(100%-2rem)] max-w-7xl -translate-x-1/2 items-center justify-between rounded-2xl border border-[#dfe4ef] bg-white p-4 shadow-xl">
+        <div className="fixed bottom-4 left-1/2 z-20 flex w-[calc(100%-2rem)] max-w-7xl -translate-x-1/2 items-center justify-between rounded-2xl border border-border-default bg-surface-surface p-4 shadow-xl">
 
           <div>
             <p className="text-sm font-extrabold">

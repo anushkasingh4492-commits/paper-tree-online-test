@@ -79,10 +79,10 @@ export default function BossFightPage() {
                 key={`${c.subject}-${c.chapter}`}
                 className={`rounded-xl border p-4 flex items-center justify-between ${
                   c.status === "weak"
-                    ? "border-[#fca5a5] bg-state-error"
+                    ? "border-state-error/20 bg-state-error"
                     : c.status === "improving"
-                      ? "border-[#fde047] bg-state-warning"
-                      : "border-[#86efac] bg-state-success"
+                      ? "border-state-warning/20 bg-state-warning"
+                      : "border-state-success/20 bg-state-success"
                 }`}
               >
                 <div className="flex-1 min-w-0">
@@ -131,7 +131,7 @@ export default function BossFightPage() {
                 </div>
                 <button
                   onClick={() => router.push(`/tests/generate?chapter=${encodeURIComponent(c.chapter)}&subject=${encodeURIComponent(c.subject)}`)}
-                  className="px-4 py-2 rounded-lg border border-border-default bg-white text-sm font-semibold text-brand-primary hover:bg-[#f0f7ff] transition"
+                  className="px-4 py-2 rounded-lg border border-border-default bg-white text-sm font-semibold text-brand-primary hover:bg-surface-subtle transition"
                 >
                   Conquer
                 </button>

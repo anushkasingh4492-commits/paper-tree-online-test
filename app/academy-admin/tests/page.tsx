@@ -332,7 +332,7 @@ export default function AcademyAdminTestsPage() {
               </div>
 
               {message && (
-                <div className="rounded-xl bg-blue-50 p-4 text-sm text-blue-700">
+                <div className="rounded-xl bg-brand-primary/10 p-4 text-sm text-brand-primary">
                   {message}
                 </div>
               )}
@@ -361,7 +361,7 @@ export default function AcademyAdminTestsPage() {
 
               <button
                 onClick={loadData}
-                className="rounded-lg border px-3 py-2 text-sm font-semibold hover:bg-gray-50"
+                className="rounded-lg border px-3 py-2 text-sm font-semibold hover:bg-surface-subtle"
               >
                 Refresh
               </button>
@@ -390,13 +390,13 @@ export default function AcademyAdminTestsPage() {
 
                         <p className="mt-1 text-sm text-text-body">
                           Batch:{" "}
-                          <span className="font-medium text-gray-700">
+                          <span className="font-medium text-text-secondary">
                             {test.batch_name || "Unknown"}
                           </span>
                         </p>
                       </div>
 
-                      <span className="rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-700">
+                      <span className="rounded-full bg-brand-primary/10 px-3 py-1 text-xs font-bold text-brand-primary">
                         {test.status}
                       </span>
                     </div>
@@ -434,7 +434,7 @@ export default function AcademyAdminTestsPage() {
                       </p>
                     </div>
 
-                    <button onClick={() => void cancelTest(test)} className="mt-4 rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-xs font-bold text-state-error">Cancel scheduled test</button>
+                    <button onClick={() => void cancelTest(test)} className="mt-4 rounded-lg border border-state-error/20 bg-state-error/10 px-3 py-2 text-xs font-bold text-state-error">Cancel scheduled test</button>
                   </div>
                 ))}
               </div>

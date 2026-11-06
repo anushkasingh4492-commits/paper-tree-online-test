@@ -8,17 +8,17 @@
 :root {
   /* --- Brand --- */
   --brand-primary: #2455C8;
-  --brand-deep-navy: #081C49;
+  --brand-deep-navy: #0B1C49;
   --brand-action-blue: #3478E8;
   --brand-purple: #6846D9;
+  --brand-yellow: #FFC928;
+  --brand-subtle-lavender: #E5E9FF;
 
   /* --- State & status --- */
   --state-error: #D64545;
-  --state-success: #20A568;
-  --state-warning: #E5B400;
+  --state-success: #20A56B;
+  --state-warning: #E69A25;
   --state-info: #3478E8;
-  --state-yellow: #FFC928;
-  --state-subtle-lavender: #E5E9FF;
 
   /* --- Surfaces (light) --- */
   --surface-app-bg: #F3F6FC;
@@ -29,33 +29,33 @@
 
   /* --- Text (light) --- */
   --text-primary: #17233F;
-  --text-secondary: #2A3868;
-  --text-tertiary: #58688F;
+  --text-secondary: #2A3B68;
+  --text-tertiary: #5B6B8F;
   --text-body: #6F7E9E;
-  --text-supporting-label: #9AABCF;
-  --text-disabled: #CFCEDC;
+  --text-supporting-label: #9AA6C1;
+  --text-disabled: #C7CEDC;
 
   /* --- Borders (light) --- */
   --border-default: #E5E9FF;
   --border-muted: #E5E9FF;
 
   /* --- CTA / interactive --- */
-  --cta-primary-default: #2455CB;
+  --cta-primary-default: #2455C8;
   --cta-primary-hover: #3478E8;
-  --cta-primary-pressed: #081C49;
+  --cta-primary-pressed: #0B1C49;
   --cta-primary-disabled: #D6DBE8;
   --cta-secondary-light-default: #E5E9FF;
-  --cta-secondary-dark-default: #30385C;
+  --cta-secondary-dark-default: #303B5C;
   --cta-disabled: #D6DBE8;
 
   /* --- Selection controls --- */
-  --selection-radio-selected-outer: #2455CB;
-  --selection-radio-selected-center: #3455C8;
+  --selection-radio-selected-outer: #2455C8;
+  --selection-radio-selected-center: #3478E8;
   --selection-tab-chip-selected-bg: #EEF2FF;
-  --selection-tab-chip-selected-text: #2455CB;
-  --selection-checkbox-selected-fill: #2455CB;
+  --selection-tab-chip-selected-text: #2455C8;
+  --selection-checkbox-selected-fill: #2455C8;
   --selection-checkbox-selected-checkmark: #FFFFFF;
-  --selection-checkbox-selected-border: #2455CB;
+  --selection-checkbox-selected-border: #2455C8;
   --selection-checkbox-unselected-fill: #FFFFFF;
   --selection-checkbox-unselected-border: #D6DBE8;
 
@@ -72,20 +72,20 @@
 
   /* --- Text-on-colour (accessibility) --- */
   --text-on-primary: #FFFFFF;
-  --text-on-secondary-light: #2455CB;
+  --text-on-secondary-light: #2455C8;
   --text-on-secondary-dark: #FFFFFF;
-  --text-on-disabled: #9AABCF;
+  --text-on-disabled: #9AA6C1;
 }
 
 /* Dark mode (applied via body.student-theme-dark / student-dashboard-dark) */
 body.student-theme-dark,
 body.student-dashboard-dark {
   /* --- Surfaces (dark) --- */
-  --surface-app-bg: #101828;
-  --surface-surface: #1B2942;
+  --surface-app-bg: #10182B;
+  --surface-surface: #1C2942;
   --surface-elevated: #263653;
   --surface-subtle: #263653;
-  --surface-muted: #303850;
+  --surface-muted: #303B5C;
 
   /* --- Text (dark) --- */
   --text-primary: #FFFFFF;
@@ -96,11 +96,11 @@ body.student-dashboard-dark {
   --text-disabled: #5A6484;
 
   /* --- Borders (dark) --- */
-  --border-default: #303850;
-  --border-muted: #303850;
+  --border-default: #303B5C;
+  --border-muted: #303B5C;
 
   /* --- CTA (dark) --- */
-  --cta-secondary-dark-default: #30385C;
+  --cta-secondary-dark-default: #303B5C;
 }
 
 /* ============================================================
@@ -116,6 +116,8 @@ body.student-dashboard-dark {
   --color-brand-deep-navy: var(--brand-deep-navy);
   --color-brand-action-blue: var(--brand-action-blue);
   --color-brand-purple: var(--brand-purple);
+  --color-brand-yellow: var(--brand-yellow);
+  --color-brand-subtle-lavender: var(--brand-subtle-lavender);
 
   /* State */
   --color-state-error: var(--state-error);
@@ -129,7 +131,7 @@ body.student-dashboard-dark {
   --color-surface-app-bg: var(--surface-app-bg);
   --color-surface-surface: var(--surface-surface);
   --color-surface-elevated: var(--surface-elevated);
-  --color-surface-subtle: var(--surface-surface);
+  --color-surface-subtle: var(--surface-subtle);
   --color-surface-muted: var(--surface-muted);
 
   /* Text */
@@ -356,7 +358,7 @@ body {
 /* Student dashboard dark theme. Scoped to the dashboard so staff pages and
    test-result layouts retain their existing appearance. */
 .student-dashboard-dark {
-  background: #101522 !important;
+  background: #10182B !important;
   color: #e8edf7 !important;
 }
 .student-dashboard-dark [class*="bg-white"],
@@ -364,7 +366,7 @@ body {
 .student-dashboard-dark [class*="bg-[#f9fafb]"],
 .student-dashboard-dark [class*="bg-[#f6f8fc]"],
 .student-dashboard-dark [class*="bg-[#f0efff]"] {
-  background-color: #1a2232 !important;
+  background-color: #1C2942 !important;
 }
 .student-dashboard-dark [class*="text-[#1d2435]"],
 .student-dashboard-dark [class*="text-[#202638]"],
@@ -384,7 +386,7 @@ body {
 .student-dashboard-dark [class*="border-[#e"],
 .student-dashboard-dark [class*="border-slate-200"],
 .student-dashboard-dark [class*="border-gray-200"] {
-  border-color: #303b50 !important;
+  border-color: #303B5C !important;
 }
 .student-dashboard-dark input,
 .student-dashboard-dark select,
@@ -406,13 +408,13 @@ body {
 
 /* Persistent student dark mode: shared by tests, results, history, reports and trophy wall. */
 body.student-theme-dark {
-  background: #101522 !important;
+  background: #10182B !important;
   color: #e8edf7 !important;
   color-scheme: dark;
 }
 body.student-theme-dark main,
 body.student-theme-dark .summary-shell {
-  background-color: #101522 !important;
+  background-color: #10182B !important;
   color: #e8edf7 !important;
 }
 body.student-theme-dark header,
@@ -485,15 +487,15 @@ body.student-theme-dark [class*="border-[#e"] {
 body.student-theme-dark input,
 body.student-theme-dark select,
 body.student-theme-dark textarea {
-  background-color: #121a28 !important;
-  color: #edf2fb !important;
-  border-color: #3b4962 !important;
+  background-color: #1C2942 !important;
+  color: #e8edf7 !important;
+  border-color: #303B5C !important;
 }
 body.student-theme-dark .summary-shell .summary-panel,
 body.student-theme-dark .summary-shell .summary-stats div {
-  background: #1a2232 !important;
+  background: #1C2942 !important;
   color: #e8edf7 !important;
-  border-color: #303b50 !important;
+  border-color: #303B5C !important;
 }
 body.student-theme-dark .summary-subtitle,
 body.student-theme-dark .summary-test p,
@@ -505,7 +507,7 @@ body.student-theme-dark .summary-state {
 /* Dark-mode contrast refinements for all student surfaces. The page canvas is
    intentionally darker than interactive cards to make content groups distinct. */
 body.student-theme-dark main {
-  background-color: #101522 !important;
+  background-color: #10182B !important;
 }
 body.student-theme-dark [class*="shadow"] {
   --tw-shadow-color: rgb(0 0 0 / 0.18);
@@ -513,10 +515,10 @@ body.student-theme-dark [class*="shadow"] {
 
 /* Page canvas must stay darker than the cards so content groups remain distinct. */
 body.student-theme-dark main {
-  background-color: #0f1420 !important;
+  background-color: #10182B !important;
 }
 body.student-theme-dark [class*="bg-white"],
 body.student-theme-dark [class*="bg-[#f8f9fc]"],
 body.student-theme-dark [class*="bg-[#f6f8fc]"] {
-  background-color: #1a2232 !important;
+  background-color: #1C2942 !important;
 }

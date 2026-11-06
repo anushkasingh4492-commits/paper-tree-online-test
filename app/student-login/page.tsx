@@ -3,6 +3,7 @@
 import { FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
 import AcademyBranding from "@/components/AcademyBranding";
+import { Icon } from "@/components/Icon";
 export default function Home() {
   const router = useRouter();
 
@@ -132,20 +133,20 @@ async function handleSubmit(
 
             <div className="relative max-w-[560px]">
 
-              <div className="mb-5 inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.12em] text-blue-50">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#8dffb4]" />
+              <div className="mb-5 inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.12em] text-white/90">
+                <span className="h-1.5 w-1.5 rounded-full bg-state-success" />
                 COMPETITIVE EXAMS
               </div>
 
               <h1 className="text-[48px] font-extrabold leading-[1.08] tracking-[-0.045em] text-white">
                 Practice smarter.
                 <br />
-                <span className="text-blue-100">
+                <span className="text-white/90">
                   Perform better.
                 </span>
               </h1>
 
-              <p className="mt-6 max-w-[500px] text-[15px] leading-7 text-blue-100">
+              <p className="mt-6 max-w-[500px] text-[15px] leading-7 text-white/90">
                 Prepare for your exam with personalised
                 tests, detailed performance tracking and
                 thousands of questions from our
@@ -171,7 +172,7 @@ async function handleSubmit(
               </div>
             </div>
 
-            <p className="text-xs text-blue-200">
+            <p className="text-xs text-white/80">
               © 2026 Paper Tree Educational Studio
             </p>
 
@@ -204,10 +205,10 @@ async function handleSubmit(
 
             <form
               onSubmit={handleSubmit}
-              className="rounded-[22px] border border-[#e5e8ee] bg-white p-6 shadow-[0_12px_40px_rgba(20,30,55,0.05)] sm:p-8"
+              className="rounded-[22px] border border-border-default bg-white p-6 shadow-[0_12px_40px_rgba(20,30,55,0.05)] sm:p-8"
             >
               {error && (
-                <div className="mb-5 rounded-xl border border-red-100 bg-red-50 px-4 py-3 text-xs font-medium leading-5 text-state-error">
+                <div className="mb-5 rounded-xl border border-state-error/20 bg-state-error/10 px-4 py-3 text-xs font-medium leading-5 text-state-error">
                   {error}
                 </div>
               )}
@@ -229,7 +230,7 @@ async function handleSubmit(
                   autoComplete="email"
                   required
                   disabled={loading}
-                  className="h-12 w-full rounded-xl border border-border-default bg-white px-4 text-sm text-text-primary outline-none transition placeholder:text-text-supporting-label focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10 disabled:bg-surface-app-bg"
+                  className="h-12 w-full rounded-xl border border-border-default bg-surface-surface px-4 text-sm text-text-primary outline-none transition placeholder:text-text-supporting-label focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10 disabled:bg-surface-app-bg"
                 />
               </div>
 
@@ -256,14 +257,14 @@ async function handleSubmit(
                   autoComplete="current-password"
                   required
                   disabled={loading}
-                  className="h-12 w-full rounded-xl border border-border-default bg-white px-4 text-sm text-text-primary outline-none transition placeholder:text-text-supporting-label focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10 disabled:bg-surface-app-bg"
+                  className="h-12 w-full rounded-xl border border-border-default bg-surface-surface px-4 text-sm text-text-primary outline-none transition placeholder:text-text-supporting-label focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10 disabled:bg-surface-app-bg"
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={loading}
-                className="mt-7 flex h-12 w-full items-center justify-center rounded-xl bg-brand-primary text-sm font-bold text-white shadow-[0_8px_20px_rgba(49,91,234,0.18)] transition hover:bg-[#284ed2] active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-60"
+                className="mt-7 flex h-12 w-full items-center justify-center rounded-xl bg-brand-primary text-sm font-bold text-white shadow-[0_8px_20px_rgba(36,85,200,0.18)] transition-all duration-200 hover:bg-brand-action-blue active:bg-brand-deep-navy disabled:cursor-not-allowed disabled:opacity-50"
               >
                 {loading ? "Signing in..." : "Sign in"}
               </button>
@@ -271,9 +272,9 @@ async function handleSubmit(
               <button
                 type="button"
                 onClick={() => router.push("/change-password")}
-                className="mt-4 w-full rounded-xl border border-border-default bg-white px-4 py-3 text-sm font-bold text-brand-primary transition hover:bg-surface-subtle"
+                className="mt-4 w-full rounded-xl border border-border-default bg-brand-subtle-lavender px-4 py-3 text-sm font-bold text-brand-primary transition-all duration-200 hover:bg-brand-action-blue hover:text-white active:bg-brand-deep-navy active:text-white"
               >
-                🔐 Change Password
+                <Icon name="lock" size={14} color="text-brand-primary" /> Change Password
               </button>
             </form>
 
@@ -282,7 +283,7 @@ async function handleSubmit(
               <button
                 type="button"
                 onClick={() => router.push("/master-login")}
-                className="w-full rounded-xl border border-border-default bg-white px-4 py-3 text-sm font-bold text-brand-primary transition hover:bg-surface-subtle"
+                className="w-full rounded-xl border border-border-default bg-brand-subtle-lavender px-4 py-3 text-sm font-bold text-brand-primary transition-all duration-200 hover:bg-brand-action-blue hover:text-white active:bg-brand-deep-navy active:text-white"
               >
                 Teacher / Admin Login
               </button>
@@ -293,7 +294,7 @@ async function handleSubmit(
                 Competitive Exam Preparation Platform
               </p>
 
-              <p className="mt-1 text-[10px] text-[#c0c5ce]">
+              <p className="mt-1 text-[10px] text-text-disabled">
                 Your account is secured with encrypted authentication.
               </p>
             </div>

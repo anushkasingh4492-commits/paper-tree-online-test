@@ -199,8 +199,8 @@ export default function MistakesPage() {
 
   const statusColor = (isResolved: boolean) =>
     isResolved
-      ? "text-state-success bg-green-50 border-green-100"
-      : "text-amber-600 bg-amber-50 border-amber-100";
+      ? "text-state-success bg-state-success/10 border-state-success/20"
+      : "text-state-warning bg-state-warning/10 border-state-warning/20";
 
   const s = (n: number) => (n !== 1 ? "s" : "");
 
@@ -215,7 +215,7 @@ export default function MistakesPage() {
             &#x2190; Back to Dashboard
           </button>
           <div className="flex items-center gap-3">
-            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#f0f9ff] text-2xl">
+            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-brand-subtle-lavender text-2xl">
               &#x1F4D3;
             </div>
             <div className="flex items-center gap-2">
@@ -233,7 +233,7 @@ export default function MistakesPage() {
         </header>
 
         {error && (
-          <div className="mb-6 rounded-xl bg-red-50 border border-red-100 p-4 text-sm font-medium text-red-700">
+          <div className="mb-6 rounded-xl border border-state-error/20 bg-state-error/10 p-4 text-sm font-medium text-state-error">
             {error}
           </div>
         )}
@@ -242,17 +242,17 @@ export default function MistakesPage() {
           <StatCard
             label="Total Mistakes"
             value={stats.total}
-            color="text-state-error bg-red-50 border-red-100"
+            color="text-state-error bg-state-error/10 border-state-error/20"
           />
           <StatCard
             label="Unresolved"
             value={stats.unresolved}
-            color="text-amber-600 bg-amber-50 border-amber-100"
+            color="text-state-warning bg-state-warning/10 border-state-warning/20"
           />
           <StatCard
             label="Mastered"
             value={stats.total - stats.unresolved}
-            color="text-state-success bg-green-50 border-green-100"
+            color="text-state-success bg-state-success/10 border-state-success/20"
           />
         </div>
 
@@ -261,7 +261,7 @@ export default function MistakesPage() {
             <button
               onClick={retryAllUnresolved}
               disabled={retrying.size > 0}
-              className="w-full flex items-center justify-center gap-2 rounded-xl bg-[#16a34a] px-5 py-3 font-bold text-white hover:bg-[#15803d] disabled:opacity-50 disabled:cursor-not-allowed transition"
+              className="w-full flex items-center justify-center gap-2 rounded-xl bg-state-success px-5 py-3 font-bold text-white hover:bg-state-success/90 active:bg-brand-deep-navy disabled:opacity-50 disabled:cursor-not-allowed transition"
             >
               {retrying.size === unresolvedMistakes.length ? (
                 <span className="flex items-center gap-1.5 animate-pulse">
@@ -326,7 +326,7 @@ export default function MistakesPage() {
 
         {loading ? (
           <div className="h-64 flex items-center justify-center">
-            <div className="w-8 h-8 border-4 border-blue-100 border-t-blue-600 rounded-full animate-spin" />
+            <div className="w-8 h-8 border-4 border-brand-primary/20 border-t-brand-primary rounded-full animate-spin" />
           </div>
         ) : filteredMistakes.length === 0 ? (
           <div className="rounded-2xl border border-border-default bg-white p-12 text-center shadow-sm">
@@ -360,9 +360,9 @@ export default function MistakesPage() {
                 <div className="flex items-start justify-between gap-2"><span className="rounded-lg bg-indigo-50 px-2 py-1 text-[10px] font-black text-indigo-700">{m.subject || "General"}</span><span className={`shrink-0 rounded-md border px-2 py-1 text-[10px] font-bold ${statusColor(m.isResolved)}`}>{m.isResolved ? "Resolved" : "Unresolved"}</span></div>
                 <h2 className="mt-3 break-words text-sm font-bold leading-6 text-text-primary">{m.stem}</h2>
                 <p className="mt-1 break-words text-[11px] text-text-body">{m.chapter || "No chapter"} · {m.exam || "Practice"} · {formatDate(m.lastMade)}</p>
-                {m.options.length > 0 && <div className="mt-3 space-y-1.5">{m.options.map((opt, idx) => { const correct = idx === m.correctIndex; const selected = idx === m.selectedIndex; return <div key={idx} className={`break-words rounded-lg border px-3 py-2 text-xs ${correct ? "border-green-100 bg-green-50 text-green-700" : selected ? "border-rose-100 bg-rose-50 text-rose-700" : "border-border-default bg-[#f8fafc] text-text-tertiary"}`}>{String.fromCharCode(65 + idx)}. {opt}</div>; })}</div>}
+                {m.options.length > 0 && <div className="mt-3 space-y-1.5">{m.options.map((opt, idx) => { const correct = idx === m.correctIndex; const selected = idx === m.selectedIndex; return <div key={idx} className={`break-words rounded-lg border px-3 py-2 text-xs ${correct ? "border-state-success/20 bg-state-success/10 text-state-success" : selected ? "border-state-error/20 bg-state-error/10 text-state-error" : "border-border-default bg-surface-subtle text-text-tertiary"}`}>{String.fromCharCode(65 + idx)}. {opt}</div>; })}</div>}
                 <div className="mt-3 flex flex-wrap items-center justify-between gap-2 text-[11px] text-text-tertiary"><span>{m.attemptCount} attempt{m.attemptCount === 1 ? "" : "s"}</span><span>Q#{m.questionId}</span></div>
-                {!m.isResolved && <div className="mt-3">{retryResults[m.questionId] === "correct" ? <div className="rounded-lg bg-green-50 p-3 text-xs font-bold text-green-700">✓ Correct — resolved!</div> : retryResults[m.questionId] === "wrong" ? <p className="mb-2 text-xs font-bold text-rose-600">Not quite — try again.</p> : null}<div className="flex gap-2"><input type="text" value={retryAnswers[m.questionId] || ""} onChange={(e) => retryAnswerChange(m.questionId, e.target.value)} placeholder="Your answer" className="min-w-0 flex-1 rounded-xl border border-border-default px-3 py-2.5 text-sm focus:border-brand-primary focus:outline-none" disabled={retrying.has(m.questionId)} /><button type="button" onClick={() => void submitRetryAnswer(m)} disabled={retrying.has(m.questionId) || !retryAnswers[m.questionId]?.trim()} className="shrink-0 rounded-xl bg-brand-primary px-4 py-2.5 text-sm font-bold text-white disabled:opacity-50">{retrying.has(m.questionId) ? "…" : "Check"}</button></div></div>}
+                {!m.isResolved && <div className="mt-3">{retryResults[m.questionId] === "correct" ? <div className="rounded-lg bg-state-success/10 p-3 text-xs font-bold text-state-success">✓ Correct — resolved!</div> : retryResults[m.questionId] === "wrong" ? <p className="mb-2 text-xs font-bold text-state-error">Not quite — try again.</p> : null}<div className="flex gap-2"><input type="text" value={retryAnswers[m.questionId] || ""} onChange={(e) => retryAnswerChange(m.questionId, e.target.value)} placeholder="Your answer" className="min-w-0 flex-1 rounded-xl border border-border-default px-3 py-2.5 text-sm focus:border-brand-primary focus:outline-none" disabled={retrying.has(m.questionId)} /><button type="button" onClick={() => void submitRetryAnswer(m)} disabled={retrying.has(m.questionId) || !retryAnswers[m.questionId]?.trim()} className="shrink-0 rounded-xl bg-brand-primary px-4 py-2.5 text-sm font-bold text-white disabled:opacity-50">{retrying.has(m.questionId) ? "…" : "Check"}</button></div></div>}
               </article>
             ))}
           </div>
@@ -394,7 +394,7 @@ export default function MistakesPage() {
                 {filteredMistakes.map((m) => (
                   <tr
                     key={m.mistakeId}
-                    className="border-b border-[#f5f7fb] hover:bg-[#f8fafc] transition"
+                    className="border-b border-border-default hover:bg-surface-subtle transition"
                   >
                     <td className="px-5 py-4">
                       <div className="font-semibold text-text-primary truncate max-w-[220px]">
@@ -412,7 +412,7 @@ export default function MistakesPage() {
                             return (
                               <div
                                 key={idx}
-                                className={`text-xs px-3 py-2 rounded border ${isCorrect ? "bg-green-50 text-green-700 border-green-100" : isSelected ? "bg-rose-50 text-rose-700 border-rose-100" : "bg-[#f8fafc] text-text-tertiary border-border-default"}`}
+                                className={`text-xs px-3 py-2 rounded border ${isCorrect ? "bg-state-success/10 text-state-success border-state-success/20" : isSelected ? "bg-state-error/10 text-state-error border-state-error/20" : "bg-surface-subtle text-text-tertiary border-border-default"}`}
                               >
                                 {letter}. {opt}
                               </div>
@@ -439,15 +439,15 @@ export default function MistakesPage() {
                       {!m.isResolved ? (
                         <>
                           {retryResults[m.questionId] === "correct" ? (
-                            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-[#16a34a] bg-state-success text-sm font-semibold text-[#16a34a]">
-                              <span className="w-3 h-3 rounded-full bg-[#16a34a] text-white flex items-center justify-center text-[10px]">
+                            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-state-success bg-state-success text-sm font-semibold text-state-success">
+                              <span className="w-3 h-3 rounded-full bg-state-success text-white flex items-center justify-center text-[10px]">
                                 &#x2713;
                               </span>
                               Correct &#x2014; resolved!
                             </div>
                           ) : retryResults[m.questionId] === "wrong" ? (
-                            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-[#dc2626] bg-state-error text-sm font-semibold text-[#dc2626]">
-                              <span className="w-3 h-3 rounded-full bg-[#dc2626] text-white flex items-center justify-center text-[10px]">
+                            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-state-error bg-state-error text-sm font-semibold text-state-error">
+                              <span className="w-3 h-3 rounded-full bg-state-error text-white flex items-center justify-center text-[10px]">
                                 &#x2717;
                               </span>
                               Try again
@@ -524,7 +524,7 @@ function MistakeInfoTooltip() {
       <button
         type="button"
         onClick={() => setOpen((prev) => !prev)}
-        className="flex items-center justify-center w-7 h-7 rounded-full border border-border-default bg-white text-text-body hover:bg-surface-subtle hover:border-slate-300 transition text-[10px] font-bold"
+        className="flex items-center justify-center w-7 h-7 rounded-full border border-border-default bg-surface-surface text-text-body hover:bg-surface-subtle hover:border-border-default transition text-[10px] font-bold"
         aria-label="About Mistake Notebook"
       >
         ?

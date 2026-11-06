@@ -189,7 +189,7 @@ export default function AdminPasswordResetPage() {
       </header>
 
       <div className="mx-auto max-w-2xl px-6 py-10">
-        <section className="rounded-3xl border border-[#e1e6f2] bg-white p-7 shadow-sm">
+        <section className="rounded-3xl border border-border-default bg-surface-surface p-7 shadow-sm">
           <h2 className="text-xl font-extrabold">
             Reset Student / Teacher Password
           </h2>
@@ -200,13 +200,13 @@ export default function AdminPasswordResetPage() {
           </p>
 
           {error && (
-            <div className="mt-5 rounded-xl border border-red-100 bg-red-50 px-4 py-3 text-sm font-medium text-state-error">
+            <div className="mt-5 rounded-xl border border-state-error/20 bg-state-error/10 px-4 py-3 text-sm font-medium text-state-error">
               {error}
             </div>
           )}
 
           {message && (
-            <div className="mt-5 rounded-xl border border-emerald-100 bg-emerald-50 px-4 py-3 text-sm font-medium text-emerald-600">
+            <div className="mt-5 rounded-xl border border-state-success/20 bg-state-success/10 px-4 py-3 text-sm font-medium text-state-success">
               {message}
             </div>
           )}
@@ -219,7 +219,7 @@ export default function AdminPasswordResetPage() {
               }}
               className={`rounded-xl border-2 px-4 py-3 text-sm font-bold ${
                 type === "STUDENT"
-                  ? "border-brand-primary bg-blue-50 text-brand-primary"
+                  ? "border-brand-primary bg-brand-primary/10 text-brand-primary"
                   : "border-border-default text-text-tertiary"
               }`}
             >
@@ -233,7 +233,7 @@ export default function AdminPasswordResetPage() {
               }}
               className={`rounded-xl border-2 px-4 py-3 text-sm font-bold ${
                 type === "TEACHER"
-                  ? "border-brand-primary bg-blue-50 text-brand-primary"
+                  ? "border-brand-primary bg-brand-primary/10 text-brand-primary"
                   : "border-border-default text-text-tertiary"
               }`}
             >

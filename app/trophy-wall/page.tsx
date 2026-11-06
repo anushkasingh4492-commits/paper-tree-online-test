@@ -87,7 +87,7 @@ export default function TrophyWallPage() {
 
         {loading ? (
           <div className="h-64 flex items-center justify-center">
-            <div className="w-8 h-8 border-4 border-blue-100 border-t-blue-600 rounded-full animate-spin" />
+            <div className="w-8 h-8 border-4 border-brand-primary/20 border-t-brand-primary rounded-full animate-spin" />
           </div>
         ) : (
           <div className="rounded-2xl border border-border-default bg-white p-8 shadow-sm">
@@ -129,7 +129,7 @@ export default function TrophyWallPage() {
                     >
                       {!isUnlocked && (
                         <div className="absolute inset-0 rounded-2xl bg-black/20 flex items-center justify-center pointer-events-none">
-                          <Lock className="w-12 h-12 text-gray-500" />
+                          <Lock className="w-12 h-12 text-text-disabled" />
                         </div>
                       )}
                       <div className="relative z-10 w-16 h-16 rounded-2xl flex items-center justify-center text-4xl mb-1">

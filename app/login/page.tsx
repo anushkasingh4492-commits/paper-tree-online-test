@@ -2,6 +2,7 @@
 
 import { FormEvent, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { Icon } from "@/components/Icon";
 
 type Branding = {
   name: string;
@@ -137,14 +138,14 @@ export default function Home() {
   const instituteName = branding?.name || "Paper Tree Educational Studio";
 
   return (
-    <main className="min-h-screen bg-[#f4f7fb] text-text-primary">
+    <main className="min-h-screen bg-surface-app-bg text-text-primary">
       <div className="flex min-h-screen">
 
         {/* ========================================================= */}
         {/* LEFT BRAND / CBT PANEL                                   */}
         {/* ========================================================= */}
 
-        <section className="relative hidden min-h-screen overflow-hidden bg-[#173ea5] lg:flex lg:w-[52%]">
+        <section className="relative hidden min-h-screen overflow-hidden bg-brand-deep-navy lg:flex lg:w-[52%]">
 
           {/* Background decoration */}
 
@@ -171,7 +172,7 @@ export default function Home() {
                   />
                 </div>
               ) : (
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-[14px] bg-white text-xl font-extrabold text-[#2454d8] shadow-lg">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-[14px] bg-brand-primary text-xl font-extrabold text-white shadow-lg">
                   {instituteName
                     .charAt(0)
                     .toUpperCase()}
@@ -183,7 +184,7 @@ export default function Home() {
                   {instituteName}
                 </p>
 
-                <p className="text-[9px] font-bold tracking-[0.22em] text-blue-100">
+                <p className="text-[9px] font-bold tracking-[0.22em] text-white/90">
                   COMPUTER BASED TESTING
                 </p>
               </div>
@@ -196,20 +197,20 @@ export default function Home() {
 
             <div className="relative max-w-[590px]">
 
-              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-blue-50 backdrop-blur">
-                <span className="h-1.5 w-1.5 rounded-full bg-emerald-300" />
+              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-white/80 backdrop-blur">
+                <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow" />
                 Computer Based Testing
               </div>
 
               <h1 className="text-[50px] font-extrabold leading-[1.07] tracking-[-0.045em] text-white xl:text-[58px]">
                 Test smarter.
                 <br />
-                <span className="text-blue-100">
+                <span className="text-white/90">
                   Perform better.
                 </span>
               </h1>
 
-              <p className="mt-7 max-w-[510px] text-[15px] leading-7 text-blue-100/90">
+              <p className="mt-7 max-w-[510px] text-[15px] leading-7 text-white/90">
                 A secure and modern computer-based testing
                 platform for online examinations, practice
                 tests and assessments.
@@ -219,58 +220,58 @@ export default function Home() {
 
               <div className="mt-9 grid max-w-[470px] grid-cols-2 gap-3">
 
-                <div className="rounded-xl border border-white/10 bg-white/[0.08] px-4 py-3.5 backdrop-blur">
-                  <div className="mb-2 flex h-7 w-7 items-center justify-center rounded-lg bg-white/10 text-sm text-white">
-                    ✓
+                <div className="rounded-xl border border-white/10 bg-white/[0.12] px-4 py-3.5 backdrop-blur">
+                  <div className="mb-2 flex h-7 w-7 items-center justify-center rounded-lg bg-white/[0.12] text-sm text-white">
+                    <Icon name="check" size={16} color="text-white" variant="solid" />
                   </div>
 
                   <p className="text-xs font-bold text-white">
                     Secure Exams
                   </p>
 
-                  <p className="mt-1 text-[10px] text-blue-100/70">
+                  <p className="mt-1 text-[10px] text-white/70">
                     Reliable online testing
                   </p>
                 </div>
 
-                <div className="rounded-xl border border-white/10 bg-white/[0.08] px-4 py-3.5 backdrop-blur">
-                  <div className="mb-2 flex h-7 w-7 items-center justify-center rounded-lg bg-white/10 text-sm text-white">
-                    ◷
+                <div className="rounded-xl border border-white/10 bg-white/[0.12] px-4 py-3.5 backdrop-blur">
+                  <div className="mb-2 flex h-7 w-7 items-center justify-center rounded-lg bg-white/[0.12] text-sm text-white">
+                    <Icon name="clock" size={16} color="text-white" />
                   </div>
 
                   <p className="text-xs font-bold text-white">
                     Live Testing
                   </p>
 
-                  <p className="mt-1 text-[10px] text-blue-100/70">
+                  <p className="mt-1 text-[10px] text-white/70">
                     Timed examinations
                   </p>
                 </div>
 
-                <div className="rounded-xl border border-white/10 bg-white/[0.08] px-4 py-3.5 backdrop-blur">
-                  <div className="mb-2 flex h-7 w-7 items-center justify-center rounded-lg bg-white/10 text-sm text-white">
-                    ▣
+                <div className="rounded-xl border border-white/10 bg-white/[0.12] px-4 py-3.5 backdrop-blur">
+                  <div className="mb-2 flex h-7 w-7 items-center justify-center rounded-lg bg-white/[0.12] text-sm text-white">
+                    <Icon name="analytics" size={16} color="text-white" />
                   </div>
 
                   <p className="text-xs font-bold text-white">
                     Instant Results
                   </p>
 
-                  <p className="mt-1 text-[10px] text-blue-100/70">
+                  <p className="mt-1 text-[10px] text-white/70">
                     Fast performance insights
                   </p>
                 </div>
 
-                <div className="rounded-xl border border-white/10 bg-white/[0.08] px-4 py-3.5 backdrop-blur">
-                  <div className="mb-2 flex h-7 w-7 items-center justify-center rounded-lg bg-white/10 text-sm text-white">
-                    ◉
+                <div className="rounded-xl border border-white/10 bg-white/[0.12] px-4 py-3.5 backdrop-blur">
+                  <div className="mb-2 flex h-7 w-7 items-center justify-center rounded-lg bg-white/[0.12] text-sm text-white">
+                    <Icon name="graduation-cap" size={16} color="text-white" />
                   </div>
 
                   <p className="text-xs font-bold text-white">
                     Smart Assessment
                   </p>
 
-                  <p className="mt-1 text-[10px] text-blue-100/70">
+                  <p className="mt-1 text-[10px] text-white/70">
                     Structured test experience
                   </p>
                 </div>
@@ -282,7 +283,7 @@ export default function Home() {
             {/* LEFT FOOTER                                          */}
             {/* ===================================================== */}
 
-            <div className="flex items-center justify-between text-xs text-blue-200/70">
+            <div className="flex items-center justify-between text-xs text-text-supporting-label/70">
 
               <span>
                 © {new Date().getFullYear()} Paper Tree Educational Studio
@@ -320,7 +321,7 @@ export default function Home() {
                   />
                 </div>
               ) : (
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[13px] bg-[#2454d8] text-lg font-extrabold text-white shadow-md">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[13px] bg-brand-primary text-lg font-extrabold text-white shadow-md">
                   {instituteName
                     .charAt(0)
                     .toUpperCase()}
@@ -329,11 +330,11 @@ export default function Home() {
 
               <div>
 
-                <p className="text-[17px] font-extrabold">
+                <p className="text-[17px] font-extrabold text-text-primary">
                   {instituteName}
                 </p>
 
-                <p className="text-[9px] font-bold tracking-[0.2em] text-[#98a1b2]">
+                <p className="text-[9px] font-bold tracking-[0.2em] text-text-supporting-label">
                   COMPUTER BASED TESTING
                 </p>
 
@@ -347,7 +348,7 @@ export default function Home() {
 
             <div className="mb-8">
 
-              <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-[#eef3ff] px-3 py-1.5">
+              <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-brand-subtle-lavender px-3 py-1.5">
 
                 <span className="h-1.5 w-1.5 rounded-full bg-brand-primary" />
 
@@ -373,13 +374,13 @@ export default function Home() {
 
             <form
               onSubmit={handleSubmit}
-              className="rounded-[22px] border border-[#e4e8ef] bg-white p-6 shadow-[0_15px_45px_rgba(20,30,55,0.06)] sm:p-8"
+              className="rounded-[22px] border border-border-default bg-surface-surface p-6 shadow-[0_15px_45px_rgba(20,30,55,0.06)] sm:p-8"
             >
 
               {/* ERROR */}
 
               {error && (
-                <div className="mb-5 rounded-xl border border-red-100 bg-red-50 px-4 py-3 text-xs font-medium leading-5 text-state-error">
+                <div className="mb-5 rounded-xl border border-state-error/20 bg-state-error/10 px-4 py-3 text-xs font-medium leading-5 text-state-error">
                   {error}
                 </div>
               )}
@@ -406,7 +407,7 @@ export default function Home() {
                   autoComplete="email"
                   required
                   disabled={loading}
-                  className="h-12 w-full rounded-xl border border-border-default bg-white px-4 text-sm text-text-primary outline-none transition placeholder:text-text-supporting-label focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10 disabled:bg-surface-app-bg"
+                  className="h-12 w-full rounded-xl border border-border-default bg-surface-surface px-4 text-sm text-text-primary outline-none transition placeholder:text-text-supporting-label focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10 disabled:bg-surface-app-bg"
                 />
 
               </div>
@@ -441,7 +442,7 @@ export default function Home() {
                   autoComplete="current-password"
                   required
                   disabled={loading}
-                  className="h-12 w-full rounded-xl border border-border-default bg-white px-4 text-sm text-text-primary outline-none transition placeholder:text-text-supporting-label focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10 disabled:bg-surface-app-bg"
+                  className="h-12 w-full rounded-xl border border-border-default bg-surface-surface px-4 text-sm text-text-primary outline-none transition placeholder:text-text-supporting-label focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10 disabled:bg-surface-app-bg"
                 />
 
               </div>
@@ -451,7 +452,7 @@ export default function Home() {
               <button
                 type="submit"
                 disabled={loading}
-                className="mt-7 flex h-12 w-full items-center justify-center rounded-xl bg-brand-primary text-sm font-bold text-white shadow-[0_8px_20px_rgba(49,91,234,0.18)] transition hover:bg-[#284ed2] active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-60"
+                className="mt-7 flex h-12 w-full items-center justify-center rounded-xl bg-brand-primary text-sm font-bold text-white shadow-[0_8px_20px_rgba(36,85,200,0.18)] transition-all duration-200 hover:bg-brand-action-blue active:bg-brand-deep-navy disabled:cursor-not-allowed disabled:opacity-50"
               >
                 {loading
                   ? "Signing in..."
@@ -471,7 +472,7 @@ export default function Home() {
                 administrators.
               </p>
 
-              <p className="mt-2 text-[10px] font-medium text-[#c0c5ce]">
+              <p className="mt-2 text-[10px] font-medium text-text-disabled">
                 © {new Date().getFullYear()} Paper Tree Educational Studio
               </p>
 

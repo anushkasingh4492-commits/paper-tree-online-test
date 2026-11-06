@@ -373,7 +373,7 @@ export default function AcademyAdminPerformancePage() {
                         <div className="font-black text-brand-purple">L{student.level}</div>
                         <div className="text-[10px] text-text-supporting-label">{student.levelName}</div>
                       </td>
-                      <td className="px-4 py-5 text-center font-black text-orange-500">🔥 {student.currentStreak}</td>
+                      <td className="px-4 py-5 text-center font-black text-state-warning">🔥 {student.currentStreak}</td>
                       <td className="px-4 py-5 text-center font-semibold">{student.testsTaken}</td>
                       <td className="px-4 py-5 text-center font-bold">
                         {student.averagePercentage}%
@@ -391,7 +391,7 @@ export default function AcademyAdminPerformancePage() {
                         {student.wrongAnswers}
                       </td>
                       <td className="px-4 py-5 text-center">
-                        <button type="button" onClick={() => setBadgeStudent(student)} className="rounded-lg bg-violet-50 px-2.5 py-1.5 font-bold text-violet-700 transition hover:bg-violet-100">🏆 {student.badgesEarned}</button>
+                        <button type="button" onClick={() => setBadgeStudent(student)} className="rounded-lg bg-brand-primary/10 px-2.5 py-1.5 font-bold text-brand-primary transition hover:bg-brand-primary/10">🏆 {student.badgesEarned}</button>
                       </td>
                       <td className="px-4 py-5 text-center text-xs font-medium text-text-body">{student.lastActiveDate || "—"}</td>
                       <td className="px-4 py-5 text-center">
@@ -404,7 +404,7 @@ export default function AcademyAdminPerformancePage() {
                               if (!response.ok || !data.success) throw new Error(data.error || "Could not create summary.");
                               setReport({ studentId: student.id, text: data.summary });
                             } catch (error) { setError(error instanceof Error ? error.message : "Could not create summary."); } finally { setSending(null); }
-                          }} className="rounded-lg border border-violet-200 bg-violet-50 px-2.5 py-1.5 text-[10px] font-bold text-violet-700">{sending === student.id ? "..." : "AI Summary"}</button>}
+                          }} className="rounded-lg border border-brand-primary/20 bg-brand-primary/10 px-2.5 py-1.5 text-[10px] font-bold text-brand-primary">{sending === student.id ? "..." : "AI Summary"}</button>}
                           {features?.parentWhatsAppReports && <button type="button" onClick={async () => {
                             setSending(student.id);
                             try {
@@ -413,7 +413,7 @@ export default function AcademyAdminPerformancePage() {
                               if (!response.ok || !data.success) throw new Error(data.error || "Could not create report.");
                               if (data.sent) alert("WhatsApp report sent."); else window.open(data.clickToChat, "_blank", "noopener,noreferrer");
                             } catch (error) { setError(error instanceof Error ? error.message : "Could not create WhatsApp report."); } finally { setSending(null); }
-                          }} className="rounded-lg bg-[#25D366] px-2.5 py-1.5 text-[10px] font-bold text-white">WhatsApp</button>}
+                          }} className="rounded-lg bg-state-success px-2.5 py-1.5 text-[10px] font-bold text-white">WhatsApp</button>}
                         </div>
                       </td>
                     </tr>
@@ -458,7 +458,7 @@ export default function AcademyAdminPerformancePage() {
                     Loading attempted tests...
                   </p>
                 ) : attemptError ? (
-                  <p className="rounded-xl bg-red-50 px-4 py-3 text-sm font-semibold text-state-error">
+                  <p className="rounded-xl bg-state-error/10 px-4 py-3 text-sm font-semibold text-state-error">
                     {attemptError}
                   </p>
                 ) : attempts.length === 0 ? (
@@ -533,7 +533,7 @@ export default function AcademyAdminPerformancePage() {
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 p-5" onClick={() => setReport(null)}>
             <div className="w-full max-w-lg rounded-2xl bg-white p-6 shadow-2xl" onClick={(event) => event.stopPropagation()}>
               <div className="flex items-center justify-between"><h3 className="text-lg font-extrabold">AI Parent Summary</h3><button onClick={() => setReport(null)} className="text-sm font-bold text-text-tertiary">Close</button></div>
-              <p className="mt-5 whitespace-pre-wrap rounded-xl bg-surface-app-bg p-4 text-sm leading-6 text-[#475168]">{report.text}</p>
+              <p className="mt-5 whitespace-pre-wrap rounded-xl bg-surface-app-bg p-4 text-sm leading-6 text-text-secondary">{report.text}</p>
               <button type="button" onClick={() => navigator.clipboard?.writeText(report.text)} className="mt-4 rounded-xl bg-brand-primary px-4 py-2.5 text-sm font-bold text-white">Copy Summary</button>
             </div>
           </div>

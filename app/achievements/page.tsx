@@ -61,7 +61,7 @@ export default function AchievementsPage() {
 
         {loading ? (
           <div className="h-64 flex items-center justify-center">
-            <div className="w-8 h-8 border-4 border-blue-100 border-t-blue-600 rounded-full animate-spin" />
+            <div className="w-8 h-8 border-4 border-brand-primary/20 border-t-brand-primary rounded-full animate-spin" />
           </div>
         ) : (
           <div className="space-y-4">
@@ -85,7 +85,7 @@ export default function AchievementsPage() {
                     <span
                       className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${
                         a.tier === 1
-                          ? "text-amber-600 bg-amber-50"
+                          ? "text-state-warning bg-state-warning/10"
                           : a.tier === 2
                             ? "text-silver-600 bg-silver-50"
                             : a.tier === 3
@@ -120,7 +120,7 @@ export default function AchievementsPage() {
                     🔒
                   </div>
                 ) : (
-                  <div className="w-8 h-8 rounded-full bg-[#16a34a] flex items-center justify-center text-white text-[10px]">
+                  <div className="w-8 h-8 rounded-full bg-state-success flex items-center justify-center text-white text-[10px]">
                     ✓
                   </div>
                 )}

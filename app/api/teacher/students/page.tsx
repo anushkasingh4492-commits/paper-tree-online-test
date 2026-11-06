@@ -98,7 +98,7 @@ export default function TeacherStudentsPage() {
         </div>
 
         {error && (
-          <div className="rounded-xl border border-red-100 bg-red-50 px-4 py-3 text-sm font-medium text-state-error">
+          <div className="rounded-xl border border-state-error/20 bg-state-error/10 px-4 py-3 text-sm font-medium text-state-error">
             {error}
           </div>
         )}
@@ -190,11 +190,11 @@ export default function TeacherStudentsPage() {
                         %
                       </td>
 
-                      <td className="px-5 py-4 text-sm font-semibold text-emerald-600">
+                      <td className="px-5 py-4 text-sm font-semibold text-state-success">
                         {student.correct}
                       </td>
 
-                      <td className="px-5 py-4 text-sm font-semibold text-rose-500">
+                      <td className="px-5 py-4 text-sm font-semibold text-state-error">
                         {student.wrong}
                       </td>
 

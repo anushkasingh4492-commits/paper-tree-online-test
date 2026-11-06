@@ -388,7 +388,7 @@ export default function ScheduledTestPage() {
 
                   <button
                     onClick={handleStart}
-                    className="mt-4 h-12 px-10 rounded-xl bg-brand-primary text-white text-sm font-extrabold shadow-[0_8px_20px_rgba(49,91,234,.18)] hover:bg-[#284ed2]"
+                    className="mt-4 h-12 px-10 rounded-xl bg-brand-primary text-white text-sm font-extrabold shadow-[0_8px_20px_rgba(49,91,234,.18)] hover:bg-brand-action-blue"
                   >
                     Start Test →
                   </button>

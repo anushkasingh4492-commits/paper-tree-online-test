@@ -179,7 +179,7 @@ function downloadStudentTemplate() {
 }
   return (
     <main className="min-h-screen bg-surface-app-bg text-text-primary">
-      <header className="border-b border-border-default bg-white">
+      <header className="border-b border-border-default bg-surface-surface">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
           <div>
             <h1 className="text-xl font-extrabold">
@@ -193,7 +193,7 @@ function downloadStudentTemplate() {
 
           <button
             onClick={() => history.back()}
-            className="rounded-xl border border-border-default bg-white px-4 py-2.5 text-sm font-bold text-text-tertiary"
+            className="rounded-xl border border-border-default bg-surface-surface px-4 py-2.5 text-sm font-bold text-text-tertiary"
           >
             ← Back
           </button>
@@ -221,14 +221,14 @@ function downloadStudentTemplate() {
           {/* Create student */}
           <form
             onSubmit={createStudent}
-            className="h-fit rounded-2xl border border-border-default bg-white p-6 shadow-sm"
+            className="h-fit rounded-2xl border border-border-default bg-surface-surface p-6 shadow-sm"
           >
             <h3 className="text-lg font-extrabold">
               Add Student
             </h3>
 
             {batches.length === 0 && (
-              <div className="mt-4 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-xs font-semibold leading-5 text-amber-700">
+              <div className="mt-4 rounded-xl border border-state-warning/20 bg-state-warning/10 px-4 py-3 text-xs font-semibold leading-5 text-state-warning">
                 No batches available. Please create a batch first before
                 adding a student.
               </div>
@@ -248,7 +248,7 @@ function downloadStudentTemplate() {
               value={batchId}
               onChange={(e) => setBatchId(e.target.value)}
               disabled={batches.length === 0}
-              className="mt-3 w-full rounded-xl border border-border-default bg-white px-4 py-3 text-sm outline-none focus:border-brand-primary disabled:cursor-not-allowed disabled:bg-[#f5f6f8] disabled:text-[#9aa1ad]"
+              className="mt-3 w-full rounded-xl border border-border-default bg-surface-surface px-4 py-3 text-sm outline-none focus:border-brand-primary disabled:cursor-not-allowed disabled:bg-surface-app-bg disabled:text-text-disabled"
             >
               <option value="">Select batch</option>
 
@@ -310,7 +310,7 @@ function downloadStudentTemplate() {
           </form>
 
           {/* Bulk Excel upload */}
-          <section className="mb-8 rounded-2xl border border-border-default bg-white p-6 shadow-sm lg:col-span-2">
+          <section className="mb-8 rounded-2xl border border-border-default bg-surface-surface p-6 shadow-sm lg:col-span-2">
             <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
               <div>
                 <h3 className="text-lg font-extrabold">Bulk Student Upload</h3>
@@ -328,7 +328,7 @@ function downloadStudentTemplate() {
 >
   ↓ Download Excel Template
 </button>
-                <select value={bulkBatchId} onChange={(e) => setBulkBatchId(e.target.value)} className="rounded-xl border border-border-default bg-white px-3 py-2.5 text-sm">
+                <select value={bulkBatchId} onChange={(e) => setBulkBatchId(e.target.value)} className="rounded-xl border border-border-default bg-surface-surface px-3 py-2.5 text-sm">
                   <option value="">Select batch</option>
                   {batches.map((batch) => <option key={batch.id} value={batch.id}>{batch.name}</option>)}
                 </select>
@@ -357,7 +357,7 @@ function downloadStudentTemplate() {
           </section>
 
           {/* Student list */}
-          <section className="rounded-2xl border border-border-default bg-white p-6 shadow-sm">
+          <section className="rounded-2xl border border-border-default bg-surface-surface p-6 shadow-sm">
             <div className="flex items-center justify-between">
               <h3 className="text-lg font-extrabold">
                 Academy Students
@@ -391,7 +391,7 @@ function downloadStudentTemplate() {
 
                     <button
                       onClick={() => void removeStudent(student)}
-                      className="rounded-lg border border-red-200 bg-red-50 px-3 py-1.5 text-xs font-bold text-state-error"
+                      className="rounded-lg border border-state-error/20 bg-state-error/10 px-3 py-1.5 text-xs font-bold text-state-error"
                     >
                       Remove
                     </button>

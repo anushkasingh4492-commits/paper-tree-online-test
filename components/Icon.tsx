@@ -14,6 +14,8 @@ export type IconName =
   | "chevron-up"
   | "chevron-left"
   | "menu"
+  | "sun"
+  | "moon"
   /* Action */
   | "play"
   | "analytics"
@@ -37,6 +39,7 @@ export type IconName =
   | "users"
   /* Communication */
   | "bell"
+  | "lock"
   | "message"
   /* System & Settings */
   | "settings"
@@ -55,6 +58,8 @@ const LINE_ICONS: Record<IconName, React.ComponentType<SVGProps<SVGSVGElement> &
   "chevron-up": Lucide.ChevronUp,
   "chevron-left": Lucide.ChevronLeft,
   menu: Lucide.Menu,
+  sun: Lucide.Sun,
+  moon: Lucide.Moon,
   play: Lucide.Play,
   analytics: Lucide.BarChart3,
   plus: Lucide.Plus,
@@ -73,6 +78,7 @@ const LINE_ICONS: Record<IconName, React.ComponentType<SVGProps<SVGSVGElement> &
   user: Lucide.User,
   users: Lucide.Users,
   bell: Lucide.Bell,
+  lock: Lucide.Lock,
   message: Lucide.MessageCircle,
   settings: Lucide.Settings,
   search: Lucide.Search,

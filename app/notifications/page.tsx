@@ -44,7 +44,7 @@ export default function NotificationsPage() {
 
         {loading ? (
           <div className="h-64 flex items-center justify-center">
-            <div className="w-8 h-8 border-4 border-blue-100 border-t-blue-600 rounded-full animate-spin" />
+            <div className="w-8 h-8 border-4 border-brand-primary/20 border-t-brand-primary rounded-full animate-spin" />
           </div>
         ) : notifications.length === 0 ? (
           <div className="rounded-2xl border border-border-default bg-white p-16 text-center shadow-sm">

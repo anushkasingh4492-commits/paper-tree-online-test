@@ -264,13 +264,13 @@ export default function UploadDatasetPage() {
             </div>
 
             {error && (
-              <div className="mt-6 rounded-xl bg-red-50 p-4 text-sm font-semibold text-state-error">
+              <div className="mt-6 rounded-xl bg-state-error/10 p-4 text-sm font-semibold text-state-error">
                 {error}
               </div>
             )}
 
             {message && (
-              <div className="mt-6 rounded-xl bg-green-50 p-4 text-sm font-semibold text-green-700">
+              <div className="mt-6 rounded-xl bg-state-success/10 p-4 text-sm font-semibold text-state-success">
                 {message}
               </div>
             )}
@@ -327,7 +327,7 @@ export default function UploadDatasetPage() {
                 <tbody>
                   {history.length === 0 && (
                     <tr>
-                      <td colSpan={9} className="px-5 py-8 text-center text-[#8a9386]">
+                      <td colSpan={9} className="px-5 py-8 text-center text-text-disabled">
                         No imports yet. Upload a dataset to get started.
                       </td>
                     </tr>
@@ -345,10 +345,10 @@ export default function UploadDatasetPage() {
                       <td className="px-5 py-3 text-right text-text-primary">
                         {row.total_records}
                       </td>
-                      <td className="px-5 py-3 text-right text-[#16a34a]">
+                      <td className="px-5 py-3 text-right text-state-success">
                         +{row.inserted}
                       </td>
-                      <td className="px-5 py-3 text-right text-[#ca8a04]">
+                      <td className="px-5 py-3 text-right text-state-warning">
                         {row.updated}
                       </td>
                       <td className="px-5 py-3 text-right text-text-tertiary">

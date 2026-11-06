@@ -31,13 +31,13 @@ export default function TestSummaryPage() {
       <div className="max-w-5xl mx-auto">
         <button onClick={() => router.push("/dashboard")} className="text-sm text-text-secondary mb-5">← Back to dashboard</button>
         <div className="flex items-center justify-between gap-3 mb-6">
-          <div><h1 className="text-2xl sm:text-3xl font-black">My Tests</h1><p className="text-sm text-[#7a8495] mt-1">Your completed and past test records.</p></div>
+          <div><h1 className="text-2xl sm:text-3xl font-black">My Tests</h1><p className="text-sm text-text-secondary mt-1">Your completed and past test records.</p></div>
           <button onClick={() => router.push("/tests")} className="rounded-xl bg-brand-purple text-white px-4 py-2.5 text-sm font-bold">Practice Test</button>
         </div>
-        {loading ? <div className="rounded-2xl bg-white p-8 text-center">Loading your test records…</div> : error ? <div className="rounded-2xl bg-red-50 border border-red-100 p-5 text-red-700">{error}</div> : tests.length === 0 ? <div className="rounded-2xl bg-white p-10 text-center"><div className="text-4xl mb-3">📝</div><h2 className="font-black text-lg">No past tests yet</h2><p className="text-sm text-[#7a8495] mt-1">Your test records will appear here after you complete a test.</p></div> : (
+        {loading ? <div className="rounded-2xl bg-surface-surface p-8 text-center">Loading your test records…</div> : error ? <div className="rounded-2xl bg-state-error/10 border border-state-error/20 p-5 text-state-error">{error}</div> : tests.length === 0 ? <div className="rounded-2xl bg-surface-surface p-10 text-center"><div className="text-4xl mb-3">📝</div><h2 className="font-black text-lg">No past tests yet</h2><p className="text-sm text-text-secondary mt-1">Your test records will appear here after you complete a test.</p></div> : (
           <div className="space-y-3">
             {tests.map((test) => (
-              <button key={test.attemptId} type="button" onClick={() => test.testId && router.push(`/test/result/${test.testId}`)} className="w-full text-left rounded-2xl bg-white border border-[#e7e9ef] p-4 sm:p-5 shadow-sm hover:shadow-md transition active:scale-[.995]">
+              <button key={test.attemptId} type="button" onClick={() => test.testId && router.push(`/test/result/${test.testId}`)} className="w-full text-left rounded-2xl bg-surface-surface border border-border-default p-4 sm:p-5 shadow-sm hover:shadow-md transition active:scale-[.995]">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                   <div className="min-w-0"><h2 className="font-black truncate">{test.title}</h2><p className="text-xs text-text-body mt-1">{test.submittedAt ? new Date(test.submittedAt).toLocaleString() : "Completed test"}</p></div>
                   <div className="flex items-center gap-4"><div><div className="text-xs text-text-body">Score</div><div className="font-black">{test.score}/{test.totalMarks}</div></div><div><div className="text-xs text-text-body">Result</div><div className="font-black text-brand-purple">{test.percentage}%</div></div><span className="text-brand-purple font-black">→</span></div>

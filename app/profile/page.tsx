@@ -139,13 +139,13 @@ export default function ProfilePage() {
         </div>
 
         {error && (
-          <div role="alert" className="mt-6 rounded-xl border border-red-200 bg-red-50 p-4 text-sm text-red-700">
+          <div role="alert" className="mt-6 rounded-xl border border-state-error/20 bg-state-error/10 p-4 text-sm text-state-error">
             {error}
           </div>
         )}
 
         {notice && (
-          <div role="status" className="mt-6 rounded-xl border border-green-200 bg-green-50 p-4 text-sm text-green-700">
+          <div role="status" className="mt-6 rounded-xl border border-state-success/20 bg-state-success/10 p-4 text-sm text-state-success">
             {notice}
           </div>
         )}
@@ -168,7 +168,7 @@ export default function ProfilePage() {
                     onChange={(event) => setName(event.target.value)}
                     maxLength={100}
                     autoComplete="name"
-                    className="mt-2 w-full rounded-xl border border-slate-300 px-4 py-3 text-base font-semibold outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
+                    className="mt-2 w-full rounded-xl border border-border-default px-4 py-3 text-base font-semibold outline-none focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/10"
                   />
                   <p className="mt-2 text-xs text-text-body">
                     Your student ID, roll number, and email cannot be changed here.
@@ -187,7 +187,7 @@ export default function ProfilePage() {
                 <button
                   onClick={cancelEditing}
                   disabled={saving}
-                  className="rounded-xl border border-slate-300 bg-white px-5 py-2.5 text-sm font-bold text-text-secondary disabled:opacity-50"
+                  className="rounded-xl border border-border-default bg-white px-5 py-2.5 text-sm font-bold text-text-secondary disabled:opacity-50"
                 >
                   Cancel
                 </button>
