@@ -117,11 +117,14 @@ export function Icon({
   // `variant` prop locks in the semantic intent (high-emphasis state).
   const _ = variant;
 
+  // `color` may be a Tailwind class (e.g. "text-brand-primary") or a CSS color
+  // value. Append it to className so it applies via `currentColor` inheritance.
+  const mergedClassName = [className, color].filter(Boolean).join(" ");
+
   return (
     <Icon
       size={size}
-      color={color}
-      className={className}
+      className={mergedClassName}
       {...props}
     />
   );
