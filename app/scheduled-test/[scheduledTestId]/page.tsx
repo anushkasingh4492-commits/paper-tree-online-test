@@ -382,7 +382,7 @@ export default function ScheduledTestPage() {
               !timing.ended && (
                 <div className="text-center">
 
-                  <p className="text-xs font-bold text-[#19a463]">
+                  <p className="text-xs font-bold text-state-success">
                     Test is now live
                   </p>
 
@@ -398,7 +398,7 @@ export default function ScheduledTestPage() {
 
             {timing.ended && (
               <div className="text-center">
-                <p className="text-sm font-bold text-[#dc3545]">
+                <p className="text-sm font-bold text-state-error">
                   This test has ended.
                 </p>
               </div>
@@ -498,7 +498,7 @@ export default function ScheduledTestPage() {
                   (chapter) => (
                     <span
                       key={chapter}
-                      className="px-3 py-1.5 rounded-lg bg-surface-app-bg border border-border-default text-[#596477] text-xs font-semibold"
+                      className="px-3 py-1.5 rounded-lg bg-surface-app-bg border border-border-default text-text-secondary text-xs font-semibold"
                     >
                       {chapter}
                     </span>

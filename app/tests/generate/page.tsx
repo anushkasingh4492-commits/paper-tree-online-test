@@ -571,7 +571,7 @@ onClick={() => toggleSubject(subject.name)}
               <aside className="lg:sticky lg:top-7 lg:h-fit">
                 <div className="overflow-hidden rounded-[22px] border border-border-default bg-brand-primary shadow-[0_18px_45px_rgba(49,91,234,0.12)]">
                   <div className="p-6">
-                    <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-blue-100">
+                    <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-white/90">
                       Test summary
                     </p>
 
@@ -579,14 +579,14 @@ onClick={() => toggleSubject(subject.name)}
                       MHT-CET Practice
                     </h3>
 
-                    <p className="mt-2 text-xs leading-5 text-blue-100">
+                    <p className="mt-2 text-xs leading-5 text-white/90">
                       Your test will be generated from the live question
                       bank.
                     </p>
 
                     <div className="mt-6 space-y-2">
                       <div className="flex items-center justify-between rounded-xl bg-white/10 px-4 py-3">
-                        <span className="text-xs text-blue-100">
+                        <span className="text-xs text-white/90">
                           Subjects
                         </span>
 
@@ -596,7 +596,7 @@ onClick={() => toggleSubject(subject.name)}
                       </div>
 
                       <div className="flex items-center justify-between rounded-xl bg-white/10 px-4 py-3">
-                        <span className="text-xs text-blue-100">
+                        <span className="text-xs text-white/90">
                           Questions
                         </span>
 
@@ -606,7 +606,7 @@ onClick={() => toggleSubject(subject.name)}
                       </div>
 
                       <div className="flex items-center justify-between rounded-xl bg-white/10 px-4 py-3">
-                        <span className="text-xs text-blue-100">
+                        <span className="text-xs text-white/90">
                           Difficulty
                         </span>
 
@@ -616,7 +616,7 @@ onClick={() => toggleSubject(subject.name)}
                       </div>
 
                       <div className="flex items-center justify-between rounded-xl bg-white/10 px-4 py-3">
-                        <span className="text-xs text-blue-100">
+                        <span className="text-xs text-white/90">
                           Duration
                         </span>
 
@@ -629,7 +629,7 @@ onClick={() => toggleSubject(subject.name)}
 
                   <div className="border-t border-white/10 bg-brand-primary p-5">
                     {error && (
-                      <div className="mb-4 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-xs font-semibold leading-5 text-state-error">
+                      <div className="mb-4 rounded-xl border border-state-error/20 bg-state-error/10 px-4 py-3 text-xs font-semibold leading-5 text-state-error">
                         {error}
                       </div>
                     )}
@@ -653,7 +653,7 @@ onClick={() => toggleSubject(subject.name)}
                       )}
                     </button>
 
-                    <p className="mt-3 text-center text-[10px] leading-4 text-blue-100">
+                    <p className="mt-3 text-center text-[10px] leading-4 text-white/90">
                       Questions are randomly selected from the MHT-CET
                       question bank.
                     </p>

@@ -411,7 +411,7 @@ function subjectConfig(
   if (normalized === "chemistry") {
     return {
       bar: "bg-state-success",
-      text: "text-emerald-600",
+      text: "text-state-success",
       iconBg: "bg-brand-primary/10",
       icon: "",
     };
@@ -2734,7 +2734,7 @@ export default function DashboardPage() {
                             {area.subject}
                           </span>
 
-                          <span className="text-[11px] font-extrabold text-rose-500">
+                          <span className="text-[11px] font-extrabold text-state-error">
                             {area.accuracy.toFixed(
                               0
                             )}
@@ -2811,8 +2811,8 @@ export default function DashboardPage() {
                   statistics
                     ?.totalCorrect ??
                     0,
-                  "text-emerald-600",
-                  "bg-emerald-50",
+                  "text-state-success",
+                  "bg-state-success/10",
                 ],
 
                 [
@@ -2821,7 +2821,7 @@ export default function DashboardPage() {
                     ?.totalWrong ??
                     0,
                   "text-state-error",
-                  "bg-rose-50",
+                  "bg-brand-primary/10",
                 ],
 
                 [
@@ -2829,8 +2829,8 @@ export default function DashboardPage() {
                   statistics
                     ?.totalUnanswered ??
                     0,
-                  "text-amber-600",
-                  "bg-amber-50",
+                  "text-state-warning",
+                  "bg-state-warning/10",
                 ],
 
                 [
@@ -2842,8 +2842,8 @@ export default function DashboardPage() {
                       ?.accuracy ??
                     0
                   }%`,
-                  "text-violet-600",
-                  "bg-violet-50",
+                  "text-brand-primary",
+                  "bg-brand-primary/10",
                 ],
               ].map(
                 ([

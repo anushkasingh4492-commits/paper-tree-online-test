@@ -2108,7 +2108,7 @@ setSubjects([
                                 </div>
 
                                 {course === "MHT-CET" && preset.examAccurate && (
-                                  <span className="shrink-0 text-[10px] font-semibold uppercase tracking-wide bg-green-100 text-green-700 px-2 py-1 rounded-md">
+                                  <span className="shrink-0 text-[10px] font-semibold uppercase tracking-wide bg-state-success/10 text-state-success px-2 py-1 rounded-md">
                                     Actual MHT CET pattern
                                   </span>
                                 )}

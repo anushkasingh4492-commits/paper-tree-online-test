@@ -1806,7 +1806,7 @@ export default function TestResultPage() {
     return (
       <main className="min-h-screen bg-surface-app-bg flex items-center justify-center">
         <div className="text-center">
-          <div className="w-11 h-11 border-4 border-blue-100 border-t-blue-600 rounded-full animate-spin mx-auto" />
+          <div className="w-11 h-11 border-4 border-brand-primary/20 border-t-brand-primary rounded-full animate-spin mx-auto" />
 
           <p className="mt-4 text-sm font-semibold text-text-body">
             Loading your result...
@@ -3093,7 +3093,7 @@ if (ctx === null) {
                   </p>
                 </div>
 
-                <div className="rounded-2xl bg-white border border-blue-100 p-5">
+                <div className="rounded-2xl bg-white border border-brand-primary/20 p-5">
                   <div className="w-10 h-10 rounded-xl bg-blue-50 text-brand-primary flex items-center justify-center font-bold">
                     %
                   </div>
@@ -3588,7 +3588,7 @@ if (ctx === null) {
                       </div>
 
                       {question.solution && (
-                        <div className="mt-5 ml-0 sm:ml-14 rounded-2xl bg-blue-50 border border-blue-100 p-5">
+                        <div className="mt-5 ml-0 sm:ml-14 rounded-2xl bg-blue-50 border border-brand-primary/20 p-5">
                           <div className="flex items-center gap-2">
                             <div className="w-7 h-7 rounded-lg bg-surface-subtle text-blue-700 flex items-center justify-center text-xs font-bold">
                               i

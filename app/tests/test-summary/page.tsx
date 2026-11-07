@@ -42,7 +42,7 @@ export default function TestSummaryPage() {
                   <div className="min-w-0"><h2 className="font-black truncate">{test.title}</h2><p className="text-xs text-text-body mt-1">{test.submittedAt ? new Date(test.submittedAt).toLocaleString() : "Completed test"}</p></div>
                   <div className="flex items-center gap-4"><div><div className="text-xs text-text-body">Score</div><div className="font-black">{test.score}/{test.totalMarks}</div></div><div><div className="text-xs text-text-body">Result</div><div className="font-black text-brand-purple">{test.percentage}%</div></div><span className="text-brand-purple font-black">→</span></div>
                 </div>
-                <div className="mt-3 flex flex-wrap gap-2 text-[11px] font-semibold"><span className="rounded-full bg-green-50 text-green-700 px-2.5 py-1">✓ {test.correct} correct</span><span className="rounded-full bg-red-50 text-red-700 px-2.5 py-1">✕ {test.incorrect} wrong</span><span className="rounded-full bg-surface-subtle text-text-body px-2.5 py-1">{test.unanswered} unanswered</span></div>
+                <div className="mt-3 flex flex-wrap gap-2 text-[11px] font-semibold"><span className="rounded-full bg-state-success/10 text-state-success px-2.5 py-1">✓ {test.correct} correct</span><span className="rounded-full bg-state-error/10 text-state-error px-2.5 py-1">✕ {test.incorrect} wrong</span><span className="rounded-full bg-surface-subtle text-text-body px-2.5 py-1">{test.unanswered} unanswered</span></div>
               </button>
             ))}
           </div>
