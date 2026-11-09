@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Trophy, Lock } from "lucide-react";
+import Image from "next/image";
 import { Card } from "@/components/ui/Card";
 import type { DashboardInsights } from "@/types/dashboard";
 
@@ -27,27 +28,32 @@ export function TrophyCard({ trophy }: { trophy: DashboardInsights["badges"][num
       <div className="absolute inset-0 -z-10 bg-current/10 rounded-[16px] transform rotate-[5deg] scale-[1.02] opacity-50 pointer-events-none" />
       <div className="absolute inset-0 -z-20 bg-current/10 rounded-[16px] transform rotate-[-5deg] scale-[1.04] opacity-30 pointer-events-none" />
 
-      {/* Lock overlay for locked trophies */}
-      {!trophy.earned && (
-        <div className="absolute inset-0 bg-white/60 backdrop-blur-md flex flex-col items-center justify-center rounded-[16px]">
-          <div className="w-12 h-12 rounded-full bg-white/40 flex items-center justify-center text-white/60 mb-3">
-            <Lock size={24} />
-          </div>
-          <div className="text-[10px] font-bold text-white/70 uppercase tracking-wider">LOCKED</div>
-        </div>
-      )}
-
       <div className="relative z-10 flex flex-col items-center gap-3">
-        {/* Trophy Icon */}
-        <div className="w-16 h-16 rounded-full flex items-center justify-center">
-          <div className="w-12 h-12 rounded-full bg-white/40 flex items-center justify-center backdrop-blur-sm">
-            <Trophy size={28} className={trophy.earned ? "text-yellow-500" : "text-white/40"} />
-          </div>
+        <div className="relative flex h-16 w-16 items-center justify-center rounded-full">
+          {trophy.asset ? (
+            <Image
+              src={trophy.asset}
+              alt={`${trophy.name}${tierLabel ? ` ${tierLabel}` : ""} badge`}
+              width={56}
+              height={56}
+              className={`h-14 w-14 object-contain drop-shadow-md ${trophy.earned ? "" : "grayscale opacity-65"}`}
+            />
+          ) : (
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/40 backdrop-blur-sm">
+              <Trophy size={28} className={trophy.earned ? "text-yellow-500" : "text-slate-400"} />
+            </div>
+          )}
+          {!trophy.earned && (
+            <span className="absolute -right-1 -top-1 flex h-6 w-6 items-center justify-center rounded-full border-2 border-white bg-slate-700 text-white shadow">
+              <Lock size={12} />
+            </span>
+          )}
         </div>
 
         <div className="text-center">
           <div className="text-xs font-black text-text-primary">{trophy.name}</div>
           <div className="text-[10px] font-semibold text-text-body">{tierLabel}</div>
+          {!trophy.earned && <div className="text-[9px] font-bold uppercase tracking-wider text-text-supporting-label">Locked</div>}
         </div>
 
         {/* Progress Indicator */}
