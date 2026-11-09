@@ -18,10 +18,10 @@ function DonutMetricCard({ metric }: { metric: DonutMetric }) {
     clock: <Clock size={20} className="text-amber-500" />,
     check: <CheckCircle2 size={20} className="text-green-500" />,
   };
-  const icon = icons[metric.label === "Unresolved" ? "clock" : metric.label === "Resolved" ? "check" : "alert"];
+  const icon = icons[metric.label === "Unresolved" ? "clock" : metric.label === "Mastered" ? "check" : "alert"];
 
   return (
-    <Card variant="default" padding="md" radius="large" className={`border border-border-default ${colors.bg}`}>
+    <Card variant="default" padding="none" radius="large" className={`border border-border-default p-3 shadow-sm sm:p-4 ${colors.bg}`}>
       <div className="flex items-center gap-3">
         <div className="w-10 h-10 rounded-full flex items-center justify-center">{icon}</div>
         <div>
@@ -30,7 +30,7 @@ function DonutMetricCard({ metric }: { metric: DonutMetric }) {
         </div>
         <div className="ml-auto">
           <div className="relative w-16 h-16">
-            <svg className="w-full h-full transform -rotate-90">
+            <svg viewBox="0 0 80 80" className="h-full w-full -rotate-90">
               <circle cx="40" cy="40" r="34" stroke="currentColor" strokeWidth="8" fill="none" className="text-border-muted" />
               <circle
                 cx="40"
@@ -86,7 +86,7 @@ export function QuestionOverview({
   const donutMetrics: DonutMetric[] = [
     { label: "Total Mistakes", value: total, percentage: total ? 100 : 0, color: "red", icon: <AlertTriangle /> },
     { label: "Unresolved", value: mistakeStats.unresolved, percentage: total ? Math.round((mistakeStats.unresolved / total) * 100) : 0, color: "amber", icon: <Clock /> },
-    { label: "Resolved", value: resolved, percentage: total ? Math.round((resolved / total) * 100) : 0, color: "green", icon: <CheckCircle2 /> },
+    { label: "Mastered", value: resolved, percentage: total ? Math.round((resolved / total) * 100) : 0, color: "green", icon: <CheckCircle2 /> },
   ];
   const weakestChapters = [...chapters].filter((chapter) => chapter.attempted > 0).sort((a, b) => a.accuracy - b.accuracy).slice(0, 5);
 
@@ -102,19 +102,22 @@ export function QuestionOverview({
         <a href="/stats" className="text-[11px] font-bold text-brand-purple hover:underline flex items-center gap-1">View Detailed Analysis →</a>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 gap-2 sm:grid-cols-3">
         {donutMetrics.map((metric) => <DonutMetricCard key={metric.label} metric={metric} />)}
       </div>
 
       <div className="border-t border-border-default pt-4">
-        <div className="flex justify-between items-baseline mb-4">
+        <div className="mb-3 flex justify-between items-baseline">
           <div className="flex items-center gap-2">
             <Icon name="bookmark" size={16} className="text-brand-purple" />
-            <span className="text-[10px] font-bold uppercase tracking-wider text-text-supporting-label">Chapters to Conquer</span>
+            <div>
+              <span className="block text-[9px] font-black uppercase tracking-wider text-state-error">Chapter Mastery</span>
+              <span className="text-[13px] font-black text-text-primary">Chapters to conquer</span>
+            </div>
           </div>
         </div>
         {weakestChapters.length
-          ? <div className="space-y-2">{weakestChapters.map((chapter) => <ChapterProgressBar key={`${chapter.subject}-${chapter.chapter}`} chapter={chapter} />)}</div>
+          ? <div className="grid grid-cols-1 gap-x-6 gap-y-3 md:grid-cols-2">{weakestChapters.map((chapter) => <ChapterProgressBar key={`${chapter.subject}-${chapter.chapter}`} chapter={chapter} />)}</div>
           : <p className="text-sm text-text-body">Chapter performance will appear after you complete tests.</p>}
       </div>
     </section>

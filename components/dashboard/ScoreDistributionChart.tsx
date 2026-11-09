@@ -4,25 +4,25 @@ import type { ScoreDistribution } from "@/types/dashboard";
 import { Card } from "@/components/ui/Card";
 
 const COLOR_MAP: Record<string, string> = {
-  red: "text-red-500",
-  orange: "text-orange-500",
-  yellow: "text-yellow-500",
-  green: "text-green-500",
+  red: "text-rose-500",
+  amber: "text-amber-500",
+  blue: "text-blue-500",
+  green: "text-emerald-500",
 };
 
 export function ScoreDistributionChart({ data }: { data: ScoreDistribution[] }) {
   const totalCount = data.reduce((sum, d) => sum + d.count, 0);
 
   return (
-    <Card variant="default" padding="md" radius="large" className="border border-border-default">
+    <Card variant="default" padding="none" radius="large" className="border border-border-default p-3 sm:p-4">
       <div className="flex flex-col">
         <div className="flex justify-between items-baseline mb-6">
           <div>
             <h3 className="text-xs font-bold uppercase tracking-wider text-text-supporting-label">Score Distribution</h3>
             <p className="text-[10px] text-text-body">All tests ({totalCount} attempts)</p>
           </div>
-          <div className="w-20 h-20 rounded-full border-8 border-surface-subtle flex items-center justify-center relative">
-            <svg className="w-full h-full transform -rotate-90">
+          <div className="relative flex h-16 w-16 items-center justify-center rounded-full border-8 border-surface-subtle">
+            <svg viewBox="0 0 80 80" className="h-full w-full -rotate-90">
               <circle cx="40" cy="40" r="30" stroke="currentColor" strokeWidth="8" fill="none" className="text-border-muted" />
               {data.map((d, index) => {
                 const sweepAngle = (d.percentage / 100) * 360;
@@ -44,8 +44,8 @@ export function ScoreDistributionChart({ data }: { data: ScoreDistribution[] }) 
               })}
             </svg>
             <div className="absolute inset-0 flex flex-col items-center justify-center">
-              <span className="text-2xl font-black text-text-primary">{totalCount}</span>
-              <span className="text-[10px] text-text-body">Tests</span>
+              <span className="text-xl font-black text-text-primary">{totalCount}</span>
+              <span className="text-[9px] text-text-body">Tests</span>
             </div>
           </div>
         </div>

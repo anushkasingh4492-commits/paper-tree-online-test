@@ -5,8 +5,6 @@ import { Card } from "@/components/ui/Card";
 
 export function PerformanceTrendChart({ data, accuracy }: { data: TrendPoint[]; accuracy: number }) {
   const maxScore = data.length ? Math.max(...data.map((d) => d.score)) : 0;
-  const minScore = data.length ? Math.min(...data.map((d) => d.score)) : 0;
-  const range = maxScore - minScore || 1;
   const width = 400;
   const height = 200;
   const padding = 40;
@@ -16,7 +14,7 @@ export function PerformanceTrendChart({ data, accuracy }: { data: TrendPoint[]; 
     const x = data.length === 1
       ? width / 2
       : padding + (i / (data.length - 1)) * (width - 2 * padding);
-    const y = height - padding - ((d.score - minScore) / range) * (height - 2 * padding);
+    const y = height - padding - (Math.max(0, Math.min(100, d.score)) / 100) * (height - 2 * padding);
     return { x, y, score: d.score, date: d.date };
   });
 
@@ -25,7 +23,7 @@ export function PerformanceTrendChart({ data, accuracy }: { data: TrendPoint[]; 
     .join(" ");
 
   return (
-    <Card variant="default" padding="md" radius="large" className="border border-border-default">
+    <Card variant="default" padding="none" radius="large" className="border border-border-default p-3 sm:p-4">
       <div className="flex flex-col">
         {/* Chart Labels */}
         <div className="flex justify-between mb-4">
@@ -34,7 +32,7 @@ export function PerformanceTrendChart({ data, accuracy }: { data: TrendPoint[]; 
           <div className="text-[10px] font-bold text-text-body">0%</div>
         </div>
 
-        <div className="relative w-full h-[200px]">
+        <div className="relative h-[160px] w-full">
           {/* Grid lines */}
           <div className="absolute inset-0 flex flex-col justify-between pointer-events-none">
             {[0, 50, 100].map((pct, i) => (
@@ -96,20 +94,20 @@ export function PerformanceTrendChart({ data, accuracy }: { data: TrendPoint[]; 
         </div>
 
         {/* Chart Summary Stats */}
-        <div className="mt-6 grid grid-cols-3 gap-4 border-t border-border-default pt-4">
+        <div className="mt-3 grid grid-cols-3 gap-2 border-t border-border-default pt-3">
           <div className="text-center">
             <div className="text-[10px] text-text-body">Best Score</div>
-            <div className="text-xl font-black text-text-primary">{data.length ? `${maxScore.toFixed(1)}%` : "—"}</div>
+            <div className="text-base font-black text-text-primary">{data.length ? `${maxScore.toFixed(1)}%` : "—"}</div>
           </div>
           <div className="text-center">
             <div className="text-[10px] text-text-body">Improvement</div>
-            <div className={`text-xl font-black ${improvement >= 0 ? "text-state-success" : "text-state-error"}`}>
+            <div className={`text-base font-black ${improvement >= 0 ? "text-state-success" : "text-state-error"}`}>
               {data.length > 1 ? `${improvement > 0 ? "+" : ""}${improvement.toFixed(1)}%` : "—"}
             </div>
           </div>
           <div className="text-center">
             <div className="text-[10px] text-text-body">Accuracy</div>
-            <div className="text-xl font-black text-text-primary">{data.length ? `${accuracy.toFixed(1)}%` : "—"}</div>
+            <div className="text-base font-black text-text-primary">{data.length ? `${accuracy.toFixed(1)}%` : "—"}</div>
           </div>
         </div>
       </div>

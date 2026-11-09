@@ -1,123 +1,199 @@
 "use client";
 
-import { useState } from "react";
-import { Trophy, Lock } from "lucide-react";
+import { useMemo, useState } from "react";
 import Image from "next/image";
-import { Card } from "@/components/ui/Card";
+import Link from "next/link";
+import { ArrowRight, LockKeyhole, Trophy } from "lucide-react";
 import type { DashboardInsights } from "@/types/dashboard";
 
-export function TrophyCard({ trophy }: { trophy: DashboardInsights["badges"][number] }) {
-  const tierNames = ["", "I", "II", "III", "IV", "V"];
-  const tierLabel = tierNames[trophy.tier] || "";
-  const progressPct = Math.min((trophy.progress / Math.max(1, trophy.target)) * 100, 100);
+type Badge = DashboardInsights["badges"][number];
+type BadgeGroup = { category: string; badges: Badge[] };
+
+function BadgeArtwork({ badge, size = 36 }: { badge: Badge; size?: number }) {
+  return badge.asset ? (
+    <Image
+      src={badge.asset}
+      alt=""
+      width={size}
+      height={size}
+      className="h-full w-full object-contain"
+      unoptimized
+    />
+  ) : (
+    <Trophy size={Math.round(size * 0.58)} className="text-amber-500" aria-hidden="true" />
+  );
+}
+
+function BadgeDeck({
+  group,
+  expanded,
+  onClick,
+}: {
+  group: BadgeGroup;
+  expanded: boolean;
+  onClick: () => void;
+}) {
+  const earned = group.badges.filter((badge) => badge.earned).length;
+  const preview = group.badges.slice(0, 3);
 
   return (
-    <Card
-      variant={trophy.earned ? "default" : "subtle"}
-      padding="md"
-      radius="large"
-      className={`
-        relative overflow-hidden group border border-border-default transition-all duration-300
-        ${trophy.earned
-          ? "bg-gradient-to-br from-amber-100 via-yellow-100 to-orange-100"
-          : "bg-white/30 border-white/20 backdrop-blur-sm"
-        }
-      `}
+    <button
+      type="button"
+      onClick={onClick}
+      aria-expanded={expanded}
+      className={`group relative flex h-[112px] w-[108px] shrink-0 flex-col items-center justify-between overflow-hidden rounded-xl border p-2.5 text-center transition hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary ${
+        expanded
+          ? "border-brand-primary bg-brand-primary/5 shadow-sm"
+          : "border-border-default bg-surface-surface"
+      }`}
     >
-      {/* Stacked card effect - 2 cards behind rotated 5deg */}
-      <div className="absolute inset-0 -z-10 bg-current/10 rounded-[16px] transform rotate-[5deg] scale-[1.02] opacity-50 pointer-events-none" />
-      <div className="absolute inset-0 -z-20 bg-current/10 rounded-[16px] transform rotate-[-5deg] scale-[1.04] opacity-30 pointer-events-none" />
+      <span className="relative block h-[58px] w-full">
+        {preview.map((badge, index) => (
+          <span
+            key={badge.id}
+            className={`absolute top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center overflow-hidden rounded-lg border border-border-default bg-surface-surface p-1 shadow-sm ${
+              badge.earned ? "" : "grayscale opacity-60"
+            }`}
+            style={{
+              left: `calc(50% + ${(index - (preview.length - 1) / 2) * 22}px)`,
+              transform: `translate(-50%, -50%) rotate(${(index - (preview.length - 1) / 2) * 9}deg)`,
+              zIndex: preview.length - index,
+            }}
+          >
+            <BadgeArtwork badge={badge} size={34} />
+          </span>
+        ))}
+        {group.badges.length > preview.length && (
+          <span className="absolute right-1 top-0 rounded-full bg-surface-subtle px-1.5 py-0.5 text-[8px] font-bold text-text-body">
+            +{group.badges.length - preview.length}
+          </span>
+        )}
+      </span>
+      <span className="w-full truncate text-[10px] font-extrabold text-text-primary">
+        {group.category}
+      </span>
+      <span className="text-[8px] font-semibold text-text-body">
+        {earned} of {group.badges.length} earned
+      </span>
+    </button>
+  );
+}
 
-      <div className="relative z-10 flex flex-col items-center gap-3">
-        <div className="relative flex h-16 w-16 items-center justify-center rounded-full">
-          {trophy.asset ? (
-            <Image
-              src={trophy.asset}
-              alt={`${trophy.name}${tierLabel ? ` ${tierLabel}` : ""} badge`}
-              width={56}
-              height={56}
-              className={`h-14 w-14 object-contain drop-shadow-md ${trophy.earned ? "" : "grayscale opacity-65"}`}
-            />
-          ) : (
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/40 backdrop-blur-sm">
-              <Trophy size={28} className={trophy.earned ? "text-yellow-500" : "text-slate-400"} />
-            </div>
-          )}
-          {!trophy.earned && (
-            <span className="absolute -right-1 -top-1 flex h-6 w-6 items-center justify-center rounded-full border-2 border-white bg-slate-700 text-white shadow">
-              <Lock size={12} />
-            </span>
-          )}
-        </div>
+function BadgeCard({ badge }: { badge: Badge }) {
+  const progress = badge.target > 0
+    ? Math.min(100, (badge.progress / badge.target) * 100)
+    : 0;
 
-        <div className="text-center">
-          <div className="text-xs font-black text-text-primary">{trophy.name}</div>
-          <div className="text-[10px] font-semibold text-text-body">{tierLabel}</div>
-          {!trophy.earned && <div className="text-[9px] font-bold uppercase tracking-wider text-text-supporting-label">Locked</div>}
-        </div>
-
-        {/* Progress Indicator */}
-        <div className="w-full mt-2">
-          <div className="flex justify-between text-[9px] font-bold text-text-body mb-1">
-            <span>{trophy.progress}</span>
-            <span>/{trophy.target}</span>
-          </div>
-          <div className="h-1.5 rounded-full bg-white/30 overflow-hidden">
-            <div
-              className="h-full rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 transition-all duration-700"
-              style={{ width: `${progressPct}%` }}
-            />
-          </div>
-        </div>
-      </div>
-    </Card>
+  return (
+    <article className="flex min-w-0 items-center gap-2.5 rounded-xl border border-border-default bg-surface-surface p-2.5">
+      <span className={`relative flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-surface-subtle p-1 ${
+        badge.earned ? "" : "grayscale opacity-60"
+      }`}>
+        <BadgeArtwork badge={badge} size={36} />
+        {!badge.earned && (
+          <span className="absolute inset-0 flex items-center justify-center bg-surface-surface/40 text-text-body">
+            <LockKeyhole size={13} aria-label="Locked" />
+          </span>
+        )}
+      </span>
+      <span className="min-w-0 flex-1">
+        <span className="block truncate text-[10px] font-bold text-text-primary">{badge.name}</span>
+        <span className="mt-0.5 block text-[8px] text-text-body">
+          {badge.progress} / {badge.target}
+          {badge.tier > 0 ? ` · Tier ${badge.tier}` : ""}
+        </span>
+        <span className="mt-1 block h-1 overflow-hidden rounded-full bg-surface-subtle">
+          <span
+            className="block h-full rounded-full bg-gradient-to-r from-amber-400 to-orange-500"
+            style={{ width: `${progress}%` }}
+          />
+        </span>
+      </span>
+    </article>
   );
 }
 
 export function TrophyWall({ badges }: { badges: DashboardInsights["badges"] }) {
-  const [category, setCategory] = useState("All");
-
-  const categories = ["All", ...new Set(badges.map((badge) => badge.category))];
-  const filteredTrophies = category === "All" ? badges : badges.filter((badge) => badge.category === category);
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const groups = useMemo(() => {
+    const byCategory = new Map<string, Badge[]>();
+    badges.forEach((badge) => {
+      const current = byCategory.get(badge.category) ?? [];
+      current.push(badge);
+      byCategory.set(badge.category, current);
+    });
+    return Array.from(byCategory, ([category, categoryBadges]) => ({
+      category,
+      badges: categoryBadges,
+    }));
+  }, [badges]);
+  const selectedGroup = groups.find((group) => group.category === selectedCategory);
+  const earnedCount = badges.filter((badge) => badge.earned).length;
 
   return (
-    <section className="w-full">
-      <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-4 mb-5">
-        <div>
-          <div className="flex items-center gap-2 mb-1">
-            <Trophy size={18} className="text-yellow-500" />
-            <h2 className="text-[18px] font-black text-text-primary">Trophy Wall</h2>
+    <section className="w-full rounded-2xl border border-border-default bg-surface-surface p-3 shadow-sm sm:p-4">
+      <div className="mb-3 flex items-center justify-between gap-3">
+        <div className="min-w-0">
+          <div className="flex flex-wrap items-center gap-1.5">
+            <Trophy size={15} className="text-amber-500" />
+            <h2 className="text-[15px] font-black text-text-primary">Trophy Wall</h2>
+            <span className="text-[9px] font-bold text-text-body">
+              {earnedCount} of {badges.length} earned
+            </span>
           </div>
-          <p className="text-[11px] text-text-body">Earn trophies, upgrade titles, and unlock more!</p>
+          <p className="mt-0.5 text-[9px] text-text-body">
+            Each badge variety has its own deck. Select a deck to see every milestone.
+          </p>
         </div>
-        <a href="#" className="text-[11px] font-bold text-brand-purple hover:underline flex items-center gap-1">
-          VIEW ALL TROPHIES →
-        </a>
+        <Link
+          href="/achievements"
+          className="shrink-0 inline-flex items-center gap-1 text-[9px] font-bold text-brand-purple hover:underline"
+        >
+          View all <ArrowRight size={11} />
+        </Link>
       </div>
 
-      {/* Category Tabs */}
-      <div className="flex gap-2 overflow-x-auto pb-2 mb-4 scrollbar-hide">
-        {categories.map((cat) => (
-          <button
-            key={cat}
-            onClick={() => setCategory(cat)}
-            className={`px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-wider transition-all ${
-              category === cat
-                ? "bg-brand-primary text-white shadow-md"
-                : "bg-surface-subtle text-text-body hover:bg-surface-elevated"
-            }`}
-          >
-            {cat}
-          </button>
-        ))}
-      </div>
-
-      {/* Trophy Grid - 3 columns */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        {filteredTrophies.length
-          ? filteredTrophies.map((trophy) => <TrophyCard key={trophy.id} trophy={trophy} />)
-          : <p className="text-sm text-text-body">Your badges will appear here as you complete tests.</p>}
-      </div>
+      {groups.length ? (
+        <>
+          <div className="flex gap-2 overflow-x-auto pb-1">
+            {groups.map((group) => (
+              <BadgeDeck
+                key={group.category}
+                group={group}
+                expanded={selectedCategory === group.category}
+                onClick={() => setSelectedCategory(
+                  selectedCategory === group.category ? null : group.category
+                )}
+              />
+            ))}
+          </div>
+          {selectedGroup && (
+            <div className="mt-3 border-t border-border-default pt-3">
+              <div className="mb-2 flex items-center justify-between gap-2">
+                <h3 className="text-[10px] font-extrabold text-text-primary">
+                  {selectedGroup.category} badges
+                </h3>
+                <button
+                  type="button"
+                  onClick={() => setSelectedCategory(null)}
+                  className="text-[9px] font-semibold text-text-body hover:text-brand-purple"
+                >
+                  Close deck
+                </button>
+              </div>
+              <div className="grid max-h-56 grid-cols-1 gap-2 overflow-y-auto sm:grid-cols-2 xl:grid-cols-3">
+                {selectedGroup.badges.map((badge) => (
+                  <BadgeCard key={badge.id} badge={badge} />
+                ))}
+              </div>
+            </div>
+          )}
+        </>
+      ) : (
+        <p className="py-4 text-center text-xs text-text-body">
+          Your badge decks will appear as you start completing tests.
+        </p>
+      )}
     </section>
   );
 }

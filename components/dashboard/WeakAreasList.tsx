@@ -5,22 +5,22 @@ import { Card } from "@/components/ui/Card";
 
 export function WeakAreasList({ areas }: { areas: WeakArea[] }) {
   return (
-    <Card variant="default" padding="md" radius="large" className="border border-border-default">
+    <Card variant="default" padding="none" radius="large" className="border border-border-default p-3 sm:p-4">
       <div className="flex flex-col">
-        <div className="flex justify-between items-baseline mb-4">
+        <div className="mb-2 flex items-baseline justify-between">
           <div className="flex items-center gap-2">
             <span className="text-[10px] font-bold uppercase tracking-wider text-text-supporting-label">Weak Areas</span>
           </div>
-          <a href="#" className="text-[10px] font-bold text-brand-purple hover:underline flex items-center gap-1">
+          <a href="/tests/weak-areas" className="text-[10px] font-bold text-brand-purple hover:underline flex items-center gap-1">
             View All →
           </a>
         </div>
 
         <div className="space-y-2">
-          {areas.length ? areas.map((area) => (
+          {areas.length ? areas.slice(0, 5).map((area) => (
             <div
               key={area.topic}
-              className="flex items-center justify-between p-3 rounded-xl border border-surface-subtle bg-white/30"
+              className="flex items-center justify-between gap-2 rounded-lg border border-surface-subtle bg-white/30 px-2.5 py-2"
             >
               <div className="flex items-center gap-2">
                 <span
@@ -28,7 +28,7 @@ export function WeakAreasList({ areas }: { areas: WeakArea[] }) {
                     area.flagged ? "bg-state-error" : "bg-state-warning"
                   }`}
                 />
-                <span className="text-sm font-medium text-text-primary">{area.topic}</span>
+                <span className="text-[9px] font-medium text-text-primary">{area.topic}</span>
               </div>
               <span className="text-[10px] font-bold text-state-error">{area.accuracy?.toFixed(0) ?? "—"}% accuracy</span>
             </div>

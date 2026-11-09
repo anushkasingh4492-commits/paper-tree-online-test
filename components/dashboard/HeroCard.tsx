@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowRight, Flame, Trophy, TrendingUp, Info, Zap } from "lucide-react";
+import Link from "next/link";
 import type { DashboardInsights, DashboardPayload } from "@/types/dashboard";
 
 const INDIA_DATE_FORMATTER = new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Kolkata" });
@@ -40,30 +41,29 @@ export function HeroCard({
 
   return (
     <section className="w-full">
-      <div className="relative w-full rounded-[24px] border border-transparent bg-gradient-to-br from-indigo-900 via-indigo-950 to-navy-900 p-6 text-white overflow-hidden shadow-xl">
-        <div className="absolute top-0 right-0 -mb-6 -mr-6 w-64 h-64 bg-purple-500/20 rounded-full blur-[120px] pointer-events-none" />
-        <div className="relative z-10 flex flex-col lg:flex-row lg:items-start gap-6">
-          <div className="flex-1 space-y-4">
+      <div className="relative w-full overflow-hidden rounded-[20px] border border-indigo-800/40 bg-gradient-to-br from-indigo-900 via-indigo-950 to-[#111942] p-4 text-white shadow-lg sm:p-5">
+        <div className="pointer-events-none absolute -right-10 -top-20 h-56 w-56 rounded-full bg-purple-500/20 blur-[90px]" />
+        <div className="relative z-10 grid gap-5 lg:grid-cols-[minmax(0,1.65fr)_minmax(230px,.8fr)] lg:items-center">
+          <div className="min-w-0 space-y-3">
             <div className="flex justify-between items-start">
               <div>
-                <div className="text-[11px] uppercase tracking-widest text-indigo-300 font-semibold mb-1">PLAYER PROGRESS</div>
-                <div className="flex flex-wrap items-baseline gap-2">
-                  <span className="text-5xl font-black tracking-tight">Level {insights.level}</span>
-                  <span className="text-3xl font-black tracking-tight">{insights.levelName}</span>
+                <div className="mb-1 text-[9px] font-bold uppercase tracking-[.16em] text-indigo-300">Player progress</div>
+                <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                  <span className="text-4xl font-black tracking-tight sm:text-[42px]">Level {insights.level}</span>
+                  <span className="text-lg font-extrabold tracking-tight text-indigo-100 sm:text-xl">{insights.levelName}</span>
                 </div>
               </div>
-              <a href="/achievements" className="flex items-center gap-1.5 rounded-lg bg-indigo-800/50 px-3 py-1.5 text-[10px] font-bold text-indigo-200 hover:bg-indigo-800/80 transition">
-                <ArrowRight size={14} className="text-indigo-300" />
-                <span>VIEW ACHIEVEMENTS</span>
-              </a>
+              <Link href="/achievements" className="hidden items-center gap-1 rounded-full bg-indigo-800/60 px-3 py-1.5 text-[9px] font-bold text-indigo-100 transition hover:bg-indigo-700/80 sm:flex">
+                Tap to view level <ArrowRight size={12} />
+              </Link>
             </div>
 
-            <div className="space-y-2">
-              <div className="flex justify-between text-[10px] font-bold text-indigo-300 uppercase tracking-wider">
-                <span>LEVEL PROGRESS</span>
+            <div className="space-y-1.5">
+              <div className="flex justify-between gap-3 text-[9px] font-bold uppercase tracking-wider text-indigo-300">
+                <span>Level progress</span>
                 <span>{testsRemaining ? `${testsRemaining} more tests to go` : "Max level reached"}</span>
               </div>
-              <div className="w-full h-3 rounded-full bg-indigo-600/30 overflow-hidden border border-white/10">
+              <div className="h-2 w-full overflow-hidden rounded-full border border-white/10 bg-indigo-600/30">
                 <div
                   className="h-full bg-gradient-to-r from-indigo-400 to-purple-400 transition-all duration-1000 ease-out"
                   style={{ width: `${insights.levelProgress}%` }}
@@ -71,46 +71,42 @@ export function HeroCard({
               </div>
             </div>
 
-            <div className="flex flex-wrap items-center gap-5 border-t border-white/10 pt-4">
+            <div className="flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-white/10 pt-3">
               <div className="flex items-center gap-2">
-                <div className="w-7 h-7 rounded-full bg-indigo-500/20 flex items-center justify-center text-indigo-300"><Zap size={16} /></div>
-                <div><div className="text-xs font-bold text-white">{insights.points} XP</div><div className="text-[10px] text-indigo-300/70">Experience points</div></div>
+                <div className="flex h-7 w-7 items-center justify-center rounded-full bg-indigo-500/20 text-indigo-300"><Zap size={15} /></div>
+                <div><div className="text-[11px] font-bold text-white">{insights.points} XP</div><div className="text-[9px] text-indigo-300/70">Experience points</div></div>
               </div>
               <div className="flex items-center gap-2">
-                <div className="w-7 h-7 rounded-full bg-yellow-400/20 flex items-center justify-center text-yellow-300"><Trophy size={16} /></div>
-                <div><div className="text-xs font-bold text-white">{earnedBadges} Badges</div><div className="text-[10px] text-indigo-300/70">Badges earned</div></div>
+                <div className="flex h-7 w-7 items-center justify-center rounded-full bg-yellow-400/20 text-yellow-300"><Trophy size={15} /></div>
+                <div><div className="text-[11px] font-bold text-white">{earnedBadges} Badges</div><div className="text-[9px] text-indigo-300/70">Badges earned</div></div>
               </div>
               <div className="flex items-center gap-2">
-                <div className="w-7 h-7 rounded-full bg-green-400/20 flex items-center justify-center text-green-300"><TrendingUp size={16} /></div>
-                <div><div className="text-xs font-bold text-white">{dashboard.statistics.testsTaken ? `${dashboard.statistics.averageScore.toFixed(1)}%` : "—"} avg.</div><div className="text-[10px] text-indigo-300/70">Average score</div></div>
+                <div className="flex h-7 w-7 items-center justify-center rounded-full bg-green-400/20 text-green-300"><TrendingUp size={15} /></div>
+                <div><div className="text-[11px] font-bold text-white">{dashboard.statistics.testsTaken ? `${dashboard.statistics.averageScore.toFixed(1)}%` : "—"} avg.</div><div className="text-[9px] text-indigo-300/70">Average score</div></div>
               </div>
-              <div className="ml-auto p-1.5 rounded-full bg-indigo-600/20 text-indigo-300" title={`${insights.testsCompleted} completed tests`}>
+              <div className="ml-auto hidden rounded-full bg-indigo-600/20 p-1.5 text-indigo-300 sm:block" title={`${insights.testsCompleted} completed tests`}>
                 <Info size={16} />
               </div>
             </div>
           </div>
 
-          <div className="flex-1 lg:w-[300px] space-y-4">
-            <div>
-              <div className="text-[11px] uppercase tracking-widest text-indigo-300 font-semibold mb-1">DAY STREAK</div>
-              <div className="flex items-baseline gap-2">
-                <span className="text-4xl font-black tracking-tight">{insights.streak}</span>
-                <span className="text-xs font-bold text-white">Streak Days</span>
+          <div className="min-w-0 space-y-2.5 border-t border-white/10 pt-3 lg:border-l lg:border-t-0 lg:pl-5 lg:pt-0">
+            <div className="flex items-center justify-between">
+              <div>
+                <div className="mb-0.5 text-[9px] font-bold uppercase tracking-[.16em] text-indigo-300">Day streak</div>
+                <div className="flex items-baseline gap-2">
+                  <span className="text-3xl font-black tracking-tight">{insights.streak}</span>
+                  <span className="text-[10px] font-bold text-white">Streak days</span>
+                </div>
               </div>
-            </div>
-
-            <div className="relative h-36 rounded-2xl overflow-hidden border border-white/10 bg-gradient-to-br from-indigo-800 to-navy-900">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <Flame size={60} className={insights.streak ? "text-orange-400" : "text-indigo-400"} />
-                {Boolean(insights.streak) && <div className="absolute inset-0 bg-orange-500/20 rounded-full blur-xl animate-pulse" />}
-              </div>
+              <Flame size={38} className={insights.streak ? "text-orange-400" : "text-indigo-400"} />
             </div>
 
             <div className="grid grid-cols-7 gap-1.5">
               {days.map((day) => (
                 <div
                   key={day.dateKey}
-                  className={`flex flex-col items-center gap-1 p-1.5 rounded-lg ${
+                  className={`flex flex-col items-center gap-1 rounded-lg p-1 ${
                     day.active
                       ? "bg-green-500/10 border border-green-500/30"
                       : day.isFuture

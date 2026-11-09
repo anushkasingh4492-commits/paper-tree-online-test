@@ -398,6 +398,24 @@ body {
 .student-dashboard-dark .bg-gradient-to-br {
   color: #fff !important;
 }
+.student-dashboard-dark [class~="bg-red-50"] {
+  background-color: rgb(127 29 29 / 0.22) !important;
+}
+.student-dashboard-dark [class~="bg-amber-50"] {
+  background-color: rgb(120 53 15 / 0.24) !important;
+}
+.student-dashboard-dark [class~="bg-green-50"] {
+  background-color: rgb(20 83 45 / 0.24) !important;
+}
+.student-dashboard-dark [class*="text-red-600"] {
+  color: #fca5a5 !important;
+}
+.student-dashboard-dark [class*="text-amber-600"] {
+  color: #fcd34d !important;
+}
+.student-dashboard-dark [class*="text-green-600"] {
+  color: #86efac !important;
+}
 
 .student-dashboard-dark > button[aria-label] {
   background-color: #253047 !important;

@@ -339,6 +339,7 @@ export type DashboardInsights = {
     progress: number;
     target: number;
     detail: string;
+    subject?: string | null;
   }>;
 };
 

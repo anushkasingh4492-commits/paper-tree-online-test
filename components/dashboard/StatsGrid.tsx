@@ -18,21 +18,23 @@ export function StatCard({ card }: { card: MetricCard }) {
     card.trendDirection === "up" ? "text-state-success" : card.trendDirection === "down" ? "text-state-error" : "text-text-body";
 
   return (
-    <Card variant="default" padding="sm" radius="standard" className="border border-border-default">
-      <div className="flex items-center gap-2 mb-2">
-        <IconComp />
-        <span className="text-[10px] font-bold uppercase tracking-wider text-text-supporting-label">{card.label}</span>
+    <Card variant="default" padding="none" radius="large" className="min-h-[82px] border border-border-default p-3 shadow-sm">
+      <div className="mb-1.5 flex items-center justify-between gap-2">
+        <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-brand-subtle-lavender/60">
+          <IconComp />
+        </span>
+        <span className="min-w-0 text-right text-[9px] font-extrabold uppercase tracking-wider text-text-supporting-label">{card.label}</span>
       </div>
-      <div className="text-2xl font-black text-text-primary">{card.value}</div>
-      {card.trend && <div className={`flex items-center gap-1 mt-1 text-[10px] font-semibold ${trendColor}`}>{card.trend}</div>}
-      {card.subtitle && <div className="mt-1 text-[10px] text-text-body">{card.subtitle}</div>}
+      <div className="truncate text-xl font-black leading-none text-text-primary">{card.value}</div>
+      {card.trend && <div className={`mt-1 flex items-center gap-1 text-[9px] font-semibold ${trendColor}`}>{card.trend}</div>}
+      {card.subtitle && <div className="mt-1 text-[9px] leading-3 text-text-body">{card.subtitle}</div>}
     </Card>
   );
 }
 
 export function StatsGrid({ cards }: { cards: MetricCard[] }) {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+    <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-5">
       {cards.map((card) => <StatCard key={card.label} card={card} />)}
     </div>
   );
@@ -72,17 +74,21 @@ export function BatchRankingCard({
   const members = students.slice(0, 3);
 
   return (
-    <Card variant="default" padding="md" radius="large" className="border border-border-default">
-      <div className="flex flex-col lg:flex-row lg:items-start gap-6">
-        <div className="flex-1 space-y-3">
-          <div className="flex items-start gap-3">
-            <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center shadow-lg">
-              <Trophy size={24} className="text-white" />
+    <Card variant="default" padding="none" radius="large" className="border border-border-default p-3 shadow-sm sm:p-4">
+      <div className="mb-3 border-b border-border-default pb-2">
+        <h2 className="text-[13px] font-black text-text-primary">Your Batch</h2>
+        <p className="mt-0.5 text-[10px] text-text-body">{batch?.name ?? "Batch ranking and activity"}</p>
+      </div>
+      <div className="flex flex-col gap-3 lg:flex-row lg:items-start">
+        <div className="min-w-0 flex-1 space-y-2">
+          <div className="flex items-start gap-2.5">
+            <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 shadow-md">
+              <Trophy size={21} className="text-white" />
             </div>
             <div>
               <div className="text-xs font-bold uppercase tracking-wider text-text-supporting-label">{batch?.name ?? "Your Batch"}</div>
-              <div className="text-4xl font-black text-text-primary">{currentStudent ? `#${currentStudent.rank}` : "—"}</div>
-              <div className="text-[11px] font-semibold text-brand-purple">
+              <div className="text-3xl font-black text-text-primary">{currentStudent ? `#${currentStudent.rank}` : "—"}</div>
+              <div className="text-[10px] font-semibold text-brand-purple">
                 {currentStudent ? `Rank ${currentStudent.rank} of ${batch?.size ?? students.length}` : "No batch ranking available"}
               </div>
               <div className="mt-1 text-[10px] text-text-body">{batch?.courseName || "Batch performance"}</div>
@@ -90,9 +96,9 @@ export function BatchRankingCard({
           </div>
         </div>
 
-        <div className="lg:w-[220px] flex flex-col items-center gap-3">
-          <div className="text-[10px] font-bold uppercase tracking-wider text-text-supporting-label mb-1">TESTS THIS WEEK</div>
-          <div className="w-full h-24 flex items-end justify-between gap-1 px-2">
+        <div className="flex flex-col items-center gap-2 lg:w-[220px]">
+          <div className="mb-1 text-[9px] font-bold uppercase tracking-wider text-text-supporting-label">Tests this week</div>
+          <div className="flex h-20 w-full items-end justify-between gap-1 px-2">
             {weekCounts.map((count, index) => (
               <div key={index} className="flex h-full flex-1 flex-col items-center justify-end gap-1">
                 <div
@@ -104,7 +110,7 @@ export function BatchRankingCard({
               </div>
             ))}
           </div>
-          <div className="w-full grid grid-cols-3 gap-2 mt-2">
+          <div className="mt-1 grid w-full grid-cols-3 gap-2">
             <div className="text-center"><div className="text-xs font-black text-text-primary">{statistics.studyTime}</div><div className="text-[9px] text-text-body">Study time</div></div>
             <div className="text-center"><div className="text-xs font-black text-text-primary">{currentStudent?.testsTaken ? `${currentStudent.average.toFixed(1)}%` : "—"}</div><div className="text-[9px] text-text-body">Batch average</div></div>
             <div className="text-center">
@@ -116,9 +122,9 @@ export function BatchRankingCard({
           </div>
         </div>
 
-        <div className="flex-1 lg:w-[260px] space-y-2">
-          <div className="flex justify-between items-center mb-2">
-            <div className="text-[10px] font-bold uppercase tracking-wider text-text-supporting-label">Top Batch Members</div>
+        <div className="min-w-0 flex-1 space-y-2 lg:w-[260px]">
+          <div className="mb-2 flex items-center justify-between">
+            <div className="text-[9px] font-bold uppercase tracking-wider text-text-supporting-label">Top batch members</div>
             <a href="/student/batch-leaderboard" className="flex items-center gap-1 text-[10px] font-bold text-brand-purple hover:underline transition">View Scoreboard →</a>
           </div>
           {members.length ? (

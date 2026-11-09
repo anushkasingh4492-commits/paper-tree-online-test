@@ -30,30 +30,30 @@ export function TopNavbar({
   return (
     <header
       className={`
-        sticky top-0 z-40 flex items-center justify-between gap-4 px-5 py-4
-        border-b border-border-default bg-surface-surface/95 backdrop-blur-md
+      sticky top-0 z-40 flex items-center justify-between gap-2 px-3 py-3 sm:gap-4 sm:px-5 sm:py-4
+      border-b border-border-default bg-surface-surface/95 shadow-sm backdrop-blur-md
         ${className}
       `}
     >
       {/* Left: Logo + Welcome */}
-      <div className="flex items-center gap-4">
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-[10px] bg-brand-primary text-white flex items-center justify-center font-black text-sm shadow-sm">
+      <div className="flex min-w-0 items-center gap-2 sm:gap-4">
+      <div className="flex shrink-0 items-center gap-2">
+        <div className="flex h-8 w-8 items-center justify-center rounded-[10px] bg-brand-primary text-sm font-black text-white shadow-sm">
             IC
           </div>
-          <div className="text-[12px] font-extrabold text-text-primary">Infinity Classes</div>
+        <div className="hidden text-[12px] font-extrabold text-text-primary md:block">Infinity Classes</div>
         </div>
 
-        <div className="hidden sm:flex flex-col">
-          <h1 className="text-[17px] font-black text-text-primary leading-tight">
+      <div className="flex min-w-0 flex-col">
+        <h1 className="truncate text-[12px] font-black leading-tight text-text-primary sm:text-[17px]">
             Welcome back, {student.firstName}
           </h1>
-          <p className="text-[11px] text-text-body">Here&apos;s your performance overview and next steps.</p>
+        <p className="hidden text-[11px] text-text-body sm:block">Here&apos;s your performance overview and next steps.</p>
         </div>
       </div>
 
       {/* Center: Course Selector */}
-      <div className="flex items-center gap-2">
+      <div className="hidden items-center gap-2 md:flex">
         <button
           onClick={() => setCourseOpen(!courseOpen)}
           className="flex items-center gap-2 rounded-xl border border-border-default bg-surface-subtle px-3 py-2 text-[12px] font-bold text-text-primary hover:bg-surface-elevated transition"
@@ -64,11 +64,11 @@ export function TopNavbar({
       </div>
 
       {/* Right: Profile, Notifications, Dark Mode */}
-      <div className="flex items-center gap-3">
+      <div className="flex shrink-0 items-center gap-1 sm:gap-3">
         {/* Profile Dropdown */}
         <button
           onClick={() => setProfileOpen(!profileOpen)}
-          className="flex items-center gap-2 rounded-full border border-border-default bg-surface-subtle px-3 py-1.5 text-[11px] font-medium text-text-secondary hover:bg-surface-elevated transition"
+          className="flex items-center gap-2 rounded-full border border-border-default bg-surface-subtle px-2 py-1 sm:px-3 sm:py-1.5 text-[11px] font-medium text-text-secondary hover:bg-surface-elevated transition"
         >
           <StudentAvatar avatarKey={student.avatarKey} name={student.firstName} size={28} />
           <span className="hidden sm:inline">{student.firstName}{student.lastName ? ` ${student.lastName[0]}.` : ""}</span>
