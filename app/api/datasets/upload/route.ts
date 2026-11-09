@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import crypto from "crypto";
-import XLSX from "xlsx";
+import * as XLSX from "xlsx";
 import { parseSessionCookie } from "@/lib/session";
 import { pool } from "@/lib/db";
 
