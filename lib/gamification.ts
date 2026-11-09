@@ -510,6 +510,7 @@ export async function getStudentGamification(studentId: string, academyId: strin
     averagePercentage: Number(average.toFixed(1)),
     streak,
     maxStreak,
+    activityDays: [...new Set(allTestDays)].sort(),
     lastActiveDate,
     points: xp,
     level: currentLevel.level,

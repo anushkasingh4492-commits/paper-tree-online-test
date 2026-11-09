@@ -41,6 +41,14 @@ export async function GET() {
       });
     }
 
+    const assignedTestsResult = await pool.query(
+      `SELECT COUNT(*)::int AS total
+       FROM scheduled_tests
+       WHERE batch_id = $1`,
+      [batch.id]
+    );
+    const assignedTestCount = Number(assignedTestsResult.rows[0]?.total ?? 0);
+
     // Keep this leaderboard consistent with the batch-rank metric shown on
     // the student dashboard: average percentage across completed attempts.
     const result = await pool.query(
@@ -78,6 +86,12 @@ export async function GET() {
                THEN (ta.score::numeric / ta.total_marks::numeric) * 100
              END
            ), 0) AS avg_pct,
+           COALESCE(MAX(CASE
+             WHEN LOWER(REPLACE(COALESCE(ta.status, ''), '-', '_'))
+                  IN ('submitted', 'auto_submitted', 'auto submitted', 'completed', 'complete')
+               AND COALESCE(ta.total_marks, 0) > 0
+             THEN (ta.score::numeric / ta.total_marks::numeric) * 100
+           END), 0) AS best_pct,
            COUNT(CASE
              WHEN LOWER(REPLACE(COALESCE(ta.status, ''), '-', '_'))
                   IN ('submitted', 'auto_submitted', 'auto submitted', 'completed', 'complete')
@@ -148,7 +162,11 @@ export async function GET() {
       name: String(row.name),
       avatarKey: row.avatar_key == null ? null : String(row.avatar_key),
       average: Number(Number(row.avg_pct ?? 0).toFixed(1)),
+      bestScore: Number(Number(row.best_pct ?? 0).toFixed(1)),
       testsTaken: Number(row.tests_taken ?? 0),
+      completionPercent: assignedTestCount > 0
+        ? Math.min(100, Number(((Number(row.tests_taken ?? 0) / assignedTestCount) * 100).toFixed(1)))
+        : null,
       questionsSeen: Number(row.questions_seen ?? 0),
       rank: Number(row.rank ?? 0),
       isCurrent: String(row.student_id) === studentId,
@@ -163,6 +181,7 @@ export async function GET() {
         name: String(batch.name),
         courseName: batch.course_name == null ? null : String(batch.course_name),
         size: students.length,
+        assignedTestCount,
       },
       students,
       currentStudent: current,
