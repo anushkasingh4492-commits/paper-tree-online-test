@@ -76,15 +76,50 @@ export function TopNavbar({
         </button>
 
         {/* Notifications */}
-        <button
-          onClick={() => setNotificationsOpen(!notificationsOpen)}
-          className="relative p-2 rounded-lg text-text-secondary hover:text-brand-purple hover:bg-surface-subtle transition"
-        >
-          <Icon name="bell" size={20} />
-          {unreadNotifications > 0 && (
-            <span className="absolute top-1 right-1 h-2 w-2 rounded-full bg-state-error border-2 border-surface-surface" />
+        <div className="relative">
+          <button
+            onClick={() => setNotificationsOpen(!notificationsOpen)}
+            className="relative p-2 rounded-lg text-text-secondary hover:text-brand-purple hover:bg-surface-subtle transition"
+          >
+            <Icon name="bell" size={20} />
+            {unreadNotifications > 0 && (
+              <span className="absolute top-1 right-1 h-2 w-2 rounded-full bg-state-error border-2 border-surface-surface" />
+            )}
+          </button>
+
+          {notificationsOpen && (
+            <div className="absolute right-0 mt-2 w-64 rounded-xl border border-border-default bg-surface-surface shadow-lg z-50">
+              <div className="p-3 border-b border-border-default">
+                <h3 className="text-[11px] font-black text-text-primary">Notifications</h3>
+              </div>
+              <div className="p-2 space-y-1">
+                {unreadNotifications > 0 ? (
+                  <div className="flex items-start gap-2 p-2 rounded-lg bg-amber-50 border border-amber-100">
+                    <div className="w-6 h-6 rounded-full flex items-center justify-center bg-amber-100 text-amber-700 text-[9px] font-bold">
+                      !
+                    </div>
+                    <div className="min-w-0">
+                      <div className="text-[10px] font-bold text-text-primary">You have {unreadNotifications} unread notification</div>
+                      <div className="text-[9px] text-text-body mt-0.5">Check your dashboard for updates.</div>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="flex items-center justify-center py-4">
+                    <span className="text-[10px] text-text-body">No new notifications</span>
+                  </div>
+                )}
+              </div>
+              <div className="border-t border-border-default p-2">
+                <button
+                  onClick={() => setNotificationsOpen(false)}
+                  className="w-full flex items-center justify-center gap-1 px-2 py-1.5 rounded-lg text-[10px] font-bold text-brand-purple hover:bg-surface-subtle transition"
+                >
+                  Mark all as read
+                </button>
+              </div>
+            </div>
           )}
-        </button>
+        </div>
 
         {/* Dark Mode Toggle */}
         <button

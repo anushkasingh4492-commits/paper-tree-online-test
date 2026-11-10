@@ -133,7 +133,8 @@ export function TrophyWall({ badges }: { badges: DashboardInsights["badges"] }) 
   return (
     <section className="w-full rounded-2xl border border-border-default bg-surface-surface p-3 shadow-sm sm:p-4">
       <div className="mb-3 flex items-center justify-between gap-3">
-        <div className="min-w-0">
+        <div className="min-w-0 flex items-center gap-2">
+          <Image src="/images/dashboard/trophy-medals.svg" alt="Trophy medals" width={40} height={28} className="shrink-0" unoptimized />
           <div className="flex flex-wrap items-center gap-1.5">
             <Trophy size={15} className="text-amber-500" />
             <h2 className="text-[15px] font-black text-text-primary">Trophy Wall</h2>

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { AlertTriangle, Clock, CheckCircle2 } from "lucide-react";
 import { Card } from "@/components/ui/Card";
 import { Icon } from "@/components/Icon";
@@ -92,12 +93,15 @@ export function QuestionOverview({
 
   return (
     <section className="w-full space-y-4">
-      <div className="flex justify-between items-start">
-        <div>
+      <div className="relative flex justify-between items-end gap-4 mb-2">
+        <div className="flex-1 min-w-0">
           <h2 className="text-[18px] font-black text-text-primary">Question Overview</h2>
           <p className="text-[11px] text-text-body">
             {statistics.totalAttempted} of {statistics.totalQuestions} questions attempted across your tests.
           </p>
+        </div>
+        <div className="hidden sm:block w-[200px] h-[140px] shrink-0 opacity-80">
+          <Image src="/images/dashboard/mistake-notebook.svg" alt="Mistake notebook" width={200} height={140} unoptimized className="w-full h-full object-contain" />
         </div>
         <a href="/stats" className="text-[11px] font-bold text-brand-purple hover:underline flex items-center gap-1">View Detailed Analysis →</a>
       </div>

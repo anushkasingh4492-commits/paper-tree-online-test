@@ -101,6 +101,21 @@ body.student-dashboard-dark {
 
   /* --- CTA (dark) --- */
   --cta-secondary-dark-default: #303B5C;
+
+  /* --- Text selection (dark) --- */
+  --selection-bg: #6846D9;
+  --selection-text: #FFFFFF;
+}
+
+body.student-theme-dark::selection,
+body.student-dashboard-dark::selection {
+  background: #6846D9;
+  color: #FFFFFF;
+}
+
+body::selection {
+  background: #2455C8;
+  color: #FFFFFF;
 }
 
 /* ============================================================

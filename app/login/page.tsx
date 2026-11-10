@@ -135,267 +135,94 @@ export default function Home() {
     }
   }
 
-  const instituteName = branding?.name || "Paper Tree Educational Studio";
+  const brandName = branding?.name || "Paper Tree";
 
   return (
     <main className="min-h-screen bg-surface-app-bg text-text-primary">
-      <div className="flex min-h-screen">
+      <div className="flex min-h-screen w-full">
 
-        {/* ========================================================= */}
-        {/* LEFT BRAND / CBT PANEL                                   */}
-        {/* ========================================================= */}
+        {/* LEFT BRAND PANEL */}
+        <section className="hidden lg:flex lg:w-[52%] bg-brand-primary relative overflow-hidden">
 
-        <section className="relative hidden min-h-screen overflow-hidden bg-brand-deep-navy lg:flex lg:w-[52%]">
+          <div className="absolute -right-32 -top-32 h-[500px] w-[500px] rounded-full border-[70px] border-white/[0.06]" />
+          <div className="absolute -bottom-40 -left-20 h-[420px] w-[420px] rounded-full bg-white/[0.05]" />
+          <div className="absolute top-1/4 left-1/5 h-[320px] w-[320px] bg-purple-500/20 blur-[100px] rounded-full" />
 
-          {/* Background decoration */}
-
-          <div className="absolute -right-40 -top-40 h-[620px] w-[620px] rounded-full border-[90px] border-white/[0.045]" />
-
-          <div className="absolute right-20 top-40 h-[300px] w-[300px] rounded-full border-[45px] border-white/[0.035]" />
-
-          <div className="absolute -bottom-48 -left-32 h-[560px] w-[560px] rounded-full bg-white/[0.035]" />
-
-          <div className="relative z-10 flex w-full flex-col justify-between p-14">
-
-            {/* ===================================================== */}
-            {/* INSTITUTE BRAND                                      */}
-            {/* ===================================================== */}
+          <div className="relative flex w-full flex-col justify-between p-14">
 
             <div className="flex items-center gap-3">
-
-              {branding?.logo_data ? (
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-[14px] bg-white p-1.5 shadow-lg">
-                  <img
-                    src={branding.logo_data}
-                    alt={`${instituteName} logo`}
-                    className="h-full w-full rounded-lg object-contain"
-                  />
-                </div>
-              ) : (
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-[14px] bg-brand-primary text-xl font-extrabold text-white shadow-lg">
-                  {instituteName
-                    .charAt(0)
-                    .toUpperCase()}
-                </div>
-              )}
-
-              <div>
-                <p className="text-[18px] font-extrabold tracking-tight text-white">
-                  {instituteName}
-                </p>
-
-                <p className="text-[9px] font-bold tracking-[0.22em] text-white/90">
-                  COMPUTER BASED TESTING
-                </p>
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white text-2xl font-black text-brand-primary shadow-lg">
+                P
               </div>
-
-            </div>
-
-            {/* ===================================================== */}
-            {/* MAIN CONTENT                                         */}
-            {/* ===================================================== */}
-
-            <div className="relative max-w-[590px]">
-
-              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-white/80 backdrop-blur">
-                <span className="h-1.5 w-1.5 rounded-full bg-brand-yellow" />
-                Computer Based Testing
-              </div>
-
-              <h1 className="text-[50px] font-extrabold leading-[1.07] tracking-[-0.045em] text-white xl:text-[58px]">
-                Test smarter.
-                <br />
-                <span className="text-white/90">
-                  Perform better.
-                </span>
-              </h1>
-
-              <p className="mt-7 max-w-[510px] text-[15px] leading-7 text-white/90">
-                A secure and modern computer-based testing
-                platform for online examinations, practice
-                tests and assessments.
-              </p>
-
-              {/* CBT FEATURES */}
-
-              <div className="mt-9 grid max-w-[470px] grid-cols-2 gap-3">
-
-                <div className="rounded-xl border border-white/10 bg-white/[0.12] px-4 py-3.5 backdrop-blur">
-                  <div className="mb-2 flex h-7 w-7 items-center justify-center rounded-lg bg-white/[0.12] text-sm text-white">
-                    <Icon name="check" size={16} color="text-white" variant="solid" />
-                  </div>
-
-                  <p className="text-xs font-bold text-white">
-                    Secure Exams
-                  </p>
-
-                  <p className="mt-1 text-[10px] text-white/70">
-                    Reliable online testing
-                  </p>
+              <div className="text-white">
+                <div className="font-extrabold text-[20px] tracking-tight">
+                  {brandName}
                 </div>
-
-                <div className="rounded-xl border border-white/10 bg-white/[0.12] px-4 py-3.5 backdrop-blur">
-                  <div className="mb-2 flex h-7 w-7 items-center justify-center rounded-lg bg-white/[0.12] text-sm text-white">
-                    <Icon name="clock" size={16} color="text-white" />
-                  </div>
-
-                  <p className="text-xs font-bold text-white">
-                    Live Testing
-                  </p>
-
-                  <p className="mt-1 text-[10px] text-white/70">
-                    Timed examinations
-                  </p>
+                <div className="text-indigo-100 text-[11px] font-semibold uppercase tracking-wider mt-0.5">
+                  Educational Studio
                 </div>
-
-                <div className="rounded-xl border border-white/10 bg-white/[0.12] px-4 py-3.5 backdrop-blur">
-                  <div className="mb-2 flex h-7 w-7 items-center justify-center rounded-lg bg-white/[0.12] text-sm text-white">
-                    <Icon name="analytics" size={16} color="text-white" />
-                  </div>
-
-                  <p className="text-xs font-bold text-white">
-                    Instant Results
-                  </p>
-
-                  <p className="mt-1 text-[10px] text-white/70">
-                    Fast performance insights
-                  </p>
-                </div>
-
-                <div className="rounded-xl border border-white/10 bg-white/[0.12] px-4 py-3.5 backdrop-blur">
-                  <div className="mb-2 flex h-7 w-7 items-center justify-center rounded-lg bg-white/[0.12] text-sm text-white">
-                    <Icon name="graduation-cap" size={16} color="text-white" />
-                  </div>
-
-                  <p className="text-xs font-bold text-white">
-                    Smart Assessment
-                  </p>
-
-                  <p className="mt-1 text-[10px] text-white/70">
-                    Structured test experience
-                  </p>
-                </div>
-
               </div>
             </div>
 
-            {/* ===================================================== */}
-            {/* LEFT FOOTER                                          */}
-            {/* ===================================================== */}
+            <div className="relative max-w-[560px] mt-6">
 
-            <div className="flex items-center justify-between text-xs text-text-supporting-label/70">
+              <div className="mb-8">
+                <img
+                  src="/images/login/Stacked Books with Floating Question Tiles.png"
+                  alt="Study materials"
+                  className="w-full h-auto block mx-auto drop-shadow-2xl"
+                  loading="lazy"
+                />
+              </div>
 
-              <span>
-                © {new Date().getFullYear()} Paper Tree Educational Studio
-              </span>
-
-              <span>
-                Computer Based Testing Platform
-              </span>
+              <div className="space-y-3">
+                <h2 className="text-3xl font-extrabold text-white tracking-tight">
+                  Welcome back
+                </h2>
+                <p className="text-indigo-100 text-lg">
+                  Sign in to access your dashboard,<br />
+                  performance insights, and learning tools.
+                </p>
+              </div>
 
             </div>
 
           </div>
+
         </section>
 
-        {/* ========================================================= */}
-        {/* RIGHT LOGIN PANEL                                        */}
-        {/* ========================================================= */}
+        {/* RIGHT FORM PANEL */}
+        <main className="flex-1 w-full min-w-0 bg-surface-app-bg">
 
-        <section className="flex flex-1 items-center justify-center px-6 py-10 sm:px-10">
-
-          <div className="w-full max-w-md">
-
-            {/* ===================================================== */}
-            {/* MOBILE BRAND                                         */}
-            {/* ===================================================== */}
-
-            <div className="mb-10 flex items-center gap-3 lg:hidden">
-
-              {branding?.logo_data ? (
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[13px] bg-white p-1.5 shadow-md">
-                  <img
-                    src={branding.logo_data}
-                    alt={`${instituteName} logo`}
-                    className="h-full w-full rounded-lg object-contain"
-                  />
-                </div>
-              ) : (
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[13px] bg-brand-primary text-lg font-extrabold text-white shadow-md">
-                  {instituteName
-                    .charAt(0)
-                    .toUpperCase()}
-                </div>
-              )}
-
-              <div>
-
-                <p className="text-[17px] font-extrabold text-text-primary">
-                  {instituteName}
-                </p>
-
-                <p className="text-[9px] font-bold tracking-[0.2em] text-text-supporting-label">
-                  COMPUTER BASED TESTING
-                </p>
-
-              </div>
-
-            </div>
-
-            {/* ===================================================== */}
-            {/* LOGIN HEADING                                        */}
-            {/* ===================================================== */}
-
-            <div className="mb-8">
-
-              <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-brand-subtle-lavender px-3 py-1.5">
-
-                <span className="h-1.5 w-1.5 rounded-full bg-brand-primary" />
-
-                <span className="text-[10px] font-bold uppercase tracking-[0.12em] text-brand-primary">
-                  Computer Based Testing
-                </span>
-
-              </div>
-
-              <h2 className="mt-2 text-[31px] font-extrabold tracking-[-0.04em] text-text-primary">
-                Welcome back
-              </h2>
-
-              <p className="mt-2 text-sm leading-6 text-text-body">
-                Sign in to access your testing dashboard.
-              </p>
-
-            </div>
-
-            {/* ===================================================== */}
-            {/* LOGIN FORM                                           */}
-            {/* ===================================================== */}
+          <div className="flex items-center justify-center px-6 py-12 lg:py-20">
 
             <form
               onSubmit={handleSubmit}
-              className="rounded-[22px] border border-border-default bg-surface-surface p-6 shadow-[0_15px_45px_rgba(20,30,55,0.06)] sm:p-8"
+              className="w-full max-w-md space-y-6"
             >
 
-              {/* ERROR */}
+              <div className="text-center">
+                <h1 className="text-2xl font-extrabold text-text-primary">
+                  Sign in to CBT
+                </h1>
+                <p className="mt-1 text-text-body">
+                  Enter your credentials below
+                </p>
+              </div>
 
               {error && (
-                <div className="mb-5 rounded-xl border border-state-error/20 bg-state-error/10 px-4 py-3 text-xs font-medium leading-5 text-state-error">
+                <div className="rounded-xl border border-state-error/20 bg-state-error/10 px-4 py-3 text-sm font-medium text-state-error">
                   {error}
                 </div>
               )}
 
-              {/* EMAIL */}
-
-              <div>
-
+              <div className="space-y-2">
                 <label
                   htmlFor="email"
-                  className="mb-2 block text-xs font-bold text-text-tertiary"
+                  className="block text-xs font-bold text-text-tertiary uppercase tracking-wider"
                 >
                   Email address
                 </label>
-
                 <input
                   id="email"
                   type="email"
@@ -409,28 +236,20 @@ export default function Home() {
                   disabled={loading}
                   className="h-12 w-full rounded-xl border border-border-default bg-surface-surface px-4 text-sm text-text-primary outline-none transition placeholder:text-text-supporting-label focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10 disabled:bg-surface-app-bg"
                 />
-
               </div>
 
-              {/* PASSWORD */}
-
-              <div className="mt-5">
-
+              <div className="space-y-2">
                 <div className="mb-2 flex items-center justify-between">
-
                   <label
                     htmlFor="password"
-                    className="block text-xs font-bold text-text-tertiary"
+                    className="block text-xs font-bold text-text-tertiary uppercase tracking-wider"
                   >
                     Password
                   </label>
-
                   <span className="text-[10px] font-medium text-text-body">
                     Secure login
                   </span>
-
                 </div>
-
                 <input
                   id="password"
                   type="password"
@@ -444,15 +263,12 @@ export default function Home() {
                   disabled={loading}
                   className="h-12 w-full rounded-xl border border-border-default bg-surface-surface px-4 text-sm text-text-primary outline-none transition placeholder:text-text-supporting-label focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10 disabled:bg-surface-app-bg"
                 />
-
               </div>
-
-              {/* LOGIN BUTTON */}
 
               <button
                 type="submit"
                 disabled={loading}
-                className="mt-7 flex h-12 w-full items-center justify-center rounded-xl bg-brand-primary text-sm font-bold text-white shadow-[0_8px_20px_rgba(36,85,200,0.18)] transition-all duration-200 hover:bg-brand-action-blue active:bg-brand-deep-navy disabled:cursor-not-allowed disabled:opacity-50"
+                className="mt-2 flex h-12 w-full items-center justify-center rounded-xl bg-brand-primary text-sm font-bold text-white shadow-[0_8px_20px_rgba(36,85,200,0.18)] transition-all duration-200 hover:bg-brand-action-blue active:bg-brand-deep-navy disabled:cursor-not-allowed disabled:opacity-50"
               >
                 {loading
                   ? "Signing in..."
@@ -461,27 +277,29 @@ export default function Home() {
 
             </form>
 
-            {/* ===================================================== */}
-            {/* RIGHT FOOTER                                          */}
-            {/* ===================================================== */}
+            <div className="mt-6">
+              <button
+                type="button"
+                onClick={() => router.push("/master-login")}
+                className="w-full rounded-xl border border-border-default bg-brand-subtle-lavender px-4 py-3 text-sm font-bold text-brand-primary transition-all duration-200 hover:bg-brand-action-blue hover:text-white active:bg-brand-deep-navy active:text-white"
+              >
+                Teacher / Admin Login
+              </button>
+            </div>
 
-            <div className="mt-7 text-center">
-
+            <div className="mt-8 text-center">
               <p className="text-[11px] leading-5 text-text-body">
                 Secure access for students, teachers and
                 administrators.
               </p>
-
               <p className="mt-2 text-[10px] font-medium text-text-disabled">
                 © {new Date().getFullYear()} Paper Tree Educational Studio
               </p>
-
             </div>
 
           </div>
 
-        </section>
-
+        </main>
       </div>
     </main>
   );

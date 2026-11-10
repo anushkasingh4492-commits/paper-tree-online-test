@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { ArrowRight, Flame, Trophy, TrendingUp, Info, Zap } from "lucide-react";
 import Link from "next/link";
 import type { DashboardInsights, DashboardPayload } from "@/types/dashboard";
@@ -91,6 +92,9 @@ export function HeroCard({
           </div>
 
           <div className="min-w-0 space-y-2.5 border-t border-white/10 pt-3 lg:border-l lg:border-t-0 lg:pl-5 lg:pt-0">
+            <div className="relative mb-3">
+              <Image src="/images/dashboard/trophy-cup.svg" alt="Trophy cup" width={140} height={100} className="w-full h-auto object-contain opacity-90" unoptimized />
+            </div>
             <div className="flex items-center justify-between">
               <div>
                 <div className="mb-0.5 text-[9px] font-bold uppercase tracking-[.16em] text-indigo-300">Day streak</div>

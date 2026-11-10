@@ -43,8 +43,9 @@ export function LeftSidebar({
   return (
     <aside
       className={`
-        fixed xl:relative xl:inset-0 xl:top-0 xl:left-0 xl:h-screen xl:w-[220px] xl:border-r xl:border-border-default
-        xl:flex xl:flex-col z-50
+        sticky top-0 z-50 h-screen overflow-y-auto border-r border-border-default
+        xl:w-[220px] xl:border-r xl:border-border-default
+        flex flex-col bg-surface-surface/95 backdrop-blur-sm
         ${className}
       `}
     >

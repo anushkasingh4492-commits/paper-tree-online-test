@@ -2,6 +2,8 @@
 
 import { FormEvent, Suspense, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import { Icon } from "@/components/Icon";
+
 function MasterLoginForm() {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -61,13 +63,13 @@ function MasterLoginForm() {
         );
       }
 
-     if (result.role === "ADMIN") {
-  router.replace("/admin");
-} else if (result.role === "ACADEMY_ADMIN") {
-  router.replace("/academy-admin");
-} else if (result.role === "TEACHER") {
-  router.replace("/teacher");
-}
+      if (result.role === "ADMIN") {
+        router.replace("/admin");
+      } else if (result.role === "ACADEMY_ADMIN") {
+        router.replace("/academy-admin");
+      } else if (result.role === "TEACHER") {
+        router.replace("/teacher");
+      }
     } catch (err) {
       console.error("MASTER LOGIN ERROR:", err);
 
@@ -82,15 +84,28 @@ function MasterLoginForm() {
   }
 
   return (
-    <main className="flex min-h-screen items-center justify-center bg-surface-app-bg px-6">
+    <main className="min-h-screen bg-surface-app-bg text-text-primary flex items-center justify-center px-6">
 
-      <div className="w-full max-w-md">
+      <div className="w-full max-w-md bg-white/50 backdrop-blur-sm rounded-3xl border border-white/20 p-8 shadow-2xl relative overflow-hidden">
+
+        {/* Decorative glow */}
+        <div className="absolute -top-20 -right-20 h-[300px] w-[300px] rounded-full bg-brand-primary/20 blur-[100px]" />
+        <div className="absolute -bottom-10 -left-10 h-[200px] w-[200px] rounded-full bg-purple-500/20 blur-[80px]" />
+
+        {/* Illustration */}
+        <div className="mb-6 relative z-10">
+          <img
+            src="/images/login/Glossy Purple Trophy with Stars.png"
+            alt="Trophy"
+            className="w-24 h-24 mx-auto drop-shadow-lg"
+            loading="lazy"
+          />
+        </div>
 
         {/* BRAND */}
+        <div className="mb-6 text-center relative z-10">
 
-        <div className="mb-8 text-center">
-
-          <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-primary text-2xl font-extrabold text-white">
+          <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-primary text-2xl font-extrabold text-white shadow-lg">
             P
           </div>
 
@@ -105,39 +120,30 @@ function MasterLoginForm() {
         </div>
 
         {/* LOGIN CARD */}
+        <div className="rounded-2xl border border-white/30 bg-white/80 backdrop-blur-md p-6 shadow-xl relative z-10">
 
-        <div className="rounded-3xl border border-border-default bg-white p-8 shadow-sm">
-
-          <div className="mb-7">
+          <div className="mb-6">
 
             <p className="text-xs font-bold uppercase tracking-[0.15em] text-brand-primary">
               {isAdmin ? "ADMIN LOGIN" : isTeacher ? "TEACHER LOGIN" : "STAFF LOGIN"}
             </p>
 
-            <h2 className="mt-2 text-2xl font-extrabold text-text-primary">
-              {isAdmin ? "Welcome, Admin" : isTeacher ? "Welcome, Teacher" : "Welcome"}
+            <h2 className="mt-2 text-xl font-extrabold text-text-primary">
+              Sign in to your portal
             </h2>
-
-            <p className="mt-2 text-sm text-text-tertiary">
-              Sign in to access your{" "}
-              {isAdmin ? "admin" : isTeacher ? "teacher" : "staff"} dashboard.
-            </p>
 
           </div>
 
           <form
             onSubmit={login}
-            className="space-y-5"
+            className="space-y-4"
           >
 
-            {/* EMAIL */}
+            <div className="space-y-2">
 
-            <div>
-
-              <label className="mb-2 block text-sm font-semibold text-text-primary">
+              <label className="mb-1 block text-xs font-semibold text-text-primary">
                 Email
               </label>
-
               <input
                 type="email"
                 value={email}
@@ -148,19 +154,16 @@ function MasterLoginForm() {
                 autoComplete="email"
                 disabled={loading}
                 required
-                className="h-12 w-full rounded-xl border border-border-default px-4 text-sm outline-none transition focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10 disabled:bg-surface-app-bg"
+                className="h-11 w-full rounded-xl border border-border-default bg-white px-4 text-sm outline-none transition focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10 disabled:bg-surface-app-bg"
               />
 
             </div>
 
-            {/* PASSWORD */}
+            <div className="space-y-2">
 
-            <div>
-
-              <label className="mb-2 block text-sm font-semibold text-text-primary">
+              <label className="mb-1 block text-xs font-semibold text-text-primary">
                 Password
               </label>
-
               <input
                 type="password"
                 value={password}
@@ -171,12 +174,10 @@ function MasterLoginForm() {
                 autoComplete="current-password"
                 disabled={loading}
                 required
-                className="h-12 w-full rounded-xl border border-border-default px-4 text-sm outline-none transition focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10 disabled:bg-surface-app-bg"
+                className="h-11 w-full rounded-xl border border-border-default bg-white px-4 text-sm outline-none transition focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10 disabled:bg-surface-app-bg"
               />
 
             </div>
-
-            {/* ERROR */}
 
             {error && (
               <div className="rounded-xl border border-state-error/20 bg-state-error/10 px-4 py-3 text-sm font-medium text-state-error">
@@ -184,29 +185,26 @@ function MasterLoginForm() {
               </div>
             )}
 
-            {/* BUTTON */}
-
             <button
               type="submit"
               disabled={loading}
-              className="w-full rounded-xl bg-brand-primary px-4 py-3 font-bold text-white transition hover:bg-brand-primary disabled:cursor-not-allowed disabled:opacity-60"
+              className="w-full rounded-xl bg-brand-primary px-4 py-3 font-bold text-white transition hover:bg-brand-action-blue disabled:cursor-not-allowed disabled:opacity-60"
             >
               {loading
                 ? "Signing in..."
                 : role ? `Sign in as ${isAdmin ? "Admin" : "Teacher"}` : "Sign in"}
             </button>
             <button
-  type="button"
-  onClick={() => router.push("/change-password")}
-  className="mt-4 w-full rounded-xl border border-border-default bg-white px-4 py-3 text-sm font-bold text-brand-primary transition hover:bg-surface-subtle"
->
-  🔐 Change Password
-</button>
+              type="button"
+              onClick={() => router.push("/change-password")}
+              className="mt-3 w-full rounded-xl border border-border-default bg-white px-4 py-3 text-sm font-bold text-brand-primary transition hover:bg-surface-subtle"
+            >
+              <Icon name="lock" size={14} className="text-brand-primary" /> Change Password
+            </button>
 
           </form>
 
           {/* BACK */}
-
           <button
             type="button"
             onClick={() => router.push("/login")}
@@ -222,6 +220,7 @@ function MasterLoginForm() {
     </main>
   );
 }
+
 export default function MasterLoginPage() {
   return (
     <Suspense
