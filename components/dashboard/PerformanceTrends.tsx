@@ -29,8 +29,8 @@ export function PerformanceTrendsSection({
   accuracy: number;
 }) {
   return (
-    <section className="w-full space-y-3">
-      <div className="flex justify-between items-start">
+    <section className="w-full space-y-4 sm:space-y-5">
+      <div className="flex items-start justify-between gap-3">
         <div>
           <h2 className="text-[15px] font-black text-text-primary">Performance Trend</h2>
           <p className="text-[11px] text-text-body">Track your progress over time.</p>
@@ -40,17 +40,17 @@ export function PerformanceTrendsSection({
         </div>
       </div>
 
-      <div className="grid grid-cols-1 gap-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-3 lg:grid-cols-3 lg:gap-4">
         <div className="lg:col-span-2">
           <PerformanceTrendChart data={trend} accuracy={accuracy} />
         </div>
-        <div className="flex flex-col gap-4 lg:col-span-1">
+        <div className="flex flex-col gap-3 sm:gap-4 lg:col-span-1">
           <ScoreDistributionChart data={distribution} />
           <SubjectPerformanceBars data={subjects} />
         </div>
       </div>
 
-      <div className="grid grid-cols-1 gap-2 lg:grid-cols-2">
+      <div className="grid grid-cols-1 gap-3 lg:grid-cols-2 lg:gap-4">
         <RecentTestsTable tests={recentTests} />
         <WeakAreasList areas={weakAreas} />
       </div>

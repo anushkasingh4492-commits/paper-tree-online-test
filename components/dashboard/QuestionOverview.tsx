@@ -22,7 +22,7 @@ function DonutMetricCard({ metric }: { metric: DonutMetric }) {
   const icon = icons[metric.label === "Unresolved" ? "clock" : metric.label === "Mastered" ? "check" : "alert"];
 
   return (
-    <Card variant="default" padding="none" radius="large" className={`border border-border-default p-3 shadow-sm sm:p-4 ${colors.bg}`}>
+    <Card variant="default" padding="none" radius="large" className={`border border-border-default p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md sm:p-5 ${colors.bg}`}>
       <div className="flex items-center gap-3">
         <div className="w-10 h-10 rounded-full flex items-center justify-center">{icon}</div>
         <div>
@@ -93,20 +93,27 @@ export function QuestionOverview({
 
   return (
     <section className="w-full space-y-4">
-      <div className="relative flex justify-between items-end gap-4 mb-2">
+      <div className="relative mb-2 flex items-end justify-between gap-4">
         <div className="flex-1 min-w-0">
-          <h2 className="text-[18px] font-black text-text-primary">Question Overview</h2>
+          <h2 className="text-xl font-black text-text-primary">Question Overview</h2>
           <p className="text-[11px] text-text-body">
             {statistics.totalAttempted} of {statistics.totalQuestions} questions attempted across your tests.
           </p>
         </div>
-        <div className="hidden sm:block w-[200px] h-[140px] shrink-0 opacity-80">
-          <Image src="/images/dashboard/mistake-notebook.svg" alt="Mistake notebook" width={200} height={140} unoptimized className="w-full h-full object-contain" />
+        <div className="hidden h-[110px] w-[160px] shrink-0 sm:block">
+          <Image
+            src="/images/login/Glossy Neon Checklist Scroll.png"
+            alt=""
+            width={160}
+            height={110}
+            sizes="160px"
+            className="h-full w-full object-contain"
+          />
         </div>
         <a href="/stats" className="text-[11px] font-bold text-brand-purple hover:underline flex items-center gap-1">View Detailed Analysis →</a>
       </div>
 
-      <div className="grid grid-cols-1 gap-2 sm:grid-cols-3">
+      <div className="grid grid-cols-1 gap-3 sm:grid-cols-3 sm:gap-4">
         {donutMetrics.map((metric) => <DonutMetricCard key={metric.label} metric={metric} />)}
       </div>
 

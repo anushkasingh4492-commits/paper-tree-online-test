@@ -123,8 +123,11 @@ export function TopNavbar({
 
         {/* Dark Mode Toggle */}
         <button
+          type="button"
           onClick={() => onDarkModeChange(!darkMode)}
-          className="p-2 rounded-lg text-text-secondary hover:text-brand-purple hover:bg-surface-subtle transition"
+          aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
+          title={darkMode ? "Switch to light mode" : "Switch to dark mode"}
+          className="rounded-lg p-2 text-text-secondary transition hover:bg-surface-subtle hover:text-brand-purple focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary"
         >
           <Icon name={darkMode ? "sun" : "moon"} size={20} />
         </button>

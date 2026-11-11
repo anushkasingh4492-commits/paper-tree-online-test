@@ -99,6 +99,7 @@ function MasterLoginForm() {
             alt="Trophy"
             className="w-24 h-24 mx-auto drop-shadow-lg"
             loading="lazy"
+            decoding="async"
           />
         </div>
 
@@ -188,7 +189,7 @@ function MasterLoginForm() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full rounded-xl bg-brand-primary px-4 py-3 font-bold text-white transition hover:bg-brand-action-blue disabled:cursor-not-allowed disabled:opacity-60"
+              className="w-full rounded-xl bg-brand-primary px-4 py-3 font-bold text-white transition hover:bg-brand-action-blue active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-60"
             >
               {loading
                 ? "Signing in..."
@@ -197,7 +198,7 @@ function MasterLoginForm() {
             <button
               type="button"
               onClick={() => router.push("/change-password")}
-              className="mt-3 w-full rounded-xl border border-border-default bg-white px-4 py-3 text-sm font-bold text-brand-primary transition hover:bg-surface-subtle"
+              className="mt-3 w-full rounded-xl border border-border-default bg-white px-4 py-3 text-sm font-bold text-brand-primary transition hover:bg-surface-subtle flex items-center justify-center gap-2"
             >
               <Icon name="lock" size={14} className="text-brand-primary" /> Change Password
             </button>

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowRight, Flame, Trophy, TrendingUp, Info, Zap } from "lucide-react";
+import { ArrowRight, Trophy, TrendingUp, Info, Zap } from "lucide-react";
 import Link from "next/link";
 import type { DashboardInsights, DashboardPayload } from "@/types/dashboard";
 
@@ -54,6 +54,14 @@ export function HeroCard({
                   <span className="text-lg font-extrabold tracking-tight text-indigo-100 sm:text-xl">{insights.levelName}</span>
                 </div>
               </div>
+              <Image
+                src="/images/login/Level Two Bar Chart with Golden Arrow.png"
+                alt=""
+                width={92}
+                height={76}
+                sizes="92px"
+                className="mr-2 h-[68px] w-[82px] shrink-0 object-contain sm:h-[76px] sm:w-[92px]"
+              />
               <Link href="/achievements" className="hidden items-center gap-1 rounded-full bg-indigo-800/60 px-3 py-1.5 text-[9px] font-bold text-indigo-100 transition hover:bg-indigo-700/80 sm:flex">
                 Tap to view level <ArrowRight size={12} />
               </Link>
@@ -92,18 +100,45 @@ export function HeroCard({
           </div>
 
           <div className="min-w-0 space-y-2.5 border-t border-white/10 pt-3 lg:border-l lg:border-t-0 lg:pl-5 lg:pt-0">
-            <div className="relative mb-3">
-              <Image src="/images/dashboard/trophy-cup.svg" alt="Trophy cup" width={140} height={100} className="w-full h-auto object-contain opacity-90" unoptimized />
+            <div className="relative mx-auto mb-2 h-[112px] w-full max-w-[190px]">
+              <Image
+                src="/images/login/Glossy Purple Trophy with Stars.png"
+                alt=""
+                fill
+                sizes="(max-width: 1024px) 190px, 190px"
+                className="object-contain"
+              />
             </div>
             <div className="flex items-center justify-between">
               <div>
-                <div className="mb-0.5 text-[9px] font-bold uppercase tracking-[.16em] text-indigo-300">Day streak</div>
+                <div className="mb-0.5 flex items-center gap-1 text-[9px] font-bold uppercase tracking-[.16em] text-indigo-300">
+                  <Image
+                    src="/images/login/Glowing Flame Streak Icon.png"
+                    alt=""
+                    width={20}
+                    height={20}
+                    sizes="20px"
+                    className="h-5 w-5 object-contain"
+                  />
+                  Day streak
+                </div>
                 <div className="flex items-baseline gap-2">
                   <span className="text-3xl font-black tracking-tight">{insights.streak}</span>
                   <span className="text-[10px] font-bold text-white">Streak days</span>
                 </div>
               </div>
-              <Flame size={38} className={insights.streak ? "text-orange-400" : "text-indigo-400"} />
+              <Image
+                src={
+                  insights.streak
+                    ? "/images/login/Vibrant Gradient Flame with Sparkles.png"
+                    : "/images/login/Glowing Blue Layered Flame.png"
+                }
+                alt=""
+                width={60}
+                height={60}
+                sizes="60px"
+                className="h-[60px] w-[60px] object-contain"
+              />
             </div>
 
             <div className="grid grid-cols-7 gap-1.5">

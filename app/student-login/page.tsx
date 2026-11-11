@@ -106,9 +106,11 @@ export default function Home() {
         {/* LEFT BRAND PANEL */}
         <section className="hidden lg:flex lg:w-[52%] bg-brand-primary relative overflow-hidden">
 
+          {/* Decorative glows */}
           <div className="absolute -right-32 -top-32 h-[500px] w-[500px] rounded-full border-[70px] border-white/[0.06]" />
           <div className="absolute -bottom-40 -left-20 h-[420px] w-[420px] rounded-full bg-white/[0.05]" />
           <div className="absolute top-1/3 left-1/4 h-[300px] w-[300px] bg-indigo-500/20 blur-[100px] rounded-full" />
+          <div className="absolute bottom-1/4 right-1/6 h-[260px] w-[260px] bg-purple-500/20 blur-[90px] rounded-full" />
 
           <div className="relative flex w-full flex-col justify-between p-14">
 
@@ -119,21 +121,24 @@ export default function Home() {
 
             <div className="relative max-w-[560px]">
 
-              <div className="mb-8">
+              {/* Hero illustration */}
+              <div className="mb-8 relative">
                 <img
                   src="/images/login/Glossy Neon Checklist Scroll.png"
                   alt="Student dashboard"
-                  className="w-full h-auto block mx-auto drop-shadow-2xl"
+                  className="w-full h-auto block mx-auto drop-shadow-2xl relative z-10"
                   loading="lazy"
+                  decoding="async"
                 />
+                <div className="absolute -inset-4 bg-white/20 rounded-[30px] blur-[40px]" />
               </div>
 
               <div className="space-y-3">
-                <h2 className="text-3xl font-extrabold text-white tracking-tight">
+                <h2 className="text-3xl font-extrabold text-white tracking-tight leading-[1.15]">
                   Welcome back
                 </h2>
-                <p className="text-indigo-100 text-lg">
-                  Sign in to access your performance dashboard,<br />
+                <p className="text-indigo-100 text-lg leading-relaxed">
+                  Sign in to access your performance dashboard,<br className="hidden lg:block" />
                   badges, streak, and upcoming tests.
                 </p>
               </div>
@@ -155,7 +160,10 @@ export default function Home() {
             >
 
               <div className="text-center">
-                <h1 className="text-2xl font-extrabold text-text-primary">
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-brand-primary text-white mb-4 shadow-lg shadow-indigo-500/30">
+                  <span className="text-lg font-black">P</span>
+                </div>
+                <h1 className="text-2xl font-extrabold text-text-primary tracking-tight">
                   Sign in to CBT
                 </h1>
                 <p className="mt-1 text-text-body">
@@ -164,11 +172,13 @@ export default function Home() {
               </div>
 
               {error && (
-                <div className="rounded-xl border border-state-error/20 bg-state-error/10 px-4 py-3 text-sm font-medium text-state-error">
+                <div className="rounded-xl border border-state-error/20 bg-state-error/10 px-4 py-3 text-sm font-medium text-state-error flex items-center gap-2">
+                  <Icon name="alert" size={16} className="text-state-error" />
                   {error}
                 </div>
               )}
 
+              {/* EMAIL */}
               <div className="space-y-2">
                 <label
                   htmlFor="email"
@@ -189,6 +199,7 @@ export default function Home() {
                 />
               </div>
 
+              {/* PASSWORD */}
               <div className="space-y-2">
                 <div className="mb-2 flex items-center justify-between">
                   <label
@@ -214,24 +225,34 @@ export default function Home() {
                 />
               </div>
 
+              {/* LOGIN BUTTON */}
               <button
                 type="submit"
                 disabled={loading}
-                className="mt-2 flex h-12 w-full items-center justify-center rounded-xl bg-brand-primary text-sm font-bold text-white shadow-[0_8px_20px_rgba(36,85,200,0.18)] transition-all duration-200 hover:bg-brand-action-blue active:bg-brand-deep-navy disabled:cursor-not-allowed disabled:opacity-50"
+                className="mt-2 flex h-12 w-full items-center justify-center rounded-xl bg-brand-primary text-sm font-bold text-white shadow-[0_8px_20px_rgba(36,85,200,0.18)] transition-all duration-200 hover:bg-brand-action-blue active:bg-brand-deep-navy active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50"
               >
-                {loading ? "Signing in..." : "Sign in"}
+                {loading ? (
+                  <span className="flex items-center gap-2">
+                    <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    Signing in...
+                  </span>
+                ) : "Sign in"}
               </button>
 
               <button
                 type="button"
                 onClick={() => router.push("/change-password")}
-                className="w-full rounded-xl border border-border-default bg-brand-subtle-lavender px-4 py-3 text-sm font-bold text-brand-primary transition-all duration-200 hover:bg-brand-action-blue hover:text-white active:bg-brand-deep-navy active:text-white"
+                className="w-full rounded-xl border border-border-default bg-brand-subtle-lavender px-4 py-3 text-sm font-bold text-brand-primary transition-all duration-200 hover:bg-brand-action-blue hover:text-white active:bg-brand-deep-navy active:text-white flex items-center justify-center gap-2"
               >
                 <Icon name="lock" size={14} className="text-brand-primary" /> Change Password
               </button>
 
             </form>
 
+            {/* STAFF LOGIN */}
             <div className="mt-6">
               <button
                 type="button"

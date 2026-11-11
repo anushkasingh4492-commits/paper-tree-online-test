@@ -46,11 +46,41 @@ function formatDate(value: string) {
       });
 }
 
+function saveStudentTheme(enabled: boolean) {
+  try {
+    window.localStorage.setItem("paperTreeStudentDarkMode", String(enabled));
+    window.dispatchEvent(new Event("paperTreeStudentThemeChange"));
+  } catch (error) {
+    console.error("Could not save the student theme preference.", error);
+  }
+}
+
 export default function DashboardPage() {
   const [data, setData] = useState<DashboardData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-  const [darkMode, setDarkMode] = useState(false);
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+  const [darkMode, setDarkMode] = useState(() => {
+    if (typeof window === "undefined") return false;
+    try {
+      return window.localStorage.getItem("paperTreeStudentDarkMode") === "true";
+    } catch {
+      return false;
+    }
+  });
+
+  useEffect(() => {
+    const syncTheme = () => {
+      try {
+        setDarkMode(window.localStorage.getItem("paperTreeStudentDarkMode") === "true");
+      } catch {
+        setDarkMode(false);
+      }
+    };
+
+    window.addEventListener("storage", syncTheme);
+    return () => window.removeEventListener("storage", syncTheme);
+  }, []);
 
   useEffect(() => {
     let active = true;
@@ -208,10 +238,11 @@ export default function DashboardPage() {
   const currentStudent = nonNullLeaderboard.currentStudent ?? null;
 
   return (
-    <div className={`min-h-screen w-full overflow-x-hidden ${darkMode ? "bg-[#10182B] text-white" : "bg-surface-app-bg text-text-primary"}`}>
-      <div className="flex min-h-screen w-full">
+    <div className={`min-h-dvh w-full overflow-x-hidden ${darkMode ? "bg-[#10182B] text-white" : "bg-surface-app-bg text-text-primary"}`}>
+      <div className="flex min-h-dvh w-full">
         <LeftSidebar
           className="hidden xl:flex"
+          onCollapsedChange={setSidebarCollapsed}
           student={{
             firstName,
             lastName,
@@ -219,7 +250,7 @@ export default function DashboardPage() {
             avatarKey: currentStudent?.avatarKey,
           }}
         />
-        <main className="flex-1 w-full min-w-0">
+        <main className={`min-w-0 w-full flex-1 transition-[margin] duration-200 ${sidebarCollapsed ? "xl:ml-20" : "xl:ml-[220px]"}`}>
           <TopNavbar
             student={{
               firstName,
@@ -228,25 +259,28 @@ export default function DashboardPage() {
               avatarKey: currentStudent?.avatarKey,
             }}
             darkMode={darkMode}
-            onDarkModeChange={setDarkMode}
+            onDarkModeChange={(enabled) => {
+              setDarkMode(enabled);
+              saveStudentTheme(enabled);
+            }}
             unreadNotifications={
               dashboard.notifications?.filter((notification) => !notification.isRead).length ?? 0
             }
           />
 
-          <div className="mx-auto max-w-[1500px] px-3 py-4 sm:px-5 lg:px-7 lg:py-5">
+          <div className="mx-auto w-full max-w-[1600px] space-y-4 px-4 py-5 sm:space-y-5 sm:px-6 lg:px-8 lg:py-7">
             {/* Player progress + day streak hero */}
-            <div className="mb-3">
+            <section>
               <HeroCard dashboard={dashboard} insights={nonNullInsights} />
-            </div>
+            </section>
 
             {/* Student-specific performance metrics */}
-            <div className="mb-3">
+            <section>
               <StatsGrid cards={metrics} />
-            </div>
+            </section>
 
             {/* Batch: rank + tests this week + top batch members */}
-            <div className="mb-3">
+            <section>
               <BatchRankingCard
                 batch={nonNullLeaderboard.batch}
                 students={nonNullLeaderboard.students}
@@ -254,34 +288,34 @@ export default function DashboardPage() {
                 performanceTrend={dashboard.performanceTrend}
                 statistics={dashboard.statistics}
               />
-            </div>
+            </section>
 
             {/* Trophy Wall — compact card stacks grouped by badge category */}
-            <div className="mb-3">
+            <section>
               <TrophyWall badges={nonNullInsights.badges} />
-            </div>
+            </section>
 
             {/* Question overview + chapter mastery */}
-            <div className="mb-3">
+            <section>
               <QuestionOverview
                 statistics={dashboard.statistics}
                 chapters={dashboard.chapterPerformance}
                 mistakeStats={nonNullMistakeStats}
               />
-            </div>
+            </section>
 
             {/* Target your weak areas */}
-            <div className="mb-3">
+            <section>
               <WeakAreasBanner
                 weakAreas={dashboard.weakAreas}
                 levelName={nonNullInsights.levelName}
                 badgesEarned={nonNullInsights.badges.filter((badge) => badge.earned).length}
                 darkMode={darkMode}
               />
-            </div>
+            </section>
 
             {/* Performance trends, score distribution, subjects, recent tests, weak areas */}
-            <div className="mb-6">
+            <section className="pb-2">
               <PerformanceTrendsSection
                 trend={trend}
                 distribution={distribution}
@@ -290,7 +324,7 @@ export default function DashboardPage() {
                 weakAreas={weakAreas}
                 accuracy={dashboard.statistics.accuracy}
               />
-            </div>
+            </section>
           </div>
         </main>
       </div>

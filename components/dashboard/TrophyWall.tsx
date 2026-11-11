@@ -133,18 +133,27 @@ export function TrophyWall({ badges }: { badges: DashboardInsights["badges"] }) 
   return (
     <section className="w-full rounded-2xl border border-border-default bg-surface-surface p-3 shadow-sm sm:p-4">
       <div className="mb-3 flex items-center justify-between gap-3">
-        <div className="min-w-0 flex items-center gap-2">
-          <Image src="/images/dashboard/trophy-medals.svg" alt="Trophy medals" width={40} height={28} className="shrink-0" unoptimized />
-          <div className="flex flex-wrap items-center gap-1.5">
-            <Trophy size={15} className="text-amber-500" />
-            <h2 className="text-[15px] font-black text-text-primary">Trophy Wall</h2>
-            <span className="text-[9px] font-bold text-text-body">
-              {earnedCount} of {badges.length} earned
-            </span>
+        <div className="flex min-w-0 items-center gap-2">
+          <Image
+            src="/images/login/Glossy Gradient Badge Trio.png"
+            alt=""
+            width={72}
+            height={50}
+            sizes="72px"
+            className="h-12 w-[68px] shrink-0 object-contain"
+          />
+          <div className="min-w-0">
+            <div className="flex flex-wrap items-center gap-x-1.5 gap-y-0.5">
+              <Trophy size={15} className="text-amber-500" />
+              <h2 className="text-[15px] font-black text-text-primary">Trophy Wall</h2>
+              <span className="text-[9px] font-bold text-text-body">
+                {earnedCount} of {badges.length} earned
+              </span>
+            </div>
+            <p className="mt-0.5 text-[9px] text-text-body">
+              Each badge variety has its own deck. Select a deck to see every milestone.
+            </p>
           </div>
-          <p className="mt-0.5 text-[9px] text-text-body">
-            Each badge variety has its own deck. Select a deck to see every milestone.
-          </p>
         </div>
         <Link
           href="/achievements"

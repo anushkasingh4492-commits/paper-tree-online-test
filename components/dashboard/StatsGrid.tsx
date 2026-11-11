@@ -18,23 +18,23 @@ export function StatCard({ card }: { card: MetricCard }) {
     card.trendDirection === "up" ? "text-state-success" : card.trendDirection === "down" ? "text-state-error" : "text-text-body";
 
   return (
-    <Card variant="default" padding="none" radius="large" className="min-h-[82px] border border-border-default p-3 shadow-sm">
-      <div className="mb-1.5 flex items-center justify-between gap-2">
-        <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-brand-subtle-lavender/60">
+    <Card variant="default" padding="none" radius="large" className="min-h-[104px] border border-border-default p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+      <div className="mb-2 flex items-center justify-between gap-2">
+        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-brand-subtle-lavender/60">
           <IconComp />
         </span>
-        <span className="min-w-0 text-right text-[9px] font-extrabold uppercase tracking-wider text-text-supporting-label">{card.label}</span>
+        <span className="min-w-0 text-right text-[10px] font-extrabold uppercase tracking-wider text-text-supporting-label">{card.label}</span>
       </div>
-      <div className="truncate text-xl font-black leading-none text-text-primary">{card.value}</div>
-      {card.trend && <div className={`mt-1 flex items-center gap-1 text-[9px] font-semibold ${trendColor}`}>{card.trend}</div>}
-      {card.subtitle && <div className="mt-1 text-[9px] leading-3 text-text-body">{card.subtitle}</div>}
+      <div className="truncate text-2xl font-black leading-none text-text-primary">{card.value}</div>
+      {card.trend && <div className={`mt-1 flex items-center gap-1 text-[10px] font-semibold ${trendColor}`}>{card.trend}</div>}
+      {card.subtitle && <div className="mt-1.5 text-[10px] leading-4 text-text-body">{card.subtitle}</div>}
     </Card>
   );
 }
 
 export function StatsGrid({ cards }: { cards: MetricCard[] }) {
   return (
-    <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-5">
+    <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-5">
       {cards.map((card) => <StatCard key={card.label} card={card} />)}
     </div>
   );
@@ -74,12 +74,12 @@ export function BatchRankingCard({
   const members = students.slice(0, 3);
 
   return (
-    <Card variant="default" padding="none" radius="large" className="border border-border-default p-3 shadow-sm sm:p-4">
+    <Card variant="default" padding="none" radius="large" className="border border-border-default p-4 shadow-sm sm:p-5">
       <div className="mb-3 border-b border-border-default pb-2">
         <h2 className="text-[13px] font-black text-text-primary">Your Batch</h2>
         <p className="mt-0.5 text-[10px] text-text-body">{batch?.name ?? "Batch ranking and activity"}</p>
       </div>
-      <div className="flex flex-col gap-3 lg:flex-row lg:items-start">
+      <div className="flex flex-col gap-5 lg:flex-row lg:items-start">
         <div className="min-w-0 flex-1 space-y-2">
           <div className="flex items-start gap-2.5">
             <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 shadow-md">

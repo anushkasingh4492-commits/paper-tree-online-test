@@ -11,6 +11,14 @@ export async function POST(request: Request) {
 
     const email = String(body.email || "").trim().toLowerCase();
     const password = String(body.password || "");
+    const rememberMe = body.rememberMe === true;
+    const sessionCookieOptions = {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "lax" as const,
+      path: "/",
+      ...(rememberMe ? { maxAge: 60 * 60 * 24 * 7 } : {}),
+    };
     const requestedPortalRole = String(body.portalRole || "").trim().toUpperCase();
     const portalRole =
       requestedPortalRole === "ADMIN" ||
@@ -101,13 +109,7 @@ export async function POST(request: Request) {
             role,
             academyId: admin.academy_id || null,
           }),
-          {
-            httpOnly: true,
-            secure: process.env.NODE_ENV === "production",
-            sameSite: "lax",
-            path: "/",
-            maxAge: 60 * 60 * 24 * 7,
-          }
+          sessionCookieOptions
         );
 
         return response;
@@ -185,13 +187,7 @@ export async function POST(request: Request) {
             role: "TEACHER",
             academyId: teacher.academy_id,
           }),
-          {
-            httpOnly: true,
-            secure: process.env.NODE_ENV === "production",
-            sameSite: "lax",
-            path: "/",
-            maxAge: 60 * 60 * 24 * 7,
-          }
+          sessionCookieOptions
         );
 
         return response;
@@ -302,13 +298,7 @@ export async function POST(request: Request) {
           email: student.email,
           academyId: student.academy_id,
         }),
-        {
-          httpOnly: true,
-          secure: process.env.NODE_ENV === "production",
-          sameSite: "lax",
-          path: "/",
-          maxAge: 60 * 60 * 24 * 7,
-        }
+        sessionCookieOptions
       );
 
       return response;
