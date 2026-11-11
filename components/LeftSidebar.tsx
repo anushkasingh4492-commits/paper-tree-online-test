@@ -13,7 +13,6 @@ const NAV_ITEMS: Array<{
   href: string;
 }> = [
   { key: "dashboard", label: "Dashboard", icon: "home", href: "/dashboard" },
-  { key: "my-tests", label: "My Tests", icon: "test-tube", href: "/tests" },
   { key: "test-summary", label: "Test Summary", icon: "analytics", href: "/test-summary" },
   { key: "batch-leaderboard", label: "Batch Leaderboard", icon: "trophy", href: "/student/batch-leaderboard" },
   { key: "mistake-notebook", label: "Mistake Notebook", icon: "book", href: "/student/mistakes" },

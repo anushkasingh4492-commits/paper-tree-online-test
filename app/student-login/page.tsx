@@ -100,13 +100,25 @@ export default function Home() {
   }
 
   return (
-    <main className="min-h-screen bg-surface-app-bg text-text-primary">
-      <div className="flex min-h-screen w-full">
+    <main
+      className="min-h-screen w-full text-text-primary relative"
+      style={{
+        backgroundImage: "url('/images/login/Glossy Neon Checklist Scroll.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed",
+      }}
+    >
+      {/* Full-screen overlay to soften the image and ensure text readability */}
+      <div className="absolute inset-0 bg-black/30 backdrop-blur-sm z-0" />
+
+      <div className="relative z-10 flex min-h-screen w-full">
 
         {/* LEFT BRAND PANEL */}
-        <section className="hidden lg:flex lg:w-[52%] bg-brand-primary relative overflow-hidden">
+        <section className="hidden lg:flex lg:w-[52%] relative overflow-hidden">
 
-          {/* Decorative glows */}
+          {/* Decorative glows on top of image */}
           <div className="absolute -right-32 -top-32 h-[500px] w-[500px] rounded-full border-[70px] border-white/[0.06]" />
           <div className="absolute -bottom-40 -left-20 h-[420px] w-[420px] rounded-full bg-white/[0.05]" />
           <div className="absolute top-1/3 left-1/4 h-[300px] w-[300px] bg-indigo-500/20 blur-[100px] rounded-full" />
@@ -150,30 +162,30 @@ export default function Home() {
         </section>
 
         {/* RIGHT FORM PANEL */}
-        <main className="flex-1 w-full min-w-0 bg-surface-app-bg">
+        <main className="flex-1 w-full min-w-0 bg-black/40 backdrop-blur-md">
 
           <div className="flex items-center justify-center px-6 py-12 lg:py-20">
 
             <form
               onSubmit={handleSubmit}
-              className="w-full max-w-md space-y-6"
+              className="w-full max-w-md space-y-6 bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 shadow-2xl"
             >
 
               <div className="text-center">
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-brand-primary text-white mb-4 shadow-lg shadow-indigo-500/30">
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-white/20 text-white mb-4 shadow-lg shadow-black/30">
                   <span className="text-lg font-black">P</span>
                 </div>
-                <h1 className="text-2xl font-extrabold text-text-primary tracking-tight">
+                <h1 className="text-2xl font-extrabold text-white tracking-tight">
                   Sign in to CBT
                 </h1>
-                <p className="mt-1 text-text-body">
+                <p className="mt-1 text-indigo-100">
                   Enter your student credentials below
                 </p>
               </div>
 
               {error && (
-                <div className="rounded-xl border border-state-error/20 bg-state-error/10 px-4 py-3 text-sm font-medium text-state-error flex items-center gap-2">
-                  <Icon name="alert" size={16} className="text-state-error" />
+                <div className="rounded-xl border border-red-500/50 bg-red-500/10 px-4 py-3 text-sm font-medium text-red-100 flex items-center gap-2">
+                  <Icon name="alert" size={16} className="text-red-400" />
                   {error}
                 </div>
               )}
@@ -182,7 +194,7 @@ export default function Home() {
               <div className="space-y-2">
                 <label
                   htmlFor="email"
-                  className="block text-xs font-bold text-text-tertiary uppercase tracking-wider"
+                  className="block text-xs font-bold text-indigo-200 uppercase tracking-wider"
                 >
                   Email address
                 </label>
@@ -195,7 +207,7 @@ export default function Home() {
                   autoComplete="email"
                   required
                   disabled={loading}
-                  className="h-12 w-full rounded-xl border border-border-default bg-surface-surface px-4 text-sm text-text-primary outline-none transition placeholder:text-text-supporting-label focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10 disabled:bg-surface-app-bg"
+                  className="h-12 w-full rounded-xl border border-white/30 bg-white/10 px-4 text-sm text-white outline-none transition placeholder:text-indigo-300 focus:border-indigo-400 focus:ring-4 focus:ring-indigo-500/20 disabled:bg-white/5"
                 />
               </div>
 
@@ -204,11 +216,11 @@ export default function Home() {
                 <div className="mb-2 flex items-center justify-between">
                   <label
                     htmlFor="password"
-                    className="block text-xs font-bold text-text-tertiary uppercase tracking-wider"
+                    className="block text-xs font-bold text-indigo-200 uppercase tracking-wider"
                   >
                     Password
                   </label>
-                  <span className="text-[10px] font-medium text-text-body">
+                  <span className="text-[10px] font-medium text-indigo-300">
                     Secure login
                   </span>
                 </div>
@@ -221,7 +233,7 @@ export default function Home() {
                   autoComplete="current-password"
                   required
                   disabled={loading}
-                  className="h-12 w-full rounded-xl border border-border-default bg-surface-surface px-4 text-sm text-text-primary outline-none transition placeholder:text-text-supporting-label focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10 disabled:bg-surface-app-bg"
+                  className="h-12 w-full rounded-xl border border-white/30 bg-white/10 px-4 text-sm text-white outline-none transition placeholder:text-indigo-300 focus:border-indigo-400 focus:ring-4 focus:ring-indigo-500/20 disabled:bg-white/5"
                 />
               </div>
 
@@ -229,7 +241,7 @@ export default function Home() {
               <button
                 type="submit"
                 disabled={loading}
-                className="mt-2 flex h-12 w-full items-center justify-center rounded-xl bg-brand-primary text-sm font-bold text-white shadow-[0_8px_20px_rgba(36,85,200,0.18)] transition-all duration-200 hover:bg-brand-action-blue active:bg-brand-deep-navy active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50"
+                className="mt-2 flex h-12 w-full items-center justify-center rounded-xl bg-indigo-600 text-sm font-bold text-white shadow-[0_8px_20px_rgba(79,70,229,0.35)] transition-all duration-200 hover:bg-indigo-500 active:bg-indigo-700 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50"
               >
                 {loading ? (
                   <span className="flex items-center gap-2">
@@ -245,9 +257,9 @@ export default function Home() {
               <button
                 type="button"
                 onClick={() => router.push("/change-password")}
-                className="w-full rounded-xl border border-border-default bg-brand-subtle-lavender px-4 py-3 text-sm font-bold text-brand-primary transition-all duration-200 hover:bg-brand-action-blue hover:text-white active:bg-brand-deep-navy active:text-white flex items-center justify-center gap-2"
+                className="w-full rounded-xl border border-white/30 bg-white/10 px-4 py-3 text-sm font-bold text-indigo-100 transition-all duration-200 hover:bg-white/20 hover:text-white active:bg-white/30 flex items-center justify-center gap-2"
               >
-                <Icon name="lock" size={14} className="text-brand-primary" /> Change Password
+                <Icon name="lock" size={14} className="text-indigo-300" /> Change Password
               </button>
 
             </form>
@@ -257,17 +269,17 @@ export default function Home() {
               <button
                 type="button"
                 onClick={() => router.push("/master-login")}
-                className="w-full rounded-xl border border-border-default bg-brand-subtle-lavender px-4 py-3 text-sm font-bold text-brand-primary transition-all duration-200 hover:bg-brand-action-blue hover:text-white active:bg-brand-deep-navy active:text-white"
+                className="w-full rounded-xl border border-white/30 bg-white/10 px-4 py-3 text-sm font-bold text-indigo-100 transition-all duration-200 hover:bg-white/20 hover:text-white active:bg-white/30"
               >
                 Teacher / Admin Login
               </button>
             </div>
 
             <div className="mt-8 text-center">
-              <p className="text-[11px] leading-5 text-text-body">
+              <p className="text-[11px] leading-5 text-indigo-200">
                 Competitive Exam Preparation Platform
               </p>
-              <p className="mt-1 text-[10px] text-text-disabled">
+              <p className="mt-1 text-[10px] text-indigo-300/70">
                 Your account is secured with encrypted authentication.
               </p>
             </div>

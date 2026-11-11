@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import { Building2, BookOpen, Upload, Key, Shield } from "lucide-react";
 
 export default function AdminPage() {
   const router = useRouter();
@@ -19,18 +20,11 @@ export default function AdminPage() {
             <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-primary text-lg font-black text-white shadow-sm">
               P
             </div>
-
             <div>
-              <h1 className="text-lg font-extrabold">
-                Paper Tree
-              </h1>
-
-              <p className="text-[10px] font-bold tracking-[0.15em] text-text-body">
-                MASTER ADMIN
-              </p>
+              <h1 className="text-lg font-extrabold">Paper Tree</h1>
+              <p className="text-[10px] font-bold tracking-[0.15em] text-text-body">MASTER ADMIN</p>
             </div>
           </div>
-
           <button
             onClick={logout}
             className="rounded-xl border border-border-default bg-surface-surface px-4 py-2.5 text-sm font-bold text-text-tertiary transition hover:border-border-default hover:bg-surface-subtle"
@@ -42,119 +36,104 @@ export default function AdminPage() {
 
       {/* CONTENT */}
       <div className="mx-auto max-w-7xl px-6 py-12">
-        {/* HERO */}
-        <section className="relative overflow-hidden rounded-3xl border border-border-default bg-surface-surface px-8 py-9 shadow-sm">
-          <div className="relative z-10 max-w-2xl">
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-brand-subtle-lavender px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.12em] text-brand-primary">
-              <span className="h-1.5 w-1.5 rounded-full bg-brand-primary" />
-              Master Administration
-            </div>
+        {/* HERO - Center aligned per spec */}
+        <section className="text-center flex flex-col items-center justify-center py-12 px-4 relative overflow-hidden">
+          {/* Abstract Geometry Details */}
+          <div className="absolute top-8 left-12 w-8 h-8 rounded-full bg-blue-300 opacity-40 blur-xs" />
+          <div className="absolute top-12 right-16 w-10 h-10 rounded-full bg-orange-300 opacity-40 blur-xs" />
 
-            <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
-              🛡️ Admin Control Center
+          <div className="relative z-10">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-blue-600 tracking-tight mb-2">
+              Admin Control Center
             </h2>
-
-            <p className="mt-3 max-w-xl text-sm leading-6 text-text-tertiary">
-              Manage Paper Tree academies and their complete
-              administration from one central dashboard.
+            <p className="text-slate-500 max-w-xl text-sm md:text-base mb-4">
+              Manage Paper Tree academies and their complete administration from one central dashboard.
             </p>
+            {/* Small decorative centered horizontal split element */}
+            <div className="w-16 h-0.5 bg-slate-200 mx-auto" />
           </div>
-
-          {/* Decorative element */}
-          <div className="pointer-events-none absolute -right-16 -top-20 h-64 w-64 rounded-full bg-brand-primary/5" />
-
-          <div className="pointer-events-none absolute -bottom-28 right-24 h-48 w-48 rounded-full bg-brand-primary/5" />
         </section>
 
-        {/* ACTION GRID */}
-        <section className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+        {/* ACTION GRID - 2x2 layout */}
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto px-4 mt-6">
 
+          {/* Card 1: Academies */}
           <button
             type="button"
             onClick={() => router.push("/admin/academies")}
-            className="group rounded-3xl border border-border-default bg-white p-7 text-left shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-border-default hover:shadow-lg"
+            className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 flex items-start space-x-5 hover:shadow-md transition-shadow duration-200"
           >
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-surface-subtle text-2xl mb-4 group-hover:bg-brand-primary group-hover:text-white transition-colors">
-              🏢
+            <div className="w-16 h-16 rounded-xl flex items-center justify-center shrink-0 bg-blue-50 text-blue-600">
+              <Building2 size={24} />
             </div>
-            <h4 className="text-lg font-extrabold text-text-primary mb-1">
-              Academy Management
-            </h4>
-            <p className="text-sm leading-6 text-text-tertiary">
-              Full control over all academy tenants and their
-              administration.
-            </p>
+            <div className="flex flex-col text-left">
+              <h4 className="text-lg font-bold text-slate-800 mb-1">Academy Management</h4>
+              <p className="text-xs md:text-sm text-slate-400 leading-relaxed">
+                Manage academies, branding, and administrative settings for all institutions.
+              </p>
+            </div>
           </button>
 
+          {/* Card 2: Batch Course Setup */}
           <button
             type="button"
             onClick={() => router.push("/academy-admin/batches")}
-            className="group rounded-3xl border border-border-default bg-white p-7 text-left shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-border-default hover:shadow-lg"
+            className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 flex items-start space-x-5 hover:shadow-md transition-shadow duration-200"
           >
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-brand-subtle-lavender text-2xl mb-4 group-hover:bg-brand-primary group-hover:text-white transition-colors">
-              📚
+            <div className="w-16 h-16 rounded-xl flex items-center justify-center shrink-0 bg-orange-50 text-orange-600">
+              <BookOpen size={24} />
             </div>
-            <h4 className="text-lg font-extrabold text-text-primary mb-1">
-              Batch Course Setup
-            </h4>
-            <p className="text-sm leading-6 text-text-tertiary">
-              Create academy batches for MHT-CET, NEET, JEE, and CAT.
-              CAT question-bank import is available with the bundled CAT
-              data.
-            </p>
+            <div className="flex flex-col text-left">
+              <h4 className="text-lg font-bold text-slate-800 mb-1">Batch Course Setup</h4>
+              <p className="text-xs md:text-sm text-slate-400 leading-relaxed">
+                Create academy batches for MHT-CET, NEET, JEE, and CAT with question-bank imports.
+              </p>
+            </div>
           </button>
 
+          {/* Card 3: Upload Dataset */}
           <button
             type="button"
             onClick={() => router.push("/admin/upload-dataset")}
-            className="group rounded-3xl border border-border-default bg-white p-7 text-left shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-border-default hover:shadow-lg"
+            className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 flex items-start space-x-5 hover:shadow-md transition-shadow duration-200"
           >
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-brand-subtle-lavender text-2xl mb-4 group-hover:bg-brand-primary group-hover:text-white transition-colors">
-              📦
+            <div className="w-16 h-16 rounded-xl flex items-center justify-center shrink-0 bg-emerald-50 text-emerald-600">
+              <Upload size={24} />
             </div>
-            <h4 className="text-lg font-extrabold text-text-primary mb-1">
-              Upload Dataset
-            </h4>
-            <p className="text-sm leading-6 text-text-tertiary">
-              Import question-bank datasets (JSON, CSV, Excel) by
-              course/subject so students can see new questions alongside
-              existing ones.
-            </p>
+            <div className="flex flex-col text-left">
+              <h4 className="text-lg font-bold text-slate-800 mb-1">Upload Dataset</h4>
+              <p className="text-xs md:text-sm text-slate-400 leading-relaxed">
+                Import question-bank datasets (JSON, CSV, Excel) by course/subject.
+              </p>
+            </div>
           </button>
 
+          {/* Card 4: Password Management */}
           <button
             type="button"
             onClick={() => router.push("/admin/password-reset")}
-            className="group rounded-3xl border border-border-default bg-white p-7 text-left shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-border-default hover:shadow-lg"
+            className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 flex items-start space-x-5 hover:shadow-md transition-shadow duration-200"
           >
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-state-warning text-2xl mb-4 group-hover:bg-brand-primary group-hover:text-white transition-colors">
-              🔐
+            <div className="w-16 h-16 rounded-xl flex items-center justify-center shrink-0 bg-purple-50 text-purple-600">
+              <Key size={24} />
             </div>
-            <h4 className="text-lg font-extrabold text-text-primary mb-1">
-              Password Management
-            </h4>
-            <p className="text-sm leading-6 text-text-tertiary">
-              Reset passwords for students and teachers whenever
-              required.
-            </p>
+            <div className="flex flex-col text-left">
+              <h4 className="text-lg font-bold text-slate-800 mb-1">Password Management</h4>
+              <p className="text-xs md:text-sm text-slate-400 leading-relaxed">
+                Reset passwords for students and teachers whenever required.
+              </p>
+            </div>
           </button>
 
         </section>
 
-        {/* ACCESS NOTE */}
-        <div className="mt-6 flex items-center gap-3 rounded-2xl border border-border-default bg-surface-app-bg px-5 py-4">
-          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-brand-subtle-lavender text-sm">
-            🛡️
-          </div>
-
+        {/* ACCESS VERIFICATION BANNER */}
+        <div className="w-full bg-blue-50/60 rounded-xl p-4 border border-blue-100/50 flex items-center space-x-3 mt-8">
+          <Shield className="text-blue-500 w-5 h-5" />
           <div>
-            <p className="text-xs font-bold text-brand-primary">
-              Master Admin Access
-            </p>
-
-            <p className="mt-0.5 text-xs text-text-tertiary">
-              You have full administrative control over academy
-              management.
+            <p className="text-xs md:text-sm text-slate-500 font-medium">Master Admin Access</p>
+            <p className="text-xs md:text-sm text-slate-500">
+              You have full administrative control over academy management.
             </p>
           </div>
         </div>

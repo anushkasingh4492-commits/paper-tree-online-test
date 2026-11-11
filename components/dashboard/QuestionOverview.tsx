@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { AlertTriangle, Clock, CheckCircle2 } from "lucide-react";
+import { AlertTriangle, Bookmark, Clock, CheckCircle2 } from "lucide-react";
 import { Card } from "@/components/ui/Card";
 import { Icon } from "@/components/Icon";
 import type { DashboardMistakeStats, DashboardPayload, DonutMetric } from "@/types/dashboard";
@@ -57,19 +57,34 @@ function DonutMetricCard({ metric }: { metric: DonutMetric }) {
 
 function ChapterProgressBar({ chapter }: { chapter: DashboardPayload["chapterPerformance"][number] }) {
   const progress = Math.max(0, Math.min(100, chapter.accuracy));
-  const barColor = progress < 40 ? "from-red-400 to-red-600" : progress < 70 ? "from-orange-400 to-orange-600" : "from-emerald-400 to-emerald-600";
+  const isWeak = progress < 40;
+  const isAverage = progress >= 40 && progress < 70;
+  const isStrong = progress >= 70;
+
+  const theme = isWeak
+    ? { bg: "bg-red-50", border: "border-red-100", ring: "from-red-400 to-red-600", text: "text-red-600", icon: "text-red-500" }
+    : isAverage
+      ? { bg: "bg-amber-50", border: "border-amber-100", ring: "from-amber-400 to-amber-600", text: "text-amber-600", icon: "text-amber-500" }
+      : { bg: "bg-emerald-50", border: "border-emerald-100", ring: "from-emerald-400 to-emerald-600", text: "text-emerald-600", icon: "text-emerald-500" };
 
   return (
-    <div className="flex items-center gap-3 mb-2">
-      <div className="w-32 flex-shrink-0 min-w-0">
-        <div className="text-[10px] font-bold text-text-primary truncate" title={chapter.chapter}>{chapter.chapter}</div>
-        <div className="text-[9px] text-text-body truncate">{chapter.subject}</div>
+    <Card variant="default" padding="md" radius="card" className={`border ${theme.border} bg-surface-surface p-4 transition-all duration-200 hover:border-brand-primary/50 hover:shadow-md`}>
+      <div className="flex items-center gap-3">
+        <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0">
+          <Bookmark size={18} className={theme.icon} />
+        </div>
+        <div className="flex-1 min-w-0">
+          <div className="flex justify-between items-baseline mb-1">
+            <div className="text-[10px] font-black uppercase tracking-wider text-text-supporting-label truncate" title={chapter.chapter}>{chapter.chapter}</div>
+            <span className={`text-[10px] font-bold ${theme.text}`}>{progress.toFixed(0)}%</span>
+          </div>
+          <div className="text-[9px] text-text-body truncate">{chapter.subject}</div>
+        </div>
       </div>
-      <div className="flex-1 h-2 rounded-full bg-surface-subtle overflow-hidden">
-        <div className={`h-full rounded-full transition-all duration-1000 bg-gradient-to-r ${barColor}`} style={{ width: `${progress}%` }} />
+      <div className="mt-3 h-2 rounded-full bg-surface-subtle overflow-hidden">
+        <div className={`h-full rounded-full transition-all duration-1000 bg-gradient-to-r ${theme.ring}`} style={{ width: `${progress}%` }} />
       </div>
-      <div className="w-12 text-right text-[10px] font-bold text-text-primary">{progress.toFixed(0)}%</div>
-    </div>
+    </Card>
   );
 }
 
