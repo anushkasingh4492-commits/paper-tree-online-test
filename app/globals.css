@@ -1,5 +1,43 @@
 @import "tailwindcss";
 
+
+.admin-page,
+.teacher-page {
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #F4F7FF;
+}
+
+/* Fixed diagonal background gradients */
+.admin-page::before,
+.teacher-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  background-color: #F4F7FF;
+
+  background-image:
+    radial-gradient(
+      ellipse 65% 75% at 0% 100%,
+      rgba(75, 145, 255, 0.22) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 65% 75% at 100% 0%,
+      rgba(255, 158, 112, 0.34) 0%,
+      transparent 70%
+    );
+
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+
 /* ============================================================
    DESIGN SYSTEM TOKENS — Wireframe-3 style guide (single source)
    ============================================================ */
@@ -270,18 +308,20 @@ body {
 }
 
 .summary-stats {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
   margin-bottom: 24px;
 }
 
-.summary-stats div {
+.summary-stat-grid {
   display: grid;
-  gap: 4px;
-  padding: 20px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--spacing-card-gap);
+}
+
+.summary-stat-card {
+  min-width: 0;
+  padding: var(--spacing-card-padding);
   border: 1px solid var(--border-default);
-  border-radius: var(--radius-standard);
+  border-radius: var(--radius-card);
   background: var(--surface-surface);
 }
 
@@ -363,7 +403,7 @@ body {
 @media (max-width: 640px) {
   .summary-shell { padding: 32px 16px 48px; }
   .summary-heading { align-items: start; flex-direction: column; }
-  .summary-stats { grid-template-columns: repeat(2, 1fr); }
+  .summary-stat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .summary-panel { padding: 20px; }
   .summary-test { align-items: start; flex-direction: column; gap: 12px; }
   .summary-test-meta { width: 100%; justify-content: space-between; }
@@ -525,7 +565,7 @@ body.student-theme-dark textarea {
   border-color: #303B5C !important;
 }
 body.student-theme-dark .summary-shell .summary-panel,
-body.student-theme-dark .summary-shell .summary-stats div {
+body.student-theme-dark .summary-shell .summary-stat-card {
   background: #1C2942 !important;
   color: #e8edf7 !important;
   border-color: #303B5C !important;

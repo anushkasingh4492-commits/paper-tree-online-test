@@ -868,7 +868,7 @@ export default function TeacherPublishPage() {
                 (targetType === "student" &&
                   selectedStudentIds.length === 0)
               }
-              className="mt-7 w-full rounded-2xl bg-brand-primary px-5 py-4 text-base font-bold text-white shadow-lg shadow-brand-primary/20 transition hover:bg-brand-action-blue hover:hover:shadow-xl disabled:cursor-not-allowed disabled:bg-surface-muted disabled:shadow-none"
+              className="mt-7 w-full rounded-2xl bg-brand-primary px-5 py-4 text-base font-bold text-white shadow-lg shadow-brand-primary/20 transition hover:bg-brand-action-blue hover:shadow-xl disabled:cursor-not-allowed disabled:bg-surface-muted disabled:shadow-none"
             >
               {loading
                 ? "Publishing test…"

@@ -32,7 +32,7 @@ export function Chip({
         }
       }}
       className={[
-        "inline-flex items-center justify-center gap-1.5 rounded-[4px] px-3 py-1.5 text-[10px] font-bold transition-all duration-200 cursor-pointer",
+        "inline-flex items-center justify-center gap-1.5 rounded-standard px-3 py-1.5 text-[10px] font-bold transition-all duration-200 cursor-pointer",
         selected
           ? "bg-selection-tab-chip-selected-bg text-selection-tab-chip-selected-text"
           : "bg-surface-surface text-text-tertiary border border-border-default",

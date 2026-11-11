@@ -155,7 +155,7 @@ function MasterLoginForm() {
                 autoComplete="email"
                 disabled={loading}
                 required
-                className="h-11 w-full rounded-xl border border-border-default bg-white px-4 text-sm outline-none transition focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10 disabled:bg-surface-app-bg"
+                className="h-12 w-full rounded-xl border border-border-default bg-white px-4 text-sm outline-none transition focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10 disabled:bg-surface-app-bg"
               />
 
             </div>
@@ -175,7 +175,7 @@ function MasterLoginForm() {
                 autoComplete="current-password"
                 disabled={loading}
                 required
-                className="h-11 w-full rounded-xl border border-border-default bg-white px-4 text-sm outline-none transition focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10 disabled:bg-surface-app-bg"
+                className="h-12 w-full rounded-xl border border-border-default bg-white px-4 text-sm outline-none transition focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10 disabled:bg-surface-app-bg"
               />
 
             </div>

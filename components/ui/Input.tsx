@@ -17,7 +17,7 @@ export function Input({
   ...props
 }: InputProps) {
   const inputClasses = [
-    "h-12 w-full rounded-xl border px-4 text-sm outline-none transition-all duration-200",
+    "h-12 w-full rounded-standard border px-4 text-sm outline-none transition-all duration-200",
     "bg-surface-surface text-text-primary placeholder:text-text-supporting-label",
     "border-border-default focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10",
     error ? "border-state-error focus:border-state-error focus:ring-state-error/10" : "",

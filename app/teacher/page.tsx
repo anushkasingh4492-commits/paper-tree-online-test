@@ -75,7 +75,7 @@ export default function TeacherPage() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-surface-app-bg text-text-primary">
+    <main className="teacher-page text-text-primary">
       <div className="mx-auto max-w-7xl px-6 py-10">
 
         <div className="mb-10 flex items-center justify-between gap-4">

@@ -12,7 +12,7 @@ export default function AdminPage() {
   }
 
   return (
-    <main className="min-h-screen bg-surface-app-bg text-text-primary">
+    <main className="admin-page text-text-primary">
       {/* HEADER */}
       <header className="border-b border-border-default bg-white">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">

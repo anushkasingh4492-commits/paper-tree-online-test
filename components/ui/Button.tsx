@@ -28,7 +28,7 @@ export function Button({
   className,
   ...props
 }: ButtonProps) {
-  const base = "flex items-center justify-center gap-2 rounded-xl font-bold outline-none transition-all duration-200 disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed";
+  const base = "flex items-center justify-center gap-2 rounded-large font-bold outline-none transition-all duration-200 disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed";
 
   const variantClasses = {
     primary: {

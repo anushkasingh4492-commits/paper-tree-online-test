@@ -108,17 +108,17 @@ export default function TestSummaryPage() {
         </Link>
       </div>
 
-      <section className="summary-stats px-4 pb-6 max-w-3xl" aria-label="Test totals">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <section className="summary-stats px-4 pb-6" aria-label="Test totals">
+        <div className="summary-stat-grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           {statCards.map((card) => (
             <Card
               key={card.key}
               variant="default"
               padding="md"
               radius="card"
-              className={`border border-border-default bg-surface-surface flex flex-col items-center justify-center text-center p-6 ${card.color}`}
+              className={`summary-stat-card border border-border-default bg-surface-surface flex flex-col items-center justify-center text-center ${card.color}`}
             >
-              <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-3 bg-white/50 shadow-sm">
+              <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-2 bg-white/50 shadow-sm">
                 <card.icon size={20} className={card.key === "total" ? "text-brand-primary" : card.key === "taken" ? "text-green-600" : card.key === "upcoming" ? "text-blue-600" : "text-red-600"} />
               </div>
               <strong className="text-2xl font-black text-text-primary">{card.value}</strong>

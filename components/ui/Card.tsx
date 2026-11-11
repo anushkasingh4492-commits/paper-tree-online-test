@@ -29,7 +29,7 @@ const RADIUS_CLASSES: Record<string, string> = {
 
 export function Card({
   variant = "default",
-  padding = "md",
+  padding = "sm",
   radius = "card",
   children,
   className,

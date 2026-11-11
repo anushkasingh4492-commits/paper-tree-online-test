@@ -87,9 +87,9 @@ export default function AchievementsPage() {
                         a.tier === 1
                           ? "text-state-warning bg-state-warning/10"
                           : a.tier === 2
-                            ? "text-silver-600 bg-silver-50"
+                            ? "text-text-tertiary bg-surface-subtle"
                             : a.tier === 3
-                              ? "text-bronze-600 bg-bronze-50"
+                              ? "text-state-warning bg-state-warning/20"
                               : "text-brand-primary bg-surface-subtle"
                       }`}
                     >
