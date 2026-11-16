@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import Link from "next/link";
@@ -58,9 +59,11 @@ export function LeftSidebar({
     >
       {/* Sidebar Brand */}
       <div className={`flex h-[82px] shrink-0 items-center gap-3 border-b border-border-default bg-surface-surface ${collapsed ? "justify-center px-2" : "px-5"}`}>
-        <div className="w-9 h-9 rounded-[11px] bg-brand-primary text-white flex items-center justify-center font-black text-lg shadow-sm">
-          IC
-        </div>
+        <Image
+          src="/images/logos/infinity-classes.svg"
+          alt="Infinity Classes logo"
+          className="w-9 h-9 shrink-0 rounded-[11px] object-contain shadow-sm"
+        />
         <div className={`flex flex-col ${collapsed ? "hidden" : ""}`}>
           <div className="font-extrabold text-[15px] leading-4 text-text-primary">
             Infinity Classes

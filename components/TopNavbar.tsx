@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import { Icon } from "./Icon";
 import StudentAvatar from "./StudentAvatar";
@@ -38,9 +39,11 @@ export function TopNavbar({
       {/* Left: Logo + Welcome */}
       <div className="flex min-w-0 items-center gap-2 sm:gap-4">
       <div className="flex shrink-0 items-center gap-2">
-        <div className="flex h-8 w-8 items-center justify-center rounded-[10px] bg-brand-primary text-sm font-black text-white shadow-sm">
-            IC
-          </div>
+        <Image
+          src="/images/logos/infinity-classes.svg"
+          alt="Infinity Classes logo"
+          className="h-8 w-8 shrink-0 rounded-[10px] object-contain shadow-sm"
+        />
         <div className="hidden text-[12px] font-extrabold text-text-primary md:block">Infinity Classes</div>
         </div>
 

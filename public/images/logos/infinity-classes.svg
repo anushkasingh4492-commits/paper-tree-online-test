@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <defs>
+    <linearGradient id="infinityGradient" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="50%" stop-color="#1e40af"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+  </defs>
+  <!-- Left loop of infinity -->
+  <path d="M8 16C8 11.582 11.582 8 16 8C20.418 8 24 11.582 24 16S20.418 24 16 24C11.582 24 8 20.418 8 16Z" fill="url(#infinityGradient)"/>
+  <!-- Right loop overlap -->
+  <path d="M16 10C12.686 10 10 12.686 10 16S12.686 22 16 22C19.314 22 22 19.314 22 16S19.314 10 16 10Z" fill="#1e3a8a"/>
+</svg>

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 type AcademyBrand = {
@@ -98,9 +99,11 @@ export default function AcademyBranding({
             className="h-10 w-10 shrink-0 rounded-card object-contain bg-surface-surface"
           />
         ) : (
-          <div className="h-10 w-10 shrink-0 rounded-xl bg-brand-primary text-white flex items-center justify-center font-black text-lg">
-            {name.charAt(0).toUpperCase()}
-          </div>
+          <Image
+            src="/images/logos/infinity-classes.svg"
+            alt="Infinity Classes logo"
+            className="h-10 w-10 shrink-0 rounded-card object-contain"
+          />
         )}
 
         <div className="min-w-0">
@@ -128,9 +131,11 @@ export default function AcademyBranding({
             className="h-11 w-11 rounded-[13px] object-contain bg-surface-surface"
           />
         ) : (
-          <div className="h-11 w-11 rounded-[13px] bg-surface-surface text-brand-primary flex items-center justify-center text-lg font-extrabold">
-            {name.charAt(0).toUpperCase()}
-          </div>
+          <Image
+            src="/images/logos/infinity-classes.svg"
+            alt="Infinity Classes logo"
+            className="h-11 w-11 rounded-[13px] object-contain"
+          />
         )}
 
         <div className="min-w-0">
@@ -157,9 +162,11 @@ export default function AcademyBranding({
           className="h-10 w-10 shrink-0 rounded-xl object-contain bg-white"
         />
       ) : (
-        <div className="h-10 w-10 shrink-0 rounded-xl bg-brand-primary text-white flex items-center justify-center font-black text-lg">
-          {name.charAt(0).toUpperCase()}
-        </div>
+        <Image
+          src="/images/logos/infinity-classes.svg"
+          alt="Infinity Classes logo"
+          className="h-10 w-10 shrink-0 rounded-xl object-contain"
+        />
       )}
 
       <div className="min-w-0">
