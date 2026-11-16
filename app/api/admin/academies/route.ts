@@ -57,6 +57,11 @@ async function ensureAcademySettingsColumns() {
   `);
 
   await pool.query(`
+    ALTER TABLE academies
+      ADD COLUMN IF NOT EXISTS assigned_courses TEXT[] NOT NULL DEFAULT '{}'
+  `);
+
+  await pool.query(`
     CREATE UNIQUE INDEX IF NOT EXISTS academies_domain_unique
     ON academies (LOWER(domain))
     WHERE domain IS NOT NULL AND domain <> ''
@@ -87,6 +92,7 @@ export async function GET() {
         a.subscription_tier,
        a.logo_data,
 a.domain,
+a.assigned_courses,
 COUNT(DISTINCT t.id)::int AS teacher_count,
         COUNT(DISTINCT s.id)::int AS student_count
       FROM academies a
@@ -105,7 +111,8 @@ COUNT(DISTINCT t.id)::int AS teacher_count,
   a.subscription_end,
   a.subscription_plan,
   a.subscription_tier,
-  a.domain
+  a.domain,
+  a.assigned_courses
       ORDER BY a.created_at DESC
     `);
 
@@ -154,6 +161,9 @@ export async function POST(req: NextRequest) {
   const subscriptionPlan = String(body.subscriptionPlan || `${subscriptionTier} · ${studentLimit} Students`).trim();
   const subscriptionStart = String(body.subscriptionStart || "").trim();
   const subscriptionEnd = String(body.subscriptionEnd || "").trim();
+  const assignedCourses = Array.isArray(body.assignedCourses)
+    ? body.assignedCourses.filter((c: unknown) => typeof c === "string")
+    : [];
 
   if (
     !academyName ||
@@ -217,11 +227,22 @@ export async function POST(req: NextRequest) {
         subscription_tier,
         student_limit,
         subscription_start,
-        subscription_end
+        subscription_end,
+        assigned_courses
       )
-      VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
+      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
       `,
-      [academyId, academyName, academyCode, subscriptionPlan, subscriptionTier, studentLimit, subscriptionStart, subscriptionEnd]
+      [
+        academyId,
+        academyName,
+        academyCode,
+        subscriptionPlan,
+        subscriptionTier,
+        studentLimit,
+        subscriptionStart,
+        subscriptionEnd,
+        assignedCourses,
+      ]
     );
 
     const adminId = crypto.randomUUID();

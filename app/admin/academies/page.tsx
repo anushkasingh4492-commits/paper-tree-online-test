@@ -24,6 +24,7 @@ type Academy = {
   subscription_start?: string;
   subscription_end?: string;
   status?: string;
+  assigned_courses?: string[];
 };
 
 type Details = {
@@ -130,6 +131,13 @@ const [resettingAdmin, setResettingAdmin] = useState(false);
 
   const [academyName, setAcademyName] = useState("");
   const [academyCode, setAcademyCode] = useState("");
+  const [assignedCourses, setAssignedCourses] = useState<string[]>([]);
+
+  const toggleCourse = (course: string) => {
+    setAssignedCourses((prev) =>
+      prev.includes(course) ? prev.filter((c) => c !== course) : [...prev, course]
+    );
+  };
 
   const [adminName, setAdminName] = useState("");
   const [adminEmail, setAdminEmail] = useState("");
@@ -455,6 +463,8 @@ useEffect(() => {
 
             subscriptionEnd:
               end,
+
+            assignedCourses,
           }),
         }
       );
@@ -1429,6 +1439,31 @@ async function resetAcademyAdmin(adminId: string) {
                 <option value="GOLD">Gold</option>
               </select>
             </label>
+
+            <label className="text-xs font-bold">
+              Assigned Courses
+            </label>
+            <div className="grid grid-cols-2 gap-2 mt-1">
+              {BATCH_COURSE_OPTIONS.map((course) => (
+                <label
+                  key={course}
+                  className={
+                    "flex items-center gap-2 rounded-xl border px-3 py-2 cursor-pointer text-sm transition-all " +
+                    (assignedCourses.includes(course)
+                      ? "border-brand-primary bg-brand-primary/10 text-brand-primary"
+                      : "border-border-default text-text-secondary hover:border-brand-primary hover:bg-brand-primary/5")
+                  }
+                >
+                  <input
+                    type="checkbox"
+                    checked={assignedCourses.includes(course)}
+                    onChange={() => toggleCourse(course)}
+                    className="w-4 h-4 rounded text-brand-primary"
+                  />
+                  {course}
+                </label>
+              ))}
+            </div>
 
             <Field
               label="Subscription months"
