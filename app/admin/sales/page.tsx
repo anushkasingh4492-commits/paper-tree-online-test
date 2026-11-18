@@ -21,6 +21,7 @@ type SalesUser = {
 
 type Lead = {
   id: string;
+  academy_code: string | null;
   institute_name: string;
   contact_name: string;
   status: string;
@@ -137,14 +138,14 @@ export default function SalesManagementPage() {
             <h2 className="text-lg font-extrabold">Create sales login</h2>
             <label className="mt-4 block text-sm font-bold">Name<input required value={name} onChange={(event) => setName(event.target.value)} className="mt-1 w-full rounded-lg border px-3 py-2 font-normal" /></label>
             <label className="mt-3 block text-sm font-bold">Email<input required type="email" value={email} onChange={(event) => setEmail(event.target.value)} className="mt-1 w-full rounded-lg border px-3 py-2 font-normal" /></label>
-            <label className="mt-3 block text-sm font-bold">Temporary password<input required minLength={8} type="password" value={password} onChange={(event) => setPassword(event.target.value)} className="mt-1 w-full rounded-lg border px-3 py-2 font-normal" /></label>
+            <label className="mt-3 block text-sm font-bold">Temporary password<input required type="password" value={password} onChange={(event) => setPassword(event.target.value)} className="mt-1 w-full rounded-lg border px-3 py-2 font-normal" /></label>
             <button className="mt-5 w-full rounded-xl bg-blue-700 px-4 py-3 font-extrabold text-white">Create login</button>
           </form>
         </section>
 
         <section className="mt-8 overflow-hidden rounded-2xl border bg-white shadow-sm">
           <h2 className="border-b px-5 py-4 text-lg font-extrabold">Institute demos in Academy Management</h2>
-          {loading ? <p className="p-5 text-slate-500">Loading institute demos…</p> : leads.length === 0 ? <p className="p-5 text-slate-500">Institute demos added by sales staff will appear here.</p> : <div className="overflow-x-auto"><table className="w-full min-w-[800px] text-left text-sm"><thead className="bg-slate-50 text-slate-500"><tr>{["Institute", "Salesperson", "Status", "Students", "Sale amount", "Commission"].map((item) => <th key={item} className="px-4 py-3 font-bold">{item}</th>)}</tr></thead><tbody>{leads.map((lead) => <tr key={lead.id} className="border-t"><td className="px-4 py-3 font-bold">{lead.institute_name}</td><td className="px-4 py-3">{lead.sales_person}</td><td className="px-4 py-3">{lead.status.replaceAll("_", " ")}</td><td className="px-4 py-3">{lead.students_converted}</td><td className="px-4 py-3">₹{Number(lead.sale_amount).toLocaleString("en-IN")}</td><td className="px-4 py-3">₹{Number(lead.commission).toLocaleString("en-IN", { maximumFractionDigits: 2 })}</td></tr>)}</tbody></table></div>}
+          {loading ? <p className="p-5 text-slate-500">Loading institute demos…</p> : leads.length === 0 ? <p className="p-5 text-slate-500">Institute demos added by sales staff will appear here.</p> : <div className="overflow-x-auto"><table className="w-full min-w-[900px] text-left text-sm"><thead className="bg-slate-50 text-slate-500"><tr>{["Institute", "Academy code", "Salesperson", "Status", "Students", "Sale amount", "Commission"].map((item) => <th key={item} className="px-4 py-3 font-bold">{item}</th>)}</tr></thead><tbody>{leads.map((lead) => <tr key={lead.id} className="border-t"><td className="px-4 py-3 font-bold">{lead.institute_name}</td><td className="px-4 py-3">{lead.academy_code || "—"}</td><td className="px-4 py-3">{lead.sales_person}</td><td className="px-4 py-3">{lead.status.replaceAll("_", " ")}</td><td className="px-4 py-3">{lead.students_converted}</td><td className="px-4 py-3">₹{Number(lead.sale_amount).toLocaleString("en-IN")}</td><td className="px-4 py-3">₹{Number(lead.commission).toLocaleString("en-IN", { maximumFractionDigits: 2 })}</td></tr>)}</tbody></table></div>}
         </section>
       </div>
     </main>

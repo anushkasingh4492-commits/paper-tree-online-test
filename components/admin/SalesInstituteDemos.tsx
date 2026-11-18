@@ -5,6 +5,7 @@ import { useDemoPortal } from "@/components/useDemoPortal";
 
 type Demo = {
   id: string;
+  academy_code: string | null;
   institute_name: string;
   contact_name: string;
   status: string;
@@ -41,9 +42,9 @@ export default function SalesInstituteDemos() {
       </div>
       {error ? <p role="alert" className="text-sm font-semibold text-state-error">{error}</p> : demos.length === 0 ? <p className="text-sm text-text-tertiary">No sales demos have been set up yet.</p> : (
         <div className="overflow-x-auto">
-          <table className="w-full min-w-[600px] text-left text-sm">
-            <thead className="text-xs text-text-tertiary"><tr>{["Institute", "Contact", "Salesperson", "Status", "Created"].map((heading) => <th key={heading} className="border-b px-3 py-2">{heading}</th>)}</tr></thead>
-            <tbody>{demos.map((demo) => <tr key={demo.id} className="border-b last:border-0"><td className="px-3 py-3 font-bold">{demo.institute_name}</td><td className="px-3 py-3">{demo.contact_name}</td><td className="px-3 py-3">{demo.sales_person}</td><td className="px-3 py-3">{demo.status.replaceAll("_", " ")}</td><td className="px-3 py-3">{new Date(demo.created_at).toLocaleDateString("en-IN")}</td></tr>)}</tbody>
+          <table className="w-full min-w-[700px] text-left text-sm">
+            <thead className="text-xs text-text-tertiary"><tr>{["Institute", "Academy code", "Contact", "Salesperson", "Status", "Created"].map((heading) => <th key={heading} className="border-b px-3 py-2">{heading}</th>)}</tr></thead>
+            <tbody>{demos.map((demo) => <tr key={demo.id} className="border-b last:border-0"><td className="px-3 py-3 font-bold">{demo.institute_name}</td><td className="px-3 py-3">{demo.academy_code || "—"}</td><td className="px-3 py-3">{demo.contact_name}</td><td className="px-3 py-3">{demo.sales_person}</td><td className="px-3 py-3">{demo.status.replaceAll("_", " ")}</td><td className="px-3 py-3">{new Date(demo.created_at).toLocaleDateString("en-IN")}</td></tr>)}</tbody>
           </table>
         </div>
       )}

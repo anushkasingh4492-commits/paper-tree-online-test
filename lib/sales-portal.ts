@@ -24,11 +24,11 @@ export function isSalesPortalHost(host: string | null) {
   if (process.env.NODE_ENV !== "production") return true;
 
   const hostname = (host || "").split(":")[0].toLowerCase();
-  const allowedHost = (process.env.DEMO_CBT_HOST || process.env.NEXT_PUBLIC_DEMO_CBT_HOST || "demo.cbt")
-    .split(":")[0]
-    .toLowerCase();
+  const configuredHost = (
+    process.env.DEMO_CBT_HOST || process.env.NEXT_PUBLIC_DEMO_CBT_HOST || ""
+  ).split(":")[0].toLowerCase();
 
-  return hostname === allowedHost;
+  return hostname === "demo.cbt.papertreestudio.in" || hostname === configuredHost;
 }
 
 export function salesPortalDisabled() {
@@ -54,6 +54,7 @@ export async function ensureSalesSchema() {
   await pool.query(`
     CREATE TABLE IF NOT EXISTS sales_leads (
       id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+      academy_id UUID REFERENCES academies(id) ON DELETE SET NULL,
       institute_name VARCHAR(255) NOT NULL,
       contact_name VARCHAR(150) NOT NULL,
       email VARCHAR(255),
@@ -68,6 +69,11 @@ export async function ensureSalesSchema() {
       created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
       updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
     )
+  `);
+
+  await pool.query(`
+    ALTER TABLE sales_leads
+    ADD COLUMN IF NOT EXISTS academy_id UUID REFERENCES academies(id) ON DELETE SET NULL
   `);
 
   await pool.query(`

@@ -3,9 +3,14 @@
 import { useSyncExternalStore } from "react";
 
 export function isDemoPortalHostname(hostname: string) {
-  const configuredHost = (process.env.NEXT_PUBLIC_DEMO_CBT_HOST || "demo.cbt").toLowerCase();
   const normalizedHost = hostname.toLowerCase();
-  return normalizedHost === configuredHost || normalizedHost === "localhost" || normalizedHost === "127.0.0.1";
+  const configuredHost = process.env.NEXT_PUBLIC_DEMO_CBT_HOST?.toLowerCase();
+  return (
+    normalizedHost === "demo.cbt.papertreestudio.in" ||
+    normalizedHost === configuredHost ||
+    normalizedHost === "localhost" ||
+    normalizedHost === "127.0.0.1"
+  );
 }
 
 function subscribe() {
