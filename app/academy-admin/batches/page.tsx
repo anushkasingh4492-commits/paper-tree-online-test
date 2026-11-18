@@ -106,7 +106,7 @@ export default function AcademyBatchesPage() {
         data.success &&
         Array.isArray(data.academies)
       ) {
-        const academyList =
+        const academyList: Academy[] =
           data.academies.map(
             (academy: Academy) => ({
               id: String(academy.id),
@@ -121,9 +121,12 @@ export default function AcademyBatchesPage() {
           !selectedAcademyId &&
           academyList.length > 0
         ) {
-          setSelectedAcademyId(
-            academyList[0].id
+          const requestedAcademyId =
+            new URLSearchParams(window.location.search).get("academyId");
+          const requestedAcademy = academyList.find(
+            (academy) => academy.id === requestedAcademyId,
           );
+          setSelectedAcademyId(requestedAcademy?.id || academyList[0].id);
         }
       }
     } catch (error) {

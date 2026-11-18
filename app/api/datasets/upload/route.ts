@@ -4,6 +4,7 @@ import crypto from "crypto";
 import * as XLSX from "xlsx";
 import { parseSessionCookie } from "@/lib/session";
 import { pool } from "@/lib/db";
+import { isSalesPortalHost, salesPortalDisabled } from "@/lib/sales-portal";
 
 export const runtime = "nodejs";
 
@@ -445,6 +446,7 @@ async function parseUploadedFile(
   }
 }
 export async function POST(request: Request): Promise<NextResponse> {
+  if (isSalesPortalHost(request.headers.get("host"))) return salesPortalDisabled();
   try {
     const cookieStore = await cookies();
     const sessionCookie = cookieStore.get("master_session")?.value;
@@ -762,6 +764,7 @@ export async function POST(request: Request): Promise<NextResponse> {
   }
 }
 export async function GET(request: Request): Promise<NextResponse> {
+  if (isSalesPortalHost(request.headers.get("host"))) return salesPortalDisabled();
   try {
     const cookieStore = await cookies();
     const sessionCookie = cookieStore.get("master_session")?.value;

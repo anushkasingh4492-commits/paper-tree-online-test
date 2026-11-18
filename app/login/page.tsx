@@ -124,6 +124,8 @@ export default function Home() {
         router.replace("/academy-admin");
       } else if (result.role === "ADMIN") {
         router.replace("/admin");
+      } else if (result.role === "SALES") {
+        router.replace("/sales");
       } else {
         throw new Error("Unknown account role.");
       }
@@ -151,7 +153,11 @@ export default function Home() {
           <div className="relative z-10">
             <div className="flex items-center gap-2 mb-2">
               <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center">
-                <Icon name="graduation-cap" size={20} className="text-brand-primary" />
+                <img
+                  src="/images/paper-tree-logo.png"
+                  alt="Paper Tree"
+                  className="h-10 w-10 rounded-xl object-contain"
+                />
               </div>
               <div>
                 <h2 className="text-xl font-extrabold tracking-tight">{brandName}</h2>

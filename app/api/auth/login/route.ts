@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 import { pool } from "@/lib/db";
 import { createSessionCookie } from "@/lib/session";
+import { ensureSalesSchema, isSalesPortalHost } from "@/lib/sales-portal";
 
 export const runtime = "nodejs";
 
@@ -42,6 +43,44 @@ export async function POST(request: Request) {
         },
         { status: 400 }
       );
+    }
+
+    if (!portalRole && isSalesPortalHost(request.headers.get("host"))) {
+      await ensureSalesSchema();
+      const salesResult = await pool.query(
+        `SELECT id, name, email, password_hash, active
+         FROM sales_users WHERE LOWER(email) = $1 LIMIT 1`,
+        [email],
+      );
+      if (salesResult.rows.length) {
+        const salesUser = salesResult.rows[0];
+        const valid = await bcrypt.compare(password, salesUser.password_hash);
+        if (!valid || !salesUser.active) {
+          return NextResponse.json(
+            { success: false, error: "Invalid email or password." },
+            { status: 401 },
+          );
+        }
+
+        const response = NextResponse.json({
+          success: true,
+          role: "SALES",
+          user: { id: salesUser.id, name: salesUser.name, email: salesUser.email },
+        });
+        response.cookies.delete("master_session");
+        response.cookies.delete("student_session");
+        response.cookies.set(
+          "sales_session",
+          createSessionCookie({
+            id: salesUser.id,
+            role: "SALES",
+            name: salesUser.name,
+            email: salesUser.email,
+          }),
+          sessionCookieOptions,
+        );
+        return response;
+      }
     }
 
     /*
@@ -101,6 +140,7 @@ export async function POST(request: Request) {
         });
 
         response.cookies.delete("student_session");
+        response.cookies.delete("sales_session");
 
         response.cookies.set(
           "master_session",
@@ -179,6 +219,7 @@ export async function POST(request: Request) {
         });
 
         response.cookies.delete("student_session");
+        response.cookies.delete("sales_session");
 
         response.cookies.set(
           "master_session",
@@ -289,6 +330,7 @@ export async function POST(request: Request) {
       });
 
       response.cookies.delete("master_session");
+      response.cookies.delete("sales_session");
 
       response.cookies.set(
         "student_session",

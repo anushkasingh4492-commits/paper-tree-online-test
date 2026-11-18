@@ -1,7 +1,8 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { ArrowRight, BookOpen, Building2, KeyRound, LogOut, ShieldCheck, Upload, type LucideIcon } from "lucide-react";
+import { useDemoPortal } from "@/components/useDemoPortal";
+import { ArrowRight, BookOpen, Building2, KeyRound, LogOut, ShieldCheck, Upload, Users, type LucideIcon } from "lucide-react";
 
 type Accent = "blue" | "orange" | "green" | "purple";
 type ManagementCardProps = { title: string; description: string; icon: LucideIcon; accent: Accent; onClick: () => void };
@@ -37,10 +38,16 @@ function ManagementCard({ title, description, icon: Icon, accent, onClick }: Man
 
 export default function AdminPage() {
   const router = useRouter();
+  const demoPortal = useDemoPortal();
+
   const sections: ManagementCardProps[] = [
     { title: "Academy Management", description: "Manage academies, branding, and administrative settings for all institutions.", icon: Building2, accent: "blue", onClick: () => router.push("/admin/academies") },
-    { title: "Batch Course Setup", description: "Create academy batches for MHT-CET, NEET, JEE, and CAT with question-bank imports.", icon: BookOpen, accent: "orange", onClick: () => router.push("/academy-admin/batches") },
-    { title: "Upload Dataset", description: "Import question-bank datasets (JSON, CSV, Excel) by course or subject.", icon: Upload, accent: "green", onClick: () => router.push("/admin/upload-dataset") },
+    ...(demoPortal
+      ? [{ title: "Sales Team & Performance", description: "Create sales logins and track institute demos, conversions, students, and 10% commission.", icon: Users, accent: "green" as const, onClick: () => router.push("/admin/sales") }]
+      : [
+          { title: "Batch Course Setup", description: "Create academy batches for MHT-CET, NEET, JEE, and CAT with question-bank imports.", icon: BookOpen, accent: "orange" as const, onClick: () => router.push("/academy-admin/batches") },
+          { title: "Upload Dataset", description: "Import question-bank datasets (JSON, CSV, Excel) by course or subject.", icon: Upload, accent: "green" as const, onClick: () => router.push("/admin/upload-dataset") },
+        ]),
     { title: "Password Management", description: "Reset passwords for students and teachers whenever required.", icon: KeyRound, accent: "purple", onClick: () => router.push("/admin/password-reset") },
   ];
 
@@ -53,7 +60,7 @@ export default function AdminPage() {
     <main className="admin-page flex min-h-screen text-text-primary">
       <aside className="hidden w-64 shrink-0 border-r border-border-default bg-white/80 lg:flex lg:flex-col">
         <div className="flex h-20 items-center gap-3 border-b border-border-default px-6">
-          <div className="flex h-10 w-10 items-center justify-center rounded-card bg-brand-primary text-lg font-black text-white shadow-sm">P</div>
+          <img src="/images/paper-tree-logo.png" alt="Paper Tree" className="h-10 w-10 rounded-card bg-white object-contain shadow-sm" />
           <div><p className="font-extrabold leading-tight">Paper Tree</p><p className="text-[10px] font-bold tracking-[0.12em] text-text-body">ADMIN CONTROL</p></div>
         </div>
         <nav className="px-4 py-6" aria-label="Master admin navigation">
@@ -68,7 +75,7 @@ export default function AdminPage() {
 
       <div className="min-w-0 flex-1">
         <header className="flex h-20 items-center justify-between border-b border-white/70 bg-white/70 px-5 backdrop-blur-sm sm:px-8 lg:justify-end">
-          <div className="flex items-center gap-3 lg:hidden"><div className="flex h-10 w-10 items-center justify-center rounded-card bg-brand-primary text-lg font-black text-white">P</div><p className="font-extrabold">Paper Tree</p></div>
+          <div className="flex items-center gap-3 lg:hidden"><img src="/images/paper-tree-logo.png" alt="Paper Tree" className="h-10 w-10 rounded-card bg-white object-contain" /><p className="font-extrabold">Paper Tree</p></div>
           <div className="flex items-center gap-3"><span className="rounded-card bg-white px-3 py-2 text-sm font-semibold text-text-secondary shadow-sm">Master Admin</span><button type="button" onClick={logout} className="rounded-card border border-border-default bg-white px-3 py-2 text-sm font-bold text-text-secondary transition hover:bg-surface-subtle">Logout</button></div>
         </header>
         <div id="dashboard" className="mx-auto w-full max-w-[1440px] px-5 py-10 sm:px-8 lg:px-12 lg:py-14">

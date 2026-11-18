@@ -8,6 +8,8 @@ import {
   useState,
 } from "react";
 import { useRouter } from "next/navigation";
+import SalesInstituteDemos from "@/components/admin/SalesInstituteDemos";
+import { useDemoPortal } from "@/components/useDemoPortal";
 
 type Academy = {
   id: string;
@@ -63,6 +65,7 @@ const BATCH_COURSE_OPTIONS = [
 
 export default function AcademiesPage() {
   const router = useRouter();
+  const demoPortal = useDemoPortal();
 
   const [academies, setAcademies] = useState<Academy[]>([]);
   const [loading, setLoading] = useState(true);
@@ -1327,14 +1330,22 @@ async function resetAcademyAdmin(adminId: string) {
             </h1>
           </div>
 
-          <button
-            onClick={() =>
-              router.push("/admin")
-            }
-            className="rounded-xl border border-border-default px-4 py-2 text-sm font-bold hover:bg-surface-app-bg"
-          >
-            ← Dashboard
-          </button>
+          <div className="flex flex-wrap gap-2">
+            {demoPortal && <button
+              onClick={() => router.push(selectedAcademy
+                ? `/academy-admin/batches?academyId=${encodeURIComponent(selectedAcademy.id)}`
+                : "/academy-admin/batches")}
+              className="rounded-xl bg-brand-primary px-4 py-2 text-sm font-bold text-white hover:opacity-90"
+            >
+              Batch course setup
+            </button>}
+            <button
+              onClick={() => router.push("/admin")}
+              className="rounded-xl border border-border-default px-4 py-2 text-sm font-bold hover:bg-surface-app-bg"
+            >
+              ← Dashboard
+            </button>
+          </div>
         </div>
       </header>
 
@@ -1364,6 +1375,8 @@ async function resetAcademyAdmin(adminId: string) {
             icon="📚"
           />
         </section>
+
+        <SalesInstituteDemos />
 
         <section className="rounded-3xl border border-border-default bg-white p-6 shadow-sm">
           <div className="mb-5 flex flex-wrap items-center justify-between gap-3">

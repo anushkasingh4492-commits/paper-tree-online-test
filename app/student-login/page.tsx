@@ -37,7 +37,12 @@ export default function Home() {
 
       const text = await response.text();
 
-      let result: any;
+      let result: {
+        success?: boolean;
+        error?: string;
+        user?: { id?: string | number; name?: string };
+        student?: { id?: string | number; name?: string };
+      };
 
       if (contentType.includes("application/json")) {
         try {
@@ -173,7 +178,7 @@ export default function Home() {
 
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-white/20 text-white mb-4 shadow-lg shadow-black/30">
-                  <span className="text-lg font-black">P</span>
+                  <img src="/images/paper-tree-logo.png" alt="Paper Tree" className="h-12 w-12 rounded-2xl object-contain" />
                 </div>
                 <h1 className="text-2xl font-extrabold text-white tracking-tight">
                   Sign in to CBT

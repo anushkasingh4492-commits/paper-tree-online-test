@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { isDemoPortalHostname } from "@/components/useDemoPortal";
 
 export default function UploadDatasetPage() {
   const router = useRouter();
@@ -56,10 +57,14 @@ export default function UploadDatasetPage() {
   }
 
   useEffect(() => {
+    if (isDemoPortalHostname(window.location.hostname)) {
+      router.replace("/admin");
+      return;
+    }
     (async () => {
       await fetchHistory();
     })();
-  }, []);
+  }, [router]);
 
   function formatDate(value: string | null | undefined): string {
     if (!value) return "-";
