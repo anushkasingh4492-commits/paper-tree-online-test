@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 import { pool } from "@/lib/db";
+import { parseSessionCookie } from "@/lib/session";
 
 export const runtime = "nodejs";
 
@@ -12,22 +13,9 @@ type Session = {
 
 function getSession(request: Request): Session | null {
   const cookieHeader = request.headers.get("cookie") || "";
-
-  const match = cookieHeader.match(
-    /(?:^|;\s*)master_session=([^;]+)/
-  );
-
-  if (!match) {
-    return null;
-  }
-
-  try {
-    return JSON.parse(
-      decodeURIComponent(match[1])
-    );
-  } catch {
-    return null;
-  }
+  const match = cookieHeader.match(/(?:^|;\s*)master_session=([^;]+)/);
+  if (!match) return null;
+  return parseSessionCookie<Session>(decodeURIComponent(match[1]));
 }
 
 export async function GET(request: Request) {
@@ -97,6 +85,7 @@ const studentsResult = await pool.query(
 
     return NextResponse.json({
       success: true,
+      masterId: session.id,
       teachers: teachersResult.rows,
       students: studentsResult.rows,
     });
@@ -173,10 +162,7 @@ export async function POST(request: Request) {
       body.newPassword || ""
     );
 
-    if (
-      userType !== "STUDENT" &&
-      userType !== "TEACHER"
-    ) {
+    if (!["STUDENT", "TEACHER", "MASTER"].includes(userType)) {
       return NextResponse.json(
         {
           success: false,
@@ -186,7 +172,7 @@ export async function POST(request: Request) {
       );
     }
 
-    if (!userId) {
+    if (userType !== "MASTER" && !userId) {
       return NextResponse.json(
         {
           success: false,
@@ -196,12 +182,12 @@ export async function POST(request: Request) {
       );
     }
 
-    if (newPassword.length < 8) {
+    if (newPassword.length < 6) {
       return NextResponse.json(
         {
           success: false,
           error:
-            "Password must be at least 8 characters long.",
+            "Password must be at least 6 characters long.",
         },
         { status: 400 }
       );
@@ -211,6 +197,24 @@ export async function POST(request: Request) {
       newPassword,
       12
     );
+
+    if (userType === "MASTER") {
+      if (userId !== session.id) {
+        return NextResponse.json(
+          { success: false, error: "Only the signed-in master admin can change this password." },
+          { status: 403 }
+        );
+      }
+      await pool.query(
+        `UPDATE admins SET password_hash = $1
+         WHERE id = $2 AND is_master = TRUE`,
+        [passwordHash, session.id]
+      );
+      return NextResponse.json({
+        success: true,
+        message: "Master Admin password changed successfully.",
+      });
+    }
 
     /*
      * ==========================================

@@ -21,12 +21,13 @@ export default function AdminPasswordResetPage() {
     useState<Account[]>([]);
 
   const [type, setType] =
-    useState<"TEACHER" | "STUDENT">(
+    useState<"MASTER" | "TEACHER" | "STUDENT">(
       "STUDENT"
     );
 
   const [userId, setUserId] =
     useState("");
+  const [masterId, setMasterId] = useState("");
 
   const [password, setPassword] =
     useState("");
@@ -74,6 +75,10 @@ export default function AdminPasswordResetPage() {
         setStudents(
           result.students || []
         );
+        if (result.masterId) {
+          setMasterId(String(result.masterId));
+          setUserId("");
+        }
       } catch (err) {
         setError(
           err instanceof Error
@@ -97,14 +102,14 @@ export default function AdminPasswordResetPage() {
     setError("");
     setMessage("");
 
-    if (!userId) {
+    if (type !== "MASTER" && !userId) {
       setError("Select an account.");
       return;
     }
 
-    if (password.length < 8) {
+    if (password.length < 6) {
       setError(
-        "Password must be at least 8 characters long."
+        "Password must be at least 6 characters long."
       );
       return;
     }
@@ -131,7 +136,7 @@ export default function AdminPasswordResetPage() {
           credentials: "include",
           body: JSON.stringify({
             userType: type,
-            userId,
+            userId: type === "MASTER" ? masterId : userId,
             newPassword: password,
           }),
         }
@@ -191,12 +196,12 @@ export default function AdminPasswordResetPage() {
       <div className="mx-auto max-w-2xl px-6 py-10">
         <section className="rounded-3xl border border-border-default bg-surface-surface p-7 shadow-sm">
           <h2 className="text-xl font-extrabold">
-            Reset Student / Teacher Password
+            Change Password
           </h2>
 
           <p className="mt-2 text-sm text-text-tertiary">
-            You can reset an account password without
-            knowing the user's current password.
+            Change the Master Admin password or reset a
+            student or teacher password.
           </p>
 
           {error && (
@@ -211,7 +216,17 @@ export default function AdminPasswordResetPage() {
             </div>
           )}
 
-          <div className="mt-7 grid grid-cols-2 gap-3">
+          <div className="mt-7 grid grid-cols-3 gap-3">
+            <button
+              onClick={() => setType("MASTER")}
+              className={`rounded-xl border-2 px-4 py-3 text-sm font-bold ${
+                type === "MASTER"
+                  ? "border-brand-primary bg-brand-primary/10 text-brand-primary"
+                  : "border-border-default text-text-tertiary"
+              }`}
+            >
+              🛡️ Master
+            </button>
             <button
               onClick={() => {
                 setType("STUDENT");
@@ -241,36 +256,34 @@ export default function AdminPasswordResetPage() {
             </button>
           </div>
 
-          <label className="mt-6 block text-sm font-bold">
-            Select account
-          </label>
+          {type === "MASTER" ? (
+            <div className="mt-6 rounded-xl border border-border-default bg-surface-app-bg px-4 py-3 text-sm text-text-tertiary">
+              The signed-in Master Admin password will be changed.
+            </div>
+          ) : (
+            <>
+              <label className="mt-6 block text-sm font-bold">
+                Select account
+              </label>
 
-          <select
-            value={userId}
-            onChange={(e) =>
-              setUserId(e.target.value)
-            }
-            disabled={loading}
-            className="mt-2 h-12 w-full rounded-xl border border-border-default bg-white px-4 text-sm outline-none focus:border-brand-primary"
-          >
-            <option value="">
-              {loading
-                ? "Loading accounts..."
-                : "Select an account"}
-            </option>
-
-            {accounts.map((account) => (
-              <option
-                key={account.id}
-                value={account.id}
+              <select
+                value={userId}
+                onChange={(e) => setUserId(e.target.value)}
+                disabled={loading}
+                className="mt-2 h-12 w-full rounded-xl border border-border-default bg-white px-4 text-sm outline-none focus:border-brand-primary"
               >
-                {account.name} — {account.email}
-                {account.academy_name
-                  ? ` — ${account.academy_name}`
-                  : ""}
-              </option>
-            ))}
-          </select>
+                <option value="">
+                  {loading ? "Loading accounts..." : "Select an account"}
+                </option>
+                {accounts.map((account) => (
+                  <option key={account.id} value={account.id}>
+                    {account.name} — {account.email}
+                    {account.academy_name ? ` — ${account.academy_name}` : ""}
+                  </option>
+                ))}
+              </select>
+            </>
+          )}
 
           <label className="mt-6 block text-sm font-bold">
             New password
@@ -282,8 +295,8 @@ export default function AdminPasswordResetPage() {
             onChange={(e) =>
               setPassword(e.target.value)
             }
-            placeholder="Minimum 8 characters"
-            minLength={8}
+            placeholder="Minimum 6 characters"
+            minLength={6}
             className="mt-2 h-12 w-full rounded-xl border border-border-default px-4 text-sm outline-none focus:border-brand-primary"
           />
 

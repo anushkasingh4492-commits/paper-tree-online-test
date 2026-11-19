@@ -43,7 +43,7 @@ export default function AdminPage() {
   const sections: ManagementCardProps[] = [
     { title: "Academy Management", description: "Manage academies, branding, and administrative settings for all institutions.", icon: Building2, accent: "blue", onClick: () => router.push("/admin/academies") },
     ...(demoPortal
-      ? [{ title: "Sales Team & Performance", description: "Create sales logins and track institute demos, conversions, students, and 10% commission.", icon: Users, accent: "green" as const, onClick: () => router.push("/admin/sales") }]
+      ? [{ title: "Sales Team & Performance", description: "Create sales logins and track institute demos, conversions, students, and percentage-based commission.", icon: Users, accent: "green" as const, onClick: () => router.push("/admin/sales") }]
       : [
           { title: "Batch Course Setup", description: "Create academy batches for MHT-CET, NEET, JEE, and CAT with question-bank imports.", icon: BookOpen, accent: "orange" as const, onClick: () => router.push("/academy-admin/batches") },
           { title: "Upload Dataset", description: "Import question-bank datasets (JSON, CSV, Excel) by course or subject.", icon: Upload, accent: "green" as const, onClick: () => router.push("/admin/upload-dataset") },

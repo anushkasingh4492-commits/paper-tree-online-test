@@ -34,10 +34,17 @@ export async function PATCH(request: Request, context: Context) {
     if (!isSalesLeadStatus(status)) {
       return NextResponse.json({ success: false, error: "Invalid institute status." }, { status: 400 });
     }
-    const students = Number(body.studentsConverted ?? 0);
-    const saleAmount = Number(body.saleAmount ?? 0);
-    if (!Number.isInteger(students) || students < 0 || !Number.isFinite(saleAmount) || saleAmount < 0) {
-      return NextResponse.json({ success: false, error: "Student count and sale amount must be non-negative values." }, { status: 400 });
+    const totalStudents = Number(body.totalStudents);
+    const proposedSellingPrice = Number(body.proposedSellingPrice);
+    const reaction = String(body.reaction || "").toUpperCase();
+    if (
+      !Number.isInteger(totalStudents) ||
+      totalStudents < 0 ||
+      !Number.isFinite(proposedSellingPrice) ||
+      proposedSellingPrice < 0 ||
+      !["HOT", "WARM", "COLD", "REJECTED"].includes(reaction)
+    ) {
+      return NextResponse.json({ success: false, error: "Enter a valid student count, proposed selling price, and reaction." }, { status: 400 });
     }
     const followUpAt = body.followUpAt ? String(body.followUpAt) : null;
     if (followUpAt) {
@@ -47,21 +54,53 @@ export async function PATCH(request: Request, context: Context) {
       }
     }
 
-    const result = await pool.query(
-      `UPDATE sales_leads
-       SET status = $1,
-           follow_up_at = $2::date,
-           students_converted = CASE WHEN $1 = 'CONVERTED' THEN $3 ELSE 0 END,
-           sale_amount = CASE WHEN $1 = 'CONVERTED' THEN $4 ELSE 0 END,
-           updated_at = NOW()
-       WHERE id = $5::uuid AND ($6::uuid IS NULL OR sales_user_id = $6)
-       RETURNING id, institute_name, contact_name, email, phone, status, follow_up_at,
-                 students_converted, sale_amount, notes, created_at,
-                 (sale_amount * 0.1)::numeric AS commission`,
-      [status, followUpAt, students, saleAmount, leadId, isAdmin ? null : sales!.id],
-    );
-    if (!result.rowCount) return NextResponse.json({ success: false, error: "Institute demo not found." }, { status: 404 });
-    return NextResponse.json({ success: true, lead: result.rows[0] });
+    const client = await pool.connect();
+    try {
+      await client.query("BEGIN");
+      const result = await client.query(
+        `UPDATE sales_leads
+         SET status = $1,
+             follow_up_at = $2::date,
+             reaction = $3,
+             total_students = $4,
+             students_converted = CASE WHEN $1 = 'CONVERTED' THEN $4 ELSE 0 END,
+             proposed_selling_price = $5,
+             sale_amount = $4 * $5,
+             updated_at = NOW()
+         WHERE id = $6::uuid AND ($7::uuid IS NULL OR sales_user_id = $7)
+         RETURNING id, academy_id, institute_name, contact_name, alternate_contact_numbers,
+                   status, reaction, follow_up_at, total_students, proposed_selling_price,
+                   sale_amount, notes, created_at, sales_user_id`,
+        [status, followUpAt, reaction, totalStudents, proposedSellingPrice, leadId, isAdmin ? null : sales!.id],
+      );
+      if (!result.rowCount) {
+        await client.query("ROLLBACK");
+        return NextResponse.json({ success: false, error: "Institute demo not found." }, { status: 404 });
+      }
+      if (result.rows[0].academy_id) {
+        await client.query(
+          "UPDATE academies SET student_limit = $1 WHERE id = $2",
+          [totalStudents, result.rows[0].academy_id],
+        );
+      }
+      await client.query("COMMIT");
+      const commissionResult = await client.query(
+        "SELECT commission_percentage FROM sales_users WHERE id = $1",
+        [result.rows[0].sales_user_id],
+      );
+      const commission = status === "CONVERTED"
+        ? Number(result.rows[0].sale_amount || 0) * Number(commissionResult.rows[0]?.commission_percentage || 0) / 100
+        : 0;
+      return NextResponse.json({
+        success: true,
+        lead: { ...result.rows[0], commission },
+      });
+    } catch (error) {
+      await client.query("ROLLBACK");
+      throw error;
+    } finally {
+      client.release();
+    }
   } catch (error) {
     console.error("UPDATE SALES LEAD ERROR:", error);
     return NextResponse.json({ success: false, error: "Could not update institute status." }, { status: 500 });

@@ -46,6 +46,8 @@ export async function ensureSalesSchema() {
       email VARCHAR(255) NOT NULL UNIQUE,
       password_hash TEXT NOT NULL,
       active BOOLEAN NOT NULL DEFAULT TRUE,
+      commission_amount NUMERIC(12, 2) NOT NULL DEFAULT 0 CHECK (commission_amount >= 0),
+      commission_percentage NUMERIC(5, 2) NOT NULL DEFAULT 0 CHECK (commission_percentage >= 0 AND commission_percentage <= 100),
       created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
       updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
     )
@@ -59,10 +61,16 @@ export async function ensureSalesSchema() {
       contact_name VARCHAR(150) NOT NULL,
       email VARCHAR(255),
       phone VARCHAR(50),
+      alternate_contact_numbers TEXT[] NOT NULL DEFAULT '{}',
       status VARCHAR(30) NOT NULL DEFAULT 'DEMO_SET_UP'
         CHECK (status IN ('DEMO_SET_UP', 'REJECTED', 'FOLLOW_UP', 'INTERESTED', 'CONVERTED')),
       follow_up_at DATE,
       students_converted INTEGER NOT NULL DEFAULT 0 CHECK (students_converted >= 0),
+      total_students INTEGER NOT NULL DEFAULT 0 CHECK (total_students >= 0),
+      proposed_selling_price NUMERIC(12, 2) NOT NULL DEFAULT 0 CHECK (proposed_selling_price >= 0),
+      reaction VARCHAR(20) NOT NULL DEFAULT 'WARM'
+        CHECK (reaction IN ('HOT', 'WARM', 'COLD', 'REJECTED')),
+      duration_days INTEGER NOT NULL DEFAULT 30 CHECK (duration_days > 0),
       sale_amount NUMERIC(12, 2) NOT NULL DEFAULT 0 CHECK (sale_amount >= 0),
       notes TEXT,
       sales_user_id UUID NOT NULL REFERENCES sales_users(id) ON DELETE RESTRICT,
@@ -75,10 +83,23 @@ export async function ensureSalesSchema() {
     ALTER TABLE sales_leads
     ADD COLUMN IF NOT EXISTS academy_id UUID REFERENCES academies(id) ON DELETE SET NULL
   `);
+  await pool.query(`
+    ALTER TABLE sales_leads
+      ADD COLUMN IF NOT EXISTS alternate_contact_numbers TEXT[] NOT NULL DEFAULT '{}',
+      ADD COLUMN IF NOT EXISTS total_students INTEGER NOT NULL DEFAULT 0,
+      ADD COLUMN IF NOT EXISTS proposed_selling_price NUMERIC(12, 2) NOT NULL DEFAULT 0,
+      ADD COLUMN IF NOT EXISTS reaction VARCHAR(20) NOT NULL DEFAULT 'WARM',
+      ADD COLUMN IF NOT EXISTS duration_days INTEGER NOT NULL DEFAULT 30
+  `);
 
   await pool.query(`
     CREATE INDEX IF NOT EXISTS sales_leads_sales_user_created_idx
     ON sales_leads (sales_user_id, created_at DESC)
+  `);
+  await pool.query(`
+    ALTER TABLE sales_users
+    ADD COLUMN IF NOT EXISTS commission_amount NUMERIC(12, 2) NOT NULL DEFAULT 0,
+    ADD COLUMN IF NOT EXISTS commission_percentage NUMERIC(5, 2) NOT NULL DEFAULT 0
   `);
 }
 

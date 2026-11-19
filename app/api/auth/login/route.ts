@@ -3,6 +3,7 @@ import bcrypt from "bcryptjs";
 import { pool } from "@/lib/db";
 import { createSessionCookie } from "@/lib/session";
 import { ensureSalesSchema, isSalesPortalHost } from "@/lib/sales-portal";
+import { ensureAcademyUsernameSchema } from "@/lib/academy-admin-login";
 
 export const runtime = "nodejs";
 
@@ -43,6 +44,10 @@ export async function POST(request: Request) {
         },
         { status: 400 }
       );
+    }
+
+    if (isSalesPortalHost(request.headers.get("host"))) {
+      await ensureAcademyUsernameSchema();
     }
 
     if (!portalRole && isSalesPortalHost(request.headers.get("host"))) {
@@ -95,11 +100,12 @@ export async function POST(request: Request) {
         id,
         name,
         email,
+        username,
         password_hash,
         academy_id,
         is_master
       FROM admins
-      WHERE LOWER(email) = $1
+      WHERE LOWER(email) = $1 OR LOWER(username) = $1
       LIMIT 1
       `,
       [email]
