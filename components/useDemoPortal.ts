@@ -14,7 +14,11 @@ export function isDemoPortalHostname(hostname: string) {
 }
 
 export function isInfinityPortalHostname(hostname: string) {
-  return hostname.toLowerCase() === "web.infinity.classes.net";
+  const normalizedHost = hostname.toLowerCase();
+  return (
+    normalizedHost === "web.infinityclasses.net" ||
+    normalizedHost === "web.infinity.classes.net"
+  );
 }
 
 function subscribe() {
