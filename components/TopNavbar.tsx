@@ -40,9 +40,11 @@ export function TopNavbar({
       <div className="flex min-w-0 items-center gap-2 sm:gap-4">
       <div className="flex shrink-0 items-center gap-2">
         <Image
-          src="/images/logos/infinity-classes.svg"
+          src="/images/logos/infinity-mark.png"
           alt="Infinity Classes logo"
-          className="h-8 w-8 shrink-0 rounded-[10px] object-contain shadow-sm"
+          width={896}
+          height={439}
+          className="h-8 w-12 shrink-0 rounded-[10px] bg-white object-contain shadow-sm"
         />
         <div className="hidden text-[12px] font-extrabold text-text-primary md:block">Infinity Classes</div>
         </div>

@@ -100,9 +100,11 @@ export default function AcademyBranding({
           />
         ) : (
           <Image
-            src="/images/logos/infinity-classes.svg"
+            src="/images/logos/infinity-mark.png"
             alt="Infinity Classes logo"
-            className="h-10 w-10 shrink-0 rounded-card object-contain"
+            width={896}
+            height={439}
+            className="h-8 w-[54px] shrink-0 rounded-card bg-white object-contain"
           />
         )}
 
@@ -132,9 +134,11 @@ export default function AcademyBranding({
           />
         ) : (
           <Image
-            src="/images/logos/infinity-classes.svg"
+            src="/images/logos/infinity-mark.png"
             alt="Infinity Classes logo"
-            className="h-11 w-11 rounded-[13px] object-contain"
+            width={896}
+            height={439}
+            className="h-8 w-[54px] rounded-[13px] bg-white object-contain"
           />
         )}
 
@@ -163,9 +167,11 @@ export default function AcademyBranding({
         />
       ) : (
         <Image
-          src="/images/logos/infinity-classes.svg"
+          src="/images/logos/infinity-mark.png"
           alt="Infinity Classes logo"
-          className="h-10 w-10 shrink-0 rounded-xl object-contain"
+          width={896}
+          height={439}
+          className="h-8 w-[54px] shrink-0 rounded-xl bg-white object-contain"
         />
       )}
 

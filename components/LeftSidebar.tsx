@@ -60,18 +60,12 @@ export function LeftSidebar({
       {/* Sidebar Brand */}
       <div className={`flex h-[82px] shrink-0 items-center gap-3 border-b border-border-default bg-surface-surface ${collapsed ? "justify-center px-2" : "px-5"}`}>
         <Image
-          src="/images/logos/infinity-classes.svg"
+          src={collapsed ? "/images/logos/infinity-mark.png" : "/images/logos/infinity-classes.png"}
           alt="Infinity Classes logo"
-          className="w-9 h-9 shrink-0 rounded-[11px] object-contain shadow-sm"
+          width={collapsed ? 896 : 1700}
+          height={collapsed ? 439 : 768}
+          className={`${collapsed ? "h-8 w-12" : "h-[76px] w-[170px]"} shrink-0 rounded-[11px] bg-white object-contain shadow-sm`}
         />
-        <div className={`flex flex-col ${collapsed ? "hidden" : ""}`}>
-          <div className="font-extrabold text-[15px] leading-4 text-text-primary">
-            Infinity Classes
-          </div>
-          <div className="text-[9px] font-semibold tracking-[.17em] text-text-supporting-label mt-1">
-            EDUCATIONAL STUDIO
-          </div>
-        </div>
         {collapsed && (
           <button
             onClick={() => setSidebarCollapsed(false)}

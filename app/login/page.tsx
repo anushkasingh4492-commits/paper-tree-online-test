@@ -3,6 +3,8 @@
 import { FormEvent, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Icon } from "@/components/Icon";
+import { useDemoPortal } from "@/components/useDemoPortal";
+import styles from "./login.module.css";
 
 type Branding = {
   name: string;
@@ -11,11 +13,15 @@ type Branding = {
 
 export default function Home() {
   const router = useRouter();
+  const demoPortal = useDemoPortal();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [mode, setMode] = useState<"student" | "staff">("student");
+  const [showPassword, setShowPassword] = useState(false);
+  const [rememberMe, setRememberMe] = useState(false);
 
   const [branding, setBranding] = useState<Branding | null>(null);
 
@@ -63,6 +69,8 @@ export default function Home() {
         body: JSON.stringify({
           email,
           password,
+          rememberMe,
+          ...(mode === "staff" ? { portalRole: "STAFF" } : {}),
         }),
       });
 
@@ -142,6 +150,178 @@ export default function Home() {
     } finally {
       setLoading(false);
     }
+  }
+
+  if (demoPortal) {
+    const isStudentMode = mode === "student";
+
+    return (
+      <main className={styles.page}>
+        <div className={styles.shell}>
+          <section className={styles.hero}>
+            <div className={styles.copy}>
+              <div className={styles.brand}>
+                <img
+                  src={branding?.logo_data || "/images/paper-tree-logo.png"}
+                  alt={`${brandName} logo`}
+                  className={styles.logo}
+                />
+                <div>
+                  <strong>{brandName}</strong>
+                  <small>COMPUTER BASED TESTING</small>
+                </div>
+              </div>
+              <div className={styles.eyebrow}>ONE PLATFORM. EVERY ASSESSMENT.</div>
+              <h1>
+                Think.
+                <br />
+                Test.
+                <br />
+                <span>Excel.</span>
+              </h1>
+              <p className={styles.description}>
+                Access expert-crafted tests, secure assessments, and actionable
+                insights to boost learning outcomes.
+              </p>
+            </div>
+
+            <div className={styles.scene} aria-hidden="true">
+              <div className={styles.orbit} />
+              <div className={`${styles.feature} ${styles.featureOne}`}>
+                <span className={styles.featureIcon}>✦</span>
+                <span><strong>Expert-crafted questions</strong><small>Built by experienced educators.</small></span>
+              </div>
+              <div className={`${styles.feature} ${styles.featureTwo}`}>
+                <span className={styles.featureIcon}>◷</span>
+                <span><strong>Timed assessments</strong><small>Realistic exam practice.</small></span>
+              </div>
+              <div className={`${styles.feature} ${styles.featureThree}`}>
+                <span className={styles.featureIcon}>▥</span>
+                <span><strong>Performance insights</strong><small>Track scores and progress.</small></span>
+              </div>
+              <div className={`${styles.feature} ${styles.featureFour}`}>
+                <span className={styles.featureIcon}>★</span>
+                <span><strong>Achievement system</strong><small>Celebrate every milestone.</small></span>
+              </div>
+              <div className={styles.examWrap}>
+                <div className={styles.examBack} />
+                <div className={styles.exam}>
+                  <div className={styles.examDots}><i /><i /><i /></div>
+                  <div className={styles.examBody}>
+                    <div className={styles.questionNumbers}><b>1</b><b>2</b><b>3</b><b>4</b></div>
+                    <div>
+                      <div className={styles.questionTitle}><span>Question 12</span><span className={styles.timer}>◷ 00:58:32</span></div>
+                      <div className={styles.line} />
+                      <div className={`${styles.line} ${styles.lineMid}`} />
+                      <div className={`${styles.line} ${styles.lineShort}`} />
+                      {["A", "B", "C", "D"].map((choice) => (
+                        <div className={styles.option} key={choice}><em>{choice}</em><span /></div>
+                      ))}
+                      <div className={styles.nextButton}>Next →</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.books}><i /><i /><i /></div>
+            </div>
+          </section>
+
+          <section className={styles.panel} aria-label="Sign in">
+            <div className={styles.formColumn}>
+              <div>
+                <h2>Welcome back</h2>
+                <p className={styles.subtitle}>
+                  {isStudentMode
+                    ? "Sign in to continue your assessment journey."
+                    : "Sign in to manage assessments and your workspace."}
+                </p>
+              </div>
+
+              {error && <p className={styles.error} role="alert" aria-live="polite">{error}</p>}
+
+              <form id="loginForm" onSubmit={handleSubmit} className={styles.form}>
+                <label className={styles.field}>
+                  <span className={styles.fieldIcon} aria-hidden="true">✉</span>
+                  <span className={styles.visuallyHidden}>Email address or username</span>
+                  <input
+                    type="text"
+                    value={email}
+                    onChange={(event) => setEmail(event.target.value)}
+                    autoComplete="username"
+                    aria-label="Email address or username"
+                    placeholder="Enter your email address or username"
+                    required
+                    disabled={loading}
+                  />
+                </label>
+                <label className={styles.field}>
+                  <span className={styles.fieldIcon} aria-hidden="true">♙</span>
+                  <span className={styles.visuallyHidden}>Password</span>
+                  <input
+                    type={showPassword ? "text" : "password"}
+                    value={password}
+                    onChange={(event) => setPassword(event.target.value)}
+                    autoComplete="current-password"
+                    aria-label="Password"
+                    placeholder="Enter your password"
+                    required
+                    disabled={loading}
+                  />
+                  <button
+                    type="button"
+                    className={styles.passwordToggle}
+                    onClick={() => setShowPassword((visible) => !visible)}
+                    aria-label={showPassword ? "Hide password" : "Show password"}
+                    aria-pressed={showPassword}
+                  >
+                    {showPassword ? "Hide" : "Show"}
+                  </button>
+                </label>
+                <div className={styles.formBottom}>
+                  <label className={styles.remember}>
+                    <input
+                      type="checkbox"
+                      checked={rememberMe}
+                      onChange={(event) => setRememberMe(event.target.checked)}
+                      disabled={loading}
+                    />
+                    Remember this device
+                  </label>
+                </div>
+              </form>
+            </div>
+
+            <div className={styles.actions}>
+              <button
+                type="submit"
+                form="loginForm"
+                disabled={loading}
+                className={`${styles.cta} ${styles.primary}`}
+              >
+                {loading ? "Signing in..." : isStudentMode ? "Sign in to CBT →" : "Sign in to Staff Portal →"}
+              </button>
+              <button
+                type="button"
+                className={`${styles.cta} ${styles.secondary}`}
+                onClick={() => {
+                  setMode(isStudentMode ? "staff" : "student");
+                  setError("");
+                }}
+                disabled={loading}
+              >
+                {isStudentMode ? "Teacher / Admin login →" : "← Student / Sales login"}
+              </button>
+              <p className={styles.modeNote} aria-live="polite">
+                Currently signing in as {isStudentMode ? "a student or sales team member" : "a teacher or administrator"}
+              </p>
+              <p className={styles.fine}>Secure access for students, teachers, sales staff, and administrators.</p>
+            </div>
+          </section>
+
+          <footer className={styles.footer}>© {new Date().getFullYear()} {brandName}</footer>
+        </div>
+      </main>
+    );
   }
 
   return (
