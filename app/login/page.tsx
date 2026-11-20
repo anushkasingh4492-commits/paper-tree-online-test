@@ -3,7 +3,7 @@
 import { FormEvent, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Icon } from "@/components/Icon";
-import { useDemoPortal } from "@/components/useDemoPortal";
+import { useDemoPortal, useInfinityPortal } from "@/components/useDemoPortal";
 import styles from "./login.module.css";
 
 type Branding = {
@@ -14,6 +14,7 @@ type Branding = {
 export default function Home() {
   const router = useRouter();
   const demoPortal = useDemoPortal();
+  const infinityPortal = useInfinityPortal();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -25,7 +26,7 @@ export default function Home() {
 
   const [branding, setBranding] = useState<Branding | null>(null);
 
-  const brandName = branding?.name || "Paper Tree";
+  const brandName = branding?.name || (infinityPortal ? "Infinity Classes" : "Paper Tree");
 
   useEffect(() => {
     async function loadBranding() {
@@ -152,8 +153,11 @@ export default function Home() {
     }
   }
 
-  if (demoPortal) {
+  if (demoPortal || infinityPortal) {
     const isStudentMode = mode === "student";
+    const logo = infinityPortal
+      ? "/images/logos/infinity-mark.png"
+      : branding?.logo_data || "/images/paper-tree-logo.png";
 
     return (
       <main className={styles.page}>
@@ -162,7 +166,7 @@ export default function Home() {
             <div className={styles.copy}>
               <div className={styles.brand}>
                 <img
-                  src={branding?.logo_data || "/images/paper-tree-logo.png"}
+                  src={logo}
                   alt={`${brandName} logo`}
                   className={styles.logo}
                 />

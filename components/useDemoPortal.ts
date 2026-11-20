@@ -13,6 +13,10 @@ export function isDemoPortalHostname(hostname: string) {
   );
 }
 
+export function isInfinityPortalHostname(hostname: string) {
+  return hostname.toLowerCase() === "web.infinity.classes.net";
+}
+
 function subscribe() {
   return () => {};
 }
@@ -23,4 +27,12 @@ function getSnapshot() {
 
 export function useDemoPortal() {
   return useSyncExternalStore(subscribe, getSnapshot, () => false);
+}
+
+export function useInfinityPortal() {
+  return useSyncExternalStore(
+    subscribe,
+    () => typeof window !== "undefined" && isInfinityPortalHostname(window.location.hostname),
+    () => false,
+  );
 }
